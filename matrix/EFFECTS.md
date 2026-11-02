@@ -5,7 +5,10 @@ the falsifiers recorded by the last test run; do not edit by hand. Every command
 by code that changes an outcome by it (or awaits the layer that will read it), and every command and kind is
 falsified: changing its input changes the state it leaves.
 
-Effects: 0.
+Effects: 3.
 
 | Effect | Sort | Declared | What it changes | Read at | Falsified by |
 |---|---|---|---|---|---|
+| `clock.counted` | command | `src/world/clock/clock.ts:47` | Counts the real time played, carries the part of a second, and pauses the clock at a commitment. | `src/world/clock/clock.ts:63` | tests/world/clock/effects.test.ts › the clock > clock.counted: the real time played is counted, and the part of a second carried |
+| `clock.pause` | command | `src/world/clock/clock.ts:46` | Pauses the clock: real time passing moves the life on no more. | `src/world/clock/clock.ts:61` | tests/world/clock/effects.test.ts › the clock > clock.pause: paused, real time moves the life on no more |
+| `clock.play` | command | `src/world/clock/clock.ts:45` | Sets the clock playing: real time passing moves the life on. | `src/world/clock/clock.ts:61` | tests/world/clock/effects.test.ts › the clock > clock.play: played, real time moves the life on |

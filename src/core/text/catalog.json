@@ -33,5 +33,55 @@
     "text": "This device wouldn't keep the life just now, so nothing changed. Try again in a moment.",
     "where": "the slots screen, when keeping a life fails",
     "status": "placeholder"
+  },
+  "weather.model": {
+    "text": "Day to day, the weather here is SLATE's own, drawn around the official averages measured near {place} from {years}.",
+    "where": "Home, under the weather",
+    "status": "placeholder"
+  },
+  "weather.model-undated": {
+    "text": "Day to day, the weather here is SLATE's own, drawn around the official averages measured near {place}.",
+    "where": "Home, under the weather, where the averages don't say the years they cover",
+    "status": "placeholder"
+  },
+  "weather.borrowed": {
+    "text": "No averages are published from near here in {country}, so the weather follows those measured near {place}, in {placeCountry}.",
+    "where": "Home, under the weather, where the town's own country publishes none",
+    "status": "placeholder"
+  },
+  "weather.borrowed-part": {
+    "text": "Not every average is published from near here in {country}, so for those the weather follows the ones measured near {place}, in {placeCountry}.",
+    "where": "Home, under the weather, where the town's own country publishes some averages and not others",
+    "status": "placeholder"
+  },
+  "holidays.unannounced": {
+    "text": "{place} hasn't announced its holidays after {year} yet, so the calendar keeps only those its law fixes.",
+    "where": "the calendar, on a year past the last a country has announced",
+    "status": "placeholder"
+  },
+  "holidays.unkept": {
+    "text": "{country}'s public holidays aren't on this calendar, so each day in {country} is kept as an ordinary one.",
+    "where": "the calendar, in a country whose holidays the game doesn't keep",
+    "status": "placeholder"
+  },
+  "holidays.region-unkept": {
+    "text": "{region}'s own holidays aren't on this calendar yet, so it keeps {country}'s national ones.",
+    "where": "the calendar, in a region whose own law's holidays the game hasn't read, where its country's other regions keep theirs",
+    "status": "placeholder"
+  },
+  "holidays.region-unmoved": {
+    "text": "When a holiday in {region} falls on its weekly day of rest, the day off given in its place isn't on this calendar.",
+    "where": "the calendar, in a region whose holidays are kept but whose rule for one on its weekly day of rest the game hasn't read",
+    "status": "placeholder"
+  },
+  "prices.unkept": {
+    "text": "What things cost in {country} isn't known to this game yet, so nothing there has a price.",
+    "where": "wherever a price is shown, in a country whose prices the game doesn't keep",
+    "status": "placeholder"
+  },
+  "holidays.local": {
+    "text": "Holidays kept only by a town or a district aren't on this calendar; its country's and its region's are.",
+    "where": "the calendar, under a town's holidays",
+    "status": "placeholder"
   }
 }
