@@ -23,7 +23,7 @@ export const SOURCES = {
   benchmark: { file: 'vendor/worldbank/PA.NUS.PRVT.PP-2021.json', sha256: 'ce5f050f50ca4dec3c2943bd62df76008fe872c05f9445ddd700d40292ac2f6c' },
   icp: { file: 'vendor/worldbank/ICP2021-9100000-PPPGlob.json', sha256: 'e056aa7ee4a6a359bfee5dc28da5022c0f3180f41b1915f48c10eddd3be0933f' },
   icpMetadata: { file: 'vendor/worldbank/ICP2021-metadata.json', sha256: '97d651a60f09057ff52963f162f273d0ce3fd655ac310b7fddd2f08a8dc096af' },
-  geonames: { file: 'vendor/geonames/countryInfo.txt', sha256: 'c55f638cfaafb4fe45a9aa15120a0f1f78e8a34a8e1847d7b9320cf740fbc9ab' },
+  geonames: { file: 'vendor/geonames/countryInfo.txt', sha256: '79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04' },
 } as const;
 /** The indices a level is carried by: each country's file, and the United States'. */
 export const INDICES = 'research/sources/prices';

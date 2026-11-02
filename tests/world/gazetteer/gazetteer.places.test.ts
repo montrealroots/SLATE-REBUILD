@@ -6,7 +6,7 @@ import { daylight } from '../../../src/core/time/sun.ts';
 import { COUNTRY_CODES, placesOf, regionName } from '../../../src/world/gazetteer/gazetteer.ts';
 
 /**
- * The gazetteer, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The gazetteer, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -34,7 +34,7 @@ describe('every place on the map', () => {
         checked += 1;
       }
     }
-    expect(checked).toBe(171_654);
+    expect(checked).toBe(171_750);
     expect(ids).toEqual(JSON.parse(readFileSync(join(ROOT, 'src/world/gazetteer/place-ids.json'), 'utf8')));
   }, 120_000);
 });

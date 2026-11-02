@@ -4,7 +4,7 @@ import { COUNTRY_CODES, placesOf } from '../../../src/world/gazetteer/gazetteer.
 import { aboutHolidays, holidaysOf, keepsHolidays } from '../../../src/world/holidays/holidays.ts';
 
 /**
- * The holidays, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The holidays, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -28,7 +28,7 @@ describe('the holidays', () => {
         read += 1;
       }
     }
-    expect(read).toBe(171_654);
+    expect(read).toBe(171_750);
     // Each region of a country with regional holidays keeps its own and the country's.
     expect(seen.get('CH CH.ZH')).not.toBe(seen.get('CH CH.TI'));
   }, 300_000);

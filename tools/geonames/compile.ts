@@ -5,9 +5,10 @@ import money from '../../src/core/money/currencies.json' with { type: 'json' };
 import { readZip } from './zip.ts';
 
 /**
- * Compiles the gazetteer from GeoNames' daily dump as published on 2026-10-26 (register R-0032 to R-0034): its 252
+ * Compiles the gazetteer from GeoNames' daily dump as published on 2026-11-02 (register R-0032 to R-0034): its 252
  * countries and territories, its first-level subdivisions, and its populated places (cities1000: places of a
- * thousand people or more, and the seats of administrative divisions). The owner chose that release on 2026-10-26.
+ * thousand people or more, and the seats of administrative divisions). The owner ruled for today's release (SLATE's
+ * ruling of 2026-10-26, held again 2026-11-02), so it was read again the day layer 2 came over.
  * Each file is checked against its pinned SHA-256 before a byte of it is read.
  *
  * What's kept of each place is what the engines read: its name (and its plain-letter spelling, where it differs,
@@ -16,9 +17,9 @@ import { readZip } from './zip.ts';
  * fetches a country's towns only when someone looks at that country.
  */
 export const SOURCES = {
-  countries: { file: 'vendor/geonames/countryInfo.txt', sha256: 'c55f638cfaafb4fe45a9aa15120a0f1f78e8a34a8e1847d7b9320cf740fbc9ab' },
+  countries: { file: 'vendor/geonames/countryInfo.txt', sha256: '79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04' },
   regions: { file: 'vendor/geonames/admin1CodesASCII.txt', sha256: '2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3' },
-  places: { file: 'vendor/geonames/cities1000.zip', sha256: '289fa72adcf173bdd3ae23b12f2e4a63d29c096877eb3eba54a595fa26abc73f', entry: 'cities1000.txt' },
+  places: { file: 'vendor/geonames/cities1000.zip', sha256: '1403372062c5db3039991cbe621b5bbb2b45f5faf8b5d8a1208bd469c8e77f0b', entry: 'cities1000.txt' },
 } as const;
 
 export const OUT = 'src/world/gazetteer';

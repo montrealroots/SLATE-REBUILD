@@ -3,7 +3,7 @@ import { COUNTRY_CODES, placesOf } from '../../../src/world/gazetteer/gazetteer.
 import { indexStations, loadStations, sourcesFor, weatherOn } from '../../../src/world/weather/weather.ts';
 
 /**
- * The weather, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The weather, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -21,6 +21,6 @@ describe('the weather at real towns', () => {
         read += 1;
       }
     }
-    expect(read).toBe(171_654);
+    expect(read).toBe(171_750);
   }, 300_000);
 });

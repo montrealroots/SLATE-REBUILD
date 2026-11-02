@@ -3,7 +3,7 @@ import { COUNTRY_CODES, currencyOf, placesOf } from '../../../src/world/gazettee
 import { aboutPrices, keepsPrices, priceIn } from '../../../src/world/prices/prices.ts';
 
 /**
- * The prices, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The prices, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -18,6 +18,6 @@ describe('the prices', () => {
         read += 1;
       }
     }
-    expect(read).toBe(171_654);
+    expect(read).toBe(171_750);
   }, 300_000);
 });

@@ -3,7 +3,7 @@ import { COUNTRY_CODES, placesOf } from '../../../src/world/gazetteer/gazetteer.
 import { markerIn, projectPoint, wholeWorld } from '../../../src/world/map/map.ts';
 
 /**
- * The map, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The map, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -19,6 +19,6 @@ describe('every place on the map', () => {
         marked += 1;
       }
     }
-    expect(marked).toBe(171_654);
+    expect(marked).toBe(171_750);
   }, 120_000);
 });

@@ -67,7 +67,7 @@ describe('the zip reader', () => {
   it('reads GeoNames\' dump', () => {
     const files = readZip(readFileSync(join(ROOT, SOURCES.places.file)));
     expect([...files.keys()]).toEqual(['cities1000.txt']);
-    expect(files.get('cities1000.txt')?.length).toBe(32_037_359);
+    expect(files.get('cities1000.txt')?.length).toBe(32_051_388);
   });
   it('refuses what it can\'t read rather than guess', () => {
     expect(() => readZip(Buffer.from('not a zip at all, not even close'))).toThrow('not a zip archive: no end of central directory');
@@ -105,10 +105,10 @@ describe('the compiler', () => {
     const written = readdirSync(join(ROOT, OUT, 'places')).map((f) => `places/${f}`);
     expect(written.sort()).toEqual([...files.keys()].filter((k) => k.startsWith('places/')).sort());
   });
-  it('reads the whole dump: 252 countries, 3,865 regions, 171,654 places, in 246 countries', () => {
+  it('reads the whole dump: 252 countries, 3,865 regions, 171,750 places, in 246 countries', () => {
     const g = readGazetteer(ROOT);
     const placed = Object.keys(g.places);
-    expect([Object.keys(g.countries).length, Object.keys(g.regions).length, Object.values(g.places).flat().length, placed.length]).toEqual([252, 3865, 171_654, 246]);
+    expect([Object.keys(g.countries).length, Object.keys(g.regions).length, Object.values(g.places).flat().length, placed.length]).toEqual([252, 3865, 171_750, 246]);
     expect(Object.keys(g.countries).filter((c) => !placed.includes(c)).sort()).toEqual(['AN', 'AQ', 'BV', 'CS', 'HM', 'UM']);
     expect(g.countries['US']).toEqual({ name: 'United States', currency: 'USD' });
     expect([g.countries['BG']?.currency, g.countries['AN']?.currency, g.countries['AQ']?.currency, g.countries['SV']?.currency]).toEqual(['EUR', '', '', 'USD']);

@@ -4,7 +4,7 @@ import { reading } from '../../../src/world/clock/clock.ts';
 import { COUNTRY_CODES, placesOf } from '../../../src/world/gazetteer/gazetteer.ts';
 
 /**
- * The clock, every one of the map's 171,654 places: held by the gate's test run on every commit, and left out of mutation
+ * The clock, every one of the map's 171,750 places: held by the gate's test run on every commit, and left out of mutation
  * testing (vitest.stryker.config.ts), which reruns the suite for each mutant; the unit tests beside it stand in there.
  */
 
@@ -21,6 +21,6 @@ describe('what the clock shows', () => {
         read += 1;
       }
     }
-    expect(read).toBe(171_654);
+    expect(read).toBe(171_750);
   }, 180_000);
 });
