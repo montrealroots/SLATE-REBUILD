@@ -1,0 +1,14 @@
+{
+  "country": {
+    "source": "src/world/gazetteer/countries.json",
+    "pick": "keys",
+    "count": 252,
+    "decidedIn": "CLAUDE.md, full coverage, researched to the source: all 252 countries and territories"
+  },
+  "place": {
+    "source": "src/world/gazetteer/place-ids.json",
+    "pick": "array",
+    "count": 171654,
+    "decidedIn": "the owner, 2026-11-02 (CLAUDE.md, full coverage): not the first SLATE's 170,911; SLATE's ruling of 2026-10-26 holds, \"Use today's GeoNames release, keep going.\" The count is SLATE's from that release (GeoNames cities1000 of 2026-10-26, 171,654 places), set again to the release the rebuild's gazetteer reads, in layer 2"
+  }
+}

@@ -1,7 +1,7 @@
 # Title Case on screens (the owner's rule, from the first SLATE)
 
-The owner's rule from the first SLATE (`montrealroots/1221`: `src/engine/core/text.ts`, `tools/title-case.mjs`,
-`tools/label-sweep.mjs`), to be held when screens are built (`docs/BUILD-ORDER.md` layer 5):
+The owner's rule from the first SLATE (in `montrealroots/1221`: `src/engine/core/text.ts`, `tools/title-case.mjs`, `tools/label-sweep.mjs`),
+held by the gate's title-case check from layer 1, when the rule's code (`core.text`) is built:
 
 - **Every label, heading, button, tab and title is Title Case: every word starts with a capital.** Not the
   typographic convention where small words stay lowercase: "Skip To Event", not "Skip to Event"; "Same As Your
@@ -18,5 +18,5 @@ The owner's rule from the first SLATE (`montrealroots/1221`: `src/engine/core/te
 - **The gate holds it before the game is done.** In the first SLATE, `title-case --check` (labels in the interface)
   and `label-sweep` (names in the content registries, which render as labels) failed the gate; it went unchecked for
   a while and "Delete slot 1" sat in a button. The owner's word (2026-10-29): enforce it when the game is done. It
-  goes into this rebuild's gate when the screens are built; the game isn't done until the check is in the gate and green. Until then,
-  every label written follows the rule by hand.
+  goes into this rebuild's gate with `core.text`, in layer 1, before any label is drawn; the game isn't done until the
+  check is in the gate and green.

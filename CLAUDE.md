@@ -211,7 +211,9 @@ place covers the whole map built into the game; and no merge or deployment witho
 - **Zero decoration.** Nothing shown that nothing reads; nothing asked that nothing uses; no number typed where a sum
   belongs; no choice that ends the same whichever way it's made; no text that explains instead of does.
 - **Full coverage, researched to the source.** Every engine has a coverage matrix; every engine that reads a place
-  covers all 252 countries and territories and 170,911 places of the map; every row cites the primary source and the
+  covers all 252 countries and territories and every place of the map, as many as the GeoNames release the gazetteer
+  reads holds (the owner, 2026-11-02: not the first SLATE's 170,911; SLATE's ruling of 2026-10-26 holds, "Use today's
+  GeoNames release, keep going."); every row cites the primary source and the
   date it was read, in a research register the gate holds; a row without its source fails. Do everything possible to
   find a fact (web search in every phrasing, the institution's own site and documents, official registers, trade
   press quoting a primary source, archived copies). A fact not found is a blocker recorded by name and date, never a
