@@ -29,6 +29,7 @@ function minimal(over: Record<string, unknown> = {}) {
     'registry/engines.json': {},
     'registry/axes.json': readFileSync(join(ROOT, 'registry/axes.json'), 'utf8'),
     'registry/voice.json': readFileSync(join(ROOT, 'registry/voice.json'), 'utf8'),
+    'registry/names.json': readFileSync(join(ROOT, 'registry/names.json'), 'utf8'),
     'research/register.json': { entries: [] },
     'HANDOFF.md': `Layer in progress: 0\n\n${SECTIONS.join('\n\n')}\n`,
     ...over,
@@ -60,7 +61,7 @@ describe('the gate, end to end on a fixture', () => {
     const after = runGate(opts(root));
     expect(after.results.flatMap(all)).toEqual([]);
     expect(after.verdict).toBe('green');
-    expect(after.results.map((r) => r.check)).toEqual(['toolchain', 'owner-docs', 'build-order', 'text-inventory', 'research-register', 'feature-matrix', 'effects', 'coverage', 'handoff', 'doc-refs', 'generated']);
+    expect(after.results.map((r) => r.check)).toEqual(['toolchain', 'owner-docs', 'build-order', 'text-inventory', 'title-case', 'catalog-text', 'research-register', 'feature-matrix', 'effects', 'coverage', 'handoff', 'doc-refs', 'generated']);
   });
   it('fails a matrix that is stale, and a file in matrix/ no check owns', () => {
     const { root } = minimal();
@@ -76,7 +77,7 @@ describe('the gate, end to end on a fixture', () => {
     const { testRun: _t, ...withoutTests } = opts(root, { full: true, run: spy });
     const out = runGate(withoutTests);
     expect(calls).toEqual(['npx tsc', 'npx eslint', 'npx vitest', 'npm audit', 'npx stryker']);
-    expect(out.results.map((r) => r.check)).toEqual(['toolchain', 'owner-docs', 'build-order', 'text-inventory', 'research-register', 'typecheck', 'lint', 'tests', 'feature-matrix', 'effects', 'coverage', 'handoff', 'doc-refs', 'audit', 'mutation', 'generated']);
+    expect(out.results.map((r) => r.check)).toEqual(['toolchain', 'owner-docs', 'build-order', 'text-inventory', 'title-case', 'catalog-text', 'research-register', 'typecheck', 'lint', 'tests', 'feature-matrix', 'effects', 'coverage', 'handoff', 'doc-refs', 'audit', 'mutation', 'generated']);
     expect(all(named(out.results, 'tests'))).toEqual(['red - | the test run left no report']);
   });
   it('feeds what the test run said into the feature matrix and the coverage', () => {

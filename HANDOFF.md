@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 1
+Layer in progress: 2
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -13,9 +13,42 @@ Read `CLAUDE.md` first.
 - 1221's rules, then SLATE's, are in `CLAUDE.md` and `.claude/rules/`, with `docs/STYLE.md` and `docs/GLOSSARY.md`,
   without SLATE's one-agent rule or 1221's Base44 deployment. Layer 6 (the voice) is dropped (2026-11-02).
 - Layer 0 (the repository and the gate) is proven: the full gate green in a fresh clone of the branch at
-  `80e8d7438f9b`, recorded in `registry/layers.json` (2026-11-02). Layer 1 (the core) is in progress and has not
-  started; nothing in it comes over until the owner picks it. Layers 2 to 7 have not started (6 is dropped); the gate
-  refuses code in a layer until every layer under it is recorded proven.
+  `80e8d7438f9b`, recorded in `registry/layers.json` (2026-11-02). The owner merged it (`ac96497`) and the branch
+  restarted from `main` there.
+- Layer 1 (the core) is proven: all six of SLATE's core engines, at the owner's word ("Every single one of them"), the
+  full gate green in a fresh clone of the branch at `47bfeac7fda9`, recorded in `registry/layers.json` (2026-11-02).
+  Layer 2 (the world) is in progress and has not started; nothing in it comes over until the owner picks it. Layers 3
+  to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
+
+What layer 1 holds, ported from SLATE's core (`montrealroots/SLATE` at `acf1874`), changed only where a ruling or
+today's sources say:
+
+- `core.time` (`src/core/time`): the calendar's arithmetic, time zones compiled from IANA's tzdata as zic compiles
+  them, sunrise and sunset by NOAA's method, local time. On tzdata 2026f (2026-10-27), not SLATE's 2026e: Cuba stays on
+  -04 through 2027-11-07, and Brazil's 1965 and 1966 DST ends are corrected. Its signature is good from Paul Eggert's
+  key; against 2026e only the Cuba and Brazil rule sets differ; zic's transition code is line for line the same
+  (register R-0001, R-0003, R-0005). Every zone is held to zic and zdump, and to the ICU zones in Node (tz 2026e), where
+  only America/Havana may now differ.
+- `core.rng` (`src/core/rng`): SplitMix64 streams keyed by the life's seed and a named decider through FNV-1a 64. No
+  decider is registered yet; each comes with the engine that reads it.
+- `core.money` (`src/core/money`): amounts in whole minor units, ISO 4217's 155 currencies in use (list one of
+  2026-09-17, byte for byte what SIX publishes today).
+- `core.frame` (`src/core/frame`): a life's state, commands, scheduled kinds, the passing of time, notices.
+- `core.text` (`src/core/text`): the text catalog (seven lines so far, the device store's) and Title Case.
+- `core.persistence` (`src/core/persistence`): lives on this device only (the owner, 2026-11-02): IndexedDB with
+  local storage behind it, gzip, a copy before every write. SLATE's Base44 server store, its backend functions and
+  their catalog lines and coverage rows did not come over, nor the store's `where`, which nothing read without them;
+  the schema version is pinned in one place. A life saved, opened and played on is tested on the frame alone
+  (`tests/core/persistence/continue.test.ts`); SLATE's version played a layer 3 card, which comes back with it.
+- Two checks join the gate: title-case (SLATE's, reading the rule from `src/core/text/case.ts`, with
+  `registry/names.json`) and catalog-text (1221's plural-check, voice-check, tics, spelling and typos, over the
+  catalog's lines: 27 countable nouns, 14 contraction rules at a budget of zero, 9 tics and lists that open alike at
+  1221's density per line of prose, 150 British spellings with 142 real names left as written, 150 misspellings and
+  doubled words). The tools that compile time zones and currencies come with their tests (`tests/tools/tzdb.test.ts`,
+  `tests/core/money/money.test.ts`) and are mutation-tested; the USNO reader (`tools/research/usno-sun.ts`) is not.
+- Research: all 27 register entries read again on 2026-11-02 at their sources, each dated so. Beside the tz release,
+  every one says what SLATE read: the 108 USNO sun answers are identical, the ISO 4217 list is byte for byte the same,
+  and the calendar, NOAA, SplitMix64, FNV-1a and Amendment 170 sources hold the figures the register cites.
 
 What layer 0 holds, ported from SLATE's gate as it stood on 2026-11-02 (`montrealroots/SLATE` at `acf1874`), which
 SLATE proved at a 100% mutation score:
@@ -70,9 +103,10 @@ SLATE proved at a 100% mutation score:
   ratchet has nothing to count: its count is held at zero); coverage and completion-matrix (the coverage
   matrices and the research register); deciders (the lint's ban on `Math.random`, and the seeded decider in
   layer 1).
-- With layer 1's `core.text`, before the first label is drawn: title-case and label-sweep (SLATE's one title-case
-  check, which reads the rule from `core.text`'s own code); plural-check, voice-check, tics, spelling and typos
-  (checks of the catalog's lines, built with the catalog).
+- With layer 1's `core.text`, here now: title-case and label-sweep (SLATE's one title-case check); plural-check,
+  voice-check, tics, spelling and typos (the catalog-text check). 1221's `typos.mjs` named punctuation slips in its
+  header but held none, and voice-check's four stiff shapes were counted there and never failed it (the tics hold
+  them), so none came over; nor did 1221's allowances, which named lines of its own files.
 - With layer 2's gazetteer: geo-check (the place axis and the all-places test).
 - Not brought: devmap, traceability, capabilities, inventory, student-matrix and guide-quotes held 1221's own
   documents (its dev map, its capabilities list, its catalogs, the school's student matrix, the guide's quotes); the
@@ -80,13 +114,16 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 0.
-2. The owner picks what comes over in layer 1, the core: from SLATE, `core.time`, `core.rng`, `core.money`,
-   `core.frame`, `core.text` and `core.persistence`. With `core.text` come the title-case check and the checks of
-   the catalog's lines (plural-check, voice-check, tics, spelling, typos), before the first label is drawn.
+1. The owner pulls and merges layer 1, then picks what comes over in layer 2, the world: from SLATE, `world.gazetteer`,
+   `world.map`, `world.clock`, `world.weather`, `world.holidays` and `world.prices`. With the gazetteer comes 1221's
+   geo-check (the place axis and the all-places test), and the place count is set to the GeoNames release it reads.
 
 ## Verification evidence
 
+- Layer 1's proof: `npm run gate:full` green in a fresh clone of the branch at `47bfeac7fda9`, after
+  `npx -y npm@11.6.2 ci`: every check green; 1,181 of 1,181 tests, the zic and zdump oracle and the ICU comparison
+  among them; audit 0 advisories; mutation 100.00% (5,745 of 5,745 mutants killed, static mutants included); 778 s. It
+  passed on the first full run.
 - Layer 0's proof: `npm run gate:full` green in a fresh clone of the branch at `80e8d7438f9b`, after
   `npx -y npm@11.6.2 ci`: every check green; 225 of 225 tests; audit 0 advisories; mutation 100.00% (2,668 of 2,668
   mutants killed, static mutants included); 357 s.

@@ -1,0 +1,67 @@
+{
+ "engine": "core.time",
+ "axis": "local-time-operation",
+ "universe": {
+  "keys": [
+   "type-at",
+   "local-time",
+   "instant-of",
+   "zone-names",
+   "local-days",
+   "age"
+  ]
+ },
+ "rows": [
+  {
+   "key": "type-at",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/time.test.ts::the type in effect at an instant > changes at the transition, to the second",
+    "tests/core/time/time.test.ts::the type in effect at an instant > finds the right transition in a long history"
+   ]
+  },
+  {
+   "key": "local-time",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/time.test.ts::local time > is the date, the seconds since midnight, the weekday and the type"
+   ]
+  },
+  {
+   "key": "instant-of",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/time.test.ts::the instant a local time names > round-trips every instant near every transition from 1990 to 2030, in every zone",
+    "tests/core/time/time.test.ts::the instant a local time names > is the earlier of two when the clock goes back, or the later when asked",
+    "tests/core/time/time.test.ts::the instant a local time names > lands as far past the jump as it was into the gap when the clock goes forward"
+   ]
+  },
+  {
+   "key": "zone-names",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/time.test.ts::zones by name > holds the release's 344 zones, and follows an alias to its zone"
+   ]
+  },
+  {
+   "key": "local-days",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/dates.test.ts::a local day > starts at the zone's midnight, not UT's",
+    "tests/core/time/dates.test.ts::a local day > starts at its first moment where the clock skips midnight",
+    "tests/core/time/dates.test.ts::days and months on > keep the local time across a change of the clocks, so a day is 23 or 25 hours there",
+    "tests/core/time/dates.test.ts::days and months on > keep the day of the month, or the month's last where it has fewer, across years both ways",
+    "tests/core/time/dates.test.ts::days and months on > count the local dates between two moments, not the hours"
+   ]
+  },
+  {
+   "key": "age",
+   "status": "proven",
+   "tests": [
+    "tests/core/time/dates.test.ts::an age > turns at the local midnight of the zone the person lives in",
+    "tests/core/time/dates.test.ts::an age > is whole years, before and after the birthday in its month and either side of it",
+    "tests/core/time/dates.test.ts::an age > turns on 1 March for someone born on 29 February, in a year without one (the game's reading)"
+   ]
+  }
+ ]
+}

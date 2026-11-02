@@ -10,8 +10,9 @@ Node 22.23.4 (`.nvmrc`). Install with `npx -y npm@11.6.2 ci` (npm is pinned in `
 kept with npm 11.6.2). Add a dependency at an exact version: `npm install -E <package>@<version>`.
 
 - `npm run gate`: the gate, as every commit runs it (`.githooks/pre-commit`): the toolchain pins, the owner's
-  documents, the build order, the text inventory, the research register, the typecheck, the lint, the tests, the
-  feature-to-effect matrix, the engines' effects, the coverage matrices, the handoff and the files the docs name.
+  documents, the build order, the text inventory, Title Case, the catalog's words, the research register, the
+  typecheck, the lint, the tests, the feature-to-effect matrix, the engines' effects, the coverage matrices, the
+  handoff and the files the docs name.
   Exit 0 green, 1 red (a rule broken), 2 incomplete (declared work unfinished). Read the exit code from a file, never
   through a pipe (`CLAUDE.md`, Part 1).
 - `npm run gate:full`: the same plus `npm audit` (any known advisory is red) and mutation testing at a 100% break

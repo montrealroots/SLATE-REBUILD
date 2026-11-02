@@ -11,6 +11,7 @@ export const PATHS = {
   engines: 'registry/engines.json',
   axes: 'registry/axes.json',
   voice: 'registry/voice.json',
+  names: 'registry/names.json',
   register: 'research/register.json',
   catalog: 'src/core/text/catalog.json',
   handoff: 'HANDOFF.md',
