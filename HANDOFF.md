@@ -12,5 +12,6 @@ Read `CLAUDE.md` first.
 
 ## Next
 
-The owner picks which of SLATE's features come over, one at a time. SLATE's 41 engines, by layer, are listed in
-`montrealroots/SLATE`'s `registry/engines.json`.
+The owner merges this branch, then gives the word to start layer 0 (the repository and the gate). Layer 6 is
+dropped (2026-11-02, `CLAUDE.md`). SLATE's 41 engines, by layer, are listed in `montrealroots/SLATE`'s
+`registry/engines.json`; the owner picks which come over.

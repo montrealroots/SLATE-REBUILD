@@ -218,7 +218,11 @@ place covers the whole map built into the game; and no merge or deployment witho
   guess; the game tells the player what isn't modeled, and nothing is invented. No half facts: a figure from memory
   or a summary is not a figure.
 - **No stopping until done.** Done is the whole matrix covered and the gate green from end to end, not a first
-  screen that works. Work is checkpointed in `HANDOFF.md` so an interruption resumes, never restarts.
+  screen that works. Work is checkpointed in `HANDOFF.md` so an interruption resumes, never restarts. And (the
+  owner, 2026-11-02): "I want everything done perfectly and to not be finished until you personally feel we've
+  gotten all the information we could possibly obtain." No layer, engine or research row is called finished while
+  any avenue for a fact is untried; a blocker is recorded only after every method has been tried, and the report
+  says which were tried.
 - **Built in order, top to bottom.** Each layer is proven (its tests, its coverage matrix, its research register
   rows, the gate green) before the next is laid on it; nothing in a later layer is started on an assumption about
   an earlier one:
@@ -229,8 +233,9 @@ place covers the whole map built into the game; and no merge or deployment witho
   3. The person's papers and money.
   4. The person.
   5. The screens, in the player's order, each drawn only from state layers 1 to 4 already hold and test.
-  6. The voice: every string rewritten in the owner's voice against the text inventory, with the voice checks in
-     the gate.
+  6. Dropped (the owner, 2026-11-02: "Don't need Layer 6"). SLATE's layer 6 was a separate pass rewriting every
+     string in the owner's voice after the screens. There is no such pass here: the voice rule binds each string as
+     it is written, and the text inventory holds it from layer 0.
   7. Verification, end to end: long played lives on real clocks across many places, the falsifiability twins for
      every claim, the matrices complete, the gate green in a clean clone.
 - **Connected, cohesive, logical.** One model of the world, every system reading the same state through the same
