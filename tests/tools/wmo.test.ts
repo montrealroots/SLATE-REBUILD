@@ -5,7 +5,7 @@ import { gzipSync } from 'node:zlib';
 import { describe, expect, it } from 'vitest';
 import { coverageOf, readTowns } from '../../tools/wmo/build.ts';
 import { MODEL, NO_PLACES, OUTPUT as COVERAGE, SETS, TESTS, TOLD, serializeCoverage, weatherCoverage } from '../../tools/wmo/coverage.ts';
-import { COMMUNES_MF, COUNTRIES_DWD, COUNTRIES_KT, KT_COUNTRY, MONTH_DAYS, MEMBERS_6190, MEMBERS_9120, MEMBERS_WWIS, OUTPUT, SOURCES_6190, SOURCES_8110, SOURCES_9120, HAND_READ, SOURCE_CWA, SOURCE_DWD, SOURCE_KT, SOURCE_METOFFICE, SOURCE_MF, SOURCE_WWIS, SOURCE_GHCND, SOURCE_ANGUILLA, SOURCE_TONGA, YEARS_GHCND, compileStations, monthValue, parseAnguilla, parseTonga, parseGhcnd, countryOf, distanceKm, nearestTown, parse6190, parse8110, parse9120, parseCwa, parseDwd, parseKlimatafeln, parseMeteoFrance, parseMetOffice, parseWwis, readStations, serialize, TOWN_KM, townPool, type SourceStation, inOutline, outlineKm, readOutlines, NEAR_KM, BORDER_KM } from '../../tools/wmo/compile.ts';
+import { COMMUNES_MF, COUNTRIES_DWD, COUNTRIES_KT, KT_COUNTRY, MONTH_DAYS, MEMBERS_6190, MEMBERS_9120, MEMBERS_WWIS, OUTPUT, SOURCES_6190, SOURCES_8110, SOURCES_9120, HAND_READ, SOURCE_CWA, SOURCE_DWD, SOURCE_KT, SOURCE_METOFFICE, SOURCE_MF, SOURCE_WWIS, SOURCE_GHCND, SOURCE_ANGUILLA, SOURCE_TONGA, SOURCES_COMPUTED, YEARS_GHCND, compileStations, monthValue, parseMeteoAd, parseClimat, parseMeteoFranceDaily, parseMontserrat, parseAnguilla, parseTonga, parseGhcnd, countryOf, distanceKm, nearestTown, parse6190, parse8110, parse9120, parseCwa, parseDwd, parseKlimatafeln, parseMeteoFrance, parseMetOffice, parseWwis, readStations, serialize, TOWN_KM, townPool, type SourceStation, inOutline, outlineKm, readOutlines, NEAR_KM, BORDER_KM } from '../../tools/wmo/compile.ts';
 import { SOURCE as OUTLINES } from '../../tools/naturalearth/compile.ts';
 
 const ROOT = join(import.meta.dirname, '../..');
@@ -90,7 +90,7 @@ describe('the station compiler', () => {
       { key: 'EC', status: 'researched', register: ['R-0038', 'R-0039', 'R-0040', 'R-0044'], tests: TESTS },
     ]);
     expect(TOLD).toBe("tests/world/weather/weather.test.ts::the weather at real towns > reads each town's nearest station of its own country, and says where it has none");
-    expect([SETS, MODEL]).toEqual([{ '9120': 'R-0037', '6190': 'R-0038', '8110': 'R-0044', mf: 'R-0043', cwa: 'R-0045', metoffice: 'R-0048', bws: 'R-0049', dhm: 'R-0057', rnsm: 'R-0060', meteocw: 'R-0074', anguilla: 'R-0075', tms: 'R-0076', rhmz: 'R-4115', jica: 'R-4116', vms: 'R-4117', svgmet: 'R-4235', dwd: 'R-0062', kt: 'R-0063', wwis: 'R-0042', ghcnd: 'R-0073' }, ['R-0039', 'R-0040']]);
+    expect([SETS, MODEL]).toEqual([{ '9120': 'R-0037', '6190': 'R-0038', '8110': 'R-0044', mf: 'R-0043', cwa: 'R-0045', metoffice: 'R-0048', bws: 'R-0049', dhm: 'R-0057', rnsm: 'R-0060', meteocw: 'R-0074', anguilla: 'R-0075', tms: 'R-0076', rhmz: 'R-4115', jica: 'R-4116', vms: 'R-4117', svgmet: 'R-4235', dwd: 'R-0062', kt: 'R-0063', wwis: 'R-0042', ghcnd: 'R-0073', meteoad: 'R-0077', climat: 'R-0083', mfd: 'R-4238', montserrat: 'R-4239' }, ['R-0039', 'R-0040']]);
     // A station is of a set by its id's start up to the colon, not by a likeness.
     expect(weatherCoverage(['FR'], new Set(['FR']), [st('9120x:1', 'FR', ['tmax', 'tmin', 'prcp', 'wet', 'sun'])], new Map())[0]).toMatchObject({ register: ['R-0039', 'R-0040'] });
     expect(serializeCoverage([{ key: 'AN', status: 'proven', tests: ['t'] }])).toBe('{\n "engine": "world.weather",\n "axis": "country",\n "rows": [\n  {\n   "key": "AN",\n   "status": "proven",\n   "tests": [\n    "t"\n   ]\n  }\n ]\n}\n');
@@ -470,6 +470,9 @@ describe('the station compiler', () => {
     expect(monthValue('tmax', missing([0, 1, 2, 3, 5, 6, 7, 8]))).toBe(1);
     expect(monthValue('prcp', [1, 2, 3])).toBe(6);
     expect(monthValue('prcp', [1, null, 3])).toBeNull();
+    // The sunshine is a sum too.
+    expect(monthValue('sun', [1, 2, 3])).toBe(6);
+    expect(monthValue('sun', [1, null, 3])).toBeNull();
     // A count is the share of the days observed with at least 1 mm.
     expect(monthValue('wet', [0, 1, 0.9, 2, null])).toBe(0.5);
   });
@@ -516,6 +519,76 @@ describe('the station compiler', () => {
     expect(out[1]?.normals.tmax).toEqual(Array(12).fill(25));
     expect(ku?.normals.wet).toEqual(MONTH_DAYS.map((d) => Math.round(d * 10) / 10));
     expect(vi?.normals).toEqual({ prcp: Array(12).fill(0), wet: Array(12).fill(0) });
+  });
+  it("averages Andorra's daily values as NOAA's are, and takes a day of no sunshine under a bright sky for the recorder's gap", () => {
+    // Every day of 1991 to 2020: the maximum 10,5, the minimum -1,0 (none in 1991), 2,0 mm, 10h 15 of sun under 1000 J/cm²;
+    // each 15th without its irradiation. Each January 1st of 1991-1997 reads no sun under 900 (a gap: over 60% of the
+    // month's highest); each January 2nd from 1998, no sun under 600 (a reading: not over 60%).
+    const months = [];
+    for (let year = 1991; year <= 2020; year += 1) {
+      for (let month = 1; month <= 12; month += 1) {
+        const days = Array.from({ length: new Date(Date.UTC(year, month, 0)).getUTCDate() }, (_, i) => {
+          const day = i + 1;
+          const jan = month === 1 && ((day === 1 && year <= 1997) || (day === 2 && year >= 1998));
+          // January 3rd, 1991 has no sunshine given (a month already a gap).
+          const sun = jan ? '0h 0' : year === 1991 && month === 1 && day === 3 ? '' : '10h 15';
+          const irr = day === 15 ? [] : [jan ? (year <= 1997 ? '900' : '600') : '1000'];
+          return [String(day), '10,5', year === 1991 ? '' : '-1,0', '2,0', sun, ...irr].join(';');
+        });
+        months.push({ year, month, days: days.join('\n') });
+      }
+    }
+    const out = parseMeteoAd(JSON.stringify({ station: { name: 'Roc St. Pere', latitude: 42.5127, longitude: 1.5327, elevation: 1113 }, months }));
+    expect(out.map((s) => [s.id, s.period, Object.keys(s.normals)])).toEqual([
+      ['meteoad:99130005:1991-2020', '1991-2020', ['tmax', 'prcp', 'wet']],
+      ['meteoad:99130005:1992-2020', '1992-2020', ['tmin']],
+      ['meteoad:99130005:1993-2020', '1993-2020', ['sun']],
+    ]);
+    const [all, tmin, sun] = out;
+    expect(all).toMatchObject({ name: 'Roc St. Pere', country: 'AD', latitude: 42.5127, longitude: 1.5327, elevation: 1113 });
+    expect(all?.normals.tmax).toEqual(Array(12).fill(10.5));
+    expect(all?.normals.prcp).toEqual([62, 56.5, 62, 60, 62, 60, 62, 62, 60, 62, 60, 62]);
+    expect(all?.normals.wet).toEqual(MONTH_DAYS.map((d) => Math.round(d * 10) / 10));
+    expect(tmin?.normals.tmin).toEqual(Array(12).fill(-1));
+    // January's thirty days of sun from 1998 (the second a reading of none); February's over 1993-2020's leap years.
+    expect(sun?.normals.sun).toEqual([307.5, 289.6, 317.8, 307.5, 317.8, 307.5, 317.8, 317.8, 307.5, 317.8, 307.5, 317.8]);
+  });
+  it("averages the monthly CLIMAT reports over each parameter's years, and Montserrat's tables, the year on its first row", () => {
+    const head = 'JAHR;Jan;Feb;Mrz;Apr;Mai;Jun;Jul;Aug;Sep;Okt;Nov;Dez';
+    // A year's row of the month's number, or of `v`; outside 1991-2020, 99; each January of 1991-1997 empty, February 2000
+    // blank; the days of at least 1 mm's 2020 row stops after February.
+    const rows = (v?: string) =>
+      [head, ...Array.from({ length: 32 }, (_, i) => 1990 + i).map((y) => [y, ...Array.from({ length: 12 }, (_, m) => (y < 1991 || y > 2020 ? '99' : (m === 0 && y <= 1997) ? '' : m === 1 && y === 2000 ? ' ' : (v ?? `${m + 1}.0`)))].join(';'))].join('\n');
+    const station = { wmo: '88889', country: 'FK', name: 'Mnt. Pleasant Airp./Falkland Isl.', latitude: -51.81, longitude: -58.45, elevation: 74 };
+    const out = parseClimat(JSON.stringify({ stations: [{ ...station, files: { tmax: { text: rows() }, wet: { text: [head, ...Array.from({ length: 30 }, (_, i) => [1991 + i, ...Array(i === 29 ? 2 : 12).fill(' 10.0 ')].join(';'))].join('\n') } } }, { ...station, wmo: '88903', files: {} }] }));
+    expect(out).toEqual([
+      { id: 'climat:88889:1993-2020', name: 'Mnt. Pleasant Airp./Falkland Isl.', country: 'FK', latitude: -51.81, longitude: -58.45, elevation: 74, period: '1993-2020', normals: { tmax: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] } },
+      { id: 'climat:88889:1991-2020', name: 'Mnt. Pleasant Airp./Falkland Isl.', country: 'FK', latitude: -51.81, longitude: -58.45, elevation: 74, period: '1991-2020', normals: { wet: Array(12).fill(10) } },
+    ]);
+    // Montserrat's: a "MAX" and a "MIN" row each year, the year on the first; "-" none; the rain days not read.
+    const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const years = Array.from({ length: 22 }, (_, i) => 2005 + i);
+    const temperature = [[], ['', 'Minimum and Maximum Average Temperture (°C)'], ['', 'YEAR', '', ...MONTHS], ...years.flatMap((y) => [['', String(y), 'MAX', ...MONTHS.map((_, m) => (y > 2020 ? '40' : m === 6 && y === 2010 ? '-' : String(30 + m)))], ['', '', 'MIN ', ...MONTHS.map(() => (y > 2020 ? '1' : '20'))]])];
+    const rain = [['', 'Rain data (mm), monthly'], ['', 'YEAR', '', ...MONTHS, 'Total'], ...years.flatMap((y) => [['', String(y), 'Rain Days', ...MONTHS.map(() => '25'), '300'], ['', ' ', 'Rainfall (mm)', ...MONTHS.map(() => '100'), '1200']])];
+    const ms = parseMontserrat(JSON.stringify({ workbooks: { temperature: { sheets: { a: temperature } }, rain: { sheets: { b: rain } } }, station: '"788625","99999","JOHN A OSBORNE AIRPORT","MH","","TRPG","+16.783","-062.193","+0168.0","20091009","20250824"' }));
+    expect(ms).toEqual([{ id: 'montserrat:trpg:2005-2020', name: 'JOHN A OSBORNE AIRPORT', country: 'MS', latitude: 16.783, longitude: -62.193, elevation: 168, period: '2005-2020', normals: { tmax: MONTHS.map((_, m) => 30 + m), tmin: Array(12).fill(20), prcp: Array(12).fill(100) } }]);
+  });
+  it("averages Météo-France's daily base as NOAA's records are, a day counting only where its quality code is 0 or 1", () => {
+    const days: string[] = [];
+    for (let t = Date.UTC(1991, 0, 1); t <= Date.UTC(2020, 11, 31); t += 86_400_000) {
+      const d = new Date(t);
+      const date = d.toISOString().slice(0, 10).replace(/-/g, '');
+      // The rain protected (0) or validated (1); a maximum of 2 (dubious) or 9 (not yet checked) is none, so no maximum
+      // before 2011; the minimum only from 2011.
+      const early = d.getUTCFullYear() <= 2010;
+      days.push([date, '1.5', d.getUTCDate() % 2 === 0 ? '0' : '1', early ? '' : '24.0', early ? '' : '1', early ? '35.0' : '30.0', early ? (d.getUTCDate() % 2 === 0 ? '2' : '9') : '1'].join(';'));
+    }
+    const out = parseMeteoFranceDaily(JSON.stringify({ stations: [{ id: '97127004', name: 'ST-MARTIN GRAND-CASE', latitude: 18.100667, longitude: -63.048, elevation: 5, days: days.join('\n') }] }));
+    expect(out.map((s) => [s.id, s.country, s.period, s.normals])).toEqual([
+      ['mfd:97127004:2011-2020', 'MF', '2011-2020', { tmax: Array(12).fill(30), tmin: Array(12).fill(24) }],
+      ['mfd:97127004:1991-2020', 'MF', '1991-2020', { prcp: [46.5, 42.4, 46.5, 45, 46.5, 45, 46.5, 46.5, 45, 46.5, 45, 46.5], wet: MONTH_DAYS.map((d) => Math.round(d * 10) / 10) }],
+    ]);
+    expect(out[0]).toMatchObject({ name: 'ST-MARTIN GRAND-CASE', latitude: 18.100667, longitude: -63.048, elevation: 5 });
   });
   it("fills what each country lacks in order: the WMO's sets, then 1981-2010, then a national service's, the Deutscher Wetterdienst's, and the World Weather Information Service's", () => {
     const st = (id: string, country: string, normals: SourceStation['normals']): SourceStation => ({ id, name: id, country, latitude: 0, longitude: 0, elevation: null, period: '1981-2010', normals });
@@ -668,7 +741,7 @@ describe('the station compiler', () => {
     expect(place([st('isle', 'SE', 50, -30), st('aq', 'AQ', -75, 0)])).toEqual([['aq', 'AQ'], ['isle', 'SE']]);
   });
   it('refuses a file that isn\'t the one the register cites', () => {
-    const files = [...Object.values(SOURCES_9120), ...Object.values(SOURCES_6190), ...Object.values(SOURCES_8110), SOURCE_MF, SOURCE_CWA, SOURCE_METOFFICE, ...HAND_READ.flatMap((h) => [h.source].flat()), SOURCE_ANGUILLA, SOURCE_TONGA, OUTLINES, SOURCE_DWD, SOURCE_KT, SOURCE_WWIS, SOURCE_GHCND];
+    const files = [...Object.values(SOURCES_9120), ...Object.values(SOURCES_6190), ...Object.values(SOURCES_8110), SOURCE_MF, SOURCE_CWA, SOURCE_METOFFICE, ...HAND_READ.flatMap((h) => [h.source].flat()), SOURCE_ANGUILLA, SOURCE_TONGA, OUTLINES, SOURCE_DWD, SOURCE_KT, SOURCE_WWIS, SOURCE_GHCND, ...Object.values(SOURCES_COMPUTED)];
     for (const target of files) {
       const root = mkdtempSync(join(tmpdir(), 'slate-wmo-'));
       for (const dir of ['vendor/wmo/9120', 'vendor/wmo/6190', 'vendor/wmo/8110', 'vendor/bws', 'vendor/dhm', 'vendor/rnsm', 'vendor/meteocw', 'vendor/rhmz', 'vendor/jica', 'vendor/vmgd', 'vendor/svgmet', 'vendor/naturalearth', 'research/sources']) mkdirSync(join(root, dir), { recursive: true });

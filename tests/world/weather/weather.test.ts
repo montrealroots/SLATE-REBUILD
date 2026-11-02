@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { daysFromCivil, daysInMonth, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
-import { findPlace } from '../../../src/world/gazetteer/gazetteer.ts';
+import { countryName, findPlace } from '../../../src/world/gazetteer/gazetteer.ts';
 import { isLine, t } from '../../../src/core/text/text.ts';
 import { draws, seedFromText } from '../../../src/core/rng/rng.ts';
 import { hourAngleArg, julianCentury, julianDay, sunDeclination } from '../../../src/core/time/sun.ts';
@@ -306,6 +306,16 @@ describe('the weather at real towns', () => {
     const vatican = sourcesFor(va, index);
     expect(PARAMS.every((p) => vatican[p].borrowed && vatican[p].station.country === 'IT')).toBe(true);
     expect(aboutWeather(va, vatican)).toBe(t(BORROWED_LINE, { country: 'Vatican', place: vatican.wet.station.town ?? vatican.wet.station.name, placeCountry: 'Italy' }));
+    // Andorra's own service's daily values give all five (since 2026-11-02; until then every one was borrowed);
+    // Montserrat's tables its temperatures and rain, not its days of at least 1 mm or its sunshine.
+    const ad = (await findPlace('AD', '3041563')) as never;
+    const andorra = sourcesFor(ad, index);
+    expect(PARAMS.some((p) => andorra[p].borrowed)).toBe(false);
+    expect(aboutWeather(ad, andorra)).toBe(t(MODEL_LINE, { place: 'les Escaldes', years: '1991 to 2020' }));
+    const brades = (await findPlace('MS', '7266440')) as never;
+    const montserrat = sourcesFor(brades, index);
+    expect(PARAMS.filter((p) => montserrat[p].borrowed)).toEqual(['wet', 'sun']);
+    expect(aboutWeather(brades, montserrat)).toBe(t(BORROWED_PART_LINE, { country: 'Montserrat', place: montserrat.wet.station.town ?? montserrat.wet.station.name, placeCountry: countryName(montserrat.wet.station.country as never) }));
   });
 });
 

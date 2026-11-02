@@ -130,6 +130,13 @@ export const SOURCE_WWIS = { file: 'research/sources/wwis-climate.json', sha256:
 export const SOURCE_ANGUILLA = { file: 'research/sources/anguilla-climate.json', sha256: 'ff25c6805b8bde223b8eda33716b52c2a7dd05537a0ae0139ac80085200fdc75' } as const;
 export const SOURCE_TONGA = { file: 'research/sources/tonga-climate.json', sha256: 'a4a84177d234a31d4350679c88cfbcc42d45ab0f25bab9a63352332a89873b3c' } as const;
 export const SOURCE_GHCND = { file: 'research/sources/ghcnd-daily.json', sha256: 'd82ab4db4600eead59ccd2d7f3da00bbb661550b150edc09b736215e1fecc293' } as const;
+/** The averages computed as R-0073's are, from other services' own records: Andorra's, the CLIMAT reports', Météo-France's daily base and Montserrat's. */
+export const SOURCES_COMPUTED = {
+  meteoad: { file: 'research/sources/meteoad-daily.json', sha256: '8dd36ffed92382c5a1d7b55d7d5bb568ec418456286d3dc1f76d502725e7cb8e' },
+  climat: { file: 'research/sources/dwd-climat-monthly.json', sha256: '10f4cdbfd21ca6e6c55b490793686eaf6fa50fcb0a7fc0b11c95535c52a6cebf' },
+  mfd: { file: 'research/sources/meteofrance-daily.json', sha256: '9e0c48c76f89972242c106e86928c38a55b9bde2ecb70d3422e0fe469e63470d' },
+  montserrat: { file: 'research/sources/montserrat-climate.json', sha256: '27d96b185f22a47a81a46c77adea0dd3706405b03a131200103ebc6c27544c3e' },
+} as const;
 export const OUTPUT = 'src/world/weather/stations.json';
 
 export type Param = 'tmax' | 'tmin' | 'prcp' | 'wet' | 'sun';
@@ -843,7 +850,7 @@ export function parseKlimatafeln(json: string): (SourceStation & { member: strin
   return [...out.values()];
 }
 
-/** The years a station's daily records are read over: 1991 to 2020, the climatological standard normal's. */
+/** The years a station's daily or monthly records are read over: 1991 to 2020, the climatological standard normal's. */
 export const YEARS_GHCND = [1991, 2020] as const;
 const DAILY_GHCND: readonly [Param, 'tmax' | 'tmin' | 'prcp'][] = [
   ['tmax', 'tmax'],
@@ -854,45 +861,81 @@ const DAILY_GHCND: readonly [Param, 'tmax' | 'tmin' | 'prcp'][] = [
 
 /**
  * A month's value from its days' (WMO-No. 1203, 4.3.1 and 4.4.1): none where 11 or more days are missing or 5 or more
- * in a row, and for a sum, none where any is; a mean's is the days' mean, a sum's their sum, a count's (days of at
- * least 1 mm) the share of the days observed.
+ * in a row, and for a sum (the precipitation, the sunshine), none where any is; a mean's is the days' mean, a sum's
+ * their sum, a count's (days of at least 1 mm) the share of the days observed.
  */
 export function monthValue(param: Param, days: readonly (number | null)[]): number | null {
   const missing = days.filter((d) => d === null).length;
+  const sum = param === 'prcp' || param === 'sun';
   let run = 0;
   let longest = 0;
   for (const d of days) {
     run = d === null ? run + 1 : 0;
     longest = Math.max(longest, run);
   }
-  if (missing >= 11 || longest >= 5 || (param === 'prcp' && missing > 0)) return null;
+  if (missing >= 11 || longest >= 5 || (sum && missing > 0)) return null;
   const seen = days.filter((d) => d !== null);
   if (param === 'wet') return seen.filter((d) => d >= 1).length / seen.length;
-  const sum = seen.reduce((a, b) => a + b, 0);
-  return param === 'prcp' ? sum : sum / seen.length;
+  const total = seen.reduce((a, b) => a + b, 0);
+  return sum ? total : total / seen.length;
+}
+
+/** Each month's value in each year of YEARS_GHCND (months[m][year - 1991]), from its days' (by date, "1991-01-31"), by monthValue. */
+export function dailyMonths(param: Param, daily: ReadonlyMap<string, number | undefined>): (number | null)[][] {
+  const [first, last] = YEARS_GHCND;
+  return MONTH_DAYS.map((_, m) =>
+    Array.from({ length: last - first + 1 }, (_, i) => {
+      const year = first + i;
+      const length = new Date(Date.UTC(year, m + 1, 0)).getUTCDate();
+      return monthValue(param, Array.from({ length }, (_, d) => daily.get(`${year}-${String(m + 1).padStart(2, '0')}-${String(d + 1).padStart(2, '0')}`) ?? null));
+    }),
+  );
 }
 
 /**
- * NOAA NCEI's GHCN-Daily records (R-0073), each station's days of 1991 to 2020 as "date;precipitation;flags;maximum;
- * flags;minimum;flags" in tenths of a millimetre and of a degree, averaged by WMO-No. 1203's rules: a day counts where
- * its quality flag (the flags' second) is blank; a month by monthValue; a month's average is the mean of its valid
- * values (a count's mean share times the month's days, February's 28.25) where they are of at least 80% of the
- * averaging period's years (4.3.2 and 4.4.2). Each parameter's period is the longest of at least ten years (an average,
- * as chapter 3 defines it: over any period), from a year with a month of it to another, whose every month is averaged
- * so, the latest of the longest; 1991-2020,
- * the climatological standard normal, where the records allow it. A station is kept once for each period, with the
- * parameters of that period.
+ * A parameter's average from each month's value in each year of YEARS_GHCND (months[m][year - 1991], null where a
+ * month has none), by WMO-No. 1203's rules (4.3.2 and 4.4.2): each month the mean of its values where they are of at
+ * least 80% of the period's years, times the month's share where one is given (a count of days made a share by
+ * monthValue, times MONTH_DAYS). The period is the longest of at least ten years (an average, as chapter 3 defines it:
+ * over any period), from a year with a month of it to another, whose every month is averaged so, the latest of the
+ * longest; 1991-2020, the climatological standard normal, where the records allow it. None where no period is.
  */
-export function parseGhcnd(json: string): SourceStation[] {
-  const data = JSON.parse(json) as { stations: { id: string; country: string; name: string; latitude: number; longitude: number; elevation: number; days: string }[] };
+export function averaged(months: readonly (readonly (number | null)[])[], scale?: readonly number[]): { period: string; normal: Months } | undefined {
   const [first, last] = YEARS_GHCND;
   // Every period of ten years or more, longest first, then latest.
   // Stryker disable next-line ArrayDeclaration: an entry that is no period of the years is skipped as one no record fills.
   const periods: [number, number][] = [];
   // Stryker disable next-line ArithmeticOperator: a longer first length only adds lengths no period of the years can have.
   for (let length = last - first + 1; length >= 10; length -= 1) for (let to = last; to - length + 1 >= first; to -= 1) periods.push([to - length + 1, to]);
-  const out: SourceStation[] = [];
-  for (const st of data.stations) {
+  for (const [from, to] of periods) {
+    // A period begins and ends with a year it has a month of.
+    if (months.every((years) => years[from - first] === null) || months.every((years) => years[to - first] === null)) continue;
+    const normal = months.map((years, m) => {
+      const values = years.slice(from - first, to - first + 1).filter((v) => v !== null);
+      if (values.length * 5 < (to - from + 1) * 4) return NaN;
+      return round1((values.reduce((a, b) => a + b, 0) / values.length) * (scale?.[m] ?? 1));
+    });
+    if (normal.every(Number.isFinite)) return { period: `${from}-${to}`, normal };
+  }
+  return undefined;
+}
+
+/** A station once for each period its parameters are averaged over ("<id>:<period>"), with the parameters of that period. */
+export function byPeriod(station: Omit<SourceStation, 'period' | 'normals'>, averages: readonly (readonly [Param, { period: string; normal: Months } | undefined])[]): SourceStation[] {
+  const periods = new Map<string, Partial<Record<Param, Months>>>();
+  for (const [param, a] of averages) if (a !== undefined) periods.set(a.period, { ...periods.get(a.period), [param]: a.normal });
+  return [...periods].map(([period, normals]) => ({ ...station, id: `${station.id}:${period}`, period, normals }));
+}
+
+/**
+ * NOAA NCEI's GHCN-Daily records (R-0073), each station's days of 1991 to 2020 as "date;precipitation;flags;maximum;
+ * flags;minimum;flags" in tenths of a millimetre and of a degree: a day counts where its quality flag (the flags'
+ * second) is blank, each parameter averaged by averaged. A station is kept once for each period, with the parameters
+ * of that period.
+ */
+export function parseGhcnd(json: string): SourceStation[] {
+  const data = JSON.parse(json) as { stations: { id: string; country: string; name: string; latitude: number; longitude: number; elevation: number; days: string }[] };
+  return data.stations.flatMap((st) => {
     const daily = { tmax: new Map<string, number>(), tmin: new Map<string, number>(), prcp: new Map<string, number>() };
     for (const line of st.days.split('\n')) {
       const [date, prcp, prcpFlags, tmax, tmaxFlags, tmin, tminFlags] = line.split(';') as [string, string, string, string, string, string, string];
@@ -900,36 +943,114 @@ export function parseGhcnd(json: string): SourceStation[] {
         if (value !== '' && flags.split(',')[1] === '') daily[element].set(date, Number(value) / 10);
       }
     }
-    const byPeriod = new Map<string, Partial<Record<Param, Months>>>();
-    for (const [param, element] of DAILY_GHCND) {
-      // Each month's value in each year, null where it has none.
-      const months = MONTH_DAYS.map((_, m) =>
-        Array.from({ length: last - first + 1 }, (_, i) => {
-          const year = first + i;
-          const length = new Date(Date.UTC(year, m + 1, 0)).getUTCDate();
-          return monthValue(param, Array.from({ length }, (_, d) => daily[element].get(`${year}-${String(m + 1).padStart(2, '0')}-${String(d + 1).padStart(2, '0')}`) ?? null));
-        }),
-      );
-      for (const [from, to] of periods) {
-        // A period begins and ends with a year it has a month of.
-        if (months.every((years) => years[from - first] === null) || months.every((years) => years[to - first] === null)) continue;
-        const normal = months.map((years, m) => {
-          const values = years.slice(from - first, to - first + 1).filter((v) => v !== null);
-          if (values.length * 5 < (to - from + 1) * 4) return NaN;
-          const mean = values.reduce((a, b) => a + b, 0) / values.length;
-          return round1(param === 'wet' ? mean * (MONTH_DAYS[m] as number) : mean);
-        });
-        if (!normal.every(Number.isFinite)) continue;
-        const period = `${from}-${to}`;
-        byPeriod.set(period, { ...byPeriod.get(period), [param]: normal });
-        break;
-      }
-    }
-    for (const [period, normals] of byPeriod) {
-      out.push({ id: `ghcnd:${st.id}:${period}`, name: st.name.replace(/, [A-Z]{2}$/, ''), country: st.country, latitude: st.latitude, longitude: st.longitude, elevation: st.elevation, period, normals });
-    }
+    const station = { id: `ghcnd:${st.id}`, name: st.name.replace(/, [A-Z]{2}$/, ''), country: st.country, latitude: st.latitude, longitude: st.longitude, elevation: st.elevation };
+    return byPeriod(station, DAILY_GHCND.map(([param, element]) => [param, averaged(dailyMonths(param, daily[element]), param === 'wet' ? MONTH_DAYS : undefined)]));
+  });
+}
+
+/**
+ * The Servei Meteorològic Nacional d'Andorra's daily values at Roc St. Pere (R-0077), each month's days as "day;maximum;
+ * minimum;precipitation;sunshine;irradiation" as its workbooks give them ("27,9", the sunshine as "5h 38"), averaged as
+ * NOAA's daily records are (averaged). A day of no sunshine under a sky that let through more than 60% of the month's
+ * highest irradiation is the recorder's gap, not a reading: the recorder read 0 hours on nearly every day from July
+ * 2016 to June 2017, and through August 2014, under full sun.
+ */
+export function parseMeteoAd(json: string): SourceStation[] {
+  const data = JSON.parse(json) as { station: { name: string; latitude: number; longitude: number; elevation: number }; months: { year: number; month: number; days: string }[] };
+  // A day without a value is held as none (undefined), as one not given is.
+  const daily = { tmax: new Map<string, number | undefined>(), tmin: new Map<string, number | undefined>(), prcp: new Map<string, number | undefined>(), sun: new Map<string, number | undefined>() };
+  const number = (v: string | undefined) => (v ? Number(v.replace(',', '.')) : undefined);
+  for (const { year, month, days } of data.months) {
+    const rows = days.split('\n').map((l) => l.split(';'));
+    const irradiation = rows.map((r) => number(r[5]) ?? 0);
+    const highest = Math.max(...irradiation);
+    rows.forEach(([day, tmax, tmin, prcp, sun], i) => {
+      const date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      for (const [element, value] of [['tmax', number(tmax)], ['tmin', number(tmin)], ['prcp', number(prcp)]] as const) daily[element].set(date, value);
+      const hours = /(\d+)h (\d+)/.exec(sun as string);
+      const reading = hours === null ? undefined : Number(hours[1]) + Number(hours[2]) / 60;
+      if (!(reading === 0 && (irradiation[i] as number) > 0.6 * highest)) daily.sun.set(date, reading);
+    });
   }
-  return out;
+  const station = { id: 'meteoad:99130005', name: data.station.name, country: 'AD', latitude: data.station.latitude, longitude: data.station.longitude, elevation: data.station.elevation };
+  return byPeriod(station, PARAMS.map((param) => [param, averaged(dailyMonths(param, daily[param === 'wet' ? 'prcp' : param]), param === 'wet' ? MONTH_DAYS : undefined)]));
+}
+
+/** Each month's value in each year of YEARS_GHCND (months[m][year - 1991]) from a year's row of twelve, null where a cell is empty or no number. */
+export function yearlyMonths(rows: ReadonlyMap<number, readonly string[]>): (number | null)[][] {
+  const [first, last] = YEARS_GHCND;
+  return MONTH_DAYS.map((_, m) =>
+    // Stryker disable next-line ArithmeticOperator: a year past 2020 is never read by averaged.
+    Array.from({ length: last - first + 1 }, (_, i) => {
+      const v = Number(rows.get(first + i)?.[m]?.trim() || NaN);
+      return Number.isFinite(v) ? v : null;
+    }),
+  );
+}
+
+/**
+ * The Deutscher Wetterdienst's monthly CLIMAT values (R-0083), each station's file for each parameter a row a year
+ * ("1991;232.0;205.0;;...", a month empty where it has none) of the service's monthly CLIMAT reports: the mean daily
+ * maximum and minimum, the days of at least 1 mm and the hours of sunshine, each averaged over its years (averaged).
+ */
+export function parseClimat(json: string): SourceStation[] {
+  const data = JSON.parse(json) as { stations: { wmo: string; country: string; name: string; latitude: number; longitude: number; elevation: number; files: Partial<Record<Param, { text: string }>> }[] };
+  return data.stations.flatMap((st) => {
+    const station = { id: `climat:${st.wmo}`, name: st.name, country: st.country, latitude: st.latitude, longitude: st.longitude, elevation: st.elevation };
+    const averages = Object.entries(st.files).map(([param, { text }]) => {
+      const rows = new Map(text.split('\n').map((row) => [Number(row.split(';')[0]), row.split(';').slice(1)] as const));
+      return [param as Param, averaged(yearlyMonths(rows))] as const;
+    });
+    return byPeriod(station, averages);
+  });
+}
+
+/**
+ * Météo-France's daily climatological base for Saint-Martin (R-4238), each station's days of 1991 to 2020 as
+ * "date;precipitation;code;minimum;code;maximum;code": a day counts where its quality code is 0 (protected: validated
+ * for good) or 1 (validated), not 2 (doubtful, under checking) or 9 (filtered: through the first checks only), each
+ * parameter averaged as NOAA's daily records are (averaged).
+ */
+export function parseMeteoFranceDaily(json: string): SourceStation[] {
+  const data = JSON.parse(json) as { stations: { id: string; name: string; latitude: number; longitude: number; elevation: number; days: string }[] };
+  return data.stations.flatMap((st) => {
+    const daily = { prcp: new Map<string, number>(), tmin: new Map<string, number>(), tmax: new Map<string, number>() };
+    for (const line of st.days.split('\n')) {
+      const [d, ...f] = line.split(';') as [string, ...string[]];
+      const date = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
+      (['prcp', 'tmin', 'tmax'] as const).forEach((element, i) => {
+        const [value, code] = [f[2 * i] as string, f[2 * i + 1]];
+        if (value !== '' && (code === '0' || code === '1')) daily[element].set(date, Number(value));
+      });
+    }
+    const station = { id: `mfd:${st.id}`, name: st.name, country: 'MF', latitude: st.latitude, longitude: st.longitude, elevation: st.elevation };
+    return byPeriod(station, DAILY_GHCND.map(([param, element]) => [param, averaged(dailyMonths(param, daily[element]), param === 'wet' ? MONTH_DAYS : undefined)]));
+  });
+}
+
+/**
+ * The Statistics Department of Montserrat's tables from John A. Osborne Airport (R-4239): a row for each year's "MAX"
+ * and "MIN" average temperature and its "Rainfall (mm)", a column a month under "JAN" to "DEC" ("-" where none), the
+ * year on the first of its rows; the rain days, of no stated threshold, aren't read. Each averaged over its years
+ * (averaged); the station's place and height are NOAA's station history's (its line for TRPG), the tables giving none.
+ */
+export function parseMontserrat(json: string): SourceStation[] {
+  const data = JSON.parse(json) as { workbooks: Record<'temperature' | 'rain', { sheets: Record<string, string[][]> }>; station: string };
+  const read = (book: 'temperature' | 'rain', label: string) => {
+    const rows = Object.values(data.workbooks[book].sheets)[0] as string[][];
+    const jan = (rows.find((r) => r.includes('JAN')) as string[]).indexOf('JAN');
+    const years = new Map<number, string[]>();
+    let year = NaN;
+    for (const row of rows) {
+      // A year's first row names it; its others leave the cell empty or blank.
+      if (row[1]?.trim()) year = Number(row[1]);
+      if (row[2]?.trim() === label) years.set(year, row.slice(jan, jan + 12));
+    }
+    return averaged(yearlyMonths(years));
+  };
+  const [, , name, , , , latitude, longitude, elevation] = data.station.split(',').map((f) => f.replace(/"/g, ''));
+  const station = { id: 'montserrat:trpg', name: name as string, country: 'MS', latitude: Number(latitude), longitude: Number(longitude), elevation: Number(elevation) };
+  return byPeriod(station, [['tmax', read('temperature', 'MAX')], ['tmin', read('temperature', 'MIN')], ['prcp', read('rain', 'Rainfall (mm)')]]);
 }
 
 const MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -1132,7 +1253,8 @@ export function compileStations(
     out.push(...stations.map((st) => ({ ...st, latitude: round4(st.latitude), longitude: round4(st.longitude) })));
   }
   // A 1981-2010 station, then a national service's own, then the Deutscher Wetterdienst's normals and its Klimatafeln,
-  // then a World Weather Information Service city, then an average of NOAA's daily records, stands only for what its
+  // then a World Weather Information Service city, then an average of NOAA's daily records or of another service's own
+  // (Andorra's, the CLIMAT reports', Météo-France's daily base, Montserrat's; since 2026-11-02), stands only for what its
   // country has from none of the sets before.
   const fill = (stations: readonly SourceStation[]) => {
     const has = new Set(out.flatMap((s) => Object.keys(s.normals).map((p) => `${s.country}|${p}`)));
@@ -1175,7 +1297,9 @@ export function readStations(root: string, towns: readonly Town[]): Station[] {
   const wwis = pinned(root, SOURCE_WWIS.file, SOURCE_WWIS.sha256, 'utf8');
   const s8110 = Object.entries(SOURCES_8110).flatMap(([country, f]) => parse8110(country, pinned(root, f.file, f.sha256, 'latin1')));
   const outlines = readOutlines(pinned(root, OUTLINES.file, OUTLINES.sha256, 'utf8'));
-  return compileStations(parse9120(files), parse6190(normals, stations), s8110, national, parseDwd(pinned(root, SOURCE_DWD.file, SOURCE_DWD.sha256, 'utf8')), parseKlimatafeln(pinned(root, SOURCE_KT.file, SOURCE_KT.sha256, 'utf8')), parseWwis(wwis), parseGhcnd(pinned(root, SOURCE_GHCND.file, SOURCE_GHCND.sha256, 'utf8')), towns, outlines);
+  const read = (f: Pin) => pinned(root, f.file, f.sha256, 'utf8');
+  const computed = [...parseMeteoAd(read(SOURCES_COMPUTED.meteoad)), ...parseClimat(read(SOURCES_COMPUTED.climat)), ...parseMeteoFranceDaily(read(SOURCES_COMPUTED.mfd)), ...parseMontserrat(read(SOURCES_COMPUTED.montserrat))];
+  return compileStations(parse9120(files), parse6190(normals, stations), s8110, national, parseDwd(pinned(root, SOURCE_DWD.file, SOURCE_DWD.sha256, 'utf8')), parseKlimatafeln(pinned(root, SOURCE_KT.file, SOURCE_KT.sha256, 'utf8')), parseWwis(wwis), [...parseGhcnd(pinned(root, SOURCE_GHCND.file, SOURCE_GHCND.sha256, 'utf8')), ...computed], towns, outlines);
 }
 
 /** Compact: a station per array (id, name, town, country, latitude, longitude, height, period), its parameters as twelve months or null, in PARAMS' order. */

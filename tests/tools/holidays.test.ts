@@ -95,10 +95,14 @@ describe('the holidays\' coverage', () => {
       ['world.holidays.JJ', 'R-8'],
       ['world.holidays.blocked.JJ.02', 'R-9'],
       ['world.holidays.blocked.JJA', 'R-10'],
+      // A region's own found on its own is cited with its country's lists; another country's beginning alike isn't.
+      ['world.holidays.AA.01', 'R-11'],
+      ['world.holidays.AAB.01', 'R-12'],
+      ['world.holidays.AAB', 'R-13'],
     ]);
     const rows = holidaysCoverage(['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'II', 'JJ'], new Set(['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG', 'II', 'JJ']), rules, facts);
     expect(rows).toStrictEqual([
-      { key: 'AA', status: 'researched', register: ['R-1'], tests: TESTS },
+      { key: 'AA', status: 'researched', register: ['R-1', 'R-11'], tests: TESTS },
       { key: 'BB', status: 'researched', register: ['R-0036', 'R-0106', 'R-0107', 'R-0108', 'R-2'], tests: TESTS },
       { key: 'CC', status: 'researched', register: ['R-0107', 'R-3'], tests: TESTS },
       { key: 'DD', status: 'blocked', register: ['R-4'], tests: [...TESTS, TOLD] },

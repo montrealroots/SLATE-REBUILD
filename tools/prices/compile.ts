@@ -189,7 +189,8 @@ export function decimal(num: bigint, den: bigint): string {
 
 /**
  * A benchmark level carried forward to the last year the country's index reaches (CARRIED_TO, or a year from FROM on
- * where its office hasn't published that one yet, as the World Bank keeps a 2024 level where it has no 2025): times
+ * where its office hasn't published that one yet, or published it against its own rates, as the Northern Mariana Islands'
+ * 2025 was, as the World Bank keeps a 2024 level where it has no 2025): times
  * the country's index's change, over the United States' to the same year.
  */
 export function carryForward(ppp: string, own: Indices, us: Indices, code: string): Level {

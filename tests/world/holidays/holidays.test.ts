@@ -58,7 +58,7 @@ describe('the holidays of every country kept', () => {
         }
       }
     }
-    expect(read).toBe(660);
+    expect(read).toBe(673);
   });
   it('are each a country of the map with its lists, their regions its own, their substitutes the engine reckons', () => {
     expect(Object.keys(RULES).sort()).toEqual(LISTS.map((l) => l.country).sort());
@@ -329,10 +329,14 @@ describe('the holidays', () => {
   });
   it("tell the player where a region's own aren't kept", () => {
     expect(REGION_UNKEPT_LINE).toBe('holidays.region-unkept');
-    // Prince Edward Island's own aren't read (the register's blocker), so it keeps Canada's; Quebec keeps its own law's.
-    expect(aboutHolidays('CA', 2026, 'CA.09')).toBe(t(REGION_UNKEPT_LINE, { region: 'Prince Edward Island', country: 'Canada' }));
-    expect(aboutHolidays('CA', 2026, 'CA.09')).toBe("Prince Edward Island's own holidays aren't on this calendar yet, so it keeps Canada's national ones.");
-    expect(holidaysOf('CA', 2026, 'CA.09')).toEqual(holidaysOf('CA', 2026));
+    // Ladakh's own aren't read (the register's blocker), so it keeps India's; Kerala keeps its Reserve Bank office's, and
+    // Prince Edward Island (its blocker found 2026-11-02) its own law's, as Quebec does.
+    expect(aboutHolidays('IN', 2026, 'IN.41')).toBe(t(REGION_UNKEPT_LINE, { region: 'Ladakh', country: 'India' }));
+    expect(aboutHolidays('IN', 2026, 'IN.41')).toBe("Ladakh's own holidays aren't on this calendar yet, so it keeps India's national ones.");
+    expect(holidaysOf('IN', 2026, 'IN.41')).toEqual(holidaysOf('IN', 2026));
+    expect(aboutHolidays('IN', 2026, 'IN.13')).toBeUndefined();
+    expect(aboutHolidays('CA', 2026, 'CA.09')).toBeUndefined();
+    expect(holidaysOf('CA', 2026, 'CA.09').map((h) => h.name)).toContain('Islander Day');
     expect(aboutHolidays('CA', 2026, 'CA.10')).toBeUndefined();
     expect(aboutHolidays('CA', 2026)).toBeUndefined();
     expect(aboutHolidays('US', 2026, 'US.CA')).toBeUndefined();
@@ -340,12 +344,15 @@ describe('the holidays', () => {
   });
   it("tell the player where a region's days off in place of its holidays aren't kept", () => {
     expect(REGION_UNMOVED_LINE).toBe('holidays.region-unmoved');
-    // Kelantan's own days are kept, but not its rule for one on its weekly holiday, Friday (the register's blocker); Selangor's is.
-    expect(aboutHolidays('MY', 2026, 'MY.03')).toBe(t(REGION_UNMOVED_LINE, { region: 'Kelantan' }));
-    expect(aboutHolidays('MY', 2026, 'MY.03')).toBe("When a holiday in Kelantan falls on its weekly day of rest, the day off given in its place isn't on this calendar.");
-    expect(holidaysOf('MY', 2026, 'MY.03').some((h) => h.name === 'Hari Keputeraan Sultan Kelantan')).toBe(true);
+    // Terengganu's own days are kept, but not its rule for one on its weekly holiday, Friday (the register's blocker); Selangor's
+    // is, and Kelantan's (its blocker found 2026-11-02: Saturday's Nuzul Al-Quran, 7 March 2026, is off on the Sunday).
+    expect(aboutHolidays('MY', 2026, 'MY.13')).toBe(t(REGION_UNMOVED_LINE, { region: 'Terengganu' }));
+    expect(aboutHolidays('MY', 2026, 'MY.13')).toBe("When a holiday in Terengganu falls on its weekly day of rest, the day off given in its place isn't on this calendar.");
+    expect(holidaysOf('MY', 2026, 'MY.13').some((h) => h.name === 'Hari Keputeraan Sultan Terengganu')).toBe(true);
     expect(aboutHolidays('MY', 2026, 'MY.12')).toBeUndefined();
-    expect(aboutHolidays('MY', 2028, 'MY.03')).toBe(t(UNANNOUNCED_LINE, { place: 'Malaysia', year: '2027' }));
+    expect(aboutHolidays('MY', 2026, 'MY.03')).toBeUndefined();
+    expect(holidayOn('MY', day('2026-03-08'), 'MY.03')?.name).toBe('Hari Nuzul Al-Quran');
+    expect(aboutHolidays('MY', 2028, 'MY.13')).toBe(t(UNANNOUNCED_LINE, { place: 'Malaysia', year: '2027' }));
     expect(aboutHolidays('MY', 2026)).toBeUndefined();
     expect(isLine(REGION_UNMOVED_LINE)).toBe(true);
   });

@@ -125,8 +125,8 @@ export interface CountryRules {
   regional?: string[];
   /**
    * The first-level regions whose rule for a holiday on their weekly day of rest the game hasn't read: their holidays
-   * are kept, the days off in place of them aren't (Malaysia's Kedah, Kelantan and Terengganu, whose weekly holiday
-   * is Friday).
+   * are kept, the days off in place of them aren't (Malaysia's Kedah and Terengganu, whose weekly holiday is Friday;
+   * Kelantan's rule was read on 2026-11-02 and its days in place are kept by their dates).
    */
   unmoved?: string[];
   /** A day between two holidays (not substitutes) is one too, by this name (Japan's Act on National Holidays, article 3(3)). */

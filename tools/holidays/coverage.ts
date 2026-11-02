@@ -4,7 +4,8 @@ import type { When } from '../../src/world/holidays/rules.ts';
 /**
  * The holidays' coverage matrix (coverage/holidays-countries.json), from the rules and the register: a country whose
  * rules are kept and whose official lists the register holds (world.holidays.<code>) is researched, citing those and
- * the reckonings its rules stand on (the calendars, the two Easters, the clock's equinoxes); such a country with a region
+ * the reckonings its rules stand on (the calendars, the two Easters, the clock's equinoxes) and any region's own found on its
+ * own (world.holidays.<region>: Prince Edward Island's, found 2026-11-02 after its blocker); such a country with a region
  * whose own the register couldn't find (world.holidays.blocked.<region>) is blocked, citing that blocker too; one without is blocked where the
  * register holds its blocker (world.holidays.blocked.<code>), else pending; a country with no place of its own is
  * proven by the gazetteer's test that it has none.
@@ -47,7 +48,8 @@ export function holidaysCoverage(countries: readonly string[], withPlaces: Reado
     if (kept !== undefined && 'holidays' in kept && lists !== undefined) {
       const others = of === undefined ? [] : [facts.get(`world.holidays.${of}`) as string];
       const regions = [...facts].filter(([fact]) => fact.startsWith(`world.holidays.blocked.${key}.`)).map(([, id]) => id);
-      const register = new Set([lists, ...others, ...regions, ...kept.holidays.flatMap((r) => reckonings(r.when, r.shift !== undefined))]);
+      const found = [...facts].filter(([fact]) => fact.startsWith(`world.holidays.${key}.`)).map(([, id]) => id);
+      const register = new Set([lists, ...others, ...found, ...regions,...kept.holidays.flatMap((r) => reckonings(r.when, r.shift !== undefined))]);
       return regions.length > 0 ? { key, status: 'blocked', register: [...register].sort(), tests: [...TESTS, TOLD_REGION] } : { key, status: 'researched', register: [...register].sort(), tests: TESTS };
     }
     const blocker = facts.get(`world.holidays.blocked.${key}`);

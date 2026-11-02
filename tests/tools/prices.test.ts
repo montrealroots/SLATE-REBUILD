@@ -57,6 +57,12 @@ describe('the price levels compiler', () => {
     expect(levels['BQ']).toEqual({ ppp: '0.734067268186', year: 2025 });
     // Mayotte's 2022 is given through 2023, across its change of method.
     expect(levels['YT']).toEqual({ ppp: '0.81394825101', year: 2025 });
+    // Saint Kitts and Nevis, by the Department's index (2025's months as the ECCB carries them); the Northern Mariana
+    // Islands by Saipan's, to 2024 only, the Division's 2025 levels contradicting its own rates.
+    expect([levels['KN'], levels['MP']]).toEqual([
+      { ppp: '2.070980557536', year: 2025 },
+      { ppp: '0.817883459054', year: 2024 },
+    ]);
     expect([levels['AR'], levels['AD']]).toEqual([
       { ppp: '661.287794234474', year: 2025 },
       { ppp: '0.636851408291', year: 2025 },
