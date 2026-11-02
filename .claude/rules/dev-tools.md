@@ -21,7 +21,7 @@ never outrank them. Where one of them says otherwise, this is what holds:
   of the overlapping skills per task, and check a finding before acting on it.
 - **Git.** Work stays on the designated branch: no worktrees or new branches unless asked; finishing-a-development-
   branch never merges to `main`, opens a pull request or deploys without the owner's word; never force-push.
-- **The look.** Impeccable critiques against `docs/kept/01-startup-and-persistence/tokens.css` and `docs/SCREENS.md`;
+- **The look.** Impeccable critiques against `docs/kept/01-startup-and-persistence/tokens.css` and `CLAUDE.md`'s rule on the look;
   it does not replace them, and `/impeccable init` writes no PRODUCT.md or DESIGN.md that contradicts the package.
   Its telemetry is off for this project (`.impeccable/config.json`).
 - **Graphify is a map, not a source.** The graph is built from code by local parsing (`GRAPHIFY_BACKEND=none`; a
