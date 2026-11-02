@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 0
+Layer in progress: 1
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -12,10 +12,10 @@ Read `CLAUDE.md` first.
 - The development tools are set up (`tools/setup/README.md`; `bash tools/setup/verify.sh` reports each one).
 - 1221's rules, then SLATE's, are in `CLAUDE.md` and `.claude/rules/`, with `docs/STYLE.md` and `docs/GLOSSARY.md`,
   without SLATE's one-agent rule or 1221's Base44 deployment. Layer 6 (the voice) is dropped (2026-11-02).
-- Layer 0 (the repository and the gate) is built. It is proven when a green full gate (`npm run gate:full`) on a
-  committed tree, in a fresh clone, is recorded in `registry/layers.json` (layer, commit, date, evidence) in the
-  commit after it. Layers 1 to 7 have not started; the gate refuses code in a layer until every layer under it is
-  recorded proven.
+- Layer 0 (the repository and the gate) is proven: the full gate green in a fresh clone of the branch at
+  `80e8d7438f9b`, recorded in `registry/layers.json` (2026-11-02). Layer 1 (the core) is in progress and has not
+  started; nothing in it comes over until the owner picks it. Layers 2 to 7 have not started (6 is dropped); the gate
+  refuses code in a layer until every layer under it is recorded proven.
 
 What layer 0 holds, ported from SLATE's gate as it stood on 2026-11-02 (`montrealroots/SLATE` at `acf1874`), which
 SLATE proved at a 100% mutation score:
@@ -80,15 +80,20 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. Commit layer 0, run `npm run gate:full` in a fresh clone of the committed branch, and record the proof in
-   `registry/layers.json` and this file (layer 1 then in progress), in the commit after it.
-2. Push the branch and read the CI run of the full gate.
-3. The owner pulls and merges, then picks what comes over in layer 1 (the core).
+1. The owner pulls and merges layer 0.
+2. The owner picks what comes over in layer 1, the core: from SLATE, `core.time`, `core.rng`, `core.money`,
+   `core.frame`, `core.text` and `core.persistence`. With `core.text` come the title-case check and the checks of
+   the catalog's lines (plural-check, voice-check, tics, spelling, typos), before the first label is drawn.
 
 ## Verification evidence
 
-- `npm run gate` on the working tree before the layer-0 commit: see the commit's `Gate:` trailer.
-- The proof run is recorded here and in `registry/layers.json` when it is made.
+- Layer 0's proof: `npm run gate:full` green in a fresh clone of the branch at `80e8d7438f9b`, after
+  `npx -y npm@11.6.2 ci`: every check green; 225 of 225 tests; audit 0 advisories; mutation 100.00% (2,668 of 2,668
+  mutants killed, static mutants included); 357 s.
+- The full gate before it, at `b173964`, scored 99.89% (2,669 of 2,672), here and in CI run 1: three mutants
+  survived (one equivalent in doc-refs, an ordering no test gave in effects, a key no test held absent in the
+  layer ledger). `80e8d74` killed them; a mutation run over the three files killed all 571 of their mutants before
+  the proof.
 
 ## Assumptions
 
@@ -105,6 +110,9 @@ SLATE proved at a 100% mutation score:
 ## Blockers and open issues
 
 - None for layer 0.
+- CI warns that `actions/checkout@v4`, `actions/setup-node@v4` and `actions/upload-artifact@v4` target Node.js 20,
+  which GitHub now runs on Node.js 24. The workflow runs; moving to the actions' next major versions waits until each
+  is confirmed on its own release page.
 
 ## Questions for the owner
 
