@@ -41,6 +41,22 @@ sources say:
 - The catalog-text check stopped one of SLATE's lines ("so every day there is kept as an ordinary one", a place and a
   passive, not a "there's"); it now says "each day in {country} is kept as an ordinary one".
 - 1221's geo-check is held by the place axis and each engine's run over every place of the map.
+- Research, read again on 2026-11-02 at every one of the layer's 1,082 sources, every blocker tried again by all five
+  methods (eight research agents in parallel, three integrating, the lead verifying at the sources and holding the
+  register). Of 108 blockers, 15 were found: Andorra's and the Falklands' normals and parts of South Georgia's,
+  Saint-Martin's and Montserrat's (averaged from the services' own records by WMO-1203, as R-0073 did); St Kitts and
+  Nevis's and the Northern Mariana Islands' price levels (Saipan's index standing for the Commonwealth); the holidays of
+  Prince Edward Island, Yukon, Haryana, Andaman and Nicobar, South Australia, Kelantan, the Isle of Man, Tanzania, the
+  Bahamas, St Vincent and Brunei. Laos, Myanmar, Suriname, Gambia, Punjab and Kedah were found in part and stay blocked
+  on what's missing; Niue's normals (2 to 5 years) fall short of the WMO's rule. Held data found wrong and fixed: Ghana's
+  Boxing Day 2026 is observed Monday 28 December; Egypt lacked Sinai Liberation Day, 25 April 2026 (its entry, held at
+  second hand, now stands on the Cabinet's own decisions); India lacked six of the Reserve Bank's days. Newly
+  published and added: Oklahoma's 2027, Kyrgyzstan's 27 January 2027. Primaries found for CZ, GE, HR, BY and KH. The
+  register: 441 entries, 306 found, 42 secondary, 93 blocked; 893 sources that read the same are dated 2026-11-02.
+- What couldn't be reached today, recorded in each entry: web.archive.org (every archive attempt; Common Crawl's
+  copies stood in where it held one), and pages behind bot checks or failing TLS (Lithuania's e-seimas, PacLII,
+  gazettes.africa, the Marshall Islands' statistics office, Rwanda's and Botswana's data portals, the Bureau of
+  Meteorology). None was forced.
 
 What layer 1 holds, ported from SLATE's core (`montrealroots/SLATE` at `acf1874`), changed only where a ruling or
 today's sources say:
@@ -176,4 +192,10 @@ SLATE proved at a 100% mutation score:
 
 ## Questions for the owner
 
-- None open. The place count was answered on 2026-11-02: not 170,911; today's GeoNames release (`CLAUDE.md`).
+- Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
+  Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian
+  Development Bank's index, which it labels its own estimate), Turks and Caicos (yearly inflation rates only, no
+  index). Say if any should stand.
+- Kelantan's 2027 substitute days apply its 2026 rule before its 2027 instruction is published, and Tanzania's Eid
+  al-Hajj and Maulid 2026 are the stock exchange's dates pending the moon's sighting, as every lunar holiday is until
+  announced. Say if either should wait for the official notice instead.
