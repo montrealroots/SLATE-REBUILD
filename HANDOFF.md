@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 1
+Layer in progress: 2
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -15,9 +15,10 @@ Read `CLAUDE.md` first.
 - Layer 0 (the repository and the gate) is proven: the full gate green in a fresh clone of the branch at
   `80e8d7438f9b`, recorded in `registry/layers.json` (2026-11-02). The owner merged it (`ac96497`) and the branch
   restarted from `main` there.
-- Layer 1 (the core) is built: all six of SLATE's core engines, at the owner's word ("Every single one of them"). It is
-  proven when a green full gate in a fresh clone is recorded in `registry/layers.json`. Layers 2 to 7 have not started
-  (6 is dropped); the gate refuses code in a layer until every layer under it is recorded proven.
+- Layer 1 (the core) is proven: all six of SLATE's core engines, at the owner's word ("Every single one of them"), the
+  full gate green in a fresh clone of the branch at `47bfeac7fda9`, recorded in `registry/layers.json` (2026-11-02).
+  Layer 2 (the world) is in progress and has not started; nothing in it comes over until the owner picks it. Layers 3
+  to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
 
 What layer 1 holds, ported from SLATE's core (`montrealroots/SLATE` at `acf1874`), changed only where a ruling or
 today's sources say:
@@ -113,14 +114,16 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. Run `npm run gate:full` in a fresh clone of the committed branch, and record layer 1's proof in
-   `registry/layers.json` and this file (layer 2 then in progress), in the commit after it.
-2. The owner pulls and merges layer 1, then picks what comes over in layer 2, the world: from SLATE, `world.gazetteer`,
+1. The owner pulls and merges layer 1, then picks what comes over in layer 2, the world: from SLATE, `world.gazetteer`,
    `world.map`, `world.clock`, `world.weather`, `world.holidays` and `world.prices`. With the gazetteer comes 1221's
    geo-check (the place axis and the all-places test), and the place count is set to the GeoNames release it reads.
 
 ## Verification evidence
 
+- Layer 1's proof: `npm run gate:full` green in a fresh clone of the branch at `47bfeac7fda9`, after
+  `npx -y npm@11.6.2 ci`: every check green; 1,181 of 1,181 tests, the zic and zdump oracle and the ICU comparison
+  among them; audit 0 advisories; mutation 100.00% (5,745 of 5,745 mutants killed, static mutants included); 778 s. It
+  passed on the first full run.
 - Layer 0's proof: `npm run gate:full` green in a fresh clone of the branch at `80e8d7438f9b`, after
   `npx -y npm@11.6.2 ci`: every check green; 225 of 225 tests; audit 0 advisories; mutation 100.00% (2,668 of 2,668
   mutants killed, static mutants included); 357 s.
