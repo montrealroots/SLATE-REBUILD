@@ -1,1 +1,55 @@
-{}
+{
+  "core.time": {
+    "layer": 1,
+    "dir": "src/core/time",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/time-zones.json",
+      "coverage/time-calendar.json",
+      "coverage/time-sun.json",
+      "coverage/time-local.json"
+    ]
+  },
+  "core.rng": {
+    "layer": 1,
+    "dir": "src/core/rng",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/rng-operations.json",
+      "coverage/rng-deciders.json"
+    ]
+  },
+  "core.money": {
+    "layer": 1,
+    "dir": "src/core/money",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/money-currencies.json",
+      "coverage/money-operations.json"
+    ]
+  },
+  "core.frame": {
+    "layer": 1,
+    "dir": "src/core/frame",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/frame-operations.json"
+    ]
+  },
+  "core.text": {
+    "layer": 1,
+    "dir": "src/core/text",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/text-operations.json"
+    ]
+  },
+  "core.persistence": {
+    "layer": 1,
+    "dir": "src/core/persistence",
+    "readsPlace": false,
+    "matrices": [
+      "coverage/persistence-operations.json"
+    ]
+  }
+}

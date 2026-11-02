@@ -7,7 +7,7 @@
 export default {
   testRunner: 'vitest',
   plugins: ['@stryker-mutator/vitest-runner'],
-  vitest: { configFile: 'vitest.config.ts' },
+  vitest: { configFile: 'vitest.stryker.config.ts' },
   // The gate, the app and the tools that make its data; not the scripts that only fetch research or run other tools.
   mutate: [
     'gate/**/*.ts',
@@ -19,6 +19,9 @@ export default {
     '!gate/test/**',
     '!gate/cli.ts',
     '!gate/lock-owner-docs.ts',
+    '!tools/research/**',
+    '!tools/tzdb/zdump-sample.ts',
+    '!tools/**/build.ts',
     '!**/*.test.ts',
   ],
   coverageAnalysis: 'perTest',

@@ -1,0 +1,10 @@
+import { defineConfig, mergeConfig } from 'vitest/config';
+import base from './vitest.config.ts';
+
+/**
+ * Mutation testing runs the suite once per mutant (the whole suite for each static mutant), so it leaves out the
+ * exhaustive oracle runs (every zone against zic and against ICU, tens of seconds each); the sample of zones held to the
+ * oracle in tests/core/time/zones.test.ts and the unit tests stand in for them there. The gate's own test run keeps them.
+ * (SLATE also left out its runs over every place of the map, `*.places.test.ts`, which arrive here with layer 2.)
+ */
+export default mergeConfig(base, defineConfig({ test: { exclude: ['**/node_modules/**', '.stryker-tmp/**', 'tests/**/*.oracle.test.ts', 'tests/**/*.icu.test.ts', 'tests/**/*.places.test.ts'] } }));

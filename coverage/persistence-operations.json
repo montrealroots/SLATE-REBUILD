@@ -1,0 +1,115 @@
+{
+ "engine": "core.persistence",
+ "axis": "persistence-operation",
+ "universe": {
+  "keys": [
+   "versions-pinned",
+   "reading-a-kept-life",
+   "gzip",
+   "indexeddb",
+   "local-storage-fallback",
+   "copy-before-every-write",
+   "unreadable-lives-and-copies",
+   "letting-a-life-go",
+   "bringing-the-copy-back",
+   "device-slots",
+   "save-load-continue"
+  ]
+ },
+ "rows": [
+  {
+   "key": "versions-pinned",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::the versions > are pinned: the shape a life is kept in at a whole version from 1, and the build's is the package's"
+   ]
+  },
+  {
+   "key": "reading-a-kept-life",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::a kept life's text > reads back as it was written",
+    "tests/core/persistence/local.test.ts::a kept life's text > says the file is damaged, or not a SLATE life, never the parser's words",
+    "tests/core/persistence/local.test.ts::a kept life's text > knows a life from a newer build"
+   ]
+  },
+  {
+   "key": "gzip",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::packing > gzips a life and marks it, and reads it back",
+    "tests/core/persistence/local.test.ts::packing > reads a plain life as it is, and says a damaged packed one is damaged",
+    "tests/core/persistence/local.test.ts::packing > without compression in the browser, keeps it plain, and says a packed one can't be opened"
+   ]
+  },
+  {
+   "key": "indexeddb",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::the key stores > IndexedDB: reads, writes and removes, in this build's own database",
+    "tests/core/persistence/local.test.ts::the key stores > IndexedDB: a database that won't open is tried again",
+    "tests/core/persistence/local.test.ts::the key stores > IndexedDB: a transaction that fails or is aborted rejects with its error",
+    "tests/core/persistence/local.test.ts::the key stores > the device's: IndexedDB where there is one, local storage otherwise",
+    "tests/core/persistence/local.test.ts::lives kept on this device > use the device's own store when given none",
+    "tests/core/persistence/local.test.ts::the key stores > the device's: local storage from the first time IndexedDB won't open, and only then"
+   ]
+  },
+  {
+   "key": "local-storage-fallback",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::the key stores > local storage: reads, writes and removes, and says when there is none",
+    "tests/core/persistence/local.test.ts::the key stores > the device's: IndexedDB where there is one, local storage otherwise",
+    "tests/core/persistence/local.test.ts::the key stores > the device's: local storage from the first time IndexedDB won't open, and only then",
+    "tests/core/persistence/local.test.ts::the key stores > the device's: a life kept in local storage while IndexedDB wouldn't open is found once it does"
+   ]
+  },
+  {
+   "key": "copy-before-every-write",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::lives kept on this device > keep a copy of what was there before each write",
+    "tests/core/persistence/local.test.ts::lives kept on this device > leave the place as it was when a write fails, and say why"
+   ]
+  },
+  {
+   "key": "unreadable-lives-and-copies",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::lives kept on this device > say when the storage itself can't be read",
+    "tests/core/persistence/local.test.ts::lives kept on this device > say a life that can't be read can't, and offer only a copy that can"
+   ]
+  },
+  {
+   "key": "letting-a-life-go",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::lives kept on this device > let a life go keeping it as the copy, but never write a damaged one over a good copy",
+    "tests/core/persistence/local.test.ts::lives kept on this device > let a life go on a full device, its copy written into the room it left, or the copy before kept"
+   ]
+  },
+  {
+   "key": "bringing-the-copy-back",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::lives kept on this device > bring the copy back as the life, the life it replaces becoming the copy"
+   ]
+  },
+  {
+   "key": "device-slots",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/local.test.ts::lives kept on this device > start with three empty places and no copies",
+    "tests/core/persistence/local.test.ts::lives kept on this device > keep a life packed under its own key, and say what it holds without opening it",
+    "tests/core/persistence/local.test.ts::lives kept on this device > keep this build's lives apart from the first SLATE's saves"
+   ]
+  },
+  {
+   "key": "save-load-continue",
+   "status": "proven",
+   "tests": [
+    "tests/core/persistence/continue.test.ts::a life saved, opened and played on > ends where the life never saved ends"
+   ]
+  }
+ ]
+}
