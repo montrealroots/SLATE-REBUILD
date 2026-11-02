@@ -86,6 +86,13 @@ describe('the effects check', () => {
         '',
       ].join('\n'),
     );
+    // The proofs are listed in file and test order, however the parallel run recorded them.
+    const reversed = checkEffects(
+      fixture({ [R]: registry, [ENGINE]: engine, [READER]: reader }).repo,
+      [{ feature: 'thing.make', claim: 'bites', file: T, test: 'thing > makes again' }, ...proofs],
+      { passed: new Set([...passed, `${T}::thing > makes again`]) },
+    );
+    expect(reversed.generated[0]?.content).toContain('| tests/thing.test.ts › thing > makes<br>tests/thing.test.ts › thing > makes again |');
     const missing = checkEffects(fixture({ [R]: registry, [ENGINE]: engine, [READER]: reader }).repo, [], { passed: new Set() });
     expect(missing.generated[0]?.content).toContain('| tests/thing.test.ts › thing > ticks |'.replace('tests/thing.test.ts › thing > ticks', '**missing**'));
     const r = checkEffects(fixture({ [R]: registry, [ENGINE]: engine, [READER]: reader }).repo, proofs, { passed });

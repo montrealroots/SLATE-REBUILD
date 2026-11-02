@@ -25,10 +25,11 @@ export function checkDocRefs(repo: Repo): CheckResult {
   for (const doc of docs) {
     // Stryker disable next-line StringLiteral: every doc listed was just found, so it reads.
     (repo.read(doc) ?? '').split('\n').forEach((line, i) => {
-      const other = ELSEWHERE.exec(line)?.index ?? Infinity;
-      for (const m of line.matchAll(PATH)) {
+      // The line up to another repository's name, if it names one: what follows is that repository's.
+      const ours = line.slice(0, ELSEWHERE.exec(line)?.index);
+      for (const m of ours.matchAll(PATH)) {
         const path = m[1] as string;
-        if (m.index > other || !OURS.has(path.split('/')[0] as string)) continue;
+        if (!OURS.has(path.split('/')[0] as string)) continue;
         named += 1;
         if (repo.read(path) === undefined) r.red(`the doc names ${path}, which isn't here`, `${doc}:${i + 1}`);
       }

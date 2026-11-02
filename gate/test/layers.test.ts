@@ -74,7 +74,8 @@ describe('the layer ledger', () => {
     });
     const p = parseLedger(withDropped([proof(0)]));
     expect(p.ok && p.ledger.layers[1]).toEqual({ n: 1, name: 'Voice', dirs: [], holdsEngines: false, dropped: 'the owner, 2026-11-02' });
-    expect(p.ok && p.ledger.layers[0]).toEqual({ n: 0, name: 'Gate', dirs: ['gate'], holdsEngines: false });
+    // A layer not dropped carries no dropped key at all, not one left undefined.
+    expect(p.ok && p.ledger.layers[0]).toStrictEqual({ n: 0, name: 'Gate', dirs: ['gate'], holdsEngines: false });
     expect(p.ok && layerInProgress(p.ledger)).toBe(2);
     const q = parseLedger(withDropped([]));
     expect(q.ok && layerInProgress(q.ledger)).toBe(0);
