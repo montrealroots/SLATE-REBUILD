@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import { checkCatalogText } from './checks/catalog-text.ts';
 import { checkCoverage } from './checks/coverage.ts';
 import { checkDocRefs } from './checks/doc-refs.ts';
 import { checkEffects } from './checks/effects.ts';
@@ -55,6 +56,7 @@ export function runGate(o: GateOptions): GateOutcome {
   const text = checkText(repo, current ?? 0);
   results.push(text.result);
   results.push(checkTitleCase(repo));
+  results.push(checkCatalogText(repo));
   const register = checkRegister(repo, o.today, text.ids);
   results.push(register.result);
 
