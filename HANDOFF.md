@@ -17,8 +17,30 @@ Read `CLAUDE.md` first.
   restarted from `main` there.
 - Layer 1 (the core) is proven: all six of SLATE's core engines, at the owner's word ("Every single one of them"), the
   full gate green in a fresh clone of the branch at `47bfeac7fda9`, recorded in `registry/layers.json` (2026-11-02).
-  Layer 2 (the world) is in progress and has not started; nothing in it comes over until the owner picks it. Layers 3
-  to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
+  The owner merged it (`3ccce87`) and the branch restarted from `main` there.
+- Layer 2 (the world) is being built: all six of SLATE's world engines, at the owner's word ("Every single one of
+  them"). Its research is being read again at every source, and every blocker tried again, before it is proven. Layers
+  3 to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
+
+What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
+sources say:
+
+- `world.gazetteer` (`src/world/gazetteer`): every country and territory (252), first-level region (3,865) and
+  populated place, read from today's GeoNames release, as the owner ruled: the dump of 2026-11-02, 171,750 places in
+  246 countries, where SLATE's of 2026-10-26 had 171,654 (104 added, 8 removed, 133 changed). The place axis is held to
+  171,750 (register R-0032 to R-0034).
+- `world.map` (`src/world/map`): Natural Earth's outlines and every place marked on them.
+- `world.clock` (`src/world/clock`): real time in the town's local time, play, pause and advance; its three commands'
+  falsifiers moved beside it (`tests/world/clock/effects.test.ts`) from SLATE's layer 3 test.
+- `world.weather` (`src/world/weather`): each town's climate from its station's normals, the day's weather drawn
+  around them by four deciders, the forecast.
+- `world.holidays` (`src/world/holidays`): every country's public holidays in its own calendars. The calendars compile
+  on ICU 78.3, this Node's, not SLATE's 77.1: one Hebrew year moved (5806, from Kislev, and 1 Tishri 5807 to
+  2046-10-01), the fix of ICU-23069, which Calendrical Calculations' rules and Hebcal confirm (register R-0106).
+- `world.prices` (`src/world/prices`): each country's price level from the World Bank's ICP figures.
+- The catalog-text check stopped one of SLATE's lines ("so every day there is kept as an ordinary one", a place and a
+  passive, not a "there's"); it now says "each day in {country} is kept as an ordinary one".
+- 1221's geo-check is held by the place axis and each engine's run over every place of the map.
 
 What layer 1 holds, ported from SLATE's core (`montrealroots/SLATE` at `acf1874`), changed only where a ruling or
 today's sources say:
