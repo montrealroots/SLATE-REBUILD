@@ -12,12 +12,16 @@ jobs:
     # By 2026-10-31 there were 16,561 and the run took 175 minutes; run 505 was cancelled at the 180 it was given. A
     # GitHub-hosted job may run 360.
     timeout-minutes: 340
+    # The actions are pinned to exact releases, as every package is, each confirmed in its own repository on
+    # 2026-11-02 to run on Node.js 24 (v4 targeted Node.js 20, which GitHub had stopped running). setup-node from v6
+    # caches npm's downloads on its own, because package.json names npm in packageManager; `npm ci` still installs
+    # exactly what the lockfile holds.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           # The layer ledger's proofs name commits; the gate checks this branch carries them.
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version-file: .nvmrc
       - run: npx -y npm@11.6.2 ci
@@ -31,7 +35,7 @@ jobs:
             exit 0
           fi
           exit $code
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: gate-receipt

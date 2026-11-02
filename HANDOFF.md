@@ -99,9 +99,8 @@ SLATE proved at a 100% mutation score:
 
 - Node 22.23.4 is pinned, the version this session runs and tests on, not SLATE's 22.22.0; both satisfy the engines
   range SLATE set (`>=22.13.0 <23`).
-- The place axis is held to 171,654 (SLATE's owner ruling of 2026-10-26: "Use today's GeoNames release, keep going"),
-  not the 170,911 `CLAUDE.md` names, the first SLATE's snapshot; the count is decided again by the GeoNames release
-  the rebuild's gazetteer reads, in layer 2.
+- The place axis holds 171,654, SLATE's count from the GeoNames release of 2026-10-26, until layer 2's gazetteer reads
+  its own release and the count is set to it (the owner, 2026-11-02: not the 170,911; "today's GeoNames release").
 - `registry/voice.json` keeps SLATE's banned patterns (the engine's vocabulary out of the player's sight), sourced to
   `CLAUDE.md` and `docs/STYLE.md`.
 - `registry/pages.json` is empty: SLATE's pages were decided in its own documents, which are not here; each page is
@@ -110,11 +109,12 @@ SLATE proved at a 100% mutation score:
 ## Blockers and open issues
 
 - None for layer 0.
-- CI warns that `actions/checkout@v4`, `actions/setup-node@v4` and `actions/upload-artifact@v4` target Node.js 20,
-  which GitHub now runs on Node.js 24. The workflow runs; moving to the actions' next major versions waits until each
-  is confirmed on its own release page.
+- CI's actions moved from v4 (Node.js 20, which GitHub had stopped running) to exact releases on Node.js 24, each
+  confirmed in its own repository on 2026-11-02 at the owner's word: `actions/checkout@v7.0.1` (2026-07-17),
+  `actions/setup-node@v7.1.0` and `actions/upload-artifact@v7.0.2` (both 2026-10-07). Every input the workflow uses
+  is still there; checkout's v7 change (refusing fork code under `pull_request_target` and `workflow_run`) touches
+  no trigger here; setup-node now caches npm's downloads itself; upload-artifact still zips by default.
 
 ## Questions for the owner
 
-- The place count: `CLAUDE.md` says 170,911 places; SLATE's later ruling replaced it with "today's GeoNames
-  release" (171,654 on 2026-10-26). The gate follows the later ruling until you say otherwise.
+- None open. The place count was answered on 2026-11-02: not 170,911; today's GeoNames release (`CLAUDE.md`).
