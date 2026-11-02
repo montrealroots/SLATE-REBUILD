@@ -1,14 +1,177 @@
 # CLAUDE.md — SLATE-REBUILD
 
-This repository is a fresh rebuild of SLATE, an actor/actress life simulator. Its rules are SLATE's
-(`montrealroots/SLATE`: `CLAUDE.md`, `docs/MANDATE.md`, `docs/BUILD-ORDER.md`, `.claude/rules/title-case.md`),
-brought over on 2026-11-02 at the owner's word: "Bring over all of SLATE's rules except the one-agent rule and
-deploying to base44." The one-agent rule (SLATE's MANDATE rule 9) is left out; parallel subagents hold instead
-(below). SLATE's rules never named Base44, so nothing was removed for it; Base44 deployment was 1221's, and this
-repository has none.
+This repository is a fresh rebuild of SLATE, an actor/actress life simulator. It is held to two sets of rules, read
+in this order:
 
-Features come over from SLATE one at a time, as the owner picks them. Nothing from SLATE's code, research or
-package is assumed here until it is brought over. Read `HANDOFF.md` for where the build stands.
+1. **1221's rules** (`montrealroots/1221`, the first SLATE: its `CLAUDE.md`, the SLATE Development Blueprint and
+   the House Standard), Part 1 below.
+2. **SLATE's rules** (`montrealroots/SLATE`: `CLAUDE.md`, `docs/MANDATE.md`, `docs/BUILD-ORDER.md`,
+   `.claude/rules/title-case.md`), Part 2 below.
+
+Brought over on 2026-11-02 at the owner's word: "Bring over all of SLATE's rules except the one-agent rule and
+deploying to base44", then "Bring over all 1221's rule too ... it should read the rules of '1221' first followed by
+'SLATE' rules." Left out, by that word: SLATE's one-agent rule (its MANDATE rule 9; parallel subagents hold instead,
+Part 2) and 1221's Base44 deployment (its rule 14 and the save-schema pin its deployment needed).
+
+**Where the two disagree, SLATE's rule holds.** SLATE's are the later rulings, made for the rebuild, and SLATE's own
+`CLAUDE.md` says they outrank anything carried from the first SLATE. The places they meet are named where they
+arise in Part 1.
+
+Features come over from SLATE one at a time, as the owner picks them. Nothing from either repository's code,
+research or package is assumed here until it is brought over. Read `HANDOFF.md` for where the build stands.
+
+---
+
+# Part 1 — 1221's rules
+
+## The Operating Model
+
+**Claude Code** is the primary reasoning, coding, architecture, debugging and orchestration layer.
+
+**PowerShell 7** (`pwsh`, not the Windows PowerShell 5.1 that ships with the system) is the primary local execution
+environment on the owner's Windows machine (the owner, 2026-09-23). Claude Code may use it to inspect and operate on
+the real project environment: files and directories, Git, Node and npm, tests, builds, verification scripts, logs,
+environment and configuration, automation and diagnostics. In a cloud session the container's shell (bash) does the
+same job; commands written for the project work in both.
+
+**Git** is the authoritative safety and version-control layer.
+
+| Layer | Owns |
+|---|---|
+| Claude Code | Reasoning and orchestration |
+| PowerShell 7 (or the cloud session's shell) | Execution and system access |
+| Git | Versioning, recovery, audit trail and safety |
+
+## The Rules
+
+1. Work against the real canonical repository (this one), not disposable copies.
+2. Inspect current Git state before beginning substantial work.
+3. Never assume repository state from conversation memory alone.
+4. Break large development work into coherent modules.
+5. Validate each substantial module before integrating or moving forward.
+6. Run relevant tests, typechecking, linting, verification and regression checks.
+7. Never mark work complete solely because code was written.
+8. Keep commits coherent and recoverable.
+9. Do not perform destructive Git operations unless explicitly justified and safe.
+10. Preserve uncommitted work, stashes, branches, worktrees and handoff context before operations that could affect
+    them.
+11. Update `HANDOFF.md` whenever a major development phase completes and before switching Claude accounts. (1221
+    called it `SLATE_CURRENT_MASTER_HANDOFF.md`; here there is one handoff, `HANDOFF.md`, so no fact has two copies.)
+12. The repository and verified test results outrank stale conversation assumptions.
+13. Claude should explain materially risky operations before executing them.
+14. (1221's Base44 deployment rule, left out at the owner's word, 2026-11-02. Deployment waits on the owner's
+    explicit word, Part 2.)
+15. Maintain an auditable trail of important architecture decisions, fixes, tests and deployment state.
+16. Every Claude Code account that works on this repository follows this same workflow.
+17. This workflow remains canonical unless the owner explicitly changes it.
+
+## How The Rules Cash Out Here
+
+### Rules 2 and 3 — look before working
+
+Before substantial work, and always after a context compaction or an account switch:
+
+```bash
+git status -sb            # branch, tracking, and anything uncommitted
+git log --oneline -5      # where HEAD actually is
+git stash list            # what is held and must not be lost
+git worktree list         # what else is checked out
+```
+
+A summary of a previous session is a snapshot, not a source of truth. When a document and the tree disagree, **the
+tree wins and the document gets corrected** (rule 12).
+
+### Rules 6 and 7 — what "done" means
+
+The verification gate is one command, `npm run gate`, and it is the bar (Part 2 says what it holds; it is built in
+layer 0). Read its exit status **from a file, never from a pipe**: a pipe that stops early ends the gate partway and
+can leave the previous command's exit code, which can read as a pass.
+
+```bash
+npm run gate > "${TMPDIR:-/tmp}/gate.txt" 2>&1; echo "exit=$?" > "${TMPDIR:-/tmp}/gate-exit.txt"
+```
+
+```powershell
+npm run gate *> "$env:TEMP\gate.txt"
+"exit=$LASTEXITCODE" | Out-File -Encoding utf8 "$env:TEMP\gate-exit.txt"
+```
+
+Code that is written is not work that is finished. Nothing is reported complete until the gate has passed and the
+report says what the numbers were.
+
+Two things about measurement, both rule 7 in practice. Measure on a **played life, never an idle save**: an idle save
+holds every number still and the stillness looks like a result. And apply the falsifiability test to any claim:
+**change an input; does the outcome change, or only the sentence?**
+
+### Rules 9 and 10 — what must not be lost
+
+Standing constraints from the owner:
+
+- **Never** apply, pop or drop the stash.
+- **Never** merge worktrees.
+- **Never** force-push the working branch.
+- **Do not merge to `main` without the owner.**
+
+Before anything that could touch uncommitted work, a stash entry, a branch, a worktree or the handoff, preserve it
+first and say what is being preserved.
+
+### Rules 11 and 16 — the handoff is the only thing that crosses
+
+When more than one Claude Code account or session works on the rebuild, `HANDOFF.md` is the only state that passes
+between them. It is updated when a phase completes and before a switch. A handoff that has drifted from the tree is
+worse than no handoff, because it sends the next session to rebuild something that already exists, which happened in
+1221.
+
+### Rule 13 — explain before acting
+
+A materially risky operation gets a sentence first: what it does, what it could lose, and why it is the right call.
+Destructive Git commands, deployments, deletes and overwrites all qualify.
+
+This does **not** extend to ordinary design and judgement calls. The owner has said repeatedly that Claude should
+decide and then report the decision, rather than opening with a question or a menu of options. Deciding is Claude's
+job; destroying or publishing is what gets announced first.
+
+### Rule 15 — the auditable trail
+
+The trail lives in four places, all load-bearing:
+
+- **Commit messages** say what was decided and why, not what changed. The diff already says what changed.
+- **`HANDOFF.md`** carries state across accounts and sessions.
+- **`docs/UNBITTEN.md`** is the open-work ledger: what is declared, written, displayed or believed but changes no
+  outcome. It is started the first time such a thing exists.
+- **`docs/UNWIRED.json`** is the machine ratchet: its counts **may fall and may not rise**, and the gate fails a
+  rise once the gate holds it.
+
+## The House Standard
+
+The project's own rules, which rules 5, 6 and 7 exist to enforce. They are not separate from them.
+
+**THE ONE RULE.** A declared word with nothing that reads it is worse than no word at all.
+
+**THE FALSIFIABILITY TEST.** Change an input. Does the outcome change, or only the sentence?
+
+**Prose here is load-bearing.** Comments and docs do not describe what a function does; they say what was measured,
+what was tried, what was deleted and why. A comment your change falsifies **is part of your change**. Say what is no
+longer true in the past tense: the past tense is how this project keeps its history. Until a check holds it, review
+holds the line.
+
+**A ledger balance is never a number somebody typed.** It is the sum of postings.
+
+**Player-facing text is written for the player** (1221, from 2026-10-17, the owner's brief 14). Every string the game
+shows follows `docs/STYLE.md` ("Talking to the player", and "Speak like a finished game") and uses `docs/GLOSSARY.md`'s
+words. Both are 1221's, brought over as 1221 wrote them: the checks and tools they name are 1221's and come over with
+the gate, and a glossary row binds once its feature comes over (a row for something out of the first build, Part 2,
+binds nothing). A new feature's text is plain, specific and true, and it never shows the player the engine: inputs,
+weights, dimensions, segments, a command's id or a file name. A new source of text is read and given a status in the
+text inventory (Part 2, layer 0), and a changed one is read again and marked again in the same commit. Comments keep
+this project's voice; player text keeps the player's.
+
+**Mutation-test every claim a test protects.** A surviving mutation usually means a redundant guard that an earlier
+clamp already settles.
+
+---
+
+# Part 2 — SLATE's rules
 
 ## The owner's words (SLATE's mandate, 2026-10-26)
 
