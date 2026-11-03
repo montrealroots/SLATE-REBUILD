@@ -364,11 +364,12 @@ session's agents were given; change the date, the scratchpad path and the groups
 
 ## Questions for the owner
 
-- The family means' income is WID's average post-tax national income (adiinc992j), which counts public spending as
-  income; WID's post-tax disposable income (acainc992j) has no percentile cuts for any of the 215 countries. A family
-  starts with one month of the national figure in checking, which overstates its cash. Say whether to keep it (said
-  so to the player), scale it by each country's ratio of disposable to national income where WID gives both averages,
-  or seek a household survey's disposable income per country instead.
+- The family means' income is WID's post-tax national income (adiinc992j), which counts public spending as income, so
+  a family's first month of checking overstates its cash. The owner chose on 2026-11-03 to scale it by each country's
+  ratio of WID's post-tax disposable income (acainc992j) to national income; reading WID's file of 30 October 2026
+  showed that ratio can't be taken as ruled: no country has the disposable average for 2024 (the bands' year), 37
+  European countries have it to 2022 at latest, and none outside Europe has it at all. Nothing was changed; the
+  income stays unscaled until the owner chooses again.
 
 - Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
   Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian
