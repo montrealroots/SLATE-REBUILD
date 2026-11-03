@@ -111,6 +111,12 @@ describe('work', () => {
       { right: 'permit', route: "Visa du contrat de travail (the Minister in charge of Employment's visa on the contract or letter of engagement of a non-Central African worker; Code du travail, loi n° 09.004, art. 100)" },
       { right: 'permit', route: 'Permit for recruiting foreign labour (Ministry of Labour and Rehabilitation), then an entry visa for residence and work (Decree No. 212 of 2009; Labour Relations Law No. 12 of 2010)' },
     ]);
+    // Found in the web-search pass (2026-11-03): Kiribati's work permit on its trade portal, and Cuba's professional
+    // artists, temporary residents on the Ministry of Labour's permit under Ley 173 and its regulations; neither gives days.
+    expect([work('AU', 'KI'), work('ES', 'CU')]).toStrictEqual([
+      { right: 'permit', route: 'Work permit (Ministry of Foreign Affairs and Immigration)' },
+      { right: 'permit', route: 'Permiso de trabajo (Ministerio de Trabajo y Seguridad Social), as a Residente Temporal, artistas de profesión (Decreto 136/2025, art. 100)' },
+    ]);
   });
 
   it("tell the player what the game doesn't know", () => {

@@ -1371,13 +1371,15 @@
    {
     "id": "residente-temporal-trabajo",
     "name": "Residente Temporal (permiso de trabajo)",
-    "for": "work"
+    "for": "work",
+    "apply": "in country",
+    "work": "sponsor"
    },
    {
     "id": "residente-temporal-familiar",
     "name": "Residente Temporal (familiar acompañante)",
     "for": "family",
-    "apply": "in country"
+    "work": "none"
    }
   ]
  },

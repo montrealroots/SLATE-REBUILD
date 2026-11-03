@@ -318,6 +318,10 @@
     {
      "src": 12,
      "said": "TVA DE 1% AU BÉNÉFICE DES ARCHIPELS AUTRES QUE LA SOCIÉTÉ. Cette disposition entre en vigueur au 1er juillet 2026."
+    },
+    {
+     "src": 13,
+     "said": "Les personnes réalisant un chiffre d'affaires inférieur ou égal à 10 millions de F CFP sont de droit au régime de la franchise en base et n'ont pas à facturer la TVA à leurs clients."
     }
    ]
   },
@@ -436,12 +440,19 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "TVA DE 1% AU BÉNÉFICE DES ARCHIPELS AUTRES QUE LA SOCIÉTÉ. Cette disposition entre en vigueur au 1er juillet 2026."
+  },
+  {
+   "url": "https://www.service-public.pf/dicp/faq-items/suis-je-tenue-aux-obligations-du-regime-de-tva/",
+   "title": "DICP, FAQ 'Suis-je tenue aux obligations du régime de TVA ?'",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Les personnes réalisant un chiffre d'affaires inférieur ou égal à 10 millions de F CFP sont de droit au régime de la franchise en base et n'ont pas à facturer la TVA à leurs clients. Elles peuvent néanmoins opter pour le régime réel ; Les personnes réalisant un chiffre d'affaires supérieur à 10 millions de F CFP, hors exonérations, sont soumis au régime réel de la TVA"
   }
  ],
  "blockers": [
   {
    "item": "vat-threshold",
-   "sought": "Which VAT franchise threshold is in force in 2026: DICP's VAT page (updated 2025-08-13) says under XPF 10 million of annual turnover; its risk-prevention sheet (dated 2025-03-25) says XPF 5,000,000 or less; the Code des impôts (lexpol) would settle it",
+   "sought": "Which VAT franchise threshold is in force in 2026: DICP's VAT page (updated 2025-08-13) and its undated FAQ (read 2026-11-03) say XPF 10 million of annual turnover; its risk-prevention sheet (dated 2025-03-25) says XPF 5,000,000 or less; the Code des impôts (lexpol) would settle it",
    "tried": {
     "institution": "service-public.pf/dicp searched by its WordPress search API 2026-11-01 ('retenue a la source', 'franchise TVA', 'impot sur le revenu', 'droits d\\'auteur'); no rate page found among results || retry 2026-11-01 (world round): service-public.pf/dicp searched by its WordPress API ('taux TVA', 'TVA'): the VAT rates FAQ and the VAT page saved (PF-dicp-faq-taux-tva.html, PF-dicp-tva.html): rates settled (5/13/16%); the two thresholds conflict as stated",
     "official-register": "JOPF and lexpol.cloud.pf: lexpol not reachable (curl 000) 2026-11-01 || retry 2026-11-01 (world round): lexpol.cloud.pf does not answer (curl 000) again; the Code des impôts text not reached",

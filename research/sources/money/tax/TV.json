@@ -88,7 +88,7 @@
   },
   {
    "item": "vat",
-   "finding": "Consumption Tax falls on taxable supplies, services included, by a person registered or liable to register, which a person must do when taxable supplies reach $100,000 in a 12-month period; the rate is set by Regulation within 3% to 10%.",
+   "finding": "Consumption Tax falls on taxable supplies, services included, by a person registered or liable to register, which a person must do when taxable supplies reach $100,000 in a 12-month period; the rate is set by Regulation within 3% to 10%, and the Consumption Tax Regulation 2009 set it at 3% from 1 July 2009.",
    "value": {
     "currency": "AUD",
     "registrationThreshold": 100000,
@@ -96,19 +96,24 @@
      0.03,
      0.1
     ],
-    "rate": "not read"
+    "rate": 0.03,
+    "rateSetBy": "Consumption Tax Regulation 2009, reg. 3, from 2009-07-01"
    },
-   "applies": "Consumption Tax Act 2008; a freelancer below $100,000 a year charges none.",
+   "applies": "Read 2026-11-03: the government's legislation register lists no later regulation, though its index may lag (it doesn't list the Consumption Tax Amendment Act 2020).",
    "sources": [
     {
      "src": 2,
      "said": "The rate of Consumption Tax shall be an amount determined by the Minister … by Regulation, but shall be an amount within the range from 3% to 10% … the person's enterprise in that period will be $100,000 or"
+    },
+    {
+     "src": 6,
+     "said": "under section 5 of the Act shall be 3%."
     }
    ]
   },
   {
    "item": "social",
-   "finding": "Every employee in Tuvalu is a member of the Tuvalu National Provident Fund: the employee pays 13% of gross monthly earnings and the employer 10% (the TNPF's employers' page reads 'a minimum of 13%'), due by the 15th of the next month; an employer may add up to 3% more; the self-employed may join voluntarily.",
+   "finding": "Every employee in Tuvalu is a member of the Tuvalu National Provident Fund: the employee pays 13% of gross monthly earnings (the 2008 amendment of the Contributions Regulations raised it from 10%) and the employer 10%, as the Regulations' schedule sets it, due by the 15th of the next month; an employer may add up to 3% more; the self-employed may join voluntarily. (The TNPF's employers' page reads 'a minimum of 13%', which the Regulations read do not say.)",
    "value": {
     "currency": "AUD",
     "employee": 0.13,
@@ -117,7 +122,7 @@
     "employerVoluntaryExtra": 0.03,
     "due": "15th of the next month"
    },
-   "applies": "Employees; the employer's share conflict is kept as a blocker.",
+   "applies": "Employees; the employer's 10% read in the Regulations' 2008 Revised Edition on 2026-11-03.",
    "sources": [
     {
      "src": 3,
@@ -130,6 +135,10 @@
     {
      "src": 5,
      "said": "in paragraph 1 by deleting “10%” and substituting “13%”"
+    },
+    {
+     "src": 7,
+     "said": "Group 2 contributions (employers) The contribution shall be 10 per cent of the gross earnings for each member employed under a contract of service by an employer"
     }
    ]
   }
@@ -177,6 +186,20 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "in paragraph 1 by deleting “10%” and substituting “13%”"
+  },
+  {
+   "url": "https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/2009/2009-0007/2009-0007_1.pdf",
+   "title": "Consumption Tax Regulation 2009 (LN 7 of 2009), Tuvalu legislation register",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The rate of Consumption Tax to be levied on taxable supplies by a taxable person made on or after 1 July 2009 and on taxable imports made on or after 1 July 2009 under section 5 of the Act shall be 3%."
+  },
+  {
+   "url": "https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/1985/1985-0016/1985-0016_1.pdf",
+   "title": "Provident Fund (Contributions) Regulations, 2008 Revised Edition, Schedule (Tuvalu legislation register)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "1. Group 1 contributions (employed persons) (i) The contribution shall be 10 per cent of the member’s gross earnings. … 2. Group 2 contributions (employers) The contribution shall be 10 per cent of the gross earnings for each member employed under a contract of service by an employer"
   }
  ],
  "blockers": [
@@ -192,19 +215,8 @@
    }
   },
   {
-   "item": "social",
-   "sought": "Which employer share the TNPF levies on a member's gross earnings (10% on the members' page, 'a minimum of 13%' on the employers' page), in the regulation's own text",
-   "tried": {
-    "institution": "not tried || 2026-11-01 retry: tnpf.tv read: 'Become a Member' (employee 13%, employer 10%) and 'Become an Employer' (employer 'a minimum of 13%'), and the Contribution Regulations 1984 and 2008 amendment (employee rate 10% to 13%): now a figure; the two TNPF pages disagree on the employer's share",
-    "official-register": "not tried || 2026-11-01 retry: TNPF legislation page lists the Contribution Regulation (Amendment) 2021 (employer may add up to 3%); the regulation raising the employer's share to 10% was not found among the PDFs",
-    "web-search": "not run || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01)",
-    "trade-press": "not tried || 2026-11-01 retry: No firm summary for Tuvalu read",
-    "archive": "web.archive.org unreachable from this environment || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
-   }
-  },
-  {
    "item": "vat",
-   "sought": "The Consumption Tax rate fixed by Regulation under s.5(3) of the Consumption Tax Act 2008 (within 3% to 10%) as in force for 2026",
+   "sought": "Whether a regulation after the Consumption Tax Regulation 2009 (3% from 1 July 2009, read 2026-11-03) changed the rate in force for 2026 (the legislation register's index may lag)",
    "tried": {
     "institution": "not tried || 2026-11-01 retry: finance.gov.tv (Ministry of Finance and Economic Development) answers; its media library holds the Income Tax Act 2008 Revised Edition, the Income Tax Amendment Act 2008 and the Consumption Tax Act 2008 (saved TV-mof-*.pdf), now figures: the Consumption Tax Act sets the rate by Regulation within 3% to 10% and registration at $100,000 of taxable supplies a year; the Regulation fixing the rate is not among the Ministry's files",
     "official-register": "not tried || 2026-11-01 retry: tuvalu-legislation.tv/cms answers, but its act listings load by script and its search returned no PDF for 'Income Tax' or 'Consumption Tax'; PacLII still answers a Cloudflare check (403)",

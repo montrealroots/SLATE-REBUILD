@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "residents",
-   "finding": "Under the 2013 Code, pay is taxed by the tax on wages (ITS) on monthly bands: 1% to XOF 25,000, 2% to 50,000, 6% to 100,000, 13% to 150,000, 25% to 300,000, 30% to 400,000, 32% to 700,000, 34% to 1,000,000 and 35% above, less family reductions.",
+   "finding": "Pay is taxed by the tax on wages (ITS) on monthly bands: 1% to XOF 25,000, 2% to 50,000, 6% to 100,000, 13% to 150,000, 25% to 300,000, 30% to 400,000, 32% to 700,000, 34% to 1,000,000 and 35% above, less family reductions; the finance law for 2026 restored this scale (CGI art. 150 new) after the Code of July 2025 had changed it.",
    "value": {
     "currency": "XOF",
     "monthly": [
@@ -55,9 +55,9 @@
       "rate": 0.35
      }
     ],
-    "lawYear": 2013
+    "lawYear": 2026
    },
-   "applies": "CGI art. 66. From the Code of 2013 (Loi n°2012-37 of 20 June 2012, in force 1 January 2013); no 2026 text was reachable, so this is the last law read, not a confirmed 2026 figure (see blocker).",
+   "applies": "From 1 January 2026 (Ordonnance n° 2025-44, LF 2026, art. 150 new), read 2026-11-03; the 2013 Code held the same scale.",
    "sources": [
     {
      "src": 0,
@@ -66,21 +66,29 @@
     {
      "src": 0,
      "said": "De 0 A 25 000 1% De 25 001 A 50 000 2% De 50 001 A 100 000 6% De 100 001 A 150 000 13% De 150 001 A 300 000 25% De 300 001 A 400 000 30% De 400 001 A 700 000 32% De 700 001 A 1 000 000 34% Au-delà De 1 000 000 35%"
+    },
+    {
+     "src": 3,
+     "said": "Article 150 (nouveau) : L'Impôt sur les traitements et salaires est un impôt progressif calculé par tranches mensuelles comme suit : De 0 A 25 000 1% … Au-delà De 1 000 000 35%"
     }
    ]
   },
   {
    "item": "vat",
-   "finding": "Under the 2013 Code the standard VAT rate is 19%.",
+   "finding": "The standard VAT rate is 19%, as the 2013 Code set it and the finance law for 2026 states it in force.",
    "value": {
     "standard": 0.19,
-    "lawYear": 2013
+    "lawYear": 2026
    },
-   "applies": "CGI art. 226. From the Code of 2013 (Loi n°2012-37 of 20 June 2012, in force 1 January 2013); no 2026 text was reachable, so this is the last law read, not a confirmed 2026 figure (see blocker).",
+   "applies": "Read 2026-11-03 in the finance law for 2026, which states the 19% rate in passing (of mobile-money commissions) as the law in force.",
    "sources": [
     {
      "src": 0,
      "said": "Art. 226- Le taux normal de la taxe sur la valeur ajoutée est de 19%."
+    },
+    {
+     "src": 3,
+     "said": "En l'état actuel de la législation fiscale, les commissions et autres frais perçus par ces opérateurs sont soumis, selon le cas, à la Taxe sur la valeur ajoutée (TVA) au taux de 19%"
     }
    ]
   },
@@ -158,12 +166,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "son financement est assuré par les cotisations sociales entièrement supportées par l’employeur au taux de 1,75%"
+  },
+  {
+   "url": "https://finances.gouv.ne/index.php/lois-de-finances/file/1314-2025-josp-25-lfi-2026-1er-cahier",
+   "title": "Journal Officiel de la République du Niger, édition spéciale du 31 décembre 2025, LF 2026 1er cahier (Ordonnance n° 2025-44 du 31 décembre 2025 portant loi de finances pour l'année budgétaire 2026), Ministère des Finances",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Article 150 (nouveau) : L'Impôt sur les traitements et salaires est un impôt progressif calculé par tranches mensuelles comme suit : De 0 A 25 000 1% De 25 001 A 50 000 2% De 50 001 A 100 000 6% De 100 001 A 150 000 13% De 150 001 A 300 000 25% De 300 001 A 400 000 30% De 400 001 A 700 000 32% De 700 001 A 1 000 000 34% Au-delà De 1 000 000 35% … Le Code général des impôts adopté par l'ordonnance n°022/PRN du 14 juillet 2025 a changé le barème de calcul de l'Impôt sur les traitements et salaires (ITS) … d'où la proposition de rétablir l'ancien barème … En l'état actuel de la législation fiscale, les commissions et autres frais perçus par ces opérateurs sont soumis, selon le cas, à la Taxe sur la valeur ajoutée (TVA) au taux de 19%"
   }
  ],
  "blockers": [
   {
-   "item": "residents",
-   "sought": "The 2026 wage tax scale, VAT rate and threshold under the Finance Law for 2026.",
+   "item": "vat",
+   "sought": "The VAT registration threshold for a freelancer (the 2026 wage-tax scale and the 19% VAT rate were read in the finance law for 2026 on 2026-11-03)",
    "tried": {
     "institution": "impots.gouv.ne and finances.gouv.ne are refused by this environment's proxy; finance.gov.ne gives CONNECT 502 (2026-11-01). || 2026-11-01 retry: impots.gouv.ne, finances.gouv.ne, sggouv.ne and assemblee.ne fail (connection, curl 000) on 2026-11-01; presidence.ne answers with no tax text",
     "official-register": "No 2026 Journal officiel or Finance Law for Niger was reachable; the embassy's copy of the 2013 Code was read (2026-11-01). || 2026-11-01 retry: No Journal officiel of Niger reachable (sggouv.ne fails); the 2013 Code already held",

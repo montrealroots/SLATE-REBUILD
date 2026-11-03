@@ -222,6 +222,27 @@
      "said": "Registration Threshold Value of taxable supply of goods or services other than financial services by any person including whole sale and retail trade (with effect from 01.01.2024) … exceeds Rs. 15 million for a quarter, exceeds Rs. 60 million for 12 months period … From 01.09.2022 to 31.12.2023 - 15% From 01.01.2024 - 18%"
     }
    ]
+  },
+  {
+   "item": "withholding",
+   "finding": "A payer withholds 5% of the full payment from a service fee above LKR 100,000 in a calendar month paid to a resident individual who isn't its employee, for services as an independent service provider (from 1 January 2023); the Amendment Act No. 11 of 2026 named artists, actors and writers among them.",
+   "value": {
+    "currency": "LKR",
+    "serviceFees": {
+     "rate": 0.05,
+     "on": "the full payment",
+     "overPerMonth": 100000,
+     "to": "a resident individual who isn't the payer's employee",
+     "from": "2023-01-01"
+    }
+   },
+   "applies": "From 1 January 2023 (IRD notice PN/IT/2022-03); the scope reaching artists, actors and writers from Act No. 11 of 2026, which states no new rate. The threshold is a calendar month's fees; the game reads each fee as the month's.",
+   "sources": [
+    {
+     "src": 8,
+     "said": "Service fee payments exceeds Rs. 100,000 per calendar month to a resident individual who is not an employee of the payer … (c) for services provided by such individual in the capacity of independent service provider … 5% on full payment"
+    }
+   ]
   }
  ],
  "country": "LK",
@@ -281,12 +302,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Registration Threshold Value of taxable supply of goods or services other than financial services by any person including whole sale and retail trade (with effect from 01.01.2024) … exceeds Rs. 15 million for a quarter, exceeds Rs. 60 million for 12 months period … From 01.09.2022 to 31.12.2023 - 15% From 01.01.2024 - 18%"
+  },
+  {
+   "url": "https://www.ramco.com/hubfs/Notice%20PN_IT_2022-03_15Dec2022_E3.pdf",
+   "title": "Inland Revenue Department, Notice to Taxpayers PN/IT/2022-03 (15.12.2022): Changes to the Inland Revenue Act, No. 24 of 2017 (the Department's notice, a copy hosted by Ramco; ird.gov.lk answered 503 on 2026-11-03)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Service fee payments exceeds Rs. 100,000 per calendar month to a resident individual who is not an employee of the payer with respect to following - (a) for teaching, lecturing, examining, invigilating or supervising an examination; (b) as a commission or brokerage to a resident insurance, sales or canvassing agent; or (c) for services provided by such individual in the capacity of independent service provider such as doctor, engineer, accountant, lawyer, software developer, researcher, academic or any individual service provider as may be prescribed by regulation 5% on full payment"
   }
  ],
  "blockers": [
   {
-   "item": "withholding",
-   "sought": "The rate of withholding on service fees to resident individuals under IR Act s. 85(1C) and on fees to non-resident artistes (the APIT tables and the 2026 widening of s. 85(1C) to artists, actors and writers are found)",
+   "item": "nonResident",
+   "sought": "The withholding on a fee paid to a non-resident artiste (the 5% on a resident's service fees under s. 85(1C) was read in the IRD's notice PN/IT/2022-03 on 2026-11-03)",
    "tried": {
     "institution": "ird.gov.lk read (Income Tax page; IR Amendment Acts 2/2025 and 11/2026); APIT tables, VAT pages and the return deadline not located in this pass || retry-8 2026-11-01: ird.gov.lk APIT tables page read; Table 1 (2025-2026) and the index downloaded and recorded; the IRD Income Tax page carries no WHT rate table",
     "official-register": "EPF (Central Bank / Labour Department) and ETF Board pages not tried || retry-8 2026-11-01: Inland Revenue (Amendment) Acts No. 2 of 2025 and No. 11 of 2026 read for s. 85: No. 11 of 2026 widens s. 85(1C)(c) to artists, actors, writers; neither states the rate; the principal Act No. 24 of 2017 consolidated not on the IRD pages read; EPF (epf.lk) and ETF Board (etfb.lk) pages read for the social item (recorded)",

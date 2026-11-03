@@ -2315,15 +2315,25 @@
  },
  "FM": {
   "year": null,
-  "residents": [],
+  "residents": [
+   {
+    "layers": [{"bands":{"fig":4,"path":["wageTax"]}}]
+   }
+  ],
   "social": {
    "employee": [[{"from":0,"to":{"fig":2,"path":["quarterlyWageBase"],"quarters":true},"rate":{"fig":2,"path":["employee"]}}]],
    "self": []
   },
-  "withholding": {},
-  "nonResident": {},
+  "withholding": {
+   "performer": {"bands":{"fig":4,"path":["wageTax"]}},
+   "director": {"bands":{"fig":4,"path":["wageTax"]}}
+  },
+  "nonResident": {
+   "performer": {"bands":{"fig":4,"path":["wageTax"]},"final":{"fig":4,"path":["final"]}},
+   "director": {"bands":{"fig":4,"path":["wageTax"]},"final":{"fig":4,"path":["final"]}}
+  },
   "vat": null,
-  "unmodeled": ["business","social"],
+  "unmodeled": ["business","credits","social"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "FO": {
@@ -4155,7 +4165,9 @@
   },
   "withholding": {
    "performer": {"bands":{"fig":3,"path":["table1"]}},
-   "director": {"bands":{"fig":3,"path":["table1"]}}
+   "director": {"bands":{"fig":3,"path":["table1"]}},
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":6,"path":["serviceFees","rate"]}}],"over":{"fig":6,"path":["serviceFees","overPerMonth"]}},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":6,"path":["serviceFees","rate"]}}],"over":{"fig":6,"path":["serviceFees","overPerMonth"]}}
   },
   "nonResident": {},
   "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["threshold12Months"]}},
@@ -6516,20 +6528,15 @@
    "employee": [[{"from":0,"to":null,"rate":{"fig":2,"path":["employee"]}}]],
    "self": []
   },
-  "withholding": {},
+  "withholding": {
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":3,"path":["professionalFees"]}}]},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":3,"path":["royalties"]}}]}
+  },
   "nonResident": {
-   "performer": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],
-    "final": {"fig":0,"path":["final"]}
-   },
-   "director": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],
-    "final": {"fig":0,"path":["final"]}
-   },
-   "producer": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],
-    "final": {"fig":0,"path":["final"]}
-   }
+   "performer": {"bands":[{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],"final":{"fig":0,"path":["final"]}},
+   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],"final":{"fig":0,"path":["final"]}},
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":0,"path":["rate"]}}],"final":{"fig":0,"path":["final"]}},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":0,"path":["royalties"]}}],"final":{"fig":0,"path":["final"]}}
   },
   "vat": null,
   "unmodeled": []
@@ -6785,7 +6792,7 @@
     "final": {"fig":3,"path":["final"]}
    }
   },
-  "vat": null,
+  "vat": {"rate":{"fig":4,"path":["rate"]},"threshold":{"fig":4,"path":["threshold"]}},
   "unmodeled": [],
   "currency": {"fig":0,"path":["currency"]}
  },
@@ -6929,6 +6936,22 @@
   "unmodeled": ["credits","social","vat"],
   "currency": {"fig":0,"path":["currency"]}
  },
+ "TJ": {
+  "year": null,
+  "residents": [],
+  "social": {
+   "employee": [[{"from":0,"to":null,"rate":{"fig":2,"path":["employee"]}}]],
+   "self": []
+  },
+  "withholding": {},
+  "nonResident": {
+   "performer": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["employment"]}}],"final":{"fig":1,"path":["final"]}},
+   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["employment"]}}],"final":{"fig":1,"path":["final"]}}
+  },
+  "vat": null,
+  "unmodeled": [],
+  "currency": {"fig":0,"path":["currency"]}
+ },
  "TK": {
   "year": null,
   "residents": [],
@@ -7067,12 +7090,20 @@
    }
   ],
   "social": {
-   "employee": [],
+   "employee": [[{"from":0,"to":null,"rate":{"fig":3,"path":["employee"]}}]],
    "self": []
   },
-  "withholding": {},
-  "nonResident": {},
-  "vat": null,
+  "withholding": {
+   "performer": {"bands":{"fig":0,"path":["brackets"]}},
+   "director": {"bands":{"fig":0,"path":["brackets"]}}
+  },
+  "nonResident": {
+   "performer": {"bands":[{"from":0,"to":null,"rate":{"fig":2,"path":["independentServices"]}}],"final":{"fig":2,"path":["final"]}},
+   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":2,"path":["independentServices"]}}],"final":{"fig":2,"path":["final"]}},
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":2,"path":["independentServices"]}}],"final":{"fig":2,"path":["final"]}},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":2,"path":["royalties"]}}],"final":{"fig":2,"path":["final"]}}
+  },
+  "vat": {"rate":{"fig":4,"path":["rate"]},"threshold":{"fig":4,"path":["threshold"]}},
   "unmodeled": [],
   "currency": {"fig":0,"path":["currency"]}
  },
@@ -7149,7 +7180,7 @@
     "final": {"fig":2,"path":["final"]}
    }
   },
-  "vat": null,
+  "vat": {"rate":{"fig":4,"path":["rate"]},"threshold":{"fig":4,"path":["registrationThreshold"]}},
   "unmodeled": ["residents","wages"],
   "currency": {"fig":0,"path":["currency"]}
  },
@@ -7688,17 +7719,14 @@
    "employee": [[{"from":0,"to":null,"rate":{"fig":2,"path":["employee"]}}]],
    "self": []
   },
-  "withholding": {},
+  "withholding": {
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":7,"path":["royalties"]}}]}
+  },
   "nonResident": {
-   "director": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["services"]}}]
-   },
-   "producer": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["services"]}}]
-   },
-   "author": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["royalties"]}}]
-   }
+   "performer": {"bands":[{"from":0,"to":null,"rate":{"fig":6,"path":["entertainers"]}}],"final":{"fig":6,"path":["final"]}},
+   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":6,"path":["services"]}}],"final":{"fig":6,"path":["final"]}},
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":6,"path":["services"]}}],"final":{"fig":6,"path":["final"]}},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":7,"path":["royalties"]}}],"final":{"fig":7,"path":["final"]}}
   },
   "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["threshold"]}},
   "unmodeled": ["withholding"],

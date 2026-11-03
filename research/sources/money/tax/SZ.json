@@ -34,7 +34,7 @@
     "rebateOver60": 10900,
     "taxFreeBelow": 41000
    },
-   "applies": "Tax year 1 July to 30 June; PwC reviewed 30 March 2026 (year to 30 June 2026).",
+   "applies": "As the Eswatini Revenue Service states its rates and thresholds, read 2026-11-03, in the tax year from 1 July 2026 (its page is undated: the Service's current statement).",
    "sources": [
     {
      "src": 0,
@@ -43,6 +43,10 @@
     {
      "src": 0,
      "said": "A rebate of SZL 8,200 (SZL 10,900 for those over age 60) per annum is applied to the annualized tax calculated. In essence, no tax is payable below an annual taxable salary of SZL 41,000 per annum ."
+    },
+    {
+     "src": 4,
+     "said": "E0 E100 000 0 + 20% of the excess of E0 E100 000 E150 000 E20 000 + 25% of the excess of E100 000 E150 000 E200 000 E32 500 + 30% of the excess of E150 000 E200 000 E47 500 + 33% of the excess of E200 000 … Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year The rates are applicable on the amount exceeding E41 000"
     }
    ]
   },
@@ -99,21 +103,34 @@
     {
      "src": 3,
      "said": "WHT for royalties and management fees is payable at the rate of 15%."
+    },
+    {
+     "src": 4,
+     "said": "Withholding tax payments to entertainers E 15% On or before the 15th day of the following month from the date withheld"
     }
    ]
   },
   {
    "item": "vat",
-   "finding": "VAT is 15%.",
+   "finding": "VAT is 15%; registration is compulsory once a business's annual taxable turnover exceeds E900,000.",
    "value": {
+    "currency": "SZL",
     "rate": 0.15,
-    "threshold": null
+    "threshold": 900000
    },
-   "applies": "Registration threshold not found.",
+   "applies": "Read 2026-11-03 from the Eswatini Revenue Service's VAT pages.",
    "sources": [
     {
      "src": 1,
      "said": "VAT is charged at the standard rate of 15%."
+    },
+    {
+     "src": 6,
+     "said": "it is levied on most goods and services at the rate of 15%"
+    },
+    {
+     "src": 5,
+     "said": "VAT registration is compulsory for businesses whose annual taxable turnover exceeds E900 000."
     }
    ]
   },
@@ -173,30 +190,28 @@
    "kind": "secondary",
    "quotes": "https://www.ers.org.sz/",
    "said": "Contractors or professionals WHT is payable at the rate of 15% on services provided by contractors or professionals in Eswatini … Entertainers and sportsmen WHT is payable at the rate of 15% on income earned in Eswatini by entertainers and sportsmen. This tax relates only to public entertainers and sportsmen not ordinarily resident in Eswatini. The payer is required to deduct the tax and pay it within 15 days. … WHT for royalties and management fees is payable at the rate of 15%."
-  }
- ],
- "blockers": [
-  {
-   "item": "residents",
-   "sought": "The Eswatini Revenue Service's own rates for the year from 1 July 2026.",
-   "tried": {
-    "institution": "www.ers.org.sz failed TLS verification (certificate chain) from this environment on 2026-11-01; not read another way. || 2026-11-01 retry: www.ers.org.sz and gov.sz reset the connection (curl 000) on 2026-11-01",
-    "official-register": "Government Gazette not reached. || 2026-11-01 retry: Government Gazette not reached",
-    "web-search": "Not searched further. || 2026-11-01 retry: refused by the tool on 2026-11-01: 'this turn's web search budget is used up (limit: 200 WebSearch calls per turn, shared by every agent)'; queries sent and refused this turn: 'Налоговый кодекс Республики Беларусь статья 199 ставки подоходного налога 2026 13 25 процентов' and 'Eswatini Revenue Service PAYE tax tables 1 July 2026'; no search engine was queried any other way",
-    "trade-press": "PwC (reviewed 30 March 2026); no Deloitte 2026 for Eswatini found. || 2026-11-01 retry: PwC (already used); no Deloitte Eswatini 2026",
-    "archive": "web.archive.org reset the connection. || 2026-11-01 retry: archive.org's availability API now answers (snapshots of the institution's site exist), but web.archive.org snapshot pages return HTTP 403 over http and reset over https from this environment (2026-11-01)"
-   }
   },
   {
-   "item": "vat",
-   "sought": "The VAT registration threshold.",
-   "tried": {
-    "institution": "ers.org.sz unreachable. || 2026-11-01 retry: www.ers.org.sz and gov.sz reset the connection (curl 000) on 2026-11-01",
-    "official-register": "None. || 2026-11-01 retry: Government Gazette not reached",
-    "web-search": "Not searched. || 2026-11-01 retry: refused by the tool on 2026-11-01: 'this turn's web search budget is used up (limit: 200 WebSearch calls per turn, shared by every agent)'; queries sent and refused this turn: 'Налоговый кодекс Республики Беларусь статья 199 ставки подоходного налога 2026 13 25 процентов' and 'Eswatini Revenue Service PAYE tax tables 1 July 2026'; no search engine was queried any other way",
-    "trade-press": "PwC: rate only. || 2026-11-01 retry: PwC (already used); no Deloitte Eswatini 2026",
-    "archive": "Archive unreachable. || 2026-11-01 retry: archive.org's availability API now answers (snapshots of the institution's site exist), but web.archive.org snapshot pages return HTTP 403 over http and reset over https from this environment (2026-11-01)"
-   }
+   "url": "https://www.ers.org.sz/IncomeTax/RatesandThres",
+   "title": "Eswatini Revenue Service, Rates and Thresholds",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Rates of normal TAX for individual Taxable Income Rates Exceeds Does not exceed E0 E100 000 0 + 20% of the excess of E0 E100 000 E150 000 E20 000 + 25% of the excess of E100 000 E150 000 E200 000 E32 500 + 30% of the excess of E150 000 E200 000 E47 500 + 33% of the excess of E200 000 When applying the above rates, the following should be taken into account: Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year The rates are applicable on the amount exceeding E41 000 … Withholding tax payments to entertainers E 15% On or before the 15th day of the following month from the date withheld"
+  },
+  {
+   "url": "https://www.ers.org.sz/Registration",
+   "title": "Eswatini Revenue Service, VAT Registration",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "VAT registration is compulsory for businesses whose annual taxable turnover exceeds E900 000. Any business with reasonable expectations to reach this amount should also apply to register."
+  },
+  {
+   "url": "https://www.ers.org.sz/VAT/Eswatini",
+   "title": "Eswatini Revenue Service, Eswatini VAT",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "It was introduced on 1 April 2012 to replace Sales Tax. Like Sales Tax, it is an indirect tax and it is levied on most goods and services at the rate of 15%."
   }
- ]
+ ],
+ "blockers": []
 }

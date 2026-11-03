@@ -245,6 +245,28 @@
      "said": "169. Tax collected or deducted as a final tax.— (1) This section shall apply … (b) the 2[tax required to be deducted] is a final tax under 3[sub- section (1E) of section 152, 152A] … (2) Where this section applies — (a) the income shall not be chargeable to tax under any head of income in computing the taxable income of the person; … (3) Sub-section (2) does not apply to an amount — … (b) with the written approval of the Commissioner, that is taxable to a permanent establishment in Pakistan of the non-resident person;"
     }
    ]
+  },
+  {
+   "item": "vat",
+   "finding": "Sindh's sales tax on services is 15%; the services of performing and other artists are exempt (not stage, set, lighting or costume designers'), and a provider whose annual turnover is at most Rs 4 million is exempt unless serving a withholding agent or a registered person.",
+   "value": {
+    "currency": "PKR",
+    "province": "Sindh",
+    "rate": 0.15,
+    "performingArtistsExempt": true,
+    "turnoverExemptUpTo": 4000000
+   },
+   "applies": "Sindh, as consolidated to the Sindh Finance Act 2026, read 2026-11-03; the other provinces and the capital were not read, and the game holds no province for a person, so no province's rate is applied.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "sales tax on the provision of a taxable service at the rate of fifteen per cent of value of the taxable service"
+    },
+    {
+     "src": 4,
+     "said": "Services of performing and other artists: exempt; the exemption shall not be applicable to services provided or rendered by stage designers, set designers, lighting designers and costume designers"
+    }
+   ]
   }
  ],
  "country": "PK",
@@ -279,12 +301,19 @@
    "kind": "secondary",
    "quotes": "https://download1.fbr.gov.pk/Docs/2026724177725705IncomeTaxOrdinanace2001.pdf",
    "said": "The tax year is 1 July through 30 June."
+  },
+  {
+   "url": "https://www.srb.gos.pk/srb/wp-content/uploads/2026/08/SSTOS_Act2011.pdf",
+   "title": "Sindh Sales Tax on Services Act, 2011, consolidated to the Sindh Finance Act, 2026 (Sindh Revenue Board)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "s. 8(1): sales tax on the provision of a taxable service at the rate of fifteen per cent of value of the taxable service, which shall be referred to as the standard rate. First Schedule, item 37 (CPC 963, services of performing and other artists): exempt; the exemption shall not be applicable to services provided or rendered by stage designers, set designers, lighting designers and costume designers. Item 44: services of a person whose total annual turnover does not exceed rupees four million in a financial year"
   }
  ],
  "blockers": [
   {
    "item": "vat",
-   "sought": "The provincial sales tax rates on services (Punjab, Sindh, KP, Balochistan, ICT) that apply to a freelancer's fee and their thresholds.",
+   "sought": "The provincial sales tax rates on services that apply to a freelancer's fee and their thresholds in Punjab, Khyber Pakhtunkhwa, Balochistan and the Islamabad Capital Territory (Sindh's were read on 2026-11-03)",
    "tried": {
     "institution": "provincial revenue authorities' sites not tried || retry-8 2026-11-01: pra.punjab.gov.pk (Punjab Revenue Authority), srb.gos.pk (Sindh Revenue Board), kpra.kp.gov.pk (Khyber Pakhtunkhwa) and bra.gob.pk (Balochistan): connection reset or no answer (http answers 503) from this environment; fbr.gov.pk home read: no link to the Islamabad Capital Territory (Tax on Services) Ordinance found",
     "official-register": "not tried || retry-8 2026-11-01: the provincial sales tax on services Acts (Punjab 2012, Sindh 2011, KP 2022, Balochistan 2015) and the ICT Ordinance 2001: no reachable official host this turn",

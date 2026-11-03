@@ -169,7 +169,11 @@ describe('the ages read from the person research', () => {
     // parent's consent for a younger performer, Malaysia's majority with its working age unread.
     expect([ages['SR']?.majority, ages['JO']?.majority, ages['MY']?.majority, ages['MY']?.work]).toEqual([18, 18, 18, null]);
     expect(ages['TJ']?.work).toStrictEqual({ from: 15, performers: 'permit', permit: 'согласие отца или матери или лиц, заменяющих их (a parent’s or guardian’s consent)' });
-    expect(Object.keys(ages).length).toBe(218);
+    // The second round of 2026-11-03: Sint Maarten's own Civil Code and working-hours ordinance; Brunei's, Mali's and
+    // Malawi's majority beside the working age layer 3 held; the Marshall Islands' majority with its working age unread.
+    expect(ages['SX']).toStrictEqual({ majority: 18, work: { from: 15, performers: 'barred' } });
+    expect([ages['BN']?.majority, ages['ML']?.majority, ages['MW']?.majority, ages['MH']?.majority, ages['MH']?.work]).toEqual([18, 18, 18, 18, null]);
+    expect(Object.keys(ages).length).toBe(220);
   });
 });
 

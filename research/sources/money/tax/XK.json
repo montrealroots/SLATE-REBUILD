@@ -125,6 +125,44 @@
      "said": "The standard VAT rate is 18%."
     }
    ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident entertainer's income from work in Kosovo (a theatre, film, radio or television artiste, a singer or musician) and a non-resident's income for other services performed there are withheld by the payer at 5% of the gross compensation, a final tax: no return is filed.",
+   "value": {
+    "entertainers": 0.05,
+    "services": 0.05,
+    "base": "gross compensation",
+    "final": "yes: art. 41(4)",
+    "law": "Law 05/L-028 art. 41"
+   },
+   "applies": "Read 2026-11-03 in the Official Gazette's text of Law 05/L-028; Law 08/L-142 (2024) amends it on the minimum wage and the yearly brackets, by its title.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "shuma e mbajtjes në burim sipas paragrafit 1 dhe 2 të këtij neni është 5% e kompensimit bruto"
+    },
+    {
+     "src": 5,
+     "said": "Mbajtja në burim sipas këtij neni konsiderohet të jetë tatim përfundimtar dhe pranuesit e të ardhurave të tilla … nuk do të dorëzojnë deklaratë në ATK"
+    }
+   ]
+  },
+  {
+   "item": "authors",
+   "finding": "Royalties, which include payment for the use of the copyright in a literary, artistic or scientific work and in cinematograph films, are withheld at 10% when a business pays them to a resident or a non-resident; no other treatment of an author's earnings is given.",
+   "value": {
+    "royalties": 0.1,
+    "final": null,
+    "law": "Law 05/L-028 arts. 2(1.22), 37(1.2), 39(1)"
+   },
+   "applies": "Read 2026-11-03 in the Official Gazette's text of Law 05/L-028.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "do të mbajë në burim tatimin dhjetë për qind (10%) në kohën e pagesës apo kreditimit"
+    }
+   ]
   }
  ],
  "country": "XK",
@@ -168,34 +206,19 @@
    "kind": "secondary",
    "quotes": "https://www.atk-ks.org/",
    "said": "taxable persons whose turnover is above EUR 30,000 within a calendar year are required to register for VAT. … The standard VAT rate is 18%."
+  },
+  {
+   "url": "https://gzk.rks-gov.net/ActDetail.aspx?ActID=11014",
+   "title": "Ligji Nr. 05/L-028 për tatimin në të ardhurat personale, Gazeta Zyrtare e Republikës së Kosovës Nr. 22, 14 gusht 2015 (the Official Gazette's own text)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Neni 39 1. Secili person fizik afarist, ortakëri apo grupim i personave, i cili iu paguan interes apo të drejta pronësore … personave rezidentë apo jo rezidentë, do të mbajë në burim tatimin dhjetë për qind (10%) në kohën e pagesës apo kreditimit. … Neni 41 1. Të ardhurat që i atribuohen një jo rezidenti në Kosovë si një zbavitës, sikurse është teatri, figurat e lëvizshme, artiste radioje apo televizioni, ose një këngëtar apo muzikant, ose si një sportist, nga aktivitetet e tij të ushtruara në Kosovë i nënshtrohet mbajtjes në burim nga paguesi … 2. Të ardhurat … nga një person apo entitet jo-rezident nga shërbimet e kryera në Kosovë i nënshtrohen mbajtjes në burim … 3. … shuma e mbajtjes në burim sipas paragrafit 1 dhe 2 të këtij neni është 5% e kompensimit bruto. … 4. Mbajtja në burim sipas këtij neni konsiderohet të jetë tatim përfundimtar dhe pranuesit e të ardhurave të tilla … nuk do të dorëzojnë deklaratë në ATK"
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The PIT law's own text and the tax administration's 2026 rate page",
-   "tried": {
-    "institution": "atk-ks.org fails TLS verification from this environment (curl: SSL certificate problem: unable to get local issuer certificate, 2026-11-01); not read another way || retry-8 2026-11-01: atk-ks.org and www.atk-ks.org rechecked 2026-11-01: TLS verification still fails (SSL certificate problem); not read another way",
-    "official-register": "gzk.rks-gov.net (Official Gazette: Law 08/L-257 on PIT, Law 05/L-037 on VAT) not read || retry-8 2026-11-01: gzk.rks-gov.net (Official Gazette) answers: home page and 'Laws in force' list read; the list shows 20 acts per page and pages by ASP.NET postback, and none of the acts on the first page or linked from the home page is the PIT law (08/L-257), the VAT law or the tax-administration law; the act's ActID is not known, so it was not opened",
-    "web-search": "not run separately || retry-8 2026-11-01: a search for 'Ligji 08/L-257 tatimi në të ardhurat personale artist jorezident tatim në burim' was refused by the search tool (shared per-turn limit of 200 searches reached)",
-    "trade-press": "PwC Kosovo used for all figures || retry-8 2026-11-01: PwC Kosovo (used) re-read: services by non-residents 5%, royalties 10%; nothing on finality or authors",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || retry-8 2026-11-01: web.archive.org: connection reset and availability API 429 on 2026-11-01"
-   }
-  },
-  {
-   "item": "nonResident",
-   "sought": "Whether a non-resident performer's fee is withheld at the services rate or another, and whether final",
-   "tried": {
-    "institution": "atk-ks.org fails TLS verification from this environment (curl: SSL certificate problem: unable to get local issuer certificate, 2026-11-01); not read another way || retry-8 2026-11-01: atk-ks.org and www.atk-ks.org rechecked 2026-11-01: TLS verification still fails (SSL certificate problem); not read another way",
-    "official-register": "gzk.rks-gov.net (Official Gazette: Law 08/L-257 on PIT, Law 05/L-037 on VAT) not read || retry-8 2026-11-01: gzk.rks-gov.net (Official Gazette) answers: home page and 'Laws in force' list read; the list shows 20 acts per page and pages by ASP.NET postback, and none of the acts on the first page or linked from the home page is the PIT law (08/L-257), the VAT law or the tax-administration law; the act's ActID is not known, so it was not opened",
-    "web-search": "not run separately || retry-8 2026-11-01: a search for 'Ligji 08/L-257 tatimi në të ardhurat personale artist jorezident tatim në burim' was refused by the search tool (shared per-turn limit of 200 searches reached)",
-    "trade-press": "PwC Kosovo used for all figures || retry-8 2026-11-01: PwC Kosovo (used) re-read: services by non-residents 5%, royalties 10%; nothing on finality or authors",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || retry-8 2026-11-01: web.archive.org: connection reset and availability API 429 on 2026-11-01"
-   }
-  },
-  {
-   "item": "authors",
-   "sought": "Any special treatment of authors' fees or royalties",
+   "sought": "The PIT law's yearly brackets as Law 08/L-142 (2024) set them, and the tax administration's 2026 rate page (Law 05/L-028's own text was read on 2026-11-03; its art. 6 brackets are the ones 08/L-142 replaced)",
    "tried": {
     "institution": "atk-ks.org fails TLS verification from this environment (curl: SSL certificate problem: unable to get local issuer certificate, 2026-11-01); not read another way || retry-8 2026-11-01: atk-ks.org and www.atk-ks.org rechecked 2026-11-01: TLS verification still fails (SSL certificate problem); not read another way",
     "official-register": "gzk.rks-gov.net (Official Gazette: Law 08/L-257 on PIT, Law 05/L-037 on VAT) not read || retry-8 2026-11-01: gzk.rks-gov.net (Official Gazette) answers: home page and 'Laws in force' list read; the list shows 20 acts per page and pages by ASP.NET postback, and none of the acts on the first page or linked from the home page is the PIT law (08/L-257), the VAT law or the tax-administration law; the act's ActID is not known, so it was not opened",

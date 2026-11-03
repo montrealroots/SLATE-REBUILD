@@ -75,9 +75,10 @@ describe("a country's tax", () => {
     // The compiled figures are the research's, read where the readings place them, from the files the register cites.
     const read = readTax(root);
     expect(TAX).toEqual(read.countries);
-    // Every place of the map but the two with no taxing state and the five whose research found nothing (their register entries blockers).
-    expect([Object.keys(TAX).length, read.noState]).toEqual([245, ['AN', 'AQ']]);
-    for (const cc of ['ER', 'IR', 'ST', 'SY', 'TJ', 'AN', 'AQ']) expect(taxOf(cc), cc).toBeUndefined();
+    // Every place of the map but the two with no taxing state and the four whose research found nothing (their register entries blockers);
+    // Tajikistan left that list on 2026-11-03, when its Tax Committee's rate articles were read.
+    expect([Object.keys(TAX).length, read.noState]).toEqual([246, ['AN', 'AQ']]);
+    for (const cc of ['ER', 'IR', 'ST', 'SY', 'AN', 'AQ']) expect(taxOf(cc), cc).toBeUndefined();
     // Every scale read whole from the research: each band's from, to and rate, exactly.
     const gb = research('GB').figures[0]?.value['brackets'] as { from: number; to: number | null; rate: number }[];
     expect(of('GB').residents[0]?.layers[0]?.bands).toEqual(gb.map((b) => ({ from: String(b.from), to: b.to === null ? null : String(b.to), rate: String(b.rate) })));

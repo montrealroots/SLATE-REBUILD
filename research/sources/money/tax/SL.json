@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "nonResident",
-   "finding": "From 1 January 2026 the Finance Act 2026 raises withholding on management or professional fees paid to non-residents from 15% to 20% (non-resident contractors from 10% to 20%), withheld on the gross before payment.",
+   "finding": "From 1 January 2026 the Finance Act 2026 raised the withholding on management or professional fees paid to non-residents from 15% to 20%, and on payments to non-resident contractors from 10% to 20%; rents and royalties paid to a non-resident bear 15%, and a non-resident's employment income 25% (the Finance Act 2024's table).",
    "value": {
     "rate": 0.2,
     "previous": 0.15,
@@ -13,13 +13,23 @@
     "base": "gross amount payable",
     "threshold": null,
     "final": null,
-    "from": "2026-01-01"
+    "from": "2026-01-01",
+    "royalties": 0.15,
+    "employment": 0.25
    },
-   "applies": "Payments to non-residents",
+   "applies": "From 1 January 2026; the Finance Acts 2024 and 2026 read 2026-11-03 on the NRA's own pages.",
    "sources": [
     {
      "src": 0,
      "said": "Withholding tax on payments to non-resident contractors increases from 10% to 20% . Withholding tax on management or professional fees paid to non-residents increases from 15% to 20% . Payments covered under this provision are not treated as employment income. The payer is required to withhold tax at source on the gross amount payable before making payment to the non-resident. Reference: Second Schedule to the Income Tax Act 2000."
+    },
+    {
+     "src": 4,
+     "said": "(d) repealing the 15% rate corresponding to the 'Management/professional fees 'item under the 'type of payment' column of that part and replacing it with 20%."
+    },
+    {
+     "src": 3,
+     "said": "Employment income (section 116) 25% … Rents and royalties (section 120) 15%"
     }
    ]
   },
@@ -62,6 +72,43 @@
      "said": "The scheme covers all formal sector employers and employees on a mandatory basis. It provides voluntary membership for the self employed."
     }
    ]
+  },
+  {
+   "item": "withholding",
+   "finding": "A payer withholds 15% from management or professional fees and from royalties paid to a resident, and 5% from payments to resident contractors; an employer files the monthly PAYE return and pays the tax by the 15th of the next month.",
+   "value": {
+    "professionalFees": 0.15,
+    "royalties": 0.15,
+    "contractors": 0.05,
+    "payeDue": "15th of the following month"
+   },
+   "applies": "Residents; the Finance Act 2024's table (the Finance Act 2026 changed only its rent rate), and the NRA's 2022 guide for the PAYE date, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "Rates of tax to be withheld from payments made to residents … Payments to contractors (section 117) 5% … Management/professional fees 15% … Royalties (section 120) 15%"
+    },
+    {
+     "src": 5,
+     "said": "The employer is required to file a monthly PAYE return … on or before the 15th of the month following the payment of staff emoluments."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "A supplier must register for GST once its taxable supplies pass the threshold the Finance Act 2024 set at Le500,000; the GST rate was not read.",
+   "value": {
+    "threshold": 500000,
+    "thresholdAsWritten": "Le500,000",
+    "rate": null
+   },
+   "applies": "From the Finance Act 2024 (s. 13); the Act writes \"Le\", replacing a threshold of \"Le100,000,000\" in old leones.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "deleting the registration threshold amount of \"Lel00,000,000\" and inserting the following new registration threshold amount of \"Le500,000\""
+    }
+   ]
   }
  ],
  "country": "SL",
@@ -87,12 +134,33 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "The scheme covers all formal sector employers and employees on a mandatory basis. It provides voluntary membership for the self employed."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/The_Finance_Act_2024_0d6d83e684.pdf",
+   "title": "The Finance Act, 2024 (Sierra Leone), National Revenue Authority, ss. 11-13",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "PART IV (Sections 117,118,119,120 and 121) Rates of tax to be withheld from payments made to residents Type of payment Rate Payments to contractors (section 117) 5% Dividends (section 118) 15% Interests (section 119) 15% Management/professional fees 15% Rents 10% Royalties (section 120) 15% … PART II … Rates of tax to be withheld from payments made to non-residents: Employment income (section 116) 25% Payments to contractors (sectionl 17) 10% … Management/professional fees 15% Rents and royalties (section 120) 15% … 13. Section 15 of the Goods and Services Tax Act 2009 is amended under subsection (2) by deleting the registration threshold amount of \"Lel00,000,000\" and inserting the following new registration threshold amount of \"Le500,000\""
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/The_Finance_Act_2026_121df05d9b.pdf",
+   "title": "The Finance Act, 2026 (Sierra Leone), National Revenue Authority, ss. 13-14",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(b) Part IV by repealing the 10% rate corresponding to the 'rent' item under the 'type of payment' column of that part and replacing it with 15%. 14. The Second Schedule to the Income Tax Act 2000 is amended in Part II as follows- (a) repealing the 10% rate corresponding to 'payments to contractors (section 117)' item … and replacing it with 20%; … (d) repealing the 15% rate corresponding to the 'Management/professional fees 'item under the 'type of payment' column of that part and replacing it with 20%."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/2022_NRA_TAX_GUIDE_83dc12b316.pdf",
+   "title": "National Revenue Authority, 2022 Tax Guide",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The employer is required to file a monthly PAYE return … on or before the 15th of the month following the payment of staff emoluments."
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The personal income tax bands (Income Tax Act 2000, First Schedule, as last amended) in new leones.",
+   "sought": "The personal income tax bands (Income Tax Act 2000, First Schedule, as last amended) in new leones (the NRA's 2022 guide prints the 2021 bands in old leones; the redenomination's ratio was not read from a primary)",
    "tried": {
     "institution": "nra.gov.sl did not answer this environment; its CMS PDF host fails TLS verification (not bypassed) || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for residents; nassit.org.sl read (social now recorded).",
     "official-register": "Finance Act 2026 PDF unreachable (TLS); Sierra Leone Gazette not online || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
@@ -102,19 +170,8 @@
    }
   },
   {
-   "item": "withholding",
-   "sought": "PAYE method and remittance date.",
-   "tried": {
-    "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for withholding; nassit.org.sl read (social now recorded).",
-    "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
-    "web-search": "not run || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('NRA Sierra Leone Finance Act 2026 withholding').",
-    "trade-press": "not found || 2026-11-01 retry: taxsummaries.pwc.com/sierra-leone returns 404 (checked 2026-11-01); PaySpace note already saved.",
-    "archive": "web.archive.org unreachable from this environment || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
-   }
-  },
-  {
    "item": "vat",
-   "sought": "GST rate and registration threshold.",
+   "sought": "The GST rate (the registration threshold of Le500,000 was read in the Finance Act 2024 on 2026-11-03)",
    "tried": {
     "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for vat; nassit.org.sl read (social now recorded).",
     "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
@@ -125,7 +182,7 @@
   },
   {
    "item": "authors",
-   "sought": "Treatment of royalties.",
+   "sought": "Treatment of royalties beyond the 15% withheld from a resident's and a non-resident's (read in the Finance Act 2024 on 2026-11-03): whether it is final, and any relief",
    "tried": {
     "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for authors; nassit.org.sl read (social now recorded).",
     "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",

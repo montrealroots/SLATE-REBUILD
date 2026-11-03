@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "residents",
-   "finding": "From 1 July 2021 an individual or sole trader pays nothing on the first TOP 12,000 a year, 10% to 30,000, 15% to 50,000, 20% to 70,000 and 25% above, as the Ministry of Revenue and Customs announced; no later change was found.",
+   "finding": "An individual or sole trader pays nothing on the first TOP 12,000 a year of gross income, 10% to 30,000, 15% to 50,000, 20% to 70,000 and 25% above, the Ministry of Revenue and Customs's \"New Tax Rate\" from July 2021, with no deductions for an employee; no later table is printed.",
    "value": {
     "currency": "TOP",
     "brackets": [
@@ -38,7 +38,7 @@
     "since": "2021-07-01",
     "regionalLayer": null
    },
-   "applies": "Individuals and sole traders in Tonga; financial year 1 July - 30 June (2025-26 and 2026-27 touch calendar 2026), on the 2021 schedule.",
+   "applies": "From 1 July 2021; read 2026-11-03 on the Ministry's own page, which prints no later table.",
    "sources": [
     {
      "src": 0,
@@ -51,6 +51,95 @@
     {
      "src": 0,
      "said": "Income tax cuts for individuals and sole traders from July 1 means all income taxpayers in Tonga will pay less."
+    },
+    {
+     "src": 1,
+     "said": "New Tax Rate - July 2021 Gross Income Tax Rate $0 - $12,000 Nil $12,001 - $30,000 10% $30,001- $50,000 15% $50,001-$70,000 20% $70,001 and over 25% No Deduction Allowed Employees have no allowable deductions."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer withholds PAYE from an employee's gross pay at the tax rates of the table and pays it with a monthly return within 28 days after the month; the year's reconciliation is due on 31 August, and an individual in business files a return by 31 October.",
+   "value": {
+    "paye": "by the table on gross employment income",
+    "remit": "within 28 days after the end of each month",
+    "reconciliation": "08-31",
+    "soleTraderReturn": "10-31"
+   },
+   "applies": "Read 2026-11-03.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Your employer is obliged under the law to withhold tax (PAYE ) if any, by applying the tax rates in the table below"
+    },
+    {
+     "src": 5,
+     "said": "Monthly Withholding Tax Return/PAYE – Form 7 … Within 28 days after end of each month"
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A payer withholds 10% of the gross from a non-resident's fee for independent services (a visiting performer's, director's or producer's), and 15% from a royalty; the non-resident's liability is satisfied to the extent the tax is withheld, and the payer pays it within 28 days after the month.",
+   "value": {
+    "independentServices": 0.1,
+    "royalties": 0.15,
+    "base": "gross",
+    "final": "yes: the non-resident's liability is satisfied to the extent the tax is withheld",
+    "remit": "within 28 days after the end of the month"
+   },
+   "applies": "Payments to non-residents; read 2026-11-03.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The income tax imposed shall be 10% of the gross amount paid to a non-resident person rendering independent services."
+    },
+    {
+     "src": 2,
+     "said": "a non-resident person’s liability for tax is satisfied to the extent that the tax payable is withheld by the payer from the amount paid to the non-resident person. The income tax imposed shall be: 5% of the gross amount of the insurance premium 15% of the gross amount of the interest, royalty, dividend, or technical services fee"
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "A private-sector employee pays 5% of gross pay to the National Retirement Benefits Fund, deducted by the employer, and the employer at least 7.5% (of gross on the Fund's home page, of basic salary on its services page), monthly.",
+   "value": {
+    "currency": "TOP",
+    "employee": 0.05,
+    "employer": 0.075,
+    "base": "gross (home page); basic salary (services page)"
+   },
+   "applies": "Members of the Fund (the private sector, from 1 July 2012); read 2026-11-03.",
+   "sources": [
+    {
+     "src": 6,
+     "said": "Member Contribution Account (MC, 5% of gross) – mandated contribution deducted from members weekly/fortnightly/monthly or annual salary … Employer Contribution Account (EC, 7.5% of gross)"
+    },
+    {
+     "src": 6,
+     "said": "Employees must contribute 5% of his Montly Salary Employer must contribute minimum 7.5% based on employee basic salary"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "Consumption tax is 15% on most goods and services (since 1 April 2005); registration is compulsory once taxable supplies reach TOP 100,000 in twelve months.",
+   "value": {
+    "currency": "TOP",
+    "rate": 0.15,
+    "threshold": 100000,
+    "since": "2005-04-01"
+   },
+   "applies": "Read 2026-11-03. The Ministry registers at TOP 100,000 or more; the game charges it above TOP 100,000.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "at the rate of 15% with effect from 1st April 2005"
+    },
+    {
+     "src": 3,
+     "said": "expects the total value of the taxable supplies of goods and/or services to be $100,000 or more in the next 12 months"
     }
    ]
   }
@@ -64,63 +153,49 @@
    "kind": "secondary",
    "quotes": "https://www.revenue.gov.to",
    "said": "The tax-free income level will be raised from the first $10,000 to the first $12,000 pa'anga earned in the new financial year, with further adjustments in tax thresholds easing higher income tax levels. … The current 10% income tax will be applied on income between $12,000 and $30,000 per annum. For earnings between $30,001 and $50,000, the rate will be reduced from 20% to 15%. Earnings between $50,0001 and $70,000 are subject to a $20% tax rate. Earnings over $70,001 are subject to a 25% tax rate. … Income tax cuts for individuals and sole traders from July 1 means all income taxpayers in Tonga will pay less."
+  },
+  {
+   "url": "https://www.revenue.gov.to/individual-employee",
+   "title": "Ministry of Revenue and Customs (Tonga), Individual Employee",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Your employer is obliged under the law to withhold tax (PAYE ) if any, by applying the tax rates in the table below … New Tax Rate - July 2021 Gross Income Tax Rate $0 - $12,000 Nil $12,001 - $30,000 10% $30,001- $50,000 15% $50,001-$70,000 20% $70,001 and over 25% No Deduction Allowed Employees have no allowable deductions."
+  },
+  {
+   "url": "https://www.revenue.gov.to/non-residents-and-visitors",
+   "title": "Ministry of Revenue and Customs (Tonga), Non Residents and Visitors",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The income tax imposed shall be 10% of the gross amount paid to a non-resident person rendering independent services. … Thus, a non-resident person’s liability for tax is satisfied to the extent that the tax payable is withheld by the payer from the amount paid to the non-resident person. The income tax imposed shall be: 5% of the gross amount of the insurance premium 15% of the gross amount of the interest, royalty, dividend, or technical services fee, rent, natural resource payment, management fees"
+  },
+  {
+   "url": "https://www.revenue.gov.to/consumption-tax-registration",
+   "title": "Ministry of Revenue and Customs (Tonga), CT Registration",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Any person who carries on a taxable activity who expects the total value of the taxable supplies of goods and/or services to be $100,000 or more in the next 12 months; Any person who carries on a taxable activity and the total value of the taxable supplies of goods and/or services in the past 12 months (or some lesser period) is $100,000 or more"
+  },
+  {
+   "url": "https://www.revenue.gov.to/consumption-tax-overview",
+   "title": "Ministry of Revenue and Customs (Tonga), Consumption Tax Overview",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Consumption Tax (CT) is a tax on spending levied on the supply of most goods and services in Tonga at the rate of 15% with effect from 1st April 2005."
+  },
+  {
+   "url": "https://www.revenue.gov.to/tax-due-Dates-and-extensions",
+   "title": "Ministry of Revenue and Customs (Tonga), Tax Due Dates and Extensions",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Non Resident Withholding Tax return – Form 6 Monthly Withholding Tax Return/PAYE – Form 7 Consumption Tax return (CT) Within 28 days after end of each month … PAYE Reconciliation and Employee Statement – Form 8 and Form 4 31 st of August … Income Tax return for Individual with business (Sole Trader) – Form 10 … 31 st of October"
+  },
+  {
+   "url": "https://www.nrbf.to",
+   "title": "National Retirement Benefits Fund (Tonga), home page and Our Services (services.php)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Member Contribution Account (MC, 5% of gross) – mandated contribution deducted from members weekly/fortnightly/monthly or annual salary … Employer Contribution Account (EC, 7.5% of gross) – mandated contribution for the member from the employer. (services.php:) Employees must contribute 5% of his Montly Salary Employer must contribute minimum 7.5% based on employee basic salary This conribution must done on Montly basis"
   }
  ],
- "blockers": [
-  {
-   "item": "residents",
-   "sought": "The 2026 schedule in the Income Tax Act or Regulations (confirming no change since July 2021)",
-   "tried": {
-    "institution": "revenue.gov.to not reachable (curl 000) 2026-11-01; ago.gov.to returns a 408-byte shell || 2026-11-01 retry: revenue.gov.to and finance.gov.to still do not answer (curl 000); ago.gov.to returns the same 408-byte shell.",
-    "official-register": "paclii.org HTTP 403; pacliirms.austlii.edu.au reset the connection (Government Gazette 2021/6 and the Income Tax Amendment Acts not read) || 2026-11-01 retry: paclii.org/to/legis/consol_act/ returns HTTP 403 (not read another way).",
-    "web-search": "WebSearch 'Tonga income tax rates individuals employment income threshold TOP 12,000 ...' and 'Tonga \"Income Tax (Amendment) Act 2021\" ...' || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "Matangi Tonga 2021 read (quotes the Ministry); payroll vendors (Rivermate, Pebl) seen, not used || 2026-11-01 retry: No Deloitte Tonga 2026 Highlights (HTTP 404); no PwC Tonga summary.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org/wayback/available lists a 2026-10-17 snapshot of revenue.gov.to; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
-  {
-   "item": "social",
-   "sought": "The Retirement Fund / national superannuation contributions on pay",
-   "tried": {
-    "institution": "revenue.gov.to not reachable (curl 000) 2026-11-01; ago.gov.to returns a 408-byte shell || 2026-11-01 retry: revenue.gov.to and finance.gov.to still do not answer (curl 000); ago.gov.to returns the same 408-byte shell.",
-    "official-register": "paclii.org HTTP 403; pacliirms.austlii.edu.au reset the connection (Government Gazette 2021/6 and the Income Tax Amendment Acts not read) || 2026-11-01 retry: paclii.org/to/legis/consol_act/ returns HTTP 403 (not read another way).",
-    "web-search": "WebSearch 'Tonga income tax rates individuals employment income threshold TOP 12,000 ...' and 'Tonga \"Income Tax (Amendment) Act 2021\" ...' || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "Matangi Tonga 2021 read (quotes the Ministry); payroll vendors (Rivermate, Pebl) seen, not used || 2026-11-01 retry: No Deloitte Tonga 2026 Highlights (HTTP 404); no PwC Tonga summary.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org/wayback/available lists a 2026-10-17 snapshot of revenue.gov.to; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
-  {
-   "item": "withholding",
-   "sought": "PAYE withholding and the withholding on payments to non-residents (artistes)",
-   "tried": {
-    "institution": "revenue.gov.to not reachable (curl 000) 2026-11-01; ago.gov.to returns a 408-byte shell || 2026-11-01 retry: revenue.gov.to and finance.gov.to still do not answer (curl 000); ago.gov.to returns the same 408-byte shell.",
-    "official-register": "paclii.org HTTP 403; pacliirms.austlii.edu.au reset the connection (Government Gazette 2021/6 and the Income Tax Amendment Acts not read) || 2026-11-01 retry: paclii.org/to/legis/consol_act/ returns HTTP 403 (not read another way).",
-    "web-search": "WebSearch 'Tonga income tax rates individuals employment income threshold TOP 12,000 ...' and 'Tonga \"Income Tax (Amendment) Act 2021\" ...' || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "Matangi Tonga 2021 read (quotes the Ministry); payroll vendors (Rivermate, Pebl) seen, not used || 2026-11-01 retry: No Deloitte Tonga 2026 Highlights (HTTP 404); no PwC Tonga summary.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org/wayback/available lists a 2026-10-17 snapshot of revenue.gov.to; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
-  {
-   "item": "nonResident",
-   "sought": "The tax on a non-resident performer's fee",
-   "tried": {
-    "institution": "revenue.gov.to not reachable (curl 000) 2026-11-01; ago.gov.to returns a 408-byte shell || 2026-11-01 retry: revenue.gov.to and finance.gov.to still do not answer (curl 000); ago.gov.to returns the same 408-byte shell.",
-    "official-register": "paclii.org HTTP 403; pacliirms.austlii.edu.au reset the connection (Government Gazette 2021/6 and the Income Tax Amendment Acts not read) || 2026-11-01 retry: paclii.org/to/legis/consol_act/ returns HTTP 403 (not read another way).",
-    "web-search": "WebSearch 'Tonga income tax rates individuals employment income threshold TOP 12,000 ...' and 'Tonga \"Income Tax (Amendment) Act 2021\" ...' || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "Matangi Tonga 2021 read (quotes the Ministry); payroll vendors (Rivermate, Pebl) seen, not used || 2026-11-01 retry: No Deloitte Tonga 2026 Highlights (HTTP 404); no PwC Tonga summary.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org/wayback/available lists a 2026-10-17 snapshot of revenue.gov.to; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
-  {
-   "item": "vat",
-   "sought": "Consumption tax rate and registration threshold",
-   "tried": {
-    "institution": "revenue.gov.to not reachable (curl 000) 2026-11-01; ago.gov.to returns a 408-byte shell || 2026-11-01 retry: revenue.gov.to and finance.gov.to still do not answer (curl 000); ago.gov.to returns the same 408-byte shell.",
-    "official-register": "paclii.org HTTP 403; pacliirms.austlii.edu.au reset the connection (Government Gazette 2021/6 and the Income Tax Amendment Acts not read) || 2026-11-01 retry: paclii.org/to/legis/consol_act/ returns HTTP 403 (not read another way).",
-    "web-search": "WebSearch 'Tonga income tax rates individuals employment income threshold TOP 12,000 ...' and 'Tonga \"Income Tax (Amendment) Act 2021\" ...' || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "Matangi Tonga 2021 read (quotes the Ministry); payroll vendors (Rivermate, Pebl) seen, not used || 2026-11-01 retry: No Deloitte Tonga 2026 Highlights (HTTP 404); no PwC Tonga summary.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org/wayback/available lists a 2026-10-17 snapshot of revenue.gov.to; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  }
- ]
+ "blockers": []
 }

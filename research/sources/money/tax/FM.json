@@ -5,14 +5,14 @@
  "figures": [
   {
    "item": "residents",
-   "finding": "The national government levies a wage and salary tax (with a tax-free threshold) and a gross receipts tax on business, half of each shared with the states; their rates were not found.",
+   "finding": "The national government levies a wage and salary tax and a gross revenue tax on business, half of each shared with the states: wages and salaries bear 6% on the first $11,000 a year and 10% above (FSM Code tit. 54 § 121), withheld by the employer as paid and remitted quarterly; an employee earning under $5,000 a year may claim a $1,000 deduction by refund (§ 122); a business's gross revenue, a freelancer's fees and royalties included, bears $80 on the first $10,000 a year and 3% above, none at $2,000 or less (§§ 112(5), 141), paid quarterly.",
    "value": {
     "currency": "USD",
-    "wageAndSalaryTax": "exists, rates not read",
-    "grossReceiptsTax": "exists, rates not read",
+    "wageAndSalaryTax": "rates read 2026-11-03 (figure 4)",
+    "grossReceiptsTax": "rates read 2026-11-03 (figure 4)",
     "stateShare": 0.5
    },
-   "applies": "Wage earners and businesses",
+   "applies": "Wage earners and businesses; the rates as the FSM Code (2014 codification, these sections last amended by PL 5-84) states them, read 2026-11-03.",
    "sources": [
     {
      "src": 0,
@@ -21,6 +21,10 @@
     {
      "src": 1,
      "said": "the proposed transition from the Gross Revenue Tax to a Net Profits Tax. The introduction of a Value Added Tax and a proposed increase to the wage and salary tax threshold were also discussed."
+    },
+    {
+     "src": 5,
+     "said": "121 . Tax on wages and salaries . There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee"
     }
    ]
   },
@@ -98,6 +102,54 @@
      "said": "If the contractor is in business (and therefore should pay the Gross Revenue Tax):"
     }
    ]
+  },
+  {
+   "item": "residents",
+   "finding": "Wages and salaries bear 6% on the first $11,000 a year and 10% above, withheld by the employer as paid and remitted with a quarterly return by 30 April, 31 July, 31 October and 31 January; an employee earning under $5,000 a year claims a $1,000 deduction by refund. A business's gross revenue (a freelancer's fees and royalties included) bears $80 a year on its first $10,000 and 3% above, none at $2,000 or less, paid with quarterly returns on the same dates. Wages for work done partly outside the FSM are presumed earned there, and an employee of an employer with no place of business or agent in the FSM files and pays the tax himself.",
+   "value": {
+    "currency": "USD",
+    "wageTax": [
+     {
+      "from": 0,
+      "to": 11000,
+      "rate": 0.06
+     },
+     {
+      "from": 11000,
+      "to": null,
+      "rate": 0.1
+     }
+    ],
+    "lowEarnerDeduction": {
+     "amount": 1000,
+     "whenAnnualWagesUnder": 5000,
+     "claimedBy": "refund (§§ 122-123)"
+    },
+    "grossRevenueTax": {
+     "flatOnFirst10000": 80,
+     "rateAbove10000": 0.03,
+     "exemptAtOrBelow": 2000
+    },
+    "returns": "quarterly, by 30 April, 31 July, 31 October and 31 January (§§ 132, 143); no annual return for an employee",
+    "nonResident": "wages for work in and out of the FSM presumed FSM-sourced (§ 124); an employee of an employer with no FSM place of business or agent files and pays himself (§ 137); a non-employee's fees and royalties are a business's gross revenue (§ 112(5)); whether the wage tax withheld is final is not stated",
+    "final": null,
+    "authors": "royalties and fees are a business's gross revenue (§ 112(5)); no separate rule"
+   },
+   "applies": "Read 2026-11-03 from the FSM Code as the Legal Information System of the FSM holds it (its home page names the FSM Supreme Court as the project's local executing agency); a public law changing these sections after the codification would show only if the site carries it. The gross revenue tax's flat $80 on the first $10,000 is not one the engine can apply, so a freelancer's business tax is told as not modeled.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee"
+    },
+    {
+     "src": 5,
+     "said": "(3) Businesses which earn gross revenues of not more than $2,000 per year are exempt from taxation under this section."
+    },
+    {
+     "src": 5,
+     "said": "Gross revenue means the gross receipts, cash or accrued, of the taxpayer received as compensation for personal services not in the form of salaries or wages … including interest, rentals, royalties, fees, or other emoluments however designated"
+    }
+   ]
   }
  ],
  "country": "FM",
@@ -136,41 +188,14 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "The contractor permits the Department or Agency (employer) to deduct the Wage & Salaries Tax (W&ST) from their payments for services from the commencement of this contract, and pay the amounts deducted to the Customs and Tax Administration (CTA) to be credited against the W&ST payable by the contractor. … If the contractor is in business (and therefore should pay the Gross Revenue Tax):"
+  },
+  {
+   "url": "http://www.fsmlaw.org/fsm/code/title54/T54_Ch01.htm",
+   "title": "FSM Code, Title 54, Chapter 1: Taxation of Wages, Salaries, and Gross Revenues (Legal Information System of the Federated States of Micronesia, the FSM Supreme Court its local executing agency)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "121 . Tax on wages and salaries . There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee, as defined, except as provided in section 122 of this chapter. … 122 . (1) Every employee, as defined, except those whose gross annual wages and salaries are $5,000 or more, shall be allowed a deduction of $1,000 per year … (2) The deduction shall be claimed by the employee filing for a refund … 124 . Source of wages . If an employee is credited or paid salaries or wages derived from, or attributable to, personal services performed or rendered both within and without the Federated States of Micronesia, then the whole of the salaries or wages shall be presumed to have been earned within the Federated States of Micronesia. … 132 . (1) The employer shall, on or before the last day of the month following the close of each quarter, to wit, on or before April 30, July 31, October 31, and January 31, pay the tax withheld … 137 . (1) Any individual who is paid or credited wages or salaries from an employer who does not have a place of business in the Federated States of Micronesia and does not have an agent within the Federated States of Micronesia … shall file a return with and pay the tax due … 141 . (1) There shall be assessed, levied, collected, and paid a tax of $80 per year upon that portion of the amount of gross revenues earned by every business subject to the provisions of this chapter which does not exceed $10,000 per year. (2) … a tax of three percent per year upon that portion … which is in excess of $10,000 per year. (3) Businesses which earn gross revenues of not more than $2,000 per year are exempt from taxation under this section. … 112 (5) Gross revenue means the gross receipts … received as compensation for personal services not in the form of salaries or wages … including interest, rentals, royalties, fees, or other emoluments however designated"
   }
  ],
- "blockers": [
-  {
-   "item": "residents",
-   "sought": "Wage and salary tax rates and threshold, gross receipts tax rate, and tax year and return dates (FSM Code Title 54)",
-   "tried": {
-    "institution": "2026-11-01: fsmlaw.org (FSM Code Title 54) returns HTTP 406 to curl's default agent, not read another way; dofa.gov.fm timed out; gov.fm and cfsm.gov.fm read || retry 2026-11-01 (world round): fsmlaw.org answers HTTP 406 again (refusal, not read another way); dofa.gov.fm now answers: its Customs & Tax pages list document types with 0 tax documents; the Guideline on Tax Clause for Contractors (FM-dofa-tax-clause-contractors.pdf) read: names the Wage & Salaries Tax and Gross Revenue Tax, no rates; fsmssa.fm read for social security",
-    "official-register": "2026-11-01: paclii.org FSM legislation returns HTTP 403; cfsm.gov.fm lists public laws by Congress but no consolidated Title 54 || retry 2026-11-01 (world round): paclii.org FSM 403; cfsm.gov.fm public-law lists hold no consolidated Title 54; DoFA's 'Legislation' document type is empty",
-    "web-search": "2026-11-01: refused: the session web-search budget was used up || retry 2026-11-01 (world round): WebSearch refused 2026-11-01 (the turn's shared 200-search budget exhausted) || depth round 2026-11-02: WebSearch \"FSM Code Title 54 wage and salary tax 6% 10% $11,000 gross revenue tax Federated States of Micronesia\": fsmlaw.org Title 54 Ch. 1 subchapters II and IV (Taxation of Wages, Salaries, and Gross Revenues), PacLII consolidation, Congress bills CB 12-38, 14-7 (a 20% rate proposed), 16-155 (a $5,000 exemption proposed), 18-46, 20-115, the DoFA Taxpayer Services Booklet; no snippet states the rates in force. fsmlaw.org (the FSM Supreme Court legal information system) answers 406 Not Acceptable (Mod Security) to this environment for T54_Ch01_SubChpI-IV_2014.html and mail.fsmlaw.org/.../FSMCode2014Tit54Chap01.pdf; paclii.org/fm/legis/consol_act_2014/tac215 answers 403; dofa.gov.fm/wp-content/uploads/2021/09/Taxpayer-Services-Booklet.pdf answers 404 (2026-11-02). Not read another way.",
-    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || retry 2026-11-01 (world round): no PwC or Deloitte page for the FSM (404, as before); DoFA news on the National Tax Reform Task Force consultations (dofa.gov.fm/news/national-tax-reform-task-force-concludes-nationwide-consultations-across-fsm/) listed, no rates",
-    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || retry 2026-11-01 (world round): web.archive.org and archive.ph reset the connection; arquivo.pt 403"
-   }
-  },
-  {
-   "item": "nonResident",
-   "sought": "Tax on a non-resident performer's FSM-source pay or fee",
-   "tried": {
-    "institution": "2026-11-01: fsmlaw.org (FSM Code Title 54) returns HTTP 406 to curl's default agent, not read another way; dofa.gov.fm timed out; gov.fm and cfsm.gov.fm read || retry 2026-11-01 (world round): fsmlaw.org answers HTTP 406 again (refusal, not read another way); dofa.gov.fm now answers: its Customs & Tax pages list document types with 0 tax documents; the Guideline on Tax Clause for Contractors (FM-dofa-tax-clause-contractors.pdf) read: names the Wage & Salaries Tax and Gross Revenue Tax, no rates; fsmssa.fm read for social security",
-    "official-register": "2026-11-01: paclii.org FSM legislation returns HTTP 403; cfsm.gov.fm lists public laws by Congress but no consolidated Title 54 || retry 2026-11-01 (world round): paclii.org FSM 403; cfsm.gov.fm public-law lists hold no consolidated Title 54; DoFA's 'Legislation' document type is empty",
-    "web-search": "2026-11-01: refused: the session web-search budget was used up || retry 2026-11-01 (world round): WebSearch refused 2026-11-01 (the turn's shared 200-search budget exhausted) || depth round 2026-11-02: WebSearch \"Micronesia wage tax non-resident employee FSM-source income royalties taxation Title 54 Chapter 1 section 112\": fsmlaw.org Title 54 Ch. 1, the FSM Supreme Court taxation digest (Youngstrom v. Kosrae, Bank of the FSM v. FSM on 54 F.S.M.C. 112(1)), PacLII public laws, Rivermate (non-residents taxed on FSM-source income; no primary named); section 124 (source of wages) not reached. fsmlaw.org (the FSM Supreme Court legal information system) answers 406 Not Acceptable (Mod Security) to this environment for T54_Ch01_SubChpI-IV_2014.html and mail.fsmlaw.org/.../FSMCode2014Tit54Chap01.pdf; paclii.org/fm/legis/consol_act_2014/tac215 answers 403; dofa.gov.fm/wp-content/uploads/2021/09/Taxpayer-Services-Booklet.pdf answers 404 (2026-11-02). Not read another way.",
-    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || retry 2026-11-01 (world round): no PwC or Deloitte page for the FSM (404, as before); DoFA news on the National Tax Reform Task Force consultations (dofa.gov.fm/news/national-tax-reform-task-force-concludes-nationwide-consultations-across-fsm/) listed, no rates",
-    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || retry 2026-11-01 (world round): web.archive.org and archive.ph reset the connection; arquivo.pt 403"
-   }
-  },
-  {
-   "item": "authors",
-   "sought": "Any treatment of authors' fees or royalties",
-   "tried": {
-    "institution": "2026-11-01: fsmlaw.org (FSM Code Title 54) returns HTTP 406 to curl's default agent, not read another way; dofa.gov.fm timed out; gov.fm and cfsm.gov.fm read || retry 2026-11-01 (world round): fsmlaw.org answers HTTP 406 again (refusal, not read another way); dofa.gov.fm now answers: its Customs & Tax pages list document types with 0 tax documents; the Guideline on Tax Clause for Contractors (FM-dofa-tax-clause-contractors.pdf) read: names the Wage & Salaries Tax and Gross Revenue Tax, no rates; fsmssa.fm read for social security",
-    "official-register": "2026-11-01: paclii.org FSM legislation returns HTTP 403; cfsm.gov.fm lists public laws by Congress but no consolidated Title 54 || retry 2026-11-01 (world round): paclii.org FSM 403; cfsm.gov.fm public-law lists hold no consolidated Title 54; DoFA's 'Legislation' document type is empty",
-    "web-search": "2026-11-01: refused: the session web-search budget was used up || retry 2026-11-01 (world round): WebSearch refused 2026-11-01 (the turn's shared 200-search budget exhausted) || depth round 2026-11-02: WebSearch \"Micronesia wage tax non-resident employee FSM-source income royalties taxation Title 54 Chapter 1 section 112\": the FSM taxation digest (Youngstrom v. Kosrae, 5 FSM R. 73: the taxing power reaches royalties and fees), no rule on authors' royalties; \"FSM Code Title 54 wage and salary tax ...\": nothing on royalties. fsmlaw.org (the FSM Supreme Court legal information system) answers 406 Not Acceptable (Mod Security) to this environment for T54_Ch01_SubChpI-IV_2014.html and mail.fsmlaw.org/.../FSMCode2014Tit54Chap01.pdf; paclii.org/fm/legis/consol_act_2014/tac215 answers 403; dofa.gov.fm/wp-content/uploads/2021/09/Taxpayer-Services-Booklet.pdf answers 404 (2026-11-02). Not read another way.",
-    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || retry 2026-11-01 (world round): no PwC or Deloitte page for the FSM (404, as before); DoFA news on the National Tax Reform Task Force consultations (dofa.gov.fm/news/national-tax-reform-task-force-concludes-nationwide-consultations-across-fsm/) listed, no rates",
-    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || retry 2026-11-01 (world round): web.archive.org and archive.ph reset the connection; arquivo.pt 403"
-   }
-  }
- ]
+ "blockers": []
 }

@@ -37,6 +37,10 @@
     {
      "src": 0,
      "said": "An exemption from taxation applies to net income of up to CVE 220,000 annually."
+    },
+    {
+     "src": 6,
+     "said": "a) 16,5% para rendimentos até 960.000$00 (novecentos e sessenta mil escudos) anuais; b) 23,1% para rendimentos superiores a 960.000$00 … e até 1.800.000$00 … anuais; c) 27,5% para rendimentos superiores a 1.800.000$00 … anuais. 2. Está isento de tributação o rendimento colectável até ao montante de 220.000$00"
     }
    ]
   },
@@ -174,6 +178,27 @@
      "said": "Royalty payments are subject to WHT at the rate of 20%."
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "As the IRPS Code was enacted in 2014, an original author's income from copyright and related rights is business and professional income (category B), withheld at 20% on account of the year's tax; the Code gives authors no other treatment.",
+   "value": {
+    "category": "B",
+    "withholding": 0.2,
+    "final": false,
+    "law": "Código do IRPS (Lei 78/VIII/2014) arts. 7(1)(c), 47(1)"
+   },
+   "applies": "The Code as published on 31 December 2014, read 2026-11-03; amendments by later budget laws were not read.",
+   "sources": [
+    {
+     "src": 6,
+     "said": "c) Exploração da propriedade intelectual ou industrial, incluindo direitos de autor e direitos conexos … auferidos pelo seu titular originário."
+    },
+    {
+     "src": 6,
+     "said": "Os rendimentos da categoria B estão sujeitos a taxa de retenção na fonte de 20%, feita por conta imposto devido a final"
+    }
+   ]
   }
  ],
  "country": "CV",
@@ -224,12 +249,19 @@
    "kind": "secondary",
    "quotes": "https://www.mf.gov.cv/",
    "said": "Royalty payments are subject to WHT at the rate of 20%."
+  },
+  {
+   "url": "https://boe.incv.cv/Bulletins/Download/1952",
+   "title": "Boletim Oficial da República de Cabo Verde, I Série, no. 81, 31 December 2014: Lei n.º 78/VIII/2014, Código do IRPS",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Artigo 45º 1. A taxa de imposto aplicável aos rendimentos objecto de englobamento … é de: a) 16,5% para rendimentos até 960.000$00 … anuais; b) 23,1% para rendimentos superiores a 960.000$00 … e até 1.800.000$00 … anuais; c) 27,5% para rendimentos superiores a 1.800.000$00 … anuais. 2. Está isento de tributação o rendimento colectável até ao montante de 220.000$00 … Artigo 47º 1. Os rendimentos da categoria B estão sujeitos a taxa de retenção na fonte de 20%, feita por conta imposto devido a final … c) Exploração da propriedade intelectual ou industrial, incluindo direitos de autor e direitos conexos … auferidos pelo seu titular originário."
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The PIT Code's own text and DNRE pages",
+   "sought": "The IRPS Code as amended to 2026 and the DNRE's pages (the Code's own text as enacted in 2014 was read on 2026-11-03: its rates and its 220,000$00 exempt minimum are the ones held)",
    "tried": {
     "institution": "mf.gov.cv home page reachable but its tax pages and the PIT Code were not located (2026-11-01) || 2026-11-01 retry: mf.gov.cv/web/dnre and /web/dnre/legislacao read: the document list loads by script and carries no code text; the DNRE brochure 'Principais Alterações Códigos Tributários 2020' read (saved CV-dnre-alteracoes-2020.pdf): REMPE rules only, nothing on this item; dnre.cv resets",
     "official-register": "Boletim Oficial not read || 2026-11-01 retry: boe.incv.cv (Boletim Oficial) reachable but its texts sit behind an account (Login/Register); not read",
@@ -251,7 +283,7 @@
   },
   {
    "item": "authors",
-   "sought": "Any special treatment of authors' fees or royalties",
+   "sought": "Any special treatment of authors' fees or royalties introduced after the IRPS Code of 2014 (whose own text, read 2026-11-03, puts an original author's royalties in category B with no other rule)",
    "tried": {
     "institution": "mf.gov.cv home page reachable but its tax pages and the PIT Code were not located (2026-11-01) || 2026-11-01 retry: mf.gov.cv/web/dnre and /web/dnre/legislacao read: the document list loads by script and carries no code text; the DNRE brochure 'Principais Alterações Códigos Tributários 2020' read (saved CV-dnre-alteracoes-2020.pdf): REMPE rules only, nothing on this item; dnre.cv resets",
     "official-register": "Boletim Oficial not read || 2026-11-01 retry: boe.incv.cv (Boletim Oficial) reachable but its texts sit behind an account (Login/Register); not read",

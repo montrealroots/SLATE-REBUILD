@@ -140,14 +140,14 @@
   },
   {
    "item": "nonResident",
-   "finding": "A non-resident's Jordanian-source income is taxed; services and royalties paid to a non-resident individual bear 10% withholding plus a 1% national contribution; whether it is final for an individual's performance fee was not confirmed.",
+   "finding": "A non-resident's Jordanian-source income is taxed: whoever owes or pays taxable income to a non-resident withholds 10% of it on the due date or the payment date, whichever comes first (Income Tax Law art. 12(B)(1)); it is final only where the executive instructions make it so, and otherwise a payment on account of the tax (art. 12(B)(2), 12(C)); PwC adds a 1% national contribution.",
    "value": {
     "rate": 0.1,
     "nationalContribution": 0.01,
     "base": "gross payment",
-    "final": null
+    "final": "no: a payment on account of the tax (art. 12(C)) unless the executive instructions make it final (art. 12(B)(2)); those instructions were not read"
    },
-   "applies": "Non-resident individuals",
+   "applies": "Payments to non-residents; the law's own text read 2026-11-03 (the ISTD's Arabic text and its English translation).",
    "sources": [
     {
      "src": 4,
@@ -156,6 +156,14 @@
     {
      "src": 4,
      "said": "10% (plus national contribution tax at sector rate) 10% (plus 1% national contribution tax)"
+    },
+    {
+     "src": 8,
+     "said": "أن يقتطع من هذا الدخل بتاريخ الاستحقاق أو الدفع أيهما أسبق ما نسبته (10%)"
+    },
+    {
+     "src": 9,
+     "said": "Otherwise, the withheld amounts shall be deemed a down payment on the tax account."
     }
    ]
   },
@@ -288,19 +296,21 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "بدل الخدمة الذي يجنيه الشخص غير المقيم من المملكة والناشئ عن خدمة قدمها لأي شخص إذا تمت مزاولة العمل أو النشاط المتعلق بذلك البدل في المملكة أو إذا تم استخدام مخرجات هذه الخدمة داخلها"
+  },
+  {
+   "url": "https://www.istd.gov.jo/EBV4.0/Root_Storage/AR/EB_Tenders/قانون_ضريبة_الدخل_34_لسنة_2014_وتعديلاته.docx",
+   "title": "Income and Sales Tax Department, قانون ضريبة الدخل 34 لسنة 2014 وتعديلاته (art. 12)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "يترتب على كل شخص استحق لديه أو دفع دخلاً غير معفى من الضريبة لشخص غير مقيم مباشرة أو بالوساطة أن يقتطع من هذا الدخل بتاريخ الاستحقاق أو الدفع أيهما أسبق ما نسبته (10%) وأن يعد بياناً يوضح فيه مقدار الدخل والمبلغ المقتطع وأن يزود كلا من الدائرة والمستفيد بنسخة من هذا البيان. يجوز بموجب تعليمات تنفيذية اعتبار أي مبلغ مقتطع وفق أحكام البند (1) من هذه الفقرة ضريبة قطعية."
+  },
+  {
+   "url": "https://www.istd.gov.jo/ebv4.0/root_storage/en/eb_list_page/income_tax_law_no._(38_)_of_2018.pdf",
+   "title": "ISTD, Law No. (34) of 2014 Amended by Law No. (38) of 2018, Income Tax Law (the Department's unofficial English translation)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "B- 1. Any person who owed or paid a taxable income to a non-resident person directly or via an intermediary shall withhold from this income on the due date or payment date, whichever is earlier, (10%) of such income … 2. Under the executive instructions, it is permissible to consider any amount withheld in accordance with the provisions of item (1) of this Paragraph as a final tax. C- The taxpayer’s gross income shall not include the income subject to withholding from the source in case the withheld amount is a final tax. Otherwise, the withheld amounts shall be deemed a down payment on the tax account."
   }
  ],
- "blockers": [
-  {
-   "item": "nonResident",
-   "sought": "The withholding article of Income Tax Law No. 34 of 2014 as amended by Law No. 38 of 2018 (rate on a non-resident's service fee, and whether it is final), in the law's own text",
-   "tried": {
-    "institution": "istd.gov.jo reached; its English news notice on exemptions read; no page found on non-resident artists' withholding or the current social security ceiling || 2026-11-01 retry: istd.gov.jo read: its Income Tax Law page (https://www.istd.gov.jo/AR/List/قانون_ضريبة_الدخل, saved JO-istd-law.html) shows arts. 1 to 10 only; art. 3(a)(12) makes a non-resident's service fee taxable where the work is done in Jordan (now a figure). The later articles (withholding, art. 12) are on the list's next pages, reached only by the page's form postback, which answered 'Error Page' and then reset the connection; not pressed further",
-    "official-register": "Income Tax Law No. 38 of 2018 text not read (not located on istd.gov.jo this pass) || 2026-11-01 retry: lob.gov.jo (Legislation and Opinion Bureau) connection fails (curl 000); the ISTD law list stands in as the official text",
-    "web-search": "searched 'Jordan Income Tax Law 38 of 2018 personal exemption 9,000 dinars family 9,000 non-resident withholding 10% services ISTD' || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01) || Web search 2026-11-02: query \"قانون ضريبة الدخل الأردني المادة 12 اقتطاع 10% الخدمات غير المقيم نهائية\" refused by the search tool (\"this turn's web search budget is used up (limit: 200 WebSearch calls per turn, shared by every agent in it)\"); not worked around. Next turn resumes here, then with \"Jordan Income Tax Law 34 of 2014 article 12 withholding non-resident services 10% final\".",
-    "trade-press": "PwC (reviewed 05 July 2026) and Deloitte Jordan Highlights 2023 read || 2026-11-01 retry: PwC (reviewed 05 July 2026) already held: 10% plus 1% national contribution on services to non-residents; it does not say whether final for an individual",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
-   }
-  }
- ]
+ "blockers": []
 }

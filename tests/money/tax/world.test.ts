@@ -169,6 +169,36 @@ describe("the web-search round's figures (2026-11-03)", () => {
   });
 });
 
+describe("the web-search round's second pass (2026-11-03)", () => {
+  // A home with no taxing state, so a non-resident's pay is withheld where it's earned and counted nowhere.
+  const away = { home: 'AQ' };
+  it("withholds what Micronesia's, Tonga's, Kosovo's, Tajikistan's and Sierra Leone's laws and authorities were read to take", () => {
+    // Micronesia's wage tax (FSM Code tit. 54 § 121): 6% to $11,000 and 10% above, from an employee's pay and a non-resident's.
+    expect([pay('FM', {}).p.tax, pay('FM', { gross: m('USD', '20000') }).p.tax, pay('FM', away).p.tax, of('FM').nonResident.performer?.final]).toEqual([60_000, 156_000, 60_000, false]);
+    // Tonga: PAYE on its scale (nothing to TOP 12,000), the NRBF's 5%, 10% final from a non-resident's fee and 15% from a royalty.
+    expect([pay('TO', {}).p.tax, pay('TO', { gross: m('TOP', '40000') }).p.tax, pay('TO', {}).p.social, pay('TO', away).p.tax, pay('TO', { ...away, work: 'author' }).p.tax]).toEqual([0, 330_000, 50_000, 100_000, 150_000]);
+    expect([of('TO').nonResident.performer?.final, of('TO').unknown]).toEqual([true, ['year']]);
+    // Kosovo: 5% final from a non-resident entertainer (Law 05/L-028 art. 41), 10% from a resident author's royalties (art. 39).
+    expect([pay('XK', away).p.tax, of('XK').nonResident.performer?.final, pay('XK', { work: 'author' }).p.tax]).toEqual([50_000, true, 100_000]);
+    // Tajikistan: the employee's 2% social tax; 20% on a non-resident's employment income (Tax Code arts. 332, 183).
+    expect([pay('TJ', {}).p.social, pay('TJ', {}).p.tax, pay('TJ', away).p.tax]).toEqual([20_000, 0, 200_000]);
+    // Sierra Leone: 15% from a resident's professional fee and royalties, 15% from a non-resident's royalties (the Finance Act 2024's tables).
+    expect([pay('SL', { work: 'producer' }).p.tax, pay('SL', { work: 'author' }).p.tax, pay('SL', { ...away, work: 'author' }).p.tax]).toEqual([150_000, 150_000, 150_000]);
+    // Sri Lanka: 5% of the whole of a freelancer's fee above LKR 100,000 (the IRD's notice PN/IT/2022-03), nothing at it.
+    expect([pay('LK', { work: 'producer', gross: m('LKR', '100000') }).p.tax, pay('LK', { work: 'author', gross: m('LKR', '100001') }).p.tax]).toEqual([0, 500_005]);
+  });
+
+  it("charges VAT where its threshold was read, and tells the player only what's still unknown", () => {
+    // Eswatini's 15% above E900,000; Tonga's 15% above TOP 100,000; Tuvalu's 3% (the 2009 Regulation) above $100,000.
+    const vat = (cc: string, n: string) => pay(cc, { work: 'producer', gross: m(of(cc).currency, n) }).p.vat;
+    expect([vat('SZ', '900000'), vat('SZ', '900001'), vat('TO', '100000'), vat('TO', '100001'), vat('TV', '100000'), vat('TV', '100001')]).toEqual([0, 13_500_015, 0, 1_500_015, 0, 300_003]);
+    // Jordan's 10% from a non-resident is a payment on account (art. 12(C)), so what more is owed stays told.
+    expect([of('JO').nonResident.performer, of('JO').unknown.includes('nonResident')]).toEqual([{ bands: [{ from: '0', to: null, rate: '0.1' }], final: false }, true]);
+    // Found, no longer told: Eswatini's rates and VAT, Micronesia's wage tax, Niger's 2026 scale (its VAT threshold still is), Sri Lanka's resident withholding.
+    expect([of('SZ').unknown, of('FM').unknown.includes('residents'), of('NE').unknown.includes('residents'), of('NE').unknown.includes('vat'), of('LK').unknown.includes('withholding')]).toEqual([['wages', 'nonResident'], false, false, true, false]);
+  });
+});
+
 describe('pay and the reckoning, around the world', () => {
   it('in a country with no income tax: nothing withheld, nothing due', () => {
     const { s, p } = pay('AE', { gross: m('AED', '100000') });

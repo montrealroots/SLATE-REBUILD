@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "residents",
-   "finding": "A domiciled individual's net income is exempt to USD 6,600 a year, then taxed at 10%, 20% and 30% (USD 212.12 plus 10% over USD 4,064 to USD 9,142.86; USD 720 plus 20% over USD 9,142.86 to USD 22,857.14; USD 3,462.86 plus 30% above), as the table is printed; a non-domiciled individual pays 30%.",
+   "finding": "A domiciled individual's net income is exempt to USD 6,600 a year, then taxed at USD 212.12 plus 10% over USD 6,600 to USD 10,742.86, USD 720 plus 20% over 10,742.86 to 24,457.14, and USD 3,462.86 plus 30% above (the December recalculation table of Decreto Ejecutivo No. 10, from May 2025); a non-domiciled individual pays 30%. (PwC's table, printing the 10% band over USD 4,064 to 9,142.86, was the law's before D.L. 293 moved its first two tramos.)",
    "value": {
     "currency": "USD",
     "exemptTo": 6600,
@@ -19,40 +19,44 @@
      },
      {
       "from": 6600,
-      "to": 9142.86,
+      "to": 10742.86,
       "fixed": 212.12,
       "rate": 0.1,
-      "over": 4064.0
+      "over": 6600
      },
      {
-      "from": 9142.86,
-      "to": 22857.14,
+      "from": 10742.86,
+      "to": 24457.14,
       "fixed": 720.0,
       "rate": 0.2,
-      "over": 9142.86
+      "over": 10742.86
      },
      {
-      "from": 22857.14,
+      "from": 24457.14,
       "to": null,
       "fixed": 3462.86,
       "rate": 0.3,
-      "over": 22857.14
+      "over": 24457.14
      }
     ],
     "nonDomiciled": 0.3,
     "regional": null
    },
-   "applies": "2026; mh.gob.sv not read in this pass, so PwC is quoted.",
+   "applies": "From May 2025, read 2026-11-03 in the decree's annual table; no 2026 decree replacing it was found. The table's fixed sum at the start of the 10% band is not one the engine's scales can apply, so the resident's tax is told as not known.",
    "sources": [
     {
      "src": 0,
      "said": "Net income (USD) Tax rates Over Not over 0.00 6,600.00 Exempt 6,600 .0 0 9,142.86 USD 212.12 plus 10% on the excess over USD 4,064.00 9,142.86 22,857.14 USD 720.00 plus 20% on the excess over USD 9,142.86 22,857.14 and over USD 3,462.86 plus 30% on the excess over USD 22,857.14 Non-domiciled individuals shall compute their income taxes at 30%."
+    },
+    {
+     "src": 5,
+     "said": "I TRAMO 0.01 6,600.00 SIN RETENCIÓN II TRAMO 6,600.01 10,742.86 10% 6,600.00 212.12 III TRAMO 10,742.87 24,457.14 20% 10,742.86 720.00"
     }
    ]
   },
   {
    "item": "withholding",
-   "finding": "Employers withhold monthly: nothing to USD 550, then USD 17.67 plus 10% over USD 472 to USD 895.24, USD 60 plus 20% over 895.24 to 2,038.10, and USD 288.57 plus 30% above; a resident individual's fees for services outside employment bear 10% withholding.",
+   "finding": "Employers withhold monthly from May 2025: nothing to USD 550, then USD 17.67 plus 10% over USD 550 to USD 895.24, USD 60 plus 20% over 895.24 to 2,038.10, and USD 288.57 plus 30% above (Decreto Ejecutivo No. 10); a resident individual's fees for services outside employment bear 10% withholding.",
    "value": {
     "currency": "USD",
     "period": "month",
@@ -69,7 +73,7 @@
       "to": 895.24,
       "fixed": 17.67,
       "rate": 0.1,
-      "over": 472.0
+      "over": 550
      },
      {
       "from": 895.24,
@@ -88,7 +92,7 @@
     ],
     "residentServicesFee": 0.1
    },
-   "applies": "2026.",
+   "applies": "From May 2025 (the Ministerio de Hacienda's notice and the decree, read 2026-11-03); PwC's table printed the 10% band's excess over USD 472.",
    "sources": [
     {
      "src": 0,
@@ -97,6 +101,14 @@
     {
      "src": 1,
      "said": "Payments to resident individuals with respect to services rendered, other than under a labour relationship, are subject to a 10% WHT."
+    },
+    {
+     "src": 4,
+     "said": "Los cambios tendrán efecto a partir del mes de mayo de 2025."
+    },
+    {
+     "src": 5,
+     "said": "I TRAMO 0.01 550.00 SIN RETENCIÓN II TRAMO 550.01 895.24 10% 550.00 17.67 III TRAMO 895.25 2,038.10 20% 895.24 60.00"
     }
    ]
   },
@@ -218,12 +230,26 @@
    "kind": "secondary",
    "quotes": "https://www.mh.gob.sv/",
    "said": "0 to 1,000 3 7.50 Note: For individuals who have salaries above USD 1,000, the social security contribution applicable is USD 30.00 for the employee and USD 75.00 for the employer. … On the total monthly salary 7.25 8.75 … VAT (i.e. Impuesto al Valor Agregado or IVA) is levied at a rate of 13% over the taxable amount."
+  },
+  {
+   "url": "https://www.mh.gob.sv/wp-content/uploads/2025/05/Modificacion-a-las-tablas-de-retenci%C3%B3n-del-Impuesto-Sobre-la-Renta-Decreto-Ejecutivo-NO.10.pdf",
+   "title": "Ministerio de Hacienda, 'Modificación a las tablas de retención del Impuesto Sobre la Renta - Decreto Ejecutivo No. 10'",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Los cambios tendrán efecto a partir del mes de mayo de 2025."
+  },
+  {
+   "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2025/04/10A052.PDF",
+   "title": "Decreto Ejecutivo No. 10, 30 April 2025 (Corte Suprema de Justicia, legislative library)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "I TRAMO 0.01 550.00 SIN RETENCIÓN II TRAMO 550.01 895.24 10% 550.00 17.67 III TRAMO 895.25 2,038.10 20% 895.24 60.00 … I TRAMO 0.01 6,600.00 SIN RETENCIÓN II TRAMO 6,600.01 10,742.86 10% 6,600.00 212.12 III TRAMO 10,742.87 24,457.14 20% 10,742.86 720.00"
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "El Salvador's 2026 income-tax table from the Ministerio de Hacienda (the PwC table's 6,600 exempt band against a USD 4,064 base for the 10% band reads as a partial update of the law's table)",
+   "sought": "A 2026 income-tax table: Decreto Ejecutivo No. 10's tables (from May 2025) were read on 2026-11-03 and no later decree was found, and LISR art. 37's own text as D.L. 293 amended it was not read",
    "tried": {
     "institution": "mh.gob.sv not reached in this pass (2026-11-01) || 2026-11-01 retry: mh.gob.sv answers; its site search for 'tabla de retencion' lists no retention table; its WordPress API refuses unauthenticated requests (HTTP 401) and was not pursued",
     "official-register": "Diario Oficial / Asamblea Legislativa decree text not fetched || 2026-11-01 retry: Diario Oficial not reached this turn",

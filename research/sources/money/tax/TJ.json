@@ -2,13 +2,109 @@
  "topic": "tax.TJ",
  "read": "2026-11-01",
  "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Tajikistan: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
- "figures": [],
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "A resident's taxable income from the main place of work is taxed at 12% above the personal deduction; a resident's other income at 15%, without the deductions of art. 191; the personal deduction's amount was not read.",
+   "value": {
+    "currency": "TJS",
+    "mainJob": 0.12,
+    "other": 0.15,
+    "personalDeduction": null
+   },
+   "applies": "The Tax Code of 2021 as the Tax Committee posted its rate articles in January 2022, read 2026-11-03; amendments after 2022 were not checked.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "Даромади андозбандишавандаи шахси воқеӣ-резидент аз ҷойи кори асосӣ зиёда аз тарњи шахсӣ бо меъёри 12 фоиз андозбандӣ карда мешавад."
+    },
+    {
+     "src": 0,
+     "said": "бе тарҳҳои дар моддаи 191 КА пешбинишуда, ба истиснои андози иҷтимоии суғурташаванда, бо меъёри 15 фоиз андозбандӣ карда мешавад."
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident's taxable employment income from sources in Tajikistan is taxed at 20%; whether it is withheld as a final tax was not read.",
+   "value": {
+    "employment": 0.2,
+    "final": null
+   },
+   "applies": "Tax Code art. 183(2), as posted in January 2022; read 2026-11-03.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "Даромади андозбандишавандаи шахси воқеӣ-ғайрирезидент аз кори кироя, ки аз манбаъҳои дар Ҷумҳурии Тоҷикистон ба даст оварда шудааст, бо меъёри 20 фоиз андозбандӣ карда мешавад."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Social tax is 20% from the employer and 2% from the insured employee (25% and 1% in budget institutions).",
+   "value": {
+    "currency": "TJS",
+    "employer": 0.2,
+    "employee": 0.02,
+    "budgetInstitutions": {
+     "employer": 0.25,
+     "employee": 0.01
+    }
+   },
+   "applies": "Tax Code art. 332, as posted in January 2022; read 2026-11-03.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "барои ташкилотҳои дигар – 20 фоиз. 2. Меъёри андози иҷтимоӣ барои суғурташудагон ба андозаи зерин муқаррар карда мешавад: - барои муассисаҳои буҷетӣ – 1 фоиз; - барои ташкилотҳои дигар – 2 фоиз."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "The standard VAT rate is 15%, applied at 14% from 1 January 2024 to 31 December 2026 and 13% from 1 January 2027; the registration threshold was not read.",
+   "value": {
+    "standard": 0.15,
+    "rate2024to2026": 0.14,
+    "rateFrom2027": 0.13,
+    "threshold": null
+   },
+   "applies": "Tax Code art. 264 and art. 397(4), as posted by the Tax Committee; read 2026-11-03.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "аз 1 январи соли 2024 то 31 декабри соли 2026 – 14 фоиз ва аз 1 январи соли 2027 – 13 фоиз муқаррар карда мешавад."
+    }
+   ]
+  }
+ ],
  "country": "TJ",
- "sources": [],
+ "sources": [
+  {
+   "url": "https://andoz.tj/docs/zamin-amvol/A_Daromad_TJ_2022.pdf",
+   "title": "Tax Committee under the Government of Tajikistan, 'Андоз аз даромадҳо' (Tax Code art. 183)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Моддаи 183. 1. Даромади андозбандишавандаи шахси воқеӣ-резидент аз ҷойи кори асосӣ зиёда аз тарњи шахсӣ бо меъёри 12 фоиз андозбандӣ карда мешавад. 2. Даромади андозбандишавандаи шахси воқеӣ-ғайрирезидент аз кори кироя, ки аз манбаъҳои дар Ҷумҳурии Тоҷикистон ба даст оварда шудааст, бо меъёри 20 фоиз андозбандӣ карда мешавад. 3. Даромади андозбандишавандаи шахсони воқеӣ, ки дар қисмҳои 1 ва 2 ҳамин модда зикр нагардидааст, бе тарҳҳои дар моддаи 191 КА пешбинишуда, ба истиснои андози иҷтимоии суғурташаванда, бо меъёри 15 фоиз андозбандӣ карда мешавад."
+  },
+  {
+   "url": "https://andoz.tj/docs/zamin-amvol/A-Ijtimoi_TJ_2022.pdf",
+   "title": "Tax Committee under the Government of Tajikistan, 'Андози иҷтимоӣ' (Tax Code art. 332)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Моддаи 332. Меъёрҳои андоз 1. Меъёри андози иҷтимоӣ барои суғуртакунандагон ба андозаи зерин муқаррар карда мешавад: - барои муассисаҳои буҷетӣ – 25 фоиз; - барои ташкилотҳои дигар – 20 фоиз. 2. Меъёри андози иҷтимоӣ барои суғурташудагон ба андозаи зерин муқаррар карда мешавад: - барои муассисаҳои буҷетӣ – 1 фоиз; - барои ташкилотҳои дигар – 2 фоиз."
+  },
+  {
+   "url": "https://andoz.tj/docs/zamin-amvol/%D0%90%D0%90%D0%98_2022.pdf",
+   "title": "Tax Committee under the Government of Tajikistan, 'Андоз аз арзиши иловашуда' (Tax Code art. 264)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Меъёри андоз аз арзиши иловашудаи дар банди 1) қисми 1 моддаи 264 Кодекси андоз муқарраршуда барои муомилоти андозбандишаванда ва воридоти андозбандишаванда аз 1 январи соли 2024 то 31 декабри соли 2026 – 14 фоиз ва аз 1 январи соли 2027 – 13 фоиз муқаррар карда мешавад. Моддаи 264. … 1) меъёри стандартӣ – 15 фоиз"
+  }
+ ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "Personal income tax rates for residents under the 2021 Tax Code as in force for 2026.",
+   "sought": "The personal deduction (тарҳи шахсӣ) under the 2021 Tax Code and whether the 12% and 15% rates (read 2026-11-03) hold for 2026",
    "tried": {
     "institution": "andoz.tj (Tax Committee) did not answer this environment (connection failed, twice) || 2026-11-01 retry: andoz.tj (https and http) still does not answer (curl 000); minfin.tj and mmk.tj do not answer; president.tj serves a 1,900-byte script shell.",
     "official-register": "Tax Code of the Republic of Tajikistan (2021) not reached; adlia.tj not tried before the search budget ran out || 2026-11-01 retry: adlia.tj (National Centre of Legislation) returns HTTP 503 for the home page and show_doc.fwx; ncz.tj also 503; parlament.tj does not answer.",
@@ -19,7 +115,7 @@
   },
   {
    "item": "social",
-   "sought": "The social figure for 2026 from the tax authority or the law.",
+   "sought": "Whether the social tax rates read 2026-11-03 (20% employer, 2% employee; Tax Code art. 332 as posted in 2022) hold for 2026",
    "tried": {
     "institution": "andoz.tj (Tax Committee) did not answer this environment (connection failed, twice) || 2026-11-01 retry: andoz.tj (https and http) still does not answer (curl 000); minfin.tj and mmk.tj do not answer; president.tj serves a 1,900-byte script shell.",
     "official-register": "Tax Code of the Republic of Tajikistan (2021) not reached; adlia.tj not tried before the search budget ran out || 2026-11-01 retry: adlia.tj (National Centre of Legislation) returns HTTP 503 for the home page and show_doc.fwx; ncz.tj also 503; parlament.tj does not answer.",
@@ -41,7 +137,7 @@
   },
   {
    "item": "nonResident",
-   "sought": "The nonResident figure for 2026 from the tax authority or the law.",
+   "sought": "Whether the 20% on a non-resident's employment income (read 2026-11-03) is withheld as a final tax, and the tax on a non-resident's fee for services",
    "tried": {
     "institution": "andoz.tj (Tax Committee) did not answer this environment (connection failed, twice) || 2026-11-01 retry: andoz.tj (https and http) still does not answer (curl 000); minfin.tj and mmk.tj do not answer; president.tj serves a 1,900-byte script shell.",
     "official-register": "Tax Code of the Republic of Tajikistan (2021) not reached; adlia.tj not tried before the search budget ran out || 2026-11-01 retry: adlia.tj (National Centre of Legislation) returns HTTP 503 for the home page and show_doc.fwx; ncz.tj also 503; parlament.tj does not answer.",
@@ -63,7 +159,7 @@
   },
   {
    "item": "vat",
-   "sought": "VAT rate for 2026 (secondary: 14%) and the registration threshold.",
+   "sought": "The VAT registration threshold (the 14% rate for 2024 to 2026 was read in the Tax Code on 2026-11-03)",
    "tried": {
     "institution": "andoz.tj (Tax Committee) did not answer this environment (connection failed, twice) || 2026-11-01 retry: andoz.tj (https and http) still does not answer (curl 000); minfin.tj and mmk.tj do not answer; president.tj serves a 1,900-byte script shell.",
     "official-register": "Tax Code of the Republic of Tajikistan (2021) not reached; adlia.tj not tried before the search budget ran out || 2026-11-01 retry: adlia.tj (National Centre of Legislation) returns HTTP 503 for the home page and show_doc.fwx; ncz.tj also 503; parlament.tj does not answer.",
