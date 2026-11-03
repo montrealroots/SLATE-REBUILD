@@ -144,6 +144,40 @@
      "said": "(च) द्धवगत बाह्र मद्धहनामा वस्तुको हकमा पचास लाि रुपैयाँ र … वस्तु तथा सेवा भमशश्रत कारोबारको र सेवाको हकमा 46तीस … लाि रुपैयाँ करयोग्य कारोबार नपुगेको करदाता िएमा,"
     }
    ]
+  },
+  {
+   "item": "social",
+   "finding": "An employer deducts 11% of a worker's basic remuneration and adds 20% of its own, 31% in all, to the Social Security Fund (1.20% medical and maternity, 0.80% accident and disability, 0.67% dependants, 28.33% old age); a self-employed person contributes 31% of a declared amount from the minimum basic wage to three times it.",
+   "value": {
+    "currency": "NPR",
+    "ssf": {
+     "employee": 0.11,
+     "employer": 0.2,
+     "total": 0.31,
+     "base": "basic remuneration",
+     "split": {
+      "medicalMaternity": 0.012,
+      "accidentDisability": 0.008,
+      "dependants": 0.0067,
+      "oldAge": 0.2833
+     }
+    },
+    "selfEmployed": {
+     "rate": 0.31,
+     "base": "a declared amount from the minimum basic wage to three times it"
+    }
+   },
+   "applies": "Contributors to the Fund. Read 2026-11-03 from the Fund's own procedures; their text layer is set in the Preeti font, and the integrator re-read the clauses (११, २० and ३१ percent; the four shares, in Unicode, sum to 31). Not read by the engine: how the Fund's contribution meets the income tax's 1% social security tax was not read.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "रोजगारदाताले श्रमिकको आधारभूत पारिश्रमिकबाट ११ प्रतिशत रकम कट्टी गरी सो रकममा श्रमिकको आधारभूत पारिश्रमिकको २० प्रतिशत रकम थप गरी कुल ३१ प्रतिशत रकम कोषमा जम्मा गर्नेछन्"
+    },
+    {
+     "src": 5,
+     "said": "स्वरोजगारमा रहेका व्यक्तिले कम्तीमा न्यूनतम आधारभूत पारिश्रमिक देखि अधिकतम यसको तीन गुणा सम्मको रकमको एकतीस प्रतिशत रकम योगदान गर्नु पर्नेछ"
+    }
+   ]
   }
  ],
  "country": "NP",
@@ -176,12 +210,26 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "करको दराः 28(१) यस ऐन बमोशजम लाग्ने करको दर तेह्र प्रभतितको एकल … दर हुनेछ। … (च) द्धवगत बाह्र मद्धहनामा वस्तुको हकमा पचास लाि रुपैयाँ र … वस्तु तथा सेवा भमशश्रत कारोबारको र सेवाको हकमा 46तीस … लाि रुपैयाँ करयोग्य कारोबार नपुगेको करदाता िएमा,"
+  },
+  {
+   "url": "https://ssf.gov.np/images/news/17406520344566_Social%20Security%20Operation%20Procedure%202075%20with%205th%20ammendment.pdf",
+   "title": "सामाजिक सुरक्षा योजना सञ्चालन कार्यविधि, २०७५ (Social Security Scheme Operation Procedure 2075, with its fifth amendment of 2081/09/10), Social Security Fund, s. 25",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "s. 25, set in the Preeti font and read in Devanagari: रोजगारदाताले श्रमिकको आधारभूत पारिश्रमिकबाट ११ प्रतिशत रकम कट्टी गरी सो रकममा श्रमिकको आधारभूत पारिश्रमिकको २० प्रतिशत रकम थप गरी कुल ३१ प्रतिशत रकम कोषमा जम्मा गर्नेछन् … (क) औषधि उपचार, स्वास्थ्य तथा मातृत्व सुरक्षा योजनाको लागी १.२० प्रतिशत (ख) दुर्घटना तथा अशक्तता सुरक्षा योजनाको लागि ०.८० प्रतिशत (ग) आश्रित परिवार सुरक्षा योजनाको लागि ०.६७ प्रतिशत (घ) वृद्ध अवस्था सुरक्षा योजनाको लागि २८.३३ प्रतिशत"
+  },
+  {
+   "url": "https://ssf.gov.np/images/news/17169880149914_Informal%20and%20Self%20Employed%20Procedure%20with%20First%20Amendment.pdf",
+   "title": "अनौपचारिक क्षेत्रका श्रमिक र स्वरोजगारमा रहेका व्यक्तिको सामाजिक सुरक्षा योजना सञ्चालन कार्यविधि, २०७९ (first amendment 2080/11/17), Social Security Fund, s. 5",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "s. 5(4): स्वरोजगारमा रहेका व्यक्तिले कम्तीमा न्यूनतम आधारभूत पारिश्रमिक देखि अधिकतम यसको तीन गुणा सम्मको रकमको एकतीस प्रतिशत रकम योगदान गर्नु पर्नेछ (allocated: medical, health and maternity two point four percent; accident and disability zero point eight; dependent family one point eight; old age twenty-six, of which at least sixteen to the pension scheme)"
   }
  ],
  "blockers": [
   {
    "item": "year",
-   "sought": "Nepal's fiscal-year dates in the Gregorian calendar (Shrawan 1 to Ashadh end) and the return deadline; Social Security Fund (SSF) contribution rates for employees, employers and the self-employed",
+   "sought": "Nepal's fiscal-year dates in the Gregorian calendar (Shrawan 1 to Ashadh end) and the return deadline (the Social Security Fund's contribution rates were read from its own procedures on 2026-11-03)",
    "tried": {
     "institution": "ird.gov.np 2026-11-01: tax-rate and finance-act listings and the Finance Act 2083 booklet read; only the individual rate change was extracted in this pass || retry 2026-11-01 (world round): ird.gov.np read: withholding-rate PDF for 2083/84 (NP-ird-tds-2083.pdf) and the VAT Act 2052 as amended (NP-vat-act-2052.pdf) saved and used; no page giving the Gregorian dates or the return deadline found among its listings; ssf.gov.np/pages/introduction read: no contribution rates; ssf.gov.np/list/act_regulation listed",
     "official-register": "Nepal Law Commission (Income Tax Act 2058) not fetched || retry 2026-11-01 (world round): lawcommission.gov.np answers (home page); its site search for 'income tax' (lawcommission.gov.np/?s=income+tax) lists no Income Tax Act 2058 or Contribution-based Social Security Act 2074 entry; /en/ answers 404",

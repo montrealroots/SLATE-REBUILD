@@ -85,8 +85,9 @@ const LICENCES = data as unknown as Record<string, Licence | { readonly issuedBy
 export function licenceAt({ country, region }: Where): Licence | undefined {
   const entry = LICENCES[country] ?? LICENCES[region];
   if (entry === undefined || 'none' in entry) return undefined;
-  // The compile holds every issuer named as a place kept in its own right: a country kept whole, or a region
-  // (Christmas Island's licences are Western Australia's).
+  // The compile holds every issuer named as a place kept in its own right: a country kept whole, or a region. Christmas
+  // Island's licences were taken for Western Australia's until 2026-11-03, when WA's Department of Transport was read
+  // transferring them into its own; none is held by a region now.
   return 'issuedBy' in entry ? (LICENCES[entry.issuedBy] as Licence) : entry;
 }
 

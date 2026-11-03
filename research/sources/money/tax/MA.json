@@ -132,12 +132,14 @@
   },
   {
    "item": "vat",
-   "finding": "VAT is 20% (reduced 10%); every person liable to VAT declares his existence within 30 days of starting.",
+   "finding": "VAT is 20% (reduced 10%); an individual providing services is exempt while the year's turnover is 500,000 dirhams or less, and once liable may leave only after three years in a row at or below it.",
    "value": {
     "standard": 0.2,
-    "reduced": 0.1
+    "reduced": 0.1,
+    "currency": "MAD",
+    "exemptUpTo": 500000
    },
-   "applies": "No turnover threshold for a freelancer's services was confirmed; see blocker.",
+   "applies": "2026: CGI art. 91-II-3° (from loi de finances 50-22), read 2026-11-03.",
    "sources": [
     {
      "src": 1,
@@ -146,6 +148,37 @@
     {
      "src": 1,
      "said": "Registration: To register for VAT purposes, all persons subject to VAT must make a “declaration of existence” within 30 days of"
+    },
+    {
+     "src": 5,
+     "said": "3°- Les ventes et prestations de services, effectuées par les fabricants et les prestataires, personnes physiques, dont le chiffre d'affaires annuel est inférieur ou égal à cinq cent mille (500.000) dirhams."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "An artist's fee (cachet), paid to an artist working alone or in a troupe, bears withholding at 30% after a flat 50% allowance (15% of the gross); the withholding isn't final, so the artist's income is still reckoned in the year's return.",
+   "value": {
+    "currency": "MAD",
+    "artistsCachets": {
+     "allowance": 0.5,
+     "rate": 0.3,
+     "final": false
+    }
+   },
+   "applies": "2026: CGI arts. 60-II (the 50% allowance, from loi de finances 55-23), 73-II-G-4° (30%), and art. 73's last paragraph, whose list of final withholdings leaves G-4° out.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "est soumis à la retenue à la source au taux prévu à l'article 73-II-G-4° ci-dessous, après un abattement forfaitaire de 50%"
+    },
+    {
+     "src": 5,
+     "said": "G.-30% : … 4°- pour le montant brut des cachets, prévus à l'article 60-II ci-dessus, octroyés aux artistes exerçant à titre individuel ou constitués en troupes"
+    },
+    {
+     "src": 5,
+     "said": "G (2°, 3° , 8° et 9°) du paragraphe II et au paragraphe III ci-dessus, sont libératoires de l'impôt sur le revenu."
     }
    ]
   }
@@ -191,30 +224,15 @@
    "kind": "secondary",
    "quotes": "https://www.tax.gov.ma/",
    "said": "According to the Moroccan Tax Code, all payments of all kinds of services rendered by non-resident entities are subject to WHT at the rate of 10%. However, it shall be noted that treaty dispositions limit the scope of application of WHT only to remunerations that constitute royalties."
-  }
- ],
- "blockers": [
-  {
-   "item": "authors",
-   "sought": "The withholding on artists' fees (cachets) under CGI art. 73-II-G-4° after the 40% allowance, its 2026 rate and whether final.",
-   "tried": {
-    "institution": "tax.gov.ma returns 403 to this environment (2026-11-01). || 2026-11-01 retry: tax.gov.ma again 403; finances.gov.ma answers and links Arabic finance-law summaries (SLF2026-Ar.pdf), not the CGI text and not read.",
-    "official-register": "The CGI 2026 is published on tax.gov.ma (refused); sgg.gov.ma (Bulletin officiel) not read 2026-11-01. || 2026-11-01 retry: sgg.gov.ma Bulletin officiel page answers (200) but lists no CGI 2026; not searched by article.",
-    "web-search": "'Maroc CGI article 73 cachets artistes retenue à la source 30% libératoire honoraires non salariés' (2026-11-01): La Vie Éco cites the 40% allowance and art. 73-II-G-4° but no rate; sources conflict. || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('CGI Maroc 2026 article 73 cachets artistes / seuil TVA').",
-    "trade-press": "PwC Worldwide Tax Summaries and Deloitte Morocco Highlights 2026 (2026-11-01): silent. || 2026-11-01 retry: PwC and Deloitte Morocco (already saved): silent, as before.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
-   }
   },
   {
-   "item": "vat",
-   "sought": "Any turnover below which a freelancer's services are outside VAT in 2026.",
-   "tried": {
-    "institution": "tax.gov.ma returns 403 to this environment (2026-11-01). || 2026-11-01 retry: tax.gov.ma again 403; finances.gov.ma answers and links Arabic finance-law summaries (SLF2026-Ar.pdf), not the CGI text and not read.",
-    "official-register": "The CGI 2026 is published on tax.gov.ma (refused); sgg.gov.ma (Bulletin officiel) not read 2026-11-01. || 2026-11-01 retry: sgg.gov.ma Bulletin officiel page answers (200) but lists no CGI 2026; not searched by article.",
-    "web-search": "Not run separately (2026-11-01). || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('CGI Maroc 2026 article 73 cachets artistes / seuil TVA').",
-    "trade-press": "PwC and Deloitte Morocco 2026: no threshold stated. || 2026-11-01 retry: PwC and Deloitte Morocco (already saved): silent, as before.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
-   }
+   "url": "https://upsilon-consulting.com/documents/cgi-2026-maroc.pdf",
+   "title": "Code Général des Impôts 2026 (the DGI's edition, updated to loi de finances n° 50-25; copy hosted by Upsilon Consulting)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.tax.gov.ma/wps/portal/DGI/Textes-legislatifs-et-reglementaires/Code-General-des-Impots",
+   "said": "II.- Les cachets octroyés aux artistes. Le montant brut des cachets octroyés aux artistes exerçant à titre individuel ou constitués en troupes est soumis à la retenue à la source au taux prévu à l'article 73-II-G-4° ci-dessous, après un abattement forfaitaire de 50%. … G.-30% : … 4°- pour le montant brut des cachets, prévus à l'article 60-II ci-dessus, octroyés aux artistes exerçant à titre individuel ou constitués en troupes ; … Les prélèvements aux taux fixés aux B (1°, 6° et 7°), C (1° et 2°), F (2°, 3°, 4°, 5°, 6°, 9°, 10°, 11° et 12°), G (2°, 3° , 8° et 9°) du paragraphe II et au paragraphe III ci-dessus, sont libératoires de l'impôt sur le revenu. … [Article 91-II] 3°- Les ventes et prestations de services, effectuées par les fabricants et les prestataires, personnes physiques, dont le chiffre d'affaires annuel est inférieur ou égal à cinq cent mille (500.000) dirhams."
   }
- ]
+ ],
+ "blockers": []
 }

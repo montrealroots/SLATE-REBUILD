@@ -123,20 +123,38 @@
   },
   {
    "item": "social",
-   "finding": "Every employer and every worker pays an Accident Compensation Corporation levy of 1 sene per tala of wages (1% each), with each pay run; the Samoa National Provident Fund contribution was not read.",
+   "finding": "Every employer and every worker pays an Accident Compensation Corporation levy of 1 sene per tala of wages (1% each), with each pay run; the employer deducts the employee's 10% National Provident Fund contribution from gross wages and adds a matching 10%.",
    "value": {
     "accLevy": {
      "employer": 0.01,
      "worker": 0.01,
      "base": "wages"
     },
-    "snpf": null
+    "snpf": {
+     "employee": 0.1,
+     "employer": 0.1,
+     "base": "gross wages, overtime, allowances and bonuses included",
+     "due": "7th day after the month ends",
+     "voluntaryMonthly": {
+      "currency": "WST",
+      "min": 100,
+      "max": 2000
+     }
+    }
    },
-   "applies": "Employers and workers in Samoa",
+   "applies": "Employers and workers in Samoa. The SNPF contribution is read from the Fund's own guides on 2026-11-03; a self-employed person may join as a voluntary member.",
    "sources": [
     {
      "src": 2,
      "said": "How much levy do I need to pay and when? Every employer and worker pays a levy of $0.01 sene for every $1.00 of wages. Payment time depends on how often wages are paid."
+    },
+    {
+     "src": 4,
+     "said": "Deduct your employee's portion of 10% from their gross wages"
+    },
+    {
+     "src": 5,
+     "said": "Employee Member 10% employee contribution A matching 10% by the employer"
     }
    ]
   },
@@ -187,20 +205,23 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "You are not permitted to charge VAGST on goods or services supplied if you are not registered for VAGST. … A taxable period is how often you file your VAGST returns which is two monthly. … [VAGST Threshold: $130,000 p.a]"
+  },
+  {
+   "url": "https://www.npf.ws/employers-guide",
+   "title": "Employers Guide, Samoa National Provident Fund",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "1. Deduct your employee's portion of 10% from their gross wages (which include overtime, allowance, bonus and any compensation (monetary value) receivable in relation to employment). 2. Ensure to remit a payment of 20% - the employee's 10% plus your (employer's) matching portion of 10% - to NPF. Contribution payments are due on the 7th day after every month end (e.g. contributions for August are due by 7th September)."
+  },
+  {
+   "url": "https://www.npf.ws/members-guide",
+   "title": "Members Guide, Samoa National Provident Fund",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The minimum contributions are as follows: Employee Member 10% employee contribution A matching 10% by the employer … Voluntary member A voluntary member must make a regular contribution with a minimum of $100 to the maximum of $2,000 per month."
   }
  ],
  "blockers": [
-  {
-   "item": "social",
-   "sought": "Samoa National Provident Fund (SNPF) contributions on pay (the ACC levy is found)",
-   "tried": {
-    "institution": "snpf.ws not tried || retry-8 2026-11-01: revenue.gov.ws home answers (after one HTTP/2 error): its forms list read; IR2 2025 return (rates, year, due dates), IR31 VAGST registration form (threshold) and the May 2026 due-date notice downloaded; acc.gov.ws FAQ read (ACC levy); snpf.ws and www.snpf.org.ws: no answer",
-    "official-register": "not reached || retry-8 2026-11-01: PacLII refused in the earlier pass; the VAGST Act 2015 and the National Provident Fund Act not on the Ministry or ACC pages read (ACC 'Legislations' page not opened)",
-    "web-search": "not run || retry-8 2026-11-01: a search for 'Samoa VAGST rate 15% SNPF employer employee contribution non-resident withholding' was refused by the search tool (shared per-turn limit of 200 searches reached)",
-    "trade-press": "not used || retry-8 2026-11-01: none reachable this turn",
-    "archive": "web.archive.org unreachable from this environment || retry-8 2026-11-01: web.archive.org: connection reset and availability API 429 on 2026-11-01"
-   }
-  },
   {
    "item": "nonResident",
    "sought": "Withholding on a non-resident performer's fee.",

@@ -17,8 +17,9 @@ import { amount, checkIssuers, compileIssued, currencyIn, isRecord, isWhole, onl
  * reaches it ends), where one is set, or that it lasts for life, or the terms the holder chooses among, each with its
  * own fee) and the identity card the office issues to someone who doesn't drive, either or both, with the licences it
  * exchanges without a test. A fee or a term the research hasn't read is null. A territory whose licences are another
- * country's says whose (`issuedBy`), a region's where that country keeps its licences by region (Christmas Island's are
- * Western Australia's). No file was written when the engine was built (2026-10-30); then nothing is compiled.
+ * country's says whose (`issuedBy`), a region's where that country keeps its licences by region (Christmas Island's were
+ * taken for Western Australia's until 2026-11-03, when WA's Department of Transport was read transferring them into its
+ * own; none is a region's now). No file was written when the engine was built (2026-10-30); then nothing is compiled.
  */
 export const SOURCES = 'research/sources/papers/licence';
 export const OUTPUT = 'src/papers/licence/licence.json';

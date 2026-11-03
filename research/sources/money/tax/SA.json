@@ -107,12 +107,15 @@
   },
   {
    "item": "vat",
-   "finding": "VAT is 15% since 1 July 2020; a resident must register within 30 days of a month-end at which his past twelve months' supplies (or the next twelve months' expected) exceed the Mandatory Registration Threshold the GCC Agreement sets (its amount not read).",
+   "finding": "VAT is 15% since 1 July 2020; a resident must register within 30 days of a month-end at which his past twelve months' supplies (or the next twelve months' expected) exceed the Mandatory Registration Threshold the GCC Agreement sets, SAR 375,000 (voluntary registration from half of it).",
    "value": {
     "standard": 0.15,
-    "since": "2020-07-01"
+    "since": "2020-07-01",
+    "currency": "SAR",
+    "threshold": 375000,
+    "voluntary": 187500
    },
-   "applies": "2026.",
+   "applies": "2026. The threshold is read from the GCC Agreement as ZATCA publishes it, 2026-11-03; no amendment of it by the Ministerial Committee was found.",
    "sources": [
     {
      "src": 5,
@@ -121,6 +124,10 @@
     {
      "src": 6,
      "said": "every Resident Person in the Kingdom who is not registered by the Authority must at the end of each month calculate the value of his Supplies made in the Kingdom within the twelve months then ended, in accordance with the requirements set out in the Agreement. In cases where this value exceeds the Mandatory Registration Threshold detailed in the Agreement, the Person must apply to the Authority to register within thirty (30) days of the end of that month"
+    },
+    {
+     "src": 7,
+     "said": "2. The Mandatory Registration Threshold shall be SAR 375,000 (or its equivalent in the GCC State currencies)."
     }
    ]
   }
@@ -180,20 +187,16 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "every Resident Person in the Kingdom who is not registered by the Authority must at the end of each month calculate the value of his Supplies made in the Kingdom within the twelve months then ended, in accordance with the requirements set out in the Agreement. In cases where this value exceeds the Mandatory Registration Threshold detailed in the Agreement, the Person must apply to the Authority to register within thirty (30) days of the end of that month"
+  },
+  {
+   "url": "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Documents/GCC%20VAT%20Agreement.pdf",
+   "title": "Common VAT Agreement of the States of the Gulf Cooperation Council (GCC), arts. 50 and 51 (bilingual text published by ZATCA)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Article 50 Mandatory Registration 1. For the purposes of implementing this Agreement, a Taxable Person shall be obliged to register if : a) he is resident in any Member State; b) the value of his annual supplies in that Member State exceeds or is expected to exceed the Mandatory Registration Threshold. 2. The Mandatory Registration Threshold shall be SAR 375,000 (or its equivalent in the GCC State currencies). The Ministerial Committee has the right to amend The Mandatory Registration Threshold after it has been in force for three years. … Article 51 … 3. The Voluntary Registration Threshold is 50% of the Mandatory Registration Threshold."
   }
  ],
  "blockers": [
-  {
-   "item": "vat",
-   "sought": "The amount of the Mandatory Registration Threshold (understood as SAR 375,000 a year) from ZATCA or the GCC Unified VAT Agreement",
-   "tried": {
-    "institution": "zatca.gov.sa taxes page fetched 2026-11-01 carried no threshold; the WHT guideline read in full on WHT only || retry 2026-11-01: zatca.gov.sa: VAT Implementing Regulations PDF (RulesRegulations/Taxes/Documents/Implmenting Regulations of the VAT Law_EN.pdf) saved and cited: registration refers to the Agreement's threshold, no amount; eServices/Pages/VAT_Registration.aspx returns ZATCA's not-found page; Documents library REST listing HTTP 401 (not read another way); guessed paths for the VAT Law and the GCC Unified Agreement redirect (302) to not-found",
-    "official-register": "VAT Implementing Regulations not fetched in this pass || retry 2026-11-01: GCC Unified VAT Agreement (where the SAR 375,000 sits, art. on mandatory registration) not found on zatca.gov.sa at the paths tried; the Regulations read instead",
-    "web-search": "not run for this item || retry 2026-11-01: refused by the search tool on 2026-11-01 (the turn's shared limit of 200 searches was reached) for \"zatca.gov.sa VAT mandatory registration threshold SAR 375,000 voluntary 187,500 VAT Implementing Regulations\"; not worked around",
-    "trade-press": "PwC Saudi corporate other taxes read: rate only, no threshold || retry 2026-11-01: PwC Saudi corporate and individual other-taxes pages already saved re-read: no threshold amount",
-    "archive": "not tried || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
-   }
-  },
   {
    "item": "year",
    "sought": "Whether any return is due from an individual (none for employment income); tax year of a non-Saudi resident's business income",

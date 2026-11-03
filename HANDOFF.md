@@ -56,7 +56,16 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
   stands only where a primary states it (Benin's, Côte d'Ivoire's, Senegal's, Algeria's and Mozambique's keys were
   worked out from real numbers only, so their checks stay blocked); a law not in force is not the rule (Samoa's credit
   register Act); a government's page about another country is a lead, not a source, unless it names the primary.
-- The register: 4,952 entries, 3,343 found, 779 secondary, 830 blocked (737 of them layer 3's).
+- The web-search pass, round 1 (2026-11-03, the same session once its search allowance answered again): nine agents,
+  each held to 20 searches (about 176 in all), searched about 170 of the blockers wave 1 couldn't, and five integrated
+  what they found. Found, and their rows now researched: Algeria's BNA card, Saint-Pierre and Miquelon's national
+  number, the Marshall Islands' residence routes, the Maldives' licence, the ages of Belize, Israel, Jordan, Nicaragua,
+  Suriname (21 until 1 May 2025, 18 since), Tunisia, Nepal, Seychelles, El Salvador, Tajikistan and Venezuela, and the
+  tax of Chile, Liberia, Morocco (and Western Sahara with it), Peru and the Philippines. Some forty more were found in
+  part and stay blocked on what is missing. Fixed on the way: Algeria's banks note gave BNA's packs as from 200 dinars
+  a month, where BNA's conditions of November 2025 give 100; a comment held that Christmas Island's licences are
+  Western Australia's, where Western Australia issues none there.
+- The register: 4,939 entries, 3,350 found, 779 secondary, 810 blocked (717 of them layer 3's).
 
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
@@ -193,10 +202,11 @@ The owner's ruling (2026-11-03): finish layer 3's research in a new session, wit
 prove it. In that session, from `research/rounds/brief.md` and `research/rounds/integrate.md` (the briefs this
 session's agents were given; change the date, the scratchpad path and the groups, keep the rules):
 
-1. The web-search pass: 613 of layer 3's 737 blockers have no web-search attempt dated 2026-11-03 (a blocker whose
-   latest `web-search` attempt is older; tax 129, ages 101, licence 70, formats 66, numbers 65, cards 51, credit 37,
-   means 31, banks 17, work 16, residence 14, passports 9, ids 7). Re-attack each with web search and trade press,
-   which this session's wave 1 couldn't reach.
+1. The web-search pass, the rest: 445 of layer 3's 717 blockers still have no web-search attempt dated 2026-11-03 (a
+   blocker whose latest `web-search` attempt is older; tax 94, ages 66, formats 60, licence 56, numbers 45, cards 37,
+   means 25, credit 22, banks 15, work 13, residence 6, ids 5, passports 1). Round 1 held each agent to 20 searches,
+   since the allowance is shared and ran out once before; do the same, and re-attack each with web search and trade
+   press.
 2. Wave 2: layer 3's 737 facts held only at second hand (citizenship and visits most of them): re-read each source and
    search for the primary it quotes.
 3. Wave 3: re-read the sources of layer 3's 3,037 found facts, re-check every pinned file's hash, and take any newer

@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "residents",
-   "finding": "A resident's annual income from work (IRPF) is free to UYU 576,576, then taxed at 10% to 823,680, 15% to 1,235,520, 24% to 2,471,040, 25% to 4,118,400, 27% to 6,177,600, 31% to 9,472,320 and 36% above; few deductions (social security and notional amounts for dependent children) are allowed; capital income is taxed at 12%; there is no regional layer.",
+   "finding": "A resident's annual income from work (IRPF) is free to UYU 576,576, then taxed at 10% to 823,680, 15% to 1,235,520, 24% to 2,471,040, 25% to 4,118,400, 27% to 6,177,600, 31% to 9,472,320 and 36% above; few deductions (social security and notional amounts for dependent children) are allowed; capital income is taxed at 12%; there is no regional layer. An independent worker is taxed on the income less a deemed 30% for expenses, once the month's income without VAT passes 7 BPC; above UI 4,000,000 a year, the worker pays IRAE (business tax) from the next year.",
    "value": {
     "currency": "UYU",
     "brackets": [
@@ -51,9 +51,14 @@
      }
     ],
     "capitalIncome": 0.12,
-    "regional": null
+    "regional": null,
+    "selfEmployed": {
+     "deemedExpense": 0.3,
+     "liableAboveMonthlyBPC": 7,
+     "iraeFromNextYearAboveUI": 4000000
+    }
    },
-   "applies": "Resident individuals' work income; amounts as given by PwC 'as of 31 December 2025' (indexed to the BPC)",
+   "applies": "Resident individuals' work income; amounts as given by PwC 'as of 31 December 2025' (indexed to the BPC). The independent worker's deemed expense is read from the DGI on 2026-11-03; the engine reckons a resident's fees on the scale without it (told).",
    "sources": [
     {
      "src": 0,
@@ -62,6 +67,14 @@
     {
      "src": 0,
      "said": "The tax is levied on capital investments (e.g. interest, rents, royalties, capital gains) at a flat rate of 12%, with some exceptions."
+    },
+    {
+     "src": 6,
+     "said": "A este monto se le deduce en forma ficta un 30% en concepto de gastos."
+    },
+    {
+     "src": 6,
+     "said": "siempre que sus ingresos mensuales totales sin IVA superen las 7 BPC mensuales"
     }
    ]
   },
@@ -256,12 +269,19 @@
    "kind": "secondary",
    "quotes": "https://www.gub.uy/direccion-general-impositiva/",
    "said": "All Uruguayan-sourced income obtained by non-residents (other than those obtained through a PE in Uruguay) is taxed at flat rates of up to 12% on gross income, with some exceptions. This tax is basically collected by way of WHT."
+  },
+  {
+   "url": "https://www.gub.uy/direccion-general-impositiva/comunicacion/publicaciones/irpf-para-trabajadores-independientes",
+   "title": "IRPF para trabajadores independientes, Dirección General Impositiva",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Quedan alcanzados por el impuesto aquellos trabajadores independientes (profesionales y no profesionales) que presten servicios fuera de una relación de dependencia, siempre que sus ingresos mensuales totales sin IVA superen las 7 BPC mensuales. … Se consideran todos los ingresos por servicios personales fuera de la relación de dependencia, excluido el IVA. A este monto se le deduce en forma ficta un 30% en concepto de gastos. … Los trabajadores independientes cuyas rentas por servicios personales superen las UI 4.000.000 (cuatro millones de unidades indexadas) a la cotización de cierre de ejercicio deberán tributar IRAE en forma obligatoria en el ejercicio siguiente."
   }
  ],
  "blockers": [
   {
    "item": "nonResident",
-   "sought": "The IRPF deemed-expense rate for a self-employed resident artist, and whether a small freelancer may use the literal E (minimum VAT) regime; the IRNR finality is now read from Decreto 149/007.",
+   "sought": "Whether a small freelancer may use the literal E (minimum VAT) regime (the IRPF deemed-expense rate, 30%, was read from the DGI on 2026-11-03; the IRNR finality is now read from Decreto 149/007).",
    "tried": {
     "institution": "gub.uy/direccion-general-impositiva reached (home page); the IRPF/IRNR rate pages and the 2026 BPC value not located this pass || 2026-11-01 retry: gub.uy/direccion-general-impositiva home read; guessed IRNR policy pages return 404; its \"codigos-impuestos\" publication page found (not read).",
     "official-register": "IMPO (Texto Ordenado, Título 7 and 8) not read || 2026-11-01 retry: IMPO read: Decreto 149/007 (IRNR regulation) saved and quoted (arts. 24, 31); impo.com.uy/bases/todgi/8-2023 returns a 4.4 kB stub; IRPF decree 150/007 not read.",

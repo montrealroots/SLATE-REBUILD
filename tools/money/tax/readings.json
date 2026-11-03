@@ -4182,6 +4182,18 @@
    }
   },
   "nonResident": {
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["servicesRate"]}}],
+    "final": {"fig":7,"path":["final"]}
+   },
+   "director": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["servicesRate"]}}],
+    "final": {"fig":7,"path":["final"]}
+   },
+   "producer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["servicesRate"]}}],
+    "final": {"fig":7,"path":["final"]}
+   },
    "author": {
     "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["royalties"]}}],
     "final": {"fig":7,"path":["final"]}
@@ -4314,6 +4326,10 @@
    }
   },
   "nonResident": {
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["performers","rate"]}}],
+    "final": {"fig":3,"path":["final"]}
+   },
    "author": {
     "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["royalties"]}}],
     "final": {"fig":3,"path":["final"]}
@@ -4351,7 +4367,12 @@
    "employee": [[{"from":0,"to":{"fig":2,"path":["socialMonthlyCap"],"months":true},"rate":{"fig":2,"path":["employee","social"]}}],[{"from":0,"to":null,"rate":{"fig":2,"path":["employee","medical"]}}]],
    "self": []
   },
-  "withholding": {},
+  "withholding": {
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":6,"path":["artistsCachets","rate"]}}],
+    "deduct": {"fig":6,"path":["artistsCachets","allowance"]}
+   }
+  },
   "nonResident": {
    "performer": {
     "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["servicesWithholding"]}}]
@@ -4366,8 +4387,8 @@
     "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["servicesWithholding"]}}]
    }
   },
-  "vat": null,
-  "unmodeled": [],
+  "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["exemptUpTo"]}},
+  "unmodeled": ["authors"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "MC": {
@@ -5482,7 +5503,7 @@
     "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["nonResidentRoyalties"]}}]
    }
   },
-  "vat": null,
+  "vat": {"rate":{"fig":5,"path":["rate"]},"threshold":{"fig":5,"path":["threshold"]}},
   "unmodeled": []
  },
  "PE": {
@@ -5601,7 +5622,11 @@
    "employee": [[{"from":0,"to":{"fig":4,"path":["philhealth","ceilingMonthly"],"months":true},"rate":{"fig":4,"path":["philhealth","rate"],"half":true}}]],
    "self": []
   },
-  "withholding": {},
+  "withholding": {
+   "producer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":2,"path":["freelancer","rate"]}}]
+   }
+  },
   "nonResident": {
    "performer": {
     "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["notEngagedRate"]}}]
@@ -5617,7 +5642,7 @@
    }
   },
   "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["threshold"]}},
-  "unmodeled": ["scheme","social"],
+  "unmodeled": ["scheme","social","withholding"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "PK": {
@@ -6158,7 +6183,7 @@
     "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["royaltiesNonResident"]}}]
    }
   },
-  "vat": null,
+  "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["threshold"]}},
   "unmodeled": ["business","social"],
   "currency": {"fig":0,"path":["currency"]}
  },
@@ -7380,7 +7405,7 @@
    }
   },
   "vat": {"rate":{"fig":6,"path":["standard"]},"threshold":{"fig":6,"path":["threshold"]}},
-  "unmodeled": ["credits","social","authors","nonResident"],
+  "unmodeled": ["business","credits","social","authors","nonResident"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "UZ": {
@@ -7640,7 +7665,7 @@
    }
   ],
   "social": {
-   "employee": [[{"from":0,"to":null,"rate":{"fig":4,"path":["accLevy","worker"]}}]],
+   "employee": [[{"from":0,"to":null,"rate":{"fig":4,"path":["accLevy","worker"]}}],[{"from":0,"to":null,"rate":{"fig":4,"path":["snpf","employee"]}}]],
    "self": []
   },
   "withholding": {

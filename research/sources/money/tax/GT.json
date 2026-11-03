@@ -168,6 +168,34 @@
      "said": "The tax year for individuals runs from 1 January to 31 December."
     }
    ]
+  },
+  {
+   "item": "vat",
+   "finding": "A small taxpayer (Pequeño Contribuyente) pays 5% of gross income in place of VAT, and its invoices give the buyer no VAT credit; Decreto 31-2024 (in force 9 April 2025) raised the regime's annual ceiling from Q150,000 to 125 non-agricultural minimum wages, Q465,381.25 for 2025.",
+   "value": {
+    "currency": "GTQ",
+    "smallTaxpayer": {
+     "rate": 0.05,
+     "base": "gross income",
+     "ceiling2025": 465381.25,
+     "ceilingRule": "125 monthly non-agricultural minimum wages, the bonus left out (Decreto 31-2024)"
+    }
+   },
+   "applies": "Not read by the engine: the ceiling in force for 2026 is not read from the SAT or the decree (see blocker).",
+   "sources": [
+    {
+     "src": 8,
+     "said": "el nuevo monto llega a Q465 mil 381.25 para el período del 2025"
+    },
+    {
+     "src": 8,
+     "said": "La tasa del impuesto para el pequeño contribuyente es de 5%"
+    },
+    {
+     "src": 8,
+     "said": "equivale a 125 salarios mínimos no agrícolas sin tomar en cuenta la bonificación incentivo vigente"
+    }
+   ]
   }
  ],
  "country": "GT",
@@ -235,12 +263,20 @@
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "A 12% VAT is levied on the sale or transfer of merchandise and on non-personal services rendered or effected in Guatemala."
+  },
+  {
+   "url": "https://www.prensalibre.com/economia/sat-eleva-techo-de-ingresos-para-pequenos-contribuyentes-a-q465-mil-anuales/",
+   "title": "Prensa Libre: SAT eleva techo de ingresos para Pequeños Contribuyentes a Q465 mil anuales, derivado del decreto 31-2024 (10 de abril de 2025)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://portal.sat.gob.gt/portal/",
+   "said": "El cambio al límite máximo de ingresos anuales para quienes estén como Pequeños Contribuyentes … se deriva del decreto 31-2024, que entró en vigencia el 9 de abril, y el nuevo monto llega a Q465 mil 381.25 para el período del 2025. … El nuevo techo máximo para los pequeños contribuyentes establecido en el decreto 31-2024, equivale a 125 salarios mínimos no agrícolas sin tomar en cuenta la bonificación incentivo vigente … La tasa del impuesto para el pequeño contribuyente es de 5% y las facturas no generan crédito fiscal del IVA para sus clientes."
   }
  ],
  "blockers": [
   {
    "item": "vat",
-   "sought": "The small-taxpayer VAT regime (Pequeño Contribuyente: 5% of gross up to an annual limit) and when a freelancer must charge 12%",
+   "sought": "The Pequeño Contribuyente ceiling in force for 2026 and when a freelancer above it must charge 12%, from the SAT or Decreto 31-2024 itself (the regime's 5% of gross and its 2025 ceiling of Q465,381.25, 125 non-agricultural minimum wages, are read in Prensa Libre's report of the SAT, 2026-11-03)",
    "tried": {
     "institution": "2026-11-01: portal.sat.gob.gt/portal/pequeno-contribuyente/ fetched (saved GT-sat-pequeno.html): JavaScript shell; its WordPress JSON (GT-sat-pequeno-json.html) describes the electronic ledger only; site search lists FAQ pages that the JSON API does not serve (404) || retry 2026-11-01: portal.sat.gob.gt 2026-11-01: WordPress search API for \"ley del impuesto al valor agregado\", \"decreto 10-2012\", \"pequeño contribuyente 150000\" listed procedures; read and saved: Principales Impuestos (GT-sat-principales-impuestos.html: IVA 12% under Decreto 27-92, no small-taxpayer limit), the régimen change procedure (GT-sat-cambio-pc-a-general.html: no limit), Cumplimiento Tributario FAQ (GT-sat-faq-cumplimiento.html: names forms SAT-1411 ISR Anual and SAT-2241 Pequeño Contribuyente, no dates or limits) and the non-resident withholding system page (GT-sat-retenciones-no-residentes.html: withholding on non-residents is final, no rate)",
     "official-register": "2026-11-01: Decreto 10-2012 and Decreto 27-92 texts not read || retry 2026-11-01: SAT legislation library (leyes-reglamentos-los-impuestos) links Decreto 10-2012 and Decreto 27-92, but both downloads answer \"You can't download unpublished file(s)\" (44 bytes) with and without the .pdf suffix; only the ISR regulation (Acuerdo Gubernativo 213-2013) downloads; congreso.gob.gt answers a 212-byte page",

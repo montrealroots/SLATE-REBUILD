@@ -166,8 +166,9 @@ export function compileNone(code: string, file: Record<string, unknown>): None {
 
 /**
  * A territory's file naming the country whose papers its people hold (its `what`: numbers, permits, licences), or,
- * where `regions` is given (licences, which a country may keep by region), a region of another country (Christmas
- * Island's licences are Western Australia's).
+ * where `regions` is given (licences, which a country may keep by region), a region of another country. (Until
+ * 2026-11-03 this said Christmas Island's licences are Western Australia's; Western Australia issues none there, it
+ * converts them into its own.)
  */
 export function compileIssued(code: string, file: Record<string, unknown>, what: string, regions?: Readonly<Record<string, unknown>>): Issued {
   checkCountry(code, file);

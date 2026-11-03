@@ -140,13 +140,18 @@
   },
   {
    "item": "nonResident",
-   "finding": "A non-resident is taxed on Latvian-source income; royalties paid to a non-resident individual bear 25.5% withholding unless a treaty reduces it.",
+   "finding": "A non-resident is taxed on Latvian-source income; an artist's income from professional activity in Latvia bears 25.5%, withheld by the payer, and royalties paid to a non-resident individual bear 25.5% unless a treaty reduces it.",
    "value": {
     "basis": "Latvian-source income",
     "royalties": 0.255,
-    "final": null
+    "final": null,
+    "performers": {
+     "rate": 0.255,
+     "base": "income from an artist's professional activity in Latvia, whoever receives it (art. 3(3)(3))",
+     "withheld": "by the payer at payment, paid by the 23rd of the next month (art. 17(12))"
+    }
    },
-   "applies": "No artistes' rule was found; employment income is taxed through the employer as for residents.",
+   "applies": "Read again on 2026-11-03 from the consolidated law: art. 3(3)(3) names artists, sportspeople and coaches, not directors; whether the 25.5% is final is not stated in the clauses read (see blocker). Employment income is taxed through the employer as for residents.",
    "sources": [
     {
      "src": 1,
@@ -155,6 +160,14 @@
     {
      "src": 6,
      "said": "Royalties paid to nonresident individuals are subject to a 25.5% withholding tax, unless the rate is reduced under an applicable tax treaty."
+    },
+    {
+     "src": 7,
+     "said": "ienākums no mākslinieku, sportistu vai treneru profesionālās darbības Latvijas Republikā"
+    },
+    {
+     "src": 7,
+     "said": "Šā likuma 3. panta trešās daļas 3. punktā un 12. punkta \"a\" apakšpunktā minētajam ienākumam tiek piemērota 25,5 procentu likme."
     }
    ]
   },
@@ -277,12 +290,19 @@
    "kind": "secondary",
    "quotes": "https://likumi.lv/ta/id/56880-par-iedzivotaju-ienakuma-nodokli",
    "said": "Royalties paid to nonresident individuals are subject to a 25.5% withholding tax, unless the rate is reduced under an applicable tax treaty. … Persons whose taxable supplies (excluding imports) exceed EUR 50,000 in a calendar year must register for VAT purposes."
+  },
+  {
+   "url": "https://likumi.lv/ta/id/56880-par-iedzivotaju-ienakuma-nodokli",
+   "title": "Likums \"Par iedzīvotāju ienākuma nodokli\" (consolidated on likumi.lv, version in force 23.10.2026.-31.03.2027.)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "3. Ārvalsts nodokļa maksātāja (nerezidenta) ar nodokli apliekamais ienākums ir: … 3) ienākums no mākslinieku, sportistu vai treneru profesionālās darbības Latvijas Republikā neatkarīgi no tā, vai šo ienākumu saņem pats mākslinieks, sportists vai treneris, vai cita juridiskā vai fiziskā persona; … [15. pants] 7. 1 Šā likuma 3. panta trešās daļas 3. punktā un 12. punkta \"a\" apakšpunktā minētajam ienākumam tiek piemērota 25,5 procentu likme. … [17. pants] 12. No šā likuma 3. panta trešās daļas 1., 2., 3., … punktā minētajiem ienākumiem nodoklis tiek ieturēts ienākuma izmaksas vietā un iemaksāts vienotajā nodokļu kontā līdz ienākuma izmaksas mēnesim sekojošā mēneša 23. datumam."
   }
  ],
  "blockers": [
   {
    "item": "nonResident",
-   "sought": "A withholding rule specific to a non-resident performer's or director's fee, its rate and finality.",
+   "sought": "Whether the 25.5% withheld from a non-resident artist's fee (art. 15(7.1), read on likumi.lv on 2026-11-03) is final, and the rule for a non-resident director's fee, which art. 3(3)(3) doesn't name",
    "tried": {
     "institution": "vid.gov.lv unreachable. || retry 2026-11-01 (world round): www.vid.gov.lv/lv refused again (HTTP/2 INTERNAL_ERROR); fm.gov.lv/lv and mk.gov.lv refused the same way",
     "official-register": "likumi.lv unreachable. || retry 2026-11-01 (world round): likumi.lv and m.likumi.lv (id 56880) reset the connection; the amending law in Latvijas Vēstnesis 2024/240.1 (vestnesis.lv/op/2024/240.1, saved LV-vestnesis-op-2024-240.1.html) read: it raises the rate in article 17 parts 17 and 19 from 23 to 25.5 but does not state what those parts tax; no performer rule in it",

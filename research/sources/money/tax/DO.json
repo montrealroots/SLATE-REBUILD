@@ -64,7 +64,7 @@
     },
     "regional": null
    },
-   "applies": "Individuals, fiscal years 2026 and 2027 onward The 2027 scale (exempt to DOP 480,000; 15% to 685,000; 20% to 910,000; 25% to 4,800,000; 27% above) is read from Ley 30-26 art. 296 as amended; the 2026 scale is from PwC (DGII refuses this environment).",
+   "applies": "Individuals, fiscal years 2026 and 2027 onward The 2027 scale (exempt to DOP 480,000; 15% to 685,000; 20% to 910,000; 25% to 4,800,000; 27% above) is read from Ley 30-26 art. 296 as amended; the 2026 scale is from PwC (DGII refuses this environment). Alegra (read 2026-11-03) gives the same 2026 scale and names its instrument, DGII resolution DDG-AR1-2026-00001, not read.",
    "sources": [
     {
      "src": 0,
@@ -77,6 +77,10 @@
     {
      "src": 1,
      "said": "Rentas hasta los RD$480,000.00 Exentas … Rentas desde RD$480,000.01 15% del excedente de … hasta RD$685,000.00 RD$480,000.01 … Rentas desde RD$685,000.01 RD$30,750.00 más el 20 % del … hasta RD$910,000.00 excedente de RD$685,000.01 … Rentas desde RD$910,000.01 RD$75,750.00 más el 25% del … hasta RD$4,800,000.00 excedente de RD$910,000.01 … Rentas desde RD$4,800,000.01 en RD$1,04 8,250.00 más el 27% del … adelante excedente de RD$4,800,000.01"
+    },
+    {
+     "src": 5,
+     "said": "Hasta 416.220,00 Exento — 416.220,01 – 624.329,00 15 % — 624.329,01 – 867.123,00 20 % RD$31.216 Más de 867.123,00 25 % RD$79.776"
     }
    ]
   },
@@ -251,12 +255,20 @@
    "kind": "secondary",
    "quotes": "https://dgii.gov.do/",
    "said": "The WHT on payments to foreign corporations, which are not permanently established in the Dominican Republic, are as follows: Recipient WHT (%) Dividends and interest Royalties Technical assistance Other services Non-treaty 10 15 27 27"
+  },
+  {
+   "url": "https://blog.alegra.com/republica-dominicana/impuesto-sobre-la-renta-isr/",
+   "title": "Alegra: Impuesto Sobre la Renta en RD 2026: tasas, escala y formularios (published 22 October 2026, modified 26 October 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://dgii.gov.do/",
+   "said": "La escala vigente este año está fijada por la resolución DDG-AR1-2026-00001 de la DGII: Renta neta anual (RD$) Tasa Cuota fija Hasta 416.220,00 Exento — 416.220,01 – 624.329,00 15 % — 624.329,01 – 867.123,00 20 % RD$31.216 Más de 867.123,00 25 % RD$79.776"
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The DGII's own 2026 scale (indexed exemption DOP 416,220 per PwC); the 2027 scale is now read from Ley 30-26",
+   "sought": "The DGII's own 2026 scale (indexed exemption DOP 416,220 per PwC and Alegra, which names DGII resolution DDG-AR1-2026-00001, not read); the 2027 scale is now read from Ley 30-26",
    "tried": {
     "institution": "dgii.gov.do refused this environment (HTTP 403 bot check); not read another way || retry 2026-11-01 (world round): dgii.gov.do 403 again (home and its Guía 9 ISR Persona Física PDF path); hacienda.gob.do 403; presidencia.gob.do reachable: Ley 30-26 saved (DO-ley-30-26.pdf), which sets the 2027 scale only",
     "official-register": "not reached || retry 2026-11-01 (world round): Ley 30-26 read from the Presidency's law page; consultoria.gov.do, camaradediputados.gob.do and senadord.gob.do answer 200 but the 2026 indexed exemption is a DGII figure, not in a law",

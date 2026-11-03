@@ -149,6 +149,26 @@ describe("the depth round's figures", () => {
   });
 });
 
+describe("the web-search round's figures (2026-11-03)", () => {
+  it("withholds and charges what was found: Liberia's, Latvia's, Morocco's, the Philippines', Panama's, Saudi Arabia's and Samoa's", () => {
+    // A non-resident's service fee in Liberia: 20% final (the Tax Amendment Act of 2024); a non-resident artist's in Latvia: 25.5%, not known to be final.
+    expect([of('LR').nonResident.performer, of('LR').nonResident.producer?.bands, of('LV').nonResident.performer]).toEqual([
+      { bands: [{ from: '0', to: null, rate: '0.2' }], final: true },
+      [{ from: '0', to: null, rate: '0.2' }],
+      { bands: [{ from: '0', to: null, rate: '0.255' }], final: false },
+    ]);
+    // Morocco: an artist's cachet bears 30% after a 50% allowance; a freelancer's fee bears 20% VAT once the year's fees pass 500,000 dirhams.
+    expect([pay('MA', {}).p.tax, pay('MA', { work: 'producer', gross: m('MAD', '500000') }).p.vat, pay('MA', { work: 'producer', gross: m('MAD', '500001') }).p.vat]).toEqual([150_000, 0, 10_000_020]);
+    // The Philippines: 5% from a freelancer's fee; Panama's 7% above B/.36,000 and Saudi Arabia's 15% above SAR 375,000.
+    expect([pay('PH', { work: 'producer' }).p.tax, pay('PA', { work: 'producer', gross: m('PAB', '36000') }).p.vat, pay('PA', { work: 'producer', gross: m('PAB', '36001') }).p.vat]).toEqual([50_000, 0, 252_007]);
+    expect([pay('SA', { work: 'producer', gross: m('SAR', '375000') }).p.vat, pay('SA', { work: 'producer', gross: m('SAR', '375001') }).p.vat]).toEqual([0, 5_625_015]);
+    // Samoa: the employee's 10% to the National Provident Fund beside the 1% ACC levy.
+    expect(pay('WS', {}).p.social).toBe(110_000);
+    // Chile's and Peru's freelancer's fee bears no VAT (the SII's Circular 50 of 2022; the IGV law's art. 3(c)(1)), and the player is no longer told it's unknown.
+    expect([pay('CL', { work: 'producer' }).p.vat, pay('PE', { work: 'producer' }).p.vat, of('CL').unknown.includes('vat'), of('PE').unknown.includes('vat')]).toEqual([0, 0, false, false]);
+  });
+});
+
 describe('pay and the reckoning, around the world', () => {
   it('in a country with no income tax: nothing withheld, nothing due', () => {
     const { s, p } = pay('AE', { gross: m('AED', '100000') });

@@ -180,7 +180,7 @@
   },
   {
    "item": "nonResident",
-   "finding": "A non-resident is taxed on Liberia-source income, including pay for services performed in Liberia, by withholding in place of the income tax, so the withholding is final unless the non-resident elects to file a return (the election binds that year and the next four, and the tax withheld is then a credit); the payer remits within 10 days after the month. The Code as amended to 2020 sets 15% on payments for services and 15% on royalties.",
+   "finding": "A non-resident is taxed on Liberia-source income, including pay for services performed in Liberia, by withholding in place of the income tax, so the withholding is final unless the non-resident elects to file a return (the election binds that year and the next four, and the tax withheld is then a credit); the payer remits within 10 days after the month. The Code as amended to 2020 set 15% on payments for services; the Tax Amendment Act of 2024 raised it to 20%. Royalties bear 15%.",
    "value": {
     "final": true,
     "electionToFile": {
@@ -190,13 +190,18 @@
     "servicesRate2020Text": 0.15,
     "royalties": 0.15,
     "remitDays": 10,
-    "rateConflict": "PwC (reviewed 24 September 2026) gives 20% on services; the LRA's 2020 consolidation gives 15%; the December 2025 amendment read does not touch s. 806(e)"
+    "servicesRate": 0.2,
+    "servicesRateLaw": "s. 806(e) as amended by the Tax Amendment Act of 2024 (approved 2024-12-17, in force on publication into handbills, printed 2024-12-20)"
    },
    "applies": "Non-residents receiving Liberia-source payments (ss. 804-806 of the Liberia Revenue Code)",
    "sources": [
     {
      "src": 6,
      "said": "Section 804. Imposition of Tax (a) General Rule. A nonresident person is subject to tax on Liberia-source income (deﬁned in Section 805). In lieu of the generally applicable income tax of Part II, The Personal and Business Income Tax, tax is collected by withholding on payments as speciﬁed in Section 806. … (2) derived in respect of the performance of services or employment exercised in Liberia … (e) Payments for Services Rendered. A payor who makes a payment to a nonresident for services rendered is required to withhold tax at the rate of 15 percent of the amount of the payment … (i) Election. A nonresident subject to tax under this section may elect to ﬁle an income tax return … An amount of tax withheld pursuant to Section 806 is creditable against income tax liability"
+    },
+    {
+     "src": 7,
+     "said": "A payor who makes a payment to a nonresident for services rendered is required to withhold tax at the rate of 20 percent of the amount of the payment"
     }
    ]
   }
@@ -256,19 +261,15 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Section 804. Imposition of Tax (a) General Rule. A nonresident person is subject to tax on Liberia-source income (deﬁned in Section 805). In lieu of the generally applicable income tax of Part II, The Personal and Business Income Tax, tax is collected by withholding on payments as speciﬁed in Section 806. … (2) derived in respect of the performance of services or employment exercised in Liberia … (e) Payments for Services Rendered. A payor who makes a payment to a nonresident for services rendered is required to withhold tax at the rate of 15 percent of the amount of the payment … (i) Election. A nonresident subject to tax under this section may elect to ﬁle an income tax return … An amount of tax withheld pursuant to Section 806 is creditable against income tax liability"
+  },
+  {
+   "url": "https://www.forest-trends.org/wp-content/uploads/2025/08/GoL2024-RevenueCodeAmendmentsCh810.pdf",
+   "title": "Tax Amendment Act of 2024 Amending Certain Portions of Chapter 8 and 10 of the Liberia Consolidated Revenue Code as Amended (handbill, approved 17 December 2024, printed 20 December 2024, published by authority of the Ministry of Foreign Affairs; copy hosted by Forest Trends)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://revenue.lra.gov.lr/tax-laws-and-amendments/",
+   "said": "(e) Payments for Services Rendered. A payor who makes a payment to a nonresident for services rendered is required to withhold tax at the rate of 20 percent of the amount of the payment if payment is of a sort that, if made to a resident, would be includible in gross income under Section 201 (including Board fees, management fees, commissions, and the like). … Unless provided to the contrary, in the Transitional Rules, this Act shall take effect upon publication into handbills."
   }
  ],
- "blockers": [
-  {
-   "item": "nonResident",
-   "sought": "The rate on a non-resident's service fee in force for 2026: 15% in the LRA's 2020 consolidation of s. 806(e), 20% per PwC (finality is found: final unless the non-resident elects to file)",
-   "tried": {
-    "institution": "revenue.lra.gov.lr reached; the December 2025 Revenue Code amendment (scan) OCR read: no rule on non-resident performers' finality in it || retry-8 2026-11-01: revenue.lra.gov.lr 'Domestic Tax Laws & Regulations' page read; the Liberia Revenue Code as amended 2020 (250 pages) downloaded and read: s. 804 (withholding in lieu of income tax) and s. 806(e) 15% on services, (i) election; the December 2025 amendment (OCR) re-read: s. 806(b) only",
-    "official-register": "Liberia Consolidated Revenue Code text not read as text || retry-8 2026-11-01: the LRA's consolidated Code stands for the official text; no later consolidation (2022-2025 amendments to s. 806(e)) is on the LRA pages read",
-    "web-search": "not separately searched; PwC (reviewed 24 September 2026) current || retry-8 2026-11-01: a search for 'Liberia Revenue Code section 806(e) nonresident services withholding 20 percent amendment' was refused by the search tool (shared per-turn limit of 200 searches reached)",
-    "trade-press": "PwC Worldwide Tax Summaries used || retry-8 2026-11-01: PwC Worldwide Tax Summaries (reviewed 24 September 2026) re-read: 20% on services to non-residents, no primary named for the change",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry-8 2026-11-01: web.archive.org: connection reset and availability API 429 on 2026-11-01"
-   }
-  }
- ]
+ "blockers": []
 }

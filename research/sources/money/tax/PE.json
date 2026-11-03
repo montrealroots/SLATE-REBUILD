@@ -172,15 +172,20 @@
   },
   {
    "item": "vat",
-   "finding": "IGV (VAT) is 18% in general.",
+   "finding": "IGV (VAT) is 18% in general; it reaches a service only where its income is third-category (business) income, so a freelancer's fourth-category fee bears none.",
    "value": {
-    "standard": 0.18
+    "standard": 0.18,
+    "fourthCategoryFeeBearsIGV": false
    },
-   "applies": "Whether an individual's independent services bear IGV, and any threshold, was not confirmed; see blocker.",
+   "applies": "An individual's independent work (fourth category); a worker who organises the activity as a business earns third-category income, which bears IGV. Read 2026-11-03.",
    "sources": [
     {
      "src": 2,
      "said": "The general rate of VAT is 18%."
+    },
+    {
+     "src": 6,
+     "said": "Toda prestación que una persona realiza para otra y por la cual percibe una retribución o ingreso que se considere renta de tercera categoría para los efectos del Impuesto a la Renta"
     }
    ]
   },
@@ -268,19 +273,14 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Artículo 54°.- Las personas naturales y sucesiones indivisas no domiciliadas en el país estarán sujetas al Impuesto por sus rentas de fuente peruana con las siguientes tasas: ... g) Rentas de trabajo 30% h) Rentas por regalías. 30% i) Rentas de artistas intérpretes y ejecutantes por espectáculos en vivo, realizados en el país. 15% j) Otras rentas distintas a las señaladas en los incisos anteriores. 30%"
+  },
+  {
+   "url": "https://www.sunat.gob.pe/legislacion/igv/ley/capitul1.pdf",
+   "title": "TUO de la Ley del IGV e ISC (D.S. 055-99-EF), Título I, Capítulo I, art. 3 (SUNAT legislation, PDF of 2026-01-12)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "c) SERVICIOS: 1. Toda prestación que una persona realiza para otra y por la cual percibe una retribución o ingreso que se considere renta de tercera categoría para los efectos del Impuesto a la Renta, aún cuando no esté afecto a este último impuesto; incluidos el arrendamiento de bienes muebles e inmuebles y el arrendamiento financiero."
   }
  ],
- "blockers": [
-  {
-   "item": "vat",
-   "sought": "Whether a freelancer's fourth-category services bear IGV.",
-   "tried": {
-    "institution": "sunat.gob.pe answers; the orientation pages for this were not located in this pass (2026-11-01). || 2026-11-01 retry: orientacion.sunat.gob.pe searched ('cuarta categoria'): the fourth-category FAQ (preguntas-frecuentes-renta-de-cuarta-categoria) and concept pages read; none says whether an independent's fee bears IGV",
-    "official-register": "El Peruano (official gazette) not read 2026-11-01. || 2026-11-01 retry: busquedas.elperuano.pe answers (HTTP 200) but its search is a script app; the IGV Law (TUO, D.S. 055-99-EF) was not reached in the time",
-    "web-search": "Not run for Peru (2026-11-01). || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01)",
-    "trade-press": "PwC and Deloitte Peru 2026: rate only. || 2026-11-01 retry: PwC and Deloitte Peru 2026 already held: rate only",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
-   }
-  }
- ]
+ "blockers": []
 }

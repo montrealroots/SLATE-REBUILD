@@ -5159,8 +5159,7 @@
    "vat": null,
    "unknown": [
     "social",
-    "withholding",
-    "vat"
+    "withholding"
    ]
   },
   "CM": {
@@ -8045,7 +8044,19 @@
     ],
     "self": []
    },
-   "withholding": {},
+   "withholding": {
+    "performer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.3"
+      }
+     ],
+     "final": false,
+     "deduct": "0.5"
+    }
+   },
    "nonResident": {
     "performer": {
      "bands": [
@@ -8088,13 +8099,15 @@
      "final": false
     }
    },
-   "vat": null,
+   "vat": {
+    "rate": "0.2",
+    "threshold": "500000"
+   },
    "unknown": [
     "residents",
     "wages",
     "nonResident",
     "authors",
-    "vat",
     "year"
    ]
   },
@@ -15678,6 +15691,36 @@
     }
    },
    "nonResident": {
+    "performer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.2"
+      }
+     ],
+     "final": true
+    },
+    "director": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.2"
+      }
+     ],
+     "final": true
+    },
+    "producer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.2"
+      }
+     ],
+     "final": true
+    },
     "author": {
      "bands": [
       {
@@ -15692,7 +15735,6 @@
    "vat": null,
    "unknown": [
     "wages",
-    "nonResident",
     "vat"
    ]
   },
@@ -16212,6 +16254,16 @@
     }
    },
    "nonResident": {
+    "performer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.255"
+      }
+     ],
+     "final": false
+    },
     "author": {
      "bands": [
       {
@@ -16366,7 +16418,19 @@
     ],
     "self": []
    },
-   "withholding": {},
+   "withholding": {
+    "performer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.3"
+      }
+     ],
+     "final": false,
+     "deduct": "0.5"
+    }
+   },
    "nonResident": {
     "performer": {
      "bands": [
@@ -16409,12 +16473,14 @@
      "final": false
     }
    },
-   "vat": null,
+   "vat": {
+    "rate": "0.2",
+    "threshold": "500000"
+   },
    "unknown": [
     "wages",
     "nonResident",
     "authors",
-    "vat",
     "year"
    ]
   },
@@ -20681,12 +20747,14 @@
      "final": false
     }
    },
-   "vat": null,
+   "vat": {
+    "rate": "0.07",
+    "threshold": "36000"
+   },
    "unknown": [
     "social",
     "wages",
-    "nonResident",
-    "vat"
+    "nonResident"
    ]
   },
   "PE": {
@@ -20817,7 +20885,6 @@
     "credits",
     "social",
     "wages",
-    "vat",
     "year"
    ]
   },
@@ -21192,7 +21259,18 @@
     ],
     "self": []
    },
-   "withholding": {},
+   "withholding": {
+    "producer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.05"
+      }
+     ],
+     "final": false
+    }
+   },
    "nonResident": {
     "performer": {
      "bands": [
@@ -21242,6 +21320,7 @@
    "unknown": [
     "social",
     "wages",
+    "withholding",
     "nonResident",
     "scheme"
    ]
@@ -23314,12 +23393,14 @@
      "final": false
     }
    },
-   "vat": null,
+   "vat": {
+    "rate": "0.15",
+    "threshold": "375000"
+   },
    "unknown": [
     "business",
     "social",
     "nonResident",
-    "vat",
     "year"
    ]
   },
@@ -27394,6 +27475,7 @@
     "threshold": "0"
    },
    "unknown": [
+    "business",
     "credits",
     "social",
     "wages",
@@ -28154,7 +28236,6 @@
    },
    "vat": null,
    "unknown": [
-    "residents",
     "credits",
     "social",
     "wages",
@@ -28343,6 +28424,13 @@
        "to": null,
        "rate": "0.01"
       }
+     ],
+     [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.1"
+      }
      ]
     ],
     "self": []
@@ -28392,7 +28480,6 @@
    "nonResident": {},
    "vat": null,
    "unknown": [
-    "social",
     "nonResident",
     "vat"
    ]

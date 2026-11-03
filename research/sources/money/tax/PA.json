@@ -128,20 +128,34 @@
   },
   {
    "item": "vat",
-   "finding": "Services bear ITBMS (Panama's VAT) at 7% (10% on hotel stays and alcohol, 15% on tobacco).",
+   "finding": "Services bear ITBMS (Panama's VAT) at 7% (10% on hotel stays and alcohol, 15% on tobacco); a small provider whose gross income was B/.36,000 or less in the year before (B/.3,000 a month on average) is not a taxpayer.",
    "value": {
     "rate": 0.07,
     "other": {
      "hotelsAlcohol": 0.1,
      "tobacco": 0.15
     },
-    "threshold": null
+    "threshold": 36000,
+    "thresholdMonthlyAverage": 3000,
+    "thresholdBasis": "the previous year's gross income: a provider at or under both is not an ITBMS taxpayer"
    },
-   "applies": "Taxable supplies",
+   "applies": "Taxable supplies. The threshold is read from the DGI's own pages on 2026-11-03.",
    "sources": [
     {
      "src": 4,
      "said": "The general tax rate is currently 7%. Alcoholic beverages and hotel accommodation are taxed at 10%, and tobacco and tobacco-derive"
+    },
+    {
+     "src": 5,
+     "said": "sus ingresos brutos anuales no hayan sido superiores a Treinta y Seis Mil Balboas (B/.36,000.00)"
+    },
+    {
+     "src": 5,
+     "said": "La tarifa de este impuesto será de siete por ciento (7%) a partir del 1 de julio de 2010."
+    },
+    {
+     "src": 6,
+     "said": "Es obligatorio la presentación del ITBMS cuando los ingresos anuales superan mas de B/ 36,000.00"
     }
    ]
   },
@@ -203,20 +217,23 @@
    "kind": "secondary",
    "quotes": "https://dgi.mef.gob.pa/",
    "said": "The general tax rate is currently 7%. Alcoholic beverages and hotel accommodation are taxed at 10%, and tobacco and tobacco-derive"
+  },
+  {
+   "url": "https://dgi.mef.gob.pa/DInforme/Formulario430.php",
+   "title": "Formulario 430 (Declaración Jurada del ITBMS), Dirección General de Ingresos, MEF Panamá",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "no serán considerados contribuyentes del impuesto los pequeños productores, comerciantes o prestadores de servicios, que durante el año anterior hayan tenido un ingreso bruto promedio mensual no superior a los Tres Mil Balboas (B/.3,000.00) y sus ingresos brutos anuales no hayan sido superiores a Treinta y Seis Mil Balboas (B/.36,000.00). … La tarifa de este impuesto será de siete por ciento (7%) a partir del 1 de julio de 2010."
+  },
+  {
+   "url": "https://dgi.mef.gob.pa/Preguntas/Itbms.php",
+   "title": "Preguntas frecuentes ITBMS, Dirección General de Ingresos, MEF Panamá",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Es obligatorio la presentación del ITBMS cuando los ingresos anuales superan mas de B/ 36,000.00 o dependiendo de la actividad económica."
   }
  ],
  "blockers": [
-  {
-   "item": "vat",
-   "sought": "The ITBMS registration threshold for a freelancer (turnover below which a provider need not charge ITBMS)",
-   "tried": {
-    "institution": "2026-11-01: dgi.mef.gob.pa/ITBMS.php read: \"¡Estamos trabajando en ello!\" maintenance page, no content || 2026-11-01 retry: dgi.mef.gob.pa answers (HTTP 200, 53 KB home page) but its ITBMS page was in maintenance in the first pass; css.gob.pa HTTP 403 (not read another way)",
-    "official-register": "2026-11-01: Código Fiscal text not reached (DGI site in maintenance) || 2026-11-01 retry: Gaceta Oficial texts not reached this turn",
-    "web-search": "2026-11-01: not found in PwC Panama pages read || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
-    "trade-press": "2026-11-01: PwC Panama summary read and cited || 2026-11-01 retry: none found this turn",
-    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
-   }
-  },
   {
    "item": "nonResident",
    "sought": "A specific rule for non-resident performers (artistas extranjeros) working in Panama: rate, base and finality",

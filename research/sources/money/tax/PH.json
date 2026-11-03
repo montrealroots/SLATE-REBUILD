@@ -91,15 +91,31 @@
   },
   {
    "item": "withholding",
-   "finding": "Tax is withheld from compensation so that, generally, the withholding equals the final liability; any balance is paid with the annual return.",
+   "finding": "Tax is withheld from compensation so that, generally, the withholding equals the final liability; any balance is paid with the annual return. A freelancer's professional or talent fee bears a creditable 5% while the year's gross income is PHP 3M or less (with the sworn declaration), 10% above it or where the payee is VAT-registered.",
    "value": {
-    "employment": "withheld at the graduated rates"
+    "employment": "withheld at the graduated rates",
+    "freelancer": {
+     "currency": "PHP",
+     "rate": 0.05,
+     "rateHigh": 0.1,
+     "threshold": 3000000,
+     "highWhen": "the year's gross income above PHP 3M, the payee VAT-registered, or no sworn declaration of gross receipts given to the payer",
+     "creditable": true
+    }
    },
-   "applies": "2026.",
+   "applies": "2026. The fee rule is RR 2-98 s. 2.57.2(A) as RR 11-2018 and RR 14-2018 left it, read 2026-11-03; later issuances amending it were not checked.",
    "sources": [
     {
      "src": 1,
      "said": "Generally, the income tax withheld from the salaries or compensation of aliens, resident or not, should equal their final tax liability on such compensation. If not, the balance must be paid at the time the annual return is filed."
+    },
+    {
+     "src": 7,
+     "said": "Individual payee: If gross income for the current year did not exceed ₱3M - Five percent (5%); If gross income is more than ₱3M - Ten percent (10%)"
+    },
+    {
+     "src": 8,
+     "said": "If gross income is more than P3M or VAT Registered regardless of amount - Ten percent (10%)"
     }
    ]
   },
@@ -261,19 +277,21 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Republic Act No. 11199 ... increases the following effective year 2025: 1. contribution rate to 15% 2. minimum Monthly Salary Credit (MSC) to ₱5,000.00 3. maximum MSC to ₱35,000.00 ... BELOW 5,250: MSC 5,000.00; employer 500.00 + EC 10.00 = 510.00; employee 250.00 ... 34,750 - Over: MSC 35,000.00 (Regular SS 20,000.00, MPF 15,000.00); employer 2,000.00 + 1,500.00 + EC 30.00 = 3,530.00; employee 1,000.00 + 750.00 = 1,750.00; total 5,280.00"
+  },
+  {
+   "url": "https://bir-cdn.bir.gov.ph/local/pdf/RR%20No.%2011-2018.pdf",
+   "title": "Revenue Regulations No. 11-2018 (31 January 2018), s. 2, amending RR 2-98 s. 2.57.2(A) (Bureau of Internal Revenue)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(A) Professional fees, talent fees, etc. for services rendered – On the gross professional, promotional, and talent fees or any other form of remuneration for the services rendered by the following: Individual payee: If gross income for the current year did not exceed ₱3M - Five percent (5%); If gross income is more than ₱3M - Ten percent (10%) … In the case of professional entertainers, professional athletes, directors involved in movies, stage, radio, television and musical productions and other recipients of talent fees, the amounts subject to withholding tax shall include amounts paid to them in consideration for the use of their names or pictures … If the recipient of the aforementioned income, however, is an employee of the lone income payor, such fees or payments shall be considered supplemental compensation … The ten percent (10%) withholding tax rate shall be applied in the following cases: (1) the payee failed to provide the income payor/withholding agent of such declaration; or (2) the income payment exceeds ₱3M"
+  },
+  {
+   "url": "https://bir-cdn.bir.gov.ph/local/pdf/RR%20No.%2014-2018.pdf",
+   "title": "Revenue Regulations No. 14-2018 (28 March 2018), amending RR 11-2018 s. 2 (Bureau of Internal Revenue; scanned, OCR read)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Individual payee: If gross income for the current year did not exceed P3M - Five percent (5%); If gross income is more than P3M or VAT Registered regardless of amount - Ten percent (10%)"
   }
  ],
- "blockers": [
-  {
-   "item": "social",
-   "sought": "The expanded withholding rate on talent fees paid to a resident freelancer (RR 2-98 as amended); PhilHealth is read from its own table and the SSS 2025+ schedule from Circular 2024-006 (2026-11-03)",
-   "tried": {
-    "institution": "bir.gov.ph/income-tax 2026-11-01: page body renders by script (no text served); SSS and PhilHealth sites not reached in this pass || 2026-11-01 retry: sss.gov.ph answers on retry: SSS Contribution Table page read (saved PH-sss-contribution-table.html): the schedules are JPG images (Cir-2024-006 Employers, Cir-2024-008 Self-Employed); OCR by tesseract timed out twice in this environment, so they were not read. philhealth.gov.ph ContributionTable_v2.pdf read and quoted (saved PH-philhealth-contribution-table.pdf). bir.gov.ph pages still render by script.",
-    "official-register": "officialgazette.gov.ph RA 10963: HTTP 403, not read another way || 2026-11-01 retry: officialgazette.gov.ph returns HTTP 403 (not read another way); RR 2-98 not reached.",
-    "web-search": "not run for these items in this pass || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "PwC Philippines: only the PHP 51,000 2025 maximum || 2026-11-01 retry: Deloitte Philippines Highlights 2026 read (saved PH-deloitte-2026.pdf, quoted for SSS and HDMF amounts); it gives no talent-fee withholding rate.",
-    "archive": "not tried || 2026-11-01 retry: archive.org/wayback/available answers; web.archive.org snapshots reset https and return 403 on http from this environment (2026-11-01)."
-   }
-  }
- ]
+ "blockers": []
 }

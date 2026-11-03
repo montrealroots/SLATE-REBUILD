@@ -3748,6 +3748,109 @@
    }
   ]
  },
+ "MH": {
+  "routes": [
+   {
+    "id": "work-visa",
+    "name": "Work visa (E-1)",
+    "for": "work",
+    "apply": "abroad",
+    "work": "sponsor",
+    "fee": {
+     "currency": "USD",
+     "minor": 20000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "temporary-work-visa",
+    "name": "Temporary work visa (TE-1)",
+    "for": "work",
+    "apply": "abroad",
+    "fee": {
+     "currency": "USD",
+     "minor": 15000
+    },
+    "term": {
+     "n": 6,
+     "unit": "month"
+    }
+   },
+   {
+    "id": "business-visa",
+    "name": "Business visa (B-1)",
+    "for": "self-employed",
+    "apply": "abroad",
+    "fee": {
+     "currency": "USD",
+     "minor": 30000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "compact-citizens",
+    "name": "Citizens of the United States, Palau and the Federated States of Micronesia",
+    "for": "free movement",
+    "work": "any",
+    "groups": [
+     "US",
+     "PW",
+     "FM"
+    ]
+   },
+   {
+    "id": "general-visa",
+    "name": "General visa (G-1)",
+    "for": "family",
+    "apply": "abroad",
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "dependent-adult-visa",
+    "name": "Dependent Adult Visa (DA-1)",
+    "for": "family",
+    "apply": "abroad",
+    "work": "none",
+    "fee": {
+     "currency": "USD",
+     "minor": 20000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "student-visa",
+    "name": "Student visa (S-1)",
+    "for": "study",
+    "apply": "abroad",
+    "work": "none",
+    "fee": {
+     "currency": "USD",
+     "minor": 15000
+    },
+    "term": {
+     "n": 12,
+     "unit": "month"
+    },
+    "renewable": true
+   }
+  ]
+ },
  "MK": {
   "routes": [
    {

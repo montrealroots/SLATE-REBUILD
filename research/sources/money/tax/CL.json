@@ -209,12 +209,15 @@
   },
   {
    "item": "vat",
-   "finding": "VAT is 19% on transfers and services.",
+   "finding": "VAT is 19% on transfers and services; an individual's honorarios (second-category income, LIR art. 42) are exempt from it, before and after Ley 21.420 widened VAT to services from 2023.",
    "value": {
     "rate": 0.19,
-    "threshold": null
+    "threshold": null,
+    "honorariosBearVAT": false,
+    "honorariosRule": "DL 825 art. 12 E N° 8 as amended by Ley 21.420: income under LIR arts. 42 and 48 is exempt",
+    "inForceFrom": "2023-01-01"
    },
-   "applies": "In the SII's 2017 text a 'service' for VAT is one from the activities of LIR art. 20 Nos. 3 and 4 (commerce, industry and the like), which leaves an individual's honorarios (second-category income, LIR art. 42 No. 2) outside VAT; the 2022 reform widening VAT to services (Ley 21.420) is not in that copy, so the current treatment is still open (see blocker).",
+   "applies": "An individual's fees (honorarios); a performer's or director's wages bear no VAT either. Read again on 2026-11-03: SII Circular 50 (2022) gives art. 12 E N° 8 as Ley 21.420 left it, which keeps art. 42 income exempt, so a freelancer's fee bears no VAT.",
    "sources": [
     {
      "src": 7,
@@ -227,6 +230,14 @@
     {
      "src": 0,
      "said": "The standard VAT rate is 19%."
+    },
+    {
+     "src": 8,
+     "said": "8. Los ingresos mencionados en los artículos 42° y 48° de la Ley de la Renta."
+    },
+    {
+     "src": 8,
+     "said": "entrarán en vigencia a contar del 1° de enero del año 2023"
     }
    ]
   },
@@ -313,19 +324,14 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Por “servicio”, la acción o prestación que una persona realiza para otra y por la cual percibe un interés, prima, comisión o cualquiera otra forma de remuneración, siempre que provenga del ejercicio de las actividades comprendidas en los Nºs. 3 y 4, del artículo 20, de la Ley sobre Impuesto a la Renta."
+  },
+  {
+   "url": "https://www.sii.cl/normativa_legislacion/circulares/2022/circu50.pdf",
+   "title": "SII Circular N° 50, 27 de octubre de 2022: modificaciones de la Ley N° 21.420 a los artículos 2° N° 2 y 12 letra E de la LIVS (Servicio de Impuestos Internos)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Finalmente, el artículo octavo transitorio de la Ley prescribe que las mencionadas modificaciones entrarán en vigencia a contar del 1° de enero del año 2023 y, por lo tanto, se aplicarán a los servicios prestados a partir de dicha fecha. … Artículo 12°- Estarán exentos del impuesto establecido en este Título: (…) E.- Las siguientes remuneraciones y servicios: (…) 8. Los ingresos mencionados en los artículos 42° y 48° de la Ley de la Renta. Para estos efectos quedarán comprendidos los ingresos de las sociedades de profesionales referidas en el artículo 42, N° 2, de la Ley sobre Impuesto a la Renta, aun cuando hayan optado por declarar sus rentas de acuerdo con las normas de la primera categoría."
   }
  ],
- "blockers": [
-  {
-   "item": "vat",
-   "sought": "Whether an individual's honorarios bear VAT after Ley 21.420 (VAT on services from 2023), from the current DL 825 text (art. 12 E) or an SII circular.",
-   "tried": {
-    "institution": "sii.cl not found on this point in the time. || 2026-11-01 retry: sii.cl answers: DL 825 PDF read (saved CL-sii-dl825.pdf), updated only to Ley 21.045 (2017); its art. 2 Nº 2 (quoted) confines VAT services to LIR art. 20 Nos. 3-4.",
-    "official-register": "bcn.cl empty. || 2026-11-01 retry: bcn.cl/leychile (idNorma 6369 and the get_norma_json service) returns HTTP 401 to curl; not read another way.",
-    "web-search": "Not resolved. || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
-    "trade-press": "None. || 2026-11-01 retry: Deloitte Chile Highlights 2026 (saved CL-deloitte-2026.pdf, already cited for the 19% rate) read: no statement on honorarios.",
-    "archive": "Archive unreachable. || 2026-11-01 retry: archive.org/wayback/available answers; web.archive.org snapshots reset https and return 403 on http from this environment (2026-11-01)."
-   }
-  }
- ]
+ "blockers": []
 }

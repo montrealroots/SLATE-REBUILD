@@ -203,6 +203,24 @@
      "said": "Deliveries of goods and services are subject to VAT at rates varying from 1% to 20%. The general rate is 20%."
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "As the decision setting art. 94's withholding rates was first published (2009), payments for professional work within art. 18 (an author's copyright work) bore 17%, other professional fees 20%, and payments to non-residents for the sale of copyright 20%.",
+   "value": {
+    "withholdingAsPublished2009": {
+     "art18Copyright": 0.17,
+     "professionalFees": 0.2,
+     "nonResidentCopyrightSale": 0.2
+    }
+   },
+   "applies": "Not read by the engine: the decision's later amendments (2010 to 2024) were not read, so whether these rates stand in 2026 is open (see blocker).",
+   "sources": [
+    {
+     "src": 6,
+     "said": "a) 18 inci madde kapsamına giren serbest meslek işleri dolayısıyla yapılan ödemelerden % 17, b) Diğerlerinden % 20, … 4. Dar mükellefiyete tabi olanlara, telif ve patent haklarının satışı dolayısıyla yapılan ödemelerden % 20,"
+    }
+   ]
   }
  ],
  "country": "TR",
@@ -254,12 +272,19 @@
    "kind": "secondary",
    "quotes": "https://www.gib.gov.tr/",
    "said": "In case of royalty payments to non-residents, 20% WHT has to be deducted by the Turkish entity making the payment. The WHT rate may be reduced by the application of DTT provisions (generally to 10%)."
+  },
+  {
+   "url": "https://www.resmigazete.gov.tr/eskiler/2009/02/20090203-3.htm",
+   "title": "Bakanlar Kurulu Kararı 2009/14592 (12/1/2009), Resmî Gazete 3 Şubat 2009, Sayı 27130, art. 1",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "2. Yaptıkları serbest meslek işleri dolayısıyla bu işleri icra edenlere yapılan ödemelerden (noterlere serbest meslek faaliyetlerinden dolayı yapılan ödemeler hariç); a) 18 inci madde kapsamına giren serbest meslek işleri dolayısıyla yapılan ödemelerden % 17, b) Diğerlerinden % 20, 3. 42 nci madde kapsamına giren işler dolayısıyla bu işleri yapanlara ödenen istihkak bedellerinden % 3, 4. Dar mükellefiyete tabi olanlara, telif ve patent haklarının satışı dolayısıyla yapılan ödemelerden % 20,"
   }
  ],
  "blockers": [
   {
    "item": "authors",
-   "sought": "Income Tax Law art. 18 exemption of authors' copyright income and art. 94 withholding rates on copyright (17%) and professional fees (20%) from the law text",
+   "sought": "Income Tax Law art. 18 exemption of authors' copyright income from the law text, and whether art. 94's withholding rates on copyright (17%) and professional fees (20%) still stand after BKK 2009/14592's later amendments (the decision as first published, Resmî Gazete 27130, was read on 2026-11-03)",
    "tried": {
     "institution": "gib.gov.tr reached (home page); its legislation pages are a script application not read || 2026-11-01 retry: gib.gov.tr legislation URLs (/gelir-vergisi-kanunu, /node/87587) 404; the GİB legislation pages are a script app.",
     "official-register": "Resmî Gazete 31.12.2025 (5th mükerrer) PDF timed out (60 s) on 2026-11-01 || 2026-11-01 retry: mevzuat.gov.tr and resmigazete.gov.tr time out from this environment (curl 000, 30 s).",
