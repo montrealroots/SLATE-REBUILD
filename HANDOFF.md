@@ -81,7 +81,25 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
   stays blocked (papers.licence.blocked.FM.03), the draft a lead. Rulings this round: a value taken from WebFetch is a
   model's summary, so it is read verbatim before use; a fact resting on a primary read whole and found silent stands;
   a length seen on real numbers or a form's grid is a lead.
-- The register: 4,937 entries, 3,371 found, 777 secondary, 789 blocked (696 of them layer 3's).
+- The web-search pass, round 4 (2026-11-03, late night): seven agents held to 20 searches each, four integrators, and
+  every layer 3 blocker now has a web search dated 2026-11-03. Found, rows researched: Saint Helena's cards (none: the
+  Bank of St Helena, its own About Us page says the only banking facility on the island, issues no credit card, by its
+  tariff of 1 April 2026); the tax of Bermuda, the Caribbean Netherlands, Luxembourg and Puerto Rico (no rule for
+  authors: each law read whole) and Libya (Law 7/2010 art. 33 exempts writing books, a secondary copy naming the
+  Gazette); the ages of the Central African Republic (majority 18), Tanzania (work from 14, s. 77 of the Law of the
+  Child Act) and Chad (majority 21). An error found and fixed: Laos' Law No. 88/NA (Official Gazette, published
+  19 June 2026; art. 38(4.4), read by the lead on the page image) taxes a resident performer's income above the minimum
+  wage at 5%, not the 10% the engine held, and copyright at 5%; non-resident artists stay at 10% (art. 48). Its start
+  is recorded both ways (art. 74's 1 September 2025 on its conditions; 1 July 2026 by law firms): either puts 5% in
+  force today. North Korea's working age: the engine keeps 16; Korean press reports a 2024 revision raised it to 17,
+  recorded as a lead with no text found.
+- An error found and fixed in this session's own tools: the Common Crawl lookup script read CloudFront's error pages as
+  an empty index, so some archive attempts recorded "no captures" where the crawl holds captures. The lead fixed the
+  script to fail loudly, re-ran all 301 such lookups (184 attempts), and found 17 attempts wrong; each now says so in
+  the past tense and is followed by its re-run, whose captures two agents opened (robots.txt files, bot-check pages and
+  redirects, and pages without the fact: no fact changed). PacLII's and the BPK's robots.txt bar Common Crawl's
+  crawler, so the Wayback Machine is the only archive route for them.
+- The register: 4,934 entries, 3,375 found, 779 secondary, 780 blocked (687 of them layer 3's).
 
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
@@ -218,13 +236,11 @@ The owner's ruling (2026-11-03): finish layer 3's research in a new session, wit
 prove it. In that session, from `research/rounds/brief.md` and `research/rounds/integrate.md` (the briefs this
 session's agents were given; change the date, the scratchpad path and the groups, keep the rules):
 
-1. The web-search pass, the rest: 81 of layer 3's 696 blockers still have no web-search attempt dated 2026-11-03
-   (tax 27, ages 20, licence 9, credit 7, numbers 5, ids 4, formats 4, cards 3, passports 1, work 1). Three rounds held each agent to 20 searches. Laos' Law No. 88/NA on income tax (in force 1 July 2026; law
-   firms report it cuts the withholding on performing-arts fees from 10% to 5%) is still unread at the Official
-   Gazette, and the tax engine holds 10%.
+1. The web-search pass is done for layer 3 (four rounds; every one of its 687 blockers has a web search dated
+   2026-11-03). A fifth round is the owner's call; the leads it would follow are in each blocker's attempts.
 2. Wave 2: layer 3's 737 facts held only at second hand (citizenship and visits most of them): re-read each source and
    search for the primary it quotes.
-3. Wave 3: re-read the sources of layer 3's 3,037 found facts, re-check every pinned file's hash, and take any newer
+3. Wave 3: re-read the sources of layer 3's 3,071 found facts, re-check every pinned file's hash, and take any newer
    release (exchange rates, the World Inequality Database's release of 2026-10-30 for the family means, tax years).
 4. Integrate each wave by engine, merge the register, then prove layer 3 on CI (`npm run gate:full` takes over two
    hours here) and record it.

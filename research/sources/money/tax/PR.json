@@ -169,6 +169,21 @@
      "said": "Effective 1 July 2020, services to other merchants rendered by merchants with annual volume of business of less than USD 300,000."
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "Puerto Rico's Internal Revenue Code gives an author's royalties no treatment of their own: royalties are gross income (s. 1031.01(a)(8)), and the Code holds no exclusion, credit or rate of its own for them.",
+   "value": {
+    "specialTreatment": false,
+    "royalties": "gross income, s. 1031.01(a)(8)"
+   },
+   "applies": "Residents; the Code as amended to 28 May 2026, read whole on 2026-11-03: its twelve mentions of regalías are each general (gross income, investment income, the source rules, the withholding from non-residents, an exempt organisation's unrelated business income, a mineral royalty, customs value), and 'derechos de autor' appears only among kinds of intangible property; the finding rests on the whole text read and found silent.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "(8) Ganancias, beneficios e ingresos derivados de intereses, rentas, regalías, dividendos"
+    }
+   ]
   }
  ],
  "country": "PR",
@@ -212,19 +227,14 @@
    "kind": "secondary",
    "quotes": "https://hacienda.pr.gov/",
    "said": "The SUT rate is imposed at 10.5% at the state level and an additional 1% at the municipal level, for an aggregate 11.5%. Designated professional services and business-to-business (B2B) services are taxed at a 4% SUT rate. … Services rendered by merchants with annual volume of business of less than USD 50,000. … Effective 1 July 2020, services to other merchants rendered by merchants with annual volume of business of less than USD 300,000."
+  },
+  {
+   "url": "https://hacienda.pr.gov/sites/default/files/codigo_de_rentas_internas_2011_segun_enmendado_28.08.2026.pdf",
+   "title": "Código de Rentas Internas de Puerto Rico de 2011, según enmendado (Departamento de Hacienda; every page footed \"Rev. 28 de mayo de 2026\")",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Sección 1031.01. — Ingreso Bruto. … (8) Ganancias, beneficios e ingresos derivados de intereses, rentas, regalías, dividendos, beneficios de sociedades, beneficios de corporaciones de individuos, beneficios de corporaciones de responsabilidad limitada, valores o la operación de cualquier negocio explotado con fines de lucro o utilidad."
   }
  ],
- "blockers": [
-  {
-   "item": "authors",
-   "sought": "Any special treatment of an author's royalties in Puerto Rico.",
-   "tried": {
-    "institution": "hacienda.pr.gov answers; no page on royalties located in this pass (2026-11-01). || 2026-11-01 retry: hacienda.pr.gov site search for 'regalías' (hacienda.pr.gov/search?keys=regal%C3%ADas) returns only withholding on royalties paid to non-residents (Ley 135-1997, Ley de Incentivos sec. 6(k)) and circulars CC RI 15-02, 16-10; no rule for a resident author's royalties",
-    "official-register": "The Code (bvirtualogp.pr.gov) not read 2026-11-01. || 2026-11-01 retry: Código de Rentas Internas 2011 text not reached this turn",
-    "web-search": "Not run for Puerto Rico (2026-11-01). || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
-    "trade-press": "PwC Worldwide Tax Summaries and Deloitte Puerto Rico Highlights 2026: no author rule. || 2026-11-01 retry: none found this turn",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
-   }
-  }
- ]
+ "blockers": []
 }

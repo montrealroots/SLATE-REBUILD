@@ -15,7 +15,8 @@ import type { PERFORMERS } from './compile.ts';
  * contested); the Comoros' was left unread here (the 2005 Family Code's article not read) until layer 3's file read it
  * on 2026-11-03, and Cuba's majority and working age, read here until then, are layer 3's file's since; a working age
  * with no performer's rule found (Afghanistan, Burkina Faso, Burundi, Belarus, Bhutan, Cabo Verde, Congo, Ethiopia,
- * Fiji, Gabon, Guinea-Bissau, Iraq, Cambodia, Moldova, Mozambique, Panama, Sint Maarten, Tajikistan, Tanzania), or none general (Cayman, New Zealand,
+ * Fiji, Gabon, Guinea-Bissau, Iraq, Cambodia, Moldova, Mozambique, Panama, Sint Maarten, Tajikistan; Tanzania's until
+ * 2026-11-03, when layer 3's file read the Law of the Child Act's), or none general (Cayman, New Zealand,
  * Palau, Norfolk Island, Tuvalu's school-year rule, Australia's and Canada's by state, which the form holds by country);
  * the light-work ages and hours, which the youth engine reads from the same files.
  */

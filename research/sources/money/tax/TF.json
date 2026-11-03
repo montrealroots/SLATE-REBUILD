@@ -67,6 +67,20 @@
      "said": "Les revenus professionnels correspondant à une activité exercée sur le territoire des TAAF sont soumis à une contribution directe territoriale. Cette contribution est retenue à la source par les employeurs et directement payée auprès de l’administration territoriale."
     }
    ]
+  },
+  {
+   "item": "vat",
+   "finding": "French VAT doesn't apply in the French Southern and Antarctic Lands.",
+   "value": {
+    "frenchVat": false
+   },
+   "applies": "The DGFiP's doctrine in force from 18 January 2023, read 2026-11-03. Whether the TAAF levies a turnover tax of its own wasn't found (no arrêté read).",
+   "sources": [
+    {
+     "src": 2,
+     "said": "la TVA n'est pas applicable … dans les Terres australes et antarctiques françaises"
+    }
+   ]
   }
  ],
  "country": "TF",
@@ -84,12 +98,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "les agents de l’État et les personnes relevant d’organismes appelés à intervenir dans les TAAF qui sont envoyés dans ce territoire sont soumis à un impôt local sur le revenu. … L'arrêté n° 2001-29 du 6 août 2001 instaurant une contribution directe territoriale sur les revenus perçus dans le territoire des Terres australes et antarctiques françaises pris par l’administrateur supérieur du territoire, institue une contribution directe territoriale prélevée à la source par les employeurs sur les revenus perçus au titre d’une activité professionnelle exercée dans le territoire des TAAF. … L’impôt retenu à la source au titre d’une année s’impute sur l’impôt sur le revenu français dû au titre des revenus de cette même année, acquitté l’année suivante. … Lorsque les intéressés sont considérés comme fiscalement domiciliés hors de France, les rémunérations perçues à l’occasion de leur activité dans le territoire des TAAF ne sont pas soumises à l’impôt sur le revenu en France. … Les revenus professionnels correspondant à une activité exercée sur le territoire des TAAF sont soumis à une contribution directe territoriale. Cette contribution est retenue à la source par les employeurs et directement payée auprès de l’administration territoriale."
+  },
+  {
+   "url": "https://bofip.impots.gouv.fr/bofip/1340-PGP.html",
+   "title": "BOFiP-Impôts, BOI-TVA-CHAMP-20-10: TVA - Champ d'application et territorialité - Définition du territoire d'application de la TVA (version en vigueur du 18/01/2023), § 10",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Remarque 3 : En tout état de cause, la TVA n'est pas applicable en Guyane, à Mayotte, dans les collectivités régies par l' article 74 de la Constitution (Saint-Martin, Saint-Barthélémy, Saint-Pierre-et-Miquelon, Polynésie française, Wallis-et-Futuna), en Nouvelle-Calédonie, dans les Terres australes et antarctiques françaises ou à l'Île de Clipperton."
   }
  ],
  "blockers": [
   {
    "item": "vat",
-   "sought": "Whether any VAT or turnover tax applies to a fee for work in the TAAF",
+   "sought": "Whether the TAAF levies a turnover tax of its own on a fee for work there (French VAT doesn't apply in the TAAF: BOFiP, BOI-TVA-CHAMP-20-10, read 2026-11-03)",
    "tried": {
     "institution": "taaf.fr not searched successfully for tax pages || retry 2026-11-01 (world round): taaf.fr answers: its site search for 'contribution directe territoriale' (taaf.fr/?s=...) returns only general pages (hivernant guide, district contracts arrêté 2011-09, annual report); its WordPress search API answers 401",
     "official-register": "Légifrance 403 || retry 2026-11-01 (world round): Légifrance 403 again; the Journal officiel des TAAF is not online",

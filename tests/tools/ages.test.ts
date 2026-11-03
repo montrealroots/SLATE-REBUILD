@@ -176,13 +176,20 @@ describe('the ages read from the person research', () => {
     expect([ages['BN']?.majority, ages['ML']?.majority, ages['MW']?.majority, ages['MH']?.majority, ages['MH']?.work]).toEqual([18, 18, 18, 18, null]);
     // The third round of 2026-11-03: the Comoros' own codes; Yemen's Civil Law beside the person research's working age;
     // Angola's working age layer 3's beside the person research's majority; the Central African Republic's working age
-    // and the Faroe Islands' majority, each with the other unread.
+    // (its majority unread until the fourth round, below) and the Faroe Islands' majority, each with the other unread.
     expect(ages['KM']).toStrictEqual({ majority: 18, work: { from: 15, performers: 'barred' } });
     expect(ages['YE']).toStrictEqual({ majority: 15, work: { from: 15, performers: 'barred' } });
     expect(ages['AO']).toStrictEqual({ majority: 18, work: { from: 14, performers: 'barred' } });
-    expect([ages['CF'], ages['FO']]).toStrictEqual([{ majority: null, work: { from: 14, performers: 'barred' } }, { majority: 18, work: null }]);
+    expect(ages['FO']).toStrictEqual({ majority: 18, work: null });
+    // The fourth round of 2026-11-03: the Central African Republic's Code de la famille beside its Code du travail;
+    // Tanzania's Law of the Child Act beside its Age of Majority Act; Chad's applied Civil Code of 1958 beside the person
+    // research's working age; Micronesia's and Somalia's majority and Solomon Islands' working age, each with the other unread.
+    expect(ages['CF']).toStrictEqual({ majority: 18, work: { from: 14, performers: 'barred' } });
+    expect(ages['TZ']).toStrictEqual({ majority: 18, work: { from: 14, performers: 'barred' } });
+    expect(ages['TD']).toStrictEqual({ majority: 21, work: { from: 14, performers: 'barred' } });
+    expect([ages['FM'], ages['SO'], ages['SB']]).toStrictEqual([{ majority: 18, work: null }, { majority: 18, work: null }, { majority: null, work: { from: 12, performers: 'barred' } }]);
     expect(READINGS['CU']).toBeUndefined();
-    expect(Object.keys(ages).length).toBe(222);
+    expect(Object.keys(ages).length).toBe(225);
   });
 });
 

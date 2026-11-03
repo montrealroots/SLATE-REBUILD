@@ -145,6 +145,26 @@
      "said": "Eilandgebied Bonaire Sint Eustatius en Saba Algemeen tarief - leveringen/invoer 8% 6% Algemeen tarief - diensten 6% 4%"
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "The BES income tax act has no rule for an author's fees or royalties: a resident writer's or director's fees and royalties are the yield of enterprise and labour (art. 6), taxed on the ordinary scale.",
+   "value": {
+    "specialRule": null,
+    "category": "opbrengst van onderneming en arbeid (Wet IB BES art. 6)",
+    "law": "Wet inkomstenbelasting BES (BWBR0029281), geldend 2026-01-01"
+   },
+   "applies": "Residents of Bonaire, Sint Eustatius and Saba, 2026. The act as in force from 1 January 2026, read whole on 2026-11-03: the words auteur, royalty, kunst, artiest, intellectueel and octrooi occur nowhere in it; the finding rests on the whole text read and found silent.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "4 Onder inkomen wordt verstaan het gezamenlijke bedrag van hetgeen de belastingplichtige zuiver geniet als opbrengst van: a. roerend kapitaal; b. onderneming en arbeid; c. rechten op periodieke uitkeringen."
+    },
+    {
+     "src": 3,
+     "said": "1 De opbrengst van onderneming en arbeid omvat de niet onder artikel 5 vallende voordelen, die als winst, honorarium, traktement, salaris, loon … of onder welke naam of vorm ook worden verkregen uit bedrijf of beroep … en uit handelingen, werkzaamheden en diensten van elke aard."
+    }
+   ]
   }
  ],
  "country": "BQ",
@@ -169,19 +189,14 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Eilandgebied Bonaire Sint Eustatius en Saba Algemeen tarief - leveringen/invoer 8% 6% Algemeen tarief - diensten 6% 4%"
+  },
+  {
+   "url": "https://wetten.overheid.nl/BWBR0029281/2026-01-01",
+   "title": "Wet inkomstenbelasting BES, geldend van 01-01-2026 (wetten.overheid.nl)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "4 Onder inkomen wordt verstaan het gezamenlijke bedrag van hetgeen de belastingplichtige zuiver geniet als opbrengst van: a. roerend kapitaal; b. onderneming en arbeid; c. rechten op periodieke uitkeringen. [art. 3] … 1 De opbrengst van onderneming en arbeid omvat de niet onder artikel 5 vallende voordelen, die als winst, honorarium, traktement, salaris, loon … of onder welke naam of vorm ook worden verkregen uit bedrijf of beroep … en uit handelingen, werkzaamheden en diensten van elke aard. [art. 6]"
   }
  ],
- "blockers": [
-  {
-   "item": "authors",
-   "sought": "Any special treatment of authors' royalties under the BES income tax act.",
-   "tried": {
-    "institution": "belastingdienst-cn.nl answers; no page on royalties found in this pass (2026-11-01). || 2026-11-01 retry: english.belastingdienst-cn.nl tax-return form A 2024 page returns 404; the 2026 Handboek loonheffingen (saved BQ-handboek-loonheffingen-2026.pdf) searched for 'royalt', 'auteurs': it covers artistes (14.2) but not royalties",
-    "official-register": "wetten.overheid.nl (Wet inkomstenbelasting BES) not read 2026-11-01. || 2026-11-01 retry: wetten.overheid.nl (Wet inkomstenbelasting BES) search page: HTTP/2 protocol error, then an empty reply over HTTP/1.1 (2026-11-01)",
-    "web-search": "Not run for Caribbean Netherlands (2026-11-01). || 2026-11-01 retry: Dutch: 'Wet inkomstenbelasting BES royalty's auteursrecht \"Caribisch Nederland\" inkomstenbelasting belastingdienst': only mainland case law and the Belastingregeling voor het Koninkrijk royalty article; no BES rule",
-    "trade-press": "None read. || 2026-11-01 retry: taxlive.nl items in results concern mainland Dutch income tax (Rechtbank Noord-Nederland), not the BES act; not relied on",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org availability API queried for wetten.overheid.nl/BWBR0028230 (the BES act id not confirmed): no snapshot; web.archive.org snapshot fetch resets the connection from this environment"
-   }
-  }
- ]
+ "blockers": []
 }

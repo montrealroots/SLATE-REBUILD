@@ -4032,7 +4032,7 @@
   "year": null,
   "residents": [
    {
-    "layers": [{"bands":{"fig":0,"path":["brackets"]}}]
+    "layers": [{"bands":{"fig":0,"path":["monthly"],"months":true}}]
    }
   ],
   "social": {
@@ -4043,16 +4043,22 @@
    "performer": {
     "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["artists"]}}]
    },
-   "director": {"bands":{"fig":0,"path":["monthly"]}}
+   "director": {"bands":{"fig":0,"path":["monthly"]}},
+   "author": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["copyright"]}}]
+   }
   },
   "nonResident": {
    "performer": {
     "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["artists"]}}]
    },
-   "director": {"bands":{"fig":0,"path":["monthly"]}}
+   "director": {"bands":{"fig":0,"path":["monthly"]}},
+   "author": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["copyright"]}}]
+   }
   },
   "vat": null,
-  "unmodeled": ["business"],
+  "unmodeled": ["business","withholding"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "LB": {
@@ -4302,7 +4308,7 @@
    }
   },
   "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":{"fig":5,"path":["threshold"]}},
-  "unmodeled": ["residents","social"],
+  "unmodeled": ["residents","social","authors"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "LV": {
@@ -4365,7 +4371,7 @@
   "withholding": {},
   "nonResident": {},
   "vat": null,
-  "unmodeled": ["credits","business","nonResident"],
+  "unmodeled": ["credits","business","nonResident","authors"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "MA": {
@@ -6703,6 +6709,19 @@
   },
   "vat": null,
   "unmodeled": ["residents","withholding"],
+  "currency": {"fig":0,"path":["currency"]}
+ },
+ "ST": {
+  "year": null,
+  "residents": [],
+  "social": {
+   "employee": [[{"from":0,"to":null,"rate":{"fig":0,"path":["employee"]}}]],
+   "self": []
+  },
+  "withholding": {},
+  "nonResident": {},
+  "vat": null,
+  "unmodeled": [],
   "currency": {"fig":0,"path":["currency"]}
  },
  "SV": {

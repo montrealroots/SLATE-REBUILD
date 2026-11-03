@@ -342,6 +342,34 @@
      "said": "Exonération partielle en vertu de l'article 50ter L.I.R. … Brevet (demande de brevet) Médicament orphelin … Certificat complémentaire de protection Droit d'auteur sur un logiciel informatique … Modèle d'utilité (demande de modèle d'utilité) Certificat d'obtention végétale (demande d'obtention végétale) … l’exonérationpartielle de 80% des revenus nets éligibles ajustés et compensés dégagés par un actif visé à l’article 50ter, alinéa 1er, numéro 1"
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "Luxembourg's income tax law has no rate or relief of its own for an author: a resident writer's or director's independent literary or artistic work is a liberal profession (LIR art. 91), copyright royalties are income from letting property unless they belong to that profession (art. 98), and art. 50ter's IP exemption leaves literary and artistic copyright out. The one relief that reaches an author is the general one for extraordinary income: pay for liberal-profession work spread over several years and taxable in one may, on request, be taxed by the quarter method, at most 24% of it (arts. 131(1)b and 132).",
+   "value": {
+    "authorSpecificRate": null,
+    "category": {
+     "activity": "profession libérale (art. 91(1)1)",
+     "royalties": "location de biens (art. 98(1)3), or the professional category where they belong to it (art. 98(5))"
+    },
+    "multiYearRelief": {
+     "articles": "LIR 131(1)b, 132(1)1, 132(4)",
+     "method": "four times the extra tax on a quarter of the extraordinary income",
+     "cap": 0.24,
+     "onRequest": true
+    }
+   },
+   "applies": "Residents; the ACD's coordinated text in force on 1 January 2026 (updated 8 May 2026), read whole on 2026-11-03 for artiste, littéraire, droit d'auteur and œuvre. The game doesn't apply the quarter method, and tells the player so.",
+   "sources": [
+    {
+     "src": 10,
+     "said": "l'activité scientifique, artistique, littéraire"
+    },
+    {
+     "src": 10,
+     "said": "L'impôt correspondant aux revenus extraordinaires prévisés ne peut cependant pas être supérieur à 24% de ces revenus"
+    }
+   ]
   }
  ],
  "country": "LU",
@@ -418,19 +446,14 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Exonération partielle en vertu de l'article 50ter L.I.R. … Brevet (demande de brevet) Médicament orphelin … Certificat complémentaire de protection Droit d'auteur sur un logiciel informatique … Modèle d'utilité (demande de modèle d'utilité) Certificat d'obtention végétale (demande d'obtention végétale) … l’exonérationpartielle de 80% des revenus nets éligibles ajustés et compensés dégagés par un actif visé à l’article 50ter, alinéa 1er, numéro 1"
+  },
+  {
+   "url": "https://impotsdirects.public.lu/dam-assets/fr/legislation/LIR/texte-coordonn-en-vigueur-au-1er-janvier-2026-ver-08052026.pdf",
+   "title": "Loi modifiée du 4 décembre 1967 concernant l'impôt sur le revenu, texte coordonné en vigueur au 1er janvier 2026 (ACD, actualisé 08/05/2026)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Art. 91. (1) Est considéré comme bénéfice provenant de l'exercice d'une profession libérale le revenu net provenant des activités ci-après désignées, lorsque ces activités sont exercées d'une façon indépendante: 1. l'activité scientifique, artistique, littéraire … Art. 98. (1) … 3. de redevances payées pour l'usage ou la concession de l'usage, d'un droit d'auteur sur une œuvre littéraire, artistique ou scientifique, y compris les films cinématographiques … (5) Lorsqu'un revenu prévu au présent article relève d'une des catégories de revenus visées à l'article 10, numéros 1 à 3, il est imposable dans la catégorie afférente de revenus. … [Art. 131 (1) b)] Cet impôt est égal à quatre fois l'excédent de l'impôt correspondant, d'après le tarif normal, à la somme du revenu ordinaire et du quart des revenus extraordinaires prévisés sur l'impôt correspondant, d'après le même tarif, au revenu ordinaire. L'impôt correspondant aux revenus extraordinaires prévisés ne peut cependant pas être supérieur à 24% de ces revenus … Art. 132. … (4) Sauf en ce qui concerne les revenus visés aux numéros 1 et 2 de l'alinéa 2, l'application de l'article 131 ne peut avoir lieu que sur demande du contribuable."
   }
  ],
- "blockers": [
-  {
-   "item": "authors",
-   "sought": "A primary statement that no rule other than art. 50ter (which excludes literary and artistic copyright) treats a resident author's or director's royalties specially",
-   "tried": {
-    "institution": "ACD tariff, withholding and barème pages read; none states a special rate for authors' royalties || retry 2026-11-01: ACD form 760 (art. 50ter) saved and cited: software copyright only, no literary or artistic copyright; ACD legislation pages legi26.html and textes-coordonnes.html list no coordinated LIR text with an author rule",
-    "official-register": "LIR text on impotsdirects.public.lu not read for this point || retry 2026-11-01: legilux.public.lu/eli/etat/leg/loi/1967/12/04/n1/consolide/20260101 serves a 2 KB script shell to curl; the LIR article text (art. 91 libérales, art. 50ter) not readable",
-    "web-search": "not run for this point (budget kept for other countries) || retry 2026-11-01: \"Luxembourg impôt revenu droits d'auteur écrivain artiste régime spécial LIR article 91 activité artistique \\\"droits d'auteur\\\" impotsdirects\" and \"impotsdirects.public.lu circulaire L.I.R. n° 50ter droits d'auteur sur logiciels brevets actifs éligibles\": the 760 form (used) and WIPO's note of the 2018 law; no author-specific rule",
-    "trade-press": "PwC Luxembourg individual summary read: no author-specific rule quoted || retry 2026-11-01: search results quoted no Luxembourg author rule (French BOFiP and l-expert-comptable pages are on French law)",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || retry 2026-11-01: web.archive.org: curl \"Recv failure: Connection reset by peer\" again 2026-11-01"
-   }
-  }
- ]
+ "blockers": []
 }

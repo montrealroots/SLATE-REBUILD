@@ -2980,8 +2980,7 @@
    "vat": null,
    "unknown": [
     "social",
-    "nonResident",
-    "authors"
+    "nonResident"
    ]
   },
   "BN": {
@@ -3256,7 +3255,6 @@
     "regional",
     "wages",
     "nonResident",
-    "authors",
     "vat",
     "year"
    ]
@@ -15097,7 +15095,7 @@
       {
        "from": "0",
        "to": null,
-       "rate": "0.1"
+       "rate": "0.05"
       }
      ],
      "final": false
@@ -15133,6 +15131,16 @@
        "from": "65000000",
        "to": null,
        "rate": "0.25"
+      }
+     ],
+     "final": false
+    },
+    "author": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.05"
       }
      ],
      "final": false
@@ -15183,14 +15191,23 @@
       }
      ],
      "final": false
+    },
+    "author": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.05"
+      }
+     ],
+     "final": false
     }
    },
    "vat": null,
    "unknown": [
-    "residents",
     "business",
+    "withholding",
     "nonResident",
-    "authors",
     "vat",
     "year"
    ]
@@ -22024,8 +22041,7 @@
     "social",
     "wages",
     "withholding",
-    "nonResident",
-    "authors"
+    "nonResident"
    ]
   },
   "PS": {
@@ -25165,6 +25181,43 @@
     "wages",
     "withholding",
     "nonResident",
+    "year"
+   ]
+  },
+  "ST": {
+   "currency": "STN",
+   "year": {
+    "start": "01-01",
+    "due": null
+   },
+   "residents": [],
+   "employed": [
+    "performer",
+    "director"
+   ],
+   "social": {
+    "employee": [
+     [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.04"
+      }
+     ]
+    ],
+    "self": []
+   },
+   "withholding": {},
+   "nonResident": {},
+   "vat": null,
+   "unknown": [
+    "residents",
+    "social",
+    "wages",
+    "withholding",
+    "nonResident",
+    "authors",
+    "vat",
     "year"
    ]
   },
