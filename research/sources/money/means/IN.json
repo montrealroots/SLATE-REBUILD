@@ -18,7 +18,24 @@
   "p0p99": "229394.8",
   "p99p100": "6674110.7"
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), India, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in INR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]).",
+ "cash": {
+  "year": 2019,
+  "currency": "INR",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": true,
+  "disposable": {
+   "code": "B.6n",
+   "gross": "160180891000000",
+   "less": "7786048995389"
+  },
+  "national": {
+   "code": "B.5n",
+   "gross": "201578992000000",
+   "less": "21635984000000"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), India, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in INR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from UNdata's National Accounts Official Country Data (the United Nations Statistics Division's), Table 4.6 and Table 4.1, series 1000, SNA 2008, 2019 (fiscal year beginning 1 April): the net disposable income (B.6n) of households (S.14), 160,180,891,000,000 less 7,786,048,995,389 (152,394,842,004,611), and net national income (B.5n) 201,578,992,000,000 less 21,635,984,000,000 (179,943,008,000,000), in the table's currency (Indian rupee), a ratio of about 0.847 (`cash`). Each net figure was derived as the gross less its own consumption of fixed capital (K.1), from the same table, series and year. 2019 was the latest year published. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -31,6 +48,18 @@
    "title": "World Inequality Database, bulk download, WID_metadata_IN.csv (variables ahweal992j and adiinc992j)",
    "read": "2026-11-03",
    "said": "IN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;INR; ... IN;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "India | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 160,180,891,000,000 ... India | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 7,786,048,995,389"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "India | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 201,578,992,000,000 ... India | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 21,635,984,000,000"
   }
  ]
 }

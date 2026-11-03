@@ -51,7 +51,24 @@
    }
   ]
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), United States, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in USD of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Savings (the owner's ruling of 2026-10-30: only what a family holds as deposits and cash): Main table: the Federal Reserve Board's Distributional Financial Accounts (dfa.zip, files of 15 September 2026, quarter 2026:Q2), which distribute the Financial Accounts of the United States across net-worth percentile groups using the Survey of Consumer Finances: bottom 50 percent, 50th to 90th, 90th to 99th, 99th to 99.9th and top 0.1 percent. Deposits are \"Checkable Deposits and Currency plus Time Deposits and Short-term Investments\"; money market fund shares are listed apart. Per household = the group's millions of dollars times 1,000,000 divided by its household count (my division). Second table (scf2022): the 2022 SCF's own Table 6 (financial assets by percentile of net worth: less than 25, 25-49.9, 50-74.9, 75-89.9, 90-100), transaction accounts and certificates of deposit, percentage of families holding and mean value for holders in thousands of 2022 dollars (times 1000 here; the mean over all families is my product of the two), and Table 4's median and mean net worth (2022 column). The SCF workbook was read with openpyxl and its sheets saved as CSV; the said parts are from those CSVs. SCF marks the means \"not reviewed for robustness\". Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). Its other sources were fetched again on 2026-11-03 and said the same.",
+ "cash": {
+  "year": 2024,
+  "currency": "USD",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": true,
+  "disposable": {
+   "code": "B.6n",
+   "gross": "21875665000000",
+   "less": "1160813000000"
+  },
+  "national": {
+   "code": "B.5n",
+   "gross": "28993443000000",
+   "less": "4796699000000"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), United States, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in USD of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Savings (the owner's ruling of 2026-10-30: only what a family holds as deposits and cash): Main table: the Federal Reserve Board's Distributional Financial Accounts (dfa.zip, files of 15 September 2026, quarter 2026:Q2), which distribute the Financial Accounts of the United States across net-worth percentile groups using the Survey of Consumer Finances: bottom 50 percent, 50th to 90th, 90th to 99th, 99th to 99.9th and top 0.1 percent. Deposits are \"Checkable Deposits and Currency plus Time Deposits and Short-term Investments\"; money market fund shares are listed apart. Per household = the group's millions of dollars times 1,000,000 divided by its household count (my division). Second table (scf2022): the 2022 SCF's own Table 6 (financial assets by percentile of net worth: less than 25, 25-49.9, 50-74.9, 75-89.9, 90-100), transaction accounts and certificates of deposit, percentage of families holding and mean value for holders in thousands of 2022 dollars (times 1000 here; the mean over all families is my product of the two), and Table 4's median and mean net worth (2022 column). The SCF workbook was read with openpyxl and its sheets saved as CSV; the said parts are from those CSVs. SCF marks the means \"not reviewed for robustness\". Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). Its other sources were fetched again on 2026-11-03 and said the same. The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from UNdata's National Accounts Official Country Data (the United Nations Statistics Division's), Table 4.6 and Table 4.1, series 1000, SNA 2008, 2024: the net disposable income (B.6n) of households (S.14), 21,875,665,000,000 less 1,160,813,000,000 (20,714,852,000,000), and net national income (B.5n) 28,993,443,000,000 less 4,796,699,000,000 (24,196,744,000,000), in the table's currency (US dollar), a ratio of about 0.856 (`cash`). Each net figure was derived as the gross less its own consumption of fixed capital (K.1), from the same table, series and year. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -100,6 +117,18 @@
    "title": "Federal Reserve Board, 2022 Survey of Consumer Finances, Table 4, family net worth",
    "read": "2026-11-03",
    "said": "Percentile of net worth ... Less than 25,0.11,-0.54,0.5,-0.56,0.95,-0.15,0.5,-1.85,1.2,0.08,1.7,-1.33,1.31,-2.11,†,-12.14,†,-12.97,0.1,-11.9,0.31,-13.63,3.47,-5.65 ... 25–49.9,21,23.15,23.58,25.47,28.32,30.63,32.84,35.97,41,44.46,43.6,47.16,54.21,58.13,32.3,35.63,31.36,35.86,39.92,44.67,57.6,58.18,93.4,98.84 ... 50–74.9,87.3,89.72,87.9,90.75,95.12,99.63,120.76,128.7,157.9,167.42,171.1,185.85,220.59,227.74,156.8,168.09,168.23,177.71,192.05,204.06,224.2,236.28,356.9,373.78 ... 75–89.9,211.65,227.71,204.401,219.06,221.71,238.72,310.93,322.69,431.45,452.35,509.9,528.9,572.2,588.02,479.92,525.01,505.08,546.25,605,659.16,653.1,703.59,1036.3,1102.76 ... 90–100,691,1269.33,668,1252.72,684.35,1447.39,900.3,1944.46,1316.8,2765.46,1429.5,3118.72,1897.2,3974.89,1863.8,3681.88,1871.6,3962.43,2386.5,5310.88,2598.4,5710.34,3795,7771.29"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "United States | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | US dollar | 2008 | Western calendar year | 21,875,665,000,000 ... United States | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | US dollar | 2008 | Western calendar year | 1,160,813,000,000"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=21",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "United States | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | US dollar | 2008 | Western calendar year | 28,993,443,000,000 ... United States | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | US dollar | 2008 | Western calendar year | 4,796,699,000,000"
   }
  ]
 }

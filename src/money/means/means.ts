@@ -6,7 +6,10 @@ import data from './means.json' with { type: 'json' };
 /**
  * What the family a life is born into gives it on the first morning (src/money/means/means.json, compiled by
  * tools/money/means from the World Inequality Database's figures, register facts money.means.<CC>): in the country the
- * family is from, a month of its band's average post-tax income per adult in checking, and its band's average net wealth
+ * family is from, a month of its band's average post-tax income per adult in checking (from 2026-11-03 the family's own:
+ * the database's post-tax national income times the country's ratio of households' disposable income to national
+ * income in its national accounts; where none is held, still the national income, public spending in it, and the
+ * player told so; until that day every country's was the national income), and its band's average net wealth
  * per adult, where below nothing, as a debt, each in the currency and of the year the database gives them; in savings,
  * the deposits its band of households holds, from the country's household wealth survey where one publishes them by
  * net wealth band (the owner's ruling of 2026-10-30), and nothing where none does, the player told so. Each family
@@ -23,6 +26,7 @@ interface Means {
   readonly year: number;
   readonly families: { readonly [f in Family]: { readonly checking: number; readonly debt: number; readonly savings?: number } };
   readonly liquid?: { readonly currency: string; readonly period: string };
+  readonly includesPublic?: true;
 }
 
 const DATA = data as { countries: { readonly [code: string]: Means } };
@@ -49,10 +53,16 @@ export function meansOf(country: CountryCode, family: Family): FirstMorning | un
 
 export const UNKEPT_LINE = 'means.unkept';
 export const SAVINGS_UNKEPT_LINE = 'means.savings-unkept';
+export const PUBLIC_LINE = 'means.income-public';
 
 /** What the player is told about a country whose families' means, or whose families' savings, the game doesn't know. Nothing otherwise. */
 export function aboutMeans(country: CountryCode): string | undefined {
   const m = DATA.countries[country];
   if (m === undefined) return t(UNKEPT_LINE, { country: countryName(country) });
   return m.liquid === undefined ? t(SAVINGS_UNKEPT_LINE, { country: countryName(country) }) : undefined;
+}
+
+/** What the player is told about a country whose families' income still counts public spending, no national accounts' ratio held. Nothing otherwise. */
+export function aboutIncome(country: CountryCode): string | undefined {
+  return DATA.countries[country]?.includesPublic === true ? t(PUBLIC_LINE, { country: countryName(country) }) : undefined;
 }

@@ -18,7 +18,24 @@
   "p0p99": "125228.2",
   "p99p100": "2833671.9"
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), South Africa, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in ZAR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]).",
+ "cash": {
+  "year": 2024,
+  "currency": "ZAR",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": true,
+  "disposable": {
+   "code": "B.6n",
+   "gross": "4820286000000",
+   "less": "163775000000"
+  },
+  "national": {
+   "code": "B.5n",
+   "gross": "7207887000000",
+   "less": "1017156000000"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), South Africa, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in ZAR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from UNdata's National Accounts Official Country Data (the United Nations Statistics Division's), Table 4.6 and Table 4.1, series 1100, SNA 2008, 2024: the net disposable income (B.6n) of households (S.14), 4,820,286,000,000 less 163,775,000,000 (4,656,511,000,000), and net national income (B.5n) 7,207,887,000,000 less 1,017,156,000,000 (6,190,731,000,000), in the table's currency (rand), a ratio of about 0.752 (`cash`). Each net figure was derived as the gross less its own consumption of fixed capital (K.1), from the same table, series and year. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -31,6 +48,18 @@
    "title": "World Inequality Database, bulk download, WID_metadata_ZA.csv (variables ahweal992j and adiinc992j)",
    "read": "2026-11-03",
    "said": "ZA;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;ZAR; ... ZA;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=12",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+   "read": "2026-11-03",
+   "said": "South Africa | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | rand | 2008 | Western calendar year | 4,820,286,000,000 ... South Africa | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | rand | 2008 | Western calendar year | 163,775,000,000"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=18",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+   "read": "2026-11-03",
+   "said": "South Africa | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | rand | 2008 | Western calendar year | 7,207,887,000,000 ... South Africa | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | rand | 2008 | Western calendar year | 1,017,156,000,000"
   }
  ]
 }

@@ -16,6 +16,17 @@ import { isCurrency, minorUnits, rational, roundHalfEven, type CurrencyCode } fr
  * replaced, the file names it (`replaced`: the old currency and how many of it one of the new is worth, as the issuer
  * fixed it), and the amounts are carried into the new.
  *
+ * The income is a family's own, by the owner's ruling of 2026-11-03 ("National-accounts ratio"): each cut is scaled by
+ * the country's ratio of households' disposable income to national income in its official national accounts (`cash`:
+ * the two figures with their codes, the sector, net or gross, the year, the currency, and whether each net figure was
+ * derived as the gross less consumption of fixed capital from the same table, series and year), exactly, before a band
+ * is read from the cuts. A ratio stands only from a year of 2019 or later (the lead's ruling of the same day), of
+ * households alone where that's published, else with the non-profit institutions serving them, net where that's
+ * published, else gross over gross. Until 2026-11-03 the income was the database's post-tax national income as it
+ * stood, public spending (schools, health care) counted as the family's, so a US family of modest means started with
+ * 5,676.92 dollars in checking where a month of its own income, scaled by 0.856, was 4,860.02. A country whose ratio
+ * isn't held keeps the unscaled income, marked `includesPublic`, and the player is told it counts public spending.
+ *
  * The game's reading, said to the player as the game's: each family is a band of the country's adults, Nothing the
  * bottom fifth, Scraping By the next, Modest the middle fifth, Comfortable the 60th to 90th percentiles, Wealthy the
  * 90th to 99th and Inherited the top 1 percent; a band's average is read from the averages below its edges. A family
@@ -52,6 +63,8 @@ export interface Means {
   families: { [f in Family]: { checking: number; debt: number; savings?: number } };
   /** The survey the savings are read from: its currency and the period it's of. */
   liquid?: { currency: CurrencyCode; period: string };
+  /** Where no national accounts' ratio is held: the income is the database's as it stands, public spending in it. */
+  includesPublic?: true;
 }
 
 /** A family's deposits from the survey's bands: the average over its percentiles, each band weighed by the width shared. */
@@ -98,18 +111,20 @@ export function compileCountry(code: string, file: { [key: string]: unknown }): 
     if (typeof r.per !== 'string' || !/^\d+(\.\d+)?$/.test(r.per) || rational(r.per).num === 0n) throw new Error(`${code} gives how many ${r.currency} one ${cur} is worth`);
     per = rational(r.per);
   }
-  const read = (what: unknown, name: string) => {
+  // Each cut in the new currency, times k: the national accounts' ratio for the income, 1 for the wealth.
+  const read = (what: unknown, name: string, k: Q) => {
     const out: { [cut: string]: Q } = {};
     for (const cut of CUTS) {
       const v = (what as { [k: string]: unknown } | undefined)?.[cut];
       if (typeof v !== 'string' || !DECIMAL.test(v)) throw new Error(`${code}'s ${name} gives ${cut} as a decimal`);
       const q = rational(v);
-      out[cut] = { num: q.num * per.den, den: q.den * per.num };
+      out[cut] = { num: q.num * per.den * k.num, den: q.den * per.num * k.den };
     }
     return out;
   };
-  const w = read(wealth, 'wealth');
-  const i = read(income, 'income');
+  const ratio = file['cash'] === undefined ? undefined : cash(code, file['cash']);
+  const w = read(wealth, 'wealth', { num: 1n, den: 1n });
+  const i = read(income, 'income', ratio ?? { num: 1n, den: 1n });
   const scale = 10n ** BigInt(minorUnits(cur));
   const held = file['liquid'] === undefined ? undefined : liquid(code, file['liquid']);
   const families = Object.fromEntries(
@@ -128,7 +143,40 @@ export function compileCountry(code: string, file: { [key: string]: unknown }): 
   ) as Means['families'];
   const out: Means = { currency: cur, year: year as number, families };
   if (held !== undefined) out.liquid = { currency: held.currency, period: held.period };
+  if (ratio === undefined) out.includesPublic = true;
   return out;
+}
+
+const POSITIVE = /^\d+(\.\d+)?$/;
+
+/**
+ * A country's national accounts' ratio of households' disposable income to national income, exactly, from its file's
+ * `cash`: of a year from 2019 on, of households (S.14) or households with the institutions serving them (S.14+S.15),
+ * net or gross on both sides, each figure as published (`value`) or, where `derived`, its gross less its consumption of
+ * fixed capital (`gross`, `less`).
+ */
+export function cash(code: string, c: unknown): Q {
+  const { year, currency, sector, basis, derived, disposable, national, ...rest } = (typeof c === 'object' && c !== null ? c : {}) as { [k: string]: unknown };
+  if (typeof c !== 'object' || c === null || Object.keys(rest).length > 0) throw new Error(`${code}'s cash is the year, currency, sector, basis, whether derived and the two figures, nothing else`);
+  if (!Number.isInteger(year) || (year as number) < 2019) throw new Error(`${code}'s cash is of a year from 2019 on`);
+  if (!isCurrency(String(currency))) throw new Error(`${code}'s cash names its figures' currency`);
+  if (sector !== 'S.14' && sector !== 'S.14+S.15') throw new Error(`${code}'s cash is of households, S.14 or S.14+S.15`);
+  if (basis !== 'net' && basis !== 'gross') throw new Error(`${code}'s cash is net or gross`);
+  if (typeof derived !== 'boolean' || (derived && basis === 'gross')) throw new Error(`${code}'s cash says whether its net figures were derived`);
+  const figure = (side: unknown, item: string): Q => {
+    const want = `B.${item}${basis === 'net' ? 'n' : 'g'}`;
+    const { code: named, ...parts } = (typeof side === 'object' && side !== null ? side : {}) as { [k: string]: unknown };
+    const keys = derived ? ['gross', 'less'] : ['value'];
+    if (named !== want || Object.keys(parts).join() !== keys.join() || !Object.values(parts).every((v) => typeof v === 'string' && POSITIVE.test(v))) throw new Error(`${code}'s cash gives ${want} as ${keys.join(' and ')}, each a decimal`);
+    const [a, b = '0'] = Object.values(parts).map(String) as [string, string?];
+    const [x, y] = [rational(a), rational(b)];
+    const q = { num: x.num * y.den - y.num * x.den, den: x.den * y.den };
+    if (q.num <= 0n) throw new Error(`${code}'s cash gives ${want} above nothing`);
+    return q;
+  };
+  const d = figure(disposable, '6');
+  const n = figure(national, '5');
+  return { num: d.num * n.den, den: d.den * n.num };
 }
 
 /** A survey's deposits by net wealth band: its currency, its period, and bands contiguous from 0 to 100. */

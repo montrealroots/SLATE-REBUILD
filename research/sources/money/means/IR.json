@@ -18,7 +18,24 @@
   "p0p99": "2778352778.4",
   "p99p100": "50659171223.5"
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Iran, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in IRR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]).",
+ "cash": {
+  "year": 2024,
+  "currency": "IRR",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": true,
+  "disposable": {
+   "code": "B.6n",
+   "gross": "140574749329920000",
+   "less": "26167572743757600"
+  },
+  "national": {
+   "code": "B.5n",
+   "gross": "215350468227798000",
+   "less": "51837060790265300"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Iran, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in IRR of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from UNdata's National Accounts Official Country Data (the United Nations Statistics Division's), Table 4.6 and Table 4.1, series 1000, SNA 2008, 2024 (fiscal year beginning 21 March): the net disposable income (B.6n) of households (S.14), 140,574,749,329,920,000 less 26,167,572,743,757,600 (114,407,176,586,162,400), and net national income (B.5n) 215,350,468,227,798,000 less 51,837,060,790,265,300 (163,513,407,437,532,700), in the table's currency (Iranian rial), a ratio of about 0.700 (`cash`). Each net figure was derived as the gross less its own consumption of fixed capital (K.1), from the same table, series and year. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -31,6 +48,18 @@
    "title": "World Inequality Database, bulk download, WID_metadata_IR.csv (variables ahweal992j and adiinc992j)",
    "read": "2026-11-03",
    "said": "IR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;IRR; ... IR;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=7",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "Iran (Islamic Republic of) | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 140,574,749,329,920,000 ... Iran (Islamic Republic of) | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 26,167,572,743,757,600"
+  },
+  {
+   "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+   "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+   "read": "2026-11-03",
+   "said": "Iran (Islamic Republic of) | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 215,350,468,227,798,000 ... Iran (Islamic Republic of) | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 51,837,060,790,265,300"
   }
  ]
 }

@@ -118068,11 +118068,11 @@
     {
       "id": "R-2624",
       "fact": "money.means.AL",
-      "sought": "The means of a family in Albania: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Albania: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AL.json",
-        "sha256": "9ca291fafb02d58047eb58719ad0038e87f91920bcbe9ddbddfced79aba554f9"
+        "sha256": "fece941f66f44f219f38175555268a14d46e324b2704db779f5e6d128ee3f313"
       },
       "sources": [
         {
@@ -118088,17 +118088,24 @@
           "title": "World Inequality Database, bulk download, WID_metadata_AL.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "AL;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;ALL; ... AL;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=AL; na_item=B6G; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=1856312; status=p ... geo=AL; na_item=B5G; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=2464192; status=p"
         }
       ]
     },
     {
       "id": "R-2625",
       "fact": "money.means.AM",
-      "sought": "The means of a family in Armenia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Armenia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AM.json",
-        "sha256": "1ff2691dfd25649c4b2f22ce923e69abd9a1312a4d6362858533a19d186a74b5"
+        "sha256": "7bf333ceb7109780953efbe45903f1bd974600da9882c627698803217bf16e64"
       },
       "sources": [
         {
@@ -118114,6 +118121,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_AM.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "AM;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;AMD; ... AM;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Armenia | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1000 | dram | 2008 | Western calendar year | 5,028,417,066,583 ... Armenia | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2023 | 1000 | dram | 2008 | Western calendar year | 443,551,200,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Armenia | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1000 | dram | 2008 | Western calendar year | 9,246,735,400,000 ... Armenia | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2023 | 1000 | dram | 2008 | Western calendar year | 1,162,201,200,000"
         }
       ]
     },
@@ -118172,11 +118193,11 @@
     {
       "id": "R-2628",
       "fact": "money.means.AT",
-      "sought": "The means of a family in Austria: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Austria: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AT.json",
-        "sha256": "d9fd2ea444848e7e910936f9c2a009cfc5a5b26edd4720675dba0563dac4ceed"
+        "sha256": "7b48742b322b23d35e80e6104d9c193ed3e49ca2767dc94625508bb1b86980cf"
       },
       "sources": [
         {
@@ -118206,17 +118227,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=AT; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=280641 ... geo=AT; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=400019"
         }
       ]
     },
     {
       "id": "R-2629",
       "fact": "money.means.AU",
-      "sought": "The means of a family in Australia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Australia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AU.json",
-        "sha256": "19417bd828c3c52a1da7ab7feed6be71ceba090ae2a04388edb4f622588454b0"
+        "sha256": "db639b9fe3feccfa7e1e1c0276fc7bcecb3d63d1ad469fa71862acb0b2125a1e"
       },
       "sources": [
         {
@@ -118246,6 +118274,27 @@
           "title": "ABS, Household Income and Wealth, Australia, latest release page",
           "read": "2026-11-03",
           "said": "Household Income and Wealth, Australia, 2019-20 financial year ... Outputs will not be released from the Survey of Income and Housing, 2023–24."
+        },
+        {
+          "kind": "primary",
+          "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S14_S15+S1M...B6N+B5N+B6G+B5G.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+          "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: disposable and national income (B6G, B5G)",
+          "read": "2026-11-03",
+          "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A: Annual,AUS: Australia,S1M: Households and non-profit institutions serving households (NPISH),S1: Total economy,C: Revenue,\"B6G: Disposable income, gross\",_Z: Not applicable,_Z: Not applicable,XDC: National currency,S: Standard valuation based on SNA/ESA,V: Current prices,N: Non transformed data,T0800: Table 0800 - Non-financial accounts by sector - annual,2024,1715705,W: World,_Z: Not applicable,,F: Free (free for publication),2: Two,A: Normal value,6: Millions,AUD: Australian dollar"
+        },
+        {
+          "kind": "primary",
+          "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S1M...P51C+B6N+B5N+B2N+B8N.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+          "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: consumption of fixed capital (P51C)",
+          "read": "2026-11-03",
+          "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A,AUS,S1M,S1,D,P51C,_Z,_Z,XDC,S,V,N,T0800,2024,181775,W,N,,F,2,A,6,AUD"
+        },
+        {
+          "kind": "primary",
+          "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE2,/A..............?startPeriod=2022",
+          "title": "OECD Data Explorer, Annual national disposable income, saving and net lending/net borrowing (DSD_NAMAIN10@DF_TABLE2), SDMX API, CSV",
+          "read": "2026-11-03",
+          "said": "OECD.SDD.NAD:DSD_NAMAIN10@DF_TABLE2(2.0),A,AUS,S1,S1,B5G,_Z,_Z,_Z,XDC,V,N,T0107,2024,2701546,,F,1,A,6,AUD ... OECD.SDD.NAD:DSD_NAMAIN10@DF_TABLE2(2.0),A,AUS,S1,S1,P51C,_Z,_Z,_Z,XDC,V,N,T0107,2024,502537,,F,1,A,6,AUD"
         }
       ]
     },
@@ -118256,7 +118305,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AW.json",
-        "sha256": "bd5f4b2aa190d577eed39801c8f12f42c35d7c517cdac61a71ba653bfacc220f"
+        "sha256": "84499743483838b717bfdb38203c624cda7d6da211b46b8cef1ea1d51e609ab8"
       },
       "sources": [
         {
@@ -118278,11 +118327,11 @@
     {
       "id": "R-2631",
       "fact": "money.means.AZ",
-      "sought": "The means of a family in Azerbaijan: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Azerbaijan: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/AZ.json",
-        "sha256": "19e06df86331f355fba7ab9fbc0c2ad9f0b6dac8e4364368ee0000e148edee8e"
+        "sha256": "474112d976b8b9365dcf2208df9d99089fad6e74094cd1e3ac7103d51db8cb8b"
       },
       "sources": [
         {
@@ -118298,6 +118347,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_AZ.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "AZ;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;AZN; ... AZ;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Azerbaijan | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1000 | Azerbaijan new manat | 2008 | Western calendar year | 67,720,200,000 ... Azerbaijan | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2023 | 1000 | Azerbaijan new manat | 2008 | Western calendar year | 1,281,700,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Azerbaijan | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1000 | Azerbaijan new manat | 2008 | Western calendar year | 117,956,000,000 ... Azerbaijan | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2023 | 1000 | Azerbaijan new manat | 2008 | Western calendar year | 7,011,200,000"
         }
       ]
     },
@@ -118382,11 +118445,11 @@
     {
       "id": "R-2635",
       "fact": "money.means.BE",
-      "sought": "The means of a family in Belgium: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Belgium: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BE.json",
-        "sha256": "5b071bd21fd7614fe2297398f78cd44c7813511f825dbbf3b0d084102934d932"
+        "sha256": "de0c4189da52e0570bf1491fb83e930335bfb854849dae4c52349d8a7d88191a"
       },
       "sources": [
         {
@@ -118416,17 +118479,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=BE; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=338191 ... geo=BE; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=509838"
         }
       ]
     },
     {
       "id": "R-2636",
       "fact": "money.means.BF",
-      "sought": "The means of a family in Burkina Faso: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Burkina Faso: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BF.json",
-        "sha256": "e6c6c540e0adeab8d1e89a31916b6f85dc54d030cb7dd21c8cf46a622b29f1d9"
+        "sha256": "bf3dc61e0e38ab61582b67705309bea32529eede641e6cf69a2dd0fad2721f87"
       },
       "sources": [
         {
@@ -118442,6 +118512,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_BF.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "BF;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;XOF; ... BF;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Burkina Faso | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 1000 | CFA franc | 2008 | Western calendar year | 7,720,670,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Burkina Faso | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 1000 | CFA franc | 2008 | Western calendar year | 10,862,925,000,000"
         }
       ]
     },
@@ -118452,7 +118536,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BH.json",
-        "sha256": "d15275bd058c8f8b92ccb8fd4aeb29a5105f40698ed49d9962baefc52d963ee1"
+        "sha256": "4cb9b3923e0c88650e2be3a9660f6eb46b40ca971afd2056b652fa0a3130f3ed"
       },
       "sources": [
         {
@@ -118578,11 +118662,11 @@
     {
       "id": "R-2642",
       "fact": "money.means.BO",
-      "sought": "The means of a family in Bolivia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Bolivia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BO.json",
-        "sha256": "5d2c4aabe007f999edfff2dce58187d54d4244454f92dd660159ed78b34e2e2c"
+        "sha256": "7a196efe20fd6dbe178299deea1ebad9dc02495d69a25dc46af8e0283367027b"
       },
       "sources": [
         {
@@ -118598,17 +118682,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_BO.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "BO;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;BOB; ... BO;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Bolivia (Plurinational State of) | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1000 | boliviano | 2008 | Western calendar year | 260,154,029,308"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Bolivia (Plurinational State of) | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1000 | boliviano | 2008 | Western calendar year | 352,920,229,071"
         }
       ]
     },
     {
       "id": "R-2643",
       "fact": "money.means.BR",
-      "sought": "The means of a family in Brazil: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Brazil: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BR.json",
-        "sha256": "ba9bf85ef21478c34c3e87882d9f7b76e40898dc9c632404914f91d8f337d6b1"
+        "sha256": "eca374400edfcb41db3a7f866ebdf2dcb34585346d3557a3176702ef7af8cb29"
       },
       "sources": [
         {
@@ -118624,6 +118722,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_BR.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "BR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;BRL; ... BR;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Brazil | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2021 | 1000 | real | 2008 | Western calendar year | 5,937,056,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Brazil | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2021 | 1000 | real | 2008 | Western calendar year | 8,730,974,000,000"
         }
       ]
     },
@@ -118686,7 +118798,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BW.json",
-        "sha256": "2f418d25c0329aec7608d46293dbec3a0043b9f59b143ec02149c743f0f1a543"
+        "sha256": "940ab102b45e39137af8fc79abe92c9250f17da3716b8655e38291227f8a521d"
       },
       "sources": [
         {
@@ -118708,11 +118820,11 @@
     {
       "id": "R-2647",
       "fact": "money.means.BY",
-      "sought": "The means of a family in Belarus: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Belarus: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BY.json",
-        "sha256": "b836b7341fc7306e41d10e3365faac5ff80243098485c86f7bb2feed911d642c"
+        "sha256": "a3e68d611346061e2c2c6eef9ac17bbe9ebf21bd16278d3697093bd42e642916"
       },
       "sources": [
         {
@@ -118728,6 +118840,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_BY.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "BY;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;BYN; ... BY;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Belarus | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | Belarussian rouble (re-denom. 1:10000) | 2008 | Western calendar year | 149,325,851,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Belarus | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | Belarussian rouble (re-denom. 1:10000) | 2008 | Western calendar year | 249,855,382,000"
         }
       ]
     },
@@ -118760,11 +118886,11 @@
     {
       "id": "R-2649",
       "fact": "money.means.CA",
-      "sought": "The means of a family in Canada: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Canada: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CA.json",
-        "sha256": "c7f6c6aa59a7a437f0db67bf82eb0fb4dec5c83bb134cc8ba89f95823b21bc59"
+        "sha256": "e79243eee9ff27f66a2f0b3ee64763e68db332a449880c8421843490e6b284e6"
       },
       "sources": [
         {
@@ -118787,6 +118913,20 @@
           "title": "Statistics Canada, Table 11-10-0049-01, Survey of Financial Security (SFS), assets and debts by net worth quintile (CSV), 2023 Canada rows",
           "read": "2026-11-03",
           "said": "\"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Lowest net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Lowest net worth quintile\",\"Number holding asset or debt\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Lowest net worth quintile\",\"Number holding asset or debt\",\"Estimate\",\"Number\" ... \"Total assets\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\" ... \"Total assets\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Total debt\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\" ... \"Total debt\",\"Lowest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Total values\",\"Estimate\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Second net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Second net worth quintile\",\"Total values\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Second net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Second net worth quintile\",\"Number holding asset or debt\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Second net worth quintile\",\"Number holding asset or debt\",\"Estimate\",\"Number\" ... \"Total assets\",\"Second net worth quintile\",\"Total values\",\"Estimate\" ... \"Total assets\",\"Second net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Total debt\",\"Second net worth quintile\",\"Total values\",\"Estimate\" ... \"Total debt\",\"Second net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Total values\",\"Estimate\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Middle net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Middle net worth quintile\",\"Total values\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Middle net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Middle net worth quintile\",\"Number holding asset or debt\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Middle net worth quintile\",\"Number holding asset or debt\",\"Estimate\",\"Number\" ... \"Total assets\",\"Middle net worth quintile\",\"Total values\",\"Estimate\" ... \"Total assets\",\"Middle net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Total debt\",\"Middle net worth quintile\",\"Total values\",\"Estimate\" ... \"Total debt\",\"Middle net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Fourth net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Fourth net worth quintile\",\"Number holding asset or debt\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Fourth net worth quintile\",\"Number holding asset or debt\",\"Estimate\",\"Number\" ... \"Total assets\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\" ... \"Total assets\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Total debt\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\" ... \"Total debt\",\"Fourth net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Total values\",\"Estimate\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Percentage of total assets or total debts\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Percentage holding asset or debt\",\"Estimate\",\"Percent\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\" ... \"Deposits in financial institutions\",\"Highest net worth quintile\",\"Average value for those holding asset or debt\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Highest net worth quintile\",\"Total values\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Highest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Net worth (total assets less total debt)\",\"Highest net worth quintile\",\"Number holding asset or debt\",\"Estimate\" ... \"Net worth (total assets less total debt)\",\"Highest net worth quintile\",\"Number holding asset or debt\",\"Estimate\",\"Number\" ... \"Total assets\",\"Highest net worth quintile\",\"Total values\",\"Estimate\" ... \"Total assets\",\"Highest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\" ... \"Total debt\",\"Highest net worth quintile\",\"Total values\",\"Estimate\" ... \"Total debt\",\"Highest net worth quintile\",\"Total values\",\"Estimate\",\"2023 constant dollars\""
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A409%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.9 Combined Sectors: Households and NPISH (S.14 + S.15), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Canada | 4.9 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Canadian dollar | 2008 | Western calendar year | 1,868,229,000,000 ... Canada | 4.9 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Canadian dollar | 2008 | Western calendar year | 96,071,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Canada | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Canadian dollar | 2008 | Western calendar year | 3,059,266,000,000 ... Canada | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Canadian dollar | 2008 | Western calendar year | 508,448,000,000"
         }
       ]
     },
@@ -118871,11 +119011,11 @@
     {
       "id": "R-2653",
       "fact": "money.means.CH",
-      "sought": "The means of a family in Switzerland: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Switzerland: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CH.json",
-        "sha256": "5018482ab66520a805c3065fa95d97d662b13081601974991868047c2949e4dd"
+        "sha256": "9b8df17bf23d5aaa21c6f793b10fb8218126ab16a53a903f7adb7b25202f471a"
       },
       "sources": [
         {
@@ -118891,6 +119031,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CH.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CH;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CHF; ... CH;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=CH; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2023; value=441303; status=p ... geo=CH; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2023; value=584091; status=p"
         }
       ]
     },
@@ -118901,7 +119048,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CI.json",
-        "sha256": "0e4b694c999cacd97d10ef498582af4d9492b633eb4190a7a4c3da3a10ef2f83"
+        "sha256": "877a9fe846f99c411116c777bde39ca0d8b4ed74d24d35dba4a428468e429867"
       },
       "sources": [
         {
@@ -118923,11 +119070,11 @@
     {
       "id": "R-2655",
       "fact": "money.means.CL",
-      "sought": "The means of a family in Chile: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Chile: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CL.json",
-        "sha256": "6946237edc9b22afa56c85ea1bdacba15494e0b666ac75a309e2b9e71978fbc0"
+        "sha256": "a9700249e6edee4bc0ced0c11cc2e20d7281b5de66cc13ba928a9507bfad5748"
       },
       "sources": [
         {
@@ -118943,17 +119090,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CL.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CL;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CLP; ... CL;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A409%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=1",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.9 Combined Sectors: Households and NPISH (S.14 + S.15), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Chile | 4.9 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Chilean peso | 2008 | Western calendar year | 187,700,763,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Chile | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Chilean peso | 2008 | Western calendar year | 296,165,160,000,000"
         }
       ]
     },
     {
       "id": "R-2656",
       "fact": "money.means.CM",
-      "sought": "The means of a family in Cameroon: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Cameroon: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CM.json",
-        "sha256": "dbe1bcddd0620e1b4393e24d87109961aa053571cd69628179619281ed7185aa"
+        "sha256": "03b3e2283e96047fcbdc568d455474e4343a09284f5c6bd4fa879b0901426627"
       },
       "sources": [
         {
@@ -118969,17 +119130,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CM.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CM;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;XAF; ... CM;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Cameroon | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1100 | CFA franc | 2008 | Western calendar year | 23,648,657,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Cameroon | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1100 | CFA franc | 2008 | Western calendar year | 28,728,371,000,000"
         }
       ]
     },
     {
       "id": "R-2657",
       "fact": "money.means.CN",
-      "sought": "The means of a family in China: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in China: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CN.json",
-        "sha256": "2a7b7c71967db761f88c1b61716a9ee11d5dc54e04901f75931590645c51910b"
+        "sha256": "47a51b9068c2e0936f2a36fe16f62fbe058282a9a7f7f3013ec056735e45093d"
       },
       "sources": [
         {
@@ -118995,17 +119170,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CN.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CNY; ... CN;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "China | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1000 | Yuan Renminbi | 2008 | Western calendar year | 78,689,060,433,482"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "China | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1000 | Yuan Renminbi | 2008 | Western calendar year | 128,477,390,938,527"
         }
       ]
     },
     {
       "id": "R-2658",
       "fact": "money.means.CO",
-      "sought": "The means of a family in Colombia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Colombia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CO.json",
-        "sha256": "845e8392c3cb09bf97608417c4a45b3ff8e3f392e63b58cc124f41ec687cff98"
+        "sha256": "b1b9b8f03d8a42270421ac56b057c6b6eeb0dfcb977cf8b60ba116ce196ef0eb"
       },
       "sources": [
         {
@@ -119021,17 +119210,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CO.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CO;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;COP; ... CO;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Colombia | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Colombian peso | 2008 | Western calendar year | 1,331,273,000,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Colombia | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Colombian peso | 2008 | Western calendar year | 1,687,310,000,000,000"
         }
       ]
     },
     {
       "id": "R-2659",
       "fact": "money.means.CR",
-      "sought": "The means of a family in Costa Rica: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Costa Rica: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CR.json",
-        "sha256": "98e5ca25efe90023fa24c249ff52fcb3da9f01538d7e019fad5f2ef19b8b83e9"
+        "sha256": "6170c34d2d9cbe6dcc7e3d40418a728c73188b981d7936c5c5af2de0acece203"
       },
       "sources": [
         {
@@ -119047,6 +119250,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CR.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CRC; ... CR;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1200, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Costa Rica | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 1200 | Costa Rican colon | 2008 | Western calendar year | 30,236,127,210,849 ... Costa Rica | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2022 | 1200 | Costa Rican colon | 2008 | Western calendar year | 429,199,331,101"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=5",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1200, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Costa Rica | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 1200 | Costa Rican colon | 2008 | Western calendar year | 42,701,080,021,384 ... Costa Rica | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2022 | 1200 | Costa Rican colon | 2008 | Western calendar year | 2,986,901,779,711"
         }
       ]
     },
@@ -119079,11 +119296,11 @@
     {
       "id": "R-2661",
       "fact": "money.means.CV",
-      "sought": "The means of a family in Cabo Verde: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Cabo Verde: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CV.json",
-        "sha256": "eec6272401de5e67f343e01f873e233a92d732848f2586bdb65ce12f9fedb542"
+        "sha256": "cca338668aa80ae3fe26b383128de2fdb52abe19000df39253ec4d959bf3f4d6"
       },
       "sources": [
         {
@@ -119099,17 +119316,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CV.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CV;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CVE; ... CV;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=2",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Cabo Verde | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2023 | 1000 | escudo | 2008 | Western calendar year | 190,383,228,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=3",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Cabo Verde | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2023 | 1000 | escudo | 2008 | Western calendar year | 248,962,405,000"
         }
       ]
     },
     {
       "id": "R-2662",
       "fact": "money.means.CY",
-      "sought": "The means of a family in Cyprus: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Cyprus: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CY.json",
-        "sha256": "9315edb43ab91d21828e9a1002ecb167619689bb8710026db423ae8fae5e8225"
+        "sha256": "4c1c4c1d2fb7194f3c12048222cc4d130da4f01463ae52711bb1fdc660302ee9"
       },
       "sources": [
         {
@@ -119139,17 +119370,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=CY; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=20045 ... geo=CY; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=27454"
         }
       ]
     },
     {
       "id": "R-2663",
       "fact": "money.means.CZ",
-      "sought": "The means of a family in Czechia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Czechia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CZ.json",
-        "sha256": "fb02913e9c8efd475a2aaf072be5c2255acf2f41521c6d3e806eabacb6f0a62a"
+        "sha256": "0e6c96b2897ba444798f356844ae717f6a177241e36cd0bb96880d0d9e53a74c"
       },
       "sources": [
         {
@@ -119165,17 +119403,24 @@
           "title": "World Inequality Database, bulk download, WID_metadata_CZ.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "CZ;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;CZK; ... CZ;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=CZ; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=4352947 ... geo=CZ; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=6068841"
         }
       ]
     },
     {
       "id": "R-2664",
       "fact": "money.means.DE",
-      "sought": "The means of a family in Germany: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Germany: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/DE.json",
-        "sha256": "de8338bff425edf03202527f7b2f31777f3406847f2020aed7f439698f22b493"
+        "sha256": "d7757997e365dcf9997922ca609851af9f7906575cae3d11b54a5d0449301b5e"
       },
       "sources": [
         {
@@ -119205,6 +119450,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=DE; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=2518518; status=p ... geo=DE; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=3657710; status=p"
         }
       ]
     },
@@ -119237,11 +119489,11 @@
     {
       "id": "R-2666",
       "fact": "money.means.DK",
-      "sought": "The means of a family in Denmark: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Denmark: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/DK.json",
-        "sha256": "b8228aec73cf95f46b75b3c89a70039b9bd28a736bbfe6313795713e6c0d8500"
+        "sha256": "9d2f467851da0aedbf8bb232bfbaf597824a6d06c789d2fae9891392808d2540"
       },
       "sources": [
         {
@@ -119257,6 +119509,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_DK.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "DK;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;DKK; ... DK;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=DK; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=1278146 ... geo=DK; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=2551135"
         }
       ]
     },
@@ -119293,7 +119552,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/DO.json",
-        "sha256": "ffe0a5be06a5b16e9c406614146f150ccf7109bf65923cc1250d44cbb8b87d1b"
+        "sha256": "0b140fc8c06706ab1791634b00ab3d09d688468c03379799d31200a0672e9cd2"
       },
       "sources": [
         {
@@ -119341,11 +119600,11 @@
     {
       "id": "R-2670",
       "fact": "money.means.EC",
-      "sought": "The means of a family in Ecuador: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Ecuador: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/EC.json",
-        "sha256": "8f2793339e604d609273a335ef0a3db1b123ef307a705c17b4211b24456f6556"
+        "sha256": "0f681038340f54db13197a800df4cc0c436e8ef60be7fc7960b36e235f542487"
       },
       "sources": [
         {
@@ -119361,17 +119620,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_EC.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "EC;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;USD; ... EC;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Ecuador | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | US dollar | 2008 | Western calendar year | 90,110,638,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Ecuador | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | US dollar | 2008 | Western calendar year | 120,445,085,000"
         }
       ]
     },
     {
       "id": "R-2671",
       "fact": "money.means.EE",
-      "sought": "The means of a family in Estonia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Estonia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/EE.json",
-        "sha256": "d83a959af6b9146ee8561107fb9ec2e3cd6e2866dc476376e7bbd3f8e5fdc6eb"
+        "sha256": "3d1918d4e89bf6089855a160aaa7bd389ed191e78ad9230275732d884326aeaf"
       },
       "sources": [
         {
@@ -119401,6 +119674,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=EE; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=21429 ... geo=EE; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=32276"
         }
       ]
     },
@@ -119411,7 +119691,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/EG.json",
-        "sha256": "d2a5ae0a2ad37d4b55d38924dddeb7ebda26404bf6b4fc2475fe7d1e134bf349"
+        "sha256": "e82fcb58ddb184f5d9f53e7e1775e0a4e25092fe966168c67ed8a860522484ff"
       },
       "sources": [
         {
@@ -119459,11 +119739,11 @@
     {
       "id": "R-2674",
       "fact": "money.means.ES",
-      "sought": "The means of a family in Spain: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Spain: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/ES.json",
-        "sha256": "dd941a459c7a507508aecbaca0d4f05d2bcf6d62feaa40f9d6ee5c998666e15b"
+        "sha256": "9d7093ce71b085cf72dc9162dd34d3cfce195d502053ee7caa9407fed815df16"
       },
       "sources": [
         {
@@ -119493,6 +119773,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=ES; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=952671 ... geo=ES; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=1347510"
         }
       ]
     },
@@ -119525,11 +119812,11 @@
     {
       "id": "R-2676",
       "fact": "money.means.FI",
-      "sought": "The means of a family in Finland: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Finland: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/FI.json",
-        "sha256": "58bb6302ad11cdff91e05faa880dcdb429d345990c4f4d652f6c5f4abfda2228"
+        "sha256": "eabdf3a9d9f2b23ca2312af642aa71df39c577a2ae07c8bb60715689ea4c1aeb"
       },
       "sources": [
         {
@@ -119559,6 +119846,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=FI; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=142907 ... geo=FI; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=219544"
         }
       ]
     },
@@ -119617,11 +119911,11 @@
     {
       "id": "R-2679",
       "fact": "money.means.FR",
-      "sought": "The means of a family in France: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in France: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/FR.json",
-        "sha256": "b8136cffa2b640e455c119f579dd1b211c0767b8ee598234b672e09e253fe040"
+        "sha256": "e2aa24390e3841625a3d4d41ef1e7a2ffdc4249f6605bdd8da8f9ee01d490ac0"
       },
       "sources": [
         {
@@ -119651,6 +119945,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=FR; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=1758248; status=p ... geo=FR; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=2444983; status=p"
         }
       ]
     },
@@ -119683,11 +119984,11 @@
     {
       "id": "R-2681",
       "fact": "money.means.GB",
-      "sought": "The means of a family in United Kingdom: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in United Kingdom: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/GB.json",
-        "sha256": "2f609dc9e5cfcd743f9393c6a29730772478203e8a8bc30d80d7a65615d6e198"
+        "sha256": "0f72e5dbfad7093f79bb3d026f8fd19284376dd90e779e21fdcb80b1c7cf790f"
       },
       "sources": [
         {
@@ -119703,6 +120004,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_GB.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "GB;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;GBP; ... GB;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "United Kingdom | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | pound sterling | 2008 | Western calendar year | 1,798,886,000,000 ... United Kingdom | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | pound sterling | 2008 | Western calendar year | 86,144,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=21",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "United Kingdom | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | pound sterling | 2008 | Western calendar year | 2,863,047,000,000 ... United Kingdom | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | pound sterling | 2008 | Western calendar year | 434,552,000,000"
         }
       ]
     },
@@ -119869,7 +120184,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/GN.json",
-        "sha256": "e13b541d57ee9026f6d9069568547d7fbec41983a8aa70f5e244a281fd8bdd3f"
+        "sha256": "26aacee365e42f0a3464e87d72326b7ab87bd3f5ba31d2c9d70f2e2e6881e35f"
       },
       "sources": [
         {
@@ -119917,11 +120232,11 @@
     {
       "id": "R-2690",
       "fact": "money.means.GR",
-      "sought": "The means of a family in Greece: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Greece: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/GR.json",
-        "sha256": "a033ceb333dd8c2bc0ce1eb08c58a056cf542fd33b3c0eb04a2efb7b6431092f"
+        "sha256": "4ecef8fb6098da4928e6dc3dbf3dab74743b30a3f547b1c5f942d07ad32d62cb"
       },
       "sources": [
         {
@@ -119951,17 +120266,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=EL; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=147354; status=p ... geo=EL; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=198864; status=p"
         }
       ]
     },
     {
       "id": "R-2691",
       "fact": "money.means.GT",
-      "sought": "The means of a family in Guatemala: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Guatemala: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/GT.json",
-        "sha256": "2cc8c1165472ddb3ad7b9640684d2e26e4c7786af1e0bb037646a4d0d7be5927"
+        "sha256": "0e658d45d2a4a13d859784812593a5a45d8ce055670e949bc3161b40121c617c"
       },
       "sources": [
         {
@@ -119977,6 +120299,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_GT.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "GT;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;GTQ; ... GT;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Guatemala | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | quetzal | 2008 | Western calendar year | 824,040,207,243"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=8",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Guatemala | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | quetzal | 2008 | Western calendar year | 865,778,740,084"
         }
       ]
     },
@@ -120061,11 +120397,11 @@
     {
       "id": "R-2695",
       "fact": "money.means.HN",
-      "sought": "The means of a family in Honduras: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Honduras: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/HN.json",
-        "sha256": "b5720e603795b63f63b9c99110211ac71088290044cab6d6731efa98b964ba9d"
+        "sha256": "01ae02425e131eefea733aa83657bf0fa1392a6cb7d0bcc8d0631aed875ff803"
       },
       "sources": [
         {
@@ -120081,6 +120417,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_HN.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "HN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;HNL; ... HN;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 100, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Honduras | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2021 | 100 | lempira | 1993 | Western calendar year | 581,380,500,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=8",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 100, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Honduras | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2021 | 100 | lempira | 1993 | Western calendar year | 619,086,300,000"
         }
       ]
     },
@@ -120113,11 +120463,11 @@
     {
       "id": "R-2697",
       "fact": "money.means.HU",
-      "sought": "The means of a family in Hungary: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Hungary: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/HU.json",
-        "sha256": "5fed546b408a861d392d59b203d9fccf1dbbbf5982b8895c6604bf9841982394"
+        "sha256": "09d5b10180337ff8ab46483ddb92964aa85a5cd344d4c95c7ca55daefb5bb929"
       },
       "sources": [
         {
@@ -120147,17 +120497,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=HU; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=47212800 ... geo=HU; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=63687090"
         }
       ]
     },
     {
       "id": "R-2698",
       "fact": "money.means.ID",
-      "sought": "The means of a family in Indonesia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Indonesia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/ID.json",
-        "sha256": "acd6ccca1a2f0251cb808bc6b4945ff0c52e2819f46f7fc28d2ea903f4af6481"
+        "sha256": "e572fcff04753123e0d5469c82efa450efb13187a0ed4aeb15a27635c484fc96"
       },
       "sources": [
         {
@@ -120173,17 +120530,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_ID.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "ID;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;IDR; ... ID;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Indonesia | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Indonesian Rupiah | 2008 | Western calendar year | 13,077,780,242,667,500 ... Indonesia | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Indonesian Rupiah | 2008 | Western calendar year | 641,378,902,190,175"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Indonesia | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Indonesian Rupiah | 2008 | Western calendar year | 21,439,540,291,389,900 ... Indonesia | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Indonesian Rupiah | 2008 | Western calendar year | 4,426,259,164,990,900"
         }
       ]
     },
     {
       "id": "R-2699",
       "fact": "money.means.IE",
-      "sought": "The means of a family in Ireland: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Ireland: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/IE.json",
-        "sha256": "fa698d6ec0e57758a867aaf1dbb682a2988f172363989027531b2edde165ae9b"
+        "sha256": "eec39a1000970cb325282a9d2ee6ef776923661f8374c6394e107d978767fcd7"
       },
       "sources": [
         {
@@ -120213,6 +120584,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=IE; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=169058 ... geo=IE; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=289431"
         }
       ]
     },
@@ -120271,11 +120649,11 @@
     {
       "id": "R-2702",
       "fact": "money.means.IN",
-      "sought": "The means of a family in India: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in India: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/IN.json",
-        "sha256": "bc232865fe33554a7f61005b9d8ac9670a044e25c22c0ea879f5d64e3500fba1"
+        "sha256": "f9162cd68e54b35ceae445c8f3c611d134eb7061cfdcb6c4156313c88a009137"
       },
       "sources": [
         {
@@ -120291,6 +120669,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_IN.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "IN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;INR; ... IN;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "India | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 160,180,891,000,000 ... India | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 7,786,048,995,389"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "India | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 201,578,992,000,000 ... India | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 1000 | Indian rupee | 2008 | Fiscal year beginning 1 April | 21,635,984,000,000"
         }
       ]
     },
@@ -120323,11 +120715,11 @@
     {
       "id": "R-2704",
       "fact": "money.means.IR",
-      "sought": "The means of a family in Iran: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Iran: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/IR.json",
-        "sha256": "117996affcb8a245571bd1d60a10df1c23db7a6ee8bffb31fd9e29318ca4344f"
+        "sha256": "2455363ce60c550a36842fd7e4de6e6d602607aa1afabae353bab56ab9b909e2"
       },
       "sources": [
         {
@@ -120343,17 +120735,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_IR.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "IR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;IRR; ... IR;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=7",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Iran (Islamic Republic of) | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 140,574,749,329,920,000 ... Iran (Islamic Republic of) | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 26,167,572,743,757,600"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Iran (Islamic Republic of) | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 215,350,468,227,798,000 ... Iran (Islamic Republic of) | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Iranian rial | 2008 | Fiscal year beginning 21 March | 51,837,060,790,265,300"
         }
       ]
     },
     {
       "id": "R-2705",
       "fact": "money.means.IS",
-      "sought": "The means of a family in Iceland: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Iceland: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/IS.json",
-        "sha256": "ecfd90b1a6a166353167f868df81d256971f6acb3df497a831cd6af4762b149b"
+        "sha256": "54bc218a01eb935cf699ca2481e0467e0cdce9340e7556eb07ac1f0d5a1146e3"
       },
       "sources": [
         {
@@ -120369,17 +120775,24 @@
           "title": "World Inequality Database, bulk download, WID_metadata_IS.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "IS;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;ISK; ... IS;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=IS; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=2229882 ... geo=IS; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=3737818"
         }
       ]
     },
     {
       "id": "R-2706",
       "fact": "money.means.IT",
-      "sought": "The means of a family in Italy: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Italy: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/IT.json",
-        "sha256": "9d17ddc7bb95cc363aa965a5e3ad7736e6fbbc46292b42ec6b72176b87034f04"
+        "sha256": "c8754ec0d129ea84c7a7aa9b2fb11b8d333a1afc34e265dad528f73a26a7be08"
       },
       "sources": [
         {
@@ -120409,6 +120822,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=IT; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=1299048 ... geo=IT; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=1815788"
         }
       ]
     },
@@ -120467,11 +120887,11 @@
     {
       "id": "R-2709",
       "fact": "money.means.JP",
-      "sought": "The means of a family in Japan: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Japan: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/JP.json",
-        "sha256": "ccc6275fbbe6e0992a64157f89ccbc61f1d9bc61e356fd6d7bffbebba947f83c"
+        "sha256": "57f4173e1ce0a3a809ab877bfbb7fc249af447a20d4606e0c05322520cd057ab"
       },
       "sources": [
         {
@@ -120487,6 +120907,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_JP.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "JP;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;JPY; ... JP;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=7",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Japan | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | yen | 2008 | Western calendar year | 359,518,600,000,000 ... Japan | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | yen | 2008 | Western calendar year | 29,803,100,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Japan | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | yen | 2008 | Western calendar year | 671,201,200,000,000 ... Japan | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | yen | 2008 | Western calendar year | 172,900,500,000,000"
         }
       ]
     },
@@ -120519,11 +120953,11 @@
     {
       "id": "R-2711",
       "fact": "money.means.KG",
-      "sought": "The means of a family in Kyrgyzstan: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Kyrgyzstan: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/KG.json",
-        "sha256": "9f6aac98dc51e32988de626dd82ddd2f30836157dd2fd738854beb2c5a2bf401"
+        "sha256": "e398b9b0d010f873db01cc88351f60bac2461d4dc9377212e0b8ab7f56afd99e"
       },
       "sources": [
         {
@@ -120539,6 +120973,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_KG.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "KG;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;KGS; ... KG;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=8",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Kyrgyzstan | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Kyrgyz som | 2008 | Western calendar year | 993,295,000,000 ... Kyrgyzstan | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Kyrgyz som | 2008 | Western calendar year | 38,907,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Kyrgyzstan | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Kyrgyz som | 2008 | Western calendar year | 1,556,097,100,000 ... Kyrgyzstan | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Kyrgyz som | 2008 | Western calendar year | 132,610,100,000"
         }
       ]
     },
@@ -120675,11 +121123,11 @@
     {
       "id": "R-2717",
       "fact": "money.means.KR",
-      "sought": "The means of a family in South Korea: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in South Korea: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/KR.json",
-        "sha256": "2de2909daa2a48419190d7a6ad3cd9ec6ddceaaa808e8917cd0dcb1d93e272a6"
+        "sha256": "cdc32eda99e6d5a83644fc641fc50263e6b216ef63da8fe3ddbe120f022a0b80"
       },
       "sources": [
         {
@@ -120695,6 +121143,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_KR.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "KR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;KRW; ... KR;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A409%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.9 Combined Sectors: Households and NPISH (S.14 + S.15), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Republic of Korea | 4.9 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | Korean won | 2008 | Western calendar year | 1,435,656,300,000,000 ... Republic of Korea | 4.9 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | Korean won | 2008 | Western calendar year | 79,191,700,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=16",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Republic of Korea | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | Korean won | 2008 | Western calendar year | 2,593,762,000,000,000 ... Republic of Korea | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | Korean won | 2008 | Western calendar year | 569,163,300,000,000"
         }
       ]
     },
@@ -120705,7 +121167,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/KW.json",
-        "sha256": "f8db427a87eb06970466e78048d3b669653f728e3b34a019e3cf2490bac66300"
+        "sha256": "d8e02fab2cef21f0a05e4498fef7f44c3c4c177646360cfeafa3777f3ca8f909"
       },
       "sources": [
         {
@@ -120753,11 +121215,11 @@
     {
       "id": "R-2720",
       "fact": "money.means.KZ",
-      "sought": "The means of a family in Kazakhstan: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Kazakhstan: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/KZ.json",
-        "sha256": "d5bb2d0786f7867a19c571b12f296546ebe9b750ccd4ed1e66216e75bc935d59"
+        "sha256": "698d69110cbcc824dd6eb843b02bd4a91243e819775cddd9a44cba5ffd1ae2af"
       },
       "sources": [
         {
@@ -120773,6 +121235,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_KZ.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "KZ;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;KZT; ... KZ;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=8",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 200, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Kazakhstan | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 200 | tenge | 1993 | Western calendar year | 43,583,097,900,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 200, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Kazakhstan | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 200 | tenge | 1993 | Western calendar year | 91,972,299,500,000"
         }
       ]
     },
@@ -120961,11 +121437,11 @@
     {
       "id": "R-2728",
       "fact": "money.means.LT",
-      "sought": "The means of a family in Lithuania: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Lithuania: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/LT.json",
-        "sha256": "dd3223fbd26555cce134505c283b82a780ae35662a31ba7b2872563bfeccafe0"
+        "sha256": "548caca2e802a5af05a0fde671db4f1b9a8dba3a5d2f22ff10b37f46317ea02a"
       },
       "sources": [
         {
@@ -120995,17 +121471,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=LT; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=43799 ... geo=LT; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=67844"
         }
       ]
     },
     {
       "id": "R-2729",
       "fact": "money.means.LU",
-      "sought": "The means of a family in Luxembourg: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Luxembourg: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/LU.json",
-        "sha256": "68771a4b03e95438e78b8e773316f59b272526a746e9896d4e30799f16722c3d"
+        "sha256": "972d0bbbfc238829d3fcd22207aab7501008b39f3add563cc5a203a7a573a4e5"
       },
       "sources": [
         {
@@ -121035,17 +121518,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=LU; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=27669 ... geo=LU; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=46667"
         }
       ]
     },
     {
       "id": "R-2730",
       "fact": "money.means.LV",
-      "sought": "The means of a family in Latvia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Latvia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/LV.json",
-        "sha256": "a60a29f2c123801268ba2ed244d534c9892c96e49a8ea0886cee5a5ddee1875c"
+        "sha256": "f190925f0695e6d5fa817cd6545dba94ed0967df0577a9880225f36c24c86993"
       },
       "sources": [
         {
@@ -121075,6 +121565,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=LV; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=22368 ... geo=LV; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=32362"
         }
       ]
     },
@@ -121107,11 +121604,11 @@
     {
       "id": "R-2732",
       "fact": "money.means.MA",
-      "sought": "The means of a family in Morocco: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Morocco: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MA.json",
-        "sha256": "e95bc614844f4cef50c539fceac17ae5c481ca6467101d905535b2f0d1a42a80"
+        "sha256": "94db0c725bc5de81643a6ca268ecf7441cc88c8918b125f65b41436d9645fe8f"
       },
       "sources": [
         {
@@ -121127,6 +121624,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_MA.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "MA;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;MAD; ... MA;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=10",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Morocco | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | Moroccan dirham | 2008 | Western calendar year | 1,077,016,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Morocco | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | Moroccan dirham | 2008 | Western calendar year | 1,590,158,000,000"
         }
       ]
     },
@@ -121159,11 +121670,11 @@
     {
       "id": "R-2734",
       "fact": "money.means.MD",
-      "sought": "The means of a family in Moldova: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Moldova: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MD.json",
-        "sha256": "53a4e9a1edc00fd8664bd634b33d57f42b47e6276ad323d0373c87128720a6fe"
+        "sha256": "7930a7d810ecae4e723ed2940dccbd9ae491215cefb2f41f9f2191f5c7702694"
       },
       "sources": [
         {
@@ -121179,6 +121690,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_MD.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "MD;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;MDL; ... MD;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Republic of Moldova | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Moldovan leu | 2008 | Western calendar year | 240,613,499,948"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=17",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Republic of Moldova | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Moldovan leu | 2008 | Western calendar year | 325,578,130,456"
         }
       ]
     },
@@ -121341,11 +121866,11 @@
     {
       "id": "R-2741",
       "fact": "money.means.MN",
-      "sought": "The means of a family in Mongolia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Mongolia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MN.json",
-        "sha256": "eb4857e74fc02ea629d3a4ff1461d557f26a60e69072c6b2355916b574e0cdb2"
+        "sha256": "782ae37ccdd1f02dee53d2850eb994a9a3bdc7652940cfdccc7c64847e9b6090"
       },
       "sources": [
         {
@@ -121361,6 +121886,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_MN.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "MN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;MNT; ... MN;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Mongolia | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | Togrog | 2008 | Western calendar year | 37,869,816,818,273 ... Mongolia | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | Togrog | 2008 | Western calendar year | 555,981,728"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=13",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Mongolia | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | Togrog | 2008 | Western calendar year | 71,613,926,894,448 ... Mongolia | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | Togrog | 2008 | Western calendar year | 8,275,778,635,210"
         }
       ]
     },
@@ -121445,11 +121984,11 @@
     {
       "id": "R-2745",
       "fact": "money.means.MT",
-      "sought": "The means of a family in Malta: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Malta: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MT.json",
-        "sha256": "db199498ca4ec1bae57a020edd9042d9511a3dfdee3bee3ff18600aefcd7c068"
+        "sha256": "dd81ffa98d1e11de13b0f102432ef150737288c087983fc7e52e1038eb5ae8be"
       },
       "sources": [
         {
@@ -121479,6 +122018,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=MT; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=12010; status=p ... geo=MT; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=15843; status=p"
         }
       ]
     },
@@ -121489,7 +122035,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MU.json",
-        "sha256": "4f16668672decc439299b28ed5ea156abf0dcacc7c907cda60e038be575f2460"
+        "sha256": "75bc5e8f5c5f678677fc82933d4e37af2ac9b69bb3c05048a6b4fc327b40617e"
       },
       "sources": [
         {
@@ -121563,11 +122109,11 @@
     {
       "id": "R-2749",
       "fact": "money.means.MX",
-      "sought": "The means of a family in Mexico: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Mexico: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MX.json",
-        "sha256": "50b2cdb7d25eea4ff17df18f0ef0547f447983bb39b82d0996912d17ed8e156e"
+        "sha256": "6c651a8e233275508fb89e80a05977c0b6675a4907d1f081da7feeaf13bf7b28"
       },
       "sources": [
         {
@@ -121583,17 +122129,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_MX.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "MX;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;MXN; ... MX;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Mexico | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Mexican new peso | 2008 | Western calendar year | 25,762,030,000,000 ... Mexico | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Mexican new peso | 2008 | Western calendar year | 1,720,418,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=13",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Mexico | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Mexican new peso | 2008 | Western calendar year | 32,571,766,000,000 ... Mexico | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | Mexican new peso | 2008 | Western calendar year | 6,451,801,000,000"
         }
       ]
     },
     {
       "id": "R-2750",
       "fact": "money.means.MY",
-      "sought": "The means of a family in Malaysia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Malaysia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/MY.json",
-        "sha256": "521a2e89f3dc07d940a74c0efe12d8e24d371e3df0a8505f87332b42a05c8cee"
+        "sha256": "ffe6640738861f87e6a19c0c99f7a1897d4b5783b9b77eb29d2a0b86adc25194"
       },
       "sources": [
         {
@@ -121609,6 +122169,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_MY.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "MY;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;MYR; ... MY;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=9",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Malaysia | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 1000 | ringgit | 2008 | Western calendar year | 989,418,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=12",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Malaysia | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 1000 | ringgit | 2008 | Western calendar year | 1,736,960,000,000"
         }
       ]
     },
@@ -121693,11 +122267,11 @@
     {
       "id": "R-2754",
       "fact": "money.means.NE",
-      "sought": "The means of a family in Niger: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Niger: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/NE.json",
-        "sha256": "34d66d3b696a5db5ecc0578fd95bb191ac18d1f8ced7cba1b24569c92c0d4d6d"
+        "sha256": "259709b0f469abae441579792f0efb3ff7b66257a9838ae518cc1d393c8f2cad"
       },
       "sources": [
         {
@@ -121713,6 +122287,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_NE.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "NE;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;XOF; ... NE;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=10",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Niger | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | CFA franc | 2008 | Western calendar year | 9,041,897,575,207"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Niger | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | CFA franc | 2008 | Western calendar year | 11,769,826,271,058"
         }
       ]
     },
@@ -121745,11 +122333,11 @@
     {
       "id": "R-2756",
       "fact": "money.means.NI",
-      "sought": "The means of a family in Nicaragua: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Nicaragua: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/NI.json",
-        "sha256": "421020b7b6fa63c0279f1004dc3702f9c504db98b681ccda16feb5f4569970bd"
+        "sha256": "df3e7ebbe4fb6661241a9dab1c015ea9b000de7585ab402bca789c0d9f8a342c"
       },
       "sources": [
         {
@@ -121765,17 +122353,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_NI.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "NI;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;NIO; ... NI;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=10",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 300, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Nicaragua | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2019 | 300 | córdoba | 1993 | Western calendar year | 322,718,796,804 ... Nicaragua | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 300 | córdoba | 1993 | Western calendar year | 1,255,652,240"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 300, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Nicaragua | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2019 | 300 | córdoba | 1993 | Western calendar year | 405,338,520,270 ... Nicaragua | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2019 | 300 | córdoba | 1993 | Western calendar year | 17,781,580,270"
         }
       ]
     },
     {
       "id": "R-2757",
       "fact": "money.means.NL",
-      "sought": "The means of a family in The Netherlands: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in The Netherlands: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/NL.json",
-        "sha256": "6e9a0232ed07c96bc79fd33637aafe5ce226677110c3158072505c1deab9f10e"
+        "sha256": "ca7ded05919529e114d0a1039bb1c82f726b30051df9a9003e6033c31678ba51"
       },
       "sources": [
         {
@@ -121805,17 +122407,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=NL; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=501511 ... geo=NL; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=925914"
         }
       ]
     },
     {
       "id": "R-2758",
       "fact": "money.means.NO",
-      "sought": "The means of a family in Norway: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Norway: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/NO.json",
-        "sha256": "fb15ff51a20b09b64dc30f2498dc49077d0e131caf423e2b8bba61056185bdc4"
+        "sha256": "5cd03ea4b90de68cdc14899b79a0215042c92f33f0e27deca248040d6088c0ef"
       },
       "sources": [
         {
@@ -121831,6 +122440,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_NO.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "NO;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;NOK; ... NO;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.ssb.no/api/v0/en/table/10799",
+          "title": "Statistics Norway, StatBank table 10799: Annual non-financial sector accounts. Income, expenditure and saving (NOK million), current prices (the API's json-stat2 response to a POST for Sektor 140000 and 100000, Transaksjoner i3491_ and i3291_, Tid 2023 and 2024)",
+          "read": "2026-11-03",
+          "said": "Sektor 140000 Houshold; Transaksjoner i3491_ '= Disposable income'; LPriser; 2024: 2030778 ... Sektor 100000 Resident sectors, total; Transaksjoner i3291_ '= BALANCE OF PRIMARY INCOME'; LPriser; 2024: 4560822"
         }
       ]
     },
@@ -121889,11 +122505,11 @@
     {
       "id": "R-2761",
       "fact": "money.means.NZ",
-      "sought": "The means of a family in New Zealand: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in New Zealand: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/NZ.json",
-        "sha256": "58374b7ff5ba785480f51204b1ea417bb016c2b122772202f131e04a8a311eb4"
+        "sha256": "41dccd07eb07544722ec2e03e17a4d50368a8fa184d51e60c2fb0a814ba20d7c"
       },
       "sources": [
         {
@@ -121916,6 +122532,20 @@
           "title": "Stats NZ, Household net worth statistics: Year ended June 2021 (corrected), Table 2.02",
           "read": "2026-11-03",
           "said": "Household assets and liabilities – mean value ... By net-worth quintile(1)(2)(3) ... Year ended June 2021(R) ... ($000s)(5) ... ,Currency and deposits,6,15.5,22,13.4,34,14.9,60,13.6,163,12.5,57,9.2 ... Total household assets,,69,14.3,264,10.2,599,3.8,979,2.6,3155,6.7,1014,4.6 ... Total household net worth,,-5,129.7,135,4.2,407,1.9,821,1.6,2978,7.2,868,5.5"
+        },
+        {
+          "kind": "primary",
+          "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S14_S15+S1M...B6N+B5N+B6G+B5G.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+          "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: disposable and national income (B6G, B5G)",
+          "read": "2026-11-03",
+          "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A: Annual,NZL: New Zealand,S14: Households,S1: Total economy,D: Expenditure,\"B6G: Disposable income, gross\",_Z: Not applicable,_Z: Not applicable,XDC: National currency,S: Standard valuation based on SNA/ESA,V: Current prices,N: Non transformed data,T0800: Table 0800 - Non-financial accounts by sector - annual,2023,242491,W: World,_Z: Not applicable,,F: Free (free for publication),2: Two,A: Normal value,6: Millions,NZD: New Zealand dollar ... OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A: Annual,NZL: New Zealand,S1: Total economy,S1: Total economy,D: Expenditure,\"B5G: Balance of primary incomes, gross / National income, gross\",_Z: Not applicable,_Z: Not applicable,XDC: National currency,S: Standard valuation based on SNA/ESA,V: Current prices,N: Non transformed data,T0800: Table 0800 - Non-financial accounts by sector - annual,2023,405220,W: World,_Z: Not applicable,,F: Free (free for publication),2: Two,A: Normal value,6: Millions,NZD: New Zealand dollar"
+        },
+        {
+          "kind": "primary",
+          "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S1M...P51C+B6N+B5N+B2N+B8N.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+          "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: consumption of fixed capital (P51C)",
+          "read": "2026-11-03",
+          "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A,NZL,S14,S1,D,P51C,_Z,_Z,XDC,S,V,N,T0800,2023,9533,W,N,,F,2,A,6,NZD ... OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A,NZL,S1,S1,D,P51C,_Z,_Z,XDC,S,V,N,T0800,2023,63185,W,N,,F,2,A,6,NZD"
         }
       ]
     },
@@ -121974,11 +122604,11 @@
     {
       "id": "R-2764",
       "fact": "money.means.PE",
-      "sought": "The means of a family in Peru: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Peru: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/PE.json",
-        "sha256": "aedad267e2723f8ce508ef54c1b2540518dbfb34de2762332cc1f43c173a6b17"
+        "sha256": "a126f5734733f509ff8692fb58a22426e05aa43c9cc3fec234e96dcef3038035"
       },
       "sources": [
         {
@@ -121994,6 +122624,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_PE.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "PE;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;PEN; ... PE;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Peru | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | new sol | 2008 | Western calendar year | 707,193,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=15",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Peru | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | new sol | 2008 | Western calendar year | 1,031,634,000,000"
         }
       ]
     },
@@ -122056,7 +122700,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/PH.json",
-        "sha256": "3d4e226e34942422c095be02374d2c702da4d4331f65d88a71a2af44c5b18bd9"
+        "sha256": "1abf11695cc9a9aca683591a854e5c5549ecf5c155c158d0f2633075cda3e6e4"
       },
       "sources": [
         {
@@ -122104,11 +122748,11 @@
     {
       "id": "R-2769",
       "fact": "money.means.PL",
-      "sought": "The means of a family in Poland: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Poland: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/PL.json",
-        "sha256": "9cb364f761b9b1912214a6a18a158380d4bc4ffa75841abaf7a3f902a0da0192"
+        "sha256": "c6604c8ab8613f05ab3fe0adcfa2546ddb732146bb2b0f875d6f3de71e85aedb"
       },
       "sources": [
         {
@@ -122124,6 +122768,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_PL.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "PL;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;PLN; ... PL;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=PL; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=2224273 ... geo=PL; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=3152741"
         }
       ]
     },
@@ -122189,11 +122840,11 @@
     {
       "id": "R-2772",
       "fact": "money.means.PT",
-      "sought": "The means of a family in Portugal: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Portugal: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/PT.json",
-        "sha256": "4554de4b29fea56a0aa23c9f74d44604621ae71646c48ebf6629ca515a065500"
+        "sha256": "437662af328f6768fc08c939a375ae66845ececd79cbc059e9c8776f9e3e6ce7"
       },
       "sources": [
         {
@@ -122223,6 +122874,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=PT; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=181910 ... geo=PT; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=234628"
         }
       ]
     },
@@ -122281,11 +122939,11 @@
     {
       "id": "R-2775",
       "fact": "money.means.QA",
-      "sought": "The means of a family in Qatar: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Qatar: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/QA.json",
-        "sha256": "40b2953c31ebac4bbddc6dd82736ae750fa1af0bdc17e07e6f63733e660cb767"
+        "sha256": "7303badeddb5b7fa3020e1dbf0d3a23d7933691d622d7898742f753189d9d7b8"
       },
       "sources": [
         {
@@ -122301,17 +122959,31 @@
           "title": "World Inequality Database, bulk download, WID_metadata_QA.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "QA;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;QAR; ... QA;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=11",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 100, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Qatar | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2019 | 100 | Qatar riyal | 1993 | Western calendar year | 185,158,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=16",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 100, SNA 1993",
+          "read": "2026-11-03",
+          "said": "Qatar | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2019 | 100 | Qatar riyal | 1993 | Western calendar year | 625,940,000,000"
         }
       ]
     },
     {
       "id": "R-2776",
       "fact": "money.means.RO",
-      "sought": "The means of a family in Romania: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Romania: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/RO.json",
-        "sha256": "5388de69f7310c4f9759be13b24a01561c862107ec721a56a9c3613da8d1f893"
+        "sha256": "c23805ff0033b83047b29ce6441fdaa322e857042783a21242aa6aa13968f346"
       },
       "sources": [
         {
@@ -122327,17 +122999,24 @@
           "title": "World Inequality Database, bulk download, WID_metadata_RO.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "RO;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;RON; ... RO;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=RO; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=973848 ... geo=RO; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=1454230"
         }
       ]
     },
     {
       "id": "R-2777",
       "fact": "money.means.RS",
-      "sought": "The means of a family in Serbia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Serbia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/RS.json",
-        "sha256": "8ec5c6f0a840bba6155b3ea5eaffa9a7e20a1ac500fb866f052be63d7ff5d0ac"
+        "sha256": "a51ef4f1a1703c6a88ca36978e8fc942e2edb92340eb038486803a804c816089"
       },
       "sources": [
         {
@@ -122353,6 +123032,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_RS.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "RS;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;RSD; ... RS;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=RS; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=6134726; status=p ... geo=RS; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=7717389; status=p"
         }
       ]
     },
@@ -122363,7 +123049,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/RU.json",
-        "sha256": "8b7824d94b951ca4e8537269d9fcf748d491ee2cb8172bf2c342e0c52686caf8"
+        "sha256": "eedd9ccf7e48c492f90440d00d53d5c23e79a57a2355b96958663e1f6c7f531d"
       },
       "sources": [
         {
@@ -122415,7 +123101,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SA.json",
-        "sha256": "b59a019540d231753531e517f077f2ae86df54eb3697e26e46a745ec7fb0ac79"
+        "sha256": "582106225871beea48b44b2f107628eeb1294e7db426b367b018db0485092d96"
       },
       "sources": [
         {
@@ -122515,11 +123201,11 @@
     {
       "id": "R-2784",
       "fact": "money.means.SE",
-      "sought": "The means of a family in Sweden: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Sweden: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SE.json",
-        "sha256": "b099039601c291a3145299ad687efcc38e0db7ebae9505aea1ee3dc8cfc74873"
+        "sha256": "3fcac9c7cc2386111372cfd11611722d84d9002692206416de794deafb5c5957"
       },
       "sources": [
         {
@@ -122535,6 +123221,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_SE.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "SE;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;SEK; ... SE;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=SE; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=3039500 ... geo=SE; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=5568833"
         }
       ]
     },
@@ -122567,11 +123260,11 @@
     {
       "id": "R-2786",
       "fact": "money.means.SI",
-      "sought": "The means of a family in Slovenia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Slovenia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SI.json",
-        "sha256": "934bf48dedfe6a1417304ee1644c77ea13356b9f25ae620fb588722037b88f53"
+        "sha256": "7ca2dcc2a090a1cc1a3bfbab393d7e171e96b162dd320938da26b0e8aad699cb"
       },
       "sources": [
         {
@@ -122601,17 +123294,24 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=SI; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=36300 ... geo=SI; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=54780"
         }
       ]
     },
     {
       "id": "R-2787",
       "fact": "money.means.SK",
-      "sought": "The means of a family in Slovakia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Slovakia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SK.json",
-        "sha256": "11e4f257e07b39d4e0e5ff018f4dc4a0210262679118fa49f337d648b083be36"
+        "sha256": "0d86d1af43e5e6c02b3f64ccf27c6dff3350651dd79b2855157b6a2cdc145cb2"
       },
       "sources": [
         {
@@ -122641,6 +123341,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=SK; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=75519 ... geo=SK; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=105776"
         }
       ]
     },
@@ -122673,11 +123380,11 @@
     {
       "id": "R-2789",
       "fact": "money.means.SN",
-      "sought": "The means of a family in Senegal: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Senegal: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SN.json",
-        "sha256": "9b6bf4563bf2ebac57eb0819395fae871d642bb74c1869d8fde4b69358cc9c00"
+        "sha256": "5612f70d01752acc64012f9580c5d75ee0413821d675f5be3955bc6e0987aec5"
       },
       "sources": [
         {
@@ -122693,6 +123400,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_SN.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "SN;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;XOF; ... SN;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=12",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Senegal | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 1000 | CFA franc | 2008 | Western calendar year | 12,636,096,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=17",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Senegal | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 1000 | CFA franc | 2008 | Western calendar year | 16,696,674,470,885"
         }
       ]
     },
@@ -122803,11 +123524,11 @@
     {
       "id": "R-2794",
       "fact": "money.means.SV",
-      "sought": "The means of a family in El Salvador: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in El Salvador: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/SV.json",
-        "sha256": "8a9038c7c646ff49711d26bffc7d53d39ebe855a6475a7cd37efb2dfe921cef0"
+        "sha256": "a1f1520ca281da296b8c494ee78e5a1213030bf1a949f685e2789e309a2f395a"
       },
       "sources": [
         {
@@ -122823,6 +123544,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_SV.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "SV;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;USD; ... SV;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=4",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "El Salvador | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2022 | 1000 | US dollars | 2008 | Western calendar year | 27,922,980,022"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=6",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "El Salvador | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2022 | 1000 | US dollars | 2008 | Western calendar year | 29,922,819,976"
         }
       ]
     },
@@ -122911,7 +123646,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/TD.json",
-        "sha256": "41de1e0ac03eb83de1757edd98a3f61d7d01e9543d8d6990bcc2281382a67693"
+        "sha256": "7ad5dc2646f15913ac22ed05efe3dee4927851a638e180887995a3a3acca0274"
       },
       "sources": [
         {
@@ -123067,7 +123802,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/TN.json",
-        "sha256": "fa365721bfc9f8e9dfd4d35aeee39a0b1a95989e7dacebe3db1bf96e6c9ddb35"
+        "sha256": "4c393bfd4dfbca370952a18e4ccc32ca5bd7f4c3c1456b260852cbba4faa1456"
       },
       "sources": [
         {
@@ -123115,11 +123850,11 @@
     {
       "id": "R-2806",
       "fact": "money.means.TR",
-      "sought": "The means of a family in Turkey: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Turkey: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/TR.json",
-        "sha256": "2f2de3d4b019e45dfc6c4bd5f2bfd0131d12f88442348b3f748937d4b726d28c"
+        "sha256": "afc91004f8983ea4fb507dd46d695cf9903265db8dbf75b0ab628dcca700c534"
       },
       "sources": [
         {
@@ -123135,6 +123870,13 @@
           "title": "World Inequality Database, bulk download, WID_metadata_TR.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "TR;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;TRY; ... TR;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=TR; na_item=B6G; sector=S14_S15; direct=PAID; unit=CP_MNAC; time=2024; value=26813773; status=p ... geo=TR; na_item=B5G; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=44044657; status=p"
         }
       ]
     },
@@ -123145,7 +123887,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/TT.json",
-        "sha256": "6a599b2fdca6d22bf7c7865f0e7777f407291d0a0dd51ad2a506f3b2e24f563f"
+        "sha256": "b100f82955acbed83aea15b0435bf50672081c528aa72744fefb42ba9e5b028c"
       },
       "sources": [
         {
@@ -123245,11 +123987,11 @@
     {
       "id": "R-2811",
       "fact": "money.means.UA",
-      "sought": "The means of a family in Ukraine: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Ukraine: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/UA.json",
-        "sha256": "0cf81ddd5c9e5e2de1b75293a5533d06f80c3191e62143a2fe3535b5d975abd4"
+        "sha256": "06ac324a5275999f77a787d457df9abaee0b976586a4da399815484c34aced0d"
       },
       "sources": [
         {
@@ -123265,6 +124007,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_UA.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "UA;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;UAH; ... UA;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Ukraine | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | hryvnia | 2008 | Western calendar year | 5,441,709,000,000 ... Ukraine | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | hryvnia | 2008 | Western calendar year | 130,808,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=20",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Ukraine | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | hryvnia | 2008 | Western calendar year | 7,665,460,000,000 ... Ukraine | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | hryvnia | 2008 | Western calendar year | 1,144,854,000,000"
         }
       ]
     },
@@ -123297,11 +124053,11 @@
     {
       "id": "R-2813",
       "fact": "money.means.US",
-      "sought": "The means of a family in United States: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in United States: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/US.json",
-        "sha256": "3b1f6d7fd7db89ab4217d054168242856f9609aedcd58080627840f78694e761"
+        "sha256": "246f02798010567f340908ab5520e5f5d75f6d7a9c2fe81bb1aca95e80824115"
       },
       "sources": [
         {
@@ -123359,6 +124115,20 @@
           "title": "Federal Reserve Board, 2022 Survey of Consumer Finances, Table 4, family net worth",
           "read": "2026-11-03",
           "said": "Percentile of net worth ... Less than 25,0.11,-0.54,0.5,-0.56,0.95,-0.15,0.5,-1.85,1.2,0.08,1.7,-1.33,1.31,-2.11,†,-12.14,†,-12.97,0.1,-11.9,0.31,-13.63,3.47,-5.65 ... 25–49.9,21,23.15,23.58,25.47,28.32,30.63,32.84,35.97,41,44.46,43.6,47.16,54.21,58.13,32.3,35.63,31.36,35.86,39.92,44.67,57.6,58.18,93.4,98.84 ... 50–74.9,87.3,89.72,87.9,90.75,95.12,99.63,120.76,128.7,157.9,167.42,171.1,185.85,220.59,227.74,156.8,168.09,168.23,177.71,192.05,204.06,224.2,236.28,356.9,373.78 ... 75–89.9,211.65,227.71,204.401,219.06,221.71,238.72,310.93,322.69,431.45,452.35,509.9,528.9,572.2,588.02,479.92,525.01,505.08,546.25,605,659.16,653.1,703.59,1036.3,1102.76 ... 90–100,691,1269.33,668,1252.72,684.35,1447.39,900.3,1944.46,1316.8,2765.46,1429.5,3118.72,1897.2,3974.89,1863.8,3681.88,1871.6,3962.43,2386.5,5310.88,2598.4,5710.34,3795,7771.29"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "United States | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | US dollar | 2008 | Western calendar year | 21,875,665,000,000 ... United States | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | US dollar | 2008 | Western calendar year | 1,160,813,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=21",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "United States | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | US dollar | 2008 | Western calendar year | 28,993,443,000,000 ... United States | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1000 | US dollar | 2008 | Western calendar year | 4,796,699,000,000"
         }
       ]
     },
@@ -123369,7 +124139,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/UY.json",
-        "sha256": "d2e0c0d262c6573678f8bd5a625320440034079eaa3a54892eab0cbc12fec70a"
+        "sha256": "5f5f247ea84122da26b63576b9c964e930daded5af976b9424952669ae1f5b54"
       },
       "sources": [
         {
@@ -123391,11 +124161,11 @@
     {
       "id": "R-2815",
       "fact": "money.means.UZ",
-      "sought": "The means of a family in Uzbekistan: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Uzbekistan: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/UZ.json",
-        "sha256": "481d0c3ae5e59d537d2d1919318199fb6fe892545b91d7b4cef8356563de0652"
+        "sha256": "5b55f2effe3a0deee7d6ccb49a4e4e81a093fb4cc4ee4306ff3d31a82147102f"
       },
       "sources": [
         {
@@ -123411,6 +124181,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_UZ.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "UZ;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;UZS; ... UZ;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=14",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Uzbekistan | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1000 | Uzbek sum | 2008 | Western calendar year | 947,024,763,398,465"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=21",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1000, SNA 2008",
+          "read": "2026-11-03",
+          "said": "Uzbekistan | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1000 | Uzbek sum | 2008 | Western calendar year | 1,549,780,337,387,440"
         }
       ]
     },
@@ -123447,7 +124231,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/VG.json",
-        "sha256": "3dcb245f488391c507b3baab63f9213c98b2105bd04d01a544a9a35103ba7805"
+        "sha256": "de9ad670c73a74a366575dabfb195af5045f55872cc9833ea53b6f540cdb81bd"
       },
       "sources": [
         {
@@ -123573,11 +124357,11 @@
     {
       "id": "R-2822",
       "fact": "money.means.ZA",
-      "sought": "The means of a family in South Africa: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in South Africa: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/ZA.json",
-        "sha256": "ddc053160151e9b951705fd274e7371913a0a387eeb0a58d6889e802f09f76d3"
+        "sha256": "d07f9d1bcf1c94cf91db13dc3faa32e58a63dc50397ce2539cf3333eb5b6ad53"
       },
       "sources": [
         {
@@ -123593,6 +124377,20 @@
           "title": "World Inequality Database, bulk download, WID_metadata_ZA.csv (variables ahweal992j and adiinc992j)",
           "read": "2026-11-03",
           "said": "ZA;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;ZAR; ... ZA;adiinc992j;992;j;"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A406%3Bitem_code%3A4%2C26%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=12",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.6 Households (S.14), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "South Africa | 4.6 | II.2 Secondary distribution of income account - Uses | GROSS DISPOSABLE INCOME | B.6g | 2024 | 1100 | rand | 2008 | Western calendar year | 4,820,286,000,000 ... South Africa | 4.6 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | rand | 2008 | Western calendar year | 163,775,000,000"
+        },
+        {
+          "kind": "primary",
+          "url": "https://data.un.org/Data.aspx?d=SNA&f=group_code%3A401%3Bitem_code%3A6%2C29%3Bfiscal_year%3A2019%2C2020%2C2021%2C2022%2C2023%2C2024%2C2025&v=18",
+          "title": "UNdata, National Accounts Official Country Data (United Nations Statistics Division), Table 4.1 Total Economy (S.1), series 1100, SNA 2008",
+          "read": "2026-11-03",
+          "said": "South Africa | 4.1 | II.1.2 Allocation of primary income account - Uses | GROSS NATIONAL INCOME | B.5g | 2024 | 1100 | rand | 2008 | Western calendar year | 7,207,887,000,000 ... South Africa | 4.1 | I. Production account - Uses | Less: Consumption of fixed capital | K.1 | 2024 | 1100 | rand | 2008 | Western calendar year | 1,017,156,000,000"
         }
       ]
     },
@@ -126600,11 +127398,11 @@
     {
       "id": "R-2860",
       "fact": "money.means.BG",
-      "sought": "The means of a family in Bulgaria: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Bulgaria: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/BG.json",
-        "sha256": "756e63f6fede8d11d47129e930e239c43270877e85905664ce918e13dc60ce17"
+        "sha256": "783a9617052a136a9893f74b32afebb878995f6211709772fb8da65e2704d105"
       },
       "sources": [
         {
@@ -126627,6 +127425,13 @@
           "title": "European Central Bank, press release, \"Bulgaria to join euro area on 1 January 2026\", 8 July 2025",
           "read": "2026-11-03",
           "said": "Conversion rate of lev fixed at 1.95583 = EUR 1 ... Today the Council of the European Union formally approved the accession of Bulgaria to the euro area on 1 January 2026 and determined a Bulgarian lev conversion rate of 1.95583 per euro."
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=BG; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2022; value=44859 ... geo=BG; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2022; value=71733"
         }
       ]
     },
@@ -126637,7 +127442,7 @@
       "status": "found",
       "value": {
         "file": "research/sources/money/means/CW.json",
-        "sha256": "f239ef9f14355571155e69441271b5341e4687410750d620a65360317fcd02b4"
+        "sha256": "1d324807ba5411059a032bec24dbeeb929015c6c8288aeae70ba70ae0839f614"
       },
       "sources": [
         {
@@ -126666,11 +127471,11 @@
     {
       "id": "R-2862",
       "fact": "money.means.HR",
-      "sought": "The means of a family in Croatia: average net wealth and post-tax income per adult by band of the population",
+      "sought": "The means of a family in Croatia: average net wealth and post-tax income per adult by band of the population, and its national accounts' ratio of households' disposable income to national income, from 2019 on",
       "status": "found",
       "value": {
         "file": "research/sources/money/means/HR.json",
-        "sha256": "47debeed81b5884e6dffb1922f0a489edbb94d4c075fbcd0babff0038e197318"
+        "sha256": "94073befe55a965812340573093236839ab53d6bbaab8c46c5fd07eb5d14bacf"
       },
       "sources": [
         {
@@ -126707,6 +127512,13 @@
           "title": "ECB Data Portal, DWA data structure definition and code lists (CL_DWA_GRP, CL_DWA_INSTR, CL_DWA_UNIT)",
           "read": "2026-11-03",
           "said": "Quintile 1 based on net wealth concept ... Decile 10 based on net wealth concept ... Bottom 50% based on net wealth concept ... Deposits ... Adjusted wealth (net) ... Euro; ratio to number of households"
+        },
+        {
+          "kind": "primary",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+          "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+          "read": "2026-11-03",
+          "said": "geo=HR; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=48888 ... geo=HR; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=71727"
         }
       ]
     },

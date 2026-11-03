@@ -18,7 +18,22 @@
   "p0p99": "90222.3",
   "p99p100": "1306282.8"
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Poland, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in PLN of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]).",
+ "cash": {
+  "year": 2024,
+  "currency": "PLN",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": false,
+  "disposable": {
+   "code": "B.6n",
+   "value": "2224273"
+  },
+  "national": {
+   "code": "B.5n",
+   "value": "3152741"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Poland, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in PLN of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from Eurostat's non-financial transactions (nasa_10_nf_tr), 2024: the net disposable income (B.6n) of households (S.14), 2,224,273, and net national income (B.5n) 3,152,741, in millions of the national currency, a ratio of about 0.706 (`cash`). Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -31,6 +46,12 @@
    "title": "World Inequality Database, bulk download, WID_metadata_PL.csv (variables ahweal992j and adiinc992j)",
    "read": "2026-11-03",
    "said": "PL;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;PLN; ... PL;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_nf_tr?format=JSON&lang=EN&freq=A&unit=CP_MNAC&na_item=B6N&na_item=B5N&na_item=B6G&na_item=B5G&sector=S1&sector=S14&sector=S14_S15&sinceTimePeriod=2021",
+   "title": "Eurostat, Non-financial transactions - annual data (nasa_10_nf_tr), JSON-stat API, dataset updated 2026-10-29T23:00:00+0100",
+   "read": "2026-11-03",
+   "said": "geo=PL; na_item=B6N; sector=S14; direct=PAID; unit=CP_MNAC; time=2024; value=2224273 ... geo=PL; na_item=B5N; sector=S1; direct=PAID; unit=CP_MNAC; time=2024; value=3152741"
   }
  ]
 }

@@ -51,7 +51,24 @@
    }
   ]
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Australia, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in AUD of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Savings (the owner's ruling of 2026-10-30: only what a family holds as deposits and cash): ABS, Household Income and Wealth, Australia, 2019-20 financial year (released 28 April 2022; the 2023-24 survey released no outputs, the release page says), data cube 7 \"Net worth quintiles\", Table 7.2 Household assets and liabilities, estimates in $'000, mean per household: value of accounts held with financial institutions (excluding offset accounts), value of offset accounts (deposits held against a mortgage, listed apart), mean net worth and total assets. Times 1000 here. The workbook was read with openpyxl and Table 7.2 saved as CSV. No top 1 percent. Offset accounts are liquid in practice; the lead decides whether to count them. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). Its other sources were fetched again on 2026-11-03 and said the same.",
+ "cash": {
+  "year": 2024,
+  "currency": "AUD",
+  "sector": "S.14+S.15",
+  "basis": "net",
+  "derived": true,
+  "disposable": {
+   "code": "B.6n",
+   "gross": "1715705",
+   "less": "181775"
+  },
+  "national": {
+   "code": "B.5n",
+   "gross": "2701546",
+   "less": "502537"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Australia, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in AUD of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Savings (the owner's ruling of 2026-10-30: only what a family holds as deposits and cash): ABS, Household Income and Wealth, Australia, 2019-20 financial year (released 28 April 2022; the 2023-24 survey released no outputs, the release page says), data cube 7 \"Net worth quintiles\", Table 7.2 Household assets and liabilities, estimates in $'000, mean per household: value of accounts held with financial institutions (excluding offset accounts), value of offset accounts (deposits held against a mortgage, listed apart), mean net worth and total assets. Times 1000 here. The workbook was read with openpyxl and Table 7.2 saved as CSV. No top 1 percent. Offset accounts are liquid in practice; the lead decides whether to count them. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). Its other sources were fetched again on 2026-11-03 and said the same. The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), read 2026-11-03 from the OECD's sector accounts (DSD_NASEC10@DF_TABLE14) for households and its national accounts (DSD_NAMAIN10@DF_TABLE2) for the nation, 2024: the net disposable income (B.6n) of households with the non-profit institutions serving them (S.14+S.15), 1,715,705 less 181,775 (1,533,930), and net national income (B.5n) 2,701,546 less 502,537 (2,199,009), in millions of the national currency, a ratio of about 0.698 (`cash`). Each net figure was derived as the gross less its own consumption of fixed capital (P.51c), from the same table, series and year. Households and the non-profit institutions serving them were combined: nothing narrower was published for that year. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -76,6 +93,24 @@
    "title": "ABS, Household Income and Wealth, Australia, latest release page",
    "read": "2026-11-03",
    "said": "Household Income and Wealth, Australia, 2019-20 financial year ... Outputs will not be released from the Survey of Income and Housing, 2023–24."
+  },
+  {
+   "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S14_S15+S1M...B6N+B5N+B6G+B5G.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+   "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: disposable and national income (B6G, B5G)",
+   "read": "2026-11-03",
+   "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A: Annual,AUS: Australia,S1M: Households and non-profit institutions serving households (NPISH),S1: Total economy,C: Revenue,\"B6G: Disposable income, gross\",_Z: Not applicable,_Z: Not applicable,XDC: National currency,S: Standard valuation based on SNA/ESA,V: Current prices,N: Non transformed data,T0800: Table 0800 - Non-financial accounts by sector - annual,2024,1715705,W: World,_Z: Not applicable,,F: Free (free for publication),2: Two,A: Normal value,6: Millions,AUD: Australian dollar"
+  },
+  {
+   "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE14,/A..S1+S14+S1M...P51C+B6N+B5N+B2N+B8N.......?startPeriod=2021&dimensionAtObservation=AllDimensions",
+   "title": "OECD Data Explorer, Annual non-financial accounts by institutional sector (DSD_NASEC10@DF_TABLE14), SDMX API, CSV: consumption of fixed capital (P51C)",
+   "read": "2026-11-03",
+   "said": "OECD.SDD.NAD:DSD_NASEC10@DF_TABLE14(1.1),A,AUS,S1M,S1,D,P51C,_Z,_Z,XDC,S,V,N,T0800,2024,181775,W,N,,F,2,A,6,AUD"
+  },
+  {
+   "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE2,/A..............?startPeriod=2022",
+   "title": "OECD Data Explorer, Annual national disposable income, saving and net lending/net borrowing (DSD_NAMAIN10@DF_TABLE2), SDMX API, CSV",
+   "read": "2026-11-03",
+   "said": "OECD.SDD.NAD:DSD_NAMAIN10@DF_TABLE2(2.0),A,AUS,S1,S1,B5G,_Z,_Z,_Z,XDC,V,N,T0107,2024,2701546,,F,1,A,6,AUD ... OECD.SDD.NAD:DSD_NAMAIN10@DF_TABLE2(2.0),A,AUS,S1,S1,P51C,_Z,_Z,_Z,XDC,V,N,T0107,2024,502537,,F,1,A,6,AUD"
   }
  ]
 }
