@@ -820,7 +820,10 @@
     "id": "commune",
     "where": "home",
     "speed": "standard",
-    "within": null
+    "within": {
+     "n": 1,
+     "unit": "day"
+    }
    }
   ],
   "bands": [
@@ -831,7 +834,9 @@
     },
     "from": 16
    }
-  ]
+  ],
+  "must": 16,
+  "from": 16
  },
  "BJ": {
   "document": "Carte nationale d'identité biométrique (CNIB)",
@@ -1000,16 +1005,37 @@
      "n": 6,
      "unit": "day"
     }
+   },
+   {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": {
+     "n": 6,
+     "unit": "day"
+    },
+    "renewal": true
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
     "validYears": null,
     "pay": {
-     "dzongkhag": 10000
-    }
+     "dzongkhag": 10000,
+     "renew": 10000,
+     "lost": 40000
+    },
+    "from": 15
    }
-  ]
+  ],
+  "from": 15
  },
  "BW": {
   "document": "National Identity Card (Omang)",
@@ -1332,13 +1358,21 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
     "validYears": 10,
     "pay": {
-     "office": 0
+     "office": 0,
+     "lost": 7610000
     },
     "from": 18
    }
@@ -1608,13 +1642,21 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "renewal": true
    }
   ],
   "bands": [
    {
     "validYears": 10,
     "pay": {
-     "population": 2000
+     "population": 2700,
+     "renew": 2000
     },
     "from": 18
    }
@@ -2314,15 +2356,41 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "renewal": true
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
     "validYears": 5,
     "pay": {
-     "office": 15000
+     "office": 15000,
+     "renew": 15000,
+     "lost": 15000
     },
-    "from": 15
+    "from": 15,
+    "under": 16
+   },
+   {
+    "validYears": 5,
+    "pay": {
+     "office": 0,
+     "renew": null,
+     "lost": null
+    },
+    "from": 16
    }
   ]
  },
@@ -2338,13 +2406,21 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
     "validYears": 10,
     "pay": {
-     "police": 1000
+     "police": 1000,
+     "lost": 1900
     },
     "from": 12
    }
@@ -3077,13 +3153,21 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
     "validYears": null,
     "pay": {
-     "paci": 5000
+     "paci": 5000,
+     "lost": 20000
     }
    }
   ]
@@ -3558,6 +3642,54 @@
     "pay": {
      "office": 5000
     },
+    "under": 6
+   },
+   {
+    "validYears": 6,
+    "pay": {
+     "office": 5000
+    },
+    "from": 6,
+    "under": 7
+   },
+   {
+    "validYears": 5,
+    "pay": {
+     "office": 5000
+    },
+    "from": 7,
+    "under": 8
+   },
+   {
+    "validYears": 4,
+    "pay": {
+     "office": 5000
+    },
+    "from": 8,
+    "under": 9
+   },
+   {
+    "validYears": 3,
+    "pay": {
+     "office": 5000
+    },
+    "from": 9,
+    "under": 10
+   },
+   {
+    "validYears": 2,
+    "pay": {
+     "office": 5000
+    },
+    "from": 10,
+    "under": 11
+   },
+   {
+    "validYears": 1,
+    "pay": {
+     "office": 5000
+    },
+    "from": 11,
     "under": 12
    },
    {
@@ -3567,7 +3699,8 @@
     },
     "from": 12
    }
-  ]
+  ],
+  "must": 16
  },
  "MC": {
   "document": "carte d'identité monégasque",
@@ -3898,7 +4031,7 @@
   ]
  },
  "MH": {
-  "document": "National identification card",
+  "document": "Identity card",
   "currency": "USD",
   "routes": [
    {
@@ -3958,24 +4091,28 @@
   ]
  },
  "ML": {
-  "document": "Carte nationale d'identité",
+  "document": "Carte d'identité biométrique sécurisée",
   "currency": "XOF",
   "routes": [
    {
-    "id": "police",
+    "id": "centre",
     "where": "home",
     "speed": "standard",
-    "within": {
-     "n": 24,
-     "unit": "hour"
-    }
+    "within": null
+   },
+   {
+    "id": "mission",
+    "where": "abroad",
+    "speed": "standard",
+    "within": null
    }
   ],
   "bands": [
    {
-    "validYears": 3,
+    "validYears": null,
     "pay": {
-     "police": 1700
+     "centre": null,
+     "mission": null
     },
     "from": 18
    }
@@ -4252,13 +4389,38 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "renewal": true
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
+    "validYears": null,
+    "pay": {
+     "dnr": 0,
+     "renew": null,
+     "lost": null
+    },
+    "under": 10
+   },
+   {
     "validYears": 5,
     "pay": {
-     "dnr": null
+     "dnr": 0,
+     "renew": null,
+     "lost": null
     },
     "from": 10,
     "under": 40
@@ -4266,7 +4428,9 @@
    {
     "validYears": 10,
     "pay": {
-     "dnr": null
+     "dnr": 0,
+     "renew": null,
+     "lost": null
     },
     "from": 40
    }
@@ -5495,10 +5659,12 @@
    {
     "validYears": null,
     "pay": {
-     "ncra": null
-    }
+     "ncra": 14000
+    },
+    "from": 12
    }
-  ]
+  ],
+  "from": 12
  },
  "SM": {
   "document": "carta d'identità",
@@ -5626,21 +5792,59 @@
     "id": "registos",
     "where": "home",
     "speed": "standard",
-    "within": null
+    "within": {
+     "n": 15,
+     "unit": "day"
+    }
+   },
+   {
+    "id": "urgent",
+    "where": "home",
+    "speed": "urgent",
+    "within": {
+     "n": 3,
+     "unit": "day"
+    }
+   },
+   {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": {
+     "n": 15,
+     "unit": "day"
+    },
+    "renewal": true
+   },
+   {
+    "id": "renew-urgent",
+    "where": "home",
+    "speed": "urgent",
+    "within": {
+     "n": 3,
+     "unit": "day"
+    },
+    "renewal": true
    }
   ],
   "bands": [
    {
     "validYears": null,
     "pay": {
-     "registos": null
+     "registos": 13500,
+     "urgent": 20250,
+     "renew": 12500,
+     "renew-urgent": 18500
     },
     "under": 18
    },
    {
     "validYears": null,
     "pay": {
-     "registos": 0
+     "registos": 0,
+     "urgent": 20250,
+     "renew": 12500,
+     "renew-urgent": 18500
     },
     "from": 18,
     "under": 19
@@ -5648,7 +5852,10 @@
    {
     "validYears": null,
     "pay": {
-     "registos": null
+     "registos": 13500,
+     "urgent": 20250,
+     "renew": 12500,
+     "renew-urgent": 18500
     },
     "from": 19
    }
@@ -5665,10 +5872,38 @@
     "within": null
    },
    {
+    "id": "renew",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "renewal": true
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
+   },
+   {
     "id": "abroad",
     "where": "abroad",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "renew-abroad",
+    "where": "abroad",
+    "speed": "standard",
+    "within": null,
+    "renewal": true
+   },
+   {
+    "id": "lost-abroad",
+    "where": "abroad",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
@@ -5676,7 +5911,11 @@
     "validYears": null,
     "pay": {
      "duicentro": 0,
-     "abroad": 3500
+     "renew": 1031,
+     "lost": 1031,
+     "abroad": 3500,
+     "renew-abroad": 3500,
+     "lost-abroad": 3500
     }
    }
   ]
@@ -5951,16 +6190,27 @@
     "where": "home",
     "speed": "standard",
     "within": null
+   },
+   {
+    "id": "lost",
+    "where": "home",
+    "speed": "standard",
+    "within": null,
+    "replacement": true
    }
   ],
   "bands": [
    {
-    "validYears": null,
+    "validYears": 5,
     "pay": {
-     "nico": null
-    }
+     "nico": 0,
+     "lost": 5000
+    },
+    "from": 14
    }
-  ]
+  ],
+  "must": 14,
+  "from": 14
  },
  "TR": {
   "document": "Türkiye Cumhuriyeti kimlik kartı",
@@ -6115,15 +6365,7 @@
     "validYears": null,
     "pay": {
      "office": 0
-    },
-    "under": 18
-   },
-   {
-    "validYears": null,
-    "pay": {
-     "office": 0
-    },
-    "from": 18
+    }
    }
   ]
  },
@@ -6431,7 +6673,10 @@
     "id": "civil-registry",
     "where": "home",
     "speed": "standard",
-    "within": null
+    "within": {
+     "n": 3,
+     "unit": "day"
+    }
    }
   ],
   "bands": [
@@ -6442,7 +6687,9 @@
     },
     "from": 16
    }
-  ]
+  ],
+  "must": 16,
+  "from": 16
  },
  "YT": {
   "issuedBy": "FR"

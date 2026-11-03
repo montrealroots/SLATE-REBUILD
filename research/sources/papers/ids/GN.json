@@ -10,19 +10,48 @@
    "speed": "standard",
    "within": null,
    "label": "at an identification office"
+  },
+  {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a renewal on expiry, at an identification office"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a duplicate after a loss, theft or damage, at an identification office"
   }
  ],
  "cards": [
   {
-   "for": "from 15",
+   "for": "15, at the old tariff",
    "from": 15,
+   "under": 16,
    "validYears": 5,
    "pay": {
-    "office": "15000"
+    "office": "15000",
+    "renew": "15000",
+    "lost": "15000"
+   }
+  },
+  {
+   "for": "16 and over",
+   "from": 16,
+   "validYears": 5,
+   "pay": {
+    "office": "0",
+    "renew": null,
+    "lost": null
    }
   }
  ],
- "note": "The Immigration and Refugee Board of Canada's response (2011-2014), quoting Decree D/95/254/PRG/SGG of 1995 and the 2008 order on fees: the card is compulsory from 15 (art. 3) and valid five years, renewable (art. 2); a stamp duty of GNF 5,000 and an issuing fee of GNF 10,000, summed here. These are the latest terms found; the time isn't stated.",
+ "note": "The President signed a decree on 2 February 2025 making the biometric national identity card free (the Council of Ministers' minutes of 27 February 2025, on the Government's site, read 2026-11-03). The ministries' communiqué, as Guinéenews reported it (27 March 2025), limits it to a first request from 16: a renewal on expiry, a duplicate after a loss, theft or damage, and a child under 16 still pay, a child at the old tariff. Until then a first card was held at GNF 15,000 at every age, from Decree D/95/254/PRG/SGG of 1995 and the 2008 order on fees as the IRB of Canada's response quoted them (a stamp duty of 5,000 and an issuing fee of 10,000, summed); that now holds only at 15. What a renewal or a duplicate costs from 16 isn't stated, so it's null. The decree of 2025 itself wasn't found; the card is compulsory from 15 (art. 3) and valid five years (art. 2) in the 1995 decree, held still; the time isn't stated.",
  "sources": [
   {
    "url": "https://www.ecoi.net/en/document/1146298.html",
@@ -31,6 +60,21 @@
    "kind": "secondary",
    "quotes": "https://irb-cisr.gc.ca/",
    "said": "The national identity card is mandatory for all citizens from fifteen (15) years of age (Guinea 1995, art. 3) The national identity card is valid for a renewable term of five (5) years and is issued only to Guinean nationals (ibid., Art. 2). ... Duty on stamp to be applied = 5,000 Guinean francs (GNF) [C$0.80] Fee for issuing the national identity card = 10,000 GNF [C$1.60]"
+  },
+  {
+   "url": "https://gouvernement.gov.gn/compte-rendu-de-la-session-ordinaire-du-conseil-des-ministres-du-jeudi-27-fevrier-2025/",
+   "title": "Gouvernement guinéen, Compte rendu de la session ordinaire du Conseil des ministres du jeudi 27 février 2025",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Par ailleurs, le Président de la République a rappelé que, le 2 février 2025, il a signé un décret pour la gratuité de la carte nationale d’identité biométrique . Dans ce cadre, il a décidé personnellement de financer cette gratuité sur son budget de souveraineté."
+  },
+  {
+   "url": "https://guineenews.org/2025/03/27/carte-didentite-gratuite-en-guinee-ce-quil-faut-savoir-sur-les-nouvelles-regles/",
+   "title": "Guinéenews, Carte d’identité gratuite en Guinée pour la première demande (27 mars 2025)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://gouvernement.gov.gn/",
+   "said": "Désormais, toute première demande de CNI biométrique sera gratuite pour les citoyens guinéens âgés de 16 ans et plus. ... la gratuité ne s’applique pas: – Aux demandes de renouvellement (en cas d’expiration de la carte) ; – Aux duplicatas (en cas de perte, vol ou détérioration) ; – Aux mineurs de moins de 16 ans, qui restent soumis aux anciennes conditions tarifaires."
   }
  ]
 }

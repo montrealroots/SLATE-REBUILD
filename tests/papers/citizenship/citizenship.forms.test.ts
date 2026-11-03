@@ -30,6 +30,8 @@ describe('the citizenship rules, at birth and on naturalising', () => {
     expect(naturalisation('GU')).toStrictEqual({ years: 5, renounce: null });
     expect([naturalisation('CN'), naturalisation('SJ'), naturalisation('KP')]).toEqual(['none', 'none', undefined]);
     expect(naturalise(['US'], 'GB')).toEqual({ held: ['US', 'GB'], unsure: [] });
+    // Where a state's renunciation isn't known, every citizenship kept is unsure.
+    expect(naturalise(['GB'], 'US')).toEqual({ held: ['GB', 'US'], unsure: ['GB'] });
   });
 
   it('give how citizenship comes at birth, a territory its state\'s', () => {

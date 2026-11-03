@@ -190,6 +190,10 @@ describe('the ages read from the person research', () => {
     expect(ages['TZ']).toStrictEqual({ majority: 18, work: { from: 14, performers: 'barred' } });
     expect(ages['TD']).toStrictEqual({ majority: 21, work: { from: 14, performers: 'barred' } });
     expect([ages['FM'], ages['SO'], ages['SB']]).toStrictEqual([{ majority: 18, work: null }, { majority: 18, work: null }, { majority: null, work: { from: 12, performers: 'barred' } }]);
+    // The second pass of 2026-11-03: Laos's Ministerial Agreement No. 4677 of 2023, in the Gazette from 10 July 2026, lists
+    // television, radio and artistic performances among the light work open from twelve; a younger performer was held
+    // barred below fourteen, on the Labour Law's article 101 alone, until then.
+    expect(ages['LA']?.work).toStrictEqual({ from: 14, performers: 'permit', permit: 'Light work listed by Ministerial Agreement No. 4677 of 2023 (no individual permit)', permitFrom: 12 });
     expect(READINGS['CU']).toBeUndefined();
     expect(Object.keys(ages).length).toBe(225);
   });

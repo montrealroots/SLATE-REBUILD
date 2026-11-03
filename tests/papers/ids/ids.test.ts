@@ -32,6 +32,12 @@ describe('the identity documents', () => {
     expect(idOffers('SI', 70)?.[0]?.permanent).toBe(true);
     expect(brief(idOffers('SI', 69))?.[0]).toEqual(['unit', 3055, 10, undefined]);
     expect(brief(idOffers('SI', 11))?.[0]).toEqual(['unit', 2520, 5, undefined]);
+    // Morocco (decree 2.20.521, art. 1): a child's card runs at most seven years and never past the day before 12, held
+    // in whole years by the age applied at; ten years from 12; held from 16 (law 04.20, art. 2).
+    expect([4, 5, 6, 9, 11, 12].map((a) => brief(idOffers('MA', a))?.[0])).toEqual([['office', 5000, 7, undefined], ['office', 5000, 7, undefined], ['office', 5000, 6, undefined], ['office', 5000, 3, undefined], ['office', 5000, 1, undefined], ['office', 7500, 10, undefined]]);
+    expect([mustHoldId('MA', 15), mustHoldId('MA', 16), mustHoldId('TO', 13), mustHoldId('TO', 14), mustHoldId('YE', 16)]).toEqual([false, true, false, true, true]);
+    // Tonga (National Identity Card Act 2010): from 14, five years, free, and $50 for a lost card.
+    expect([idOffers('TO', 13), brief(idOffers('TO', 14)), brief(idOffers('TO', 30, 'replacement'))]).toEqual([[], [['nico', 0, 5, undefined]], [['lost', 5000, 5, undefined]]]);
     // Spain: from 70 the term is a date the office sets, which the game doesn't know.
     expect(brief(idOffers('ES', 70))).toEqual([['police', 1200, null, undefined]]);
     // The United Kingdom and the United States issue none; Guam's people are the United States', so hold none.
@@ -59,6 +65,13 @@ describe('the identity documents', () => {
     // Mongolia: 18,300 tögrög at 16 and again at 25, in 5 working days in the capital; 33,300 to reissue.
     expect(brief(idOffers('MN', 25))?.[0]).toEqual(['capital', 1830000, null, undefined]);
     expect(brief(idOffers('MN', 30, 'replacement'))?.[2]).toEqual(['mission-lost', 3330000, null, undefined]);
+    // Guinea: the decree of 2 February 2025 makes a first card free from 16; at 15 it's the old GNF 15,000, and a renewal
+    // from 16 is priced at an amount not stated.
+    expect([brief(idOffers('GN', 15)), brief(idOffers('GN', 16)), brief(idOffers('GN', 30, 'renewal'))]).toEqual([[['office', 15000, 5, undefined]], [['office', 0, 5, undefined]], [['renew', null, 5, undefined]]]);
+    // São Tomé (the DGRN's page): a first card STN 135 in 15 days or 202.50 in 3; a renewal 125 or 185; free at 18.
+    expect([brief(idOffers('ST', 30)), brief(idOffers('ST', 18))?.[0], brief(idOffers('ST', 30, 'renewal'))]).toEqual([[['registos', 13500, null, undefined], ['urgent', 20250, null, undefined]], ['registos', 0, null, undefined], [['renew', 12500, null, undefined], ['renew-urgent', 18500, null, undefined]]]);
+    // Djibouti (the Population Branch, as the IRB read it): DJF 2,700 for a first card and 2,000 to renew it.
+    expect([brief(idOffers('DJ', 18)), brief(idOffers('DJ', 30, 'renewal'))]).toEqual([[['population', 2700, 10, undefined]], [['renew', 2000, 10, undefined]]]);
   });
 
   it("tell the player what the game doesn't know", () => {

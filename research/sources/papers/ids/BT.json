@@ -13,18 +13,41 @@
     "unit": "day"
    },
    "label": "in person at the civil registration office of one's dzongkhag: the card printed in Thimphu and received in 5 to 6 days"
+  },
+  {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 6,
+    "unit": "day"
+   },
+   "renewal": true,
+   "label": "a renewal within six months of expiry, at one's dzongkhag, on production of the old card"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a card replacing a lost one, at one's dzongkhag"
   }
  ],
  "cards": [
   {
-   "for": "a first card, or a renewal within six months of expiry",
+   "for": "15 and over",
+   "from": 15,
    "validYears": null,
    "pay": {
-    "dzongkhag": "100"
+    "dzongkhag": "100",
+    "renew": "100",
+    "lost": "400"
    }
   }
  ],
- "note": "The Bhutanese (12 September 2015), quoting an official of the Department of Civil Registration and Census: Nu 100 for a first card and for renewing one whose expiry is six months away or less; Nu 300 for renewing earlier, or for a change of image, on production of the old card; Nu 400 for a lost card (these later cases aren't modelled). Renewal is done in one's own dzongkhag, the card printed in Thimphu reaching the dzongkhag in 5 to 6 days, and the applicant must come in person. The age at which a first card is due and the card's term aren't given, so every age is offered and the term is null; the Department's own guidelines could not be fetched (the host reset every connection).",
+ "note": "The Department of Civil Registration and Census's guideline on new and replacement cards (2025, for citizens residing abroad, which the Department also links as its fee structure; read 2026-11-03 from a Common Crawl capture, the live site resetting the connection): Nu 100 for a first card and for renewing one whose validity is six months or less, on production of the old card; Nu 300 for one damaged, or for a change of image or particulars, earlier (not modelled); Nu 400 for a lost card, held as the replacement route. Its first-card categories start at 15, so the card is issued from 15; until then every age was offered. The Bhutanese (12 September 2015), quoting a Department official, gives the same fees, and that the card, printed in Thimphu, reaches one's dzongkhag in 5 to 6 days, which still stands on it. The 4G card launched on 7 August 2025 replaces a 3G card only on its expiry (the Department, 11 August 2025). The card's term isn't given, so it's null.",
+ "from": 15,
  "sources": [
   {
    "url": "https://thebhutanese.bt/cid-processing-made-more-flexible-for-citizens/",
@@ -33,6 +56,20 @@
    "kind": "secondary",
    "quotes": "https://dcrc.moha.gov.bt/",
    "said": "Instead, they can now renew the CID from their own dzongkhags. ... However, people in the dzongkhags have to wait for 5 to 6 days to receive the printed CID cards from Thimphu, as the only CID printing machine is located in Thimphu. ... A person has to pay Nu 100 for fresh/processing of CID cards for the first time and Nu 100 for renewal of CID cards if the date of expiry of the earlier issued CID card is less than or equal to six months. ... If the expiry date of earlier issued CID cards has duration more than six months then the person has to pay Nu 300,"
+  },
+  {
+   "url": "https://dcrc.moha.gov.bt/wp-content/uploads/2025/10/Revised_Guidelines_for_Processing_New__Replacement_of_CID_card.pdf",
+   "title": "Department of Civil Registration and Census, Guideline for Processing New and Replacement of Citizenship Identity card for individuals residing abroad-2025 (Common Crawl capture CC-MAIN-2026-30, 17 July 2026; the live site resets the connection)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "1. New CID card (first-time) For individuals aged 15-17 years shall be required to submit the following documents: ... 3. Card fees The detailed fee structure is as outlined below: Sl. No. Service Type Fees Card Category Remarks 1. New Nu. 100 First-time card issuance. 2. Renewal Nu. 100 Validity of the Citizenship Identity/Special Residence Card has expired or is about to expire. For cards with a validity period of 6 months or less and upon production of the old card. 3. Damaged Nu. 300 ... 6. Lost Nu. 400 Lost Card/could not be traced"
+  },
+  {
+   "url": "https://dcrc.moha.gov.bt/index.php/2025/08/11/launch-of-the-4th-generation-citizenship-identity-card/",
+   "title": "Department of Civil Registration and Census, Launch of the 4th Generation Citizenship Identity Card (11 August 2025; Common Crawl capture CC-MAIN-2026-30)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "On the auspicious day of 7th August 2025 ... the Department of Civil Registration and Census, Ministry of Home Affairs, officially launched the 4th Generation Citizenship Identity Card (4G CID). ... The Department affirms that existing 3G CID cards remain valid, and the 4G CID cards will be issued only upon expiry of current cards."
   }
  ]
 }

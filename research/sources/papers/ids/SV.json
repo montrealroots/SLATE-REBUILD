@@ -12,11 +12,43 @@
    "label": "in person at a DUIcentro in El Salvador"
   },
   {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a renewal in person at a DUIcentro in El Salvador"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a replacement in person at a DUIcentro in El Salvador"
+  },
+  {
    "id": "abroad",
    "where": "abroad",
    "speed": "standard",
    "within": null,
    "label": "at an RNPN office abroad"
+  },
+  {
+   "id": "renew-abroad",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a renewal at an RNPN office abroad"
+  },
+  {
+   "id": "lost-abroad",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a replacement at an RNPN office abroad"
   }
  ],
  "cards": [
@@ -25,11 +57,15 @@
    "validYears": null,
    "pay": {
     "duicentro": "0",
-    "abroad": "35"
+    "renew": "10.31",
+    "lost": "10.31",
+    "abroad": "35",
+    "renew-abroad": "35",
+    "lost-abroad": "35"
    }
   }
  ],
- "note": "The RNPN's fees as Diario El Mundo reported them: the DUI costs USD 10.31 in El Salvador and USD 35 abroad, for a renewal, replacement or update; a first issue is free (and must be in person, El Diario de Hoy reports, for the fingerprints). A first issue abroad isn't free: Diario El Mundo's list of the RNPN's requirements for the DUI abroad (13 September 2024) has a first issue pay 35 dollars, as every procedure abroad does, so the route abroad is 35. The DUI's term, the age it's issued from and the time aren't modelled; the RNPN's own site (dui.sv) refused this session.",
+ "note": "The RNPN's own page on the DUI at home (read 2026-11-03): a first issue in the country is free; a renewal, a replacement or a change is paid by a bank receipt of USD 10.31, held as the renewal and replacement routes at home (a change isn't modelled). Abroad every procedure costs USD 35, a first issue included (Diario El Mundo's list of the RNPN's requirements, 13 September 2024); the RNPN's page for the DUI abroad (dui.sv/exterior) answered a Cloudflare block, so the 35 still stands on the press. A first issue must be in person, El Diario de Hoy reports, for the fingerprints. The DUI's term, the age it's issued from and the time aren't modelled.",
  "sources": [
   {
    "url": "https://diario.elmundo.sv/politica/estos-son-los-43-lugares-para-tramitar-el-dui-en-el-salvador-y-en-el-extranjero",
@@ -54,6 +90,13 @@
    "kind": "secondary",
    "quotes": "https://www.rnpn.gob.sv/",
    "said": "Cada trámite tiene un costo de $35 para los connacionales en el extranjero. En el territorio nacional tiene un precio de $10.31. ... Emisiones por primera vez: Pago de $35. Partida de nacimiento original."
+  },
+  {
+   "url": "https://www.rnpn.gob.sv/servicios/servicio-de-dui-a-domicilio/",
+   "title": "Registro Nacional de las Personas Naturales (RNPN), Servicio de DUI a domicilio",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "El trámite por primera vez, gratis en el país, es indispensable la partida de nacimiento reciente, para la renovación, reposición y modificación se debe anexar el recibo cancelado previamente en el banco por $10.31. ... PRIMERA VEZ ● Emisión de DUI por primera vez GRATIS ... RENOVACIÓN ● Recibo de pago en banco por $10.31. REPOSICIÓN ● Recibo de pago en banco por $10.31."
   }
  ]
 }

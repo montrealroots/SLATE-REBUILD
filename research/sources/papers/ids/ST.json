@@ -8,8 +8,43 @@
    "id": "registos",
    "where": "home",
    "speed": "standard",
-   "within": null,
-   "label": "at the Direção-Geral dos Registos e Notariado or its brigades (issued on the spot in Príncipe)"
+   "within": {
+    "n": 15,
+    "unit": "day"
+   },
+   "label": "a first card, normal: within 15 days, at the Direção-Geral dos Registos e Notariado or its brigades (issued on the spot in Príncipe)"
+  },
+  {
+   "id": "urgent",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 3,
+    "unit": "day"
+   },
+   "label": "a first card, very urgent: within 3 days"
+  },
+  {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 15,
+    "unit": "day"
+   },
+   "renewal": true,
+   "label": "a renewal, normal: within 15 days, on the old card"
+  },
+  {
+   "id": "renew-urgent",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 3,
+    "unit": "day"
+   },
+   "renewal": true,
+   "label": "a renewal, very urgent: within 3 days, on the old card"
   }
  ],
  "cards": [
@@ -18,7 +53,10 @@
    "under": 18,
    "validYears": null,
    "pay": {
-    "registos": null
+    "registos": "135",
+    "urgent": "202.50",
+    "renew": "125",
+    "renew-urgent": "185"
    }
   },
   {
@@ -27,7 +65,10 @@
    "under": 19,
    "validYears": null,
    "pay": {
-    "registos": "0"
+    "registos": "0",
+    "urgent": "202.50",
+    "renew": "125",
+    "renew-urgent": "185"
    }
   },
   {
@@ -35,11 +76,14 @@
    "from": 19,
    "validYears": null,
    "pay": {
-    "registos": null
+    "registos": "135",
+    "urgent": "202.50",
+    "renew": "125",
+    "renew-urgent": "185"
    }
   }
  ],
- "note": "The Bilhete de Identidade is issued by the Direção-Geral dos Registos e Notariado; since January 2026 a campaign issues it free to every citizen reaching majority that year (Téla Nón, 22 January 2026), modelled as free at 18. Since March 2024 it is issued on the spot in the autonomous region of Príncipe (Téla Nón, 12 March 2024). The ordinary fee, the card's term and the time on São Tomé weren't found. Tried again 2026-10-30: a search in Portuguese for the card's price in dobras found nothing on it; the fee stays null.",
+ "note": "The Direção-Geral dos Registos e do Notariado's own page on its Centro de Identificação Civil e Criminal (read 2026-11-03): a first Bilhete de Identidade costs STN 135.00 (normal, 15 days) or 202.50 (very urgent, 3 days); a renewal, on the old card, 125.00 or 185.00; its questions page gives 205.0 for the very urgent first card, a discrepancy on the institution's own site, and the fee page's 202.50 is held. The 2017 table of fees (Despacho Conjunto 04/2017, in dobras before the 2018 redenomination) is older and isn't held. Until then the ordinary fee and the time on São Tomé were null. Since January 2026 a campaign issues the card free to every citizen reaching majority that year (Téla Nón, 22 January 2026), modelled as free at 18 the normal way; since March 2024 it is issued on the spot in Príncipe (Téla Nón, 12 March 2024). A replacement isn't priced apart on the page, so it's offered as a first card is; the card's term wasn't found.",
  "sources": [
   {
    "url": "https://www.telanon.info/sociedade/2026/01/22/51507/campanha-de-atribuicao-gratuita-do-bilhete-de-identidade-iniciou-se-no-ilheu-das-rolas-e-decorre-em-porto-alegre/",
@@ -56,6 +100,27 @@
    "kind": "secondary",
    "quotes": "https://www.gov.st/",
    "said": "O bilhete de identidade é o documento que identifica o cidadão em São Tomé e Príncipe. Esse importante documento passa a ser emitido também na região autónoma do Príncipe. ... A partir de agora a situação é outra, o bilhete de identidade é emitido na região de forma instantânea."
+  },
+  {
+   "url": "https://dgrn.gov.st/cicc_cid.php",
+   "title": "Direção-Geral dos Registos e do Notariado, Centro de Identificação Civil e Criminal (CICC)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Bilhete de Identidade 1ª via O que é necessário? 2 fotos tipo passe; Cédula pessoal ou boletim de nascimento; Depósito feito na conta n.º 1294068/101 – Registo Civil; Modaliade: 135,00 Dbs (normal-15 dias) 202,50 Dbs (muito urgente-3 dias) Renovação O que é necessário? BI anterior; 2 Fotos tipo passe; Depósito feito na conta n.º 1656549 – CICC; Modaliade: 125,00 Dbs (normal-15 dias), 185,00 Dbs (muito urgente-3 dias)"
+  },
+  {
+   "url": "https://dgrn.gov.st/faq.php",
+   "title": "Direção-Geral dos Registos e do Notariado, Perguntas frequentes",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Quais são os documentos necessários para pedir a 1ª via do Bilhete de Identidade? 2 fotos; Cédula pessoal ou boletim de nascimento; Talão de depósito na conta N:1294068; Valor:135 DBS (normal-15 dias) ou 205.0 dbs (muito urgente-3 dias)"
+  },
+  {
+   "url": "https://dgrn.gov.st/leis/Lei/3_tabela_de_emolumentos_da_DGRN.pdf",
+   "title": "Diário da República n.º 3, 19 January 2017: Despacho Conjunto n.º 04/2017, Tabela de Emolumentos de Identificação Civil e Criminal (on the DGRN's site)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "a) Pela concessão, renovação, passagem da segunda via, substituição e averbamento de bilhete de identidade – Dbs. 100.000,00; b) Pela taxa de urgência, quando requerida pelo interessado – Dbs. 130.000,00; c) Pela taxa de muito urgente, quando requerida pelo interessado – Dbs. 160.000,00; d) Por cada conjunto de impressos destinados a emissão de Bilhete de Identidade – Dbs.15.000,00"
   }
  ]
 }

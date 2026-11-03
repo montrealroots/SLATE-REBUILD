@@ -8,8 +8,11 @@
    "id": "commune",
    "where": "home",
    "speed": "standard",
-   "within": null,
-   "label": "in person at the commune of residence"
+   "within": {
+    "n": 1,
+    "unit": "day"
+   },
+   "label": "in person at the town hall or commune office: the same day or the next"
   }
  ],
  "cards": [
@@ -22,15 +25,16 @@
    }
   }
  ],
- "note": "The Immigration and Refugee Board of Canada's response (January 2020): the CNI is compulsory from 16 and issued to every Burundian of 16 or more; the Isôko information portal gives its fee as 500 Burundian francs. The card's term and the time aren't stated.",
+ "note": "Isôko, the state's portal of administrative procedures (isoko.gov.bi, served over plain http; read 2026-11-03): the CNI is compulsory and issued to every Burundian from 16; it costs 500 Burundian francs at the town hall or commune office, and is ready the same day or the next, held as within a day. Until then the entry stood on the IRB of Canada's response (2020) quoting the portal, which gave no time, so the time was null. The card's term isn't stated.",
+ "must": 16,
+ "from": 16,
  "sources": [
   {
-   "url": "https://www.ecoi.net/en/document/2027841.html",
-   "title": "Immigration and Refugee Board of Canada, Burundi: Requirements and procedure to obtain or replace a national identity card (2016-January 2020), on ecoi.net",
+   "url": "http://isoko.gov.bi/?procedures=fichier-national-de-lidentification-carte-nationale-didentite/",
+   "title": "Isôko, portail d'informations sur les procédures administratives (Ministère de la Fonction publique, du Travail et de l'Emploi), Fichier National de l'Identification/Carte Nationale d'Identité",
    "read": "2026-11-03",
-   "kind": "secondary",
-   "quotes": "https://irb-cisr.gc.ca/",
-   "said": "According to the Isôko information portal, the fee for a CNI is 500 Burundian francs [approximately C$0.35] (Burundi n.d.a). ... the CNI is issued to all Burundians who are at least 16 years old, upon presentation of the required documents"
+   "kind": "primary",
+   "said": "La carte nationale d’identité est un document obligatoire délivré à tous les citoyens Burundais à partir de l’âge de 16 ans. ... Délais de Traitement Jour même / le lendemain Frais à Payer 500 FBU Lieu de Dépôt Mairie / Bureau communal"
   }
  ]
 }

@@ -9,7 +9,15 @@
    "where": "home",
    "speed": "standard",
    "within": null,
-   "label": "through PACI, the fee payable on its website"
+   "label": "through PACI: online, on the Sahel app or in person, the fee paid on PACI's site or the app"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "replacing a lost or damaged card, through PACI"
   }
  ],
  "cards": [
@@ -17,19 +25,33 @@
    "for": "anyone",
    "validYears": null,
    "pay": {
-    "paci": "5"
+    "paci": "5",
+    "lost": "20"
    }
   }
  ],
- "note": "Kuwait Times (30 March 2016), quoting PACI's director: the civil ID fee is KD 5, up from KD 2, and reissuing a lost or damaged card KD 20, payable online on PACI's website. No later change was found (the Government's e-services pages refuse this client). The card's term, the age at which it is due and the time weren't read.",
+ "note": "PACI's own applications guide (read 2026-11-03): renewing a Kuwaiti's card and completing a newborn's record each cost KD 5, and a card lost or damaged KD 20, held as the replacement route, paid on PACI's site or the Sahel app; holders with a moderate or severe disability are exempt from the issue and renewal fees (not modelled). Until then the entry stood on Kuwait Times (30 March 2016), quoting PACI's director, which gave the same KD 5 and KD 20 but left the replacement unmodelled. The card's term, the age at which it is due and the time weren't read.",
  "sources": [
   {
-   "url": "https://kuwaittimes.com/civil-id-fee-raised-kd-2-kd-5",
-   "title": "Kuwait Times, Civil ID fee raised from 'KD 2 to KD 5' (30 March 2016)",
+   "url": "https://services.paci.gov.kw/applications-guide/detail/-kuwaiti-card-renewal/1",
+   "title": "Public Authority for Civil Information, Applications guide: تجديد بطاقة كويتي (renewing a Kuwaiti's card)",
    "read": "2026-11-03",
-   "kind": "secondary",
-   "quotes": "https://www.paci.gov.kw/",
-   "said": "KUWAIT: The Public Authority of Civil Information (PACI)’s director Musaed Al-Assoussi said that the new civil ID fees would be in effect from Sunday and that the fee would be KD 5 instead of KD 2. ... Al-Assoussi added that the decision includes increasing the fees re-issue in cases of loss or damage from KD 10 to 20. The civil ID fees could be paid online at the PACI’s website."
+   "kind": "primary",
+   "said": "طريقة الوصول للخدمة من خلال تطبيق سهل أو الخدمات الإلكترونية المتوفرة على موقع الهيئة الإلكتروني www.paci.gov.kw أو الحضور شخصيا ... رسوم الخدمة 5 دنانير رسوم تدفع قيمتها عن طريق موقع الهيئة أو تطبيق سهل. ملاحظة يعفى ذوي الإعاقة المتوسطة والشديدة من رسوم إصدار وتجديد البطاقة المدنية"
+  },
+  {
+   "url": "https://services.paci.gov.kw/applications-guide/detail/newborn-registration/4",
+   "title": "PACI, Applications guide: استكمال بيانات مولود كويتي (completing a Kuwaiti newborn's record)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "تسجيل المولود من خلال تطبيق سهل أو الخدمات الإلكترونية ... رسوم الخدمة 5 دنانير رسوم خدمة تدفع قيمتها عن طريق موقع الهيئة أو تطبيق سهل."
+  },
+  {
+   "url": "https://services.paci.gov.kw/applications-guide/detail/lost-card/21",
+   "title": "PACI, Applications guide: بدل فاقد / تالف (كويتي) (lost or damaged card)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "رسوم الخدمة 20 دينار رسوم تدفع قيمتها عن طريق موقع الهيئة أو تطبيق سهل."
   }
  ]
 }

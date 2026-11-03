@@ -109,7 +109,14 @@ describe('work', () => {
     expect([work('US', 'BW'), work('FR', 'CF'), work('EG', 'LY')]).toStrictEqual([
       { right: 'permit', route: 'Work permit (Employment of Non-Citizens Act), with the residence permit' },
       { right: 'permit', route: "Visa du contrat de travail (the Minister in charge of Employment's visa on the contract or letter of engagement of a non-Central African worker; Code du travail, loi n° 09.004, art. 100)" },
-      { right: 'permit', route: 'Permit for recruiting foreign labour (Ministry of Labour and Rehabilitation), then an entry visa for residence and work (Decree No. 212 of 2009; Labour Relations Law No. 12 of 2010)' },
+      { right: 'permit', route: 'Permit for recruiting foreign labour, then an entry visa for residence and work (Decree No. 212 of 2009; Labour Relations Law No. 12 of 2010)' },
+    ]);
+    // Wave 2's second pass (2026-11-03): the UAE portal names the GCC route the UAE/GCC national work permit, and Tunisia's
+    // Ministry of Employment gives Moroccans an attestation that they aren't subject to the contract visa.
+    expect([work('SA', 'AE'), work('MA', 'TN'), work('FR', 'TN')]).toStrictEqual([
+      { right: 'permit', route: 'UAE/GCC national work permit' },
+      { right: 'permit', route: 'Attestation de non soumission au visa de contrat de travail' },
+      { right: 'permit', route: 'Contrat de travail visé (titre de séjour « salarié »)' },
     ]);
     // Found in the web-search pass (2026-11-03): Kiribati's work permit on its trade portal, and Cuba's professional
     // artists, temporary residents on the Ministry of Labour's permit under Ley 173 and its regulations; neither gives days.

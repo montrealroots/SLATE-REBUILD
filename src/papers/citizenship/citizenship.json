@@ -635,8 +635,9 @@
   "renounce": false,
   "lapses": false,
   "atBirth": {
-   "soil": "none",
-   "descent": "either parent"
+   "soil": "unconditional",
+   "descent": "either parent",
+   "descentAbroad": "Person is born outside Fiji to a parent who was a citizen at the birth: a citizen by registration, at any age, not at birth; applying after 18, only after 3 of the 5 years before in Fiji (s. 8)."
   }
  },
  "FK": {
@@ -1343,8 +1344,8 @@
   "lapses": false,
   "atBirth": {
    "soil": "none",
-   "descent": "either parent",
-   "descentAbroad": "Person is born abroad and father is a citizen.; Person is born abroad and mother is a citizen. Registration required during the year before he/she reaches the age of majority. Authorities may oppose registration."
+   "descent": "father",
+   "descentAbroad": "Person is born abroad to a Mauritanian father; to a Mauritanian mother only where the father has no nationality or an unknown one (art. 8); a child born abroad to a Mauritanian mother and a foreign father may opt for it in the year before majority (art. 13)."
   }
  },
  "MS": {
@@ -1373,7 +1374,7 @@
  },
  "MV": {
   "years": 12,
-  "renounce": null,
+  "renounce": true,
   "lapses": false,
   "atBirth": {
    "soil": "none",
@@ -1386,7 +1387,8 @@
   "lapses": false,
   "atBirth": {
    "soil": "none",
-   "descent": "either parent"
+   "descent": "either parent",
+   "descentAbroad": "Person is born outside Malawi to one or both parents who are Malawi citizens by birth."
   }
  },
  "MX": {
@@ -1545,13 +1547,13 @@
   ]
  },
  "OM": {
-  "years": 20,
+  "years": 15,
   "renounce": true,
   "lapses": true,
   "atBirth": {
    "soil": "none",
    "descent": "father",
-   "descentAbroad": "Person is born in Oman to a male citizen. Person born to a female citizen can only obtain citizenship when the father was a citizen who became stateless or if the father is unknown.; Person is the child of a male citizen who has deceased or abandoned or divorced his wife at least 10 years ago and he/she had resided in the country for at least 10 years. Other conditions: good character, not convicted of crime or offence in breach of trust or honor, written consent and proof of renunciation of citizenship of another country, written consent of guardian."
+   "descentAbroad": "Person is born in or outside Oman to an Omani father by origin (art. 12); to an Omani mother only where descent from a father is not legally established (art. 15) or the Omani father has become stateless (art. 12)."
   }
  },
  "PA": {
@@ -1819,7 +1821,7 @@
   }
  },
  "SN": {
-  "years": 5,
+  "years": 10,
   "renounce": false,
   "lapses": true,
   "atBirth": {
@@ -2175,8 +2177,8 @@
   "lapses": false,
   "atBirth": {
    "soil": "conditional",
-   "descent": "either parent",
-   "soilIf": "Person is born in Yemen to a father who was also born in the country."
+   "descent": "father",
+   "soilIf": "Person is born in Yemen to a foreign father also born there, or to foreign parents and has lived there until majority, knows Arabic and asks within a year of majority; granted by presidential decree."
   }
  },
  "YT": {

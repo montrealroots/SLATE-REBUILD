@@ -16,10 +16,13 @@ describe('citizenship', () => {
     expect(naturalisation('CN')).toBe('none');
     // Read in the law on 2026-11-03, where the dataset had them otherwise: Dominica's seven years (not eight), Ghana's six
     // (not five), Panama's renunciation (art. 10(1)); Kosovo's 2026 law gives no birthright to permanent residents' children.
-    // Fiji's birthright was briefly held unconditional from its immigration ministry's page; the Act wasn't read, so the
-    // dataset's reading (none) was put back the same night.
+    // Fiji's birthright was held none, the dataset's reading, while the Act couldn't be read; the second pass read s. 6 the
+    // same night and it is unconditional. Oman's 2025 law asks fifteen years (not twenty), Senegal's Ministry of Justice
+    // ten (not five), the Maldives' Act renunciation (not unknown); Mauritania's and Yemen's codes pass it by the father.
     expect([naturalisation('DM'), naturalisation('GH'), naturalisation('PA')]).toStrictEqual([{ years: 7, renounce: false }, { years: 6, renounce: false }, { years: 5, renounce: true }]);
-    expect([atBirth('XK')?.soil, atBirth('CR')?.soil, atBirth('FJ')?.soil, atBirth('NP')?.descent]).toEqual(['none', 'conditional', 'none', 'either parent']);
+    expect([naturalisation('OM'), naturalisation('SN'), naturalisation('MV')]).toStrictEqual([{ years: 15, renounce: true }, { years: 10, renounce: false }, { years: 12, renounce: true }]);
+    expect([atBirth('XK')?.soil, atBirth('CR')?.soil, atBirth('FJ')?.soil, atBirth('NP')?.descent]).toEqual(['none', 'conditional', 'unconditional', 'either parent']);
+    expect([atBirth('MR')?.descent, atBirth('YE')?.descent]).toEqual(['father', 'father']);
     expect([naturalisation('AQ'), nationality('AQ')]).toEqual([undefined, undefined]);
     // A territory's people hold their state's nationality under its rules; Svalbard's residence doesn't count.
     expect([nationality('GP'), nationality('GU'), nationality('HK'), nationality('DE')]).toEqual(['FR', 'US', 'CN', 'DE']);
@@ -47,11 +50,12 @@ describe('citizenship', () => {
     expect(aboutNaturalisation('HK')).toBe(t(NONE_LINE, { country: 'China' }));
     expect(aboutNaturalisation('SJ')).toBe(t(NONE_LINE, { country: 'Svalbard and Jan Mayen' }));
     expect([aboutNaturalisation('DE'), aboutNaturalisation('GP')]).toEqual([undefined, undefined]);
-    // The Maldives' renunciation isn't known, so every citizenship kept is unsure; San Marino's own loss rule isn't.
-    const mv = naturalise(['FR', 'SM'], 'MV');
-    expect(mv).toStrictEqual({ held: ['FR', 'SM', 'MV'], unsure: ['FR', 'SM'] });
-    expect(naturalise(['FR', 'SM', 'JP'], 'DE')).toStrictEqual({ held: ['FR', 'SM', 'DE'], unsure: ['SM'] });
-    expect(keepingUnknown(mv as NonNullable<typeof mv>)).toEqual([t(KEEP_UNKNOWN_LINE, { country: 'France' }), "Whether you'd keep your San Marino citizenship isn't known to this game yet."]);
+    // San Marino's own loss rule isn't known, so its citizenship kept is unsure. (The Maldives' renunciation was the one
+    // unknown until its Act was read on 2026-11-03; a state whose renunciation isn't known is held in the forms' test.)
+    const sm = naturalise(['FR', 'SM', 'JP'], 'DE');
+    expect(sm).toStrictEqual({ held: ['FR', 'SM', 'DE'], unsure: ['SM'] });
+    expect(keepingUnknown({ held: ['FR', 'DE'], unsure: ['FR'] })).toEqual([t(KEEP_UNKNOWN_LINE, { country: 'France' })]);
+    expect(keepingUnknown(sm as NonNullable<typeof sm>)).toEqual(["Whether you'd keep your San Marino citizenship isn't known to this game yet."]);
     expect(keepingUnknown({ held: ['DE'], unsure: [] })).toEqual([]);
   });
 });

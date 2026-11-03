@@ -5,7 +5,9 @@ import { idOffers, idTravel, mustHoldId, type IdOffer } from '../../../src/paper
  * The forms of 2026-10-30 (the age a card must be held from, the youngest it's issued at, where it travels, its renewal
  * and replacement routes), read from a compiled file of the form's shape. No research file carried them when this was
  * written; from 2026-11-03 Moldova's and Mauritania's carry the age, and Moldova's, Argentina's, Turkey's, Nigeria's,
- * Mongolia's and Papua New Guinea's the renewal or replacement routes, which ids.test.ts holds on the real file.
+ * Mongolia's and Papua New Guinea's the renewal or replacement routes, and after Wave 2's second pass that day
+ * Morocco's, Tonga's, Yemen's, Burundi's, Bhutan's and Sierra Leone's the ages and ten more countries' the routes,
+ * which ids.test.ts holds on the real file for some.
  */
 vi.mock('../../../src/papers/ids/ids.json', () => {
   const r = (id: string, more: object = {}) => ({ id, where: 'home', speed: 'standard', within: null, ...more });

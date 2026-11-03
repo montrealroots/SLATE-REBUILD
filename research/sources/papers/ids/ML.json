@@ -1,31 +1,36 @@
 {
  "country": "ML",
- "document": "Carte nationale d'identité",
- "office": "the police, at its stations",
+ "document": "Carte d'identité biométrique sécurisée",
+ "office": "the Government's withdrawal centres (centres d'enlèvement), embassies and consulates among them",
  "currency": "XOF",
  "routes": [
   {
-   "id": "police",
+   "id": "centre",
    "where": "home",
    "speed": "standard",
-   "within": {
-    "n": 24,
-    "unit": "hour"
-   },
-   "label": "at a police station: ready in 24 hours"
+   "within": null,
+   "label": "collected at a withdrawal centre in Mali"
+  },
+  {
+   "id": "mission",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "label": "collected at an embassy or consulate"
   }
  ],
  "cards": [
   {
    "for": "from 18",
    "from": 18,
-   "validYears": 3,
+   "validYears": null,
    "pay": {
-    "police": "1700"
+    "centre": null,
+    "mission": null
    }
   }
  ],
- "note": "The Immigration and Refugee Board of Canada's response of February 2015, quoting the Government of Mali's site and its embassy in Ottawa: a citizen may obtain the card from 18; fiscal stamps of 500 and 200 francs CFA and legal fees of 1,000 on collection (summed here), ready in 24 hours; valid three years. These 2015 terms are the latest found.",
+ "note": "Mali's Embassy in Japan (Avis N°003/AMJT/2023, 12 April 2023, read 2026-11-03): after the RAVEC's data were corrected, the Government began withdrawing the secure biometric identity card in the withdrawal centres, embassies and consulates among them, on 11 April 2023. Until then the entry held the card of 2015 as the IRB of Canada's response (February 2015) gave it: from 18, fiscal stamps and legal fees of 1,700 francs CFA, ready in 24 hours, valid three years. That card has been replaced, and the new card's fee, term and time weren't found, so they're null and the player is told; the age stays the last one read, 18. Decree 2022-0639/PT-RM, which reportedly sets the new card's terms, wasn't read.",
  "sources": [
   {
    "url": "https://www.ecoi.net/en/document/1324156.html",
@@ -34,6 +39,13 @@
    "kind": "secondary",
    "quotes": "https://irb-cisr.gc.ca/",
    "said": "fiscal stamps (500 + 200 CFA francs) [approximately $CDN1.10 + $CDN0.10] Legal fees: 1,000 CFA [approximately $CDN2.20 ] when picking up the card, along with a receipt. Delay necessary to obtain the card: 24 hours ... a national identity card is valid for three years, as indicated on the back of the card ... upon reaching the age of majority (18 years old) and who is officially considered a citizen of Mali, has the right to obtain a national identity card"
+  },
+  {
+   "url": "http://www.ambamali-jp.org/eng/wp-content/uploads/2023/04/Avis-003.AMJT_.2023-Phase-retrait-carte-identite-biometrique.pdf",
+   "title": "Ambassade de la République du Mali au Japon, Avis N°003/AMJT/2023 (Tokyo, 12 avril 2023)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "le Gouvernement malien, après la phase de correction et de mise à jour des données du RAVEC, a annoncé le démarrage de la phase nationale de retrait de la carte d’identité biométrique sécurisée, le mardi 11 avril 2023, dans les différents centres d’enlèvement, notamment dans les Ambassades et Consulats."
   }
  ]
 }
