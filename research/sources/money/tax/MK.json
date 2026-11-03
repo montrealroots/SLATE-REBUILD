@@ -27,14 +27,21 @@
   },
   {
    "item": "social",
-   "finding": "Social contributions on gross pay are withheld from the employee: pension and disability 18.8%, health 7.5%, employment 1.2% and additional health 0.5% (28% in all), on a monthly base from 50% of the average salary up to 16 average salaries.",
+   "finding": "An employee pays 28% of gross pay in contributions: from July to December 2026 19.9% pension, 7.5% health, 0.5% additional health and 0.1% unemployment (to June 18.8% pension and 1.2% unemployment); the employer pays none; the base is at least half and at most 16 times the average salary a month.",
    "value": {
     "employee": {
-     "pension": 0.188,
+     "pension": 0.199,
      "health": 0.075,
-     "employment": 0.012,
+     "employment": 0.001,
      "additionalHealth": 0.005,
-     "total": 0.28
+     "total": 0.28,
+     "from": "2026-07",
+     "to": "2026-12",
+     "before": {
+      "pension": 0.188,
+      "employment": 0.012,
+      "to": "2026-06"
+     }
     },
     "employer": 0,
     "baseMinMonthly": "50% of average salary",
@@ -45,6 +52,10 @@
     {
      "src": 1,
      "said": "which on a monthly basis is 50% of the average salary paid in North Macedonia. The highest base for payment of mandatory social security contributions on a monthly basis is 16 average salaries paid in North Macedonia. … Employers are obligated to calculate, withhold from employees’ gross salary, and pay into the accounts of respective funds the compulsory social contributions and personal income tax (PIT). The current level of the compulsory social contributions on gross salary is as follows: Pension and disability insurance: 18.8%. Health insurance: 7.5%. Employment insurance: 1.2%. Additional health insurance: 0.5%."
+    },
+    {
+     "src": 6,
+     "said": "Член 25 (1) Стапки по кои се пресметуваат и плаќаат придонесите почнувајќи со исплатата на платата за месец јули 2026 година, заклучно со исплатата на платата за месец декември 2026 година се: 1. 19,9% за задолжително пензиско и инвалидско осигурување; ... 3. 7,5% за задолжително здравствено осигурување; ... 7. 0,5% стапка на дополнителен придонес за задолжително здравствено осигурување за случај на повреда на работа и професионално заболување и 8. 0,1% за задолжителен придонес за осигурување во случај на невработеност. Член 16 (1) Највисока месечна основица ... е износот од шеснаесет просечни плати."
     }
    ]
   },
@@ -189,6 +200,13 @@
    "kind": "secondary",
    "quotes": "https://www.ujp.gov.mk/",
    "said": "The standard VAT rate is 18%. … All taxpayers whose total annual turnover exceeds MKD 2 million or whose total supplies, as projected at the beginning of the business activity, will exceed this amount are liable to register for VAT purposes."
+  },
+  {
+   "url": "https://www.ujp.gov.mk/files/attachment/0000/1616/Precisten_tekst_na_ZPZSO_07_2026______________.pdf",
+   "title": "УЈП: Закон за придонеси од задолжително социјално осигурување, пречистен текст до Сл. весник 148 од 06.07.2026",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Член 25 (1) Стапки по кои се пресметуваат и плаќаат придонесите почнувајќи со исплатата на платата за месец јули 2026 година, заклучно со исплатата на платата за месец декември 2026 година се: 1. 19,9% за задолжително пензиско и инвалидско осигурување; ... 3. 7,5% за задолжително здравствено осигурување; ... 7. 0,5% стапка на дополнителен придонес за задолжително здравствено осигурување за случај на повреда на работа и професионално заболување и 8. 0,1% за задолжителен придонес за осигурување во случај на невработеност. Член 16 (1) Највисока месечна основица ... е износот од шеснаесет просечни плати."
   }
  ],
  "blockers": [

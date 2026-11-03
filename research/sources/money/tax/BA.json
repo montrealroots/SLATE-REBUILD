@@ -15,20 +15,17 @@
      },
      "RS": {
       "rate": 0.08,
-      "allowanceAnnual": 6000,
-      "smallEntrepreneurOnRevenue": 0.02
+      "allowanceAnnual": 12000,
+      "smallEntrepreneurOnRevenue": 0.02,
+      "selfEmployedRate": 0.1,
+      "authorsCapitalOtherRate": 0.13
      },
      "BD": {
       "rate": 0.1,
       "allowanceAnnual": 6000
      }
     },
-    "regional": "the entity (FBiH, RS, BD) sets the rate",
-    "rsConflict": {
-     "allowancePwC": 6000,
-     "allowanceDeloitte": 12000,
-     "rsSelfEmployedRate": 0.1
-    }
+    "regional": "the entity (FBiH, RS, BD) sets the rate"
    },
    "applies": "2026; the entity of residence decides which column applies. The FBiH rate and BAM 3,600 a year (300 a month) allowance are from the FBiH law as the FBiH Ministry of Finance publishes it (amendments to 65/13); RS and BD figures remain PwC's. Deloitte 2026 gives the RS allowance as BAM 12,000 a year and RS self-employment income 10%: the RS figures are in conflict until the RS law is read (see blocker).",
    "sources": [
@@ -59,6 +56,10 @@
     {
      "src": 3,
      "said": "In the RS, the standard personal income tax rate on employment income is 8%, a 10% rate applies to income from self-employment (although certain small entrepreneurs pay a 2% tax on total gross revenue), and a 13% rate applies to other income. … In the RS, there is a personal deduction in the amount of BAM 12,000 per calendar year"
+    },
+    {
+     "src": 8,
+     "said": "Član 4 (1) Porez na dohodak od ličnih primanja plaća se po stopi od 8%. (2) Porez na prihod od samostalne djelatnosti plaća se po stopi od 10%. (3) Porez na dohotke iz člana 3. stav 1. t. 3), 4), 5) i 7) ovog zakona plaća se po stopi od 13%. ... (3) Poreski obveznik poreza na lična primanja ima pravo na sljedeće odbitke od poreske osnovice: 1) osnovni lični odbitak u iznosu od 12.000 KM godišnje"
     }
    ]
   },
@@ -285,12 +286,20 @@
    "kind": "secondary",
    "quotes": "https://www.uino.gov.ba/",
    "said": "Any person making taxable supplies of goods and services that exceeds or is likely to exceed a threshold of 100,000 konvertibilna marka (convertible mark or BAM) is required to register as a VAT payer."
+  },
+  {
+   "url": "https://www.paragraf.ba/propisi/republika-srpska/zakon-o-porezu-na-dohodak.html",
+   "title": "Zakon o porezu na dohodak Republike Srpske, consolidated through 'Sl. glasnik RS', br. 114/2025 (Paragraf Lex)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.poreskaupravars.org/",
+   "said": "Član 4 (1) Porez na dohodak od ličnih primanja plaća se po stopi od 8%. (2) Porez na prihod od samostalne djelatnosti plaća se po stopi od 10%. (3) Porez na dohotke iz člana 3. stav 1. t. 3), 4), 5) i 7) ovog zakona plaća se po stopi od 13%. ... (3) Poreski obveznik poreza na lična primanja ima pravo na sljedeće odbitke od poreske osnovice: 1) osnovni lični odbitak u iznosu od 12.000 KM godišnje"
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The RS and Brčko District income-tax laws (rates, the BAM 6,000 allowance, authors' and non-resident artists' rules) from the RS Tax Administration or the BD Finance Directorate; FBiH is now read from its law. Conflict: the RS personal deduction is BAM 6,000 a year (PwC) or BAM 12,000 (Deloitte 2026); RS self-employment is taxed at 10% per Deloitte.",
+   "sought": "Brčko District's income-tax law (rate, allowance, authors' and non-resident artists' rules) from its Finance Directorate, and Republika Srpska's rulebook on authors' normed costs (40% to 60%) and any rule for a non-resident artist; RS's law is read through Paragraf Lex (8% on pay, 10% self-employment, 13% authors' rights, KM 12,000 deduction: the earlier conflict settled at 12,000)",
    "tried": {
     "institution": "not fetched in this pass (2026-11-01) || 2026-11-01 retry: pufbih.ba answers but is a script-only app (no text served); fmf.gov.ba (FBiH Ministry of Finance) Zakoni page read: the FBiH income-tax law PDF saved (BA-fmf-zakon-porez-dohodak.pdf) and now quoted, and the contributions law saved (BA-fmf-zakon-doprinosi.doc); poreskaupravars.org and bdcentral.net do not answer (curl 000); vladars.rs Ministry of Finance page links only to poreskaupravars.org.",
     "official-register": "Službene novine FBiH / Službeni glasnik RS not reached || 2026-11-01 retry: Službeni glasnik Republike Srpske and Službeni glasnik Brčko distrikta: no reachable host (slglasnik.org, the RS gazette's publisher, answers HTTP 200 but sells the law texts by subscription; not read); parlamentfbih.gov.ba does not answer.",

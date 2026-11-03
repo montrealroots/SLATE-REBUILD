@@ -16,7 +16,8 @@ import { amount as above, charge, percent, RATE_PERIODS, type Charge, type RateP
  * nothing to keep): each in the major units of the account's currency (the country's unless the bank names another),
  * how often it's charged (`per`: a month, two months, a quarter, half a year or a year), and the conditions any one of
  * which waives it (`waived`): money paid in over the period (`deposits`), a balance never below a figure through it
- * (`balance`), an average daily balance (`average`), an age (`under`, `from`), or citizenship of the bank's country
+ * (`balance`), an average daily balance (`average`), or one at most a figure (`averageUpTo`, from 2026-11-03, for a fee the
+ * bank charges by band of balance, as BISTP's), an age (`under`, `from`), or citizenship of the bank's country
  * (`national`), or the account's first periods (`first`). A condition the game can't check
  * isn't written, and the fee is charged in full, as it would be to anyone who doesn't meet it. A price list that states
  * the fee's next figure and the day it takes effect gives it (`changes`, each a date and the figure from it, in order);
@@ -44,7 +45,7 @@ export const OUTPUT = 'src/money/banks/banks.json';
 export const PERIODS = ['month', 'bimonth', 'quarter', 'half', 'year'] as const;
 export type Period = (typeof PERIODS)[number];
 
-export type Waiver = { deposits: Money } | { balance: Money } | { average: Money } | { under: number } | { from: number } | { national: true } | { first: number };
+export type Waiver = { deposits: Money } | { balance: Money } | { average: Money } | { averageUpTo: Money } | { under: number } | { from: number } | { national: true } | { first: number };
 
 export interface Change {
   from: string;
@@ -136,7 +137,7 @@ function amount(currency: CurrencyCode, text: unknown, what: string): Money {
   return m;
 }
 
-const AMOUNTS = ['deposits', 'balance', 'average'] as const;
+const AMOUNTS = ['deposits', 'balance', 'average', 'averageUpTo'] as const;
 const AGES = ['under', 'from'] as const;
 
 /** One condition that waives the fee. */

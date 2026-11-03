@@ -5,7 +5,7 @@ import { t } from '../../../src/core/text/text.ts';
 import { COUNTRY_CODES } from '../../../src/world/gazetteer/gazetteer.ts';
 import data from '../../../src/money/formats/formats.json';
 import { aboutFormats, accountNumber, formatOf, keepsFormat, payeeRefusal, UNKEPT_LINE } from '../../../src/money/formats/formats.ts';
-import { draw, ibanCheck, mod97, refusal, signed, type Format, type National, type Part } from '../../../src/money/formats/number.ts';
+import { draw, ibanCheck, mod97, refusal, signed, type Format, type National, type Iban, type Part, type Span } from '../../../src/money/formats/number.ts';
 
 const ROOT = resolve(import.meta.dirname, '../../..');
 const SEED = 0x5eed_0000_0000_0001n;
@@ -35,6 +35,10 @@ describe('account numbers', () => {
     expect([keepsFormat('GB'), keepsFormat('ZA')]).toEqual([true, false]);
     expect(formatOf('ZA')).toBeUndefined();
     expect(GB).toStrictEqual({ iban: { prefix: 'GB', length: 22, bban: [{ length: 4, kind: 'a' }, { length: 6, kind: 'n' }, { length: 8, kind: 'n' }], bank: [1, 4] } });
+    // Brazil's, as Release 103 (September 2026) changed it: the bank's eight characters and the last but one take a letter.
+    expect(formatOf('BR')).toStrictEqual({ iban: { prefix: 'BR', length: 29, bban: [{ length: 8, kind: 'c' }, { length: 5, kind: 'n' }, { length: 10, kind: 'n' }, { length: 1, kind: 'c' }, { length: 1, kind: 'c' }], bank: [1, 8] } });
+    // Its new example passes, a letter in the bank's code where the earlier releases took only digits, and so does theirs.
+    expect([payeeRefusal('BR', 'BR6699999A03000010009795493C1'), payeeRefusal('BR', 'BR1800360305000010009795493C1')]).toEqual([undefined, undefined]);
     // Guadeloupe's accounts are numbered as France's: SWIFT's registry folds it into the prefix FR.
     expect(formatOf('GP')).toStrictEqual(formatOf('FR'));
     // Every example IBAN SWIFT's registry gives passes, its check digits the ones ISO 13616's rule works out.
@@ -78,9 +82,13 @@ describe('account numbers', () => {
     expect(clabe).toMatch(/^\d{18}$/);
     expect(draw(CLABE, SEED, 'MX', 'BBVA', 1).slice(0, 3)).toBe(clabe.slice(0, 3));
     expect(draw(CLABE, SEED, 'MX', 'BBVA', 1).slice(3)).not.toBe(clabe.slice(3));
-    // With no bank's code in the form (Poland's in the registry), nothing stays the same from one account to the next.
-    const pl = formatOf('PL') as Format;
-    expect(draw(pl, SEED, 'PL', 'PKO', 1).slice(4, 12)).not.toBe(draw(pl, SEED, 'PL', 'PKO', 0).slice(4, 12));
+    // With no bank's code in the form, nothing stays the same from one account to the next. Poland's was the registry's
+    // one such until Release 103 was read (2026-11-03), which gives its bank at characters 1 to 8.
+    const pl = formatOf('PL') as { iban: Iban & { bank: Span } };
+    expect(pl.iban.bank).toEqual([1, 8]);
+    const loose: Format = { iban: { prefix: 'PL', length: 28, bban: pl.iban.bban } };
+    expect(draw(loose, SEED, 'PL', 'PKO', 1).slice(4, 12)).not.toBe(draw(loose, SEED, 'PL', 'PKO', 0).slice(4, 12));
+    expect(draw(pl, SEED, 'PL', 'PKO', 1).slice(4, 12)).toBe(draw(pl, SEED, 'PL', 'PKO', 0).slice(4, 12));
     // A bank's code past the number's start: only its own characters stay the same.
     const mid: Format = { national: { name: 'N', parts: [{ name: 'x', length: 12, kind: 'n' }], bank: [5, 8] } };
     const [m0, m1] = [draw(mid, SEED, 'XX', 'B', 0), draw(mid, SEED, 'XX', 'B', 1)];
@@ -163,8 +171,14 @@ describe('account numbers', () => {
     // A check below ten keeps its leading nought, and 98 is written whole.
     const two: National = { name: 'N', parts: [{ name: 'x', length: 4, kind: 'n' }], checks: [{ over: [1, 2], mod97: true }] };
     expect([signed(two, '9600'), signed(two, '0000'), signed(two, '3000')]).toEqual(['9604', '0098', '3008']);
+    // Cabo Verde's NIB, MOD 97-10 as the Banco de Cabo Verde states it: every NIB drawn reads 1 mod 97, so every IBAN
+    // built on one carries the check digits 64, the figure the bank's own page gives.
+    const cv = formatOf('CV') as Format;
+    const nibs = Array.from({ length: 40 }, (_, n) => draw(cv, SEED, 'CV', 'BCA', n));
+    for (const nib of nibs) expect([nib.length, mod97(nib), ibanCheck('CV', nib)], nib).toEqual([21, 1, '64']);
+    expect(refusal(cv, `${(nibs[0] as string).slice(0, 19)}${(nibs[0] as string)[19] === '9' ? '0' : '9'}${(nibs[0] as string)[20] as string}`)).toBe('check');
     // Drawn numbers carry their checks, and a form with none is drawn as it was.
-    for (const country of ['AR', 'NG', 'AO']) expect(refusal(formatOf(country as 'AR') as Format, draw(formatOf(country as 'AR') as Format, SEED + 1n, country, 'B', 3)), country).toBeUndefined();
+    for (const country of ['AR', 'NG', 'AO', 'CV']) expect(refusal(formatOf(country as 'AR') as Format, draw(formatOf(country as 'AR') as Format, SEED + 1n, country, 'B', 3)), country).toBeUndefined();
     expect(signed(CLABE.national, '123')).toBe('123');
   });
 

@@ -67,6 +67,8 @@ describe('the cards compile', () => {
     for (const spend of ['0', '-1', 100, undefined]) expect(() => waiver({ spend }, 'USD', 'w'), String(spend)).toThrow("w's spend is an amount above nothing, written in major units");
     expect(() => waiver({ spend: '1', under: 26 }, 'USD', 'w')).toThrow('w names one condition');
     expect(() => waiver({ first: 1, under: 26 }, 'USD', 'w')).toThrow('w names one condition');
+    expect(() => waiver({ averageUpTo: '500' }, 'USD', 'w')).toThrow("w names a condition the game doesn't check on a card (averageUpTo)");
+    expect(waiver({ average: '500' }, 'USD', 'w')).toStrictEqual({ average: money('USD', 50_000) });
     for (const w of [null, 'x', 7]) expect(() => waiver(w, 'USD', 'w'), String(w)).toThrow('w names one condition');
     expect(fee({ fee: '39.00', per: 'year' }, 'EUR', 'f')).toStrictEqual({ fee: money('EUR', 3900), per: 'year' });
     expect(fee({ fee: '1800', per: 'year', waived: [{ spend: '10000' }, { from: 60 }, { first: 1 }] }, 'HKD', 'f')).toStrictEqual({ fee: money('HKD', 180_000), per: 'year', waived: [{ spend: money('HKD', 1_000_000) }, { from: 60 }, { first: 1 }] });

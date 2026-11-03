@@ -49,6 +49,21 @@ describe('banks', () => {
     expect(feeFor(chase, { ...standing, average: usd(500_000) }, '2026-11-01')).toStrictEqual(usd(0));
   });
 
+  it('charge a fee only on the band of average balance it names, as a fee by band is written', () => {
+    // BISTP's account (research/sources/money/banks/ST.json): 11 on an average up to 500, 14 above it up to 1,250, 25 above.
+    const stn = (n: number) => money('STN', n);
+    const at = (fees: Fee[], avg: number) => fees.map((f) => feeFor(f, { ...standing, average: stn(avg) }, '2026-11-01').minor).reduce((a, b) => a + b, 0);
+    const bands: Fee[] = [
+      { fee: stn(1100), per: 'month', waived: [{ average: stn(50_001) }] },
+      { fee: stn(1400), per: 'month', waived: [{ averageUpTo: stn(50_000) }, { average: stn(125_001) }] },
+      { fee: stn(2500), per: 'month', waived: [{ averageUpTo: stn(125_000) }] },
+    ];
+    expect([0, 50_000, 50_001, 125_000, 125_001].map((avg) => at(bands, avg))).toStrictEqual([1100, 1100, 1400, 1400, 2500]);
+    const st = banksIn('ST')[0];
+    expect(st?.fees.map((f) => f.fee.minor)).toStrictEqual([1100, 1400, 2500]);
+    expect([0, 50_000, 50_001, 125_000, 125_001].map((avg) => at(st?.fees as Fee[], avg))).toStrictEqual([1100, 1100, 1400, 1400, 2500]);
+  });
+
   it('waive a fee by the age the account names', () => {
     const young = { fee: usd(500), per: 'month' as const, waived: [{ under: 26 }] };
     const old = { fee: usd(500), per: 'month' as const, waived: [{ from: 60 }] };

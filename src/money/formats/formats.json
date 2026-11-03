@@ -531,7 +531,7 @@
     "bban": [
      {
       "length": 8,
-      "kind": "n"
+      "kind": "c"
      },
      {
       "length": 5,
@@ -543,7 +543,7 @@
      },
      {
       "length": 1,
-      "kind": "a"
+      "kind": "c"
      },
      {
       "length": 1,
@@ -713,6 +713,46 @@
     ]
    }
   },
+  "CV": {
+   "national": {
+    "name": "Número De Identificação Bancária",
+    "parts": [
+     {
+      "name": "Código Da Instituição",
+      "length": 4,
+      "kind": "n"
+     },
+     {
+      "name": "Código Do Balcão",
+      "length": 4,
+      "kind": "n"
+     },
+     {
+      "name": "Número Da Conta",
+      "length": 11,
+      "kind": "n"
+     },
+     {
+      "name": "Dígitos De Controlo",
+      "length": 2,
+      "kind": "n"
+     }
+    ],
+    "bank": [
+     1,
+     4
+    ],
+    "checks": [
+     {
+      "over": [
+       1,
+       19
+      ],
+      "mod97": true
+     }
+    ]
+   }
+  },
   "CX": {
    "national": {
     "name": "BSB and account number",
@@ -769,11 +809,7 @@
       "kind": "n"
      },
      {
-      "length": 6,
-      "kind": "n"
-     },
-     {
-      "length": 10,
+      "length": 16,
       "kind": "n"
      }
     ],
@@ -1955,8 +1991,8 @@
      }
     ],
     "bank": [
-     5,
-     8
+     1,
+     4
     ]
    }
   },
@@ -3051,6 +3087,10 @@
       "length": 16,
       "kind": "n"
      }
+    ],
+    "bank": [
+     1,
+     8
     ]
    }
   },
@@ -3619,7 +3659,11 @@
     "length": 25,
     "bban": [
      {
-      "length": 8,
+      "length": 4,
+      "kind": "n"
+     },
+     {
+      "length": 4,
       "kind": "n"
      },
      {

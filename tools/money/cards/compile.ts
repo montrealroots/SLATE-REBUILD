@@ -175,6 +175,9 @@ export function rate(r: unknown, currency: CurrencyCode, what: string): Card['ra
 /** One condition that waives a card's fee: an account's, spending a figure over the fee's period, or its first periods. */
 export function waiver(w: unknown, currency: CurrencyCode, what: string): Waiver {
   if (typeof w === 'object' && w !== null && Object.keys(w).length === 1 && 'spend' in w) return { spend: amount((w as { spend: unknown }).spend, currency, `${what}'s spend`) };
+  // A card has no daily balance of its own (src/money/cards/account.ts stands its average at nothing), so a fee waived
+  // on an average at most a figure would always be waived.
+  if (typeof w === 'object' && w !== null && 'averageUpTo' in w) throw new Error(`${what} names a condition the game doesn't check on a card (averageUpTo)`);
   return accountWaiver(w, currency, what);
 }
 

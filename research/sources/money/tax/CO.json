@@ -220,7 +220,8 @@
     "residentFees": {
      "general": 0.1,
      "aboveThreshold": 0.11,
-     "threshold": "not read for 2026"
+     "threshold": 3300,
+     "thresholdUnit": "UVT in the year, by contract or by one payer's payments (11% from the payment that crosses it)"
     }
    },
    "applies": "2026; a treaty may reduce the non-resident rate; the art. 383 table applies to an independent who has not hired two or more workers (art. 383 as modified by Ley 1819 de 2016, editor's note to art. 392).",
@@ -232,6 +233,10 @@
     {
      "src": 4,
      "said": "Por norma general la retención en la fuente por concepto de honorarios y comisiones que perciban las personas naturales es del diez por ciento (10%) sobre el valor del respectivo pago o abono en cuenta. En los siguientes casos se aplicará una tarifa de retención del once por ciento (11%)"
+    },
+    {
+     "src": 5,
+     "said": "Cuando el beneficiario del pago o abono en cuenta por honorarios o comisiones, sea una persona natural la tarifa de retención es del diez por ciento (10%). No obstante lo anterior, la tarifa ... será del once por ciento (11 %) en cualquiera de los siguientes casos: a) Cuando del contrato se desprenda que los ingresos que obtendrá la persona natural ... superan en el año gravable el valor de tres mil trescientas (3.300) UVT; b) Cuando los pagos o abonos en cuenta realizados durante el ejercicio gravable por un mismo agente retenedor a una misma persona natural superen en el año gravable el valor de tres mil trescientas (3.300) UVT."
     }
    ]
   }
@@ -274,12 +279,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Por norma general la retención en la fuente por concepto de honorarios y comisiones que perciban las personas naturales es del diez por ciento (10%) sobre el valor del respectivo pago o abono en cuenta. En los siguientes casos se aplicará una tarifa de retención del once por ciento (11%)"
+  },
+  {
+   "url": "https://normograma.dian.gov.co/dian/compilacion/docs/decreto_1625_2016.htm",
+   "title": "Decreto 1625 de 2016 (DUR tributario), art. 1.2.4.3.1 (DIAN normograma)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Cuando el beneficiario del pago o abono en cuenta por honorarios o comisiones, sea una persona natural la tarifa de retención es del diez por ciento (10%). No obstante lo anterior, la tarifa ... será del once por ciento (11 %) en cualquiera de los siguientes casos: a) Cuando del contrato se desprenda que los ingresos que obtendrá la persona natural ... superan en el año gravable el valor de tres mil trescientas (3.300) UVT; b) Cuando los pagos o abonos en cuenta realizados durante el ejercicio gravable por un mismo agente retenedor a una misma persona natural superen en el año gravable el valor de tres mil trescientas (3.300) UVT."
   }
  ],
  "blockers": [
   {
    "item": "withholding",
-   "sought": "The current threshold (in UVT) above which a resident natural person's fees bear 11% rather than 10% (Decreto 1625 de 2016, art. 1.2.4.3.1), and the 2026 labour withholding table (art. 383 ET, an image on the compilations)",
+   "sought": "Nothing further to read: the 3,300 UVT threshold (Decreto 1625 de 2016, art. 1.2.4.3.1) and the art. 383 labour table (DIAN's image) were read on 2026-11-03; the engine withholds no 11% above a year's threshold and no table with its own constants, so the withholding stays untold until it can",
    "tried": {
     "institution": "dian.gov.co reachable (HTTP 200) but normograma.dian.gov.co not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: normograma.dian.gov.co now reachable: Estatuto Tributario arts. 408, 592 and 392 read (the non-resident part is now a figure); DIAN Concepto c23562 read: 10% on a natural person's fees, 11% above a yearly amount given in 2001 pesos ($88,000,000)",
     "official-register": "secretariasenado.gov.co ET pages read (art. 241 table is an image; arts. 406-408 withholding on payments abroad, 437 VAT thresholds not read) || 2026-11-01 retry: Estatuto Tributario on normograma.dian.gov.co (DIAN's own compilation) in place of secretariasenado.gov.co (connection fails today); Decreto 1625 de 2016 art. 1.2.4.3.1 (the 11% threshold in UVT) not located in the time",

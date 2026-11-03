@@ -1465,6 +1465,31 @@
     }
    }
   ],
+  "GA": [
+   {
+    "bank": "BGFIBank Gabon",
+    "account": "Compte particulier",
+    "currency": "XAF",
+    "fees": [],
+    "transfers": {
+     "domestic": {
+      "currency": "XAF",
+      "minor": 5950
+     }
+    },
+    "savings": {
+     "account": "Compte sur livret",
+     "interest": {
+      "percent": "4.25",
+      "per": "year"
+     },
+     "minimum": {
+      "currency": "XAF",
+      "minor": 100000
+     }
+    }
+   }
+  ],
   "GB": [
    {
     "bank": "Barclays",
@@ -3770,6 +3795,14 @@
     ]
    }
   ],
+  "SO": [
+   {
+    "bank": "Premier Bank",
+    "account": "Personal Current Account",
+    "currency": "USD",
+    "fees": []
+   }
+  ],
   "SR": [
    {
     "bank": "De Surinaamsche Bank",
@@ -3792,6 +3825,72 @@
     "account": "Simba Savings Account",
     "currency": "SSP",
     "fees": []
+   }
+  ],
+  "ST": [
+   {
+    "bank": "Banco Internacional de São Tomé e Príncipe",
+    "account": "Depósito à Ordem",
+    "currency": "STN",
+    "fees": [
+     {
+      "fee": {
+       "currency": "STN",
+       "minor": 1100
+      },
+      "per": "month",
+      "waived": [
+       {
+        "average": {
+         "currency": "STN",
+         "minor": 50001
+        }
+       }
+      ]
+     },
+     {
+      "fee": {
+       "currency": "STN",
+       "minor": 1400
+      },
+      "per": "month",
+      "waived": [
+       {
+        "averageUpTo": {
+         "currency": "STN",
+         "minor": 50000
+        }
+       },
+       {
+        "average": {
+         "currency": "STN",
+         "minor": 125001
+        }
+       }
+      ]
+     },
+     {
+      "fee": {
+       "currency": "STN",
+       "minor": 2500
+      },
+      "per": "month",
+      "waived": [
+       {
+        "averageUpTo": {
+         "currency": "STN",
+         "minor": 125000
+        }
+       }
+      ]
+     }
+    ],
+    "opening": {
+     "deposit": {
+      "currency": "STN",
+      "minor": 100000
+     }
+    }
    }
   ],
   "SV": [

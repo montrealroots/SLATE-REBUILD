@@ -203,6 +203,23 @@
      "said": "Espectáculos en vivo con la participación principal de artistas intérpretes y ejecutantes no domiciliados: (15%) … Otras rentas: (30%)"
     }
    ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-domiciled individual pays 30% on Peruvian work income and royalties; the 15% rate is for artists' live shows in Peru only, so a screen performer's pay bears 30%.",
+   "value": {
+    "workIncome": 0.3,
+    "royalties": 0.3,
+    "liveShowsInPeru": 0.15,
+    "other": 0.3
+   },
+   "applies": "Non-domiciled individuals (art. 54); filmed work is not a live show",
+   "sources": [
+    {
+     "src": 5,
+     "said": "Artículo 54°.- Las personas naturales y sucesiones indivisas no domiciliadas en el país estarán sujetas al Impuesto por sus rentas de fuente peruana con las siguientes tasas: ... g) Rentas de trabajo 30% h) Rentas por regalías. 30% i) Rentas de artistas intérpretes y ejecutantes por espectáculos en vivo, realizados en el país. 15% j) Otras rentas distintas a las señaladas en los incisos anteriores. 30%"
+    }
+   ]
   }
  ],
  "country": "PE",
@@ -244,6 +261,13 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Espectáculos en vivo con la participación principal de artistas intérpretes y ejecutantes no domiciliados: (15%) … Otras rentas: (30%)"
+  },
+  {
+   "url": "https://www.sunat.gob.pe/legislacion/renta/ley/capvii.pdf",
+   "title": "Ley del Impuesto a la Renta (TUO), Capítulo VII, artículo 54° (SUNAT's annotated text)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Artículo 54°.- Las personas naturales y sucesiones indivisas no domiciliadas en el país estarán sujetas al Impuesto por sus rentas de fuente peruana con las siguientes tasas: ... g) Rentas de trabajo 30% h) Rentas por regalías. 30% i) Rentas de artistas intérpretes y ejecutantes por espectáculos en vivo, realizados en el país. 15% j) Otras rentas distintas a las señaladas en los incisos anteriores. 30%"
   }
  ],
  "blockers": [
@@ -255,17 +279,6 @@
     "official-register": "El Peruano (official gazette) not read 2026-11-01. || 2026-11-01 retry: busquedas.elperuano.pe answers (HTTP 200) but its search is a script app; the IGV Law (TUO, D.S. 055-99-EF) was not reached in the time",
     "web-search": "Not run for Peru (2026-11-01). || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01)",
     "trade-press": "PwC and Deloitte Peru 2026: rate only. || 2026-11-01 retry: PwC and Deloitte Peru 2026 already held: rate only",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
-   }
-  },
-  {
-   "item": "nonResident",
-   "sought": "The rate for a non-domiciled individual artiste (Income Tax Law art. 54) where the 15% live-show rate of art. 56 is stated only for non-domiciled companies",
-   "tried": {
-    "institution": "sunat.gob.pe answers; the orientation pages for this were not located in this pass (2026-11-01). || 2026-11-01 retry: orientacion.sunat.gob.pe read: 'Retenciones para no domiciliados' (withholding is final, now a figure) and 'Tasas Aplicables' (15% on live shows with non-domiciled artistes, in the companies' section, art. 56); the individuals' section (impuesto-a-la-renta-personas, non-domiciled-taxation) gives no rate for an individual artiste",
-    "official-register": "El Peruano (official gazette) not read 2026-11-01. || 2026-11-01 retry: busquedas.elperuano.pe answers but its search is a script app; the Income Tax Law (TUO, D.S. 179-2004-EF) art. 54 not reached in the time",
-    "web-search": "Not run for Peru (2026-11-01). || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01)",
-    "trade-press": "PwC and Deloitte Peru 2026: employees' 30% and royalty withholding only. || 2026-11-01 retry: PwC and Deloitte Peru 2026 already held: employees' 30% and royalty withholding only",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
    }
   }

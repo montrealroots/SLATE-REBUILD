@@ -20,9 +20,44 @@ Read `CLAUDE.md` first.
   The owner merged it (`3ccce87`) and the branch restarted from `main` there.
 - Layer 2 (the world) is proven: all six of SLATE's world engines, at the owner's word ("Every single one of them"),
   its research read again at every source and every blocker tried again; the full gate green in a fresh clone at
-  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). Layer 3 (the person's papers and money) is in
-  progress and has not started; nothing in it comes over until the owner picks it. Layers 4 to 7 have not started (6 is
-  dropped); the gate refuses code in a layer until every layer under it is proven.
+  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). The owner merged it (`dd4e83a`) and the branch
+  restarted from `main` there.
+- Layer 3 (the person's papers and money) is built but **not proven**: all nineteen of SLATE's layer 3 engines, at
+  the owner's word ("Every single one of them"), with the first of three research waves done. The session's web-search
+  allowance ran out during that wave, and the owner ruled (2026-11-03) that a new session finishes the research and
+  only then proves the layer. Layers 4 to 7 have not started (6 is dropped).
+
+What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:
+
+- The papers (`src/papers`: passports, ids, citizenship, visits, ages, work, numbers, residence, licence) and the money
+  (`src/money`: banks, accounts, ledger, cards, credit, rates, means, formats, units, tax), with their compilers,
+  research sources (`research/sources/papers`, `research/sources/money`, and `research/sources/person/ages`, which the
+  ages engine reads), coverage matrices, catalog lines, the `money.account` decider and sixteen effects. Work permits
+  (`papers.permits`) are layer 4's and did not come.
+- Ids: layer 2's four new entries had taken R-4236 to R-4239, which SLATE's register already gives to two licences, a
+  card and an island's cards; ours moved to R-9680 to R-9683, above SLATE's highest (R-9679), and every new id since
+  starts above them (R-9684 to R-9723 so far).
+- Player text the catalog-text check stopped and that was reworded: "licence" (British) to "license"; "you are taxed"
+  to "you're taxed"; "{country} offers" (read as a count) to "{country} has no bank that offers a credit card".
+- Five consumer anchors in accounts and tax named layer 4's commands (`acting.perform`, `directing.prep`,
+  `script.pitch`, `producing.shoot`, `youth.release`); they come back with layer 4.
+- Research wave 1 (2026-11-03, nine agents, five integrating, the lead holding the register and checking figures at
+  their sources): every one of layer 3's 783 blockers re-attacked. Found, and their rows now researched: passports of
+  Sierra Leone, Tuvalu, Turks and Caicos, Eswatini; work routes of Kuwait, Tuvalu, Eswatini; residence of South Korea,
+  Costa Rica, Ecuador, Tuvalu; account numbers of Cape Verde; national numbers of Angola, Kosovo, Fiji; cards of the
+  Isle of Man, Belize, Tanzania; credit records of Nigeria, Svalbard, San Marino; banks of Gabon, Somalia, São Tomé (the
+  banks engine now holds a fee by average-balance band); nine licences (Marshall Islands, Tonga, Tuvalu, Bhutan, Cook
+  Islands, Isle of Man, Jersey, Latvia, Turks and Caicos); ages of eight countries and the Bahamas, Belarus, Jersey,
+  Kyrgyzstan; tax of Azerbaijan, Canada, Grenada, Georgia, Russia. Many more were found in part and stay blocked on
+  what is missing. Held figures found out of date and fixed: North Macedonia's July 2026 contribution split, Grenada's
+  insurable ceiling (5,200), Canada's provinces' and six US states' ages, SWIFT's IBAN Registry (release 103 changed
+  BR, CZ, JO, PL, PT and ST; the 105 IBAN facts now stand on SWIFT's own registry, found, not secondary). Recorded for
+  2027: Belgium's tax-free base, Angola's new personal income tax, Mongolia's bands. Rulings applied: a check algorithm
+  stands only where a primary states it (Benin's, Côte d'Ivoire's, Senegal's, Algeria's and Mozambique's keys were
+  worked out from real numbers only, so their checks stay blocked); a law not in force is not the rule (Samoa's credit
+  register Act); a government's page about another country is a lead, not a source, unless it names the primary.
+- The register: 4,952 entries, 3,343 found, 779 secondary, 830 blocked (737 of them layer 3's).
+
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
 sources say:
@@ -154,14 +189,28 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 2, and answers the questions below if they wish.
-2. The owner picks what comes over in layer 3, the person's papers and money: from SLATE, the papers (`passports`,
-   `ids`, `citizenship`, `visits`, `ages`, `work`, `numbers`, `residence`, `licence`) and the money (`banks`,
-   `accounts`, `ledger`, `cards`, `credit`, `rates`, `means`, `formats`, `units`, `tax`). Its research is read again at
-   every source and every blocker tried again, as layer 2's was.
+The owner's ruling (2026-11-03): finish layer 3's research in a new session, with a fresh web-search allowance, then
+prove it. In that session, from `research/rounds/brief.md` and `research/rounds/integrate.md` (the briefs this
+session's agents were given; change the date, the scratchpad path and the groups, keep the rules):
+
+1. The web-search pass: 613 of layer 3's 737 blockers have no web-search attempt dated 2026-11-03 (a blocker whose
+   latest `web-search` attempt is older; tax 129, ages 101, licence 70, formats 66, numbers 65, cards 51, credit 37,
+   means 31, banks 17, work 16, residence 14, passports 9, ids 7). Re-attack each with web search and trade press,
+   which this session's wave 1 couldn't reach.
+2. Wave 2: layer 3's 737 facts held only at second hand (citizenship and visits most of them): re-read each source and
+   search for the primary it quotes.
+3. Wave 3: re-read the sources of layer 3's 3,037 found facts, re-check every pinned file's hash, and take any newer
+   release (exchange rates, the World Inequality Database's release of 2026-10-30 for the family means, tax years).
+4. Integrate each wave by engine, merge the register, then prove layer 3 on CI (`npm run gate:full` takes over two
+   hours here) and record it.
+5. The owner then pulls and merges, and picks what comes over in layer 4.
 
 ## Verification evidence
 
+- Layer 3 so far: `npm run gate` green on the working tree before the last commit: 1,691 of 1,691 tests (every place
+  of the map through every engine), 31 engines, 0 rows pending, the register's 4,952 entries clean. Each integrator's
+  code changes were mutation-tested alone at 100% (the banks engine's balance bands: 1,226 of 1,226; the ages reader:
+  95 of 95). The full gate, and so the proof, waits for the research the owner ruled for a new session.
 - Layer 2's proof: `npm run gate:full` green in a fresh clone of the branch at `e3c205c47ce3` on GitHub Actions (run
   41547356832), after `npx -y npm@11.6.2 ci`: every check green; 1,369 of 1,369 tests, every place of the map through
   all six engines among them; audit 0 advisories; mutation 100.00% (9,815 of 9,815 mutants killed, static mutants
@@ -193,6 +242,10 @@ SLATE proved at a 100% mutation score:
 
 ## Blockers and open issues
 
+- This session's web-search allowance (200 searches, shared by every agent) is spent; it is why layer 3's research
+  continues in a new session. Hosts that refuse this environment, recorded in the entries as each attempt's result:
+  web.archive.org (Common Crawl's data.commoncrawl.org stood in), Légifrance, swift.com, the Bureau of Meteorology, and
+  sites behind bot checks; none was forced.
 - The full gate now takes about 2 h 40 min (9,815 mutants), longer than a session's background command may run, so
   layers are proven on CI from here; CI's job may run 340 minutes. CI also logs an error that the step summary
   (1,661k) is over GitHub's 1,024k; it fails nothing.

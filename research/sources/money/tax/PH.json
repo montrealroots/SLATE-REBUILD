@@ -144,7 +144,16 @@
       250,
       1750
      ],
-     "employerMaxMonthly": 3530
+     "employerMaxMonthly": 3530,
+     "rate": 0.15,
+     "employeeRate": 0.05,
+     "employerRate": 0.1,
+     "mscMonthly": [
+      5000,
+      35000
+     ],
+     "mscStep": 500,
+     "from": "2025-01"
     },
     "hdmf": {
      "employeeMonthly": 200,
@@ -164,6 +173,10 @@
     {
      "src": 4,
      "said": "The maximum monthly employer contribution for an employee in the highest salary bracket is PHP 3,530. Employees are required to make monthly contributions (ranging from PHP 250 to PHP 1,750) to the social security system based on their salary bracket. … The maximum monthly employer contribution for an employee in the highest salary bracket is PHP 2,500 for PHIC and PHP 200 for HDMF."
+    },
+    {
+     "src": 6,
+     "said": "Republic Act No. 11199 ... increases the following effective year 2025: 1. contribution rate to 15% 2. minimum Monthly Salary Credit (MSC) to ₱5,000.00 3. maximum MSC to ₱35,000.00 ... BELOW 5,250: MSC 5,000.00; employer 500.00 + EC 10.00 = 510.00; employee 250.00 ... 34,750 - Over: MSC 35,000.00 (Regular SS 20,000.00, MPF 15,000.00); employer 2,000.00 + 1,500.00 + EC 30.00 = 3,530.00; employee 1,000.00 + 750.00 = 1,750.00; total 5,280.00"
     }
    ]
   },
@@ -241,12 +254,19 @@
    "kind": "secondary",
    "quotes": "https://www.officialgazette.gov.ph/2017/12/19/republic-act-no-10963/",
    "said": "Persons required to register for VAT are those with gross sales exceeding the VAT threshold, which is currently PHP 3 million, in the past 12 months or reasonably expected to exceed the said threshold in the next 12 months."
+  },
+  {
+   "url": "https://www.sss.gov.ph/wp-content/uploads/2024/12/Cir-2024-006-Employers-scaled.jpg",
+   "title": "SSS Circular No. 2024-006 (19 December 2024): Schedule of SSS Contributions Effective January 2025, Business Employers and Employees (an image, read from the page)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Republic Act No. 11199 ... increases the following effective year 2025: 1. contribution rate to 15% 2. minimum Monthly Salary Credit (MSC) to ₱5,000.00 3. maximum MSC to ₱35,000.00 ... BELOW 5,250: MSC 5,000.00; employer 500.00 + EC 10.00 = 510.00; employee 250.00 ... 34,750 - Over: MSC 35,000.00 (Regular SS 20,000.00, MPF 15,000.00); employer 2,000.00 + 1,500.00 + EC 30.00 = 3,530.00; employee 1,000.00 + 750.00 = 1,750.00; total 5,280.00"
   }
  ],
  "blockers": [
   {
    "item": "social",
-   "sought": "The SSS 2025+ schedule as text (15% total, monthly salary credit range) and the expanded withholding rate on talent fees paid to a resident freelancer (RR 2-98 as amended); PhilHealth is now read from its own table.",
+   "sought": "The expanded withholding rate on talent fees paid to a resident freelancer (RR 2-98 as amended); PhilHealth is read from its own table and the SSS 2025+ schedule from Circular 2024-006 (2026-11-03)",
    "tried": {
     "institution": "bir.gov.ph/income-tax 2026-11-01: page body renders by script (no text served); SSS and PhilHealth sites not reached in this pass || 2026-11-01 retry: sss.gov.ph answers on retry: SSS Contribution Table page read (saved PH-sss-contribution-table.html): the schedules are JPG images (Cir-2024-006 Employers, Cir-2024-008 Self-Employed); OCR by tesseract timed out twice in this environment, so they were not read. philhealth.gov.ph ContributionTable_v2.pdf read and quoted (saved PH-philhealth-contribution-table.pdf). bir.gov.ph pages still render by script.",
     "official-register": "officialgazette.gov.ph RA 10963: HTTP 403, not read another way || 2026-11-01 retry: officialgazette.gov.ph returns HTTP 403 (not read another way); RR 2-98 not reached.",

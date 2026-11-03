@@ -90,6 +90,14 @@ describe("a country's tax", () => {
     // Germany's § 32a, zone by zone, and its solidarity surcharge's cap.
     expect(of('DE').residents[0]?.layers[0]?.zones?.[2]).toEqual({ from: '17799', to: '69878', quad: ['173.10', '2397', '1034.87'] });
     expect(of('DE').residents[0]?.layers[0]?.surtax).toEqual({ rate: '0.055', over: '20350', cap: '0.119' });
+    // Read again on 2026-11-03: Georgia's 10% at source on a non-resident's fee, final unless a return is filed (Tax Code art. 134);
+    // Malawi's VAT (the MRA's guide); Mozambique's VAT from the first metical once its small regimes went (Lei 10/2025).
+    expect([of('GE').nonResident.performer, of('MW').vat, of('MZ').vat, of('GD').social.self]).toEqual([
+      { bands: [{ from: '0', to: null, rate: '0.1' }], final: true },
+      { rate: '0.175', threshold: '50000000' },
+      { rate: '0.16', threshold: null },
+      [[{ from: '0', to: '62400', rate: '0.135' }]],
+    ]);
     // The year, and when its return is due.
     expect([of('GB').year, of('AU').year, of('ZA').year, of('FR').year, of('MX').year, of('DK').year]).toEqual([
       { start: '04-06', due: { on: '01-31', after: 1 } },
@@ -127,6 +135,7 @@ describe("a country's tax", () => {
       ['SE', '700000', '2026-01-01', '238060.00'], // the municipal average and 20% above 643,000
       ['NG', '5000000', '2026-01-01', '690000.00'], // 15% to 3m, 18% above
       ['NZ', '100000', '2026-04-01', '22877.50'], // 10.5%, 17.5%, 30% and 33%
+      ['FO', '500000', '2026-01-01', '163250.00'], // landsskattur 61,450 and 25% of 50,000; Tórshavn's 19% above 30,000
     ];
     for (const [c, income, year, tax] of cases) expect(residentTax(of(c), m(of(c).currency, income), year), `${c} ${income}`).toEqual(m(of(c).currency, tax));
   });

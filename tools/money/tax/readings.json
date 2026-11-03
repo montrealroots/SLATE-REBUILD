@@ -437,7 +437,7 @@
    }
   ],
   "social": {
-   "employee": [],
+   "employee": [[{"from":0,"to":{"fig":3,"path":["aovAwwIncomeCap"]},"rate":{"fig":3,"path":["employee","aov"]}}],[{"from":0,"to":{"fig":3,"path":["aovAwwIncomeCap"]},"rate":{"fig":3,"path":["employee","aww"]}}]],
    "self": []
   },
   "withholding": {},
@@ -991,22 +991,42 @@
  },
  "BS": {
   "year": null,
-  "residents": [{"none":{"fig":0,"path":["incomeTax"]}}],
+  "residents": [
+   {
+    "none": {"fig":0,"path":["incomeTax"]}
+   }
+  ],
   "social": {
-   "employee": [[{"from":0,"to":{"fig":2,"path":["ceilingMonthly"],"months":true},"rate":{"fig":2,"path":["employee"]}}]],
-   "self": [[{"from":0,"to":{"fig":2,"path":["ceilingMonthly"],"months":true},"rate":{"fig":2,"path":["selfEmployed"]}}]]
+   "employee": [[{"from":0,"to":{"fig":2,"path":["ceilingWeekly"],"weeks":true},"rate":{"fig":2,"path":["employee"]}}]],
+   "self": [[{"from":0,"to":{"fig":2,"path":["ceilingWeekly"],"weeks":true},"rate":{"fig":2,"path":["selfEmployed"]}}]]
   },
   "withholding": {
-   "performer": {"none":{"fig":0,"path":["incomeTax"]}},
-   "director": {"none":{"fig":0,"path":["incomeTax"]}},
-   "producer": {"none":{"fig":0,"path":["incomeTax"]}},
-   "author": {"none":{"fig":0,"path":["incomeTax"]}}
+   "performer": {
+    "none": {"fig":0,"path":["incomeTax"]}
+   },
+   "director": {
+    "none": {"fig":0,"path":["incomeTax"]}
+   },
+   "producer": {
+    "none": {"fig":0,"path":["incomeTax"]}
+   },
+   "author": {
+    "none": {"fig":0,"path":["incomeTax"]}
+   }
   },
   "nonResident": {
-   "performer": {"none":{"fig":1,"path":["withholding"]}},
-   "director": {"none":{"fig":1,"path":["withholding"]}},
-   "producer": {"none":{"fig":1,"path":["withholding"]}},
-   "author": {"none":{"fig":1,"path":["withholding"]}}
+   "performer": {
+    "none": {"fig":1,"path":["withholding"]}
+   },
+   "director": {
+    "none": {"fig":1,"path":["withholding"]}
+   },
+   "producer": {
+    "none": {"fig":1,"path":["withholding"]}
+   },
+   "author": {
+    "none": {"fig":1,"path":["withholding"]}
+   }
   },
   "vat": {"rate":{"fig":3,"path":["standardRate"]},"threshold":{"fig":3,"path":["threshold12Months"]}},
   "unmodeled": [],
@@ -2308,15 +2328,13 @@
  },
  "FO": {
   "year": null,
-  "residents": [],
+  "residents": [
+   {
+    "layers": [{"bands":{"fig":9,"path":["national"]}},{"bands":[{"from":{"fig":9,"path":["municipalFree"]},"to":null,"rate":{"fig":9,"path":["municipal","Tórshavn"]}}]}]
+   }
+  ],
   "social": {
-   "employee": [
-    [{"from":0,"to":null,"rate":{"fig":6,"path":["employee",0,"rate"]}}],
-    [{"from":0,"to":null,"rate":{"fig":6,"path":["employee",1,"rate"]}}],
-    [{"from":0,"to":null,"rate":{"fig":6,"path":["employee",2,"rate"]}}],
-    [{"from":0,"to":null,"rate":{"fig":6,"path":["employee",3,"rate"]}}],
-    [{"from":0,"to":null,"rate":{"fig":6,"path":["mandatoryPension"]}}]
-   ],
+   "employee": [[{"from":0,"to":null,"rate":{"fig":6,"path":["employee",0,"rate"]}}],[{"from":0,"to":null,"rate":{"fig":6,"path":["employee",1,"rate"]}}],[{"from":0,"to":null,"rate":{"fig":6,"path":["employee",2,"rate"]}}],[{"from":0,"to":null,"rate":{"fig":6,"path":["employee",3,"rate"]}}],[{"from":0,"to":null,"rate":{"fig":6,"path":["mandatoryPension"]}}]],
    "self": []
   },
   "withholding": {},
@@ -2335,7 +2353,7 @@
    }
   },
   "vat": {"rate":{"fig":4,"path":["rate"]},"threshold":{"fig":4,"path":["threshold"]}},
-  "unmodeled": ["social","wages"],
+  "unmodeled": ["regional","social","wages"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "FR": {
@@ -2454,7 +2472,7 @@
   ],
   "social": {
    "employee": [[{"from":0,"to":{"fig":2,"path":["ceilingMonthly"],"months":true},"rate":{"fig":2,"path":["employee"]}}]],
-   "self": []
+   "self": [[{"from":0,"to":{"fig":2,"path":["selfEmployed","ceilingMonthly"],"months":true},"rate":{"fig":2,"path":["selfEmployed","rate"]}}]]
   },
   "withholding": {
    "author": {
@@ -2502,7 +2520,20 @@
     "bands": [{"from":0,"to":null,"rate":{"fig":3,"path":["rate"]}}]
    }
   },
-  "nonResident": {},
+  "nonResident": {
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":6,"path":["rate"]}}],
+    "final": {"fig":6,"path":["final"]}
+   },
+   "director": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":6,"path":["rate"]}}],
+    "final": {"fig":6,"path":["final"]}
+   },
+   "producer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":6,"path":["rate"]}}],
+    "final": {"fig":6,"path":["final"]}
+   }
+  },
   "vat": {"rate":{"fig":4,"path":["standard"]},"threshold":{"fig":4,"path":["threshold"]}},
   "unmodeled": ["scheme"],
   "currency": {"fig":0,"path":["currency"]}
@@ -4823,12 +4854,7 @@
   "year": {"start":{"fig":1,"path":["taxYear","from"]},"end":{"fig":1,"path":["taxYear","to"]}},
   "residents": [
    {
-    "layers": [
-     {"bands":{"fig":0,"path":["brackets"]}},
-     {
-      "bands": [{"from":{"fig":0,"path":["fairShare","above"]},"to":null,"rate":{"fig":0,"path":["fairShare","rate"]}}]
-     }
-    ]
+    "layers": [{"bands":{"fig":0,"path":["brackets"]}},{"bands":[{"from":{"fig":0,"path":["fairShare","above"]},"to":null,"rate":{"fig":0,"path":["fairShare","rate"]}}]}]
    }
   ],
   "social": {
@@ -4843,6 +4869,18 @@
   "nonResident": {
    "author": {
     "bands": [{"from":0,"to":null,"rate":{"fig":5,"path":["nonResident"]}}]
+   },
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["entertainer"]}}],
+    "final": {"fig":7,"path":["entertainerFinal"]}
+   },
+   "director": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["services"]}}],
+    "final": {"fig":7,"path":["servicesFinal"]}
+   },
+   "producer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["services"]}}],
+    "final": {"fig":7,"path":["servicesFinal"]}
    }
   },
   "vat": {"rate":{"fig":6,"path":["standardRate"]},"threshold":{"fig":6,"path":["threshold"]}},
@@ -4875,12 +4913,16 @@
    "self": []
   },
   "withholding": {
-   "performer": {"bands":{"fig":1,"path":["brackets"]}},
-   "director": {"bands":{"fig":1,"path":["brackets"]}}
+   "performer": {
+    "bands": {"fig":1,"path":["brackets"]}
+   },
+   "director": {
+    "bands": {"fig":1,"path":["brackets"]}
+   }
   },
   "nonResident": {},
-  "vat": null,
-  "unmodeled": ["year","social","vat","authors"],
+  "vat": {"rate":{"fig":2,"path":["rate"]},"threshold":{"fig":2,"path":["threshold"]}},
+  "unmodeled": ["year","social","authors"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "MX": {
@@ -4985,7 +5027,7 @@
     "final": {"fig":4,"path":["final"]}
    }
   },
-  "vat": null,
+  "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":null},
   "unmodeled": ["regional"],
   "currency": {"fig":0,"path":["currency"]}
  },
@@ -5473,6 +5515,10 @@
    },
    "author": {
     "bands": [{"from":0,"to":null,"rate":{"fig":4,"path":["royalties"]}}],
+    "final": {"fig":7,"path":["final"]}
+   },
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":8,"path":["workIncome"]}}],
     "final": {"fig":7,"path":["final"]}
    }
   },
@@ -6584,7 +6630,12 @@
    "self": [[{"from":0,"to":null,"rate":{"fig":5,"path":["aov","rate"]}}]]
   },
   "withholding": {},
-  "nonResident": {},
+  "nonResident": {
+   "performer": {
+    "bands": [{"from":0,"to":null,"rate":{"fig":7,"path":["performerShortContract"]}}],
+    "final": {"fig":7,"path":["final"]}
+   }
+  },
   "vat": {"rate":{"fig":4,"path":["standard"]},"threshold":{"fig":4,"path":["registrationThreshold"]}},
   "unmodeled": [],
   "currency": {"fig":0,"path":["currency"]}

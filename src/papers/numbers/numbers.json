@@ -89,6 +89,21 @@
    "tax"
   ]
  },
+ "AO": {
+  "name": "Número do Bilhete de Identidade (Número Único do Cidadão)",
+  "issuer": "Angola's civil identification service (the law names it only as the service competent to issue the Bilhete de Identidade)",
+  "format": {
+   "length": 14,
+   "pattern": "^[0-9]{9}[A-Z0-9]{4}[0-9]$"
+  },
+  "when": "application",
+  "who": [
+   "citizens"
+  ],
+  "needed": [
+   "tax"
+  ]
+ },
  "AR": {
   "name": "Código Único de Identificación Laboral (CUIL)",
   "issuer": "the Administración Nacional de la Seguridad Social (ANSES)",
@@ -694,6 +709,30 @@
   "who": [
    "residents"
   ],
+  "needed": [
+   "tax"
+  ]
+ },
+ "FJ": {
+  "name": "Taxpayer Identification Number (TIN)",
+  "issuer": "the Fiji Revenue and Customs Service",
+  "format": {
+   "length": 10,
+   "min": 9,
+   "pattern": "^[0-9]{9,10}$"
+  },
+  "when": "application",
+  "who": [
+   "anyone"
+  ],
+  "fee": {
+   "currency": "FJD",
+   "minor": 0
+  },
+  "within": {
+   "n": 3,
+   "unit": "day"
+  },
   "needed": [
    "tax"
   ]
@@ -2195,6 +2234,19 @@
   "when": "application",
   "who": [
    "anyone"
+  ]
+ },
+ "XK": {
+  "name": "Numri personal (personal number)",
+  "issuer": "the Civil Status Office, from the Civil Registration Agency's electronic civil status system (for foreigners and stateless residents, the Department for Citizenship, Asylum and Migration)",
+  "format": {
+   "length": 10,
+   "pattern": "^[0-9]{10}$"
+  },
+  "when": "birth",
+  "who": [
+   "citizens",
+   "residents"
   ]
  },
  "YT": {

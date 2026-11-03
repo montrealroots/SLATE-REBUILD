@@ -1312,6 +1312,60 @@
    }
   ]
  },
+ "CR": {
+  "routes": [
+   {
+    "id": "artistas",
+    "name": "Categoría especial: Artistas, deportistas e integrantes de espectáculos públicos",
+    "for": "work",
+    "work": "sponsor",
+    "within": {
+     "n": 3,
+     "unit": "month"
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "residente-temporal",
+    "name": "Residente temporal",
+    "for": "work",
+    "work": "sponsor",
+    "fee": {
+     "currency": "USD",
+     "minor": 8000
+    },
+    "within": {
+     "n": 3,
+     "unit": "month"
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true,
+    "counts": true,
+    "permanentAfter": 3
+   },
+   {
+    "id": "residente-permanente",
+    "name": "Residente permanente",
+    "for": "permanent",
+    "fee": {
+     "currency": "USD",
+     "minor": 8000
+    },
+    "within": {
+     "n": 3,
+     "unit": "month"
+    },
+    "counts": true
+   }
+  ]
+ },
  "CU": {
   "routes": [
    {
@@ -1679,6 +1733,48 @@
     "apply": "in country",
     "work": "sponsor",
     "renewable": true
+   }
+  ]
+ },
+ "EC": {
+  "routes": [
+   {
+    "id": "temporal-dependencia",
+    "name": "Visa de residencia temporal de trabajo por actividades laborales bajo relación de dependencia",
+    "for": "work",
+    "work": "sponsor",
+    "fee": {
+     "currency": "USD",
+     "minor": 32000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    }
+   },
+   {
+    "id": "temporal-autonomo",
+    "name": "Visa de residencia temporal de trabajo autónomo, servicios profesionales, civiles, de consultoría o por carta de auspicio",
+    "for": "self-employed",
+    "apply": "either",
+    "work": "any",
+    "fee": {
+     "currency": "USD",
+     "minor": 32000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    }
+   },
+   {
+    "id": "permanente",
+    "name": "Visa de residencia permanente por tiempo de permanencia mayor a 21 meses",
+    "for": "permanent",
+    "fee": {
+     "currency": "USD",
+     "minor": 27500
+    }
    }
   ]
  },
@@ -3068,6 +3164,39 @@
     "name": "Work Visa (work permit)",
     "for": "work",
     "apply": "abroad"
+   }
+  ]
+ },
+ "KR": {
+  "routes": [
+   {
+    "id": "e-6",
+    "name": "예술흥행(E-6)",
+    "for": "work",
+    "apply": "either",
+    "work": "sponsor",
+    "fee": {
+     "currency": "KRW",
+     "minor": 100000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    },
+    "renewable": true,
+    "counts": true,
+    "permanentAfter": 5
+   },
+   {
+    "id": "f-5",
+    "name": "영주(F-5)",
+    "for": "permanent",
+    "apply": "in country",
+    "fee": {
+     "currency": "KRW",
+     "minor": 200000
+    },
+    "counts": true
    }
   ]
  },
@@ -5797,6 +5926,100 @@
     "for": "work",
     "apply": "either",
     "work": "sponsor",
+    "renewable": true
+   }
+  ]
+ },
+ "TV": {
+  "routes": [
+   {
+    "id": "employment-abroad",
+    "name": "Permit to Enter and Reside (employment), lodged outside Tuvalu",
+    "for": "work",
+    "apply": "abroad",
+    "work": "sponsor",
+    "fee": {
+     "currency": "AUD",
+     "minor": 60000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "employment-in",
+    "name": "Permit to Enter and Reside (employment), lodged in Tuvalu",
+    "for": "work",
+    "apply": "in country",
+    "work": "sponsor",
+    "fee": {
+     "currency": "AUD",
+     "minor": 120000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "business-abroad",
+    "name": "Permit to Enter and Reside (conduct of business), lodged outside Tuvalu",
+    "for": "self-employed",
+    "apply": "abroad",
+    "fee": {
+     "currency": "AUD",
+     "minor": 60000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "business-in",
+    "name": "Permit to Enter and Reside (conduct of business), lodged in Tuvalu",
+    "for": "self-employed",
+    "apply": "in country",
+    "fee": {
+     "currency": "AUD",
+     "minor": 120000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "study",
+    "name": "Permit to Enter and Reside (study)",
+    "for": "study",
+    "fee": {
+     "currency": "AUD",
+     "minor": 30000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
+    "renewable": true
+   },
+   {
+    "id": "family",
+    "name": "Permit to Enter and Reside (family re-union or family support)",
+    "for": "family",
+    "fee": {
+     "currency": "AUD",
+     "minor": 10000
+    },
+    "term": {
+     "n": 1,
+     "unit": "year"
+    },
     "renewable": true
    }
   ]

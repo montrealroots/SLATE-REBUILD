@@ -81,15 +81,39 @@
   },
   {
    "item": "social",
-   "finding": "The employer pays pay-related social insurance for employees, and employed and self-employed people pay capped social insurance contributions.",
+   "finding": "From 1 January 2026 an employee pays 4.5% AOV and 0.5% AWW on pay up to Afl. 85,000, and 1.6% AZV; the employer pays 10% and 0.5%, 8.9% AZV, and ZV and OV alone.",
    "value": {
-    "rates": null
+    "currency": "AWG",
+    "from": "2026-01-01",
+    "employee": {
+     "aov": 0.045,
+     "aww": 0.005,
+     "azv": 0.016
+    },
+    "employer": {
+     "aov": 0.1,
+     "aww": 0.005,
+     "azv": 0.089,
+     "zv": 0.0265,
+     "ov": [
+      0.0025,
+      0.025
+     ]
+    },
+    "aovAwwIncomeCap": 85000,
+    "zvOvIncomeCapYearly": 70200,
+    "azvIncomeCap": null,
+    "selfEmployed": null
    },
-   "applies": "The 2026 AOV/AWW and AZV rates and caps were not found; see blocker.",
+   "applies": "Employees. The SVB gives the AOV/AWW income limit as one figure with no period, read as a year (its ZV/OV limits are given by day, week, month and year, the year's 70,200). The AZV's own ceiling and the self-employed's rates aren't on the page.",
    "sources": [
     {
      "src": 0,
      "said": "Social contributions and payroll taxes: The employer is required to make pay-related social insurance payments on behalf of"
+    },
+    {
+     "src": 2,
+     "said": "(E sumanan aki ta conta entrante 1 januari 2026 ...) Prima (den porcentahe di salario) AOV & AWW total 15,5 % Doño di trabao: 10,5% Trahado: 5% AOV total 14,5% Doño di trabao: 10% Trahado: 4,5% AWW total 1% Doño di trabao: 0,5% Trahado: 0,5% ... ZV 2,65% di e salario bruto, paga pa doño di trabao AZV total 10,5% Doño di trabao: 8,9% Trahado: 1,6% Entrada maximo (inkomensgrens) pa prima AOV/AWW Afl. 85.000,- Entrada maximo (inkomensgrens) pa prima ZV/OV ... Pa aña: Afl. 70.200,-"
     }
    ]
   },
@@ -168,12 +192,19 @@
    "read": "2026-11-02",
    "kind": "primary",
    "said": "Onder onzuiver inkomen wordt verstaan al hetgeen wordt genoten als zuivere opbrengst van: a. onroerende zaken en de rechten waaraan deze zijn onderworpen; b. roerend kapitaal; c. onderneming en arbeid; d. rechten op periodieke uitkeringen. … De niet in Aruba wonende personen, bedoeld in artikel 1, derde lid, zijn belastingplichtig naar hun binnenlands belastbaar inkomen. … bedrijven en beroepen (ambt, waardigheid, bediening en bestaande of vroegere dienstbetrekking door henzelf of door een ander ver- … vuld daaronder begrepen), die en voor zover zij persoonlijk of door vaste vertegenwoordigers of gemachtigden in Aruba worden uitgeoefend"
+  },
+  {
+   "url": "https://www.svbaruba.org/dono-di-trabao/resumen-di-tarifa/resumen-di-tarifa-2026/",
+   "title": "Resumen di Tarifa 2026 (Sociale Verzekeringsbank Aruba)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(E sumanan aki ta conta entrante 1 januari 2026 ...) Prima (den porcentahe di salario) AOV & AWW total 15,5 % Doño di trabao: 10,5% Trahado: 5% AOV total 14,5% Doño di trabao: 10% Trahado: 4,5% AWW total 1% Doño di trabao: 0,5% Trahado: 0,5% ... ZV 2,65% di e salario bruto, paga pa doño di trabao AZV total 10,5% Doño di trabao: 8,9% Trahado: 1,6% Entrada maximo (inkomensgrens) pa prima AOV/AWW Afl. 85.000,- Entrada maximo (inkomensgrens) pa prima ZV/OV ... Pa aña: Afl. 70.200,-"
   }
  ],
  "blockers": [
   {
    "item": "social",
-   "sought": "The 2026 AOV/AWW and AZV contribution rates and income caps (employee, employer, self-employed).",
+   "sought": "The 2026 AZV income ceiling (the employee's 1.6% AZV is read, its ceiling isn't) and the self-employed's AOV/AWW and AZV rates; the employee's and the employer's AOV/AWW rates and their Afl. 85,000 limit were read from the SVB on 2026-11-03.",
    "tried": {
     "institution": "impuesto.aw answers; its 'Loonbelasting en Premies' page (saved as AW-dimp-loonbelasting-en-premies.html) lists forms but no 2026 rates (2026-11-01). || retry 2026-11-01 (world round): impuesto.aw answers: its AZV levy page (AW-dimp-bestemmingsheffing-azv.html) and the 2026 income/wage tax calculator (AW-dimp-calculator-ib-lb-2026.xlsx) read: no AOV/AWW or AZV premium rates or caps; svb.aw does not answer (curl 000); azv.aw answers 403",
     "official-register": "cuatro.sim-cdn.nl / overheid.aw legislation not read 2026-11-01. || retry 2026-11-01 (world round): gobierno.aw (ex overheid.aw) answers its home page; no premium regulation located; cuatro.sim-cdn.nl hosts DIMP files only",

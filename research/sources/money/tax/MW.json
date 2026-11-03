@@ -82,6 +82,22 @@
      "said": "Monthly tax table for 2026 tax year Monthly Income Rate From (MK) To (MK) 0 170 000.00 0% 170 000 .01 1 570 000.00 30%"
     }
    ]
+  },
+  {
+   "item": "vat",
+   "finding": "VAT is 17.5%, and a business registers once its taxable supplies reach K50,000,000 a year.",
+   "value": {
+    "currency": "MWK",
+    "rate": 0.175,
+    "threshold": 50000000
+   },
+   "applies": "A freelancer's taxable supplies",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Output tax is the VAT charged on sales, services or supplies at the applicable tax rates (17.5% or 0%). ... Section 11 of the VAT Act establishes the threshold for registration, that is, K50,000,000 per annum. Businesses or persons providing taxable supplies ... whose annual business turnover equals, exceeds or is expected to exceed K50,000,000 ... must register for VAT, within thirty (30) days"
+    }
+   ]
   }
  ],
  "country": "MW",
@@ -93,12 +109,19 @@
    "kind": "secondary",
    "quotes": "https://www.mra.mw/",
    "said": "The Malawi Revenue Authority (MRA) confirmed that the following tax changes have been enacted on 30 December 2025 in the Taxation (Amendment) Act No.36 of 2025 and are effective from 1 January 2026 . … Monthly tax table for 2026 tax year Monthly Income Rate From (MK) To (MK) 0 170 000.00 0% 170 000 .01 1 570 000.00 30% 1 570 000.01 10 000 000.00 35% 10 000 000.01 And above 40%"
+  },
+  {
+   "url": "https://www.mra.mw/admin/storage/download_files/1793197797_1.%20VAT%20Guide%20(003)%20reviewed%2029092026.docx",
+   "title": "Malawi Revenue Authority: VAT Guide (reviewed 29-09-2026)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Output tax is the VAT charged on sales, services or supplies at the applicable tax rates (17.5% or 0%). ... Section 11 of the VAT Act establishes the threshold for registration, that is, K50,000,000 per annum. Businesses or persons providing taxable supplies ... whose annual business turnover equals, exceeds or is expected to exceed K50,000,000 ... must register for VAT, within thirty (30) days"
   }
  ],
  "blockers": [
   {
    "item": "nonResident",
-   "sought": "Malawi's withholding on non-resident performers' and authors' fees (rate, finality), the tax year and return date, pension contributions, VAT rate and threshold",
+   "sought": "Malawi's withholding on non-resident performers' and authors' fees (rate, finality), the tax year and return date, and pension contributions (VAT's rate and threshold were read from the MRA's VAT Guide on 2026-11-03)",
    "tried": {
     "institution": "mra.mw 2026-11-01: a script-rendered app (1,876-byte shell, no text); not read another way || 2026-11-01 retry: mra.mw is a React app; its route list names /allrates and its content API (www.mra.mw/admin/api/v1/download/getAllDomestic) answers 'Unauthorized access', so it was not read",
     "official-register": "Malawi Gazette / Taxation Act (Cap. 41:01) not reached || 2026-11-01 retry: malawilii.org answers; its legislation listing (paged) did not show the Taxation Act among the pages read",

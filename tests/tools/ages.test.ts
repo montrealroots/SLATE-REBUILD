@@ -163,7 +163,9 @@ describe('the ages read from the person research', () => {
     expect([ages['US']?.regions?.['US.CA'], ages['US']?.regions?.['US.NY'], ages['CA']?.regions?.['CA.08'], ages['CA']?.regions?.['CA.10'], ages['AU']?.regions?.['AU.07']]).toEqual([18, 18, 18, 18, 18]);
     // Layer 3's own where it holds one: Mauritania's code over the state's report.
     expect(ages['MR']?.work).toStrictEqual({ from: 14, performers: 'barred' });
-    expect(Object.keys(ages).length).toBe(213);
+    // Layer 3's majority beside the person research's working age: the Bahamas' Minors Act (2026-11-03).
+    expect(ages['BS']).toStrictEqual({ majority: 18, work: { from: 16, performers: 'barred' } });
+    expect(Object.keys(ages).length).toBe(217);
   });
 });
 

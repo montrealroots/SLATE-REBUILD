@@ -42,8 +42,9 @@ export const READINGS: Readonly<Record<string, Reading>> = {
   BJ: OF_AGE,
   BL: OF_AGE,
   BO: AGE,
-  // No child under sixteen employable save by parents in light domestic or farm work; no law sanctions performing.
-  BS: { ...AGE, from: 'general', performers: 'barred' },
+  // No child under sixteen employable save by parents in light domestic or farm work; no law sanctions performing. Its
+  // majority was read here until 2026-11-03, when layer 3's file read the Minors Act's own.
+  BS: { from: 'general', performers: 'barred' },
   BT: AGE,
   BW: AGE,
   BY: AGE,

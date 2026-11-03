@@ -16,6 +16,7 @@ describe('the banks compile', () => {
     expect(waiver({ deposits: '500' }, 'USD', 'w')).toStrictEqual({ deposits: money('USD', 50_000) });
     expect(waiver({ balance: '1500.00' }, 'USD', 'w')).toStrictEqual({ balance: money('USD', 150_000) });
     expect(waiver({ average: '0.01' }, 'USD', 'w')).toStrictEqual({ average: money('USD', 1) });
+    expect(waiver({ averageUpTo: '500' }, 'STN', 'w')).toStrictEqual({ averageUpTo: money('STN', 50_000) });
     expect(waiver({ under: 26 }, 'USD', 'w')).toStrictEqual({ under: 26 });
     expect(waiver({ from: 1 }, 'USD', 'w')).toStrictEqual({ from: 1 });
     expect(waiver({ from: 120 }, 'USD', 'w')).toStrictEqual({ from: 120 });
@@ -32,6 +33,7 @@ describe('the banks compile', () => {
     expect(() => waiver({ deposits: 500 }, 'USD', 'w')).toThrow("w's deposits is an amount written in major units");
     expect(() => waiver({ deposits: '-1.00' }, 'USD', 'w')).toThrow("w's deposits is an amount written in major units");
     expect(() => waiver({ balance: '0' }, 'USD', 'w')).toThrow("w's balance is above nothing");
+    expect(() => waiver({ averageUpTo: '0' }, 'USD', 'w')).toThrow("w's averageUpTo is above nothing");
     for (const age of [0, 121, 2.5, '26', null]) expect(() => waiver({ under: age }, 'USD', 'w'), String(age)).toThrow("w's under is an age in whole years");
   });
 

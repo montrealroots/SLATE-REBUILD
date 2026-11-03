@@ -21,6 +21,8 @@ export type Waiver =
   | { readonly deposits: Money }
   | { readonly balance: Money }
   | { readonly average: Money }
+  /** The average of the daily balances is at most the figure: a fee charged only on a balance above it (BISTP's, by band). */
+  | { readonly averageUpTo: Money }
   | { readonly under: number }
   | { readonly from: number }
   /** The holder is a citizen of the bank's country. */
@@ -119,6 +121,7 @@ export const waives = (w: Waiver, s: Standing): boolean => {
   if ('deposits' in w) return compare(s.deposits, w.deposits) >= 0;
   if ('balance' in w) return compare(s.lowest, w.balance) >= 0;
   if ('average' in w) return compare(s.average, w.average) >= 0;
+  if ('averageUpTo' in w) return compare(s.average, w.averageUpTo) <= 0;
   if ('under' in w) return s.age < w.under;
   if ('national' in w) return s.national;
   if ('first' in w) return s.period <= w.first;

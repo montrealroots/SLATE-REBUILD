@@ -88,7 +88,7 @@
     ],
     "regional": null
    },
-   "applies": "Employment income of residents; a resident is taxed on worldwide income; the self-employed (independent entrepreneur) rate is not covered by the source read",
+   "applies": "Employment income of residents; a resident is taxed on worldwide income; an independent entrepreneur's 20% is the business figure (read 2026-11-03)",
    "sources": [
     {
      "src": 0,
@@ -105,6 +105,10 @@
     {
      "src": 1,
      "said": "Persons actually staying in the territory of Azerbaijan for more than 182 days during a calendar year are considered resident."
+    },
+    {
+     "src": 8,
+     "said": "Vergi Məcəlləsinin 101.1-1-ci maddəsinə əsasən, 2019-cu il yanvarın 1-dən 7 il müddətində neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən 8000 manatadək olan aylıq gəlirlərindən vergi tutulmurdu. 2026-cı il yanvarın 1-dən həmin maddəyə edilmiş dəyişikliyə əsasən, fiziki şəxslərin muzdlu işdən 2500 manatadək olan aylıq gəlirlərindən 2027-ci il yanvarın 1-dək 3 faiz, 2027-ci il yanvarın 1-dən 2028-ci il yanvarın 1-dək 5 faiz, 2028-ci il yanvarın 1-dən isə 7 faiz həcmində vergi tutulur."
     }
    ]
   },
@@ -303,6 +307,20 @@
      "said": "If the volume of taxable transactions exceeds 200,000 manat in any month of a consecutive 12-month period, it shall take effect on the first day of the following month"
     }
    ]
+  },
+  {
+   "item": "business",
+   "finding": "An individual entrepreneur's taxable income is taxed at 20%, as the State Tax Service's own answers of June 2026 state it.",
+   "value": {
+    "entrepreneurRate": 0.2
+   },
+   "applies": "A self-employed screen worker registered as an individual entrepreneur; the game doesn't tax a freelancer's profits apart from the resident's scale (the reading's 'business', told to the player).",
+   "sources": [
+    {
+     "src": 9,
+     "said": "On an individual entrepreneur's income after the relief of art. 102.1.30-1: \"qalan məbləğdən 20 faiz dərəcə ilə gəlir vergisi hesablanıb\" (citing the Tax Code's art. 33.4; ID 10936 also arts. 102.1.30, 102.1.30-1 and 220)."
+    }
+   ]
   }
  ],
  "country": "AZ",
@@ -369,19 +387,21 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "If the volume of taxable transactions exceeds 200,000 manat in any month of a consecutive 12-month period, it shall take effect on the first day of the following month"
+  },
+  {
+   "url": "https://taxes.gov.az/uploads/2026/faq/FAQ2026.pdf",
+   "title": "Vergi Məcəlləsində edilmiş dəyişikliklər suallar və cavablarda (State Tax Service, Bakı 2026: the Law of 9 December 2025's changes)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Vergi Məcəlləsinin 101.1-1-ci maddəsinə əsasən, 2019-cu il yanvarın 1-dən 7 il müddətində neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən 8000 manatadək olan aylıq gəlirlərindən vergi tutulmurdu. 2026-cı il yanvarın 1-dən həmin maddəyə edilmiş dəyişikliyə əsasən, fiziki şəxslərin muzdlu işdən 2500 manatadək olan aylıq gəlirlərindən 2027-ci il yanvarın 1-dək 3 faiz, 2027-ci il yanvarın 1-dən 2028-ci il yanvarın 1-dək 5 faiz, 2028-ci il yanvarın 1-dən isə 7 faiz həcmində vergi tutulur."
+  },
+  {
+   "url": "https://taxes.gov.az/az/page/suallar-ve-cavablar?page=4",
+   "title": "Suallar və cavablar (State Tax Service): answers ID 10894 (02.06.2026), 10922 (16.06.2026), 10936 (22.06.2026) and 10951 (29.06.2026)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "On an individual entrepreneur's income after the relief of art. 102.1.30-1: \"qalan məbləğdən 20 faiz dərəcə ilə gəlir vergisi hesablanıb\" (citing the Tax Code's art. 33.4; ID 10936 also arts. 102.1.30, 102.1.30-1 and 220)."
   }
  ],
- "blockers": [
-  {
-   "item": "residents",
-   "sought": "The income tax rate on an independent entrepreneur's (a self-employed screen worker's) profit for 2026, and the Tax Code's own text of Articles 101 and 123",
-   "tried": {
-    "institution": "taxes.gov.az home page unreachable (connection failed) on 2026-11-01; the Tax Code page and salary-deduction page load but carry no rate text (the latter is an app) || 2026-11-01 retry: www.taxes.gov.az/en and /az/page/vergi-mecellesi again: 000 and 404; no rate page reached.",
-    "official-register": "e-qanun.az not tried (JavaScript); the State Tax Service's Tax Code link https://www.taxes.gov.az/az/page/ar-vergi-mecellesi read without the article text || 2026-11-01 retry: e-qanun.az/framework/46948 (Tax Code) answers 200 but is a Next.js app: 9 characters of text, the article text loads by script and was not read another way.",
-    "web-search": "searched 'Azerbaijan Tax Code article 157 VAT registration threshold 200,000 manats 12 months 2026' || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('Vergi Məcəlləsi 101 fərdi sahibkar gəlir vergisi dərəcəsi 2026'). || Web search 2026-11-02: queries \"Azerbaijan Tax Code article 101 individual entrepreneur income tax rate 20% 2026\" (returned Deloitte's 2023 highlights and Freeman Law's treaty note, both listing 20% for individual entrepreneurs without naming the 2026 text; PwC's summary with the 2026 wage scale; taxes.gov.az/en/page/2-1, an English \"Extract from the Tax Code\" read 2026-11-02 that holds Articles 103 to 105 only, not 101) and \"Vergi Məcəlləsi 101.3 sahibkarlıq fəaliyyəti fiziki şəxs gəlir vergisi 20 faiz 2026\" (returned the State Tax Service's 2026 question-and-answer booklet taxes.gov.az/uploads/2026/faq/FAQ2026.pdf, saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/tax/AZ-faq2026.pdf: it explains the Law of 9 December 2025's changes and does not state the entrepreneur's rate; a taxes.gov.az Q&A citing art. 101.2's 14% on non-entrepreneurial income; azertag.az's 2026 explainer on wage income only); no primary text of art. 101.3 or 123 found.",
-    "trade-press": "PwC Worldwide Tax Summaries (reviewed 28 September 2026) used; it does not give the entrepreneur rate || 2026-11-01 retry: taxsummaries.pwc.com Azerbaijan (already saved) still gives no entrepreneur rate; no other firm summary fetched.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
-   }
-  }
- ]
+ "blockers": []
 }

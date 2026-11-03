@@ -101,12 +101,12 @@
   },
   {
    "item": "social",
-   "finding": "From 2023 the employer pays a single insurance contribution of 30% on pay up to the single annual base limit and 15.1% above it (art. 425); a self-employed person on the professional income tax (NPD) pays 4% on income from individuals and 6% on income from businesses and companies, with no insurance contributions, while income stays within RUB 2.4 million a year.",
+   "finding": "From 2023 the employer pays a single insurance contribution of 30% on pay up to the single annual base limit (RUB 2,979,000 in 2026, Government decree No. 1705 of 31 October 2025) and 15.1% above it (art. 425); a self-employed person on the professional income tax (NPD) pays 4% on income from individuals and 6% on income from businesses and companies, with no insurance contributions, while income stays within RUB 2.4 million a year.",
    "value": {
     "employer": {
      "toLimit": 0.3,
      "aboveLimit": 0.151,
-     "limit2026": null
+     "limit2026": 2979000
     },
     "npd": {
      "fromIndividuals": 0.04,
@@ -128,6 +128,14 @@
     {
      "src": 5,
      "said": "8) налогоплательщики, у которых доходы, учитываемые при определении налоговой базы, превысили в текущем календарном году 2,4 миллиона рублей;"
+    },
+    {
+     "src": 9,
+     "said": "Утверждена единая предельная величина базы для исчисления страховых взносов с 1 января 2026 года. В отношении каждого физического лица база составит 2 979 000 рублей. Основная категория плательщиков исчисляет страховые взносы ... по общеустановленным единым тарифам в размере 30% в пределах установленной единой предельной величины базы, 15,1% - сверх нее."
+    },
+    {
+     "src": 10,
+     "said": "1. Установить, что для плательщиков страховых взносов, указанных в подпункте 1 пункта 1 статьи 419 Налогового кодекса ... единая предельная величина базы ... составляет в отношении каждого физического лица сумму, не превышающую 2979000 рублей нарастающим итогом с 1 января 2026 г."
     }
    ]
   },
@@ -261,19 +269,22 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "3) налогоплательщики, получающие авторские вознаграждения или вознаграждения за создание, исполнение или иное использование произведений науки, литературы, искусства, за создание иных результатов интеллектуальной деятельности, вознаграждения патентообладателям изобретений, полезных моделей, промышленных образцов, в сумме фактически произведенных и документально подтвержденных расходов. Если эти расходы не могут быть подтверждены документально, они принимаются к вычету в следующих размерах: … Создание литературных произведений, в том числе для театра, кино, эстрады и цирка 20 … Создание аудиовизуальных произведений (видео-, теле- и кинофильмов) 30 … оригинальной музыки для кино-, теле- и видеофильмов и театральных постановок 40 других музыкальных произведений, в том числе подготовленных к опубликованию 25 Исполнение произведений литературы и искусства 20"
+  },
+  {
+   "url": "https://www.nalog.gov.ru/rn77/news/activities_fts/16577139/",
+   "title": "ФНС России: Установлен единый предельный размер базы для исчисления страховых взносов на 2026 год (12.11.2025)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Утверждена единая предельная величина базы для исчисления страховых взносов с 1 января 2026 года. В отношении каждого физического лица база составит 2 979 000 рублей. Основная категория плательщиков исчисляет страховые взносы ... по общеустановленным единым тарифам в размере 30% в пределах установленной единой предельной величины базы, 15,1% - сверх нее."
+  },
+  {
+   "url": "https://base.garant.ru/412984357/",
+   "title": "Постановление Правительства РФ от 31 октября 2025 г. N 1705 \"О единой предельной величине базы для исчисления страховых взносов с 1 января 2026 г.\" (Garant)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "http://publication.pravo.gov.ru/",
+   "said": "1. Установить, что для плательщиков страховых взносов, указанных в подпункте 1 пункта 1 статьи 419 Налогового кодекса ... единая предельная величина базы ... составляет в отношении каждого физического лица сумму, не превышающую 2979000 рублей нарастающим итогом с 1 января 2026 г."
   }
  ],
- "blockers": [
-  {
-   "item": "social",
-   "sought": "The single base limit for insurance contributions for 2026 (the Government decree's figure); the self-employed (NPD) regime is now found in Law 422-FZ.",
-   "tried": {
-    "institution": "nalog.gov.ru pages HTTP 403 to curl 2026-11-01 (not read another way) || 2026-11-01 retry: nalog.gov.ru still HTTP 403 (not read another way); consultant.ru NK RF art. 421 (ed. 04.08.2026) read: it sets how the limit is indexed, not the 2026 figure; consultant.ru 'Календарь бухгалтера на 2026 год' (cons_doc_LAW_520626) read: no base-limit figure.",
-    "official-register": "legalacts.ru read for NK RF arts. 145, 164, 224, 225, 226, 229, 425; the 2026 base-limit decree and the professional income tax law (422-FZ) not read || 2026-11-01 retry: legalacts.ru site search for 'предельной величине базы для исчисления страховых взносов 2026' returned only unrelated federal laws; consultant.ru /law/ref/strahovye-vznosy/ and /law/ref/predelnaya-baza/ are 404.",
-    "web-search": "WebSearch 'consultant.ru статья 224 НК РФ налоговые ставки 13 15 18 20 22 процентов 2026' || 2026-11-01 retry: refused by the tool: 'this turn's web search budget is used up (limit: 200 WebSearch calls per turn, shared by every agent)' when querying 'Налоговый кодекс ... 2026' (2026-11-01).",
-    "trade-press": "no big-four summary for Russia (Deloitte and PwC pages 404) || 2026-11-01 retry: no big-four Russia page exists (earlier 404s); ConsultantPlus is the only consolidator reached and it gives no figure on the pages read.",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || 2026-11-01 retry: archive.org availability API answers, but web.archive.org snapshots return HTTP 403 (http) or reset (https) from this environment."
-   }
-  }
- ]
+ "blockers": []
 }

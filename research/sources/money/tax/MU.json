@@ -173,6 +173,23 @@
      "said": "The standard VAT rate is 15%. Some supplies are zero rated or exempt. Registration: The registration threshold is MUR 3 million."
     }
    ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A payment to a non-resident entertainer bears 10% withheld, the final tax at the payee's option; a payment to a non-resident for any other services rendered in Mauritius bears 10% withheld, not final.",
+   "value": {
+    "entertainer": 0.1,
+    "entertainerFinal": "yes, at the payee's option (s. 111C(5))",
+    "services": 0.1,
+    "servicesFinal": false
+   },
+   "applies": "Non-residents paid by Mauritian payers (a treaty rate may be lower)",
+   "sources": [
+    {
+     "src": 2,
+     "said": "111C (4) Where ... (d) payments to an entertainer or sportsperson referred to in section 111B(j) ... are payable to a non-resident, the income tax to be deducted shall be at the rate specified in the Sixth Schedule or at the rate specified under any arrangement for relief from double taxation ..., whichever is lower. (5) Where income tax is deducted from the interest, payments to an entertainer or sportsperson, or from rent or royalties ... under subsection (4), the amount of tax so deducted, at the option of the payee shall be deemed to be the final amount of tax payable ... SIXTH SCHEDULE ... 8 Payment made to a non-resident for any services rendered in Mauritius pursuant to section 111B(h) 10 ... 10 Payments to a non-resident entertainer or sportsperson pursuant to 111B(j) 10"
+    }
+   ]
   }
  ],
  "country": "MU",
@@ -191,6 +208,13 @@
    "kind": "secondary",
    "quotes": "https://www.mra.mu",
    "said": "All individuals with a net annual income exceeding MUR 12 million are liable to pay a fair share contribution of 15% on the amount in excess of MUR 12 million, for the three consecutive income years commencing on 1 July 2025. … One dependent: MUR 110,000; • Two dependents: MUR 190,000; • Three dependents: MUR 275,000; and • Four or more dependents: MUR 355,000. … Tax year: The tax year is from 1 July through 30 June. … Income not subject to PAYE is self-assessed, and the individual must make quarterly tax payments. An annual income tax return must be filed by 15 October following the end of the tax year. … The employer must make pay-related social security contributions equal to 2.5% (for the National Solidarity Fund (NSF)) and 1.5% (for the Human Resource Development Council levy) of the monthly basic salary (the monthly salary is capped for NSF contributions). Contributions to the Contribution Sociale Généralisée (CSG) payable by the employer are based on specific remuneration brackets and are not capped. The employee must make pay-related social security contributions equal to 1% (in respect of the NSF) of the monthly basic salary, subject to a cap. … Nonresidents are taxed only on Mauritius-source income. … A 10% withholding tax generally is imposed on technical service fees paid to nonresidents for services rendered in Mauritius unless the fees are specifically exempted or the rate is reduced under an applicable tax treaty. … The general rate of withholding tax on royalties paid to nonresidents is 15% unless the rate is reduced under an applicable tax treaty. A 10% withholding tax generally applies to royalties paid to residents. … The standard VAT rate is 15%. Some supplies are zero rated or exempt. Registration: The registration threshold is MUR 3 million."
+  },
+  {
+   "url": "https://www.mra.mu/download/ITAConsolidated.pdf",
+   "title": "The Income Tax Act 1995, consolidated up to Finance Act 2026 (MRA), s. 111C and the Sixth Schedule",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "111C (4) Where ... (d) payments to an entertainer or sportsperson referred to in section 111B(j) ... are payable to a non-resident, the income tax to be deducted shall be at the rate specified in the Sixth Schedule or at the rate specified under any arrangement for relief from double taxation ..., whichever is lower. (5) Where income tax is deducted from the interest, payments to an entertainer or sportsperson, or from rent or royalties ... under subsection (4), the amount of tax so deducted, at the option of the payee shall be deemed to be the final amount of tax payable ... SIXTH SCHEDULE ... 8 Payment made to a non-resident for any services rendered in Mauritius pursuant to section 111B(h) 10 ... 10 Payments to a non-resident entertainer or sportsperson pursuant to 111B(j) 10"
   }
  ],
  "blockers": [
@@ -202,17 +226,6 @@
     "official-register": "Income Tax Act 1995 not read || retry 2026-11-01 (world round): legislation.govmu.org does not answer (curl 000); attorneygeneral.govmu.org and mof.govmu.org answer (home pages); the Social Contribution and Social Benefits Act 2021 not located on them",
     "web-search": "not searched beyond the summary || retry 2026-11-01 (world round): WebSearch refused 2026-11-01 (the turn's shared 200-search budget exhausted)",
     "trade-press": "Deloitte Mauritius Highlights 2026 read || retry 2026-11-01 (world round): Deloitte Mauritius Highlights 2026 (read before): CSG summary without the primary's brackets",
-    "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || retry 2026-11-01 (world round): web.archive.org and archive.ph reset the connection; arquivo.pt 403"
-   }
-  },
-  {
-   "item": "nonResident",
-   "sought": "Any specific withholding on a non-resident entertainer's fee in Mauritius",
-   "tried": {
-    "institution": "mra.mu reachable; PAYE page read; CSG bracket tables and non-resident entertainer rules not located in this pass || retry 2026-11-01 (world round): mra.mu PAYE guide (December 2025) and payroll-tax notice read: no entertainer or non-resident fee rule; mra.mu FAQs and downloadable-forms pages list nothing on it",
-    "official-register": "Income Tax Act 1995 not read || retry 2026-11-01 (world round): legislation.govmu.org unreachable; the Income Tax Act 1995 (s. 111B, payments to non-residents) not located on attorneygeneral.govmu.org",
-    "web-search": "not searched beyond the summary || retry 2026-11-01 (world round): WebSearch refused 2026-11-01 (the turn's shared 200-search budget exhausted)",
-    "trade-press": "Deloitte Mauritius Highlights 2026 read || retry 2026-11-01 (world round): Deloitte Mauritius Highlights 2026 (read before): no entertainer line",
     "archive": "web.archive.org not reachable (curl 000) 2026-11-01 || retry 2026-11-01 (world round): web.archive.org and archive.ph reset the connection; arquivo.pt 403"
    }
   }

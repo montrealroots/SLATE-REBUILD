@@ -192,7 +192,7 @@
     },
     "marriageDeductionTransfer": 30000
    },
-   "applies": "FO, TAKS's pages as archived 9 and 10 May 2026. The national tax table (landsskattatalva) itself is archived only as of January 2021 and the municipal table as of April 2022; neither is taken for 2026, so the bands stay blocked.",
+   "applies": "FO, TAKS's pages as archived 9 and 10 May 2026. The national tax table (landsskattatalva) itself was archived only as of January 2021 and the municipal table as of April 2022, so neither was taken for 2026; TAKS's own 2026 tables were read on 2026-11-03 (the 2026 residents figure).",
    "sources": [
     {
      "src": 4,
@@ -221,6 +221,71 @@
     {
      "src": 6,
      "said": "Ordinary taxpayers and self-employed are required to submit their tax return by 1 May. If you have not submitted your completed tax return by this date, TAKS is authorised to impose a fine of minimum DKK 1,000."
+    }
+   ]
+  },
+  {
+   "item": "residents",
+   "finding": "In 2026 national tax (landsskattur) takes nothing to DKK 65,000, then 13% to 180,000, 15% to 330,000, 20% to 450,000, 25% to 600,000 and 30% above; municipal tax takes the municipality's rate above the first DKK 30,000 (Tórshavn 19%; 16% to 21.5% across the 29 municipalities); members of the national church pay church tax besides.",
+   "value": {
+    "currency": "DKK",
+    "year": 2026,
+    "national": [
+     {
+      "from": 0,
+      "to": 65000,
+      "rate": 0
+     },
+     {
+      "from": 65000,
+      "to": 180000,
+      "rate": 0.13
+     },
+     {
+      "from": 180000,
+      "to": 330000,
+      "rate": 0.15
+     },
+     {
+      "from": 330000,
+      "to": 450000,
+      "rate": 0.2
+     },
+     {
+      "from": 450000,
+      "to": 600000,
+      "rate": 0.25
+     },
+     {
+      "from": 600000,
+      "to": null,
+      "rate": 0.3
+     }
+    ],
+    "municipalFree": 30000,
+    "municipal": {
+     "Tórshavn": 0.19,
+     "min": 0.16,
+     "max": 0.215
+    },
+    "church": {
+     "Tórshavn": 0.0085,
+     "maxCombined": 0.0095
+    }
+   },
+   "applies": "Persons fully liable to Faroese tax, 2026. The game reads Tórshavn's municipal rate for every municipality (the others are the reading's 'regional', told) and leaves church tax out, as members of the church alone pay it.",
+   "sources": [
+    {
+     "src": 7,
+     "said": "0-65.000: 0, 0%; 65.000-180.000: 0 av 65.000, 13,0%; 180.000-330.000: 14.950 av 180.000, 15,0%; 330.000-450.000: 37.450 av 330.000, 20,0%; 450.000-600.000: 61.450 av 450.000, 25,0%; 600.000 og meira: 98.950 av 600.000, 30,0%."
+    },
+    {
+     "src": 8,
+     "said": "\"Tær 65.000 áðrenn eru botnfrádrátturin hjá landinum, og hann fáa øll.\" \"Tær fyrstu 30.000 krónurnar eru skattafríar ... Hetta er botnfrádrátturin hjá kommununum, og hann fáa øll.\" \"Nógvastaðni millum 19 og 21%. Tað minsta er 16, tað hægsta 21,50.\" \"Kirkjuskatturin kann ikki vera meira enn 0,95% til samans\"."
+    },
+    {
+     "src": 9,
+     "said": "Tórshavnar: kommunuskattur 19,00; kirkjuskattur 0,60 (footnote 8: \"Tórshavn og Ternuryggur: 0,85\"); barnafrádráttur 9.000. Lowest municipal rate 16,00 (Fugloyar, Skúvoyar, Fámjins), highest 21,50 (Runavíkar)."
     }
    ]
   }
@@ -275,20 +340,30 @@
    "read": "2026-11-02",
    "kind": "primary",
    "said": "Ordinary taxpayers and self-employed are required to submit their tax return by 1 May. If you have not submitted your completed tax return by this date, TAKS is authorised to impose a fine of minimum DKK 1,000."
+  },
+  {
+   "url": "https://www.taks.fo/fo/borgari/gjoeld-og-agodar/talva-yvir-landsskatt",
+   "title": "Talva yvir landsskatt 2026 (TAKS)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "0-65.000: 0, 0%; 65.000-180.000: 0 av 65.000, 13,0%; 180.000-330.000: 14.950 av 180.000, 15,0%; 330.000-450.000: 37.450 av 330.000, 20,0%; 450.000-600.000: 61.450 av 450.000, 25,0%; 600.000 og meira: 98.950 av 600.000, 30,0%."
+  },
+  {
+   "url": "https://www.taks.fo/fo/borgari/skattur/hvussu-roknar-man-skatt",
+   "title": "Hvussu roknar man skatt? (TAKS)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "\"Tær 65.000 áðrenn eru botnfrádrátturin hjá landinum, og hann fáa øll.\" \"Tær fyrstu 30.000 krónurnar eru skattafríar ... Hetta er botnfrádrátturin hjá kommununum, og hann fáa øll.\" \"Nógvastaðni millum 19 og 21%. Tað minsta er 16, tað hægsta 21,50.\" \"Kirkjuskatturin kann ikki vera meira enn 0,95% til samans\"."
+  },
+  {
+   "url": "https://www.taks.fo/fo/borgari/gjoeld-og-agodar/talva-yvir-kommunuskatt-kirkjuskatt-og-barnafradratt",
+   "title": "Talva yvir kommunuskatt, kirkjuskatt og barnafrádrátt 2026 (TAKS)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Tórshavnar: kommunuskattur 19,00; kirkjuskattur 0,60 (footnote 8: \"Tórshavn og Ternuryggur: 0,85\"); barnafrádráttur 9.000. Lowest municipal rate 16,00 (Fugloyar, Skúvoyar, Fámjins), highest 21,50 (Runavíkar)."
   }
  ],
  "blockers": [
-  {
-   "item": "residents",
-   "sought": "The 2026 landsskattur scale and allowance (personfrádráttur), and every municipality's rate.",
-   "tried": {
-    "institution": "taks.fo (TAKS, the Faroese tax authority) returns 403 to this environment on every page (2026-11-01). || 2026-11-01 retry: taks.fo again returns HTTP 403 (not read another way). Hagstova Føroya (hagstova.fo, the statistics office) answers: its \"Skattir\" page (saved FO-hagstova-skattir.html) describes tax revenue by type, with no rates or allowances.",
-    "official-register": "logir.fo (law database) answers but finds laws only by form postback; the direct URL for Skattalógin returned LawNotFound (2026-11-01). || 2026-11-01 retry: logir.fo answers, but its law database (LawDatabase.aspx) works only by ASP.NET postback; logir.fo/Skattalog returns 404.",
-    "web-search": "'logir.fo skattalóg landsskattur skattstig 2026 kommunuskattur prosent' (2026-11-01): one municipal budget (Tvøroyri, read), no national scale. || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used. || Web search 2026-11-02: queries \"logir.fo løgtingslóg um landsskatt og kommunuskatt skattaskali persónsfrádráttur 2026\", \"logir.fo Logtingslog \\\"um landsskatt og kommunuskatt\\\" Skattalógin\", \"\\\"áseting av skatti\\\" løgtingslóg 2026 landsskattur skattaprosent frádráttur\", \"logir.fo \\\"um áseting av skatti\\\" Logtingslogarkunngerd\", \"meirvirðisgjald Føroyar 25% skráseting umsetningur 50.000 kr løgtingslóg um meirvirðisgjald\" and \"Føroyar rithøvundar samsýning skattur upphavsrættur listafólk skattafrádráttur listaløn\". They led to the Skattalógin (logir.fo løgtingslógarkunngerð nr. 109 frá 19. september 2023, read and saved) and to TAKS's own pages, which taks.fo refuses but web.archive.org now serves (snapshots of April to June 2026 read and saved: VAT, taxation in the Faroe Islands, moving for work, deductions, tax return); the findings above rest on them. Still missing: the 2026 national bands (landsskattatalva archived only at 9 Jan 2021) and each municipality's rate (archived only at 23 Apr 2022); løgtingslóg nr. 87 frá 1. september 1983 um áseting av skatti not found on logir.fo by URL.",
-    "trade-press": "No PwC or Deloitte summary for the Faroe Islands (Deloitte 2026: 404). || 2026-11-01 retry: No Deloitte Faroe Islands 2026 Highlights (HTTP 404); no PwC summary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2025-07-16 snapshot of taks.fo/fo/borgari/skattur; the brief bars reading a refused page another way, and web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
   {
    "item": "nonResident",
    "sought": "Tax on a non-resident performer's fee and whether final.",
