@@ -1,45 +1,49 @@
 {
  "topic": "ages.FJ",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Fiji: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Fiji: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page. Read again 2026-11-03 at the source, the Laws of Fiji as the Office of the Solicitor-General consolidates them (laws.gov.fj, through the site's own API): the Employment Relations Act's ss. 4, 92, 93, 95 and 97 and the Companies Act's s. 93; the DOL report (403 this time), the Fiji Times and Expanship are no longer cited.",
  "figures": [
   {
    "item": "minimumWorkAge",
-   "finding": "Fiji's Employment Relations Act 2007 sets the minimum age for employment at fifteen (s. 92) and lets children of thirteen to fifteen do only light work that does not harm their health, development or education (s. 93), without listing the activities or capping the hours; hazardous work is barred below eighteen.",
+   "finding": "Fiji's Employment Relations Act 2007 sets the minimum age for employment at fifteen (s. 92) and lets children of thirteen to fifteen do light work, or work where family or communal or religious group members are employed, that does not harm their health or development or their attendance at school (s. 93); it sets no separate cap for light work, but no child (under eighteen, s. 4) may work more than 8 hours a day, with 30 minutes' paid rest in every 4 continuous hours (s. 97), and hazardous work is barred to children by ministerial order (s. 95). The DOL report first read held the light-work hours uncapped (lightWorkHoursCap null), which overlooked s. 97's cap on every child's day.",
    "value": {
     "general": 15,
     "lightWorkFrom": 13,
-    "lightWorkHoursCap": null,
+    "childHoursCapPerDay": 8,
     "hazardousFrom": 18
    },
-   "applies": "Fiji (as of 2024-2026; the Act's own text not reached: laws.gov.fj is a script application and PacLII blocks this client).",
+   "applies": "Fiji, the Act as consolidated on laws.gov.fj to 12 August 2026 (a reported amendment raising the age from 15 to 16 isn't in it).",
    "sources": [
     {
      "src": 0,
-     "said": "Minimum Age for Work 15"
+     "said": "The age of 15 years is the minimum age for employment of children."
     },
     {
      "src": 0,
-     "said": "Although the Employment Relations Promulgation includes a light work framework, it does not specify the activities or conditions in which light work may be undertaken or limit the number of hours for light work."
+     "said": "Subsection (1) does not apply to a child of 13 to 15 years of age engaged in employment or light work or in a workplace in which members of the same family or of communal or religious group are employed"
     },
     {
-     "src": 1,
-     "said": "Mr Nemani said the Employment Relations Act 2007 permits children aged 13 to 15 years to perform only light work, provided it does not harm their health, development or education."
+     "src": 0,
+     "said": "child means a person who is under the age of 18 years"
+    },
+    {
+     "src": 0,
+     "said": "A child must— (a) not be employed or permitted to be employed for more than 8 hours in a day; and (b) be given at least 30 minutes paid rest for every continuous 4 hours worked."
     }
    ]
   },
   {
    "item": "companies",
-   "finding": "Under Fiji's Companies Act 2015 a director must be a natural person of at least eighteen (Expanship's guide; the Act's own text not reached), so a minor may hold shares in a producer's company but direct it only from eighteen.",
+   "finding": "Under Fiji's Companies Act 2015, s. 93(1), only a natural person of at least eighteen may be a director or secretary of a company, so a minor may hold shares in a producer's company but direct it only from eighteen.",
    "value": {
     "directorFrom": 18,
     "naturalPerson": true
    },
-   "applies": "Fiji (secondary only).",
+   "applies": "Fiji, the Act as consolidated on laws.gov.fj to 12 August 2026.",
    "sources": [
     {
-     "src": 2,
-     "said": "Minimum Age Requirement Directors must be at least 18 years of age."
+     "src": 1,
+     "said": "Only a natural person who is at least 18 years of age may be appointed as a director or secretary of a company."
     }
    ]
   }
@@ -47,28 +51,18 @@
  "country": "FJ",
  "sources": [
   {
-   "url": "https://www.dol.gov/sites/dolgov/files/ILAB/child_labor_reports/tda2024/Fiji.pdf",
-   "title": "US Department of Labor, 2024 Findings on the Worst Forms of Child Labor: Fiji; quotes the Employment Relations Promulgation 2007 (Promulgation No. 36 of 2007, now the Employment Relations Act 2007), ss. 92-93",
-   "read": "2026-11-01",
-   "kind": "secondary",
-   "quotes": "https://www.laws.gov.fj/",
-   "said": "Minimum Age for Work 15 … Although the Employment Relations Promulgation includes a light work framework, it does not specify the activities or conditions in which light work may be undertaken or limit the number of hours for light work."
+   "kind": "primary",
+   "url": "https://www.laws.gov.fj/api/retrieve_html/LOF.CAP92.ERAFJ07.S92",
+   "title": "Employment Relations Act 2007, ss. 4, 92, 93, 95, 97 (Laws of Fiji, Office of the Solicitor-General, laws.gov.fj; consolidated to 12 August 2026; read through the site's own API, retrieve_html/LOF.CAP92.ERAFJ07.S<n>)",
+   "read": "2026-11-03",
+   "said": "[EMP 92] Minimum age for employment The age of 15 years is the minimum age for employment of children. [EMP 93] Employment of children under 15 years (1) A child under the age of 15 years must not be employed in any capacity other than in accordance with subsection (2) ... (2) Subsection (1) does not apply to a child of 13 to 15 years of age engaged in employment or light work or in a workplace in which members of the same family or of communal or religious group are employed provided that— (a) the employment is not likely to be harmful to the health or development of the child; and (b) the employment is not such as to prejudice the child’s attendance at school ... [s. 4] child means a person who is under the age of 18 years ... [EMP 95] (2) The Minister may ... by order in the Gazette, declare any employment or workplace to be a prohibited or restricted employment or workplace for the purposes of this Part on the ground that it is injurious to health or is hazardous ... [EMP 97] (1) A child must— (a) not be employed or permitted to be employed for more than 8 hours in a day; and (b) be given at least 30 minutes paid rest for every continuous 4 hours worked."
   },
   {
-   "url": "https://www.fijitimes.com.fj/ps-warns-against-child-exploitation/",
-   "title": "The Fiji Times, 15 June 2026: PS warns against child exploitation (the Permanent Secretary for Employment, Productivity and Workplace Relations); quotes the Employment Relations Promulgation 2007 (Promulgation No. 36 of 2007, now the Employment Relations Act 2007), ss. 92-93",
-   "read": "2026-11-01",
-   "kind": "secondary",
-   "quotes": "https://www.laws.gov.fj/",
-   "said": "Mr Nemani said the Employment Relations Act 2007 permits children aged 13 to 15 years to perform only light work, provided it does not harm their health, development or education."
-  },
-  {
-   "url": "https://www.expanship.com/fj/blog/incorporation-requirements-in-fiji",
-   "title": "Expanship: Incorporation requirements in Fiji",
-   "read": "2026-11-01",
-   "kind": "secondary",
-   "quotes": "https://pacliirms.austlii.edu.au/fj/legis/num_act/ca2015107.pdf",
-   "said": "Minimum Age Requirement Directors must be at least 18 years of age."
+   "kind": "primary",
+   "url": "https://www.laws.gov.fj/api/retrieve_html/LOF.CAP247.COAFJ15.S93",
+   "title": "Companies Act 2015, s. 93 (Laws of Fiji, laws.gov.fj; consolidated to 12 August 2026)",
+   "read": "2026-11-03",
+   "said": "[COM 93] Who can be a director (1) Only a natural person who is at least 18 years of age may be appointed as a director or secretary of a company."
   }
  ],
  "blockers": [

@@ -1,7 +1,7 @@
 {
  "topic": "ages.MR",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Mauritania: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Mauritania: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page. Read again 2026-11-03 at the source, the Secretariat General of the Government's Codes usuels de Mauritanie 2026 (Tome 01, civil law; Tome 16, labour law, updated to the Journal officiel of 1 January 2026); the State's CRC reports are no longer cited. The majority, sought here until then, was found there (Personal Status Code art. 162: eighteen full years) and is held in layer 3's file (papers.ages.MR), so it is no longer a blocker here.",
  "figures": [
   {
    "item": "minorsContracts",
@@ -11,27 +11,55 @@
     "discernmentToMajority": "not full capacity",
     "representation": "statutory, testamentary or dative guardianship"
    },
-   "applies": "Mauritania; the Personal Status Code (Law No. 2001-052) as the State quotes it.",
+   "applies": "Mauritania, the Personal Status Code (Law No. 2001-052), Book 3, in the Secretariat General of the Government's 2026 compilation (msgg.gov.mr).",
    "sources": [
     {
      "src": 0,
-     "said": "A person who reaches the age of discernment before reaching the age of majority does not enjoy full legal capacity"
+     "said": "L’individu qui ne jouit pas de la faculté de discernement, du fait de son jeune âge ou de son aliénation, est incapable d’exercer ses droits civils."
+    },
+    {
+     "src": 0,
+     "said": "N’est pas pleinement capable, la personne qui, parvenue à l’âge de discernement, n’a pas atteint l’âge de la majorité"
+    },
+    {
+     "src": 0,
+     "said": "La représentation légale de l’incapable est assurée par la tutelle légale, testamentaire ou dative."
     }
    ]
   },
   {
    "item": "minimumWorkAge",
-   "finding": "Mauritania's 2017 report gave sixteen as the minimum age of employment and eighteen for hazardous work (and marriage), while the Labour Code of 2004 (art. 153, which layer 3 read) says fourteen; the conflict isn't resolved here.",
+   "finding": "Since Law No. 2024-048 of 31 December 2024 (JO 1573 of 2025) the Labour Code bars employing a child in any undertaking before sixteen (art. 153); from fourteen to sixteen a child may work, outside sea fishing, where members of the family are employed, only with the Labour Minister's express authorisation (art. 154), and from fourteen light work outside school hours of at most two hours a day; under sixteen no work on rest days, holidays or from 20:00 to 08:00 (art. 155); hazardous work is barred under eighteen (Arrêté 0066 of 2022). Until 2026-11-03 this figure held the 2004 Code's fourteen beside the State's 2017 report of sixteen as unresolved; the amended article settles it at sixteen.",
    "value": {
-    "reported2017": 16,
-    "hazardous": 18,
-    "labourCode2004": 14
+    "general": 16,
+    "familyFrom": 14,
+    "familyPermit": "autorisation expresse du Ministre chargé du Travail",
+    "lightWorkFrom": 14,
+    "lightWorkHoursPerDay": 2,
+    "nightUnder16": "20:00-08:00",
+    "hazardous": 18
    },
-   "applies": "Mauritania.",
+   "applies": "Mauritania, the Labour Code as the Secretariat General of the Government compiles it, updated to the Journal officiel of 1 January 2026 (msgg.gov.mr).",
    "sources": [
     {
      "src": 1,
-     "said": "16 — minimum age of employment; (iii) 18 — minimum age for hazardous work"
+     "said": "Les enfants ne peuvent être employés dans aucune entreprise, avant l’âge de seize ans."
+    },
+    {
+     "src": 1,
+     "said": "Aucun enfant dont l’âge se situe entre quatorze et seize ans ne peut être employé sans l’autorisation expresse du Ministre chargé du Travail."
+    },
+    {
+     "src": 1,
+     "said": "n’excédent pas deux heures par jour, aussi bien les jours de classe que les jours de vacances"
+    },
+    {
+     "src": 1,
+     "said": "la nuit, de 20 heure à 8 heure du matin."
+    },
+    {
+     "src": 1,
+     "said": "Il est interdit d’employer les enfants ... à des travaux dangereux nuisibles à leur santé physique ou mentale"
     }
    ]
   }
@@ -39,34 +67,21 @@
  "country": "MR",
  "sources": [
   {
-   "url": "https://documents.un.org/api/symbol/access?s=CRC/C/MRT/2&l=en&t=pdf",
-   "title": "Mauritania: second periodic report, CRC/C/MRT/2 (2007, issued 30 July 2008)",
-   "read": "2026-11-01",
-   "kind": "secondary",
-   "quotes": "https://msgg.gov.mr/codes/mauritanie-recueil-01-droit-civil-3.pdf",
-   "said": "A person who reaches the age of discernment before reaching the age of majority does not enjoy full legal capacity"
+   "kind": "primary",
+   "url": "https://msgg.gov.mr/codes/mauritanie-recueil-01-droit-civil-3.pdf",
+   "title": "Codes usuels de Mauritanie 2026, Tome 01 – Droit civil (Ministère chargé du Secrétariat Général du Gouvernement); Code du statut personnel, Livre 3",
+   "read": "2026-11-03",
+   "said": "Art.162.- La capacité de l’individu à exercer ses droits civils est acquise conformément aux dispositions de l’article 15 du Code des obligations et des contrats. L’âge de la majorité est de dix-huit années accomplies. Art.163.- L’individu qui ne jouit pas de la faculté de discernement, du fait de son jeune âge ou de son aliénation, est incapable d’exercer ses droits civils. Art.164.- N’est pas pleinement capable, la personne qui, parvenue à l’âge de discernement, n’a pas atteint l’âge de la majorité ou qui, ayant atteint l’âge de la majorité, est prodigue. ... Art.176.- La représentation légale de l’incapable est assurée par la tutelle légale, testamentaire ou dative."
   },
   {
-   "url": "https://documents.un.org/api/symbol/access?s=CRC/C/MRT/3-5&l=en&t=pdf",
-   "title": "Mauritania: combined third to fifth periodic reports, CRC/C/MRT/3-5 (2017)",
-   "read": "2026-11-01",
-   "kind": "secondary",
-   "quotes": "https://msgg.gov.mr/codes/mauritanie-recueil-16-droit-du-travail.pdf",
-   "said": "16 — minimum age of employment; (iii) 18 — minimum age for hazardous work"
+   "kind": "primary",
+   "url": "https://msgg.gov.mr/codes/mauritanie-recueil-16-droit-du-travail.pdf",
+   "title": "Codes usuels de Mauritanie 2026, Tome 16 – Droit du travail, mis à jour des journaux officiels parus au 1er janvier 2026 (Ministère chargé du Secrétariat Général du Gouvernement)",
+   "read": "2026-11-03",
+   "said": "Art.153.- (Loi n°2024-48) Age d’admission au travail Les enfants ne peuvent être employés dans aucune entreprise, avant l’âge de seize ans. A l’exclusion des emplois dans la pêche maritime, les enfants dont l’âge est compris entre quatorze et seize ans peuvent, dans les conditions fixées à l’article 154 (nouveau), être employés dans les établissements où sont employés les membres de leurs familles. Art.154.- (Loi n°2024-48) Conditions de dérogation Aucun enfant dont l’âge se situe entre quatorze et seize ans ne peut être employé sans l’autorisation expresse du Ministre chargé du Travail. ... Les enfants ayant atteint l’âge de quatorze ans peuvent, en dehors des heures fixées pour la fréquentation scolaire, être employés à des travaux sous réserve que ces travaux : • ne soient pas nuisibles à leur santé et à leur développement normal ; • n’excédent pas deux heures par jour, aussi bien les jours de classe que les jours de vacances ; ... Art.155.- (Loi n°2024-48) Horaires interdits Est interdit l’emploi des enfants âgés de moins de seize ans : • le jour du repos hebdomadaire et les jours fériés ; • la nuit, de 20 heure à 8 heure du matin. ... [Arrêté n°0066 MFPT du 17 janvier 2022] Art.2.- Au sens du présent arrêté, le terme enfant désigne toute personne âgée de moins de dix-huit ans. Art.3.- Il est interdit d’employer les enfants ... à des travaux dangereux nuisibles à leur santé physique ou mentale"
   }
  ],
  "blockers": [
-  {
-   "item": "majority",
-   "sought": "The age of majority in Mauritania's Personal Status Code (Law No. 2001-052)",
-   "tried": {
-    "institution": "finances.gov.mr's compilation holds the Labour Code, not the Personal Status Code",
-    "official-register": "UN ODS CRC/C/MRT/2 and 3-5 read: majority named, not its age",
-    "web-search": "web search: the session budget of 200 searches per turn, shared by every agent, was used up before this country was reached (\"this turn's web search budget is used up\"); not worked around",
-    "trade-press": "none",
-    "archive": "web.archive.org reset the connection through the egress proxy (curl: (35) Recv failure: Connection reset by peer); not read another way"
-   }
-  },
   {
    "item": "childPerformers",
    "sought": "A Mauritanian rule for child performers",

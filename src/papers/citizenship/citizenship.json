@@ -59,7 +59,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born to parents who are both citizens or to a parent who is a citizen and the other parent is unknown or stateless. If one parent is a citizen and the other parent is a foreigner, the child acquires citizenship based on a written consent. In the absence of written consent, the child acquires citizenship if she or he is otherwise stateless, or both parents reside permanently in Armenia."
+   "descentAbroad": "A child of one citizen and one foreign parent born abroad takes it on the parents' written consent, or without it only if it would otherwise be stateless or the parents permanently reside in Armenia."
   }
  },
  "AO": {
@@ -78,7 +78,7 @@
   "atBirth": {
    "soil": "unconditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen who was born in Argentina.; Person is born abroad to a citizen who was exiled from Argentina. Option right can be exercised after arrival in the country."
+   "descentAbroad": "Person is born abroad to a native-born Argentine and opts for the citizenship of origin."
   }
  },
  "AS": {
@@ -189,9 +189,10 @@
   "renounce": false,
   "lapses": true,
   "atBirth": {
-   "soil": "none",
+   "soil": "conditional",
    "descent": "father",
-   "descentAbroad": "Person is born in Bahrain to a male citizen. The father has to be Bahraini citizen at the time of the child's birth; Person is born in Bahrain to a female citizen, providing that the father was either unknown or the child was not legally connected to the father. The mother has to be Bahraini citizen at the time of the child's birth."
+   "soilIf": "Person is born in Bahrain to a father who was born in Bahrain and usually resided there at the birth, and holds no other nationality.",
+   "descentAbroad": "Person is born outside Bahrain to a Bahraini father, provided the father or paternal grandfather was born in Bahrain; or, wherever born, to a Bahraini mother where the father is unknown, his paternity isn't legally proven, or he has no nationality."
   }
  },
  "BI": {
@@ -416,7 +417,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen. Unless the parent is settled abroad and the child consequently acquired another citizenship at birth."
+   "descentAbroad": "Person is born abroad to a Chinese parent, unless the Chinese parent (or both) has settled abroad and the child acquired a foreign nationality at birth."
   }
  },
  "CO": {
@@ -426,7 +427,8 @@
   "atBirth": {
    "soil": "conditional",
    "descent": "either parent",
-   "soilIf": "Person is born in Colombia to non-citizens who are domiciled in the country at the time of birth (Article 1 of Law 1997 of 2019 establishes that the children of Venezuelan nationals born in Colombia between 1 January 2015 and 16 September 2021 will be Colombians by birth. This is regardless of whether the parents were regular or irregular in the country at the moment of birth.)"
+   "soilIf": "Person is born in Colombia to foreign parents, one of whom is domiciled in Colombia at the time of the birth.",
+   "descentAbroad": "Person is born abroad to a Colombian father or mother and later takes up domicile in Colombia or is registered at a Colombian consular office."
   }
  },
  "CR": {
@@ -434,9 +436,10 @@
   "renounce": false,
   "lapses": false,
   "atBirth": {
-   "soil": "unconditional",
+   "soil": "conditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen by birth and is registered in the Civil Register by the parent during minority, or registers him/herself before reaching the age of 25."
+   "soilIf": "Person is born in Costa Rica to foreign parents and is registered as Costa Rican, by either parent while a minor or by the person up to the age of 25.",
+   "descentAbroad": "Person is born abroad to a Costa Rican-by-birth father or mother and is registered in the Civil Register, by that parent while a minor or by the person up to the age of 25."
   }
  },
  "CU": {
@@ -522,7 +525,7 @@
   }
  },
  "DM": {
-  "years": 8,
+  "years": 7,
   "renounce": false,
   "lapses": false,
   "atBirth": {
@@ -722,8 +725,7 @@
   "lapses": true,
   "atBirth": {
    "soil": "none",
-   "descent": "either parent",
-   "descentAbroad": "Person is born abroad to two citizens. Or to a citizen and a non-citizen, one of whom has permanent residence in Georgia. Or to a citizen and a non-citizen both of whom permanently reside abroad, if the parents agree on the child<d4>s acquiring citizenship of Georgia."
+   "descent": "either parent"
   }
  },
  "GF": {
@@ -733,7 +735,7 @@
   "nationalityOf": "GB"
  },
  "GH": {
-  "years": 5,
+  "years": 6,
   "renounce": false,
   "lapses": false,
   "atBirth": {
@@ -822,7 +824,7 @@
   "atBirth": {
    "soil": "unconditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen otherwise than by descent.; Person is born abroad to a citizen who was also born abroad."
+   "descentAbroad": "Person is born abroad to a father or mother who is a citizen of Guyana otherwise than by descent."
   }
  },
  "HK": {
@@ -1117,7 +1119,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to parents who are both citizens, or to one parent who is a citizen and the other parent is stateless or of unknown citizenship.; Person is born abroad to one parent who is a citizen and at least one parent had permanent residence in Kazachstan at the time of the child's birth. If the parent(s) have permanent residence outside the country, their joint consent is required."
+   "descentAbroad": "Person is born abroad to two citizens; or to one citizen and one parent of another citizenship where the parents, or one of them, then had permanent residence in Kazakhstan."
   }
  },
  "LA": {
@@ -1205,7 +1207,7 @@
   "atBirth": {
    "soil": "conditional",
    "descent": "either parent",
-   "soilIf": "Person is born in Luxembourg to a person who was also born there."
+   "soilIf": "Person is born in Luxembourg to a non-Luxembourgish parent who was also born there."
   }
  },
  "LV": {
@@ -1293,7 +1295,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to two citizens, or to one parent who is a citizen and the other parent is unknown, stateless or of unknown citizenship.; Person is born abroad to a citizen (registration by parent before the age of 18), or the person starts residing in Macedonia before the age of 18.; Person is born abroad to a citizen (declaration between the age of 18 and 23)."
+   "descentAbroad": "Person is born abroad to two citizens, or to one citizen and one parent unknown, of unknown citizenship or stateless; a child of one citizen and one foreign parent takes it if registered as a citizen, or settled permanently in North Macedonia with the citizen parent, before 18, or if it registers itself between 18 and 23."
   }
  },
  "ML": {
@@ -1355,12 +1357,12 @@
   "atBirth": {
    "soil": "conditional",
    "descent": "either parent",
-   "soilIf": "Person is born on or after the 1st August, 1989 and is a descendant in the direct line of an ascendant born in Malta of a parent likewise born in Malta. Person must take the oath of allegiance and not be contrary to public interest.",
-   "descentAbroad": "Person is born abroad and in wedlock to a citizen who has acquired citizenship otherwise than by descent, or out of wedlock to a mother who is a citizen."
+   "soilIf": "Person is born in Malta on or after 1 August 1989 to a father or mother who is a citizen of Malta (or a person art. 44(4)(a) or (b) of the Constitution names); one born there without such a parent who descends in the direct line from an ascendant born in Malta of a parent likewise born there may register, on taking the oath of allegiance.",
+   "descentAbroad": "Person is born abroad to a father or mother who is a citizen of Malta otherwise than by descent; for a birth out of wedlock before 1 January 2005, to a citizen mother."
   }
  },
  "MU": {
-  "years": 5,
+  "years": 6,
   "renounce": true,
   "lapses": false,
   "atBirth": {
@@ -1507,7 +1509,7 @@
   "lapses": true,
   "atBirth": {
    "soil": "none",
-   "descent": "father",
+   "descent": "either parent",
    "descentAbroad": "Person is born abroad to a father who is a citizen, or to a mother who is a citizen and the father is untraceable."
   }
  },
@@ -1554,12 +1556,12 @@
  },
  "PA": {
   "years": 5,
-  "renounce": false,
+  "renounce": true,
   "lapses": false,
   "atBirth": {
    "soil": "unconditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen by birth and establishes residence in Panama.; Person is born abroad to a citizen by naturalisation and establishes residence in Panama (by declaration within 1 year of reaching the age of majority)."
+   "descentAbroad": "Person is born abroad to a Panamanian-by-birth father or mother and takes up domicile in Panama; or to a naturalised Panamanian parent, takes up domicile in Panama and declares for Panamanian nationality within a year of majority."
   }
  },
  "PE": {
@@ -1569,7 +1571,7 @@
   "atBirth": {
    "soil": "unconditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen by birth and is registered with the Peruvian consulate of the country of birth. Provision only applies to descendants up to the 3rd generation.; Person is born abroad to a citizen, makes a declaration upon reaching the age of majority, and is resident in Peru."
+   "descentAbroad": "Person is born abroad to a Peruvian-by-birth father or mother and is registered at the Peruvian consulate during minority (descendants to the third generation only); or, born abroad to a Peruvian father or mother, declares for it from majority."
   }
  },
  "PF": {
@@ -1652,7 +1654,7 @@
   "atBirth": {
    "soil": "unconditional",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen and establishes permanent residence in Paraguay (declaration by parent until age 18 and by person him/herself after age 18)."
+   "descentAbroad": "Person is born abroad to a Paraguayan mother or father in the Republic's service, or to a Paraguayan mother or father and settles permanently in Paraguay."
   }
  },
  "QA": {
@@ -1684,7 +1686,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to two citizens, or to one parent who is a citizen another parent who is unknown, of unknown citizenship, or stateless, or to a citizen and the person would otherwise be stateless.; Person is born abroad to a citizen (registration by parent before the age of 18).; Person is born abroad to a citizen (declaration by person between the age of 18 and 23)."
+   "descentAbroad": "Person is born abroad to two citizens, or to one citizen and one parent unknown, of unknown citizenship or stateless; a child of one citizen and one foreign parent takes it if the citizen parent registers it before 18, or if it applies for registration itself between 18 and 23, or if it would otherwise be stateless."
   }
  },
  "RU": {
@@ -1767,7 +1769,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born to a citizen by birth, registration or descent. Citizenship is not acquired if the child is not registered within 1 year after birth, or if the child acquired the citizenship of the country of birth and the parent is a citizen by registration. In case the parent is a citizen by descent, the parent needs to have resided in Singapore prior to the person's birth for a total of 5 years or for 2 out of the 5 years immediately preceding the person's birth."
+   "descentAbroad": "Person is born abroad to a father or mother who is a citizen by birth, registration or descent, and the birth is registered within a year; not if a parent is a citizen by registration and the child takes the citizenship of its country of birth; and a parent who is a citizen by descent must have lived in Singapore five years before the birth, or two of the five years immediately before it."
   }
  },
  "SH": {
@@ -1780,7 +1782,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to a citizen and a parent who is unknown, of unknown citizenship or without citizenship, or when the child would otherwise be stateless.; Person is born abroad to a citizen and a citizen of another country, is between 18 and 36 years of age, and has not previously lost citizenship due to release, renunciation or deprivation."
+   "descentAbroad": "Person is born abroad to a citizen and a parent unknown, of unknown citizenship or stateless; a child of one citizen and one foreign parent takes it if registered as a citizen, or settled permanently in Slovenia with the citizen parent, before 18; or a person born abroad declares for it between 18 and 36."
   }
  },
  "SJ": {
@@ -1991,7 +1993,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to two citizens, or to a father or mother who is a citizen (birth in wedlock), or to a mother who is a citizen (birth out of wedlock)."
+   "descentAbroad": "Person is born abroad in wedlock to a Turkish mother or father, or out of wedlock to a Turkish mother (or to a Turkish father once descent is established)."
   }
  },
  "TT": {
@@ -2023,7 +2025,7 @@
   }
  },
  "TZ": {
-  "years": 7,
+  "years": 8,
   "renounce": true,
   "lapses": true,
   "atBirth": {
@@ -2087,7 +2089,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born in Uzbekistan to two citizen parents or a citizenship parent and a stateless parent.; Person is born in Uzbekistan to a citizen and a foreigner and neither of the parents have permanent residence in the country, the written agreement of the parents is required."
+   "descentAbroad": "Wherever born, a child of two citizen parents (or a single citizen parent) is a citizen; a child of one citizen and one foreign parent takes it only on the petition of the citizen parent or another legal representative."
   }
  },
  "VA": {
@@ -2132,7 +2134,7 @@
   "atBirth": {
    "soil": "none",
    "descent": "either parent",
-   "descentAbroad": "Person is born abroad to two citizens, to a citizen and the other parent is stateless, or to a mother who is a citizen and the father is unknown. If one parent is a citizen and the other parent is a citizen of another country, the child acquires Vietnamese citizenship if the parents agree in writing, but also if they do not reach agreement."
+   "descentAbroad": "Person is born abroad to two citizens, to a citizen and a stateless parent, or to a citizen mother and an unknown father; a child of one Vietnamese and one foreign parent takes it only if the parents choose Vietnamese nationality for it at the birth registration."
   }
  },
  "VU": {
@@ -2162,10 +2164,9 @@
   "renounce": false,
   "lapses": false,
   "atBirth": {
-   "soil": "conditional",
+   "soil": "none",
    "descent": "either parent",
-   "soilIf": "Person is born to parents of another country who have a permanent residence permit in Kosovo and they give their consent to acquisition of citizenship.",
-   "descentAbroad": "Person is born abroad to two citizens.; Person is born abroad to a parent who is a citizen and one parent who is stateless or of unknown citizenship.; Person is born abroad to only one citizen, and both parents give their consent to acquisition before the child reaches the age of 14. In the case where the child would be stateless, he/she can acquire citizenship even without the parents' consent."
+   "descentAbroad": "Person is born abroad to one citizen and one parent of another citizenship: both parents agree in writing (and the child too, from 14 to 18), or the child would otherwise be stateless."
   }
  },
  "YE": {

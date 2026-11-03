@@ -99,7 +99,26 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
   the past tense and is followed by its re-run, whose captures two agents opened (robots.txt files, bot-check pages and
   redirects, and pages without the fact: no fact changed). PacLII's and the BPK's robots.txt bar Common Crawl's
   crawler, so the Wayback Machine is the only archive route for them.
-- The register: 4,934 entries, 3,375 found, 779 secondary, 780 blocked (687 of them layer 3's).
+- Wave 2, first pass (2026-11-03, night): eleven agents (15 searches each) sought the primary behind each of layer 3's
+  737 facts held at second hand; seven integrators, one per engine. The primary was reached for every figure of 149
+  entries, for some of 158, and for none of 430. 120 entries now stand on primaries alone (citizenship 47, visits 21,
+  work, banks and numbers 20, ages and licence 10, tax and credit 9, residence and passports 7, ids 6); every
+  secondary source that answered was re-read and dated 2026-11-03. Errors found and fixed (the primary read by the
+  integrator, the lead re-reading Mauritania's and Nigeria's): Mauritania's working age 16, not 14 (Loi 2024-48, art.
+  153); Dominica's naturalisation 7 years, not 8, Ghana's 6, Mauritius' 6, Tanzania's 8; Kosovo's Law 10/L-023 (Gazette,
+  6 May 2026) ends birthright for permanent residents' children; Costa Rica's and Bahrain's birthright conditional;
+  Nepal's descent from either parent; Panama's renunciation; Montenegro's decree 158/2026 (from 1 November 2026: Belarus,
+  Russia, Saudi Arabia and Turkey need a visa) and about forty other countries' visa lists; Latvia's permit fee EUR 160,
+  not 100; Bulgaria's single permit three years, not one; Libya's credit register (the Central Bank's 2023 regulation:
+  negative records kept 10 years), where the engine held none; Vietnam's first VND 20 million of each royalty untaxed
+  (Law 109/2025); Gabon's capped allowance; Argentina's first DNI free; Moldova's, Mongolia's and Turkey's card fees;
+  Czechia's birth number now checked (divisible by eleven, s. 13; the numbers engine's check mutation-tested 78 of 78).
+  Greece's Z.3 route for actors (Migration Code art. 70) was added to residence. Held back by the lead: Fiji's birthright
+  (the immigration ministry says unconditional, GLOBALCIT none, the Act unread, so none stays) and Kyrgyzstan's credit
+  keep (the National Bank's rules of January 2025 say five years, but predate the 2026 law the press reports at two, so
+  two stays).
+- The register: 4,933 entries, 3,493 found, 661 secondary, 779 blocked (layer 3: 3,189 found, 619 secondary, 686
+  blocked).
 
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
@@ -238,9 +257,13 @@ session's agents were given; change the date, the scratchpad path and the groups
 
 1. The web-search pass is done for layer 3 (four rounds; every one of its 687 blockers has a web search dated
    2026-11-03). A fifth round is the owner's call; the leads it would follow are in each blocker's attempts.
-2. Wave 2: layer 3's 737 facts held only at second hand (citizenship and visits most of them): re-read each source and
-   search for the primary it quotes.
-3. Wave 3: re-read the sources of layer 3's 3,071 found facts, re-check every pinned file's hash, and take any newer
+2. Wave 2, the second pass: the 430 facts whose primary wasn't reached (many got only a homepage check, or a
+   register that refused this environment: Légifrance, njt.hu, legislatie.just.ro, pravo.gov.ru, the LII sites); OCR
+   data for 68 languages is now in the scratchpad's `tessdata` (the first pass had English and French only). Also read
+   Fiji's Citizenship Act 2009 (its birthright), Kyrgyzstan's 2026 credit law, Cuba's Ley 172/2024 and Moldova's Law
+   253/2025, and confirm Guyana's list (it leaves Germany out, so Germany was set to need a visa) and the United States'
+   visa waiver list (Romania).
+3. Wave 3: re-read the sources of layer 3's 3,189 found facts, re-check every pinned file's hash, and take any newer
    release (exchange rates, the World Inequality Database's release of 2026-10-30 for the family means, tax years).
 4. Integrate each wave by engine, merge the register, then prove layer 3 on CI (`npm run gate:full` takes over two
    hours here) and record it.
@@ -298,6 +321,10 @@ session's agents were given; change the date, the scratchpad path and the groups
   no trigger here; setup-node now caches npm's downloads itself; upload-artifact still zips by default.
 
 ## Questions for the owner
+
+- Slovakia: a Slovak who voluntarily takes another citizenship loses Slovak citizenship unless they had lived five
+  years in that state (Act 40/1993, s. 9(16)). The citizenship engine holds loss as yes or no, so it keeps "no" for
+  now. Say whether the engine should learn the five-year exception (a change to its model) or keep the simpler form.
 
 - Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
   Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian

@@ -2416,7 +2416,7 @@
     "layers": [
      {
       "bands": {"fig":0,"path":["bracketsPerShare"]},
-      "shares": [{"rate":{"fig":0,"path":["allowance"]}}]
+      "shares": [{"rate":{"fig":0,"path":["allowance"]},"max":{"fig":0,"path":["allowanceCap"]}}]
      }
     ]
    }
@@ -7645,7 +7645,7 @@
     "over": {"fig":1,"path":["noContractOrUnder3Months","onPaymentsFrom"]}
    },
    "author": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":5,"path":["royaltiesToIndividuals"]}}]
+    "bands": {"fig":5,"path":["scale"]}
    }
   },
   "nonResident": {
@@ -7658,7 +7658,7 @@
     "final": {"fig":4,"path":["final"]}
    },
    "author": {
-    "bands": [{"from":0,"to":null,"rate":{"fig":5,"path":["royaltiesToIndividuals"]}}]
+    "bands": {"fig":5,"path":["scale"]}
    }
   },
   "vat": null,

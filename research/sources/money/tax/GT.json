@@ -1,7 +1,7 @@
 {
  "topic": "tax.GT",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Guatemala: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Guatemala: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. SAT's own pages were added for the deduction, the simplified regime, the non-resident's withholding and VAT's rate.",
  "figures": [
   {
    "item": "residents",
@@ -28,7 +28,7 @@
     ],
     "regional": null
    },
-   "applies": "Employment income (dependence relationship)",
+   "applies": "Employment income (dependence relationship) SAT states the Q48,000 deduction (and up to Q12,000 for VAT paid on personal costs, which the game doesn't hold); the 5% and 7% at Q300,000 rest on PwC.",
    "sources": [
     {
      "src": 0,
@@ -37,6 +37,10 @@
     {
      "src": 1,
      "said": "A standard deduction of GTQ 48,000 is provided in addition to the personal deductions described above."
+    },
+    {
+     "src": 9,
+     "said": "Las deducciones que se puede aplicar a la renta neta para determinar la renta imponible son los siguientes: Q 48,000.00 corresponden a gastos personales sin necesidad de comprobación. Q 12,000.00 que podrá acreditar por el IVA pagado en gastos personales."
     }
    ]
   },
@@ -65,6 +69,10 @@
     {
      "src": 2,
      "said": "The tax rate is 25% on net income. … The tax rate is 5% on gross income that ranges from 0.01 Guatemalan quetzales (GTQ) to GTQ 30,000 and 7% on the excess."
+    },
+    {
+     "src": 9,
+     "said": "¿Cómo se determina el ISR, en el regimen opcional simplificado? Aplicando el 5% sobre el monto hasta de Q 30,000.00 y el 7% sobre el monto que exceda los Q 30,000.00."
     }
    ]
   },
@@ -113,7 +121,7 @@
     },
     "final": "withheld at source"
    },
-   "applies": "Non-resident individuals",
+   "applies": "Non-resident individuals SAT states the withholding; the 15% and 25% rest on PwC.",
    "sources": [
     {
      "src": 5,
@@ -122,6 +130,10 @@
     {
      "src": 6,
      "said": "A non-resident alien's other income from a Guatemalan source is subject to income tax withholding at 25%."
+    },
+    {
+     "src": 9,
+     "said": "Cuando contratan servicios a personas no domiciliadas en el país, ¿se debe retener el ISR? Si el servicio es prestado dentro del territorio nacional, sí debe retener porque la persona no residente no tiene establecimiento permanente en el país."
     }
    ]
   },
@@ -151,6 +163,10 @@
     {
      "src": 7,
      "said": "A 12% VAT is levied on the sale or transfer of merchandise and on non-personal services rendered or effected in Guatemala."
+    },
+    {
+     "src": 10,
+     "said": "Impuesto al Valor Agregado: ... Esta normado por el Decreto 27-92. La tarifa del IVA es del 12% del valor de cada producto o servicio"
     }
    ]
   },
@@ -203,7 +219,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/individual/taxes-on-personal-income",
    "title": "Guatemala - Individual - Taxes on personal income (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "Taxable income (GTQ*) Tax on column 1 (GTQ) Tax on excess (%) Over (column 1) Not over 0 300,000 0 5 300,000 15,000 7"
@@ -211,7 +227,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/individual/deductions",
    "title": "Guatemala - Individual - Deductions (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "A standard deduction of GTQ 48,000 is provided in addition to the personal deductions described above."
@@ -219,7 +235,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/corporate/taxes-on-corporate-income",
    "title": "Guatemala - Corporate - Taxes on corporate income (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "The tax rate is 25% on net income. … The tax rate is 5% on gross income that ranges from 0.01 Guatemalan quetzales (GTQ) to GTQ 30,000 and 7% on the excess."
@@ -227,7 +243,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/individual/other-taxes",
    "title": "Guatemala - Individual - Other taxes (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "Employees contribute 4.83% of their monthly salary and employers contribute 12.67% of their monthly payroll to social security."
@@ -235,7 +251,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/individual/tax-administration",
    "title": "Guatemala - Individual - Tax administration (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "Income tax must be withheld from salaries; rentals; royalties; fees for technical, professional, or scientific activities; or any kind of individual services. … The tax year for individuals runs from 1 January to 31 December."
@@ -243,7 +259,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/corporate/withholding-taxes",
    "title": "Guatemala - Corporate - Withholding taxes (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "Royalties; salaries; commissions; professional fees; professional, technical, economic, or financial assessment 15 Other 25"
@@ -251,7 +267,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/individual/income-determination",
    "title": "Guatemala - Individual - Income determination (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "A non-resident alien's other income from a Guatemalan source is subject to income tax withholding at 25%."
@@ -259,7 +275,7 @@
   {
    "url": "https://taxsummaries.pwc.com/guatemala/corporate/other-taxes",
    "title": "Guatemala - Corporate - Other taxes (PwC, reviewed 9 June 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/",
    "said": "A 12% VAT is levied on the sale or transfer of merchandise and on non-personal services rendered or effected in Guatemala."
@@ -271,6 +287,20 @@
    "kind": "secondary",
    "quotes": "https://portal.sat.gob.gt/portal/",
    "said": "El cambio al límite máximo de ingresos anuales para quienes estén como Pequeños Contribuyentes … se deriva del decreto 31-2024, que entró en vigencia el 9 de abril, y el nuevo monto llega a Q465 mil 381.25 para el período del 2025. … El nuevo techo máximo para los pequeños contribuyentes establecido en el decreto 31-2024, equivale a 125 salarios mínimos no agrícolas sin tomar en cuenta la bonificación incentivo vigente … La tasa del impuesto para el pequeño contribuyente es de 5% y las facturas no generan crédito fiscal del IVA para sus clientes."
+  },
+  {
+   "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/",
+   "title": "Superintendencia de Administración Tributaria (SAT), Preguntas frecuentes: Cumplimiento tributario",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "¿Qué gastos se tomaran como deducibles para determinar el ISR asalariados? Las deducciones que se puede aplicar a la renta neta para determinar la renta imponible son los siguientes: Q 48,000.00 corresponden a gastos personales sin necesidad de comprobación. Q 12,000.00 que podrá acreditar por el IVA pagado en gastos personales. ... Cuando contratan servicios a personas no domiciliadas en el país, ¿se debe retener el ISR? Si el servicio es prestado dentro del territorio nacional, sí debe retener porque la persona no residente no tiene establecimiento permanente en el país. ¿Cómo se determina el ISR, en el regimen opcional simplificado? Aplicando el 5% sobre el monto hasta de Q 30,000.00 y el 7% sobre el monto que exceda los Q 30,000.00."
+  },
+  {
+   "url": "https://portal.sat.gob.gt/portal/principales-impuestos-en-guatemala/",
+   "title": "SAT, Principales impuestos en Guatemala",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Impuesto al Valor Agregado: ... Esta normado por el Decreto 27-92. La tarifa del IVA es del 12% del valor de cada producto o servicio"
   }
  ],
  "blockers": [

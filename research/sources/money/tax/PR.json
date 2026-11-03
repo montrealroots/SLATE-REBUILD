@@ -1,7 +1,7 @@
 {
  "topic": "tax.PR",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Puerto Rico: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Puerto Rico: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. The Internal Revenue Code's own text, on Hacienda's site, was read again for every item but social contributions.",
  "figures": [
   {
    "item": "residents",
@@ -40,7 +40,7 @@
      "above": 500000
     }
    },
-   "applies": "Rates in effect for 2018 and later years, so for 2026; the alternate basic tax is not modelled here.",
+   "applies": "Rates in effect for 2018 and later years, so for 2026; the alternate basic tax is not modelled here. The Code states the scale; the gradual adjustment above USD 500,000 rests on PwC.",
    "sources": [
     {
      "src": 0,
@@ -49,6 +49,10 @@
     {
      "src": 0,
      "said": "This tax is 5% of the excess of the total net taxable income over USD 500,000"
+    },
+    {
+     "src": 6,
+     "said": "(3) Contribución para los años contributivos que comiencen después de 31 de diciembre de 2012: No mayor de $9,000 0 por ciento; En exceso de $9,000 pero no en exceso de $25,000 7 por ciento del exceso sobre $9,000; En exceso de $25,000 pero no en exceso de $41,500 $1,120 más el 14 por ciento del exceso sobre $25,000; En exceso de $41,500 pero no en exceso de $61,500 $3,430 más el 25 por ciento del exceso sobre $41,500; En exceso de $61,500 $8,430 más el 33 por ciento del exceso sobre $61,500"
     }
    ]
   },
@@ -67,7 +71,7 @@
      "01-15"
     ]
    },
-   "applies": "2026.",
+   "applies": "2026. The Code states the 15 April return; the extension and the estimated payments rest on PwC.",
    "sources": [
     {
      "src": 1,
@@ -76,6 +80,10 @@
     {
      "src": 1,
      "said": "must generally make quarterly payments of estimated tax due 15 April, 15 June, 15 September, and 15 January."
+    },
+    {
+     "src": 6,
+     "said": "las planillas rendidas a base del año natural deberán radicarse en o antes del 15 de abril siguiente al cierre del año natural"
     }
    ]
   },
@@ -112,11 +120,15 @@
      "exemptFirst": 500
     }
    },
-   "applies": "2026.",
+   "applies": "2026. The Code states the USD 500 exemption; the 10% rests on PwC.",
    "sources": [
     {
      "src": 1,
      "said": "In the case of a Puerto Rican resident who provides services (rather than as an employee) to another resident person, the income earned while providing such services will be subject to a withholding flat rate of 10%. Such withholding tax (WHT) rate does not apply to the first USD 500 of income earned by the individual who provides the services."
+    },
+    {
+     "src": 6,
+     "said": "la exención sobre la retención dispuesta en esta sección será sobre los primeros quinientos (500) dólares pagados durante el año natural a la persona que prestó el servicio"
     }
    ]
   },
@@ -141,6 +153,10 @@
     {
      "src": 3,
      "said": "There are no tax treaties between foreign countries and Puerto Rico."
+    },
+    {
+     "src": 6,
+     "said": "(i) una cantidad igual al veintinueve (29) por ciento de los mismos si el receptor fuera un extranjero, o (ii) una cantidad igual al veinte (20) por ciento de los mismos si el receptor fuere un ciudadano de los Estados Unidos."
     }
    ]
   },
@@ -154,7 +170,7 @@
     "excludedBelow": 50000,
     "b2bExcludedBelow": 300000
    },
-   "applies": "2026.",
+   "applies": "2026. The Code states the state 6% plus 4.5% and the municipal 1% (11.5% in all) and the 4% on services to businesses and designated professional services; the USD 50,000 and 300,000 exclusions rest on PwC.",
    "sources": [
     {
      "src": 4,
@@ -167,6 +183,10 @@
     {
      "src": 4,
      "said": "Effective 1 July 2020, services to other merchants rendered by merchants with annual volume of business of less than USD 300,000."
+    },
+    {
+     "src": 6,
+     "said": "Sección 4020.01 ... (b) La tasa contributiva será de un cinco punto cinco por ciento (5.5%) ...; disponiéndose que, efectivo el 1ro. de febrero de 2014 la tasa contributiva será de seis por ciento (6%). ... Sección 4210.01 ... (b) La tasa contributiva será de un cuatro punto cinco (4.5) por ciento ... (c) ... servicios rendidos a otros comerciantes y servicios profesionales designados ... La tasa aplicable a este impuesto será de cuatro por ciento (4%). ... ventas y uso estatal del seis (6) por ciento y del uno (1) por ciento municipal"
     }
    ]
   },
@@ -191,7 +211,7 @@
   {
    "url": "https://taxsummaries.pwc.com/puerto-rico/individual/taxes-on-personal-income",
    "title": "PwC Worldwide Tax Summaries: puerto-rico Individual - Taxes on personal income",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://hacienda.pr.gov/",
    "said": "Net taxable income (USD) Tax Not over 9,000 0% Over 9,000, but not over 25,000 7% of the excess over USD 9,000 Over 25,000, but not over 41,500 USD 1,120 plus 14% of the excess over USD 25,000 Over 41,500, but not over 61,500 USD 3,430 plus 25% of the excess over USD 41,500 Over 61,500 USD 8,430 plus 33% of the excess over USD 61,500 … This tax is 5% of the excess of the total net taxable income over USD 500,000 … Puerto Rican non-residents are only taxed in Puerto Rico on their Puerto Rico-source income."
@@ -199,7 +219,7 @@
   {
    "url": "https://taxsummaries.pwc.com/puerto-rico/individual/tax-administration",
    "title": "PwC Worldwide Tax Summaries: puerto-rico Individual - Tax administration",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://hacienda.pr.gov/",
    "said": "In most cases, taxpayers must file an individual income tax return on a calendar-year basis by 15 April of the following year. … must generally make quarterly payments of estimated tax due 15 April, 15 June, 15 September, and 15 January. … In the case of a Puerto Rican resident who provides services (rather than as an employee) to another resident person, the income earned while providing such services will be subject to a withholding flat rate of 10%. Such withholding tax (WHT) rate does not apply to the first USD 500 of income earned by the individual who provides the services. … Puerto Rican employees who are non-residents are subject to a flat 29% withholding in the case of foreign nationals and to a 20% withholding in the case of US citizens."
@@ -207,7 +227,7 @@
   {
    "url": "https://taxsummaries.pwc.com/puerto-rico/individual/other-taxes",
    "title": "PwC Worldwide Tax Summaries: puerto-rico Individual - Other taxes",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.ssa.gov/",
    "said": "Puerto Rico is covered under the US social security system; consequently, Puerto Rico employers and employees are subject to the US Social Security and Medicare taxes requirements. … These payroll taxes are: Social Security and Medicare taxes, disability benefits tax, and chauffeur's and other employees' employment security tax."
@@ -215,7 +235,7 @@
   {
    "url": "https://taxsummaries.pwc.com/puerto-rico/corporate/withholding-taxes",
    "title": "PwC Worldwide Tax Summaries: puerto-rico Corporate - Withholding taxes",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://hacienda.pr.gov/",
    "said": "There are no tax treaties between foreign countries and Puerto Rico."
@@ -223,7 +243,7 @@
   {
    "url": "https://taxsummaries.pwc.com/puerto-rico/corporate/other-taxes",
    "title": "PwC Worldwide Tax Summaries: puerto-rico Corporate - Other taxes",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://hacienda.pr.gov/",
    "said": "The SUT rate is imposed at 10.5% at the state level and an additional 1% at the municipal level, for an aggregate 11.5%. Designated professional services and business-to-business (B2B) services are taxed at a 4% SUT rate. … Services rendered by merchants with annual volume of business of less than USD 50,000. … Effective 1 July 2020, services to other merchants rendered by merchants with annual volume of business of less than USD 300,000."
@@ -234,6 +254,13 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Sección 1031.01. — Ingreso Bruto. … (8) Ganancias, beneficios e ingresos derivados de intereses, rentas, regalías, dividendos, beneficios de sociedades, beneficios de corporaciones de individuos, beneficios de corporaciones de responsabilidad limitada, valores o la operación de cualquier negocio explotado con fines de lucro o utilidad."
+  },
+  {
+   "url": "https://hacienda.pr.gov/sites/default/files/codigo_de_rentas_internas_2011_segun_enmendado_28.08.2026.pdf",
+   "title": "Departamento de Hacienda de Puerto Rico: Código de Rentas Internas de Puerto Rico de 2011, según enmendado (Rev. 28 de mayo de 2026), ss. 1021.01, 1061.16, 1062.03, 1062.08, 4020.01 and 4210.01",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(3) Contribución para los años contributivos que comiencen después de 31 de diciembre de 2012: No mayor de $9,000 0 por ciento; En exceso de $9,000 pero no en exceso de $25,000 7 por ciento del exceso sobre $9,000; En exceso de $25,000 pero no en exceso de $41,500 $1,120 más el 14 por ciento del exceso sobre $25,000; En exceso de $41,500 pero no en exceso de $61,500 $3,430 más el 25 por ciento del exceso sobre $41,500; En exceso de $61,500 $8,430 más el 33 por ciento del exceso sobre $61,500 ... Sección 1061.16 ... las planillas rendidas a base del año natural deberán radicarse en o antes del 15 de abril siguiente al cierre del año natural ... la exención sobre la retención dispuesta en esta sección será sobre los primeros quinientos (500) dólares pagados durante el año natural a la persona que prestó el servicio ... (i) una cantidad igual al veintinueve (29) por ciento de los mismos si el receptor fuera un extranjero, o (ii) una cantidad igual al veinte (20) por ciento de los mismos si el receptor fuere un ciudadano de los Estados Unidos. ... Sección 4020.01 ... (b) La tasa contributiva será de un cinco punto cinco por ciento (5.5%) ...; disponiéndose que, efectivo el 1ro. de febrero de 2014 la tasa contributiva será de seis por ciento (6%). ... Sección 4210.01 ... (b) La tasa contributiva será de un cuatro punto cinco (4.5) por ciento ... (c) ... servicios rendidos a otros comerciantes y servicios profesionales designados ... La tasa aplicable a este impuesto será de cuatro por ciento (4%). ... ventas y uso estatal del seis (6) por ciento y del uno (1) por ciento municipal"
   }
  ],
  "blockers": []

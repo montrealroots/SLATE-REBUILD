@@ -1,7 +1,7 @@
 {
  "topic": "tax.ZM",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Zambia: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Zambia: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. The Zambia Revenue Authority's own page was added for the bands, the turnover tax, a non-resident's final withholding and VAT's rate.",
  "figures": [
   {
    "item": "residents",
@@ -31,11 +31,15 @@
      }
     ]
    },
-   "applies": "Charge year 2026.",
+   "applies": "Charge year 2026. ZRA gives the monthly bands, twelve times the yearly ones the game holds.",
    "sources": [
     {
      "src": 0,
      "said": "The rates of income tax applicable to an individual for the 2026 charge year are as follows: Annual taxable income (ZMW) Rate of income tax (%) Up to 61,200 0 61,201 to 85,200 20 85,201 to 110,400 30 Over 110,400 37 In principle, the same rates apply to both Zambian and non-Zambian residents."
+    },
+    {
+     "src": 5,
+     "said": "Example Calculation (2026 Tax Bands): ... Chargeable Income (K) | Rate: First 5,100.00 0%; 5,100.01 – 7,100.00 20%; 7,100.01 – 9,200.00 30%; 9,200.01 and above 37%"
     }
    ]
   },
@@ -99,19 +103,23 @@
   },
   {
    "item": "withholding",
-   "finding": "Pay is taxed through PAYE; a small business with turnover between ZMW 12,000 and ZMW 5 million pays a 5% turnover tax instead of income tax and VAT (royalties excluded).",
+   "finding": "Pay is taxed through PAYE; a small business with turnover above ZMW 30,000 and up to ZMW 5 million a year pays a 5% turnover tax instead of income tax and VAT (royalties excluded), and none at or below ZMW 30,000.",
    "value": {
     "turnoverTax": {
      "rate": 0.05,
-     "from": 12000,
+     "from": 30000,
      "to": 5000000
     }
    },
-   "applies": "2026.",
+   "applies": "2026. ZRA puts the 0% band at K30,000 a year; until 2026-11-03 the game held PwC's ZMW 12,000. The engine doesn't read the turnover tax.",
    "sources": [
     {
      "src": 3,
      "said": "A flat rate of 5% on business turnover will be applied where turnover is between ZMW 12,000 and ZMW 5 million per annum . Income that is subject to turnover tax will not be subject to income tax or VAT."
+    },
+    {
+     "src": 5,
+     "said": "Turnover Tax is charged as follows: Turnover per Month | Annual Turnover | Tax Rate: K2,500 or less | K30,000 or less | 0%; Above K2,500 | Above K30,000 up to K5,000,000 | 5%"
     }
    ]
   },
@@ -122,7 +130,7 @@
     "rate": 0.2,
     "final": true
    },
-   "applies": "2026.",
+   "applies": "2026. ZRA states the withholding is final; the 20% rests on PwC.",
    "sources": [
     {
      "src": 4,
@@ -131,6 +139,10 @@
     {
      "src": 2,
      "said": "Withholding tax is a final tax for nonresidents. The rates may be reduced under an applicable tax treaty."
+    },
+    {
+     "src": 5,
+     "said": "Income subject to withholding tax that is treated as final tax, for example: ... Public entertainment fees paid to non-residents; Royalties paid to non-residents"
     }
    ]
   },
@@ -157,7 +169,7 @@
     "standard": 0.16,
     "registrationThreshold": 800000
    },
-   "applies": "2026.",
+   "applies": "2026. ZRA states the rate; the K800,000 threshold rests on Deloitte.",
    "sources": [
     {
      "src": 2,
@@ -166,6 +178,10 @@
     {
      "src": 3,
      "said": "VAT applies to standard rated supplies of goods and services at 16%."
+    },
+    {
+     "src": 5,
+     "said": "STANDARD RATED SUPPLIES: These are supplies that attract VAT at the prescribed standard rate 16%."
     }
    ]
   }
@@ -175,7 +191,7 @@
   {
    "url": "https://taxsummaries.pwc.com/zambia/individual/taxes-on-personal-income",
    "title": "PwC Worldwide Tax Summaries: zambia Individual - Taxes on personal income",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.zra.org.zm/",
    "said": "The rates of income tax applicable to an individual for the 2026 charge year are as follows: Annual taxable income (ZMW) Rate of income tax (%) Up to 61,200 0 61,201 to 85,200 20 85,201 to 110,400 30 Over 110,400 37 In principle, the same rates apply to both Zambian and non-Zambian residents."
@@ -183,7 +199,7 @@
   {
    "url": "https://taxsummaries.pwc.com/zambia/individual/tax-administration",
    "title": "PwC Worldwide Tax Summaries: zambia Individual - Tax administration",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.zra.org.zm/",
    "said": "Income tax is determined by reference to a charge year, being the period of 12 months ending on 31 December. … The personal income tax return needs to be submitted by 21 June following the end of the tax year."
@@ -191,7 +207,7 @@
   {
    "url": "https://www.deloitte.com/content/dam/assets-shared/docs/services/tax/2026/dttl-tax-zambiahighlights-2026.pdf",
    "title": "Deloitte International Tax: Zambia Highlights 2026",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.napsa.co.zm/",
    "said": "the employee each make pension contributions to NAPSA at a rate of 5% of the employee’s gross earnings. … Zambian and foreign employees and is capped at ZMW 1,861.80 for 2026 (ZMW 3,723.60 in total). … The National Health Insurance (NHI) Act requires that the employer and the employee each contribute 1% of the employee’s … Withholding tax is a final tax for nonresidents. The rates may be reduced under an applicable tax treaty. … of electronic services, to register for VAT if their turnover exceeds or is expected to exceed ZMW 800,000 per annum."
@@ -199,7 +215,7 @@
   {
    "url": "https://taxsummaries.pwc.com/zambia/individual/other-taxes",
    "title": "PwC Worldwide Tax Summaries: zambia Individual - Other taxes",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.zra.org.zm/",
    "said": "A flat rate of 5% on business turnover will be applied where turnover is between ZMW 12,000 and ZMW 5 million per annum . Income that is subject to turnover tax will not be subject to income tax or VAT. … VAT applies to standard rated supplies of goods and services at 16%."
@@ -207,10 +223,17 @@
   {
    "url": "https://taxsummaries.pwc.com/zambia/corporate/withholding-taxes",
    "title": "PwC Worldwide Tax Summaries: zambia Corporate - Withholding taxes",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.zra.org.zm/",
    "said": "Public entertainment fees to entertainers/sports persons N/A 20 … Royalties 15 20"
+  },
+  {
+   "url": "https://www.zra.org.zm/tax-information/",
+   "title": "Zambia Revenue Authority, Tax Information (Turnover Tax, PAYE, VAT sections; read after adding Sectigo's EV R36 intermediate to the bundle, verification on)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Turnover Tax is charged as follows: Turnover per Month | Annual Turnover | Tax Rate: K2,500 or less | K30,000 or less | 0%; Above K2,500 | Above K30,000 up to K5,000,000 | 5% ... Example Calculation (2026 Tax Bands): ... Chargeable Income (K) | Rate: First 5,100.00 0%; 5,100.01 – 7,100.00 20%; 7,100.01 – 9,200.00 30%; 9,200.01 and above 37% ... STANDARD RATED SUPPLIES: These are supplies that attract VAT at the prescribed standard rate 16%. ... Income subject to withholding tax that is treated as final tax, for example: ... Public entertainment fees paid to non-residents; Royalties paid to non-residents"
   }
  ],
  "blockers": []

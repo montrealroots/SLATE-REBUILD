@@ -1,7 +1,7 @@
 {
  "country": "MN",
  "name": "registration number",
- "issuer": "the State Center for Civil Registration and Information (SCCRI), as the source of 2012 names it",
+ "issuer": "the state administrative body in charge of state registration",
  "format": {
   "length": 10,
   "pattern": "^[A-Za-z\\u0400-\\u04FF]{2}\\d{8}$"
@@ -10,15 +10,22 @@
  "who": [
   "citizens"
  ],
- "note": "Landinfo's thematic note on Mongolia's travel, identity and supporting documents (22 November 2012), read 2026-10-30, citing a meeting with the SCCRI in Ulaanbaatar (May 2012) and a Mongolian diplomat (October 2011): the national register is kept by the SCCRI; ID cards, old and new, carry a document number and a registration number; the registration number, comparable to Norway's personal number, is given to every Mongolian citizen at birth and follows them for life; it is made of two letters and eight digits, from which the authorities read sex, date and place of birth. The note doesn't say which alphabet the two letters are in, so the pattern takes any Latin or Cyrillic letter (a superset; Mongolian is written in Cyrillic, which the source doesn't state). Read as given at birth, to citizens. The note is of 2012 (the register's office has since been reorganised; its current site burtgel.gov.mn answers but no page stating the number's form was found today; legalinfo.mn didn't answer). No check digit, fee or time is stated.",
+ "note": "Landinfo's thematic note on Mongolia's travel, identity and supporting documents (22 November 2012), read 2026-10-30, citing a meeting with the SCCRI in Ulaanbaatar (May 2012) and a Mongolian diplomat (October 2011): the national register is kept by the SCCRI; ID cards, old and new, carry a document number and a registration number; the registration number, comparable to Norway's personal number, is given to every Mongolian citizen at birth and follows them for life; it is made of two letters and eight digits, from which the authorities read sex, date and place of birth. The note doesn't say which alphabet the two letters are in, so the pattern takes any Latin or Cyrillic letter (a superset; Mongolian is written in Cyrillic, which the source doesn't state). Read as given at birth, to citizens. The note is of 2012 (the register's office has since been reorganised; its current site burtgel.gov.mn answers but no page stating the number's form was found today; legalinfo.mn didn't answer). No check digit, fee or time is stated. The Law on Civil State Registration (21 June 2018, as amended 3 June 2022), read 2026-11-03 on legalinfo.mn, defines the register number as a unique code of 2 letters and 8 digits giving the citizen's year, month and day of birth and sex (art. 4.1.7), held by every citizen with a separate 12-digit civil registration number (arts. 4.1.1, 5.12; the second isn't modelled); the procedure for giving it is approved by the head of the state administrative body in charge of state registration (art. 5.10), the issuer held from that day in place of the 2012 note's SCCRI. When it is given and the letters' alphabet aren't stated there, so the entry stays secondary.",
  "sources": [
   {
    "url": "https://landinfo.no/wp-content/uploads/2018/03/Mongolia-Reise-ID-og-underlagsdokumenter-22112012.pdf",
    "title": "Landinfo (the Norwegian immigration authorities' country-information centre), Temanotat Mongolia: Reise-, ID- og underlagsdokumenter, 22 November 2012",
-   "read": "2026-10-30",
+   "read": "2026-11-03",
+   "said": "The Mongolian national register is administered by the State Center for Civil Registration and Information (SCCRI). ... Både de tidligere og de nye ID-kortene utstedes av SCCRI, og har to tallrekker ... ettersom det tildeles alle mongolske borgere ved fødselen og følger dem gjennom hele livet ... Reigstreringsnummeret består av to bokstaver og åtte siffer",
    "kind": "secondary",
-   "quotes": "https://burtgel.gov.mn/",
-   "said": "The Mongolian national register is administered by the State Center for Civil Registration and Information (SCCRI). ... Både de tidligere og de nye ID-kortene utstedes av SCCRI, og har to tallrekker ... ettersom det tildeles alle mongolske borgere ved fødselen og følger dem gjennom hele livet ... Reigstreringsnummeret består av to bokstaver og åtte siffer"
+   "quotes": "https://burtgel.gov.mn/"
+  },
+  {
+   "url": "https://legalinfo.mn/mn/detail/13540",
+   "title": "legalinfo.mn (Unified Legal Information System), Монгол Улсын хууль: Иргэний улсын бүртгэлийн тухай (21 June 2018, as amended 3 June 2022), arts. 4.1.1, 4.1.7, 5.10, 5.12",
+   "read": "2026-11-03",
+   "said": "4.1.1.\"иргэний бүртгэлийн дугаар\" гэж Монгол Улсын иргэнд иргэний улсын бүртгэлийн мэдээллийн сангаас өгөгдсөн 12 орон бүхий тоог; ... 4.1.7.\"регистрийн дугаар\" гэж Монгол Улсын иргэний төрсөн он, сар, өдөр, хүйсийн талаарх мэдээллийг тусгасан 2 үсэг, 8 орон бүхий тооноос бүрдсэн, үл давхардах нийлмэл кодыг. ... 5.10.... регистрийн дугаарыг шинээр олгох, өөрчлөх, хүчингүй болгох журмыг улсын бүртгэлийн асуудал эрхэлсэн төрийн захиргааны байгууллагын дарга батална. ... 5.12.Монгол Улсын иргэн бүр регистрийн болон иргэний бүртгэлийн дугаартай байна.",
+   "kind": "primary"
   }
  ]
 }

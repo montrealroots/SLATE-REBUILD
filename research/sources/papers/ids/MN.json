@@ -5,18 +5,67 @@
  "currency": "MNT",
  "routes": [
   {
-   "id": "office",
+   "id": "capital",
    "where": "home",
    "speed": "standard",
-   "within": null,
-   "label": "in person at the nearest state registration office or its centre"
+   "within": {
+    "n": 5,
+    "unit": "working day"
+   },
+   "label": "in person at a state registration office in the capital"
+  },
+  {
+   "id": "soum",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 15,
+    "unit": "working day"
+   },
+   "label": "in person at a soum registration office"
   },
   {
    "id": "mission",
    "where": "abroad",
    "speed": "standard",
-   "within": null,
+   "within": {
+    "n": 30,
+    "unit": "working day"
+   },
    "label": "in person at a diplomatic mission of Mongolia abroad"
+  },
+  {
+   "id": "capital-lost",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 5,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card reissued, in the capital"
+  },
+  {
+   "id": "soum-lost",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 15,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card reissued, in a soum"
+  },
+  {
+   "id": "mission-lost",
+   "where": "abroad",
+   "speed": "standard",
+   "within": {
+    "n": 30,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card reissued at a diplomatic mission"
   }
  ],
  "cards": [
@@ -26,8 +75,12 @@
    "under": 25,
    "validYears": null,
    "pay": {
-    "office": "18300",
-    "mission": "18300"
+    "capital": "18300",
+    "soum": "18300",
+    "mission": "18300",
+    "capital-lost": "33300",
+    "soum-lost": "33300",
+    "mission-lost": "33300"
    }
   },
   {
@@ -35,20 +88,23 @@
    "from": 25,
    "validYears": null,
    "pay": {
-    "office": null,
-    "mission": null
+    "capital": "18300",
+    "soum": "18300",
+    "mission": "18300",
+    "capital-lost": "33300",
+    "soum-lost": "33300",
+    "mission-lost": "33300"
    }
   }
  ],
- "note": "GoGo.mn (2 February 2026), from the General Authority for State Registration: a citizen takes a first card on turning 16, in person at a registration office or, living abroad, at a diplomatic mission, paying the registration service fee of 15,000 tögrög and the stamp duty of 3,300, 18,300 in all; the card's term is renewed at 25 and at 45, within 30 days, on pain of a fine. The renewal fee isn't given, nor the time; the card's term in years isn't stated (it runs to the next renewal age). Tried again 2026-10-30: two searches in Mongolian for the renewal's service fee and stamp duty found only the first card's 18,300; legalinfo.mn (the Stamp Duty Law) and mof.gov.mn reset the connection, so the renewal fee stays null.",
+ "note": "The General Authority for State Registration's service sheet for registering for the citizen's identity card (read 2026-11-03): a citizen takes a first card on turning 16, and changes it within 30 days of turning 25 and 45, in person, paying for each the service fee of 15,000 tögrög and the stamp duty of 3,300, 18,300 in all; a card reissued, as after a loss, costs 30,000 and 3,300, 33,300 in all. It is done whatever the administrative unit one lives in, within 5 working days in the capital, 15 in a soum and 30 at a diplomatic mission abroad. The E-Mongolia service the sheet also lists isn't modelled. The card's term in years isn't stated (it runs to the next of those ages), so it's null. GoGo.mn's report (read 2026-10-28) gave only the first card's fee, so the change at 25 and 45 and the times were null until the sheet was read.",
  "sources": [
   {
-   "url": "https://gogo.mn/r/0w19v1",
-   "title": "GoGo.mn, Citizens turning 25 and 45 this year must renew their identity cards within 30 days (2 February 2026)",
-   "read": "2026-10-28",
-   "kind": "secondary",
-   "quotes": "https://burtgel.gov.mn/",
-   "said": "Иргэд 25, 45 насандаа иргэний үнэмлэхийн хугацаагаа сунгуулдаг. ... 30 хоногийн дотор иргэний үнэмлэхээ сунгуулж эсвэл шинээр захиалж аваагүй тохиолдолд Зөрчлийн тухай хуулийн дагуу торгууль оногдуулдаг журамтай. ... Ингэхдээ 16 нас хүрсэн өдрөөс хойш дараах бичиг баримтыг бүрдүүлж, өөрийн биеэр өөрт ойр байрлах улсын бүртгэлийн хэлтэс болон түүний харьяа нэгдсэн төв, цэгт очно. Харин гадаад улсад амьдардаг бол хилийн чанадад ажиллаж байгаа Дипломат төлөөлөгчийн газарт бүртгүүлнэ. ... Улсын бүртгэлийн үйлчилгээний хөлс болох 15000 төгрөг, тэмдэгтийн хураамж 3300, нийт 18300 төгрөгийг тушаана. ... Эх сурвалж: Улсын бүртгэлийн ерөнхий газар"
+   "url": "http://burtgel.gov.mn/service/images/service/2/00008.png",
+   "title": "Улсын бүртгэлийн ерөнхий газар (General Authority for State Registration), Иргэний бүртгэлийн үйлчилгээ, item 8 'Иргэний үнэмлэхийн бүртгэлд бүртгүүлэх' (the service sheet image on http://burtgel.gov.mn/service/index.php/civil/civil-new)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "1. Хүсэлт - Монгол Улсын 16, түүнээс дээш насны иргэн, иргэний үнэмлэхтэй байна. 2. Монгол Улсын иргэн 16 нас хүрсэн өдрөөс хойш анх удаа, 25, 45 нас хүрсэн өдрөөс хойш 30 хоногийн дотор иргэний үнэмлэхээ солихдоо өөрийн биеэр бүртгүүлнэ. ... 5. Үйлчилгээний хураамж: Төрийн банкны 106030085769 дансанд - Анх удаа, 25, 45 насанд сольж олгох – 15,000 төгрөг - Дахин олгох - 30,000 төгрөг Тэмдэгтийн хураамж - 3,300 төгрөг ... Засаг, захиргааны нэгжийн харьяалал харгалзахгүй. 21 аймаг, 9 дүүрэг, Нийслэлд байрлалтай 8 төв, 13 цэг. Хилийн чанадад ажиллаж байгаа Дипломат төлөөлөгчийн газар. Цахим үйлчилгээний нэгдсэн систем /E-Mongolia.mn/ Нийслэлд ажлын 5, сумандаа ажлын 15, ДТГ-т ажлын 30 өдрийн дотор"
   }
  ]
 }

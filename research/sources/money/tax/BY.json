@@ -1,7 +1,7 @@
 {
  "topic": "tax.BY",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Belarus: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Belarus: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. The Ministry of Taxes and Duties' own pages were added for the rates and the return; the payment day rests on a secondary, so the fact stays secondary.",
  "figures": [
   {
    "item": "residents",
@@ -41,6 +41,14 @@
     {
      "src": 0,
      "said": "Речь о доходах от дивидендов, по трудовым договорам, а также по гражданско-правовым договорам."
+    },
+    {
+     "src": 2,
+     "said": "Ставки подоходного налога с доходов физических лиц установлены Налоговым кодексом в зависимости от вида и суммы дохода. Так, доходы облагаются: - по ставке 13% - в сумме не превысившей 350 000 руб. за календарный год; - по ставке 25% - в сумме свыше 350 000 до 600 000 руб.; - по ставке 30% - в сумме свыше 600 000 руб."
+    },
+    {
+     "src": 3,
+     "said": "к доходам свыше 350 000 руб., но не более 600 000 руб., применяется ставка 25 процентов с превышения над пределом в 350 000 руб.; к доходам свыше 600 000 руб. применяется ставка 30 процентов с превышения над пределом в 600 000 руб."
     }
    ]
   },
@@ -59,12 +67,16 @@
      "paymentDue": "2026-06-01"
     }
    },
-   "applies": "Belarus, individuals who must file (income not taxed by a tax agent, income from abroad, and residents whose pay, civil-contract income and dividends together passed BYN 220,000 in 2025); income taxed at source by a tax agent needs no return.",
+   "applies": "Belarus, individuals who must file (income not taxed by a tax agent, income from abroad, and residents whose pay, civil-contract income and dividends together passed BYN 220,000 in 2025); income taxed at source by a tax agent needs no return. The Ministry of Taxes states the return's 31 March; the 30 April notice and the 1 June payment, which the engine reads, rest on Baranovichi State University's guide.",
    "searched": "Web search 2026-11-02: 'Беларусь 2026 налоговая декларация подоходный налог срок подачи 31 марта НДС 20% ...' returned pravo.by (MNS news, HTTP 403 here), neg.by, myfin.by, ilex.by and regional inspectorate notices on vitebsk-region.gov.by and belynichi.gov.by (connection refused or timed out) and barsu.by (read).",
    "sources": [
     {
      "src": 1,
      "said": "Налоговую декларацию (расчет) по подоходному налогу с физических лиц (далее - налоговая декларация) о доходах, полученных в 2025 году, физическим лицам необходимо представить не позднее 31 марта 2026 года. … производится не позднее 1 июня 2026 года на основании извещения на уплату подоходного налога, вручаемого налоговым органом не позднее 30 апреля 2026 года. … Информация размещена на сайте МНС и предоставлена инспекцией МНС по г.Барановичи."
+    },
+    {
+     "src": 3,
+     "said": "Исчисление подоходного налога по повышенным ставкам производится налоговым органом на основании налоговой декларации, которую физическое лицо, получившее вышеуказанные доходы за 2026 г., обязано будет представить в налоговый орган не позднее 31 марта 2027 г."
     }
    ]
   }
@@ -74,7 +86,7 @@
   {
    "url": "https://news.zerkalo.io/economics/116900.html",
    "title": "Zerkalo, 29 December 2025: officials raise income tax to 30% (quoting the Ministry of Finance of Belarus)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.minfin.gov.by/",
    "said": "С 1 января 2026 года максимальную сумму доходов, которые подпадают под налог по ставке 13%, увеличат с 220 000 до 350 000 рублей, сообщает Минфин. Если сумма будет больше 350 тысяч, но меньше 600 тысяч, то сбор составит 25%. Его будут брать с того, что больше 350 тысяч. При этом с доходов, которые превышают 600 000 рублей, станут взимать сбор по ставке 30%. … «Фактически уплата налога по новым ставкам начнется в 2027 году», — уточняет ведомство. … Речь о доходах от дивидендов, по трудовым договорам, а также по гражданско-правовым договорам."
@@ -82,10 +94,24 @@
   {
    "url": "https://barsu.by/information/Downloads/nalog/2026-02-09-2.pdf",
    "title": "Представление налоговой декларации (расчета) по подоходному налогу с физических лиц за 2025 год (Ministry of Taxes and Duties notice, provided by its Baranovichi inspectorate, posted by Baranovichi State University, February 2026)",
-   "read": "2026-11-02",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://nalog.gov.by/actual/predstavlenie-declaratii-podohodny/",
    "said": "Налоговую декларацию (расчет) по подоходному налогу с физических лиц (далее - налоговая декларация) о доходах, полученных в 2025 году, физическим лицам необходимо представить не позднее 31 марта 2026 года. … производится не позднее 1 июня 2026 года на основании извещения на уплату подоходного налога, вручаемого налоговым органом не позднее 30 апреля 2026 года. … Информация размещена на сайте МНС и предоставлена инспекцией МНС по г.Барановичи."
+  },
+  {
+   "url": "https://nalog.gov.by/news/34207/",
+   "title": "Ministry of Taxes and Duties of the Republic of Belarus (nalog.gov.by): Ставки подоходного налога с доходов физических лиц",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Ставки подоходного налога с доходов физических лиц установлены Налоговым кодексом в зависимости от вида и суммы дохода. Так, доходы облагаются: - по ставке 13% - в сумме не превысившей 350 000 руб. за календарный год; - по ставке 25% - в сумме свыше 350 000 до 600 000 руб.; - по ставке 30% - в сумме свыше 600 000 руб."
+  },
+  {
+   "url": "https://nalog.gov.by/clarifications/comments/33513/",
+   "title": "Ministry of Taxes and Duties: Комментарий к Закону Республики Беларусь «Об изменении законов по вопросам налоговых правоотношений» (подоходный налог с физических лиц)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "к доходам свыше 350 000 руб., но не более 600 000 руб., применяется ставка 25 процентов с превышения над пределом в 350 000 руб.; к доходам свыше 600 000 руб. применяется ставка 30 процентов с превышения над пределом в 600 000 руб. Исчисление подоходного налога по повышенным ставкам производится налоговым органом на основании налоговой декларации, которую физическое лицо, получившее вышеуказанные доходы за 2026 г., обязано будет представить в налоговый орган не позднее 31 марта 2027 г."
   }
  ],
  "blockers": [

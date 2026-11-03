@@ -63,6 +63,19 @@ export const CHECKS = {
       return body + (a === 10 ? 'X' : String(a));
     },
   },
+  /**
+   * Czechia's rodné číslo: a ten-digit number divisible by eleven without remainder (zákon č. 133/2000 Sb., § 13(3)
+   * and (5), read 2026-11-03 in e-Sbírka's text in force from 2025-01-01). As 10 is -1 mod 11, the check digit is the
+   * body's own remainder by 11; a body whose remainder is 10 has no digit that makes it divisible, so it gives no
+   * ten-digit number and fails. 7103192745 is 11 × 645744795.
+   */
+  'cz-rodne-cislo': {
+    digits: 1,
+    compute: (body: string) => {
+      const r = [...body].reduce((sum, d) => (sum * 10 + Number(d)) % 11, 0);
+      return r === 10 ? body : body + String(r);
+    },
+  },
 } satisfies Record<string, Check>;
 
 export type CheckId = keyof typeof CHECKS;

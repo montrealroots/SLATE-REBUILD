@@ -3,15 +3,43 @@
  "years": 5,
  "renounce": false,
  "lapses": false,
- "note": "GLOBALCIT's Citizenship Law Dataset v3.0 (EUI, 2025), coding the law in force on 1 January 2024 (A06a FJI 11; A06b FJI 11; L05 No provision): ordinary naturalisation after 5 years' residence; no renunciation of other citizenships required; a citizen keeps it on taking another. Reforms after that date are checked in the file's later sources, where a later source is given. Citizenship at birth is read from the same dataset's 2024 coding of modes A01a (descent, born in country: Generally applicable provision), A01b (descent, born abroad: Generally applicable provision), A02a (birth in country: No provision) and A02b (birth in country to a parent born there: No provision), as its codebook (RSC/GLOBALCIT 2025/01, sections 3.2.1a to 3.2.2b) defines them: not by birth in the territory alone (provisions for foundlings and children otherwise stateless, modes A03a and A03b, aren't held by the form); by descent from either parent, with no further limit on a child born abroad. Changes to the law at birth after 1 January 2024 weren't checked for this file.",
+ "note": "GLOBALCIT's Citizenship Law Dataset v3.0 (EUI, 2025), coding the law in force on 1 January 2024 (A06a FJI 11; A06b FJI 11; L05 No provision): ordinary naturalisation after 5 years' residence; no renunciation of other citizenships required; a citizen keeps it on taking another. Reforms after that date are checked in the file's later sources, where a later source is given. Citizenship at birth is read from the same dataset's 2024 coding of modes A01a (descent, born in country: Generally applicable provision), A01b (descent, born abroad: Generally applicable provision), A02a (birth in country: No provision) and A02b (birth in country to a parent born there: No provision), as its codebook (RSC/GLOBALCIT 2025/01, sections 3.2.1a to 3.2.2b) defines them: not by birth in the territory alone (provisions for foundlings and children otherwise stateless, modes A03a and A03b, aren't held by the form); by descent from either parent, with no further limit on a child born abroad. Changes to the law at birth after 1 January 2024 weren't checked for this file. On 2026-11-03 the primaries were read: the Ministry of Foreign Affairs' page (five of ten years; no renunciation, s. 11(2) of the Citizenship of Fiji Act 2009), which confirms the years, renunciation and keeping; Parliament's Bill No. 8 of 2026 (8 of 10 years) and Bill No. 16 of 2022 (15 of 20), bills not shown to be in force, so the five years stand. The Ministry of Immigration's page says every child born in Fiji becomes a citizen at birth unless a parent has diplomatic immunity and neither parent is a citizen, which the dataset codes as no provision for birth in the territory. The Act itself, which decides between them, wasn't read (laws.gov.fj answered 404 for its address and Common Crawl holds only error pages for it; the 2013 Constitution, s. 5, in the Constitute Project's copy, leaves the conditions to written law), so birth in the territory keeps the dataset's reading, none, until the Act is read, and the entry stays at second hand.",
  "sources": [
   {
    "url": "https://cadmus.eui.eu/bitstreams/3b166501-e695-48d7-9e27-d7bef061573a/download",
    "title": "GLOBALCIT Citizenship Law Dataset v3.0 (Vink, van der Baaren, Bauböck, Dzankic, Honohan, Manby; EUI Research Data, 2025), country-year-mode files, Fiji, 2024",
-   "read": "2026-10-29",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://globalcit.eu/national-citizenship-laws/",
    "said": "Presence in Fiji for 5 of preceding 10 years, intention to reside in Fiji. ... n.a. ... n.a. ... Generally applicable provision ... One or both parents must be a citizen. Excludes child born in Fiji to diplomat. ... Generally applicable provision ... One or both parents must be a citizen. If application for registration is made after child is 18, residence in Fiji for 3 of 5 preceding years also required. ... No provision ... No provision"
+  },
+  {
+   "url": "https://www.foreignaffairs.gov.fj/fiji-high-commission-new-zealand/fiji-citizenship/",
+   "title": "Ministry of Foreign Affairs, Fiji (Fiji High Commission, Wellington), Fiji Citizenship",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Citizenship by registration covers six categories of individuals. The first category covers children born outside the Fiji Islands on or after 10th April 2009 if at the date of the child’s birth, either of the Child’s parents was a citizen – section 8(1) of the Citizenship of Fiji Act 2009. ... A foreign national can apply for Fiji citizenship if he or she has been lawfully present in Fiji for a total of five (5) of the ten (10) years immediately before the application is made. With the introduction of the multiple citizenship policy applicants do NOT need to renounce their other citizenship – Section 11 (2) of the Citizenship of Fiji Act 2009. Dual Citizenship The Fiji Government recognizes the existence of dual nationality ..."
+  },
+  {
+   "url": "https://immigration.gov.fj/citizenship-by-birth/",
+   "title": "Ministry of Immigration, Fiji, Citizenship By Birth",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The process of citizenship acquisition is guided by Fijian Citizenship Act 2009 that came into force on 10 April 2009. ... Every child born in Fiji on or after the commencement date becomes a citizen at the date of birth unless, at the date of birth: A parent of the child has the diplomatic immunity accorded to envoys of sovereign foreign power accredited to Fiji; and Neither parent is a citizen."
+  },
+  {
+   "url": "https://www.parliament.gov.fj/wp-content/uploads/2026/05/Bill-No.-8-Citizenship-of-Fiji-Amendment-Bill-2026.pdf",
+   "title": "Parliament of the Republic of Fiji, Bill No. 8 of 2026, Citizenship of Fiji (Amendment) Bill 2026, with explanatory note",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(a) has been lawfully present in Fiji for a total of 8 of the 10 years immediately before the application for naturalisation; ... the Bill also streamlines the Act ... while repealing two uncommenced amendment Acts to consolidate the legal framework. ... From the commencement of the Citizenship of Fiji (Amendment) Act 2026 until 1 January 2035, a person qualifies for naturalisation if they have lawfully lived in Fiji for a total of eight years within the ten years immediately before applying ..."
+  },
+  {
+   "url": "https://www.parliament.gov.fj/wp-content/uploads/2022/03/Bill-No.-16-Citizenship-of-Fiji-Revised-Budget-Amendment-2022.pdf",
+   "title": "Parliament of the Republic of Fiji, Bill No. 16 of 2022, Citizenship of Fiji (Revised Budget Amendment) Bill 2022, explanatory note",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Currently, a person only needs to be lawfully present in Fiji for 5 out of the 10 years prior to lodging an application for citizenship by naturalisation. The Bill seeks to increase the requisite aggregate period prior to lodgement from 5 out of 10 years to 15 out of 20 years."
   }
  ],
  "atBirth": {

@@ -3,7 +3,7 @@ import { money } from '../../../src/core/money/money.ts';
 import { t } from '../../../src/core/text/text.ts';
 import { COUNTRY_CODES } from '../../../src/world/gazetteer/gazetteer.ts';
 import data from '../../../src/papers/citizenship/citizenship.json';
-import { aboutNaturalisation, KEEP_UNKNOWN_LINE, keepingUnknown, keepsCitizenship, nationality, naturalisation, naturalise, NONE_LINE, UNKEPT_LINE } from '../../../src/papers/citizenship/citizenship.ts';
+import { aboutNaturalisation, atBirth, KEEP_UNKNOWN_LINE, keepingUnknown, keepsCitizenship, nationality, naturalisation, naturalise, NONE_LINE, UNKEPT_LINE } from '../../../src/papers/citizenship/citizenship.ts';
 
 describe('citizenship', () => {
   it("is each state's own, and a territory's is its state's", () => {
@@ -14,6 +14,12 @@ describe('citizenship', () => {
     expect(naturalisation('JP')).toStrictEqual({ years: 5, renounce: true });
     expect(naturalisation('CA')).toStrictEqual({ years: 3, renounce: false, fee: money('CAD', 65_300), test: ['language', 'civics'] });
     expect(naturalisation('CN')).toBe('none');
+    // Read in the law on 2026-11-03, where the dataset had them otherwise: Dominica's seven years (not eight), Ghana's six
+    // (not five), Panama's renunciation (art. 10(1)); Kosovo's 2026 law gives no birthright to permanent residents' children.
+    // Fiji's birthright was briefly held unconditional from its immigration ministry's page; the Act wasn't read, so the
+    // dataset's reading (none) was put back the same night.
+    expect([naturalisation('DM'), naturalisation('GH'), naturalisation('PA')]).toStrictEqual([{ years: 7, renounce: false }, { years: 6, renounce: false }, { years: 5, renounce: true }]);
+    expect([atBirth('XK')?.soil, atBirth('CR')?.soil, atBirth('FJ')?.soil, atBirth('NP')?.descent]).toEqual(['none', 'conditional', 'none', 'either parent']);
     expect([naturalisation('AQ'), nationality('AQ')]).toEqual([undefined, undefined]);
     // A territory's people hold their state's nationality under its rules; Svalbard's residence doesn't count.
     expect([nationality('GP'), nationality('GU'), nationality('HK'), nationality('DE')]).toEqual(['FR', 'US', 'CN', 'DE']);

@@ -251,3 +251,13 @@ describe('pay and the reckoning, around the world', () => {
     expect([vi('225000'), vi('225001')]).toEqual([0, 1_125_005]);
   });
 });
+
+describe("Wave 2's primaries", () => {
+  it("reads Vietnam's untaxed first VND 20 million of a royalty and Gabon's cap on the allowance for costs", () => {
+    // Law 109/2025/QH15, arts. 16(2) and 25(1): 5% on the part of each contract's royalty above VND 20 million, resident or not.
+    const vnd = (n: string) => m('VND', n);
+    expect([pay('VN', { work: 'author', gross: vnd('20000000') }).p.tax, pay('VN', { work: 'author', gross: vnd('30000000') }).p.tax, pay('VN', { work: 'author', home: 'US', gross: vnd('30000000') }).p.tax]).toEqual([0, 500_000, 500_000]);
+    // The DGI: the 20% allowance for professional costs, never more than XAF 10 million.
+    expect(of('GA').residents[0]?.layers[0]?.shares).toEqual([{ rate: '0.2', max: '10000000' }]);
+  });
+});

@@ -531,7 +531,7 @@
     "apply": "in country",
     "work": "sponsor",
     "term": {
-     "n": 1,
+     "n": 3,
      "unit": "year"
     },
     "renewable": true,
@@ -677,7 +677,8 @@
     "term": {
      "n": 10,
      "unit": "year"
-    }
+    },
+    "renewable": true
    },
    {
     "id": "visa-etude",
@@ -2451,16 +2452,6 @@
     "renewable": true
    },
    {
-    "id": "residential-permit-c",
-    "name": "Residential Permit Type C",
-    "for": "work",
-    "term": {
-     "n": 1,
-     "unit": "year"
-    },
-    "renewable": true
-   },
-   {
     "id": "residential-permit-a",
     "name": "Residential Permit Type A",
     "for": "means",
@@ -2511,6 +2502,12 @@
      "n": 1,
      "unit": "year"
     }
+   },
+   {
+    "id": "z3",
+    "name": "Πνευματικοί δημιουργοί (τίτλος διαμονής τύπου «Ζ.3»)",
+    "for": "work",
+    "apply": "abroad"
    }
   ]
  },
@@ -3508,7 +3505,7 @@
     "work": "sponsor",
     "fee": {
      "currency": "EUR",
-     "minor": 10000
+     "minor": 16000
     },
     "within": {
      "n": 30,
@@ -3524,7 +3521,7 @@
     "apply": "abroad",
     "fee": {
      "currency": "EUR",
-     "minor": 10000
+     "minor": 16000
     },
     "within": {
      "n": 30,
@@ -3545,7 +3542,15 @@
     "id": "long-term-resident",
     "name": "Long-term resident status",
     "for": "permanent",
-    "work": "any"
+    "work": "any",
+    "fee": {
+     "currency": "EUR",
+     "minor": 16000
+    },
+    "within": {
+     "n": 30,
+     "unit": "day"
+    }
    }
   ]
  },
@@ -4595,14 +4600,22 @@
  "OM": {
   "routes": [
    {
-    "id": "residencia-trabajo",
-    "name": "Permiso de residencia y trabajo",
+    "id": "work-visa",
+    "name": "Work Visa",
     "for": "work",
-    "work": "sponsor"
+    "work": "sponsor",
+    "fee": {
+     "currency": "OMR",
+     "minor": 20000
+    },
+    "term": {
+     "n": 2,
+     "unit": "year"
+    }
    },
    {
-    "id": "residencia-conyuge",
-    "name": "Permiso de residencia (cónyuge)",
+    "id": "family-joining-visa",
+    "name": "Family Joining Visa",
     "for": "family"
    }
   ]

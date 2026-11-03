@@ -56,9 +56,9 @@ describe('the national numbers', () => {
   });
 
   it('carry the check digits their issuers publish', () => {
-    expect(Object.keys(CHECKS)).toEqual(['luhn', 'br-cpf', 'cn-gb11643']);
-    expect([CHECKS.luhn.digits, CHECKS['br-cpf'].digits, CHECKS['cn-gb11643'].digits]).toEqual([1, 2, 1]);
-    expect([isCheck('luhn'), isCheck('br-cpf'), isCheck('cn-gb11643'), isCheck('toString'), isCheck(7)]).toEqual([true, true, true, false, false]);
+    expect(Object.keys(CHECKS)).toEqual(['luhn', 'br-cpf', 'cn-gb11643', 'cz-rodne-cislo']);
+    expect([CHECKS.luhn.digits, CHECKS['br-cpf'].digits, CHECKS['cn-gb11643'].digits, CHECKS['cz-rodne-cislo'].digits]).toEqual([1, 2, 1, 1]);
+    expect([isCheck('luhn'), isCheck('br-cpf'), isCheck('cn-gb11643'), isCheck('cz-rodne-cislo'), isCheck('toString'), isCheck(7)]).toEqual([true, true, true, true, false, false]);
     // Luhn: the Canada Revenue Agency's 046 454 286; a card number; a digit doubled past 9 and one not.
     expect(CHECKS.luhn.compute('04645428')).toBe('046454286');
     expect(CHECKS.luhn.compute('7992739871')).toBe('79927398713');
@@ -79,6 +79,13 @@ describe('the national numbers', () => {
     expect(CHECKS['cn-gb11643'].compute('00000000000000006')).toBe('000000000000000060');
     expect(CHECKS['cn-gb11643'].compute('00000000000000000')).toBe('000000000000000001');
     expect(CHECKS['cn-gb11643'].compute('10000000000000000')).toBe('100000000000000005');
+    // Czechia's: divisible by eleven (7103192745 is 11 × 645744795); a body of remainder 0, a woman's month (plus 50),
+    // a body no digit completes (remainder 10), and a nine-digit number of before 1954.
+    expect(CHECKS['cz-rodne-cislo'].compute('710319274')).toBe('7103192745');
+    expect(CHECKS['cz-rodne-cislo'].compute('000000000')).toBe('0000000000');
+    expect(CHECKS['cz-rodne-cislo'].compute('785115122')).toBe('7851151220');
+    expect(CHECKS['cz-rodne-cislo'].compute('000000010')).toBe('000000010');
+    expect([checks('cz-rodne-cislo', '7103192745'), checks('cz-rodne-cislo', '7103192746'), checks('cz-rodne-cislo', '0000000100'), checks('cz-rodne-cislo', '530612123')]).toEqual([true, false, false, false]);
     expect([checks('cn-gb11643', '11010519491231002X'), checks('cn-gb11643', '110105194912310021'), checks('cn-gb11643', '1101051949123100XX'), checks('cn-gb11643', 'X')]).toEqual([true, false, false, false]);
   });
 

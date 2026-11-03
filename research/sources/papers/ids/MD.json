@@ -5,6 +5,16 @@
  "currency": "MDL",
  "routes": [
   {
+   "id": "twenty-days",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 20,
+    "unit": "working day"
+   },
+   "label": "a first card, in 20 working days"
+  },
+  {
    "id": "ten-days",
    "where": "home",
    "speed": "standard",
@@ -12,7 +22,7 @@
     "n": 10,
     "unit": "working day"
    },
-   "label": "in 10 working days"
+   "label": "a first card, in 10 working days"
   },
   {
    "id": "five-days",
@@ -20,9 +30,9 @@
    "speed": "urgent",
    "within": {
     "n": 5,
-    "unit": "day"
+    "unit": "working day"
    },
-   "label": "in 5 days"
+   "label": "a first card, in 5 working days"
   },
   {
    "id": "one-day",
@@ -32,7 +42,7 @@
     "n": 1,
     "unit": "working day"
    },
-   "label": "in 1 working day"
+   "label": "a first card, in 1 working day"
   },
   {
    "id": "same-day",
@@ -42,7 +52,117 @@
     "n": 1,
     "unit": "day"
    },
-   "label": "the same day"
+   "label": "a first card, on the day of application"
+  },
+  {
+   "id": "renew-twenty-days",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 20,
+    "unit": "working day"
+   },
+   "renewal": true,
+   "label": "a renewal, in 20 working days"
+  },
+  {
+   "id": "renew-ten-days",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 10,
+    "unit": "working day"
+   },
+   "renewal": true,
+   "label": "a renewal, in 10 working days"
+  },
+  {
+   "id": "renew-five-days",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 5,
+    "unit": "working day"
+   },
+   "renewal": true,
+   "label": "a renewal, in 5 working days"
+  },
+  {
+   "id": "renew-one-day",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 1,
+    "unit": "working day"
+   },
+   "renewal": true,
+   "label": "a renewal, in 1 working day"
+  },
+  {
+   "id": "renew-same-day",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 1,
+    "unit": "day"
+   },
+   "renewal": true,
+   "label": "a renewal, on the day of application"
+  },
+  {
+   "id": "lost-twenty-days",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 20,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card replacing a lost or stolen one, in 20 working days"
+  },
+  {
+   "id": "lost-ten-days",
+   "where": "home",
+   "speed": "standard",
+   "within": {
+    "n": 10,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card replacing a lost or stolen one, in 10 working days"
+  },
+  {
+   "id": "lost-five-days",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 5,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card replacing a lost or stolen one, in 5 working days"
+  },
+  {
+   "id": "lost-one-day",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 1,
+    "unit": "working day"
+   },
+   "replacement": true,
+   "label": "a card replacing a lost or stolen one, in 1 working day"
+  },
+  {
+   "id": "lost-same-day",
+   "where": "home",
+   "speed": "urgent",
+   "within": {
+    "n": 1,
+    "unit": "day"
+   },
+   "replacement": true,
+   "label": "a card replacing a lost or stolen one, on the day of application"
   }
  ],
  "cards": [
@@ -51,10 +171,21 @@
    "under": 7,
    "validYears": 4,
    "pay": {
+    "twenty-days": "0",
     "ten-days": "510",
     "five-days": "730",
     "one-day": "940",
-    "same-day": "1160"
+    "same-day": "1160",
+    "renew-twenty-days": "290",
+    "renew-ten-days": "510",
+    "renew-five-days": "730",
+    "renew-one-day": "940",
+    "renew-same-day": "1160",
+    "lost-twenty-days": "290",
+    "lost-ten-days": "510",
+    "lost-five-days": "730",
+    "lost-one-day": "940",
+    "lost-same-day": "1160"
    }
   },
   {
@@ -63,10 +194,21 @@
    "under": 14,
    "validYears": 7,
    "pay": {
+    "twenty-days": "0",
     "ten-days": "510",
     "five-days": "730",
     "one-day": "940",
-    "same-day": "1160"
+    "same-day": "1160",
+    "renew-twenty-days": "290",
+    "renew-ten-days": "510",
+    "renew-five-days": "730",
+    "renew-one-day": "940",
+    "renew-same-day": "1160",
+    "lost-twenty-days": "290",
+    "lost-ten-days": "510",
+    "lost-five-days": "730",
+    "lost-one-day": "940",
+    "lost-same-day": "1160"
    }
   },
   {
@@ -75,10 +217,21 @@
    "under": 70,
    "validYears": 10,
    "pay": {
+    "twenty-days": "0",
     "ten-days": "510",
     "five-days": "730",
     "one-day": "940",
-    "same-day": "1160"
+    "same-day": "1160",
+    "renew-twenty-days": "290",
+    "renew-ten-days": "510",
+    "renew-five-days": "730",
+    "renew-one-day": "940",
+    "renew-same-day": "1160",
+    "lost-twenty-days": "290",
+    "lost-ten-days": "510",
+    "lost-five-days": "730",
+    "lost-one-day": "940",
+    "lost-same-day": "1160"
    }
   },
   {
@@ -86,22 +239,33 @@
    "from": 70,
    "validYears": "permanent",
    "pay": {
+    "twenty-days": "0",
     "ten-days": "510",
     "five-days": "730",
     "one-day": "940",
-    "same-day": "1160"
+    "same-day": "1160",
+    "renew-twenty-days": "290",
+    "renew-ten-days": "510",
+    "renew-five-days": "730",
+    "renew-one-day": "940",
+    "renew-same-day": "1160",
+    "lost-twenty-days": "290",
+    "lost-ten-days": "510",
+    "lost-five-days": "730",
+    "lost-one-day": "940",
+    "lost-same-day": "1160"
    }
   }
  ],
- "note": "The Public Services Agency's tariffs as Logos-Press reported them (the Agency's own site presents a certificate this client can't verify, so it wasn't read): 510 lei in 10 working days to 1,160 the same day. The card is issued from 14, or earlier at a legal representative's request; valid four years under 7, seven from 7, ten from 14, and without end from 70.",
+ "note": "The Public Services Agency's own page of terms and tariffs for the identity card (read 2026-11-03): issued in 20 working days for 290 lei, in 10 for 510, in 5 for 730, in 1 for 940 and on the day of application for 1,160. The first card, to a citizen who never held an identity card, is free in the longest term (20 working days); one asked for faster pays its term's tariff, which the page doesn't waive. The tariff is the card's issue in every case but the first, so it's held for a renewal and for a card replacing a lost or stolen one, which the page lists among those no longer valid. A citizen living in Moldova must hold the card from 14; it is valid four years under 7, seven from 7 to 14, ten from 14 to 70, and without end from 70. The concessions (a severe disability, war veterans and others) and the orders through missions abroad aren't modelled. Logos-Press's report (read 2026-10-28) gave only the four faster terms, the 5-day term as 5 days rather than 5 working days, and no free first card: corrected from the Agency's page.",
  "sources": [
   {
-   "url": "https://logos-pres.md/noutati/cetatenii-moldoveni-pot-obtine-o-carte-de-identitate-in-regim-de-urgenta/",
-   "title": "Logos-Press, Cetățenii moldoveni pot obține o carte de identitate în regim de urgență",
-   "read": "2026-10-28",
-   "kind": "secondary",
-   "quotes": "https://www.asp.gov.md/",
-   "said": "Obținerea unui certificat în ziua solicitării va costa 1160 lei, producerea în 1 zi lucrătoare – 940 lei, în 5 zile – 730 lei, iar în 10 zile lucrătoare – 510 lei. ... Noile acte de identitate se eliberează cetățenilor Republicii Moldova care au împlinit vârsta de 14 ani. La cererea reprezentantului legal, documentul poate fi eliberat chiar înainte de împlinirea acestei vârste. ... Valabilitatea cărților de identitate variază în funcție de vârsta titularului: 4 ani – pentru persoanele cu vârsta cuprinsă între 0 și 7 ani; 7 ani – de la 7 la 14 ani; 10 ani – de la 14 la 70 de ani. După împlinirea vârstei de 70 de ani, valabilitatea documentului nu este limitată."
+   "url": "https://www.asp.gov.md/ro/servicii/persoane-fizice/acte-identitate/cartea-id/151",
+   "title": "Agenția Servicii Publice, Eliberarea cărții de identitate (ID): Termene și tarife",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Termen / Tarif, lei: 20 zile lucrătoare 290 [gratuit, nota 6]; 10 zile lucrătoare 510; 5 zile lucrătoare 730; 1 zi lucrătoare 940; În ziua adresării 1 160. ... Serviciul de eliberare a primei cărți de identitate se prestează în mod gratuit în termenul maximal stabilit pentru prestarea serviciului respectiv. ... Cetăţenii Republicii Moldova care locuiesc în Republica Moldova sunt obligaţi să deţină cartea de identitate de la vârsta de 14 ani. Cartea de identitate se eliberează cu termen de valabilitate: a) de 4 ani, pentru persoanele cu vârsta cuprinsă între 0 - 7 ani; b) de 7 ani, pentru persoanele cu vârsta cuprinsă între 7 - 14 ani; c) de 10 ani, pentru persoanele cu vârsta cuprinsă între 14 - 70 ani; d) nelimitat, după împlinirea vârstei de 70 de ani."
   }
- ]
+ ],
+ "must": 14
 }

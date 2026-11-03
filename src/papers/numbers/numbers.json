@@ -561,7 +561,8 @@
   "issuer": "the Ministry of the Interior (ministerstvo vnitra)",
   "format": {
    "length": 10,
-   "pattern": "[0-9]{10}"
+   "pattern": "[0-9]{10}",
+   "check": "cz-rodne-cislo"
   },
   "when": "birth",
   "who": [
@@ -1446,7 +1447,7 @@
  },
  "MN": {
   "name": "registration number",
-  "issuer": "the State Center for Civil Registration and Information (SCCRI), as the source of 2012 names it",
+  "issuer": "the state administrative body in charge of state registration",
   "format": {
    "length": 10,
    "pattern": "^[A-Za-z\\u0400-\\u04FF]{2}\\d{8}$"

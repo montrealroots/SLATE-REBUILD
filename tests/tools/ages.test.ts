@@ -162,8 +162,10 @@ describe('the ages read from the person research', () => {
     expect(ages['IL']?.work).toStrictEqual({ from: 15, performers: 'permit', permit: 'היתר (Minister of Labour and Welfare)' });
     // The states' and provinces' own: California's and New York's, Ontario's and Quebec's, four Australian states'.
     expect([ages['US']?.regions?.['US.CA'], ages['US']?.regions?.['US.NY'], ages['CA']?.regions?.['CA.08'], ages['CA']?.regions?.['CA.10'], ages['AU']?.regions?.['AU.07']]).toEqual([18, 18, 18, 18, 18]);
-    // Layer 3's own where it holds one: Mauritania's code over the state's report.
-    expect(ages['MR']?.work).toStrictEqual({ from: 14, performers: 'barred' });
+    // Layer 3's own where it holds one: Mauritania's code over the state's report. Its fourteen, the 2004 Code's art. 153,
+    // was held until 2026-11-03, when the Secretariat General's 2026 compilation showed Law 2024-048's sixteen and the
+    // Personal Status Code's majority.
+    expect(ages['MR']).toStrictEqual({ majority: 18, work: { from: 16, performers: 'barred' } });
     // Layer 3's majority beside the person research's working age: the Bahamas' Minors Act (2026-11-03).
     expect(ages['BS']).toStrictEqual({ majority: 18, work: { from: 16, performers: 'barred' } });
     // The web-search pass of 2026-11-03: Suriname's eighteen under its new Civil Code, Tajikistan's 2016 Labour Code with a

@@ -1,11 +1,11 @@
 {
  "topic": "tax.GA",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Gabon: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Gabon: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. The tax directorate's own pages were added for the scale, the allowance's cap and VAT; the cap is new.",
  "figures": [
   {
    "item": "residents",
-   "finding": "A resident pays IRPP under a family quotient: annual taxable pay less a 20% allowance is divided by family shares (Q), taxed at 0% to XAF 1,500,000 and then 5% to 35% (above 11 million) by the bracket formulas, times the shares; plus the complementary salary tax (TCTS) of 5% on pay above XAF 150,000 a month.",
+   "finding": "A resident pays IRPP under a family quotient: annual taxable pay less a 20% allowance is divided by family shares (Q), taxed at 0% to XAF 1,500,000 and then 5% to 35% (above 11 million) by the bracket formulas, times the shares; plus the complementary salary tax (TCTS) of 5% on pay above XAF 150,000 a month. The 20% allowance for professional costs is capped at XAF 10,000,000 (the DGI, read 2026-11-03).",
    "value": {
     "currency": "XAF",
     "allowance": 0.2,
@@ -70,9 +70,10 @@
      "rate": 0.05,
      "exemptMonthly": 150000
     },
-    "regionalLayer": null
+    "regionalLayer": null,
+    "allowanceCap": 10000000
    },
-   "applies": "Persons taxable in Gabon, calendar year 2026.",
+   "applies": "Persons taxable in Gabon, calendar year 2026. The DGI states the barème per share, the 20% allowance and its XAF 10 million cap, which the game held without its cap until 2026-11-03.",
    "sources": [
     {
      "src": 0,
@@ -85,6 +86,10 @@
     {
      "src": 0,
      "said": "The TCTS rate is 5% of the salary, indemnities, and emoluments paid to the taxpayer. The part of the revenue up to XAF 150,000 per month is exempted from the TCTS."
+    },
+    {
+     "src": 5,
+     "said": "De la base après TCS il est procédé à un abattement pour frais professionnels évalués forfaitairement à 20 % du revenu brut imposable sus déterminé, dans la limite de 10.000.000 FCFA. ... Le barème de l’IRPP est fixé comme suit : Fraction du revenu imposable (Q) | Montant de l’impôt ( K = (t% x Q) – N) De 0 à 1.500.000 FCFA 0; De 1.500.001 à 1.920.000 FCFA 5 % x Q – 75.000; De 1.920.001 à 2.700.000 FCFA 10 % x Q – 171.000; De 2.700.001 à 3.600.000 FCFA 15 % x Q – 306.000; De 3.600.001 à 5.160.000 FCFA 20 % x Q – 486.000; De 5.160.001 à 7.500.000 FCFA 25 % x Q – 744.000; De 7.500.001 à 11.000.000 FCFA 30 % x Q – 1.119.000; 35 % x Q – 1.669.000"
     }
    ]
   },
@@ -187,6 +192,10 @@
     {
      "src": 2,
      "said": "The standard VAT rate in Gabon is 18%, which applies to all transactions unless otherwise provided for by the law."
+    },
+    {
+     "src": 6,
+     "said": "L’entreprise individuelle, comme toutes les entreprises, est assujettie à la taxe sur la TVA dès lors que : Son chiffre d’affaire hors taxes s’établit à 60.000.000FCFA. ... taux normal : 18 % ... taux réduit : 10 % ... taux réduit : 5 % applicable aux opérations de vente portant sur le ciment"
     }
    ]
   }
@@ -196,7 +205,7 @@
   {
    "url": "https://taxsummaries.pwc.com/gabon/individual/taxes-on-personal-income",
    "title": "Gabon – individual/taxes-on-personal-income (PwC Worldwide Tax Summaries, last reviewed 6 August 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.dgi.ga",
    "said": "Q = [(S x 12) - A] / P (as Q is annual) P = Family quotient (number of shares). S = Monthly taxable gross income. A = 20% allowance. … 0 1,500,000 0 1,500,001 1,920,000 5% x Q - 75,000 1,920,001 2,700,000 10% x Q - 171,000 2,700,001 3,600,000 15% x Q - 306,000 3,600,001 5,160,000 20% x Q - 486,000 5,160,001 7,500,000 25% x Q - 744,000 7,500,001 11,000,000 30% x Q - 1,119,000 11,000,001 and above 35% x Q - 1,669,000 … The TCTS rate is 5% of the salary, indemnities, and emoluments paid to the taxpayer. The part of the revenue up to XAF 150,000 per month is exempted from the TCTS."
@@ -204,7 +213,7 @@
   {
    "url": "https://taxsummaries.pwc.com/gabon/individual/tax-administration",
    "title": "Gabon – individual/tax-administration (PwC Worldwide Tax Summaries, last reviewed 6 August 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.dgi.ga",
    "said": "The tax year is the calendar year in Gabon. … The counterfoil of the individual forms is given to the employees for their personal tax return, which must be filed before 1 March of each year. … The IRPP and the TCTS are withheld monthly by the employer and paid over (before the 15th day of the following month) to the Public Treasury."
@@ -212,7 +221,7 @@
   {
    "url": "https://taxsummaries.pwc.com/gabon/individual/other-taxes",
    "title": "Gabon – individual/other-taxes (PwC Worldwide Tax Summaries, last reviewed 6 August 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.dgi.ga",
    "said": "However, there is an annual ceiling of XAF 18 million (or XAF 1.5 million per month). … The employees pay 2.5% for the CNSS and 2% for the National Disease Insurance and Social Guarantee Fund (CNAMGS). The other social security contributions represent 20.1% of the taxable salary. … The standard VAT rate in Gabon is 18%, which applies to all transactions unless otherwise provided for by the law."
@@ -220,7 +229,7 @@
   {
    "url": "https://taxsummaries.pwc.com/gabon/corporate/withholding-taxes",
    "title": "Gabon – corporate/withholding-taxes (PwC Worldwide Tax Summaries, last reviewed 6 August 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.dgi.ga",
    "said": "All amounts paid pursuant to the practice of an 'independent profession' in Gabon. Payments received by inventors, payments relating to copyrights, and all payments relating to intellectual and commercial property as well as assimilated rights. All amounts paid for services materially rendered or effectively used in Gabon."
@@ -228,10 +237,24 @@
   {
    "url": "https://taxsummaries.pwc.com/gabon/corporate/other-taxes",
    "title": "Gabon – corporate/other-taxes (PwC Worldwide Tax Summaries, last reviewed 6 August 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.dgi.ga",
    "said": "The aforesaid persons, subject to CIT or personal income tax (PIT), being registered or not, are liable to VAT should their turnover out of taxes reach XAF 60 million."
+  },
+  {
+   "url": "https://dgi.ga/particuliers/assiette-et-liquidation-de-lirpp/",
+   "title": "Direction Générale des Impôts du Gabon (dgi.ga): Assiette et liquidation de l'IRPP",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "De la base après TCS il est procédé à un abattement pour frais professionnels évalués forfaitairement à 20 % du revenu brut imposable sus déterminé, dans la limite de 10.000.000 FCFA. ... Le barème de l’IRPP est fixé comme suit : Fraction du revenu imposable (Q) | Montant de l’impôt ( K = (t% x Q) – N) De 0 à 1.500.000 FCFA 0; De 1.500.001 à 1.920.000 FCFA 5 % x Q – 75.000; De 1.920.001 à 2.700.000 FCFA 10 % x Q – 171.000; De 2.700.001 à 3.600.000 FCFA 15 % x Q – 306.000; De 3.600.001 à 5.160.000 FCFA 20 % x Q – 486.000; De 5.160.001 à 7.500.000 FCFA 25 % x Q – 744.000; De 7.500.001 à 11.000.000 FCFA 30 % x Q – 1.119.000; 35 % x Q – 1.669.000"
+  },
+  {
+   "url": "https://dgi.ga/imposition-des-personnes-morales/taxes-sur-le-chiffre-daffaires/tva/",
+   "title": "Direction Générale des Impôts du Gabon (dgi.ga): TVA",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "L’entreprise individuelle, comme toutes les entreprises, est assujettie à la taxe sur la TVA dès lors que : Son chiffre d’affaire hors taxes s’établit à 60.000.000FCFA. ... taux normal : 18 % ... taux réduit : 10 % ... taux réduit : 5 % applicable aux opérations de vente portant sur le ciment"
   }
  ],
  "blockers": [

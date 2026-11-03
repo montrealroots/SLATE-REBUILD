@@ -10,6 +10,14 @@
    "speed": "standard",
    "within": null,
    "label": "registration with the NID office, with the birth certificate"
+  },
+  {
+   "id": "nid-lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a stolen, damaged or lost NID card replaced"
   }
  ],
  "cards": [
@@ -18,16 +26,17 @@
    "from": 18,
    "validYears": null,
    "pay": {
-    "nid": "0"
+    "nid": "0",
+    "nid-lost": "200"
    }
   }
  ],
- "note": "EMTV, quoting the registry: the NID card comes with the new birth certificate for those 18 and older, the age the Civil Registration Act sets for holding it; The National: the card is free, the minister responsible says, and no one is to pay. Its term and the time aren't stated.",
+ "note": "EMTV, quoting the registry: the NID card comes with the new birth certificate for those 18 and older, the age the Civil Registration Act sets for holding it; The National: the card is free, the minister responsible says, and no one is to pay. Its term and the time aren't stated. The Civil and Identity Registry's own pages (read 2026-11-03): the NID card section of its registration form is for applicants of 18 and above, and its statutory fee table (from 1 January 2015) prices a replaced NID card (stolen, damaged, lost) at K200, held, and no first card, which agrees with the minister's word that the first card is free; the table doesn't say so in words, so the entry stays at second hand.",
  "sources": [
   {
    "url": "https://emtv.com.pg/?p=116357",
    "title": "EMTV (Papua New Guinea), on the new birth certificate and NID card",
-   "read": "2026-10-28",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.pngcir.gov.pg/",
    "said": "He explained that the new birth certificate comes along with a NID card for those at 18 years of age and older."
@@ -35,7 +44,7 @@
   {
    "url": "https://emtv.com.pg/?p=201399",
    "title": "EMTV (Papua New Guinea), on the NID component of the Civil Registration Act",
-   "read": "2026-10-28",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.pngcir.gov.pg/",
    "said": "the NID component is an extension of the Civil Registration Act that calls for a person to have a National Identification Card by 18 years of Age."
@@ -43,10 +52,24 @@
   {
    "url": "https://www.thenational.com.pg/?p=187243",
    "title": "The National (Papua New Guinea), No fee for NID card, says Maru",
-   "read": "2026-10-28",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.pngcir.gov.pg/",
    "said": "THE National Identification Card (NID) is free and anyone charging for it to be processed should be reported to police"
+  },
+  {
+   "url": "https://pngcir.gov.pg/nid-registration-information/",
+   "title": "PNG Civil & Identity Registry, Registration Info (Birth & NID)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "C: National Identity Card Information: Refers to additional information required for Applicants 18 years and above only ... Current Residential Address: Refers to Applicant's current residential address which is used for NID Card ... Fee Schedules can be found here"
+  },
+  {
+   "url": "https://pngcir.gov.pg/png-civil-identity-registry-fees/",
+   "title": "PNG Civil & Identity Registry, PNGCIR FEES (table image https://pngcir.gov.pg/wp-content/uploads/2020/02/NID-FEES-2020-edit.png)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "STATUTORY FEES 01/01/2015 (PNG Kina): 1 Search Fees (request) 10.00 ... 3 Birth Certificate 20.00 ... 13 Replacement of NID Card (stolen, damage, lost) 200.00 ... 14 Replacement of NID Card (stolen, damage, lost) 200.00"
   }
  ]
 }

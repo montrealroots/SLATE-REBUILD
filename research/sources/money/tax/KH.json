@@ -1,7 +1,7 @@
 {
  "topic": "tax.KH",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Cambodia: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Cambodia: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved. The Ministry of Economy and Finance's open-data brackets (read again from its own API by the integrator, 2026-11-03) were added for the monthly scale and a non-resident's salary.",
  "figures": [
   {
    "item": "residents",
@@ -47,6 +47,10 @@
     {
      "src": 0,
      "said": "0 to 1,500,000 0 1,500,001 to 2,000,000 5 2,000,001 to 8,500,000 10 8,500,001 to 12,500,000 15 Over 12,500,000 20"
+    },
+    {
+     "src": 5,
+     "said": "{\"monthly_taxable_income\":\"0 – 1,500,000\",\"tax_rate\":0.0,\"excess_amount\":0.0},{\"monthly_taxable_income\":\"1,500,001 – 2,000,000\",\"tax_rate\":5.0,\"excess_amount\":75000.0},{\"monthly_taxable_income\":\"2,000,001 – 8,500,000\",\"tax_rate\":10.0,\"excess_amount\":175000.0},{\"monthly_taxable_income\":\"8,500,001 – 12,500,000\",\"tax_rate\":15.0,\"excess_amount\":600000.0},{\"monthly_taxable_income\":\"Over 12,500,000\",\"tax_rate\":20.0,\"excess_amount\":1225000.0}"
     }
    ]
   },
@@ -128,7 +132,7 @@
     "otherIncome": 0.14,
     "final": true
    },
-   "applies": "Non-residents.",
+   "applies": "Non-residents. The ministry states the salary's 20%; the 14% on other income rests on PwC.",
    "sources": [
     {
      "src": 0,
@@ -141,6 +145,10 @@
     {
      "src": 3,
      "said": "Income from services performed in Cambodia."
+    },
+    {
+     "src": 5,
+     "said": "For non-resident taxpayers, salary tax is withheld at a flat rate of 20 percents on all taxable salary payments made by the employer."
     }
    ]
   },
@@ -164,7 +172,7 @@
   {
    "url": "https://taxsummaries.pwc.com/cambodia/individual/taxes-on-personal-income",
    "title": "PwC Worldwide Tax Summaries: Cambodia, Individual - Taxes on personal income (reviewed 2 April 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.tax.gov.kh/",
    "said": "There is no personal income tax, per se , in Cambodia. Instead, a monthly salary tax is imposed on individuals who derive income from employment. … 0 to 1,500,000 0 1,500,001 to 2,000,000 5 2,000,001 to 8,500,000 10 8,500,001 to 12,500,000 15 Over 12,500,000 20 … Non-residents are taxed at a flat rate of 20%, which constitutes a final tax."
@@ -172,7 +180,7 @@
   {
    "url": "https://taxsummaries.pwc.com/cambodia/individual/tax-administration",
    "title": "PwC Worldwide Tax Summaries: Cambodia, Individual - Tax administration (reviewed 2 April 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.tax.gov.kh/",
    "said": "Employees do not have to file an annual return. … The tax withheld must be paid to the tax authorities no later than 20 days after the end of the month in which the salaries were paid. … Employers must deduct salary tax from employees' salaries in accordance with the tax tables on a pay-as-you-earn (PAYE) basis."
@@ -180,7 +188,7 @@
   {
    "url": "https://taxsummaries.pwc.com/cambodia/individual/other-taxes",
    "title": "PwC Worldwide Tax Summaries: Cambodia, Individual - Other taxes (reviewed 2 April 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.tax.gov.kh/",
    "said": "The employer is required to contribute ORC equal to 0.8% of the monthly average wage of an employee to the NSSF’s designated bank account. … The healthcare contribution is required from both employers and employees at 1.3% (each) of the monthly average wage of employees. However, from 1 January 2018, the obligation to pay the contribution of healthcare as stated in the above paragraph shall be the full burden (100%) of the employer. … In the first five years, the pension contribution rate is 4% of the contributory wage of the worker/employee. The employer contributes 2%, while the other 2% comes from the worker/employee."
@@ -188,7 +196,7 @@
   {
    "url": "https://taxsummaries.pwc.com/cambodia/corporate/withholding-taxes",
    "title": "PwC Worldwide Tax Summaries: Cambodia, Corporate - Withholding taxes (reviewed 2 April 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.tax.gov.kh/",
    "said": "Royalties: 15%. Rental: 10%. Services: 15% (except payments to a registered taxpayer and supported by a valid VAT invoice). … who pays any Cambodian-source income as defined under Article 33 of the Law on Taxation to a non-resident taxpayer must withhold tax at 14% of the amount paid. … Income from services performed in Cambodia."
@@ -196,10 +204,17 @@
   {
    "url": "https://taxsummaries.pwc.com/cambodia/corporate/other-taxes",
    "title": "PwC Worldwide Tax Summaries: Cambodia, Corporate - Other taxes (reviewed 2 April 2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://www.tax.gov.kh/",
    "said": "VAT is applicable to self-declaration regime entities and is charged at 10% on the value of the supply of most goods and services."
+  },
+  {
+   "url": "https://data.mef.gov.kh/datasets/pd_68b6a4afeb43bd000745b590",
+   "title": "Ministry of Economy and Finance of Cambodia, Open Data Portal: Monthly salary tax brackets in Cambodia (dataset page, rendered; data read from its own API https://data.mef.gov.kh/api/v1/public-datasets/pd_68b6a4afeb43bd000745b590/json?page=1&page_size=10)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "For non-resident taxpayers, salary tax is withheld at a flat rate of 20 percents on all taxable salary payments made by the employer. ... {\"monthly_taxable_income\":\"0 – 1,500,000\",\"tax_rate\":0.0,\"excess_amount\":0.0},{\"monthly_taxable_income\":\"1,500,001 – 2,000,000\",\"tax_rate\":5.0,\"excess_amount\":75000.0},{\"monthly_taxable_income\":\"2,000,001 – 8,500,000\",\"tax_rate\":10.0,\"excess_amount\":175000.0},{\"monthly_taxable_income\":\"8,500,001 – 12,500,000\",\"tax_rate\":15.0,\"excess_amount\":600000.0},{\"monthly_taxable_income\":\"Over 12,500,000\",\"tax_rate\":20.0,\"excess_amount\":1225000.0}"
   }
  ],
  "blockers": [

@@ -3,7 +3,7 @@ import { money } from '../../../src/core/money/money.ts';
 import { t } from '../../../src/core/text/text.ts';
 import { COUNTRY_CODES } from '../../../src/world/gazetteer/gazetteer.ts';
 import data from '../../../src/papers/ids/ids.json';
-import { aboutIds, FEE_UNKNOWN_LINE, idDocument, idIssuer, idOfferGaps, idOffers, keepsIds, NONE_LINE, TIME_UNKNOWN_LINE, UNKEPT_LINE, VALIDITY_UNKNOWN_LINE, type IdOffer } from '../../../src/papers/ids/ids.ts';
+import { aboutIds, FEE_UNKNOWN_LINE, idDocument, idIssuer, idOfferGaps, idOffers, keepsIds, mustHoldId, NONE_LINE, TIME_UNKNOWN_LINE, UNKEPT_LINE, VALIDITY_UNKNOWN_LINE, type IdOffer } from '../../../src/papers/ids/ids.ts';
 
 /** An offer as the player meets it, in a few words: the route, the fee in minor units, the validity, whether it never expires. */
 const brief = (offers: IdOffer[] | undefined) => offers?.map((o) => [o.route.id, o.fee === null ? null : o.fee.minor, o.validYears, o.permanent]);
@@ -38,6 +38,27 @@ describe('the identity documents', () => {
     expect([idDocument('GB'), idDocument('US'), idDocument('GU')]).toEqual(['none', 'none', 'none']);
     expect([idOffers('GB', 30), idOffers('US', 30), idOffers('GU', 30)]).toEqual([[], [], []]);
     expect([idIssuer('GU'), idIssuer('US'), idIssuer('DE'), idIssuer('GF')]).toEqual(['US', 'US', 'DE', 'FR']);
+  });
+
+  it('price a first card apart from its renewal and its replacement, where the office does', () => {
+    // Moldova (the Agency's own tariff, read 2026-11-03): a first card is free in the longest term, 20 working days; a
+    // renewal pays 290 lei there; faster terms pay the same whichever it is; held from 14.
+    expect(brief(idOffers('MD', 30))?.slice(0, 2)).toEqual([['twenty-days', 0, 10, undefined], ['ten-days', 51000, 10, undefined]]);
+    expect(brief(idOffers('MD', 30, 'renewal'))?.slice(0, 2)).toEqual([['renew-twenty-days', 29000, 10, undefined], ['renew-ten-days', 51000, 10, undefined]]);
+    expect(brief(idOffers('MD', 70, 'replacement'))?.[0]).toEqual(['lost-twenty-days', 29000, null, true]);
+    expect(idOffers('MD', 30)?.[2]?.route.within).toEqual({ n: 5, unit: 'working day' });
+    expect([mustHoldId('MD', 13), mustHoldId('MD', 14), mustHoldId('MR', 15), mustHoldId('MR', 16)]).toEqual([false, true, false, true]);
+    // Argentina: a first DNI is free; an update or a new copy costs ARS 10,000, express 26,000 within four working days.
+    expect(brief(idOffers('AR', 5))).toEqual([['first', 0, null, undefined]]);
+    expect(brief(idOffers('AR', 14, 'renewal'))?.slice(0, 2)).toEqual([['regular', 1000000, null, undefined], ['express', 2600000, null, undefined]]);
+    expect(idOffers('AR', 14, 'renewal')?.[1]?.route.within).toEqual({ n: 4, unit: 'working day' });
+    // Turkey: the Gazette's tariff prices a change and a loss, not a first card for a birth registered in time.
+    expect([idOffers('TR', 30), idOffers('TR', 30, 'renewal'), idOffers('TR', 30, 'replacement')].map(brief)).toEqual([[['nufus', null, null, undefined]], [['nufus-change', 22000, null, undefined]], [['nufus-lost', 44000, null, undefined]]]);
+    // Belarus: under 14 the standard card is free, and faster issue costs one or two base units more.
+    expect(brief(idOffers('BY', 10))?.slice(0, 3)).toEqual([['standard', 0, 5, undefined], ['accelerated', 4500, 5, undefined], ['urgent', 9000, 5, undefined]]);
+    // Mongolia: 18,300 tögrög at 16 and again at 25, in 5 working days in the capital; 33,300 to reissue.
+    expect(brief(idOffers('MN', 25))?.[0]).toEqual(['capital', 1830000, null, undefined]);
+    expect(brief(idOffers('MN', 30, 'replacement'))?.[2]).toEqual(['mission-lost', 3330000, null, undefined]);
   });
 
   it("tell the player what the game doesn't know", () => {
