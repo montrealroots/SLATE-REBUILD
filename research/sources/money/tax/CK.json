@@ -203,6 +203,43 @@
      "said": "(e) all royalties or other like payments dependent upon production from or the use of any real or personal property, whether or not they are instalments of the purchase price of any property;"
     }
    ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident's pay for personal services done in the Cook Islands is exempt only where the visit is 30 days or less, the pay is taxed at home by a like tax and the work is done for a non-resident, and never for one present more than 30 days in the year; otherwise it is income taxed by assessment. The Act's withholding at source (Part IX) covers only dividends, interest and royalties, at 15% to a non-resident, and the withholding return RM100 has no line for a performer's or contractor's fee.",
+   "value": {
+    "shortVisitExemption": {
+     "maxDays": 30,
+     "conditions": [
+      "taxed at home by a substantially similar tax",
+      "services performed for a non-resident"
+     ],
+     "notIfPresentOver": 30,
+     "section": "42(1)(d)"
+    },
+    "withholdingAtSource": {
+     "covers": [
+      "dividends",
+      "interest",
+      "royalties"
+     ],
+     "rate": 0.15,
+     "section": "99-101"
+    },
+    "feesWithheld": null,
+    "final": null
+   },
+   "applies": "The Income Tax Act 1997 as enacted (MFEM's copy) and the RM100 return, read 2026-11-03; the Income Tax Amendment Act 2011 (PacLII) could not be read, and no regulation declaring a fee a withholding payment was found, so whether a non-resident performer's fee is withheld stays blocked.",
+   "sources": [
+    {
+     "src": 9,
+     "said": "income derived by a person who is not resident … from personal (including professional) services performed by that person within the Cook Islands during a visit to the Cook Islands if - (i) that visit does not exceed a period of 30 days"
+    },
+    {
+     "src": 7,
+     "said": "Non-resident Withholding Dividend (15%) … Non-resident Withholding Royalty (15%) … Non-resident Withholding Bank Interest (15%)"
+    }
+   ]
   }
  ],
  "country": "CK",
@@ -259,9 +296,9 @@
   {
    "url": "https://www.mfem.gov.ck/_files/ugd/dbdf40_754de6a1d2fa41409ab33d556d6a31fc.pdf",
    "title": "MFEM Revenue Management Division: Withholding Tax Return RM100",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
-   "said": "Non-resident Withholding Royalty (15%)"
+   "said": "Non-resident Withholding Royalty (15%) … (read again 2026-11-03:) Non-resident Withholding Dividend (15%) … Non-resident Withholding Royalty (15%) … Non-resident Withholding Bank Interest (15%) … Resident Withholding Bank Interest (30%) … Non-Resident Withholding Land (15%) (no line for a fee for services)"
   },
   {
    "url": "https://www.mfem.gov.ck/_files/ugd/dbdf40_980f74bf1d4d4b77a9b43ab0913e5126.pdf",
@@ -273,15 +310,15 @@
   {
    "url": "https://www.mfem.gov.ck/_files/ugd/dbdf40_ef039a088ac247b2aeaf8dcc59fb90a6.pdf",
    "title": "Cook Islands Income Tax Act 1997 (MFEM legislation page)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
-   "said": "(e) all royalties or other like payments dependent upon production from or the use of any real or personal property, whether or not they are instalments of the purchase price of any property;"
+   "said": "(e) all royalties or other like payments dependent upon production from or the use of any real or personal property, whether or not they are instalments of the purchase price of any property; … (read again 2026-11-03:) s.42(1)(d): income derived by a person who is not resident … from personal (including professional) services performed by that person within the Cook Islands during a visit to the Cook Islands if - (i) that visit does not exceed a period of 30 days; and (ii) in the country or territory in which that person is resident that income … is chargeable with any tax which in the opinion of the Collector is substantially of the same nature as income tax under this Act and; (iii) those services are performed for or on behalf of a person who is not resident … Provided that this paragraph shall not apply to the income derived in any income year by a person who is present within the Cook Islands for a period or periods exceeding in the aggregate 30 days during that year; … 99 (2) This Part shall apply to income (in this Act referred to as withholding income) being income that is deemed under this Act to be derived from the Cook Islands and which consists of dividends and interest, or royalties paid to a non-resident … 100. … the amount of the withholding tax shall be fifteen per cent (15%) of the dividends, interest or royalties so paid."
   }
  ],
  "blockers": [
   {
    "item": "nonResident",
-   "sought": "Whether a non-resident performer's or director's fee for work in the Cook Islands is withheld at source (the Act's withholding covers dividends, interest, royalties and payments declared by regulation; no regulation for performers found), at what rate, and whether final",
+   "sought": "Whether a non-resident performer's or director's fee for work in the Cook Islands is withheld at source, at what rate, and whether final: the Income Tax Act 1997 read 2026-11-03 exempts a visit of 30 days or less done for a non-resident (s.42(1)(d)) and withholds only on dividends, interest and royalties (Part IX), and the RM100 return has no line for a fee; the Income Tax Amendment Act 2011 and any regulation remain unread",
    "tried": {
     "institution": "MFEM filing page, RM100 return and quick reference guides read: no entertainer rule || 2026-11-01 retry: MFEM legislation page and the Income Tax Act 1997 read: income from contracts performed in the Cook Islands is Cook Islands-source (s 2 source rules, 'income derived from contracts made or wholly or partly performed in the Cook Islands'); Part IX withholding covers dividends, interest and royalties and any 'withholding payment' declared by regulations; no such regulation for performers is on MFEM's list",
     "official-register": "paclii.org (Income Tax Act 1997 text) blocks this environment (Cloudflare HTTP 403, 2026-11-01). || 2026-11-01 retry: MFEM's own legislation page (mfem.gov.ck/information-process) lists the Income Tax Act 1997 and every amendment to 2023 No. 3; the Act read (saved CK-ita-1997.pdf); the 2023 amendment is a 12-page scan (saved CK-ita-amend-2023.pdf) and OCR here did not finish (tesseract over 100 s a page under load)",

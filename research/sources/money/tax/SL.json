@@ -96,17 +96,25 @@
   },
   {
    "item": "vat",
-   "finding": "A supplier must register for GST once its taxable supplies pass the threshold the Finance Act 2024 set at Le500,000; the GST rate was not read.",
+   "finding": "GST is 15% on every taxable supply that is not zero-rated; a supplier must register once its taxable supplies pass the threshold the Finance Act 2024 sets at Le500,000.",
    "value": {
     "threshold": 500000,
     "thresholdAsWritten": "Le500,000",
-    "rate": null
+    "rate": 0.15
    },
-   "applies": "From the Finance Act 2024 (s. 13); the Act writes \"Le\", replacing a threshold of \"Le100,000,000\" in old leones.",
+   "applies": "The rate as the NRA's consolidation of the GST Act states it (to 2016), read 2026-11-03; the Finance Acts 2021 and 2025 amend other sections of the GST Act, not the rate. The Finance Act 2025 writes amounts in new leones (NLe); whether the 2024 Act's Le500,000 is in new leones isn't settled, so VAT isn't charged.",
    "sources": [
     {
      "src": 3,
      "said": "deleting the registration threshold amount of \"Lel00,000,000\" and inserting the following new registration threshold amount of \"Le500,000\""
+    },
+    {
+     "src": 6,
+     "said": "(b) in any other case, 15 per cent."
+    },
+    {
+     "src": 7,
+     "said": "12. Section 19 of the Goods and Services Tax Act, 2009 is amended by- (a) repealing and replacing subsection (9)"
     }
    ]
   }
@@ -155,6 +163,20 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "The employer is required to file a monthly PAYE return … on or before the 15th of the month following the payment of staff emoluments."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/Compilation_GST_Act_2009_Consolidated_to_include_amendments_and_repeals_up_to_2016_7ce053284a.pdf",
+   "title": "National Revenue Authority: The Goods and Services Tax Act, 2009, consolidated to include amendments and repeals up to 2016",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(3) The rate of GST applicable to a taxable supply or import is– (a) if the supply or import is zero-rated under the First Schedule, zero per cent; (b) in any other case, 15 per cent."
+  },
+  {
+   "url": "https://mof.gov.sl/wp-content/uploads/2025/01/The-Finance-Act-2025.pdf",
+   "title": "The Finance Act, 2025 (Sierra Leone Gazette supplement, Vol. CLXVI, No. 3, 16 January 2025), Ministry of Finance",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "12. Section 19 of the Goods and Services Tax Act, 2009 is amended by- (a) repealing and replacing subsection (9) with the following new subsection (9) …"
   }
  ],
  "blockers": [
@@ -171,7 +193,7 @@
   },
   {
    "item": "vat",
-   "sought": "The GST rate (the registration threshold of Le500,000 was read in the Finance Act 2024 on 2026-11-03)",
+   "sought": "Whether the GST registration threshold the Finance Act 2024 writes as Le500,000 is in new leones (the Finance Act 2025 writes NLe; the GST rate, 15%, was read on 2026-11-03 in the NRA's consolidation of the GST Act)",
    "tried": {
     "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for vat; nassit.org.sl read (social now recorded).",
     "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",

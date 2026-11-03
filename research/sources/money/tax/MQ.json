@@ -73,6 +73,22 @@
      "said": "Aux termes de l'article 296 bis-a du CGI , la TVA est perçue, dans les départements de la Guadeloupe, de la Martinique et de la Réunion, au taux de 1,05 % pour les opérations visées à l' article 281 quater de ce code ."
     }
    ]
+  },
+  {
+   "item": "social",
+   "finding": "France's general social-security regime reaches Martinique: its health, maternity and paternity benefits are paid there by the CGSS, the overseas departments' fund, and universal health cover takes in residents of Martinique; the page states no contribution rate for the overseas departments.",
+   "value": {
+    "regime": "FR general regime",
+    "fund": "CGSS",
+    "rates": null
+   },
+   "applies": "CLEISS (the French public body for social-security liaison), 2026, read 2026-11-03: it places Martinique in the general regime; it isn't a statement that the 2026 contribution rates there are mainland France's.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "les caisses générales de sécurité sociale (CGSS) dans les départements d'outre-mer"
+    }
+   ]
   }
  ],
  "country": "MQ",
@@ -105,12 +121,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "Aux termes de l'article 296 bis-a du CGI , la TVA est perçue, dans les départements de la Guadeloupe, de la Martinique et de la Réunion, au taux de 1,05 % pour les opérations visées à l' article 281 quater de ce code ."
+  },
+  {
+   "url": "https://www.cleiss.fr/docs/regimes/regime_france1.html",
+   "title": "CLEISS: Le régime français de sécurité sociale, maladie, maternité, paternité, invalidité, décès 2026",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Les prestations de l'assurance maladie, maternité et paternité sont attribuées par : les caisses primaires d'assurance maladie (CPAM) en métropole, et les caisses générales de sécurité sociale (CGSS) dans les départements d'outre-mer. … La protection universelle maladie (PUMa) garantit la prise en charge des frais de santé à toute personne qui : exerce une activité professionnelle , ou réside de manière stable et régulière en France (y compris la Guadeloupe, la Guyane, la Martinique, La Réunion, Saint-Barthélemy et Saint Martin) depuis au moins 3 mois."
   }
  ],
  "blockers": [
   {
    "item": "social",
-   "sought": "A source stating that the French general social-security contributions apply to pay in Martinique, and any DOM-specific rates",
+   "sought": "A source stating the general social-security contribution rates that apply to pay in Martinique in 2026, and any DOM-specific rates (CLEISS, read 2026-11-03, places Martinique in the French general regime, run there by the CGSS, but states no rate)",
    "tried": {
     "institution": "cgss-martinique.fr returned HTTP 403; urssaf.fr gave an empty reply (2026-11-01) || 2026-11-01 retry: cgss-martinique.fr answers 'NinjaFirewall 403 Forbidden'; www.cgss.mq fails (proxy 502); urssaf.fr gives an empty reply (2026-11-01)",
     "official-register": "legifrance.gouv.fr (Code de la sécurité sociale, art. L. 751-1) returned HTTP 403 || 2026-11-01 retry: legifrance.gouv.fr answers a 'Just a moment...' bot check (403); not read another way",

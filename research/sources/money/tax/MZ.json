@@ -147,6 +147,61 @@
      "said": "Lei n.º 10/2025, Artigo 53 (Disposições transitórias): \"Os sujeitos passivos que estejam integrados nos regimes de Isenção e Regime de tributação simplificada passam a cumprir as obrigações materiais e formais nos termos da presente Lei.\" Artigo 3 (Revogação): \"É revogado o número 8 do artigo 21 e as Subsecções I e II da Secção IV do Código do Imposto sobre o Valor Acrescentado\". Artigo 5: \"A presente Lei entra em vigor a 1 de Janeiro de 2026.\" Lei n.º 9/2025 (ISPC), art. 2(2)-(3): \"... cujo volume de negócios anual seja igual ou inferior a 4.000.000,00MT. 3. A tributação dos sujeitos passivos no Imposto Simplificado para Pequenos Contribuintes é de carácter optativo.\" Art. 8(1): \"b) à taxa de 12%, ... prestação de serviços, tais como, canalização, carpintaria ...; c) à taxa de 15%, ... profissões liberais, tais como, advogados, economistas, geólogos, engenheiros, contabilistas\"; (3): \"consideram-se profissões liberais as actividades exercidas com base em formação técnica ou científica especializada, regulamentada, ou não, por uma ordem profissional, incluindo os consultores.\""
     }
    ]
+  },
+  {
+   "item": "residents",
+   "finding": "The IRPS Code's own scale (art. 54) taxes annual taxable income at 10% to MZN 42,000, 15% to 168,000, 20% to 504,000, 25% to 1,512,000 and 32% above, the whole income at its top rate less the table's sum, which comes to the same as band by band; from the tax so reckoned a resident deducts MZN 1,800 a year for himself and MZN 600 to 1,800 for one to four or more dependants, never below nothing (art. 60 as Lei 20/2013 wrote it, from 1 January 2014).",
+   "value": {
+    "currency": "MZN",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 42000,
+      "rate": 0.1
+     },
+     {
+      "from": 42000,
+      "to": 168000,
+      "rate": 0.15
+     },
+     {
+      "from": 168000,
+      "to": 504000,
+      "rate": 0.2
+     },
+     {
+      "from": 504000,
+      "to": 1512000,
+      "rate": 0.25
+     },
+     {
+      "from": 1512000,
+      "to": null,
+      "rate": 0.32
+     }
+    ],
+    "taxCredits": {
+     "perTaxpayer": 1800,
+     "dependants": {
+      "1": 600,
+      "2": 900,
+      "3": 1200,
+      "4+": 1800
+     },
+     "offTheTax": true
+    }
+   },
+   "applies": "The Code as enacted (Lei 33/2007) and as Lei 20/2013 amended art. 60, read 2026-11-03 in the Boletim's scans (art. 60 checked against the page image); Lei 11/2025 (from 2026) amends neither article (PwC's list), but acts from 2014 to 2024 weren't checked. PwC's 2026 table prints the same scale.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "Até 42.000 10% -; De 42.001 a 168.000 15% 2.100; De 168.001 a 504.000 20% 10.500; De 504.001 a 1.512.000 25% 35.700; Além de 1.512.000 32% 141.540"
+    },
+    {
+     "src": 5,
+     "said": "À colecta do IRPS devida por contribuintes residentes em território moçambicano e até ao seu montante são deduzidos anualmente: a) 1.800,00MT por cada sujeito passivo"
+    }
+   ]
   }
  ],
  "country": "MZ",
@@ -181,12 +236,28 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Lei n.º 10/2025, Artigo 53 (Disposições transitórias): \"Os sujeitos passivos que estejam integrados nos regimes de Isenção e Regime de tributação simplificada passam a cumprir as obrigações materiais e formais nos termos da presente Lei.\" Artigo 3 (Revogação): \"É revogado o número 8 do artigo 21 e as Subsecções I e II da Secção IV do Código do Imposto sobre o Valor Acrescentado\". Artigo 5: \"A presente Lei entra em vigor a 1 de Janeiro de 2026.\" Lei n.º 9/2025 (ISPC), art. 2(2)-(3): \"... cujo volume de negócios anual seja igual ou inferior a 4.000.000,00MT. 3. A tributação dos sujeitos passivos no Imposto Simplificado para Pequenos Contribuintes é de carácter optativo.\" Art. 8(1): \"b) à taxa de 12%, ... prestação de serviços, tais como, canalização, carpintaria ...; c) à taxa de 15%, ... profissões liberais, tais como, advogados, economistas, geólogos, engenheiros, contabilistas\"; (3): \"consideram-se profissões liberais as actividades exercidas com base em formação técnica ou científica especializada, regulamentada, ou não, por uma ordem profissional, incluindo os consultores.\""
+  },
+  {
+   "url": "https://www.dlapiperafrica.com/export/sites/africa/mozambique/insights/legislation-series/tax/downloads/Lei_33_2007.pdf_2063068952.pdf",
+   "title": "Boletim da República, I Série, 31 de Dezembro de 2007: Lei n.º 33/2007, Código do IRPS (scan hosted by DLA Piper Africa)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "said": "ARTIGO 54 (Taxas gerais) 1. As taxas do imposto são as constantes da tabela seguinte: Rendimentos Colectáveis Anuais em Meticais / Taxas / Parcela a abater: Até 42.000 10% -; De 42.001 a 168.000 15% 2.100; De 168.001 a 504.000 20% 10.500; De 504.001 a 1.512.000 25% 35.700; Além de 1.512.000 32% 141.540",
+   "quotes": "https://www.at.gov.mz/"
+  },
+  {
+   "url": "https://www.dlapiperafrica.com/export/sites/africa/mozambique/insights/legislation-series/tax/downloads/Lei-n_20.2013.pdf_2063068952.pdf",
+   "title": "Boletim da República, I Série, n.º 76, 2.º Suplemento, 23 de Setembro de 2013: Lei n.º 20/2013, altering the IRPS Code (scan hosted by DLA Piper Africa)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "said": "Artigo 60 (Deduções relativas à situação pessoal e familiar) 1. À colecta do IRPS devida por contribuintes residentes em território moçambicano e até ao seu montante são deduzidos anualmente: a) 1.800,00MT por cada sujeito passivo; b) 600.00MT quando exista um dependente; 900,00MT quando existam dois dependentes; 1.200,00MT quando existam três dependentes e 1.800,00MT quando existam quatro ou mais dependentes, desde que não sejam sujeitos passivos deste imposto.",
+   "quotes": "https://www.at.gov.mz/"
   }
  ],
  "blockers": [
   {
    "item": "residents",
-   "sought": "The IRPS Code's own scale and personal deductions",
+   "sought": "Whether any act from 2014 to 2025 amended the IRPS Code's scale (art. 54) or its personal credits (art. 60): both were read in the Code's own text on 2026-11-03, and Lei 11/2025 leaves them as they were",
    "tried": {
     "institution": "at.gov.mz resets the connection from this environment (2026-11-01) || 2026-11-01 retry: at.gov.mz: https does not answer (curl 000), http returns 503; inss.gov.mz does not answer; mef.gov.mz returns HTTP 403 (not read another way).",
     "official-register": "Código do IRPS not read || 2026-11-01 retry: portaldogoverno.gov.mz answers (HTTP 200) but its home page links no tax code, legislation or IRPS page; the Boletim da República is not on a reachable host.",

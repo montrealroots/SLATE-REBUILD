@@ -267,6 +267,34 @@
      "said": "Services of performing and other artists: exempt; the exemption shall not be applicable to services provided or rendered by stage designers, set designers, lighting designers and costume designers"
     }
    ]
+  },
+  {
+   "item": "vat",
+   "finding": "Khyber Pakhtunkhwa's sales tax on services is 15%; performing artists' services, authors' and composers' original works included, are exempt where they reflect cultural and societal values for the public at large, but live concerts, stage shows, dramas and like commercial entertainment stay taxable, and no turnover threshold is set in the Act (the Policy Board may notify one). Balochistan's is 15% on every service not in its First Schedule of exemptions, from 1 July 2025.",
+   "value": {
+    "KP": {
+     "rate": 0.15,
+     "performingArtists": "exempt where cultural and for the public at large; commercial entertainment (live concerts, stage shows, dramas) taxable",
+     "threshold": null
+    },
+    "Balochistan": {
+     "rate": 0.15,
+     "from": "2025-07-01",
+     "basis": "every service not in the First Schedule",
+     "threshold": null
+    }
+   },
+   "applies": "KP's Act as updated to its Finance Act 2026 and Balochistan's Finance Act 2025, read 2026-11-03 (Balochistan's section 10 checked against the scan's page image). The game holds no province for a person, so no province's rate is applied.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "there shall be charged, levied, collected and paid a tax at the rate of fifteen per cent on the value of a taxable service"
+    },
+    {
+     "src": 6,
+     "said": "there shall be charged, levied, collected and paid the tax on the value of a taxable service at the rate of fifteen percent of the value of the taxable service."
+    }
+   ]
   }
  ],
  "country": "PK",
@@ -308,12 +336,26 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "s. 8(1): sales tax on the provision of a taxable service at the rate of fifteen per cent of value of the taxable service, which shall be referred to as the standard rate. First Schedule, item 37 (CPC 963, services of performing and other artists): exempt; the exemption shall not be applicable to services provided or rendered by stage designers, set designers, lighting designers and costume designers. Item 44: services of a person whose total annual turnover does not exceed rupees four million in a financial year"
+  },
+  {
+   "url": "https://kpra.gov.pk/wp-content/uploads/2026/09/KPSTSA-2022-Updated-Finance-act-2026.pdf",
+   "title": "The Khyber Pakhtunkhwa Sales Tax on Services Act, 2022, with the amendments of the KP Finance Act 2025, the Notification of 13 May 2026 and the KP Finance Act 2026 (Khyber Pakhtunkhwa Revenue Authority)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "9. Scope of tax and allied matters.---(1) [Subject to the provisions of this Act, there shall be charged, levied, collected and paid a tax at the rate of fifteen per cent on the value of a taxable service, which shall be deemed and treated as the standard or general rate of tax for all purposes of this Act … (3) Notwithstanding anything contained in this Act, the Policy Board may, with the approval of Government, by notification in the official Gazette … fix the limit or threshold of annual turnover … below which such person or class of persons shall be exempt from payment of tax under this Act. … 20. Services of performing artists including original works of authors, composers and other artists. Such services which are provided to reflect cultural and societal values and benefit the public at large; provided that services which are provided in live concerts, stage shows, dramas or similar commercial entertainment events shall remain taxable."
+  },
+  {
+   "url": "https://pabalochistan.gov.pk/storage/8273/686e57088b10e_Finance-Act-2025.pdf",
+   "title": "The Balochistan Finance Act, 2025 (Act No. XVIII of 2025), Provincial Assembly of Balochistan (scan)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(15) Section 10, following shall substituted.- \"10. Scope of Tax and Allied Matters:- (1) Subject to the provisions of this Act and the rules, there shall be charged, levied, collected and paid the tax on the value of a taxable service at the rate of fifteen percent of the value of the taxable service. (2) Notwithstanding anything contained in sub-section (1) and subject to the provisions of Section 12 the services specified in the First Schedule shall be exempt from tax. … 10A. Transitional Provision. — All services not specified in the First Schedule shall be deemed to be taxable services under this Act effective from the Ist day of July, 2025."
   }
  ],
  "blockers": [
   {
    "item": "vat",
-   "sought": "The provincial sales tax rates on services that apply to a freelancer's fee and their thresholds in Punjab, Khyber Pakhtunkhwa, Balochistan and the Islamabad Capital Territory (Sindh's were read on 2026-11-03)",
+   "sought": "The provincial sales tax rates on services that apply to a freelancer's fee and their thresholds in Punjab and the Islamabad Capital Territory (Sindh's, Khyber Pakhtunkhwa's and Balochistan's were read on 2026-11-03)",
    "tried": {
     "institution": "provincial revenue authorities' sites not tried || retry-8 2026-11-01: pra.punjab.gov.pk (Punjab Revenue Authority), srb.gos.pk (Sindh Revenue Board), kpra.kp.gov.pk (Khyber Pakhtunkhwa) and bra.gob.pk (Balochistan): connection reset or no answer (http answers 503) from this environment; fbr.gov.pk home read: no link to the Islamabad Capital Territory (Tax on Services) Ordinance found",
     "official-register": "not tried || retry-8 2026-11-01: the provincial sales tax on services Acts (Punjab 2012, Sindh 2011, KP 2022, Balochistan 2015) and the ICT Ordinance 2001: no reachable official host this turn",

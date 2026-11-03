@@ -1454,16 +1454,14 @@
   },
   {
    "key": "JE",
-   "status": "blocked",
+   "status": "researched",
    "register": [
-    "R-6657",
     "R-6656"
    ],
    "tests": [
     "tests/money/tax/tax.test.ts::a country's tax > is each country's own, every figure as the research gives it",
     "tests/money/tax/tax.test.ts::pay > is paid into the ledger less what the work's country withholds",
-    "tests/money/tax/tax.test.ts::the year's reckoning > taxes the year's income at the resident's scale less what was withheld",
-    "tests/money/tax/tax.test.ts::a country's tax > tells the player what of it isn't known"
+    "tests/money/tax/tax.test.ts::the year's reckoning > taxes the year's income at the resident's scale less what was withheld"
    ]
   },
   {

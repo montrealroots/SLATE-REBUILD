@@ -288,6 +288,48 @@
      "said": "Tórshavnar: kommunuskattur 19,00; kirkjuskattur 0,60 (footnote 8: \"Tórshavn og Ternuryggur: 0,85\"); barnafrádráttur 9.000. Lowest municipal rate 16,00 (Fugloyar, Skúvoyar, Fámjins), highest 21,50 (Runavíkar)."
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "An author's royalties get no relief: a Faroese resident's are ordinary income, B-income reported to TAKS; a recipient resident abroad bears a 25% gross withholding, with no deduction of expenses, withheld by the payer, unless resident in a country with a double taxation agreement with the Faroes (Iceland, Denmark, Norway, Sweden, Finland, Greenland, the United Kingdom, Switzerland, India, Guernsey, Jersey, the Cayman Islands, the Isle of Man, Bermuda and the British Virgin Islands), where it is 0%, refunded on application.",
+   "value": {
+    "resident": "ordinary income (B-income), no relief",
+    "nonResident": {
+     "rate": 0.25,
+     "base": "gross",
+     "treatyRate": 0,
+     "treaty": [
+      "IS",
+      "DK",
+      "NO",
+      "SE",
+      "FI",
+      "GL",
+      "GB",
+      "CH",
+      "IN",
+      "GG",
+      "JE",
+      "KY",
+      "IM",
+      "BM",
+      "VG"
+     ],
+     "treatyRelief": "refund on application"
+    },
+    "payerReportsBy": "01-31"
+   },
+   "applies": "Read 2026-11-03 on TAKS's own page. The game doesn't withhold the non-resident's 25%: its withholding doesn't turn on the recipient's home, and the 0% for a treaty country's resident does, so a non-resident author's Faroese royalties stay among what a non-resident owes beyond what is withheld.",
+   "sources": [
+    {
+     "src": 10,
+     "said": "Royalties are taxed as ordinary income if the recipient is resident in the Faroe Islands This is in accordance with Sections 1 and 25 of the Tax Act."
+    },
+    {
+     "src": 10,
+     "said": "If the recipient's country of residence does not have a double taxation agreement with the Faroe Islands, the tax rate is 25%."
+    }
+   ]
   }
  ],
  "country": "FO",
@@ -361,6 +403,13 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Tórshavnar: kommunuskattur 19,00; kirkjuskattur 0,60 (footnote 8: \"Tórshavn og Ternuryggur: 0,85\"); barnafrádráttur 9.000. Lowest municipal rate 16,00 (Fugloyar, Skúvoyar, Fámjins), highest 21,50 (Runavíkar)."
+  },
+  {
+   "url": "https://www.taks.fo/en/business/tax/tax-and-royalties",
+   "title": "TAKS (the Faroese tax authority): Tax and Royalties",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Royalties are taxed as ordinary income if the recipient is resident in the Faroe Islands This is in accordance with Sections 1 and 25 of the Tax Act. Royalty payments constitute B-income and must be reported to the Faroese Tax Authority (TAKS). … Royalties are taxed at either 0% or 25%, if the recipient is resident abroad Whether the tax rate is 0% or 25% depends on whether the country in which the recipient is resident has a double taxation agreement with the Faroe Islands. … If the recipient's country of residence does not have a double taxation agreement with the Faroe Islands, the tax rate is 25%. This is in accordance with Section 2(1)(c) of the Tax Act and Section 7 of the Withholding Tax Act. The tax is a gross withholding tax, meaning that the recipient is not entitled to deduct any business expenses that may have been incurred. The countries and territories that have double taxation agreements with the Faroe Islands are: Iceland, Denmark, Norway, Sweden, Finland, Greenland, England, Scotland, Wales, Northern Ireland, Switzerland, India, Guernsey, Jersey, the Cayman Islands, the Isle of Man, Bermuda, and the British Virgin Islands. … The reporting deadline is 31 January of the year following the year in which the payment was made."
   }
  ],
  "blockers": [
@@ -371,17 +420,6 @@
     "institution": "taks.fo (TAKS, the Faroese tax authority) returns 403 to this environment on every page (2026-11-01). || 2026-11-01 retry: taks.fo again returns HTTP 403 (not read another way). Hagstova Føroya (hagstova.fo, the statistics office) answers: its \"Skattir\" page (saved FO-hagstova-skattir.html) describes tax revenue by type, with no rates or allowances.",
     "official-register": "logir.fo (law database) answers but finds laws only by form postback; the direct URL for Skattalógin returned LawNotFound (2026-11-01). || 2026-11-01 retry: logir.fo answers, but its law database (LawDatabase.aspx) works only by ASP.NET postback; logir.fo/Skattalog returns 404.",
     "web-search": "'logir.fo skattalóg landsskattur skattstig 2026 kommunuskattur prosent' (2026-11-01): one municipal budget (Tvøroyri, read), no national scale. || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used. || Web search 2026-11-02: queries \"logir.fo løgtingslóg um landsskatt og kommunuskatt skattaskali persónsfrádráttur 2026\", \"logir.fo Logtingslog \\\"um landsskatt og kommunuskatt\\\" Skattalógin\", \"\\\"áseting av skatti\\\" løgtingslóg 2026 landsskattur skattaprosent frádráttur\", \"logir.fo \\\"um áseting av skatti\\\" Logtingslogarkunngerd\", \"meirvirðisgjald Føroyar 25% skráseting umsetningur 50.000 kr løgtingslóg um meirvirðisgjald\" and \"Føroyar rithøvundar samsýning skattur upphavsrættur listafólk skattafrádráttur listaløn\". They led to the Skattalógin (logir.fo løgtingslógarkunngerð nr. 109 frá 19. september 2023, read and saved) and to TAKS's own pages, which taks.fo refuses but web.archive.org now serves (snapshots of April to June 2026 read and saved: VAT, taxation in the Faroe Islands, moving for work, deductions, tax return); the findings above rest on them. The 42% (35% on FAS ships) is now found; whether it is final is stated nowhere read (TAKS says the person stays liable at home).",
-    "trade-press": "No PwC or Deloitte summary for the Faroe Islands (Deloitte 2026: 404). || 2026-11-01 retry: No Deloitte Faroe Islands 2026 Highlights (HTTP 404); no PwC summary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2025-07-16 snapshot of taks.fo/fo/borgari/skattur; the brief bars reading a refused page another way, and web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
-   }
-  },
-  {
-   "item": "authors",
-   "sought": "Any special treatment of authors' royalties.",
-   "tried": {
-    "institution": "taks.fo (TAKS, the Faroese tax authority) returns 403 to this environment on every page (2026-11-01). || 2026-11-01 retry: taks.fo again returns HTTP 403 (not read another way). Hagstova Føroya (hagstova.fo, the statistics office) answers: its \"Skattir\" page (saved FO-hagstova-skattir.html) describes tax revenue by type, with no rates or allowances.",
-    "official-register": "logir.fo (law database) answers but finds laws only by form postback; the direct URL for Skattalógin returned LawNotFound (2026-11-01). || 2026-11-01 retry: logir.fo answers, but its law database (LawDatabase.aspx) works only by ASP.NET postback; logir.fo/Skattalog returns 404.",
-    "web-search": "'logir.fo skattalóg landsskattur skattstig 2026 kommunuskattur prosent' (2026-11-01): one municipal budget (Tvøroyri, read), no national scale. || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used. || Web search 2026-11-02: queries \"logir.fo løgtingslóg um landsskatt og kommunuskatt skattaskali persónsfrádráttur 2026\", \"logir.fo Logtingslog \\\"um landsskatt og kommunuskatt\\\" Skattalógin\", \"\\\"áseting av skatti\\\" løgtingslóg 2026 landsskattur skattaprosent frádráttur\", \"logir.fo \\\"um áseting av skatti\\\" Logtingslogarkunngerd\", \"meirvirðisgjald Føroyar 25% skráseting umsetningur 50.000 kr løgtingslóg um meirvirðisgjald\" and \"Føroyar rithøvundar samsýning skattur upphavsrættur listafólk skattafrádráttur listaløn\". They led to the Skattalógin (logir.fo løgtingslógarkunngerð nr. 109 frá 19. september 2023, read and saved) and to TAKS's own pages, which taks.fo refuses but web.archive.org now serves (snapshots of April to June 2026 read and saved: VAT, taxation in the Faroe Islands, moving for work, deductions, tax return); the findings above rest on them. The Skattalógin (§ 118-type reporting duty) only obliges payers to report fees to authors, composers and performing artists; no special treatment of royalties found. Not found.",
     "trade-press": "No PwC or Deloitte summary for the Faroe Islands (Deloitte 2026: 404). || 2026-11-01 retry: No Deloitte Faroe Islands 2026 Highlights (HTTP 404); no PwC summary.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2025-07-16 snapshot of taks.fo/fo/borgari/skattur; the brief bars reading a refused page another way, and web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
    }

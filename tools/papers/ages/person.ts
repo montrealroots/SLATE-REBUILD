@@ -11,10 +11,11 @@ import type { PERFORMERS } from './compile.ts';
  *   `permitFrom`, the key of the youngest age in its `childPerformers` figure;
  * - `settles`: why the person research's figure stands over a differing one layer 3 holds; without it, a reading of a
  *   field layer 3 already holds is refused.
- * Not read: Indonesia's majority (two readings, unsettled), Iran's (by sex, in lunar years), the Comoros' (the 2005
- * Family Code's article not read), Nigeria's (by state, contested); a working age with no performer's rule found
- * (Afghanistan, Burkina Faso, Burundi, Belarus, Bhutan, Cabo Verde, Congo, Ethiopia, Fiji, Gabon, Guinea-Bissau, Iraq,
- * Cambodia, Moldova, Mozambique, Panama, Sint Maarten, Tajikistan, Tanzania), or none general (Cayman, New Zealand,
+ * Not read: Indonesia's majority (two readings, unsettled), Iran's (by sex, in lunar years), Nigeria's (by state,
+ * contested); the Comoros' was left unread here (the 2005 Family Code's article not read) until layer 3's file read it
+ * on 2026-11-03, and Cuba's majority and working age, read here until then, are layer 3's file's since; a working age
+ * with no performer's rule found (Afghanistan, Burkina Faso, Burundi, Belarus, Bhutan, Cabo Verde, Congo, Ethiopia,
+ * Fiji, Gabon, Guinea-Bissau, Iraq, Cambodia, Moldova, Mozambique, Panama, Sint Maarten, Tajikistan, Tanzania), or none general (Cayman, New Zealand,
  * Palau, Norfolk Island, Tuvalu's school-year rule, Australia's and Canada's by state, which the form holds by country);
  * the light-work ages and hours, which the youth engine reads from the same files.
  */
@@ -33,8 +34,9 @@ const OF_AGE = { majority: 'majority' } as const;
 
 export const READINGS: Readonly<Record<string, Reading>> = {
   AF: AGE,
-  // Minors are barred outright from theatres, cinemas and like places; no performer's permit.
-  AO: { ...AGE, from: 'general', performers: 'barred' },
+  // Its working age, and that a younger performer is barred, were read here until 2026-11-03, when layer 3's file read
+  // the Lei Geral do Trabalho's own (the same Law, in the same scan).
+  AO: AGE,
   AU: { regions: ['AU.01', 'AU.04', 'AU.07', 'AU.08'] },
   BF: AGE,
   BH: OF_AGE,
@@ -57,8 +59,6 @@ export const READINGS: Readonly<Record<string, Reading>> = {
   CM: AGE,
   // The Children and Adolescents Code's absolute bar under fifteen reaches a performer's hiring; no exception.
   CR: { from: 'general', performers: 'barred' },
-  // Fifteen and sixteen by exception with the parents' consent, the general rule a performer is held to.
-  CU: { ...AGE, from: 'general', performers: 'permit', permit: 'consentimiento de los padres o tutores', permitFrom: 'lowestAge' },
   CW: AGE,
   CY: AGE,
   // No permit or artistic exception below sixteen.

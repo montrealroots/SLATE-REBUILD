@@ -142,6 +142,29 @@
      "said": "son financement est assuré par les cotisations sociales entièrement supportées par l’employeur au taux de 1,75%"
     }
    ]
+  },
+  {
+   "item": "social",
+   "finding": "Family benefits take 8.40% of pay, from the employer alone, as do work-injury cover (1.75%) and the national employment agency's 0.5%; none of them comes out of the worker's pay.",
+   "value": {
+    "familyBenefits": {
+     "employer": 0.084,
+     "employee": 0
+    },
+    "workInjury": {
+     "employer": 0.0175
+    },
+    "anpe": {
+     "employer": 0.005
+    }
+   },
+   "applies": "Read 2026-11-03 on the government's procedures portal (undated); its pension line is garbled, so only these lines are taken. The 2026 ceiling wasn't read (CLEISS's FCFA 500,000 a month at 1 January 2024 names no Nigerien text: a lead).",
+   "sources": [
+    {
+     "src": 4,
+     "said": "8,40% pour les prestations familiales à la charge de l'employeur"
+    }
+   ]
   }
  ],
  "country": "NE",
@@ -173,6 +196,13 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "Article 150 (nouveau) : L'Impôt sur les traitements et salaires est un impôt progressif calculé par tranches mensuelles comme suit : De 0 A 25 000 1% De 25 001 A 50 000 2% De 50 001 A 100 000 6% De 100 001 A 150 000 13% De 150 001 A 300 000 25% De 300 001 A 400 000 30% De 400 001 A 700 000 32% De 700 001 A 1 000 000 34% Au-delà De 1 000 000 35% … Le Code général des impôts adopté par l'ordonnance n°022/PRN du 14 juillet 2025 a changé le barème de calcul de l'Impôt sur les traitements et salaires (ITS) … d'où la proposition de rétablir l'ancien barème … En l'état actuel de la législation fiscale, les commissions et autres frais perçus par ces opérateurs sont soumis, selon le cas, à la Taxe sur la valeur ajoutée (TVA) au taux de 19%"
+  },
+  {
+   "url": "https://niger.eregulations.org/procedure/97/79/step/366?l=fr",
+   "title": "eRegulations Niger (the Government of Niger's procedures portal): Paiement des cotisations sociales (CNSS)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "8,40% pour les prestations familiales à la charge de l'employeur 1,75% pour les accidents de travail et maladies professionnelles à la charge de l'employeur … 0,5% pour l'Agence Nationale de promotion d'emploi à la charge de l'employeur"
   }
  ],
  "blockers": [
@@ -189,7 +219,7 @@
   },
   {
    "item": "social",
-   "sought": "The CNSS family-benefits (prestations familiales) contribution rate and any 2026 change to the ceiling",
+   "sought": "Any 2026 change to the CNSS contribution ceiling (FCFA 500,000 a month in the pension branch's own page; the family-benefits contribution, 8.40% from the employer alone, was read on 2026-11-03)",
    "tried": {
     "institution": "impots.gouv.ne and finances.gouv.ne are refused by this environment's proxy; finance.gov.ne gives CONNECT 502 (2026-11-01). || 2026-11-01 retry: cnss.ne read (branche des pensions, branche des accidents du travail, saved NE-cnss-*.html): pension and injury rates now a figure; the family-benefits page states no rate, and the CNSS site search ('taux') finds nothing more",
     "official-register": "No 2026 Journal officiel or Finance Law for Niger was reachable; the embassy's copy of the 2013 Code was read (2026-11-01). || 2026-11-01 retry: No Journal officiel of Niger reachable (sggouv.ne fails); the 2013 Code already held",

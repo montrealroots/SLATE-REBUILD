@@ -146,6 +146,22 @@
      "said": "The standard rate of GST is 5%. Companies with taxable supplies of more than GBP 300,000 per annum are required to register for GST."
     }
    ]
+  },
+  {
+   "item": "authors",
+   "finding": "Jersey's Income Tax Law gives an author's royalties no treatment of their own: the only royalties it names are those paid for the use of a patent (paid under deduction of tax at the standard rate), and it says nothing of copyright or of literary or artistic work, so an author's earnings are income taxed like any other.",
+   "value": {
+    "specialTreatment": false,
+    "royaltiesTheLawNames": "patent royalties only (Arts. 70(m), 86(3), 87)",
+    "basis": "the whole Law read, no provision found"
+   },
+   "applies": "The Law as consolidated from 17 June 2026, read whole on 2026-11-03; the finding rests on the whole text read and found silent, not on a sentence that says so: the Law's six mentions of a royalty are each 'any royalty or other sum paid in respect of the user of a patent', and it never mentions copyright, a literary or artistic work, an artist or an entertainer.",
+   "sources": [
+    {
+     "src": 6,
+     "said": "(m) any royalty or other sum paid in respect of the user of a patent."
+    }
+   ]
   }
  ],
  "country": "JE",
@@ -197,19 +213,14 @@
    "kind": "secondary",
    "quotes": "https://www.gov.je/TaxesMoney/",
    "said": "There are no WHTs on dividends, interest, or royalties paid by Jersey companies to non-residents."
+  },
+  {
+   "url": "https://www.jerseylaw.je/laws/current/l_29_1961",
+   "title": "Income Tax (Jersey) Law 1961, official consolidated version showing the law from 17 June 2026 (Jersey Legal Information Board)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Showing the law from 17 June 2026 to Current Income Tax (Jersey) Law 1961 Official Consolidated Version … (m) any royalty or other sum paid in respect of the user of a patent. … (3) Where any royalty or other sum paid in respect of the user of a patent is paid by an individual resident in Jersey wholly out of profits or gains brought into charge to tax, the person paying the royalty or sum shall be entitled, on making the payment, to deduct and retain out of it a sum representing the amount of the tax thereon at the standard rate"
   }
  ],
- "blockers": [
-  {
-   "item": "authors",
-   "sought": "Any special treatment of an author's royalties in Jersey.",
-   "tried": {
-    "institution": "gov.je returns HTTP 500 to this environment (2026-11-01). || 2026-11-01 retry: gov.je/TaxesMoney/IncomeTax again HTTP 500; revenue.je refused (curl 000).",
-    "official-register": "jerseylaw.je (Income Tax (Jersey) Law 1961) not read 2026-11-01. || 2026-11-01 retry: jerseylaw.je/laws/current/l_24_1961 (Income Tax (Jersey) Law 1961) again HTTP 500.",
-    "web-search": "Not run for Jersey (2026-11-01). || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('Jersey income tax royalties author copyright Revenue Jersey').",
-    "trade-press": "PwC Worldwide Tax Summaries (Jersey): none. || 2026-11-01 retry: taxsummaries.pwc.com/jersey (200) already used: no author rule.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
-   }
-  }
- ]
+ "blockers": []
 }

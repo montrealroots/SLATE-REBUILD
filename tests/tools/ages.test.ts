@@ -155,7 +155,8 @@ describe('the ages read from the person research', () => {
     // Uganda: the Children (Amendment) Act 2016's sixteen over the Employment Act 2006's fourteen, layer 3's rule kept.
     expect(ages['UG']?.work).toStrictEqual({ from: 16, performers: 'barred' });
     expect(READINGS['UG']?.settles).toMatch(/^The Children \(Amendment\) Act 2016/);
-    // A country layer 3 has no file for: Cuba's majority, its working age and its younger performer's consent from fifteen.
+    // Cuba's majority, its working age and its younger performer's consent from fifteen: the person research's until
+    // 2026-11-03, layer 3's own file's since.
     expect(ages['CU']).toStrictEqual({ majority: 18, work: { from: 17, performers: 'permit', permit: 'consentimiento de los padres o tutores', permitFrom: 15 } });
     expect([ages['BH']?.majority, ages['EG']?.majority, ages['NZ']?.majority, ages['WS']?.majority, ages['BL']?.majority]).toEqual([21, 21, 20, 21, 18]);
     expect(ages['IL']?.work).toStrictEqual({ from: 15, performers: 'permit', permit: 'היתר (Minister of Labour and Welfare)' });
@@ -173,7 +174,15 @@ describe('the ages read from the person research', () => {
     // Malawi's majority beside the working age layer 3 held; the Marshall Islands' majority with its working age unread.
     expect(ages['SX']).toStrictEqual({ majority: 18, work: { from: 15, performers: 'barred' } });
     expect([ages['BN']?.majority, ages['ML']?.majority, ages['MW']?.majority, ages['MH']?.majority, ages['MH']?.work]).toEqual([18, 18, 18, 18, null]);
-    expect(Object.keys(ages).length).toBe(220);
+    // The third round of 2026-11-03: the Comoros' own codes; Yemen's Civil Law beside the person research's working age;
+    // Angola's working age layer 3's beside the person research's majority; the Central African Republic's working age
+    // and the Faroe Islands' majority, each with the other unread.
+    expect(ages['KM']).toStrictEqual({ majority: 18, work: { from: 15, performers: 'barred' } });
+    expect(ages['YE']).toStrictEqual({ majority: 15, work: { from: 15, performers: 'barred' } });
+    expect(ages['AO']).toStrictEqual({ majority: 18, work: { from: 14, performers: 'barred' } });
+    expect([ages['CF'], ages['FO']]).toStrictEqual([{ majority: null, work: { from: 14, performers: 'barred' } }, { majority: 18, work: null }]);
+    expect(READINGS['CU']).toBeUndefined();
+    expect(Object.keys(ages).length).toBe(222);
   });
 });
 

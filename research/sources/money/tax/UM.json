@@ -33,6 +33,27 @@
      "said": "the five territories listed earlier because that income will … not qualify for any of the exclusions or other benefits … Baker Island, … Howland Island, … Jarvis Island, … Johnston Island, … Kingman Reef, … Midway Islands, … Palmyra Atoll, and … Wake Island."
     }
    ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident alien's wages for work on the Minor Outlying Islands are foreign-source income, neither reported nor withheld for U.S. federal income tax: the IRS's general rule for wages for services performed outside the United States, the islands being outside the geographical United States (§ 7701(a)(9)). How a non-resident alien's fees for independent work and royalties there are taxed was not read.",
+   "value": {
+    "wagesWithheld": false,
+    "wagesSource": "foreign (outside the United States, § 7701(a)(9))",
+    "fees": null,
+    "royalties": null
+   },
+   "applies": "Read 2026-11-03: the IRS page and § 7701(a)(9) together; no IRS text names the islands for a non-resident alien, and the IRS gives it as a general rule.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "As a general rule, wages earned by nonresident aliens for services performed outside of the United States for any employer are foreign source income and therefore are not subject to reporting and withholding of U.S. federal income tax."
+    },
+    {
+     "src": 2,
+     "said": "The term \"United States\" when used in a geographical sense includes only the States and the District of Columbia."
+    }
+   ]
   }
  ],
  "country": "UM",
@@ -64,12 +85,19 @@
    "read": "2026-11-01",
    "kind": "primary",
    "said": "the five territories listed earlier because that income will … not qualify for any of the exclusions or other benefits … Baker Island, … Howland Island, … Jarvis Island, … Johnston Island, … Kingman Reef, … Midway Islands, … Palmyra Atoll, and … Wake Island."
+  },
+  {
+   "url": "https://www.irs.gov/individuals/international-taxpayers/persons-employed-abroad-by-a-us-person",
+   "title": "IRS: Persons employed abroad by a U.S. person (Page Last Reviewed or Updated: 22-May-2026)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Nonresident aliens As a general rule, wages earned by nonresident aliens for services performed outside of the United States for any employer are foreign source income and therefore are not subject to reporting and withholding of U.S. federal income tax."
   }
  ],
  "blockers": [
   {
    "item": "nonResident",
-   "sought": "How pay earned on the Minor Outlying Islands by a non-resident alien is taxed: the islands are outside the geographical United States (§ 7701(a)(9), now read), so whether that pay is foreign-source and outside U.S. tax for a non-resident alien needs an IRS statement or regulation. (The earlier question, an IRS statement naming the islands, is answered by Publication 570.)",
+   "sought": "How a non-resident alien's fees for independent work and royalties earned on the Minor Outlying Islands are taxed (wages for work there were read on 2026-11-03 as foreign-source and outside U.S. withholding: the IRS's general rule with § 7701(a)(9))",
    "tried": {
     "institution": "irs.gov reachable: only written determinations on Johnston Island found (199920013; not precedent by its own terms) || 2026-11-01 retry: irs.gov Publication 570 (2025) fetched and read: names the islands as insular areas outside the territory exclusions; says nothing on non-resident aliens there.",
     "official-register": "uscode.house.gov returned 404 for § 7701 (geographical meaning of United States); govinfo § 931 read || 2026-11-01 retry: govinfo 26 U.S.C. § 7701 (2024 ed.) read and saved; uscode.house.gov again 404 for § 7701.",

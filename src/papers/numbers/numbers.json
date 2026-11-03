@@ -914,6 +914,9 @@
    "bank"
   ]
  },
+ "GS": {
+  "none": true
+ },
  "GT": {
   "name": "Código Único de Identificación (CUI)",
   "issuer": "the Registro Nacional de las Personas (RENAP)",
@@ -1734,6 +1737,21 @@
  },
  "PF": {
   "issuedBy": "FR"
+ },
+ "PG": {
+  "name": "Taxpayer Identification Number (TIN)",
+  "issuer": "the Internal Revenue Commission",
+  "format": {
+   "length": 9,
+   "pattern": "^\\d{9}$"
+  },
+  "when": "application",
+  "who": [
+   "anyone"
+  ],
+  "needed": [
+   "tax"
+  ]
  },
  "PH": {
   "name": "Taxpayer Identification Number (TIN)",

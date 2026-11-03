@@ -5034,7 +5034,7 @@
   "year": {"start":{"fig":1,"path":["start"]},"end":{"fig":1,"path":["end"]},"due":{"fig":1,"path":["returnWindow",1]},"after":1},
   "residents": [
    {
-    "layers": [{"bands":{"fig":0,"path":["brackets"]}}]
+    "layers": [{"bands":{"fig":0,"path":["brackets"]},"credit":[{"fig":7,"path":["taxCredits","perTaxpayer"]}]}]
    }
   ],
   "social": {
@@ -5061,7 +5061,7 @@
    }
   },
   "vat": {"rate":{"fig":5,"path":["standard"]},"threshold":null},
-  "unmodeled": ["regional"],
+  "unmodeled": ["credits","regional"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "NA": {
@@ -6946,10 +6946,12 @@
   "withholding": {},
   "nonResident": {
    "performer": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["employment"]}}],"final":{"fig":1,"path":["final"]}},
-   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["employment"]}}],"final":{"fig":1,"path":["final"]}}
+   "director": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["employment"]}}],"final":{"fig":1,"path":["final"]}},
+   "producer": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["otherIncome"]}}],"final":{"fig":1,"path":["final"]}},
+   "author": {"bands":[{"from":0,"to":null,"rate":{"fig":1,"path":["otherIncome"]}}],"final":{"fig":1,"path":["final"]}}
   },
-  "vat": null,
-  "unmodeled": [],
+  "vat": {"rate":{"fig":3,"path":["rate2024to2026"]},"threshold":{"fig":3,"path":["threshold"]}},
+  "unmodeled": ["social"],
   "currency": {"fig":0,"path":["currency"]}
  },
  "TK": {
@@ -7359,12 +7361,15 @@
    "self": []
   },
   "withholding": {},
-  "nonResident": {},
+  "nonResident": {
+   "performer": {"none":{"fig":1,"path":["wagesWithheld"]}},
+   "director": {"none":{"fig":1,"path":["wagesWithheld"]}}
+  },
   "vat": null,
   "unmodeled": [],
   "follows": {
    "country": {"fig":0,"path":["follows"]},
-   "items": ["residents","year","social","withholding","nonResident","authors","vat"]
+   "items": ["residents","year","social","withholding","authors","vat"]
   }
  },
  "US": {

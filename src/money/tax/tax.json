@@ -9054,7 +9054,6 @@
     "social",
     "wages",
     "nonResident",
-    "authors",
     "year"
    ]
   },
@@ -13513,8 +13512,7 @@
    "unknown": [
     "credits",
     "wages",
-    "nonResident",
-    "authors"
+    "nonResident"
    ]
   },
   "JM": {
@@ -19058,7 +19056,8 @@
          "to": null,
          "rate": "0.32"
         }
-       ]
+       ],
+       "credit": "1800"
       }
      ]
     }
@@ -19128,6 +19127,7 @@
    },
    "unknown": [
     "residents",
+    "credits",
     "regional",
     "wages",
     "authors",
@@ -25981,9 +25981,32 @@
       }
      ],
      "final": false
+    },
+    "producer": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.15"
+      }
+     ],
+     "final": false
+    },
+    "author": {
+     "bands": [
+      {
+       "from": "0",
+       "to": null,
+       "rate": "0.15"
+      }
+     ],
+     "final": false
     }
    },
-   "vat": null,
+   "vat": {
+    "rate": "0.14",
+    "threshold": "1000000"
+   },
    "unknown": [
     "residents",
     "social",
@@ -25991,7 +26014,6 @@
     "withholding",
     "nonResident",
     "authors",
-    "vat",
     "year"
    ]
   },
@@ -27466,25 +27488,13 @@
    },
    "withholding": {},
    "nonResident": {
-    "producer": {
-     "bands": [
-      {
-       "from": "0",
-       "to": null,
-       "rate": "0.3"
-      }
-     ],
-     "final": false
+    "performer": {
+     "bands": [],
+     "final": true
     },
-    "author": {
-     "bands": [
-      {
-       "from": "0",
-       "to": null,
-       "rate": "0.3"
-      }
-     ],
-     "final": false
+    "director": {
+     "bands": [],
+     "final": true
     }
    },
    "vat": null,

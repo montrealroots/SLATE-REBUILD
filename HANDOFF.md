@@ -72,7 +72,16 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
   Malawi and Sint Maarten; the tax of Micronesia, Jordan, Eswatini and Tonga. About fifty more found in part and
   recorded. An agent's misreading caught at integration: Cambodia's salary-tax scan is Sub-Decree No. 09, not 196, and
   its first band starts at KHR 1,300,000; it wasn't used.
-- The register: 4,934 entries, 3,360 found, 776 secondary, 798 blocked.
+- The web-search pass, round 3 (2026-11-03, night): nine agents held to 20 searches each, five integrators. Found, rows
+  researched: Ghana's and Nunavut's licences (and so Canada's row), Kosrae's and Yap's; Papua New Guinea's TIN; South
+  Georgia's tax number (none is issued: the Ordinance, its Regulations and its Guide read whole); Turkmenistan's
+  Vnesheconombank cards; Jersey's tax (no relief for authors: the whole Income Tax Law read); the ages of the Comoros,
+  Yemen (majority 15, Civil Law art. 50), Angola and Cuba. About fifty more found in part. Held back by the lead:
+  Chuuk's licence, read only in the 2001 draft Chuuk State Code, which its own index says is not yet enacted, so it
+  stays blocked (papers.licence.blocked.FM.03), the draft a lead. Rulings this round: a value taken from WebFetch is a
+  model's summary, so it is read verbatim before use; a fact resting on a primary read whole and found silent stands;
+  a length seen on real numbers or a form's grid is a lead.
+- The register: 4,937 entries, 3,371 found, 777 secondary, 789 blocked (696 of them layer 3's).
 
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
@@ -209,11 +218,10 @@ The owner's ruling (2026-11-03): finish layer 3's research in a new session, wit
 prove it. In that session, from `research/rounds/brief.md` and `research/rounds/integrate.md` (the briefs this
 session's agents were given; change the date, the scratchpad path and the groups, keep the rules):
 
-1. The web-search pass, the rest: 285 of layer 3's 705 blockers still have no web-search attempt dated 2026-11-03 (a
-   blocker whose latest `web-search` attempt is older; tax 52, ages 41, licence 38, numbers 31, cards 29, means 25,
-   formats 25, credit 21, banks 8, work 6, ids 5, residence 3, passports 1). Rounds 1 and 2 held each agent to 20
-   searches, since the allowance is shared and ran out once; do the same. Twenty-five family-means entries were left
-   unsearched in round 2 by an agent's judgement that no band data exists for them; search them all the same.
+1. The web-search pass, the rest: 81 of layer 3's 696 blockers still have no web-search attempt dated 2026-11-03
+   (tax 27, ages 20, licence 9, credit 7, numbers 5, ids 4, formats 4, cards 3, passports 1, work 1). Three rounds held each agent to 20 searches. Laos' Law No. 88/NA on income tax (in force 1 July 2026; law
+   firms report it cuts the withholding on performing-arts fees from 10% to 5%) is still unread at the Official
+   Gazette, and the tax engine holds 10%.
 2. Wave 2: layer 3's 737 facts held only at second hand (citizenship and visits most of them): re-read each source and
    search for the primary it quotes.
 3. Wave 3: re-read the sources of layer 3's 3,037 found facts, re-check every pinned file's hash, and take any newer
