@@ -1,7 +1,7 @@
 {
  "topic": "tax.DK",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Denmark: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, any authors' treatment, VAT's threshold, the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax*.md); every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Denmark: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, any authors' treatment, VAT's threshold, the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax*.md); every quote checked by the lead against its saved page. Re-read 2026-11-03 (wave 3): skat.dk's satser held the 2026 column cited and a 2027 column (personfradrag 55.700 kr., beskæftigelsesfradrag 12,75% to 65.200 kr., jobfradrag 4,50% to 3.200 kr., mellemskat 7,5% over 659.900 kr., topskat 7,5% over 800.500 kr., toptopskat 5% over 2.668.200 kr., skatteloft 44,57%, am-bidrag 8%); the rule in force stays 2026's, and the 2027 figures were read into a scale dated 1 January 2027 (figure 9), at 2026's Copenhagen rate until the municipalities' 2027 rates are read. The 2027 scale's municipal rate (Copenhagen's 23.39%) wasn't read as adopted: Copenhagen's own budget annex for 2027 (Borgerrepræsentationen, meeting of 1 October 2026, bilag 3, read 2026-11-03) assumed an unchanged udskrivningsprocent of 23.39, and the rate the council set wasn't found on kk.dk or skm.dk that day, so the 2027 scale holds the annex's figure until the adopted rate is read.",
  "figures": [
   {
    "item": "residents",
@@ -276,6 +276,72 @@
      "said": "Timelønssats for 2026 Mænd: 258,69 kr. Kvinder: 233,62 kr."
     }
    ]
+  },
+  {
+   "item": "residents",
+   "finding": "From 2027 the state thresholds rise: the 7.5% middle tax applies above DKK 659,900, the 7.5% top tax above DKK 800,500 and the 5% top-top tax above DKK 2,668,200; the bottom tax stays 12.01%, the personal allowance rises to DKK 55,700 and the employment deduction stays 12.75% up to DKK 65,200.",
+   "value": {
+    "currency": "DKK",
+    "from": "2027-01-01",
+    "state": [
+     {
+      "from": 0,
+      "to": 659900,
+      "rate": 0.1201
+     },
+     {
+      "from": 659900,
+      "to": 800500,
+      "rate": 0.1951
+     },
+     {
+      "from": 800500,
+      "to": 2668200,
+      "rate": 0.2701
+     },
+     {
+      "from": 2668200,
+      "to": null,
+      "rate": 0.3201
+     }
+    ],
+    "personfradrag": 55700,
+    "beskaeftigelsesfradrag": {
+     "rate": 0.1275,
+     "max": 65200
+    }
+   },
+   "applies": "Income year 2027, from skat.dk's 2027 column (read 2026-11-03); the cumulative state rates add the layers as in 2026. The municipal rate is 2026's (Copenhagen 23.39%) until the municipalities' 2027 rates are read; am-bidrag stays 8%.",
+   "sources": [
+    {
+     "src": 10,
+     "said": "Bundskat: 12,01%"
+    },
+    {
+     "src": 10,
+     "said": "Mellemskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 7,5 % / 659.900 kr."
+    },
+    {
+     "src": 10,
+     "said": "Topskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 7,5 % / 800.500 kr."
+    },
+    {
+     "src": 10,
+     "said": "Toptopskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 5 % / 2.668.200 kr."
+    },
+    {
+     "src": 10,
+     "said": "Personfradrag (fyldt 18 år): 55.700 kr."
+    },
+    {
+     "src": 10,
+     "said": "Beskæftigelsesfradrag (procent): 12,75%"
+    },
+    {
+     "src": 10,
+     "said": "Beskæftigelsesfradrag (maksimalt): 65.200 kr."
+    }
+   ]
   }
  ],
  "country": "DK",
@@ -283,42 +349,42 @@
   {
    "url": "https://skat.dk/hjaelp/bundskat-mellemskat-topskat-og-toptopskat",
    "title": "Bundskat, mellemskat, topskat og toptopskat (Skattestyrelsen, skat.dk)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "Bundskat: 12,01 % Alle, der har en indkomst, betaler bundskat. Du skal dog kun betale bundskat af den del af din personlige indkomst, der overstiger dit personfradrag. … For 2026 gælder det, at hvis du har en personlig indkomst over 641.200 kr. efter am-bidrag, skal du betale 7,5 % i mellemskat af indkomsten, der overstiger dette beløb … Topskat: 7,5 % Hvis du har en personlig indkomst over 777.900 kr. efter am-bidrag, skal du betale 7,5 % i topskat af indkomsten, der overstiger dette beløb. Toptopskat: 5 % Hvis du har en personlig indkomst over 2.592.700 kr. efter am-bidrag, skal du betale 5 % i toptopskat af indkomsten, der overstiger dette beløb. Derudover betaler man kommuneskat, og medlemmer af folkekirken betaler kirkeskat."
   },
   {
    "url": "https://skat.dk/hjaelp/satser",
    "title": "Satser (skat.dk), 2026 column, read from the page's embedded data in DK-skat-satser.html and extracted label by label",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "Skatteloft (personlig indkomst): 44,57% … Personfradrag (fyldt 18 år): 54.100 kr. … Beskæftigelsesfradrag (procent): 12,75% … Beskæftigelsesfradrag (maksimalt): 63.300 kr. … Jobfradrag (maksimalt): 3.100 kr."
   },
   {
    "url": "https://svmn.dk/media/0oia30i5/kommuneskattesatser_2026.xlsx",
    "title": "Kommuneskattesatser 2026 (Skatte- og Vækstministeriet, xlsx; dumped to CSV beside it)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "København,Hovedstaden,101,1084,50,23.39,0.8,0,,5.1 … Lolland,Sjælland,360,1085,55,26.3,1.23,1.2399999999999984,,17.4"
   },
   {
    "url": "https://skat.dk/borger/aarsopgoerelse/aarsopgoerelsen-hvornaar-sker-hvad",
    "title": "Årsopgørelsen – hvornår sker hvad (skat.dk)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "20. maj 2026 Frist for at rette i årsopgørelsen. Fristen er normalt 1. maj, men er i år forlænget for at give dig bedre tid til at rette dine oplysninger. 1. juli 2026 Frist for at udfylde oplysningsskemaet"
   },
   {
    "url": "https://skat.dk/borger/am-bidrag",
    "title": "Am-bidrag (arbejdsmarkedsbidrag) (skat.dk)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "Arbejdsmarkedsbidrag (am-bidrag) er en skat på 8 %, som du betaler af alt løn. … Honorarer (fx hvis du har holdt foredrag) Bestyrelseshonorarer … Overskud af selvstændig virksomhed … Din arbejdsgiver trækker am-bidraget af din løn, efter at ATP og eget pensionsbidrag er fratrukket, men før den øvrige skat trækkes. … Hvis du har en fast B-indkomst, som du har registreret i din forskudsopgørelse, bliver dit am-bidrag automatisk regnet ind i dine B-skatterater."
   },
   {
    "url": "https://tax.dk/jv/cf/C_F_8_2_2_17_2.htm",
    "title": "Den Juridiske Vejledning 2026-2, C.F.8.2.2.17.2 (mirror at tax.dk; converted to UTF-8 beside the saved page)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://info.skat.dk/jura",
    "said": "Bemærk Danmark kan som kildeland ikke altid udnytte beskatningsretten efter artikel 17. Der er kun begrænset skattepligt til Danmark, hvis der foreligger et tjenesteforhold til en dansk arbejdsgiver eller en udenlandsk arbejdsgiver med fast driftssted her i landet, eller personen selv har fast driftssted her i landet."
@@ -326,7 +392,7 @@
   {
    "url": "https://tax.dk/jv/cf/C_F_3_2_4.htm",
    "title": "Den Juridiske Vejledning 2026-2, C.F.3.2.4 Skatteberegning (mirror at tax.dk; converted to UTF-8 beside the saved page)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://info.skat.dk/jura",
    "said": "For begrænset skattepligtige beregnes indkomstskatterne til staten efter de normale regler. Begrænset skattepligtige betaler de almindelige statsskatter herunder arbejdsmarkedsbidrag. Se PSL § 5. Derudover betales kommuneskat med den gennemsnitlige kommunale udskrivningsprocent nedrundet til nærmeste hele procent. Se PSL § 8 c. Begrænset skattepligtige betaler ikke kirkeskat. … For personer, der er begrænset skattepligtig hele året efter KSL § 2, stk. 1, nr. 1 og 9-13, eller stk. 2, 1.-3. pkt., nedsættes de beregnede skatter med skatteværdien af et personfradrag efter PSL § 10, stk. 5, jf. stk. 1-2."
@@ -334,7 +400,7 @@
   {
    "url": "https://tax.dk/jv/da/D_A_5_7_1.htm",
    "title": "Den Juridiske Vejledning 2026-2, D.A.5.7.1 Lovgrundlag (mirror at tax.dk; converted to UTF-8)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "secondary",
    "quotes": "https://info.skat.dk/jura",
    "said": "7) Ydelser leveret af forfattere og kunstnere, herunder udøvende kunstnere, i forbindelse med forfattervirksomhed og kunstnerisk aktivitet. Fritagelsen omfatter dog ikke overdragelse af ophavsrettigheder"
@@ -342,16 +408,23 @@
   {
    "url": "https://skat.dk/erhverv/moms/i-gang-med-moms",
    "title": "I gang med moms (skat.dk)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "I Danmark er momsen som udgangspunkt 25 % af varens eller ydelsens værdi. … Du skal betale moms, hvis du sælger momspligtige varer eller ydelser for mere end 50.000 kr. inden for et kalenderår."
   },
   {
    "url": "https://www.borger.dk/pension-og-efterloen/atp-livslang-pension-oversigt/atp-bidraget/atp-satser-for-privat-virksomhed",
    "title": "ATP-satser for 2026 i privat virksomhed (borger.dk, written by ATP Livslang Pension)",
-   "read": "2026-11-01",
+   "read": "2026-11-03",
    "kind": "primary",
    "said": "Mindst 117 timer 99,00 198,00 297,00 Under 117 timer - med mindst 78 timer 66,00 132,00 198,00 … Timelønssats for 2026 Mænd: 258,69 kr. Kvinder: 233,62 kr."
+  },
+  {
+   "url": "https://skat.dk/hjaelp/satser",
+   "title": "Satser (skat.dk), 2027 column, read from the page's embedded data and extracted label by label",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Bundskat: 12,01% … Mellemskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 7,5 % / 659.900 kr. … Topskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 7,5 % / 800.500 kr. … Toptopskat (fra 2026) / skattegrænse efter am-bidrag er fratrukket: 5 % / 2.668.200 kr. … Personfradrag (fyldt 18 år): 55.700 kr. … Beskæftigelsesfradrag (procent): 12,75% … Beskæftigelsesfradrag (maksimalt): 65.200 kr. … Am-bidrag (arbejdsmarkedsbidrag): 8 %"
   }
  ],
  "blockers": []

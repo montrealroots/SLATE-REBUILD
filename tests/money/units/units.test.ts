@@ -13,8 +13,11 @@ describe('units', () => {
     expect(inUnits('1', 'UMA', '2026-01-31')).toStrictEqual(money('MXN', 11_314));
     expect(inUnits('6', 'UMA', '2016-01-28')).toStrictEqual(money('MXN', 43_824));
     expect(inUnits('1', 'UMA', '2016-01-27')).toBeUndefined();
-    // The UR of each month: September 2026's 1,940.77, January 2024's 1,638.35 from the first of the month.
-    expect(inUnits('1.25', 'UR', '2026-10-30')).toStrictEqual(money('UYU', 242_596));
+    // The UR of each month: September 2026's 1,940.77, October 2026's 1,946.95, January 2024's 1,638.35 from the first
+    // of the month. Until 2026-11-03 INE's series ended at September and 2026-10-30 read 1,940.77 (242,596); INE's
+    // spreadsheet of that day gave October's 1,946.95, so 2026-10-30 now reads it (2,433.6875, half to even 243,369).
+    expect(inUnits('1.25', 'UR', '2026-09-30')).toStrictEqual(money('UYU', 242_596));
+    expect(inUnits('1.25', 'UR', '2026-10-30')).toStrictEqual(money('UYU', 243_369));
     expect(inUnits('1.25', 'UR', '2024-01-01')).toStrictEqual(money('UYU', 204_794));
     expect(inUnits('1', 'UR', '2023-12-31')).toBeUndefined();
   });

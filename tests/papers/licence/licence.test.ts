@@ -20,7 +20,9 @@ describe('the licences', () => {
     // Nayarit's 8.5 UMA in 2026 and in 2025; Cerro Largo's 1.25 UR with its $333 of stamps.
     expect(feeOn({ count: '8.5', unit: 'UMA' }, '2026-10-30')).toStrictEqual(money('MXN', 99_714));
     expect(feeOn({ count: '8.5', unit: 'UMA' }, '2025-06-01')).toStrictEqual(money('MXN', 96_169));
-    expect(feeOn({ count: '1.25', unit: 'UR', plus: money('UYU', 33_300) }, '2026-10-30')).toStrictEqual(money('UYU', 275_896));
+    // 2026-10-30 read September's UR, 1,940.77 (275,896), until INE's series gave October's 1,946.95 on 2026-11-03.
+    expect(feeOn({ count: '1.25', unit: 'UR', plus: money('UYU', 33_300) }, '2026-09-30')).toStrictEqual(money('UYU', 275_896));
+    expect(feeOn({ count: '1.25', unit: 'UR', plus: money('UYU', 33_300) }, '2026-10-30')).toStrictEqual(money('UYU', 276_669));
     // Before a unit's first value, or a unit the game doesn't hold, the fee isn't known.
     expect([feeOn({ count: '1', unit: 'UR', plus: money('UYU', 100) }, '2023-01-01'), feeOn({ count: '1', unit: 'UF' }, '2026-10-30')]).toEqual([undefined, undefined]);
   });

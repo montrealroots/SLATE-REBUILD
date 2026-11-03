@@ -5429,6 +5429,15 @@
   "currency": "SGD",
   "routes": [
    {
+    "id": "school",
+    "where": "home",
+    "speed": "standard",
+    "within": {
+     "n": 1,
+     "unit": "month"
+    }
+   },
+   {
     "id": "register",
     "where": "home",
     "speed": "standard",
@@ -5451,6 +5460,7 @@
    {
     "validYears": null,
     "pay": {
+     "school": 1000,
      "register": 1000
     },
     "from": 15,

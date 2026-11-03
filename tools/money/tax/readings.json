@@ -1877,6 +1877,21 @@
       "minimum": {"fig":1,"path":["personfradrag"]}
      }
     ]
+   },
+   {
+    "from": {"fig":9,"path":["from"]},
+    "layers": [
+     {
+      "bands": {"fig":9,"path":["state"]},
+      "shares": [{"rate":{"fig":3,"path":["amBidrag"]}}],
+      "minimum": {"fig":9,"path":["personfradrag"]}
+     },
+     {
+      "bands": [{"from":0,"to":null,"rate":{"fig":0,"path":["municipal","example","København"]}}],
+      "shares": [{"rate":{"fig":3,"path":["amBidrag"]}},{"rate":{"fig":9,"path":["beskaeftigelsesfradrag","rate"]},"max":{"fig":9,"path":["beskaeftigelsesfradrag","max"]}}],
+      "minimum": {"fig":9,"path":["personfradrag"]}
+     }
+    ]
    }
   ],
   "social": {

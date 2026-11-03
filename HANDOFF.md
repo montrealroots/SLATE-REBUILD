@@ -137,6 +137,25 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
   987, Mali's biometric card of 2023, Tonga's 2020 revised Act); Guyana's list (Germany left out, set to need a visa)
   and the United States' visa waiver list (Romania) to confirm; a second reader for the Dhivehi (Maldives) and Khmer
   (Cambodia) texts.
+- Wave 3 (2026-11-03, night): every source of layer 3's 3,258 found facts read before that day was read again. A
+  script fetched all 5,522 addresses and checked each quoted fragment verbatim: 5,220 sources matched and were re-dated
+  by the lead (the 12 addresses cited twice in one entry with mixed results were left to the agents); nine agents, one
+  per engine, read the 1,668 that didn't match by hand (pages drawn by script, PDF columns, scans by OCR, moved pages),
+  and two release agents re-read the World Inequality Database (its bulk file of 30 October 2026: all 2,588 quoted rows
+  unchanged, the series still ending at 2024) and the Treasury's and central banks' exchange rates (latest record date
+  still 2026-09-30). 3,143 of the 3,258 now have every source read on 2026-11-03; the other 180 sources answered with a
+  bot check, a failed connection or an expired certificate (none was got past), keep their earlier dates, and their
+  files say what was tried; such a fact stays found on its earlier read, as it isn't contradicted. Changes from the
+  sources as they stand: Saudi Arabia's AlJazira card rate 2.9% a month (was 2.20%); Belarus' card rates (the
+  refinancing rate fell); Uruguay's OCA rate 55% from 1 November 2026 (was 61%); Argentina's Banco Nación card fees
+  from the bank's own schedule (11,447.81 a month and 203,534.10 a year, the central bank's register still showing the
+  older); OP's account fee in Finland rising to 2.60 euros from 2027; Singapore's identity card registered at school
+  ready in a month; Mauritania's lost 64-page passport 12,000 MRU; Ireland's passport terms (10 years for an adult, 5
+  for a child, from the Department's fees page); British Columbia's full licence from 20, not 21 (ICBC's learner
+  stage now one year; re-read by the lead); Western Australia's exchange list gaining 14 countries from 31 October
+  2026; Uruguay's UR for October 2026; South Sudan's pound from 30 October 2026; Denmark's 2027 tax scale, dated
+  2027-01-01 (its municipal rate is the 23.39% Copenhagen's own budget annex assumed, the adopted rate unread). WID's
+  codes were written wrongly in the notes (ahwealj992 for ahweal992j) and are corrected.
 - The register: 4,933 entries, 3,562 found, 592 secondary, 779 blocked (layer 3: 3,258 found, 550 secondary, 686
   blocked).
 
@@ -279,8 +298,11 @@ session's agents were given; change the date, the scratchpad path and the groups
    2026-11-03). A fifth round is the owner's call; the leads it would follow are in each blocker's attempts.
 2. Wave 2 is done (two passes): layer 3's 550 facts still at second hand each record what both passes tried. A
    third pass is the owner's call.
-3. Wave 3: re-read the sources of layer 3's 3,258 found facts, re-check every pinned file's hash, and take any newer
-   release (exchange rates, the World Inequality Database's release of 2026-10-30 for the family means, tax years).
+3. Wave 3 is done. Left from it: 24 entries cite a legal information institute's copy (PacLII, RwandaLII,
+   ZambiaLII, LesothoLII, MalawiLII, NamibLII, TanzLII, Laws.Africa's consolidations) as primary, 16 of them resting on
+   it alone, against the ruling that such a copy is secondary (Kenya Law, the state's own law reporter, and the
+   gazette scans Laws.Africa hosts are primary): relabel them, or find the state's own text; and the sweep for newer
+   editions of dated fee schedules wasn't finished beyond Kenya's and Côte d'Ivoire's.
 4. Integrate each wave by engine, merge the register, then prove layer 3 on CI (`npm run gate:full` takes over two
    hours here) and record it.
 5. The owner then pulls and merges, and picks what comes over in layer 4.
@@ -341,6 +363,12 @@ session's agents were given; change the date, the scratchpad path and the groups
   no trigger here; setup-node now caches npm's downloads itself; upload-artifact still zips by default.
 
 ## Questions for the owner
+
+- The family means' income is WID's average post-tax national income (adiinc992j), which counts public spending as
+  income; WID's post-tax disposable income (acainc992j) has no percentile cuts for any of the 215 countries. A family
+  starts with one month of the national figure in checking, which overstates its cash. Say whether to keep it (said
+  so to the player), scale it by each country's ratio of disposable to national income where WID gives both averages,
+  or seek a household survey's disposable income per country instead.
 
 - Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
   Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian

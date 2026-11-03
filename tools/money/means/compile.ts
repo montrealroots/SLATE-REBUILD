@@ -8,8 +8,10 @@ import { isCurrency, minorUnits, rational, roundHalfEven, type CurrencyCode } fr
  * Compiles the means each family a life can be born into gives it on the first morning (src/money/means/means.json),
  * from the research's files, one per country (research/sources/money/means/<CC>.json, register fact money.means.<CC>),
  * each checked against the SHA-256 its register entry cites before a byte of it is read. A country's file gives, from
- * the World Inequality Database, the average net personal wealth (`wealth`) and the average post-tax disposable income
- * a year (`income`) per adult, for the bottom 20, 40, 60, 90 and 99 percent (`p0p20` ... `p0p99`) and the top 1 percent
+ * the World Inequality Database, the average net personal wealth (`wealth`, ahweal992j) and the average post-tax national
+ * income a year (`income`, adiinc992j: post-tax disposable income plus public spending, by the database's metadata, read
+ * 2026-11-03; until then this comment called it post-tax disposable income, which the database gives at these percentiles
+ * for no country) per adult, for the bottom 20, 40, 60, 90 and 99 percent (`p0p20` ... `p0p99`) and the top 1 percent
  * (`p99p100`), in the currency (`currency`) of the year (`year`) the database gives them; where that is a currency since
  * replaced, the file names it (`replaced`: the old currency and how many of it one of the new is worth, as the issuer
  * fixed it), and the amounts are carried into the new.

@@ -135,6 +135,7 @@ describe("a country's tax", () => {
       ['IN', '1200000', '2026-04-01', '0.00'], // the rebate takes the 60,000 to nothing up to 12 lakh
       ['IN', '1300000', '2026-04-01', '78000.00'], // no rebate above it, and 4% cess
       ['DK', '500000', '2026-01-01', '128882.73'], // state and Copenhagen, after am-bidrag and the work deduction
+      ['DK', '500000', '2027-01-01', '128211.08'], // 2027's scale (skat.dk, read 2026-11-03): 12.01% of 404,300 and 23.39% of 340,550
       ['NO', '600000', '2026-01-01', '98582.60'], // 22% after the minimum deduction and personal allowance, and trinnskatt
       ['MX', '300000', '2026-01-01', '41419.92'], // 22,282.14 and 21.36% above 210,403.70
       ['BR', '100000', '2026-01-01', '16595.34'], // 27.5% less 10,904.66
