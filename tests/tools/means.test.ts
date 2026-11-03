@@ -117,6 +117,11 @@ describe('the family means compile', () => {
     expect(cash('US', { ...CASH, basis: 'gross', disposable: { code: 'B.6g', value: '1' }, national: { code: 'B.5g', value: '2.50' } })).toStrictEqual({ num: 100n, den: 250n });
     expect(cash('US', { ...CASH, derived: true, disposable: { code: 'B.6n', gross: '3.5', less: '0.5' }, national: { code: 'B.5n', gross: '5', less: '1' } })).toStrictEqual({ num: 300n, den: 400n });
     expect(cash('US', { ...CASH, year: 2019, sector: 'S.14+S.15' })).toStrictEqual(q(3, 4));
+    // Either side derived alone: a sum of published parts (a sector's quarters), or a net figure's gross less its
+    // consumption of fixed capital beside a published one.
+    expect(cash('US', { ...CASH, derived: true, disposable: { code: 'B.6n', sum: ['1', '0.5', '1.5'] } })).toStrictEqual({ num: 300n, den: 400n });
+    expect(cash('US', { ...CASH, basis: 'gross', derived: true, disposable: { code: 'B.6g', value: '3' }, national: { code: 'B.5g', sum: ['1.5', '2.50'] } })).toStrictEqual({ num: 3000n, den: 4000n });
+    expect(cash('US', { ...CASH, derived: true, disposable: { code: 'B.6n', gross: '4', less: '1' } })).toStrictEqual(q(3, 4));
     const no = "US's cash is the year, currency, sector, basis, whether derived and the two figures, nothing else";
     for (const [bad, error] of [
       [null, no],
@@ -130,21 +135,27 @@ describe('the family means compile', () => {
       [{ ...CASH, sector: 'S.15' }, "US's cash is of households, S.14 or S.14+S.15"],
       [{ ...CASH, sector: undefined }, "US's cash is of households, S.14 or S.14+S.15"],
       [{ ...CASH, basis: 'Net' }, "US's cash is net or gross"],
-      [{ ...CASH, derived: 'false' }, "US's cash says whether its net figures were derived"],
-      [{ ...CASH, derived: true, basis: 'gross' }, "US's cash says whether its net figures were derived"],
-      [{ ...CASH, disposable: { code: 'B.6g', value: '3' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, national: { code: 'B.6n', value: '4' } }, "US's cash gives B.5n as value, each a decimal"],
-      [{ ...CASH, basis: 'gross' }, "US's cash gives B.6g as value, each a decimal"],
-      [{ ...CASH, disposable: null }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n', value: '3', less: '1' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n', value: 3 } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n', value: '-3' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n', value: '3x' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, disposable: { code: 'B.6n', value: 'x3' } }, "US's cash gives B.6n as value, each a decimal"],
-      [{ ...CASH, derived: true }, "US's cash gives B.6n as gross and less, each a decimal"],
-      [{ ...CASH, derived: true, disposable: { code: 'B.6n', less: '1', gross: '3' } }, "US's cash gives B.6n as gross and less, each a decimal"],
-      [{ ...CASH, derived: true, disposable: { code: 'B.6n', gross: '3', less: 1 } }, "US's cash gives B.6n as gross and less, each a decimal"],
+      [{ ...CASH, derived: 'false' }, "US's cash says whether a figure was derived"],
+      [{ ...CASH, derived: true }, "US's cash says whether a figure was derived"],
+      [{ ...CASH, disposable: { code: 'B.6n', sum: ['1', '2'] } }, "US's cash says whether a figure was derived"],
+      [{ ...CASH, national: { code: 'B.5n', gross: '5', less: '1' } }, "US's cash says whether a figure was derived"],
+      [{ ...CASH, disposable: { code: 'B.6g', value: '3' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, national: { code: 'B.6n', value: '4' } }, "US's cash gives B.5n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, basis: 'gross' }, "US's cash gives B.6g as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: null }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n', value: '3', less: '1' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n', value: 3 } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n', value: '-3' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n', value: '3x' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, disposable: { code: 'B.6n', value: 'x3' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, basis: 'gross', derived: true, disposable: { code: 'B.6g', gross: '3', less: '1' }, national: { code: 'B.5g', value: '4' } }, "US's cash gives B.6g as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', sum: ['3'] } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', sum: '3' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', sum: ['3', 1] } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', sum: ['3', '-1'] } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', less: '1', gross: '3' } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
+      [{ ...CASH, derived: true, disposable: { code: 'B.6n', gross: '3', less: 1 } }, "US's cash gives B.6n as a value, a net figure's gross and less, or a sum of two or more, each a decimal"],
       [{ ...CASH, disposable: { code: 'B.6n', value: '0' } }, "US's cash gives B.6n above nothing"],
       [{ ...CASH, national: { code: 'B.5n', value: '0.0' } }, "US's cash gives B.5n above nothing"],
       [{ ...CASH, derived: true, disposable: { code: 'B.6n', gross: '3', less: '3' }, national: { code: 'B.5n', gross: '4', less: '1' } }, "US's cash gives B.6n above nothing"],
@@ -162,6 +173,10 @@ describe('the family means compile', () => {
     expect(cash('US', file('US')['cash'])).toStrictEqual({ num: 21_875_665_000_000n - 1_160_813_000_000n, den: 28_993_443_000_000n - 4_796_699_000_000n });
     // Norway, Statistics Norway's own net figures for 2024, in millions of kroner.
     expect(cash('NO', file('NO')['cash'])).toStrictEqual({ num: 2_030_778n, den: 4_560_822n });
+    // Togo, INSEED's accounts for 2020: gross national income the sum of its five sectors' primary balances. Thailand,
+    // the NESDC's for 2024: households' net disposable income derived, the national income's published net.
+    expect(cash('TG', file('TG')['cash'])).toStrictEqual({ num: 3_800_993n, den: 115_450n + 3_592_526n + 536_119n + 20_810n + 74_661n });
+    expect(cash('TH', file('TH')['cash'])).toStrictEqual({ num: 11_096_677n - 236_953n, den: 14_885_487n });
     // Take Qatar's ratio out of its file and its families get the national income again, public spending in it.
     const qa = file('QA');
     falsifyAny({ feature: 'means.first-morning', claim: 'bites', says: "a country's national accounts' ratio, a family's own income on the first morning", base: qa, twin: { ...qa, cash: undefined }, outcome: (x) => compileCountry('QA', x).families.modest.checking });

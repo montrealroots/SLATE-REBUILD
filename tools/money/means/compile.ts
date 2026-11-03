@@ -18,9 +18,10 @@ import { isCurrency, minorUnits, rational, roundHalfEven, type CurrencyCode } fr
  *
  * The income is a family's own, by the owner's ruling of 2026-11-03 ("National-accounts ratio"): each cut is scaled by
  * the country's ratio of households' disposable income to national income in its official national accounts (`cash`:
- * the two figures with their codes, the sector, net or gross, the year, the currency, and whether each net figure was
- * derived as the gross less consumption of fixed capital from the same table, series and year), exactly, before a band
- * is read from the cuts. A ratio stands only from a year of 2019 or later (the lead's ruling of the same day), of
+ * the two figures with their codes, the sector, net or gross, the year, the currency, and whether a figure was derived:
+ * a net figure as the gross less consumption of fixed capital from the same table, series and year, or a sum of
+ * published parts), exactly, before a band is read from the cuts. A ratio stands only from a year of 2019 or later
+ * (the lead's ruling of the same day), of
  * households alone where that's published, else with the non-profit institutions serving them, net where that's
  * published, else gross over gross. Until 2026-11-03 the income was the database's post-tax national income as it
  * stood, public spending (schools, health care) counted as the family's, so a US family of modest means started with
@@ -152,8 +153,9 @@ const POSITIVE = /^\d+(\.\d+)?$/;
 /**
  * A country's national accounts' ratio of households' disposable income to national income, exactly, from its file's
  * `cash`: of a year from 2019 on, of households (S.14) or households with the institutions serving them (S.14+S.15),
- * net or gross on both sides, each figure as published (`value`) or, where `derived`, its gross less its consumption of
- * fixed capital (`gross`, `less`).
+ * net or gross on both sides, each figure as published (`value`) or derived (`derived`, from 2026-11-03 either side
+ * alone): a net figure as its gross less its consumption of fixed capital (`gross`, `less`), or a sum of published parts
+ * (`sum`). Until 2026-11-03 only both sides' gross less consumption of fixed capital was taken as derived.
  */
 export function cash(code: string, c: unknown): Q {
   const { year, currency, sector, basis, derived, disposable, national, ...rest } = (typeof c === 'object' && c !== null ? c : {}) as { [k: string]: unknown };
@@ -162,20 +164,29 @@ export function cash(code: string, c: unknown): Q {
   if (!isCurrency(String(currency))) throw new Error(`${code}'s cash names its figures' currency`);
   if (sector !== 'S.14' && sector !== 'S.14+S.15') throw new Error(`${code}'s cash is of households, S.14 or S.14+S.15`);
   if (basis !== 'net' && basis !== 'gross') throw new Error(`${code}'s cash is net or gross`);
-  if (typeof derived !== 'boolean' || (derived && basis === 'gross')) throw new Error(`${code}'s cash says whether its net figures were derived`);
-  const figure = (side: unknown, item: string): Q => {
+  // A figure as published (`value`), or derived: a net figure its gross less its consumption of fixed capital
+  // (`gross`, `less`), or a sum of published parts (`sum`: a sector's quarters, consumption and saving, the sectors'
+  // primary balances).
+  const figure = (side: unknown, item: string): { q: Q; derived: boolean } => {
     const want = `B.${item}${basis === 'net' ? 'n' : 'g'}`;
     const { code: named, ...parts } = (typeof side === 'object' && side !== null ? side : {}) as { [k: string]: unknown };
-    const keys = derived ? ['gross', 'less'] : ['value'];
-    if (named !== want || Object.keys(parts).join() !== keys.join() || !Object.values(parts).every((v) => typeof v === 'string' && POSITIVE.test(v))) throw new Error(`${code}'s cash gives ${want} as ${keys.join(' and ')}, each a decimal`);
-    const [a, b = '0'] = Object.values(parts).map(String) as [string, string?];
-    const [x, y] = [rational(a), rational(b)];
-    const q = { num: x.num * y.den - y.num * x.den, den: x.den * y.den };
+    const form = Object.keys(parts).join();
+    const figures: unknown[] = Array.isArray(parts['sum']) ? parts['sum'] : Object.values(parts);
+    const shaped = form === 'value' || (form === 'gross,less' && basis === 'net') || (form === 'sum' && figures.length > 1);
+    if (named !== want || !shaped || !figures.every((v) => typeof v === 'string' && POSITIVE.test(v))) throw new Error(`${code}'s cash gives ${want} as a value, a net figure's gross and less, or a sum of two or more, each a decimal`);
+    let q: Q = { num: 0n, den: 1n };
+    for (const [i, v] of figures.entries()) {
+      const x = rational(v as string);
+      // num/den + or - x, kept exact: the second of gross and less is taken away.
+      q = { num: q.num * x.den + (form === 'gross,less' && i === 1 ? -x.num : x.num) * q.den, den: q.den * x.den };
+    }
     if (q.num <= 0n) throw new Error(`${code}'s cash gives ${want} above nothing`);
-    return q;
+    return { q, derived: form !== 'value' };
   };
-  const d = figure(disposable, '6');
-  const n = figure(national, '5');
+  const { q: d, derived: dd } = figure(disposable, '6');
+  const { q: n, derived: nd } = figure(national, '5');
+  // Whether a figure was derived, said as true or false: anything else is neither.
+  if (derived !== (dd || nd)) throw new Error(`${code}'s cash says whether a figure was derived`);
   return { num: d.num * n.den, den: d.den * n.num };
 }
 

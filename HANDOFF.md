@@ -337,11 +337,15 @@ session's agents were given; change the date, the scratchpad path and the groups
   ratio"): WID's post-tax national income bands (adiinc992j) are scaled by each country's ratio of households'
   disposable income to national income from its official national accounts (the UN Statistics Division's tables or
   the statistics office's own); where none is published, the unscaled figure is kept and the player is told it
-  includes public spending. Done for 74 countries on 2026-11-03 (ratios from 0.296, Qatar, to 0.952, Guatemala; the
+  includes public spending. Done for 83 countries on 2026-11-03 (74 from the UN Statistics Division's, Eurostat's,
+  the OECD's and Statistics Norway's tables, 9 more from the statistics offices' own: Georgia, Thailand, Taiwan,
+  Tunisia, Togo, Saudi Arabia, Singapore, the Philippines, Tajikistan) (ratios from 0.296, Qatar, to 0.952, Guatemala; the
   latest year from 2019 on, an older ratio recorded but not held; a net derived as gross less fixed-capital use
   stands, labelled; gross or households-with-NPISH stands where nothing narrower is published for that year); the
-  other 141 keep the unscaled figure and the player's line (means.income-public) says it includes public spending.
-  A further search of those 141 countries' own statistics offices is under way; any ratio it finds is data only.
+  other 132 keep the unscaled figure and the player's line (means.income-public) says it includes public spending.
+  The other 132 were searched in their own statistics offices and central banks that night and publish no household
+  disposable income account from 2019 on, or didn't answer (each file says which); Gabon's, Equatorial Guinea's,
+  Guinea-Bissau's and Eritrea's offices weren't reached by that search and are left to a later pass.
 
 - Slovakia's citizenship keeps the simple form (the owner, 2026-11-03: "Keep the simple form for Slovakia"): loss on
   taking another citizenship is held as no, though Act 40/1993 s. 9(16) takes it unless the person had five years'

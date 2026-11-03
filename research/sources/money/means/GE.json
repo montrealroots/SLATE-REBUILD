@@ -18,7 +18,22 @@
   "p0p99": "23651.2",
   "p99p100": "574990.7000000001"
  },
- "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Georgia, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in GEL of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]).",
+ "cash": {
+  "year": 2024,
+  "currency": "GEL",
+  "sector": "S.14",
+  "basis": "net",
+  "derived": false,
+  "disposable": {
+   "code": "B.6n",
+   "value": "59789.68874219982"
+  },
+  "national": {
+   "code": "B.5n",
+   "value": "78128.08082181434"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Georgia, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in GEL of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), searched again on 2026-11-03 in the statistics office's own accounts: Geostat's Sector Accounts 2024 (Sector-Accounts-2024.xlsx), 2024: the net disposable income (B.6n) of households alone (S.14), 59,789.69, and net national income (B.5n, S.1) 78,128.08, in millions of lari, as published, a ratio of about 0.765 (`cash`). The non-profit institutions serving households were a column of their own (S.15). Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
  "sources": [
   {
    "url": "https://wid.world/bulk_download/wid_all_data.zip",
@@ -31,6 +46,12 @@
    "title": "World Inequality Database, bulk download, WID_metadata_GE.csv (variables ahweal992j and adiinc992j)",
    "read": "2026-11-03",
    "said": "GE;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;GEL; ... GE;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://www.geostat.ge/media/79763/Sector-Accounts-2024.xlsx",
+   "title": "National Statistics Office of Georgia (Geostat), Sector Accounts, 2024 (at current prices, mil. GEL), listed at https://www.geostat.ge/en/modules/categories/866 (National Accounts, Sector Accounts)",
+   "read": "2026-11-03",
+   "said": "Columns S.1 | S.11 | S.12 | S.13 | S.14 | S.15 | S.2. Allocation of primary income account: 'B.5n | Balance of primary incomes, net/National income, net | 78128.08082181434 | 9965.099844529384 | 2751.489869660696 | 12483.734436789788 | 52902.39352605109 | 25.363144783405904'. Secondary distribution of income account: 'B.6g | Disposable income, gross | 95351.01221271566 | 11934.204237324071 | 4044.9068450683267 | 18545.33053526193 | 60787.96037771852 | 38.610217342845985 | -9174.320600141515'; 'B.6n | Disposable income, net | 87302.40142195584 | 7004.140410254817 | 3930.042194335871 | 16553.166930381976 | 59789.68874219982 | 25.363144783405904 | -9174.320600141515'."
   }
  ]
 }

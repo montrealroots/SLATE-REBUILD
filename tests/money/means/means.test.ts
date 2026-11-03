@@ -26,8 +26,9 @@ describe('means', () => {
     // households' disposable income to national income. Norway's middle fifth, 86,104.00 kroner a month before, times
     // 2,030,778 over 4,560,822 (Statistics Norway, 2024, net): 38,339.17. Qatar's, 9,603.18 riyals, times 185,158 over
     // 625,940 million (UN Tables 4.6 and 4.1, 2019, gross): 2,840.70. Guatemala's, 3,200.48 quetzales, times 0.952
-    // (2024, gross): 3,046.19. The United States', 5,676.92 dollars, times 0.856 (2024, net): 4,860.02.
-    expect([meansOf('NO', 'modest')?.checking, meansOf('QA', 'modest')?.checking, meansOf('GT', 'modest')?.checking, meansOf('US', 'modest')?.checking]).toStrictEqual([money('NOK', 3_833_917), money('QAR', 284_070), money('GTQ', 304_619), money('USD', 486_002)]);
+    // (2024, gross): 3,046.19. The United States', 5,676.92 dollars, times 0.856 (2024, net): 4,860.02. Saudi Arabia's,
+    // 6,831.12 riyals, times 2,291,712 over 4,320,287 (GASTAT's own accounts, 2024, net): 3,623.60.
+    expect([meansOf('NO', 'modest')?.checking, meansOf('QA', 'modest')?.checking, meansOf('GT', 'modest')?.checking, meansOf('US', 'modest')?.checking, meansOf('SA', 'modest')?.checking]).toStrictEqual([money('NOK', 3_833_917), money('QAR', 284_070), money('GTQ', 304_619), money('USD', 486_002), money('SAR', 362_360)]);
     // Each family up the bands has more a month, in every country the game knows.
     for (const [code, m] of Object.entries(data.countries)) {
       const months = FAMILIES.map((f) => m.families[f].checking);
@@ -44,7 +45,7 @@ describe('means', () => {
     // Where a ratio is held, nothing to tell; nor where the family's means aren't known (the player's told that).
     expect([aboutIncome('US'), aboutIncome('QA'), aboutIncome('VA')]).toEqual([undefined, undefined, undefined]);
     const told = Object.entries(data.countries).filter(([code]) => aboutIncome(code as CountryCode) !== undefined).length;
-    expect([told, Object.keys(data.countries).length]).toEqual([141, 215]);
+    expect([told, Object.keys(data.countries).length]).toEqual([132, 215]);
   });
 
   it("tell the player what the game doesn't know", () => {
