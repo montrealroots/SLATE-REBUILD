@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 2
+Layer in progress: 3
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -18,9 +18,11 @@ Read `CLAUDE.md` first.
 - Layer 1 (the core) is proven: all six of SLATE's core engines, at the owner's word ("Every single one of them"), the
   full gate green in a fresh clone of the branch at `47bfeac7fda9`, recorded in `registry/layers.json` (2026-11-02).
   The owner merged it (`3ccce87`) and the branch restarted from `main` there.
-- Layer 2 (the world) is being built: all six of SLATE's world engines, at the owner's word ("Every single one of
-  them"). Its research is being read again at every source, and every blocker tried again, before it is proven. Layers
-  3 to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
+- Layer 2 (the world) is proven: all six of SLATE's world engines, at the owner's word ("Every single one of them"),
+  its research read again at every source and every blocker tried again; the full gate green in a fresh clone at
+  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). Layer 3 (the person's papers and money) is in
+  progress and has not started; nothing in it comes over until the owner picks it. Layers 4 to 7 have not started (6 is
+  dropped); the gate refuses code in a layer until every layer under it is proven.
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
 sources say:
@@ -152,12 +154,20 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 1, then picks what comes over in layer 2, the world: from SLATE, `world.gazetteer`,
-   `world.map`, `world.clock`, `world.weather`, `world.holidays` and `world.prices`. With the gazetteer comes 1221's
-   geo-check (the place axis and the all-places test), and the place count is set to the GeoNames release it reads.
+1. The owner pulls and merges layer 2, and answers the questions below if they wish.
+2. The owner picks what comes over in layer 3, the person's papers and money: from SLATE, the papers (`passports`,
+   `ids`, `citizenship`, `visits`, `ages`, `work`, `numbers`, `residence`, `licence`) and the money (`banks`,
+   `accounts`, `ledger`, `cards`, `credit`, `rates`, `means`, `formats`, `units`, `tax`). Its research is read again at
+   every source and every blocker tried again, as layer 2's was.
 
 ## Verification evidence
 
+- Layer 2's proof: `npm run gate:full` green in a fresh clone of the branch at `e3c205c47ce3` on GitHub Actions (run
+  41547356832), after `npx -y npm@11.6.2 ci`: every check green; 1,369 of 1,369 tests, every place of the map through
+  all six engines among them; audit 0 advisories; mutation 100.00% (9,815 of 9,815 mutants killed, static mutants
+  included); 9,697 s. The session's own fresh-clone run was stopped twice before it finished, once by the container's
+  restart and once at the two-hour limit of a background command; CI's run is the same command in a clean clone. The
+  next commit, `b41aafe`, changed `HANDOFF.md` alone.
 - Layer 1's proof: `npm run gate:full` green in a fresh clone of the branch at `47bfeac7fda9`, after
   `npx -y npm@11.6.2 ci`: every check green; 1,181 of 1,181 tests, the zic and zdump oracle and the ICU comparison
   among them; audit 0 advisories; mutation 100.00% (5,745 of 5,745 mutants killed, static mutants included); 778 s. It
@@ -183,6 +193,9 @@ SLATE proved at a 100% mutation score:
 
 ## Blockers and open issues
 
+- The full gate now takes about 2 h 40 min (9,815 mutants), longer than a session's background command may run, so
+  layers are proven on CI from here; CI's job may run 340 minutes. CI also logs an error that the step summary
+  (1,661k) is over GitHub's 1,024k; it fails nothing.
 - None for layer 0.
 - CI's actions moved from v4 (Node.js 20, which GitHub had stopped running) to exact releases on Node.js 24, each
   confirmed in its own repository on 2026-11-02 at the owner's word: `actions/checkout@v7.0.1` (2026-07-17),
