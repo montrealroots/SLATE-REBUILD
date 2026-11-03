@@ -333,6 +333,12 @@ session's agents were given; change the date, the scratchpad path and the groups
 
 ## Assumptions
 
+- The family means' income (the owner, 2026-11-03, after WID's own ratio proved unavailable: "National-accounts
+  ratio"): WID's post-tax national income bands (adiinc992j) are scaled by each country's ratio of households'
+  disposable income to national income from its official national accounts (the UN Statistics Division's tables or
+  the statistics office's own); where none is published, the unscaled figure is kept and the player is told it
+  includes public spending. In progress.
+
 - Slovakia's citizenship keeps the simple form (the owner, 2026-11-03: "Keep the simple form for Slovakia"): loss on
   taking another citizenship is held as no, though Act 40/1993 s. 9(16) takes it unless the person had five years'
   residence in the other state; the exception isn't modelled.
@@ -363,13 +369,6 @@ session's agents were given; change the date, the scratchpad path and the groups
   no trigger here; setup-node now caches npm's downloads itself; upload-artifact still zips by default.
 
 ## Questions for the owner
-
-- The family means' income is WID's post-tax national income (adiinc992j), which counts public spending as income, so
-  a family's first month of checking overstates its cash. The owner chose on 2026-11-03 to scale it by each country's
-  ratio of WID's post-tax disposable income (acainc992j) to national income; reading WID's file of 30 October 2026
-  showed that ratio can't be taken as ruled: no country has the disposable average for 2024 (the bands' year), 37
-  European countries have it to 2022 at latest, and none outside Europe has it at all. Nothing was changed; the
-  income stays unscaled until the owner chooses again.
 
 - Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
   Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian
