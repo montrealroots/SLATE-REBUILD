@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 2
+Layer in progress: 3
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -17,8 +17,48 @@ Read `CLAUDE.md` first.
   restarted from `main` there.
 - Layer 1 (the core) is proven: all six of SLATE's core engines, at the owner's word ("Every single one of them"), the
   full gate green in a fresh clone of the branch at `47bfeac7fda9`, recorded in `registry/layers.json` (2026-11-02).
-  Layer 2 (the world) is in progress and has not started; nothing in it comes over until the owner picks it. Layers 3
-  to 7 have not started (6 is dropped); the gate refuses code in a layer until every layer under it is proven.
+  The owner merged it (`3ccce87`) and the branch restarted from `main` there.
+- Layer 2 (the world) is proven: all six of SLATE's world engines, at the owner's word ("Every single one of them"),
+  its research read again at every source and every blocker tried again; the full gate green in a fresh clone at
+  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). Layer 3 (the person's papers and money) is in
+  progress and has not started; nothing in it comes over until the owner picks it. Layers 4 to 7 have not started (6 is
+  dropped); the gate refuses code in a layer until every layer under it is proven.
+
+What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
+sources say:
+
+- `world.gazetteer` (`src/world/gazetteer`): every country and territory (252), first-level region (3,865) and
+  populated place, read from today's GeoNames release, as the owner ruled: the dump of 2026-11-02, 171,750 places in
+  246 countries, where SLATE's of 2026-10-26 had 171,654 (104 added, 8 removed, 133 changed). The place axis is held to
+  171,750 (register R-0032 to R-0034).
+- `world.map` (`src/world/map`): Natural Earth's outlines and every place marked on them.
+- `world.clock` (`src/world/clock`): real time in the town's local time, play, pause and advance; its three commands'
+  falsifiers moved beside it (`tests/world/clock/effects.test.ts`) from SLATE's layer 3 test.
+- `world.weather` (`src/world/weather`): each town's climate from its station's normals, the day's weather drawn
+  around them by four deciders, the forecast.
+- `world.holidays` (`src/world/holidays`): every country's public holidays in its own calendars. The calendars compile
+  on ICU 78.3, this Node's, not SLATE's 77.1: one Hebrew year moved (5806, from Kislev, and 1 Tishri 5807 to
+  2046-10-01), the fix of ICU-23069, which Calendrical Calculations' rules and Hebcal confirm (register R-0106).
+- `world.prices` (`src/world/prices`): each country's price level from the World Bank's ICP figures.
+- The catalog-text check stopped one of SLATE's lines ("so every day there is kept as an ordinary one", a place and a
+  passive, not a "there's"); it now says "each day in {country} is kept as an ordinary one".
+- 1221's geo-check is held by the place axis and each engine's run over every place of the map.
+- Research, read again on 2026-11-02 at every one of the layer's 1,082 sources, every blocker tried again by all five
+  methods (eight research agents in parallel, three integrating, the lead verifying at the sources and holding the
+  register). Of 108 blockers, 15 were found: Andorra's and the Falklands' normals and parts of South Georgia's,
+  Saint-Martin's and Montserrat's (averaged from the services' own records by WMO-1203, as R-0073 did); St Kitts and
+  Nevis's and the Northern Mariana Islands' price levels (Saipan's index standing for the Commonwealth); the holidays of
+  Prince Edward Island, Yukon, Haryana, Andaman and Nicobar, South Australia, Kelantan, the Isle of Man, Tanzania, the
+  Bahamas, St Vincent and Brunei. Laos, Myanmar, Suriname, Gambia, Punjab and Kedah were found in part and stay blocked
+  on what's missing; Niue's normals (2 to 5 years) fall short of the WMO's rule. Held data found wrong and fixed: Ghana's
+  Boxing Day 2026 is observed Monday 28 December; Egypt lacked Sinai Liberation Day, 25 April 2026 (its entry, held at
+  second hand, now stands on the Cabinet's own decisions); India lacked six of the Reserve Bank's days. Newly
+  published and added: Oklahoma's 2027, Kyrgyzstan's 27 January 2027. Primaries found for CZ, GE, HR, BY and KH. The
+  register: 441 entries, 306 found, 42 secondary, 93 blocked; 893 sources that read the same are dated 2026-11-02.
+- What couldn't be reached today, recorded in each entry: web.archive.org (every archive attempt; Common Crawl's
+  copies stood in where it held one), and pages behind bot checks or failing TLS (Lithuania's e-seimas, PacLII,
+  gazettes.africa, the Marshall Islands' statistics office, Rwanda's and Botswana's data portals, the Bureau of
+  Meteorology). None was forced.
 
 What layer 1 holds, ported from SLATE's core (`montrealroots/SLATE` at `acf1874`), changed only where a ruling or
 today's sources say:
@@ -114,12 +154,20 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 1, then picks what comes over in layer 2, the world: from SLATE, `world.gazetteer`,
-   `world.map`, `world.clock`, `world.weather`, `world.holidays` and `world.prices`. With the gazetteer comes 1221's
-   geo-check (the place axis and the all-places test), and the place count is set to the GeoNames release it reads.
+1. The owner pulls and merges layer 2, and answers the questions below if they wish.
+2. The owner picks what comes over in layer 3, the person's papers and money: from SLATE, the papers (`passports`,
+   `ids`, `citizenship`, `visits`, `ages`, `work`, `numbers`, `residence`, `licence`) and the money (`banks`,
+   `accounts`, `ledger`, `cards`, `credit`, `rates`, `means`, `formats`, `units`, `tax`). Its research is read again at
+   every source and every blocker tried again, as layer 2's was.
 
 ## Verification evidence
 
+- Layer 2's proof: `npm run gate:full` green in a fresh clone of the branch at `e3c205c47ce3` on GitHub Actions (run
+  41547356832), after `npx -y npm@11.6.2 ci`: every check green; 1,369 of 1,369 tests, every place of the map through
+  all six engines among them; audit 0 advisories; mutation 100.00% (9,815 of 9,815 mutants killed, static mutants
+  included); 9,697 s. The session's own fresh-clone run was stopped twice before it finished, once by the container's
+  restart and once at the two-hour limit of a background command; CI's run is the same command in a clean clone. The
+  next commit, `b41aafe`, changed `HANDOFF.md` alone.
 - Layer 1's proof: `npm run gate:full` green in a fresh clone of the branch at `47bfeac7fda9`, after
   `npx -y npm@11.6.2 ci`: every check green; 1,181 of 1,181 tests, the zic and zdump oracle and the ICU comparison
   among them; audit 0 advisories; mutation 100.00% (5,745 of 5,745 mutants killed, static mutants included); 778 s. It
@@ -145,6 +193,9 @@ SLATE proved at a 100% mutation score:
 
 ## Blockers and open issues
 
+- The full gate now takes about 2 h 40 min (9,815 mutants), longer than a session's background command may run, so
+  layers are proven on CI from here; CI's job may run 340 minutes. CI also logs an error that the step summary
+  (1,661k) is over GitHub's 1,024k; it fails nothing.
 - None for layer 0.
 - CI's actions moved from v4 (Node.js 20, which GitHub had stopped running) to exact releases on Node.js 24, each
   confirmed in its own repository on 2026-11-02 at the owner's word: `actions/checkout@v7.0.1` (2026-07-17),
@@ -154,4 +205,10 @@ SLATE proved at a 100% mutation score:
 
 ## Questions for the owner
 
-- None open. The place count was answered on 2026-11-02: not 170,911; today's GeoNames release (`CLAUDE.md`).
+- Three price levels stay blocked though a near figure exists, each for a reason the register's rules give: South
+  Sudan (the IMF's linked series disagrees with the statistics bureau's own late-2024 months), Turkmenistan (the Asian
+  Development Bank's index, which it labels its own estimate), Turks and Caicos (yearly inflation rates only, no
+  index). Say if any should stand.
+- Kelantan's 2027 substitute days apply its 2026 rule before its 2027 instruction is published, and Tanzania's Eid
+  al-Hajj and Maulid 2026 are the stock exchange's dates pending the moon's sighting, as every lunar holiday is until
+  announced. Say if either should wait for the official notice instead.

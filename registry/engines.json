@@ -51,5 +51,59 @@
     "matrices": [
       "coverage/persistence-operations.json"
     ]
+  },
+  "world.gazetteer": {
+    "layer": 2,
+    "dir": "src/world/gazetteer",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/gazetteer-countries.json"
+    ],
+    "allPlacesTest": "tests/world/gazetteer/gazetteer.places.test.ts::every place on the map > is in its country, with a region of that country or none, coordinates on the globe, and a time zone the clock and the sun answer for"
+  },
+  "world.map": {
+    "layer": 2,
+    "dir": "src/world/map",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/map-countries.json"
+    ],
+    "allPlacesTest": "tests/world/map/map.places.test.ts::every place on the map > is marked on the whole world's view, where its coordinates put it"
+  },
+  "world.clock": {
+    "layer": 2,
+    "dir": "src/world/clock",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/clock-countries.json"
+    ],
+    "allPlacesTest": "tests/world/clock/clock.places.test.ts::what the clock shows > at every place on the map"
+  },
+  "world.weather": {
+    "layer": 2,
+    "dir": "src/world/weather",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/weather-countries.json"
+    ],
+    "allPlacesTest": "tests/world/weather/weather.places.test.ts::the weather at real towns > at every place on the map"
+  },
+  "world.holidays": {
+    "layer": 2,
+    "dir": "src/world/holidays",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/holidays-countries.json"
+    ],
+    "allPlacesTest": "tests/world/holidays/holidays.places.test.ts::the holidays > at every place on the map"
+  },
+  "world.prices": {
+    "layer": 2,
+    "dir": "src/world/prices",
+    "readsPlace": true,
+    "matrices": [
+      "coverage/prices-countries.json"
+    ],
+    "allPlacesTest": "tests/world/prices/prices.places.test.ts::the prices > at every place on the map"
   }
 }
