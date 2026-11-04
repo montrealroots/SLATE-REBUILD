@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 3
+Layer in progress: 4
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -22,10 +22,10 @@ Read `CLAUDE.md` first.
   its research read again at every source and every blocker tried again; the full gate green in a fresh clone at
   `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). The owner merged it (`dd4e83a`) and the branch
   restarted from `main` there.
-- Layer 3 (the person's papers and money) is built but **not proven**: all nineteen of SLATE's layer 3 engines, at
-  the owner's word ("Every single one of them"), with the first of three research waves done. The session's web-search
-  allowance ran out during that wave, and the owner ruled (2026-11-03) that a new session finishes the research and
-  only then proves the layer. Layers 4 to 7 have not started (6 is dropped).
+- Layer 3 (the person's papers and money) is proven: all nineteen of SLATE's layer 3 engines, at the owner's word
+  ("Every single one of them"), its research taken through three waves and four web-search rounds (below); the full
+  gate green on GitHub Actions in a fresh clone at `e8b573910dad`, recorded in `registry/layers.json` (2026-11-04).
+  The owner pulls and merges it. Layers 4 to 7 have not started (6 is dropped).
 
 What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:
 
@@ -290,29 +290,26 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-The owner's ruling (2026-11-03): finish layer 3's research in a new session, with a fresh web-search allowance, then
-prove it. In that session, from `research/rounds/brief.md` and `research/rounds/integrate.md` (the briefs this
-session's agents were given; change the date, the scratchpad path and the groups, keep the rules):
-
-1. The web-search pass is done for layer 3 (four rounds; every one of its 687 blockers has a web search dated
-   2026-11-03). A fifth round is the owner's call; the leads it would follow are in each blocker's attempts.
-2. Wave 2 is done (two passes): layer 3's 550 facts still at second hand each record what both passes tried. A
-   third pass is the owner's call.
-3. Wave 3 is done. Left from it: 24 entries cite a legal information institute's copy (PacLII, RwandaLII,
-   ZambiaLII, LesothoLII, MalawiLII, NamibLII, TanzLII, Laws.Africa's consolidations) as primary, 16 of them resting on
-   it alone, against the ruling that such a copy is secondary (Kenya Law, the state's own law reporter, and the
-   gazette scans Laws.Africa hosts are primary): relabel them, or find the state's own text; and the sweep for newer
-   editions of dated fee schedules wasn't finished beyond Kenya's and Côte d'Ivoire's.
-4. Integrate each wave by engine, merge the register, then prove layer 3 on CI (`npm run gate:full` takes over two
-   hours here) and record it.
-5. The owner then pulls and merges, and picks what comes over in layer 4.
+1. The owner pulls and merges layer 3 (the branch is `claude/quirky-gauss-gnub7q`, proven at `e8b573910dad`); the
+   branch then restarts from `main`.
+2. The owner picks what comes over in layer 4 (the person: SLATE's own layer 4 engines, one at a time or all of
+   them), and the work goes on as it did for layers 1 to 3: bring each engine over, read every source again, try every
+   blocker again, then prove the layer.
+3. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
+   facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,
+   Equatorial Guinea, Guinea-Bissau, Eritrea); the 180 sources that answered only with a bot check or a failed
+   connection on 2026-11-03; the sweep for newer editions of dated fee schedules. Each register entry records what
+   was tried.
 
 ## Verification evidence
 
-- Layer 3 so far: `npm run gate` green on the working tree before the last commit: 1,691 of 1,691 tests (every place
-  of the map through every engine), 31 engines, 0 rows pending, the register's 4,952 entries clean. Each integrator's
-  code changes were mutation-tested alone at 100% (the banks engine's balance bands: 1,226 of 1,226; the ages reader:
-  95 of 95). The full gate, and so the proof, waits for the research the owner ruled for a new session.
+- Layer 3's proof: `npm run gate:full` green in a fresh clone of the branch at `e8b573910dad` on GitHub Actions (run
+  41751636700, job 126317853090), after `npx -y npm@11.6.2 ci`: every check green; 1,699 of 1,699 tests, every place
+  of the map through all thirty-one engines among them; the register's 4,933 entries clean; audit 0 advisories;
+  mutation 100.00% (19,724 of 19,724 mutants killed, static mutants included); 14,555 s. The run before it, 41721795427
+  at `69f3993`, scored 99.99%: one mutant survived in `tools/money/means/coverage.ts` (an empty array a stray key could
+  replace unseen, the national-accounts change having been mutation-tested on its compiler alone); `e8b5739` killed it,
+  53 of 53 in that file. The commit after the proof changed `registry/layers.json`, `HANDOFF.md` and the generated `matrix/LAYERS.md` alone.
 - Layer 2's proof: `npm run gate:full` green in a fresh clone of the branch at `e3c205c47ce3` on GitHub Actions (run
   41547356832), after `npx -y npm@11.6.2 ci`: every check green; 1,369 of 1,369 tests, every place of the map through
   all six engines among them; audit 0 advisories; mutation 100.00% (9,815 of 9,815 mutants killed, static mutants
