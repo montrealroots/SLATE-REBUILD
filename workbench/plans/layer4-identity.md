@@ -46,6 +46,10 @@ The first headshot: a submission sends it, a casting platform asks it; a life wi
 until it has one; a session's cost and how long a headshot stays current, from the platforms and the photographers'
 published rates.
 
+The headshot went on 2026-11-04 with casting (the owner: "there is no casting because we're going to be in our own film
+if we every act"), and its research with it (R-4622's photo rules and prices): nothing sees a headshot in the life's
+own productions.
+
 ## Order
 
 1. Research (parallel subagents, `workbench/briefs/BRIEF-identity-research.md`), each result checked by the lead.

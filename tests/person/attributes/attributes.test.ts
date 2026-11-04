@@ -33,7 +33,7 @@ describe('the screenwriter attributes', () => {
   it("give the producer, the director and the actor the owner's map, each component and facet as its research has it", () => {
     expect(ATTRIBUTES.producer.map((a) => a.name)).toEqual(['Development', 'Financing', 'Production', 'Leadership', 'Dealmaking', 'Marketing']);
     expect(ATTRIBUTES.director.map((a) => a.name)).toEqual(['Vision', 'Working With Actors', 'Visual Craft', 'Editing', 'Script Sense', 'Leadership', 'Communication']);
-    expect(ATTRIBUTES.actor.map((a) => a.name)).toEqual(['Acting', 'Memorization', 'Voice', 'Physicality', 'Camera', 'Direction', 'Auditioning']);
+    expect(ATTRIBUTES.actor.map((a) => a.name)).toEqual(['Acting', 'Memorization', 'Voice', 'Physicality', 'Camera', 'Direction']);
     for (const [role, research] of [['producer', producerFacets], ['director', directorFacets], ['actor', actorFacets]] as const) {
       expect(ATTRIBUTES[role].map((a) => [a.id, a.name, a.covers.map((c) => c.research)]), role).toEqual(map.roles[role].map((g) => [g.id, g.name, g.covers]));
       const ids = new Map(research.attributes.map((x) => [x.name, x.attribute]));

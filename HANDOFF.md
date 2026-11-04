@@ -30,7 +30,7 @@ Read `CLAUDE.md` first.
   (2026-11-04: "All ten"), identity, attributes, acting, directing, producing, work (the screenwriter's), genres,
   unions, permits and youth, brought over as SLATE wrote them with their compilers, research, 26 coverage matrices,
   2,107 register entries, 15 catalog lines, six deciders and 33 effects; every compiler's output is byte for byte
-  SLATE's on the rebuild's data. Its research hasn't been read again yet. Layers 5 to 7 have not started (6 is
+  SLATE's on the rebuild's data, until the owner's rulings of 2026-11-04 rebuilt it around the life's own productions (Assumptions): casting and spec sales went, then the actor's Auditioning attribute and Camera's self-taping part ("Remove them (Recommended)"), the writers' compiled hold-until-photography and option terms, and the headshot research, with R-5213 and R-5216 retired; the director's pitch joined the financing. The register stands at 7,038 entries. Its research hasn't been integrated yet, and a series' or a play's fund, credit and release are still refused while their UK research (read 2026-11-04) is wired. Layers 5 to 7 have not started (6 is
   dropped).
 
 What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:

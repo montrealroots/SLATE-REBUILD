@@ -27,7 +27,10 @@ import compiled from './markets.json' with { type: 'json' };
  * drawn. The direction's parts come from the director's broad attributes, each read through its researched components and their
  * facets (R-4610): the story told from Vision and Script Sense, the performances from Working With Actors, the images
  * from Visual Craft, the cut from Editing. Leadership holds the schedule and carries a short one; Leadership and
- * Communication bring the plan to the set; Communication pitches the next film.
+ * Communication bring the plan to the set; Communication pitches the production to its financiers, beside the producer's
+ * pitch (and the writer's, where the script is the life's), an equal share of the package (src/person/producing). It
+ * pitched the next film until the second feature's draw went on 2026-11-04, and nothing read it until it was wired into
+ * the financing later that day.
  *
  * The trade's own figures (R-4613): the DGA's guaranteed periods and minimums for 2026-27 (a feature's two weeks of prep
  * and thirteen weeks paid, at the Low Budget Sideletter's level for a budget of $11 million or less; a network episode's
@@ -51,8 +54,8 @@ import compiled from './markets.json' with { type: 'json' };
  * or couldn't find what does, there is no minimum, and the player is told what isn't known.
  *
  * The model's own figures (the spreads, how far a short schedule or a short cut carries, what the set takes from a
- * director's plan, a festival's pool and steepness, what a festival's selection says of an audience, what a pitch adds)
- * are the game's until the owner balances them (person.directing.model).
+ * director's plan, a festival's pool and steepness, what a festival's selection says of an audience, the shares of the
+ * pitch) are the game's until the owner balances them (person.directing.model).
  */
 
 /** The line that tells the player these figures are the game's own (person.directing.model). */
@@ -199,6 +202,9 @@ export function shootNeeded(v: Values, film: Pick<Film, 'form'>): number {
   const base = film.form === 'feature' ? FEATURE_SHOOT : EPISODES[film.form].shoot;
   return base * (1.25 - (0.5 * pace) / 100);
 }
+
+/** How the director pitches a production, 0 to 100: Communication's pitching and presenting the project, half; speaking and persuasion, a quarter each. */
+export const pitchSkill = (v: Values): number => 0.5 * of(v, 'pitching-and-presenting-the-project') + 0.25 * of(v, 'speaking') + 0.25 * of(v, 'persuasion');
 
 /** What the set takes of the plan, 0.8 to 1: leading the cast and crew, coordinating them, briefing and hearing them. */
 export const onSet = (v: Values): number => 0.8 + (0.2 * mean(['lead-cast-and-crew', 'coordination', 'speech-clarity', 'active-listening'].map((id) => of(v, id)))) / 100;

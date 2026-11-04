@@ -5,8 +5,8 @@ import { draws, seedFromText } from '../../../src/core/rng/rng.ts';
 import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
 import { addMonths } from '../../../src/core/time/dates.ts';
 import { ACTING_START, type ActingSlice } from '../../../src/person/acting/acting.ts';
-import { ATTRIBUTES_START, chooseAttributes, componentValues, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
-import { DIRECTING_START, EPISODES, type DirectingSlice, type Film } from '../../../src/person/directing/directing.ts';
+import { ATTRIBUTES_START, chooseAttributes, componentValues, skillOf, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
+import { DIRECTING_START, EPISODES, pitchSkill as directorsPitch, type DirectingSlice, type Film } from '../../../src/person/directing/directing.ts';
 import type { GenresSlice } from '../../../src/person/genres/genres.ts';
 import type { IdentitySlice } from '../../../src/person/identity/identity.ts';
 import type { PermitsSlice } from '../../../src/person/permits/permits.ts';
@@ -244,6 +244,37 @@ describe("financing the life's own script", () => {
     expect(packagePitch(fresh.slices, v, project(fresh))).toBeCloseTo((pitchSkill(v) + pitchOf(componentValues(fresh.slices.attributes, 'screenwriter'), {})) / 2, 12);
     const optioned = dispatch(life({ producer: 60 }), optionMaterial, { format: 'film', roles: ['producer'], account: ACCOUNT, days: 1, genre: 'drama' });
     expect(packagePitch(optioned.slices, v, project(optioned))).toBe(pitchSkill(v));
+  });
+
+  it("goes out with the director's pitch beside the others where the life directs, and the director's Communication moves the financing", () => {
+    /** A production of the life's script, the life directing it or not, its director's Communication at a level (the rest at 50). */
+    const directing = (communication: number, roles = ['writer', 'producer', 'director']) => {
+      const l = dispatch(writer(70, 'feature', 30), chooseAttributes, { role: 'director', all: 50, each: { communication } });
+      return dispatch(dispatch(l, developScript, { ...DEVELOP, roles }), planProject, { project: 1, budget: '1000000' });
+    };
+    const l = directing(80);
+    const [v, w, d] = (['producer', 'screenwriter', 'director'] as const).map((r) => componentValues(l.slices.attributes, r)) as [ReturnType<typeof componentValues>, ReturnType<typeof componentValues>, ReturnType<typeof componentValues>];
+    expect(directorsPitch(d)).toBeCloseTo(0.5 * skillOf(d, 'director', 'pitching-and-presenting-the-project') + 0.25 * skillOf(d, 'director', 'speaking') + 0.25 * skillOf(d, 'director', 'persuasion'), 12);
+    expect(packagePitch(l.slices, v, project(l))).toBeCloseTo((pitchSkill(v) + pitchOf(w, {}) + directorsPitch(d)) / 3, 12);
+    const optioned = dispatch(dispatch(life({ producer: 60 }), chooseAttributes, { role: 'director', all: 90 }), optionMaterial, { format: 'film', roles: ['producer', 'director'], account: ACCOUNT, days: 1, genre: 'drama' });
+    const ov = componentValues(optioned.slices.attributes, 'producer');
+    expect(packagePitch(optioned.slices, ov, project(optioned))).toBeCloseTo((pitchSkill(ov) + directorsPitch(componentValues(optioned.slices.attributes, 'director'))) / 2, 12);
+    // Not directing, the director's Communication pitches nothing: the package is the producer's and the writer's.
+    const pitched = (c: number, roles?: string[]) => {
+      const x = directing(c, roles);
+      return factor(x.slices.producing, packagePitch(x.slices, componentValues(x.slices.attributes, 'producer'), project(x)), project(x), T0);
+    };
+    expect(pitched(10, ['writer', 'producer'])).toBe(pitched(95, ['writer', 'producer']));
+    expect(pitched(95)).toBeGreaterThan(pitched(10));
+    // Over twenty lives, the sources each closes in forty days of raising: a better-spoken director closes more.
+    const closed = (c: number, roles?: string[]) =>
+      Array.from({ length: 20 }, (_, i) => {
+        const seed = (i + 1).toString(16).padStart(16, '0');
+        const x = dispatch(dispatch(dispatch(writer(70, 'feature', 30, identity(), seed), chooseAttributes, { role: 'director', all: 50, each: { communication: c } }), developScript, { ...DEVELOP, roles: roles ?? ['writer', 'producer', 'director'] }), planProject, { project: 1, budget: '1000000' });
+        return Object.keys(project(dispatch(x, raiseMoney, { project: 1, days: 40 })).raised).length;
+      });
+    expect(closed(10, ['writer', 'producer'])).toEqual(closed(95, ['writer', 'producer']));
+    falsifyAny({ feature: 'attributes.choose', claim: 'downstream', says: "a director at 95 in Communication pitches the production the life directs to its financiers better than one at 10, and it closes more of its money", base: 10, twin: 95, outcome: closed });
   });
 
   it('script.summarise: a better pitch document helps the production raise its money', () => {

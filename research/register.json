@@ -201106,9 +201106,9 @@
       "status": "found",
       "value": {
         "file": "research/sources/person/attributes/actor-facets.json",
-        "sha256": "92f325edefc1e80ea4d772f3507bf2c9bce7727d8ec08e590fc39f9834816856",
-        "attributes": 37,
-        "facets": 179
+        "sha256": "130baa658ff0abe2995d3391afd7b879768983189a9d37e44b335d4d2042570f",
+        "attributes": 31,
+        "facets": 143
       },
       "sources": [
         {
@@ -201627,13 +201627,6 @@
         },
         {
           "kind": "primary",
-          "url": "https://ec.europa.eu/esco/api/resource/skill?uri=http://data.europa.eu/esco/skill/a04c2655-5996-4744-bca2-4f4c8b3e4667&language=en",
-          "title": "ESCO skill 'promote yourself', ESCO API resource read 2026-10-31",
-          "read": "2026-11-04",
-          "said": "Market one's own strengths in terms of skills and knowledge."
-        },
-        {
-          "kind": "primary",
           "url": "https://www.careersinscreen.ie/role/actor-actress/",
           "title": "Fís Éireann/Screen Ireland (Screen Skills Ireland), \"Actor/Actress - Careers In Screen\", read 2026-10-31",
           "read": "2026-11-04",
@@ -201767,24 +201760,10 @@
         },
         {
           "kind": "primary",
-          "url": "https://www.equityfoundation.org.au/self-testing/",
-          "title": "Equity Foundation (MEAA Equity, Australia), Self Testing",
-          "read": "2026-11-04",
-          "said": "Self Testing is now a vital skill for any actor. … Designed to challenge you as a performer, The Self Test Project emulates a self-test request with a quick turnaround or last minute call out."
-        },
-        {
-          "kind": "primary",
           "url": "https://actramontreal.ca/workshops/cold-reading-techniques-2026/",
           "title": "ACTRA Montreal, Cold Reading Techniques workshop (2026)",
           "read": "2026-11-04",
           "said": "actors not only have to be prepared for last-minute self tapes, but also for script changes when on set. … Address scenario of actors being given new or altered material on set … These factors and more make it necessary for actors to train with cold reading, and there is a clear and pressing need for this technique to be commonplace in our talented city. … Address scenario of actors being provided with audition material less than 24hrs in advance, where they are familiar with material but still require their script/sides in hand"
-        },
-        {
-          "kind": "primary",
-          "url": "https://actraalberta.com/self-tape-tips-resources/",
-          "title": "ACTRA Alberta, Self-tape tips and resources",
-          "read": "2026-11-04",
-          "said": "You should always read the self tape instructions included with auditions to ensure you are following the instructions from the individual Casting Director."
         },
         {
           "kind": "primary",
@@ -201799,13 +201778,6 @@
           "title": "USC School of Dramatic Arts, Learning Objectives (undergraduate programs)",
           "read": "2026-11-04",
           "said": "Develop students’ unique voices as artists."
-        },
-        {
-          "kind": "primary",
-          "url": "https://www.qaa.ac.uk/docs/qaa/sbs/sbs-dance-drama-and-performance-24.pdf?sfvrsn=201b481_4",
-          "title": "QAA, Subject Benchmark Statement: Dance, Drama and Performance, April 2024",
-          "read": "2026-11-04",
-          "said": "demonstrate skills in self-management, including the ability to set goals, manage workloads and meet deadlines"
         },
         {
           "kind": "primary",
@@ -201834,13 +201806,6 @@
           "title": "ESCO skill 'interact with fellow actors', ESCO API resource read 2026-10-31",
           "read": "2026-11-04",
           "said": "Perform together with other actors. Anticipate their moves. React to their actions."
-        },
-        {
-          "kind": "primary",
-          "url": "https://www.paramountpressexpress.com/cbs-entertainment/releases/?view=59037",
-          "title": "Paramount Press Express (ViacomCBS), ViacomCBS announces the 15 performers starring in the 2022 virtual SHOWCASE",
-          "read": "2026-11-04",
-          "said": "performers attend various workshops and panels, on topics ranging from audition technique to a Q&A with esteemed SHOWCASE alumni."
         }
       ]
     },
@@ -202475,9 +202440,9 @@
     {
       "id": "R-4615",
       "fact": "person.directing.model",
-      "sought": "The figures the director's engine needs that no source gives: how a director's attributes turn into a film's parts, how short schedules and cuts cost, how far a festival's rate moves with quality, and how a series' episodes are read as jobs.",
+      "sought": "The figures the director's engine needs that no source gives: how a director's attributes turn into a film's parts, how short schedules and cuts cost, how far a festival's rate moves with quality, how a series' episodes are read as jobs, and how a director pitches a production to its financiers.",
       "status": "game",
-      "why": "R-4613 gives the DGA's terms, the CNC's shooting days and festivals' counts; it gives no pages-per-day or set-ups rate, no casting or rehearsal period, no SXSW submission count, no 2026 Basic Agreement text (its blockers). The game reckons the rest, and tells the player these are its own until the owner balances them. Until 2026-11-04 it also read a debut finding an audience and a pitch moving a second feature's odds; they went with the second feature's draw (the next production rests on what the life can finance).",
+      "why": "R-4613 gives the DGA's terms, the CNC's shooting days and festivals' counts; it gives no pages-per-day or set-ups rate, no casting or rehearsal period, no SXSW submission count, no 2026 Basic Agreement text (its blockers). The game reckons the rest, and tells the player these are its own until the owner balances them. Until 2026-11-04 it also read a debut finding an audience and a pitch moving a second feature's odds; they went with the second feature's draw (the next production rests on what the life can finance), and the pitch now stands beside the producer's in the financing, where the life directs.",
       "playerLabel": "directing.model",
       "value": {
         "partSkill": "a part's skill is the plain mean of its broad attributes' components, each read through its facets (facetSkill: 75% own, 25% tied components)",
@@ -202547,7 +202512,8 @@
         },
         "notModeled": "non-network and High Budget SVOD episodes, pilots, episodic hiring (series-affiliated against career-track), SXSW (no submission count), Sundance's episodic section, a feature's pay at $3M or less (left to negotiation: no fee), deals above scale, payment into the ledger (recorded only, as the screenwriter's sale)",
         "series": "a series' every episode is a job on its agreement's terms, its share of the production's scheduled shooting days (at least one); the series' days and fee are its episodes' together, and its shooting days needed each episode's",
-        "festivalQuality": "a festival weighs what the production came out as (the four roles' blend), not the direction alone; a feature it chose is read as one that found an audience (Follows's 1,000+ IMDb votes), which counts toward how financiers take the life's next production (person.producing.model)"
+        "festivalQuality": "a festival weighs what the production came out as (the four roles' blend), not the direction alone; a feature it chose is read as one that found an audience (Follows's 1,000+ IMDb votes), which counts toward how financiers take the life's next production (person.producing.model)",
+        "pitch": "where the life directs, its pitch is an equal share of the package financiers weigh (person.producing.model): Communication's pitching and presenting the project 50%, speaking 25%, persuasion 25%"
       },
       "sources": []
     },
@@ -202598,7 +202564,7 @@
       "fact": "person.producing.model",
       "sought": "How a producer's attributes decide the material optioned, how near the need a schedule comes, how financiers and the market take a package, how far a shoot slips, how far a film and its campaign move the published release and recoupment rates, the standard of the people hired for a role the life doesn't hold, and how the four roles' results make what a production comes out as",
       "status": "game",
-      "why": "What stands on sources is theirs (R-4612): the WGA's option terms, the CNC's 32 shooting days (2024, R-4613, shared with the director), the BFI's fee line, funding rate, award share and most, its ten months left on an option, the UK's credits, the EAO's financing shares, the BFI's release and recoupment rates by budget, the PGA's two features in seven years; the components and facets read (R-4609). No source gives how well a producer's eye reads a script, how far a script's need sits from the average or a plan from the need, how far a shoot slips where the team falters, how often the market closes a deal, how much a package, a record or a campaign moves a published rate, or who covers what the named sources leave: nor the standard of the people a production hires, nor how a writer's contacts and pitch move financiers: the game reckons those, balanced later at the owner's word, so that a producer at 100 throughout gets the top of what's real and lower levels correspondingly worse, and the player is told the reckoning is the game's own. The four roles' equal blend is the owner's ruling (2026-11-04: 'Equal blend of four'); the hired standard and its use are the game's.",
+      "why": "What stands on sources is theirs (R-4612): the WGA's option terms, the CNC's 32 shooting days (2024, R-4613, shared with the director), the BFI's fee line, funding rate, award share and most, its ten months left on an option, the UK's credits, the EAO's financing shares, the BFI's release and recoupment rates by budget, the PGA's two features in seven years; the components and facets read (R-4609). No source gives how well a producer's eye reads a script, how far a script's need sits from the average or a plan from the need, how far a shoot slips where the team falters, how often the market closes a deal, how much a package, a record or a campaign moves a published rate, or who covers what the named sources leave: nor the standard of the people a production hires, nor how a writer's contacts and a writer's or director's pitch move financiers: the game reckons those, balanced later at the owner's word, so that a producer at 100 throughout gets the top of what's real and lower levels correspondingly worse, and the player is told the reckoning is the game's own. The four roles' equal blend is the owner's ruling (2026-11-04: 'Equal blend of four'); the hired standard and its use are the game's.",
       "playerLabel": "producing.model",
       "value": {
         "material": "a script read a day, each worth 0 to 100 uniformly; the producer's judgement off by up to 100 points either side at 0 in choosing the material, none at 100; the one judged best optioned",
@@ -202617,7 +202583,7 @@
         "zone": "the option's months counted in Europe/London",
         "hired": "50, 0 to 100: a role the life doesn't hold on a production counts at 50 in what the production comes out as, and a producer hired works at 50 in every attribute (plan, financing, shoot, release)",
         "blend": "what a production comes out as is the plain mean of four results: the script (the material, as last graded where it is the life's script), the producing (the shoot's result: the team within the screenwriter's spread), the directing (the film's four parts' mean) and the acting (the mean of the parts the life played); a role not held at the hired standard",
-        "package": "the pitch financiers weigh: the producer's; where the material is the life's script, the mean of the producer's and the writer's (Pitching 50%, Speaking 20%, Persuasion 20%, the best of the pitch's five documents 10%)",
+        "package": "the pitch financiers weigh: the mean of the producer's, the writer's where the material is the life's script (Pitching 50%, Speaking 20%, Persuasion 20%, the best of the pitch's five documents 10%), and the director's where the life directs (person.directing.model)",
         "doors": "each contact the writer's networking made, and one for a family in film, TV, music or the trade, adds 5% to a day's chance of closing a source, up to ten (a family's sponsorship read from Gorji, Carney and Prakash, R-4622)",
         "formats": "the research is a film's: a series' or a play's plan has no fee or credit, and its fund and release are refused, told",
         "home": "a production with no country named is made in the person's home (their first citizenship's country, money.tax.model)"
@@ -204392,11 +204358,11 @@
     {
       "id": "R-4622",
       "fact": "person.identity.background",
-      "sought": "The genres' market figures, family in the business, wealth by occupation, headshot rules and prices, and the writing programmes' eligibility",
+      "sought": "The genres' market figures, family in the business, wealth by occupation, and the writing programmes' eligibility",
       "status": "found",
       "value": {
         "file": "research/sources/person/identity/background.json",
-        "sha256": "4b266cfa4fb2bd8d3f5171de2d1df7a99c74cc887682100cfed66578ad67da06"
+        "sha256": "a8f3e93a57b8ea8fb6e46d1e84bc1affe660b7ed3a91fbbd2ad7d2759c060ef0"
       },
       "sources": [
         {
@@ -204493,76 +204459,6 @@
         },
         {
           "kind": "primary",
-          "url": "https://app.spotlight.com/news-and-advice/tips-and-advice/everything-you-need-to-know-about-photos/",
-          "title": "Spotlight, Everything You Need to Know About... Photos",
-          "read": "2026-11-04",
-          "said": "It should be a recent head and shoulders shot. … You can upload 15 Spotlight profile photos for free, but 4 or 5 excellent, well-chosen shots are much better. … At least 1MB and no more than 40MB"
-        },
-        {
-          "kind": "primary",
-          "url": "https://app.spotlight.com/news-and-advice/interviews-podcasts/everything-you-need-to-know-about-headshots/",
-          "title": "Spotlight, 7 Headshot Tips from Casting Directors",
-          "read": "2026-11-04",
-          "said": "You should be prepared to change your headshots every couple of years and delete any photos that no longer represent you."
-        },
-        {
-          "kind": "primary",
-          "url": "https://www.spotlight.com/news-and-advice/the-essentials/how-to-get-the-perfect-headshot/",
-          "title": "Spotlight, How to Get the Perfect Headshot (29 Sep 2023)",
-          "read": "2026-11-04",
-          "said": "they should be an accurate representation of how you currently look."
-        },
-        {
-          "kind": "primary",
-          "url": "https://help.castingworkbook.com/article/14-how-do-i-submit-to-a-breakdown",
-          "title": "Casting Workbook Help, How Do I Submit To A Breakdown",
-          "read": "2026-11-04",
-          "said": "The final page is where you can choose which photo from your profile appears with your Submission (please note: this is just the cover photo of your submission, Casting is able to see your entire portfolio once submitted)."
-        },
-        {
-          "kind": "primary",
-          "url": "https://breakdownservices.com/index.cfm/main/faq",
-          "title": "Breakdown Services FAQ",
-          "read": "2026-11-04",
-          "said": "2 free headshots … For $68/year or $9.99/month your Actors Access PLUS membership includes all the features of a free Actors Access account"
-        },
-        {
-          "kind": "primary",
-          "url": "https://support.castingnetworks.com/en/articles/11236417",
-          "title": "Casting Networks Support, TALENT REPRESENTATIVE: What tips can I share with my talent",
-          "read": "2026-11-04",
-          "said": "All new accounts receive 2 free photo credits, 1 video, and 1 audio."
-        },
-        {
-          "kind": "primary",
-          "url": "https://support.castingnetworks.com/en/articles/11236033",
-          "title": "Casting Networks Support, TALENT REPRESENTATIVES: How do I customize my submissions?",
-          "read": "2026-11-04",
-          "said": "You can either choose an existing photo from your talent's profile to be the primary photo for the submission, or you can upload a brand new one just for this submission."
-        },
-        {
-          "kind": "primary",
-          "url": "https://www.thumbtack.com/p/photographer-prices",
-          "title": "Thumbtack, 2026 Photographer Prices (updated 28 Oct 2026)",
-          "read": "2026-11-04",
-          "said": "Headshot photography $304 $216-$427"
-        },
-        {
-          "kind": "primary",
-          "url": "https://blog.instaheadshots.com/blog/cost-of-professional-headshots/",
-          "title": "InstaHeadshots, How Much Do Professional Headshots Cost? (2025 U.S. Headshot Pricing Report, 11 Aug 2025)",
-          "read": "2026-11-04",
-          "said": "The average starting cost for a professional headshot in the U.S. is $283. … Los Angeles, CA $394 … New York, NY $423"
-        },
-        {
-          "kind": "primary",
-          "url": "https://whito.co.uk/research/photography-costs-uk/",
-          "title": "Whito, Photography costs UK 2026: What Photographers Actually Charge",
-          "read": "2026-11-04",
-          "said": "a typical headshot session costs £110 to £350, according to Whito's August 2026 check of 40 published UK price lists."
-        },
-        {
-          "kind": "primary",
           "url": "https://wga.org/news-events/news/connect/11-12-21/tv-writers-access-project-call-for-submissions",
           "title": "WGA West, TV Writers Access Project Call for Submissions (Connect, 12 Nov 2021)",
           "read": "2026-11-04",
@@ -204615,9 +204511,9 @@
     {
       "id": "R-4623",
       "fact": "person.identity.model",
-      "sought": "The figures the identity engine applies that no source gives as a rule: where a suggestion's threshold, the young performer's playing age and a headshot session's price are the game's own reckoning",
+      "sought": "The figures the identity engine applies that no source gives as a rule: where a suggestion's threshold and the young performer's playing age are the game's own reckoning",
       "status": "game",
-      "why": "CLDR gives each language's share but no threshold for suggesting it; Spotlight gives a young performer's range by example only (9-11 at ten) and names no age where the adult rule begins; Thumbtack's $304 is an average over US headshot sessions, not the price of any one",
+      "why": "CLDR gives each language's share but no threshold for suggesting it; Spotlight gives a young performer's range by example only (9-11 at ten) and names no age where the adult rule begins",
       "playerLabel": "identity.model",
       "value": {
         "suggestionThresholdPct": 10,
@@ -204625,13 +204521,6 @@
         "playingAgeYoungUnder": 18,
         "playingAgeYoungEitherWay": 1,
         "playingAgeYoungRule": "under 18 the playing age is the age one year either way (Spotlight's example, 9-11 at ten, taken as the rule for every age under 18; 18 is the game's line), and never below 0",
-        "headshotSessionPrice": {
-          "US": {
-            "currency": "USD",
-            "major": "304"
-          }
-        },
-        "headshotSessionPriceRule": "every US session is priced at Thumbtack's average ($304) as the session's own price; no other country has a price (null)",
         "birthDateToday": "the latest birth date taken is today's date in Kiribati's Line Islands (UTC+14), the latest anywhere, so no one born today anywhere is refused"
       },
       "sources": []
@@ -254928,7 +254817,7 @@
     {
       "id": "R-5212",
       "fact": "person.markets.writer.blocked.AU",
-      "sought": "The terms a screenwriter works on in Australia: AWG minimum rates for 2026: feature film screenplay and treatment, SASA episode, MATA telemovie, low-budget features.; Option terms in the AWG Feature Film Option Agreement or SPA agreements.; A source giving the language Australian screen work is made in (markets/AU.json has no language row).",
+      "sought": "The terms a screenwriter works on in Australia: AWG minimum rates for 2026: feature film screenplay and treatment, SASA episode, MATA telemovie, low-budget features.; A source giving the language Australian screen work is made in (markets/AU.json has no language row).",
       "status": "blocked",
       "notModeled": "writing.unkept",
       "attempts": [
@@ -254964,36 +254853,6 @@
         },
         {
           "method": "institution",
-          "tried": "members-only (AWG portal) | Retry 2026-11-01: Creative Workplaces rate-guides page (above): AWG rates are for Guild members; no option terms published.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "official-register",
-          "tried": "none | Retry 2026-11-01: ACCC register 403 (above).",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "web-search",
-          "tried": "not found 2026-11-01 | Retry 2026-11-01: Same query as fees; no option terms.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "trade-press",
-          "tried": "none | Retry 2026-11-01: Mumbrella 2010 (above) mentions \"options on final fees\" in the children's TV deal without amounts.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "archive",
-          "tried": "web.archive.org resets through the proxy | Retry 2026-11-01: NLA bot check; web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "institution",
           "tried": "Screen Australia Drama Report pages (summaries) break spend down by format and origin, not language | Retry 2026-11-01: Screen Australia searched by web search (\"screenaustralia.gov.au fact finders feature films language non-English Australian features produced\"): no production-language table found.",
           "result": "not found: language",
           "date": "2026-11-01"
@@ -255020,45 +254879,6 @@
           "method": "archive",
           "tried": "web.archive.org resets through this environment's proxy | Retry 2026-11-01: NLA bot check; web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
           "result": "not found: language",
-          "date": "2026-11-01"
-        }
-      ]
-    },
-    {
-      "id": "R-5213",
-      "fact": "person.markets.writer.blocked.DE",
-      "sought": "The terms a screenwriter works on in Germany: Option terms (price, period) for German screenplays set by any GVR.",
-      "status": "blocked",
-      "notModeled": "writing.unkept",
-      "attempts": [
-        {
-          "method": "institution",
-          "tried": "DDV GVR page and the ARD, ZDF, RTL and ProSiebenSat.1 rules read; none sets option terms | Retry 2026-11-01: The 2026 DDV/Netflix GVR Film, read by OCR (saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-DE-netflix-film.ocr.txt): its only \"option\" is DDV's one-time choice of a remuneration model (section C), not a screenplay option.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "official-register",
-          "tried": "none | Retry 2026-11-01: No register of joint remuneration rules (§ 36 UrhG) exists; none found.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "web-search",
-          "tried": "not found in the two GVR searches of 2026-11-01 | Retry 2026-11-01: \"Optionsvertrag Drehbuch Optionsentgelt Prozent Drehbuchverband Empfehlung Laufzeit Option Stoffrechte\": no German guild or producer figure.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "trade-press",
-          "tried": "none found | Retry 2026-11-01: wbs.legal (law firm) page on film contracts lists what an option contract should settle, with no figures; not used.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "archive",
-          "tried": "web.archive.org resets through the proxy | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
-          "result": "not found: option",
           "date": "2026-11-01"
         }
       ]
@@ -255142,45 +254962,6 @@
       ]
     },
     {
-      "id": "R-5216",
-      "fact": "person.markets.writer.blocked.FR",
-      "sought": "The terms a screenwriter works on in France: Option terms (price, length) for fiction features under the 2025 cinema agreement.",
-      "status": "blocked",
-      "notModeled": "writing.unkept",
-      "attempts": [
-        {
-          "method": "institution",
-          "tried": "CNC and Ministry of Culture press releases (read) do not give them | Retry 2026-11-01: Guilde française des scénaristes communiqué of 14 October 2025 on the cinema agreement (https://www.guildedesscenaristes.org/la-guilde-francaise-des-scenaristes-dit-non-a-laccord-cinema/, saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-FR-gds-non-accord-cinema.html) gives the MGEP floors but nothing on options; the 2021 \"Accord relatif aux clauses types\" for cinema (scan, OCR saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-FR-clauses-types-cinema-2021.ocr.txt) sets conditions for CNC aid, no option terms.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "official-register",
-          "tried": "Légifrance JORFTEXT000052404038 refused with a bot check (403), not read another way | Retry 2026-11-01: Légifrance tried in three forms (jorf/id/JORFTEXT000052404038 with and without www, and the ELI path): 403 each time; not read another way.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "web-search",
-          "tried": "2026-11-01 two searches on the agreement's amounts; none on options found | Retry 2026-11-01: \"accord 15 octobre 2025 pratiques contractuelles auteurs-scénaristes producteurs long métrage texte pdf option durée rémunération\": no text of the agreement found.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "trade-press",
-          "tried": "L'Officiel des métiers summary (read) does not mention options | Retry 2026-11-01: European Audiovisual Observatory IRIS/Merlin article 10412 answered 403; change.org petition (not a primary) gives the MGEP amounts only.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "archive",
-          "tried": "archive.org availability API lists no snapshot of the JORF page | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        }
-      ]
-    },
-    {
       "id": "R-5217",
       "fact": "person.markets.writer.blocked.GB",
       "sought": "The terms a screenwriter works on in United Kingdom: A source giving the language UK screen work is made in (no markets/GB.json in the actor research).",
@@ -255222,7 +255003,7 @@
     {
       "id": "R-5218",
       "fact": "person.markets.writer.blocked.IE",
-      "sought": "The terms a screenwriter works on in Ireland: Writers Guild of Ireland membership criteria and fees.; Option terms set or recommended for Irish screenplays.",
+      "sought": "The terms a screenwriter works on in Ireland: Writers Guild of Ireland membership criteria and fees.",
       "status": "blocked",
       "notModeled": "writing.unkept",
       "attempts": [
@@ -255254,36 +255035,6 @@
           "method": "archive",
           "tried": "web.archive.org resets through the proxy | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
           "result": "not found: union",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "institution",
-          "tried": "script.ie 403 | Retry 2026-11-01: script.ie answered 403 to every form tried (http and https, with and without www, /membership/, /join-us/, /wp-json/wp/v2/pages, /sitemap.xml, /robots.txt); listings by Irish Theatre Institute and Dublin UNESCO City of Literature (saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-IE-irishtheatre-wgi.html, /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-IE-dcol-wgi.html) describe the Guild with no option terms.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "official-register",
-          "tried": "none | Retry 2026-11-01: Register of Lobbying entry for the Writers Guild of Ireland (https://www.lobbying.ie/organisation/3386/writers-guild-of-ireland, saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-IE-lobbying-wgi.html): registration details only.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "web-search",
-          "tried": "not found 2026-11-01 | Retry 2026-11-01: \"Writers Guild of Ireland membership fee full member associate requirements\", \"script.ie join us full membership € per year produced credit writers guild ireland\", \"\\\"Writers Guild of Ireland\\\" minimum rates screenwriters agreement Screen Producers Ireland fee\": no option term found.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "trade-press",
-          "tried": "none | Retry 2026-11-01: None found.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "archive",
-          "tried": "web.archive.org resets through the proxy | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
-          "result": "not found: option",
           "date": "2026-11-01"
         }
       ]
@@ -255654,7 +255405,7 @@
     {
       "id": "R-5226",
       "fact": "person.markets.writer.blocked.NZ",
-      "sought": "The terms a screenwriter works on in New Zealand: Any edition of the NZWG Rates Guide later than November 2021 (fees); the current one is members-only.; Any edition of the NZWG Rates Guide later than November 2021 (option terms); the current one is members-only.",
+      "sought": "The terms a screenwriter works on in New Zealand: Any edition of the NZWG Rates Guide later than November 2021 (fees); the current one is members-only.",
       "status": "blocked",
       "notModeled": "writing.unkept",
       "attempts": [
@@ -255686,36 +255437,6 @@
           "method": "archive",
           "tried": "web.archive.org resets through this environment's proxy | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
           "result": "not found: fees",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "institution",
-          "tried": "members-only NZWG guide; NZFC development guidelines (Sep 2026) and Terms of Trade (Dec 2025) saved and searched for writer and option terms, none set | Retry 2026-11-01: A public copy of the November 2021 NZWG Rates Guide found through WIFT NZ (saved /tmp/claude-0/-home-user-SLATE/cfe06f79-0641-529e-b709-1fcd46045c09/scratchpad/dl/roles-markets/writer-NZ-nzwg-rates-guide-2021.pdf; now a figure); nzwg.org.nz's current guide stays members-only.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "official-register",
-          "tried": "none | Retry 2026-11-01: None: no Screen Industry Workers Act collective contract (as before).",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "web-search",
-          "tried": "not found 2026-11-01 | Retry 2026-11-01: \"New Zealand Writers Guild SPADA screenwriter agreement minimum fee feature film \\\"per cent of budget\\\" OR \\\"rates guide\\\" 2025\": led to the 2021 guide; no later edition.",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "trade-press",
-          "tried": "none | Retry 2026-11-01: WIFT NZ, 9 November 2021 (secondary, linking the guide).",
-          "result": "not found: option",
-          "date": "2026-11-01"
-        },
-        {
-          "method": "archive",
-          "tried": "web.archive.org resets through the proxy | Retry 2026-11-01: web.archive.org reset the connection again (2026-11-01); archive.ph reset; arquivo.pt answered 403; not read another way.",
-          "result": "not found: option",
           "date": "2026-11-01"
         }
       ]

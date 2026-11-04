@@ -80,7 +80,7 @@ export const DOCUMENT_DAYS = {
 
 export type Document = keyof typeof DOCUMENT_DAYS;
 
-/** What a pitch to financiers puts forward: the query's logline and synopses, and the pitch's document and treatment. */
+/** What a pitch to financiers puts forward: the logline and the synopses (a query's until 2026-11-04), the pitch document and the treatment. */
 export const PITCH: readonly Document[] = ['logline', 'short-synopsis', 'one-page-synopsis', 'pitch-document', 'treatment'];
 
 /** Each script's documents written, by its quality, 0 to 100. */
@@ -121,7 +121,7 @@ export interface MarketAgreement {
   readonly fees: readonly Fee[];
 }
 /** What a market's research couldn't find, by the item its blockers name. */
-export type Unknown = 'agreement' | 'fees' | 'option' | 'language' | 'union' | 'terms' | 'none' | 'follows';
+export type Unknown = 'agreement' | 'fees' | 'language' | 'union' | 'terms' | 'none' | 'follows';
 export interface Market {
   readonly agreements: readonly string[];
   readonly unknown: readonly Unknown[];
@@ -152,10 +152,11 @@ export const WRITES_IN: Level = 'C1';
 /** The line that tells the player what of a market isn't known. */
 export const UNKEPT_LINE: LineId = 'writing.unkept';
 /**
- * Each item a market's research couldn't find, as the player is told it. An option's terms aren't told: they priced an
- * option to another's production, which went with spec sales on 2026-11-04, so nothing the player does turns on them.
+ * Each item a market's research couldn't find, as the player is told it. An option's terms were set aside here until
+ * 2026-11-04, when the compile stopped reading them (tools/person/markets-writer/compile.ts, UNREAD): they priced an
+ * option to another's production, which went with spec sales, so nothing the player does turns on them.
  */
-export const MISSING: Readonly<Record<Exclude<Unknown, 'option'>, string>> = {
+export const MISSING: Readonly<Record<Unknown, string>> = {
   agreement: 'whether any agreement sets what a script is paid',
   fees: 'some of the minimums a script is paid',
   language: 'the language scripts are written in',
@@ -167,12 +168,12 @@ export const MISSING: Readonly<Record<Exclude<Unknown, 'option'>, string>> = {
 
 /**
  * What the player is told of a country's market where its research couldn't find all of it: "a" or "a and b" (no
- * writer's market leaves more than two items untold once an option's terms are set aside, a test holds); nothing where
- * it is known whole, or there's no research of it.
+ * writer's market leaves more than two items untold, a test holds); nothing where it is known whole, or there's no
+ * research of it.
  */
 export function aboutCountry(country: string): string | undefined {
   if (!Object.hasOwn(MARKETS, country)) return undefined;
-  const missing = (MARKETS[country] as Market).unknown.flatMap((u) => (u === 'option' ? [] : [MISSING[u]]));
+  const missing = (MARKETS[country] as Market).unknown.map((u) => MISSING[u]);
   if (missing.length === 0) return undefined;
   return t(UNKEPT_LINE, { country: countryName(country as CountryCode), missing: missing.join(' and ') });
 }

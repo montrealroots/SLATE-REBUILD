@@ -107,9 +107,10 @@ describe('a part', () => {
     expect(partSkill(w, p)).not.toBeCloseTo(partSkill(w, part()), 3);
   });
 
-  it("reads each of the actor's broad attributes in a part, Auditioning where a part asks for it or a facet draws on it", () => {
-    expect(broadIds).toEqual(['acting', 'memorization', 'voice', 'physicality', 'camera', 'direction', 'auditioning']);
-    const p = part({ asks: ['singing', 'dance', 'audition-technique'] });
+  it("reads each of the actor's broad attributes in a part", () => {
+    // Auditioning and Camera's self-taping were removed on 2026-11-04 (the owner: "Remove them"), with casting.
+    expect(broadIds).toEqual(['acting', 'memorization', 'voice', 'physicality', 'camera', 'direction']);
+    const p = part({ asks: ['singing', 'dance'] });
     for (const id of broadIds) expect(partSkill(v(made(50, { [id]: 90 })), p), id).toBeGreaterThan(partSkill(v(made(50, { [id]: 20 })), p));
   });
 
@@ -371,7 +372,7 @@ describe('playing a part', () => {
       const l = dispatch(base, playPart, { part: 1, account: ACCOUNT });
       const quality = clamp(k + spread(k) * (2 * draws(seedFromText(seed), 'acting.work', 'perform', 1).float() - 1));
       expect(parts(l)[0]?.work, seed).toEqual({ at: AUGUST, quality, pay: usd('2566') });
-      for (const id of broadIds) expect(held(l)[id], id).toBeCloseTo(id === 'voice' || id === 'auditioning' ? (held(base)[id] as number) : grown(held(base)[id] as number, 2), 10);
+      for (const id of broadIds) expect(held(l)[id], id).toBeCloseTo(id === 'voice' ? (held(base)[id] as number) : grown(held(base)[id] as number, 2), 10);
     }
   });
 

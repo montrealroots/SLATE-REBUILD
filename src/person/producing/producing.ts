@@ -7,7 +7,7 @@ import { earn, type Earning, type Work } from '../../money/tax/tax.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { AGREEMENTS, COUNTRY, dateOf, MARKET as WORK, MARKETS as ACTED, type ActingSlice, type Medium } from '../acting/acting.ts';
 import { ATTRIBUTES, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
-import { EPISODES, FEATURE_SHOOT, type DirectingSlice, type Form as Directed } from '../directing/directing.ts';
+import { EPISODES, FEATURE_SHOOT, pitchSkill as directorsPitch, type DirectingSlice, type Form as Directed } from '../directing/directing.ts';
 import { boxOfficeFactor, lovesOrRefuse, type GenresSlice } from '../genres/genres.ts';
 import { scriptOf, spread, type Form as Written, type ScriptsSlice } from '../work/work.ts';
 import { aboutMarket as writersUnknown, countryOf, KEPT, languagesOf, marketOf as writerMarketOf, MARKETS as WRITTEN, minimumOf, pitchOf, quality, WRITES_IN, type CareerSlice } from '../work/career.ts';
@@ -54,7 +54,8 @@ import compiled from './markets.json' with { type: 'json' };
  *   option with ten months left; the rest from the market in the EAO's shares (broadcasters 18%, pre-sales 14%), the
  *   remainder from equity, the producer's own 18% (the EAO's producer investment) carried last. The package is the
  *   material and the pitch; where the material is the life's script, the writer's own pitch and documents stand beside
- *   the producer's, and the writer's contacts and a family in the business open doors to the market (R-4622).
+ *   the producer's, and where the life directs, the director's own pitch (Communication) beside them, each equally; the
+ *   writer's contacts and a family in the business open doors to the market (R-4622).
  * - The shoot (Production's crew, Leadership's team): days slip where the team falters, the days past the schedule cost
  *   the budget's day rate, and the producer's fee is deferred against the overrun first.
  * - The release (Marketing, the film's quality): a cinema release at the BFI's rate for the budget (11.6% under £0.5m
@@ -388,11 +389,17 @@ export function record(s: ProducingSlice, at: number, d: DirectingSlice = { film
 export const pitchSkill = (v: Values): number =>
   0.3 * of(v, C.pitch) + 0.2 * of(v, C.arrange) + 0.1 * of(v, C.adequacy) + 0.2 * of(v, C.network) + 0.1 * of(v, C.communicator) + 0.1 * of(v, 'negotiation');
 
-/** The pitch a package goes out with: the producer's, and where the material is the life's script, the writer's own beside it, equally. */
+/**
+ * The pitch a package goes out with: the producer's; where the material is the life's script, the writer's own beside
+ * it; and where the life directs, the director's own (src/person/directing): each pitch held an equal share.
+ */
 export function packagePitch(s: { attributes: AttributesSlice; career: CareerSlice }, v: Values, p: Project): number {
-  if (p.script === null) return pitchSkill(v);
+  const pitches = [pitchSkill(v)];
   // @slate:consumer script.summarise
-  return (pitchSkill(v) + pitchOf(componentValues(s.attributes, 'screenwriter'), s.career.documents[String(p.script)] ?? {})) / 2;
+  if (p.script !== null) pitches.push(pitchOf(componentValues(s.attributes, 'screenwriter'), s.career.documents[String(p.script)] ?? {}));
+  // @slate:consumer attributes.choose
+  if (holds(p, 'director')) pitches.push(directorsPitch(componentValues(s.attributes, 'director')));
+  return pitches.reduce((t, x) => t + x, 0) / pitches.length;
 }
 
 /** How a financier takes a project, 0.5 to 1.7: the material and the pitch, 1 for both at the middle, and the producer's record. */

@@ -27,13 +27,13 @@ import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/mone
  *   animation), by the tier it sets (the production's budget, the script's running time, the budget an hour of it),
  *   from the date it applies, in the agreement's currency, paid by the script, the minute, the hour or each day the
  *   script was written (a wage floor the research's source says reaches the writer); a share of the budget where the
- *   agreement sets its floor so, under a ceiling an hour; and what of it waits for the first day of photography. A tier
- *   the research leaves to negotiation (a budget under the agreement's floor) is read as such, never given a figure.
- * And its option's terms: a share of the script's minimum (or of the minimum the research names) for a year, as the
- * research sets it; negotiated where the research's own finding on options says nothing sets its price; none where the
- * research gives no option. Since 2026-11-04 (the owner: "Remove spec sales too") the engine pays a script whole on the
- * first day of photography, when the life's own production buys it, so neither what waits for photography nor an
- * option's terms changes an outcome any more; both are still compiled and held to the research by the compile's tests.
+ *   agreement sets its floor so, under a ceiling an hour. A tier the research leaves to negotiation (a budget under the
+ *   agreement's floor) is read as such, never given a figure.
+ * What of a minimum waits for the first day of photography and an agreement's option's terms (a share of the script's
+ * minimum for a year, or negotiated) were compiled until 2026-11-04, when they went from the compile, its readings and
+ * markets.json: the owner's "Remove spec sales too" left a script paid whole on the first day of photography by the
+ * life's own production, which buys no option, so neither changed an outcome. The research files keep them, as the
+ * record of what was read; a blocker on an option's terms is no longer an item the player is told of (UNREAD).
  *
  * Every amount is read from the research at its place, never written here; every date and currency is checked to stand
  * in the research's figure. A market gives its agreements and what its research couldn't find (its blockers' items),
@@ -61,7 +61,9 @@ export const KINDS = ['fiction', 'documentary', 'animation'] as const;
 /** What a minimum's tier turns on: the production's budget, the script's minutes, the budget an hour of it. */
 export const TIERS = ['budget', 'minutes', 'hourly'] as const;
 /** What a market's research can leave unknown, as its blockers name it. */
-export const ITEMS = ['agreement', 'fees', 'option', 'language', 'union', 'terms', 'none', 'follows'] as const;
+export const ITEMS = ['agreement', 'fees', 'language', 'union', 'terms', 'none', 'follows'] as const;
+/** What the research's blockers name that the game no longer reads: an option's terms, since 2026-11-04. */
+export const UNREAD = ['option'] as const;
 /** The blockers that leave an agreement's figures unknown: its fees, whether there is one, whether anything sets the terms, whether another market's reach it. */
 export const UNKNOWING: readonly Item[] = ['agreement', 'fees', 'terms', 'none', 'follows'];
 
@@ -86,15 +88,6 @@ export interface Fee {
   share: string | null;
   /** The most the minimum asks, by the same unit as the amount. */
   cap: string | null;
-  /** What of it waits for the first day of photography: a share of it, or an amount. */
-  held: { share: string } | { amount: string } | null;
-}
-
-export interface Priced {
-  forms: Form[];
-  /** The option's price for a year, as a share of the script's minimum, or of the base the research names. */
-  share: string;
-  base: string | null;
 }
 
 export interface Agreement {
@@ -107,7 +100,6 @@ export interface Agreement {
   none: boolean;
   unknown: boolean;
   fees: Fee[];
-  option: Priced[] | 'negotiated' | null;
 }
 
 export interface Market {
@@ -207,7 +199,7 @@ const dateIn = (r: Research, f: Figure, from: unknown): string => {
 /** One minimum, read from the research at its place; or a tier its research leaves to negotiation. */
 export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, forms: readonly Form[]): Fee {
   const m = record(reading, 'a minimum');
-  only(m, ['forms', 'kind', 'when', 'per', 'from', 'dated', 'fig', 'path', 'negotiated', 'held', 'share', 'cap'], 'a minimum');
+  only(m, ['forms', 'kind', 'when', 'per', 'from', 'dated', 'fig', 'path', 'negotiated', 'share', 'cap'], 'a minimum');
   const own = formsOf(m['forms'], forms, "a minimum's forms");
   if (m['kind'] !== undefined && !KINDS.includes(m['kind'] as Kind)) throw new Error(`a minimum is set for ${String(m['kind'])}, a kind the game doesn't read`);
   const kind = (m['kind'] ?? null) as Kind | null;
@@ -220,7 +212,7 @@ export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, for
     const f = figureOf(r, record(m['negotiated'], 'negotiated')['fig'], null);
     if (!/negotia|exempt/i.test(JSON.stringify(f))) throw new Error(`${r.country}'s figure doesn't leave the tier to negotiation`);
     const from = dateIn(r, m['dated'] === undefined ? f : figureOf(r, m['dated'], null), m['from']);
-    return { forms: own, kind, when, per: null, from, amount: null, share: null, cap: null, held: null };
+    return { forms: own, kind, when, per: null, from, amount: null, share: null, cap: null };
   }
   const figure = figureOf(r, m['fig'], ['fees', 'agreement', 'rates']);
   if (!PERS.includes(m['per'] as Per)) throw new Error(`a minimum is paid by ${String(m['per'])}, which the game doesn't read`);
@@ -228,51 +220,16 @@ export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, for
   if (!JSON.stringify(figure).includes(currency)) throw new Error(`${r.country}'s figure ${String(m['fig'])} doesn't name ${currency}`);
   const amount = numberAt(r, figure, m['path']);
   fromMajor(currency, String(amount));
-  let held: Fee['held'] = null;
-  if (m['held'] !== undefined) {
-    const h = record(m['held'], 'what is held');
-    const n = numberAt(r, figure, h['path']);
-    if (h['unit'] === 'amount') {
-      if (!(n < amount)) throw new Error(`${r.country} holds more than the minimum until photography`);
-      held = { amount: String(n) };
-    } else held = { share: shareOf(n, h['unit']) };
-  }
   const sh = m['share'] === undefined ? null : record(m['share'], 'a share');
   const share = sh === null ? null : shareOf(numberAt(r, figure, sh['path']), sh['unit']);
   const cap = m['cap'] === undefined ? null : numberAt(r, figure, record(m['cap'], 'a cap')['path']);
   if (cap !== null && !(cap > amount)) throw new Error(`${r.country}'s ceiling is under its floor`);
-  return { forms: own, kind, when, per: m['per'] as Per, from, amount: String(amount), share, cap: cap === null ? null : String(cap), held };
+  return { forms: own, kind, when, per: m['per'] as Per, from, amount: String(amount), share, cap: cap === null ? null : String(cap) };
 }
 
 /** Whether an agreement's minimums are one to a script: where two share a form and a date, they are apart by a tier. */
 export function checkFees(id: string, all: readonly Fee[]): void {
   for (const [i, a] of all.entries()) for (const b of all.slice(i + 1)) if (a.from === b.from && !apart(a, b)) throw new Error(`${id} sets two minimums for one script (${a.forms.join(', ')} from ${a.from})`);
-}
-
-/** An agreement's option: negotiated where the research's finding on options says so, or priced at its share for a year. */
-export function optionOf(r: Research, reading: unknown, currency: CurrencyCode | null, forms: readonly Form[]): Agreement['option'] {
-  if (reading === undefined) return null;
-  const o = record(reading, 'an option');
-  only(o, ['negotiated', 'priced'], 'an option');
-  if (o['negotiated'] !== undefined) {
-    figureOf(r, record(o['negotiated'], 'negotiated')['fig'], ['option']);
-    return 'negotiated';
-  }
-  if (currency === null || !Array.isArray(o['priced']) || o['priced'].length === 0) throw new Error(`${r.country}'s option is priced in the agreement's currency`);
-  const priced = o['priced'].map((p): Priced => {
-    const x = record(p, 'a price');
-    only(x, ['forms', 'fig', 'path', 'unit', 'base'], 'a price');
-    const share = shareOf(numberAt(r, figureOf(r, x['fig'], ['option']), x['path']), x['unit']);
-    if (x['base'] === undefined) return { forms: formsOf(x['forms'], forms, "an option's forms"), share, base: null };
-    const b = record(x['base'], 'a base');
-    const f = figureOf(r, b['fig'], ['fees', 'agreement']);
-    if (!JSON.stringify(f).includes(currency)) throw new Error(`${r.country}'s base doesn't name ${currency}`);
-    const amount = numberAt(r, f, b['path']);
-    dateIn(r, f, b['from']);
-    return { forms: formsOf(x['forms'], forms, "an option's forms"), share, base: String(amount) };
-  });
-  for (const f of forms) if (!priced.some((p) => p.forms.includes(f))) throw new Error(`${r.country}'s option sets no price for a ${f}`);
-  return priced;
 }
 
 /** A language an agreement's scripts are written in: one a person speaks, standing where the reading says the research names it (the writer's figure, or the country's own, the actor's), the game's own where it says none. */
@@ -304,20 +261,20 @@ function noneIn(r: Research, reading: unknown): void {
   if (f.item !== 'none' && at(f.value, n['path']) !== null) throw new Error(`${r.country}'s figure ${String(n['fig'])} doesn't say nothing sets the pay`);
 }
 
-/** One agreement: its languages and forms, and the pay left to negotiation, unknown, or its minimums; and its option. */
+/** One agreement: its languages and forms, and the pay left to negotiation, unknown, or its minimums. */
 export function agreementOf(id: string, r: Research, reading: unknown, names: Readonly<Record<string, string>>, country: Research | null = null): Agreement {
   const a = record(reading, `the reading of ${id}`);
-  only(a, ['forms', 'language', 'currency', 'fees', 'none', 'unknown', 'option'], id);
+  only(a, ['forms', 'language', 'currency', 'fees', 'none', 'unknown'], id);
   const forms = formsOf(a['forms'], FORMS, `${id}'s forms`);
   const listed = a['language'] === undefined ? [] : Array.isArray(a['language']) ? a['language'] : [a['language']];
   const languages = listed.map((l) => languageOf(r, l, names, country));
   if (new Set(languages).size !== languages.length) throw new Error(`${id} names a language twice`);
   const base = { country: r.country, languages, forms };
-  if (a['unknown'] === true) return { ...base, currency: null, none: false, unknown: true, fees: [], option: null };
+  if (a['unknown'] === true) return { ...base, currency: null, none: false, unknown: true, fees: [] };
   if (languages.length === 0) throw new Error(`${id} names no language its scripts are written in`);
   if (a['none'] !== undefined) {
     noneIn(r, a['none']);
-    return { ...base, currency: null, none: true, unknown: false, fees: [], option: optionOf(r, a['option'], null, forms) };
+    return { ...base, currency: null, none: true, unknown: false, fees: [] };
   }
   const currency = String(a['currency']);
   if (!isCurrency(currency)) throw new Error(`${id} pays in ${currency}, which isn't a currency`);
@@ -326,13 +283,14 @@ export function agreementOf(id: string, r: Research, reading: unknown, names: Re
   const fees = a['fees'].map((m) => feeOf(r, m, currency, forms)).sort((x, y) => x.from.localeCompare(y.from));
   for (const f of forms) if (!fees.some((x) => x.forms.includes(f))) throw new Error(`${id} sets no minimum for a ${f}`);
   checkFees(id, fees);
-  return { ...base, currency, none: false, unknown: false, fees, option: optionOf(r, a['option'], currency, forms) };
+  return { ...base, currency, none: false, unknown: false, fees };
 }
 
-/** The items a file's blockers name, each once, in the research's order. */
+/** The items a file's blockers name that the game reads, each once, in the research's order. */
 export function unknownOf(blockers: readonly { item: string }[]): Item[] {
   const out: Item[] = [];
   for (const { item } of blockers) {
+    if ((UNREAD as readonly string[]).includes(item)) continue;
     if (!ITEMS.includes(item as Item)) throw new Error(`a blocker names ${item}, which isn't a fact the research seeks`);
     if (!out.includes(item as Item)) out.push(item as Item);
   }
