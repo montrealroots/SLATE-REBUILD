@@ -1,0 +1,397 @@
+{
+ "AN": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "AQ": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "AZ": {
+  "missing": [
+   "institution",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u15.result.json",
+    "method": "web-search",
+    "tried": "WebSearch \"Azərbaycan dövlət teatrları tamaşa müəllif qonorarı minimum məbləği Nazirlər Kabinetinin qərarı rejissor dramaturq\"",
+    "result": "led to nk.gov.az PDFs and the WIPO copy of the Theatre Law",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u15.result.json",
+    "method": "official-register",
+    "tried": "nk.gov.az PDFs old/f1a587…pdf (amendment naming Decision 52 and its annex 4), old/256e597…pdf (national status for a Nakhchivan theatre), 67810fde3bb84.pdf (Decision 38 amendment on film fees)",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u15.result.json",
+    "method": "official-register",
+    "tried": "WIPO Lex AZ073: Law on Theatre and Theatrical Activity (2006)",
+    "result": "read whole",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": "Of a stage director's minimum (2026-11-04): A rate in manat was not found: Decision 52's own text (annex 4 on drama works) was not reached (e-qanun.az not fetched; the search found no copy). Read (u15.result.json): {\"employment\": \"creative staff of theatres work under labour contracts (Art. 20.2); posts list set by the executive (20.1)\", \"premiums\": {\"academic\": 1.0, \"national\": 0.5, \"leading\": 0.25}, \"commissionedStagingFee\": \"Cabinet Decision 52 of 16 February 2006 sets minimum author fees for commissioned works and creative staff of state events (title read; its annexes not read)\"}; Teatr və teatr fəaliyyəti haqqında Azərbaycan Respublikasının Qanunu, 29 dekabr 2006, № 222-IIIQ (WIPO Lex AZ073; the page splits letters ə, ğ, ı, ş, ç with spaces, removed in this quote), https://www.wipo.int/wipolex/en/text/224680, read 2026-11-04; Nazirlər Kabinetinin Qərarı (2018-2019): 97, 52, 165, 219, 136 və 67 nömrəli qərarlarında dəyişiklik edilməsi barədə (nk.gov.az), https://nk.gov.az/uploads/doc/docs/old/f1a587b701d0180242c9dc1f695957f5.pdf, read 2026-11-04."
+ },
+ "BA": {
+  "missing": [
+   "institution",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u19.result.json",
+    "method": "web-search",
+    "tried": "1 search: 'kolektivni ugovor djelatnost kulture Kanton Sarajevo glumac reditelj koeficijent pozorište'",
+    "result": "Led to copies of the agreement (sartr.ba consolidated, muzejsarajeva.ba gazette 10/23) and actor job ads (szks.ba, mks.ks.gov.ba), all fetched",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u19.result.json",
+    "method": "official-register",
+    "tried": "Službene novine KS 10/2023 (gazette pages, Muzej Sarajeva copy) and the consolidated 10/23 + 12/24 text (SARTR copy) read for the coefficient table",
+    "result": "Coefficients for actors, directors, dramaturg; base not in the text",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": "Of a stage director's minimum (2026-11-04): A salaried theatre director's scale, not a freelance per-production fee. The base (osnovica) is agreed between the union and the canton government outside the agreement's text; 400 KM net is inferred from one 2025 ad (2,080 / 5.20), not stated. Read (u19.result.json): {\"scope\": \"employees of Sarajevo Canton's cantonal public culture institutions (Art. 2-3); the ads read are Narodno pozorište Sarajevo's and Pozorište mladih's\", \"agreement\": \"Kolektivni ugovor za djelatnost kulture u KS, SN KS 10/23 and 12/24\", \"coefficients\": {\"redateljI\": 6.1, \"redateljII\": 5.2}, \"coefficients2023\": {\"redateljI\": 5.9, \"redateljII\": 5.0}, \"monthlyBaseNetBAM\": {\"impliedBase\": 400, \"redateljI\": 2440, \"redateljII\": 2080, \"basis\": \"the 2025 Narodno pozorište ad's Glumac III net base 2,080 KM divided by coefficient 5.20; Redatelj II shares class IX\"}, \"seniorityUpliftPerYear\": 0.006, \"seniorityUpliftMax\": 0.2, \"floor\": \"70% of the Federation's average net wage of the last three months\", \"perProductionFee\": null}; Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo (prečišćeni tekst, Službene novine KS 10/23 i 12/24), copy published by JU Sarajevski ratni teatar SARTR, https://sartr.ba/wp-content/uploads/2025/03/KOLEKTIVNI-UGOVOR-ZA-DJELATNOST-KULTURE-U-KANTONU-SARAJEVO-PRECISCENI-TEKST-2-1.pdf, read 2026-11-04; Službene novine Kantona Sarajevo, broj 10, 2. 3. 2023: Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo (original text, copy published by Muzej Sarajeva), https://www.muzejsarajeva.ba/wp-content/uploads/2025/10/Kolektivni-ugovor-za-djelatnost-kulture-KS.pdf, read 2026-11-04; JU Služba za zapošljavanje Kantona Sarajevo: Javni oglas, JU Narodno pozorište Sarajevo, glumac III (2025), https://szks.ba/wp-content/uploads/2025/11/tekst-oglasa-glumac-III-1-izvrsilac-2025.pdf, read 2026-11-04."
+ },
+ "BW": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "CH": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "t2.result.json",
+    "method": "institution",
+    "tried": "szeneschweiz.ch Mindestgagen page and 2026/27 PDF; tpunkt.ch/richtloehne",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": "Of a stage director's minimum (2026-11-04): Which of min/med/max the director's level maps to is computed by the page's script (t.js), not printed; recommendations, not an agreement. Read (t2.result.json): {\"agreement\": null, \"recommendation\": \"t. Theaterschaffen Schweiz Richtlöhne (free scene): a director is at the 'whole project' responsibility level; the calculator's monthly table runs by region, e.g. Zurich min 5,750 / med 6,900 / max 8,000 CHF, Ticino 4,500 / 5,750 / 7,000, other regions 5,500 / 6,500-6,750 / 7,500-8,000\", \"houses\": \"the SBV/SzeneSchweiz Mindestgagen cover permanent and guest artists at the houses, listed by house, without a director line\"}; SzeneSchweiz: Mindestgagen, https://szeneschweiz.ch/gagen-vertraege/mindestgagen/, read 2026-11-04; t. Theaterschaffen Schweiz: Richtlöhne und Richthonorare, https://www.tpunkt.ch/richtloehne, read 2026-11-04."
+ },
+ "CL": {
+  "missing": [
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u19.result.json",
+    "method": "institution",
+    "tried": "sidarte.cl/salarios-minimos-sugeridos/ re-read",
+    "result": "Theatre day and rehearsal rates (suggested); nothing for directors or playwrights",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u19.result.json",
+    "method": "web-search",
+    "tried": "1 search: 'tarifario sugerido honorarios dramaturgia dirección teatral Chile asociación dramaturgos sindicato 2025'",
+    "result": "No playwright or director rate card; leads only (TNCH Ciclo Germinar bases, Teatro a Mil documents)",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "CS": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "CX": {
+  "missing": [
+   "institution"
+  ],
+  "attempts": [
+   {
+    "from": "m16.result.json",
+    "method": "web-search",
+    "tried": "WebSearch 3 of 10 (the same search as the producer blocker's)",
+    "result": "No result on a stage director's or a playwright's terms on Christmas Island; the WA-run IOT arts grant was the only Christmas Island arts result.",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "m16.result.json",
+    "method": "official-register",
+    "tried": "legislation.gov.au: Fair Work Act 2009, compilation No. 73 of 7 July 2026, volume 1 (document_1; files/m16/cx-fwa-d1.html, sha256 1439791d…), s 12 definitions; the Fair Work Commission's Live Performance Award 2020 [MA000081] (awards.fairwork.gov.au/MA000081.html; files/m16/cx-ma81.html, sha256 4539651e…) searched for director, playwright, writer, author",
+    "result": "s 12: 'Australia means the Commonwealth of Australia and, when used in a geographical sense, includes Norfolk Island, the Territory of Christmas Island and the Territory of Cocos (Keeling) Islands', so Australia's awards and agreements reach a stage on Christmas Island. The Live Performance Award classifies no stage director and no playwright (its only 'director' is a dance company's Rehearsal Director, under the Artistic Director).",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "m16.result.json",
+    "method": "trade-press",
+    "tried": "ABC News 'Christmas Island' location page; artshub.com.au search 'playwright commission fee'",
+    "result": "ABC: nothing on theatre on the island. ArtsHub: Cloudflare challenge (403), not read.",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "m16.result.json",
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, -39 for 'au,com,awg)/' (the Australian Writers' Guild, whose rates are members-only); got the 2026-10-06 capture of 'www.awg.com.au/2024-minimum-rates-and-contracts-now-available-on-the-awg-website/' (files/m16/cx-cc-awg2024.html, sha256 1a711f18…); CC-MAIN-2025-51 for the same prefix",
+    "result": "The capture says 'Industrial contracts and rates available to AWG members have been updated for 2024, with rates increased with CPI (as of 1 January 2024)', and links the rates to the members' area; no figure is public in any capture listed (contracts-and-rates, 2020, 2021, 2024 notices, theatre streaming guidelines). No stage directors' body's page was in the crawls searched. CC-MAIN-2025-51 lists the same kinds of AWG page (the 2020 and 2025 'minimum rates and contracts now available' notices, contracts-and-rates); those captures were not opened, the 2024 notice showing the notices point to the members' area.",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "DK": {
+  "missing": [
+   "official-register",
+   "trade-press"
+  ],
+  "blocker": "R-5178"
+ },
+ "EE": {
+  "missing": [
+   "web-search"
+  ],
+  "blocker": "R-5584"
+ },
+ "ES": {
+  "missing": [
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "blocker": "R-5179"
+ },
+ "HK": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u8.result.json",
+    "method": "institution",
+    "tried": "hkadc.org.hk project-grant page and its Drama assessment guidelines 2025-26 PDF",
+    "result": "read: ceilings HK$700,000 / 200,000 / 140,000; budget rule 60% occupancy",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "HM": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "IE": {
+  "missing": [
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "blocker": "R-5182"
+ },
+ "IT": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "blocker": "R-5184"
+ },
+ "JE": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u11.result.json",
+    "method": "institution",
+    "tried": "gov.je minimum wage pages (three guessed URLs 404, then gov.je/minimumwage which redirected to /Working/EmploymentRelations/Pages/MinimumWage.aspx)",
+    "result": "Read",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "LI": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [],
+  "foundInPart": null
+ },
+ "LV": {
+  "missing": [
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u9.result.json",
+    "method": "web-search",
+    "tried": "WebSearch 2 (standard): \"Latvija teātris koplīgums aktieru režisoru atalgojums minimālā likme dramaturga honorārs\"",
+    "result": "no collective agreement or playwright floor; led to theatres' pay-policy disclosures and the minimum wage",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u9.result.json",
+    "method": "institution",
+    "tried": "teatris.lv (Latvian National Theatre) pay policy PDF 2025; jrt.lv (New Riga Theatre) pay policy PDF 2025; lm.gov.lv minimum wage",
+    "result": "LNT artistic staff incl. actors EUR 1,200-2,300; JRT gives no actor band; minimum wage EUR 780 from 2026-01-01",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "ME": {
+  "missing": [
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u13.result.json",
+    "method": "web-search",
+    "tried": "1 search (standard): 'Zakon o zaradama zaposlenih u javnom sektoru Crna Gora koeficijent glumac pozorište reditelj honorar Crnogorsko narodno pozorište'",
+    "result": "led to the culture sector collective agreement on cnp.me and the pay law",
+    "date": "2026-11-04"
+   },
+   {
+    "from": "u13.result.json",
+    "method": "institution",
+    "tried": "cnp.me Granski kolektivni ugovor za oblast kulture PDF; amrrs.gov.me copy of the public-sector pay law (connection reset)",
+    "result": "agreement read; pay law not reached",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": "Of a stage director's minimum (2026-11-04): This is an employed director's basic-pay coefficient, not a fee for a guest staging; whether the 2016 agreement still holds after the public-sector pay law's 2026 amendment (OG 26/26) was not verified, and the coefficient's euro value was not read. Read (u13.result.json): {\"basis\": \"sector collective agreement for culture (OG 64/16), employees of budget-funded public culture institutions (and municipal ones until they sign their own)\", \"role\": \"Režiser (employed)\", \"coefficient\": {\"levelVI_180credits\": 6.5, \"levelVII1_240credits\": 8.8}, \"pay\": \"coefficient x the Government's value of the coefficient (not read)\", \"guestDirectorFee\": null}; Granski kolektivni ugovor za oblast kulture (Službeni list Crne Gore, br. 064/16 od 10.10.2016), as posted by the Crnogorsko narodno pozorište (cnp.me), https://cnp.me/wp-content/uploads/2019/05/Granski-kolektivni-ugovor-za-oblast-kulture.pdf, read 2026-11-04."
+ },
+ "NZ": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "blocker": "R-5191"
+ },
+ "PA": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u24.result.json",
+    "method": "institution",
+    "tried": "Ministerio de Trabajo, www.mitradel.gob.pa (home and posts API)",
+    "result": "403; the API redirected without end",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "SK": {
+  "missing": [
+   "web-search",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u13.result.json",
+    "method": "institution",
+    "tried": "lita.sk home, /divadlo, /zakladne-dokumenty; downloaded the theatre tariff from 1.1.2026 (scan) and read pages 1-4 from rendered images; tesseract (slk) was started but stopped by this agent (PID 723, the machine's load near 190) and the figures were read from the images",
+    "result": "read; royalties by role found",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": "Of a stage director's minimum (2026-11-04): A royalty on gross takings for a director represented by LITA; it binds only works of LITA-represented authors. No minimum staging fee (honorár) or collective agreement for stage directors was found. Read (u13.result.json): {\"basis\": \"LITA theatre tariff (a collecting society's rate card for authors it represents, not a collective agreement)\", \"from\": \"2026-01-01\", \"directionRoyaltyShareOfGross\": [0.04, 0.06], \"base\": \"gross box office per performance incl. subscriptions, before any deduction\", \"streamFreeChildrenUpTo90minEUR\": 3.744, \"fee\": null}; LITA, autorská spoločnosť: Sadzobník odmien, Dramatické diela, divadelné diela a ďalšie s nimi súvisiace diela, účinný od 1.1.2026 (scan, 8 pages; linked from lita.sk/zakladne-dokumenty; read from the page images p-1 to p-4 rendered at 200 dpi, ocr_lita/p-*.png), https://www.lita.sk/s/26_sadzobnik_divadelny_s-inflaciou_od-112026_scan.pdf, read 2026-11-04; LITA, Divadlo (theatre authors' page), https://www.lita.sk/divadlo, read 2026-11-04."
+ },
+ "TH": {
+  "missing": [
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "attempts": [
+   {
+    "from": "u25.result.json",
+    "method": "web-search",
+    "tried": "WebSearch 'ละครเวที ค่าตอบแทน ผู้กำกับ นักเขียนบทละครเวที อัตรา รายได้ต่อรอบ บัตรขายหมด เพิ่มรอบ 2569'",
+    "result": "no fee or per-performance revenue figures; a 2017 SWU thesis on commercial theatre (ticket tiers, outsourced crews); a Fine Arts Department sell-out and added performances (as reported); a 2022 restage",
+    "date": "2026-11-04"
+   }
+  ],
+  "foundInPart": null
+ },
+ "ZA": {
+  "missing": [
+   "web-search",
+   "institution",
+   "official-register",
+   "trade-press",
+   "archive"
+  ],
+  "blocker": "R-5193"
+ }
+}

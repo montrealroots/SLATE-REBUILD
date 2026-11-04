@@ -1,0 +1,77 @@
+[
+  {
+    "id": "R-PENDING",
+    "fact": "person.markets.writer.blocked.UA",
+    "sought": "What a play's writer is paid in Ukraine (the playwright's minimum: a commission fee, an advance, a royalty).",
+    "status": "blocked",
+    "notModeled": "writing.unkept",
+    "attempts": [
+      {
+        "method": "institution",
+        "tried": "mincult.gov.ua search (as for 7, 9) and the Ukrainian Agency for Copyright and Related Rights, uacrr.org (429 Too Many Requests)",
+        "result": "not found: play. no playwright's fee, commission or royalty published",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "official-register",
+        "tried": "zakon.rada.gov.ua/laws/show/2811-20 (Law of Ukraine 'On Copyright and Related Rights', 2022)",
+        "result": "not found: play. connection reset by peer (curl 35); not read",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "trade-press",
+        "tried": "Detector Media (3 Nov 2026), read whole",
+        "result": "not found: play. nothing on playwrights' pay",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "archive",
+        "tried": "Common Crawl CC-MAIN-2026-43 for ua,gov,mincult)/, ua,gov,mcsc)/ (403s only), ua,org,ukrainianauthors)/ and ua,org,nstu)/ (none), ua,in,ucf)/ (the lot above lists literature among its sectors)",
+        "result": "not found: play. no capture of a playwright's minimum or a society's theatre tariff",
+        "date": "2026-11-04"
+      }
+    ],
+    "why": "Not merged: Ukraine's item 8 lacks a web-search attempt (m11's notSearched: its ten searches were spent elsewhere); a blocker stands only on all five methods."
+  },
+  {
+    "id": "R-PENDING",
+    "fact": "person.markets.writer.blocked.US",
+    "sought": "What a play's writer is paid in United States (the playwright's minimum: a commission fee, an advance, a royalty).",
+    "status": "blocked",
+    "notModeled": "writing.unkept",
+    "attempts": [
+      {
+        "method": "institution",
+        "tried": "dramatistsguild.com/contracts",
+        "result": "not found: play. APC sold as a booklet; members only",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "web-search",
+        "tried": "WebSearch (standard) 'Dramatists Guild minimum royalty playwright commission fee Approved Production Contract percentage 2026'",
+        "result": "not found: play. No published minimum: the DG's APC pages ('Become a Business Subscriber to view this contract'; APC booklets sold), the DG's April 2026 note on the Minimum Basic Agreement's centennial, an SEC-filed option agreement (4.5% of gross for one musical, a single deal), AACT's 'producing original plays' PDF",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "official-register",
+        "tried": "US Department of Labor, Office of Labor-Management Standards' collective bargaining agreements file https://www.dol.gov/agencies/olms/cba (for an Actors' Equity agreement; the Dramatists Guild is not a union and files none) and the OLMS online disclosure https://olmsapps.dol.gov/olpdr/",
+        "result": "not found: play. dol.gov: 403 (388-byte refusal); olmsapps.dol.gov: TLS 'unable to get local issuer certificate' (verification not turned off). Nothing read.",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "trade-press",
+        "tried": "American Theatre search ?s=playwright commission fee (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-amtheatre-search.html) and 'Obies, Beacon and Black List Commissions, and More' (2026-02-11, https://www.americantheatre.org/2026/02/11/obies-beacon-and-black-list-commissions-and-more/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-amtheatre-beacon.html, sha256 b83c2d7bb42e21ad6247d13392c3772b4e2c4d7e08b0f90fe0a4f329365b058d)",
+        "result": "not found: play. Observed commissions, not minimums: the Movement Theatre Company and the Black List's 'Ladder Commission, which includes $10,000 and the chance to work with the Movement to write and develop a new play that will culminate in a workshop in 2027'; Colt Coeur's Beacon Commission offers 'a traditional artist fee' (no sum) plus two workshops. Press without the companies' addresses: a lead.",
+        "date": "2026-11-04"
+      },
+      {
+        "method": "archive",
+        "tried": "Common Crawl CC-MAIN-2026-43 'com,dramatistsguild)/' (1,764 captures) filtered for contract, royalt, commission, apc, rate, minimum; opened 'article-archive/commissions' (https://www.dramatistsguild.com/article-archive/commissions, captured 2026-10-07, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-cc-articlearchive-commissions.html, sha256 8ee79435965f44fd770b839e2b51283048bd6387715b897bb9879df64c31aee9), 'thedramatist/archive/commissions' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-cc-thedramatist-commissions.html, sha256 fb226bffba2b4d3c12a17e3123ab9fb19e64eafe6a5ae7c17f262b12826b65b9) and 'benefits-and-services/form-commission-agreement-plays-and-musicals' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-cc-form-commission-agreement-plays-and-musi.html, sha256 ec5099b7d93e94fc00dc2bf5110ccf58a3c3037494ad33a32ff6d1df0328bdb1)",
+        "result": "not found: play. Found (see found): the Guild's own page says 'There is no standard commission fee. The amount is generally negotiable and dictated by the reputation and experience of the author, as well as the standard practices and financial means of the commissioning theatre or producer.' The model commission agreement page holds no figure.",
+        "date": "2026-11-04"
+      }
+    ],
+    "foundInPart": "A play: the Dramatists Guild (https://www.dramatistsguild.com/article-archive/commissions, read 2026-11-04) says there is no standard commission fee: it is negotiated, set by the author's reputation and the commissioning theatre's practice and means, and is a fee for the author's services, not an advance or a royalty. The WGA's MBA, which the engine keeps for the US, sets no terms for a play.",
+    "why": "Not merged: the engine keeps the WGA for the US and has no US writer research file, so the coverage row for the US (researched, the WGA's) can't cite a blocker and the player isn't told a play's terms there; the gate fails a blocker no coverage row cites. It needs the lead's call (a writer-US research file holding the play's blocker, or the kept row citing it)."
+  }
+]

@@ -1,0 +1,138 @@
+{
+ "AQ": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [],
+    "foundInPart": null
+   }
+  }
+ },
+ "CH": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [
+     {
+      "from": "t2.result.json",
+      "method": "institution",
+      "tried": "szeneschweiz.ch Mindestgagen page and 2026/27 PDF; tpunkt.ch/richtloehne",
+      "result": "read",
+      "date": "2026-11-04"
+     }
+    ],
+    "foundInPart": "Of a stage director's minimum (2026-11-04): Which of min/med/max the director's level maps to is computed by the page's script (t.js), not printed; recommendations, not an agreement. Read (t2.result.json): {\"agreement\": null, \"recommendation\": \"t. Theaterschaffen Schweiz Richtl\u00f6hne (free scene): a director is at the 'whole project' responsibility level; the calculator's monthly table runs by region, e.g. Zurich min 5,750 / med 6,900 / max 8,000 CHF, Ticino 4,500 / 5,750 / 7,000, other regions 5,500 / 6,500-6,750 / 7,500-8,000\", \"houses\": \"the SBV/SzeneSchweiz Mindestgagen cover permanent and guest artists at the houses, listed by house, without a director line\"}; SzeneSchweiz: Mindestgagen, https://szeneschweiz.ch/gagen-vertraege/mindestgagen/, read 2026-11-04; t. Theaterschaffen Schweiz: Richtl\u00f6hne und Richthonorare, https://www.tpunkt.ch/richtloehne, read 2026-11-04."
+   }
+  }
+ },
+ "DK": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": "R-5178"
+   },
+   "heldAttempts": {
+    "missing": [
+     "official-register",
+     "trade-press"
+    ],
+    "blocker": "R-5178"
+   }
+  }
+ },
+ "HM": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [],
+    "foundInPart": null
+   }
+  }
+ },
+ "LI": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [],
+    "foundInPart": null
+   }
+  }
+ },
+ "PA": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [
+     {
+      "from": "u24.result.json",
+      "method": "institution",
+      "tried": "Ministerio de Trabajo, www.mitradel.gob.pa (home and posts API)",
+      "result": "403; the API redirected without end",
+      "date": "2026-11-04"
+     }
+    ],
+    "foundInPart": null
+   }
+  }
+ }
+}

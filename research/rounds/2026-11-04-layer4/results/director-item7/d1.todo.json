@@ -1,0 +1,185 @@
+{
+ "AN": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [],
+    "foundInPart": null
+   }
+  }
+ },
+ "BW": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [],
+    "foundInPart": null
+   }
+  }
+ },
+ "CX": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "institution"
+    ],
+    "attempts": [
+     {
+      "from": "m16.result.json",
+      "method": "web-search",
+      "tried": "WebSearch 3 of 10 (the same search as the producer blocker's)",
+      "result": "No result on a stage director's or a playwright's terms on Christmas Island; the WA-run IOT arts grant was the only Christmas Island arts result.",
+      "date": "2026-11-04"
+     },
+     {
+      "from": "m16.result.json",
+      "method": "official-register",
+      "tried": "legislation.gov.au: Fair Work Act 2009, compilation No. 73 of 7 July 2026, volume 1 (document_1; files/m16/cx-fwa-d1.html, sha256 1439791d\u2026), s 12 definitions; the Fair Work Commission's Live Performance Award 2020 [MA000081] (awards.fairwork.gov.au/MA000081.html; files/m16/cx-ma81.html, sha256 4539651e\u2026) searched for director, playwright, writer, author",
+      "result": "s 12: 'Australia means the Commonwealth of Australia and, when used in a geographical sense, includes Norfolk Island, the Territory of Christmas Island and the Territory of Cocos (Keeling) Islands', so Australia's awards and agreements reach a stage on Christmas Island. The Live Performance Award classifies no stage director and no playwright (its only 'director' is a dance company's Rehearsal Director, under the Artistic Director).",
+      "date": "2026-11-04"
+     },
+     {
+      "from": "m16.result.json",
+      "method": "trade-press",
+      "tried": "ABC News 'Christmas Island' location page; artshub.com.au search 'playwright commission fee'",
+      "result": "ABC: nothing on theatre on the island. ArtsHub: Cloudflare challenge (403), not read.",
+      "date": "2026-11-04"
+     },
+     {
+      "from": "m16.result.json",
+      "method": "archive",
+      "tried": "Common Crawl CC-MAIN-2026-43, -39 for 'au,com,awg)/' (the Australian Writers' Guild, whose rates are members-only); got the 2026-10-06 capture of 'www.awg.com.au/2024-minimum-rates-and-contracts-now-available-on-the-awg-website/' (files/m16/cx-cc-awg2024.html, sha256 1a711f18\u2026); CC-MAIN-2025-51 for the same prefix",
+      "result": "The capture says 'Industrial contracts and rates available to AWG members have been updated for 2024, with rates increased with CPI (as of 1 January 2024)', and links the rates to the members' area; no figure is public in any capture listed (contracts-and-rates, 2020, 2021, 2024 notices, theatre streaming guidelines). No stage directors' body's page was in the crawls searched. CC-MAIN-2025-51 lists the same kinds of AWG page (the 2020 and 2025 'minimum rates and contracts now available' notices, contracts-and-rates); those captures were not opened, the 2024 notice showing the notices point to the members' area.",
+      "date": "2026-11-04"
+     }
+    ],
+    "foundInPart": null
+   }
+  }
+ },
+ "HK": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [
+     {
+      "from": "u8.result.json",
+      "method": "institution",
+      "tried": "hkadc.org.hk project-grant page and its Drama assessment guidelines 2025-26 PDF",
+      "result": "read: ceilings HK$700,000 / 200,000 / 140,000; budget rule 60% occupancy",
+      "date": "2026-11-04"
+     }
+    ],
+    "foundInPart": null
+   }
+  }
+ },
+ "JE": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": null
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "attempts": [
+     {
+      "from": "u11.result.json",
+      "method": "institution",
+      "tried": "gov.je minimum wage pages (three guessed URLs 404, then gov.je/minimumwage which redirected to /Working/EmploymentRelations/Pages/MinimumWage.aspx)",
+      "result": "Read",
+      "date": "2026-11-04"
+     }
+    ],
+    "foundInPart": null
+   }
+  }
+ },
+ "NZ": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": "R-5191"
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "blocker": "R-5191"
+   }
+  }
+ },
+ "ZA": {
+  "stage": {
+   "items": [
+    7
+   ],
+   "blockers": {
+    "director": "R-5193"
+   },
+   "heldAttempts": {
+    "missing": [
+     "web-search",
+     "institution",
+     "official-register",
+     "trade-press",
+     "archive"
+    ],
+    "blocker": "R-5193"
+   }
+  }
+ }
+}

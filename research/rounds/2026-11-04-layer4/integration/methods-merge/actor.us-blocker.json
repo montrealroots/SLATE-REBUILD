@@ -1,0 +1,39 @@
+{
+ "id": "R-NEW-US",
+ "fact": "person.markets.blocked.US",
+ "sought": "The terms a professional actor is engaged on in the United States: the stage actor's minimum (sought 2026-11-04).",
+ "status": "blocked",
+ "notModeled": "acting.unkept",
+ "attempts": [
+  {
+   "method": "official-register",
+   "tried": "US Department of Labor, Office of Labor-Management Standards' collective bargaining agreements file https://www.dol.gov/agencies/olms/cba (for an Actors' Equity agreement; the Dramatists Guild is not a union and files none) and the OLMS online disclosure https://olmsapps.dol.gov/olpdr/ (the stage actor's minimum, the methods round of 2026-11-04). Result: dol.gov: 403 (388-byte refusal); olmsapps.dol.gov: TLS 'unable to get local issuer certificate' (verification not turned off). Nothing read.",
+   "result": "not found: stage",
+   "date": "2026-11-04"
+  },
+  {
+   "method": "archive",
+   "tried": "Common Crawl CC-MAIN-2026-43 'org,actorsequity)/' (253 captures) filtered for salar, rate, minimum, production, agreement, rulebook, pdf, contract; opened Equity News 'The New Era of the Promulgated Agreement: The Independent Theatre Contract' (2026-07-09, https://www.actorsequity.org/news/equitynews/equity-news-issue/equity-news-magazine/2026/07/09/the-new-era-of-the-promulgated-agreement-the-independent-theatre-contract/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-cc-the-new-era-of-the-promulgated-agreement.html, sha256 cd0e102cc4d6f3c87c11ebf44aca59c45e3851331267fe72f42751078b21f6a0) and 'The Single Engagement Agreement and a New Era for Prepaids' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/us-cc-the-single-engagement-agreement-and-a-ne.html, sha256 5d638fc2d98313ccb82cffb5203ff8b498b4bef2d09f63ade739299840def16e); agreement and rulebook PDFs among the captures answered 404 (the stage actor's minimum, the methods round of 2026-11-04). Result: No rate table: Equity says a promulgated agreement is 'negotiated between a union staff member and a single employer. A business rep reviews data about the theatre's history and finances to determine the minimums'; 'last year, 20.3% of Equity work weeks were generated through the umbrella of independent theatres'; the ITC has 'fill-in-the-blank spaces for everything from minimum salary to numbers of contracts per season', filled by each theatre's terms letter; in 2024-2025 '2.7% of Equity contracts were on prepaid agreements'. The Production Contract minimum stays t7's ($2,717, partial).",
+   "result": "not found: stage",
+   "date": "2026-11-04"
+  },
+  {
+   "method": "institution",
+   "tried": "actorsequity.org contracts-and-codes (Production, LORT); news/PR listing (the stage actor's minimum, layer 4's research of 2026-11-04). Result: rulebooks member-only; no ratification release in the listing read",
+   "result": "not found: stage",
+   "date": "2026-11-04"
+  },
+  {
+   "method": "web-search",
+   "tried": "WebSearch \"Actors' Equity Production Contract minimum weekly salary 2026 Broadway League agreement\" (the stage actor's minimum, layer 4's research of 2026-11-04). Result: led to Broadway Journal (read) and Backstage (403)",
+   "result": "not found: stage",
+   "date": "2026-11-04"
+  },
+  {
+   "method": "trade-press",
+   "tried": "broadwayjournal.com ratification article; backstage.com pay explainer (the stage actor's minimum, layer 4's research of 2026-11-04). Result: Broadway Journal read; Backstage 403",
+   "result": "not found: stage",
+   "date": "2026-11-04"
+  }
+ ]
+}
