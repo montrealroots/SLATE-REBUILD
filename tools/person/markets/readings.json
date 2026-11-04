@@ -66,7 +66,12 @@
  "AT": {
   "market": 2, "zone": "Europe/Vienna", "language": {"code": "de", "fig": 3},
   "agreements": {
-   "at-screen": {"media": ["film", "television"], "none": {"fig": 0}}
+   "at-screen": {"media": ["film", "television"], "none": {"fig": 0}},
+   "at-stage": {"media": ["stage"], "currency": "EUR", "minimums": [
+    {"medium": "stage", "per": "month", "from": "2026-07-01", "fig": 4, "path": ["monthlyFixedPay", "2026-07-01"]},
+    {"medium": "stage", "per": "month", "from": "2027-08-01", "fig": 4, "path": ["monthlyFixedPay", "2027-08-01"]},
+    {"medium": "stage", "per": "month", "from": "2028-09-01", "fig": 4, "path": ["monthlyFixedPay", "2028-09-01"]}
+   ]}
   }
  },
  "AU": {
@@ -257,7 +262,17 @@
  },
  "DO": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "DZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
- "EC": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
+ "EC": {
+  "market": 1, "zone": "America/Guayaquil", "language": {"code": "es", "fig": 0},
+  "agreements": {
+   "ec-sectoral": {"media": ["film", "television", "stage"], "currency": "USD", "minimums": [
+    {"medium": "film", "per": "month", "from": "2025-01-01", "fig": 2, "path": ["salariedProfessionalArtistMonthly"]},
+    {"medium": "television", "per": "month", "from": "2025-01-01", "fig": 2, "path": ["salariedProfessionalArtistMonthly"]},
+    {"medium": "stage", "per": "month", "from": "2025-01-01", "fig": 2, "path": ["salariedProfessionalArtistMonthly"]},
+    {"medium": "stage", "per": "performance", "from": "2025-01-01", "fig": 2, "path": ["soloActorPerPresentation"]}
+   ]}
+  }
+ },
  "EE": {
   "market": null, "zone": "Europe/Tallinn", "language": {"code": "et", "fig": 1},
   "agreements": {
@@ -485,6 +500,18 @@
     {"medium": "television", "per": "day", "role": "supporting", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "tvNonLead"]},
     {"medium": "film", "per": "day", "role": "actor", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "film"]},
     {"medium": "film", "per": "day", "role": "beginner", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "filmBeginner"]}
+   ]},
+   "il-hebrew-theatre": {"media": ["stage"], "currency": "ILS", "minimums": [
+    {"medium": "stage", "per": "performance", "when": {"years": [0, 2]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "0-2"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [3, 4]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "3-4"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [5, 6]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "5-6"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [7, 9]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "7-9"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [10, 12]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "10-12"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [13, 15]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "13-15"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [16, 18]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "16-18"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [19, 20]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "19-20"]},
+    {"medium": "stage", "per": "performance", "when": {"years": [21, null]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "21+"]},
+    {"medium": "stage", "per": "session", "rehearsal": true, "with": ["performance"], "from": "2025-02-17", "fig": 6, "path": ["rehearsal", "perRehearsal"]}
    ]}
   }
  },
@@ -923,7 +950,7 @@
  "UA": {"unread": "its research gives no minimum, nor that none sets the pay: only an agreement without its rates and the language"},
  "UG": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "UM": {"unread": "the islands have no inhabitants and no local market; filming there is a federal permit's"},
- "UY": {"unread": "SUA's minimums are a fee for the part beside a day rate, which no term pays"},
+ "UY": {"unread": "SUA's minimums, the totals the Wage Council's agreement of 2025 has it publish, are a fee for the part beside a day rate, and no term a part is paid by is a fee for the part"},
  "UZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "VA": {
   "market": null, "zone": "Europe/Vatican", "language": {"code": "it", "fig": null},

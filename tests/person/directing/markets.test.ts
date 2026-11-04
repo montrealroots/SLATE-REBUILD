@@ -8,12 +8,14 @@ import { ATTRIBUTES_START, chooseAttributes, type AttributesSlice } from '../../
 import {
   aboutMarket,
   AGREEMENTS,
+  DGA,
   DIRECTING_START,
   engagement,
   experience,
   feePays,
   filmOf,
   HOURS,
+  jobOf,
   MARKETS,
   marketFee,
   MISSING,
@@ -21,6 +23,7 @@ import {
   shootFilm,
   cutFilm,
   stepAt,
+  terms,
   UNKEPT_LINE,
   within,
   type DirectingSlice,
@@ -74,6 +77,26 @@ const m = (c: CurrencyCode, n: string) => fromMajor(c, n);
 const before = (started: number): DirectingSlice => ({ films: [{ ...job({ form: 'hour' }), started }] });
 
 const ALL = ['feature', 'hour', 'half-hour'];
+type Tiers = [number, number | null, number, number][];
+/**
+ * The CMPA-DGC Directors Schedule 2026-2028 as the CMPA's copies give it (DR15.01, DR16.01, DR17.02): each year, its
+ * year tier, a feature's tiers A to D (budget, weekly rate, rights fee) and tier F's top, and an episode's tiers A to D
+ * (budget, fee, rights fee), tier E's budget and tier F's top, by form.
+ */
+const DGC: [string, [number, number | null], Tiers, number, Record<'half-hour' | 'hour', { tiers: Tiers; e: [number, number]; under: number }>][] = [
+  ['2026', [0, 2026], [[17593418, null, 13726, 12353.5], [10500001, 17593417, 12375, 11137.5], [6453023, 10500000, 11506, 10355.5], [3500001, 6453022, 9779, 8801]], 3500000, {
+    'half-hour': { tiers: [[1690197, null, 16966, 18662.5], [1055094, 1690196, 15308, 16839], [725376, 1055093, 13396, 14735.5], [527545, 725375, 11385, 12523.5]], e: [198147, 527544], under: 198146 },
+    hour: { tiers: [[2804192, null, 35225, 38747.5], [1895870, 2804191, 31759, 34935], [1335352, 1895869, 27753, 30528.5], [857263, 1335351, 23614, 25975.5]], e: [356664, 857262], under: 356663 },
+  }],
+  ['2027', [2027, 2027], [[18297155, null, 14138, 12724], [10920001, 18297154, 12746, 11471.5], [6711144, 10920000, 11851, 10666], [3500001, 6711143, 10072, 9065]], 3500000, {
+    'half-hour': { tiers: [[1757805, null, 17475, 19222.5], [1097298, 1757804, 15767, 17343.5], [754391, 1097297, 13798, 15178], [548647, 754390, 11727, 12899.5]], e: [206073, 548646], under: 206072 },
+    hour: { tiers: [[2916360, null, 36282, 39910], [1971705, 2916359, 32712, 35983], [1388766, 1971704, 28586, 31444.5], [891554, 1388765, 24322, 26754]], e: [370931, 891553], under: 370930 },
+  }],
+  ['2028', [2028, null], [[18937555, null, 14562, 13106], [11302201, 18937554, 13128, 11815], [6946034, 11302200, 12207, 10986.5], [3622501, 6946033, 10374, 9336.5]], 3622500, {
+    'half-hour': { tiers: [[1819328, null, 17999, 19799], [1135703, 1819327, 16240, 17864], [780795, 1135702, 14212, 15633], [567850, 780794, 12079, 13287]], e: [213286, 567849], under: 213285 },
+    hour: { tiers: [[3018433, null, 37370, 41107], [2040715, 3018432, 33693, 37062.5], [1437373, 2040714, 29444, 32388.5], [922758, 1437372, 25052, 27557]], e: [383914, 922757], under: 383913 },
+  }],
+];
 const f = (x: Fee) => [x.form, x.per, x.phases.join('+'), JSON.stringify(x.when), x.band === null ? '' : x.band.join('-'), x.floor ?? '', x.first ?? '', x.steps.map((s) => s.join(' ')).join(' | ')].join(' ');
 /** Every fee as the research gives it (each country's file, read 2026-11-01): form, pay, stages, tiers, band, floor, first-job cut, steps. */
 const EXPECTED: Record<string, string[]> = {
@@ -159,8 +182,19 @@ const EXPECTED: Record<string, string[]> = {
   'ad-artist': ALL.map((x) => `${x} day prep+shoot+cut {}    2026-07-01 72.4`),
   // DAC's minimums, March 2026: an episode's total by its running time.
   'ar-dac': ['hour', 'half-hour'].flatMap((x) => [[0, 20, 10530000], [21, 60, 16380000], [61, 90, 27300000]].map(([lo, hi, a]) => `${x} job  {"minutes":[${lo},${hi}]}    2026-03-01 ${a}`)),
-  // American Samoa's minimum wage for Miscellaneous Activities, from 30 September 2024.
-  'as-screen': ALL.map((x) => `${x} hour prep+shoot+cut {}    2024-09-30 5.8`),
+  // The CMPA-DGC Directors Schedule 2026-2028, each year's tiers and rates from its 1 January: a feature's weekly rate and
+  // rights fee (90%) over the prep and shoot, a share in tier F; an episode's fee and rights fee (110%), shares in E and F.
+  'cmpa-dgc': DGC.flatMap(([y, year, feature, under, series]) => [
+    ...feature.flatMap(([lo, hi, weekly, rights]) => [weekly, rights].map((a) => `feature week prep+shoot {"year":${JSON.stringify(year)},"budget":[${lo},${hi}]}    ${y}-01-01 ${a}`)),
+    ...['0.02', '0.0075'].map((a) => `feature share  {"year":${JSON.stringify(year)},"budget":[0,${under}]}    ${y}-01-01 ${a}`),
+    ...(['half-hour', 'hour'] as const).flatMap((x) => [
+      ...series[x].tiers.flatMap(([lo, hi, base, rights]) => [base, rights].map((a) => `${x} job  {"year":${JSON.stringify(year)},"budget":[${lo},${hi}]}    ${y}-01-01 ${a}`)),
+      ...['0.02', '0.01'].map((a) => `${x} share  {"year":${JSON.stringify(year)},"budget":[${series[x].e[0]},${series[x].e[1]}]}    ${y}-01-01 ${a}`),
+      ...['0.02', '0.0075'].map((a) => `${x} share  {"year":${JSON.stringify(year)},"budget":[0,${series[x].under}]}    ${y}-01-01 ${a}`),
+    ]),
+  ]),
+  // The STPC directors' tabulator with the APPM: a feature's minimum by the film, each year from 15 May, the last 2024's.
+  'mx-stpc': ['feature job  {}    2021-05-15 405168.75 | 2022-05-15 425427.19 | 2023-05-15 446698.55 | 2024-05-15 469033.48'],
   // Azerbaijan's least author fee for a film made to state order (Cabinet of Ministers, 10 January 2025).
   'az-state-order': ['feature job  {}    2025-01-10 9000', 'hour job  {}    2025-01-10 1400', 'half-hour job  {}    2025-01-10 1400'],
   // Belgium's SCP 303.01: a feature's flat fee, or the production manager's scale (category 10) by the week.
@@ -182,10 +216,12 @@ const oldIds = new Set(TWENTY.flatMap((cc) => (MARKETS[cc] as { agreements: read
  * blocked, their terms unknown; or none; or a sovereign's terms (FOLLOWS).
  */
 const BY_HAND: Record<string, Record<string, 'fees' | 'none' | 'unknown'>> = {
-  AD: { 'ad-artist': 'fees' }, AR: { 'ar-dac': 'fees' }, AS: { 'as-screen': 'fees' }, AT: { 'at-screen': 'none' }, AZ: { 'az-state-order': 'fees', 'az-screen': 'none' }, BA: { 'ba-screen': 'none' }, BE: { 'be-303-flat': 'fees', 'be-303': 'fees' }, CH: { 'ch-screen': 'none' }, CU: { 'cu-icaic': 'fees' }, GR: { 'gr-ert': 'unknown', 'gr-screen': 'unknown' }, HK: { 'hk-screen': 'none' }, LV: { 'lv-screen': 'none' }, ME: { 'me-screen': 'none' }, PA: { 'pa-screen': 'none' }, PH: { 'ph-screen': 'fees' }, SK: { 'sk-screen': 'none' },
+  AD: { 'ad-artist': 'fees' }, AR: { 'ar-dac': 'fees' }, AT: { 'at-screen': 'none' }, AZ: { 'az-state-order': 'fees', 'az-screen': 'none' }, BA: { 'ba-screen': 'none' }, BE: { 'be-303-flat': 'fees', 'be-303': 'fees' }, CH: { 'ch-screen': 'none' }, CU: { 'cu-icaic': 'fees' }, GR: { 'gr-ert': 'unknown', 'gr-screen': 'unknown' }, HK: { 'hk-screen': 'none' }, LV: { 'lv-screen': 'none' }, ME: { 'me-screen': 'none' }, PA: { 'pa-screen': 'none' }, PH: { 'ph-screen': 'fees' }, SK: { 'sk-screen': 'none' },
 };
 /** The territories whose research says a director's work there follows its sovereign's terms: the sovereign's agreements, as the territory's own. */
 const FOLLOWS: Record<string, string> = { AX: 'FI', BL: 'FR', CC: 'AU', CX: 'AU', GF: 'FR', GP: 'FR', MC: 'FR', MF: 'FR', MQ: 'FR', NF: 'AU', PM: 'FR', RE: 'FR', YT: 'FR' };
+/** The US territories, whose research reads the DGA's Basic Agreement as reaching them (17-201): the DGA's terms, which the engine keeps. */
+const DGA_TERRITORIES = ['AS', 'GU', 'MP', 'PR', 'UM', 'VI'];
 /** Monaco's wage law: at least what the same profession is owed in Nice, raised by 5% (Loi n° 739; Arrêté ministériel n° 63-131). */
 const UPLIFT: Record<string, string> = { MC: '0.05' };
 const kind = (a: MarketAgreement) => (a.fees.length > 0 ? 'fees' : a.none ? 'none' : 'unknown');
@@ -198,17 +234,17 @@ describe("the director's markets", () => {
     // Every country and territory of the map but the US, whose terms are the DGA's.
     expect(Object.keys(MARKETS)).toEqual(COUNTRY_CODES.filter((cc) => cc !== 'US').sort());
     expect(old(Object.fromEntries(Object.entries(MARKETS).map(([cc, x]) => [cc, x.agreements])))).toEqual({
-      AU: ['au-award'], BR: ['br-sp', 'br-rj'], CA: ['cmpa-dgc', 'dgc-bc', 'dgc-qc', 'arrq', 'nfb'], DE: ['bvr-cinema', 'netflix-de'], DK: ['dk-feature', 'dr'], ES: ['es-screen'], FR: ['idcc-3097', 'idcc-2642'], GB: ['gb-feature', 'pact-duk'], IE: ['ie-screen'], IN: ['in-screen'], IT: ['it-screen'], JP: ['dgj-eiren'], KR: ['kr-screen'], MX: ['mx-screen'], NG: ['ng-screen'], NL: ['nl-fair-pay', 'nl-none'], NO: ['virke-feature', 'virke-tv'], NZ: ['nz-screen'], SE: ['medieforetagen', 'svt'], ZA: ['za-screen'],
+      AU: ['au-award'], BR: ['br-sp', 'br-rj'], CA: ['cmpa-dgc', 'dgc-bc', 'dgc-qc', 'arrq', 'nfb'], DE: ['bvr-cinema', 'netflix-de'], DK: ['dk-feature', 'dr'], ES: ['es-screen'], FR: ['idcc-3097', 'idcc-2642'], GB: ['gb-feature', 'pact-duk'], IE: ['ie-screen'], IN: ['in-screen'], IT: ['it-screen'], JP: ['dgj-eiren'], KR: ['kr-screen'], MX: ['mx-stpc', 'mx-screen'], NG: ['ng-screen'], NL: ['nl-fair-pay', 'nl-none'], NO: ['virke-feature', 'virke-tv'], NZ: ['nz-screen'], SE: ['medieforetagen', 'svt'], ZA: ['za-screen'],
     });
     const fees = Object.fromEntries(OWN().filter(([, a]) => a.fees.length > 0).map(([id, a]) => [id, a.fees.map(f)]));
     expect(fees).toEqual(EXPECTED);
     // Where the research says no agreement sets a director's pay, it is left to negotiation; where it couldn't find the terms, they're unknown.
     const bare = Object.entries(AGREEMENTS).filter(([id, a]) => a.fees.length === 0 && oldIds.has(id));
     expect(bare.filter(([, a]) => a.none).map(([id]) => id)).toEqual(['dk-feature', 'es-screen', 'gb-feature', 'ie-screen', 'it-screen', 'nl-none', 'nz-screen', 'za-screen']);
-    expect(bare.filter(([, a]) => !a.none).map(([id]) => id)).toEqual(['br-rj', 'cmpa-dgc', 'dgc-bc', 'dr', 'pact-duk', 'in-screen', 'dgj-eiren', 'kr-screen', 'mx-screen', 'ng-screen']);
+    expect(bare.filter(([, a]) => !a.none).map(([id]) => id)).toEqual(['br-rj', 'dgc-bc', 'dr', 'pact-duk', 'in-screen', 'dgj-eiren', 'kr-screen', 'mx-screen', 'ng-screen']);
     for (const [id, a] of OWN().filter(([, x]) => x.fees.length === 0)) expect([a.currency, a.month, a.short, a.periods], id).toEqual([null, null, null, []]);
     expect(OWN().map(([id, a]) => [id, a.country, a.currency ?? '-', a.forms.join('/')].join(' ')).filter((x) => !x.includes(' - '))).toEqual([
-      'ad-artist AD EUR feature/hour/half-hour', 'ar-dac AR ARS feature/hour/half-hour', 'as-screen AS USD feature/hour/half-hour', 'au-award AU AUD feature/hour/half-hour', 'az-state-order AZ AZN feature/hour/half-hour', 'be-303-flat BE EUR feature', 'be-303 BE EUR feature/hour/half-hour', 'br-sp BR BRL feature/hour/half-hour', 'dgc-qc CA CAD feature/hour/half-hour', 'arrq CA CAD hour/half-hour', 'nfb CA CAD feature', 'cu-icaic CU CUP feature/hour/half-hour', 'bvr-cinema DE EUR feature', 'netflix-de DE EUR hour', 'idcc-3097 FR EUR feature', 'idcc-2642 FR EUR hour/half-hour', 'nl-fair-pay NL EUR feature/hour/half-hour', 'virke-feature NO NOK feature', 'virke-tv NO NOK hour/half-hour', 'ph-screen PH PHP feature/hour/half-hour', 'medieforetagen SE SEK feature/hour/half-hour', 'svt SE SEK hour/half-hour',
+      'ad-artist AD EUR feature/hour/half-hour', 'ar-dac AR ARS feature/hour/half-hour', 'au-award AU AUD feature/hour/half-hour', 'az-state-order AZ AZN feature/hour/half-hour', 'be-303-flat BE EUR feature', 'be-303 BE EUR feature/hour/half-hour', 'br-sp BR BRL feature/hour/half-hour', 'cmpa-dgc CA CAD feature/hour/half-hour', 'dgc-qc CA CAD feature/hour/half-hour', 'arrq CA CAD hour/half-hour', 'nfb CA CAD feature', 'cu-icaic CU CUP feature/hour/half-hour', 'bvr-cinema DE EUR feature', 'netflix-de DE EUR hour', 'idcc-3097 FR EUR feature', 'idcc-2642 FR EUR hour/half-hour', 'mx-stpc MX MXN feature', 'nl-fair-pay NL EUR feature/hour/half-hour', 'virke-feature NO NOK feature', 'virke-tv NO NOK hour/half-hour', 'ph-screen PH PHP feature/hour/half-hour', 'medieforetagen SE SEK feature/hour/half-hour', 'svt SE SEK hour/half-hour',
     ]);
     expect(OWN().filter(([, a]) => a.month !== null || a.short !== null).map(([id, a]) => [id, a.month, a.short])).toEqual([['virke-tv', 21.67, { upTo: 5, share: '0.1' }], ['medieforetagen', 21, null]]);
     // The DGC Quebec/AQPM agreement's guaranteed prep and shoot (its weeks, five days each) and Director's Cut.
@@ -224,7 +260,13 @@ describe("the director's markets", () => {
       ...[[0, 20, 5], [21, 60, 10], [61, 90, 15], [91, null, 20]].map(([lo, hi, d]) => `feature cut {"minutes":[${lo},${hi}]} ${d}`),
       ...['prep', 'cut'].flatMap((part) => ['hour', 'half-hour'].flatMap((x) => [[0, 20, part === 'prep' ? 8 : 2], [21, 60, part === 'prep' ? 12 : 4], [61, 90, part === 'prep' ? 14 : 10]].map(([lo, hi, d]) => `${x} ${part} {"minutes":[${lo},${hi}]} ${d}`))),
     ]);
-    expect(OWN().filter(([, a]) => a.periods.length > 0).map(([id]) => id)).toEqual(['ar-dac', 'dgc-qc']);
+    // The CMPA-DGC Directors Schedule's guaranteed prep and shoot by the year's tier (weeks of five days), an episode's days, and the Director's cut.
+    expect((AGREEMENTS['cmpa-dgc'] as MarketAgreement).periods.map((p) => [p.form, p.part, JSON.stringify(p.when), p.days].join(' '))).toEqual([
+      ...DGC.flatMap(([, year, feature, under]) => [...feature.map(([lo, hi], i) => `feature prep-shoot {"year":${JSON.stringify(year)},"budget":[${lo},${hi}]} ${[80, 75, 70, 50][i]}`), `feature prep-shoot {"year":${JSON.stringify(year)},"budget":[0,${under}]} 40`]),
+      'half-hour prep-shoot {} 10', 'hour prep-shoot {} 18',
+      'feature cut {"budget":[0,1000000]} 20', 'feature cut {"budget":[1000001,2000000]} 30', 'feature cut {"budget":[2000001,null]} 40', 'half-hour cut {} 2', 'hour cut {} 3',
+    ]);
+    expect(OWN().filter(([, a]) => a.periods.length > 0).map(([id]) => id)).toEqual(['ar-dac', 'cmpa-dgc', 'dgc-qc']);
     // The world's markets: what isn't known is what each one's research couldn't find, as the register holds it; their
     // agreements as read by hand, or else unknown where blocked and left to negotiation where the research says so.
     for (const cc of Object.keys(MARKETS).filter((c) => !TWENTY.includes(c))) {
@@ -232,6 +274,10 @@ describe("the director's markets", () => {
       const items = [...new Set(research.blockers.map((b) => b.item))];
       const market = MARKETS[cc] as { agreements: readonly string[]; unknown: readonly string[] };
       expect(REGISTER.includes(`person.markets.director.blocked.${cc}`), cc).toBe(items.length > 0);
+      if (DGA_TERRITORIES.includes(cc)) {
+        expect(market, cc).toEqual({ agreements: [DGA], unknown: items });
+        continue;
+      }
       const sovereign = FOLLOWS[cc];
       if (sovereign !== undefined) {
         const own = MARKETS[sovereign] as { agreements: readonly string[]; unknown: readonly string[] };
@@ -325,15 +371,12 @@ describe('a film in a market', () => {
     // SVT: each of the first 60 minutes, less from the 61st, and the month.
     const svt = (minutes: number, directing: DirectingSlice = before(day(2025, 1, 1))) => fee({ form: 'hour', country: 'SE', agreement: 'svt', minutes, prep: 10, shoot: 10, cut: 10 }, NOW, directing);
     expect([svt(14), svt(60), svt(61), svt(15, DIRECTING_START)]).toEqual([null, m('SEK', '172791.43'), m('SEK', '173334.43'), m('SEK', '68758.93')]);
-    // A statute's floor where the research reads it as a director's: Andorra's day, American Samoa's hour (of the game's
-    // eight a day), Metro Manila's day; none known before each began.
+    // A statute's floor where the research reads it as a director's: Andorra's day, Metro Manila's day; none known before
+    // each began. American Samoa's hour, the game's until 2026-11-04, gave way to the DGA's terms, which reach the territory.
     const forty = { prep: 10, shoot: 20, cut: 10 };
     expect(fee({ form: 'feature', country: 'AD', ...forty })).toEqual(m('EUR', '2896'));
     expect(fee({ form: 'half-hour', country: 'AD', prep: 1, shoot: 1, cut: 1 })).toEqual(m('EUR', '217.20'));
     expect(() => job({ form: 'feature', country: 'AD', ...forty }, day(2026, 6, 30))).toThrow('no minimum is known before 2026-07-01');
-    expect(fee({ form: 'hour', country: 'AS', ...forty })).toEqual(m('USD', '1856'));
-    expect(fee({ form: 'feature', country: 'AS', ...forty }, day(2024, 9, 30))).toEqual(m('USD', '1856'));
-    expect(() => job({ form: 'feature', country: 'AS', ...forty }, day(2024, 9, 29))).toThrow('no minimum is known before 2024-09-30');
     expect(fee({ form: 'feature', country: 'PH', ...forty }, day(2026, 9, 26))).toEqual(m('PHP', '30200'));
     expect(() => job({ form: 'feature', country: 'PH', ...forty }, day(2026, 9, 25))).toThrow('no minimum is known before 2026-09-26');
     // Cuba's scale by the month (the actor's 21 days), Belgium's by the week or a feature's flat fee, Azerbaijan's by the job made to state order.
@@ -363,13 +406,38 @@ describe('a film in a market', () => {
     for (const cc of ['FI', 'HU', 'AT', 'HK', 'AE', 'PL', 'RU', 'HR', 'TZ']) expect(fee({ form: 'feature', country: cc, ...forty }), cc).toBeNull();
     expect(fee({ form: 'hour', country: 'GR', ...forty })).toBeNull();
     // Where nothing sets the pay, or the game doesn't know what does, there is no minimum.
-    for (const cc of ['ES', 'IE', 'IT', 'NZ', 'ZA', 'IN', 'JP', 'KR', 'MX', 'NG']) expect(fee({ form: 'feature', country: cc, prep: 10, shoot: 20, cut: 10 }), cc).toBeNull();
+    for (const cc of ['ES', 'IE', 'IT', 'NZ', 'ZA', 'IN', 'JP', 'KR', 'NG']) expect(fee({ form: 'feature', country: cc, prep: 10, shoot: 20, cut: 10 }), cc).toBeNull();
+    expect(fee({ form: 'hour', country: 'MX', prep: 3, shoot: 8, cut: 4 })).toBeNull();
     expect(fee({ form: 'feature', country: 'GB', prep: 10, shoot: 20, cut: 10 })).toBeNull();
     expect(fee({ form: 'hour', country: 'DK', prep: 10, shoot: 8, cut: 4 })).toBeNull();
-    expect(fee({ form: 'feature', country: 'CA', agreement: 'cmpa-dgc', prep: 10, shoot: 20, cut: 10 })).toBeNull();
+    expect(fee({ form: 'feature', country: 'CA', agreement: 'dgc-bc', prep: 10, shoot: 20, cut: 10 })).toBeNull();
+    // The STPC's tabulator: a feature's minimum by the film, the year's from 15 May, the last kept past its term.
+    const mx = (now: number) => fee({ form: 'feature', country: 'MX', prep: 10, shoot: 20, cut: 10 }, now);
+    expect([mx(NOW), mx(day(2024, 5, 15)), mx(day(2024, 5, 14)), mx(day(2021, 5, 15))]).toEqual(['469033.48', '469033.48', '446698.55', '405168.75'].map((x) => m('MXN', x)));
+    expect(() => mx(day(2021, 5, 14))).toThrow('no minimum is known before 2021-05-15');
+    // The CMPA-DGC Directors Schedule: a feature's weekly rate and its rights fee over the guaranteed prep and shoot, by
+    // the year's tier, at every edge; tier F's 2% and 0.75% of the budget; the last year's kept past 2028.
+    const dgc = (form: Asked['form'], budget: number, now = NOW, shoot = 8) => job({ form, country: 'CA', agreement: 'cmpa-dgc', budget, shoot }, now);
+    const paid = (form: Asked['form'], budget: number, now = NOW, shoot = 8) => dgc(form, budget, now, shoot).fee;
+    expect([17_593_418, 17_593_417, 10_500_001, 10_500_000, 6_453_023, 6_453_022, 3_500_001].map((b) => paid('feature', b))).toEqual(['417272', '352687.50', '352687.50', '306061', '306061', '185800', '185800'].map((x) => m('CAD', x)));
+    expect([paid('feature', 3_500_000), paid('feature', 1_000_000)]).toEqual([m('CAD', '96250'), m('CAD', '27500')]);
+    const y27 = day(2027, 1, 1);
+    expect([paid('feature', 18_297_155, y27), paid('feature', 18_297_154, y27), paid('feature', 17_593_418, day(2026, 12, 31))]).toEqual(['429792', '363262.50', '417272'].map((x) => m('CAD', x)));
+    const y28 = day(2028, 1, 1);
+    expect([paid('feature', 3_622_501, y28), paid('feature', 3_622_500, y28), paid('feature', 3_622_501, day(2031, 6, 1))]).toEqual(['197105', '99618.75', '197105'].map((x) => m('CAD', x)));
+    expect(() => dgc('feature', 17_593_418, day(2025, 12, 31))).toThrow('no minimum is known before 2026-01-01');
+    // An episode's fee and rights fee by its budget's tier, 2% and 1% in E, 2% and 0.75% in F.
+    expect([paid('half-hour', 1_690_197, NOW, 4), paid('half-hour', 527_545, NOW, 4), paid('half-hour', 527_544, NOW, 4), paid('half-hour', 198_146, NOW, 4)]).toEqual(['35628.50', '23908.50', '15826.32', '5449.02'].map((x) => m('CAD', x)));
+    expect([paid('hour', 2_804_192), paid('hour', 857_263), paid('hour', 857_262), paid('hour', 3_018_433, y28)]).toEqual(['73972.50', '49589.50', '25717.86', '78477'].map((x) => m('CAD', x)));
   });
 
   it('takes the periods its agreement guarantees, or the contract gives where it guarantees none', () => {
+    // The CMPA-DGC Directors Schedule: the year's tier's weeks of prep and shoot, an episode's days, the Director's cut by the budget.
+    const ca = (form: Asked['form'], budget: number, shoot: number, now = NOW) => job({ form, country: 'CA', agreement: 'cmpa-dgc', budget, shoot }, now);
+    expect([ca('feature', 17_593_418, 32), ca('feature', 17_593_417, 32), ca('feature', 6_453_022, 32), ca('feature', 3_500_000, 32)].map((x) => [x.prepDays, x.cutDays])).toEqual([[48, 40], [43, 40], [18, 40], [8, 40]]);
+    expect([ca('feature', 1_000_000, 30), ca('feature', 1_000_001, 30), ca('feature', 2_000_000, 30), ca('feature', 2_000_001, 30)].map((x) => x.cutDays)).toEqual([20, 30, 30, 40]);
+    expect(ca('feature', 17_593_418, 32, day(2027, 6, 1)).prepDays).toBe(43);
+    expect([ca('half-hour', 1, 4), ca('hour', 1, 8)].map((x) => [x.prepDays, x.cutDays])).toEqual([[6, 2], [10, 3]]);
     expect(job({ form: 'feature', country: 'CA', agreement: 'dgc-qc', budget: 10_879_238, shoot: 32 })).toMatchObject({ country: 'CA', agreement: 'dgc-qc', budget: 10_879_238, minutes: null, prepDays: 48, shootDays: 32, cutDays: 40 });
     expect(job({ form: 'feature', country: 'CA', agreement: 'dgc-qc', budget: 1_000_000, shoot: 40 })).toMatchObject({ prepDays: 0, cutDays: 20 });
     expect(job({ form: 'feature', country: 'CA', agreement: 'dgc-qc', budget: 2_000_000, shoot: 30 })).toMatchObject({ prepDays: 10, cutDays: 30 });
@@ -379,6 +447,19 @@ describe('a film in a market', () => {
     expect(job({ form: 'hour', country: 'SE', agreement: 'svt', minutes: 58, prep: 1, shoot: 2, cut: 3 })).toMatchObject({ minutes: 58, prepDays: 1, shootDays: 2, cutDays: 3 });
     expect(job({ form: 'hour' })).toMatchObject({ country: 'US', agreement: 'dga', minutes: null });
     expect(job({ form: 'hour', country: 'US' })).toMatchObject({ country: 'US', agreement: 'dga' });
+    // A US territory follows the DGA's terms, as the US's are set, in its own country.
+    expect(DGA).toBe('dga');
+    // (The US Minor Outlying Islands have no place on the map a production's months run in, so their terms are read alone.)
+    for (const cc of DGA_TERRITORIES) expect(terms({ form: 'hour', country: cc, budget: 1, shoot: 8, minutes: 60 }, DIRECTING_START, NOW), cc).toEqual({ country: cc, agreement: 'dga', budget: null, minutes: null, prepDays: 7, shootDays: 8, cutDays: 4, fee: m('USD', '58808') });
+    expect(job({ form: 'hour', country: 'VI' })).toMatchObject({ country: 'VI', agreement: 'dga', fee: m('USD', '58808') });
+    expect(job({ form: 'feature', country: 'PR', budget: 5_000_000, shoot: 30 })).toMatchObject({ country: 'PR', agreement: 'dga', budget: 5_000_000, prepDays: 14, shootDays: 30, cutDays: 70, fee: m('USD', '245843') });
+    expect(engagement(job({ form: 'hour', country: 'VI' }))).toEqual({ country: 'VI', days: 19 });
+    // A series' episode is its job: its share of the series' budget and of the shooting days the plan schedules.
+    const series = { ...directed({ form: 'hour', country: 'CA', budget: 11_216_768, shoot: 32 }), series: { form: 'hour' as const, episodes: 4 } };
+    const { job: one, times } = jobOf(series as Parameters<typeof jobOf>[0], { agreement: 'cmpa-dgc' });
+    expect([one.budget, one.shoot, times]).toEqual([2_804_192, 8, 4]);
+    expect(terms(one, DIRECTING_START, NOW).fee).toEqual(m('CAD', '73972.50'));
+    expect(jobOf({ ...series, plan: { ...series.plan, budget: m('CAD', '11216767') } } as Parameters<typeof jobOf>[0], {}).job.budget).toBe(2_804_191);
     // DAC's guaranteed prep, apart from the shoot, and the director's cut by the running time.
     const ar = (form: Asked['form'], minutes: number, shoot = 5) => job({ form, country: 'AR', minutes, shoot });
     expect(ar('feature', 100, 22)).toMatchObject({ country: 'AR', agreement: 'ar-dac', budget: null, minutes: 100, prepDays: 50, shootDays: 22, cutDays: 20 });
@@ -417,6 +498,7 @@ describe('a film in a market', () => {
     expect(go({ country: 'AZ' })).toThrow('a feature in AZ names its agreement: az-state-order, az-screen');
     // In the US the DGA sets all of it.
     for (const k of ['agreement', 'prep', 'cut'] as const) expect(() => job({ form: 'hour', [k]: k === 'agreement' ? 'dga' : 5 }), k).toThrow("the DGA sets a US job's agreement, prep and cut");
+    expect(() => job({ form: 'hour', country: 'GU', prep: 5 })).toThrow("the DGA sets a US job's agreement, prep and cut");
     expect(job({ form: 'hour', minutes: 60 })).toMatchObject({ agreement: 'dga', minutes: null });
   });
 
@@ -492,7 +574,7 @@ describe('a film in a market', () => {
     expect(aboutMarket('JP')).toBe(t(UNKEPT_LINE, { country: 'Japan', missing: 'some of the minimum fees, the prep, shoot and cut a director is guaranteed and the language the work is made in' }));
     expect(aboutMarket('NG')).toBe(t(UNKEPT_LINE, { country: 'Nigeria', missing: "whether anything sets the pay where no agreement does and the guild's fees or how a director joins" }));
     expect(aboutMarket('BR')).toContain('some of the agreements a director is engaged under.');
-    for (const cc of ['AU', 'US', 'XX', 'toString']) expect(aboutMarket(cc), cc).toBeUndefined();
+    for (const cc of ['AU', 'US', 'XX', 'toString', ...DGA_TERRITORIES]) expect(aboutMarket(cc), cc).toBeUndefined();
     expect(Object.keys(MARKETS).filter((cc) => aboutMarket(cc) !== undefined)).toEqual(Object.keys(MARKETS).filter((cc) => (MARKETS[cc] as { unknown: readonly string[] }).unknown.length > 0));
   });
 });

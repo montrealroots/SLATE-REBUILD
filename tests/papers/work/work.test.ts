@@ -106,6 +106,17 @@ describe('work', () => {
       { days: 8, within: 365, only: 'engaged-abroad' },
       { days: 90, within: 365, from: '2026-12-05' },
     ]);
+    // Corrected from the permit research (2026-11-04): Latvia's 14 days in 180 (the Immigration Law of 2026, art. 43),
+    // Hungary's ten working days a year (Decree 445/2013), Uruguay's non-resident performer's 90 days, Bahrain's under
+    // fifteen (the Law, over the Order's fifteen); Iceland's 90 a year stand over its 2005 regulation's four weeks.
+    expect([work('US', 'LV'), work('US', 'HU'), work('US', 'UY'), work('US', 'BH'), work('US', 'IS')]).toMatchObject([
+      { days: 14, within: 180 },
+      { days: 10, within: 365 },
+      { days: 90 },
+      { days: 14 },
+      { days: 90, within: 365 },
+    ]);
+    expect([work('US', 'UY'), work('US', 'BH')].map((w) => typeof w === 'object' && 'within' in w)).toEqual([false, false]);
     expect([work('US', 'BW'), work('FR', 'CF'), work('EG', 'LY')]).toStrictEqual([
       { right: 'permit', route: 'Work permit (Employment of Non-Citizens Act), with the residence permit' },
       { right: 'permit', route: "Visa du contrat de travail (the Minister in charge of Employment's visa on the contract or letter of engagement of a non-Central African worker; Code du travail, loi n° 09.004, art. 100)" },

@@ -22,6 +22,7 @@ import {
   applyToFunder,
   creditIn,
   currencyOf,
+  onDay,
   engagementOf,
   factor,
   HIRED,
@@ -98,11 +99,11 @@ const list = (xs: readonly string[]): string => (xs.length > 1 ? `${xs.slice(0, 
 const blockers = (cc: string): string => [...new Set((JSON.parse(readFileSync(join(ROOT, `research/sources/person/markets/producer-${cc}.json`), 'utf8')) as { blockers: { item: string }[] }).blockers.map((b) => b.item))].join(' ');
 /** A market of which the engine can read nothing: its country's currency, and what wasn't found. */
 const bare = (cc: string) => ({ currency: (countries as Record<string, { currency: string }>)[cc]?.currency, fund: null, aid: [], credit: null, fees: [], release: null, unknown: blockers(cc) });
-const REST = 'AD AF AG AI AL AO AW AX AZ BD BE BF BH BI BJ BL BM BN BO BS BT BV BW BY CC CD CF CG CI CK CM CN CU CV CX CY DJ DZ EC EG EH ER ET FK FM GA GD GG GH GI GM GN GP GQ GT GW HK HM HN HT ID IL IM IO IQ IR JM KE KG KI KM KN KP KW LA LB LC LI LK LR LS LU LY MF MG MH ML MM MO MP MQ MR MS MV MW MZ NC NE NI NP NR NU OM PE PG PM PN PR PS PW PY QA RE RU RW SA SB SC SD SG SM SO SR SS ST SV SX SY SZ TC TD TF TG TJ TK TL TM TN TO TV UA UG UZ VA VC VE VU WF WS YE YT ZM ZW'.split(' ');
+const REST = 'AD AF AG AI AL AO AW AX BD BE BF BH BI BJ BL BM BN BO BS BT BV BW BY CC CD CF CG CI CK CM CN CU CV CX CY DJ DZ EC EG EH ER ET FK FM GA GD GG GH GI GM GN GP GQ GT GW HK HM HN HT ID IL IM IO IQ IR JM KE KG KI KM KN KP KW LA LB LC LI LK LR LS LU LY MF MG MH ML MM MO MP MQ MR MS MV MW MZ NC NE NI NP NR NU OM PE PG PM PN PR PS PW PY QA RE RU RW SA SB SC SD SG SM SO SR SS ST SV SX SY SZ TC TD TF TG TJ TK TL TM TN TO TV UA UG UZ VA VC VE VU WF WS YE YT ZM ZW'.split(' ');
 
 /** A tier as a line: its budgets, then its sum, or its bands (from-to: rate), base, net and most. */
 const line = (x: Tier) =>
-  `${x.budget[0]}-${x.budget[1] ?? ''} ${x.sum !== null ? `sum ${x.sum}` : x.bands.map((b) => `${b.from}-${b.to ?? ''}:${b.rate}`).join(' ')}${x.base === 1 ? '' : ` base ${x.base}`}${x.net ? ' net' : ''}${x.most === null ? '' : ` most ${x.most}`}`.trim();
+  `${x.budget[0]}-${x.budget[1] ?? ''} ${x.sum !== null ? `sum ${x.sum}` : x.bands.map((b) => `${b.from}-${b.to ?? ''}:${b.rate}`).join(' ')}${x.base === 1 ? '' : ` base ${x.base}`}${x.net ? ' net' : ''}${x.most === null ? '' : ` most ${x.most}`}${x.currency === undefined ? '' : ` in ${x.currency}`}`.trim();
 const lines = (m: Market) => ({
   currency: m.currency,
   fund: m.fund === null ? null : [`rate ${m.fund.rate}`, ...m.fund.tiers.map(line)],
@@ -220,6 +221,8 @@ describe('the markets', () => {
       AM: { currency: 'AMD', fund: null, aid: [], credit: ['0- 0-:0.25'], fees: [], release: null, unknown: 'fund' },
       AR: { currency: 'ARS', fund: null, aid: [], credit: ['0- 0-:0.2 most 75000000'], fees: [], release: null, unknown: 'fund' },
       AS: { currency: 'USD', fund: null, aid: [], credit: [], fees: [], release: null, unknown: '' },
+      // Azerbaijan's rebate: 25% from USD 200,000 spent, at most USD 1m, in manat at the day's rate.
+      AZ: { currency: 'AZN', fund: null, aid: [], credit: ['200000- 0-:0.25 most 1000000 in USD'], fees: [], release: null, unknown: 'outcomes' },
       AT: { currency: 'EUR', fund: null, aid: [], credit: ['0- 0-:0.3 most 5000000'], fees: [['2500000- 0-:0.05 most 250000'], ['2500000- 0-:0.075 most 375000']], release: null, unknown: '' },
       BA: { currency: 'BAM', fund: null, aid: [], credit: null, fees: [['0- 0-:0.1']], release: null, unknown: 'fund incentive' },
       BB: { currency: 'BBD', fund: null, aid: [], credit: [], fees: [], release: null, unknown: '' },
@@ -385,6 +388,8 @@ describe("a market's project", () => {
     expect([plan('NO', '24999999.99')?.credit, plan('NO', '25000000')?.credit, plan('NZ', '999999.99')?.credit, plan('NZ', '1000000')?.credit, plan('NZ', '50000000')?.credit]).toEqual([of('NOK', '0'), of('NOK', '6250000'), of('NZD', '0'), of('NZD', '400000'), of('NZD', '12000000')]);
     expect([plan('SE', '29999999.99')?.credit, plan('SE', '30000000')?.credit, plan('SE', '50000000')?.credit]).toEqual([of('SEK', '0'), of('SEK', '7500000'), of('SEK', '10000000')]);
     expect([plan('US', '999999.99')?.credit, plan('US', '1000000')?.credit, plan('US', '30000000')?.credit]).toEqual([of('USD', '0'), of('USD', '350000'), of('USD', '7000000')]);
+    // Azerbaijan's in manat at the day's rate (AZN 1.7 to the dollar): nothing below USD 200,000, at most USD 1m.
+    expect([plan('AZ', '339999.99')?.credit, plan('AZ', '340000')?.credit, plan('AZ', '6800000')?.credit, plan('AZ', '20000000')?.credit]).toEqual([of('AZN', '0'), of('AZN', '85000'), of('AZN', '1700000'), of('AZN', '1700000')]);
     expect([plan('ZA', '1499999.99')?.credit, plan('ZA', '1500000')?.credit, plan('ZA', '100000000')?.credit, plan('NG', '1000000')?.credit]).toEqual([of('ZAR', '0'), of('ZAR', '525000'), of('ZAR', '25000000'), of('NGN', '0')]);
     // Not known: none carried, and none counted toward the money.
     for (const cc of ['BR', 'CA', 'IN', 'JP']) expect(plan(cc, '2000000')?.credit, cc).toBeNull();
@@ -552,8 +557,19 @@ describe("a market's project", () => {
     expect(feeIn({ ...m, fees: [] }, of('EUR', '1'))).toBeNull();
     expect(feeIn({ ...m, fees: [[tier({ budget: [10, null] })]] }, of('EUR', '1'))).toBeNull();
     expect(feeIn({ ...m, fees: [[tier({ budget: [10, null] })], [tier({})]] }, of('EUR', '1'))).toEqual(of('EUR', '0.10'));
-    expect(creditIn({ ...m, credit: null }, of('EUR', '1'))).toBeNull();
-    expect(creditIn({ ...m, credit: [] }, of('EUR', '1'))).toEqual(of('EUR', '0'));
+    expect(creditIn({ ...m, credit: null }, of('EUR', '1'), '2026-11-01')).toBeNull();
+    expect(creditIn({ ...m, credit: [] }, of('EUR', '1'), '2026-11-01')).toEqual(of('EUR', '0'));
+    // A tier set in another currency is read in the budget's at the day's rate (AZN 1.7 to the dollar from 2025-12-31):
+    // its bounds, its bands' edges, its most and its sum; as it is where it's the budget's; none before a rate is known.
+    const usd = tier({ budget: [100, 1000.01], bands: [{ from: 0, to: 50, rate: 0.5 }, { from: 50, to: null, rate: 0.1 }], most: 60, sum: 7, currency: 'USD' });
+    expect(onDay(usd, 'AZN', '2026-11-01')).toEqual({ ...usd, budget: [170, 1700.02], bands: [{ from: 0, to: 85, rate: 0.5 }, { from: 85, to: null, rate: 0.1 }], most: 102, sum: 11.9, currency: 'AZN' });
+    expect(onDay({ ...usd, budget: [0, null], most: null, sum: null }, 'AZN', '2026-11-01')).toMatchObject({ budget: [0, null], most: null, sum: null });
+    expect(onDay(tier({}), 'AZN', '2025-12-30')).toEqual(tier({}));
+    expect(onDay(usd, 'AZN', '2025-12-30')).toBeNull();
+    expect(onDay(usd, 'USD', '2025-12-30')).toEqual(usd);
+    const rebate = { ...m, credit: [tier({ budget: [200000, null], bands: [{ from: 0, to: null, rate: 0.25 }], most: 1000000, currency: 'USD' })] };
+    expect([creditIn(rebate, of('AZN', '339999.99'), '2026-11-01'), creditIn(rebate, of('AZN', '340000'), '2026-11-01'), creditIn(rebate, of('AZN', '10000000'), '2026-11-01')]).toEqual([of('AZN', '0'), of('AZN', '85000'), of('AZN', '1700000')]);
+    expect(creditIn(rebate, of('AZN', '340000'), '2025-12-30')).toBeNull();
   });
 
   it("tells the player what of a market isn't known", () => {

@@ -27,7 +27,8 @@
    "language": "de",
    "zone": "Europe/Vienna",
    "agreements": [
-    "at-screen"
+    "at-screen",
+    "at-stage"
    ]
   },
   "AU": {
@@ -115,6 +116,13 @@
     "dk-copenhagen-stage"
    ]
   },
+  "EC": {
+   "language": "es",
+   "zone": "America/Guayaquil",
+   "agreements": [
+    "ec-sectoral"
+   ]
+  },
   "EE": {
    "language": "et",
    "zone": "Europe/Tallinn",
@@ -183,7 +191,8 @@
    "language": "he",
    "zone": "Asia/Jerusalem",
    "agreements": [
-    "il-screen"
+    "il-screen",
+    "il-hebrew-theatre"
    ]
   },
   "IN": {
@@ -926,6 +935,46 @@
    ],
    "none": true,
    "minimums": []
+  },
+  "at-stage": {
+   "country": "AT",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-07-01",
+     "amount": "2558.22"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2027-08-01",
+     "amount": "2616.52"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2028-09-01",
+     "amount": "2675.72"
+    }
+   ]
   },
   "au-screen": {
    "country": "AU",
@@ -1806,6 +1855,58 @@
      "when": {},
      "from": "2026-08-01",
      "amount": "31395.92"
+    }
+   ]
+  },
+  "ec-sectoral": {
+   "country": "EC",
+   "currency": "USD",
+   "media": [
+    "film",
+    "television",
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "film",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-01-01",
+     "amount": "493.05"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-01-01",
+     "amount": "493.05"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-01-01",
+     "amount": "493.05"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-01-01",
+     "amount": "387.18"
     }
    ]
   },
@@ -3613,6 +3714,163 @@
      "when": {},
      "from": "2026-11-04",
      "amount": "1207"
+    }
+   ]
+  },
+  "il-hebrew-theatre": {
+   "country": "IL",
+   "currency": "ILS",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       2
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "450"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "550"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       6
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "650"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       7,
+       9
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "750"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       12
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "850"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       13,
+       15
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "1000"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       16,
+       18
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "1200"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       19,
+       20
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "1500"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       21,
+       null
+      ]
+     },
+     "from": "2025-02-17",
+     "amount": "1800"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "session",
+     "rehearsal": true,
+     "with": [
+      "performance"
+     ],
+     "when": {},
+     "from": "2025-02-17",
+     "amount": "150"
     }
    ]
   },
@@ -11970,7 +12228,6 @@
    "union"
   ],
   "AT": [
-   "rates",
    "market"
   ],
   "AU": [
@@ -12148,7 +12405,8 @@
    "agreements"
   ],
   "EC": [
-   "terms"
+   "agreements",
+   "rates"
   ],
   "EE": [
    "market"

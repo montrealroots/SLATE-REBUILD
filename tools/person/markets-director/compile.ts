@@ -14,7 +14,8 @@ import { at, dated, figureOf, range, type Range, type Research } from '../market
  * An agreement gives the forms it covers (a feature, an hour or a half-hour episode), its currency, its minimum fees
  * and the periods it guarantees. A fee is paid by the job, as a share of the budget, by the minute of the film, or by
  * the day, half-day, week, month or hour of the engagement's prep, shoot or cut; it holds in a tier (the budget, the
- * director's years, the film's minutes, the engagement's days) and may pay only some units of its count (the 61st minute
+ * director's years, the film's minutes, the engagement's days, the year the job starts in, where an agreement's tiers
+ * move each year) and may pay only some units of its count (the 61st minute
  * on); its amounts step by date. A period is the prep and shoot together, the cut, or the prep alone, in days. Every amount, share,
  * date and tier edge is read from the research or checked to stand in it, never written here alone. An agreement whose
  * research says none sets the pay (`none`) leaves it to negotiation; one whose terms the research couldn't find
@@ -22,7 +23,8 @@ import { at, dated, figureOf, range, type Range, type Research } from '../market
  *
  * A market gives its agreements and what its research couldn't find (its blockers' items), which the engine tells the
  * player. A territory whose research says a director's work there follows its sovereign's terms takes the sovereign's
- * market as compiled.
+ * market as compiled; one that follows the US's takes the DGA's, which the engine keeps itself (`dga`), the market's
+ * agreements naming it alone.
  */
 export const SOURCES = 'research/sources/person/markets';
 export const PREFIX = 'director-';
@@ -40,9 +42,9 @@ export const PERS = ['job', 'share', 'minute', 'day', 'half-day', 'week', 'month
 /** The pays whose units are counted whole, so a fee may pay only some of them. */
 export const BANDED = ['minute', 'day', 'half-day'] as const;
 export const PHASES = ['prep', 'shoot', 'cut'] as const;
-export const TIERS = ['budget', 'years', 'minutes', 'days'] as const;
+export const TIERS = ['budget', 'years', 'minutes', 'days', 'year'] as const;
 /** The tiers whose edges the research writes as figures. */
-export const EDGED = ['budget', 'minutes'] as const;
+export const EDGED = ['budget', 'minutes', 'year'] as const;
 /** The prep and shoot together, the cut, or the prep alone (where an agreement guarantees prep apart from the shoot). */
 export const PERIODS = ['prep-shoot', 'cut', 'prep'] as const;
 /** What a market's research can leave unknown, as its blockers name it; the items that leave an agreement's terms unknown. */
@@ -299,6 +301,8 @@ export function marketOf(r: Research, reading: unknown, done: Markets = { market
     if (!says) throw new Error(`${r.country}'s figure ${String(f['fig'])} doesn't say a director's work there follows ${cc}'s terms`);
     const share = f['uplift'] === undefined ? undefined : at(value, f['uplift'] as (string | number)[]);
     if (share !== undefined && !(typeof share === 'number' && share > 0 && share < 1)) throw new Error(`${r.country}'s figure ${String(f['fig'])} raises the minimum by no share`);
+    // The US's terms are the DGA's, which the engine keeps: the market names it, with no agreement of its own.
+    if (cc === 'US' && share === undefined) return { market: { agreements: [KEPT], unknown }, agreements };
     // Only a market read on its own is followed: one that follows another isn't in `done`.
     if (!Object.hasOwn(done.markets, cc)) throw new Error(`${cc} isn't a market to follow`);
     const followed = done.markets[cc] as Market;
@@ -361,7 +365,7 @@ export function readMarkets(root: string): Markets {
     const { research, blocked } = readResearch(root, register, cc);
     const { market, agreements } = marketOf(research, readings[cc], own, names);
     if (blocked !== research.blockers.length > 0) throw new Error(blocked ? `the register holds ${cc}'s blockers, which its research doesn't` : `${cc}'s research has blockers the register doesn't hold`);
-    for (const id of market.agreements) if (id === KEPT || Object.hasOwn(out.agreements, id)) throw new Error(`${id} is another agreement's id`);
+    for (const id of Object.keys(agreements)) if (id === KEPT || Object.hasOwn(out.agreements, id)) throw new Error(`${id} is another agreement's id`);
     if (!follows(cc)) own.markets[cc] = market;
     out.markets[cc] = market;
     Object.assign(out.agreements, agreements);

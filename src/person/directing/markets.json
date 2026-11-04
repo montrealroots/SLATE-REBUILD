@@ -82,7 +82,7 @@
   },
   "AS": {
    "agreements": [
-    "as-screen"
+    "dga"
    ],
    "unknown": []
   },
@@ -732,11 +732,9 @@
   },
   "GU": {
    "agreements": [
-    "gu-screen"
+    "dga"
    ],
-   "unknown": [
-    "none"
-   ]
+   "unknown": []
   },
   "GW": {
    "agreements": [
@@ -1186,11 +1184,9 @@
   },
   "MP": {
    "agreements": [
-    "mp-screen"
+    "dga"
    ],
-   "unknown": [
-    "fees"
-   ]
+   "unknown": []
   },
   "MQ": {
    "agreements": [
@@ -1251,6 +1247,7 @@
   },
   "MX": {
    "agreements": [
+    "mx-stpc",
     "mx-screen"
    ],
    "unknown": [
@@ -1447,7 +1444,7 @@
   },
   "PR": {
    "agreements": [
-    "pr-screen"
+    "dga"
    ],
    "unknown": []
   },
@@ -1847,7 +1844,7 @@
   },
   "UM": {
    "agreements": [
-    "um-screen"
+    "dga"
    ],
    "unknown": []
   },
@@ -1899,11 +1896,9 @@
   },
   "VI": {
    "agreements": [
-    "vi-screen"
+    "dga"
    ],
-   "unknown": [
-    "terms"
-   ]
+   "unknown": []
   },
   "VN": {
    "agreements": [
@@ -2504,78 +2499,6 @@
      "days": 10
     }
    ]
-  },
-  "as-screen": {
-   "country": "AS",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": "USD",
-   "none": false,
-   "month": null,
-   "short": null,
-   "fees": [
-    {
-     "form": "feature",
-     "per": "hour",
-     "phases": [
-      "prep",
-      "shoot",
-      "cut"
-     ],
-     "when": {},
-     "band": null,
-     "floor": null,
-     "first": null,
-     "steps": [
-      [
-       "2024-09-30",
-       "5.8"
-      ]
-     ]
-    },
-    {
-     "form": "hour",
-     "per": "hour",
-     "phases": [
-      "prep",
-      "shoot",
-      "cut"
-     ],
-     "when": {},
-     "band": null,
-     "floor": null,
-     "first": null,
-     "steps": [
-      [
-       "2024-09-30",
-       "5.8"
-      ]
-     ]
-    },
-    {
-     "form": "half-hour",
-     "per": "hour",
-     "phases": [
-      "prep",
-      "shoot",
-      "cut"
-     ],
-     "when": {},
-     "band": null,
-     "floor": null,
-     "first": null,
-     "steps": [
-      [
-       "2024-09-30",
-       "5.8"
-      ]
-     ]
-    }
-   ],
-   "periods": []
   },
   "at-screen": {
    "country": "AT",
@@ -3196,12 +3119,2816 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "CAD",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       17593418,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "13726"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       17593418,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "12353.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       10500001,
+       17593417
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "12375"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       10500001,
+       17593417
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "11137.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       6453023,
+       10500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "11506"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       6453023,
+       10500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "10355.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       3500001,
+       6453022
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "9779"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       3500001,
+       6453022
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "8801"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1690197,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "16966"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1690197,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "18662.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1055094,
+       1690196
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "15308"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1055094,
+       1690196
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "16839"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       725376,
+       1055093
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "13396"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       725376,
+       1055093
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "14735.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       527545,
+       725375
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "11385"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       527545,
+       725375
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "12523.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       198147,
+       527544
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       198147,
+       527544
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       198146
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       198146
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       2804192,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "35225"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       2804192,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "38747.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1895870,
+       2804191
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "31759"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1895870,
+       2804191
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "34935"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1335352,
+       1895869
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "27753"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       1335352,
+       1895869
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "30528.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       857263,
+       1335351
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "23614"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       857263,
+       1335351
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "25975.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       356664,
+       857262
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       356664,
+       857262
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       356663
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       356663
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2026-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       18297155,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "14138"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       18297155,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "12724"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       10920001,
+       18297154
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "12746"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       10920001,
+       18297154
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "11471.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       6711144,
+       10920000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "11851"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       6711144,
+       10920000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "10666"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       3500001,
+       6711143
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "10072"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       3500001,
+       6711143
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "9065"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1757805,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "17475"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1757805,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "19222.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1097298,
+       1757804
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "15767"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1097298,
+       1757804
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "17343.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       754391,
+       1097297
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "13798"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       754391,
+       1097297
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "15178"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       548647,
+       754390
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "11727"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       548647,
+       754390
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "12899.5"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       206073,
+       548646
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       206073,
+       548646
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       206072
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       206072
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       2916360,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "36282"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       2916360,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "39910"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1971705,
+       2916359
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "32712"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1971705,
+       2916359
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "35983"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1388766,
+       1971704
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "28586"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       1388766,
+       1971704
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "31444.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       891554,
+       1388765
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "24322"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       891554,
+       1388765
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "26754"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       370931,
+       891553
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       370931,
+       891553
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       370930
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       370930
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2027-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       18937555,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "14562"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       18937555,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "13106"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       11302201,
+       18937554
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "13128"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       11302201,
+       18937554
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "11815"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       6946034,
+       11302200
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "12207"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       6946034,
+       11302200
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "10986.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       3622501,
+       6946033
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "10374"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot"
+     ],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       3622501,
+       6946033
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "9336.5"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       3622500
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       3622500
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1819328,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "17999"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1819328,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "19799"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1135703,
+       1819327
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "16240"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1135703,
+       1819327
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "17864"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       780795,
+       1135702
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "14212"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       780795,
+       1135702
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "15633"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       567850,
+       780794
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "12079"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       567850,
+       780794
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "13287"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       213286,
+       567849
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       213286,
+       567849
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       213285
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       213285
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.0075"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       3018433,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "37370"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       3018433,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "41107"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       2040715,
+       3018432
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "33693"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       2040715,
+       3018432
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "37062.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1437373,
+       2040714
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "29444"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       1437373,
+       2040714
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "32388.5"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       922758,
+       1437372
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "25052"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "job",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       922758,
+       1437372
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "27557"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       383914,
+       922757
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       383914,
+       922757
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.01"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       383913
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.02"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "share",
+     "phases": [],
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       383913
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2028-01-01",
+       "0.0075"
+      ]
+     ]
+    }
+   ],
+   "periods": [
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       17593418,
+       null
+      ]
+     },
+     "days": 80
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       10500001,
+       17593417
+      ]
+     },
+     "days": 75
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       6453023,
+       10500000
+      ]
+     },
+     "days": 70
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       3500001,
+       6453022
+      ]
+     },
+     "days": 50
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       0,
+       2026
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "days": 40
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       18297155,
+       null
+      ]
+     },
+     "days": 80
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       10920001,
+       18297154
+      ]
+     },
+     "days": 75
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       6711144,
+       10920000
+      ]
+     },
+     "days": 70
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       3500001,
+       6711143
+      ]
+     },
+     "days": 50
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2027,
+       2027
+      ],
+      "budget": [
+       0,
+       3500000
+      ]
+     },
+     "days": 40
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       18937555,
+       null
+      ]
+     },
+     "days": 80
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       11302201,
+       18937554
+      ]
+     },
+     "days": 75
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       6946034,
+       11302200
+      ]
+     },
+     "days": 70
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       3622501,
+       6946033
+      ]
+     },
+     "days": 50
+    },
+    {
+     "form": "feature",
+     "part": "prep-shoot",
+     "when": {
+      "year": [
+       2028,
+       null
+      ],
+      "budget": [
+       0,
+       3622500
+      ]
+     },
+     "days": 40
+    },
+    {
+     "form": "half-hour",
+     "part": "prep-shoot",
+     "when": {},
+     "days": 10
+    },
+    {
+     "form": "hour",
+     "part": "prep-shoot",
+     "when": {},
+     "days": 18
+    },
+    {
+     "form": "feature",
+     "part": "cut",
+     "when": {
+      "budget": [
+       0,
+       1000000
+      ]
+     },
+     "days": 20
+    },
+    {
+     "form": "feature",
+     "part": "cut",
+     "when": {
+      "budget": [
+       1000001,
+       2000000
+      ]
+     },
+     "days": 30
+    },
+    {
+     "form": "feature",
+     "part": "cut",
+     "when": {
+      "budget": [
+       2000001,
+       null
+      ]
+     },
+     "days": 40
+    },
+    {
+     "form": "half-hour",
+     "part": "cut",
+     "when": {},
+     "days": 2
+    },
+    {
+     "form": "hour",
+     "part": "cut",
+     "when": {},
+     "days": 3
+    }
+   ]
   },
   "dgc-bc": {
    "country": "CA",
@@ -5653,20 +8380,6 @@
    "periods": [],
    "none": false
   },
-  "gu-screen": {
-   "country": "GU",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
-  },
   "gw-screen": {
    "country": "GW",
    "forms": [
@@ -6423,20 +9136,6 @@
    "periods": [],
    "none": false
   },
-  "mp-screen": {
-   "country": "MP",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
-  },
   "mr-screen": {
    "country": "MR",
    "forms": [
@@ -6521,10 +9220,49 @@
    "periods": [],
    "none": false
   },
+  "mx-stpc": {
+   "country": "MX",
+   "forms": [
+    "feature"
+   ],
+   "currency": "MXN",
+   "none": false,
+   "month": null,
+   "short": null,
+   "fees": [
+    {
+     "form": "feature",
+     "per": "job",
+     "phases": [],
+     "when": {},
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2021-05-15",
+       "405168.75"
+      ],
+      [
+       "2022-05-15",
+       "425427.19"
+      ],
+      [
+       "2023-05-15",
+       "446698.55"
+      ],
+      [
+       "2024-05-15",
+       "469033.48"
+      ]
+     ]
+    }
+   ],
+   "periods": []
+  },
   "mx-screen": {
    "country": "MX",
    "forms": [
-    "feature",
     "hour",
     "half-hour"
    ],
@@ -7561,20 +10299,6 @@
   },
   "pn-screen": {
    "country": "PN",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": true
-  },
-  "pr-screen": {
-   "country": "PR",
    "forms": [
     "feature",
     "hour",
@@ -8642,20 +11366,6 @@
    "periods": [],
    "none": false
   },
-  "um-screen": {
-   "country": "UM",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": true
-  },
   "uy-screen": {
    "country": "UY",
    "forms": [
@@ -8728,20 +11438,6 @@
   },
   "vg-screen": {
    "country": "VG",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
-  },
-  "vi-screen": {
-   "country": "VI",
    "forms": [
     "feature",
     "hour",

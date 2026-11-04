@@ -265,6 +265,17 @@ describe("the producer's markets compile", () => {
     expect(creditOf(S, 'EUR', { none: { fig: 2, path: ['rebate'] } })).toEqual([]);
     expect(creditOf(S, 'EUR', { none: { fig: 0, in: 'calibration', path: ['rebate'] } })).toEqual([]);
     expect(() => creditOf(S, 'EUR', [{ fig: 0, budget: [0, null], share: ['share'] }, { fig: 0, budget: [0, null], share: ['share'] }])).toThrow("XX's incentive has two tiers for one budget");
+    // An incentive's amounts may be set in another currency its figure names (Azerbaijan's dollars), read by the engine at the day's rate; nothing else's.
+    const cad = { fig: 1, currency: 'CAD', budget: [0, 19.99], share: ['rate'], most: ['most'] };
+    expect(creditOf(S, 'EUR', [cad])).toEqual([T({ budget: [0, 19.99], bands: [{ from: 0, to: null, rate: 0.3 }], most: 20, currency: 'CAD' })]);
+    expect(creditOf(S, 'EUR', [{ fig: 1, currency: 'CAD', budget: [0, null], sum: ['most'] }])).toEqual([T({ bands: [], sum: 20, currency: 'CAD' })]);
+    expect(creditOf(S, 'EUR', [{ fig: 0, budget: [0, null], share: ['share'] }])?.[0]).not.toHaveProperty('currency');
+    expect(() => creditOf(S, 'EUR', [{ fig: 0, budget: [0, null] }])).toThrow("XX's tier gives nothing");
+    for (const c of ['EUR', 'ZZZ', 5]) expect(() => creditOf(S, 'EUR', [{ ...cad, currency: c }]), String(c)).toThrow(`XX's tier is set in ${String(c)}, which isn't another currency an incentive may be set in`);
+    expect(() => tierOf(S, 'EUR', cad)).toThrow("XX's tier is set in CAD, which isn't another currency an incentive may be set in");
+    expect(() => tiersOf(S, 'EUR', [cad], 'fee')).toThrow("XX's tier is set in CAD, which isn't another currency an incentive may be set in");
+    expect(() => creditOf(S, 'EUR', [{ ...cad, fig: 0, budget: [0, null], share: ['share'] }])).toThrow("XX's most stands in a figure that doesn't name CAD");
+    expect(() => creditOf(S, 'EUR', [cad, { fig: 0, budget: [500_000, null], share: ['share'] }])).toThrow("XX's incentive is set in more than one currency");
     for (const path of [['yes'], ['zero']]) expect(() => creditOf(S, 'EUR', { none: { fig: 2, path } }), path.join()).toThrow("XX's research doesn't say it has no incentive");
     // None (null) where the place names the incentive: a rebate, an incentive, cash; not where it names anything else.
     const nulls = { ...S, own: { ...OWN, figures: [{ item: 'incentive', value: { cashRebate: null, productionIncentive: null, cash: null, cap: null, cashier: null, pettycash: null, rebate: 'none', list: [null] } }] } } as Sources;

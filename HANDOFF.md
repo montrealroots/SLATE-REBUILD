@@ -314,14 +314,19 @@ keep the rules):
    production's nation defaults to that region's and Creative Scotland's fund takes a life from Scotland alone. Left:
    a play outside the UK still names its run in its agreement's units (no source gives performances a week); then the
    other markets' series and plays, a research wave of its own.
-2. What the integrators found and the engines can't read yet: Azerbaijan's rebate in dollars (the engine holds one
-   currency a market), Canada's DGC 2026-28 and Mexico's STPC director rates, the DGA reaching the US Virgin Islands
-   and the Northern Mariana Islands, Austria's stage minimums, Uruguay's and Ecuador's rate tables, the Hebrew
-   theatre agreement; and for `papers.work` (layer 3) the exempt days the permit research found (Latvia 14, Hungary 10,
-   Uruguay 90, Iceland's four weeks against the 90 days held, Singapore's ended performing-artiste scheme).
+2. What the integrators found and the engines didn't read was brought in on 2026-11-04: Azerbaijan's rebate (its
+   dollar terms read at the day's rate), Canada's DGC 2026-28 schedule, Mexico's STPC feature rate, the DGA's terms in
+   the US territories (VI, MP, PR, GU, AS, UM), Austria's stage soloists, Ecuador's sectoral minimums, Israel's Hebrew
+   Theatre agreement; papers.work's exempt days corrected (Latvia 14 in 180, Hungary 10 in 365, Uruguay 90, Bahrain
+   14). Left: foreign-only rebates are paid to the life's own production at home (Azerbaijan's and 35 others: a
+   production made in the life's home country isn't foreign); Israel's theatre agreement excludes actors under 18 and
+   nothing bars them; Uruguay's table pays a fee per part, which the engine has no term for; whether the WGA and
+   SAG-AFTRA reach the US territories as the DGA does; code comments citing research removed on 2026-11-04 (acting.ts,
+   directing.ts, the genres engine and compile) and the permit files IS and SG's "left for papers.work".
 3. Older blockers still carry attempts recorded as "not tried"; each is to be tried and recorded as made. Research
-   figures only casting and spec sales read (the actor's and screenwriter's calibration counts, R-4620's shares of
-   parts, R-4622's spec deals, wealth by occupation and writing programmes) are to be taken out where nothing reads them.
+   figures only casting and spec sales read were taken out on 2026-11-04; others that look unread remain to be checked
+   (R-4620's awards figures, R-4622's CNC genre, UK class and family-share figures, R-4608's staffing, hiring and pay by
+   rung).
 4. Then the further web-search rounds on what stays blocked, and prove layer 4 on CI (`npm run gate:full`) and record it.
 5. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
    facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,

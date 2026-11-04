@@ -1,21 +1,70 @@
 {
  "topic": "markets.director.MP",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Northern Mariana Islands. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker.",
- "figures": [],
- "country": "MP",
- "sources": [],
- "blockers": [
+ "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Northern Mariana Islands. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page. Found 2026-11-04 (layer 4's research, then what it found that the engines didn't read): the DGA's own Basic Agreement reaches the United States' territories and dependencies, so the market follows the DGA's terms; until then nothing was found and the market's terms were unknown, its attempts kept in its register entry, which held the blocker until then.",
+ "figures": [
   {
-   "item": "fees",
-   "sought": "whether the DGA's agreements or any directors' terms apply in the CNMI",
-   "tried": {
-    "institution": "SAG-AFTRA Hawaii Local 'about our local' page (403 to this environment) || Retry 2026-11-01: Marianas Visitors Authority film office located in law (PL 13-29); its promotional-filming and the Department of Public Lands filming application forms read (publiclands.cnmi.gov): permits only; no union or pay term. || 2026-11-04: dga.org/Contracts/Agreements and /BasicAgreement read; the 2023 BA single PDF (4,613,093 bytes) and Article 1 PDF downloaded; Section 17-201 read; doi.gov/oia/islands/cnmi read. Result: found: the BA applies to US-based motion pictures performed in the US 'including its territories and dependencies'; Interior calls the CNMI a U.S. territory under the 1975 Covenant",
-    "official-register": "US DOL state minimum wage table (no performer rule for the CNMI) || Retry 2026-11-01: cnmilaw.gov Public Law 13-29 read: film office and permit fees; no incentive, fund or pay rule. || 2026-11-04: cnmilaw.gov PL 13-29 (read 2026-11-01) not re-read. Result: no local rule",
-    "web-search": "'SAG-AFTRA jurisdiction Guam Saipan Northern Mariana Islands local Hawaii territories' (search snippet says the Hawaii Local serves Hawaii and Guam; nothing on the CNMI) || Retry 2026-11-01: WebSearch \"CNMI film office Marianas Visitors Authority film permit production incentive Saipan\": PL 13-29, MVA forms, news of a Korean TV drama deal; no rebate or guild terms.",
-    "trade-press": "none found || Retry 2026-11-01: mvariety.com and saipantribune.com items in results (film office dormant, proposals only); none quoting a rebate or a union agreement.",
-    "archive": "web.archive.org 429/reset this session || Retry 2026-11-01: web.archive.org snapshot fetch reset by the proxy again (https: connection reset; http: 403); archive.org availability API answers but snapshots do not load; archive.ph: connection reset."
-   }
+   "item": "follows",
+   "finding": "The DGA's Basic Agreement reaches the Northern Mariana Islands: its section 17-201 applies it to work on motion pictures based in and performed in the United States, its territories and dependencies included, and the Department of the Interior holds the Northern Mariana Islands a US territory under the 1975 Covenant. The 2026 Memorandum of Agreement carries the 2023 agreement into the 2026 one (1 July 2026 to 30 June 2030) and leaves 17-201 as it was (its geographical part only reissues a bulletin and amends Sideletter No. 31), so a director there works on the DGA's terms, set as the US's are.",
+   "value": {
+    "role": "director",
+    "follows": "US",
+    "agreement": "DGA Basic Agreement of 2023, carried into the Basic Agreement of 2026 (2026-07-01 to 2030-06-30)",
+    "scope": "17-201: motion pictures based in and performed in the United States (including its territories and dependencies)",
+    "territory": "a US territory under the 1975 Covenant",
+    "binds": "signatory employers"
+   },
+   "applies": "The Northern Mariana Islands, a director engaged by a DGA signatory, as the life's company is held to be in the US (the engine's reading: the life's company signs where a guild lets a producer sign). A non-signatory's director there has no guild terms; the game doesn't model one.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "The provisions of this BA shall apply to work on motion pictures based in the United States and performed in the United States (including its territories and dependencies) and Canada; provided, however, that the provisions of this BA shall also apply to work performed by any Employee employed by the Employer in the United States, to direct, or to be a UPM or an Assistant Director or Associate Director on a motion picture based outside the United States (including its territories and dependencies)."
+    },
+    {
+     "src": 1,
+     "said": "The terms of the 2023 BA (including all sideletters) shall be incorporated in the Directors Guild of America Basic Agreement of 2026, except as provided below and subject to conforming changes. … The term of the 2026 BA and the 2026 FLTTA shall be for four (4) years, commencing on July 1, 2026 to and including June 30, 2030. … 4. International Jurisdiction (U-4) A. Geographical Application (U-4.A.) … Modify Sideletter No. 31 to the Basic Agreement as follows:"
+    },
+    {
+     "src": 2,
+     "said": "territory An unincorporated United States insular area, of which there are currently thirteen, three in the Caribbean (Navassa Island, Puerto Rico and the United States Virgin Islands) and ten in the Pacific (American Samoa, Baker Island, Guam, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Atoll, the Northern Mariana Islands and Wake Atoll)."
+    },
+    {
+     "src": 3,
+     "said": "The Federal law (the Covenant) making the CNMI a U.S. territory passed in 1975."
+    }
+   ]
   }
- ]
+ ],
+ "country": "MP",
+ "sources": [
+  {
+   "url": "https://edge.sitecorecloud.io/directorsguf4d4-dga2c79-dgaprod1615-f6e3/media/Files/Contracts/Agreements/2023-Basic-Agreement/DGABasicAgreement2023thru2026.pdf",
+   "title": "Directors Guild of America Basic Agreement of 2023 (the DGA's copy, linked from https://www.dga.org/Contracts/Agreements/BasicAgreement), Section 17-201 Geographical Application of this BA, p. 299",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "The provisions of this BA shall apply to work on motion pictures based in the United States and performed in the United States (including its territories and dependencies) and Canada; provided, however, that the provisions of this BA shall also apply to work performed by any Employee employed by the Employer in the United States, to direct, or to be a UPM or an Assistant Director or Associate Director on a motion picture based outside the United States (including its territories and dependencies)."
+  },
+  {
+   "url": "https://edge.sitecorecloud.io/directorsguf4d4-dga2c79-dgaprod1615-f6e3/media/Files/Contracts/Agreements/DGA_BAFLTTA_FullyExecuted_2026MOA.pdf",
+   "title": "Memorandum of Agreement for the Directors Guild of America Basic Agreement of 2026 and Freelance Live and Tape Television Agreement of 2026, 9 June 2026 (the DGA's copy; a scan, its 68 pages read by OCR and the quoted lines checked against the page images)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "The terms of the 2023 BA (including all sideletters) shall be incorporated in the Directors Guild of America Basic Agreement of 2026, except as provided below and subject to conforming changes. … The term of the 2026 BA and the 2026 FLTTA shall be for four (4) years, commencing on July 1, 2026 to and including June 30, 2030. … 4. International Jurisdiction (U-4) A. Geographical Application (U-4.A.) … Modify Sideletter No. 31 to the Basic Agreement as follows:"
+  },
+  {
+   "url": "https://www.doi.gov/oia/islands/politicatypes",
+   "title": "Definitions of Insular Area Political Organizations (U.S. Department of the Interior, Office of Insular Affairs)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "territory An unincorporated United States insular area, of which there are currently thirteen, three in the Caribbean (Navassa Island, Puerto Rico and the United States Virgin Islands) and ten in the Pacific (American Samoa, Baker Island, Guam, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Atoll, the Northern Mariana Islands and Wake Atoll)."
+  },
+  {
+   "url": "https://www.doi.gov/oia/islands/cnmi",
+   "title": "Commonwealth of the Northern Mariana Islands (U.S. Department of the Interior, Office of Insular Affairs)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "The Federal law (the Covenant) making the CNMI a U.S. territory passed in 1975."
+  }
+ ],
+ "blockers": []
 }

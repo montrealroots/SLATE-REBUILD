@@ -64,14 +64,7 @@
     {"form": "half-hour", "part": "cut", "when": {"minutes": [61, 90]}, "fig": 1, "path": ["episode", "61to90", 2], "unit": "day"}
    ]}
  }},
- "AS": {"agreements": {
-  "as-screen": {"forms": ["feature", "hour", "half-hour"], "currency": "USD",
-   "fees": [
-    {"form": "feature", "per": "hour", "fig": 0, "steps": [{"from": "2024-09-30", "path": ["hourlyUSD", "2024-09-30"]}]},
-    {"form": "hour", "per": "hour", "fig": 0, "steps": [{"from": "2024-09-30", "path": ["hourlyUSD", "2024-09-30"]}]},
-    {"form": "half-hour", "per": "hour", "fig": 0, "steps": [{"from": "2024-09-30", "path": ["hourlyUSD", "2024-09-30"]}]}
-   ]}
- }},
+ "AS": {"follows": {"fig": 1, "market": "US"}},
  "AT": {"agreements": {
   "at-screen": {"forms": ["feature", "hour", "half-hour"], "none": {"fig": 0, "path": ["kvMinimum"]}}
  }},
@@ -173,7 +166,135 @@
   "bz-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
  "CA": {"agreements": {
-  "cmpa-dgc": {"forms": ["feature", "hour", "half-hour"], "unknown": true},
+  "cmpa-dgc": {"forms": ["feature", "hour", "half-hour"], "currency": "CAD",
+   "fees": [
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [17593418, null]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "A", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [17593418, null]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "A", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [10500001, 17593417]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "B", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [10500001, 17593417]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "B", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [6453023, 10500000]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "C", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [6453023, 10500000]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "C", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [3500001, 6453022]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "D", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [0, 2026], "budget": [3500001, 6453022]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "D", "rights"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [0, 2026], "budget": [0, 3500000]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "F", "share"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [0, 2026], "budget": [0, 3500000]}, "fig": 17, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "F", "rightsShare"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [1690197, null]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "A", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [1690197, null]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "A", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [1055094, 1690196]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "B", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [1055094, 1690196]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "B", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [725376, 1055093]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "C", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [725376, 1055093]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "C", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [527545, 725375]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "D", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [0, 2026], "budget": [527545, 725375]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "D", "rights"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [0, 2026], "budget": [198147, 527544]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "E", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [0, 2026], "budget": [198147, 527544]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "E", "rightsShare"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [0, 2026], "budget": [0, 198146]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "F", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [0, 2026], "budget": [0, 198146]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "half-hour", "F", "rightsShare"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [2804192, null]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "A", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [2804192, null]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "A", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [1895870, 2804191]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "B", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [1895870, 2804191]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "B", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [1335352, 1895869]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "C", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [1335352, 1895869]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "C", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [857263, 1335351]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "D", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [0, 2026], "budget": [857263, 1335351]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "D", "rights"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [0, 2026], "budget": [356664, 857262]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "E", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [0, 2026], "budget": [356664, 857262]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "E", "rightsShare"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [0, 2026], "budget": [0, 356663]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "F", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [0, 2026], "budget": [0, 356663]}, "fig": 18, "steps": [{"from": "2026-01-01", "path": ["years", "2026", "hour", "F", "rightsShare"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [18297155, null]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "A", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [18297155, null]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "A", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [10920001, 18297154]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "B", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [10920001, 18297154]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "B", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [6711144, 10920000]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "C", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [6711144, 10920000]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "C", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [3500001, 6711143]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "D", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2027, 2027], "budget": [3500001, 6711143]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "D", "rights"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 3500000]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "F", "share"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 3500000]}, "fig": 17, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "F", "rightsShare"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1757805, null]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "A", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1757805, null]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "A", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1097298, 1757804]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "B", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1097298, 1757804]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "B", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [754391, 1097297]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "C", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [754391, 1097297]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "C", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [548647, 754390]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "D", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2027, 2027], "budget": [548647, 754390]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "D", "rights"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2027, 2027], "budget": [206073, 548646]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "E", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2027, 2027], "budget": [206073, 548646]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "E", "rightsShare"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 206072]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "F", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 206072]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "half-hour", "F", "rightsShare"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [2916360, null]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "A", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [2916360, null]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "A", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1971705, 2916359]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "B", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1971705, 2916359]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "B", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1388766, 1971704]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "C", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [1388766, 1971704]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "C", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [891554, 1388765]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "D", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2027, 2027], "budget": [891554, 1388765]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "D", "rights"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2027, 2027], "budget": [370931, 891553]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "E", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2027, 2027], "budget": [370931, 891553]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "E", "rightsShare"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 370930]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "F", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2027, 2027], "budget": [0, 370930]}, "fig": 18, "steps": [{"from": "2027-01-01", "path": ["years", "2027", "hour", "F", "rightsShare"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [18937555, null]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "A", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [18937555, null]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "A", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [11302201, 18937554]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "B", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [11302201, 18937554]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "B", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [6946034, 11302200]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "C", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [6946034, 11302200]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "C", "rights"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [3622501, 6946033]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "D", "weekly"]}]},
+    {"form": "feature", "per": "week", "phases": ["prep", "shoot"], "when": {"year": [2028, null], "budget": [3622501, 6946033]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "D", "rights"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [2028, null], "budget": [0, 3622500]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "F", "share"]}]},
+    {"form": "feature", "per": "share", "when": {"year": [2028, null], "budget": [0, 3622500]}, "fig": 17, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "F", "rightsShare"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [1819328, null]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "A", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [1819328, null]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "A", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [1135703, 1819327]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "B", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [1135703, 1819327]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "B", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [780795, 1135702]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "C", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [780795, 1135702]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "C", "rights"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [567850, 780794]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "D", "base"]}]},
+    {"form": "half-hour", "per": "job", "when": {"year": [2028, null], "budget": [567850, 780794]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "D", "rights"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2028, null], "budget": [213286, 567849]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "E", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2028, null], "budget": [213286, 567849]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "E", "rightsShare"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2028, null], "budget": [0, 213285]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "F", "share"]}]},
+    {"form": "half-hour", "per": "share", "when": {"year": [2028, null], "budget": [0, 213285]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "half-hour", "F", "rightsShare"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [3018433, null]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "A", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [3018433, null]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "A", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [2040715, 3018432]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "B", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [2040715, 3018432]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "B", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [1437373, 2040714]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "C", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [1437373, 2040714]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "C", "rights"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [922758, 1437372]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "D", "base"]}]},
+    {"form": "hour", "per": "job", "when": {"year": [2028, null], "budget": [922758, 1437372]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "D", "rights"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2028, null], "budget": [383914, 922757]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "E", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2028, null], "budget": [383914, 922757]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "E", "rightsShare"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2028, null], "budget": [0, 383913]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "F", "share"]}]},
+    {"form": "hour", "per": "share", "when": {"year": [2028, null], "budget": [0, 383913]}, "fig": 18, "steps": [{"from": "2028-01-01", "path": ["years", "2028", "hour", "F", "rightsShare"]}]}
+   ],
+   "periods": [
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [0, 2026], "budget": [17593418, null]}, "fig": 17, "path": ["years", "2026", "A", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [0, 2026], "budget": [10500001, 17593417]}, "fig": 17, "path": ["years", "2026", "B", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [0, 2026], "budget": [6453023, 10500000]}, "fig": 17, "path": ["years", "2026", "C", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [0, 2026], "budget": [3500001, 6453022]}, "fig": 17, "path": ["years", "2026", "D", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [0, 2026], "budget": [0, 3500000]}, "fig": 17, "path": ["years", "2026", "F", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2027, 2027], "budget": [18297155, null]}, "fig": 17, "path": ["years", "2027", "A", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2027, 2027], "budget": [10920001, 18297154]}, "fig": 17, "path": ["years", "2027", "B", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2027, 2027], "budget": [6711144, 10920000]}, "fig": 17, "path": ["years", "2027", "C", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2027, 2027], "budget": [3500001, 6711143]}, "fig": 17, "path": ["years", "2027", "D", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2027, 2027], "budget": [0, 3500000]}, "fig": 17, "path": ["years", "2027", "F", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2028, null], "budget": [18937555, null]}, "fig": 17, "path": ["years", "2028", "A", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2028, null], "budget": [11302201, 18937554]}, "fig": 17, "path": ["years", "2028", "B", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2028, null], "budget": [6946034, 11302200]}, "fig": 17, "path": ["years", "2028", "C", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2028, null], "budget": [3622501, 6946033]}, "fig": 17, "path": ["years", "2028", "D", "weeks"], "unit": "week"},
+    {"form": "feature", "part": "prep-shoot", "when": {"year": [2028, null], "budget": [0, 3622500]}, "fig": 17, "path": ["years", "2028", "F", "weeks"], "unit": "week"},
+    {"form": "half-hour", "part": "prep-shoot", "fig": 18, "path": ["years", "2026", "half-hour", "A", "days"], "unit": "day"},
+    {"form": "hour", "part": "prep-shoot", "fig": 18, "path": ["years", "2026", "hour", "A", "days"], "unit": "day"},
+    {"form": "feature", "part": "cut", "when": {"budget": [0, 1000000]}, "fig": 19, "path": ["featureWeeks", 0, "weeks"], "unit": "week"},
+    {"form": "feature", "part": "cut", "when": {"budget": [1000001, 2000000]}, "fig": 19, "path": ["featureWeeks", 1, "weeks"], "unit": "week"},
+    {"form": "feature", "part": "cut", "when": {"budget": [2000001, null]}, "fig": 19, "path": ["featureWeeks", 2, "weeks"], "unit": "week"},
+    {"form": "half-hour", "part": "cut", "fig": 19, "path": ["seriesDays", "halfHour"], "unit": "day"},
+    {"form": "hour", "part": "cut", "fig": 19, "path": ["seriesDays", "hour"], "unit": "day"}
+   ]},
   "dgc-bc": {"forms": ["feature", "hour", "half-hour"], "unknown": true},
   "dgc-qc": {"forms": ["feature", "hour", "half-hour"], "currency": "CAD",
    "fees": [
@@ -446,9 +567,7 @@
  "GT": {"agreements": {
   "gt-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
- "GU": {"agreements": {
-  "gu-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
- }},
+ "GU": {"follows": {"fig": 0, "market": "US"}},
  "GW": {"agreements": {
   "gw-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
@@ -609,9 +728,7 @@
  "MO": {"agreements": {
   "mo-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
- "MP": {"agreements": {
-  "mp-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
- }},
+ "MP": {"follows": {"fig": 0, "market": "US"}},
  "MQ": {"follows": {"fig": 0, "market": "FR"}},
  "MR": {"agreements": {
   "mr-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
@@ -632,7 +749,11 @@
   "mw-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
  "MX": {"agreements": {
-  "mx-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
+  "mx-stpc": {"forms": ["feature"], "currency": "MXN",
+   "fees": [
+    {"form": "feature", "per": "job", "fig": 1, "steps": [{"from": "2021-05-15", "path": ["perFilm", "2021-05-15"]}, {"from": "2022-05-15", "path": ["perFilm", "2022-05-15"]}, {"from": "2023-05-15", "path": ["perFilm", "2023-05-15"]}, {"from": "2024-05-15", "path": ["perFilm", "2024-05-15"]}]}
+   ]},
+  "mx-screen": {"forms": ["hour", "half-hour"], "unknown": true}
  }},
  "MY": {"agreements": {
   "my-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
@@ -742,9 +863,7 @@
  "PN": {"agreements": {
   "pn-screen": {"forms": ["feature", "hour", "half-hour"], "none": {"fig": 0}}
  }},
- "PR": {"agreements": {
-  "pr-screen": {"forms": ["feature", "hour", "half-hour"], "none": {"fig": 0}}
- }},
+ "PR": {"follows": {"fig": 1, "market": "US"}},
  "PS": {"agreements": {
   "ps-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
@@ -908,9 +1027,7 @@
  "UG": {"agreements": {
   "ug-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
- "UM": {"agreements": {
-  "um-screen": {"forms": ["feature", "hour", "half-hour"], "none": {"fig": 0}}
- }},
+ "UM": {"follows": {"fig": 1, "market": "US"}},
  "UY": {"agreements": {
   "uy-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
@@ -929,9 +1046,7 @@
  "VG": {"agreements": {
   "vg-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
- "VI": {"agreements": {
-  "vi-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
- }},
+ "VI": {"follows": {"fig": 0, "market": "US"}},
  "VN": {"agreements": {
   "vn-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},

@@ -1,7 +1,7 @@
 {
  "topic": "markets.director.MX",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Now add markets for writers, directors and producers\"): the terms a director works on in Mexico. Research and retry subagents (workbench/briefs/BRIEF-roles-markets*.md); every quote checked by the lead against its saved page; a scan read by OCR is marked so and its figures checked against the image. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker.",
+ "note": "Read 2026-11-01 at the owner's word (\"Now add markets for writers, directors and producers\"): the terms a director works on in Mexico. Research and retry subagents (workbench/briefs/BRIEF-roles-markets*.md); every quote checked by the lead against its saved page; a scan read by OCR is marked so and its figures checked against the image. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker. Rewritten 2026-11-04 (layer 4, what the research found that the engines didn't read): the STPC directors' tabulator, found that day in the federal labour register, is read by the engine as a feature's minimum; the fees blocker now seeks a television episode's alone.",
  "figures": [
   {
    "item": "cut",
@@ -25,6 +25,37 @@
      "said": "Artículo 71.- Se considera terminada la obra audiovisual cuando, de acuerdo con lo pactado entre el director realizador por una parte, y el productor por la otra, se haya llegado a la versión definitiva. … Artículo 97.- Son autores de las obras audiovisuales: I. El director realizador; II. Los autores del argumento, adaptación, guión o diálogo; III. Los autores de las composiciones musicales; IV. El fotógrafo, y V. Los autores de las caricaturas y de los dibujos animados. Salvo pacto en contrario, se considera al productor como el titular de los derechos patrimoniales de la obra en su conjunto."
     }
    ]
+  },
+  {
+   "item": "fees",
+   "finding": "The STPC's Sección de Directores and the Asociación de Productores de Películas Mexicanas, the film producers' federal employers' union, set a feature director's minimum by the film in the tabulator of their collective contract (CC-555/1986-III), as registered with the Federal Centre for Conciliation and Labour Registration: MXN 405,168.75 from 15 May 2021, 425,427.19 from 15 May 2022, 446,698.55 from 15 May 2023 and 469,033.48 from 15 May 2024 to 14 May 2025. No later revision is registered.",
+   "value": {
+    "currency": "MXN",
+    "contract": "CC-555/1986-III",
+    "perFilm": {
+     "2021-05-15": 405168.75,
+     "2022-05-15": 425427.19,
+     "2023-05-15": 446698.55,
+     "2024-05-15": 469033.48
+    },
+    "lastPeriod": "2024-05-15/2025-05-14",
+    "delayWeek": 12060.86,
+    "secondUnitPerProduction": 73705.25,
+    "secondUnitWeekly": 13400.95,
+    "compensationIndependentOfContract": 2358.08,
+    "socialBenefits": 54880.1
+   },
+   "applies": "Mexico, feature films made by members of the Asociación de Productores de Películas Mexicanas with directors of the STPC's Sección de Directores (the life's company is read as signing it, as it signs where a guild lets a producer sign); the tabulator sets nothing for television. Past 14 May 2025 its last amount is kept (person.markets.model), no later revision being registered when the register was searched on 2026-11-04. Not read: the payment for each week the shoot runs late (MXN 12,060.86), the second unit's rates, the 'compensación independiente del monto del contrato' (MXN 2,358.08, whose unit the tabulator doesn't state) and the 'prestaciones sociales' (MXN 54,880.10).",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Contrato: CFCRL-REVISION-SALARIAL-20240514-33164-3266 … Nombre del patrón: ASOCIACION DE PRODUCTORES Y DISTRIBUIDORES DE PELICULAS MEXICANAS A.C. … Fecha de presentación: 23 mayo 2024 Nombre de la asociación: SECCION DE DIRECTORES DEL SINDICATO DE TRABAJADORES DE LA PRODUCCION CINEMATOGRAFICA DE LA REPUBLICA MEXICANA Trámites relacionados Revisión Salarial … Fecha de resolución: 23 mayo 2024 … Número de expediente de la asociación: CC-555-1986-III … Tabulador de sueldos Asociación que registró | EXCEL | 1 archivo"
+    },
+    {
+     "src": 2,
+     "said": "TABULADOR DE SALARIOS, COMO PARTE INTEGRANTE DEL CONTRATO COLECTIVO DE TRABAJO, QUE CELEBRAN Y FIRMAN EL SECRETARIO GENERAL DE LA SECCIÓN DE DIRECTORES DEL SINDICATO DE TRABAJADORES DE LA PRODUCCIÓN CINEMATROGRÁFICA DE LA REPÚBLICA MEXICANA (S.T.P.C.) Y LA ASOCIACIÓN DE PRODUCTORES DE PELÍCULAS MEXICANAS, SINDICATO PATRONAL DE JURISDICCIÓN FEDERAL … DICHO TABULADOR ESTUVO Y ESTÁ VIGENTE POR EL PERIODO COMPRENDIDO DEL 15 DE MAYO DEL 2024 AL 14 DE MAYO DEL 2025: … 1.- DIRECTOR (Compensación independiente del monto del contrato). 2358.08 2.- DIRECTOR (Dirección por cada película). 469033.48 3.- DIRECTOR AUXILIAR (Segunda unidad) Salario mínimo contratado por producción. 73705.25 4.- DIRECTOR AUXILIAR (Segunda unidad) Semanarios cuando sea contrato por semana). 13400.95 5.- DIRECTOR (Por retarso de cada semana de la filmación). 12060.86 6.- PRESTACIONES SOCIALES. 54880.1 (the workbook's earlier sheets, for 15 May 2021 to 14 May 2022, 2022 to 2023 and 2023 to 2024: 2.- DIRECTOR (Dirección por cada película). 405168.75; 425427.19; 446698.55)"
+    }
+   ]
   }
  ],
  "role": "director",
@@ -36,12 +67,26 @@
    "read": "2026-11-04",
    "kind": "primary",
    "said": "Artículo 71.- Se considera terminada la obra audiovisual cuando, de acuerdo con lo pactado entre el director realizador por una parte, y el productor por la otra, se haya llegado a la versión definitiva. … Artículo 97.- Son autores de las obras audiovisuales: I. El director realizador; II. Los autores del argumento, adaptación, guión o diálogo; III. Los autores de las composiciones musicales; IV. El fotógrafo, y V. Los autores de las caricaturas y de los dibujos animados. Salvo pacto en contrario, se considera al productor como el titular de los derechos patrimoniales de la obra en su conjunto."
+  },
+  {
+   "url": "https://repositorio.centrolaboral.gob.mx/contrato/633690",
+   "title": "Centro Federal de Conciliación y Registro Laboral, Repositorio: salary revision CFCRL-REVISION-SALARIAL-20240514-33164-3266, Sección de Directores del STPC with the Asociación de Productores y Distribuidores de Películas Mexicanas (resolved 23 May 2024; the association's file CC-555-1986-III)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Contrato: CFCRL-REVISION-SALARIAL-20240514-33164-3266 … Nombre del patrón: ASOCIACION DE PRODUCTORES Y DISTRIBUIDORES DE PELICULAS MEXICANAS A.C. … Fecha de presentación: 23 mayo 2024 Nombre de la asociación: SECCION DE DIRECTORES DEL SINDICATO DE TRABAJADORES DE LA PRODUCCION CINEMATOGRAFICA DE LA REPUBLICA MEXICANA Trámites relacionados Revisión Salarial … Fecha de resolución: 23 mayo 2024 … Número de expediente de la asociación: CC-555-1986-III … Tabulador de sueldos Asociación que registró | EXCEL | 1 archivo"
+  },
+  {
+   "url": "https://registro.centrolaboral.gob.mx/documento-publico/download/2024|05|20|tramite-266307|sueldos_excel|71R0Yw8BEy2OalorHQRE1JL5plJTi4kA7vz9Vsa6.xlsx",
+   "title": "Tabulador de sueldos (the register's copy of the salary revision's workbook, four sheets, 15 May 2021 to 14 May 2025), Sección de Directores del STPC and the Asociación de Productores de Películas Mexicanas, Sindicato Patronal de Jurisdicción Federal",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "TABULADOR DE SALARIOS, COMO PARTE INTEGRANTE DEL CONTRATO COLECTIVO DE TRABAJO, QUE CELEBRAN Y FIRMAN EL SECRETARIO GENERAL DE LA SECCIÓN DE DIRECTORES DEL SINDICATO DE TRABAJADORES DE LA PRODUCCIÓN CINEMATROGRÁFICA DE LA REPÚBLICA MEXICANA (S.T.P.C.) Y LA ASOCIACIÓN DE PRODUCTORES DE PELÍCULAS MEXICANAS, SINDICATO PATRONAL DE JURISDICCIÓN FEDERAL … DICHO TABULADOR ESTUVO Y ESTÁ VIGENTE POR EL PERIODO COMPRENDIDO DEL 15 DE MAYO DEL 2024 AL 14 DE MAYO DEL 2025: … 1.- DIRECTOR (Compensación independiente del monto del contrato). 2358.08 2.- DIRECTOR (Dirección por cada película). 469033.48 3.- DIRECTOR AUXILIAR (Segunda unidad) Salario mínimo contratado por producción. 73705.25 4.- DIRECTOR AUXILIAR (Segunda unidad) Semanarios cuando sea contrato por semana). 13400.95 5.- DIRECTOR (Por retarso de cada semana de la filmación). 12060.86 6.- PRESTACIONES SOCIALES. 54880.1 (the workbook's earlier sheets, for 15 May 2021 to 14 May 2022, 2022 to 2023 and 2023 to 2024: 2.- DIRECTOR (Dirección por cada película). 405168.75; 425427.19; 446698.55)"
   }
  ],
  "blockers": [
   {
    "item": "union",
-   "sought": "The Mexican directors' union or guild, its agreement with producers, how one joins and what it costs.",
+   "sought": "How one joins the STPC's Sección de Directores (the Mexican directors' union, found 2026-11-04 in the federal labour register with its contract with the producers) and what it costs.",
    "tried": {
     "institution": "No official site found for the STPC (Sindicato de Trabajadores de la Producción Cinematográfica) or its Sección de Directores, nor for DIRECTORES (Sociedad Mexicana de Directores-Realizadores de Obras Audiovisuales, S.G.C. de I.P.). | Retry 2026-11-01: No STPC site; DBCA's FAQ names SOMEDIRE (Directores México) as the Mexican directors' rights society, which sets no fees. || 2026-11-04: https://www.anda.org.mx/ (now an unrelated site titled 'Guía Completa de Redención en Horizon Forbidden West - Anda.org.mx'), https://anuariocinemx.imcine.gob.mx/ and /Assets/anuarios/2025.pdf (connection reset, curl 35), https://www.stpc.com.mx/ (CONNECT 502), https://anda.mx/ and https://www.andamexico.org/ (CONNECT 502), 2026-11-04. Result: not reached; ANDA's own site is laanda.org.mx (as the research holds)",
     "official-register": "The Centro Federal de Conciliación y Registro Laboral register of collective contracts was not reached. | Retry 2026-11-01: CFCRL register not reachable. || 2026-11-04: Centro Federal de Conciliación y Registro Laboral, public Repositorio (https://repositorio.centrolaboral.gob.mx/?form_general=1&search=...) searched 2026-11-04 for 'ASOCIACION NACIONAL DE ACTORES' (226 association and 72 contract records), 'PRODUCCION CINEMATOGRAFICA', 'SECCION DE DIRECTORES', 'AUTORES Y ADAPTADORES', 'PRODUCTORES DE PELICULAS MEXICANAS', 'TELEVISA', 'NETFLIX', 'AMAZON', 'AZTECA'; record pages /contrato/633690, 633687, 602635, 609689, 699144, 662601, 701011, 700271 read; files downloaded from registro.centrolaboral.gob.mx/documento-publico/download/ with the repository session cookie. Result: see per entry | the directors' contract text CC-555/1986-III linked from /contrato/609689 (https://legitimacion.centrolaboral.gob.mx/Upload/Sindicato/Contrato_colectivo_prevCC-555-1986-III.pdf). Result: not reached: the legitimacion host answers 'Object Moved' to the repository home; prep, shoot and cut periods, joining terms and dues not read",
@@ -52,7 +97,7 @@
   },
   {
    "item": "fees",
-   "sought": "A minimum fee for a Mexican feature or TV-episode director.",
+   "sought": "A minimum fee for a Mexican TV-episode director. A feature director's, sought here until 2026-11-04, was found that day in the STPC's tabulator at the federal labour register and is a figure of this file.",
    "tried": {
     "institution": "As for union. | Retry 2026-11-01: No STPC site; DBCA's FAQ names SOMEDIRE (Directores México) as the Mexican directors' rights society, which sets no fees. || 2026-11-04: https://www.anda.org.mx/ (now an unrelated site titled 'Guía Completa de Redención en Horizon Forbidden West - Anda.org.mx'), https://anuariocinemx.imcine.gob.mx/ and /Assets/anuarios/2025.pdf (connection reset, curl 35), https://www.stpc.com.mx/ (CONNECT 502), https://anda.mx/ and https://www.andamexico.org/ (CONNECT 502), 2026-11-04. Result: not reached; ANDA's own site is laanda.org.mx (as the research holds)",
     "official-register": "CFCRL register not reached. | Retry 2026-11-01: CFCRL register not reachable. || 2026-11-04: Centro Federal de Conciliación y Registro Laboral, public Repositorio (https://repositorio.centrolaboral.gob.mx/?form_general=1&search=...) searched 2026-11-04 for 'ASOCIACION NACIONAL DE ACTORES' (226 association and 72 contract records), 'PRODUCCION CINEMATOGRAFICA', 'SECCION DE DIRECTORES', 'AUTORES Y ADAPTADORES', 'PRODUCTORES DE PELICULAS MEXICANAS', 'TELEVISA', 'NETFLIX', 'AMAZON', 'AZTECA'; record pages /contrato/633690, 633687, 602635, 609689, 699144, 662601, 701011, 700271 read; files downloaded from registro.centrolaboral.gob.mx/documento-publico/download/ with the repository session cookie. Result: see per entry | the directors' contract text CC-555/1986-III linked from /contrato/609689 (https://legitimacion.centrolaboral.gob.mx/Upload/Sindicato/Contrato_colectivo_prevCC-555-1986-III.pdf). Result: not reached: the legitimacion host answers 'Object Moved' to the repository home; prep, shoot and cut periods, joining terms and dues not read",

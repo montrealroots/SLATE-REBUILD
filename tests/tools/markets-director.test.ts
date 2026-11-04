@@ -86,8 +86,8 @@ describe("the director's markets compile", () => {
       ['job', 'share', 'minute', 'day', 'half-day', 'week', 'month', 'hour'],
       ['minute', 'day', 'half-day'],
       ['prep', 'shoot', 'cut'],
-      ['budget', 'years', 'minutes', 'days'],
-      ['budget', 'minutes'],
+      ['budget', 'years', 'minutes', 'days', 'year'],
+      ['budget', 'minutes', 'year'],
       ['prep-shoot', 'cut', 'prep'],
       ['agreement', 'fees', 'periods', 'union', 'language', 'none', 'terms'],
       ['agreement', 'fees', 'union', 'none', 'terms'],
@@ -106,6 +106,10 @@ describe("the director's markets compile", () => {
     expect(tiersOf({ budget: [0, 799999], years: [3, 5], days: [0, 104], minutes: [800000, null] }, w)).toEqual({ budget: [0, 799999], years: [3, 5], days: [0, 104], minutes: [800000, null] });
     expect(() => tiersOf({ budget: [1, 2] }, w)).toThrow("the research doesn't write the budget tier [1,2]");
     expect(() => tiersOf({ minutes: [15, null] }, w)).toThrow("the research doesn't write the minutes tier [15,null]");
+    // An agreement whose tiers move each year names the years its research writes.
+    expect(tiersOf({ year: [0, 2026], budget: [800000, null] }, new Set([800000, 2026]))).toEqual({ year: [0, 2026], budget: [800000, null] });
+    expect(tiersOf({ year: [2027, 2027] }, new Set([2027]))).toEqual({ year: [2027, 2027] });
+    expect(() => tiersOf({ year: [2027, 2027] }, w)).toThrow("the research doesn't write the year tier [2027,2027]");
     expect(() => tiersOf({ age: [1, 2] }, w)).toThrow("a tier turns on age, which the game doesn't read");
     expect(() => tiersOf({ years: [3, 1] }, w)).toThrow('a tier runs from');
     expect(() => tiersOf([1], w)).toThrow('a tier is not an object');
@@ -270,6 +274,11 @@ describe("the director's markets compile", () => {
     expect(() => near({ note: 1 })).toThrow("what a market follows names note, which the game doesn't read");
     expect(() => territory({ fig: 0, market: 'SV' }, [{ item: 'fees', value: { follows: 'SV' } }])).not.toThrow();
     expect(() => marketOf({ country: 'TT', figures: [{ item: 'follows', value: { follows: 'SV' } }], blockers: [] }, { follows: { fig: 0, market: 'SV' } })).toThrow("SV isn't a market to follow");
+    // A US territory's research says its director works on the US's terms: the DGA's, which the engine keeps, its market naming that agreement alone.
+    const us = (follows: Record<string, unknown>, value: Record<string, unknown> = { follows: 'US', uplift: 0.05 }) => marketOf({ country: 'TT', figures: [{ item: 'follows', value }], blockers: [{ item: 'fees' }] }, { follows: { fig: 0, market: 'US', ...follows } });
+    expect(us({})).toEqual({ market: { agreements: [KEPT], unknown: ['fees'] }, agreements: {} });
+    expect(() => us({}, { follows: 'SV' })).toThrow("TT's figure 0 doesn't say a director's work there follows US's terms");
+    expect(() => us({ uplift: ['uplift'] })).toThrow("US isn't a market to follow");
     expect(() => marketOf(RESEARCH, { follows: { fig: 0, market: 'SV' }, agreements: {} }, done)).toThrow("the reading of XX names agreements, which the game doesn't read");
     expect(() => marketOf(RESEARCH, { agreements: [] })).toThrow('the agreements is not an object');
     expect(() => marketOf(RESEARCH, { agreements: {}, zone: 'x' })).toThrow("the reading of XX names zone, which the game doesn't read");
@@ -378,6 +387,14 @@ describe("the director's markets compile", () => {
     set({ AA: [], BB: [] }, [], { AA: 'xx', BB: 'xx' });
     expect(() => readMarkets(root)).toThrow("xx is another agreement's id");
     set({ AA: [], BB: [] }, [], { AA: 'aa', BB: 'bb' });
+    expect(Object.keys(readMarkets(root).agreements)).toEqual(['aa', 'bb']);
+    // A market that follows the US names the DGA's agreement, which isn't one of its own, so no id is taken.
+    const text = JSON.stringify({ country: 'CC', figures: [{ item: 'follows', value: { follows: 'US' } }], blockers: [] });
+    put(`${SOURCES}/${PREFIX}CC.json`, text);
+    const register = JSON.parse(readFileSync(join(root, 'research/register.json'), 'utf8')) as { entries: unknown[] };
+    put('research/register.json', { entries: [...register.entries, { fact: `${FACT}CC`, value: { file: `${SOURCES}/${PREFIX}CC.json`, sha256: sha(text) } }] });
+    put(READINGS, { AA: reading('aa'), BB: reading('bb'), CC: { follows: { fig: 0, market: 'US' } } });
+    expect(readMarkets(root)).toMatchObject({ markets: { CC: { agreements: [KEPT], unknown: [] } } });
     expect(Object.keys(readMarkets(root).agreements)).toEqual(['aa', 'bb']);
   });
 

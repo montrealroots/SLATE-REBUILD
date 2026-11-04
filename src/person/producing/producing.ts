@@ -122,8 +122,9 @@ import compiled from './markets.json' with { type: 'json' };
  * each stage is the market's where its research sets it, by the budget where it sets it by budget: the fee and
  * overheads at each cap a funder sets (none where it sets none), the credit at the incentive's rate on the share it
  * counts, at most its cap, nothing below its threshold or where the research says there is none, none where it isn't
- * known; the public fund's yes at its rate as the package sells it, an award at the most its terms allow (its share, its
- * cap or its fixed sum, and what the cap on all public aid leaves after the credit), refused where the market's fund
+ * known (an incentive set in another currency, Azerbaijan's rebate in US dollars, read at the day's rate, money.rates);
+ * the public fund's yes at its rate as the package sells it, an award at the most its terms allow (its share, its cap or
+ * its fixed sum, and what the cap on all public aid leaves after the credit), refused where the market's fund
  * isn't known or the budget is outside it; a cinema release at the market's rate, refused where none is known, and
  * earning back nothing the game can tell. The option is the WGA's everywhere, and the market's money is sought in the
  * EAO's shares (the game's reading where a market's own aren't researched, person.markets.producer.model). A market's
@@ -191,6 +192,8 @@ export interface Tier {
   readonly net: boolean;
   readonly most: number | null;
   readonly sum: number | null;
+  /** The currency its bounds, bands, most and sum are set in, where it isn't the market's (an incentive's: Azerbaijan's, in US dollars). */
+  readonly currency?: CurrencyCode;
 }
 /** What a market's research couldn't find, by the item its blockers name. */
 export type Unknown = 'fund' | 'incentive' | 'feecap' | 'outcomes' | 'market' | 'union' | 'language' | 'terms' | 'none' | 'rules' | 'fund.primary';
@@ -795,10 +798,29 @@ export function feeIn(m: Market, budget: Money): Money | null {
   return tiers.length === 0 ? null : amount(budget.currency, tiers.reduce((sum, x) => sum + amountOf(x, budget), 0));
 }
 
-/** A market's credit on a budget: nothing where no tier holds it (below the threshold, or none at all); none where it isn't known. */
-export function creditIn(m: Market, budget: Money): Money | null {
+/**
+ * A tier set in another currency than the budget's, read in the budget's at the day's rate (money.rates), as the UK
+ * play's €50m cap is: its bounds, its bands' and its most; as it is where it is set in the budget's; none where either
+ * rate isn't known that day.
+ */
+export function onDay(tier: Tier, currency: CurrencyCode, date: string): Tier | null {
+  const set = tier.currency;
+  if (set === undefined) return tier;
+  if (exchangeOn(money(set, 0), currency, date) === undefined) return null;
+  const into = (n: number) => (exchangeOn(fromMajor(set, String(n)), currency, date) as { money: Money }).money.minor / 10 ** minorUnits(currency);
+  const end = (n: number | null) => (n === null ? null : into(n));
+  return { ...tier, budget: [into(tier.budget[0]), end(tier.budget[1])], bands: tier.bands.map((b) => ({ ...b, from: into(b.from), to: end(b.to) })), most: end(tier.most), sum: end(tier.sum), currency };
+}
+
+/**
+ * A market's credit on a budget on a day: nothing where no tier holds it (below the threshold, or none at all); none
+ * where it isn't known, or is set in a currency whose rate the game doesn't know that day.
+ */
+export function creditIn(m: Market, budget: Money, date: string): Money | null {
   if (m.credit === null) return null;
-  const tier = tierFor(m.credit, budget);
+  const tiers = m.credit.map((x) => onDay(x, budget.currency, date));
+  if (tiers.includes(null)) return null;
+  const tier = tierFor(tiers as Tier[], budget);
   return amount(budget.currency, tier === undefined ? 0 : amountOf(tier, budget));
 }
 
@@ -877,7 +899,7 @@ function plan(s: Producing, a: PlanArgs, c: Context): void {
   const home = p.market === HOME;
   const film = p.format === 'film';
   const fee = !film ? null : home ? amount(currency, (budget.minor * FEE_SHARE) / (1 + FEE_SHARE)) : feeIn(m, budget);
-  p.plan = { budget, needed, scheduled, weeks, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget) : null };
+  p.plan = { budget, needed, scheduled, weeks, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget, dateOf(c.now)) : null };
   learn(s, p, [C.plan, C.costs], 1);
 }
 

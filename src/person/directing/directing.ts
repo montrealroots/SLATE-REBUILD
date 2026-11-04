@@ -71,7 +71,9 @@ import compiled from './markets.json' with { type: 'json' };
  * markets.json, compiled by tools/person/markets-director from the research, person.markets.director.<CC>): a job there
  * is engaged under one of the market's agreements, paid its minimum fees (a statute's floor of a director's pay where
  * the research reads one as theirs) and given the periods it guarantees; where the research says nothing sets the pay,
- * or couldn't find what does, there is no minimum, and the player is told what isn't known.
+ * or couldn't find what does, there is no minimum, and the player is told what isn't known. A US territory's market
+ * follows the DGA's terms (the Basic Agreement's own scope reaches the United States' territories and dependencies),
+ * set as the US's are.
  *
  * The model's own figures (the spreads, how far a short schedule or a short cut carries, what the set takes from a
  * director's plan, a festival's pool and steepness, what a festival's selection says of an audience, the shares of the
@@ -301,10 +303,15 @@ export interface PrepArgs {
 
 type Terms = Pick<Film, 'country' | 'agreement' | 'budget' | 'minutes' | 'prepDays' | 'shootDays' | 'cutDays' | 'fee'>;
 
-/** The schedule and the pay of a job in the US, as the DGA sets them. */
+/**
+ * The schedule and the pay of a job in the US, as the DGA sets them, and in a US territory whose market follows its
+ * terms (the Basic Agreement's 17-201 applies it to pictures "based in the United States and performed in the United
+ * States (including its territories and dependencies)"), each in its own country. Until 2026-11-04 the DGA's terms
+ * reached the US alone and a territory's market held none.
+ */
 function dgaTerms(a: JobArgs): Terms {
   if (a.agreement !== undefined || a.prep !== undefined || a.cut !== undefined) throw new Error("the DGA sets a US job's agreement, prep and cut");
-  const us = { country: 'US', agreement: 'dga', minutes: null };
+  const us = { country: a.country, agreement: DGA, minutes: null };
   if (a.form === 'feature') {
     const level = levelOf(a.budget);
     return { ...us, budget: a.budget, prepDays: FEATURE.prep, shootDays: a.shoot, cutDays: level.cut(a.shoot), fee: level.weekly === null ? null : money('USD', level.weekly * FEATURE.weeks * 100) };
@@ -316,7 +323,7 @@ function dgaTerms(a: JobArgs): Terms {
 /** What a market's research couldn't find, by the item its blockers name. */
 export type Unknown = 'agreement' | 'fees' | 'periods' | 'union' | 'language' | 'none' | 'terms';
 type Range = readonly [number, number | null];
-type Tier = 'budget' | 'years' | 'minutes' | 'days';
+type Tier = 'budget' | 'years' | 'minutes' | 'days' | 'year';
 type When = Readonly<Partial<Record<Tier, Range>>>;
 export type Stage = 'prep' | 'shoot' | 'cut';
 export type Per = 'job' | 'share' | 'minute' | 'day' | 'half-day' | 'week' | 'month' | 'hour';
@@ -347,6 +354,8 @@ export interface Market {
   readonly unknown: readonly Unknown[];
 }
 export const MARKETS = (compiled as unknown as { markets: Readonly<Record<string, Market>> }).markets;
+/** The agreement the engine keeps itself, the DGA's, which a US territory's market may follow. */
+export const DGA = 'dga';
 export const AGREEMENTS = (compiled as unknown as { agreements: Readonly<Record<string, MarketAgreement>> }).agreements;
 
 /** The hours of a day the engagement works where a fee is by the hour: the game's eight (person.directing.model). */
@@ -410,10 +419,13 @@ export function feePays(a: MarketAgreement, f: Fee, job: Job, date: string): Mon
   return f.first !== null && job.first ? multiply(pays, f.first) : pays;
 }
 
-/** A job's minimum under a market's agreement: every fee whose tiers hold for it, added, raised by the market's share where it has one; none where none holds. */
+/**
+ * A job's minimum under a market's agreement on a date: every fee whose tiers hold for it (the year among them, where an
+ * agreement's tiers move each year), added, raised by the market's share where it has one; none where none holds.
+ */
 export function marketFee(a: MarketAgreement, form: Form, job: Job, date: string): Money | null {
   const total = job.days.prep + job.days.shoot + job.days.cut;
-  const values = { budget: job.budget, minutes: job.minutes, years: job.years, days: total };
+  const values = { budget: job.budget, minutes: job.minutes, years: job.years, days: total, year: Number(date.slice(0, 4)) };
   const fees = a.fees.filter((f) => f.form === form && holds(f.when, values));
   if (fees.length === 0) return null;
   const sum = fees.map((f) => feePays(a, f, job, date)).reduce(add);
@@ -437,7 +449,7 @@ function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   const minutes = reads('minutes') ? a.minutes : null;
   if (reads('minutes') && minutes === null) throw new Error(`a ${a.form} under ${id} names its running time`);
   const shoot = a.shoot;
-  const tier = { budget: budget ?? 0, minutes: minutes ?? 0, years: experience(s, now), days: 0 };
+  const tier = { budget: budget ?? 0, minutes: minutes ?? 0, years: experience(s, now), days: 0, year: Number(dateOf(now).slice(0, 4)) };
   const guaranteed = (part: 'prep-shoot' | 'cut' | 'prep') => periods.find((p) => p.part === part && holds(p.when, tier))?.days;
   const contract = (k: 'prep' | 'cut', days: number | undefined): number => {
     if (days === undefined) return (wholeAtLeast(a[k], 1, `the ${k} days`), a[k] as number);
@@ -491,22 +503,24 @@ function stageTerms(a: JobArgs, now: number): Terms {
   return { ...job, agreement: 'solt-equity', minutes: null, fee: fromMajor('GBP', stepAt(steps, dateOf(now))) };
 }
 
-/** The schedule and the pay of a job: the DGA's in the US, a UK play's its theatre's, a market's agreement's abroad. */
+/** The schedule and the pay of a job: the DGA's in the US and where a market follows it, a UK play's its theatre's, a market's agreement's abroad. */
 export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   if (a.form === 'play') return stageTerms(a, now);
-  return a.country === 'US' ? dgaTerms(a) : marketTerms(a, s, now);
+  return a.country === 'US' || (Object.hasOwn(MARKETS, a.country) && (MARKETS[a.country] as Market).agreements[0] === DGA) ? dgaTerms(a) : marketTerms(a, s, now);
 }
 
 /**
- * A production's job, as its terms read it: one episode's for a series (its share of the shooting days the plan
- * schedules, at least one), a play's its rehearsal weeks' days as the plan names them, the feature's otherwise; and how
- * many such jobs the production is.
+ * A production's job, as its terms read it: one episode's for a series (its share of the budget, whole units, and of
+ * the shooting days the plan schedules, at least one), a play's its rehearsal weeks' days as the plan names them, the
+ * feature's otherwise; and how many such jobs the production is. Until 2026-11-04 an episode's job carried the whole
+ * series' budget, so an agreement's tier by an episode's budget (the DGC's, Quebec's, Netflix's in Germany) read the
+ * series' instead.
  */
 export function jobOf(p: Project & { plan: Pick<Plan, 'scheduled' | 'weeks'> }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
   const times = p.series?.episodes ?? 1;
   // @slate:consumer producing.plan
   const shoot = p.plan.weeks === null ? Math.max(1, Math.round(p.plan.scheduled / times)) : p.plan.weeks.rehearsal * WEEK_DAYS;
-  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: budgetMajor(p), shoot, minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
+  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: Math.floor(budgetMajor(p) / times), shoot, minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
 }
 
 /** A job's engagement, for the permit it may need: the country it is made in and the days it works there. */

@@ -1,7 +1,7 @@
 {
  "topic": "markets.director.CA",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Now add markets for writers, directors and producers\"): the terms a director works on in Canada. Research and retry subagents (workbench/briefs/BRIEF-roles-markets*.md); every quote checked by the lead against its saved page; a scan read by OCR is marked so and its figures checked against the image. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker.",
+ "note": "Read 2026-11-01 at the owner's word (\"Now add markets for writers, directors and producers\"): the terms a director works on in Canada. Research and retry subagents (workbench/briefs/BRIEF-roles-markets*.md); every quote checked by the lead against its saved page; a scan read by OCR is marked so and its figures checked against the image. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker. Rewritten 2026-11-04 (layer 4, what the research found that the engines didn't read): the CMPA-DGC Directors Schedule 2026-2028, found that day in the CMPA's copies, is read by the engine (its theatrical and series rates, tiers by year, guaranteed periods and Director's cut); its fees blocker now seeks the B.C. district's rates alone.",
  "figures": [
   {
    "item": "agreement",
@@ -15,7 +15,7 @@
     "from": "2026-01-01",
     "to": "2028-12-31"
    },
-   "applies": "Canada excluding British Columbia and Quebec; film, television and digital media; the Directors Schedule rates were not readable (see blockers).",
+   "applies": "Canada excluding British Columbia and Quebec; film, television and digital media; its Directors Schedule's rates, tiers and Director's cut are the figures after the cut (read 2026-11-04 in the CMPA's copies; until then not readable).",
    "sources": [
     {
      "src": 0,
@@ -557,6 +557,455 @@
      "said": "COTISATIONS ANNUELLES : *Des frais d'administration de 25$ sont appliqués pour l'adhésion MEMBRE PROFESSIONNEL - 175 $ * MEMBRE STAGIAIRE - 90 $ … Réduction de 30% accordée aux membres de Documentaristes du Canada (DOC). - Réduction de 15% accordée aux nouveaux membres des Réalisatrices Équitables … Des frais d'administration de 75 $ s'appliquent aux anciens membres dont l'adhésion est inactive depuis un an ou plus"
     }
    ]
+  },
+  {
+   "item": "fees",
+   "finding": "Under the CMPA-DGC Standard Agreement 2026-2028 (every DGC district but B.C. and Quebec) a theatrical feature's director is paid at least a weekly rate by the budget's tier, with a mandatory rights acquisition fee of 90% of it, for a guaranteed period of prep and shoot: from 1 January 2026, CAD 13,726 a week for 16 weeks in tier A (CAD 17,593,418 and over), 12,375 for 15 (B), 11,506 for 14 (C) and 9,779 for 10 (D, from CAD 3,500,001), and in tier F (under CAD 3,500,000) 2% of the total budget plus 0.75%, for 8 weeks; the tiers' bounds and tiers A to D's rates rise in 2027 and 2028.",
+   "value": {
+    "agreement": "CMPA-DGC Standard Agreement 2026-2028, Directors Schedule (DR15.01, DR16.01, DR19.02)",
+    "currency": "CAD",
+    "years": {
+     "2026": {
+      "from": "2026-01-01",
+      "A": {
+       "budgetFrom": 17593418,
+       "weekly": 13726,
+       "rights": 12353.5,
+       "weeks": 16
+      },
+      "B": {
+       "budgetFrom": 10500001,
+       "budgetTo": 17593417,
+       "weekly": 12375,
+       "rights": 11137.5,
+       "weeks": 15
+      },
+      "C": {
+       "budgetFrom": 6453023,
+       "budgetTo": 10500000,
+       "weekly": 11506,
+       "rights": 10355.5,
+       "weeks": 14
+      },
+      "D": {
+       "budgetFrom": 3500001,
+       "budgetTo": 6453022,
+       "weekly": 9779,
+       "rights": 8801,
+       "weeks": 10
+      },
+      "F": {
+       "budgetUnder": 3500000,
+       "share": 0.02,
+       "rightsShare": 0.0075,
+       "weeks": 8
+      }
+     },
+     "2027": {
+      "from": "2027-01-01",
+      "A": {
+       "budgetFrom": 18297155,
+       "weekly": 14138,
+       "rights": 12724,
+       "weeks": 16
+      },
+      "B": {
+       "budgetFrom": 10920001,
+       "budgetTo": 18297154,
+       "weekly": 12746,
+       "rights": 11471.5,
+       "weeks": 15
+      },
+      "C": {
+       "budgetFrom": 6711144,
+       "budgetTo": 10920000,
+       "weekly": 11851,
+       "rights": 10666,
+       "weeks": 14
+      },
+      "D": {
+       "budgetFrom": 3500001,
+       "budgetTo": 6711143,
+       "weekly": 10072,
+       "rights": 9065,
+       "weeks": 10
+      },
+      "F": {
+       "budgetUnder": 3500000,
+       "share": 0.02,
+       "rightsShare": 0.0075,
+       "weeks": 8
+      }
+     },
+     "2028": {
+      "from": "2028-01-01",
+      "A": {
+       "budgetFrom": 18937555,
+       "weekly": 14562,
+       "rights": 13106,
+       "weeks": 16
+      },
+      "B": {
+       "budgetFrom": 11302201,
+       "budgetTo": 18937554,
+       "weekly": 13128,
+       "rights": 11815,
+       "weeks": 15
+      },
+      "C": {
+       "budgetFrom": 6946034,
+       "budgetTo": 11302200,
+       "weekly": 12207,
+       "rights": 10986.5,
+       "weeks": 14
+      },
+      "D": {
+       "budgetFrom": 3622501,
+       "budgetTo": 6946033,
+       "weekly": 10374,
+       "rights": 9336.5,
+       "weeks": 10
+      },
+      "F": {
+       "budgetUnder": 3622500,
+       "share": 0.02,
+       "rightsShare": 0.0075,
+       "weeks": 8
+      }
+     }
+    }
+   },
+   "applies": "Canada outside B.C. and Quebec, theatrical features, from 1 January 2026 to the agreement's end (31 December 2028; past it the last year's are kept, person.markets.model). Each year's column is read as applying from its 1 January, the schedule giving the year alone. The weekly rate and its rights fee pay the guaranteed prep and shoot; the Director's cut weeks (DR9.04) aren't read as days beyond the guaranteed period, whose daily rate is a quarter of the weekly (DR16.02). A budget of exactly the dollar between tier F's 'under' and tier D's start is read as F's. Tier E has no theatrical band.",
+   "sources": [
+    {
+     "src": 11,
+     "said": "DR16.01 … For Theatrical Motion Pictures, the minimum rates per week for Productions in tiers A to D and the minimum Gross Remuneration for tiers E and F, shall be: … A $13,726.00 $12,353.50 16 Weeks B $12,375.00 $11,137.50 15 Weeks C $11,506.00 $10,355.50 14 Weeks D $9,779.00 $8,801.00 10 Weeks E F 2% of Total Budget .75% of Total Budget 8 Weeks"
+    },
+    {
+     "src": 12,
+     "said": "(a) Theatrical Motion Pictures (includes \"Features\") TIER 2026 … A $ 17,593,418 - and over … D $ 3,500,001 - $ 6,453,022 … F Under $ 3,500,000"
+    },
+    {
+     "src": 10,
+     "said": "DR19.02 Additional Use - Theatrical Motion Pictures (a) Tiers A - D The Producer shall make a mandatory payment of ninety percent (90%) of the applicable Director’s minimum rate at the time of Production."
+    }
+   ]
+  },
+  {
+   "item": "fees",
+   "finding": "Under the CMPA-DGC Standard Agreement 2026-2028 a television series episode's director is paid at least a fee by the episode budget's tier, with a mandatory rights acquisition fee of 110% of it, for a guaranteed prep and shoot of 10 days (half-hour) or 18 (hour): from 1 January 2026 a half-hour CAD 16,966 (tier A, CAD 1,690,197 and over) down to 11,385 (D), an hour CAD 35,225 (A, CAD 2,804,192 and over) down to 23,614 (D); in tiers E and F 2% of the budget, plus 1% (E) or 0.75% (F); the tiers' bounds and tiers A to D's fees rise in 2027 and 2028.",
+   "value": {
+    "agreement": "CMPA-DGC Standard Agreement 2026-2028, Directors Schedule (DR15.01, DR17.02, DR19.03)",
+    "currency": "CAD",
+    "budgetIs": "the episode's",
+    "years": {
+     "2026": {
+      "from": "2026-01-01",
+      "half-hour": {
+       "A": {
+        "budgetFrom": 1690197,
+        "base": 16966,
+        "rights": 18662.5,
+        "days": 10
+       },
+       "B": {
+        "budgetFrom": 1055094,
+        "budgetTo": 1690196,
+        "base": 15308,
+        "rights": 16839,
+        "days": 10
+       },
+       "C": {
+        "budgetFrom": 725376,
+        "budgetTo": 1055093,
+        "base": 13396,
+        "rights": 14735.5,
+        "days": 10
+       },
+       "D": {
+        "budgetFrom": 527545,
+        "budgetTo": 725375,
+        "base": 11385,
+        "rights": 12523.5,
+        "days": 10
+       },
+       "E": {
+        "budgetFrom": 198147,
+        "budgetTo": 527544,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 10
+       },
+       "F": {
+        "budgetUnder": 198146,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 10
+       }
+      },
+      "hour": {
+       "A": {
+        "budgetFrom": 2804192,
+        "base": 35225,
+        "rights": 38747.5,
+        "days": 18
+       },
+       "B": {
+        "budgetFrom": 1895870,
+        "budgetTo": 2804191,
+        "base": 31759,
+        "rights": 34935,
+        "days": 18
+       },
+       "C": {
+        "budgetFrom": 1335352,
+        "budgetTo": 1895869,
+        "base": 27753,
+        "rights": 30528.5,
+        "days": 18
+       },
+       "D": {
+        "budgetFrom": 857263,
+        "budgetTo": 1335351,
+        "base": 23614,
+        "rights": 25975.5,
+        "days": 18
+       },
+       "E": {
+        "budgetFrom": 356664,
+        "budgetTo": 857262,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 18
+       },
+       "F": {
+        "budgetUnder": 356663,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 18
+       }
+      }
+     },
+     "2027": {
+      "from": "2027-01-01",
+      "half-hour": {
+       "A": {
+        "budgetFrom": 1757805,
+        "base": 17475,
+        "rights": 19222.5,
+        "days": 10
+       },
+       "B": {
+        "budgetFrom": 1097298,
+        "budgetTo": 1757804,
+        "base": 15767,
+        "rights": 17343.5,
+        "days": 10
+       },
+       "C": {
+        "budgetFrom": 754391,
+        "budgetTo": 1097297,
+        "base": 13798,
+        "rights": 15178,
+        "days": 10
+       },
+       "D": {
+        "budgetFrom": 548647,
+        "budgetTo": 754390,
+        "base": 11727,
+        "rights": 12899.5,
+        "days": 10
+       },
+       "E": {
+        "budgetFrom": 206073,
+        "budgetTo": 548646,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 10
+       },
+       "F": {
+        "budgetUnder": 206072,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 10
+       }
+      },
+      "hour": {
+       "A": {
+        "budgetFrom": 2916360,
+        "base": 36282,
+        "rights": 39910,
+        "days": 18
+       },
+       "B": {
+        "budgetFrom": 1971705,
+        "budgetTo": 2916359,
+        "base": 32712,
+        "rights": 35983,
+        "days": 18
+       },
+       "C": {
+        "budgetFrom": 1388766,
+        "budgetTo": 1971704,
+        "base": 28586,
+        "rights": 31444.5,
+        "days": 18
+       },
+       "D": {
+        "budgetFrom": 891554,
+        "budgetTo": 1388765,
+        "base": 24322,
+        "rights": 26754,
+        "days": 18
+       },
+       "E": {
+        "budgetFrom": 370931,
+        "budgetTo": 891553,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 18
+       },
+       "F": {
+        "budgetUnder": 370930,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 18
+       }
+      }
+     },
+     "2028": {
+      "from": "2028-01-01",
+      "half-hour": {
+       "A": {
+        "budgetFrom": 1819328,
+        "base": 17999,
+        "rights": 19799,
+        "days": 10
+       },
+       "B": {
+        "budgetFrom": 1135703,
+        "budgetTo": 1819327,
+        "base": 16240,
+        "rights": 17864,
+        "days": 10
+       },
+       "C": {
+        "budgetFrom": 780795,
+        "budgetTo": 1135702,
+        "base": 14212,
+        "rights": 15633,
+        "days": 10
+       },
+       "D": {
+        "budgetFrom": 567850,
+        "budgetTo": 780794,
+        "base": 12079,
+        "rights": 13287,
+        "days": 10
+       },
+       "E": {
+        "budgetFrom": 213286,
+        "budgetTo": 567849,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 10
+       },
+       "F": {
+        "budgetUnder": 213285,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 10
+       }
+      },
+      "hour": {
+       "A": {
+        "budgetFrom": 3018433,
+        "base": 37370,
+        "rights": 41107,
+        "days": 18
+       },
+       "B": {
+        "budgetFrom": 2040715,
+        "budgetTo": 3018432,
+        "base": 33693,
+        "rights": 37062.5,
+        "days": 18
+       },
+       "C": {
+        "budgetFrom": 1437373,
+        "budgetTo": 2040714,
+        "base": 29444,
+        "rights": 32388.5,
+        "days": 18
+       },
+       "D": {
+        "budgetFrom": 922758,
+        "budgetTo": 1437372,
+        "base": 25052,
+        "rights": 27557,
+        "days": 18
+       },
+       "E": {
+        "budgetFrom": 383914,
+        "budgetTo": 922757,
+        "share": 0.02,
+        "rightsShare": 0.01,
+        "days": 18
+       },
+       "F": {
+        "budgetUnder": 383913,
+        "share": 0.02,
+        "rightsShare": 0.0075,
+        "days": 18
+       }
+      }
+     }
+    }
+   },
+   "applies": "Canada outside B.C. and Quebec, television series episodes of a half-hour (1 to 30 minutes) or an hour (31 to 60), from 1 January 2026 to the agreement's end (past it the last year's are kept). Each year's column is read as applying from its 1 January; the tier is the episode's budget's (the series' budget shared among its episodes). A budget of exactly the dollar between tier F's 'under' and tier E's start is read as F's. Tier E's cap (DR19.03: no higher than a dollar under tier D's rate) never binds a fee of 2% of a budget in E's range, so it isn't read.",
+   "sources": [
+    {
+     "src": 11,
+     "said": "DR17.02 For Television Series, the minimum rates and additional use fee for Directors shall be: (a) Tier A … ½ hour $16,966.00 $18,662.50 10 Days 1 hour $35,225.00 $38,747.50 18 Days … (e) Tier E … ½ hour 2% of Total Budget 1% of Total Budget 10 Days 1 hour 2% of Total Budget 1% of Total Budget 18 Days … (f) Tier F … ½ hour 2% of Total Budget .75% of Total Budget 10 Days 1 hour 2% of Total Budget .75% of Total Budget 18 Days"
+    },
+    {
+     "src": 12,
+     "said": "(d) Television Series - 1/2 hour episodes … A $ 1,690,197 - and over … F Under $ 198,146 … (e) Television Series - 1 hour episodes … A $ 2,804,192 - and over … F Under $ 356,663"
+    }
+   ]
+  },
+  {
+   "item": "cut",
+   "finding": "Under the CMPA-DGC Standard Agreement 2026-2028 the director's right to the Director's cut is absolute, with at least 4 weeks after assembly for a theatrical feature budgeted at CAD 1 million or less, 6 to CAD 2 million and 8 above; a series episode of 30 minutes or less a day and up to one more, of up to 60 minutes 3 days.",
+   "value": {
+    "agreement": "CMPA-DGC Standard Agreement 2026-2028 (DR9.02, DR9.04)",
+    "currency": "CAD",
+    "featureWeeks": [
+     {
+      "budgetUpTo": 1000000,
+      "weeks": 4
+     },
+     {
+      "budgetUpTo": 2000000,
+      "weeks": 6
+     },
+     {
+      "budgetAbove": 2000000,
+      "weeks": 8
+     }
+    ],
+    "seriesDays": {
+     "halfHour": "1 + up to 1",
+     "hour": 3
+    }
+   },
+   "applies": "Canada outside B.C. and Quebec, theatrical features and episodic series, 2026-2028.",
+   "sources": [
+    {
+     "src": 10,
+     "said": "DR9.04 Minimum Time Allowance The Director shall be allowed at least the following minimum time allowances for the preparation of the Director’s cut: (a) For Theatrical Motion Pictures: i. Budgeted at one million dollars ($1,000,000.00) or less, four (4) weeks … ii. Budgeted at two million dollars ($2,000,000.00) or less but more than one million dollars ($1,000,000), six (6) weeks … iii. Budgeted at more than two million dollars ($2,000,000.00), eight (8) weeks … (c) For Episodic Television Series: i. having a running time of thirty (30) minutes or less, within one (1) Day plus time and the opportunity to make changes, if necessary, but not to exceed one (1) more Day … ii. having a running time of sixty (60) minutes or less, but more than thirty (30) minutes, within three (3) Days"
+    }
+   ]
   }
  ],
  "role": "director",
@@ -632,12 +1081,33 @@
    "read": "2026-11-04",
    "kind": "primary",
    "said": "COTISATIONS ANNUELLES : *Des frais d'administration de 25$ sont appliqués pour l'adhésion MEMBRE PROFESSIONNEL - 175 $ * MEMBRE STAGIAIRE - 90 $ … Réduction de 30% accordée aux membres de Documentaristes du Canada (DOC). - Réduction de 15% accordée aux nouveaux membres des Réalisatrices Équitables … Des frais d'administration de 75 $ s'appliquent aux anciens membres dont l'adhésion est inactive depuis un an ou plus"
+  },
+  {
+   "url": "https://cmpa.ca/wp-content/uploads/2026/05/DGC-Standard-Agreement-2026-2028-DIRECTORS-Final-website.pdf",
+   "title": "DGC/CMPA Standard Agreement 2026-2028, Directors Schedule (the CMPA's copy, linked from https://cmpa.ca/labour-agreements-and-fees/), DR9.04, DR14.02, DR15.01, DR16.01-DR16.02, DR17.02, DR19.02-DR19.03",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "DR9.04 Minimum Time Allowance The Director shall be allowed at least the following minimum time allowances for the preparation of the Director’s cut: (a) For Theatrical Motion Pictures: i. Budgeted at one million dollars ($1,000,000.00) or less, four (4) weeks after completion of the assemblage of sequences provided for in Article DR9.08; ii. Budgeted at two million dollars ($2,000,000.00) or less but more than one million dollars ($1,000,000), six (6) weeks after the completion of assemblage of sequences provided for in Article DR9.08; iii. Budgeted at more than two million dollars ($2,000,000.00), eight (8) weeks after the completion of assemblage of sequences provided for in Article DR9.08. … (c) For Episodic Television Series: i. having a running time of thirty (30) minutes or less, within one (1) Day plus time and the opportunity to make changes, if necessary, but not to exceed one (1) more Day after the completion of assemblage of sequences provided for in Article DR9.08; ii. having a running time of sixty (60) minutes or less, but more than thirty (30) minutes, within three (3) Days after the completion of assemblage of sequences provided for in Article DR9.08. … DR15.00 TIER LEVELS AND BUDGETS DEFINED Tiers apply from January 1, 2026 until the expiration of this Agreement. DR15.01 The minimum rates for Directors under Articles DR16.00, DR17.00 and DR18.00 have been divided into six (6) tier levels based on the type of Production and the total Budget of that Production as set out below. The Budget range reflects the total Budget (including above and below the line) in Canadian dollars. … DR16.02 Daily Rate The minimum daily rate for additional Days worked beyond the Director’s guaranteed period or for daily engagement, where permissible, shall be one-fourth (1/4th) of the Weekly Rate payable for the particular type of Motion Picture. … DR19.02 Additional Use - Theatrical Motion Pictures (a) Tiers A - D The Producer shall make a mandatory payment of ninety percent (90%) of the applicable Director’s minimum rate at the time of Production. … (b) Tier F For Theatrical Motion Pictures in Tier F, the minimum rate shall be 2% of the total Budget plus an additional .75% mandatory rights acquisition fee"
+  },
+  {
+   "url": "https://cmpa.ca/wp-content/uploads/2026/02/DGC-Directors-2026-2028-FINAL-rates-for-website.pdf",
+   "title": "DGC/CMPA Standard Agreement 2026-2028, Directors Schedule rate pages DR16.00-DR18.00 (the CMPA's copy, January 2026)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "DR16.00 MINIMUM WEEKLY RATES FOR THEATRICAL MOTION PICTURES The rates below apply from January 1, 2026 to the expiration of this Agreement. DR16.01 … For Theatrical Motion Pictures, the minimum rates per week for Productions in tiers A to D and the minimum Gross Remuneration for tiers E and F, shall be: … A $13,726.00 $12,353.50 16 Weeks B $12,375.00 $11,137.50 15 Weeks C $11,506.00 $10,355.50 14 Weeks D $9,779.00 $8,801.00 10 Weeks E F 2% of Total Budget .75% of Total Budget 8 Weeks … Minimum Base Rates 2027 A $14,138.00 $12,724.00 … D $10,072.00 $9,065.00 … Minimum Base Rates 2028 A $14,562.00 $13,106.00 … D $10,374.00 $9,336.50 … DR17.02 For Television Series, the minimum rates and additional use fee for Directors shall be: (a) Tier A … ½ hour $16,966.00 $18,662.50 10 Days 1 hour $35,225.00 $38,747.50 18 Days … (d) Tier D … Minimum Base Rates 2028 ½ hour $12,079.00 $13,287.00 10 Days 1 hour $25,052.00 $27,557.00 18 Days … (e) Tier E Length Minimum Base Rates 2026-2028 Obligatory Additional Use Fees Guaranteed period for prep and shoot ½ hour 2% of Total Budget 1% of Total Budget 10 Days 1 hour 2% of Total Budget 1% of Total Budget 18 Days … (f) Tier F … ½ hour 2% of Total Budget .75% of Total Budget 10 Days 1 hour 2% of Total Budget .75% of Total Budget 18 Days"
+  },
+  {
+   "url": "https://cmpa.ca/wp-content/uploads/2026/01/DGC-Standard-Agreement-2026-2028-Tiers.pdf",
+   "title": "DGC Standard Agreement 2026-2028, Budget Tiers (the CMPA's copy)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "(a) Theatrical Motion Pictures (includes \"Features\") TIER 2026 … A $ 17,593,418 - and over … B $ 10,500,001 - $ 17,593,417 … C $ 6,453,023 - $ 10,500,000 … D $ 3,500,001 - $ 6,453,022 … E - … F Under $ 3,500,000 … (d) Television Series - 1/2 hour episodes … A $ 1,690,197 - and over … F Under $ 198,146 … (e) Television Series - 1 hour episodes … A $ 2,804,192 - and over … F Under $ 356,663"
   }
  ],
  "blockers": [
   {
    "item": "fees",
-   "sought": "CMPA-DGC Standard Agreement Directors Schedule 2026-2028 minimum weekly theatrical and episodic rates (Ontario and other districts outside B.C. and Quebec), and DGC B.C. Appendix A director rates.",
+   "sought": "DGC B.C. Appendix A director rates (the B.C. district's base rate tables). The CMPA-DGC Directors Schedule 2026-2028 rates, sought here until 2026-11-04, were found that day in the CMPA's copies and are figures of this file.",
    "tried": {
     "institution": "cmpa.ca PDFs (2023-2025 Directors Schedule, 2025 MOA, 2025 highlights, 2026-2028 Ontario rates, DGC BC wage rates) all answered with a Cloudflare 'Just a moment' challenge (403), not read another way; dgc.ca agreement pages render by script with no PDF links in the HTML (fetching the app's script was refused as access circumvention); voting.dgc.ca answered 502. | Retry 2026-11-01: cmpa.ca DGC-Standard-Agreement-2026-2028-ONTARIO-Rates.pdf re-requested: Cloudflare 403 again, not read another way; files.dgc.ca (a different host from the script-rendered dgc.ca) served the B.C. MOA, whose Sideletter No. 4 director tiers are now a figure; no Ontario director rate sheet found on files.dgc.ca. || 2026-11-04: cmpa.ca/labour-agreements-and-fees/ read (200 today; the Cloudflare challenge of 2026-11-01 did not appear); its DGC links followed: DGC-Standard-Agreement-2026-2028-DIRECTORS-Final-website.pdf (41 pp), DGC-Directors-2026-2028-FINAL-rates-for-website.pdf (18 pp), DGC-Standard-Agreement-2026-2028-Tiers.pdf, DGC-Standard-Agreement-2026-2028-ONTARIO-Rates.pdf, all saved under files/m2/. Result: found: fees (theatrical weekly and TV minimums by tier 2026-2028, guaranteed prep-and-shoot periods, director's cut right and minimum cutting time) | dgc.ca/en/ontario/becoming-a-member/how-to-join-as-a-director/ (200, Angular shell, no text in HTML); voting.dgc.ca how-to-join page (no reply, curl 000); the site's backend API was not queried further (the auto-mode classifier refused it as access circumvention); dgc-dir-final.pdf grepped for initiation/dues: none. Result: not found: union (joining fee and dues)",
     "official-register": "Negotech (federal) holds only NFB-DGC agreements (used); the Ontario agreement is provincial and not in it. | Retry 2026-11-01: Negotech holds only NFB-DGC; Ontario agreements are not filed federally.",

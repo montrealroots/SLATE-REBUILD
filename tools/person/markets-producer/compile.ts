@@ -20,7 +20,9 @@ import countries from '../../../src/world/gazetteer/countries.json' with { type:
  * read from the research at its place, or written in the reading and found standing in the research's figure, as every
  * bound of a tier or a band is; every amount's figure names the market's currency. A term the research doesn't give is
  * none (null): the engine refuses what rests on it and tells the player; an incentive the research says doesn't exist
- * pays nothing.
+ * pays nothing. An incentive's bounds and cap may be set in another currency than the market's (Azerbaijan's rebate in
+ * US dollars, paid in manat), each standing in a figure that names it: the engine reads them in the market's currency at
+ * the day's rate (money.rates), so a market keeps one currency, its agreements' and its budget's.
  *
  * Every country's research is read (the gazetteer's 251 beyond the UK): a market's currency is its country's (the
  * gazetteer's) unless its reading names another its research's terms are given in; a reading of none (null) is a
@@ -64,6 +66,8 @@ export interface Tier {
   net: boolean;
   most: number | null;
   sum: number | null;
+  /** The currency its bounds, bands and most are set in, where it isn't the market's (an incentive's alone). */
+  currency?: CurrencyCode;
 }
 export interface Fund {
   rate: number;
@@ -239,18 +243,25 @@ export function rangeOf(r: Reading, v: unknown): Range {
   return [lo, hi];
 }
 
-const TIER_KEYS = ['fig', 'in', 'budget', 'share', 'bands', 'base', 'net', 'most', 'sum'];
+const TIER_KEYS = ['fig', 'in', 'budget', 'share', 'bands', 'base', 'net', 'most', 'sum', 'currency'];
 
-/** One tier: its budgets, and a fixed sum, or a share or bands of the share counted, at most so much; or (`bare`) none of them. */
-export function tierOf(s: Sources, currency: CurrencyCode, reading: unknown, bare = false): Tier {
+/**
+ * One tier: its budgets, and a fixed sum, or a share or bands of the share counted, at most so much; or (`bare`) none of
+ * them. Where it may (`foreign`, an incentive's), its amounts may be set in another currency it names, which its figures name.
+ */
+export function tierOf(s: Sources, market: CurrencyCode, reading: unknown, bare = false, foreign = false): Tier {
   const t = record(reading, `${s.country}'s tier`);
   only(t, TIER_KEYS, `${s.country}'s tier`);
+  const own = t['currency'];
+  if (own !== undefined && (!foreign || own === market || !isCurrency(String(own)))) throw new Error(`${s.country}'s tier is set in ${String(own)}, which isn't another currency an incentive may be set in`);
+  const currency = (own ?? market) as CurrencyCode;
   const r: Reading = { s, currency, fig: t['fig'] === undefined ? null : figureOf(s, t) };
+  const named = own === undefined ? {} : { currency };
   const budget = rangeOf(r, t['budget']);
   const net = t['net'] === true;
   if (t['sum'] !== undefined) {
     if (t['share'] !== undefined || t['bands'] !== undefined || t['base'] !== undefined || t['most'] !== undefined || net) throw new Error(`${s.country}'s tier is a sum or a share, not both`);
-    return { budget, bands: [], base: 1, net: false, most: null, sum: valueOf(r, t['sum'], 'amount', 'sum') };
+    return { budget, bands: [], base: 1, net: false, most: null, sum: valueOf(r, t['sum'], 'amount', 'sum'), ...named };
   }
   if (t['share'] !== undefined && t['bands'] !== undefined) throw new Error(`${s.country}'s tier is a share or bands, not both`);
   const bands: Band[] = [];
@@ -270,16 +281,16 @@ export function tierOf(s: Sources, currency: CurrencyCode, reading: unknown, bar
   if (bands.length === 0 && !bare) throw new Error(`${s.country}'s tier gives nothing`);
   if (net && bands.length !== 1) throw new Error(`${s.country}'s tier is counted net of one share`);
   const most = t['most'] === undefined ? null : valueOf(r, t['most'], 'amount', 'most');
-  return { budget, bands, base: t['base'] === undefined ? 1 : valueOf(r, t['base'], 'rate', 'base'), net, most, sum: null };
+  return { budget, bands, base: t['base'] === undefined ? 1 : valueOf(r, t['base'], 'rate', 'base'), net, most, sum: null, ...named };
 }
 
 /** Whether two ranges of budgets meet. */
 export const meet = (a: Range, b: Range): boolean => a[0] <= (b[1] ?? Infinity) && b[0] <= (a[1] ?? Infinity);
 
 /** A term's tiers, none of whose budgets meet another's, in the order of their budgets. */
-export function tiersOf(s: Sources, currency: CurrencyCode, reading: unknown, what: string, bare = false): Tier[] {
+export function tiersOf(s: Sources, currency: CurrencyCode, reading: unknown, what: string, bare = false, foreign = false): Tier[] {
   if (!Array.isArray(reading)) throw new Error(`${s.country}'s ${what} is a list of tiers`);
-  const tiers = reading.map((t) => tierOf(s, currency, t, bare)).sort((a, b) => a.budget[0] - b.budget[0]);
+  const tiers = reading.map((t) => tierOf(s, currency, t, bare, foreign)).sort((a, b) => a.budget[0] - b.budget[0]);
   for (const [i, t] of tiers.entries()) if (i > 0 && meet((tiers[i - 1] as Tier).budget, t.budget)) throw new Error(`${s.country}'s ${what} has two tiers for one budget`);
   return tiers;
 }
@@ -317,10 +328,15 @@ export function fundOf(s: Sources, currency: CurrencyCode, reading: unknown, aid
   return { rate: rateOf(s, f['rate']), tiers };
 }
 
-/** A market's incentive: its tiers; none (no tiers) where the research says there's none; null where it isn't given. */
+/** A market's incentive: its tiers, any set in another currency; none (no tiers) where the research says there's none; null where it isn't given. */
 export function creditOf(s: Sources, currency: CurrencyCode, reading: unknown): Tier[] | null {
   if (reading === null) return null;
-  if (Array.isArray(reading)) return tiersOf(s, currency, reading, 'incentive');
+  if (Array.isArray(reading)) {
+    const tiers = tiersOf(s, currency, reading, 'incentive', false, true);
+    // Its tiers are ordered and kept apart by their bounds, so they are set in one currency.
+    if (new Set(tiers.map((t) => t.currency)).size > 1) throw new Error(`${s.country}'s incentive is set in more than one currency`);
+    return tiers;
+  }
   const n = record(reading, `${s.country}'s incentive`);
   only(n, ['none'], `${s.country}'s incentive`);
   const none = record(n['none'], `${s.country}'s none`);
