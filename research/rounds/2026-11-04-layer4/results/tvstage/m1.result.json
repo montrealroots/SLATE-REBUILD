@@ -131,7 +131,47 @@
      "method": "archive",
      "seeItem": 7
     }
-   ]
+   ],
+   "existing": {
+    "7": [
+     {
+      "method": "web-search",
+      "existing": "u3.result.json: web-search [7, 8, 9]"
+     },
+     {
+      "method": "institution",
+      "existing": "u3.result.json: institution [7] vigszinhaz.hu PDF (404) and [7, 8, 9] szinhazidolgozok.hu, artisjus.hu, hofra.hu"
+     },
+     {
+      "method": "official-register",
+      "existing": "u3.result.json: official-register [5, 6, 7, 9] net.jogtar.hu Tao act and Emtv."
+     }
+    ],
+    "8": [
+     {
+      "method": "web-search",
+      "existing": "u3.result.json: web-search [7, 8, 9]"
+     },
+     {
+      "method": "institution",
+      "existing": "u3.result.json: institution [7, 8, 9] (Hofra price list)"
+     }
+    ],
+    "9": [
+     {
+      "method": "web-search",
+      "existing": "u3.result.json: web-search [7, 8, 9]"
+     },
+     {
+      "method": "institution",
+      "existing": "u3.result.json: institution [7, 8, 9]"
+     },
+     {
+      "method": "official-register",
+      "existing": "u3.result.json: official-register [5, 6, 7, 9]"
+     }
+    ]
+   }
   },
   "found": [
    {
@@ -267,7 +307,27 @@
      "method": "archive",
      "seeItem": 7
     }
-   ]
+   ],
+   "existing": {
+    "8": [
+     {
+      "method": "institution",
+      "existing": "u19.result.json: institution [6, 8] federation-wallonie-bruxelles.be, culture.be, arts-scene.be, sacd.be, rtbf.be (sacd.be no connection)"
+     }
+    ],
+    "9": [
+     {
+      "method": "official-register",
+      "existing": "t3.result.json: official-register [7, 9] salairesminimums.be (SPF Emploi) 3040002 page"
+     }
+    ],
+    "7": [
+     {
+      "method": "official-register",
+      "existing": "t3.result.json: official-register [7, 9] salairesminimums.be; a further official-register attempt was made here (the 2012 French-Community CCT)"
+     }
+    ]
+   }
   },
   "found": [
    {
@@ -739,7 +799,29 @@
      "method": "archive",
      "seeItem": 8
     }
-   ]
+   ],
+   "existing": {
+    "8": [
+     {
+      "method": "web-search",
+      "existing": "u13.result.json: web-search [7, 8, 9]"
+     },
+     {
+      "method": "institution",
+      "existing": "u13.result.json: institution [7, 8, 9] cnp.me culture collective agreement; amrrs.gov.me (reset)"
+     }
+    ],
+    "9": [
+     {
+      "method": "web-search",
+      "existing": "u13.result.json: web-search [7, 8, 9]"
+     },
+     {
+      "method": "institution",
+      "existing": "u13.result.json: institution [7, 8, 9] cnp.me culture collective agreement; amrrs.gov.me (reset)"
+     }
+    ]
+   }
   },
   "found": [],
   "notSearched": [],
@@ -851,10 +933,587 @@
      "method": "archive",
      "seeItem": 7
     }
-   ]
+   ],
+   "existing": {
+    "7": [
+     {
+      "method": "institution",
+      "existing": "u19.result.json: institution [1-10] culture.gouv.cd and fondsdepromotionculturelle.cd pages"
+     }
+    ],
+    "8": [
+     {
+      "method": "institution",
+      "existing": "u19.result.json: institution [1-10] culture.gouv.cd and fondsdepromotionculturelle.cd pages"
+     }
+    ],
+    "9": [
+     {
+      "method": "institution",
+      "existing": "u19.result.json: institution [1-10] culture.gouv.cd and fondsdepromotionculturelle.cd pages"
+     }
+    ]
+   }
   },
   "found": [],
   "notSearched": [],
   "notes": "Searches 4 and 5 of 10. Open leads: the artist-status decree's text and SOCODA's 2019 tariff annex (leganet.cd behind a self-signed certificate)."
+ },
+ "GF": {
+  "producer": {
+   "blocker": "R-9924",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Collectivité Territoriale de Guyane règlement fonds d'aide audiovisuel cinéma série 2026 délibération spectacle vivant aide création théâtre' (also counted for item 7)",
+     "result": "Leads: the CTG's 2017 fonds territorial PDF (held by t6), aid-directory copies of it, and the CTG–CANAL+ Antilles Guyane call PDF on ctguyane.fr (read, below); EU state-aid summaries found were Guadeloupe's and Réunion's schemes (SA.117253, SA.64304, SA.61115), not French Guiana's. No 2026 CTG audiovisual rules and no CTG theatre scheme in the results.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "(beyond the brief's missing methods, from the search) CTG 'Appel à projets cinématographiques 2025, 3ème édition' with CANAL+ Antilles Guyane https://www.ctguyane.fr/www/wp-content/uploads/2025/08/appel-a-projet-canal-2025.pdf (files/m1/gf-ctg-canal2025.pdf, sha256 554e09b905a7a2e6502582c1ac46c63b7e89b0fc0d17db82ae4b5cccaee6eb2c), read whole.",
+     "result": "Series count: production companies seated in Guyana may enter 'projets de développement de séries d'une durée maximale de 8 épisodes de 52'', the laureate getting a pre-purchase or development agreement from CANAL+ Antilles Guyane and programming on CANAL+ (36 months, 24 exclusive). Ceilings, co-funded at least half each by CANAL+ and the CTG: development agreement 'Série fiction de 8 x 52' : 40.000€', documentary series 4 x 52' 30,000; production aid short 26' 30,000 EUR, documentary 52' 60,000 EUR. A Guyanese co-producer must hold at least 30%; one selection committee a year; 'Le projet lauréat' in the singular.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Légifrance (CGI art. 220 sexies and the CCNEAC, KALICONT000005635435) and the CTG's own register 'Délibérations institutionnelles / Registre des Délibérations et Actes Officiels' https://www.ctguyane.fr/deliberations-institutionnelles/ (files/m1/gf-ctg-delib.html, sha256 ad25af90f6b3615bd8dd75c688da4441e3f8ec0f5550e5ea48856b32f8a29a62); ctguyane.fr/recueil-des-actes-administratifs/ (404); the EU state-aid register summaries the search returned.",
+     "result": "Légifrance answered 403. The CTG register page holds only the 2021 installation deliberations (election of the president, the permanent commission and delegations), no culture or audiovisual aid deliberation. The EU summaries are other regions'. Nothing read for a series incentive's reach, fee caps or a theatre credit.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "France-Guyane (franceguyane.fr) search 'appel à projets canal+ CTG' (files/m1/gf-fg-s.html); Guyane la 1ère (la1ere.franceinfo.fr/guyane) search 'fonds audiovisuel CTG' (files/m1/gf-la1-s.html).",
+     "result": "Both search pages return no server-side result list (France-Guyane only pagination links; la1ère redirected to its home page). No article read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'fr,ctguyane)/' in CC-MAIN-2026-43 (2,770 captures) and -30 (1), filtered for cinema, audiovisual, funds and stage; read the captures of '[Cinéma] Une série 100% guyanaise et solidaire, soutenue par la CTG !' (2026-10-17, files/m1/gf-cc-cinema-une-serie-100-guyanaise-et-solida_.html, sha256 d9d080377c0ed4995260e8908e00b98a6d3d593cefdf5476f1ec59094a2cce08) and 'Appel à Projets Cinématographiques CTG / CANAL+' (2026-10-12, files/m1/gf-cc-appel-a-projets-cinematographiques-ctg-c_.html, sha256 2272894b9c2d7ca3b715221836842caea06e626bba2e264af59c6ebca5ad9456); the capture of 'Spectacle et arts vivants – aides culturelles CTG' failed to fetch.",
+     "result": "The series story: the series 'Bel Ti Koté' (Kanopé Film) was funded by the CTG through its social and solidarity economy call, not the audiovisual fund; no amount. The CANAL+ call page confirms the third edition and series development of up to 8 x 52'. No count of series picked up, no fee cap, no theatre terms.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "The same search as the producer's (it named 'spectacle vivant aide création théâtre').",
+     "result": "No stage director's minimum for French Guiana; no CTG theatre scheme in the results.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture's regional office page https://www.culture.gouv.fr/regions/dcjs-guyane (files/m1/gf-culture-dac.html, sha256 77bbf0898dd10bccee7dde73bbd7e0cc20b0669921b4cfd8db4a2e172c83039b); Ministry of Labour's Code du travail numérique page for the CCNEAC (IDCC 1285) https://code.travail.gouv.fr/convention-collective/1285-entreprises-artistiques-et-culturelles (files/m1/gf-fr-ccneac-search.html, sha256 08027ae544291244e2b0fd61b9ac70429eb76088676e394f3f2321d7b4bcd08d); SYNDEAC's site search (connection reset).",
+     "result": "The DCJS Guyane page lists missions and links to aids; no pay terms. The Code du travail numérique page offers only generic salary tools for IDCC 1285, no minima table and nothing excluding the overseas departments. No Guiana-specific director minimum: the national agreements' scales (FR item 7, first wave) are the reference.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Légifrance, the CCNEAC (IDCC 1285) https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000005635435.",
+     "result": "HTTP 403; not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "France-Guyane search 'intermittents spectacle Guyane salaire' (files/m1/gf-fg-s2.html).",
+     "result": "No server-side results (only the paper's app and PDF links). No article read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'fr,ctguyane)/' in CC-MAIN-2026-43 and -30, filtered for spectacle, arts vivants, theatre and culture (the culture-aid pages: equipment, artists' mobility, books, languages, the 2025 call rules, stage and arts aid).",
+     "result": "The CTG's culture pages are subsidy schemes; none sets a director's pay; the stage-aid capture failed to fetch. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 2,
+    "value": "CTG + CANAL+ Antilles Guyane annual call (3rd edition 2025): a fiction series of up to 8 x 52' can get a development agreement up to EUR 40,000 (documentary series 4 x 52' up to 30,000), co-funded at least half each; laureate pre-bought or developed by CANAL+ (36 months, 24 exclusive) and programmed on CANAL+; applicant a production company seated in Guyana (at least 30% of a co-production); one selection committee a year",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.ctguyane.fr/www/wp-content/uploads/2025/08/appel-a-projet-canal-2025.pdf",
+      "title": "APPEL A PROJETS CINEMATOGRAPHIQUES 2025, 3ème édition (CTG / CANAL+ Antilles Guyane)",
+      "read": "2026-11-04",
+      "said": "Le plafond d'intervention cofinancé à minima à parts égales par CANAL+ Antilles-Guyane et la Collectivité Territoriale de Guyane se décompose ainsi : Une aide à la production : - Court métrage de 26' : 30.000€ - Documentaire de 52 ' : 60.000€ Une convention de développement : - Série fiction de 8 x 52' : 40.000€ - Série documentaire 4 x 52' : 30.000F ... Il est prévu une unique séance du comité de sélection par an.",
+      "file": "files/m1/gf-ctg-canal2025.pdf",
+      "sha256": "554e09b905a7a2e6502582c1ac46c63b7e89b0fc0d17db82ae4b5cccaee6eb2c"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Search 6 of 10 (one search counted for the producer blocker and item 7). The 2026 (4th) edition of the CANAL+ call is reported by the search's summary (1 June-15 July 2026) but its text was not read; the 2025 text is what is held."
+ },
+ "KN": {
+  "producer": {
+   "blocker": "R-9989",
+   "attempts": [
+    {
+     "method": "web-search",
+     "items": "producer and stage 7-9",
+     "tried": "1 search (standard): 'St Kitts and Nevis film production incentive television series grant Ministry of Culture theatre production funding actors pay minimum wage order 2026'",
+     "result": "No enacted incentive, series grant, theatre fund or stage pay. Leads: the 2021 announcement of a proposed Production Expenditure Rebate Programme (SKNIS), a March 2026 film agreement with a Nollywood director (SKNIS, Searchlight), and WIC News on the Nevis Island Administration's support for MSR Media's films.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "SKNIS (the Government's information service): search 'film rebate' (files/m1/kn-sknis-s.html) and 'St. Kitts and Nevis moves to establish a Production Expenditure Rebate Programme to boost the film industry' (26 Oct 2021) https://www.sknis.gov.kn/2021/10/26/st-kitts-and-nevis-moves-to-establish-a-production-expenditure-rebate-programme-to-boost-the-film-industry/ (files/m1/kn-sknis-rebate.html, sha256 5e38aabe83ce17a732569edf3062b5ce18c7a221edcde42ee9136243996c496e); 'St. Kitts and Nevis film industry to benefit from international movie production' (24 Mar 2021, files/m1/kn-sknis-2021.html); search 'theatre production' (files/m1/kn-sknis-theatre.html).",
+     "result": "2021: the Minister said the ministry 'is currently working closely with the Ministry of Finance to introduce an incentives programme in the form of a Production Expenditure Rebate Programme' giving 'a percentage rebate' on local spend, to be open to local filmmakers too; no rate, no series rule, no enactment. No later SKNIS item on the rebate found. The theatre search returned nothing on theatre funding or pay. No ZIZ (the national broadcaster) commissioning terms found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "St. Kitts and Nevis Law Commission (Chambers of the Attorney General): home, site search 'minimum wage' (no results), 'Revised editions' page with annual Acts and SROs 2021-2024 (files/m1/kn-lc-revised.html, sha256 48679e1b781402b7be5cb44d48e4097da714c6d01bd2eacd53e5c3280c2d4a12), scanned for any film, broadcasting, fiscal-incentive or culture law; read the Copyright Act 2024 (Act 14 of 2024) (below, items 8-9).",
+     "result": "The Acts and SROs listed (2021-2024) include no film or audiovisual incentive, rebate, broadcasting commission rule or theatre tax relief; the 2021 rebate was not enacted in what is listed. A negative only for the instruments listed there.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "WIC News 'MSR Media was paid US$150,000 per film, not per month: Premier Mark Brantley' (26 Nov 2024) https://wicnews.com/saint-kitts-nevis/msr-media-was-paid-us150000-per-film-not-per-month-premier-mark-brantley (files/m1/kn-wic-msr.html, sha256 2a87e0e10cc623310e310b97d035961f3008121ba3dcf56563f11e4de59fff50).",
+     "result": "Nevis's Premier at a press briefing: 'The deal that we had with MSR media was up to 150,000 USD per film ... we will not pay you any money instead we would use that up to 150,000 USD to pay for your accommodation', and 'we didn't have the resources to do the rebate system'. So Nevis supported specific producers in kind case by case, with no rebate scheme. The briefing has no address: a lead, consistent with no incentive in force.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'kn,gov,sknis)/' (7,245 captures) and 'com,zizonline)/' (340, the national broadcaster ZIZ) in CC-MAIN-2026-43 and -30, filtered for film, rebate, theatre, drama, creative, series; read the capture of 'Saint Kitts and Nevis Signs Film and Creative Industry Agreement at Afri-Caribbean Investment Summit in Abuja' (23 Mar 2026, files/m1/kn-cc-sknis-film2026.html, sha256 48d5bff782980fa0fdb3b3c82a51470abbe4cc6187be3c4b1af8d2d68ec46d8f).",
+     "result": "The 2026 agreement (Department of Creative Economy with Steve Gukas) is to 'facilitate the production of a major film project ... scheduled for June 2026' plus training; no incentive terms, fund, fee cap or series route. No ZIZ commissioning page, no theatre-funding page in either crawl.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search (the one search named theatre funding and actors' pay)",
+     "result": "No stage pay found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "SKNIS search 'theatre production' (files/m1/kn-sknis-theatre.html, sha256 f61fc22d99077c9dd6e57a9267a133b4bd6b18b43f002aa72b58a09e05e8147c) and 'minimum wage' (files/m1/kn-labour.html).",
+     "result": "No theatre item. The minimum-wage results are reviews (2018-2023: an advisory committee, recommendations to Cabinet in 2023), no current rate read and nothing specific to performers. No stage director's, playwright's or actor's minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Copyright Act 2024 (Act 14 of 2024) https://lawcommission.gov.kn/wp-content/documents/Annual-Laws/2024/ACTs/Act-14-of-2024-Copyright-Act-2024.pdf (files/m1/kn-copyright2024.pdf, sha256 f6632decf3dd6910000befa634123702a690d90613b0e9f8be736bb4e558b910), searched in full for royalty, remuneration, minimum and tariff; the Law Commission's lists of Acts and SROs 2021-2024 for a labour or wage order.",
+     "result": "No amount for an author or performer: s.118 gives performers 'a single equitable remuneration' for published sound recordings and audio-visual works, its amount agreed or, failing that, fixed by the High Court (s.92); 'minimum' does not occur in the Act. No wage order for performers listed.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "The WIC News article read for the producer blocker, for any performers' pay.",
+     "result": "It concerns accommodation paid for a US producer's crew; no local actor's, director's or writer's pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "The same Common Crawl SKNIS and ZIZ captures, filtered for theatre, drama, play, actor.",
+     "result": "No capture on theatre pay or a stage agreement. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Search 7 of 10 (counted once, for the producer blocker and items 7-9). St Kitts and Nevis shows no enacted screen incentive, no public series or theatre fund and no stage agreement; Nevis supported specific foreign productions in kind (2021-22)."
+ },
+ "PM": {
+  "producer": {
+   "blocker": "R-10088",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Saint-Pierre-et-Miquelon collectivité territoriale aide audiovisuel tournage série crédit d'impôt code local des impôts spectacle vivant compagnie théâtre rémunération' (also counted for item 7)",
+     "result": "No local audiovisual tax credit, local tax-code rule or theatre scheme found. Leads: an Outremers360 report on the CBC series 'Saint-Pierre' shot in the archipelago (read below); France's national credit fiches (les-aides.fr) and the cinema code's overseas articles (L333-1, on investment tax reductions), which do not say a producer in SPM can claim the CGI credits; Quebec's SODEC credit (not applicable).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Outremers360 'Saint-Pierre-et-Miquelon sous les projecteurs : le tournage de la série Saint-Pierre, diffusée sur CBC au Canada, dynamise l'archipel et l'économie locale' (18 Mar 2025) https://outremers360.com/bassin-atlantique-appli/saint-pierre-et-miquelon-sous-les-projecteurs-le-tournage-de-la-serie-saint-pierre-diffusee-sur-cbc-au-canada-dynamise-larchipel-et-leconomie-locale (files/m1/pm-o360-serie.html, sha256 44238a8ea8a8fc5bdcb5d86ba51cf9a609728d159a41107997a358354c07c54c).",
+     "result": "'La collectivité de Saint-Pierre-et-Miquelon a soutenu le projet à hauteur de 25 000 euros par saison, notamment pour faciliter la logistique du tournage'; the crew was about 85 people for about fifteen days, twice. An ad hoc grant to a Canadian series shooting there, not a published scheme; the article quotes the collectivité without an address. A lead for item 2 (a series can get local support, case by case).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'fr,spm-ct975)/' (the Collectivité territoriale, HTTP 418 live) in CC-MAIN-2026-43, -30 (one index block failed to fetch) and 2025-51; archive.org availability API for spm-ct975.fr/culture.",
+     "result": "Only robots.txt (403/301) in every crawl; no snapshot listed. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search (the one search named 'spectacle vivant compagnie théâtre rémunération')",
+     "result": "No stage director's pay rule for the territory found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Labour's Code du travail numérique page for IDCC 1285 (CCNEAC) https://code.travail.gouv.fr/convention-collective/1285-entreprises-artistiques-et-culturelles (files/m1/pm-ctrav-1285.html, sha256 48d124aee711f4628eef70af1761ab6d5a8bfdf1222bf25abd45e4c3f459a086); the Préfecture's site search 'spectacle vivant' (files/m1/pm-pref-s.html) and 'intermittent spectacle' (404).",
+     "result": "The CCNEAC page has no minima table and does not mention Saint-Pierre-et-Miquelon or the overseas territories; the Préfecture search found no stage pay or agreement. Nothing found beyond the repository's finding that the Labour Code, agreements included, applies there (director-PM.json).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Légifrance: the Labour Code section on its application in Saint-Pierre-et-Miquelon (LEGISCTA000006132362); Journal officiel BOCC page (journal-officiel.gouv.fr/pages/bocc/).",
+     "result": "Légifrance answered 403; the Journal officiel reset the connection (curl 35). Not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Outremers360 search for 'théâtre Saint-Pierre-et-Miquelon' (redirected to its home page, no results); the series article above, read for stage pay.",
+     "result": "No article on a stage director's or actor's pay in the territory.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "The same Common Crawl and availability-API lookups for spm-ct975.fr (above).",
+     "result": "robots.txt only; nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 2,
+    "status": "lead (secondary with no address for its primary)",
+    "value": "The Collectivité territoriale supported the CBC series 'Saint-Pierre' with EUR 25,000 per season (logistics), case by case; no published series fund",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://outremers360.com/bassin-atlantique-appli/saint-pierre-et-miquelon-sous-les-projecteurs-le-tournage-de-la-serie-saint-pierre-diffusee-sur-cbc-au-canada-dynamise-larchipel-et-leconomie-locale",
+      "title": "Outremers360, 18 March 2025",
+      "read": "2026-11-04",
+      "said": "La collectivité de Saint-Pierre-et-Miquelon a soutenu le projet à hauteur de 25 000 euros par saison, notamment pour faciliter la logistique du tournage.",
+      "file": "files/m1/pm-o360-serie.html",
+      "sha256": "44238a8ea8a8fc5bdcb5d86ba51cf9a609728d159a41107997a358354c07c54c",
+      "quotes": "the Collectivité territoriale (no document or address given)"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Search 8 of 10 (one search counted for the producer blocker and item 7)."
+ },
+ "TK": {
+  "producer": {
+   "blocker": "R-10153",
+   "attempts": [
+    {
+     "method": "web-search",
+     "items": "producer and stage 7-9",
+     "tried": "1 search (standard): 'Tokelau film television broadcasting theatre arts funding New Zealand law applies Tokelau creative sector Taupulega culture'",
+     "result": "Nothing Tokelau-specific on a screen incentive, a series or theatre fund, broadcasting commissions or stage pay. Results: New Zealand bodies (NZ Film Commission, NZ On Air, Creative New Zealand's Pacific arts rounds) with no statement that they reach Tokelau; Wikipedia's 'Television in Tokelau' (Sky pay TV only, no free network); Ministry for Pacific Peoples' Tokelau Language Week community grants (2021); a Tagata Pasifika item on Tokelau artists in New Zealand.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": "producer and stage 7-9",
+     "tried": "Tagata Pasifika (TP+) 'Tokelau Art Collective tell story of Peruvian slave trade in Tokelau' (31 Oct 2019) https://tpplus.co.nz/entertainment/tokelau-art-collective-tell-story-of-peruvian-slave-trade-in-tokelau/ (files/m1/tk-tpplus-art.html, sha256 bd65ad4fb2587fb4268a6aefb9cb8d0cafe7e363d76f11f219dca4620cbe4d51).",
+     "result": "Three Tokelauan artists going to the Festival of Pacific Arts 'part of the New Zealand delegation of artists': Tokelauan creative work appears through New Zealand's structures. No fund terms, screen incentive, commissioning, pay or theatre data. Consistent with Tokelau having no screen or stage trade of its own (u6).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search",
+     "result": "No stage pay or agreement for Tokelau.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "seeProducer": "trade-press",
+     "result": "No stage pay or agreement for Tokelau.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search"
+    },
+    {
+     "method": "trade-press",
+     "seeProducer": "trade-press"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search"
+    },
+    {
+     "method": "trade-press",
+     "seeProducer": "trade-press"
+    }
+   ],
+   "existing": {
+    "7": [
+     {
+      "method": "official-register",
+      "existing": "u6.result.json: official-register [1-10] legislation.govt.nz (WAF challenge)"
+     },
+     {
+      "method": "archive",
+      "existing": "u6.result.json: archive [1-10] Common Crawl and availability API"
+     },
+     {
+      "method": "institution",
+      "existing": "u6.result.json: institution [1-10] tokelau.org.nz"
+     }
+    ],
+    "8": [
+     {
+      "method": "official-register",
+      "existing": "u6.result.json: official-register [1-10] legislation.govt.nz (WAF challenge)"
+     },
+     {
+      "method": "archive",
+      "existing": "u6.result.json: archive [1-10] Common Crawl and availability API"
+     },
+     {
+      "method": "institution",
+      "existing": "u6.result.json: institution [1-10] tokelau.org.nz"
+     }
+    ],
+    "9": [
+     {
+      "method": "official-register",
+      "existing": "u6.result.json: official-register [1-10] legislation.govt.nz (WAF challenge)"
+     },
+     {
+      "method": "archive",
+      "existing": "u6.result.json: archive [1-10] Common Crawl and availability API"
+     },
+     {
+      "method": "institution",
+      "existing": "u6.result.json: institution [1-10] tokelau.org.nz"
+     }
+    ]
+   }
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Search 9 of 10, counted once for the producer blocker and items 7-9 (all were missing only web-search and trade-press). Whether New Zealand's screen funds or employment law reach Tokelau stays unread (legislation.govt.nz behind a WAF challenge, u6)."
+ },
+ "VI": {
+  "producer": {
+   "blocker": "R-10185",
+   "attempts": [
+    {
+     "method": "web-search",
+     "items": "producer and stage 7-9",
+     "tried": "1 search (standard): 'US Virgin Islands film production incentive rebate television series eligibility Virgin Islands Code Act 2026 theatre Pistarckle Reichhold Center actors pay'",
+     "result": "Secondary summaries of the STARS incentive (Production Service Network, Wrapbook, Cast & Crew, EP), conflicting on whether it is active; a 2015 BoltNagi law-blog post; nothing on series eligibility in a primary, on theatre or on actors' pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Legislature of the Virgin Islands bill tracking https://billtracking.legvi.org/ (its public search form): by Act number 7751 (the number Cast & Crew gives) and by universal search 'film production' (files/m1/vi-bt-film.html, sha256 794290222f89e8bd64f7a1fedd93edb20b6bac86d257bf34c777b5833788f403); legvi.org (HTTP 522 first, then home read); Justia's V.I. Code (403).",
+     "result": "Act 7751: no row returned. 'film production': one amendment, no. 30-772, 'To amend Title 29, Chapter 12, subchapter III, sections 747,747a-7471: (Act 7344 Bill 29-0146) to enhance incentives for film, recording and print ad production', status Introduced. So the incentive statute is 29 V.I.C. ch. 12, subch. III, §§747-747l; its text (and whether a series qualifies) was not reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'com,filmusvi)/' (the Film Office, 403 live) in CC-MAIN-2026-43, -30 and 2025-51 (16 captures); read the 2025-12-10 captures of https://www.filmusvi.com/incentives/ (files/m1/vi-cc-filmusvi-incentives_.html, sha256 8e81955d77f61346906fca5b0a53ddcd67fe2862f5aef9d4a9de0f895982f4a8) and /support-services/tax-incentives/ (files/m1/vi-cc-filmusvi-support-services_tax-incentives_.html).",
+     "result": "The Film Office page (© 2014-2023): S.T.A.R.S, 'USVI FILM INCENTIVE LAW, ACT 7728': transferable tax credit by resident hires 20-25% 10%, 25.1-30% 15%, 30.1% or greater 17%; cash rebate 9%, an additional 10% 'With a USVI promotion', an additional 10% 'If produced in St. Croix' (up to 29%); minimum spend USD 250,000; at least 20% local resident hires; credits and a school talk; rules at USVIEDA. It does not say whether a television series qualifies or set a per-episode threshold. The STARS flyer and application PDFs were not captured.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "seeProducer": "web-search (named Pistarckle, the Reichhold Center and actors' pay)",
+     "result": "No stage pay for the territory found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Pistarckle Theater https://www.pistarckle.com/ (files/m1/vi-pistarckle.html); VI Department of Labor https://www.vidol.gov/ (files/m1/vi-dol.html) and its linked minimum-wage poster PDF.",
+     "result": "pistarckle.com is a parked domain (a script redirect to '/lander', 114 bytes). The DoL home links a 'MinWagePoster.pdf' that answers 404. No stage director's, playwright's or actor's minimum found; the territory follows US federal and VI labour law, no stage agreement seen.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "The Legislature's bill tracking (above), universal search; Justia V.I. Code (403).",
+     "result": "No act on performers' pay or a theatre incentive surfaced; the V.I. Code text was not reachable. Nothing found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "The St. Croix Source search 'Pistarckle theater' (403); The VI Consortium search 'theater actors' (files/m1/vi-vic-s.html, results without theatre items).",
+     "result": "No article on stage pay read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'com,pistarckle)/' in CC-MAIN-2025-51 and -43; the filmusvi.com captures (above) for any performers' terms.",
+     "result": "The Pistarckle lookup failed to fetch the index (cc.py: fetch failed) in both; the Film Office captures set only the 20% resident-hire rule (crew, extras, actors), no pay. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 1,
+    "status": "partial (archived primary; series eligibility not stated; page dated 2014-2023)",
+    "value": "USVI STARS (Act 7728): transferable tax credit 10/15/17% for 20-25/25.1-30/over 30% resident hires; cash rebate 9% + 10% (USVI promotion) + 10% (St. Croix), up to 29%; minimum spend USD 250,000; at least 20% local resident hires",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.filmusvi.com/incentives/",
+      "title": "U.S. Virgin Islands Department of Tourism Film Office, Incentives (Common Crawl CC-MAIN-2025-51 capture of 2025-12-10)",
+      "read": "2026-11-04",
+      "said": "Up To 17% Transferable Tax Credit. Resident Hires Transferable Tax Credit 20-25% 10% 25.1-30% 15% 30.1% or Greater 17% Up To 29% Cash Rebate. Amount Note 9% ADDITIONAL 10% With a USVI promotion ADDITIONAL 10% If produced in St. Croix USVI FILM INCENTIVE LAW, ACT 7728 QUALIFICATIONS Minimum spend of $250,000 ... Minimum of 20% local resident hires (including crew, extras, actors and maximum of three (3) paid interns.",
+      "file": "files/m1/vi-cc-filmusvi-incentives_.html",
+      "sha256": "8e81955d77f61346906fca5b0a53ddcd67fe2862f5aef9d4a9de0f895982f4a8"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Search 10 of 10 (counted once for the producer blocker and items 7-9). Cast & Crew names Act 7751, the Film Office Act 7728; the bill tracker cites 29 V.I.C. §§747-747l (Act 7344). Which act is current was not settled."
  }
 }

@@ -323,7 +323,7 @@ kept in `research/rounds/2026-11-04-layer4/` (its `README.md` says what each fil
    `results/tvstage/m<n>.todo.json`, on the brief `briefs/16-methods-round.md`, each making every missing attempt for
    real. The package holds each group's `results/tvstage/m<n>.result.json` as it stood at the last checkpoint (groups write as they go, so a group still running then is partial): run `python3 -I research/rounds/2026-11-04-layer4/tools/methods_left.py` to list, per group, the attempts still missing, and give only those to new agents on the same brief (or the whole todo where a group has no result file) (the owner chose it,
    2026-11-04: "Run the methods round (Recommended)"; at most ten web searches an agent, the session's allowance being
-   200 in all). Then write the attempts into the register: append each `producer.attempts` to its blocker; for each
+   200 in all). The round finished on 2026-11-04 (all twenty groups; three web searches never ran: Lebanon's producer blocker, Ukraine's and Tajikistan's playwright items). Its merge was handed to four role integrators on the brief `briefs/17-methods-merge.md` (each writing register patches to its scratch `outm/`; if their patches aren't in the package, run that brief again). Then write the attempts into the register: append each `producer.attempts` to its blocker; for each
    stage item (7 director, 8 writer, 9 actor) append the attempts to that role's blocker
    (`person.markets.director.blocked.<CC>`, `person.markets.writer.blocked.<CC>`, `person.markets.blocked.<CC>`),
    extending its `sought` to name the stage pay, or create the blocker where the todo names none (the director's 39);

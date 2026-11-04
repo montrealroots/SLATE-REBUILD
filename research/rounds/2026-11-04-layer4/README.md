@@ -17,7 +17,7 @@ so any of them can be fetched and checked again.
     union minimum from budget); 03-05 the first research wave and its six integrators (merged as 362233c); 06 the
     follow-up fix (08e2de3); 07-10 the UK's series and plays (47c51eb, aa69c48, 7f80741); 11-12 what the engines didn't
     read (238df9f, 7268069); 13-15 a series and a play in every other market (first wave t1-t8, follow-up u1-u25,
-    integrated by four role integrators, **not yet committed**); 16 the methods round (m1-m20, running when this was
+    integrated by four role integrators, **not yet committed**); 16 the methods round (m1-m20, finished 2026-11-04); 17 its merge into the register and the engines (running when this was
     written).
 - `results/first-wave/`: the first wave's results (`m1..m8, a1, a2, p1.., s1, f1..f12`) and the re-read's review,
   merged in 362233c.

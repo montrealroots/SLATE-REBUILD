@@ -1412,14 +1412,29 @@
      "tried": "The full Common Crawl listing of bvhttdl.gov.vn (CC-MAIN-2026-43, 983 captures) grepped for Decree 261, \"bồi dưỡng\" and \"phụ cấp ưu đãi\" slugs",
      "result": "No capture of the decree or of an article on it (the \"bồi dưỡng\" hits are training courses). The live Ministry page held the decree (institution attempt).",
      "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture, Sports and Tourism: its document register https://bvhttdl.gov.vn/van-ban-quan-ly?keyword=261%2F2026 (search worked; lists Decree 261/2026/NĐ-CP and the Ministry’s Decision 2021/QĐ-BVHTTDL of 31 July 2026 implementing it) and the decree’s signed PDF it links, https://bvhttdl.gov.vn/uploads/pdf/2026/07/07/261-ndcp-signed.pdf (vn-nd261.pdf, sha256 e91cc2798977ad4746fe103befa77bf9320978ffae673a99805d7baba5290c4c; a 9-page scan); pages 1, 4, 5 and 6 OCR’d (vie) and checked against the page images (files/m2/vn-nd261-p1/p5/p6.ocr.txt)",
+     "result": "Read, primary: Decree 261/2026/NĐ-CP of 30 June 2026 (signed by the Government Office 3 July 2026), for salaried staff of public performing-arts units and the armed forces’ troupes. Art. 5(1), to 30 June 2027, rehearsal allowance per session as a share of the base salary: 7 % (People’s Artists; lead roles), 5 % (Meritorious Artists; second leads), 4 % (supporting roles, chorus, musicians), 3 % (backstage); art. 5(3), performance allowance per preview, dress rehearsal and performance: 18 %, 15 %, 10 % (also unit heads), 7 %. From 1 July 2027 until a new salary regime: rehearsal 15 %, 12 %, 8 %, 5 % (art. 5(2)); performance 30 %, 25 %, 20 %, 15 % (art. 5(4)). One rate only for a person in several roles; paid in cash, outside social insurance.",
+     "date": "2026-11-04"
     }
    ]
   },
   "found": [
    {
     "item": 9,
-    "value": "Completes u5’s partial: the base salary (mức lương cơ sở) on which Decree 261/2026/NĐ-CP counts a public troupe actor’s per-session allowances is VND 2,530,000 a month from 1 July 2026 (Decree 161/2026/NĐ-CP). So a lead role’s performance allowance (18 %) is VND 455,400 a session and rehearsal (7 %) VND 177,100; second lead 15 %/5 % (379,500/126,500), supporting 10 %/4 % (253,000/101,200), backstage 7 %/3 % (177,100/75,900), on top of state salary, 2026-07-01 to 2027-06-30 (u5’s percentages, from VietnamPlus quoting Decree 261).",
+    "value": "Decree 261/2026/NĐ-CP (30 June 2026), read from the Ministry of Culture’s copy: a salaried actor of a public troupe gets, per session, a share of the base salary (VND 2,530,000 a month from 1 July 2026, Decree 161/2026 per Tuoi Tre). To 30 June 2027: rehearsal lead 7 % (VND 177,100), second lead 5 % (126,500), supporting 4 % (101,200), backstage 3 % (75,900); performance (previews, dress, shows) lead 18 % (455,400), second lead 15 % (379,500), supporting and unit heads 10 % (253,000), backstage 7 % (177,100). From 1 July 2027 until a new salary regime: rehearsal 15/12/8/5 %, performance 30/25/20/15 %. On top of state salary; private theatres pay by agreement.",
     "sources": [
+     {
+      "kind": "primary",
+      "url": "https://bvhttdl.gov.vn/uploads/pdf/2026/07/07/261-ndcp-signed.pdf",
+      "title": "Nghị định số 261/2026/NĐ-CP ngày 30 tháng 6 năm 2026 (Ministry of Culture, Sports and Tourism copy, signed PDF scan; OCR of pp. 5-6 checked against the image)",
+      "read": "2026-11-04",
+      "said": "Điều 5 ... 1. Từ ngày Nghị định này có hiệu lực thi hành đến hết ngày 30 tháng 6 năm 2027, chế độ bồi dưỡng luyện tập tính theo số buổi thực tế gồm các mức sau đây: a) Mức 7% mức lương cơ sở cho một buổi đối với: Nghệ sĩ nhân dân; ... diễn viên đảm nhiệm vai trò chính trong vở diễn sân khấu ... 3. ... chế độ bồi dưỡng biểu diễn tính theo số buổi sơ duyệt, tổng duyệt và biểu diễn chính thức gồm các mức sau đây: a) Mức 18% mức lương cơ sở cho một buổi ... 4. Từ ngày 01 tháng 7 năm 2027 cho đến khi thực hiện chế độ tiền lương mới ... a) Mức 30% mức lương cơ sở cho một buổi",
+      "file": "l4t/files/m2/vn-nd261.pdf",
+      "sha256": "e91cc2798977ad4746fe103befa77bf9320978ffae673a99805d7baba5290c4c"
+     },
      {
       "kind": "secondary",
       "url": "https://tuoitre.vn/tu-1-7-chinh-thuc-tang-luong-co-so-luong-huu-tro-cap-bhxh-1002606260804132.htm",
