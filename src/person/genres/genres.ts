@@ -13,8 +13,8 @@ import type { LineId } from '../../core/text/text.ts';
  * (an animated film took 3.2 times the average release, a documentary a thirtieth of it); the producer's release reads
  * it, for the producer works in the UK.
  *
- * A genre's effect on a spec's sale is not modeled: no source counts the specs written by genre, so the trackers' deal
- * counts (Go Into The Story, R-4622) can't be turned into odds.
+ * A genre's effect on a spec's sale was not modeled (no source counts the specs written by genre, so the trackers' deal
+ * counts, Go Into The Story, R-4622, couldn't be turned into odds), and spec sales went on 2026-11-04.
  */
 
 /** The line that tells the player these figures are the game's own (person.genres.model). */

@@ -5,10 +5,11 @@ import { begin, commandIndex, dispatch, type Life } from '../../../src/core/fram
 import { fromMajor, type Money } from '../../../src/core/money/money.ts';
 import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
 import { exchangeOn } from '../../../src/money/rates/rates.ts';
-import { ACTING_START, type ActingSlice, type Agreement, type Audition, type Part } from '../../../src/person/acting/acting.ts';
+import { ACTING_START, type ActingSlice, type Agreement, type Cast, type Part } from '../../../src/person/acting/acting.ts';
+import type { ProducingSlice, Project } from '../../../src/person/producing/producing.ts';
+import { production } from '../../support/production.ts';
 import { DIRECTING_START, type DirectingSlice, type Film, type Form as FilmForm } from '../../../src/person/directing/directing.ts';
 import type { IdentitySlice, Person } from '../../../src/person/identity/identity.ts';
-import { CAREER_START, type CareerSlice } from '../../../src/person/work/career.ts';
 import { SCRIPTS_START, type Form, type Script, type ScriptsSlice } from '../../../src/person/work/work.ts';
 import {
   ACTRA_APPRENTICE,
@@ -36,7 +37,7 @@ import { falsifyAny } from '../../support/falsify-core.ts';
 import { identity, person } from '../../support/person.ts';
 import { ACCOUNT, minorIn, purse } from '../../support/purse.ts';
 
-type Lives = { identity: IdentitySlice; acting: ActingSlice; career: CareerSlice; scripts: ScriptsSlice; directing: DirectingSlice; unions: UnionsSlice } & ReturnType<typeof purse>;
+type Lives = { identity: IdentitySlice; acting: ActingSlice; producing: ProducingSlice; scripts: ScriptsSlice; directing: DirectingSlice; unions: UnionsSlice } & ReturnType<typeof purse>;
 
 const SEED = '0123456789abcdef';
 const day = (y: number, m: number, d: number) => daysFromCivil(y, m, d) * SECONDS_PER_DAY;
@@ -47,16 +48,16 @@ const gbp = (n: string) => fromMajor('GBP', n);
 
 const part = (agreement: Agreement, budget = 5_000_000): Part => ({ agreement, budget, seats: 0, lines: 10, term: agreement === 'uk-theatre' ? 'week' : 'day', length: 1, rehearsal: 0, asks: [] });
 /** A part played at a moment, paid as given. */
-const played = (agreement: Agreement, at: number, budget = 5_000_000, pay: Money | null = usd('1')): Audition => ({ id: 0, at, breakdown: 0, part: part(agreement, budget), taped: true, score: 50, booked: true, work: { at, quality: 50, pay } });
-const unplayed = (agreement: Agreement): Audition => ({ ...played(agreement, 0), work: null });
-const film = (form: FilmForm, budget: number | null, started = 0, fee: Money | null = usd('1')): Film => ({ id: 0, country: 'US', agreement: 'dga', minutes: null, form, budget, started, prepDays: 1, shootDays: 1, cutDays: 1, fee, plan: { story: 0, performances: 0, images: 0 }, needed: null, shot: null, cut: null, quality: null, festivals: {} });
-/** A script sold, by its form, at a moment, for a fee. */
-const sale = (form: Form, at: number, fee: Money | null = usd('1'), agreement: string | null = null) => ({ form, at, fee, agreement });
+const played = (agreement: Agreement, at: number, budget = 5_000_000, pay: Money | null = usd('1')): Cast => ({ id: 0, at, project: 1, part: part(agreement, budget), gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en', work: { at, quality: 50, pay } });
+const unplayed = (agreement: Agreement): Cast => ({ ...played(agreement, 0), work: null });
+const film = (form: FilmForm, budget: number | null, started = 0, fee: Money | null = usd('1')): Film => ({ id: 0, project: 1, episodes: 1, country: 'US', agreement: 'dga', minutes: null, form, budget, started, prepDays: 1, shootDays: 1, cutDays: 1, fee, plan: { story: 0, performances: 0, images: 0 }, needed: null, shot: null, cut: null, quality: null, festivals: {} });
+/** The life's own script, by its form, made under a writers' agreement (the WGA's where none is named) by a production shot at a moment, paid a fee. */
+const sale = (form: Form, at: number, fee: Money | null = usd('1'), agreement: string | null = null, shot = true) => ({ form, at, fee, agreement, shot });
 const card = (union: Union, at: number, standing: Membership['standing'] = 'full'): Membership => ({ union, at, standing, name: 'Ada Reyes', initiation: null, dues: null });
 
 interface Given {
   person?: Partial<Person>;
-  parts?: Audition[];
+  parts?: Cast[];
   sold?: ReturnType<typeof sale>[];
   films?: Film[];
   joined?: Membership[];
@@ -66,18 +67,18 @@ interface Given {
 }
 
 function life(g: Given = {}): Life<Lives> {
-  const career = structuredClone(CAREER_START);
   const scripts = structuredClone(SCRIPTS_START);
-  (g.sold ?? []).forEach((s, i) => {
+  const projects: Project[] = (g.sold ?? []).map((s, i) => {
     scripts.written.push({ id: i + 1, form: s.form } as unknown as Script);
-    career.out[String(i + 1)] = { documents: {}, requests: 0, sold: { at: s.at, fee: s.fee } };
-    if (s.agreement !== null) career.offered[String(i + 1)] = { agreement: s.agreement, budget: null, minutes: null, options: [] };
+    const p = production({ id: i + 1, roles: ['writer'], script: i + 1, writing: s.agreement ?? 'wga' });
+    return { ...p, shot: s.shot ? { at: s.at, days: 1, overrun: usd('0'), fee: null, quality: 50 } : null, costs: s.fee === null ? [] : [{ at: s.at, role: 'writer' as const, what: 'the script', amount: s.fee }] };
   });
-  career.out['99'] = { documents: {}, requests: 0, sold: null };
+  // A production with no script of the life's, and one hired out, count nothing.
+  projects.push(production({ id: 99, roles: ['producer'], shot: { at: NOW, days: 1, overrun: usd('0'), fee: null, quality: 50 } }));
   return begin(SEED, g.now ?? NOW, {
     identity: identity(g.person),
-    acting: { ...structuredClone(ACTING_START), auditions: (g.parts ?? []).map((a, i) => ({ ...a, id: i + 1 })) },
-    career,
+    acting: { ...structuredClone(ACTING_START), parts: (g.parts ?? []).map((a, i) => ({ ...a, id: i + 1 })) },
+    producing: { projects },
     scripts,
     directing: { ...structuredClone(DIRECTING_START), films: (g.films ?? []).map((f, i) => ({ ...f, id: i + 1 })) },
     unions: { joined: g.joined ?? [] },
@@ -115,7 +116,7 @@ describe("the unions' figures", () => {
   });
 
   it('declare what joining reads and writes', () => {
-    expect(commandIndex().filter((x) => x.id.startsWith('unions.'))).toEqual([{ id: 'unions.join', reads: ['identity', 'acting', 'career', 'scripts', 'directing'], writes: ['unions', 'accounts', 'ledger'] }]);
+    expect(commandIndex().filter((x) => x.id.startsWith('unions.'))).toEqual([{ id: 'unions.join', reads: ['identity', 'acting', 'producing', 'scripts', 'directing'], writes: ['unions', 'accounts', 'ledger'] }]);
     expect(UNIONS_START).toEqual({ joined: [] });
   });
 });
@@ -177,6 +178,18 @@ describe('Equity (UK)', () => {
     for (const a of ['pact-equity', 'uk-theatre'] as const) {
       expect(join({ parts: [played(a, 0, 5_000_000, null)] }, 'equity-uk')).toEqual([{ union: 'equity-uk', at: NOW, standing: 'full', name: 'Ada Reyes', initiation: null, dues: gbp('198') }]);
     }
+  });
+
+  it("counts a production's producer's fee and the script it bought, and not again a part's or a director's pay", () => {
+    const at = day(2026, 1, 15);
+    const paid = (role: 'producer' | 'actor' | 'director', amount: string) => {
+      const l = life({});
+      const p = { ...production({ id: 7 }), costs: [{ at, role, what: 'pay', amount: gbp(amount) }] };
+      return { ...l.slices, producing: { projects: [p] } };
+    };
+    expect(terms(paid('producer', '750'), 'equity-uk', NOW).standing).toBe('full');
+    expect(() => terms(paid('producer', '749.99'), 'equity-uk', NOW)).toThrow('Equity asks £750 earned from the work, or a part on an Equity contract');
+    for (const role of ['actor', 'director'] as const) expect(() => terms(paid(role, '750'), 'equity-uk', NOW), role).toThrow('Equity asks £750 earned');
   });
 
   it('takes £750 earned from the work, in pounds as estimated the day it was paid', () => {
@@ -284,28 +297,36 @@ describe("Actors' Equity Association", () => {
 });
 
 describe('the WGA West', () => {
-  it("counts the units of sales to signatories in the three years before: 24 for Current, fewer for Associate", () => {
-    const refused = 'the WGA asks a sale to a signatory in the last three years';
+  it("counts the units of the life's scripts produced under its agreement in the three years before, the writer credited: 24 for Current, fewer for Associate", () => {
+    const refused = "the WGA asks a script of the writer's produced under its agreement in the last three years, the writer credited";
     const at = day(2026, 1, 1);
     expect(() => join({}, 'wga-west')).toThrow(refused);
-    expect(() => join({ sold: [sale('short', at, null), sale('feature', at, null)] }, 'wga-west')).toThrow(refused);
-    expect(joined({ sold: [sale('feature', at, null), sale('episode', at)] }, 'wga-west')?.standing).toBe('associate');
+    expect(() => join({ sold: [sale('short', at, null)] }, 'wga-west')).toThrow(refused);
     expect(join({ sold: [sale('feature', at)] }, 'wga-west')).toEqual([{ union: 'wga-west', at: NOW, standing: 'full', name: 'Ada Reyes', initiation: usd('2500'), dues: usd('100') }]);
     expect(join({ sold: [sale('episode', at)] }, 'wga-west')).toEqual([{ union: 'wga-west', at: NOW, standing: 'associate', name: 'Ada Reyes', initiation: null, dues: usd('100') }]);
     expect(joined({ sold: [sale('pilot', at)] }, 'wga-west')?.standing).toBe('associate');
     expect(joined({ sold: [sale('pilot', at), sale('episode', at)] }, 'wga-west')?.standing).toBe('associate');
     expect(joined({ sold: [sale('pilot', at), sale('episode', at), sale('episode', at)] }, 'wga-west')?.standing).toBe('full');
     expect(joined({ sold: [sale('feature', day(2023, 11, 1))] }, 'wga-west')?.standing).toBe('full');
-    // A sale in another market (offered under its agreement) is not to a WGA signatory: it earns no units.
-    expect(() => join({ sold: [sale('feature', at, usd('1'), 'ca-ipa')] }, 'wga-west')).toThrow('the WGA asks a sale to a signatory in the last three years');
+    // A script not yet produced earns nothing: the writer-owned company's rule asks it produced and credited.
+    expect(() => join({ sold: [sale('feature', at, usd('1'), null, false)] }, 'wga-west')).toThrow(refused);
+    expect(joined({ sold: [sale('feature', at, usd('1'), null, false), sale('pilot', at)] }, 'wga-west')?.standing).toBe('associate');
+    // A script made under another market's agreement is not a WGA signatory's: it earns no units.
+    expect(() => join({ sold: [sale('feature', at, usd('1'), 'ca-ipa')] }, 'wga-west')).toThrow(refused);
     expect(joined({ sold: [sale('feature', at, usd('1'), 'ca-ipa'), sale('pilot', at)] }, 'wga-west')?.standing).toBe('associate');
-    // One offered under the WGA's own agreement in a market that follows it (Puerto Rico) is to a signatory.
-    expect(joined({ sold: [sale('feature', at, usd('1'), 'wga')] }, 'wga-west')?.standing).toBe('full');
     expect(() => join({ sold: [sale('feature', day(2023, 10, 31))] }, 'wga-west')).toThrow(refused);
     expect(joined({ sold: [sale('feature', day(2023, 10, 31)), sale('episode', at)] }, 'wga-west')?.standing).toBe('associate');
     expect(join({ sold: [sale('feature', at)], joined: [card('wga-west', 0, 'associate')] }, 'wga-west')).toHaveLength(2);
     expect(() => join({ sold: [sale('episode', at)], joined: [card('wga-west', 0, 'associate')] }, 'wga-west')).toThrow('a member of wga-west already');
     expect(() => join({ sold: [sale('episode', at)], joined: [card('wga-west', 0)] }, 'wga-west')).toThrow('a member of wga-west already');
+  });
+
+  it("counts a script only where the life wrote it for the production", () => {
+    const at = day(2026, 1, 1);
+    const l = life({ sold: [sale('feature', at)] });
+    const hired = { ...l.slices, producing: { projects: l.slices.producing.projects.map((p) => ({ ...p, roles: ['producer' as const] })) } };
+    expect(() => terms(hired, 'wga-west', NOW)).toThrow("the WGA asks a script of the writer's produced under its agreement");
+    expect(terms(l.slices, 'wga-west', NOW).standing).toBe('full');
   });
 });
 
@@ -349,7 +370,7 @@ describe('joining', () => {
 describe('union work', () => {
   it("lets a non-member take SAG-AFTRA work until the thirtieth day after their first SAG-AFTRA job, then only a member", () => {
     const first = day(2026, 3, 1);
-    const s = (parts: Audition[], joinedCards: Membership[] = []) => life({ parts, joined: joinedCards }).slices;
+    const s = (parts: Cast[], joinedCards: Membership[] = []) => life({ parts, joined: joinedCards }).slices;
     const thirty = first + TAFT_HARTLEY_DAYS * SECONDS_PER_DAY;
     expect(mayTakeUnionWork(s([]), 'sag-aftra', NOW)).toBe(true);
     expect(mayTakeUnionWork(s([unplayed('sag-aftra'), played('actra', 0), played('pact-equity', 0)]), 'sag-aftra', NOW)).toBe(true);

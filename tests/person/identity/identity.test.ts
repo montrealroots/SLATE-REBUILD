@@ -1,12 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { begin, commandIndex, dispatch, type Life } from '../../../src/core/frame/frame.ts';
-import { fromMajor } from '../../../src/core/money/money.ts';
 import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
 import {
   ageOf,
   ETHNICITIES,
   FAMILY,
-  HEADSHOT_PRICE,
   IDENTITY_START,
   identifiesAs,
   inTheBusiness,
@@ -21,14 +19,13 @@ import {
   speaks,
   suggestedCitizenship,
   suggestedLanguages,
-  takeHeadshot,
   TITLES,
   type IdentitySlice,
   type MakeArgs,
 } from '../../../src/person/identity/identity.ts';
 import { person } from '../../support/person.ts';
 import { falsifyAny } from '../../support/falsify-core.ts';
-import { ACCOUNT, minorIn, purse } from '../../support/purse.ts';
+import { purse } from '../../support/purse.ts';
 
 type Identity = { identity: IdentitySlice } & ReturnType<typeof purse>;
 const SEED = '0123456789abcdef';
@@ -51,7 +48,6 @@ const ARGS: MakeArgs = {
   grewUpCountry: 'US',
   grewUpRegion: 'US.CA',
   family: 'outside',
-  portrait: true,
 };
 
 const life = (now = NOW): Life<Identity> => begin(SEED, now, { identity: structuredClone(IDENTITY_START), ...purse() });
@@ -64,8 +60,7 @@ describe('the person', () => {
     expect([PRONOUNS, TITLES, LEVELS]).toEqual([['he', 'she', 'they'], ['actor', 'actress'], ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']]);
     expect(ETHNICITIES).toEqual(['white', 'black', 'latino', 'asian', 'middle-eastern', 'south-asian', 'mixed', 'pacific-islander', 'native-american']);
     expect(FAMILY).toEqual(['outside', 'acting', 'directing', 'writing', 'producing', 'music']);
-    expect(HEADSHOT_PRICE).toStrictEqual({ US: fromMajor('USD', '304') });
-    expect(IDENTITY_START).toStrictEqual({ person: null, sessions: [] });
+    expect(IDENTITY_START).toStrictEqual({ person: null });
     expect(() => personOf(IDENTITY_START)).toThrow('the person is not made yet');
   });
 
@@ -73,13 +68,12 @@ describe('the person', () => {
     const index = commandIndex().filter((c) => c.id.startsWith('identity.'));
     expect(index).toEqual([
       { id: 'identity.make', reads: [], writes: ['identity'] },
-      { id: 'identity.headshot', reads: [], writes: ['identity', 'accounts', 'ledger'] },
     ]);
   });
 });
 
 describe('identity.make', () => {
-  it('makes the person from what the player gives, trimmed, with the headshot their photo is', () => {
+  it('makes the person from what the player gives, trimmed', () => {
     const l = make({ first: ' Ada ', middle: ' Maria ', last: ' Reyes', preferred: 'Ada Reyes ', citizenship: ['US', 'IE'], languages: [{ lang: 'en', level: 'C2' }, { lang: 'es', level: 'B1' }], ethnicity: ['latino', 'white'], family: 'acting', grewUpCountry: 'IE', grewUpRegion: '' });
     expect(l.slices.identity).toStrictEqual({
       person: {
@@ -93,13 +87,10 @@ describe('identity.make', () => {
         ethnicity: ['latino', 'white'],
         grewUp: { country: 'IE', region: '' },
         family: 'acting',
-        headshot: NOW,
       },
-      sessions: [],
     });
     // The test person the other engines read is one this command makes.
-    expect(made()).toStrictEqual(person({ headshot: NOW }));
-    expect(made({ portrait: false }).headshot).toBeNull();
+    expect(made()).toStrictEqual(person());
     // No middle name given is none.
     expect(made({ middle: null as never }).legal.middle).toBe('');
   });
@@ -170,7 +161,7 @@ describe('identity.make', () => {
     expect(made({ languages: LEVELS.map((level, i) => ({ lang: ['en', 'fr', 'de', 'es', 'zh-Hant', 'gsw'][i] as string, level })) }).languages.map((l) => l.level)).toEqual([...LEVELS]);
   });
 
-  it('bites: the birth date it holds is the playing age casting reads', () => {
+  it('bites: the birth date it holds is the playing age a part reads', () => {
     falsifyAny({
       feature: 'identity.make',
       claim: 'bites',
@@ -178,47 +169,6 @@ describe('identity.make', () => {
       base: '2000-06-14',
       twin: '2010-06-14',
       outcome: (born: string) => playingAge(made({ born }), NOW, 'UTC'),
-    });
-  });
-});
-
-describe('identity.headshot', () => {
-  const taken = (country: string, at = NOW + 3600) => {
-    const l = make({ portrait: false });
-    return dispatch({ ...l, frame: { ...l.frame, now: at } }, takeHeadshot, { account: ACCOUNT, country });
-  };
-
-  it('takes a new headshot, at the price a survey gives where it gives one', () => {
-    const us = taken('US');
-    expect(us.slices.identity.sessions).toStrictEqual([{ at: NOW + 3600, price: fromMajor('USD', '304') }]);
-    expect(personOf(us.slices.identity).headshot).toBe(NOW + 3600);
-    const gb = dispatch({ ...us, frame: { ...us.frame, now: NOW + 7200 } }, takeHeadshot, { account: ACCOUNT, country: 'GB' });
-    expect(gb.slices.identity.sessions).toStrictEqual([{ at: NOW + 3600, price: fromMajor('USD', '304') }, { at: NOW + 7200, price: null }]);
-    expect(personOf(gb.slices.identity).headshot).toBe(NOW + 7200);
-    // The session is paid from the account named where its price is known; nothing where it isn't.
-    expect([minorIn(us.slices.ledger, ACCOUNT), minorIn(gb.slices.ledger, ACCOUNT), minorIn(gb.slices.ledger, 'world:photographer:USD')]).toEqual([100_000_000 - 30_400, 100_000_000 - 30_400, 30_400]);
-    const broke = make({ portrait: false });
-    expect(() => dispatch({ ...broke, frame: { ...broke.frame, now: NOW + 3600 }, slices: { ...broke.slices, ...purse('USD', 30_399) } }, takeHeadshot, { account: ACCOUNT, country: 'US' })).toThrow("everyday:1 can't cover a headshot session");
-    expect(() => taken('XX')).toThrow("there's no country XX for the session");
-    expect(() => dispatch(life(), takeHeadshot, { account: ACCOUNT, country: 'US' })).toThrow('the person is not made yet');
-  });
-
-  it("bites: the session's market is the price the life pays", () => {
-    falsifyAny({
-      feature: 'identity.headshot',
-      claim: 'bites',
-      says: 'A session in the US is at its surveyed price; one elsewhere has none the game knows.',
-      base: 'US',
-      twin: 'GB',
-      outcome: (country: string) => taken(country).slices.identity.sessions.map((s) => s.price),
-    });
-    falsifyAny({
-      feature: 'identity.headshot',
-      claim: 'bites',
-      says: 'A person with no photo has no headshot until a session gives one.',
-      base: false,
-      twin: true,
-      outcome: (session: boolean) => personOf((session ? taken('GB') : make({ portrait: false })).slices.identity).headshot,
     });
   });
 });

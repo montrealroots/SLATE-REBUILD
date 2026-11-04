@@ -9,14 +9,14 @@ import { t } from '../../../src/core/text/text.ts';
 import { accountOf, balance } from '../../../src/money/ledger/ledger.ts';
 import type { Paid } from '../../../src/money/tax/tax.ts';
 import { majorityAt, workAge } from '../../../src/papers/ages/ages.ts';
-import { ACTING_START, playPart, type ActingSlice, type Audition, type Part } from '../../../src/person/acting/acting.ts';
+import { ACTING_START, COUNTRY, playPart, type ActingSlice, type Cast, type Part } from '../../../src/person/acting/acting.ts';
 import { ATTRIBUTES_START, chooseAttributes, componentValues, DAILY, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
-import { cutFilm, DIRECTING_START, finish, onSet, prepFilm, shootFilm, shootNeeded, type DirectingSlice } from '../../../src/person/directing/directing.ts';
+import { cutFilm, DIRECTING_START, finish, onSet, prepFilm, shootFilm, shootNeeded, type DirectingSlice, type PrepArgs } from '../../../src/person/directing/directing.ts';
 import type { IdentitySlice, Person } from '../../../src/person/identity/identity.ts';
 import { PERMITS_START, type PermitsSlice } from '../../../src/person/permits/permits.ts';
-import { CAREER_START, offerScript, pitchScript, type CareerSlice } from '../../../src/person/work/career.ts';
+import { CAREER_START, type CareerSlice } from '../../../src/person/work/career.ts';
 import { SCRIPTS_START, writeScript, type ScriptsSlice } from '../../../src/person/work/work.ts';
-import { applyToFunder, optionMaterial, planProject, PRODUCING_START, projectOf, shootProject, type ProducingSlice } from '../../../src/person/producing/producing.ts';
+import { applyToFunder, developScript, optionMaterial, planProject, projectOf, shootProject, type ProducingSlice } from '../../../src/person/producing/producing.ts';
 import { UNIONS_START, type UnionsSlice } from '../../../src/person/unions/unions.ts';
 import {
   aboutYouth,
@@ -43,6 +43,7 @@ import { readYouth, serialize } from '../../../tools/person/youth/compile.ts';
 import { falsifyAny } from '../../support/falsify-core.ts';
 import { permitsEverywhere } from '../../support/permits.ts';
 import { person } from '../../support/person.ts';
+import { directed, production, type Directed } from '../../support/production.ts';
 import { ACCOUNT, minorIn, purse } from '../../support/purse.ts';
 
 const ROOT = resolve(import.meta.dirname, '../../..');
@@ -54,7 +55,7 @@ const ALL = ['performer', 'director', 'producer', 'author'];
 const grown = (from: number, days: number) => 100 - (100 - from) * (1 - DAILY) ** days;
 /** A person born on a date in a country, its citizen, and growing up there. */
 const born = (date: string, country: string, over: Partial<Person> = {}): Person => person({ born: { date, country: country as never, region: '' }, citizenship: [country as never], grewUp: { country: country as never, region: '' }, ...over });
-const identityOf = (p: Person): IdentitySlice => ({ person: p, sessions: [] });
+const identityOf = (p: Person): IdentitySlice => ({ person: p });
 const youthOf = (l: { slices: { youth: YouthSlice } }) => l.slices.youth;
 
 describe('the youth rules', () => {
@@ -328,7 +329,7 @@ describe('the youth rules, on rules of their own', () => {
   });
 
   it('pays the held pay back, posted as released', () => {
-    const l = dispatch(dispatch(life(born('2014-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { audition: 1, account: ACCOUNT });
+    const l = dispatch(dispatch(life(born('2014-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { part: 1, account: ACCOUNT });
     const after = pass(l, reachedAt('2014-05-20', 18, 'Europe/Paris')).life;
     expect(accountOf(after.slices.ledger, ACCOUNT).postings.at(-1)?.what).toBe('set aside, released');
     expect(accountOf(l.slices.ledger, ACCOUNT).postings.at(-1)?.what).toBe('set aside');
@@ -337,24 +338,32 @@ describe('the youth rules, on rules of their own', () => {
   });
 });
 
-type Lives = { attributes: AttributesSlice; acting: ActingSlice; identity: IdentitySlice; unions: UnionsSlice; permits: PermitsSlice; directing: DirectingSlice; producing: ProducingSlice; youth: YouthSlice; genres: { loved: string[] } } & ReturnType<typeof purse>;
-const life = (p: Person, role: 'actor' | 'director' | 'producer', currency: string, auditions: Audition[] = [], now = NOW, all = 50): Life<Lives> =>
+type Lives = { attributes: AttributesSlice; acting: ActingSlice; identity: IdentitySlice; unions: UnionsSlice; permits: PermitsSlice; directing: DirectingSlice; producing: ProducingSlice; youth: YouthSlice; genres: { loved: string[] }; scripts: ScriptsSlice; career: CareerSlice } & ReturnType<typeof purse>;
+/** A life in one role; each part cast in a production of its own, financed in the part's agreement's country. */
+const life = (p: Person, role: 'actor' | 'director' | 'producer', currency: string, parts: Cast[] = [], now = NOW, all = 50): Life<Lives> =>
   dispatch(
-    begin(SEED, now, { attributes: structuredClone(ATTRIBUTES_START), acting: { ...structuredClone(ACTING_START), auditions }, identity: identityOf(p), unions: structuredClone(UNIONS_START), permits: role === 'actor' ? structuredClone(PERMITS_START) : permitsEverywhere(), directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START), youth: structuredClone(YOUTH_START), genres: { loved: ['drama'] }, ...purse(currency) }),
+    begin(SEED, now, { attributes: structuredClone(ATTRIBUTES_START), acting: { ...structuredClone(ACTING_START), parts }, identity: identityOf(p), unions: structuredClone(UNIONS_START), permits: role === 'actor' ? structuredClone(PERMITS_START) : permitsEverywhere(), directing: structuredClone(DIRECTING_START), producing: { projects: parts.map((c) => production({ id: c.project, market: COUNTRY[c.part.agreement] })) }, youth: structuredClone(YOUTH_START), genres: { loved: ['drama'] }, scripts: structuredClone(SCRIPTS_START), career: structuredClone(CAREER_START), ...purse(currency) }),
     chooseAttributes,
     { role, all, each: {} },
   );
-const booked = (part: Part, id = 1): Audition => ({ id, at: 0, breakdown: 0, part, taped: true, score: 50, booked: true, work: null });
+const booked = (part: Part, id = 1): Cast => ({ id, at: 0, project: id, part, gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en', work: null });
+/** Preps a director's job in a production of its own (tests/support/production.ts). */
+const prepIn = (l: Life<Lives>, job: Directed & { agreement?: string; prep?: number; cut?: number }): Life<Lives> => {
+  const { agreement, prep, cut, ...made } = job;
+  const withIt = { ...l, slices: { ...l.slices, producing: { projects: [directed(made)] } } };
+  return dispatch(withIt, prepFilm, { project: 1, account: ACCOUNT, ...(agreement === undefined ? {} : { agreement }), ...(prep === undefined ? {} : { prep }), ...(cut === undefined ? {} : { cut }) } as PrepArgs);
+};
+const FILM = { format: 'film', roles: ['producer'] };
 const PACT: Part = { agreement: 'pact-equity', budget: 5_000_000, seats: 0, lines: 20, term: 'day', length: 3, rehearsal: 0, asks: [] };
 const FRENCH: Part = { agreement: 'fr-film', budget: 1_000_000, seats: 0, lines: 20, term: 'day', length: 2, rehearsal: 0, asks: [] };
-const played = (l: Life<Lives>, id = 1) => l.slices.acting.auditions[id - 1]?.work;
+const played = (l: Life<Lives>, id = 1) => l.slices.acting.parts[id - 1]?.work;
 
 describe("a minor's work in each role", () => {
   it("has a French director's prep and cut taught and carried at the young worker's hours", () => {
     const teen = dispatch(life(born('2011-03-10', 'FR'), 'director', 'EUR'), authoriseWork, { country: 'FR', role: 'director' });
-    const prepped = dispatch(teen, prepFilm, { account: ACCOUNT, form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 });
+    const prepped = prepIn(teen, { form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 });
     expect(prepped.slices.attributes['director']?.['vision']).toBeCloseTo(grown(50, 10 * (35 / 40)), 10);
-    expect(youthOf(prepped).held[0]?.engagement).toBe('directing:1');
+    expect(youthOf(prepped).held[0]?.engagement).toBe('director:1');
     const shot = dispatch(prepped, shootFilm, { film: 1, account: ACCOUNT });
     const editing = shot.slices.attributes['director']?.['editing'] as number;
     const cut = dispatch(shot, cutFilm, { film: 1, account: ACCOUNT });
@@ -366,7 +375,7 @@ describe("a minor's work in each role", () => {
     const shoot = (date: string, grant: boolean) => {
       let l = life(born(date, 'FR'), 'producer', 'USD', [], NOW, 90);
       if (grant) l = dispatch(l, authoriseWork, { country: 'FR', role: 'producer' });
-      l = dispatch(l, optionMaterial, { account: ACCOUNT, days: 10, genre: 'drama', market: 'FR' });
+      l = dispatch(l, optionMaterial, { ...FILM, account: ACCOUNT, days: 10, genre: 'drama', market: 'FR' });
       l = dispatch(l, planProject, { project: 1, budget: '2000000' });
       const producing = structuredClone(l.slices.producing);
       const p = projectOf(producing, 1);
@@ -380,28 +389,27 @@ describe("a minor's work in each role", () => {
     expect(done.slices.attributes['producer']?.['leadership']).toBeCloseTo(grown(before.slices.attributes['producer']?.['leadership'] as number, days * (35 / 40)), 10);
     expect(youthOf(done).granted[0]?.used).toBe(true);
     expect(projectOf(done.slices.producing, 1).shot?.fee?.minor).toBeGreaterThan(0);
-    expect(youthOf(done).held.map((h) => h.engagement)).toEqual(['producing:1']);
+    expect(youthOf(done).held.map((h) => h.engagement)).toEqual(['producer:1']);
   });
 
-  type Writing = { attributes: AttributesSlice; scripts: ScriptsSlice; career: CareerSlice; identity: IdentitySlice; genres: { loved: string[] }; youth: YouthSlice } & ReturnType<typeof purse>;
-  const writer = (p: Person): Life<Writing> => {
-    const l = dispatch(dispatch(begin(SEED, NOW, { attributes: structuredClone(ATTRIBUTES_START), scripts: structuredClone(SCRIPTS_START), career: structuredClone(CAREER_START), identity: identityOf(p), genres: { loved: ['drama'] }, youth: structuredClone(YOUTH_START), ...purse('EUR') }), chooseAttributes, { role: 'screenwriter', all: 100, each: {} }), writeScript, { form: 'episode', genre: 'drama', days: 200 });
-    const asked = { ...l, slices: { ...l.slices, career: { ...l.slices.career, out: { '1': { documents: { 'pitch-document': 100 }, requests: 40, sold: null } } } } };
-    return dispatch(asked, offerScript, { script: 1, agreement: 'fr-tv', country: 'FR', budget: 1_000_000, minutes: 52 });
+  /** A French writer's own episode, developed into a French series whose producer is hired, planned and financed by hand. */
+  const writer = (p: Person): Life<Lives> => {
+    const l = dispatch(dispatch(life(p, 'actor', 'EUR'), chooseAttributes, { role: 'screenwriter', all: 100, each: {} }), writeScript, { form: 'episode', genre: 'drama', days: 200 });
+    const developed = dispatch(dispatch(l, developScript, { script: 1, format: 'series', episode: 'hour', episodes: 1, roles: ['writer'], market: 'FR', minutes: 52 }), planProject, { project: 1, budget: '1000000' });
+    const producing = structuredClone(developed.slices.producing);
+    const project = projectOf(producing, 1);
+    project.raised['equity'] = money('EUR', (project.plan as { budget: { minor: number } }).budget.minor);
+    return { ...developed, slices: { ...developed.slices, producing } };
   };
-  const sell = (l: Life<Writing>) => {
-    let at = l;
-    for (let i = 0; i < 40 && at.slices.career.out['1']?.sold === null; i += 1) at = dispatch({ ...at, frame: { ...at.frame, now: at.frame.now + 3600 } }, pitchScript, { script: 1, account: ACCOUNT });
-    return at;
-  };
-  it("has a young French writer's sale authorised and its pécule set aside", () => {
+  it("has a young French writer's script bought by the production authorised, and its pécule set aside", () => {
     const fr = (date: string) => born(date, 'FR', { languages: [{ lang: 'fr', level: 'C2' }] });
-    expect(() => dispatch(writer(fr('2014-03-10')), pitchScript, { script: 1, account: ACCOUNT })).toThrow('that work in France needs permit first');
-    const sold = sell(dispatch(writer(fr('2014-03-10')), authoriseWork, { country: 'FR', role: 'author' }));
-    expect(sold.slices.career.out['1']?.sold).not.toBeNull();
+    expect(() => dispatch(writer(fr('2014-03-10')), shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit first');
+    const sold = dispatch(dispatch(writer(fr('2014-03-10')), authoriseWork, { country: 'FR', role: 'author' }), shootProject, { project: 1, account: ACCOUNT });
+    expect(projectOf(sold.slices.producing, 1).costs.map((c) => c.role)).toEqual(['writer']);
     expect(youthOf(sold).granted[0]?.used).toBe(true);
-    expect(youthOf(sold).held.map((h) => [h.engagement, h.amount])).toEqual([['script:1', Math.min(Math.round(0.9 * (sold.slices.tax.paid[0] as Paid).gross), (sold.slices.tax.paid[0] as Paid).gross - (sold.slices.tax.paid[0] as Paid).tax - (sold.slices.tax.paid[0] as Paid).social + (sold.slices.tax.paid[0] as Paid).vat)]]);
-    const adult = sell(writer(fr('2000-03-10')));
+    const paid = sold.slices.tax.paid[0] as Paid;
+    expect(youthOf(sold).held.map((h) => [h.engagement, h.amount])).toEqual([['writer:1', Math.min(Math.round(0.9 * paid.gross), paid.gross - paid.tax - paid.social + paid.vat)]]);
+    const adult = dispatch(writer(fr('2000-03-10')), shootProject, { project: 1, account: ACCOUNT });
     expect(youthOf(adult).held).toEqual([]);
   });
 });
@@ -411,17 +419,17 @@ describe("a minor's work", () => {
     // A ten-year-old British actress: the licence first, granted once for one part; the days at five hours of eight.
     const girl = born('2016-03-10', 'GB');
     const l = life(girl, 'actor', 'GBP', [booked(PACT), booked(PACT, 2)]);
-    expect(() => dispatch(l, playPart, { audition: 1, account: ACCOUNT })).toThrow('that work in United Kingdom needs permit first');
+    expect(() => dispatch(l, playPart, { part: 1, account: ACCOUNT })).toThrow('that work in United Kingdom needs permit first');
     const granted = dispatch(l, authoriseWork, { country: 'GB', role: 'performer' });
     expect(youthOf(granted).granted).toEqual([{ id: 1, at: NOW, country: 'GB', role: 'performer', needs: ['permit'], used: false }]);
-    const p = dispatch(granted, playPart, { audition: 1, account: ACCOUNT });
+    const p = dispatch(granted, playPart, { part: 1, account: ACCOUNT });
     expect(played(p)?.pay).toEqual(fromMajor('GBP', '483'));
     expect(youthOf(p).granted[0]?.used).toBe(true);
     expect(youthOf(p).held).toEqual([]);
     expect(p.slices.attributes['actor']?.['acting']).toBeCloseTo(grown(50, 3 * (5 / 8)), 10);
-    expect(() => dispatch(p, playPart, { audition: 2, account: ACCOUNT })).toThrow('that work in United Kingdom needs permit first');
+    expect(() => dispatch(p, playPart, { part: 2, account: ACCOUNT })).toThrow('that work in United Kingdom needs permit first');
     // At sixteen, nothing is needed and the day is whole.
-    const older = dispatch(life(born('2010-03-10', 'GB'), 'actor', 'GBP', [booked(PACT)]), playPart, { audition: 1, account: ACCOUNT });
+    const older = dispatch(life(born('2010-03-10', 'GB'), 'actor', 'GBP', [booked(PACT)]), playPart, { part: 1, account: ACCOUNT });
     expect(older.slices.attributes['actor']?.['acting']).toBeCloseTo(grown(50, 3), 10);
     expect(() => dispatch(l, authoriseWork, { country: 'GB', role: 'author' })).toThrow('nothing needs authorising for that work in United Kingdom');
     expect(() => dispatch(l, authoriseWork, { country: 'GB', role: 'director' })).toThrow('no one under 16 may be employed in United Kingdom');
@@ -430,14 +438,14 @@ describe("a minor's work", () => {
 
   it("has the law's share of a minor's pay set aside into the account it names, paid back the day they come of age", () => {
     const boy = born('2014-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' });
-    const l = dispatch(dispatch(life(boy, 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { audition: 1, account: ACCOUNT });
+    const l = dispatch(dispatch(life(boy, 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { part: 1, account: ACCOUNT });
     const paid = l.slices.tax.paid[0] as Paid;
     expect(paid.gross).toBe(83_650);
     const net = paid.gross - paid.tax - paid.social + paid.vat;
     const kept = Math.min(Math.round(0.9 * 83_650), net);
     const release = reachedAt('2014-05-20', 18, 'Europe/Paris');
     expect(youthOf(l).earned).toEqual([]);
-    expect(youthOf(l).held).toEqual([{ at: NOW, country: 'FR', engagement: 'acting:1', account: ACCOUNT, amount: kept, currency: 'EUR', into: 'Caisse des dépôts et consignations', release, released: false }]);
+    expect(youthOf(l).held).toEqual([{ at: NOW, country: 'FR', engagement: 'actor:1', account: ACCOUNT, amount: kept, currency: 'EUR', into: 'Caisse des dépôts et consignations', release, released: false }]);
     expect(minorIn(l.slices.ledger, 'world:youth:FR:EUR')).toBe(kept);
     expect(minorIn(l.slices.ledger, ACCOUNT)).toBe(100_000_000 + net - kept);
     expect(l.frame.schedule.find((i) => i.kind === RELEASE_KIND)).toMatchObject({ at: release, data: { held: 0 } });
@@ -448,7 +456,7 @@ describe("a minor's work", () => {
     expect(minorIn(after.slices.ledger, 'world:youth:FR:EUR')).toBe(0);
     expect(youthOf(after).held[0]?.released).toBe(true);
     // An adult's pay isn't held.
-    const man = dispatch(life(born('2000-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), playPart, { audition: 1, account: ACCOUNT });
+    const man = dispatch(life(born('2000-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), playPart, { part: 1, account: ACCOUNT });
     expect(youthOf(man).held).toEqual([]);
     expect(balance(accountOf(man.slices.ledger, ACCOUNT)).minor).toBe(100_000_000 + (man.slices.tax.paid[0] as Paid).gross - (man.slices.tax.paid[0] as Paid).tax - (man.slices.tax.paid[0] as Paid).social + (man.slices.tax.paid[0] as Paid).vat);
   });
@@ -459,7 +467,7 @@ describe("a minor's work", () => {
     const kid = born('2016-03-10', 'US', { born: { date: '2016-03-10', country: 'US', region: 'US.CA' } });
     let l = life(kid, 'actor', 'USD', [booked(SAG)]);
     if (m !== undefined) l = dispatch(l, authoriseWork, { country: 'US', role: 'performer' });
-    l = dispatch(l, playPart, { audition: 1, account: ACCOUNT });
+    l = dispatch(l, playPart, { part: 1, account: ACCOUNT });
     const paid = l.slices.tax.paid[0] as Paid;
     expect(youthOf(l).held.map((h) => h.amount)).toEqual(m === undefined ? [] : [Math.round(0.15 * paid.gross)]);
     expect(l.slices.attributes['actor']?.['acting']).toBeCloseTo(grown(50, 5 / 8), 10);
@@ -468,18 +476,18 @@ describe("a minor's work", () => {
   it("counts Ontario's threshold over the engagement: a quarter of what is over $2,000", () => {
     const m = majorityAt({ country: 'CA', region: 'CA.08' });
     const ACTRA: Part = { agreement: 'actra', budget: 5_000_000, seats: 0, lines: 20, term: 'day', length: 3, rehearsal: 0, asks: [] };
-    const l = dispatch(life(born('2016-03-10', 'CA'), 'actor', 'CAD', [booked(ACTRA)]), playPart, { audition: 1, account: ACCOUNT });
+    const l = dispatch(life(born('2016-03-10', 'CA'), 'actor', 'CAD', [booked(ACTRA)]), playPart, { part: 1, account: ACCOUNT });
     const gross = (l.slices.tax.paid[0] as Paid).gross;
-    expect(youthOf(l).earned).toEqual(m === undefined ? [] : [{ at: NOW, country: 'CA', engagement: 'acting:1', currency: 'CAD', gross }]);
+    expect(youthOf(l).earned).toEqual(m === undefined ? [] : [{ at: NOW, country: 'CA', engagement: 'actor:1', currency: 'CAD', gross }]);
     expect(youthOf(l).held.map((h) => h.amount)).toEqual(m === undefined ? [] : [Math.round(0.25 * (gross - 200_000))]);
   });
 
   it('bars a young director below the working age, and has a French one authorised by the prefect, the days at the young worker\'s hours', () => {
-    expect(() => dispatch(life(born('2011-03-10', 'US'), 'director', 'USD', [], NOW), prepFilm, { account: ACCOUNT, form: 'feature', budget: 5_000_000, shoot: 30 })).toThrow('no one under 16 may be employed in United States');
+    expect(() => prepIn(life(born('2011-03-10', 'US'), 'director', 'USD', [], NOW), { form: 'feature', budget: 5_000_000, shoot: 30 })).toThrow('no one under 16 may be employed in United States');
     const teen = life(born('2011-03-10', 'FR'), 'director', 'EUR');
-    const args = { account: ACCOUNT, form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 } as const;
-    expect(() => dispatch(teen, prepFilm, args)).toThrow('that work in France needs permit first');
-    const prepped = dispatch(dispatch(teen, authoriseWork, { country: 'FR', role: 'director' }), prepFilm, args);
+    const args = { form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 } as const;
+    expect(() => prepIn(teen, args)).toThrow('that work in France needs permit first');
+    const prepped = prepIn(dispatch(teen, authoriseWork, { country: 'FR', role: 'director' }), args);
     expect(youthOf(prepped).granted[0]?.used).toBe(true);
     expect(youthOf(prepped).held).toHaveLength(1);
     expect(youthOf(prepped).held[0]?.into).toBe('Caisse des dépôts et consignations');
@@ -494,7 +502,7 @@ describe("a minor's work", () => {
   it('bars a young producer below the working age, and refuses the fund below its age', () => {
     const shoot = (date: string) => {
       let l = life(born(date, 'GB'), 'producer', 'GBP');
-      l = dispatch(l, optionMaterial, { account: ACCOUNT, days: 10, genre: 'drama' });
+      l = dispatch(l, optionMaterial, { ...FILM, account: ACCOUNT, days: 10, genre: 'drama', market: 'GB' });
       l = dispatch(l, planProject, { project: 1, budget: '2000000' });
       const producing = structuredClone(l.slices.producing);
       const p = projectOf(producing, 1);
@@ -507,7 +515,7 @@ describe("a minor's work", () => {
     const done = dispatch(sixteen, shootProject, { project: 1, account: ACCOUNT });
     expect(projectOf(done.slices.producing, 1).shot).not.toBeNull();
     expect(youthOf(done).held).toEqual([]);
-    const fresh = dispatch(dispatch(life(born('2010-03-10', 'GB'), 'producer', 'GBP'), optionMaterial, { account: ACCOUNT, days: 10, genre: 'drama' }), planProject, { project: 1, budget: '2000000' });
+    const fresh = dispatch(dispatch(life(born('2010-03-10', 'GB'), 'producer', 'GBP'), optionMaterial, { ...FILM, account: ACCOUNT, days: 10, genre: 'drama', market: 'GB' }), planProject, { project: 1, budget: '2000000' });
     expect(() => dispatch(fresh, applyToFunder, { project: 1 })).toThrow("United Kingdom's public fund takes no applicant under 18");
   });
 
@@ -534,7 +542,7 @@ describe("a minor's work", () => {
       outcome: (country) => {
         const l = dispatch(life(born('2016-03-10', 'GB'), 'actor', 'GBP', [booked(PACT)]), authoriseWork, { country, role: 'performer' });
         try {
-          return played(dispatch(l, playPart, { audition: 1, account: ACCOUNT })) !== null;
+          return played(dispatch(l, playPart, { part: 1, account: ACCOUNT })) !== null;
         } catch {
           return false;
         }
@@ -543,7 +551,7 @@ describe("a minor's work", () => {
   });
 
   it("youth.release bites: the pay set aside comes back on the person's eighteenth birthday", () => {
-    const l = dispatch(dispatch(life(born('2014-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { audition: 1, account: ACCOUNT });
+    const l = dispatch(dispatch(life(born('2014-05-20', 'FR', { billedAs: 'actor', pronouns: 'he' }), 'actor', 'EUR', [booked(FRENCH)]), authoriseWork, { country: 'FR', role: 'performer' }), playPart, { part: 1, account: ACCOUNT });
     const release = reachedAt('2014-05-20', 18, 'Europe/Paris');
     falsifyAny({
       feature: 'youth.release',

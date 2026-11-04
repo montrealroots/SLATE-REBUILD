@@ -1,9 +1,7 @@
 import { defineCommand, type Context, type Json } from '../../core/frame/frame.ts';
-import { fromMajor, type Money } from '../../core/money/money.ts';
 import { daysInMonth } from '../../core/time/calendar.ts';
 import { ageOn } from '../../core/time/dates.ts';
 import { localTime } from '../../core/time/time.ts';
-import { payCost, type Holding } from '../../money/accounts/accounts.ts';
 import { nationality } from '../../papers/citizenship/citizenship.ts';
 import type { Sex } from '../../papers/ages/ages.ts';
 import { isCountry, regionsOf, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
@@ -15,16 +13,18 @@ import type { LineId } from '../../core/text/text.ts';
  * pronouns and what the person is billed as, which is their sex (the owner, 2026-11-01: "Actor (Male) Actress (Female)
  * and for They/Them it could be either or"), when and where they were
  * born, their citizenship, the languages they speak and how well, their race or ethnicity if they give one, where they
- * grew up, what their family did, and the headshot they start with. Made once, when the life is made; the one place
- * these are held, so every engine reads the same person.
+ * grew up, and what their family did. Made once, when the life is made; the one place these are held, so every engine
+ * reads the same person. The headshot casting saw (the one the person brought, and each session's, at Thumbtack's US
+ * price) was removed on 2026-11-04 with casting itself: the life plays only in its own productions, and nothing sees a
+ * headshot there.
  *
  * What reads each field, and what it changes, is in workbench/plans/layer4-identity.md and the engines that read it: the
- * parts written for the player (Billed As, playing age, a named ethnicity, a language; R-4620), the unions' rules
+ * parts the life's productions write (Billed As, playing age, a named ethnicity, a language; R-4620), the unions' rules
  * (names, citizenship; R-4621), a family in the business (R-4622), the languages the birthplace and where one grew up
  * suggest (CLDR 49, R-4618).
  *
- * Race or ethnicity, where given, is read only where the trade's published practice reads it: a breakdown that names
- * one, a programme whose eligibility names one. Never an ability, a judgment of work, a pay rate or a chance of being
+ * Race or ethnicity, where given, is read only where the trade's published practice reads it: a part that names one,
+ * as a breakdown does. Never an ability, a judgment of work, a pay rate or a chance of being
  * good (KEEP entry 4's line).
  */
 
@@ -52,11 +52,6 @@ export type Ethnicity = (typeof ETHNICITIES)[number];
  */
 export const FAMILY = ['outside', 'acting', 'directing', 'writing', 'producing', 'music'] as const;
 export type Family = (typeof FAMILY)[number];
-
-/** A headshot session's typical price where a published survey gives one: the US, Thumbtack's average of $304 (R-4622). */
-// Stryker disable next-line StringLiteral: a mutant here throws as the module loads, which Stryker reports as surviving
-// (HANDOFF, blockers); the test holds the price to the cent.
-export const HEADSHOT_PRICE: Readonly<Partial<Record<CountryCode, Money>>> = { US: fromMajor('USD', '304') };
 
 export interface Born {
   /** YYYY-MM-DD. */
@@ -89,17 +84,13 @@ export interface Person {
   ethnicity: Ethnicity[];
   grewUp: Place;
   family: Family;
-  /** When the headshot casting sees was taken; null where the person has none. */
-  headshot: number | null;
 }
 
 export interface IdentitySlice {
   person: Person | null;
-  /** Each headshot session had, and its price where known. */
-  sessions: { at: number; price: Money | null }[];
 }
 
-export const IDENTITY_START: IdentitySlice = { person: null, sessions: [] };
+export const IDENTITY_START: IdentitySlice = { person: null };
 
 const NAMES: Readonly<Record<string, string>> = LANGUAGES.names;
 const TERRITORIES = LANGUAGES.territories as Readonly<Record<string, readonly { lang: string; share: number; official: boolean }[]>>;
@@ -131,7 +122,7 @@ const base = (lang: string) => lang.split('-')[0] as string;
 export const speaks = (p: Person, lang: string, level: Level): boolean =>
   p.languages.some((l) => base(l.lang) === base(lang) && LEVELS.indexOf(l.level) >= LEVELS.indexOf(level));
 
-/** Whether the person identifies with an ethnicity a breakdown names. */
+/** Whether the person identifies with an ethnicity a part names. */
 export const identifiesAs = (p: Person, ethnicity: Ethnicity): boolean => p.ethnicity.includes(ethnicity);
 
 /** Whether the person's family was in the business, and in which trade. */
@@ -156,7 +147,7 @@ export function suggestedLanguages(born: CountryCode, grewUp: CountryCode): stri
 /** The citizenship the birthplace suggests: the nationality its people hold. */
 export const suggestedCitizenship = (born: CountryCode): CountryCode | undefined => nationality(born);
 
-/** The person's sex, as the papers, casting and the awards read it: an actor is male, an actress female. */
+/** The person's sex, as the papers, a part and the awards read it: an actor is male, an actress female. */
 export const sexOf = (p: Person): Sex => (p.billedAs === 'actor' ? 'male' : 'female');
 
 /** The title pronouns settle: he an actor, she an actress; they settle neither (KEEP entry 3). */
@@ -180,8 +171,6 @@ export interface MakeArgs {
   grewUpCountry: string;
   grewUpRegion: string;
   family: string;
-  /** Whether the person brings a photo of themselves: their first headshot. */
-  portrait: boolean;
 }
 
 const named = (v: unknown, what: string): string => {
@@ -250,29 +239,10 @@ function make(s: { identity: IdentitySlice }, a: MakeArgs, c: Context): void {
     ethnicity,
     grewUp: { country: grewUp, region: region(grewUp, a.grewUpRegion, 'where you grew up') },
     family: a.family as Family,
-    headshot: a.portrait ? c.now : null,
   };
-}
-
-export interface HeadshotArgs {
-  [key: string]: string;
-  country: string;
-  /** The account the session is paid from, where its price is known. */
-  account: string;
-}
-
-/** A headshot session where the person lives: a new headshot, at the market's price where a survey gives one, paid from the account named. */
-function headshot(s: { identity: IdentitySlice } & Holding, a: HeadshotArgs, c: Context): void {
-  const p = personOf(s.identity);
-  const where = country(a.country, 'the session');
-  const price = HEADSHOT_PRICE[where] ?? null;
-  if (price !== null) payCost(s, a.account, 'photographer', price, 'a headshot session', c.now);
-  p.headshot = c.now;
-  s.identity.sessions.push({ at: c.now, price });
 }
 
 // Stryker disable all: a mutant of a declaration made as the module loads changes its shape, so the module loaded
 // again for it is refused as declared twice (as the accounts' and the cards' say). The declarations are held by the
 // test that lists each command with what it reads and writes; what each does is mutated above.
 export const makePerson = defineCommand<{ identity: IdentitySlice }, MakeArgs>({ id: 'identity.make', reads: [], writes: ['identity'], run: make });
-export const takeHeadshot = defineCommand<{ identity: IdentitySlice } & Holding, HeadshotArgs>({ id: 'identity.headshot', reads: [], writes: ['identity', 'accounts', 'ledger'], run: headshot });

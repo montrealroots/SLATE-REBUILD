@@ -10,7 +10,6 @@
    "cut",
    "quality-by-level",
    "festivals",
-   "second-feature",
    "declarations"
   ]
  },
@@ -55,8 +54,8 @@
     "tests/person/directing/directing.test.ts::prep > plans each part at what the director can do in it, within the spread",
     "tests/person/directing/directing.test.ts::prep > holds a plan to 0 and 100",
     "tests/person/directing/directing.test.ts::prep > records the film and teaches what prep used, over its days",
-    "tests/person/directing/directing.test.ts::prep > is refused in a form there is not, for a budget or a schedule not whole, an episode given either, or before the attributes are chosen",
-    "tests/person/directing/directing.test.ts::prep > takes a second feature only once the debut has led to one, and any after that",
+    "tests/person/directing/directing.test.ts::prep > is refused where the production isn't financed, the life doesn't direct it, it is prepped already, the DGA's terms are given, or before the attributes are chosen",
+    "tests/person/directing/directing.test.ts::prep > preps the production's own job once it is financed: its form, country, budget and schedule the production's",
     "tests/person/directing/directing.test.ts::prep > directing.prep: a director with more Vision plans a better story"
    ]
   },
@@ -124,24 +123,8 @@
     "tests/person/directing/directing.test.ts::festivals > choose at each festival's own rate for a film at the pool's middle, more for better, never past certain",
     "tests/person/directing/directing.test.ts::festivals > take a finished feature by the draw on its chance, once each",
     "tests/person/directing/directing.test.ts::festivals > are refused for a festival there is not, an episode, a film not cut, or a second time",
-    "tests/person/directing/directing.test.ts::festivals > directing.submit: a better film is chosen more often"
-   ]
-  },
-  {
-   "key": "second-feature",
-   "status": "game",
-   "register": [
-    "R-4602",
-    "R-4610",
-    "R-4613",
-    "R-4615"
-   ],
-   "tests": [
-    "tests/person/directing/directing.test.ts::a second feature > comes a quarter of the time within five years, nearly half where the debut found an audience, as the pitch carries it",
-    "tests/person/directing/directing.test.ts::a second feature > is decided by the draw on the debut, a festival choosing it read as an audience found, and teaches Communication",
-    "tests/person/directing/directing.test.ts::a second feature > reads the debut, the first feature, even after episodes",
-    "tests/person/directing/directing.test.ts::a second feature > is refused with no debut, a debut not cut, or once taken",
-    "tests/person/directing/directing.test.ts::a second feature > directing.pursue: a better pitcher gets the second feature more often"
+    "tests/person/directing/directing.test.ts::festivals > directing.submit: a better film is chosen more often",
+    "tests/person/producing/production.test.ts::a production's record > directing.submit: a film a festival chose helps the next production raise its money"
    ]
   },
   {

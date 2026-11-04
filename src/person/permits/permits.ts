@@ -7,10 +7,9 @@ import { addMonths } from '../../core/time/dates.ts';
 import { t, type LineId } from '../../core/text/text.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { holidayOn } from '../../world/holidays/holidays.ts';
-import { auditionOf, COUNTRY, credit, dateOf, daysWorked, pay, type ActingSlice } from '../acting/acting.ts';
+import { castOf, COUNTRY, credit, dateOf, daysWorked, pay, type ActingSlice } from '../acting/acting.ts';
 import { engagement, filmOf, type DirectingSlice } from '../directing/directing.ts';
 import { engagementOf, projectOf, type ProducingSlice } from '../producing/producing.ts';
-import { aboutVisits, keepsVisits, visit } from '../../papers/visits/visits.ts';
 import { ageOf, personOf, speaks, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
 import { mayWorkIn } from '../unions/unions.ts';
 import { aboutWork, keepsWork, work, type Work } from '../../papers/work/work.ts';
@@ -25,8 +24,8 @@ import data from './permits.json' with { type: 'json' };
  * permit is the one papers.work names for every passport it doesn't name (`others`), and for each passport it names
  * by the same route.
  *
- * An application is made for an engagement booked there (an acting part booked, whose agreement's country is the
- * permit's), by the engager where the research says the employer applies; its fees are recorded, and paid from the
+ * An application is made for an engagement there (a part cast in one of the life's productions, whose agreement's
+ * country is the permit's), by the engager where the research says the employer applies; its fees are recorded, and paid from the
  * account the person names where the worker applies (the engager pays its own); its decision comes at the processing
  * time. A permit is granted for its term
  * from the day of the decision, refused where the country's eligibility is a test the life's own records answer and
@@ -91,7 +90,7 @@ export interface Permit {
   readonly fees: readonly Fee[] | null;
   readonly standard: Span | null;
   readonly premium: Span | null;
-  /** A span, or the engagement's own: the permit lasts as long as the engagement booked. */
+  /** A span, or the engagement's own: the permit lasts as long as the engagement it was applied for. */
   readonly term: Span | 'engagement' | null;
   readonly renews: boolean | null;
   /** A renewal's term, where the research gives one apart from the first grant's. */
@@ -160,7 +159,7 @@ export interface Application {
   readonly id: number;
   readonly at: number;
   readonly country: CountryCode;
-  /** The role the engagement is in, and its id in that role's engine: an audition booked, a film prepped, a project planned. */
+  /** The role the engagement is in, and its id in that role's engine: a part cast, a film prepped, a project planned. */
   readonly role: Role;
   readonly engagement: number;
   /** The application whose permit it renews; none for a first grant. */
@@ -185,7 +184,11 @@ export const DECISION_KIND = 'permits.decision';
 type Lives = { identity: IdentitySlice; acting: ActingSlice; directing: DirectingSlice; producing: ProducingSlice; permits: PermitsSlice };
 type Work3 = Pick<Lives, 'acting' | 'directing' | 'producing'>;
 
-/** The roles whose work abroad takes a permit: a writer's sale is a meeting, a visit (mayVisit). */
+/**
+ * The roles whose work abroad takes a permit: a script is written at home and bought by the production, so the writer
+ * needs none. Until 2026-11-04 a writer's pitch meeting abroad was a visit (mayVisit, read from papers.visits), which
+ * went with spec sales.
+ */
 export const ROLES = ['actor', 'director', 'producer'] as const;
 export type Role = (typeof ROLES)[number];
 // Every rule the research names whom it covers covers an actor (COVERS), so only the other roles are ever told apart.
@@ -223,13 +226,12 @@ export interface Engagement {
   readonly earned: (date: string) => Money | null;
 }
 
-/** The engagement an application is for: an audition that booked a part, a film prepped, a project planned. */
+/** The engagement an application is for: a part cast, a film prepped, a project planned. */
 export function engagedIn(s: Work3, role: Role, id: number): Engagement {
   switch (role) {
     case 'actor': {
-      // @slate:consumer acting.audition
-      const job = auditionOf(s.acting, id);
-      if (!job.booked) throw new Error(`audition ${id} didn't book a part`);
+      // @slate:consumer acting.cast
+      const job = castOf(s.acting, id);
       // @slate:consumer acting.perform
       return { country: COUNTRY[job.part.agreement], days: daysWorked(job.part), done: job.work !== null, earned: (date) => pay(job.part, date) };
     }
@@ -252,22 +254,6 @@ export function engagedIn(s: Work3, role: Role, id: number): Engagement {
   }
 }
 
-/**
- * Whether a visit for a meeting is open to the person: their own country, or entry their passport is given without a
- * visa applied for beforehand (free, an electronic authorisation, an e-visa, a visa on arrival; papers.visits).
- * shortcut: the game holds no visitor visa applied for at a consulate, so a passport that needs one can't visit.
- */
-export function mayVisit(p: Person, country: CountryCode): boolean {
-  // @slate:consumer identity.make
-  return p.citizenship.some((c) => {
-    const v = visit(c, country);
-    // At home there is no entry to ask, so never a visa.
-    return v !== undefined && (v as { entry?: string }).entry !== 'visa';
-  });
-}
-
-/** Why the person can't visit a country for a meeting: its list not kept, or a visa their passports need beforehand. */
-export const whyNoVisit = (country: CountryCode): string => (keepsVisits(country) ? `a visit to ${country} takes a visa applied for beforehand, which the game doesn't hold` : (aboutVisits(country) as string));
 type Test = (s: Pick<Lives, 'identity' | 'acting'>, now: number) => string | null;
 
 const HOUR = 3600;
@@ -311,7 +297,7 @@ export const LAO_AGE = 20;
 
 const recognised: Test = (s) => {
   // @slate:consumer acting.perform
-  const parts = s.acting.auditions.filter((a) => a.work !== null).length;
+  const parts = s.acting.parts.filter((a) => a.work !== null).length;
   return credit(s.acting) >= RECOGNITION.best && parts >= RECOGNITION.parts ? null : 'the petition shows no distinction yet: the work recognised as substantially above the ordinary';
 };
 
@@ -389,7 +375,7 @@ function inForce(a: Application, s: Work3, now: number): boolean {
 
 export interface ApplyArgs {
   [key: string]: number | boolean | string;
-  /** The role the engagement is in: an actor's audition booked, a director's film prepped, a producer's project planned. */
+  /** The role the engagement is in: an actor's part cast, a director's film prepped, a producer's project planned. */
   role: string;
   engagement: number;
   premium: boolean;
@@ -397,7 +383,7 @@ export interface ApplyArgs {
   account: string;
 }
 
-const DONE: Readonly<Record<Role, string>> = { actor: 'the part from audition {id} is played', director: 'film {id} is cut', producer: 'project {id} is shot' };
+const DONE: Readonly<Record<Role, string>> = { actor: 'part {id} is played', director: 'film {id} is cut', producer: 'project {id} is shot' };
 
 /** Applies for the permit an engagement abroad needs, in its own country, as the research says who applies. */
 function apply(s: Lives & Holding, a: ApplyArgs, c: Context): void {
@@ -450,7 +436,7 @@ function decide(s: Lives, item: Item, c: Context): void {
 export function daysWorkedIn(s: Work3, country: CountryCode, now: number, within: number): number {
   const since = now - within * SECONDS_PER_DAY;
   // @slate:consumer acting.perform
-  const parts = s.acting.auditions.filter((a) => a.work !== null && COUNTRY[a.part.agreement] === country && a.work.at > since).map((a) => daysWorked(a.part));
+  const parts = s.acting.parts.filter((a) => a.work !== null && COUNTRY[a.part.agreement] === country && a.work.at > since).map((a) => daysWorked(a.part));
   // @slate:consumer directing.prep
   const films = s.directing.films.filter((f) => f.country === country && f.started > since).map((f) => engagement(f).days);
   // @slate:consumer producing.shoot
@@ -460,8 +446,8 @@ export function daysWorkedIn(s: Work3, country: CountryCode, now: number, within
 
 /**
  * Whether a short engagement's days are the person's: from the day the law gives them, and for whom it gives them. An
- * artist of renown is read as the O-1's distinction is (papers.permits.model); no engagement the game books is engaged
- * from abroad (each agreement is the country's own producers'), so days for that work are no one's here.
+ * artist of renown is read as the O-1's distinction is (papers.permits.model); no engagement is engaged from abroad
+ * (the life's production engages its people in the country it is made in), so days for that work are no one's here.
  */
 function shortEngagement(s: Pick<Lives, 'acting'>, w: Work, now: number): boolean {
   // Stryker disable next-line ConditionalExpression: a day is never before no day, so the guard says plainly what the comparison does.

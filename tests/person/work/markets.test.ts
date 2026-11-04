@@ -1,60 +1,31 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { begin, dispatch, type Life } from '../../../src/core/frame/frame.ts';
-import { fromMajor, type CurrencyCode, type Money } from '../../../src/core/money/money.ts';
+import { fromMajor, type CurrencyCode } from '../../../src/core/money/money.ts';
 import { t } from '../../../src/core/text/text.ts';
-import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
-import { ATTRIBUTES_START, chooseAttributes, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
-import type { IdentitySlice, Person } from '../../../src/person/identity/identity.ts';
 import {
   aboutCountry,
   aboutMarket,
-  CAREER_START,
   countryOf,
-  DEALS,
   FEES,
   KEPT,
   kindOf,
   languagesOf,
   MARKETS,
   marketOf,
-  MEETING_DAYS,
   minimumOf,
   MISSING,
-  offerScript,
-  OPTION_YEARS,
-  optionOf,
-  paidOf,
-  pitchScript,
-  promoteScript,
-  saleIn,
-  soldIn,
-  summariseScript,
   UNKEPT_LINE,
-  WRITES_IN,
-  type CareerSlice,
   type Fee,
-  type Offer,
   type Work,
 } from '../../../src/person/work/career.ts';
 import { COUNTRY_CODES, countryName } from '../../../src/world/gazetteer/gazetteer.ts';
-import { SCRIPTS_START, writeScript, type Form, type ScriptsSlice } from '../../../src/person/work/work.ts';
-import type { GenresSlice } from '../../../src/person/genres/genres.ts';
+import type { Form } from '../../../src/person/work/work.ts';
 import compiled from '../../../src/person/work/markets.json' with { type: 'json' };
-import { falsifyAny } from '../../support/falsify-core.ts';
-import { identity } from '../../support/person.ts';
-import { ACCOUNT, minorIn, purse } from '../../support/purse.ts';
-import { YOUTH_START, type YouthSlice } from '../../../src/person/youth/youth.ts';
 
-type Career = { attributes: AttributesSlice; scripts: ScriptsSlice; career: CareerSlice; identity: IdentitySlice; genres: GenresSlice; youth: YouthSlice } & ReturnType<typeof purse>;
-const SEED = '0123456789abcdef';
-const day = (y: number, m: number, d: number) => daysFromCivil(y, m, d) * SECONDS_PER_DAY;
-const NOW = day(2026, 11, 1);
 const money = (c: CurrencyCode, n: string) => fromMajor(c, n);
 const terms = (agreement: string, budget: number | null = null, minutes: number | null = null) => ({ agreement, budget, minutes });
-const fee = (agreement: string, form: Form, date: string, budget: number | null = null, minutes: number | null = null, work: Work | null = null) => minimumOf(terms(agreement, budget, minutes), form, date, work).minimum;
-const paid = (agreement: string, form: Form, date: string, budget: number | null = null, minutes: number | null = null) => paidOf(terms(agreement, budget, minutes), form, date);
+const fee = (agreement: string, form: Form, date: string, budget: number | null = null, minutes: number | null = null, work: Work | null = null) => minimumOf(terms(agreement, budget, minutes), form, date, work);
 /** Each country's writer research, as the compile reads it (its blockers' items). */
 const SOURCES = resolve(import.meta.dirname, '../../../research/sources/person/markets');
 const RESEARCH = Object.fromEntries(
@@ -230,19 +201,12 @@ const tierText = (f: Fee) => {
   const tiers = Object.entries(f.when).map(([k, [lo, hi]]) => `${k}${lo}-${hi ?? ''}`);
   return tiers.length === 0 ? '-' : tiers.join(' ');
 };
-const line = (f: Fee) =>
-  [f.forms.join('/'), ...(f.kind === null ? [] : [f.kind]), tierText(f), f.per ?? '-', f.from, f.amount ?? 'negotiated', ...(f.share === null ? [] : ['share', f.share]), ...(f.cap === null ? [] : ['cap', f.cap]), ...(f.held === null ? [] : ['held', 'share' in f.held ? f.held.share : `£${f.held.amount}`])].join(' ');
-
-type Lives = Career;
-const writer = (over: Partial<Person> = {}, at = NOW): Life<Lives> =>
-  dispatch(
-    dispatch(begin(SEED, at, { attributes: structuredClone(ATTRIBUTES_START), scripts: structuredClone(SCRIPTS_START), career: structuredClone(CAREER_START), identity: identity(over), genres: { loved: ['drama'] }, youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'screenwriter', all: 100, each: {} }),
-    writeScript,
-    { form: 'episode', genre: 'drama', days: 200 },
-  );
-const asked = (l: Life<Lives>, n = 1): Life<Lives> => ({ ...l, slices: { ...l.slices, career: { ...l.slices.career, out: { '1': { documents: { 'pitch-document': 100 }, requests: n, sold: null } } } } });
-const at = (l: Life<Lives>, now: number): Life<Lives> => ({ ...l, frame: { ...l.frame, now } });
-const offered = (l: Life<Lives>) => l.slices.career.offered['1'] as Offer;
+/** What an agreement holds back until the first day of photography, as compiled: the production pays it with the rest that day, so only the compile's own record of it is read here. */
+type Held = { held: { share: string } | { amount: string } | null };
+const line = (f: Fee) => {
+  const { held } = f as Fee & Held;
+  return [f.forms.join('/'), ...(f.kind === null ? [] : [f.kind]), tierText(f), f.per ?? '-', f.from, f.amount ?? 'negotiated', ...(f.share === null ? [] : ['share', f.share]), ...(f.cap === null ? [] : ['cap', f.cap]), ...(held === null ? [] : ['held', 'share' in held ? held.share : `£${held.amount}`])].join(' ');
+};
 
 describe('the markets', () => {
   it("are each country's own, every minimum as the research gives it", () => {
@@ -277,7 +241,8 @@ describe('the markets', () => {
     expect(Object.keys(MARKETS)).toEqual(COUNTRY_CODES.filter((cc) => cc !== 'US').sort());
     expect(Object.keys(MARKETS)).toHaveLength(251);
     expect(Object.keys(RESEARCH).sort()).toEqual(Object.keys(MARKETS));
-    for (const cc of COUNTRY_CODES) expect(cc === 'US' || soldIn(KEPT, cc) === (FOLLOWS[cc] === 'US'), cc).toBe(true);
+    // A country whose writers are engaged on the US's terms has the WGA's agreement among its own.
+    for (const cc of COUNTRY_CODES) expect(cc === 'US' || (MARKETS[cc]?.agreements.includes(KEPT) ?? false) === (FOLLOWS[cc] === 'US'), cc).toBe(true);
   });
 
   it("read a script's kind from its genre's BFI group", () => {
@@ -293,13 +258,13 @@ describe('the markets', () => {
     expect(languagesOf('wga')).toEqual(['en']);
     expect(() => marketOf('wgx')).toThrow("there's no agreement wgx");
     expect(() => marketOf('toString')).toThrow("there's no agreement toString");
-    for (const form of ALL) expect(minimumOf(terms('wga'), form, '1900-01-01')).toEqual({ minimum: FEES[form], held: null });
-    expect(paid('wga', 'feature', '2026-11-01')).toEqual(FEES.feature);
+    for (const form of ALL) expect(minimumOf(terms('wga'), form, '1900-01-01')).toEqual(FEES[form]);
+    expect(fee('wga', 'feature', '2026-11-01')).toEqual(FEES.feature);
   });
 });
 
-describe('a script sold in a market', () => {
-  it("is paid its agreement's minimum, by form and tier, on the day it sells", () => {
+describe("a script a production pays for in a market", () => {
+  it("is paid its agreement's minimum, by form and tier, on the day it's paid", () => {
     // Canada's IPA: a feature by the date, negotiable at a budget of C$82,000 or less; a TV script by its minutes.
     expect(fee('ca-ipa', 'feature', '2026-02-01', 82_000)).toBeNull();
     expect(fee('ca-ipa', 'feature', '2026-02-01', 82_001)).toEqual(money('CAD', '71202'));
@@ -334,13 +299,12 @@ describe('a script sold in a market', () => {
     expect(() => fee('de-zdf', 'episode', '2026-11-01', null, 46)).toThrow('de-zdf sets no minimum for that episode');
     const rtl: [number, number, string][] = [[22, 350_000, '16750'], [22, 574_999, '16750'], [1, 575_000, '17500'], [22, 899_999, '17500'], [22, 900_000, '20000'], [23, 600_000, '33500'], [45, 1_149_999, '33500'], [45, 1_150_000, '35000'], [45, 1_899_999, '35000'], [45, 1_900_000, '40000']];
     for (const [minutes, budget, amount] of rtl) {
-      expect(minimumOf(terms('de-rtl', budget, minutes), 'episode', '2026-02-15'), `${minutes} ${budget}`).toEqual({ minimum: money('EUR', amount), held: money('EUR', String(Number(amount) * 0.4)) });
-      expect(paid('de-rtl', 'episode', '2026-02-15', budget, minutes)).toEqual(money('EUR', String(Number(amount) * 0.6)));
+      expect(fee('de-rtl', 'episode', '2026-02-15', budget, minutes), `${minutes} ${budget}`).toEqual(money('EUR', amount));
     }
     expect(() => fee('de-rtl', 'episode', '2026-11-01', 349_999, 22)).toThrow('de-rtl sets no minimum for that episode');
     expect(() => fee('de-rtl', 'episode', '2026-11-01', 599_999, 23)).toThrow('de-rtl sets no minimum for that episode');
     expect(() => fee('de-rtl', 'episode', '2026-11-01', 900_000, 46)).toThrow('de-rtl sets no minimum for that episode');
-    expect(paid('de-p7s1', 'episode', '2014-06-03', null, 45)).toEqual(money('EUR', '15250'));
+    expect(fee('de-p7s1', 'episode', '2014-06-03', null, 45)).toEqual(money('EUR', '30500'));
     // Denmark, France, Norway: a feature's own minimum.
     expect(fee('dk-feature', 'feature', '2026-01-01')).toEqual(money('DKK', '598836'));
     expect(() => fee('dk-feature', 'feature', '2025-12-31')).toThrow('no minimum under dk-feature is known before 2026-01-01');
@@ -360,10 +324,8 @@ describe('a script sold in a market', () => {
     expect(fee('fr-tv', 'pilot', '2026-11-01', 40_000_000, 30)).toEqual(money('EUR', '600000'));
     expect(() => fee('fr-tv', 'pilot', '2023-06-30', 40_000_000, 30)).toThrow('no minimum under fr-tv is known before 2023-07-01');
     // The UK: Pact's features by the budget, the photography stage held; the BBC by the minute, ITV and Pact's TV by the hour.
-    expect(paid('gb-pact-film', 'feature', '2026-11-01', 749_999)).toEqual(money('GBP', '14000'));
-    expect(paid('gb-pact-film', 'feature', '2026-11-01', 2_000_000)).toEqual(money('GBP', '14000'));
-    expect(minimumOf(terms('gb-pact-film', 2_000_001), 'feature', '1990-10-01')).toEqual({ minimum: money('GBP', '23200'), held: money('GBP', '4800') });
-    expect(paid('gb-pact-film', 'feature', '1990-10-01', 2_000_001)).toEqual(money('GBP', '18400'));
+    // The photography stage is paid with the rest, on the first day of photography, when the production pays for the script.
+    expect(fee('gb-pact-film', 'feature', '1990-10-01', 2_000_001)).toEqual(money('GBP', '23200'));
     expect(fee('gb-bbc', 'episode', '2025-12-15', null, 45)).toEqual(money('GBP', '9900'));
     expect(fee('gb-itv', 'episode', '2026-10-19', null, 45)).toEqual(money('GBP', '9661.50'));
     expect(fee('gb-itv', 'pilot', '2026-10-19', null, 60)).toEqual(money('GBP', '12882'));
@@ -379,7 +341,7 @@ describe('a script sold in a market', () => {
     }
     // Where no agreement sets the pay, it is left to negotiation.
     for (const id of ['br', 'de-cinema', 'dk-dr', 'es', 'ie', 'in', 'it', 'kr', 'ng', 'nl', 'no-series', 'nz', 'se-film', 'za']) {
-      for (const form of AGREEMENTS[id]?.[3] ?? []) expect(minimumOf(terms(id), form, '1900-01-01'), id).toEqual({ minimum: null, held: null });
+      for (const form of AGREEMENTS[id]?.[3] ?? []) expect(minimumOf(terms(id), form, '1900-01-01'), id).toBeNull();
     }
   });
 
@@ -401,54 +363,37 @@ describe('a script sold in a market', () => {
     expect(() => fee('mx', 'short', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Mexico', missing: MISSING.agreement }));
   });
 
-  it("prices an option for a year at its agreement's share, negotiated where nothing sets it, refused where nothing is known", () => {
-    expect(OPTION_YEARS).toBe(1);
-    expect(DEALS).toEqual(['sale', 'option']);
-    expect(optionOf(terms('ca-ipa', 1_000_000), 'feature', '2026-11-01')).toEqual(money('CAD', '3560.10'));
-    expect(optionOf(terms('ca-ipa', null, 60), 'episode', '2026-11-01')).toEqual(money('CAD', '2108.80'));
-    expect(optionOf(terms('ca-ipa', null, 30), 'pilot', '2026-11-01')).toEqual(money('CAD', '1054.60'));
-    expect(optionOf(terms('ca-ipa', 82_000), 'feature', '2026-11-01')).toBeNull();
-    expect(optionOf(terms('no-film'), 'feature', '2026-11-01')).toEqual(money('NOK', '52988.30'));
-    expect(() => optionOf(terms('no-film'), 'feature', '2026-04-30')).toThrow('no minimum under no-film is known before 2026-05-01');
-    for (const id of ['br', 'ca-sartec', 'es', 'fr-tv', 'gb-pact-film', 'it', 'kr', 'nz']) expect(optionOf(terms(id, 1_000_000, 60), (AGREEMENTS[id]?.[3] as Form[])[0] as Form, '2026-11-01'), id).toBeNull();
-    expect(() => optionOf(terms('de-netflix', 1), 'feature', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Germany', missing: MISSING.option }));
-    expect(() => optionOf(terms('ie'), 'feature', '2026-11-01')).toThrow(aboutMarket('ie') as string);
-    expect(() => optionOf(terms('dk-feature'), 'feature', '2026-11-01')).toThrow('dk-feature sets no option');
-    expect(() => optionOf(terms('gb-bbc', null, 60), 'episode', '2026-11-01')).toThrow('gb-bbc sets no option');
-    expect(() => optionOf(terms('wga'), 'feature', '2026-11-01')).toThrow("the WGA's option terms aren't kept by the game");
-    expect(() => optionOf(terms('de-ard'), 'feature', '2026-11-01')).toThrow('de-ard sets no terms for a feature');
-    expect(() => optionOf(terms('au-awg'), 'feature', '2026-11-01')).toThrow(aboutMarket('au-awg') as string);
-  });
-
   it("tells the player what of a market isn't known", () => {
     expect(UNKEPT_LINE).toBe('writing.unkept');
     expect(MISSING).toEqual({
       agreement: 'whether any agreement sets what a script is paid',
       fees: 'some of the minimums a script is paid',
-      option: 'the terms of an option on a script',
       language: 'the language scripts are written in',
       union: "the guild's fees or whom it takes",
       terms: "whether any agreement, guild rate or law sets a script's terms",
       none: 'whether any fund, guild or agreement serves a writer there',
-      follows: 'whether the agreements of the country whose law it follows reach a script sold there',
+      follows: 'whether the agreements of the country whose law it follows reach a script written for a production there',
     });
-    expect(aboutMarket('au-awg')).toBe("Some of what a screenwriter is paid or asked in Australia isn't known to this game yet: some of the minimums a script is paid, the terms of an option on a script and the language scripts are written in.");
-    expect(aboutMarket('ie')).toBe("Some of what a screenwriter is paid or asked in Ireland isn't known to this game yet: the guild's fees or whom it takes and the terms of an option on a script.");
-    expect(aboutMarket('de-zdf')).toBe("Some of what a screenwriter is paid or asked in Germany isn't known to this game yet: the terms of an option on a script.");
+    expect(aboutMarket('au-awg')).toBe("Some of what a screenwriter is paid or asked in Australia isn't known to this game yet: some of the minimums a script is paid and the language scripts are written in.");
+    expect(aboutMarket('ie')).toBe("Some of what a screenwriter is paid or asked in Ireland isn't known to this game yet: the guild's fees or whom it takes.");
+    // An option's terms alone aren't told: nothing the life does turns on them.
+    expect(aboutMarket('de-zdf')).toBeUndefined();
     expect(aboutMarket('ca-ipa')).toBeUndefined();
     expect(aboutMarket('it')).toBeUndefined();
     expect(aboutMarket('wga')).toBeUndefined();
-    for (const m of Object.values(MARKETS)) for (const id of m.agreements) expect(aboutMarket(id) === undefined, id).toBe(id === KEPT || (MARKETS[countryOf(id)] as typeof m).unknown.length === 0);
+    for (const m of Object.values(MARKETS)) for (const id of m.agreements) expect(aboutMarket(id) === undefined, id).toBe(id === KEPT || (MARKETS[countryOf(id)] as typeof m).unknown.every((u) => u === 'option'));
     // The world's: a country whose research couldn't find whether anything sets the terms, or whether any fund, guild or agreement serves a writer; one with nothing to sell under told by its country.
     expect(aboutMarket('bn')).toBe(t(UNKEPT_LINE, { country: 'Brunei', missing: MISSING.terms }));
     expect(aboutMarket('ai')).toBe(t(UNKEPT_LINE, { country: 'Anguilla', missing: MISSING.none }));
     expect(aboutMarket('cd')).toBe(t(UNKEPT_LINE, { country: countryName('CD'), missing: `${MISSING.fees} and ${MISSING.none}` }));
     expect(aboutMarket('bg')).toBe(t(UNKEPT_LINE, { country: 'Bulgaria', missing: MISSING.fees }));
     expect(aboutCountry('TH')).toBe(t(UNKEPT_LINE, { country: 'Thailand', missing: MISSING.union }));
+    // No writer's market leaves more than two items untold once an option's terms are set aside, so two are joined by "and".
+    expect(Math.max(...Object.values(MARKETS).map((m) => m.unknown.filter((u) => u !== 'option').length))).toBe(2);
     expect(aboutCountry('BE')).toBe(aboutMarket('be'));
     expect(aboutMarket('re')).toBe(t(UNKEPT_LINE, { country: countryName('RE'), missing: MISSING.follows }));
     for (const cc of ['US', 'AZ', 'BL', 'JE', 'XX', 'toString']) expect(aboutCountry(cc), cc).toBeUndefined();
-    for (const cc of Object.keys(MARKETS)) expect(aboutCountry(cc) === undefined, cc).toBe((RESEARCH[cc]?.blockers.length ?? 0) === 0);
+    for (const cc of Object.keys(MARKETS)) expect(aboutCountry(cc) === undefined, cc).toBe((RESEARCH[cc]?.blockers ?? []).every((b) => b.item === 'option'));
   });
 
   it('is paid where a wage floor reaches the writer by the days written, and by the kind of script where an agreement sets it by kind', () => {
@@ -456,10 +401,9 @@ describe('a script sold in a market', () => {
     const days = (n: number): Work => ({ genre: 'drama', days: n });
     expect(fee('ad', 'feature', '2026-07-01', null, null, days(1))).toEqual(money('EUR', '72.40'));
     expect(fee('ad', 'short', '2026-11-01', null, null, days(56))).toEqual(money('EUR', '4054.40'));
-    expect(paidOf(terms('ad'), 'episode', '2026-11-01', days(9))).toEqual(money('EUR', '651.60'));
+    expect(fee('ad', 'episode', '2026-11-01', null, null, days(9))).toEqual(money('EUR', '651.60'));
     expect(() => fee('ad', 'feature', '2026-06-30', null, null, days(1))).toThrow('no minimum under ad is known before 2026-07-01');
     expect(() => fee('ad', 'pilot', '2026-11-01')).toThrow('a pilot under ad is paid by the days it was written');
-    expect(() => optionOf(terms('ad'), 'feature', '2026-11-01', days(1))).toThrow('ad sets no option');
     // Azerbaijan's films made to state order: an original screenplay by its kind, from 10 January 2025.
     const of = (genre: string): Work => ({ genre, days: 1 });
     expect(fee('az-state', 'feature', '2025-01-10', null, null, of('drama'))).toEqual(money('AZN', '10000'));
@@ -476,140 +420,8 @@ describe('a script sold in a market', () => {
     expect(() => fee('ch-film', 'episode', '2026-11-01')).toThrow('ch-film sets no terms for a episode');
     expect(fee('ch-tv', 'episode', '2026-11-01')).toBeNull();
     // Where the research says no agreement sets the pay, it is left to negotiation.
-    for (const [id, [, , , forms, pays]] of Object.entries(AGREEMENTS)) if (pays === 'none') for (const form of forms) expect(minimumOf(terms(id), form, '1900-01-01'), id).toEqual({ minimum: null, held: null });
+    for (const [id, [, , , forms, pays]] of Object.entries(AGREEMENTS)) if (pays === 'none') for (const form of forms) expect(minimumOf(terms(id), form, '1900-01-01'), id).toBeNull();
     // And where the research couldn't find it, refused and told.
     for (const cc of UNKNOWN_AGREEMENTS) expect(() => fee(cc.toLowerCase(), 'feature', '2026-11-01'), cc).toThrow(aboutCountry(cc) as string);
-  });
-
-  it("is sold in a market that follows another's terms under that market's agreements, there; refused in one with none to sell under", () => {
-    expect(['fr-film', 'fr-tv'].every((id) => soldIn(id, 'BL') && soldIn(id, 'FR'))).toBe(true);
-    expect([soldIn('fr-film', 'RE'), soldIn('fr-film', 'DE'), soldIn('wga', 'PR'), soldIn('wga', 'US'), soldIn('au-awg', 'CX'), soldIn('wga', 'toString')]).toEqual([false, false, true, true, true, false]);
-    const french = writer({ languages: [{ lang: 'en', level: 'C2' }, { lang: 'fr', level: 'C1' }] });
-    const barts = dispatch(french, offerScript, { script: 1, agreement: 'fr-tv', country: 'BL', budget: 1_000_000, minutes: 52 });
-    expect(offered(barts)).toEqual({ agreement: 'fr-tv', country: 'BL', budget: 1_000_000, minutes: 52, options: [] });
-    expect(saleIn(barts.slices.career, 1)).toEqual({ country: 'BL', days: 1 });
-    expect(offered(dispatch(french, offerScript, { script: 1, agreement: 'fr-tv', country: 'FR', budget: 1_000_000, minutes: 52 }))).toEqual({ agreement: 'fr-tv', budget: 1_000_000, minutes: 52, options: [] });
-    expect(saleIn(dispatch(writer(), offerScript, { script: 1, agreement: 'wga', country: 'PR' }).slices.career, 1)).toEqual({ country: 'PR', days: 1 });
-    expect(() => dispatch(french, offerScript, { script: 1, agreement: 'fr-tv', country: 'JE', budget: 1_000_000, minutes: 52 })).toThrow("a script isn't sold under fr-tv in JE");
-    // Where the research couldn't show France's agreements reach it, told.
-    expect(() => dispatch(french, offerScript, { script: 1, agreement: 'fr-tv', country: 'RE', budget: 1_000_000, minutes: 52 })).toThrow(aboutCountry('RE') as string);
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'wga', country: 'TH' })).toThrow(aboutCountry('TH') as string);
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'au-awg', country: 'CX' })).toThrow(aboutMarket('au-awg') as string);
-    // In one of its languages: a Swiss film in German, French or Italian.
-    const swiss = (lang: string) => writer({ languages: [{ lang, level: 'C1' }] });
-    expect(dispatch(dispatch(swiss('fr'), writeScript, { form: 'feature', genre: 'drama', days: 30 }), offerScript, { script: 2, agreement: 'ch-film' }).slices.career.offered['2']?.agreement).toBe('ch-film');
-    const film = dispatch(swiss('it'), writeScript, { form: 'feature', genre: 'drama', days: 30 });
-    expect(film.slices.career.offered['2']).toBeUndefined();
-    expect(dispatch(film, offerScript, { script: 2, agreement: 'ch-film' }).slices.career.offered['2']).toEqual({ agreement: 'ch-film', budget: null, minutes: null, options: [] });
-    expect(() => dispatch(dispatch(swiss('en'), writeScript, { form: 'feature', genre: 'drama', days: 30 }), offerScript, { script: 2, agreement: 'ch-film' })).toThrow("a script under ch-film is written in de or fr or it, which the writer doesn't write well enough");
-  });
-
-  it('is paid and taxed where it is sold: a wage floor by the days written, a followed market in its own country', () => {
-    const sell = (l: Life<Lives>) => {
-      let x = asked(l, 9);
-      while (x.slices.career.out['1']?.sold === null && (x.slices.career.out['1']?.requests as number) > 0) x = dispatch(x, pitchScript, { script: 1, account: ACCOUNT });
-      return x;
-    };
-    const andorra = sell(dispatch(writer({ languages: [{ lang: 'ca', level: 'C1' }] }), offerScript, { script: 1, agreement: 'ad' }));
-    expect(andorra.slices.career.out['1']?.sold).toEqual({ at: NOW, fee: money('EUR', '14480') });
-    expect(andorra.slices.tax.paid.map((p) => p.country)).toEqual(['AD']);
-    const barts = sell(dispatch(writer({ languages: [{ lang: 'fr', level: 'C1' }] }), offerScript, { script: 1, agreement: 'fr-tv', country: 'BL', budget: 1_000_000, minutes: 52 }));
-    expect(barts.slices.career.out['1']?.sold).toEqual({ at: NOW, fee: money('EUR', '30000') });
-    expect(barts.slices.tax.paid.map((p) => p.country)).toEqual(['BL']);
-  });
-
-  it("script.offer: a script offered under France's TV terms in Saint-Barthélemy is sold there, where the same offer in France is sold in France", () => {
-    const french = writer({ languages: [{ lang: 'en', level: 'C2' }, { lang: 'fr', level: 'C1' }] });
-    const where = (country: string | null) => saleIn(dispatch(french, offerScript, country === null ? { script: 1, agreement: 'fr-tv', budget: 1_000_000, minutes: 52 } : { script: 1, agreement: 'fr-tv', country, budget: 1_000_000, minutes: 52 }).slices.career, 1);
-    falsifyAny({ feature: 'script.offer', claim: 'bites', says: "a script offered in Saint-Barthélemy under France's TV agreement is sold there, not in France", base: null, twin: 'BL', outcome: where });
-  });
-
-  it("is offered in a market under its agreement, in its language, refused where the writer doesn't write it or the market doesn't price it", () => {
-    expect(WRITES_IN).toBe('C1');
-    const german = (level: 'B2' | 'C1' | 'C2') => writer({ languages: [{ lang: 'en', level: 'C2' }, { lang: 'de', level }] });
-    const l = dispatch(german('C1'), offerScript, { script: 1, agreement: 'de-ard', minutes: 45 });
-    expect(offered(l)).toEqual({ agreement: 'de-ard', budget: null, minutes: 45, options: [] });
-    expect(offered(dispatch(german('C2'), offerScript, { script: 1, agreement: 'de-rtl', budget: 1_000_000, minutes: 45 }))).toEqual({ agreement: 'de-rtl', budget: 1_000_000, minutes: 45, options: [] });
-    expect(() => dispatch(german('B2'), offerScript, { script: 1, agreement: 'de-ard', minutes: 45 })).toThrow("a script under de-ard is written in de, which the writer doesn't write well enough");
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'br' })).toThrow("a script under br is written in pt, which the writer doesn't write well enough");
-    expect(offered(dispatch(writer(), offerScript, { script: 1, agreement: 'wga' }))).toEqual({ agreement: 'wga', budget: null, minutes: null, options: [] });
-    expect(offered(dispatch(writer(), offerScript, { script: 1, agreement: 'gb-bbc', minutes: 1 }))).toEqual({ agreement: 'gb-bbc', budget: null, minutes: 1, options: [] });
-    expect(offered(dispatch(writer(), offerScript, { script: 1, agreement: 'nz', budget: 1 })).budget).toBe(1);
-    expect(() => dispatch(writer(), offerScript, { script: 2, agreement: 'wga' })).toThrow("there's no script 2");
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'nz', budget: 0 })).toThrow('a budget is a whole number of at least 1 (0)');
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'nz', budget: 1.5 })).toThrow(RangeError);
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'gb-bbc', minutes: 0 })).toThrow('a running time is a whole number of at least 1 (0)');
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'gb-bbc' })).toThrow('a episode under gb-bbc names its running time');
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'gb-pact-film', budget: 5 })).toThrow('gb-pact-film sets no terms for a episode');
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'au-awg' })).toThrow(aboutMarket('au-awg') as string);
-    expect(() => dispatch(writer({}, day(2026, 10, 18)), offerScript, { script: 1, agreement: 'gb-itv', minutes: 60 })).toThrow('no minimum under gb-itv is known before 2026-10-19');
-    expect(() => dispatch(writer(), offerScript, { script: 1, agreement: 'xx' })).toThrow("there's no agreement xx");
-  });
-
-  it("is paid on a sale as its market pays, or optioned for a year at its price, the script back on the market when the option lapses", () => {
-    /** Pitches until a deal is made or the requests run out. */
-    const pitched = (l: Life<Lives>, deal?: 'sale' | 'option'): Life<Lives> => {
-      let x = l;
-      const before = l.slices.career.offered['1']?.options.length ?? 0;
-      while ((x.slices.career.out['1']?.requests ?? 0) > 0 && x.slices.career.out['1']?.sold === null && (x.slices.career.offered['1']?.options.length ?? 0) === before) x = dispatch(x, pitchScript, deal === undefined ? { script: 1, account: ACCOUNT } : { script: 1, deal, account: ACCOUNT });
-      return x;
-    };
-    const sold = (l: Life<Lives>) => l.slices.career.out['1']?.sold;
-    expect(sold(pitched(asked(writer(), 9)))).toEqual({ at: NOW, fee: FEES.episode });
-    // The buyer pays the sale into the account named: a US writer's fee at home, nothing withheld at source.
-    const wga = pitched(asked(writer(), 9));
-    expect([minorIn(wga.slices.ledger, ACCOUNT), minorIn(wga.slices.ledger, 'world:buyer:USD')]).toEqual([100_000_000 + (FEES.episode as Money).minor, -(FEES.episode as Money).minor]);
-    expect(wga.slices.tax.paid.map((p) => [p.what, p.work, p.country])).toEqual([['sale', 'author', 'US']]);
-    expect(sold(pitched(asked(dispatch(writer(), offerScript, { script: 1, agreement: 'gb-bbc', minutes: 45 }), 9)))).toEqual({ at: NOW, fee: money('GBP', '9900') });
-    const german = writer({ languages: [{ lang: 'de', level: 'C1' }] });
-    expect(sold(pitched(asked(dispatch(german, offerScript, { script: 1, agreement: 'de-rtl', budget: 700_000, minutes: 20 }), 9)))).toEqual({ at: NOW, fee: money('EUR', '10500') });
-    expect(sold(pitched(asked(dispatch(writer(), offerScript, { script: 1, agreement: 'nz' }), 9)))).toEqual({ at: NOW, fee: null });
-    // An option for a year at a tenth of the minimum for a Canadian hour; the script off the market until it lapses.
-    const canada = asked(dispatch(writer(), offerScript, { script: 1, agreement: 'ca-ipa', minutes: 60 }), 9);
-    const optioned = pitched(canada, 'option');
-    expect(offered(optioned).options).toEqual([{ at: NOW, until: '2027-11-01', fee: money('CAD', '2108.80') }]);
-    expect(sold(optioned)).toBeNull();
-    expect(optioned.slices.career.contacts).toBe(1);
-    expect(optioned.slices.career.out['1']?.requests).toBeLessThan(9);
-    const later = (y: number, m: number, d: number) => at(optioned, day(y, m, d));
-    for (const [what, args] of [[pitchScript, { script: 1, account: ACCOUNT }], [promoteScript, { script: 1, days: 1 }], [offerScript, { script: 1, agreement: 'wga' }], [summariseScript, { script: 1, document: 'logline', days: 1 }]] as const) {
-      expect(() => dispatch(later(2027, 10, 31), what as never, args as never)).toThrow('script 1 is under option until 2027-11-01');
-    }
-    const back = dispatch(later(2027, 11, 1), offerScript, { script: 1, agreement: 'ca-ipa', minutes: 30 });
-    expect(offered(back)).toEqual({ agreement: 'ca-ipa', budget: null, minutes: 30, options: [{ at: NOW, until: '2027-11-01', fee: money('CAD', '2108.80') }] });
-    const again = pitched(back, 'option');
-    expect(offered(again).options).toHaveLength(2);
-    expect(offered(again).options[1]).toMatchObject({ until: '2028-11-01', fee: money('CAD', '1054.60') });
-    expect(dispatch(later(2027, 11, 1), promoteScript, { script: 1, days: 1 }).slices.career.out['1']?.requests).toBeGreaterThanOrEqual(optioned.slices.career.out['1']?.requests as number);
-    // Refused before a request is spent.
-    expect(() => dispatch(asked(writer()), pitchScript, { script: 1, deal: 'option', account: ACCOUNT })).toThrow("the WGA's option terms aren't kept by the game");
-    expect(() => dispatch(asked(writer()), pitchScript, { script: 1, deal: 'loan' as 'sale', account: ACCOUNT })).toThrow("there's no deal loan");
-    expect(() => dispatch(writer(), pitchScript, { script: 1, deal: 'option', account: ACCOUNT })).toThrow('no one has asked to read script 1');
-    const danish = asked(dispatch(writer({ languages: [{ lang: 'da', level: 'C2' }] }), writeScript, { form: 'feature', genre: 'drama', days: 200 }));
-    expect(() => dispatch(asked(dispatch(danish, offerScript, { script: 1, agreement: 'dk-dr' })), pitchScript, { script: 1, deal: 'option', account: ACCOUNT })).toThrow('dk-dr sets no option');
-  });
-
-  it('is sold where its market is, the meeting a day there', () => {
-    expect(MEETING_DAYS).toBe(1);
-    expect(saleIn(CAREER_START, 1)).toEqual({ country: 'US', days: 1 });
-    expect(saleIn(dispatch(writer(), offerScript, { script: 1, agreement: 'gb-bbc', minutes: 30 }).slices.career, 1)).toEqual({ country: 'GB', days: 1 });
-  });
-
-  it("script.offer: a script offered under the BBC's terms sells for pounds a minute, where the WGA's pays its dollars", () => {
-    const sale = (agreement: string | null) => {
-      let l = asked(agreement === null ? writer() : dispatch(writer(), offerScript, { script: 1, agreement, minutes: 45 }), 9);
-      while (l.slices.career.out['1']?.sold === null && (l.slices.career.out['1']?.requests as number) > 0) l = dispatch(l, pitchScript, { script: 1, account: ACCOUNT });
-      return l.slices.career.out['1']?.sold;
-    };
-    falsifyAny({ feature: 'script.offer', claim: 'bites', says: 'an episode offered under the BBC agreement sells at its minimum a minute, not the WGA minimum', base: null, twin: 'gb-bbc', outcome: sale });
-  });
-});
-
-describe("a sale meeting abroad", () => {
-  it("is a visit, not work there: open where the person's passport visits the market's country without a visa applied for beforehand", () => {
-    // The WGA's market, the US: a British writer enters on the electronic travel authorisation; an Indian passport needs a visa first.
-    expect(dispatch(asked(writer({ citizenship: ['GB'] })), pitchScript, { script: 1, account: ACCOUNT }).slices.career.out['1']?.requests).toBe(0);
-    expect(() => dispatch(asked(writer({ citizenship: ['IN'] })), pitchScript, { script: 1, account: ACCOUNT })).toThrow("a visit to US takes a visa applied for beforehand, which the game doesn't hold");
-    expect(dispatch(asked(writer({ citizenship: ['IN', 'GB'] })), pitchScript, { script: 1, account: ACCOUNT }).slices.career.out['1']?.requests).toBe(0);
   });
 });

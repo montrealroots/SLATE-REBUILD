@@ -36,6 +36,7 @@ import { PRODUCING_START, type ProducingSlice } from '../../../src/person/produc
 import type { PermitsSlice } from '../../../src/person/permits/permits.ts';
 import { permitsEverywhere } from '../../support/permits.ts';
 import { identity } from '../../support/person.ts';
+import { directed, type Directed } from '../../support/production.ts';
 import { ACCOUNT, purse } from '../../support/purse.ts';
 import { YOUTH_START, type YouthSlice } from '../../../src/person/youth/youth.ts';
 import { COUNTRY_CODES, countryName, currencyOf, isCountry, type CountryCode } from '../../../src/world/gazetteer/gazetteer.ts';
@@ -46,17 +47,31 @@ const NOW = day(2026, 7, 1);
 const made = (now = NOW, directing: DirectingSlice = DIRECTING_START): Life<D> =>
   dispatch(begin('0123456789abcdef', now, { attributes: structuredClone(ATTRIBUTES_START), directing: structuredClone(directing), identity: identity(), acting: structuredClone(ACTING_START), producing: structuredClone(PRODUCING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'director', all: 50, each: {} });
 /** A film prepped by a director living in its country, paid into an account in its currency (no rate asked of the day). */
-const job = (args: PrepArgs, now = NOW, directing: DirectingSlice = DIRECTING_START): Film => {
+/** A job as these tests name it: its production's form, country, budget, shooting days and running time; the contract's agreement, prep and cut. */
+type Asked = Directed & { agreement?: string; prep?: number; cut?: number };
+/** A life with a production of the job, numbered after those it holds (tests/support/production.ts). */
+const withJob = (l: Life<D>, args: Asked): { life: Life<D>; prep: PrepArgs } => {
+  const { agreement, prep, cut, ...made_ } = args;
+  const id = Math.max(l.slices.producing.projects.length, ...l.slices.directing.films.map((f) => f.project)) + 1;
+  const life = { ...l, slices: { ...l.slices, producing: { projects: [...l.slices.producing.projects, directed(made_, id)] } } };
+  return { life, prep: { project: id, account: ACCOUNT, ...(agreement === undefined ? {} : { agreement }), ...(prep === undefined ? {} : { prep }), ...(cut === undefined ? {} : { cut }) } };
+};
+const prepIn = (l: Life<D>, args: Asked): Life<D> => {
+  const { life, prep } = withJob(l, args);
+  return dispatch(life, prepFilm, prep);
+};
+/** A film prepped by a director living in its country, paid into an account in its currency (no rate asked of the day). */
+const job = (args: Asked, now = NOW, directing: DirectingSlice = DIRECTING_START): Film => {
   const where = (args.country ?? 'US') as CountryCode;
   const base = made(now, directing);
   const local = { ...base, slices: { ...base.slices, identity: identity({ citizenship: [where] }), youth: structuredClone(YOUTH_START), ...purse(isCountry(where) ? currencyOf(where) : 'USD') } };
-  const l = dispatch(local, prepFilm, { account: ACCOUNT, ...args });
+  const l = prepIn(local, args);
   return filmOf(l.slices.directing, l.slices.directing.films.length);
 };
-const fee = (args: PrepArgs, now = NOW, directing?: DirectingSlice) => job(args, now, directing).fee;
+const fee = (args: Asked, now = NOW, directing?: DirectingSlice) => job(args, now, directing).fee;
 const m = (c: CurrencyCode, n: string) => fromMajor(c, n);
 /** An earlier job, so the director has years in the work and this one isn't the first. */
-const before = (started: number): DirectingSlice => ({ films: [{ ...job({ form: 'hour' }), started }], second: null });
+const before = (started: number): DirectingSlice => ({ films: [{ ...job({ form: 'hour' }), started }] });
 
 const ALL = ['feature', 'hour', 'half-hour'];
 const f = (x: Fee) => [x.form, x.per, x.phases.join('+'), JSON.stringify(x.when), x.band === null ? '' : x.band.join('-'), x.floor ?? '', x.first ?? '', x.steps.map((s) => s.join(' ')).join(' | ')].join(' ');
@@ -243,7 +258,7 @@ describe('a film in a market', () => {
     expect(fee({ form: 'feature', country: 'BR', agreement: 'br-sp', prep: 5, shoot: 15, cut: 5 })).toEqual(m('BRL', '27359.00'));
     expect(fee({ form: 'half-hour', country: 'BR', agreement: 'br-sp', prep: 2, shoot: 3, cut: 2 })).toEqual(m('BRL', '10670.97'));
     // DGC Quebec/AQPM: base and use fees by the budget's tier, a share below; every tier's edge.
-    const qc = (form: PrepArgs['form'], budget: number, shoot = 8) => fee({ form, country: 'CA', agreement: 'dgc-qc', budget, shoot });
+    const qc = (form: Asked['form'], budget: number, shoot = 8) => fee({ form, country: 'CA', agreement: 'dgc-qc', budget, shoot });
     expect(qc('feature', 10_879_238)).toEqual(m('CAD', '363749'));
     expect(qc('feature', 10_879_237)).toEqual(m('CAD', '321310'));
     expect(qc('feature', 2_175_847)).toEqual(m('CAD', '81843'));
@@ -325,7 +340,7 @@ describe('a film in a market', () => {
     expect(fee({ form: 'half-hour', country: 'AZ', agreement: 'az-state-order', ...forty })).toEqual(m('AZN', '1400'));
     expect(fee({ form: 'feature', country: 'AZ', agreement: 'az-screen', ...forty })).toBeNull();
     // DAC's episode minimums by the running time, at every edge; none past 90 minutes, nor for a feature.
-    const dac = (minutes: number, form: PrepArgs['form'] = 'hour') => fee({ form, country: 'AR', minutes, shoot: 5, ...(minutes > 90 ? { prep: 10, cut: 5 } : {}) });
+    const dac = (minutes: number, form: Asked['form'] = 'hour') => fee({ form, country: 'AR', minutes, shoot: 5, ...(minutes > 90 ? { prep: 10, cut: 5 } : {}) });
     expect([dac(1), dac(20), dac(21), dac(60), dac(61), dac(90), dac(30, 'half-hour')]).toEqual(['10530000', '10530000', '16380000', '16380000', '27300000', '27300000', '16380000'].map((x) => m('ARS', x)));
     expect(dac(91)).toBeNull();
     expect(fee({ form: 'feature', country: 'AR', minutes: 100, shoot: 22 })).toBeNull();
@@ -357,7 +372,7 @@ describe('a film in a market', () => {
     expect(job({ form: 'hour' })).toMatchObject({ country: 'US', agreement: 'dga', minutes: null });
     expect(job({ form: 'hour', country: 'US' })).toMatchObject({ country: 'US', agreement: 'dga' });
     // DAC's guaranteed prep, apart from the shoot, and the director's cut by the running time.
-    const ar = (form: PrepArgs['form'], minutes: number, shoot = 5) => job({ form, country: 'AR', minutes, shoot });
+    const ar = (form: Asked['form'], minutes: number, shoot = 5) => job({ form, country: 'AR', minutes, shoot });
     expect(ar('feature', 100, 22)).toMatchObject({ country: 'AR', agreement: 'ar-dac', budget: null, minutes: 100, prepDays: 50, shootDays: 22, cutDays: 20 });
     expect([ar('feature', 20), ar('feature', 21), ar('feature', 60), ar('feature', 61), ar('feature', 90), ar('feature', 91)].map((x) => [x.prepDays, x.cutDays])).toEqual([[50, 5], [50, 10], [50, 10], [50, 15], [50, 15], [50, 20]]);
     expect([ar('hour', 20), ar('hour', 21), ar('half-hour', 60), ar('hour', 61), ar('hour', 90)].map((x) => [x.prepDays, x.cutDays])).toEqual([[8, 2], [12, 4], [12, 4], [14, 10], [14, 10]]);
@@ -368,22 +383,19 @@ describe('a film in a market', () => {
   });
 
   it('is refused where the market, its agreement or its terms say otherwise', () => {
-    const go = (a: Record<string, unknown>) => () => job(Object.fromEntries(Object.entries({ form: 'feature', prep: 10, shoot: 20, cut: 10, ...a }).filter(([, v]) => v !== undefined)) as PrepArgs);
+    const go = (a: Record<string, unknown>) => () => job(Object.fromEntries(Object.entries({ form: 'feature', prep: 10, shoot: 20, cut: 10, ...a }).filter(([, v]) => v !== undefined)) as unknown as Asked);
     expect(go({ country: 'XX' })).toThrow("there's no market XX");
     expect(go({ country: 'toString' })).toThrow("there's no market toString");
     expect(go({ country: 'DE', form: 'half-hour', budget: 1 })).toThrow('no agreement the game knows covers a half-hour in DE');
     expect(go({ country: 'CA' })).toThrow('a feature in CA names its agreement: cmpa-dgc, dgc-bc, dgc-qc, nfb');
     expect(go({ country: 'CA', agreement: 'arrq' })).toThrow("arrq doesn't cover a feature in CA");
     expect(go({ country: 'CA', agreement: 'au-award' })).toThrow("au-award doesn't cover a feature in CA");
-    expect(go({ form: 'pilot' as never, country: 'AU' })).toThrow("there's no form pilot");
-    expect(go({ country: 'AU', budget: 1 })).toThrow("au-award doesn't read a feature's budget");
-    expect(go({ country: 'AU', minutes: 90 })).toThrow("au-award doesn't read a feature's running time");
-    expect(go({ country: 'DE' })).toThrow('the budget is a whole number of at least 1 (undefined)');
-    expect(go({ country: 'DE', budget: 0 })).toThrow('the budget is a whole number of at least 1 (0)');
-    expect(go({ country: 'SE', agreement: 'medieforetagen' })).toThrow('the running time is a whole number of at least 1 (undefined)');
-    expect(go({ country: 'AU', shoot: 0 })).toThrow('the shooting days is a whole number of at least 1 (0)');
+    expect(go({ country: 'SE', agreement: 'medieforetagen' })).toThrow('a feature under medieforetagen names its running time');
+    // What the agreement's tiers don't read is left aside: the production always has a budget and may have a running time.
+    expect(job({ form: 'feature', country: 'AU', prep: 10, shoot: 20, cut: 10, budget: 1_000_000, minutes: 90 })).toMatchObject({ budget: null, minutes: null });
     expect(go({ country: 'AU', prep: undefined })).toThrow('the prep days is a whole number of at least 1 (undefined)');
     expect(go({ country: 'AU', cut: 1.5 })).toThrow('the cut days is a whole number of at least 1 (1.5)');
+    expect(go({ country: 'AU', prep: 0 })).toThrow('the prep days is a whole number of at least 1 (0)');
     const qc = { country: 'CA', agreement: 'dgc-qc', budget: 1_000_000, prep: undefined, cut: undefined };
     expect(go({ ...qc, prep: 5 })).toThrow("dgc-qc guarantees a feature's prep");
     expect(go({ ...qc, cut: 5 })).toThrow("dgc-qc guarantees a feature's cut");
@@ -391,12 +403,13 @@ describe('a film in a market', () => {
     expect(go({ ...qc, shoot: 40 })).not.toThrow();
     expect(go({ country: 'AR', minutes: 100, prep: 10, cut: undefined })).toThrow("ar-dac guarantees a feature's prep");
     expect(go({ country: 'AR', minutes: 100, prep: undefined })).toThrow("ar-dac guarantees a feature's cut");
-    expect(go({ country: 'AR', prep: undefined, cut: undefined })).toThrow('the running time is a whole number of at least 1 (undefined)');
+    expect(go({ country: 'AR', prep: undefined, cut: undefined })).toThrow('a feature under ar-dac names its running time');
     expect(go({ country: 'AR', form: 'hour', minutes: 91, cut: undefined })).toThrow('the cut days is a whole number of at least 1 (undefined)');
     expect(go({ country: 'CH', form: 'hour' })).toThrow('no agreement the game knows covers a hour in CH');
     expect(go({ country: 'AZ' })).toThrow('a feature in AZ names its agreement: az-state-order, az-screen');
     // In the US the DGA sets all of it.
-    for (const k of ['agreement', 'prep', 'cut', 'minutes'] as const) expect(() => job({ form: 'hour', [k]: k === 'agreement' ? 'dga' : 5 }), k).toThrow("the DGA sets a US job's agreement, prep and cut, and reads no running time");
+    for (const k of ['agreement', 'prep', 'cut'] as const) expect(() => job({ form: 'hour', [k]: k === 'agreement' ? 'dga' : 5 }), k).toThrow("the DGA sets a US job's agreement, prep and cut");
+    expect(job({ form: 'hour', minutes: 60 })).toMatchObject({ agreement: 'dga', minutes: null });
   });
 
   it("reads the director's whole years in the work since the first film, and whether this is the first", () => {
@@ -407,7 +420,7 @@ describe('a film in a market', () => {
     expect(experience(s, day(2026, 6, 2))).toBe(2);
     expect(experience(s, day(2026, 8, 1))).toBe(3);
     // The director's years and the first job read from the slice, the earlier film kept.
-    const l = dispatch(made(NOW, s), prepFilm, { account: ACCOUNT, form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 });
+    const l = prepIn(made(NOW, s), { form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 });
     expect(l.slices.directing.films.map((x) => x.fee)).toEqual([s.films[0]?.fee, m('NOK', '173780')]);
   });
 
@@ -479,17 +492,17 @@ describe('a film in a market', () => {
 describe('a film directed abroad', () => {
   it("is shot and cut only where the person may work: a permit in force, else refused; prep books it", () => {
     const none = (l: Life<D>): Life<D> => ({ ...l, slices: { ...l.slices, permits: { applications: [] } } });
-    const prepped = none(dispatch(made(), prepFilm, { account: ACCOUNT, form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 }));
+    const prepped = none(prepIn(made(), { form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 }));
     expect(prepped.slices.directing.films).toHaveLength(1);
     expect(() => dispatch(prepped, shootFilm, { film: 1, account: ACCOUNT })).toThrow('the person may not work in NO without a permit');
-    const shot = dispatch(dispatch(made(), prepFilm, { account: ACCOUNT, form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 }), shootFilm, { film: 1, account: ACCOUNT });
+    const shot = dispatch(prepIn(made(), { form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 }), shootFilm, { film: 1, account: ACCOUNT });
     expect(() => dispatch(none(shot), cutFilm, { film: 1, account: ACCOUNT })).toThrow('the person may not work in NO without a permit');
     expect(dispatch(shot, cutFilm, { film: 1, account: ACCOUNT }).slices.directing.films[0]?.cut).not.toBeNull();
     // Kazakhstan's freedom covers a director's work (Decree 1041, item 11), so a film there is shot with no permit.
     const kz = (l: Life<D>): Life<D> => ({ ...l, slices: { ...l.slices, directing: { ...l.slices.directing, films: l.slices.directing.films.map((f) => ({ ...f, country: 'KZ' })) } } });
     expect(dispatch(kz(prepped), shootFilm, { film: 1, account: ACCOUNT }).slices.directing.films[0]?.shot).not.toBeNull();
     // At home, no permit is asked.
-    const home = none(dispatch(made(), prepFilm, { account: ACCOUNT, form: 'feature', budget: 5_000_000, shoot: 30 }));
+    const home = none(prepIn(made(), { form: 'feature', budget: 5_000_000, shoot: 30 }));
     expect(dispatch(home, shootFilm, { film: 1, account: ACCOUNT }).slices.directing.films[0]?.shot).not.toBeNull();
   });
 });

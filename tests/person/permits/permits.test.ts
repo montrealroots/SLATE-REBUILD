@@ -4,7 +4,7 @@ import { CURRENCY_CODES, fromMajor, money, roundHalfEven } from '../../../src/co
 import { exchangeOn, knowsRate } from '../../../src/money/rates/rates.ts';
 import { t } from '../../../src/core/text/text.ts';
 import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
-import { ACTING_START, daysWorked, pay, WEEK_DAYS, type ActingSlice, type Agreement, type Audition, type Part } from '../../../src/person/acting/acting.ts';
+import { ACTING_START, daysWorked, pay, WEEK_DAYS, type ActingSlice, type Agreement, type Cast, type Part } from '../../../src/person/acting/acting.ts';
 import type { IdentitySlice, Person } from '../../../src/person/identity/identity.ts';
 import { DIRECTING_START, type DirectingSlice, type Film } from '../../../src/person/directing/directing.ts';
 import { PRODUCING_START, type ProducingSlice, type Project } from '../../../src/person/producing/producing.ts';
@@ -18,9 +18,7 @@ import {
   MISSING,
   COVERS,
   engagedIn,
-  mayVisit,
   ROLES,
-  whyNoVisit,
   MONTH_DAYS,
   priced,
   UNKEPT_LINE,
@@ -53,11 +51,12 @@ const gbp = (n: string) => fromMajor('GBP', n);
 const usd = (n: string) => fromMajor('USD', n);
 
 const part = (agreement: Agreement, length = 3): Part => ({ agreement, budget: 5_000_000, seats: 0, lines: 10, term: 'day', length, rehearsal: 0, asks: [] });
-const booked = (agreement: Agreement, length = 3): Audition => ({ id: 0, at: 0, breakdown: 0, part: part(agreement, length), taped: true, score: 50, booked: true, work: null });
-const played = (agreement: Agreement, at: number, quality = 50, length = 3): Audition => ({ ...booked(agreement, length), work: { at, quality, pay: null } });
+/** A part cast in one of the life's productions, not yet played. */
+const booked = (agreement: Agreement, length = 3): Cast => ({ id: 0, at: 0, project: 1, part: part(agreement, length), gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en', work: null });
+const played = (agreement: Agreement, at: number, quality = 50, length = 3): Cast => ({ ...booked(agreement, length), work: { at, quality, pay: null } });
 
-function life(parts: Audition[], who: Partial<Person> = {}, applications: Application[] = [], now = NOW): Life<Lives> {
-  return begin(SEED, now, { identity: identity(who), acting: { ...structuredClone(ACTING_START), auditions: parts.map((a, i) => ({ ...a, id: i + 1 })) }, directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START), permits: { applications }, ...purse() });
+function life(parts: Cast[], who: Partial<Person> = {}, applications: Application[] = [], now = NOW): Life<Lives> {
+  return begin(SEED, now, { identity: identity(who), acting: { ...structuredClone(ACTING_START), parts: parts.map((a, i) => ({ ...a, id: i + 1 })) }, directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START), permits: { applications }, ...purse() });
 }
 const apps = (l: Life<Lives>) => l.slices.permits.applications;
 const granted = (country: Application['country'], until: number, id = 1, engagement = 1): Application => ({ id, at: 0, country, role: 'actor', engagement, renews: null, by: 'worker', premium: false, fees: null, decided: { at: 0, until } });
@@ -162,11 +161,11 @@ describe('permits.apply', () => {
     expect(minorIn(us.slices.ledger, ACCOUNT)).toBe(100_000_000);
   });
 
-  it("is refused where nothing is booked, where the person needs no permit, or the permit isn't known well enough to apply for", () => {
-    const l = life([{ ...booked('pact-equity'), booked: false }, played('pact-equity', 0), booked('pact-equity'), booked('sag-aftra'), booked('actra')], { citizenship: ['CA'] });
-    expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 9, premium: false })).toThrow("there's no audition 9");
-    expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 1, premium: false })).toThrow("audition 1 didn't book a part");
-    expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 2, premium: false })).toThrow('the part from audition 2 is played');
+  it("is refused where nothing is cast, where the person needs no permit, or the permit isn't known well enough to apply for", () => {
+    const l = life([booked('pact-equity'), played('pact-equity', 0), booked('pact-equity'), booked('sag-aftra'), booked('actra')], { citizenship: ['CA'] });
+    expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 9, premium: false })).toThrow("there's no part 9");
+    expect(apps(dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 1, premium: false }))).toHaveLength(1);
+    expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 2, premium: false })).toThrow('part 2 is played');
     expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 4, premium: false })).toThrow("Some of what United States asks of someone from abroad for a work permit isn't known to this game yet: how long a decision takes.");
     expect(() => dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 5, premium: false })).toThrow('you need no permit to work in CA');
     expect(() => dispatch(life([booked('pact-equity')], { citizenship: ['IE'] }), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 1, premium: false })).toThrow('you need no permit to work in GB');
@@ -175,15 +174,15 @@ describe('permits.apply', () => {
     const once = dispatch(l, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false });
     expect(() => dispatch(once, applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: true })).toThrow('a permit is applied for already for that engagement');
     const refused: Application = { ...granted('GB', 0, 1, 3), decided: { at: 0, refused: 'no' } };
-    expect(apps(dispatch(life(l.slices.acting.auditions, { citizenship: ['CA'] }, [refused]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
+    expect(apps(dispatch(life(l.slices.acting.parts, { citizenship: ['CA'] }, [refused]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
     const lapsed = granted('GB', NOW, 1, 3);
-    expect(apps(dispatch(life(l.slices.acting.auditions, { citizenship: ['CA'] }, [lapsed]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
-    expect(() => dispatch(life(l.slices.acting.auditions, { citizenship: ['CA'] }, [granted('GB', NOW + 1, 1, 3)]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false })).toThrow('a permit is applied for already for that engagement');
+    expect(apps(dispatch(life(l.slices.acting.parts, { citizenship: ['CA'] }, [lapsed]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
+    expect(() => dispatch(life(l.slices.acting.parts, { citizenship: ['CA'] }, [granted('GB', NOW + 1, 1, 3)]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false })).toThrow('a permit is applied for already for that engagement');
     // Another engagement's application doesn't stand for this one's.
-    expect(apps(dispatch(life(l.slices.acting.auditions, { citizenship: ['CA'] }, [granted('GB', NOW + 1, 1, 9)]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
+    expect(apps(dispatch(life(l.slices.acting.parts, { citizenship: ['CA'] }, [granted('GB', NOW + 1, 1, 9)]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
     // A renewal of the engagement's permit doesn't stand for a first grant.
     const renewal: Application = { ...granted('GB', NOW + 1, 1, 3), renews: 7 };
-    expect(apps(dispatch(life(l.slices.acting.auditions, { citizenship: ['CA'] }, [renewal]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
+    expect(apps(dispatch(life(l.slices.acting.parts, { citizenship: ['CA'] }, [renewal]), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 3, premium: false }))).toHaveLength(2);
   });
 
   it("names what the permit lacks, and refuses a passport whose permit isn't the one researched, or a country whose rules aren't kept", () => {
@@ -224,7 +223,7 @@ describe('the decision', () => {
 
   it("refuses the O-1 where the parts played show no distinction: the best 75 or better, and three played", () => {
     expect(RECOGNITION).toEqual({ best: 75, parts: 3 });
-    const decided = (parts: Audition[]) => apps(pass(dispatch(life([booked('sag-aftra'), ...parts], { citizenship: ['CA'] }), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 1, premium: true }), day(2027, 1, 1)).life)[0]?.decided;
+    const decided = (parts: Cast[]) => apps(pass(dispatch(life([booked('sag-aftra'), ...parts], { citizenship: ['CA'] }), applyForPermit, { account: ACCOUNT, role: 'actor', engagement: 1, premium: true }), day(2027, 1, 1)).life)[0]?.decided;
     const refused = { at: day(2026, 11, 24), refused: 'the petition shows no distinction yet: the work recognised as substantially above the ordinary' };
     expect(decided([played('actra', 0, 75), played('actra', 0, 40)])).toEqual(refused);
     expect(decided([played('actra', 0, 74), played('actra', 0, 40), played('actra', 0, 40)])).toEqual(refused);
@@ -266,7 +265,7 @@ describe('the decision', () => {
 
 describe('a permit for its engagement', () => {
   /** A life with an application lodged and its decision due now. */
-  const due = (a: Application, parts: Audition[]) => {
+  const due = (a: Application, parts: Cast[]) => {
     const l = life(parts, {}, [a]);
     return { ...l, frame: { ...l.frame, next: 2, schedule: [{ id: 1, at: NOW, kind: DECISION_KIND, data: { application: a.id } }] } };
   };
@@ -278,7 +277,7 @@ describe('a permit for its engagement', () => {
     const l = pass(due(lodged('NZ'), [booked('actra', 40)]), NOW).life;
     expect(apps(l)[0]?.decided).toEqual({ at: NOW, until: null });
     expect(permitted(l.slices, 'NZ', NOW + 400 * SECONDS_PER_DAY, 40)).toBe(true);
-    const done = { ...l.slices, acting: { ...l.slices.acting, auditions: [{ ...played('actra', NOW, 50, 40), id: 1 }] } };
+    const done = { ...l.slices, acting: { ...l.slices.acting, parts: [{ ...played('actra', NOW, 50, 40), id: 1 }] } };
     expect(permitted(done, 'NZ', NOW, 40)).toBe(false);
     // Another engagement's permit doesn't stand for it, nor this one in force for another country.
     expect(permitted(l.slices, 'AU', NOW, 400)).toBe(false);
@@ -405,7 +404,7 @@ describe('a fee set on the pay', () => {
 });
 
 describe("a short engagement's days, for whom and from when the law gives them", () => {
-  const s = (parts: Audition[] = []) => life(parts).slices;
+  const s = (parts: Cast[] = []) => life(parts).slices;
   const renowned = [played('actra', 0, 80), played('actra', 0, 40), played('actra', 0, 40)];
 
   it("are Belgium's for artists of renown, read as the O-1's distinction", () => {
@@ -423,7 +422,7 @@ describe("a short engagement's days, for whom and from when the law gives them",
 
 describe('working in a country', () => {
   it('is open by citizenship, by a permit in force on the day, or within the days a short engagement is worked without one', () => {
-    const s = (who: Partial<Person>, applications: Application[] = [], parts: Audition[] = []) => life(parts, who, applications).slices;
+    const s = (who: Partial<Person>, applications: Application[] = [], parts: Cast[] = []) => life(parts, who, applications).slices;
     expect(permitted(s({}), 'US', NOW, 400)).toBe(true);
     // Where every passport works freely (papers.work), no permit is asked of anyone.
     for (const c of ['AM', 'KZ', 'SI', 'SJ', 'UA'] as const) expect(permitted(s({ citizenship: ['IN'] }), c, NOW, 400), c).toBe(true);
@@ -447,7 +446,7 @@ describe('working in a country', () => {
   });
 
   it("adds the days worked there within the law's period to the engagement's, where the law counts one (Germany's 90 in a year)", () => {
-    const s = (parts: Audition[]) => life(parts).slices;
+    const s = (parts: Cast[]) => life(parts).slices;
     const before = (daysAgo: number, length: number) => played('de-screen', NOW - daysAgo * SECONDS_PER_DAY, 50, length);
     expect([permitted(s([before(60, 60)]), 'DE', NOW, 30), permitted(s([before(60, 60)]), 'DE', NOW, 31)]).toEqual([true, false]);
     // A part played longer ago than the year counts nothing.
@@ -457,9 +456,9 @@ describe('working in a country', () => {
   });
 
   it("counts the days worked there within the law's period, by the parts played there", () => {
-    const acting = (parts: Audition[]) => ({ acting: { ...structuredClone(ACTING_START), auditions: parts }, directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START) });
+    const acting = (parts: Cast[]) => ({ acting: { ...structuredClone(ACTING_START), parts }, directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START) });
     const parts = [played('pact-equity', NOW - 10 * SECONDS_PER_DAY, 50, 4), played('uk-theatre', NOW - 100 * SECONDS_PER_DAY), played('sag-aftra', NOW - SECONDS_PER_DAY), booked('pact-equity')];
-    parts[1] = { ...(parts[1] as Audition), part: { ...part('uk-theatre'), term: 'week', length: 2, rehearsal: 1 } };
+    parts[1] = { ...(parts[1] as Cast), part: { ...part('uk-theatre'), term: 'week', length: 2, rehearsal: 1 } };
     expect(daysWorkedIn(acting(parts), 'GB', NOW, 365)).toBe(4 + 15);
     expect(daysWorkedIn(acting(parts), 'GB', NOW, 100)).toBe(4);
     expect(daysWorkedIn(acting(parts), 'GB', NOW, 101)).toBe(19);
@@ -550,7 +549,7 @@ describe('an engagement in another role', () => {
   it("counts every role's days worked there within the law's period", () => {
     const parts = [played('pact-equity', NOW - 10 * SECONDS_PER_DAY, 50, 4)];
     const l = roles([film({ country: 'GB', started: NOW - 20 * SECONDS_PER_DAY }), film({ id: 2, country: 'GB', started: NOW - 200 * SECONDS_PER_DAY }), film({ id: 3, country: 'NO' })], [project({ market: 'GB', shot: { at: NOW - 5 * SECONDS_PER_DAY, days: 7 } }), project({ id: 2, market: 'GB' }), project({ id: 3, market: 'IT', shot: { at: NOW, days: 9 } })]);
-    const s = { ...l.slices, acting: { ...l.slices.acting, auditions: parts.map((a, i) => ({ ...a, id: i + 1 })) } };
+    const s = { ...l.slices, acting: { ...l.slices.acting, parts: parts.map((a, i) => ({ ...a, id: i + 1 })) } };
     expect(daysWorkedIn(s, 'GB', NOW, 100)).toBe(4 + 40 + 7);
     expect(daysWorkedIn(s, 'GB', NOW, 365)).toBe(4 + 80 + 7);
     expect(daysWorkedIn(s, 'GB', NOW, 15)).toBe(4 + 7);
@@ -559,15 +558,5 @@ describe('an engagement in another role', () => {
     // A project shot before the period, or exactly at its start, isn't counted.
     const edge = roles([], [project({ market: 'FR', shot: { at: NOW - 100 * SECONDS_PER_DAY, days: 7 } }), project({ id: 2, market: 'FR', shot: { at: NOW - 101 * SECONDS_PER_DAY, days: 5 } }), project({ id: 3, market: 'FR', shot: { at: NOW - 99 * SECONDS_PER_DAY, days: 3 } })]).slices;
     expect(daysWorkedIn(edge, 'FR', NOW, 100)).toBe(3);
-  });
-});
-
-describe('a visit for a meeting', () => {
-  it("is open where the person's passport enters without a visa applied for beforehand, and at home", () => {
-    const p = (citizenship: string[]) => identity({ citizenship: citizenship as Person['citizenship'] }).person as Person;
-    expect([mayVisit(p(['US']), 'GB'), mayVisit(p(['US']), 'US'), mayVisit(p(['IN']), 'GB'), mayVisit(p(['IN', 'US']), 'GB')]).toEqual([true, true, false, true]);
-    expect(mayVisit(p(['US']), 'AQ')).toBe(false);
-    expect(whyNoVisit('GB')).toBe("a visit to GB takes a visa applied for beforehand, which the game doesn't hold");
-    expect(whyNoVisit('AQ')).toBe(t('visits.unkept', { country: 'Antarctica' }));
   });
 });

@@ -22,7 +22,7 @@ import data from './youth.json' with { type: 'json' };
  *
  * - The work is refused where the law bars it at the person's age: a child performer below the youngest age the
  *   permit is granted at, or where no child may perform; any other employed work (directing, producing) below the
- *   general working age unless the child-work rule reaches it. A script sold isn't employment.
+ *   general working age unless the child-work rule reaches it. A script the production buys isn't employment.
  * - It needs, first, what the law requires of it (`youth.authorise`, once for each engagement): the child performer's
  *   permit or licence, below the age the country's law needs it under, for the work it reaches; and, below majority
  *   and the age the minor contracts alone, the guardian's signature, a court's approval or an authority's, as the

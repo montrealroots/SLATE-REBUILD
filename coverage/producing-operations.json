@@ -15,7 +15,13 @@
    "record",
    "quality-by-level",
    "refusals",
-   "declarations"
+   "declarations",
+   "production",
+   "develop",
+   "series-and-stage",
+   "package-and-doors",
+   "pay-from-budget",
+   "quality-blend"
   ]
  },
  "rows": [
@@ -155,7 +161,8 @@
    ],
    "tests": [
     "tests/person/producing/producing.test.ts::financing > takes a project by its script, the pitch and the record of films released in the PGA's seven years",
-    "tests/person/producing/producing.test.ts::the release > counts toward how financiers take the next project"
+    "tests/person/producing/producing.test.ts::the release > counts toward how financiers take the next project",
+    "tests/person/producing/production.test.ts::a production's record > counts each production that found an audience in the PGA's seven years: released in cinemas, or its film chosen by a festival"
    ]
   },
   {
@@ -202,6 +209,105 @@
    ],
    "tests": [
     "tests/person/producing/producing.test.ts::the producer > is run through the frame, each command declaring what it reads and writes"
+   ]
+  },
+  {
+   "key": "production",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-4613"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::a production > is a film, a series or a play, its roles the life holds among the four, its medium and form as each role reads it",
+    "tests/person/producing/production.test.ts::a production > is made in the country it names, the life's home where it names none",
+    "tests/person/producing/production.test.ts::a production > is refused for a format or role there is not, no role or one twice, a series without its episodes, a stage play the life directs",
+    "tests/person/producing/production.test.ts::a production > is produced by people hired at the game's standard where the life doesn't produce it: their eye, their plan, and the life's attributes left as they are"
+   ]
+  },
+  {
+   "key": "develop",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-4241",
+    "R-5229"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::the life's own script > is developed into a production: its material the script as graded, the rights the life's, its genre the script's, its agreement the market's",
+    "tests/person/producing/production.test.ts::the life's own script > is refused where the life isn't its writer, it's in a production already, there's no such script, it's a play, or its form isn't the format's",
+    "tests/person/producing/production.test.ts::the life's own script > is paid under the market's writers' agreement for its form, named where it has several, refused where its figures aren't known or the writer doesn't write its language",
+    "tests/person/producing/production.test.ts::the life's own script > producing.develop: a better script makes better material, which financiers take better"
+   ]
+  },
+  {
+   "key": "series-and-stage",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-4613"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::a series and a play > are planned on their own days: a series' episodes the DGA's shooting days, a play's run as given; no fee or credit the research doesn't give them",
+    "tests/person/producing/production.test.ts::a series and a play > are refused a fund and a release the research doesn't give them"
+   ]
+  },
+  {
+   "key": "package-and-doors",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-4606",
+    "R-4622"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::financing the life's own script > goes out with the writer's pitch beside the producer's, the documents with it",
+    "tests/person/producing/production.test.ts::financing the life's own script > opens a door to the market for each contact the life has made and a family in the business, up to ten",
+    "tests/person/producing/production.test.ts::financing the life's own script > network.meet: the contacts a writer makes open doors to the money"
+   ]
+  },
+  {
+   "key": "pay-from-budget",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-4241",
+    "R-4614"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::paying the life from a production's budget > pays the life's script its agreement's minimum on the first day of photography, from the budget, through the production's account, taxed once",
+    "tests/person/producing/production.test.ts::paying the life from a production's budget > pays the producer's fee only where the life produces, and asks the producer's permit only then",
+    "tests/person/producing/production.test.ts::paying the life from a production's budget > refuses a payment the budget can't cover, or one in another currency"
+   ]
+  },
+  {
+   "key": "quality-blend",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617"
+   ],
+   "tests": [
+    "tests/person/producing/production.test.ts::what a production comes out as > is the four roles' results, a quarter each, a role the life doesn't hold at the hired standard",
+    "tests/person/producing/production.test.ts::what a production comes out as > is refused until each role the life holds has done its work: the shoot, the director's cut, every part cast played",
+    "tests/person/producing/production.test.ts::what a production comes out as > is what the release reads, and keeps"
    ]
   }
  ]

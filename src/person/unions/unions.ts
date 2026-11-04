@@ -6,16 +6,21 @@ import { exchangeOn } from '../../money/rates/rates.ts';
 import { work } from '../../papers/work/work.ts';
 import type { CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { dateOf, SAG_TIERS, type ActingSlice, type Agreement, type Part, type Work } from '../acting/acting.ts';
+import { holds, type ProducingSlice } from '../producing/producing.ts';
 import type { DirectingSlice } from '../directing/directing.ts';
 import { ageOf, personOf, type IdentitySlice, type Person } from '../identity/identity.ts';
-import { KEPT, type CareerSlice } from '../work/career.ts';
+import { KEPT } from '../work/career.ts';
 import { scriptOf, type Form, type ScriptsSlice } from '../work/work.ts';
 import type { LineId } from '../../core/text/text.ts';
 
 /**
  * The unions and guilds a person can join, and what membership changes (BUILD-ORDER layer 4; R-4621, read 2026-11-01).
  * Each union is joined by its own route, read from the life's own work where the engines record it: the parts played
- * (src/person/acting), the scripts sold (src/person/work/career.ts), the films directed (src/person/directing). Its
+ * (src/person/acting), the scripts its productions made (src/person/producing), the films directed
+ * (src/person/directing). Every one of them is in the life's own production (the owner, 2026-11-04), whose company
+ * signs the union's agreement as any producer may: SAG-AFTRA's (a member takes no role unless the producer has signed,
+ * Rule 9), the DGA's (a director may "develop a feature length project and make your company/project signatory"), the
+ * WGA's (a company employing a writer must sign first). Its
  * initiation fee and the year's dues are paid from the account the person names when they join (money.accounts), and
  * recorded on the card; the dues of the years after aren't charged yet (the renewal isn't modeled, money.tax.model).
  *
@@ -28,8 +33,11 @@ import type { LineId } from '../../core/text/text.ts';
  * - Canadian Actors' Equity: three years' paid professional experience (the game's reading: a part first played three
  *   years before); $1,200, $200 a year ($212 from 1 May 2028).
  * - Actors' Equity Association: a year in SAG-AFTRA, its sibling union, and a part played under it; $1,800, $176 a year.
- * - The WGA West: 24 units of sales to signatories in the three years before, for Current ($2,500); fewer for
- *   Associate ($100 a year); dues of $25 a quarter.
+ * - The WGA West: 24 units from signatories in the three years before, for Current ($2,500); fewer for Associate ($100
+ *   a year); dues of $25 a quarter. A script bought by a company the writer owns counts only where the script is
+ *   produced and the writer is credited on screen (its rule for a writer-owned company, without a third party's
+ *   financing): the life's own script, made under the WGA's agreement, counts once the production is shot, its writer
+ *   credited. Its units were read from scripts sold to others until 2026-11-04, when spec sales went.
  * - The DGA: employment by a signatory, a film or an episode directed; $15,703 for a feature or television, $5,000 for a
  *   low-budget feature ($11 million or less); dues of $50 a quarter.
  *
@@ -86,7 +94,7 @@ export const CAEA = { initiation: cad('1200'), dues: cad('200'), raised: cad('21
 export const AEA = { initiation: usd('1800'), dues: usd('176') } as const;
 /** The WGA West: Current's initiation fee and units, Associate's yearly fee, a Current member's quarterly dues four times over, the years units count. */
 export const WGA = { initiation: usd('2500'), units: 24, associate: usd('100'), dues: usd('100'), years: 3 } as const;
-/** The units a sale to a signatory earns, by the form sold (the WGA West's chart): a feature screenplay 24; a teleplay of 30 to 60 minutes 8 (pilot, episode). */
+/** The units a script earns from a signatory, by its form (the WGA West's chart): a feature screenplay 24; a teleplay of 30 to 60 minutes 8 (pilot, episode); a short none. */
 export const UNITS: Readonly<Record<Exclude<Form, 'short'>, number>> = { feature: 24, pilot: 8, episode: 8 };
 /** The DGA, July 2026 to June 2027: a director's initiation fee, feature or television and low-budget feature, its ceiling, and $50 a quarter. */
 export const DGA = { initiation: usd('15703'), low: usd('5000'), ceiling: 11_000_000, dues: usd('200') } as const;
@@ -108,7 +116,7 @@ export const EQUITY_BANDS: readonly (readonly [upTo: number, fee: Money])[] = [
 /** SAG-AFTRA's union security: membership may be required from the thirtieth day after the first job. */
 export const TAFT_HARTLEY_DAYS = 30;
 
-type Lives = { identity: IdentitySlice; acting: ActingSlice; career: CareerSlice; scripts: ScriptsSlice; directing: DirectingSlice; unions: UnionsSlice };
+type Lives = { identity: IdentitySlice; acting: ActingSlice; producing: ProducingSlice; scripts: ScriptsSlice; directing: DirectingSlice; unions: UnionsSlice };
 
 /** The latest card a union gave, if any. */
 export const memberOf = (s: UnionsSlice, union: Union): Membership | undefined => s.joined.findLast((m) => m.union === union);
@@ -119,7 +127,7 @@ const yearsOn = (date: string, by: number) => `${Number(date.slice(0, 4)) + by}$
 /** The parts played, each with its work. */
 function played(s: ActingSlice): { part: Part; work: Work }[] {
   // @slate:consumer acting.perform
-  return s.auditions.flatMap((a) => (a.work === null ? [] : [{ part: a.part, work: a.work }]));
+  return s.parts.flatMap((a) => (a.work === null ? [] : [{ part: a.part, work: a.work }]));
 }
 
 /** Whether a sibling union has had the person a paid-up Full member a year, and they've played a part under its agreement. */
@@ -131,11 +139,12 @@ function siblingYear(s: Pick<Lives, 'acting' | 'unions'>, union: 'actra' | 'sag-
 
 /** Everything the work has paid, in pence, by the day: each in pounds as estimated that day (none where no rate is known). */
 function earnedInPounds(s: Lives): { date: string; pence: number }[] {
-  // @slate:consumer script.pitch
-  const sold = Object.values(s.career.out).flatMap((o) => (o.sold === null ? [] : [{ at: o.sold.at, pay: o.sold.fee }]));
+  // @slate:consumer producing.shoot
+  // The script and the producer's fee each production paid; a part's and a director's pay are counted from their own engines.
+  const produced = s.producing.projects.flatMap((p) => p.costs.filter((x) => x.role === 'writer' || x.role === 'producer').map((x) => ({ at: x.at, pay: x.amount })));
   // @slate:consumer directing.prep
   const directed = s.directing.films.map((f) => ({ at: f.started, pay: f.fee }));
-  return [...played(s.acting).map((w) => w.work), ...sold, ...directed].flatMap(({ at, pay }) => {
+  return [...played(s.acting).map((w) => w.work), ...produced, ...directed].flatMap(({ at, pay }) => {
     const date = dateOf(at);
     const pounds = pay === null || pay.currency === 'GBP' ? pay : exchangeOn(pay, 'GBP', date)?.money;
     return pounds === null || pounds === undefined ? [] : [{ date, pence: pounds.minor }];
@@ -199,15 +208,16 @@ export function terms(s: Lives, union: Union, now: number): Terms {
     case 'wga-west': {
       const since = yearsOn(today, -WGA.years);
       let units = 0;
-      // @slate:consumer script.pitch
-      for (const [id, o] of Object.entries(s.career.out)) {
-        // Only a sale under the WGA's own terms is to a signatory (one not offered elsewhere, or offered under the WGA's
-        // own agreement, as a script sold in Puerto Rico is); one offered under another market's agreement isn't.
-        if (o.sold !== null && o.sold.fee !== null && (s.career.offered[id]?.agreement ?? KEPT) === KEPT && dateOf(o.sold.at) >= since) units += UNITS[scriptOf(s.scripts, Number(id)).form as keyof typeof UNITS];
+      // @slate:consumer producing.shoot
+      for (const p of s.producing.projects) {
+        // Only a script made under the WGA's own agreement is a signatory's (as one made in Puerto Rico is), and only
+        // once produced, the life credited as its writer: a writer-owned company's rule.
+        // Only the life's own script makes the life a production's writer (producing.develop), so a writer's production has one.
+        if (holds(p, 'writer') && p.writing === KEPT && p.shot !== null && dateOf(p.shot.at) >= since) units += UNITS[scriptOf(s.scripts, p.script as number).form as keyof typeof UNITS] ?? 0;
       }
       if (units >= WGA.units) return { standing: 'full', initiation: WGA.initiation, dues: WGA.dues };
       if (units > 0) return { standing: 'associate', initiation: null, dues: WGA.associate };
-      throw new Error('the WGA asks a sale to a signatory in the last three years');
+      throw new Error("the WGA asks a script of the writer's produced under its agreement in the last three years, the writer credited");
     }
     case 'dga': {
       // @slate:consumer directing.prep
@@ -269,4 +279,4 @@ function join(s: Lives & Holding, a: JoinArgs, c: Context): void {
 // Stryker disable all: a mutant of a declaration made as the module loads changes its shape, so the module loaded
 // again for it is refused as declared twice (as the accounts' and the cards' say). The declarations are held by the
 // test that lists each command with what it reads and writes; what each does is mutated above.
-export const joinUnion = defineCommand<Lives & Holding, JoinArgs>({ id: 'unions.join', reads: ['identity', 'acting', 'career', 'scripts', 'directing'], writes: ['unions', 'accounts', 'ledger'], run: join });
+export const joinUnion = defineCommand<Lives & Holding, JoinArgs>({ id: 'unions.join', reads: ['identity', 'acting', 'producing', 'scripts', 'directing'], writes: ['unions', 'accounts', 'ledger'], run: join });

@@ -15,8 +15,7 @@
    "declarations",
    "synopsis",
    "networking",
-   "promotion",
-   "pitch-and-sale",
+   "pitch-to-financiers",
    "career-declarations"
   ]
  },
@@ -184,20 +183,7 @@
    ]
   },
   {
-   "key": "promotion",
-   "status": "game",
-   "register": [
-    "R-4608",
-    "R-4606"
-   ],
-   "tests": [
-    "tests/person/work/career.test.ts::sending a script out > asks a contact or, after them, a stranger: a cold query is answered one time in sixty-six, the query services' 1 to 2%",
-    "tests/person/work/career.test.ts::sending a script out > script.promote: a better promoter gets more requests",
-    "tests/person/work/career.test.ts::sending a script out > is weighed by the buyer on its last grade, or its parts' mean where none has graded it"
-   ]
-  },
-  {
-   "key": "pitch-and-sale",
+   "key": "pitch-to-financiers",
    "status": "game",
    "register": [
     "R-4241",
@@ -205,10 +191,10 @@
     "R-4606"
    ],
    "tests": [
-    "tests/person/work/career.test.ts::a pitch > sells a third of the time for a script at the market level and a middling meeting, more for better, 88% at best",
-    "tests/person/work/career.test.ts::a pitch > sells by the meeting draw on each script, a dozen over, and grows Pitching, Speaking and Persuasion",
-    "tests/person/work/career.test.ts::a pitch > pays the WGA's minimum for the form, takes the script off the market and leaves the buyer a contact",
-    "tests/person/work/career.test.ts::a pitch > script.pitch: a better script sells where a weak one does not"
+    "tests/person/producing/production.test.ts::financing the life's own script > goes out with the writer's pitch beside the producer's, the documents with it",
+    "tests/person/work/career.test.ts::the writer's pitch to a production's financiers > weighs the script on its last grade, or its parts' mean where none has graded it",
+    "tests/person/work/career.test.ts::the writer's pitch to a production's financiers > is Pitching, Speaking and Persuasion, and the best of the five documents a pitch puts forward",
+    "tests/person/producing/production.test.ts::financing the life's own script > script.summarise: a better pitch document helps the production raise its money"
    ]
   },
   {

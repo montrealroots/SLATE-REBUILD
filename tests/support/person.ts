@@ -13,10 +13,9 @@ export function person(over: Partial<Person> = {}): Person {
     ethnicity: [],
     grewUp: { country: 'US', region: 'US.CA' },
     family: 'outside',
-    headshot: 0,
     ...over,
   };
 }
 
 /** The identity slice of a life whose person is made. */
-export const identity = (over: Partial<Person> = {}): IdentitySlice => ({ person: person(over), sessions: [] });
+export const identity = (over: Partial<Person> = {}): IdentitySlice => ({ person: person(over) });

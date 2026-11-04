@@ -13,7 +13,7 @@ import data from './tax.json' with { type: 'json' };
  * ledger first"), on each country's own terms as the research reads them (src/money/tax/tax.json, compiled by
  * tools/money/tax from research/sources/money/tax, register facts money.tax.<CC>).
  *
- * Pay: what the person earns (a part played, a director's fee, a producer's fee, a script sold or optioned) is paid
+ * Pay: what the person earns (a part played, a director's fee, a producer's fee, a script its production buys) is paid
  * from the payer's world account into the account the person names, less what the work's country withholds at source:
  * from a resident's pay of that kind at the rate its law sets; from a non-resident's at the artistes' or the
  * non-residents' rate, above any threshold, with any surtax; and, from an employee's wages, the employee's social
@@ -328,7 +328,6 @@ export function reckon(s: { tax: TaxSlice }, item: Item, c: Context): void {
   const where = taxOf(country) as Country;
   // @slate:consumer acting.perform
   // @slate:consumer directing.prep
-  // @slate:consumer script.pitch
   // @slate:consumer producing.shoot
   const list = s.tax.paid.filter((p) => p.home === country && yearOf(where, dateOf(p.at)).start === year);
   const cur = where.currency as CurrencyCode;

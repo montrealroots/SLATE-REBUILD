@@ -483,9 +483,9 @@ describe("the screenwriter's markets coverage", () => {
     expect(TESTS).toEqual([
       "tests/person/work/markets.test.ts::the markets > are each country's own, every minimum as the research gives it",
       'tests/person/work/markets.test.ts::the markets > cover every country on the map: the WGA the US, each other one its research',
-      "tests/person/work/markets.test.ts::a script sold in a market > is paid its agreement's minimum, by form and tier, on the day it sells",
+      "tests/person/work/markets.test.ts::a script a production pays for in a market > is paid its agreement's minimum, by form and tier, on the day it's paid",
     ]);
-    expect(TOLD).toBe("tests/person/work/markets.test.ts::a script sold in a market > tells the player what of a market isn't known");
+    expect(TOLD).toBe("tests/person/work/markets.test.ts::a script a production pays for in a market > tells the player what of a market isn't known");
     expect(KEPT_TESTS).toEqual(["tests/person/work/markets.test.ts::the markets > keeps the WGA's own, the US's, in English, and refuses an agreement there's none of"]);
     expect(serializeCoverage(rows.slice(0, 2))).toBe(`${JSON.stringify({ engine: 'person.work', axis: 'country', rows: rows.slice(0, 2) }, null, 1)}\n`);
   });

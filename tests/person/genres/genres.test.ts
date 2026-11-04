@@ -1,3 +1,4 @@
+import { CAREER_START, type CareerSlice } from '../../../src/person/work/career.ts';
 import { createHash } from 'node:crypto';
 import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -199,16 +200,16 @@ describe('the genres a person loves', () => {
   });
 
   it("genres.choose: the producer's film earns as its loved genre's market does", () => {
-    type Producing = { attributes: AttributesSlice; producing: ProducingSlice; genres: GenresSlice; identity: IdentitySlice; acting: ActingSlice; directing: DirectingSlice; permits: PermitsSlice; youth: YouthSlice } & ReturnType<typeof purse>;
+    type Producing = { attributes: AttributesSlice; producing: ProducingSlice; genres: GenresSlice; identity: IdentitySlice; acting: ActingSlice; directing: DirectingSlice; permits: PermitsSlice; youth: YouthSlice; scripts: ScriptsSlice; career: CareerSlice } & ReturnType<typeof purse>;
     const doubled = (genre: string) => {
       let l: Life<Producing> = dispatch(
         // A British producer paid in pounds, in 2026 (the option's dollars carried at the day's rate).
-        dispatch(begin(SEED, Date.UTC(2026, 6, 1) / 1000, { attributes: structuredClone(ATTRIBUTES_START), producing: structuredClone(PRODUCING_START), genres: structuredClone(GENRES_START), identity: identity({ citizenship: ['GB'] }), acting: structuredClone(ACTING_START), directing: structuredClone(DIRECTING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse('GBP') }), chooseGenres, { loved: [genre] }),
+        dispatch(begin(SEED, Date.UTC(2026, 6, 1) / 1000, { attributes: structuredClone(ATTRIBUTES_START), producing: structuredClone(PRODUCING_START), genres: structuredClone(GENRES_START), identity: identity({ citizenship: ['GB'] }), acting: structuredClone(ACTING_START), directing: structuredClone(DIRECTING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), scripts: structuredClone(SCRIPTS_START), career: structuredClone(CAREER_START), ...purse('GBP') }), chooseGenres, { loved: [genre] }),
         chooseAttributes,
         { role: 'producer', all: 70, each: {} },
       );
       for (let id = 1; id <= 30; id += 1) {
-        l = dispatch(dispatch(l, optionMaterial, { account: ACCOUNT, days: 5, genre }), planProject, { project: id, budget: '20000000' });
+        l = dispatch(dispatch(l, optionMaterial, { format: 'film', roles: ['producer'], account: ACCOUNT, days: 5, genre }), planProject, { project: id, budget: '20000000' });
         const producing = structuredClone(l.slices.producing);
         const p = projectOf(producing, id);
         p.raised['equity'] = { currency: 'GBP', minor: target(p) - raised(p) };

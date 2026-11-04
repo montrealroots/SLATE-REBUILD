@@ -2,40 +2,49 @@ import { defineCommand, type Context, type Json } from '../../core/frame/frame.t
 import { add, fromMajor, multiply, type CurrencyCode, type Money } from '../../core/money/money.ts';
 import { civilFromDays, SECONDS_PER_DAY } from '../../core/time/calendar.ts';
 import { t, type LineId } from '../../core/text/text.ts';
-import { earn, type Earning } from '../../money/tax/tax.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { componentOf, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
-import { identifiesAs, personOf, playingAge, residenceOf, speaks, type Ethnicity, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
+import { ETHNICITIES, identifiesAs, personOf, playingAge, speaks, type Ethnicity, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
 import type { DirectingSlice } from '../directing/directing.ts';
-import type { ProducingSlice } from '../producing/producing.ts';
+import { budgetMajor, financedOf, holds as plays, MEDIUM as MEDIUM_OF, payOut, projectOf, type Paying, type ProducingSlice } from '../producing/producing.ts';
 import { mayTakeUnionWork, type UnionsSlice } from '../unions/unions.ts';
 import { spread } from '../work/work.ts';
-import { engagement, holdBack, hoursShare, type YouthSlice } from '../youth/youth.ts';
+import { engagement, hoursShare } from '../youth/youth.ts';
 import compiled from './markets.json' with { type: 'json' };
 
 /**
  * The actor's work (BUILD-ORDER layer 4; the owner, 2026-10-31: "I want my attributes to effect the quality of my work
- * ... it needs to actually produce results depending on how bad or good I am"): auditioning for a part, booking it, and
- * playing it, paid at the union's minimum for the part's agreement on the day the work starts.
+ * ... it needs to actually produce results depending on how bad or good I am"): playing a part in the life's own
+ * production (src/person/producing), paid from its budget at the union's minimum for the part's agreement on the day
+ * the work starts (the owner, 2026-11-04: "Remember there is no casting because we're going to be in our own film if we
+ * every act", and "Union minimum from budget").
+ *
+ * Casting went that day: the breakdowns casting put out at the trade's shares of gender, ethnicity and age (Sowa's 2017
+ * count, 2025's major film characters), the submissions under a headshot, the self-taped or room audition and its
+ * booking chance (1 in 50 to a little under 1 in 3, the game's own, R-4614's blocker) were removed, because no one else
+ * casts the life now. A part is written by the production the life acts in, as it would write any: for men, women,
+ * either or a non-binary performer, naming an ethnicity or not, for an age range, in a language (the market's where it
+ * names none). The life plays a part written for its sex or for either, and a they/them life any part (the owner,
+ * 2026-11-01: "Actor (Male) Actress (Female) and for They/Them it could be either or", read through what the person is
+ * billed as); a part for the ages it can play, an ethnicity it gives where the part names one (read only as the part
+ * writes it, never as an ability, a judgment of the work, a pay rate or a chance; KEEP entry 4), and a language it
+ * speaks at C1.
  *
  * A part asks for the craft every role uses (Acting's techniques, understanding the character and the situation, the
  * text, an interpretation of one's own, research and study of the role; Direction's taking direction; Memorization's
  * concentration, and its lines where it has any), the medium's own (the camera on screen; the space and the voice
  * that fills it on stage), and whatever else it calls for, named by the component it reads (singing, a dialect,
- * stunts, Shakespeare ...). Each is read at the level of the broad attribute that covers it, through its facets.
+ * stunts, Shakespeare ...). Each is read at the level of the broad attribute that covers it, through its facets. How
+ * well it is played is what the acting brings to what the production comes out as.
  *
- * An audition is self-taped as 92% of roles were in SAG-AFTRA's 2022 survey, or held in the room; it shows the part's
- * scene and the actor's audition craft (Auditioning; Camera's self-taping on tape). Whether it books, no source gives
- * (R-4614's blocker: unions, casting societies and platforms publish no audition-to-booking ratio; agents' columns put
- * it at 1 in 6 to 1 in 50 without data): the game's own chance runs 1 in 50 for the weakest audition to a little under
- * 1 in 3 for the best, raised by the best work casting has seen the actor do (person.acting.model).
- *
- * The pay is the agreement's minimum (R-4614): SAG-AFTRA's day and weekly performers, its low-budget tiers by the film's
- * budget (none set under $20,000, the Micro-Budget agreement leaving it to negotiation); Pact/Equity's Cinema Films
- * Agreement for UK features of £3 million and over; UK Theatre/Equity's commercial theatre weeks by the venue's seats,
- * rehearsal weeks at the rehearsal rate; ACTRA's Independent Production Agreement, a principal by the day or week and a
- * part of five lines or fewer by the day.
+ * The pay is the agreement's minimum (R-4614): SAG-AFTRA's day and weekly performers, its low-budget tiers by the
+ * production's budget (none set under $20,000, the Micro-Budget agreement leaving it to negotiation); Pact/Equity's
+ * Cinema Films Agreement for UK features of £3 million and over; UK Theatre/Equity's commercial theatre weeks by the
+ * venue's seats, rehearsal weeks at the rehearsal rate; ACTRA's Independent Production Agreement, a principal by the
+ * day or week and a part of five lines or fewer by the day. The production engages its parts under the agreements of
+ * the country it is made in, in the medium its format is (a film, a series on television, a play on stage), and its
+ * budget is the one the tiers read.
  *
  * Beyond them, every market the research gives terms for (src/person/acting/markets.json, compiled by
  * tools/person/markets from the research, register facts person.markets.<CC>): each agreement a part can be engaged
@@ -49,13 +58,6 @@ import compiled from './markets.json' with { type: 'json' };
  * pay, it is left to negotiation, as under the Micro-Budget agreement. The actor's years are the whole years since the
  * first part they played, the game's reading (person.markets.model); what a country's research couldn't find is told,
  * whether its market is compiled or not.
- *
- * Casting puts a part out as a breakdown (R-4620): written for men, women, either or a non-binary performer at the
- * shares of Sowa's count of 3,714 SAG-AFTRA television breakdowns (2017); naming an ethnicity, open to all, or silent
- * at the same count's shares; for an age range by the ages of major characters in the top US films of 2025; in the
- * market's language. An actor is seen only for a breakdown they fit, and every submission goes out under a headshot
- * (R-4622: every submission on the casting platforms carries a profile photo). A named ethnicity is read only as the
- * breakdown writes it, never as an ability, a judgment of the work, a pay rate or a chance (KEEP entry 4).
  */
 
 /** The line that tells the player these figures are the game's own (person.acting.model). */
@@ -81,11 +83,11 @@ export type Term = (typeof TERMS)[number];
 export const MEDIA = ['film', 'television', 'stage'] as const;
 export type Medium = (typeof MEDIA)[number];
 
-/** A part as casting puts it out. */
+/** A part as its production engages it. */
 export interface Part {
   [key: string]: Json;
   agreement: Agreement;
-  /** The production's budget, in the agreement's currency's major units (SAG-AFTRA's tiers, Pact/Equity's threshold turn on it). */
+  /** The production's budget, in the agreement's currency's major units (SAG-AFTRA's tiers, Pact/Equity's threshold turn on it): the production's own. */
   budget: number;
   /** The theatre's seats (UK Theatre's tiers turn on it). */
   seats: number;
@@ -114,15 +116,18 @@ export interface Work {
   readonly pay: Money | null;
 }
 
-/** Who a breakdown is written for: men, women, either (open), or a non-binary performer. */
-export type Gender = 'men' | 'women' | 'open' | 'non-binary';
-/** The ethnicity a breakdown names, or open to every ethnicity, or silent on it. */
+/** Who a part is written for: men, women, either (open), or a non-binary performer. */
+export const GENDERS = ['men', 'women', 'open', 'non-binary'] as const;
+export type Gender = (typeof GENDERS)[number];
+/** The ethnicity a part names, or open to every ethnicity, or silent on it. */
 export type Named = 'open' | 'silent' | Ethnicity;
 
-/** A part put out by casting, and who it is written for. */
-export interface Breakdown {
+/** A part in one of the life's productions, as written, and how it was played. */
+export interface Cast {
   readonly id: number;
   readonly at: number;
+  /** The production it is in. */
+  readonly project: number;
   readonly part: Part;
   readonly gender: Gender;
   readonly ethnicity: Named;
@@ -130,31 +135,16 @@ export interface Breakdown {
   readonly ages: readonly [number, number];
   /** BCP 47: the language it is played in. */
   readonly language: string;
-}
-
-export interface Audition {
-  readonly id: number;
-  readonly at: number;
-  /** The breakdown it answered. */
-  readonly breakdown: number;
-  readonly part: Part;
-  /** Self-taped, or held in the room. */
-  readonly taped: boolean;
-  /** How the audition went, 0 to 100. */
-  readonly score: number;
-  readonly booked: boolean;
   work: Work | null;
 }
 
 export interface ActingSlice {
-  breakdowns: Breakdown[];
-  auditions: Audition[];
+  parts: Cast[];
 }
 
-export const ACTING_START: ActingSlice = { breakdowns: [], auditions: [] };
+export const ACTING_START: ActingSlice = { parts: [] };
 
 type Values = Readonly<Record<string, number>>;
-type Acting = { attributes: AttributesSlice; acting: ActingSlice; identity: IdentitySlice };
 
 const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
 const mean = (xs: readonly number[]) => xs.reduce((t, x) => t + x, 0) / xs.length;
@@ -183,30 +173,10 @@ export function demands(part: Part): string[] {
 /** What the actor can do in a part: every component it asks, as the actor has it, equally. */
 export const partSkill = (v: Values, part: Part): number => mean(demands(part).map((id) => of(v, id)));
 
-/** The audition craft every audition reads; a self-tape reads Camera's self-taping besides. */
-export const ROOM = ['prepare-for-and-go-to-auditions', 'audition-technique'] as const;
-
-/** How an audition shows the actor, 0 to 100: the part's scene three fifths, the audition's craft two. */
-export function auditionSkill(v: Values, part: Part, taped: boolean): number {
-  const room = mean([...ROOM, ...(taped ? ['self-taping'] : [])].map((id) => of(v, id)));
-  return 0.6 * partSkill(v, part) + 0.4 * room;
-}
-
-/** The share of roles self-taped (SAG-AFTRA's 2022 survey: 92% of roles required it; R-4614). */
-export const TAPED = 0.92;
-
-/**
- * The chance an audition books, the game's own (no source gives it, R-4614): 2% for the weakest, 30% for the best,
- * rising with the square of the audition, and up to half again for the best work casting has seen the actor do.
- */
-export const BOOKING = { floor: 0.02, top: 0.3, credit: 0.5 } as const;
-
-export const bookingChance = (score: number, credit: number): number => (BOOKING.floor + (BOOKING.top - BOOKING.floor) * (score / 100) ** 2) * (1 + (BOOKING.credit * credit) / 100);
-
-/** The best work the actor has done, 0 where none: what casting has seen. */
+/** The best part the actor has played, 0 where none: what distinction is read from (papers.permits). */
 export function credit(s: ActingSlice): number {
   // @slate:consumer acting.perform
-  return Math.max(0, ...s.auditions.map((x) => x.work?.quality ?? 0));
+  return Math.max(0, ...s.parts.map((x) => x.work?.quality ?? 0));
 }
 
 /** A minimum's steps: from each date (the first day it applies), the amount in major units. */
@@ -434,7 +404,7 @@ export function daysWorked(part: Part): number {
 /** The actor's whole years in the work on a day: since the first part they played, none before it (person.markets.model). */
 export function experience(s: ActingSlice, now: number): number {
   // @slate:consumer acting.perform
-  const first = Math.min(...s.auditions.flatMap((a) => (a.work === null ? [] : [a.work.at])));
+  const first = Math.min(...s.parts.flatMap((a) => (a.work === null ? [] : [a.work.at])));
   if (first === Infinity) return 0;
   const [since, today] = [dateOf(first), dateOf(now)];
   return Number(today.slice(0, 4)) - Number(since.slice(0, 4)) - (today.slice(5) < since.slice(5) ? 1 : 0);
@@ -470,42 +440,10 @@ export function partOf(a: Part): Part {
   return a;
 }
 
-/** The shares of a breakdown's gender: Sowa's count of 3,714 SAG-AFTRA television breakdowns, January to August 2017 (R-4620). */
-export const GENDER: readonly (readonly [Gender, number])[] = [['men', 57.6], ['women', 37.9], ['open', 4.4], ['non-binary', 0.1]];
-
 /**
- * The shares of the ethnicity a breakdown names, open or silent, from the same count (R-4620). The published shares
- * sum to 105.7, which the paper doesn't explain; they are drawn as weights, each in proportion to the others.
- */
-export const ETHNICITY: readonly (readonly [Named, number])[] = [
-  ['open', 33.9], ['silent', 30], ['white', 15.5], ['black', 8.5], ['latino', 8.3], ['asian', 3.8], ['middle-eastern', 1.6], ['south-asian', 1.5], ['mixed', 1.4], ['pacific-islander', 0.7], ['native-american', 0.5],
-];
-
-/** The shares of major characters in the top 100 US films of 2025 in their 30s, their 40s, 40 or older and 60 or older, by gender (R-4620). */
-export const MAJOR_AGES = { women: { thirties: 32, forties: 15, over40: 28, over60: 2 }, men: { thirties: 22, forties: 29, over40: 59, over60: 8 } } as const;
-
-/**
- * The age ranges a breakdown is written for, the game's own (person.acting.model): a child's, a teenager's, an adult's
- * under 30, then each decade, and 60 to 75; a part under 30 is a child's a tenth of the time and a teenager's a tenth.
- */
-export const BANDS: readonly (readonly [number, number])[] = [[6, 12], [13, 17], [18, 29], [30, 39], [40, 49], [50, 59], [60, 75]];
-export const YOUNG = { child: 0.1, teen: 0.1 } as const;
-
-/** The weight of each band for a breakdown's gender; a part open to either, or non-binary, weighs men's and women's equally (the game's). */
-export function ageWeights(g: Gender): number[] {
-  if (g === 'open' || g === 'non-binary') {
-    const [m, w] = [ageWeights('men'), ageWeights('women')];
-    return m.map((x, i) => (x + (w[i] as number)) / 2);
-  }
-  const a = MAJOR_AGES[g];
-  const young = 100 - a.thirties - a.over40;
-  return [young * YOUNG.child, young * YOUNG.teen, young * (1 - YOUNG.child - YOUNG.teen), a.thirties, a.forties, a.over40 - a.forties - a.over60, a.over60];
-}
-
-/**
- * Each agreement's market: the language its breakdowns are written in (R-4620: the US breakdowns are English; the
- * game's for the UK's and Canada's English-language agreements; each market's own, as compiled) and
- * where casting reckons the actor's age (the market's city's zone).
+ * Each agreement's market: the language a part is played in where its production names none (R-4620: the US's parts
+ * are English; the game's for the UK's and Canada's English-language agreements; each market's own, as compiled) and
+ * where the actor's age is reckoned (the market's city's zone).
  */
 export const MARKET: Readonly<Record<Agreement, { readonly language: string; readonly zone: string }>> = {
   'sag-aftra': { language: 'en', zone: 'America/Los_Angeles' },
@@ -515,98 +453,110 @@ export const MARKET: Readonly<Record<Agreement, { readonly language: string; rea
   ...(Object.fromEntries(Object.values(MARKETS).flatMap((m) => m.agreements.map((id) => [id, { language: m.language, zone: m.zone }]))) as Record<(typeof MARKET_AGREEMENTS)[number], { language: string; zone: string }>),
 };
 
-/** How well an actor must speak a part's language to be seen for it, the game's own (person.acting.model). */
+/** How well an actor must speak a part's language to play it, the game's own (person.acting.model). */
 export const FLUENT: Level = 'C1';
 
-/** One of a table's entries, in proportion to its weight, for a draw in [0, 1). */
-export function weighted<T>(table: readonly (readonly [T, number])[], u: number): T {
-  let left = u * table.reduce((t, [, w]) => t + w, 0);
-  // Stryker disable next-line MethodExpression: the last entry takes what is left, whether the loop reaches it or not.
-  for (const [x, w] of table.slice(0, -1)) {
-    // Stryker disable next-line EqualityOperator: a draw is continuous, so it lands on a boundary with no probability.
-    if (left < w) return x;
-    left -= w;
-  }
-  return (table.at(-1) as readonly [T, number])[0];
-}
+/** What a part is written for, as the life's fit for it is read. */
+export type Written = Pick<Cast, 'part' | 'gender' | 'ethnicity' | 'ages' | 'language'>;
 
-/** Posts the next breakdown for a part: who it is written for, drawn at the trade's shares. */
-function post(s: { acting: ActingSlice }, a: Part, c: Context): void {
-  const part = partOf(a);
-  const id = s.acting.breakdowns.length + 1;
-  const d = c.draws('acting.work', 'breakdown', id);
-  const gender = weighted(GENDER, d.float());
-  const ethnicity = weighted(ETHNICITY, d.float());
-  const ages = weighted(BANDS.map((b, i) => [b, ageWeights(gender)[i] as number] as const), d.float());
-  s.acting.breakdowns.push({ id, at: c.now, part, gender, ethnicity, ages, language: MARKET[part.agreement].language });
-}
-
-export function breakdownOf(s: ActingSlice, id: number): Breakdown {
-  const found = s.breakdowns.find((x) => x.id === id);
-  if (found === undefined) throw new Error(`there's no breakdown ${id}`);
-  return found;
-}
-
-/** Why the person isn't seen for a breakdown, or null where they fit it. */
-export function misfit(p: Person, b: Breakdown, now: number): string | null {
+/** Why the person may not play a part as written, or null where they may. */
+export function misfit(p: Person, w: Written, now: number): string | null {
   // @slate:consumer identity.make
-  // A part for men is an actor's, one for women an actress's: casting reads what the person is billed as (the owner,
-  // 2026-11-01: "Remember there's an 'Actor' and 'Actress'").
-  if (b.gender === 'men' && p.billedAs !== 'actor') return 'the part is written for an actor';
-  if (b.gender === 'women' && p.billedAs !== 'actress') return 'the part is written for an actress';
-  if (b.gender === 'non-binary' && p.pronouns !== 'they') return 'the part is written for a non-binary performer';
-  const [from, to] = playingAge(p, now, MARKET[b.part.agreement].zone);
-  if (to < b.ages[0] || from > b.ages[1]) return `the part is for ${b.ages[0]} to ${b.ages[1]}, and you play ${from} to ${to}`;
-  if (b.ethnicity !== 'open' && b.ethnicity !== 'silent' && !identifiesAs(p, b.ethnicity)) return `the breakdown names an ethnicity you don't give (${b.ethnicity})`;
-  if (!speaks(p, b.language, FLUENT)) return `the part is played in ${b.language}, at ${FLUENT} or better`;
+  // A part for men is an actor's, one for women an actress's, one for either anyone's, and a they/them life plays any
+  // (the owner, 2026-11-01: "Actor (Male) Actress (Female) and for They/Them it could be either or").
+  if (p.pronouns !== 'they' && w.gender !== 'open') {
+    if (w.gender === 'non-binary') return 'the part is written for a non-binary performer';
+    if ((w.gender === 'men') !== (p.billedAs === 'actor')) return `the part is written for an ${w.gender === 'men' ? 'actor' : 'actress'}`;
+  }
+  const [from, to] = playingAge(p, now, MARKET[w.part.agreement].zone);
+  if (to < w.ages[0] || from > w.ages[1]) return `the part is for ${w.ages[0]} to ${w.ages[1]}, and you play ${from} to ${to}`;
+  if (w.ethnicity !== 'open' && w.ethnicity !== 'silent' && !identifiesAs(p, w.ethnicity)) return `the part names an ethnicity you don't give (${w.ethnicity})`;
+  if (!speaks(p, w.language, FLUENT)) return `the part is played in ${w.language}, at ${FLUENT} or better`;
   return null;
 }
 
-export function auditionOf(s: ActingSlice, id: number): Audition {
-  const found = s.auditions.find((x) => x.id === id);
-  if (found === undefined) throw new Error(`there's no audition ${id}`);
+export function castOf(s: ActingSlice, id: number): Cast {
+  const found = s.parts.find((x) => x.id === id);
+  if (found === undefined) throw new Error(`there's no part ${id}`);
   return found;
 }
 
-export interface AuditionArgs {
-  [key: string]: number;
-  breakdown: number;
+export interface CastArgs {
+  [key: string]: Json;
+  /** The production the part is in. */
+  project: number;
+  agreement: string;
+  term: string;
+  length: number;
+  lines: number;
+  rehearsal: number;
+  /** The venue's seats, on stage. */
+  seats?: number;
+  asks: string[];
+  role?: string;
+  gender: string;
+  /** The ethnicity it names, or open (the default) or silent. */
+  ethnicity?: string;
+  ages: number[];
+  /** The language it is played in: the market's where none is given. */
+  language?: string;
 }
 
-/** Auditions for a part a breakdown puts out, where the person fits it: on tape or in the room, and booked or not. */
-function audition(s: Acting, a: AuditionArgs, c: Context): void {
-  // @slate:consumer acting.breakdown
-  const b = breakdownOf(s.acting, a.breakdown);
-  if (s.acting.auditions.some((x) => x.breakdown === b.id)) throw new Error(`you've auditioned for breakdown ${b.id}`);
-  const p = personOf(s.identity);
-  const why = misfit(p, b, c.now);
+/**
+ * Writes a part in a production the life acts in, and casts the life in it: engaged under one of the agreements of the
+ * country it is made in, in its format's medium, its budget the production's. Refused where the life doesn't act in it,
+ * it has no budget yet or is released, the agreement or the medium isn't the production's, or the life may not play the
+ * part as written.
+ */
+function cast(s: Casting, a: CastArgs, c: Context): void {
+  const p = projectOf(s.producing, a.project);
+  // @slate:consumer producing.option
+  // @slate:consumer producing.develop
+  if (!plays(p, 'actor')) throw new Error(`the life doesn't act in project ${p.id}`);
+  // @slate:consumer producing.release
+  if (p.release !== null) throw new Error(`project ${p.id} is released`);
+  const agreement = a.agreement as Agreement;
+  if (!AGREEMENTS.includes(agreement)) throw new Error(`there's no agreement ${String(a.agreement)}`);
+  if (COUNTRY[agreement] !== p.market) throw new Error(`a part in a production made in ${p.market} isn't engaged under ${agreement}`);
+  const market = marketOf(agreement) !== undefined;
+  if (!market && STAGE.includes(agreement) !== (p.format === 'stage')) throw new Error(`a ${p.format} isn't engaged under ${agreement}`);
+  const part = partOf({
+    agreement,
+    // @slate:consumer producing.plan
+    // A production with no budget yet is refused here (producing's planOf).
+    budget: budgetMajor(p),
+    seats: a.seats ?? 0,
+    lines: a.lines,
+    term: a.term as Term,
+    length: a.length,
+    rehearsal: a.rehearsal,
+    asks: a.asks,
+    ...(market ? { medium: MEDIUM_OF[p.format] } : {}),
+    ...(a.role === undefined ? {} : { role: a.role }),
+    ...(market && p.minutes !== null ? { minutes: p.minutes } : {}),
+  });
+  const gender = a.gender as Gender;
+  if (!GENDERS.includes(gender)) throw new Error(`a part isn't written for ${String(a.gender)}`);
+  const ethnicity = (a.ethnicity ?? 'open') as Named;
+  if (!['open', 'silent', ...ETHNICITIES].includes(ethnicity)) throw new Error(`there's no ethnicity ${String(a.ethnicity)}`);
+  if (!Array.isArray(a.ages) || a.ages.length !== 2) throw new Error('a part is written for an age range, from and to');
+  const [from, to] = a.ages as [number, number];
+  whole(from, 'the youngest age', 0);
+  whole(to, 'the oldest age', from);
+  const written: Written = { part, gender, ethnicity, ages: [from, to], language: a.language ?? MARKET[agreement].language };
+  const why = misfit(personOf(s.identity), written, c.now);
   if (why !== null) throw new Error(why);
-  const part = b.part;
-  // @slate:consumer attributes.choose
-  const values = componentValues(s.attributes, 'actor');
-  const id = s.acting.auditions.length + 1;
-  const d = c.draws('acting.work', 'audition', id);
-  // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the share with no probability.
-  const taped = d.float() < TAPED;
-  // @slate:consumer identity.make
-  // @slate:consumer identity.headshot
-  if (p.headshot === null) throw new Error("a submission goes out under a headshot, and you haven't one");
-  const k = auditionSkill(values, part, taped);
-  const score = clamp(k + spread(k) * (2 * d.float() - 1), 0, 100);
-  // Stryker disable next-line EqualityOperator: as above.
-  const booked = d.float() < bookingChance(score, credit(s.acting));
-  s.acting.auditions.push({ id, at: c.now, breakdown: b.id, part, taped, score, booked, work: null });
-  practise(s.attributes, 'actor', [...demands(part), ...ROOM, ...(taped ? ['self-taping'] : [])], 1);
+  s.acting.parts.push({ id: s.acting.parts.length + 1, at: c.now, project: p.id, ...written, work: null });
 }
 
 export interface PlayArgs {
   [key: string]: Json;
-  audition: number;
+  /** The part cast. */
+  part: number;
   /** The account the part is paid into. */
   account: string;
 }
 
-/** Plays a part booked: how well, as the actor is in what it asks, and what it pays. */
 /** The country each agreement's work is in: SAG-AFTRA's the US, Pact/Equity's and UK Theatre's the UK, ACTRA's Canada, a market's its own. */
 export const COUNTRY: Readonly<Record<Agreement, CountryCode>> = {
   'sag-aftra': 'US',
@@ -624,7 +574,7 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
   rates: 'some of the minimums parts are paid',
   none: 'whether anything sets the pay where no agreement does',
   union: "the union's fees or whether a part needs it",
-  language: 'the language parts are cast in',
+  language: 'the language parts are played in',
   market: 'where most of the work is',
   terms: 'what terms a part is engaged on',
   successors: 'the terms of the places that succeeded it',
@@ -646,17 +596,21 @@ export function aboutMarket(where: Agreement | CountryCode): string | undefined 
 }
 
 /**
- * The slices a part played reads besides its own: whether the person may work there reads every role's days and
- * permits, and, for a minor, what the law of the work's country needs first (person.youth); its pay goes into an
- * account, taxed, less what that law sets aside.
+ * The slices a part played reads besides its own: its production, financed and not released; whether the person may
+ * work there reads every role's days and permits, and, for a minor, what the law of the work's country needs first
+ * (person.youth); its pay comes from the production's budget into an account, taxed, less what that law sets aside.
  */
-type Playing = Acting & Earning & { unions: UnionsSlice; permits: PermitsSlice; directing: DirectingSlice; producing: ProducingSlice; youth: YouthSlice };
+type Casting = { identity: IdentitySlice; acting: ActingSlice; producing: ProducingSlice };
+type Playing = Paying & { attributes: AttributesSlice; acting: ActingSlice; unions: UnionsSlice; permits: PermitsSlice; directing: DirectingSlice };
 
+/** Plays a part cast: how well, as the actor is in what it asks, and what it pays, from the production's budget. */
 function play(s: Playing, a: PlayArgs, c: Context): void {
-  const job = auditionOf(s.acting, a.audition);
-  // @slate:consumer acting.audition
-  if (!job.booked) throw new Error(`audition ${a.audition} didn't book the part`);
-  if (job.work !== null) throw new Error(`the part from audition ${a.audition} is played`);
+  // @slate:consumer acting.cast
+  const job = castOf(s.acting, a.part);
+  if (job.work !== null) throw new Error(`part ${a.part} is played`);
+  // @slate:consumer producing.raise
+  // A released production has every part played (producing.release), so a part left to play is never in one.
+  const p = financedOf(s.producing, job.project);
   const where = COUNTRY[job.part.agreement];
   // @slate:consumer permits.decision
   if (!permitted(s, where, c.now, daysWorked(job.part))) throw new Error(`the person may not work in ${where} without a permit`);
@@ -664,21 +618,19 @@ function play(s: Playing, a: PlayArgs, c: Context): void {
   if (!mayTakeUnionWork(s, job.part.agreement, c.now)) throw new Error(`a part under ${job.part.agreement} past the thirtieth day of union work is a member's`);
   // A minor's part is engaged as the work's country's law lets them take it (person.youth), its days at the hours it allows.
   const grant = engagement(s, where, 'performer', c.now);
-  if (grant !== null) grant.used = true;
   const share = hoursShare(personOf(s.identity), where, 'performer', c.now);
   // @slate:consumer attributes.choose
   const k = partSkill(componentValues(s.attributes, 'actor'), job.part);
   const quality = clamp(k + spread(k) * (2 * c.draws('acting.work', 'perform', job.id).float() - 1), 0, 100);
   const paid = pay(job.part, dateOf(c.now), experience(s.acting, c.now));
   job.work = { at: c.now, quality, pay: paid };
-  // The production pays the part into the account named, less what the country withholds (money.tax).
-  if (paid !== null) holdBack(s, earn(s, { account: a.account, payer: 'production', country: where, home: residenceOf(personOf(s.identity)), work: 'performer', gross: paid, what: 'pay' }, c), `acting:${job.id}`, c);
+  if (paid !== null) payOut(s, p, 'actor', paid, "a part's pay", a.account, c);
+  if (grant !== null) grant.used = true;
   practise(s.attributes, 'actor', demands(job.part), daysWorked(job.part) * share);
 }
 
 // Stryker disable all: a mutant of a declaration made as the module loads changes its shape, so the module loaded
 // again for it is refused as declared twice (as the accounts' and the cards' say). The declarations are held by the
 // test that lists each command with what it reads and writes; what each does is mutated above.
-export const postBreakdown = defineCommand<{ acting: ActingSlice }, Part>({ id: 'acting.breakdown', reads: [], writes: ['acting'], run: post });
-export const auditionForPart = defineCommand<Acting, AuditionArgs>({ id: 'acting.audition', reads: ['identity'], writes: ['attributes', 'acting'], run: audition });
-export const playPart = defineCommand<Playing, PlayArgs>({ id: 'acting.perform', reads: ['identity', 'unions', 'permits', 'directing', 'producing'], writes: ['attributes', 'acting', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: play });
+export const castPart = defineCommand<Casting, CastArgs>({ id: 'acting.cast', reads: ['identity', 'producing'], writes: ['acting'], run: cast });
+export const playPart = defineCommand<Playing, PlayArgs>({ id: 'acting.perform', reads: ['identity', 'unions', 'permits', 'directing', 'producing'], writes: ['attributes', 'acting', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: play });

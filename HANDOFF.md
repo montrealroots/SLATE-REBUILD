@@ -46,7 +46,8 @@ What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), chan
 - Player text the catalog-text check stopped and that was reworded: "licence" (British) to "license"; "you are taxed"
   to "you're taxed"; "{country} offers" (read as a count) to "{country} has no bank that offers a credit card".
 - Five consumer anchors in accounts and tax named layer 4's commands (`acting.perform`, `directing.prep`,
-  `script.pitch`, `producing.shoot`, `youth.release`); they come back with layer 4.
+  `script.pitch`, `producing.shoot`, `youth.release`); four came back with layer 4 on 2026-11-04, and `script.pitch`
+  went with the spec sales the owner removed that night.
 - Research wave 1 (2026-11-03, nine agents, five integrating, the lead holding the register and checking figures at
   their sources): every one of layer 3's 783 blockers re-attacked. Found, and their rows now researched: passports of
   Sierra Leone, Tuvalu, Turks and Caicos, Eswatini; work routes of Kuwait, Tuvalu, Eswatini; residence of South Korea,
@@ -341,8 +342,25 @@ scratchpad path and the groups, keep the rules):
 
 ## Assumptions
 
-- SLATE's own ruling of 2026-11-01, "own productions only", takes casting (`acting.breakdown`, the auditions) and spec
-  sales out once the own-production work is built; until then both stand in layer 4 as SLATE wrote them.
+- Own productions only (the owner, 2026-11-04: "Remember there is no casting because we're going to be in our own
+  film if we every act"; and, asked, "Remove spec sales too" and "Union minimum from budget"): an actor plays only in a
+  film the life itself produces or directs, with no breakdowns, submissions or auditions; a script is written for the
+  life's own productions, never sold or optioned to another's; and a part one plays in one's own film is paid from
+  that film's budget at the union's minimum for the part, through the production's accounts, tax and union rules.
+  SLATE's ruling of 2026-11-01 had said the same and left casting and spec sales standing until the own-production
+  work was built; layer 4 takes them out now.
+- The four roles work as one (the owner, 2026-11-04: "Remember them 4 should work in cohesiveness"): screenwriter,
+  producer, director and actor work on one and the same own production, each stage read by the next: the script the
+  life writes is what its production develops, the production is the film it directs, and the parts in that film are
+  the ones it may play. Asked on 2026-11-04, the owner ruled: the life holds any roles on a production, at least one ("Any
+  roles, at least one"), a role it doesn't hold filled at a standard the game sets and says is its own; the production
+  may make the life's own script or option others' material ("Both."); productions may be films, TV or stage ("Films,
+  TV and stage"); and the work's quality is the average of the four roles' results ("Equal blend of four"). The lead
+  decided from the rulings: a production names its country, by default the life's home; the director's and producer's
+  pay come from the budget as the actor's does; the producer's financing replaces the "debut leads to a second" draw;
+  the life's company signs with a union where the union's rules let a producer sign. Gender: a part is written for men,
+  women, either or a non-binary performer, and the life plays a part written for its sex or for either, a they/them
+  life any (the owner's ruling of 2026-11-01: "Actor (Male) Actress (Female) and for They/Them it could be either or").
 - `src/person/work/career.ts` is the screenwriter's networking and selling, not the first SLATE's career engine (its
   `pro.*` engine), which stays out of the first build.
 

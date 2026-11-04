@@ -14,21 +14,17 @@ import {
   FESTIVALS,
   filmOf,
   stagePay,
-  KIN,
-  kinship,
   finish,
   LEVELS,
   levelOf,
   onSet,
   PARTS,
   partSkill,
-  pitchSkill,
   PLANNED,
   POOL,
+  jobOf,
   prepFilm,
-  pursueSecond,
-  SECOND,
-  secondChance,
+  type PrepArgs,
   selectionChance,
   shootFilm,
   shootNeeded,
@@ -38,14 +34,14 @@ import {
   type Festival,
   type Film,
   type Part,
-  type PrepArgs,
   MODEL_LINE,
 } from '../../../src/person/directing/directing.ts';
 import { spread } from '../../../src/person/work/work.ts';
 import { t } from '../../../src/core/text/text.ts';
-import { FAMILY, type Family, type IdentitySlice } from '../../../src/person/identity/identity.ts';
+import type { IdentitySlice } from '../../../src/person/identity/identity.ts';
 import { ACTING_START, type ActingSlice } from '../../../src/person/acting/acting.ts';
-import { PRODUCING_START, type ProducingSlice } from '../../../src/person/producing/producing.ts';
+import { HIRED, PRODUCING_START, projectOf, type Project, type ProducingSlice } from '../../../src/person/producing/producing.ts';
+import { directed, type Directed } from '../../support/production.ts';
 import type { PermitsSlice } from '../../../src/person/permits/permits.ts';
 import { permitsEverywhere } from '../../support/permits.ts';
 import { identity } from '../../support/person.ts';
@@ -64,20 +60,29 @@ const BROAD = ['vision', 'working-with-actors', 'visual-craft', 'editing', 'scri
 const covers = (broad: string) => (ATTRIBUTES.director.find((a) => a.id === broad)?.covers ?? []).map((c) => c.id);
 const of = (v: Record<string, number>, id: string) => skillOf(v, 'director', id);
 
-const STUDIO: PrepArgs = { form: 'feature', budget: 20_000_000, shoot: 40 };
+/** A job as these tests name it: its production's form, country, budget, shooting days and running time; the contract's agreement, prep and cut. */
+type Job = Directed & { agreement?: string; prep?: number; cut?: number };
+const STUDIO: Job = { form: 'feature', budget: 20_000_000, shoot: 40 };
+/** Preps a job in a production of its own, made as the job names it (tests/support/production.ts). */
+const prepWith = (l: Life<D>, args: Job, account: string | null = ACCOUNT): Life<D> => {
+  const { agreement, prep, cut, ...job } = args;
+  const id = l.slices.producing.projects.length + 1;
+  const withIt = { ...l, slices: { ...l.slices, producing: { projects: [...l.slices.producing.projects, directed(job, id)] } } };
+  return dispatch(withIt, prepFilm, { project: id, ...(account === null ? {} : { account }), ...(agreement === undefined ? {} : { agreement }), ...(prep === undefined ? {} : { prep }), ...(cut === undefined ? {} : { cut }) } as PrepArgs);
+};
 const made = (all: number, each: Record<string, number> = {}, seed = SEED): Life<D> =>
   dispatch(begin(seed, 0, { attributes: structuredClone(ATTRIBUTES_START), directing: structuredClone(DIRECTING_START), identity: adult(), acting: structuredClone(ACTING_START), producing: structuredClone(PRODUCING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'director', all, each });
-const prepped = (all: number, args: PrepArgs = STUDIO, each: Record<string, number> = {}, seed = SEED) => dispatch(made(all, each, seed), prepFilm, { account: ACCOUNT, ...args });
-const shot = (all: number, args: PrepArgs = STUDIO, each: Record<string, number> = {}, seed = SEED) => dispatch(prepped(all, args, each, seed), shootFilm, { film: 1, account: ACCOUNT });
-const cutOf = (all: number, args: PrepArgs = STUDIO, each: Record<string, number> = {}, seed = SEED) => dispatch(shot(all, args, each, seed), cutFilm, { film: 1, account: ACCOUNT });
+const prepped = (all: number, args: Job = STUDIO, each: Record<string, number> = {}, seed = SEED) => prepWith(made(all, each, seed), args);
+const shot = (all: number, args: Job = STUDIO, each: Record<string, number> = {}, seed = SEED) => dispatch(prepped(all, args, each, seed), shootFilm, { film: 1, account: ACCOUNT });
+/** The production shot by hand, its producing's result at the hired standard, as producing.shoot leaves it. */
+const madeWhole = (l: Life<D>): Life<D> => ({ ...l, slices: { ...l.slices, producing: { projects: l.slices.producing.projects.map((p) => ({ ...p, shot: { at: 0, days: 40, overrun: money('USD', 0), fee: null, quality: 50 } })) } } });
+const cutOf = (all: number, args: Job = STUDIO, each: Record<string, number> = {}, seed = SEED) => madeWhole(dispatch(shot(all, args, each, seed), cutFilm, { film: 1, account: ACCOUNT }));
 const film = (l: Life<D>, id = 1): Film => filmOf(l.slices.directing, id);
 const v = (l: Life<D>) => componentValues(l.slices.attributes, 'director');
 const held = (l: Life<D>) => l.slices.attributes['director'] as Record<string, number>;
 const values = (all: number, each: Record<string, number> = {}) => v(made(all, each));
-const withDirecting = (l: Life<D>, d: Partial<DirectingSlice>): Life<D> => ({ ...l, slices: { ...l.slices, directing: { ...l.slices.directing, ...d } } });
 /** The made person, born before the epoch these lives start at, so of age throughout (person.youth reads the age). */
 const adult = (over: Parameters<typeof identity>[0] = {}) => identity({ born: { date: '1950-06-14', country: 'US', region: 'US.CA' }, ...over });
-const withFamily = (l: Life<D>, family: Family): Life<D> => ({ ...l, slices: { ...l.slices, identity: adult({ family }) } });
 
 describe("a film's parts", () => {
   it('come from the broad attributes the owner names: the story from Vision and Script Sense, performances, images, the cut', () => {
@@ -164,11 +169,13 @@ describe("the director's fee", () => {
     const c = (x: number) => 620 * Math.min(x, 18_450_000) + 145 * x + 90 * Math.max(0, x - 20_000_000);
     const [a, b] = shares as [number, number];
     expect(last.slices.tax.paid.map((p) => p.social)).toEqual([c(a), c(a + b) - c(a), c(fee.minor) - c(a + b)].map((x) => Math.round(x / 10_000)));
-    expect([minorIn(last.slices.ledger, ACCOUNT), minorIn(last.slices.ledger, 'world:social:US:USD'), minorIn(last.slices.ledger, 'world:production:USD')]).toEqual([100_000_000 + fee.minor - social, social, -fee.minor]);
+    expect([minorIn(last.slices.ledger, ACCOUNT), minorIn(last.slices.ledger, 'world:social:US:USD'), minorIn(last.slices.ledger, 'world:production:1:USD')]).toEqual([100_000_000 + fee.minor - social, social, -fee.minor]);
+    // Each stage's share is paid from the production's budget, which is so much less.
+    expect(projectOf(last.slices.producing, 1).costs.map((x) => [x.role, x.what, x.amount.minor])).toEqual([['director', 'prep', shares[0]], ['director', 'shoot', shares[1]], ['director', 'cut', shares[2]]]);
     // A fee left to negotiation pays nothing, and asks no account.
-    const low = dispatch(made(60), prepFilm, { form: 'feature', budget: 1, shoot: 10 });
+    const low = prepWith(made(60), { form: 'feature', budget: 1, shoot: 10 }, null);
     expect([film(low).fee, low.slices.tax.paid]).toEqual([null, []]);
-    expect(() => dispatch(made(60), prepFilm, STUDIO)).toThrow('no account undefined is held at a bank');
+    expect(() => prepWith(made(60), STUDIO, null)).toThrow('no account undefined is held at a bank');
   });
 });
 
@@ -200,32 +207,41 @@ describe('prep', () => {
     expect(film(l)).toMatchObject({ id: 1, started: 0, needed: null, shot: null, cut: null, quality: null, festivals: {} });
     for (const id of ['vision', 'script-sense', 'working-with-actors', 'visual-craft']) expect(held(l)[id], id).toBeCloseTo(grown(50, 7), 10);
     for (const id of ['editing', 'leadership', 'communication']) expect(held(l)[id], id).toBe(50);
-    expect(film(dispatch(l, prepFilm, { account: ACCOUNT, form: 'half-hour' }), 2).id).toBe(2);
+    expect(film(prepWith(l, { form: 'half-hour' }), 2)).toMatchObject({ id: 2, project: 2, form: 'half-hour', episodes: 1 });
   });
 
-  it('is refused in a form there is not, for a budget or a schedule not whole, an episode given either, or before the attributes are chosen', () => {
-    expect(() => prepped(50, { form: 'novel' as 'hour' })).toThrow("there's no form novel");
-    expect(() => prepped(50, { form: 'feature', shoot: 30 })).toThrow('a budget is a whole number of at least 1 (undefined)');
-    expect(() => prepped(50, { form: 'feature', budget: 0, shoot: 30 })).toThrow(RangeError);
-    expect(() => prepped(50, { form: 'feature', budget: 1.5, shoot: 30 })).toThrow('a budget is a whole number of at least 1 (1.5)');
-    expect(() => prepped(50, { form: 'feature', budget: 1, shoot: 0 })).toThrow('the shooting days is a whole number of at least 1 (0)');
-    expect(() => prepped(50, { form: 'feature', budget: 1 })).toThrow(RangeError);
-    expect(() => prepped(50, { form: 'hour', budget: 5 })).toThrow("an episode's budget and schedule are the show's");
-    expect(() => prepped(50, { form: 'hour', shoot: 5 })).toThrow("an episode's budget and schedule are the show's");
-    const bare = begin(SEED, 0, { attributes: structuredClone(ATTRIBUTES_START), directing: structuredClone(DIRECTING_START), identity: adult(), acting: structuredClone(ACTING_START), producing: structuredClone(PRODUCING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse() });
-    expect(() => dispatch(bare, prepFilm, { account: ACCOUNT, form: 'hour' })).toThrow("the director's attributes haven't been chosen");
+  it("preps the production's own job once it is financed: its form, country, budget and schedule the production's", () => {
+    const l = prepped(60);
+    expect(film(l)).toMatchObject({ project: 1, form: 'feature', episodes: 1, country: 'US', agreement: 'dga', budget: 20_000_000, shootDays: 40 });
+    // A series' every episode: each its job's days and fee, the series all of them, its shooting days needed each episode's.
+    const series = (episodes: number) => {
+      const base = made(60);
+      const p = directed({ form: 'hour' });
+      return film(dispatch({ ...base, slices: { ...base.slices, producing: { projects: [{ ...p, series: { form: 'hour', episodes } }] } } }, prepFilm, { project: 1, account: ACCOUNT }));
+    };
+    expect(series(1)).toMatchObject({ form: 'hour', episodes: 1, prepDays: 7, shootDays: 8, cutDays: 4, fee: money('USD', 5_880_800) });
+    expect(series(6)).toMatchObject({ form: 'hour', episodes: 6, prepDays: 42, shootDays: 48, cutDays: 24, fee: money('USD', 6 * 5_880_800) });
+    expect(jobOf({ ...directed({ form: 'hour', shoot: 20 }), series: { form: 'hour', episodes: 6 } } as Project & { plan: { scheduled: number } }, {}).job.shoot).toBe(3);
+    expect(jobOf({ ...directed({ form: 'hour', shoot: 2 }), series: { form: 'hour', episodes: 6 } } as Project & { plan: { scheduled: number } }, {}).job.shoot).toBe(1);
+    expect(jobOf(directed({ form: 'feature', shoot: 20, minutes: 95 }) as Project & { plan: { scheduled: number } }, { agreement: 'x', prep: 3, cut: 4 })).toEqual({ job: { form: 'feature', country: 'US', budget: 1_000_000_000, shoot: 20, minutes: 95, agreement: 'x', prep: 3, cut: 4 }, times: 1 });
+    const needed = (episodes: number) => dispatch({ ...made(60), slices: { ...made(60).slices, producing: { projects: [{ ...directed({ form: 'hour' }), series: { form: 'hour', episodes } }] } } }, prepFilm, { project: 1, account: ACCOUNT });
+    const w = v(needed(3) as Life<D>);
+    expect(film(dispatch(needed(3) as Life<D>, shootFilm, { film: 1, account: ACCOUNT })).needed).toBeCloseTo(3 * shootNeeded(w, { form: 'hour' }), 10);
+  });
+
+  it("is refused where the production isn't financed, the life doesn't direct it, it is prepped already, the DGA's terms are given, or before the attributes are chosen", () => {
+    const base = made(50);
+    const withP = (over: Partial<Project>) => ({ ...base, slices: { ...base.slices, producing: { projects: [{ ...directed(STUDIO), ...over }] } } });
+    expect(() => dispatch(withP({ raised: {} }), prepFilm, { project: 1, account: ACCOUNT })).toThrow("project 1 isn't financed");
+    expect(() => dispatch(withP({ roles: ['producer', 'actor'] }), prepFilm, { project: 1, account: ACCOUNT })).toThrow("the life doesn't direct project 1");
+    expect(() => dispatch(dispatch(withP({}), prepFilm, { project: 1, account: ACCOUNT }), prepFilm, { project: 1, account: ACCOUNT })).toThrow('project 1 is prepped');
+    expect(() => dispatch(withP({}), prepFilm, { project: 2, account: ACCOUNT })).toThrow("there's no project 2");
+    for (const over of [{ agreement: 'dga' }, { prep: 10 }, { cut: 10 }]) expect(() => dispatch(withP({}), prepFilm, { project: 1, account: ACCOUNT, ...over }), JSON.stringify(over)).toThrow("the DGA sets a US job's agreement, prep and cut");
+    const bare = { ...withP({}), slices: { ...withP({}).slices, attributes: structuredClone(ATTRIBUTES_START) } };
+    expect(() => dispatch(bare, prepFilm, { project: 1, account: ACCOUNT })).toThrow("the director's attributes haven't been chosen");
     expect(() => filmOf(DIRECTING_START, 1)).toThrow("there's no film 1");
-  });
-
-  it('takes a second feature only once the debut has led to one, and any after that', () => {
-    const debut = prepped(60);
-    expect(() => dispatch(debut, prepFilm, { ...STUDIO, account: ACCOUNT })).toThrow('a second feature needs the debut to lead to one');
-    expect(() => dispatch(withDirecting(debut, { second: false }), prepFilm, { ...STUDIO, account: ACCOUNT })).toThrow('a second feature needs the debut to lead to one');
-    const two = dispatch(withDirecting(debut, { second: true }), prepFilm, { ...STUDIO, account: ACCOUNT });
-    expect(film(two, 2).form).toBe('feature');
-    expect(film(dispatch(withDirecting(two, { second: false }), prepFilm, { ...STUDIO, account: ACCOUNT }), 3).id).toBe(3);
-    expect(film(dispatch(debut, prepFilm, { account: ACCOUNT, form: 'hour' }), 2).form).toBe('hour');
-    expect(film(dispatch(prepped(60, { form: 'hour' }), prepFilm, { ...STUDIO, account: ACCOUNT }), 2).form).toBe('feature');
+    // Two productions, each prepped once.
+    expect(film(prepWith(prepped(60), { form: 'hour' }), 2)).toMatchObject({ project: 2, form: 'hour' });
   });
 
   it('directing.prep: a director with more Vision plans a better story', () => {
@@ -304,7 +320,7 @@ describe('the cut', () => {
   });
 
   it("is made in the Director's Cut the DGA guarantees, exactly, and the film is its four parts' mean", () => {
-    const cases: [number, PrepArgs][] = [
+    const cases: [number, Job][] = [
       [20, { form: 'hour' }],
       [100, { form: 'hour' }],
       [0, { form: 'half-hour' }],
@@ -382,7 +398,8 @@ describe('festivals', () => {
       const seed = seedOf(i);
       let l = cutOf(i % 2 === 0 ? 100 : 70, STUDIO, {}, seed);
       for (const f of Object.keys(FESTIVALS) as Festival[]) {
-        const expected = u(seed, 'festival', 1, f) < selectionChance(f, film(l).quality ?? 0);
+        // The life directs alone: the script, the producing and the acting count at the hired standard.
+        const expected = u(seed, 'festival', 1, f) < selectionChance(f, (3 * HIRED + (film(l).quality ?? 0)) / 4);
         l = dispatch(l, submitFilm, { film: 1, festival: f });
         expect(film(l).festivals[f], `${seed} ${f}`).toBe(expected);
         if (expected) hits += 1;
@@ -405,106 +422,11 @@ describe('festivals', () => {
   });
 });
 
-describe('a second feature', () => {
-  it("comes a quarter of the time within five years, nearly half where the debut found an audience, as the pitch carries it", () => {
-    expect(SECOND).toEqual({ debut: 0.253, audience: 0.45 });
-    const other = 0.66 / 0.6756;
-    expect(secondChance(values(50), false, false)).toBeCloseTo(0.253 * other, 12);
-    expect(secondChance(values(50), true, false)).toBeCloseTo(0.45 * other, 12);
-    expect(secondChance(values(100), true, false)).toBeCloseTo(0.675 * other, 12);
-    expect(secondChance(values(0), false, false)).toBeCloseTo(0.1265 * other, 12);
-    const w = values(40, { communication: 90 });
-    expect(pitchSkill(w)).toBeCloseTo(mean(['pitching-and-presenting-the-project', 'persuasion', 'promote-productions-through-interviews-and-public-appearance'].map((id) => of(w, id))), 10);
-    expect(pitchSkill(w)).toBeGreaterThan(pitchSkill(values(40)));
-  });
-
-  it('is decided by the draw on the debut, a festival choosing it read as an audience found, and teaches Communication', () => {
-    for (let i = 1; i <= 16; i += 1) {
-      const seed = seedOf(i);
-      let l = cutOf(i % 2 === 0 ? 95 : 55, STUDIO, {}, seed);
-      for (const f of ['sundance', 'cannes'] as Festival[]) l = dispatch(l, submitFilm, { film: 1, festival: f });
-      const audience = Object.values(film(l).festivals).includes(true);
-      const before = v(l);
-      const after = dispatch(l, pursueSecond, {});
-      expect(after.slices.directing.second, seed).toBe(u(seed, 'second', 1) < secondChance(before, audience, false));
-      expect(held(after)['communication']).toBeCloseTo(grown(held(l)['communication'] as number, 1), 10);
-      expect(held(after)['editing']).toBe(held(l)['editing']);
-    }
-    const chosen = withDirecting(cutOf(50), {});
-    const at = (festivals: Record<string, boolean>) => {
-      const l = { ...chosen, slices: { ...chosen.slices, directing: { ...chosen.slices.directing, films: [{ ...film(chosen), festivals }] } } };
-      return Array.from({ length: 40 }, (_, i) => dispatch({ ...l, frame: { ...l.frame, seed: seedOf(i + 1) } }, pursueSecond, {}).slices.directing.second).filter(Boolean).length;
-    };
-    expect(at({ cannes: true, sundance: false })).toBeGreaterThan(at({ cannes: false, sundance: false }));
-  });
-
-  it('reads the debut, the first feature, even after episodes', () => {
-    const l = dispatch(dispatch(dispatch(prepped(60, { form: 'hour' }), prepFilm, { ...STUDIO, account: ACCOUNT }), shootFilm, { film: 2, account: ACCOUNT }), cutFilm, { film: 2, account: ACCOUNT });
-    expect(dispatch(l, pursueSecond, {}).slices.directing.second).not.toBeNull();
-  });
-
-  it('is refused with no debut, a debut not cut, or once taken', () => {
-    expect(() => dispatch(made(50), pursueSecond, {})).toThrow('there is no debut feature');
-    expect(() => dispatch(cutOf(50, { form: 'hour' }), pursueSecond, {})).toThrow('there is no debut feature');
-    expect(() => dispatch(shot(50), pursueSecond, {})).toThrow("film 1 isn't cut");
-    expect(() => dispatch(dispatch(cutOf(50), pursueSecond, {}), pursueSecond, {})).toThrow("the debut's chance is taken");
-    const unmade = cutOf(50);
-    expect(() => dispatch({ ...unmade, slices: { ...unmade.slices, identity: { person: null, sessions: [] } } }, pursueSecond, {})).toThrow('the person is not made yet');
-  });
-
-  it('directing.pursue: a better pitcher gets the second feature more often', () => {
-    const backed = (n: number) => Array.from({ length: 40 }, (_, i) => dispatch(cutOf(50, STUDIO, { communication: n }, seedOf(i + 1)), pursueSecond, {}).slices.directing.second).filter(Boolean).length;
-    falsifyAny({ feature: 'directing.pursue', claim: 'bites', says: 'forty debuts by a director at 100 in Communication lead to more second features than forty at 0', base: 0, twin: 100, outcome: backed });
-  });
-});
-
-describe('a family in the business', () => {
-  it("moves the chance of a second as Follows's debut directors were moved, 72% against 66%, averaging back to the sourced rate", () => {
-    expect(KIN).toEqual({ share: 0.26, family: 0.72, other: 0.66 });
-    expect(kinship(true)).toBeCloseTo(0.72 / 0.6756, 12);
-    expect(kinship(false)).toBeCloseTo(0.66 / 0.6756, 12);
-    expect(0.26 * kinship(true) + 0.74 * kinship(false)).toBeCloseTo(1, 12);
-    expect(kinship(true) / kinship(false)).toBeCloseTo(0.72 / 0.66, 12);
-    expect(secondChance(values(50), false, true)).toBeCloseTo((0.253 * 0.72) / 0.6756, 12);
-    expect(secondChance(values(50), true, true)).toBeCloseTo((0.45 * 0.72) / 0.6756, 12);
-    expect(secondChance(values(100), true, true)).toBeCloseTo((0.675 * 0.72) / 0.6756, 12);
-  });
-
-  it('is any trade in film or TV the family was in, not music (Follows counts film and TV), read when the debut is pursued, and changes nothing of the film', () => {
-    for (let i = 1; i <= 16; i += 1) {
-      const seed = seedOf(i);
-      const trade = FAMILY[i % FAMILY.length] as Family;
-      const l = withFamily(dispatch(cutOf(i % 2 === 0 ? 95 : 55, STUDIO, {}, seed), submitFilm, { film: 1, festival: 'cannes' }), trade);
-      const audience = film(l).festivals['cannes'] === true;
-      const after = dispatch(l, pursueSecond, {});
-      expect(after.slices.directing.second, `${seed} ${trade}`).toBe(u(seed, 'second', 1) < secondChance(v(l), audience, trade !== 'outside' && trade !== 'music'));
-      expect(film(after)).toEqual(film(l));
-    }
-  });
-
-  it('reads a family in music as outside the business, as Follows counts film and TV only', () => {
-    const debut = (i: number) => cutOf(50, STUDIO, {}, seedOf(i));
-    // A debut whose draw falls between the two sides' chances, so the family decides it.
-    const i = Array.from({ length: 400 }, (_, k) => k + 1).find((k) => {
-      const w = v(debut(k));
-      const x = u(seedOf(k), 'second', 1);
-      return x >= secondChance(w, false, false) && x < secondChance(w, false, true);
-    }) as number;
-    const second = (family: Family) => dispatch(withFamily(debut(i), family), pursueSecond, {}).slices.directing.second;
-    expect([second('outside'), second('music'), second('acting'), second('directing')]).toEqual([false, false, true, true]);
-  });
-
-  it('identity.make: a director whose family is in the business gets a second feature more often', () => {
-    const backed = (family: Family) => Array.from({ length: 200 }, (_, i) => dispatch(withFamily(cutOf(50, STUDIO, {}, seedOf(i + 1)), family), pursueSecond, {}).slices.directing.second).filter(Boolean).length;
-    falsifyAny({ feature: 'identity.make', claim: 'bites', says: 'two hundred debuts by a director whose family directs lead to more second features than by one whose family is outside the business', base: 'outside' as Family, twin: 'directing' as Family, outcome: backed });
-  });
-});
-
 describe('the director', () => {
   it('reads every broad attribute somewhere in the work', () => {
     const outcome = (each: Record<string, number>) => {
       const l = dispatch(cutOf(50, STUDIO, each), submitFilm, { film: 1, festival: 'cannes' });
-      return { f: film(l), second: secondChance(v(l), false, false) };
+      return film(l);
     };
     const base = outcome({});
     for (const id of BROAD) expect(outcome({ [id]: 90 }), id).not.toEqual(base);
@@ -522,11 +444,10 @@ describe('the director', () => {
 
   it('is run through the frame, each command declaring what it reads and writes', () => {
     expect(commandIndex().filter((x) => x.id.startsWith('directing.'))).toEqual([
-      { id: 'directing.prep', reads: ['identity'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
-      { id: 'directing.shoot', reads: ['identity', 'acting', 'producing', 'permits'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
-      { id: 'directing.cut', reads: ['identity', 'acting', 'producing', 'permits'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
-      { id: 'directing.submit', reads: [], writes: ['directing'] },
-      { id: 'directing.pursue', reads: ['identity'], writes: ['attributes', 'directing'] },
+      { id: 'directing.prep', reads: ['identity'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
+      { id: 'directing.shoot', reads: ['identity', 'acting', 'permits'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
+      { id: 'directing.cut', reads: ['identity', 'acting', 'permits'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },
+      { id: 'directing.submit', reads: ['producing', 'acting'], writes: ['directing'] },
     ]);
   });
 });
@@ -535,10 +456,10 @@ describe('a minor director (person.youth)', () => {
   const NOW = daysFromCivil(2026, 11, 2) * SECONDS_PER_DAY;
   const teen = (): Life<D> =>
     dispatch(begin(SEED, NOW, { attributes: structuredClone(ATTRIBUTES_START), directing: structuredClone(DIRECTING_START), identity: identity({ born: { date: '2011-03-10', country: 'FR', region: '' }, citizenship: ['FR'], grewUp: { country: 'FR', region: '' } }), acting: structuredClone(ACTING_START), producing: structuredClone(PRODUCING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse('EUR') }), chooseAttributes, { role: 'director', all: 50, each: {} });
-  const ARGS = { account: ACCOUNT, form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 } as const;
+  const ARGS: Job = { form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 };
   it("is engaged at prep only with what France's law needs first, each stage's pécule held, the days at the young worker's hours", () => {
-    expect(() => dispatch(teen(), prepFilm, ARGS)).toThrow('that work in France needs permit first');
-    const p = dispatch(dispatch(teen(), authoriseWork, { country: 'FR', role: 'director' }), prepFilm, ARGS);
+    expect(() => prepWith(teen(), ARGS)).toThrow('that work in France needs permit first');
+    const p = prepWith(dispatch(teen(), authoriseWork, { country: 'FR', role: 'director' }), ARGS);
     expect(p.slices.youth.granted).toMatchObject([{ role: 'director', used: true }]);
     expect(p.slices.attributes['director']?.['vision']).toBeCloseTo(grown(50, 10 * (35 / 40)), 10);
     const s = dispatch(p, shootFilm, { film: 1, account: ACCOUNT });
@@ -549,6 +470,6 @@ describe('a minor director (person.youth)', () => {
     const c = dispatch(s, cutFilm, { film: 1, account: ACCOUNT });
     expect(c.slices.attributes['director']?.['editing']).toBeCloseTo(grown(s.slices.attributes['director']?.['editing'] as number, 10 * (35 / 40)), 10);
     expect(c.slices.directing.films[0]?.cut).toBeCloseTo(Math.min(100, Math.max(0, partSkill(componentValues(s.slices.attributes, 'director'), 'cut') * finish(componentValues(s.slices.attributes, 'director'), 10 * (35 / 40), cutNeeded(componentValues(s.slices.attributes, 'director'), 20)) + spread(partSkill(componentValues(s.slices.attributes, 'director'), 'cut')) * (2 * u(SEED, 'cut', 1) - 1))), 10);
-    expect(c.slices.youth.held.map((h) => h.engagement)).toEqual(['directing:1', 'directing:1', 'directing:1']);
+    expect(c.slices.youth.held.map((h) => h.engagement)).toEqual(['director:1', 'director:1', 'director:1']);
   });
 });

@@ -4,17 +4,17 @@ import { join } from 'node:path';
 import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/money/money.ts';
 
 /**
- * Compiles the markets a screenwriter sells a script in beyond the WGA's (src/person/work/markets.json), from the
+ * Compiles the markets a production pays a screenwriter's script in beyond the WGA's (src/person/work/markets.json), from the
  * research's files, one per country (research/sources/person/markets/writer-<CC>.json, register fact
  * person.markets.writer.<CC>), each checked against the SHA-256 its register entry cites before a byte of it is read
  * (a file with no figures, which the register holds only as a blocker, person.markets.writer.blocked.<CC>, is read for
  * its blockers alone, each of them one the register's attempts name), and the game's reading of them
- * (tools/person/markets-writer/readings.json): the agreements a script can be sold under in the country, and where in
+ * (tools/person/markets-writer/readings.json): the agreements a script can be paid under in the country, and where in
  * the research each minimum stands.
  *
  * A market gives its agreements; or, where its research says a writer there is engaged on another market's terms (a
  * French overseas department on France's, an Australian territory on Australia's), it follows that market, whose
- * agreements a script is sold under there; or none, where no one is there to buy (a territory with no people, a
+ * agreements a script is paid under there; or none, where no one is there to pay for one (a territory with no people, a
  * country that no longer exists) or the research names no terms and no blocker.
  *
  * An agreement gives its country, the languages its scripts are written in (each one a person can be made to speak:
@@ -31,7 +31,9 @@ import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/mone
  *   the research leaves to negotiation (a budget under the agreement's floor) is read as such, never given a figure.
  * And its option's terms: a share of the script's minimum (or of the minimum the research names) for a year, as the
  * research sets it; negotiated where the research's own finding on options says nothing sets its price; none where the
- * research gives no option, which the engine refuses.
+ * research gives no option. Since 2026-11-04 (the owner: "Remove spec sales too") the engine pays a script whole on the
+ * first day of photography, when the life's own production buys it, so neither what waits for photography nor an
+ * option's terms changes an outcome any more; both are still compiled and held to the research by the compile's tests.
  *
  * Every amount is read from the research at its place, never written here; every date and currency is checked to stand
  * in the research's figure. A market gives its agreements and what its research couldn't find (its blockers' items),

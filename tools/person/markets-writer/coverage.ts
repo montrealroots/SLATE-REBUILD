@@ -19,10 +19,10 @@ const T = 'tests/person/work/markets.test.ts';
 export const TESTS = [
   `${T}::the markets > are each country's own, every minimum as the research gives it`,
   `${T}::the markets > cover every country on the map: the WGA the US, each other one its research`,
-  `${T}::a script sold in a market > is paid its agreement's minimum, by form and tier, on the day it sells`,
+  `${T}::a script a production pays for in a market > is paid its agreement's minimum, by form and tier, on the day it's paid`,
 ];
 /** And a blocked row's: the test that shows the player told what of the market isn't known. */
-export const TOLD = `${T}::a script sold in a market > tells the player what of a market isn't known`;
+export const TOLD = `${T}::a script a production pays for in a market > tells the player what of a market isn't known`;
 /** The US's: the test that holds the WGA's minimums kept. */
 export const KEPT_TESTS = [`${T}::the markets > keeps the WGA's own, the US's, in English, and refuses an agreement there's none of`];
 

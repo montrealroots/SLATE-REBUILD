@@ -24,6 +24,8 @@ import {
   currencyOf,
   engagementOf,
   factor,
+  HIRED,
+  pitchSkill,
   feeIn,
   fundFor,
   HOME,
@@ -56,15 +58,19 @@ import { falsifyAny } from '../../support/falsify-core.ts';
 import { ACCOUNT, purse } from '../../support/purse.ts';
 import { YOUTH_START, type YouthSlice } from '../../../src/person/youth/youth.ts';
 
-type Producing = { attributes: AttributesSlice; producing: ProducingSlice; genres: GenresSlice; identity: IdentitySlice; acting: ActingSlice; directing: DirectingSlice; permits: PermitsSlice; youth: YouthSlice } & ReturnType<typeof purse>;
+type Producing = { attributes: AttributesSlice; producing: ProducingSlice; genres: GenresSlice; identity: IdentitySlice; acting: ActingSlice; directing: DirectingSlice; permits: PermitsSlice; youth: YouthSlice; scripts: ScriptsSlice; career: CareerSlice } & ReturnType<typeof purse>;
+/** A film, the life its producer alone. */
+const FILM = { format: 'film', roles: ['producer'] };
+import { SCRIPTS_START, type ScriptsSlice } from '../../../src/person/work/work.ts';
+import { CAREER_START, type CareerSlice } from '../../../src/person/work/career.ts';
 const ROOT = resolve(import.meta.dirname, '../../..');
 const SEED = '0123456789abcdef';
 const T0 = daysFromCivil(2026, 11, 1) * SECONDS_PER_DAY;
 const GENRE = 'action';
 const made = (all = 50): Life<Producing> =>
-  dispatch(begin(SEED, T0, { attributes: structuredClone(ATTRIBUTES_START), producing: structuredClone(PRODUCING_START), genres: { loved: [GENRE] }, identity: identity(), acting: structuredClone(ACTING_START), directing: structuredClone(DIRECTING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'producer', all, each: {} });
+  dispatch(begin(SEED, T0, { attributes: structuredClone(ATTRIBUTES_START), producing: structuredClone(PRODUCING_START), genres: { loved: [GENRE] }, identity: identity(), acting: structuredClone(ACTING_START), directing: structuredClone(DIRECTING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), scripts: structuredClone(SCRIPTS_START), career: structuredClone(CAREER_START), ...purse() }), chooseAttributes, { role: 'producer', all, each: {} });
 const project = (l: Life<Producing>, id = l.slices.producing.projects.length) => projectOf(l.slices.producing, id);
-const optioned = (market: string, l = made()) => dispatch(l, optionMaterial, { account: ACCOUNT, days: 3, genre: GENRE, market });
+const optioned = (market: string, l = made()) => dispatch(l, optionMaterial, { ...FILM, account: ACCOUNT, days: 3, genre: GENRE, market });
 const planned = (market: string, budget: string, l = made()) => {
   const o = optioned(market, l);
   return dispatch(o, planProject, { project: o.slices.producing.projects.length, budget });
@@ -318,7 +324,7 @@ describe('the markets', () => {
     const l = optioned('JP');
     expect(project(l)).toMatchObject({ market: 'JP', expires: addMonths('Asia/Tokyo', T0, 18), options: [OPTION_FEE] });
     expect(project(dispatch(l, renewOption, { project: 1, account: ACCOUNT })).expires).toBe(addMonths('Asia/Tokyo', addMonths('Asia/Tokyo', T0, 18), 18));
-    expect(project(dispatch(made(), optionMaterial, { account: ACCOUNT, days: 1, genre: GENRE, market: 'GB' })).market).toBe('GB');
+    expect(project(dispatch(made(), optionMaterial, { ...FILM, account: ACCOUNT, days: 1, genre: GENRE, market: 'GB' })).market).toBe('GB');
     expect(() => optioned('XX')).toThrow("XX isn't a market a producer works in");
     expect(() => optioned('toString')).toThrow("toString isn't a market a producer works in");
     expect(project(planned('JP', '50000000')).plan?.budget).toEqual(money('JPY', 50_000_000));
@@ -413,7 +419,7 @@ describe("a market's project", () => {
     const yes: boolean[] = [];
     for (let id = 1; id <= 30; id += 1) {
       const p = project(l, id);
-      const said = draws(seedFromText(SEED), 'producing.work', 'apply', id).float() < (19 / 26) * factor(l.slices.producing, componentValues(l.slices.attributes, 'producer'), p, T0);
+      const said = draws(seedFromText(SEED), 'producing.work', 'apply', id).float() < (19 / 26) * factor(l.slices.producing, pitchSkill(componentValues(l.slices.attributes, 'producer')), p, T0);
       l = dispatch(l, applyToFunder, { project: id });
       expect(project(l, id).applied).toBe(true);
       expect(project(l, id).raised, String(id)).toEqual(said ? { fund: of('EUR', '950000') } : {});
@@ -440,10 +446,11 @@ describe("a market's project", () => {
     const cinemas: boolean[] = [];
     for (let id = 1; id <= 12; id += 1) {
       const p = project(it_, id);
-      const f = 0.5 + sellSkill(componentValues(it_.slices.attributes, 'producer'), p.shot?.quality ?? 0) / 100;
+      const quality = (3 * HIRED + (p.shot?.quality ?? 0)) / 4;
+      const f = 0.5 + sellSkill(componentValues(it_.slices.attributes, 'producer'), quality) / 100;
       const cinema = draws(seedFromText(SEED), 'producing.work', 'release', id).float() < 0.82 * f;
       it_ = dispatch(it_, releaseFilm, { project: id });
-      expect(project(it_, id).release, String(id)).toEqual({ at: T0, cinema, doubled: null });
+      expect(project(it_, id).release, String(id)).toEqual({ at: T0, quality, cinema, doubled: null });
       cinemas.push(cinema);
     }
     expect(cinemas).toContain(true);
@@ -491,10 +498,11 @@ describe("a market's project", () => {
     const released: boolean[] = [];
     for (let id = 1; id <= 12; id += 1) {
       const p = project(md, id);
-      const f = 0.5 + sellSkill(componentValues(md.slices.attributes, 'producer'), p.shot?.quality ?? 0) / 100;
+      const quality = (3 * HIRED + (p.shot?.quality ?? 0)) / 4;
+      const f = 0.5 + sellSkill(componentValues(md.slices.attributes, 'producer'), quality) / 100;
       const cinema = draws(seedFromText(SEED), 'producing.work', 'release', id).float() < (50 / 62) * f;
       md = dispatch(md, releaseFilm, { project: id });
-      expect(project(md, id).release, String(id)).toEqual({ at: T0, cinema, doubled: null });
+      expect(project(md, id).release, String(id)).toEqual({ at: T0, quality, cinema, doubled: null });
       released.push(cinema);
     }
     expect(released).toContain(true);

@@ -11,6 +11,8 @@ import {
   ACTING_START,
   AGREEMENTS,
   COUNTRY,
+  castOf,
+  castPart,
   CRAFT,
   daysWorked,
   demands,
@@ -26,7 +28,6 @@ import {
   partOf,
   pay,
   playPart,
-  postBreakdown,
   scaleOf,
   TERMS,
   UNIT_DAYS,
@@ -34,18 +35,19 @@ import {
   UNKNOWN,
   type ActingSlice,
   type Agreement,
-  type Audition,
+  type Cast,
   type Minimum,
   type Part,
 } from '../../../src/person/acting/acting.ts';
 import type { IdentitySlice } from '../../../src/person/identity/identity.ts';
 import { PERMITS_START, type PermitsSlice } from '../../../src/person/permits/permits.ts';
 import { DIRECTING_START, type DirectingSlice } from '../../../src/person/directing/directing.ts';
-import { PRODUCING_START, type ProducingSlice } from '../../../src/person/producing/producing.ts';
+import type { ProducingSlice } from '../../../src/person/producing/producing.ts';
 import { UNIONS_START, type UnionsSlice } from '../../../src/person/unions/unions.ts';
 import { COUNTRY_CODES, type CountryCode } from '../../../src/world/gazetteer/gazetteer.ts';
 import compiled from '../../../src/person/acting/markets.json' with { type: 'json' };
 import { identity, person } from '../../support/person.ts';
+import { production } from '../../support/production.ts';
 import { ACCOUNT, purse } from '../../support/purse.ts';
 import { YOUTH_START, type YouthSlice } from '../../../src/person/youth/youth.ts';
 
@@ -879,8 +881,8 @@ describe("a market's part", () => {
   });
 
   it("reckons the actor's years in the work from the first part played", () => {
-    const played = (at: number | null, id = 1): Audition => ({ id, at: 0, breakdown: 0, part: part('sag-aftra'), taped: true, score: 50, booked: true, work: at === null ? null : { at, quality: 50, pay: null } });
-    const s = (...a: Audition[]): ActingSlice => ({ breakdowns: [], auditions: a });
+    const played = (at: number | null, id = 1): Cast => ({ id, at: 0, project: 1, part: part('sag-aftra'), gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en', work: at === null ? null : { at, quality: 50, pay: null } });
+    const s = (...a: Cast[]): ActingSlice => ({ parts: a });
     expect(experience(ACTING_START, day(2026, 1, 1))).toBe(0);
     expect(experience(s(played(null)), day(2026, 1, 1))).toBe(0);
     const life = s(played(day(2021, 3, 1), 1), played(day(2020, 6, 14), 2), played(null, 3));
@@ -897,29 +899,29 @@ describe("a market's part", () => {
       rates: 'some of the minimums parts are paid',
       none: 'whether anything sets the pay where no agreement does',
       union: "the union's fees or whether a part needs it",
-      language: 'the language parts are cast in',
+      language: 'the language parts are played in',
       market: 'where most of the work is',
       terms: 'what terms a part is engaged on',
       successors: 'the terms of the places that succeeded it',
     });
-    expect(aboutMarket('au-screen')).toBe(t(UNKEPT_LINE, { country: 'Australia', missing: "the union's fees or whether a part needs it, some of the minimums parts are paid and the language parts are cast in" }));
+    expect(aboutMarket('au-screen')).toBe(t(UNKEPT_LINE, { country: 'Australia', missing: "the union's fees or whether a part needs it, some of the minimums parts are paid and the language parts are played in" }));
     expect(aboutMarket('de-guest')).toBe("Some of what a performer is paid or asked in Germany isn't known to this game yet: some of the minimums parts are paid.");
-    expect(aboutMarket('in-screen')).toBe(t(UNKEPT_LINE, { country: 'India', missing: "whether anything sets the pay where no agreement does, the union's fees or whether a part needs it, some of the agreements parts are engaged under and the language parts are cast in" }));
+    expect(aboutMarket('in-screen')).toBe(t(UNKEPT_LINE, { country: 'India', missing: "whether anything sets the pay where no agreement does, the union's fees or whether a part needs it, some of the agreements parts are engaged under and the language parts are played in" }));
     for (const a of ['dk-film', 'es-screen', 'it-stage', 'nl-stage', 'sag-aftra', 'actra', 'ad-artists', 'li-film'] as const) expect(aboutMarket(a), a).toBeUndefined();
     // A country whose market isn't compiled is told by its code: one read and blocked, one the register cites only by its blockers.
     expect(aboutMarket('FJ')).toBe(t(UNKEPT_LINE, { country: 'Fiji', missing: 'some of the agreements parts are engaged under and where most of the work is' }));
-    expect(aboutMarket('AW')).toBe(t(UNKEPT_LINE, { country: 'Aruba', missing: 'whether anything sets the pay where no agreement does, the language parts are cast in and where most of the work is' }));
+    expect(aboutMarket('AW')).toBe(t(UNKEPT_LINE, { country: 'Aruba', missing: 'whether anything sets the pay where no agreement does, the language parts are played in and where most of the work is' }));
     expect(aboutMarket('AN')).toBe(t(UNKEPT_LINE, { country: 'Netherlands Antilles', missing: 'the terms of the places that succeeded it' }));
     expect(aboutMarket('BN')).toBe(t(UNKEPT_LINE, { country: 'Brunei', missing: 'what terms a part is engaged on and where most of the work is' }));
     for (const cc of ['PE', 'US', 'GB'] as const) expect(aboutMarket(cc), cc).toBeUndefined();
     // A territory's agreement that follows another country's tells what neither research found, each once.
     expect(aboutMarket('yt-fr-film')).toBe(t(UNKEPT_LINE, { country: 'Mayotte', missing: 'some of the agreements parts are engaged under' }));
-    expect(aboutMarket('nf-au-screen')).toBe(t(UNKEPT_LINE, { country: 'Norfolk Island', missing: "the language parts are cast in, where most of the work is, the union's fees or whether a part needs it and some of the minimums parts are paid" }));
+    expect(aboutMarket('nf-au-screen')).toBe(t(UNKEPT_LINE, { country: 'Norfolk Island', missing: "the language parts are played in, where most of the work is, the union's fees or whether a part needs it and some of the minimums parts are paid" }));
     expect(aboutMarket('bl-fr-film')).toBe(t(UNKEPT_LINE, { country: 'Saint Barthelemy', missing: 'some of the agreements parts are engaged under' }));
     expect(aboutMarket('re-fr-tv')).toBe(t(UNKEPT_LINE, { country: 'Reunion', missing: 'where most of the work is and some of the agreements parts are engaged under' }));
     expect(aboutMarket('GP')).toBeUndefined();
     expect(aboutMarket('mc-fr-film')).toBe(t(UNKEPT_LINE, { country: 'Monaco', missing: 'where most of the work is and some of the agreements parts are engaged under' }));
-    expect(aboutMarket('ax-fi-guest')).toBe(t(UNKEPT_LINE, { country: 'Aland Islands', missing: 'the language parts are cast in' }));
+    expect(aboutMarket('ax-fi-guest')).toBe(t(UNKEPT_LINE, { country: 'Aland Islands', missing: 'the language parts are played in' }));
     // Every country the register holds blockers for tells the player; none other does.
     const told = Object.keys(UNKNOWN).filter((cc) => aboutMarket(cc as CountryCode) !== undefined);
     expect(told).toEqual(Object.keys(UNKNOWN).filter((cc) => (UNKNOWN[cc] as readonly string[]).length > 0));
@@ -929,37 +931,39 @@ describe("a market's part", () => {
 });
 
 describe("a market's part, played", () => {
-  const made = (now: number, who: IdentitySlice, auditions: Audition[]): Life<Acting> =>
-    dispatch(begin('0123456789abcdef', now, { attributes: structuredClone(ATTRIBUTES_START), acting: { breakdowns: [], auditions }, identity: who, unions: structuredClone(UNIONS_START), permits: structuredClone(PERMITS_START), directing: structuredClone(DIRECTING_START), producing: structuredClone(PRODUCING_START), youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'actor', all: 50, each: {} });
-  const booked = (p: Part, id = 1, work: Audition['work'] = null): Audition => ({ id, at: 0, breakdown: 0, part: p, taped: true, score: 50, booked: true, work });
+  /** Each part in its own production, financed in its agreement's country, paid into an account in that country's currency. */
+  const made = (now: number, who: IdentitySlice, parts: Cast[]): Life<Acting> =>
+    dispatch(begin('0123456789abcdef', now, { attributes: structuredClone(ATTRIBUTES_START), acting: { parts }, identity: who, unions: structuredClone(UNIONS_START), permits: structuredClone(PERMITS_START), directing: structuredClone(DIRECTING_START), producing: { projects: parts.map((c) => production({ id: c.project, market: COUNTRY[c.part.agreement] })) }, youth: structuredClone(YOUTH_START), ...purse() }), chooseAttributes, { role: 'actor', all: 50, each: {} });
+  const booked = (p: Part, id = 1, work: Cast['work'] = null): Cast => ({ id, at: 0, project: id, part: p, gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en', work });
   const NOW = day(2026, 7, 1);
 
   it("pays the minimum for the actor's years, where the person may work in the market's country", () => {
     const p = part('au-screen', { medium: 'film', length: 2 });
     const first = booked(part('sag-aftra'), 1, { at: day(2021, 7, 1), quality: 50, pay: null });
     const aussie = identity({ citizenship: ['AU'] });
-    const play = (l: Life<Acting>) => dispatch(l, playPart, { audition: 2, account: ACCOUNT }).slices.acting.auditions[1]?.work?.pay;
+    const play = (l: Life<Acting>) => dispatch(l, playPart, { part: 2, account: ACCOUNT }).slices.acting.parts[1]?.work?.pay;
     expect(play(made(NOW, aussie, [first, booked(p, 2)]))).toEqual(money('AUD', '718.60'));
     expect(() => play(made(NOW - SECONDS_PER_DAY, aussie, [first, booked(p, 2)]))).toThrow('no minimum is known before 2026-07-01');
     expect(play(made(NOW, aussie, [{ ...first, work: { at: day(2021, 7, 2), quality: 50, pay: null } }, booked(p, 2)]))).toEqual(money('AUD', '683.96'));
-    expect(() => dispatch(made(NOW, identity(), [first, booked(p, 2)]), playPart, { audition: 2, account: ACCOUNT })).toThrow('the person may not work in AU without a permit');
+    expect(() => dispatch(made(NOW, identity(), [first, booked(p, 2)]), playPart, { part: 2, account: ACCOUNT })).toThrow('the person may not work in AU without a permit');
     // A market's work is asked a permit in its own country; a territory's is paid its followed agreement's.
-    expect(() => dispatch(made(day(2026, 10, 1), identity(), [booked(part('ar-film', { role: 'day-player' }))]), playPart, { audition: 1, account: ACCOUNT })).toThrow('the person may not work in AR without a permit');
+    expect(() => dispatch(made(day(2026, 10, 1), identity(), [booked(part('ar-film', { role: 'day-player' }))]), playPart, { part: 1, account: ACCOUNT })).toThrow('the person may not work in AR without a permit');
     expect(play(made(day(2026, 10, 1), identity({ citizenship: ['FR'] }), [first, booked(part('mf-fr-tv', { length: 2 }), 2)]))).toEqual(at('fr-tv', { length: 2 }, '2026-10-01'));
     expect(play(made(day(2026, 10, 1), identity({ citizenship: ['AR'] }), [first, booked(part('ar-film', { role: 'day-player' }), 2)]))).toEqual(money('ARS', '489011'));
     const none = made(NOW, identity({ citizenship: ['ZA'] }), [booked(part('za-all', { medium: 'stage', term: 'week', length: 2 }))]);
-    expect(dispatch(none, playPart, { audition: 1, account: ACCOUNT }).slices.acting.auditions[0]?.work?.pay).toBeNull();
+    expect(dispatch(none, playPart, { part: 1, account: ACCOUNT }).slices.acting.parts[0]?.work?.pay).toBeNull();
   });
 
-  it("is cast in the market's language, the age reckoned in its city", () => {
-    const l = dispatch(made(NOW, identity(), []), postBreakdown, part('es-screen', { medium: 'film', role: 'lead', term: 'session' }));
-    const b = l.slices.acting.breakdowns[0] as NonNullable<ActingSlice['breakdowns'][number]>;
+  it("is written in the market's language where its production names none, the age reckoned in its city", () => {
+    const es = { ...made(NOW, identity({ languages: [{ lang: 'es', level: 'C1' }] }), []), slices: { ...made(NOW, identity({ languages: [{ lang: 'es', level: 'C1' }] }), []).slices, producing: { projects: [production({ market: 'ES' }, 300_000_000)] } } };
+    const l = dispatch(es, castPart, { project: 1, agreement: 'es-screen', term: 'session', length: 1, lines: 10, rehearsal: 0, asks: [], role: 'lead', gender: 'open', ages: [0, 120] });
+    const b = castOf(l.slices.acting, 1);
     expect(b.language).toBe('es');
-    expect(misfit(person(), { ...b, gender: 'open', ethnicity: 'open', ages: [0, 120] }, NOW)).toBe('the part is played in es, at C1 or better');
-    expect(misfit(person({ languages: [{ lang: 'es', level: 'C1' }] }), { ...b, gender: 'open', ethnicity: 'open', ages: [0, 120] }, NOW)).toBeNull();
+    expect(misfit(person(), b, NOW)).toBe('the part is played in es, at C1 or better');
+    expect(misfit(person({ languages: [{ lang: 'es', level: 'C1' }] }), b, NOW)).toBeNull();
     // 23:00 UTC on 13 June 2026: Ada's 26th birthday already in Sydney, still the 13th in Los Angeles.
     const late = Date.UTC(2026, 5, 13, 23) / 1000;
-    const aged = (a: Agreement) => misfit(person(), { id: 1, at: 0, part: part(a, { medium: 'film' }), gender: 'open', ethnicity: 'open', ages: [31, 40], language: 'en' }, late);
+    const aged = (a: Agreement) => misfit(person(), { part: part(a, { medium: 'film' }), gender: 'open', ethnicity: 'open', ages: [31, 40], language: 'en' }, late);
     expect(aged('au-screen')).toBeNull();
     expect(aged('sag-aftra')).toBe('the part is for 31 to 40, and you play 20 to 30');
   });

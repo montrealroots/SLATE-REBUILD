@@ -1,16 +1,15 @@
 import { defineCommand, type Context, type Json } from '../../core/frame/frame.ts';
 import { add, allocate, compare, fromMajor, money, multiply, rational, roundHalfEven, type CurrencyCode, type Money } from '../../core/money/money.ts';
 import { t, type LineId } from '../../core/text/text.ts';
-import { earn, type Earning } from '../../money/tax/tax.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { dateOf, UNIT_DAYS, WEEK_DAYS } from '../acting/acting.ts';
 import { ATTRIBUTES, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
-import { inTheBusiness, personOf, residenceOf, type IdentitySlice } from '../identity/identity.ts';
+import { personOf, type IdentitySlice } from '../identity/identity.ts';
 import { spread } from '../work/work.ts';
 import type { ActingSlice } from '../acting/acting.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
-import type { ProducingSlice } from '../producing/producing.ts';
-import { engagement as engaged, holdBack, hoursShare, type YouthSlice } from '../youth/youth.ts';
+import { budgetMajor, directedAs, financedOf, holds as directs, payOut, projectOf, qualityOf, type Paying, type Project } from '../producing/producing.ts';
+import { engagement as engaged, hoursShare } from '../youth/youth.ts';
 import compiled from './markets.json' with { type: 'json' };
 
 /**
@@ -18,8 +17,14 @@ import compiled from './markets.json' with { type: 'json' };
  * effect the quality of my work ... it needs to actually produce results depending on how bad or good I am"; and of
  * 2026-11-01, "Build them").
  *
- * A film or an episode is prepped, shot and cut, then a feature goes to festivals, and a debut feature may lead to a
- * second. Its parts come from the director's broad attributes, each read through its researched components and their
+ * The life directs its own productions (src/person/producing; the owner, 2026-11-04: "Remember them 4 should work in
+ * cohesiveness"): a film's feature, or every episode of a series, prepped once the production is financed, shot and
+ * cut, then a feature goes to festivals on what the production comes out as, a festival's choice counting toward how
+ * financiers take the life's next production (src/person/producing). A play's direction isn't modelled: no
+ * stage director's terms are researched, so a play is directed by someone hired. The debut's chance of leading to a
+ * second feature (Follows's 25.3%, 45% where it found an audience, moved by a family in the business) was removed on
+ * 2026-11-04: the next production rests on what the life can finance (the lead's reading), so no one else's yes is
+ * drawn. The direction's parts come from the director's broad attributes, each read through its researched components and their
  * facets (R-4610): the story told from Vision and Script Sense, the performances from Working With Actors, the images
  * from Visual Craft, the cut from Editing. Leadership holds the schedule and carries a short one; Leadership and
  * Communication bring the plan to the set; Communication pitches the next film.
@@ -32,6 +37,12 @@ import compiled from './markets.json' with { type: 'json' };
  * its own counts give it; a debut director's chance of a second feature within five years (25.3%; 45% where the debut
  * found an audience; Stephen Follows's count of 146,603 debuts), moved by a family in the business as Follows's debut
  * directors were (72% of those with family in film or TV went on to a second feature against 66% of everyone else; R-4622).
+ * The last two were read until 2026-11-04, when the second feature's draw went.
+ *
+ * The job's terms are its production's: its country, its budget, its shooting days as the producer's plan schedules
+ * them, its running time, and its form (a feature, or a series' hour or half-hour episodes, each episode a job on the
+ * agreement's terms, the series all of them). The fee is paid from the production's budget, a stage's share as each is
+ * done, as it pays anyone.
  *
  * Beyond the US, the market of every country and territory whose research the engine can read (src/person/directing/
  * markets.json, compiled by tools/person/markets-director from the research, person.markets.director.<CC>): a job there
@@ -104,24 +115,13 @@ export type Festival = keyof typeof FESTIVALS;
 export const POOL = 50;
 export const STEEP = 5;
 
-/** A debut director's chance of a second feature within five years; where the debut found an audience (R-4613). */
-export const SECOND = { debut: 0.253, audience: 0.45 } as const;
-
-/**
- * Follows's 1,804 directors whose debut since 2000 found a meaningful audience: 72% of those with family in film or TV
- * made a second feature against 66% of everyone else; and 26% of the top films' directors had family in it (R-4622).
- */
-export const KIN = { share: 0.26, family: 0.72, other: 0.66 } as const;
-
-/**
- * What a family in the business does to the chance of a second: its side's rate over the directors' mean, so the two sides
- * average back to the sourced rate of all debuts (the game's reading of "another roll of the dice when a film disappoints").
- */
-export const kinship = (family: boolean): number => (family ? KIN.family : KIN.other) / (KIN.share * KIN.family + (1 - KIN.share) * KIN.other);
-
 export interface Film {
   readonly id: number;
+  /** The production it directs. */
+  readonly project: number;
   readonly form: Form;
+  /** The episodes it is: a series' all, a feature one. */
+  readonly episodes: number;
   /** The country of the market it is made in, and the agreement it is directed under (the DGA's in the US). */
   readonly country: string;
   readonly agreement: string;
@@ -143,7 +143,7 @@ export interface Film {
   /** What the shoot brought to the screen. */
   shot: Record<Planned, number> | null;
   cut: number | null;
-  /** The finished film, 0 to 100: its four parts' mean. */
+  /** What the direction made of it, 0 to 100: its four parts' mean, the direction's result in what the production comes out as. */
   quality: number | null;
   /** Each festival it went to and whether it was chosen. */
   festivals: { [festival: string]: boolean };
@@ -151,24 +151,21 @@ export interface Film {
 
 export interface DirectingSlice {
   films: Film[];
-  /** Whether the debut led to a second feature within five years; null until tried. */
-  second: boolean | null;
 }
 
-export const DIRECTING_START: DirectingSlice = { films: [], second: null };
+export const DIRECTING_START: DirectingSlice = { films: [] };
 
 type Values = Readonly<Record<string, number>>;
 type Directing = { attributes: AttributesSlice; directing: DirectingSlice };
-type Pursuing = Directing & { identity: IdentitySlice };
+/** Prep is paid: its share of the fee from the production's budget into an account, taxed, less what the film's country's law sets aside of a minor's pay (person.youth). */
+type Prepping = Directing & Paying;
 /** A film shot or cut: where the director works, so whether they may work there reads the person, every role's days and the permits. */
-type Working = Directing & Earning & { identity: IdentitySlice; acting: ActingSlice; producing: ProducingSlice; permits: PermitsSlice; youth: YouthSlice };
-/** Prep is paid: its share of the fee into an account, taxed where the person lives, less what the film's country's law sets aside of a minor's pay (person.youth). */
-type Prepping = Directing & Earning & { identity: IdentitySlice; youth: YouthSlice };
+type Working = Prepping & { acting: ActingSlice; permits: PermitsSlice };
 
 /** The share of each day a director of the person's age may work in the film's country (person.youth): what the days carry. */
 const share = (s: { identity: IdentitySlice }, film: Pick<Film, 'country'>, now: number): number => hoursShare(personOf(s.identity), film.country, 'director', now);
 
-/** Refuses the work where the person may not work in the film's country for its days (papers.permits); prep books it, as an audition books a part. */
+/** Refuses the work where the person may not work in the film's country for its days (papers.permits); prep books it, as a part cast does. */
 function mayWorkOn(s: Working, film: Film, now: number): void {
   const e = engagement(film);
   // @slate:consumer permits.decision
@@ -215,12 +212,6 @@ export const cutNeeded = (v: Values, shootDays: number): number => shootDays * (
 /** A festival's chance of choosing a film: its rate at the pool's middle, more for better, never past certain. */
 export const selectionChance = (festival: Festival, quality: number): number => Math.min(1, FESTIVALS[festival] * (quality / POOL) ** STEEP);
 
-/** How a director pitches the next film, 0 to 100: pitching and presenting it, Persuasion, promoting the last. */
-export const pitchSkill = (v: Values): number => mean(['pitching-and-presenting-the-project', 'persuasion', 'promote-productions-through-interviews-and-public-appearance'].map((id) => of(v, id)));
-
-/** The chance the debut leads to a second feature within five years: the sourced rate, as a family and the pitch carry it. */
-export const secondChance = (v: Values, audience: boolean, family: boolean): number => (audience ? SECOND.audience : SECOND.debut) * kinship(family) * (0.5 + pitchSkill(v) / 100);
-
 const wholeAtLeast = (n: unknown, lo: number, what: string) => {
   if (!Number.isInteger(n) || (n as number) < lo) throw new RangeError(`${what} is a whole number of at least ${lo} (${String(n)})`);
 };
@@ -231,38 +222,41 @@ export function filmOf(s: DirectingSlice, id: number): Film {
   return found;
 }
 
+/** A job as its production gives it: the form, the market, its budget (whole major units of the market's currency, which every agreement there pays in), its shooting days, its running time; the agreement and the contract's prep and cut where the agreement leaves them. */
+export interface JobArgs {
+  form: Form;
+  country: string;
+  agreement?: string | undefined;
+  budget: number;
+  shoot: number;
+  minutes: number | null;
+  prep?: number | undefined;
+  cut?: number | undefined;
+}
+
 export interface PrepArgs {
   [key: string]: Json;
-  form: Form;
-  /** The market's country (the US where none is named) and, where several cover the form there, its agreement. */
-  country?: string;
+  /** The production directed. */
+  project: number;
+  /** Where several cover the form in the market, its agreement. */
   agreement?: string;
-  /** Its budget in the market's currency (a feature's in the US; abroad, where the agreement reads it) and its shooting days. */
-  budget?: number;
-  shoot?: number;
-  /** Abroad, the prep and cut the contract gives, where the agreement guarantees none; the running time, where it pays by it. */
+  /** The prep and cut the contract gives, where the agreement guarantees none. */
   prep?: number;
   cut?: number;
-  minutes?: number;
   /** The account prep's share of the fee is paid into, where the fee is known. */
-  account?: string;
+  account: string;
 }
 
 type Terms = Pick<Film, 'country' | 'agreement' | 'budget' | 'minutes' | 'prepDays' | 'shootDays' | 'cutDays' | 'fee'>;
 
 /** The schedule and the pay of a job in the US, as the DGA sets them. */
-function dgaTerms(a: PrepArgs): Terms {
-  if (a.agreement !== undefined || a.prep !== undefined || a.cut !== undefined || a.minutes !== undefined) throw new Error("the DGA sets a US job's agreement, prep and cut, and reads no running time");
+function dgaTerms(a: JobArgs): Terms {
+  if (a.agreement !== undefined || a.prep !== undefined || a.cut !== undefined) throw new Error("the DGA sets a US job's agreement, prep and cut");
   const us = { country: 'US', agreement: 'dga', minutes: null };
   if (a.form === 'feature') {
-    wholeAtLeast(a.budget, 1, 'a budget');
-    wholeAtLeast(a.shoot, 1, 'the shooting days');
-    const budget = a.budget as number;
-    const shoot = a.shoot as number;
-    const level = levelOf(budget);
-    return { ...us, budget, prepDays: FEATURE.prep, shootDays: shoot, cutDays: level.cut(shoot), fee: level.weekly === null ? null : money('USD', level.weekly * FEATURE.weeks * 100) };
+    const level = levelOf(a.budget);
+    return { ...us, budget: a.budget, prepDays: FEATURE.prep, shootDays: a.shoot, cutDays: level.cut(a.shoot), fee: level.weekly === null ? null : money('USD', level.weekly * FEATURE.weeks * 100) };
   }
-  if (a.budget !== undefined || a.shoot !== undefined) throw new Error("an episode's budget and schedule are the show's");
   const e = EPISODES[a.form];
   return { ...us, budget: null, prepDays: e.prep, shootDays: e.shoot, cutDays: e.cut, fee: money('USD', e.rate * 100) };
 }
@@ -375,7 +369,7 @@ export function marketFee(a: MarketAgreement, form: Form, job: Job, date: string
 }
 
 /** The schedule and the pay of a job in a market: its agreement's periods (or the contract's) and its minimum on the day prep starts. */
-function marketTerms(a: PrepArgs, s: DirectingSlice, now: number): Terms {
+function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   const cc = String(a.country);
   if (!Object.hasOwn(MARKETS, cc)) throw new Error(`there's no market ${cc}`);
   const covering = (MARKETS[cc] as Market).agreements.filter((id) => (AGREEMENTS[id] as MarketAgreement).forms.includes(a.form));
@@ -385,17 +379,12 @@ function marketTerms(a: PrepArgs, s: DirectingSlice, now: number): Terms {
   if (!covering.includes(id)) throw new Error(`${id} doesn't cover a ${a.form} in ${cc}`);
   const ag = AGREEMENTS[id] as MarketAgreement;
   const periods = ag.periods.filter((p) => p.form === a.form);
-  // What the agreement's tiers turn on is asked, what they don't refused (the compile holds a share's and a minute's pay to a tier of theirs).
+  // What the agreement's tiers turn on is read from the production, what they don't left aside (the compile holds a share's and a minute's pay to a tier of theirs).
   const reads = (k: 'budget' | 'minutes') => [...ag.fees, ...ag.periods].some((x) => k in x.when);
-  const asked = (k: 'budget' | 'minutes', what: string): number | null => {
-    if (reads(k)) return (wholeAtLeast(a[k], 1, `the ${what}`), a[k] as number);
-    if (a[k] !== undefined) throw new Error(`${id} doesn't read a ${a.form}'s ${what}`);
-    return null;
-  };
-  const budget = asked('budget', 'budget');
-  const minutes = asked('minutes', 'running time');
-  wholeAtLeast(a.shoot, 1, 'the shooting days');
-  const shoot = a.shoot as number;
+  const budget = reads('budget') ? a.budget : null;
+  const minutes = reads('minutes') ? a.minutes : null;
+  if (reads('minutes') && minutes === null) throw new Error(`a ${a.form} under ${id} names its running time`);
+  const shoot = a.shoot;
   const tier = { budget: budget ?? 0, minutes: minutes ?? 0, years: experience(s, now), days: 0 };
   const guaranteed = (part: 'prep-shoot' | 'cut' | 'prep') => periods.find((p) => p.part === part && holds(p.when, tier))?.days;
   const contract = (k: 'prep' | 'cut', days: number | undefined): number => {
@@ -414,9 +403,17 @@ function marketTerms(a: PrepArgs, s: DirectingSlice, now: number): Terms {
 }
 
 /** The schedule and the pay of a job: the DGA's in the US, a market's agreement's abroad. */
-function terms(a: PrepArgs, s: DirectingSlice, now: number): Terms {
-  if (a.form !== 'feature' && !(a.form in EPISODES)) throw new Error(`there's no form ${String(a.form)}`);
-  return a.country === undefined || a.country === 'US' ? dgaTerms(a) : marketTerms(a, s, now);
+export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
+  return a.country === 'US' ? dgaTerms(a) : marketTerms(a, s, now);
+}
+
+/**
+ * A production's job, as its terms read it: one episode's for a series (its share of the shooting days the plan
+ * schedules, at least one), the feature's otherwise; and how many such jobs the production is.
+ */
+export function jobOf(p: Project & { plan: { scheduled: number } }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
+  const times = p.series?.episodes ?? 1;
+  return { job: { form: directedAs(p), country: p.market, budget: budgetMajor(p), shoot: Math.max(1, Math.round(p.plan.scheduled / times)), minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
 }
 
 /** A job's engagement, for the permit it may need: the country it is made in and the days it works there. */
@@ -443,13 +440,6 @@ export function aboutMarket(country: string): string | undefined {
   return t(UNKEPT_LINE, { country: countryName(country as CountryCode), missing: list });
 }
 
-/** Whether a feature can be prepped: a debut always; a second only once the debut has led to one. */
-function mayDirectFeature(s: DirectingSlice): void {
-  const features = s.films.filter((f) => f.form === 'feature').length;
-  // @slate:consumer directing.pursue
-  if (features === 1 && s.second !== true) throw new Error('a second feature needs the debut to lead to one');
-}
-
 export const STAGES: readonly Stage[] = ['prep', 'shoot', 'cut'];
 
 /**
@@ -462,17 +452,24 @@ export function stagePay(film: Pick<Film, 'fee' | 'prepDays' | 'shootDays' | 'cu
   return film.fee === null ? null : (allocate(film.fee, [film.prepDays, film.shootDays, film.cutDays].map((d) => Math.round(d * 100)))[STAGES.indexOf(stage)] as Money);
 }
 
-/** Pays a stage's share of the fee into the account named, less what the film's country withholds (money.tax). */
+/** Pays a stage's share of the fee from the production's budget into the account named, less what the film's country withholds (money.tax). */
 function paidFor(s: Prepping, film: Film, stage: Stage, account: string, c: Context): void {
   const part = stagePay(film, stage);
-  // @slate:consumer identity.make
-  if (part !== null && part.minor > 0) holdBack(s, earn(s, { account, payer: 'production', country: film.country, home: residenceOf(personOf(s.identity)), work: 'director', gross: part, what: stage }, c), `directing:${film.id}`, c);
+  if (part !== null && part.minor > 0) payOut(s, projectOf(s.producing, film.project), 'director', part, stage, account, c);
 }
 
-/** Preps a film or an episode: casts it, plans its shots and its story, in the prep its agreement guarantees or its contract gives. */
+/** Preps a production the life directs, once financed: plans its shots and its story, in the prep its agreement guarantees or its contract gives. */
 function prep(s: Prepping, a: PrepArgs, c: Context): void {
-  const t = terms(a, s.directing, c.now);
-  if (a.form === 'feature') mayDirectFeature(s.directing);
+  // @slate:consumer producing.raise
+  const p = financedOf(s.producing, a.project);
+  // @slate:consumer producing.option
+  // @slate:consumer producing.develop
+  if (!directs(p, 'director')) throw new Error(`the life doesn't direct project ${p.id}`);
+  if (s.directing.films.some((f) => f.project === p.id)) throw new Error(`project ${p.id} is prepped`);
+  const { job, times } = jobOf(p, a);
+  const one = terms(job, s.directing, c.now);
+  // A series' every episode: each its job's days and fee, the series all of them.
+  const t = { ...one, prepDays: one.prepDays * times, shootDays: one.shootDays * times, cutDays: one.cutDays * times, fee: one.fee === null ? null : multiply(one.fee, String(times)) };
   // Prep books the job: a minor is engaged as the film's country's law lets them be (person.youth).
   const grant = engaged(s, t.country, 'director', c.now);
   if (grant !== null) grant.used = true;
@@ -484,7 +481,7 @@ function prep(s: Prepping, a: PrepArgs, c: Context): void {
     const k = partSkill(values, p);
     plan[p] = clamp(k + spread(k) * (2 * c.draws('directing.work', 'plan', id, p).float() - 1), 0, 100);
   }
-  s.directing.films.push({ id, form: a.form, started: c.now, ...t, plan, needed: null, shot: null, cut: null, quality: null, festivals: {} });
+  s.directing.films.push({ id, project: p.id, form: job.form, episodes: times, started: c.now, ...t, plan, needed: null, shot: null, cut: null, quality: null, festivals: {} });
   paidFor(s, s.directing.films.at(-1) as Film, 'prep', String(a.account), c);
   practise(s.attributes, 'director', [...used('story'), ...used('performances'), ...used('images')], t.prepDays * share(s, t, c.now));
 }
@@ -502,7 +499,8 @@ function shoot(s: Working, a: FilmArgs, c: Context): void {
   const film = filmOf(s.directing, a.film);
   if (film.shot !== null) throw new Error(`film ${a.film} is shot`);
   mayWorkOn(s, film, c.now);
-  const needed = shootNeeded(values, film);
+  // A series needs each episode's days.
+  const needed = shootNeeded(values, film) * film.episodes;
   const days = film.shootDays * share(s, film, c.now);
   const carried = finish(values, days, needed) * onSet(values);
   const shot = {} as Record<Planned, number>;
@@ -548,45 +546,29 @@ function finishedFeature(s: DirectingSlice, id: number): Film & { quality: numbe
   return film as Film & { quality: number };
 }
 
+/** What reads a festival's choice: what the production came out as, every role's work read (src/person/producing). */
+type Submitting = { directing: DirectingSlice; producing: Prepping['producing']; acting: ActingSlice };
+
 export interface SubmitArgs {
   [key: string]: number | string;
   film: number;
   festival: Festival;
 }
 
-/** Sends a finished feature to a festival, once to each. */
-function submit(s: { directing: DirectingSlice }, a: SubmitArgs, c: Context): void {
+/** Sends a finished feature to a festival, once to each, on what the production came out as. */
+function submit(s: Submitting, a: SubmitArgs, c: Context): void {
   if (!(a.festival in FESTIVALS)) throw new Error(`there's no festival ${String(a.festival)}`);
   const film = finishedFeature(s.directing, a.film);
   if (a.festival in film.festivals) throw new Error(`film ${a.film} went to ${a.festival}`);
+  const quality = qualityOf(s, projectOf(s.producing, film.project));
   // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
-  film.festivals[a.festival] = c.draws('directing.work', 'festival', film.id, a.festival).float() < selectionChance(a.festival, film.quality);
-}
-
-/** The debut's chance taken: whether it leads to a second feature within five years. */
-function pursue(s: Pursuing, _a: Record<string, never>, c: Context): void {
-  const debut = s.directing.films.find((f) => f.form === 'feature');
-  if (debut === undefined) throw new Error('there is no debut feature');
-  finishedFeature(s.directing, debut.id);
-  if (s.directing.second !== null) throw new Error("the debut's chance is taken");
-  const values = componentValues(s.attributes, 'director');
-  // @slate:consumer identity.make
-  // Follows counts family in film or TV (R-4622): a family in music is outside his split.
-  const trade = inTheBusiness(personOf(s.identity));
-  const family = trade !== null && trade !== 'music';
-  // A debut chosen by a festival is read as one that found an audience (the game's reading of Follows's 1,000 votes).
-  // @slate:consumer directing.submit
-  const audience = Object.values(debut.festivals).includes(true);
-  // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
-  s.directing.second = c.draws('directing.work', 'second', debut.id).float() < secondChance(values, audience, family);
-  practise(s.attributes, 'director', componentsOf('communication'), 1);
+  film.festivals[a.festival] = c.draws('directing.work', 'festival', film.id, a.festival).float() < selectionChance(a.festival, quality);
 }
 
 // Stryker disable all: a mutant of a declaration made as the module loads changes its shape, so the module loaded
 // again for it is refused as declared twice (as the accounts' and the cards' say). The declarations are held by the
 // test that lists each command with what it reads and writes; what each does is mutated above.
-export const prepFilm = defineCommand<Prepping, PrepArgs>({ id: 'directing.prep', reads: ['identity'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: prep });
-export const shootFilm = defineCommand<Working, FilmArgs>({ id: 'directing.shoot', reads: ['identity', 'acting', 'producing', 'permits'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: shoot });
-export const cutFilm = defineCommand<Working, FilmArgs>({ id: 'directing.cut', reads: ['identity', 'acting', 'producing', 'permits'], writes: ['attributes', 'directing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: cut });
-export const submitFilm = defineCommand<{ directing: DirectingSlice }, SubmitArgs>({ id: 'directing.submit', reads: [], writes: ['directing'], run: submit });
-export const pursueSecond = defineCommand<Pursuing, Record<string, never>>({ id: 'directing.pursue', reads: ['identity'], writes: ['attributes', 'directing'], run: pursue });
+export const prepFilm = defineCommand<Prepping, PrepArgs>({ id: 'directing.prep', reads: ['identity'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: prep });
+export const shootFilm = defineCommand<Working, FilmArgs>({ id: 'directing.shoot', reads: ['identity', 'acting', 'permits'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: shoot });
+export const cutFilm = defineCommand<Working, FilmArgs>({ id: 'directing.cut', reads: ['identity', 'acting', 'permits'], writes: ['attributes', 'directing', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: cut });
+export const submitFilm = defineCommand<Submitting, SubmitArgs>({ id: 'directing.submit', reads: ['producing', 'acting'], writes: ['directing'], run: submit });
