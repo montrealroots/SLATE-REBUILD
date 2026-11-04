@@ -3,6 +3,7 @@ import { fromMajor, minorUnits, money, type CurrencyCode, type Money } from '../
 import { addMonths } from '../../core/time/dates.ts';
 import { t, type LineId } from '../../core/text/text.ts';
 import { payCost, type Holding } from '../../money/accounts/accounts.ts';
+import { exchangeOn } from '../../money/rates/rates.ts';
 import { earn, type Earning, type Work } from '../../money/tax/tax.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { AGREEMENTS, COUNTRY, dateOf, MARKET as WORK, MARKETS as ACTED, type ActingSlice, type Medium } from '../acting/acting.ts';
@@ -10,7 +11,7 @@ import { ATTRIBUTES, componentValues, practise, skillOf, type AttributesSlice } 
 import { EPISODES, FEATURE_SHOOT, pitchSkill as directorsPitch, type DirectingSlice, type Form as Directed } from '../directing/directing.ts';
 import { boxOfficeFactor, lovesOrRefuse, type GenresSlice } from '../genres/genres.ts';
 import { scriptOf, spread, type Form as Written, type ScriptsSlice } from '../work/work.ts';
-import { aboutMarket as writersUnknown, countryOf, KEPT, languagesOf, marketOf as writerMarketOf, MARKETS as WRITTEN, minimumOf, pitchOf, quality, WRITES_IN, type CareerSlice } from '../work/career.ts';
+import { aboutMarket as writersUnknown, countryOf, KEPT, kindOf, languagesOf, marketOf as writerMarketOf, MARKETS as WRITTEN, minimumOf, pitchOf, playMinimum, quality, WRITES_IN, type CareerSlice, type PlayAgreement, type Screen } from '../work/career.ts';
 import { inTheBusiness, personOf, residenceOf, speaks, type IdentitySlice } from '../identity/identity.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
 import { engagement, fundRefuses, holdBack, hoursShare, type YouthSlice } from '../youth/youth.ts';
@@ -61,10 +62,38 @@ import compiled from './markets.json' with { type: 'json' };
  * - The release (Marketing, the film's quality): a cinema release at the BFI's rate for the budget (11.6% under £0.5m
  *   to 83.3% above £10m), and earning back twice the budget at its rate for those released (3.3% to 14.8%), as the film
  *   and its campaign sell it, the second in the film's genre as the BFI's gross per release of its group (2023) stands
- *   against all films' (src/person/genres; R-4622). A producer's films released in the last seven years (the PGA's
- *   window for its two features), and those a festival chose where the life directed them, count toward how financiers
+ *   against all films' (src/person/genres; R-4622). A producer's productions that found an audience in the last seven
+ *   years (the PGA's window for its two features: a film in cinemas, a series a broadcaster picked up, a play whose run
+ *   earned back its cost), and the films a festival chose where the life directed them, count toward how financiers
  *   take the next: the next production rests on what the life can finance (the lead's reading, replacing the
  *   director's "debut leads to a second").
+ *
+ * A series and a play made in the UK, on the UK's research of 2026-11-04 (research/sources/person/work/tvstage-GB.json,
+ * person.markets.producer.GB.series and .stage):
+ *
+ * - A series' credit is the Audio-Visual Expenditure Credit (CTA 2009 ss. 1179CA, 1179DE, 1179DI, 1179DV), 39% for an
+ *   animation or a children's programme and 34% otherwise, on the 80% of core costs it counts, as a film's; a series
+ *   that is neither has it only where its core costs reach £1m an hour of slot length (an hour episode an hour, a
+ *   half-hour episode half), nothing below. Every episode the game makes fills a slot over the Act's 20 minutes, so
+ *   that condition holds for every series. No UK-wide public fund backs a series (the BFI's Global Screen Fund takes
+ *   television only as an international co-production in animation or documentary; each nation's screen fund backs its
+ *   own nation's work, and a production here names no nation), so its fund is refused, told; no broadcaster or fund
+ *   publishes a cap on a series producer's fee (the BBC's price folds one in "in line with the Terms of Trade"), so it
+ *   has none, told as unknown. Once shot it is offered to broadcasters: how often one picks it up isn't counted by any
+ *   source, so the chance is the game's own, moved by the series and its campaign as a film's release is.
+ * - A play names its theatre: a subsidised theatre by its MRSL grade, a commercial theatre outside the West End or a
+ *   West End theatre by its seats; and whether it tours. Its credit is Theatre Tax Relief (CTA 2009 ss. 1217J, 1217K,
+ *   1217KC; accounting periods from 1 April 2025): 45% touring, 40% otherwise, of the lower of UK core costs and 80% of
+ *   core costs, at most the Act's €50 million. Its fund is Arts Council England's National Lottery Project Grants: a yes
+ *   at their 29.4% (2024/25, across art forms) as the package sells it, an award of what is left to raise, £1,000 to
+ *   £100,000. It opens once rehearsed and staged; how often a UK run earns back its cost isn't counted by any source, so
+ *   that chance is the game's own, moved as a film's release is. Who may take which role turns on whose agreements the
+ *   theatre's body has with the unions: the life directs a subsidised play (UK Theatre's with Equity) or a West End one
+ *   (SOLT's with Equity), and acts in a commercial one (UK Theatre's commercial theatre agreement, the actor's engine's
+ *   own); it writes a play for a subsidised theatre (UK Theatre's with the WGGB, or the ITC's) or a commercial one (the
+ *   ITC's). What the sources don't give is refused, told: a commercial theatre's director's minimum (its rates turn on a
+ *   run's length and level that the published card doesn't define), the subsidised theatre's and the West End's actors'
+ *   minimums, and a West End writers' agreement, none found.
  *
  * The producer options material in the genres they love (the game's reading of the Genres page, person.genres.model).
  *
@@ -80,14 +109,15 @@ import compiled from './markets.json' with { type: 'json' };
  * cap or its fixed sum, and what the cap on all public aid leaves after the credit), refused where the market's fund
  * isn't known or the budget is outside it; a cinema release at the market's rate, refused where none is known, and
  * earning back nothing the game can tell. The option is the WGA's everywhere, and the market's money is sought in the
- * EAO's shares (the game's reading where a market's own aren't researched, person.markets.producer.model). The research
- * is a film's: what a fund, an incentive, a fee cap or a release does for a series or a play isn't known, so a series'
- * or a play's plan has no fee or credit, and its fund and release are refused, told. What a market's research couldn't
- * find is told.
+ * EAO's shares (the game's reading where a market's own aren't researched, person.markets.producer.model). A market's
+ * research beyond the UK is a film's: what a fund, an incentive, a fee cap or a release does for a series or a play
+ * there isn't known, so a series' or a play's plan there has no fee or credit, and its fund and release are refused,
+ * told, until that market's research is done. What a market's research couldn't find is told.
  *
  * What the trade doesn't publish (how well a producer's eye reads a script, how far a plan is off, how far a shoot
- * slips, how often the market closes a deal, how much a better package, a contact or a campaign moves a rate, the
- * standard of the people hired) is the game's own until the owner balances it (person.producing.model).
+ * slips, how often the market closes a deal, how much a better package, a contact or a campaign moves a rate, how often a
+ * broadcaster picks up a series or a play earns back its cost, the standard of the people hired) is the game's own until
+ * the owner balances it (person.producing.model).
  */
 
 /** The line that tells the player these figures are the game's own (person.producing.model). */
@@ -104,6 +134,20 @@ export const FORMATS = ['film', 'series', 'stage'] as const;
 export type Format = (typeof FORMATS)[number];
 /** The medium an actor's part in it is in. */
 export const MEDIUM: Readonly<Record<Format, Medium>> = { film: 'film', series: 'television', stage: 'stage' };
+/**
+ * A UK play's theatre, as the bodies that agree its terms with the unions sort theatres: a subsidised theatre (UK
+ * Theatre's subsidised members, graded 1 to 3 by the MRSL), a commercial theatre outside the West End (UK Theatre's
+ * commercial members) or a West End theatre (SOLT's).
+ */
+export const THEATRES = ['subsidised', 'commercial', 'west-end'] as const;
+export type Theatre = (typeof THEATRES)[number];
+/** A UK play's theatre, its grade (a subsidised theatre's) or seats (a commercial or a West End theatre's), and whether it tours. */
+export interface Stage {
+  readonly theatre: Theatre;
+  readonly grade: 1 | 2 | 3 | null;
+  readonly seats: number | null;
+  readonly touring: boolean;
+}
 /** The episodes a series is made of, as the DGA's rate card has them. */
 export const EPISODE_FORMS = ['hour', 'half-hour'] as const;
 export type Episode = (typeof EPISODE_FORMS)[number];
@@ -182,6 +226,20 @@ export const FEE_SHARE = 0.075;
 /** The UK's credits on the 80% of core costs they count: the IFTC's 53% for budgets to £15m, the AVEC's 34% above (R-4612). */
 export const CREDIT = { core: 0.8, independent: 0.53, ceiling: 15_000_000, film: 0.34 } as const;
 
+/**
+ * The AVEC on a series (CTA 2009 ss. 1179CA, 1179DE, 1179DI, 1179DV, from 1 January 2024): 39% for an animation or a
+ * children's programme, without the high-end threshold; otherwise the film's 34% (CREDIT.film) where core costs reach
+ * £1m an hour of slot length, a slot an hour or half of one by the episode's form.
+ */
+export const AVEC = { from: '2024-01-01', special: 0.39, hourly: 1_000_000, slot: { hour: 1, 'half-hour': 0.5 } } as const;
+
+/** Theatre Tax Relief (CTA 2009 s. 1217K, accounting periods from 1 April 2025): 45% touring, 40% otherwise; at most €50m (s. 1217KC). */
+// Stryker disable next-line StringLiteral: a mutant here throws as the module loads, which Stryker reports as surviving (as OPTION_FEE's); the tests hold the cap to the euro.
+export const TTR = { from: '2025-04-01', touring: 0.45, other: 0.4, cap: fromMajor('EUR', '50000000') } as const;
+
+/** Arts Council England's National Lottery Project Grants: 29.4% of eligible applications funded (2024/25), £1,000 to £100,000. */
+export const ACE = { rate: 0.294, least: 1_000, most: 100_000 } as const;
+
 /** The BFI's production funding: 13% of applicants funded (2013/14), awards 22% of the budget (2018/19), at most £1.25m (Impact). */
 export const BFI = { rate: 0.13, share: 0.22, most: 1_250_000 } as const;
 
@@ -229,6 +287,10 @@ export const MODEL = {
   /** What each door open to the market (a contact, a family in the business) adds to a day's chance of closing, up to `doors`. */
   door: 0.05,
   doors: 10,
+  /** How often a broadcaster picks up a UK series made without one, for a series and campaign at the trade's middle. */
+  pickup: 0.3,
+  /** How often a UK play's run earns back its cost, for a play and campaign at the trade's middle. */
+  recoup: 0.2,
 } as const;
 
 export interface Plan {
@@ -237,9 +299,9 @@ export interface Plan {
   needed: number;
   /** The days the plan schedules. */
   scheduled: number;
-  /** The producer's fee and overheads; none where the market caps neither, or for a series or a play. */
+  /** The producer's fee and overheads; none where the market caps neither, or for a series or a play (none is published for either). */
   fee: Money | null;
-  /** The market's tax credit; none where it isn't known, or for a series or a play. */
+  /** The market's tax credit; none where it isn't known (a series' or a play's beyond the UK, or before the UK's credit for it applied). */
   credit: Money | null;
 }
 
@@ -270,6 +332,8 @@ export interface Project {
   readonly series: { readonly form: Episode; readonly episodes: number } | null;
   /** The film's or an episode's running time, where an agreement's minimums turn on it. */
   readonly minutes: number | null;
+  /** A UK play's theatre and touring; none for a film, a series or a play made elsewhere. */
+  readonly stage: Stage | null;
   /** The roles the life holds on it; the rest are hired. */
   readonly roles: readonly Role[];
   /** The life's own script it makes, by id; none where the material is optioned. */
@@ -292,8 +356,11 @@ export interface Project {
   raised: { [source: string]: Money };
   shot: Shoot | null;
   costs: Cost[];
-  /** What it came out as, and twice the budget back, where the market's research tells it. */
-  release: { at: number; quality: number; cinema: boolean; doubled: boolean | null } | null;
+  /**
+   * What it came out as; whether it found an audience (a film in cinemas, a series picked up by a broadcaster, a play's
+   * run earning back its cost); and a film's twice the budget back, where the market's research tells it.
+   */
+  release: { at: number; quality: number; audience: boolean; doubled: boolean | null } | null;
 }
 
 export interface ProducingSlice {
@@ -370,8 +437,9 @@ function running(p: Project, at: number, months: number): void {
 }
 
 /**
- * The producer's films in the PGA's seven years before a moment that found an audience: released in cinemas, or (the
- * life directing them) chosen by a festival, prepped in those years, each production once. A festival's choice is the
+ * The producer's productions in the PGA's seven years before a moment that found an audience: a film released in
+ * cinemas, a series picked up, a play whose run earned back its cost, or (the life directing it) a film chosen by a
+ * festival, prepped in those years, each production once. A festival's choice is the
  * director's engine's reading of an audience found (person.directing.model), which led to a second feature until
  * 2026-11-04 and now counts toward how financiers take the next, as a release does (person.producing.model).
  */
@@ -379,7 +447,7 @@ function running(p: Project, at: number, months: number): void {
 export function record(s: ProducingSlice, at: number, d: DirectingSlice = { films: [] }): number {
   const since = addMonths(ZONE, at, -12 * PGA.years);
   // @slate:consumer producing.release
-  const released = s.projects.filter((p) => p.release?.cinema === true && p.release.at >= since).map((p) => p.id);
+  const released = s.projects.filter((p) => p.release?.audience === true && p.release.at >= since).map((p) => p.id);
   // @slate:consumer directing.submit
   const chosen = d.films.filter((f) => f.started >= since && Object.values(f.festivals).includes(true)).map((f) => f.project);
   return new Set([...released, ...chosen]).size;
@@ -436,11 +504,49 @@ export interface MakingArgs {
   episodes?: number;
   /** The film's or an episode's running time, where an agreement's minimums turn on it. */
   minutes?: number;
+  /** A UK play's: its theatre, a subsidised theatre's grade or another's seats, and whether it tours. */
+  theatre?: string;
+  grade?: number;
+  seats?: number;
+  touring?: boolean;
 }
 
-type Making = Pick<Project, 'format' | 'series' | 'minutes' | 'roles' | 'market'>;
+type Making = Pick<Project, 'format' | 'series' | 'minutes' | 'stage' | 'roles' | 'market'>;
 
-/** A production as named: refused for a format or a role there isn't, no role or one twice, a series without its episodes, a stage play directed. */
+/** A UK play's theatre as named: a subsidised theatre by its grade, a commercial or West End theatre by its seats, and whether it tours. */
+function stageOf(a: MakingArgs): Stage {
+  const theatre = a.theatre as Theatre;
+  if (!THEATRES.includes(theatre)) throw new Error(`a play made in the UK names its theatre: ${THEATRES.join(', ')} (${String(a.theatre)})`);
+  let [grade, seats]: [Stage['grade'], Stage['seats']] = [null, null];
+  if (theatre === 'subsidised') {
+    if (a.seats !== undefined) throw new Error('a subsidised theatre names its grade, not its seats');
+    if (![1, 2, 3].includes(a.grade as number)) throw new Error(`a subsidised theatre's grade is 1, 2 or 3 (${String(a.grade)})`);
+    grade = a.grade as 1 | 2 | 3;
+  } else {
+    if (a.grade !== undefined) throw new Error(`a ${theatre === 'commercial' ? 'commercial' : 'West End'} theatre names its seats, not a grade`);
+    whole(a.seats, "the theatre's seats", 1);
+    seats = a.seats as number;
+  }
+  if (typeof a.touring !== 'boolean') throw new Error(`a play names whether it tours (${String(a.touring)})`);
+  return { theatre, grade, seats, touring: a.touring };
+}
+
+/**
+ * The roles the research lets the life hold on a play: directing it only in the UK, at a subsidised or a West End
+ * theatre, whose directors' minimums are known; acting in a UK play only at a commercial theatre, whose actors' agreement
+ * the actor's engine keeps. Elsewhere a play's parts are engaged under the market's agreements (src/person/acting).
+ */
+function playRoles(roles: readonly Role[], market: string, stage: Stage | null): void {
+  if (roles.includes('director')) {
+    if (stage === null) throw new Error(`a stage director's terms in ${countryName(market as CountryCode)} aren't known to this game, so a play there is directed by someone hired`);
+    if (stage.theatre === 'commercial') throw new Error("a commercial theatre director's minimum turns on a run's length and level that the published rates don't define, so a play there is directed by someone hired");
+  }
+  if (stage !== null && stage.theatre !== 'commercial' && roles.includes('actor')) {
+    throw new Error(`${stage.theatre === 'subsidised' ? "a subsidised theatre's" : "the West End's"} actors' minimum isn't known to this game, so a play there is acted by people hired`);
+  }
+}
+
+/** A production as named: refused for a format or a role there isn't, no role or one twice, a series without its episodes, a play's roles the research doesn't cover. */
 function making(s: Starting, a: MakingArgs): Making {
   const format = a.format as Format;
   if (!FORMATS.includes(format)) throw new Error(`there's no format ${String(a.format)}`);
@@ -448,7 +554,6 @@ function making(s: Starting, a: MakingArgs): Making {
   const roles = a.roles as Role[];
   for (const r of roles) if (!ROLES.includes(r)) throw new Error(`there's no role ${String(r)}`);
   if (new Set(roles).size !== roles.length) throw new Error('a role is held once');
-  if (format === 'stage' && roles.includes('director')) throw new Error("a stage director's terms aren't known to this game, so a play is directed by someone hired");
   let series: Project['series'] = null;
   if (format === 'series') {
     if (!EPISODE_FORMS.includes(a.episode as Episode)) throw new Error(`a series' episodes are an hour or a half-hour (${String(a.episode)})`);
@@ -460,7 +565,11 @@ function making(s: Starting, a: MakingArgs): Making {
   const market = a.market ?? residenceOf(personOf(s.identity));
   if (market !== HOME && !Object.hasOwn(MARKETS, market)) throw new Error(`${market} isn't a market a producer works in`);
   zoneOf(market);
-  return { format, series, minutes: a.minutes ?? null, roles: [...roles], market };
+  let stage: Stage | null = null;
+  if (format === 'stage' && market === HOME) stage = stageOf(a);
+  else if ([a.theatre, a.grade, a.seats, a.touring].some((x) => x !== undefined)) throw new Error(format === 'stage' ? "a play's theatre is named in the UK alone, the one market whose theatres the game knows" : `a ${format} has no theatre`);
+  if (format === 'stage') playRoles(roles, market, stage);
+  return { format, series, minutes: a.minutes ?? null, stage, roles: [...roles], market };
 }
 
 const started = (s: Producing, id: number, at: number, m: Making, rest: Pick<Project, 'script' | 'writing' | 'genre' | 'expires' | 'options' | 'material'>): void => {
@@ -511,23 +620,38 @@ export interface DevelopArgs extends MakingArgs {
 }
 
 /** The forms of script each format is made from. */
-export const WRITTEN_FOR: Readonly<Record<Exclude<Format, 'stage'>, readonly Written[]>> = { film: ['feature', 'short'], series: ['pilot', 'episode'] };
+export const WRITTEN_FOR: Readonly<Record<Format, readonly Written[]>> = { film: ['feature', 'short'], series: ['pilot', 'episode'], stage: ['play'] };
+
+/**
+ * The writers' agreements that cover a UK play by its theatre (src/person/work/career.ts, PLAYS): a subsidised
+ * theatre's UK Theatre's, or the ITC's where the life's company is an ITC member; a commercial theatre's the ITC's; the
+ * West End's none found (person.markets.writer.blocked.GB.stage.west-end).
+ */
+export const PLAY_WRITING: Readonly<Record<Theatre, readonly PlayAgreement[]>> = { subsidised: ['uk-theatre-wggb', 'itc-wggb'], commercial: ['itc-wggb'], 'west-end': [] };
+
+/** The agreements that pay a play made in a market: a UK play's by its theatre; refused elsewhere, and for the West End, where none is known. */
+function playAgreements(market: string, stage: Stage | null): readonly string[] {
+  if (stage === null) throw new Error(`a play's writers' minimum in ${countryName(market as CountryCode)} isn't known to this game, so a play there is someone else's material`);
+  if (stage.theatre === 'west-end') throw new Error("no writers' agreement for the West End is known to this game, so a West End play is someone else's material");
+  return PLAY_WRITING[stage.theatre];
+}
 
 /**
  * The writers' agreement a production pays the life's script under: the one named, or the market's only one for the
- * form (the WGA's in the US); none where the research knows none there. Refused where the one named isn't the market's,
- * the market has several and none is named, the agreement's figures aren't known (told), or the writer doesn't write
- * any of its languages well enough.
+ * form (the WGA's in the US; a play's its theatre's); none where the research knows none there. Refused where the one
+ * named isn't the market's, the market has several and none is named, the agreement's figures aren't known (told), or
+ * the writer doesn't write any of its languages well enough (a UK play's in English).
  */
-export function writingFor(s: { identity: IdentitySlice }, market: string, form: Written, named: string | undefined): string | null {
-  const all = market === countryOf(KEPT) ? [KEPT] : ((WRITTEN[market]?.agreements ?? []) as readonly string[]);
-  const covering = all.filter((id) => id === KEPT || (writerMarketOf(id) as { forms: readonly Written[] }).forms.includes(form));
+export function writingFor(s: { identity: IdentitySlice }, market: string, form: Written, named: string | undefined, stage: Stage | null = null): string | null {
+  const play = form === 'play';
+  const all = play ? playAgreements(market, stage) : market === countryOf(KEPT) ? [KEPT] : ((WRITTEN[market]?.agreements ?? []) as readonly string[]);
+  const covering = play ? all : all.filter((id) => id === KEPT || (writerMarketOf(id) as { forms: readonly Written[] }).forms.includes(form));
   if (named !== undefined && !covering.includes(named)) throw new Error(`a ${form} made in ${market} isn't paid under ${named}`);
   const id = named ?? (covering.length > 1 ? undefined : (covering[0] ?? null));
   if (id === undefined) throw new Error(`a ${form} made in ${market} names its writers' agreement: ${covering.join(', ')}`);
   if (id === null) return null;
-  if (writerMarketOf(id)?.unknown === true) throw new Error(writersUnknown(id) as string);
-  const languages = languagesOf(id);
+  if (!play && writerMarketOf(id)?.unknown === true) throw new Error(writersUnknown(id) as string);
+  const languages = play ? ['en'] : languagesOf(id);
   // @slate:consumer identity.make
   if (!languages.some((l) => speaks(personOf(s.identity), l, WRITES_IN))) throw new Error(`a script under ${id} is written in ${languages.join(' or ')}, which the writer doesn't write well enough`);
   return id;
@@ -540,10 +664,9 @@ function develop(s: Developing, a: DevelopArgs, c: Context): void {
   // @slate:consumer script.write
   const script = scriptOf(s.scripts, a.script);
   if (s.producing.projects.some((p) => p.script === script.id)) throw new Error(`script ${script.id} is in a production already`);
-  if (m.format === 'stage') throw new Error("the life writes for the screen, so a play is someone else's material");
   const forms = WRITTEN_FOR[m.format];
-  if (!forms.includes(script.form)) throw new Error(`a ${m.format} is made from a ${forms.join(' or ')}, not a ${script.form}`);
-  const writing = writingFor(s, m.market, script.form, a.agreement);
+  if (!forms.includes(script.form)) throw new Error(`a ${noun(m)} is made from a ${forms.join(' or ')}, not a ${script.form}`);
+  const writing = writingFor(s, m.market, script.form, a.agreement, m.stage);
   // @slate:consumer script.revise
   // @slate:consumer script.read
   started(s, s.producing.projects.length + 1, c.now, m, { script: script.id, writing, genre: script.genre, expires: null, options: [], material: quality(script) });
@@ -616,6 +739,38 @@ export function creditIn(m: Market, budget: Money): Money | null {
   return amount(budget.currency, tier === undefined ? 0 : amountOf(tier, budget));
 }
 
+/**
+ * The UK's credit on a series (the AVEC): 39% of the 80% counted for an animation (its genre's BFI group) or a
+ * children's programme (the children's genre, the game's reading of a programme whose audience is mostly under 15),
+ * 34% for the rest where the budget reaches £1m an hour of slot length, nothing below; none before 1 January 2024.
+ */
+export function seriesCredit(p: Pick<Project, 'series' | 'genre'>, budget: Money, date: string): Money | null {
+  if (date < AVEC.from) return null;
+  const { form, episodes } = p.series as NonNullable<Project['series']>;
+  const special = kindOf(p.genre) === 'animation' || p.genre === 'childrens';
+  if (!special && budget.minor < AVEC.hourly * 100 * AVEC.slot[form] * episodes) return amount('GBP', 0);
+  return amount('GBP', budget.minor * CREDIT.core * (special ? AVEC.special : CREDIT.film));
+}
+
+/**
+ * The UK's credit on a play (Theatre Tax Relief): 45% touring, 40% otherwise, of the 80% of core costs counted, at most
+ * the Act's €50m at the day's rate (money.rates); none before 1 April 2025. shortcut: the Act's cap binds an undertaking's
+ * credits in a year and is held here for each play, and isn't applied on a day before the first rate the game knows
+ * (2025-12-31), where only a play of over £100m could reach it; upgrade when the life's company keeps accounts by year.
+ */
+export function stageCredit(touring: boolean, budget: Money, date: string): Money | null {
+  if (date < TTR.from) return null;
+  const credit = budget.minor * CREDIT.core * (touring ? TTR.touring : TTR.other);
+  const cap = exchangeOn(TTR.cap, 'GBP', date)?.money.minor ?? Infinity;
+  return amount('GBP', Math.min(credit, cap));
+}
+
+/** A UK production's credit: a film's, a series' or a play's. */
+function homeCredit(p: Project, budget: Money, date: string): Money | null {
+  if (p.format === 'film') return creditOn(budget);
+  return p.format === 'series' ? seriesCredit(p, budget, date) : stageCredit((p.stage as Stage).touring, budget, date);
+}
+
 /** How near the need a producer schedules, 0 to 100: the detailed plan and the production's costs. */
 export const planSkill = (v: Values): number => 0.5 * of(v, C.plan) + 0.5 * of(v, C.costs);
 
@@ -629,7 +784,7 @@ export function tradeDays(p: Pick<Project, 'format' | 'series'>, days: number | 
   return days as number;
 }
 
-/** Budgets and schedules a project: the days it needs, the days the plan gives it, and for a film the fee and the credit. */
+/** Budgets and schedules a project: the days it needs, the days the plan gives it, a film's fee, and the credit. */
 function plan(s: Producing, a: PlanArgs, c: Context): void {
   const p = projectOf(s.producing, a.project);
   const v = producerValues(s, p);
@@ -645,7 +800,8 @@ function plan(s: Producing, a: PlanArgs, c: Context): void {
   const m = MARKETS[p.market] as Market;
   const home = p.market === HOME;
   const film = p.format === 'film';
-  p.plan = { budget, needed, scheduled, fee: !film ? null : home ? amount(currency, (budget.minor * FEE_SHARE) / (1 + FEE_SHARE)) : feeIn(m, budget), credit: !film ? null : home ? creditOn(budget) : creditIn(m, budget) };
+  const fee = !film ? null : home ? amount(currency, (budget.minor * FEE_SHARE) / (1 + FEE_SHARE)) : feeIn(m, budget);
+  p.plan = { budget, needed, scheduled, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget) : null };
   learn(s, p, [C.plan, C.costs], 1);
 }
 
@@ -697,21 +853,44 @@ export function fundFor(p: Project): { rate: number; award: number } {
   return { rate: m.fund.rate, award: Math.min(amountOf(tier, budget), left) };
 }
 
-/** Applies to the market's fund (the BFI in the UK), once a project: a yes at its rate as the package sells it, and its award. */
+/** What a production's noun is, as a refusal names it. */
+const noun = (p: Pick<Project, 'format'>): string => (p.format === 'stage' ? 'play' : p.format);
+
+/**
+ * Arts Council England's project grant for a UK play: a yes at its rate, an award of what is left to raise, at most
+ * £100,000; refused where less than its £1,000 is left.
+ */
+export function aceFor(p: Project): { rate: number; award: number } {
+  const ask = Math.min(target(p) - raised(p), ACE.most * 100);
+  if (ask < ACE.least * 100) throw new Error(`Arts Council England's project grants start at £1,000, more than project ${p.id} has left to raise`);
+  return { rate: ACE.rate, award: ask };
+}
+
+/** The UK's fund for a production: the BFI's for a film, Arts Council England's for a play; none across the UK for a series (refused, told). */
+function homeFund(p: Project): { rate: number; award: number; source: string } {
+  if (p.format === 'series') {
+    throw new Error("no public fund across the UK backs a drama series: the BFI's Global Screen Fund takes television only as an international co-production in animation or documentary, and each nation's screen fund backs its own nation's work");
+  }
+  if (p.format === 'stage') return { ...aceFor(p), source: 'ace' };
+  return { rate: BFI.rate, award: Math.min(planOf(p).budget.minor * BFI.share, BFI.most * 100), source: 'bfi' };
+}
+
+/** Applies to the market's fund (the BFI for a UK film, Arts Council England for a UK play), once a project: a yes at its rate as the package sells it, and its award. */
 function apply(s: Applying, a: ProjectArgs, c: Context): void {
   const p = projectOf(s.producing, a.project);
   const v = producerValues(s, p);
   if (p.applied) throw new Error(`project ${p.id} has applied`);
-  if (p.format !== 'film') throw new Error(`what a public fund gives a ${p.format === 'series' ? 'series' : 'play'} isn't known to this game`);
+  const home = p.market === HOME;
+  if (!home && p.format !== 'film') throw new Error(`what a public fund in ${countryName(p.market as CountryCode)} gives a ${noun(p)} isn't known to this game`);
   // @slate:consumer identity.make
   const refused = fundRefuses(personOf(s.identity), p.market, c.now);
   if (refused !== null) throw new Error(refused);
-  const home = p.market === HOME;
-  seeking(p, c.now, home ? MONTHS_LEFT : 0);
-  const { rate, award } = home ? { rate: BFI.rate, award: Math.min(planOf(p).budget.minor * BFI.share, BFI.most * 100) } : fundFor(p);
+  // The BFI's ten months left on an option is the BFI's own rule.
+  seeking(p, c.now, home && p.format === 'film' ? MONTHS_LEFT : 0);
+  const { rate, award, source } = home ? homeFund(p) : { ...fundFor(p), source: 'fund' };
   p.applied = true;
   // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
-  if (c.draws('producing.work', 'apply', p.id).float() < rate * factor(s.producing, packagePitch(s, v, p), p, c.now, s.directing)) p.raised[home ? 'bfi' : 'fund'] = amount(planOf(p).budget.currency, award);
+  if (c.draws('producing.work', 'apply', p.id).float() < rate * factor(s.producing, packagePitch(s, v, p), p, c.now, s.directing)) p.raised[source] = amount(planOf(p).budget.currency, award);
   learn(s, p, [C.pitch, C.arrange, C.network], 1);
 }
 
@@ -798,11 +977,15 @@ function shoot(s: Shooting, a: PayingArgs, c: Context): void {
   learn(s, p, [C.hire, C.lead], days * hoursShare(personOf(s.identity), e.country, 'producer', c.now));
 }
 
-/** What the production pays the life's script: its agreement's minimum on the day, for the production's budget and running time; none where it's left to negotiation. */
+/**
+ * What the production pays the life's script: its agreement's minimum on the day, for the production's budget and
+ * running time (a play's for its theatre's grade or its running time); none where it's left to negotiation.
+ */
 function writerPay(s: { scripts: ScriptsSlice }, p: Project & { plan: Plan }, now: number): Money | null {
   // @slate:consumer script.write
   const script = scriptOf(s.scripts, p.script as number);
-  return minimumOf({ agreement: p.writing as string, budget: budgetMajor(p), minutes: p.minutes }, script.form, dateOf(now), script);
+  if (script.form === 'play') return playMinimum(p.writing as PlayAgreement, { grade: (p.stage as Stage).grade, minutes: p.minutes }, dateOf(now));
+  return minimumOf({ agreement: p.writing as string, budget: budgetMajor(p), minutes: p.minutes }, script.form as Screen, dateOf(now), script);
 }
 
 /**
@@ -831,29 +1014,37 @@ export const sellSkill = (v: Values, quality: number): number => 0.5 * quality +
 /** A rate by budget, from a table of bounds in pounds. */
 export const rateFor = (table: readonly (readonly [number, number])[], budget: Money): number => (table.find(([below]) => budget.minor < below * 100) as readonly [number, number])[1];
 
+/** How often a UK production finds its audience, for a production and campaign at the trade's middle: a film's at the BFI's rate for its budget, a series' and a play's the game's own. */
+function homeChance(p: Project, budget: Money): number {
+  if (p.format === 'film') return rateFor(RELEASE, budget);
+  return p.format === 'series' ? MODEL.pickup : MODEL.recoup;
+}
+
 /**
- * Releases a film shot: what it came out as, a cinema release, and twice the budget back, at the BFI's rates for its
- * budget as it sells; in another market, a cinema release at its rate, refused where its research gives none. A
- * series' or a play's release isn't researched, so it is refused, told.
+ * Releases a production shot: what it came out as, and whether it finds its audience as it sells: a film's cinema
+ * release and twice the budget back at the BFI's rates for its budget; a UK series offered to broadcasters and a UK
+ * play's run, each at the game's own chance (person.producing.model); a film elsewhere reaching cinemas at its market's
+ * rate, refused where its research gives none. A series' or a play's release beyond the UK isn't researched, so it is
+ * refused, told.
  */
 function release(s: Releasing, a: ProjectArgs, c: Context): void {
   const p = projectOf(s.producing, a.project);
   const v = producerValues(s, p);
-  if (p.format !== 'film') throw new Error(`how a ${p.format === 'series' ? 'series' : 'play'} fares once it's made isn't known to this game`);
+  const home = p.market === HOME;
+  if (!home && p.format !== 'film') throw new Error(`how a ${noun(p)} made in ${countryName(p.market as CountryCode)} fares once it's made isn't known to this game`);
   if (p.release !== null) throw new Error(`project ${p.id} is released`);
   const quality = qualityOf(s, p);
   const { budget } = planOf(p);
-  const home = p.market === HOME;
   const tier = home ? undefined : tierFor((MARKETS[p.market] as Market).release ?? [], budget);
   if (!home && tier === undefined) throw new Error(`how often a film made in ${countryName(p.market as CountryCode)} reaches cinemas isn't known to this game`);
   const f = 0.5 + sellSkill(v, quality) / 100;
   const d = c.draws('producing.work', 'release', p.id);
   // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
-  const cinema = d.float() < (tier === undefined ? rateFor(RELEASE, budget) : tier.rate) * f;
+  const audience = d.float() < (tier === undefined ? homeChance(p, budget) : tier.rate) * f;
   // @slate:consumer producing.option
-  const earns = rateFor(RECOUP, budget) * f * boxOfficeFactor(p.genre);
+  const earns = () => rateFor(RECOUP, budget) * f * boxOfficeFactor(p.genre);
   // Stryker disable next-line EqualityOperator: as above.
-  p.release = { at: c.now, quality, cinema, doubled: home ? cinema && d.float() < earns : null };
+  p.release = { at: c.now, quality, audience, doubled: home && p.format === 'film' ? audience && d.float() < earns() : null };
   learn(s, p, [C.marketing], 1);
 }
 
@@ -874,9 +1065,19 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
   'fund.primary': "the public fund's own published terms",
 };
 
-/** What the player is told of a market where its research couldn't find all of it: "a, b and c"; nothing where it is known whole. */
-export function aboutMarket(market: string): string | undefined {
-  const missing = (MARKETS[market]?.unknown ?? []).map((u) => MISSING[u]);
+/**
+ * What the UK's research of 2026-11-04 couldn't find of a series and a play, as the player is told it (the register's
+ * person.markets.producer.blocked.GB.* and person.markets.writer.blocked.GB.stage.west-end); a film's is known whole.
+ */
+export const HOME_MISSING: Readonly<Record<Format, readonly string[]>> = {
+  film: [],
+  series: ["the cap a broadcaster or funder sets on a series producer's fee", 'how often a broadcaster picks up a series made without one', "what Northern Ireland Screen's fund gives a series"],
+  stage: ['how often a play earns back its cost', "the playwright's minimum in the West End"],
+};
+
+/** What the player is told of a market, for a production of a format, where its research couldn't find all of it: "a, b and c"; nothing where it is known whole. */
+export function aboutMarket(market: string, format: Format = 'film'): string | undefined {
+  const missing = [...(MARKETS[market]?.unknown ?? []).map((u) => MISSING[u]), ...(market === HOME ? HOME_MISSING[format] : [])];
   if (missing.length === 0) return undefined;
   const list = missing.length > 1 ? `${missing.slice(0, -1).join(', ')} and ${missing.at(-1) as string}` : (missing[0] as string);
   return t(UNKEPT_LINE, { country: countryName(market as CountryCode), missing: list });
@@ -885,8 +1086,8 @@ export function aboutMarket(market: string): string | undefined {
 /** Where a project is made and the days it is scheduled for, as a permit to work there would ask. */
 export const engagementOf = (p: Project): { country: CountryCode; days: number } => ({ country: p.market as CountryCode, days: planOf(p).scheduled });
 
-/** The form the director's engine reads a production as: a feature, or a series' episodes. */
-export const directedAs = (p: Pick<Project, 'format' | 'series'>): Directed => (p.series === null ? 'feature' : p.series.form);
+/** The form the director's engine reads a production as: a feature, a series' episodes, or a play. */
+export const directedAs = (p: Pick<Project, 'format' | 'series'>): Directed => (p.format === 'stage' ? 'play' : p.series === null ? 'feature' : p.series.form);
 
 // Stryker disable all: a mutant of a declaration made as the module loads changes its shape, so the module loaded
 // again for it is refused as declared twice (as the accounts' and the cards' say). The declarations are held by the

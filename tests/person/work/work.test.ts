@@ -124,13 +124,13 @@ describe('a script', () => {
   });
 
   it("needs the trade's time: a feature in eight weeks at the top, an episode within the MBA's 2.4 weeks", () => {
-    expect(DAYS).toEqual({ feature: 56, pilot: 12.6, episode: 8.4, short: 10 });
+    expect(DAYS).toEqual({ feature: 56, pilot: 12.6, episode: 8.4, short: 10, play: 56 });
     expect(daysNeeded(values(100), 'feature')).toBe(56);
     expect(daysNeeded(values(0), 'feature')).toBe(112);
     expect(daysNeeded(values(0), 'episode')).toBe(17);
     expect(daysNeeded(values(100), 'episode')).toBe(9);
     const pace = (w: Record<string, number>) => 0.6 * skillOf(w, 'screenwriter', 'writing') + 0.4 * skillOf(w, 'screenwriter', 'time-management');
-    for (const w of [values(0, { writing: 100 }), values(0, { 'time-management': 100 }), values(37)]) for (const form of ['feature', 'pilot', 'episode', 'short'] as const) expect(daysNeeded(w, form)).toBe(Math.ceil(DAYS[form] / (0.5 + (0.5 * pace(w)) / 100)));
+    for (const w of [values(0, { writing: 100 }), values(0, { 'time-management': 100 }), values(37)]) for (const form of ['feature', 'pilot', 'episode', 'short', 'play'] as const) expect(daysNeeded(w, form)).toBe(Math.ceil(DAYS[form] / (0.5 + (0.5 * pace(w)) / 100)));
     expect(daysNeeded(values(0, { writing: 100 }), 'short')).toBeGreaterThan(daysNeeded(values(100), 'short'));
     expect(finish(values(0), 60, 60)).toBe(1);
     expect(finish(values(0), 90, 60)).toBe(1);

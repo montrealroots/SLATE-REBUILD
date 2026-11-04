@@ -10,7 +10,8 @@
    "cut",
    "quality-by-level",
    "festivals",
-   "declarations"
+   "declarations",
+   "play"
   ]
  },
  "rows": [
@@ -138,6 +139,19 @@
    ],
    "tests": [
     "tests/person/directing/directing.test.ts::the director > is run through the frame, each command declaring what it reads and writes"
+   ]
+  },
+  {
+   "key": "play",
+   "status": "game",
+   "register": [
+    "R-4615",
+    "R-9778"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play the life directs > is paid its theatre's directors' minimum: UK Theatre's with Equity by the grade, SOLT's in the West End by the seats",
+    "tests/person/producing/stage.test.ts::a UK play the life directs > is prepped, then staged in its plan's days with no cut, its direction what the staging brought",
+    "tests/person/producing/stage.test.ts::a UK play the life directs > producing.option: a play at a better-graded theatre pays its director more"
    ]
   }
  ]

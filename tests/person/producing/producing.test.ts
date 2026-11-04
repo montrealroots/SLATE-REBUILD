@@ -128,7 +128,7 @@ describe('optioning material', () => {
     for (const days of [1, 5, 30]) {
       const l = optioned(60, { development: 70 }, days);
       const e = eye(v(made(60, { development: 70 })));
-      expect(project(l), String(days)).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, roles: ['producer'], script: null, writing: null, genre: GENRE, market: 'GB', expires: addMonths(ZONE, T0, 18), options: [OPTION_FEE], material: picked(e, days, 1), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
+      expect(project(l), String(days)).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, roles: ['producer'], script: null, writing: null, genre: GENRE, market: 'GB', expires: addMonths(ZONE, T0, 18), options: [OPTION_FEE], material: picked(e, days, 1), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
       expect(held(l)['development']).toBeCloseTo(grown(70, days), 10);
       expect(held(l)['financing']).toBe(60);
     }
@@ -202,7 +202,7 @@ describe('renewing an option', () => {
 describe('budgeting and scheduling', () => {
   it("schedules the days the script needs, around the CNC's 32, nearer the need with a better plan", () => {
     expect(FEATURE_SHOOT).toBe(32);
-    expect(MODEL).toEqual({ misjudged: 100, planned: 0.3, need: 0.25, falter: 0.5, daily: 1 / 30, record: 0.1, door: 0.05, doors: 10 });
+    expect(MODEL).toEqual({ misjudged: 100, planned: 0.3, need: 0.25, falter: 0.5, daily: 1 / 30, record: 0.1, door: 0.05, doors: 10, pickup: 0.3, recoup: 0.2 });
     for (const [seed, level] of [[SEED, 0], [SEED, 40], [OTHER, 75], [OTHER, 100]] as const) {
       const l = planned(optioned(50, { production: level, financing: 100 - level }, 5, seed));
       const d = dr(seed, 'plan', 1);
@@ -264,7 +264,7 @@ describe('financing', () => {
     expect(factor(l.slices.producing, pitchSkill(w), p, T0)).toBeCloseTo(0.5 + (0.5 * p.material + 0.5 * pitchSkill(w)) / 100, 12);
     const since = addMonths(ZONE, T0, -84);
     let next = 1;
-    const released = (when: number, cinema = true): Project => ({ ...p, id: (next += 1), release: { at: when, quality: 50, cinema, doubled: false } });
+    const released = (when: number, cinema = true): Project => ({ ...p, id: (next += 1), release: { at: when, quality: 50, audience: cinema, doubled: false } });
     const s = (...ps: Project[]): ProducingSlice => ({ projects: [p, ...ps] });
     expect(record(s(released(since)), T0)).toBe(1);
     expect(record(s(released(since - 1)), T0)).toBe(0);
@@ -460,7 +460,7 @@ describe('the release', () => {
       const doubled = cinema && d.float() < (big ? 0.148 : 0.033) * f * boxOfficeFactor(GENRE);
       const before = held(l)['marketing'] as number;
       l = dispatch(l, releaseFilm, { project: id });
-      expect(project(l, id).release, String(id)).toEqual({ at: T0, quality, cinema, doubled });
+      expect(project(l, id).release, String(id)).toEqual({ at: T0, quality, audience: cinema, doubled });
       expect(held(l)['marketing']).toBeCloseTo(grown(before, 1), 10);
       seen.add(`${cinema} ${doubled}`);
     }
@@ -477,7 +477,7 @@ describe('the release', () => {
   it('counts toward how financiers take the next project', () => {
     let l = made(100);
     for (let i = 0; i < 6; i += 1) l = dispatch(film(l, '20000000'), releaseFilm, { project: i + 1 });
-    const n = l.slices.producing.projects.filter((p) => p.release?.cinema === true).length;
+    const n = l.slices.producing.projects.filter((p) => p.release?.audience === true).length;
     expect(n).toBeGreaterThanOrEqual(2);
     const next = dispatch(l, optionMaterial, { ...FILM, account: ACCOUNT, days: 5, genre: GENRE });
     const p = project(next, 7);
@@ -488,7 +488,7 @@ describe('the release', () => {
     const released = (n: number) => {
       let l = made(50, { marketing: n });
       for (let i = 0; i < 20; i += 1) l = dispatch(film(l, '1000000'), releaseFilm, { project: i + 1 });
-      return l.slices.producing.projects.filter((p) => p.release?.cinema === true).length;
+      return l.slices.producing.projects.filter((p) => p.release?.audience === true).length;
     };
     falsifyAny({ feature: 'producing.release', claim: 'bites', says: 'a producer at 100 in Marketing gets more of 20 films a cinema release than one at 0', base: 0, twin: 100, outcome: released });
   });

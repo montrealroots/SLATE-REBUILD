@@ -42,6 +42,9 @@ import { partScore, PARTS, scriptOf, spread, type Form, type Script, type Script
  * What the trade doesn't publish (how likely a contact is made in a day) is the game's own until the owner balances it (person.career.model).
  */
 
+/** The forms written for the screen, which the screen's agreements pay; a play is paid under a theatre's (PLAYS). */
+export type Screen = Exclude<Form, 'play'>;
+
 /**
  * What a production under the WGA's MBA pays for a script of each form, at the 2026 MBA's first-year minimum (R-4241): a
  * feature as an original screenplay with treatment at high budget, an episode a 60-minute network prime time story and
@@ -50,7 +53,7 @@ import { partScore, PARTS, scriptOf, spread, type Form, type Script, type Script
  */
 // Stryker disable next-line StringLiteral: a mutant here throws as the module loads, which Stryker 10.0.0 reports as
 // surviving (HANDOFF, blockers); the test holds each fee to the cent.
-export const FEES: Readonly<Record<Form, Money | null>> = {
+export const FEES: Readonly<Record<Screen, Money | null>> = {
   // Stryker disable next-line StringLiteral: as above.
   feature: fromMajor('USD', '173215'),
   // Stryker disable next-line StringLiteral: as above.
@@ -242,7 +245,7 @@ function amountOf(currency: CurrencyCode, f: Fee, o: Terms, form: Form, work: Wo
  * the agreement sets no terms for the form, the kind or the tier, the production doesn't say what its tier turns on, the
  * script isn't named where a minimum turns on it, no minimum is known by the date, or its figures aren't known (told).
  */
-export function minimumOf(o: Terms, form: Form, date: string, work: Work | null = null): Money | null {
+export function minimumOf(o: Terms, form: Screen, date: string, work: Work | null = null): Money | null {
   const a = marketOf(o.agreement);
   if (a === null) return FEES[form];
   if (a.unknown) throw new Error(aboutMarket(o.agreement) as string);
@@ -257,6 +260,57 @@ export function minimumOf(o: Terms, form: Form, date: string, work: Work | null 
   const fee = fit.findLast((f) => f.from <= date);
   if (fee === undefined) throw new Error(`no minimum under ${o.agreement} is known before ${(fit[0] as Fee).from}`);
   return fee.amount === null ? null : amountOf(a.currency as CurrencyCode, fee, o, form, work);
+}
+
+/** A minimum's steps: from each date (the first day it applies), the amount in pounds. */
+type Steps = readonly (readonly [from: string, pounds: string])[];
+
+/** The theatres' agreements, by their tiers: UK Theatre's by the grade, the ITC's by the minutes a play runs over. */
+type Plays = { readonly 'uk-theatre-wggb': Readonly<Record<1 | 2 | 3, Steps>>; readonly 'itc-wggb': readonly { readonly over: number; readonly steps: Steps }[] };
+
+/**
+ * The agreements a play written for the life's own production is paid under in the UK (research/sources/person/work/
+ * tvstage-GB.json, person.markets.writer.GB.stage), each the whole of what it pays on signature, delivery and
+ * acceptance, which the production pays when it stages the play, as a film pays its script on the first day of
+ * photography:
+ *
+ * - UK Theatre's with the WGGB and the Scottish Society of Playwrights, for subsidised theatres, by the theatre's MRSL
+ *   grade, from 4 May 2026 (the earlier years' weren't read, so a play staged before is refused).
+ * - The ITC's with the WGGB, for a play by an ITC member's company, by its running time (over 70 minutes, 31 to 70, 11 to
+ *   30, 10 or less), each year's from its start: 2025/26 from 1 June 2025, as its rate card says; 2026/27 and 2027/28
+ *   from 1 April, the day the agreement's financial terms are revised each year (the game's reading of its "relevant
+ *   year", person.producing.model).
+ *
+ * Their royalties (at least 8% of the net box office, the advances recouped against it) aren't modelled: the game keeps
+ * no box office.
+ */
+export const PLAYS = {
+  'uk-theatre-wggb': { 1: [['2026-05-04', '11598.60']], 2: [['2026-05-04', '9383.49']], 3: [['2026-05-04', '8281.65']] },
+  'itc-wggb': [
+    { over: 70, steps: [['2025-06-01', '10323.00'], ['2026-04-01', '10942.38'], ['2027-04-01', '11380.08']] },
+    { over: 30, steps: [['2025-06-01', '6873.75'], ['2026-04-01', '7286.18'], ['2027-04-01', '7577.62']] },
+    { over: 10, steps: [['2025-06-01', '3438.00'], ['2026-04-01', '3644.28'], ['2027-04-01', '3790.05']] },
+    { over: 0, steps: [['2025-06-01', '1000.00'], ['2026-04-01', '1060.00'], ['2027-04-01', '1102.40']] },
+  ],
+} as const satisfies Plays;
+export type PlayAgreement = keyof typeof PLAYS;
+
+/**
+ * What a play's script is paid under a theatre's agreement on a date: UK Theatre's by the theatre's grade, the ITC's by
+ * the running time; the latest step begun by then, the last kept past an agreement's term. Refused where the play names
+ * no running time the ITC's turns on, or no minimum is known by the date.
+ */
+export function playMinimum(agreement: PlayAgreement, o: { grade: 1 | 2 | 3 | null; minutes: number | null }, date: string): Money {
+  let steps: Steps;
+  if (agreement === 'uk-theatre-wggb') steps = PLAYS[agreement][o.grade as 1 | 2 | 3];
+  else {
+    if (o.minutes === null) throw new Error(`a play under ${agreement} names its running time`);
+    const minutes = o.minutes;
+    steps = (PLAYS[agreement].find((t) => minutes > t.over) as { steps: Steps }).steps;
+  }
+  const step = steps.findLast(([from]) => from <= date);
+  if (step === undefined) throw new Error(`no minimum under ${agreement} is known before ${(steps[0] as Steps[number])[0]}`);
+  return fromMajor('GBP', step[1]);
 }
 
 type Values = Readonly<Record<string, number>>;

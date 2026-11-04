@@ -41,7 +41,9 @@ import compiled from './markets.json' with { type: 'json' };
  * The pay is the agreement's minimum (R-4614): SAG-AFTRA's day and weekly performers, its low-budget tiers by the
  * production's budget (none set under $20,000, the Micro-Budget agreement leaving it to negotiation); Pact/Equity's
  * Cinema Films Agreement for UK features of £3 million and over; UK Theatre/Equity's commercial theatre weeks by the
- * venue's seats, rehearsal weeks at the rehearsal rate; ACTRA's Independent Production Agreement, a principal by the
+ * venue's seats, rehearsal weeks at the rehearsal rate (a UK play at a commercial theatre outside the West End, the
+ * theatre's seats; its agreement covers neither a subsidised theatre nor the West End, whose actors' minimums aren't
+ * known, so the producer refuses the life's part in a play there); ACTRA's Independent Production Agreement, a principal by the
  * day or week and a part of five lines or fewer by the day. The production engages its parts under the agreements of
  * the country it is made in, in the medium its format is (a film, a series on television, a play on stage), and its
  * budget is the one the tiers read.
@@ -490,7 +492,7 @@ export interface CastArgs {
   length: number;
   lines: number;
   rehearsal: number;
-  /** The venue's seats, on stage. */
+  /** The venue's seats, on stage: a market's play's (a UK play's are its theatre's, as its producer named them). */
   seats?: number;
   asks: string[];
   role?: string;
@@ -520,12 +522,16 @@ function cast(s: Casting, a: CastArgs, c: Context): void {
   if (COUNTRY[agreement] !== p.market) throw new Error(`a part in a production made in ${p.market} isn't engaged under ${agreement}`);
   const market = marketOf(agreement) !== undefined;
   if (!market && STAGE.includes(agreement) !== (p.format === 'stage')) throw new Error(`a ${p.format} isn't engaged under ${agreement}`);
+  // A UK play's seats are its theatre's, as the producer named it (a commercial theatre's: the producer refuses the life's part anywhere else).
+  if (p.stage !== null && a.seats !== undefined) throw new Error("a UK play's seats are its theatre's");
   const part = partOf({
     agreement,
     // @slate:consumer producing.plan
     // A production with no budget yet is refused here (producing's planOf).
     budget: budgetMajor(p),
-    seats: a.seats ?? 0,
+    // @slate:consumer producing.option
+    // @slate:consumer producing.develop
+    seats: p.stage?.seats ?? a.seats ?? 0,
     lines: a.lines,
     term: a.term as Term,
     length: a.length,

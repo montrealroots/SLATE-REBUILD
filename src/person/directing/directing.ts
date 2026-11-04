@@ -8,7 +8,7 @@ import { personOf, type IdentitySlice } from '../identity/identity.ts';
 import { spread } from '../work/work.ts';
 import type { ActingSlice } from '../acting/acting.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
-import { budgetMajor, directedAs, financedOf, holds as directs, payOut, projectOf, qualityOf, type Paying, type Project } from '../producing/producing.ts';
+import { budgetMajor, directedAs, financedOf, holds as directs, payOut, projectOf, qualityOf, type Paying, type Project, type Stage as Staged } from '../producing/producing.ts';
 import { engagement as engaged, hoursShare } from '../youth/youth.ts';
 import compiled from './markets.json' with { type: 'json' };
 
@@ -20,8 +20,9 @@ import compiled from './markets.json' with { type: 'json' };
  * The life directs its own productions (src/person/producing; the owner, 2026-11-04: "Remember them 4 should work in
  * cohesiveness"): a film's feature, or every episode of a series, prepped once the production is financed, shot and
  * cut, then a feature goes to festivals on what the production comes out as, a festival's choice counting toward how
- * financiers take the life's next production (src/person/producing). A play's direction isn't modelled: no
- * stage director's terms are researched, so a play is directed by someone hired. The debut's chance of leading to a
+ * financiers take the life's next production (src/person/producing). A play's direction was refused until 2026-11-04,
+ * when the UK's stage directors' minimums were read: a UK play at a subsidised or a West End theatre is directed as a
+ * play (below); elsewhere, and at a commercial theatre, a play is directed by someone hired. The debut's chance of leading to a
  * second feature (Follows's 25.3%, 45% where it found an audience, moved by a family in the business) was removed on
  * 2026-11-04: the next production rests on what the life can finance (the lead's reading), so no one else's yes is
  * drawn. The direction's parts come from the director's broad attributes, each read through its researched components and their
@@ -47,6 +48,14 @@ import compiled from './markets.json' with { type: 'json' };
  * agreement's terms, the series all of them). The fee is paid from the production's budget, a stage's share as each is
  * done, as it pays anyone.
  *
+ * A UK play (research/sources/person/work/tvstage-GB.json, person.markets.director.GB.stage) is one job: prepped in the
+ * days the contract gives (the published rates guarantee none), then staged in the days the producer's plan schedules
+ * for its rehearsal and run, with no cut; its direction is what the staging brought of the three parts planned. Its fee
+ * is the production's minimum: UK Theatre's with Equity for a freelance director at a subsidised theatre, by the
+ * theatre's MRSL grade; SOLT's with Equity in the West End, by the theatre's category of seats; each year's from the
+ * day it applies. shortcut: UK Theatre's 20% of the fee for each week over four isn't paid, since a play's days aren't
+ * split between rehearsal and run (person.directing.model); upgrade when a play's rehearsal is planned apart.
+ *
  * Beyond the US, the market of every country and territory whose research the engine can read (src/person/directing/
  * markets.json, compiled by tools/person/markets-director from the research, person.markets.director.<CC>): a job there
  * is engaged under one of the market's agreements, paid its minimum fees (a statute's floor of a director's pay where
@@ -61,7 +70,7 @@ import compiled from './markets.json' with { type: 'json' };
 /** The line that tells the player these figures are the game's own (person.directing.model). */
 export const MODEL_LINE: LineId = 'directing.model';
 
-export type Form = 'feature' | 'hour' | 'half-hour';
+export type Form = 'feature' | 'hour' | 'half-hour' | 'play';
 
 /** The parts of a film and the broad attributes each comes from. */
 export const PARTS = {
@@ -83,6 +92,24 @@ export type Planned = (typeof PLANNED)[number];
 export const EPISODES = {
   hour: { rate: 58808, prep: 7, shoot: 8, cut: 4 },
   'half-hour': { rate: 34629, prep: 3, shoot: 4, cut: 2 },
+} as const;
+
+/** The days each year's stage directors' minimums apply from: UK Theatre's and SOLT's with Equity alike, 2023 to 2027. */
+const STAGE_YEARS = ['2023-07-03', '2024-04-01', '2025-03-31', '2026-04-06'];
+const stageSteps = (amounts: readonly string[]): readonly (readonly [string, string])[] => STAGE_YEARS.map((d, i) => [d, amounts[i] as string]);
+
+/**
+ * The UK's stage directors' minimum fees for a production, in pounds: UK Theatre/Equity's freelance director in
+ * subsidised repertory by the theatre's MRSL grade; SOLT/Equity's West End director by the theatre's category, C up to
+ * 799 seats, B 800 to 1,099, A 1,100 and over.
+ */
+export const STAGE_FEES = {
+  subsidised: { 1: stageSteps(['4089.48', '4293.95', '4465.71', '4644.34']), 2: stageSteps(['3572.20', '3750.81', '3900.84', '4056.88']), 3: stageSteps(['3367.62', '3536.00', '3677.44', '3824.54']) },
+  'west-end': [
+    { seats: 0, steps: stageSteps(['5018.00', '5269.00', '5533.00', '5809.00']) },
+    { seats: 800, steps: stageSteps(['5520.00', '5796.00', '6086.00', '6390.00']) },
+    { seats: 1100, steps: stageSteps(['6347.00', '6664.00', '6998.00', '7347.00']) },
+  ],
 } as const;
 
 /** A theatrical feature's guaranteed prep (two weeks) and the weeks its minimum pays (2 prep, 10 employment, 1 cutting). */
@@ -194,12 +221,12 @@ export function finish(v: Values, days: number, needed: number): number {
 
 /**
  * The shooting days a director needs: the trade's schedule (the CNC's 32 for a feature, the DGA's guaranteed period for
- * an episode) for one at 50 in holding a schedule (Time Management, and planning each shot), a quarter less at 100, a
- * quarter more at 0.
+ * an episode, a play's staging as its plan schedules it) for one at 50 in holding a schedule (Time Management, and
+ * planning each shot), a quarter less at 100, a quarter more at 0.
  */
-export function shootNeeded(v: Values, film: Pick<Film, 'form'>): number {
+export function shootNeeded(v: Values, film: Pick<Film, 'form'> & Partial<Pick<Film, 'shootDays'>>): number {
   const pace = 0.6 * of(v, 'time-management') + 0.4 * of(v, 'plan-each-shot-framing-composition-camera-movement-sound-act');
-  const base = film.form === 'feature' ? FEATURE_SHOOT : EPISODES[film.form].shoot;
+  const base = film.form === 'feature' ? FEATURE_SHOOT : film.form === 'play' ? (film.shootDays as number) : EPISODES[film.form].shoot;
   return base * (1.25 - (0.5 * pace) / 100);
 }
 
@@ -232,6 +259,8 @@ export function filmOf(s: DirectingSlice, id: number): Film {
 export interface JobArgs {
   form: Form;
   country: string;
+  /** A UK play's theatre (src/person/producing). */
+  stage?: Staged | null | undefined;
   agreement?: string | undefined;
   budget: number;
   shoot: number;
@@ -263,7 +292,7 @@ function dgaTerms(a: JobArgs): Terms {
     const level = levelOf(a.budget);
     return { ...us, budget: a.budget, prepDays: FEATURE.prep, shootDays: a.shoot, cutDays: level.cut(a.shoot), fee: level.weekly === null ? null : money('USD', level.weekly * FEATURE.weeks * 100) };
   }
-  const e = EPISODES[a.form];
+  const e = EPISODES[a.form as keyof typeof EPISODES];
   return { ...us, budget: null, prepDays: e.prep, shootDays: e.shoot, cutDays: e.cut, fee: money('USD', e.rate * 100) };
 }
 
@@ -408,8 +437,25 @@ function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   return { country: cc, agreement: id, budget, minutes, prepDays, shootDays: shoot, cutDays, fee: marketFee(ag, a.form, job, dateOf(now)) };
 }
 
-/** The schedule and the pay of a job: the DGA's in the US, a market's agreement's abroad. */
+/**
+ * The schedule and the pay of a UK play: the prep its contract gives, the staging its plan schedules, no cut; its fee by
+ * the theatre's grade (a subsidised theatre's, UK Theatre's) or seats (the West End's, SOLT's), on the day prep starts.
+ * The producer refuses a play the life directs anywhere else (src/person/producing), so a play here has its stage.
+ */
+function stageTerms(a: JobArgs, now: number): Terms {
+  if (a.cut !== undefined) throw new Error("a play isn't cut");
+  if (a.agreement !== undefined) throw new Error("a play's theatre sets its directors' agreement");
+  wholeAtLeast(a.prep, 1, 'the prep days');
+  const stage = a.stage as Staged;
+  const subsidised = stage.theatre === 'subsidised';
+  const steps = subsidised ? STAGE_FEES.subsidised[stage.grade as 1 | 2 | 3] : (STAGE_FEES['west-end'].findLast((t) => (stage.seats as number) >= t.seats) as { steps: Fee['steps'] }).steps;
+  const fee = fromMajor('GBP', stepAt(steps, dateOf(now)));
+  return { country: 'GB', agreement: subsidised ? 'uk-theatre-equity' : 'solt-equity', budget: null, minutes: null, prepDays: a.prep as number, shootDays: a.shoot, cutDays: 0, fee };
+}
+
+/** The schedule and the pay of a job: the DGA's in the US, a UK play's its theatre's, a market's agreement's abroad. */
 export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
+  if (a.form === 'play') return stageTerms(a, now);
   return a.country === 'US' ? dgaTerms(a) : marketTerms(a, s, now);
 }
 
@@ -419,7 +465,7 @@ export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
  */
 export function jobOf(p: Project & { plan: { scheduled: number } }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
   const times = p.series?.episodes ?? 1;
-  return { job: { form: directedAs(p), country: p.market, budget: budgetMajor(p), shoot: Math.max(1, Math.round(p.plan.scheduled / times)), minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
+  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: budgetMajor(p), shoot: Math.max(1, Math.round(p.plan.scheduled / times)), minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
 }
 
 /** A job's engagement, for the permit it may need: the country it is made in and the days it works there. */
@@ -514,6 +560,8 @@ function shoot(s: Working, a: FilmArgs, c: Context): void {
   for (const p of PLANNED) shot[p] = film.plan[p] * carried;
   film.needed = needed;
   film.shot = shot;
+  // A play isn't cut: its direction is what the staging brought.
+  if (film.form === 'play') film.quality = mean(PLANNED.map((p) => shot[p]));
   paidFor(s, film, 'shoot', a.account, c);
   practise(s.attributes, 'director', [...used('performances'), ...used('images'), ...componentsOf('leadership'), ...componentsOf('communication')], days);
 }
@@ -529,6 +577,7 @@ function finished(film: Film, cut: number): number {
 function cut(s: Working, a: FilmArgs, c: Context): void {
   const values = componentValues(s.attributes, 'director');
   const film = filmOf(s.directing, a.film);
+  if (film.form === 'play') throw new Error(`film ${a.film} is a play, which isn't cut`);
   if (film.shot === null) throw new Error(`film ${a.film} isn't shot`);
   if (film.cut !== null) throw new Error(`film ${a.film} is cut`);
   // Cut where the shoot was: the research and the agreements place the cut nowhere else.
@@ -546,7 +595,7 @@ function cut(s: Working, a: FilmArgs, c: Context): void {
 /** A finished feature, refused otherwise. */
 function finishedFeature(s: DirectingSlice, id: number): Film & { quality: number } {
   const film = filmOf(s, id);
-  if (film.form !== 'feature') throw new Error(`film ${id} is an episode`);
+  if (film.form !== 'feature') throw new Error(`film ${id} is ${film.form === 'play' ? 'a play' : 'an episode'}`);
   // @slate:consumer directing.cut
   if (film.quality === null) throw new Error(`film ${id} isn't cut`);
   return film as Film & { quality: number };

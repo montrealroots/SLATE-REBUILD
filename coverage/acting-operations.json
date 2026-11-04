@@ -6,7 +6,8 @@
    "cast",
    "part",
    "perform",
-   "pay"
+   "pay",
+   "play"
   ]
  },
  "rows": [
@@ -77,6 +78,18 @@
     "tests/person/acting/acting.test.ts::a part's pay > is UK Theatre's commercial week by the venue's seats, rehearsal weeks at the rehearsal rate",
     "tests/person/acting/acting.test.ts::a part's pay > is ACTRA's principal by the day or week, a part of five lines or fewer by the day",
     "tests/person/acting/acting.test.ts::playing a part > works a weekly or stage engagement five days a week, rehearsals too, and pays nothing where no minimum is set"
+   ]
+  },
+  {
+   "key": "play",
+   "status": "game",
+   "register": [
+    "R-4614",
+    "R-4616"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play the life acts in > is engaged under UK Theatre's commercial agreement at its theatre's seats, which the part doesn't name",
+    "tests/person/producing/stage.test.ts::a UK play the life acts in > producing.option: a bigger commercial theatre pays the part more"
    ]
   }
  ]

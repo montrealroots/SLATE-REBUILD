@@ -16,6 +16,7 @@ export function production(over: Partial<Project> = {}, budget = 500_000_000): P
     format: 'film',
     series: null,
     minutes: null,
+    stage: null,
     roles: ['writer', 'producer', 'director', 'actor'],
     script: null,
     writing: null,

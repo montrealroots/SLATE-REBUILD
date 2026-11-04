@@ -464,7 +464,7 @@ describe("a market's project", () => {
       const f = 0.5 + sellSkill(componentValues(it_.slices.attributes, 'producer'), quality) / 100;
       const cinema = draws(seedFromText(SEED), 'producing.work', 'release', id).float() < 0.82 * f;
       it_ = dispatch(it_, releaseFilm, { project: id });
-      expect(project(it_, id).release, String(id)).toEqual({ at: T0, quality, cinema, doubled: null });
+      expect(project(it_, id).release, String(id)).toEqual({ at: T0, quality, audience: cinema, doubled: null });
       cinemas.push(cinema);
     }
     expect(cinemas).toContain(true);
@@ -521,7 +521,7 @@ describe("a market's project", () => {
       const f = 0.5 + sellSkill(componentValues(md.slices.attributes, 'producer'), quality) / 100;
       const cinema = draws(seedFromText(SEED), 'producing.work', 'release', id).float() < (50 / 62) * f;
       md = dispatch(md, releaseFilm, { project: id });
-      expect(project(md, id).release, String(id)).toEqual({ at: T0, quality, cinema, doubled: null });
+      expect(project(md, id).release, String(id)).toEqual({ at: T0, quality, audience: cinema, doubled: null });
       released.push(cinema);
     }
     expect(released).toContain(true);

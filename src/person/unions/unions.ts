@@ -94,8 +94,8 @@ export const CAEA = { initiation: cad('1200'), dues: cad('200'), raised: cad('21
 export const AEA = { initiation: usd('1800'), dues: usd('176') } as const;
 /** The WGA West: Current's initiation fee and units, Associate's yearly fee, a Current member's quarterly dues four times over, the years units count. */
 export const WGA = { initiation: usd('2500'), units: 24, associate: usd('100'), dues: usd('100'), years: 3 } as const;
-/** The units a script earns from a signatory, by its form (the WGA West's chart): a feature screenplay 24; a teleplay of 30 to 60 minutes 8 (pilot, episode); a short none. */
-export const UNITS: Readonly<Record<Exclude<Form, 'short'>, number>> = { feature: 24, pilot: 8, episode: 8 };
+/** The units a script earns from a signatory, by its form (the WGA West's chart): a feature screenplay 24; a teleplay of 30 to 60 minutes 8 (pilot, episode); a short none, and a play none (the WGA's agreement isn't a play's). */
+export const UNITS: Readonly<Record<Exclude<Form, 'short' | 'play'>, number>> = { feature: 24, pilot: 8, episode: 8 };
 /** The DGA, July 2026 to June 2027: a director's initiation fee, feature or television and low-budget feature, its ceiling, and $50 a quarter. */
 export const DGA = { initiation: usd('15703'), low: usd('5000'), ceiling: 11_000_000, dues: usd('200') } as const;
 /** Equity (UK): the earnings that open it (pence), its contracts, the subsidised ages and its income ceiling (pence). */

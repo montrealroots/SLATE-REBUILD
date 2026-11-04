@@ -301,11 +301,13 @@ Layer 4's first research wave is integrated (2026-11-04). What is left before it
 run as layers 2 and 3 had them (the briefs in `research/rounds/`: change the date, the scratchpad path and the groups,
 keep the rules):
 
-1. Wire a series' and a play's producing from the UK research of 2026-11-04 (the AVEC's 34% and 39% with the
-   high-end threshold, Theatre Tax Relief's 45% and 40%, the nations' screen funds, Arts Council England's project
-   grants, the stage director's and the playwright's minimums under UK Theatre's, SOLT's and the ITC's agreements),
-   telling the player what isn't known (how often a series is picked up or a play recoups, a series producer's fee);
-   then the same for the other markets, a research wave of its own.
+1. A series and a play are made in the UK since 2026-11-04 (the AVEC, Theatre Tax Relief, Arts Council England's
+   project grants, the stage director's and playwright's minimums; the pick-up and recoup chances the game's own, told).
+   Left: a production in the UK names no nation, so England's Arts Council stands for all four (the nations' own funds
+   and Screen Scotland's and Creative Wales' series terms are read but not wired); the actor's minimums at subsidised and
+   West End theatres aren't researched, so the life can't act there, nor act in and direct one play; when the ITC's
+   2026/27 year begins isn't stated (the game reads it from 1 April, the agreement's revision day); then the other
+   markets' series and plays, a research wave of its own.
 2. What the integrators found and the engines can't read yet: Azerbaijan's rebate in dollars (the engine holds one
    currency a market), Canada's DGC 2026-28 and Mexico's STPC director rates, the DGA reaching the US Virgin Islands
    and the Northern Mariana Islands, Austria's stage minimums, Uruguay's and Ecuador's rate tables, the Hebrew

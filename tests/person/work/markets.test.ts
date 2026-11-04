@@ -20,7 +20,8 @@ import {
   type Work,
 } from '../../../src/person/work/career.ts';
 import { COUNTRY_CODES, countryName } from '../../../src/world/gazetteer/gazetteer.ts';
-import type { Form } from '../../../src/person/work/work.ts';
+// The screen's forms: a play is paid under a theatre's agreement, not a market's (career's PLAYS).
+import type { Screen as Form } from '../../../src/person/work/career.ts';
 import compiled from '../../../src/person/work/markets.json' with { type: 'json' };
 
 const money = (c: CurrencyCode, n: string) => fromMajor(c, n);

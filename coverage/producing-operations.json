@@ -19,6 +19,15 @@
    "production",
    "develop",
    "series-and-stage",
+   "series-credit",
+   "series-fund",
+   "series-release",
+   "stage-theatre",
+   "stage-credit",
+   "stage-fund",
+   "stage-release",
+   "play-writing",
+   "uk-unknowns",
    "package-and-doors",
    "pay-from-budget",
    "quality-blend"
@@ -241,7 +250,7 @@
    ],
    "tests": [
     "tests/person/producing/production.test.ts::the life's own script > is developed into a production: its material the script as graded, the rights the life's, its genre the script's, its agreement the market's",
-    "tests/person/producing/production.test.ts::the life's own script > is refused where the life isn't its writer, it's in a production already, there's no such script, it's a play, or its form isn't the format's",
+    "tests/person/producing/production.test.ts::the life's own script > is refused where the life isn't its writer, it's in a production already, there's no such script, or its form isn't the format's",
     "tests/person/producing/production.test.ts::the life's own script > is paid under the market's writers' agreement for its form, named where it has several, refused where its figures aren't known or the writer doesn't write its language",
     "tests/person/producing/production.test.ts::the life's own script > producing.develop: a better script makes better material, which financiers take better"
    ]
@@ -257,8 +266,120 @@
     "R-4613"
    ],
    "tests": [
-    "tests/person/producing/production.test.ts::a series and a play > are planned on their own days: a series' episodes the DGA's shooting days, a play's run as given; no fee or credit the research doesn't give them",
-    "tests/person/producing/production.test.ts::a series and a play > are refused a fund and a release the research doesn't give them"
+    "tests/person/producing/stage.test.ts::a series and a play > are planned on their own days: a series' episodes the DGA's shooting days, a play's run as given"
+   ]
+  },
+  {
+   "key": "series-credit",
+   "status": "researched",
+   "register": [
+    "R-9775"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK series > claims the AVEC: 34% of the 80% counted where core costs reach £1m an hour of slot, 39% for an animation or a children's programme, nothing below; none before 2024",
+    "tests/person/producing/stage.test.ts::a UK series > producing.option: a series of more episodes needs more core costs for its credit"
+   ]
+  },
+  {
+   "key": "series-fund",
+   "status": "researched",
+   "register": [
+    "R-9775"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK series > is refused a fund: no public fund across the UK backs a drama series, and elsewhere the research doesn't say"
+   ]
+  },
+  {
+   "key": "series-release",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-9775"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK series > is offered to broadcasters once shot, picked up at the game's 30% as the series and its campaign sell it",
+    "tests/person/producing/stage.test.ts::a UK series > producing.option: a series finds its audience at its own rate, a film at the BFI’s"
+   ]
+  },
+  {
+   "key": "stage-theatre",
+   "status": "game",
+   "register": [
+    "R-4617",
+    "R-9778",
+    "R-9779"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play's theatre > names its theatre, a subsidised theatre by its grade or another by its seats, and whether it tours, in the UK alone",
+    "tests/person/producing/stage.test.ts::a UK play's theatre > is refused a theatre there is not, a grade or seats out of turn, a touring left unsaid, or a theatre outside the UK or off the stage",
+    "tests/person/producing/stage.test.ts::a UK play's theatre > lets the life direct a subsidised or a West End play and act in a commercial one, and refuses the rest, told"
+   ]
+  },
+  {
+   "key": "stage-credit",
+   "status": "researched",
+   "register": [
+    "R-9776"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play > claims Theatre Tax Relief: 45% touring, 40% otherwise, of the 80% counted, at most €50m at the day's rate; none before April 2025",
+    "tests/person/producing/stage.test.ts::a UK play > producing.option: a play that tours claims more of its costs"
+   ]
+  },
+  {
+   "key": "stage-fund",
+   "status": "game",
+   "register": [
+    "R-4617",
+    "R-9777"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play > applies to Arts Council England once: a yes at 29.4% as the package sells it, an award of what's left to raise, £1,000 to £100,000",
+    "tests/person/producing/stage.test.ts::a UK play > producing.plan: a bigger play asks Arts Council England for more"
+   ]
+  },
+  {
+   "key": "stage-release",
+   "status": "game",
+   "register": [
+    "R-4603",
+    "R-4609",
+    "R-4612",
+    "R-4617",
+    "R-9776"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK play > opens once staged, its run earning back its cost at the game's 20% as the play and its campaign sell it"
+   ]
+  },
+  {
+   "key": "play-writing",
+   "status": "researched",
+   "register": [
+    "R-9779"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::the life's own play > is written for a UK subsidised or commercial theatre, paid under UK Theatre's or the ITC's, and refused for the West End and elsewhere",
+    "tests/person/producing/stage.test.ts::the life's own play > is paid its agreement's minimum when it's staged: UK Theatre's by the theatre's grade, the ITC's by its running time",
+    "tests/person/producing/stage.test.ts::the life's own play > producing.develop: a play for a better-graded theatre pays its script more"
+   ]
+  },
+  {
+   "key": "uk-unknowns",
+   "status": "blocked",
+   "register": [
+    "R-9780",
+    "R-9781",
+    "R-9782",
+    "R-9783",
+    "R-9784"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK series > tells what the UK's research couldn't find of a series and a play"
    ]
   },
   {

@@ -6,12 +6,11 @@ import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.
 import { addMonths } from '../../../src/core/time/dates.ts';
 import { ACTING_START, type ActingSlice } from '../../../src/person/acting/acting.ts';
 import { ATTRIBUTES_START, chooseAttributes, componentValues, skillOf, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
-import { DIRECTING_START, EPISODES, pitchSkill as directorsPitch, type DirectingSlice, type Film } from '../../../src/person/directing/directing.ts';
+import { DIRECTING_START, pitchSkill as directorsPitch, type DirectingSlice, type Film } from '../../../src/person/directing/directing.ts';
 import type { GenresSlice } from '../../../src/person/genres/genres.ts';
 import type { IdentitySlice } from '../../../src/person/identity/identity.ts';
 import type { PermitsSlice } from '../../../src/person/permits/permits.ts';
 import {
-  applyToFunder,
   developScript,
   directedAs,
   doors,
@@ -89,9 +88,9 @@ describe('a production', () => {
     expect(ROLES).toEqual(['writer', 'producer', 'director', 'actor']);
     expect(MEDIUM).toEqual({ film: 'film', series: 'television', stage: 'stage' });
     expect(WORK_OF).toEqual({ writer: 'author', producer: 'producer', director: 'director', actor: 'performer' });
-    expect(WRITTEN_FOR).toEqual({ film: ['feature', 'short'], series: ['pilot', 'episode'] });
+    expect(WRITTEN_FOR).toEqual({ film: ['feature', 'short'], series: ['pilot', 'episode'], stage: ['play'] });
     expect(HIRED).toBe(50);
-    expect([directedAs({ format: 'film', series: null }), directedAs({ format: 'series', series: { form: 'half-hour', episodes: 4 } })]).toEqual(['feature', 'half-hour']);
+    expect([directedAs({ format: 'film', series: null }), directedAs({ format: 'series', series: { form: 'half-hour', episodes: 4 } }), directedAs({ format: 'stage', series: null })]).toEqual(['feature', 'half-hour', 'play']);
     expect([holds({ roles: ['actor'] }, 'actor'), holds({ roles: ['actor'] }, 'writer')]).toEqual([true, false]);
   });
 
@@ -114,7 +113,7 @@ describe('a production', () => {
     expect(go({ roles: ['producer', 'grip'] })).toThrow("there's no role grip");
     expect(go({ roles: ['producer', 'producer'] })).toThrow('a role is held once');
     expect(go({ roles: ['producer', 'writer'] })).toThrow("optioned material is someone else's writing, so the life doesn't hold the writer's role");
-    expect(go({ format: 'stage', roles: ['director'] })).toThrow("a stage director's terms aren't known to this game, so a play is directed by someone hired");
+    expect(go({ format: 'stage', roles: ['director'] })).toThrow("a stage director's terms in United States aren't known to this game, so a play there is directed by someone hired");
     expect(go({ format: 'series' })).toThrow("a series' episodes are an hour or a half-hour (undefined)");
     expect(go({ format: 'series', episode: 'minute', episodes: 3 })).toThrow("a series' episodes are an hour or a half-hour (minute)");
     expect(go({ format: 'series', episode: 'hour' })).toThrow('the episodes is a whole number of at least 1 (undefined)');
@@ -123,7 +122,7 @@ describe('a production', () => {
     expect(go({ format: 'stage', episodes: 2 })).toThrow('a stage has no episodes');
     expect(go({ minutes: 0 })).toThrow('the running time is a whole number of at least 1 (0)');
     expect(project(go({ format: 'series', episode: 'half-hour', episodes: 6, minutes: 22, roles: ['actor', 'producer'] })())).toMatchObject({ format: 'series', series: { form: 'half-hour', episodes: 6 }, minutes: 22, roles: ['actor', 'producer'], script: null, writing: null, costs: [] });
-    expect(project(go({ format: 'stage', roles: ['actor'] })())).toMatchObject({ format: 'stage', series: null, minutes: null, roles: ['actor'] });
+    expect(project(go({ format: 'stage', roles: ['actor'] })())).toMatchObject({ format: 'stage', series: null, minutes: null, stage: null, roles: ['actor'] });
     expect(project(go({ roles: ['director'] })()).roles).toEqual(['director']);
   });
 
@@ -152,14 +151,14 @@ describe("the life's own script", () => {
     const l = dispatch(writer(70, 'feature', 60), readScript, { script: 1, reader: 'black-list' });
     const p = project(dispatch(l, developScript, DEVELOP));
     const script = l.slices.scripts.written[0] as NonNullable<ScriptsSlice['written'][number]>;
-    expect(p).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, roles: ['writer', 'producer'], script: 1, writing: 'wga', genre: 'drama', market: 'US', expires: null, options: [], material: quality(script), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
+    expect(p).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, roles: ['writer', 'producer'], script: 1, writing: 'wga', genre: 'drama', market: 'US', expires: null, options: [], material: quality(script), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
     expect(p.material).toBe((script.reads.at(-1)?.overall as number) * 10);
     // No option is paid for the life's own script, and none can be renewed.
     expect(minorIn(dispatch(l, developScript, DEVELOP).slices.ledger, ACCOUNT)).toBe(100_000_000);
     expect(() => dispatch(dispatch(l, developScript, DEVELOP), renewOption, { project: 1, account: ACCOUNT })).toThrow("project 1's material is the life's own, under no option");
   });
 
-  it("is refused where the life isn't its writer, it's in a production already, there's no such script, it's a play, or its form isn't the format's", () => {
+  it("is refused where the life isn't its writer, it's in a production already, there's no such script, or its form isn't the format's", () => {
     const l = writer(70, 'feature', 60);
     expect(() => dispatch(l, developScript, { ...DEVELOP, roles: ['producer'] })).toThrow("the life's own script makes the life the production's writer");
     expect(() => dispatch(dispatch(l, developScript, DEVELOP), developScript, DEVELOP)).toThrow('script 1 is in a production already');
@@ -168,7 +167,7 @@ describe("the life's own script", () => {
     expect(project(dispatch(two, developScript, DEVELOP), 3).script).toBe(1);
     expect(() => dispatch(l, developScript, { ...DEVELOP, market: 'BV' })).toThrow("where the work in BV is made isn't known to this game");
     expect(() => dispatch(l, developScript, { ...DEVELOP, script: 2 })).toThrow("there's no script 2");
-    expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'stage' })).toThrow("the life writes for the screen, so a play is someone else's material");
+    expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'stage', theatre: 'subsidised', grade: 1, touring: false, market: 'GB' })).toThrow('a play is made from a play, not a feature');
     expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'series', episode: 'hour', episodes: 2 })).toThrow('a series is made from a pilot or episode, not a feature');
     expect(() => dispatch(writer(70, 'pilot', 60), developScript, DEVELOP)).toThrow('a film is made from a feature or short, not a pilot');
     expect(project(dispatch(writer(70, 'short', 60), developScript, DEVELOP)).writing).toBe('wga');
@@ -203,32 +202,6 @@ describe("the life's own script", () => {
       return factor(l.slices.producing, 50, project(l), T0);
     };
     falsifyAny({ feature: 'producing.develop', claim: 'bites', says: 'a production of a script written at 90 is taken better by financiers than one written at 20', base: 20, twin: 90, outcome: material });
-  });
-});
-
-describe('a series and a play', () => {
-  const opt = (format: string, extra: Record<string, unknown> = {}) => dispatch(life({ producer: 60 }), optionMaterial, { format, roles: ['producer'], account: ACCOUNT, days: 1, genre: 'drama', market: 'GB', ...extra });
-
-  it("are planned on their own days: a series' episodes the DGA's shooting days, a play's run as given; no fee or credit the research doesn't give them", () => {
-    const series = project(dispatch(opt('series', { episode: 'hour', episodes: 6 }), planProject, { project: 1, budget: '3000000' })).plan;
-    const u = 2 * dr('plan', 1).float() - 1;
-    expect(series?.needed).toBe(Math.round(EPISODES.hour.shoot * 6 * (1 + MODEL.need * u)));
-    expect([series?.fee, series?.credit]).toEqual([null, null]);
-    const play = project(dispatch(opt('stage'), planProject, { project: 1, budget: '300000', days: 45 })).plan;
-    expect(play?.needed).toBe(45);
-    expect([play?.fee, play?.credit]).toEqual([null, null]);
-    expect(() => dispatch(opt('stage'), planProject, { project: 1, budget: '300000' })).toThrow("a play's days is a whole number of at least 1 (undefined)");
-    expect(() => dispatch(opt('film'), planProject, { project: 1, budget: '300000', days: 10 })).toThrow("a film's days are the trade's");
-    expect(() => dispatch(opt('series', { episode: 'hour', episodes: 2 }), planProject, { project: 1, budget: '300000', days: 10 })).toThrow("a series's days are the trade's");
-    expect(project(dispatch(opt('film'), planProject, { project: 1, budget: '3000000' })).plan?.fee).not.toBeNull();
-  });
-
-  it("are refused a fund and a release the research doesn't give them", () => {
-    expect(() => dispatch(dispatch(opt('series', { episode: 'hour', episodes: 2 }), planProject, { project: 1, budget: '300000' }), applyToFunder, { project: 1 })).toThrow("what a public fund gives a series isn't known to this game");
-    expect(() => dispatch(dispatch(opt('stage'), planProject, { project: 1, budget: '300000', days: 30 }), applyToFunder, { project: 1 })).toThrow("what a public fund gives a play isn't known to this game");
-    const shot = (format: string, extra: Record<string, unknown>, days?: number) => dispatch(funded(dispatch(opt(format, extra), planProject, { project: 1, budget: '300000', ...(days === undefined ? {} : { days }) })), shootProject, { project: 1, account: ACCOUNT });
-    expect(() => dispatch(shot('series', { episode: 'hour', episodes: 2 }), releaseFilm, { project: 1 })).toThrow("how a series fares once it's made isn't known to this game");
-    expect(() => dispatch(shot('stage', {}, 30), releaseFilm, { project: 1 })).toThrow("how a play fares once it's made isn't known to this game");
   });
 });
 
@@ -323,7 +296,7 @@ describe("financing the life's own script", () => {
 
 describe("a production's record", () => {
   const film = (project: number, started: number, chosen: boolean): Film => ({ id: project, project, form: 'feature', episodes: 1, country: 'US', agreement: 'dga', budget: 1, minutes: null, started, prepDays: 1, shootDays: 1, cutDays: 1, fee: null, plan: { story: 0, performances: 0, images: 0 }, needed: null, shot: null, cut: null, quality: 50, festivals: { cannes: chosen, tiff: false } });
-  const released = (id: number, at: number, cinema = true) => production({ id, release: { at, quality: 50, cinema, doubled: null } });
+  const released = (id: number, at: number, cinema = true) => production({ id, release: { at, quality: 50, audience: cinema, doubled: null } });
   const since = addMonths('Europe/London', T0, -84);
 
   it("counts each production that found an audience in the PGA's seven years: released in cinemas, or its film chosen by a festival", () => {

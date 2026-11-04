@@ -41,15 +41,18 @@ import { lovesOrRefuse, type GenresSlice } from '../genres/genres.ts';
 
 export const MODEL_LINE: LineId = 'work.model';
 
-export type Form = 'feature' | 'pilot' | 'episode' | 'short';
+/** A script's form: a feature, a series' pilot or episode, a short, or a play for the stage (from 2026-11-04, when the life's own play came in). */
+export type Form = 'feature' | 'pilot' | 'episode' | 'short' | 'play';
 
 /**
  * The days a first draft needs from a writer at 100 in Writing and Time Management; twice that from one at 0. A feature
  * is August's eight weeks; an episode half the MBA's 2.4 weeks (16.8 days), so the slowest writer takes all of them.
- * shortcut: no source gives a pilot's or a short's writing time (R-4608 blockers); a pilot is held at an episode and a
- * half (the MBA pays a pilot 150% of an episode) and a short at ten days, the game's own, until a source is found.
+ * shortcut: no source gives a pilot's, a short's or a play's writing time (R-4608 blockers; the UK theatre research of
+ * 2026-11-04 gives a play's fees, not its time); a pilot is held at an episode and a half (the MBA pays a pilot 150% of
+ * an episode), a short at ten days and a full-length play at a feature's eight weeks, the game's own, until a source is
+ * found.
  */
-export const DAYS: Readonly<Record<Form, number>> = { feature: 56, pilot: 12.6, episode: 8.4, short: 10 };
+export const DAYS: Readonly<Record<Form, number>> = { feature: 56, pilot: 12.6, episode: 8.4, short: 10, play: 56 };
 
 /** The parts a reader grades: the screenwriter's craft attributes, each scored facet by facet. */
 export const PARTS = ['characters', 'dialogue', 'structure', 'plot', 'theme', 'premise', 'setting', 'visual-storytelling', 'distinctive-voice', 'screenplay-format', 'film-production-process'] as const;

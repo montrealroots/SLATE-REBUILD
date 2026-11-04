@@ -223,7 +223,7 @@ describe('prep', () => {
     expect(series(6)).toMatchObject({ form: 'hour', episodes: 6, prepDays: 42, shootDays: 48, cutDays: 24, fee: money('USD', 6 * 5_880_800) });
     expect(jobOf({ ...directed({ form: 'hour', shoot: 20 }), series: { form: 'hour', episodes: 6 } } as Project & { plan: { scheduled: number } }, {}).job.shoot).toBe(3);
     expect(jobOf({ ...directed({ form: 'hour', shoot: 2 }), series: { form: 'hour', episodes: 6 } } as Project & { plan: { scheduled: number } }, {}).job.shoot).toBe(1);
-    expect(jobOf(directed({ form: 'feature', shoot: 20, minutes: 95 }) as Project & { plan: { scheduled: number } }, { agreement: 'x', prep: 3, cut: 4 })).toEqual({ job: { form: 'feature', country: 'US', budget: 1_000_000_000, shoot: 20, minutes: 95, agreement: 'x', prep: 3, cut: 4 }, times: 1 });
+    expect(jobOf(directed({ form: 'feature', shoot: 20, minutes: 95 }) as Project & { plan: { scheduled: number } }, { agreement: 'x', prep: 3, cut: 4 })).toEqual({ job: { form: 'feature', country: 'US', stage: null, budget: 1_000_000_000, shoot: 20, minutes: 95, agreement: 'x', prep: 3, cut: 4 }, times: 1 });
     const needed = (episodes: number) => dispatch({ ...made(60), slices: { ...made(60).slices, producing: { projects: [{ ...directed({ form: 'hour' }), series: { form: 'hour', episodes } }] } } }, prepFilm, { project: 1, account: ACCOUNT });
     const w = v(needed(3) as Life<D>);
     expect(film(dispatch(needed(3) as Life<D>, shootFilm, { film: 1, account: ACCOUNT })).needed).toBeCloseTo(3 * shootNeeded(w, { form: 'hour' }), 10);
@@ -267,6 +267,8 @@ describe('the shoot', () => {
     const w = values(50, { communication: 90 });
     expect(onSet(w)).toBeCloseTo(0.8 + (0.2 * mean(['lead-cast-and-crew', 'coordination', 'speech-clarity', 'active-listening'].map((id) => of(w, id)))) / 100, 10);
     expect(onSet(values(50, { leadership: 90 }))).toBeGreaterThan(onSet(values(50)));
+    // A feature's direction waits for its cut; a play's is set when it's staged (tests/person/producing/stage.test.ts).
+    expect([film(shot(50)).shot === null, film(shot(50)).quality]).toEqual([false, null]);
   });
 
   it('loses what a short schedule leaves undone, Adaptability carrying more of it', () => {
