@@ -1,6 +1,6 @@
 {
  "country": "YE",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "ترخيص عمل رسمي",
  "routeChanged": false,
  "permit": {
@@ -34,33 +34,33 @@
    "field": "fees",
    "sought": "the work licence's fee",
    "tried": {
-    "institution": "the Ministry of Social Affairs and Labour's site not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached.",
-    "official-register": "the Labour Code's text not reached (layer 3) Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01).",
+    "institution": "the Ministry of Social Affairs and Labour's site not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached. || 2026-11-04: Ministry of Social Affairs and Labour (https://www.mosal.gov.ye/) => curl: (35) connection reset by peer | www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour), www.yemen.gov.ye (national portal) => no connection (HTTP 000)",
+    "official-register": "the Labour Code's text not reached (layer 3) Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01). || 2026-11-04: curl https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=44043 (the register's quotes) => HTTP 403, a Cloudflare bot check; not passed | www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs, the laws' publisher); agoyemen.net (Office of the Attorney General, which publishes a law library): home page and its law lists ntopicsslist.php?id=2, 4, 5, 8, 9, 10, 11, 12 read => mola.gov.ye no connection (HTTP 000); agoyemen.net answers (HTTP 200) but its first list pages hold commercial, fiscal and penal laws and regulations, no Labour Code or work-licence regulation; later pages of the lists weren't paged | ILO NATLEX PDF of the Labour Code (YEM44043.pdf) => HTTP 403",
     "web-search": "not run: the session's web-search budget was spent Retry (2026-11-01): 'NATLEX Yemen Labour Code Law No. 5 of 1995 pdf ترخيص عمل غير اليمني' (2026-11-01): text copies only, all unreachable.",
-    "trade-press": "WageIndicator gives none Retry (2026-11-01): WageIndicator gives no fee, time or term.",
-    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "WageIndicator gives none Retry (2026-11-01): WageIndicator gives no fee, time or term. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ye,gov,mol)' => no capture | web.archive.org => still resets the connection (curl: (35)), 2026-11-04"
    }
   },
   {
    "field": "processing",
    "sought": "the decision time",
    "tried": {
-    "institution": "not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached.",
-    "official-register": "not reached Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01).",
+    "institution": "not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached. || 2026-11-04: Ministry of Social Affairs and Labour (https://www.mosal.gov.ye/) => curl: (35) connection reset by peer | www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour), www.yemen.gov.ye (national portal) => no connection (HTTP 000)",
+    "official-register": "not reached Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01). || 2026-11-04: curl https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=44043 (the register's quotes) => HTTP 403, a Cloudflare bot check; not passed | www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs, the laws' publisher); agoyemen.net (Office of the Attorney General, which publishes a law library): home page and its law lists ntopicsslist.php?id=2, 4, 5, 8, 9, 10, 11, 12 read => mola.gov.ye no connection (HTTP 000); agoyemen.net answers (HTTP 200) but its first list pages hold commercial, fiscal and penal laws and regulations, no Labour Code or work-licence regulation; later pages of the lists weren't paged | ILO NATLEX PDF of the Labour Code (YEM44043.pdf) => HTTP 403",
     "web-search": "not run (budget spent) Retry (2026-11-01): 'NATLEX Yemen Labour Code Law No. 5 of 1995 pdf ترخيص عمل غير اليمني' (2026-11-01): text copies only, all unreachable.",
-    "trade-press": "none Retry (2026-11-01): WageIndicator gives no fee, time or term.",
-    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "none Retry (2026-11-01): WageIndicator gives no fee, time or term. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ye,gov,mol)' => no capture | web.archive.org => still resets the connection (curl: (35)), 2026-11-04"
    }
   },
   {
    "field": "validity",
    "sought": "the licence's term and renewal",
    "tried": {
-    "institution": "not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached.",
-    "official-register": "not reached Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01).",
+    "institution": "not reached Retry (2026-11-01): The Ministry of Social Affairs and Labour's site not reached. || 2026-11-04: Ministry of Social Affairs and Labour (https://www.mosal.gov.ye/) => curl: (35) connection reset by peer | www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour), www.yemen.gov.ye (national portal) => no connection (HTTP 000)",
+    "official-register": "not reached Retry (2026-11-01): Labour Code 5/1995: NATLEX record (p3_isn=44043) 403 (Cloudflare); alp.unescwa.org Arabic PDF 403; the ILO's English PDF (ilo.org/dyn/travail/docs/1672) 404; menarights.org copy 404 (2026-11-01). || 2026-11-04: curl https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/details?p3_isn=44043 (the register's quotes) => HTTP 403, a Cloudflare bot check; not passed | www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs, the laws' publisher); agoyemen.net (Office of the Attorney General, which publishes a law library): home page and its law lists ntopicsslist.php?id=2, 4, 5, 8, 9, 10, 11, 12 read => mola.gov.ye no connection (HTTP 000); agoyemen.net answers (HTTP 200) but its first list pages hold commercial, fiscal and penal laws and regulations, no Labour Code or work-licence regulation; later pages of the lists weren't paged | ILO NATLEX PDF of the Labour Code (YEM44043.pdf) => HTTP 403",
     "web-search": "not run (budget spent) Retry (2026-11-01): 'NATLEX Yemen Labour Code Law No. 5 of 1995 pdf ترخيص عمل غير اليمني' (2026-11-01): text copies only, all unreachable.",
-    "trade-press": "WageIndicator: foreigners on fixed-term contracts, no licence term Retry (2026-11-01): WageIndicator gives no fee, time or term.",
-    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "WageIndicator: foreigners on fixed-term contracts, no licence term Retry (2026-11-01): WageIndicator gives no fee, time or term. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ye,gov,mol)' => no capture | web.archive.org => still resets the connection (curl: (35)), 2026-11-04"
    }
   }
  ],

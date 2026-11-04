@@ -1,131 +1,127 @@
 {
  "country": "BF",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Visa de contrat de travail des non nationaux (labour administration)",
  "routeChanged": false,
  "permit": {
-  "applies": null,
+  "applies": "The employer has the non-national's work contract visaed by the labour administration, which checks the conditions of employment, the contract's conformity with social legislation and the control of non-national labour.",
   "first": null,
-  "fees": [],
+  "fees": [
+   {
+    "what": "Visa of a non-national's work contract",
+    "amount": "100000",
+    "currency": "XOF"
+   }
+  ],
   "processing": null,
   "validity": null,
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "processingNote": "The portal gives the time as 'Variable'."
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://service-public.gov.bf/thematiques/divers/autres-demande-de-visas-de-contrat-de-travail-des-non-nationaux",
+   "title": "Service Public (Gouvernement du Burkina Faso), Demande de visas de contrat de travail des non nationaux (mis à jour le 04/05/2026)",
+   "read": "2026-11-04",
+   "said": "Demande de visas de contrat de travail des non nationaux … Mis à jour le 04/05/2026 Coût 100 000 FCFA Délai Variable Public Tout public Description Formalité pour vérifier les conditions d'emploi, la conformité du contrat à la législation sociale, le contrôle de la main d''uvre non nationale Qui peut faire cette démarche ? Néant Pièces à fournir Aucune pièce n'est à fournir pour cette procedure",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "fees"
+   ]
+  },
+  {
+   "url": "https://service-public.gov.bf/thematiques/divers/administration-du-travail-visa-de-contrat-de-travail",
+   "title": "Service Public (Gouvernement du Burkina Faso), Visa de contrat de travail (mis à jour le 04/11/2026)",
+   "read": "2026-11-04",
+   "said": "Visa de contrat de travail … Mis à jour le 04/11/2026 Coût Gratuit Délai Variable … Description Formalité administrative à vérifier la conformité des clauses contractuelles aux dispositions législatives, règlementaires et conventionnelles. Qui peut faire cette démarche ? Etre employeur",
+   "kind": "primary",
+   "fields": [
+    "applies"
+   ]
+  }
+ ],
  "blockers": [
-  {
-   "field": "country",
-   "sought": "Burkina Faso's work permit for a foreign performer: route, who applies, fees, time, term, union, criteria, pay, exemption",
-   "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "applies",
-   "sought": "Burkina Faso: applies",
-   "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
   {
    "field": "first",
    "sought": "Burkina Faso: first",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "Burkina Faso: fees",
-   "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "processing",
    "sought": "Burkina Faso: processing",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "validity",
    "sought": "Burkina Faso: validity",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "union",
    "sought": "Burkina Faso: union",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "eligibility",
    "sought": "Burkina Faso: eligibility",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "pay",
    "sought": "Burkina Faso: pay",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   },
   {
    "field": "exempt",
    "sought": "Burkina Faso: exempt",
    "tried": {
-    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01).",
-    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached.",
+    "institution": "fonctionpublique.gov.bf, anpe.bf and securite.gov.bf don't answer this client (2026-11-01), as on 2026-10-29. | Retry 2026-11-01: fonctionpublique.gov.bf, anpe.bf and securite.gov.bf not re-tried; legiburkina.bf doesn't answer over HTTPS (curl timeout, 2026-11-01). || 2026-11-04: service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read => found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "official-register": "legiburkina.bf answers 503 over HTTP and doesn't answer over HTTPS; the Labour Code (Loi 028-2008/AN) wasn't reached. | Retry 2026-11-01: natlex.ilo.org answers 403 to this client (2026-11-01); the Labour Code (Loi 028-2008/AN) not reached. || 2026-11-04: legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51 => no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found only commercial guides. | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "None found (layer 3); none reachable now. | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01). || 2026-11-04: web.archive.org by curl => connection reset (HTTP 000)"
    }
   }
  ],
- "note": "Burkina Faso is a blocker for the whole country, as in layer 3 (R-1686): no official text of the rule on foreign workers' permits was reached. The route is null because layer 3 holds none either."
+ "note": "Burkina Faso was a blocker for the whole country on 2026-11-01, as in SLATE's layer 3 (its register's R-1686): no official text of the rule on foreign workers' permits was reached, and the route was null because layer 3 held none either. Read 2026-11-04: the government's service portal (service-public.gov.bf), its page for the visa of non-nationals' work contracts (updated 4 May 2026: FCFA 100,000, time 'Variable') and the general contract-visa page (the employer files). The labour code that would give the term, criteria and any exemption wasn't reached."
 }

@@ -1,6 +1,6 @@
 {
  "country": "FO",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Arbejdstilladelse på Færøerne (work and residence permit)",
  "routeChanged": false,
  "permit": {
@@ -21,7 +21,7 @@
   },
   "union": null,
   "eligibility": "når væsentlige beskæftigelsesmæssige eller erhvervsmæssige hensyn taler derfor",
-  "pay": null,
+  "pay": "Salary and terms of employment must correspond to Faroese standards: pay, holidays and notice no worse than the standards of the professional field, and as a rule full-time (normally 40 hours a week); the Immigration Office assesses this.",
   "exempt": {
    "days": 90,
    "within": null
@@ -31,7 +31,7 @@
   {
    "url": "https://www.retsinformation.dk/eli/lta/2010/636/pdf",
    "title": "Bekendtgørelse nr. 636 af 7. juni 2010 om udlændinges adgang til Færøerne (Lovtidende)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "Stk. 2. Følgende udlændinge er for et tidsrum af tre måneder fra indrejsen på Færøerne fritaget for arbejdstilladelse på Fær- øerne: … 2) Kunstnere, herunder musikere, artister og lignende samt tilknyttet personale, såfremt de forud for arrangementet har indgået aftale med en arrangør på Færøerne. … Stk. 5. Arbejdstilladelse på Færøerne kan endvidere efter ansøgning gives til udlændinge med ophold uden for Færøer- ne, når væsentlige beskæftigelsesmæssige eller erhvervsmæs- sige hensyn taler derfor … gives til beskæftigelse i et bestemt arbejdsforhold. … En arbejdstilladelse på Færøerne efter § 35 har gyl- dighed i samme tidsrum som udlændingens opholdstilladelse på Færøerne, medmindre andet fremgår af tilladelsen. … forlængelse af arbejdstilladelse på Færøerne",
    "kind": "primary",
    "fields": [
@@ -53,6 +53,26 @@
     "processing",
     "validity"
    ]
+  },
+  {
+   "url": "https://www.utlendingastovan.fo/en/permits/you-want-to-apply-for/work-permit/work-in-the-faroe-islands-applicants-from-third-countries-including-sports-agreement",
+   "title": "Útlendingastovan (Faroese Immigration Office), Work in the Faroe Islands - applicants from third countries (saved l4w/files/p1c/FO-third.html)",
+   "read": "2026-11-04",
+   "said": "Your salary and terms of employment must correspond to Faroese standards Your salary and terms of employment must correspond to Faroese standards. This means that your salary, holiday entitlements, terms of notice etc. must not be inferior to the standards within the professional field where you are going to work. As a rule, your employment must be full-time, which normally means 40 hours work per week. … When your application for a residence and work permit has been submitted, the Immigration Office will assess whether your salary and terms of employment correspond to Faroese standards.",
+   "kind": "primary",
+   "fields": [
+    "pay"
+   ]
+  },
+  {
+   "url": "https://www.utlendingastovan.fo/en/permits/you-want-to-apply-for/work-permit/exemption-from-the-requirement-of-a-work-permit",
+   "title": "Útlendingastovan, Exemption from the requirement of a work permit (saved l4w/files/p1c/FO-exempt.html)",
+   "read": "2026-11-04",
+   "said": "You can work in the Faroe Islands without a work permit if your stay is shorter than 3 months, and if you are: … an artist, musician, performer or similar, and you have made an agreement with an organiser on the Faroe Islands prior to your event,",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
  "blockers": [
@@ -60,7 +80,7 @@
    "field": "fees",
    "sought": "Government fee for a Faroese work and residence permit",
    "tried": {
-    "institution": "utlendingastovan.fo and immigration.fo answer 403; nyidanmark.dk's Faroe pages answer 404. | Retry 2026-11-01: government.fo's 'Work and Residence Permit' page (the Faroese representation in Moscow) answers 403; nyidanmark.dk's 'Work on the Faroe Islands - extension' page answers 404 (2026-11-01).",
+    "institution": "utlendingastovan.fo and immigration.fo answer 403; nyidanmark.dk's Faroe pages answer 404. | Retry 2026-11-01: government.fo's 'Work and Residence Permit' page (the Faroese representation in Moscow) answers 403; nyidanmark.dk's 'Work on the Faroe Islands - extension' page answers 404 (2026-11-01). || 2026-11-04: utlendingastovan.fo (the Immigration Office's own site) navigated by curl: Work permit hub, the third-country page, the exemption page and the About/FAQ page read whole, searched for fee, DKK, cost, union => found for pay: salary and terms must match Faroese standards in the field, normally full time (40 hours); the exemption page confirms the 3-month rule for performers with an organiser's agreement. No government fee and no union step stated on these pages; the sitemap answers 403",
     "official-register": "The 2010 order names no fee; no Faroese fee notice found. | Retry 2026-11-01: Bekendtgørelse 636/2010 (retsinformation.dk, saved) re-read: no fee, union step or pay rule.",
     "web-search": "'Útlendingastovan arbeiðs- og uppihaldsloyvi gjald kr Føroyar work permit fee Faroe Islands 2025': a nyidanmark.dk snippet says 'No fee' but its page no longer loads; no primary. | Retry 2026-11-01: 'Faroe Islands work and residence permit fee DKK gjald Útlendingastovan 2026' (2026-11-01): a nyidanmark.dk snippet 'No fee' predating the Faroese takeover of 1 September 2024; Rivermate's DKK 4,000-5,000 names no primary; not filled.",
     "trade-press": "Rivermate (an employer service fee only). | Retry 2026-11-01: Global Expansion's countrypedia says no processing fee, naming no primary; not used.",
@@ -71,18 +91,7 @@
    "field": "union",
    "sought": "union",
    "tried": {
-    "institution": "Retry 2026-11-01: government.fo's 'Work and Residence Permit' page (the Faroese representation in Moscow) answers 403; nyidanmark.dk's 'Work on the Faroe Islands - extension' page answers 404 (2026-11-01).",
-    "official-register": "Retry 2026-11-01: Bekendtgørelse 636/2010 (retsinformation.dk, saved) re-read: no fee, union step or pay rule.",
-    "web-search": "Retry 2026-11-01: 'Faroe Islands work and residence permit fee DKK gjald Útlendingastovan 2026' (2026-11-01): a nyidanmark.dk snippet 'No fee' predating the Faroese takeover of 1 September 2024; Rivermate's DKK 4,000-5,000 names no primary; not filled.",
-    "trade-press": "Retry 2026-11-01: Global Expansion's countrypedia says no processing fee, naming no primary; not used.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "pay",
-   "tried": {
-    "institution": "Retry 2026-11-01: government.fo's 'Work and Residence Permit' page (the Faroese representation in Moscow) answers 403; nyidanmark.dk's 'Work on the Faroe Islands - extension' page answers 404 (2026-11-01).",
+    "institution": "Retry 2026-11-01: government.fo's 'Work and Residence Permit' page (the Faroese representation in Moscow) answers 403; nyidanmark.dk's 'Work on the Faroe Islands - extension' page answers 404 (2026-11-01). || 2026-11-04: utlendingastovan.fo (the Immigration Office's own site) navigated by curl: Work permit hub, the third-country page, the exemption page and the About/FAQ page read whole, searched for fee, DKK, cost, union => found for pay: salary and terms must match Faroese standards in the field, normally full time (40 hours); the exemption page confirms the 3-month rule for performers with an organiser's agreement. No government fee and no union step stated on these pages; the sitemap answers 403",
     "official-register": "Retry 2026-11-01: Bekendtgørelse 636/2010 (retsinformation.dk, saved) re-read: no fee, union step or pay rule.",
     "web-search": "Retry 2026-11-01: 'Faroe Islands work and residence permit fee DKK gjald Útlendingastovan 2026' (2026-11-01): a nyidanmark.dk snippet 'No fee' predating the Faroese takeover of 1 September 2024; Rivermate's DKK 4,000-5,000 names no primary; not filled.",
     "trade-press": "Retry 2026-11-01: Global Expansion's countrypedia says no processing fee, naming no primary; not used.",
@@ -90,5 +99,5 @@
    }
   }
  ],
- "note": "The executive order on aliens' access to the Faroe Islands (nr. 636 of 7 June 2010) holds the rules: artists, musicians, performers and their staff with an engagement agreed in advance with an organiser in the Faroes need no work permit for three months from entry (§ 34(2)(2)); otherwise a work permit may be given to a foreigner living outside the Faroes where significant employment or business considerations call for it (§ 35(5)), for a particular employment (§ 36), valid as long as the residence permit (§ 38). Útlendingastovan (the Faroese authority since 1 September 2024) refuses this client (403 on utlendingastovan.fo and immigration.fo), so the processing time and term are from EURAXESS Faroe Islands, which names no primary; nyidanmark.dk's Faroese pages now answer 404. Whether the 2010 order still stands unchanged under the Faroese authority is unconfirmed (as at layer 3). Nordic citizens need no permit (EURAXESS)."
+ "note": "The executive order on aliens' access to the Faroe Islands (nr. 636 of 7 June 2010) holds the rules: artists, musicians, performers and their staff with an engagement agreed in advance with an organiser in the Faroes need no work permit for three months from entry (§ 34(2)(2)); otherwise a work permit may be given to a foreigner living outside the Faroes where significant employment or business considerations call for it (§ 35(5)), for a particular employment (§ 36), valid as long as the residence permit (§ 38). Útlendingastovan (the Faroese authority since 1 September 2024) refuses this client (403 on utlendingastovan.fo and immigration.fo), so the processing time and term are from EURAXESS Faroe Islands, which names no primary; nyidanmark.dk's Faroese pages now answer 404. Whether the 2010 order still stands unchanged under the Faroese authority is unconfirmed (as at layer 3). Nordic citizens need no permit (EURAXESS). Read 2026-11-04 on the Immigration Office's own pages: the pay rule; the exemption already held (under three months) is confirmed, with the condition of an agreement with a Faroese organiser made before the event."
 }

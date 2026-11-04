@@ -115,6 +115,15 @@
     "dk-copenhagen-stage"
    ]
   },
+  "EE": {
+   "language": "et",
+   "zone": "Europe/Tallinn",
+   "agreements": [
+    "ee-film",
+    "ee-tv-private",
+    "ee-err"
+   ]
+  },
   "ES": {
    "language": "es",
    "zone": "Europe/Madrid",
@@ -418,6 +427,16 @@
     "mf-fr-tv",
     "mf-fr-subsidised-stage",
     "mf-fr-private-stage"
+   ]
+  },
+  "MQ": {
+   "language": "fr",
+   "zone": "America/Martinique",
+   "agreements": [
+    "mq-fr-film",
+    "mq-fr-tv",
+    "mq-fr-subsidised-stage",
+    "mq-fr-private-stage"
    ]
   },
   "NF": {
@@ -1787,6 +1806,98 @@
      "when": {},
      "from": "2026-08-01",
      "amount": "31395.92"
+    }
+   ]
+  },
+  "ee-film": {
+   "country": "EE",
+   "currency": "EUR",
+   "media": [
+    "film"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "film",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "300"
+    },
+    {
+     "medium": "film",
+     "role": null,
+     "per": "day",
+     "rehearsal": true,
+     "with": [
+      "day"
+     ],
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "150"
+    }
+   ]
+  },
+  "ee-tv-private": {
+   "country": "EE",
+   "currency": "EUR",
+   "media": [
+    "television"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "television",
+     "role": "lead",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "234.33"
+    },
+    {
+     "medium": "television",
+     "role": "supporting",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "194.25"
+    }
+   ]
+  },
+  "ee-err": {
+   "country": "EE",
+   "currency": "EUR",
+   "media": [
+    "television"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "television",
+     "role": "lead",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "183.92"
+    },
+    {
+     "medium": "television",
+     "role": "supporting",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-01-01",
+     "amount": "152.46"
     }
    ]
   },
@@ -3462,6 +3573,46 @@
      "when": {},
      "from": "2019-02-01",
      "amount": "1200"
+    },
+    {
+     "medium": "television",
+     "role": "lead",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-11-04",
+     "amount": "3872"
+    },
+    {
+     "medium": "television",
+     "role": "supporting",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-11-04",
+     "amount": "2923"
+    },
+    {
+     "medium": "film",
+     "role": "actor",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-11-04",
+     "amount": "1509"
+    },
+    {
+     "medium": "film",
+     "role": "beginner",
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-11-04",
+     "amount": "1207"
     }
    ]
   },
@@ -5432,6 +5583,142 @@
      },
      "from": "2019-05-01",
      "amount": "947824"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       4
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "7882"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       4
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "6021"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       4
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "70842"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "year",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       4
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "885485"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       null
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "12400"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       null
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "8855"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       null
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "123969"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "year",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       null
+      ]
+     },
+     "from": "2026-05-01",
+     "amount": "1239507"
     }
    ]
   },
@@ -9433,6 +9720,516 @@
    ],
    "follows": "fr-private-stage"
   },
+  "mq-fr-film": {
+   "country": "MQ",
+   "currency": "EUR",
+   "media": [
+    "film"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "film",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-09-01",
+     "amount": "418.25"
+    },
+    {
+     "medium": "film",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2023-09-01",
+     "amount": "1266.7"
+    }
+   ],
+   "follows": "fr-film"
+  },
+  "mq-fr-tv": {
+   "country": "MQ",
+   "currency": "EUR",
+   "media": [
+    "television"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       1,
+       1
+      ]
+     },
+     "from": "2024-02-01",
+     "amount": "301.97"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-02-01",
+     "amount": "286.37"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       1,
+       1
+      ]
+     },
+     "from": "2025-01-01",
+     "amount": "304.99"
+    },
+    {
+     "medium": "television",
+     "role": null,
+     "per": "day",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-01-01",
+     "amount": "289.23"
+    }
+   ],
+   "follows": "fr-tv"
+  },
+  "mq-fr-subsidised-stage": {
+   "country": "MQ",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "2252.37"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "2143.56"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       1,
+       2
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "162.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "141.63"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "session",
+     "rehearsal": true,
+     "with": [
+      "performance"
+     ],
+     "when": {},
+     "from": "2026-08-01",
+     "amount": "61.05"
+    }
+   ],
+   "follows": "fr-subsidised-stage"
+  },
+  "mq-fr-private-stage": {
+   "country": "MQ",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       0,
+       200
+      ],
+      "nth": [
+       1,
+       24
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "119.42"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       0,
+       200
+      ],
+      "nth": [
+       25,
+       48
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "101.2"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       0,
+       200
+      ],
+      "nth": [
+       49,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "87.03"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       0,
+       200
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "2024"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       201,
+       300
+      ],
+      "nth": [
+       1,
+       24
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "126.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       201,
+       300
+      ],
+      "nth": [
+       25,
+       48
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "107.27"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       201,
+       300
+      ],
+      "nth": [
+       49,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "95.13"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       201,
+       300
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "2210.21"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       301,
+       600
+      ],
+      "nth": [
+       1,
+       24
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "141.68"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       301,
+       600
+      ],
+      "nth": [
+       25,
+       48
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "120.43"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       301,
+       600
+      ],
+      "nth": [
+       49,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "106.26"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       301,
+       600
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "2477.38"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       601,
+       null
+      ],
+      "nth": [
+       1,
+       24
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "156.86"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       601,
+       null
+      ],
+      "nth": [
+       25,
+       48
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "133.58"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       601,
+       null
+      ],
+      "nth": [
+       49,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "117.39"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "seats": [
+       601,
+       null
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-09-01",
+     "amount": "2744.54"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "day",
+     "rehearsal": true,
+     "with": null,
+     "when": {},
+     "from": "2025-09-01",
+     "amount": "84"
+    }
+   ],
+   "follows": "fr-private-stage"
+  },
   "nf-au-screen": {
    "country": "NF",
    "currency": "AUD",
@@ -11333,9 +12130,7 @@
   "CZ": [
    "rates"
   ],
-  "DE": [
-   "rates"
-  ],
+  "DE": [],
   "DJ": [
    "rates",
    "market"
@@ -11356,7 +12151,6 @@
    "terms"
   ],
   "EE": [
-   "agreements",
    "market"
   ],
   "EG": [
@@ -11492,9 +12286,7 @@
    "rates",
    "union"
   ],
-  "IL": [
-   "rates"
-  ],
+  "IL": [],
   "IM": [
    "rates",
    "market"
@@ -11664,9 +12456,7 @@
   "MP": [
    "union"
   ],
-  "MQ": [
-   "terms"
-  ],
+  "MQ": [],
   "MR": [
    "terms"
   ],
@@ -11725,9 +12515,7 @@
    "market"
   ],
   "NL": [],
-  "NO": [
-   "rates"
-  ],
+  "NO": [],
   "NP": [
    "rates"
   ],
@@ -12021,9 +12809,7 @@
   "YE": [
    "terms"
   ],
-  "YT": [
-   "agreements"
-  ],
+  "YT": [],
   "ZA": [
    "agreements"
   ],

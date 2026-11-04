@@ -1,6 +1,6 @@
 {
  "country": "BH",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Labour Market Regulatory Authority)",
  "routeChanged": false,
  "permit": {
@@ -8,33 +8,18 @@
   "first": "The employer must have paid all the Authority's work-permit fees and dues, not be shown to have defaulted on workers' rights, and file the documents the Board prescribes (Law No. 19 of 2006, art. 24(b)).",
   "fees": [
    {
-    "what": "Visa issuance, 6-month work permit (2026)",
-    "amount": "52.50",
+    "what": "Work permit service fee, two years (LMRA)",
+    "amount": "390.00",
     "currency": "BHD"
    },
    {
-    "what": "Health care, 6-month work permit (2026)",
-    "amount": "45.00",
+    "what": "Admin fee (LMRA)",
+    "amount": "5.00",
     "currency": "BHD"
    },
    {
-    "what": "Visa issuance, 12-month work permit (2026)",
-    "amount": "105.00",
-    "currency": "BHD"
-   },
-   {
-    "what": "Health care, 12-month work permit (2026)",
-    "amount": "90.00",
-    "currency": "BHD"
-   },
-   {
-    "what": "Visa issuance, 24-month work permit (2026)",
-    "amount": "210.00",
-    "currency": "BHD"
-   },
-   {
-    "what": "Health care, 24-month work permit (2026)",
-    "amount": "180.00",
+    "what": "Job advertisement fee, applications from outside the Kingdom (LMRA)",
+    "amount": "30.00",
     "currency": "BHD"
    },
    {
@@ -48,7 +33,13 @@
     "currency": "BHD"
    }
   ],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 21,
+    "unit": "business-days"
+   },
+   "premium": null
+  },
   "validity": {
    "n": 24,
    "unit": "months",
@@ -61,7 +52,9 @@
    "days": 14,
    "within": null
   },
-  "exemptNote": "The law doesn't apply to foreigners who come to do temporary work lasting less than fifteen days, such as fairs, exhibitions, celebrations, festivals or concerts (الحفلات), on the conditions an LMRA resolution sets (Law No. 19 of 2006, art. 2(b)(2)); that resolution wasn't read."
+  "exemptNote": "The law doesn't apply to foreigners who come to do temporary work lasting less than fifteen days, such as fairs, exhibitions, celebrations, festivals or concerts (الحفلات), on the conditions an LMRA resolution sets (Law No. 19 of 2006, art. 2(b)(2)); that resolution wasn't read.",
+  "processingNote": "LMRA's stated time for a new work permit for a worker applying from outside Bahrain; three working days for one already inside the Kingdom.",
+  "feesNote": "LMRA's page (updated 30 October 2026) gives the service fee as BHD 195 a year, 390 for two years (EY's 2026 visa-issuance and health-care parts, 105 and 90 a year, sum to it), and BHD 142.5 for six months for a worker inside the Kingdom whose permit was cancelled; the employer's monthly contribution is EY's report."
  },
  "sources": [
   {
@@ -88,27 +81,27 @@
     "eligibility",
     "exempt"
    ]
+  },
+  {
+   "url": "https://lmra.gov.bh/en/page/show/106",
+   "title": "Labour Market Regulatory Authority, New Work Permit (service page, last update 30-10-2026)",
+   "read": "2026-11-04",
+   "said": "Fees Service fee: Six Months: BHD 142.5. (Available for expatriate employees inside the Kingdom of Bahrain (Cancelled work permit)). One year: BHD 195. Two years: BHD 390. Dependants: BHD 270. Admin fee: BHD 5. Job advertisement fees for expatriate employees applications from outside the Kingdom of Bahrain only: BHD 30. Processing Time 3 working days for expatriate employees’ applications from inside the Kingdom of Bahrain (Labour Market Regulatory Authority (LMRA) approval). 21 working days for expatriate employees’ applications from outside the Kingdom of Bahrain.",
+   "kind": "primary",
+   "fields": [
+    "fees",
+    "processing"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "Decision time",
-   "tried": {
-    "institution": "lmra.gov.bh, bahrain.bh and services.bahrain.bh answer 403 to this client; npra.gov.bh doesn't answer (2026-11-01). Retry 2026-11-01: lmra.gov.bh, evisa.gov.bh, bahrain.bh and iga.gov.bh answer 403 again; npra.gov.bh resets; legalaffairs.gov.bh doesn't answer.",
-    "official-register": "Not reached. Retry 2026-11-01: lloc.gov.bh (the Legislation and Legal Opinion Commission) answers: Law No. 19 of 2006 (saved) leaves procedures and their decision ('إجراءات البت فيها') to a Board resolution and gives no time; Resolution No. 2 of 2026 amending Resolution 76 of 2008 (saved) changes the place of work and transfers only; Resolution 76 of 2008 itself isn't at lloc's RBLMKT7608 (error page).",
-    "web-search": "Same search. Retry 2026-11-01: 'lloc.gov.bh قرار هيئة تنظيم سوق العمل تصريح عمل مؤقت فنانين': LMRA resolutions on six-month permits and professional activities, none on performers or decision time.",
-    "trade-press": "None found. Retry 2026-11-01: EY (Feb 2026) on the fee rise gives no time.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
-   }
-  },
-  {
    "field": "union",
    "sought": "Any union consultation",
    "tried": {
-    "institution": "lmra.gov.bh, bahrain.bh and services.bahrain.bh answer 403 to this client; npra.gov.bh doesn't answer (2026-11-01). Retry 2026-11-01: lmra.gov.bh, evisa.gov.bh, bahrain.bh and iga.gov.bh answer 403 again; npra.gov.bh resets; legalaffairs.gov.bh doesn't answer.",
+    "institution": "lmra.gov.bh, bahrain.bh and services.bahrain.bh answer 403 to this client; npra.gov.bh doesn't answer (2026-11-01). Retry 2026-11-01: lmra.gov.bh, evisa.gov.bh, bahrain.bh and iga.gov.bh answer 403 again; npra.gov.bh resets; legalaffairs.gov.bh doesn't answer. || 2026-11-04: lmra.gov.bh/en/page/show/106 fetched by curl and read whole (documents, process, legal basis, fees, processing time) => found the processing time: 21 working days for a worker outside Bahrain, 3 for one inside; the page sets no minimum pay and names no union step (saved l4w/files/p1b/BH-lmra106.html)",
     "official-register": "Not reached. Retry 2026-11-01: lloc.gov.bh (the Legislation and Legal Opinion Commission) answers: Law No. 19 of 2006 (saved) leaves procedures and their decision ('إجراءات البت فيها') to a Board resolution and gives no time or union step; Resolution No. 2 of 2026 amending Resolution 76 of 2008 (saved) changes the place of work and transfers only; Resolution 76 of 2008 itself isn't at lloc's RBLMKT7608 (error page).",
-    "web-search": "Same search. Retry 2026-11-01: 'lloc.gov.bh قرار هيئة تنظيم سوق العمل تصريح عمل مؤقت فنانين': LMRA resolutions on six-month permits and professional activities, none on performers.",
+    "web-search": "Same search. Retry 2026-11-01: 'lloc.gov.bh قرار هيئة تنظيم سوق العمل تصريح عمل مؤقت فنانين': LMRA resolutions on six-month permits and professional activities, none on performers. || 2026-11-04: 'LMRA Bahrain work permit application processing time working days service level lmra.gov.bh' (2026-11-04) => pointed to LMRA's New Work Permit service page (page/show/106)",
     "trade-press": "None found. Retry 2026-11-01: EY (Feb 2026) on the fee rise gives no union step.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
@@ -117,13 +110,13 @@
    "field": "pay",
    "sought": "A minimum pay rule",
    "tried": {
-    "institution": "lmra.gov.bh, bahrain.bh and services.bahrain.bh answer 403 to this client; npra.gov.bh doesn't answer (2026-11-01). Retry 2026-11-01: lmra.gov.bh, evisa.gov.bh, bahrain.bh and iga.gov.bh answer 403 again; npra.gov.bh resets; legalaffairs.gov.bh doesn't answer.",
+    "institution": "lmra.gov.bh, bahrain.bh and services.bahrain.bh answer 403 to this client; npra.gov.bh doesn't answer (2026-11-01). Retry 2026-11-01: lmra.gov.bh, evisa.gov.bh, bahrain.bh and iga.gov.bh answer 403 again; npra.gov.bh resets; legalaffairs.gov.bh doesn't answer. || 2026-11-04: lmra.gov.bh/en/page/show/106 fetched by curl and read whole (documents, process, legal basis, fees, processing time) => found the processing time: 21 working days for a worker outside Bahrain, 3 for one inside; the page sets no minimum pay and names no union step (saved l4w/files/p1b/BH-lmra106.html)",
     "official-register": "Not reached. Retry 2026-11-01: lloc.gov.bh (the Legislation and Legal Opinion Commission) answers: Law No. 19 of 2006 (saved) leaves procedures and their decision ('إجراءات البت فيها') to a Board resolution and gives no time or pay rule; Resolution No. 2 of 2026 amending Resolution 76 of 2008 (saved) changes the place of work and transfers only; Resolution 76 of 2008 itself isn't at lloc's RBLMKT7608 (error page).",
-    "web-search": "Same search. Retry 2026-11-01: 'lloc.gov.bh قرار هيئة تنظيم سوق العمل تصريح عمل مؤقت فنانين': LMRA resolutions on six-month permits and professional activities, none on performers.",
+    "web-search": "Same search. Retry 2026-11-01: 'lloc.gov.bh قرار هيئة تنظيم سوق العمل تصريح عمل مؤقت فنانين': LMRA resolutions on six-month permits and professional activities, none on performers. || 2026-11-04: 'LMRA Bahrain work permit application processing time working days service level lmra.gov.bh' (2026-11-04) => pointed to LMRA's New Work Permit service page (page/show/106)",
     "trade-press": "None found. Retry 2026-11-01: EY (Feb 2026) on the fee rise gives no pay rule.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
   }
  ],
- "note": "The fees are the LMRA work-permit rates from 1 January 2026 as EY reports the Crown Prince and Prime Minister's announcement of 29 December 2025 on the LMRA's recommendation; the LMRA's own page couldn't be read. Layer 3's 15 days without a permit (Order No. 2 of 2013) were read on 29 October 2026 through archive.org snapshots, which this environment can't reach today, so they weren't re-read here."
+ "note": "The fees are the LMRA work-permit rates from 1 January 2026 as EY reports the Crown Prince and Prime Minister's announcement of 29 December 2025 on the LMRA's recommendation; the LMRA's own page couldn't be read. Layer 3's 15 days without a permit (Order No. 2 of 2013) were read on 29 October 2026 through archive.org snapshots, which this environment can't reach today, so they weren't re-read here. Read 2026-11-04 on the LMRA's own new-work-permit page: its fees and decision time; the fees agree with EY's report, which they now stand on."
 }

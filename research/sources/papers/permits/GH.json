@@ -1,6 +1,6 @@
 {
  "country": "GH",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work and Residence Permit (Companies)",
  "routeChanged": false,
  "permit": {
@@ -23,12 +23,24 @@
     "currency": "USD"
    }
   ],
-  "processing": null,
-  "validity": null,
+  "processing": {
+   "standard": {
+    "n": 10,
+    "unit": "weeks"
+   },
+   "premium": null
+  },
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": null
+  },
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "processingNote": "The Ghana Immigration Service gives no clearly defined processing times: a permit may generally take between 8 and 10 weeks; the longer is held.",
+  "validityNote": "A residence permit may be issued for up to four years in the first instance, at an immigration officer's discretion; in practice most are granted for a year (GIS FAQ), which is held."
  },
  "sources": [
   {
@@ -45,81 +57,81 @@
   {
    "url": "https://gis.gov.gh/fees-and-charges/",
    "title": "Ghana Immigration Service, Fees and Charges (effective 15 May 2025)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "EFFECTIVE 15TH MAY 2025 … RESIDENCE PERMIT- WORK PERMIT [COMPANIES] $194.00 $647.00 $1,293.00 … ALIENS IDENTITY CARD GHC 39.00 $40.00 $40.00",
    "kind": "primary",
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://gis.gov.gh/faq-2/",
+   "title": "Ghana Immigration Service, Frequently Asked Questions (residence permits)",
+   "read": "2026-11-04",
+   "said": "A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. There is no specified guidance to assess how long a permit may be granted. In practice, most applications are generally granted for a year. … Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "validity"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "How long GIS takes to decide a work and residence permit",
-   "tried": {
-    "institution": "gis.gov.gh permit and fees pages: no time stated. | Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
-    "official-register": "Immigration Act 2000 (Act 573) and L.I. 2228 not reached in this pass. | Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
-    "web-search": "'Ghana Immigration Service work permit validity one year processing time weeks foreign artists performers permit': consultancies give 2 to 6 weeks and up to six months, none citing GIS. | Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "Cliffe Dekker Hofmeyr's guide answers 403; Mondaq results are generic. | Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
    "field": "validity",
-   "sought": "Longest term granted and renewal",
+   "sought": "Whether the work and residence permit renews",
    "tried": {
-    "institution": "gis.gov.gh: no term on the permit page; the fee table charges by permit, not by term. | Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
+    "institution": "gis.gov.gh: no term on the permit page; the fee table charges by permit, not by term. | Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none. || 2026-11-04: gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines => no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200) | gis.gov.gh/faq-2/ and gis.gov.gh/permits/ fetched live and read (l4w/files/f11/GH-faq, GH-permits) => found: 'Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.' and 'A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. ... In practice, most applications are generally granted for a year.' No performer criterion, union step, pay rule or exempt engagement; a visitor is admitted for 60 or 90 days by nationality, but without leave to work",
     "official-register": "Act 573 not reached. | Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
     "web-search": "Same search: one year renewable (consultancy) against up to two years (another); no primary. | Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "None citing a primary. | Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
+    "trade-press": "None citing a primary. | Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in Ghana => lead only: GAG – Ghana Actors' Guild listed; no permit source names a union step",
+    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gh,gov,gis)/ (cc.py list; 47 captures, 6-7 October 2026) => lead: the crawl holds GIS's /faq-2/ and /permits/ pages and the July 2026 fees PDF; the live pages were then read"
    }
   },
   {
    "field": "eligibility",
    "sought": "Criteria a performer must meet",
    "tried": {
-    "institution": "GIS: requirements are documents, no criteria for performers. | Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
+    "institution": "GIS: requirements are documents, no criteria for performers. | Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none. || 2026-11-04: gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines => no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200) | gis.gov.gh/faq-2/ and gis.gov.gh/permits/ fetched live and read (l4w/files/f11/GH-faq, GH-permits) => found: 'Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.' and 'A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. ... In practice, most applications are generally granted for a year.' No performer criterion, union step, pay rule or exempt engagement; a visitor is admitted for 60 or 90 days by nationality, but without leave to work",
     "official-register": "Not reached. | Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
     "web-search": "Same search. | Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "3news (2018) on artistes' practice only. | Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
+    "trade-press": "3news (2018) on artistes' practice only. | Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in Ghana => lead only: GAG – Ghana Actors' Guild listed; no permit source names a union step",
+    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gh,gov,gis)/ (cc.py list; 47 captures, 6-7 October 2026) => lead: the crawl holds GIS's /faq-2/ and /permits/ pages and the July 2026 fees PDF; the live pages were then read"
    }
   },
   {
    "field": "union",
    "sought": "Any union consultation",
    "tried": {
-    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
+    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none. || 2026-11-04: gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines => no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200) | gis.gov.gh/faq-2/ and gis.gov.gh/permits/ fetched live and read (l4w/files/f11/GH-faq, GH-permits) => found: 'Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.' and 'A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. ... In practice, most applications are generally granted for a year.' No performer criterion, union step, pay rule or exempt engagement; a visitor is admitted for 60 or 90 days by nationality, but without leave to work",
     "official-register": "Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
     "web-search": "Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in Ghana => lead only: GAG – Ghana Actors' Guild listed; no permit source names a union step",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gh,gov,gis)/ (cc.py list; 47 captures, 6-7 October 2026) => lead: the crawl holds GIS's /faq-2/ and /permits/ pages and the July 2026 fees PDF; the live pages were then read"
    }
   },
   {
    "field": "pay",
    "sought": "Any minimum pay rule",
    "tried": {
-    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
+    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none. || 2026-11-04: gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines => no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200) | gis.gov.gh/faq-2/ and gis.gov.gh/permits/ fetched live and read (l4w/files/f11/GH-faq, GH-permits) => found: 'Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.' and 'A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. ... In practice, most applications are generally granted for a year.' No performer criterion, union step, pay rule or exempt engagement; a visitor is admitted for 60 or 90 days by nationality, but without leave to work",
     "official-register": "Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
     "web-search": "Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in Ghana => lead only: GAG – Ghana Actors' Guild listed; no permit source names a union step",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gh,gov,gis)/ (cc.py list; 47 captures, 6-7 October 2026) => lead: the crawl holds GIS's /faq-2/ and /permits/ pages and the July 2026 fees PDF; the live pages were then read"
    }
   },
   {
    "field": "exempt",
    "sought": "A short engagement needing no permit",
    "tried": {
-    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none.",
+    "institution": "Retry 2026-11-01: gis.gov.gh home and Legal Research & Monitoring page read: no Act, regulation, FAQ or term/decision time; the permit and fee pages give none. || 2026-11-04: gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines => no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200) | gis.gov.gh/faq-2/ and gis.gov.gh/permits/ fetched live and read (l4w/files/f11/GH-faq, GH-permits) => found: 'Although there are no clearly defined processing times, the processing of a permit may generally take between 8 to 10 weeks.' and 'A residence permit may be issued for up to four years in the first instance. The duration of permit granted is determined by an immigration officer. ... In practice, most applications are generally granted for a year.' No performer criterion, union step, pay rule or exempt engagement; a visitor is admitted for 60 or 90 days by nationality, but without leave to work",
     "official-register": "Retry 2026-11-01: GhaLII (ghalii.org) holds the Immigration Act 2000 (Act 573) at /akn/gh/act/2000/573, which answers 403 (bot check) to this client; Immigration Regulations 2001 (L.I. 1691) not found elsewhere.",
     "web-search": "Retry 2026-11-01: 'Ghana Immigration Service work permit \"valid for\" one year renewable \"Immigration Act\" 573 section 24 OR 25 \"work permit\" period gis.gov.gh': consultancies say one year renewable or six months (IBN, Remofirst), one says up to two years; Mondaq paraphrases Act 573 (renewal a month before expiry via the Immigrant Quota Committee) without the section's text.",
-    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: Mondaq (2019, 2023) and Chambers Corporate Immigration 2025 (Ghana) by search: one-year term described, no official text quoted; Graphic Online 'Foreigners warned' gives no term. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in Ghana => lead only: GAG – Ghana Actors' Guild listed; no permit source names a union step",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gh,gov,gis)/ (cc.py list; 47 captures, 6-7 October 2026) => lead: the crawl holds GIS's /faq-2/ and /permits/ pages and the July 2026 fees PDF; the live pages were then read"
    }
   }
  ],
- "note": "The Ghana Immigration Service's fee table (effective 15 May 2025) charges the work permit (companies) at US$1,293 for other nationals (US$647 ECOWAS, US$194 Ghanaians with a foreign passport); a rotator's permit of up to six months is US$647. GIS names no performers' route, no decision time and no term; a 2018 trade report (3news, quoting the creative-arts pressure group FOCAP) says foreign musicians and actors have often performed without any permit, which is practice, not the rule. Retry 2026-11-01: the 3news (2018) item quoting the pressure group FOCAP is dropped as a source (it names no official primary); its account is not held."
+ "note": "The Ghana Immigration Service's fee table (effective 15 May 2025) charges the work permit (companies) at US$1,293 for other nationals (US$647 ECOWAS, US$194 Ghanaians with a foreign passport); a rotator's permit of up to six months is US$647. GIS names no performers' route, no decision time and no term; a 2018 trade report (3news, quoting the creative-arts pressure group FOCAP) says foreign musicians and actors have often performed without any permit, which is practice, not the rule. Retry 2026-11-01: the 3news (2018) item quoting the pressure group FOCAP is dropped as a source (it names no official primary); its account is not held. Read 2026-11-04 in the Ghana Immigration Service's FAQ, on residence permits generally (the work permit for companies is one)."
 }

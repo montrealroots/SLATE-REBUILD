@@ -1,6 +1,6 @@
 {
  "country": "AG",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Labour Code, Division F)",
  "routeChanged": false,
  "permit": {
@@ -10,6 +10,11 @@
    {
     "what": "Application or renewal fee (Labour Code s. F5(2), as amended by Act No. 13 of 2020)",
     "amount": "100",
+    "currency": "XCD"
+   },
+   {
+    "what": "Work permit fee, artist or entertainer, non-CARICOM national, a year (Work Permit (Fees) Order 2017; pro-rated for a shorter permit)",
+    "amount": "2000.00",
     "currency": "XCD"
    }
   ],
@@ -22,7 +27,8 @@
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The Work Permit (Fees) Order 2017 (S.I. 2017 No. 5) charges an artist or entertainer XCD 1,000 a year if a CARICOM national, 2,000 otherwise, pro-rated for permits under a year; a single act or group of up to three for a week or less pays 600 or 1,200 (the row for over a week up to three months is printed blank). From 10 March 2025 CARICOM and Dominican Republic nationals pay no permit fee, only the application fee (S.I. 2025 No. 4)."
  },
  "sources": [
   {
@@ -46,6 +52,26 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://laws.gov.ag/wp-content/uploads/2019/03/No.-5-The-Work-Permit-Fees-Order-2017.pdf",
+   "title": "The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, Official Gazette Vol. XXXVII No. 5, 19 January 2017)",
+   "read": "2026-11-04",
+   "said": "Categories of Workers | CARICOM Nationals | Non-CARICOM Nationals ... Artist $1,000.00 $2,000.00 ... Entertainer $1,000.00 $2,000.00 (a) Single or group entertainers not exceeding three in number (i) over one week but not exceeding three months [no fee printed] (i) Not exceeding one week $600.00 $1,200.00 (b) Each group of entertainers over three but not exceeding twelve (i) over one week but not exceeding three months $2,500.00 $5,000.00 (ii) not exceeding one week $1,000.00 $3,000.00 (c) each additional entertainer over twelve in a group (i) over one week but not exceeding three months $200.00(each) $500.00 (ii) not exceeding one week $100.00 (each) $200.00 (each) ... Person engaged in a profession not specified in this schedule $2,500.00 $4,500.00 ... Fees are to be pro-rated for work permits granted for periods less than one year",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://laws.gov.ag/wp-content/uploads/2025/12/No.-4-of-2025-The-Antigua-and-BArbuda-Labour-Code-Non-Application-of-work-Permit-Fees-Caricom-and-Dominican-Republic-Order-2025.pdf",
+   "title": "The Antigua and Barbuda Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4, Official Gazette Vol. XLV No. 14, 6 March 2025)",
+   "read": "2026-11-04",
+   "said": "2. This Order shall come into force from the 10th day of March, 2025. ... the payment of Work Permit fees shall not apply to the class of persons listed in the Schedules. 2. The class of persons listed in the Schedules shall submit an application for a Work Permit in accordance with Division F and pay the applicable application fee. ... SCHEDULE 1 ... A A National of the Caribbean Community (CARICOM). B A National of the Dominican Republic. SCHEDULE II ... 1. Anguilla 2. Bahamas 3. Barbados 4. Belize 5. British Virgin Islands 6. Guyana 7. Haiti 8. Jamaica 9. Suriname 10. Trinidad and Tobago, and 11. The Dominican Republic",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
  "blockers": [
@@ -53,68 +79,57 @@
    "field": "processing",
    "sought": "How long the Labour Department or Minister takes to decide",
    "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Labour Code Cap. 27 Division F and its 2020 amendment read; the Work Permit (Fees) Order 1971 (kept by s. F12) and any later Order not found online. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
+    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy. || 2026-11-04: every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | labour.gov.ag fetched by curl => no connection (HTTP 000) | ab.gov.ag (Government portal, links to immigration.gov.ag and police permits) and labour.gov.ag again => ab.gov.ag answers with no work-permit page; labour.gov.ag: connection reset",
+    "official-register": "Labour Code Cap. 27 Division F and its 2020 amendment read; the Work Permit (Fees) Order 1971 (kept by s. F12) and any later Order not found online. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online. || 2026-11-04: laws.gov.ag (Ministry of Legal Affairs, The Laws of Antigua and Barbuda): wp-json media search 'work permit' (8 instruments) and 'labour code' (35 files); read: The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, 9 pages; the entertainer rows checked against the page image of p. 6), the Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4), the Work Permit Exemption Order, 2003 (S.I. 2003 No. 23, read from the page image), and Division F of the Labour Code, Cap. 27 (cap-27.pdf, sections F2 to F13, from its text layer) => found in part: who needs a permit, the exemptions, the fees for an artist or entertainer, the CARICOM/Dominican Republic fee waiver, the permit's length and the application fee; processing time and any union rule are not in these instruments. The Labour Code Amendment Acts of 2017, 2019, 2020 and 2022 in the same library were not read, so a later change to Division F is not excluded",
     "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
     "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read | Common Crawl CC-MAIN-2026-43, prefix 'ag,gov,labour)' => no capture"
    }
   },
   {
    "field": "union",
    "sought": "Any union consultation for a foreign performer",
    "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Division F names none. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
+    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy. || 2026-11-04: every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | labour.gov.ag fetched by curl => no connection (HTTP 000) | ab.gov.ag (Government portal, links to immigration.gov.ag and police permits) and labour.gov.ag again => ab.gov.ag answers with no work-permit page; labour.gov.ag: connection reset",
+    "official-register": "Division F names none. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online. || 2026-11-04: laws.gov.ag (Ministry of Legal Affairs, The Laws of Antigua and Barbuda): wp-json media search 'work permit' (8 instruments) and 'labour code' (35 files); read: The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, 9 pages; the entertainer rows checked against the page image of p. 6), the Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4), the Work Permit Exemption Order, 2003 (S.I. 2003 No. 23, read from the page image), and Division F of the Labour Code, Cap. 27 (cap-27.pdf, sections F2 to F13, from its text layer) => found in part: who needs a permit, the exemptions, the fees for an artist or entertainer, the CARICOM/Dominican Republic fee waiver, the permit's length and the application fee; processing time and any union rule are not in these instruments. The Labour Code Amendment Acts of 2017, 2019, 2020 and 2022 in the same library were not read, so a later change to Division F is not excluded",
     "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
     "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read | Common Crawl CC-MAIN-2026-43, prefix 'ag,gov,labour)' => no capture"
    }
   },
   {
    "field": "eligibility",
    "sought": "Criteria a performer must meet",
    "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Division F sets no criteria beyond the Employment Service's investigation of the effect on citizens' opportunities. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
+    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy. || 2026-11-04: every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | labour.gov.ag fetched by curl => no connection (HTTP 000) | ab.gov.ag (Government portal, links to immigration.gov.ag and police permits) and labour.gov.ag again => ab.gov.ag answers with no work-permit page; labour.gov.ag: connection reset",
+    "official-register": "Division F sets no criteria beyond the Employment Service's investigation of the effect on citizens' opportunities. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online. || 2026-11-04: laws.gov.ag (Ministry of Legal Affairs, The Laws of Antigua and Barbuda): wp-json media search 'work permit' (8 instruments) and 'labour code' (35 files); read: The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, 9 pages; the entertainer rows checked against the page image of p. 6), the Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4), the Work Permit Exemption Order, 2003 (S.I. 2003 No. 23, read from the page image), and Division F of the Labour Code, Cap. 27 (cap-27.pdf, sections F2 to F13, from its text layer) => found in part: who needs a permit, the exemptions, the fees for an artist or entertainer, the CARICOM/Dominican Republic fee waiver, the permit's length and the application fee; processing time and any union rule are not in these instruments. The Labour Code Amendment Acts of 2017, 2019, 2020 and 2022 in the same library were not read, so a later change to Division F is not excluded",
     "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
     "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read | Common Crawl CC-MAIN-2026-43, prefix 'ag,gov,labour)' => no capture"
    }
   },
   {
    "field": "pay",
    "sought": "Any minimum or market pay rule",
    "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Division F names none; s. F10(2) lets fees vary by wage. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
+    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy. || 2026-11-04: every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | labour.gov.ag fetched by curl => no connection (HTTP 000) | ab.gov.ag (Government portal, links to immigration.gov.ag and police permits) and labour.gov.ag again => ab.gov.ag answers with no work-permit page; labour.gov.ag: connection reset",
+    "official-register": "Division F names none; s. F10(2) lets fees vary by wage. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online. || 2026-11-04: laws.gov.ag (Ministry of Legal Affairs, The Laws of Antigua and Barbuda): wp-json media search 'work permit' (8 instruments) and 'labour code' (35 files); read: The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, 9 pages; the entertainer rows checked against the page image of p. 6), the Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4), the Work Permit Exemption Order, 2003 (S.I. 2003 No. 23, read from the page image), and Division F of the Labour Code, Cap. 27 (cap-27.pdf, sections F2 to F13, from its text layer) => found in part: who needs a permit, the exemptions, the fees for an artist or entertainer, the CARICOM/Dominican Republic fee waiver, the permit's length and the application fee; processing time and any union rule are not in these instruments. The Labour Code Amendment Acts of 2017, 2019, 2020 and 2022 in the same library were not read, so a later change to Division F is not excluded",
     "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
     "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read | Common Crawl CC-MAIN-2026-43, prefix 'ag,gov,labour)' => no capture"
    }
   },
   {
    "field": "exempt",
    "sought": "A short engagement needing no permit",
    "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Division F names no days; exemptions only by Minister's Order (s. F3), not found. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
+    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy. || 2026-11-04: every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | labour.gov.ag fetched by curl => no connection (HTTP 000) | ab.gov.ag (Government portal, links to immigration.gov.ag and police permits) and labour.gov.ag again => ab.gov.ag answers with no work-permit page; labour.gov.ag: connection reset",
+    "official-register": "Division F names no days; exemptions only by Minister's Order (s. F3), not found. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online. || 2026-11-04: laws.gov.ag (Ministry of Legal Affairs, The Laws of Antigua and Barbuda): wp-json media search 'work permit' (8 instruments) and 'labour code' (35 files); read: The Work Permit (Fees) Order, 2017 (S.I. 2017 No. 5, 9 pages; the entertainer rows checked against the page image of p. 6), the Labour Code (Non Application of Work Permit Fees) (CARICOM and Dominican Republic) Order, 2025 (S.I. 2025 No. 4), the Work Permit Exemption Order, 2003 (S.I. 2003 No. 23, read from the page image), and Division F of the Labour Code, Cap. 27 (cap-27.pdf, sections F2 to F13, from its text layer) => found in part: who needs a permit, the exemptions, the fees for an artist or entertainer, the CARICOM/Dominican Republic fee waiver, the permit's length and the application fee; processing time and any union rule are not in these instruments. The Labour Code Amendment Acts of 2017, 2019, 2020 and 2022 in the same library were not read, so a later change to Division F is not excluded",
     "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
     "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "The work permit's own fee on grant (s. F10 Order)",
-   "tried": {
-    "institution": "labour.gov.ag resets the connection from this environment (2026-11-01); the Labour Code (laws.gov.ag) says nothing on it. || Retry 2026-11-01: labour.gov.ag and www.labour.gov.ag still reset the connection (curl: (35), 2026-11-01); www.ab.gov.ag fails TLS verification through the proxy.",
-    "official-register": "Labour Code Cap. 27 Division F and its 2020 amendment read; the Work Permit (Fees) Order 1971 (kept by s. F12) and any later Order not found online. || Retry 2026-11-01: laws.gov.ag's own search for 'work permit' returns no instrument; FAOLEX search for Antigua work-permit instruments: only Act No. 13 of 2020 (already read); the Work Permit (Fees) Order not online.",
-    "web-search": "'Antigua and Barbuda work permit fee entertainers Labour Department short term work permit': only employer-of-record and aggregator guides, none quoting a primary. || Retry 2026-11-01: WebSearch '\"Antigua and Barbuda\" \"work permit\" \"Labour Department\" processing weeks application fee entertainers \"Work Permit (Fees) Order\"': expatfocus, Rivermate, Playroll (2-12 weeks, no primary); a VisaVerge item on a Cabinet target of 21 days, not quoting a government text.",
-    "trade-press": "Antigua Observer result on paying approved permit fees, no amount or time; no law firm quoting the Order. || Retry 2026-11-01: Antigua Observer (?p=198328): the Labour Commissioner's warning to pay for approved permits, no time, criteria or exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read | Common Crawl CC-MAIN-2026-43, prefix 'ag,gov,labour)' => no capture"
    }
   }
  ],
- "note": "The permit's own fee, on grant, is whatever the Minister prescribes by Order (s. F10), possibly by category and wage; the Order in force wasn't found. The permit may carry a condition that a citizen counterpart-trainee be assigned."
+ "note": "The permit's own fee, on grant, is whatever the Minister prescribes by Order (s. F10), possibly by category and wage; the Order in force wasn't found. The permit may carry a condition that a citizen counterpart-trainee be assigned. Read 2026-11-04: the permit's own fee, in the Fees Order the Minister made under s. F10, on the Government's laws site (checked on the page image: the blank row is blank)."
 }

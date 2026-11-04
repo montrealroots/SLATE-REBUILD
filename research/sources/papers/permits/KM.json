@@ -1,131 +1,108 @@
 {
  "country": "KM",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Carte spéciale de travailleur étranger, with the labour inspection's visa on the contract (Code du travail 2012, arts. 36, 150)",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
+  "applies": "The employer asks the labour inspection services for the visa on the written contract (art. 36).",
+  "first": "A written contract, after the worker's medical visit, for an engagement over three months or one requiring the worker to move (art. 36).",
   "fees": [],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 30,
+    "unit": "days"
+   },
+   "premium": null,
+   "note": "Without a decision within thirty days of the request, the visa is deemed granted (art. 36)."
+  },
   "validity": null,
   "union": null,
   "eligibility": null,
   "pay": null,
   "exempt": null
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://justice.gouv.km/texte/code-du-travail/",
+   "title": "Code du Travail 2012, Ministère de la Justice des Comores, Législation et textes officiels",
+   "read": "2026-11-04",
+   "said": "Article 150 .- Sous réserve des traités et accords de réciprocité conclus entre l'Union des Comores et d'autres Etats, il est interdit à toute personne d'engager ou de conserver à son service un étranger non muni de la carte spéciale de travailleur étranger. … La demande de visa incombe à l'employeur. Si le visa est refusé, le contrat est nul de plein droit. … Si l'autorité compétente, pour accorder le visa, n'a pas fait connaître sa décision dans les trente jours qui suivent la demande de visa celui-ci est réputé avoir été accordé. … Pour les travailleurs non originaires des Comores, la durée de contrat de travail à durée déterminée ne peut sauf dérogation accordée par le Ministre du travail, excéder trois ans.",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first",
+    "processing"
+   ]
+  }
+ ],
  "blockers": [
-  {
-   "field": "country",
-   "sought": "The Comoros' work permit for a foreign performer: route, who applies, fees, time, term, union, criteria, pay, exemption",
-   "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "applies",
-   "sought": "The Comoros: applies",
-   "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "first",
-   "sought": "The Comoros: first",
-   "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
-   }
-  },
   {
    "field": "fees",
    "sought": "The Comoros: fees",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "processing",
-   "sought": "The Comoros: processing",
-   "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
-    "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   },
   {
    "field": "validity",
    "sought": "The Comoros: validity",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   },
   {
    "field": "union",
    "sought": "The Comoros: union",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   },
   {
    "field": "eligibility",
    "sought": "The Comoros: eligibility",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   },
   {
    "field": "pay",
    "sought": "The Comoros: pay",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   },
   {
    "field": "exempt",
    "sought": "The Comoros: exempt",
    "tried": {
-    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable.",
-    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text.",
+    "institution": "beit-salam.km (Presidency) answers with nothing on foreigners' work; travail.gouv.km, mae.gouv.km and anpi.km don't answer this client (2026-11-01). Retry (2026-11-01): No ministry page reachable. || 2026-11-04: www.travail.gouv.km fetched by curl => no connection (curl HTTP 000)",
+    "official-register": "The Labour Code of the Comoros and its immigration law weren't found as official text. Retry (2026-11-01): The Labour Code of the Comoros not found as official text. || 2026-11-04: justice.gouv.km (Ministère de la Justice, 'Législation et textes officiels'): site search for travail and etrangers, the legislation index, then justice.gouv.km/texte/code-du-travail/ ('Code du Travail 2012') fetched and read: arts. 32-36 and Title VI (arts. 149-151) (l4w/files/f11/KM-ct) => found: art. 150 forbids engaging or keeping a foreigner without the 'carte spéciale de travailleur étranger' (subject to treaties); art. 151 leaves its terms to a decree (not found); art. 36: a fixed-term contract over three months, or one needing the worker to move, is put in writing after a medical visit and endorsed (visé) by the labour inspection; the employer asks the visa; a refused visa voids the contract; no decision in thirty days means the visa is deemed granted; art. 34: a non-Comorian's fixed-term contract may not exceed three years without the Labour Minister's derogation",
     "web-search": "Couldn't run: this session's shared web-search budget was used up (2026-11-01); layer 3's searches (2026-10-29) found nothing on the Comoros. Retry (2026-11-01): 'Comores permis de travail étranger code du travail autorisation préalable ministère du travail artiste' (2026-11-01): guides only (Rivermate, Globalization Partners, Africarrières), disagreeing on the issuing authority, none quoting a text.",
-    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "trade-press": "None found (layer 3); none reachable now. Retry (2026-11-01): None quoting a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Comoros => no member union listed for the Comoros | FIA's member list (fia-actors.com/about/fia-members/, fetched and read), for a performers' union in the Comoros => no member union listed",
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for km,gouv (cc.py list; 246 captures, 140 of justice.gouv.km's legal texts, 98 of finances.gouv.km) => lead: the Ministry of Justice publishes the legislation as text pages (justice.gouv.km/texte/…); its labour inspection order (arrêté 15-021 of 29 December 2015) captured; the labour code then sought live"
    }
   }
  ],
- "note": "The Comoros is a blocker for the whole country, as in layer 3 (R-1691): no official text of the rule on foreign workers' permits was reached. The route is null because layer 3 holds none either."
+ "note": "The Comoros was a blocker for the whole country on 2026-11-01, as in SLATE's layer 3 (its register's R-1691): no official text of the rule on foreign workers' permits was reached, and the route was null because layer 3 held none either. Read 2026-11-04 on the Ministry of Justice's site (justice.gouv.km), the Code du travail 2012: the special card and the contract's visa. The card's fees, term and criteria are left to a decree (art. 151), not found."
 }

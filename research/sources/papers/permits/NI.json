@@ -1,6 +1,6 @@
 {
  "country": "NI",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "No residente, artista de espectáculos públicos",
  "routeChanged": false,
  "permit": {
@@ -45,66 +45,66 @@
    "field": "fees",
    "sought": "the Dirección General de Migración y Extranjería's fee for a performing artist's authorisation",
    "tried": {
-    "institution": "migob.gob.ni not reached with a fee page Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502).",
-    "official-register": "Ley 761 sets none; the Ministry of the Interior's 2024 normativa's text not found Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page.",
+    "institution": "migob.gob.ni not reached with a fee page Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "Ley 761 sets none; the Ministry of the Interior's 2024 normativa's text not found Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "'Nicaragua Migración y Extranjería artistas extranjeros espectáculos públicos permiso requisitos tarifa dólares migob.gob.ni' (2026-11-01): only El Salvador's fees surfaced Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "La Prensa (2024) gives no fee",
-    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection."
+    "trade-press": "La Prensa (2024) gives no fee || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   },
   {
    "field": "processing",
    "sought": "the decision time",
    "tried": {
-    "institution": "not reached Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502).",
-    "official-register": "Ley 761 sets none Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page.",
+    "institution": "not reached Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "Ley 761 sets none Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "as above Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "La Prensa: 30 days' notice of an event, not a decision time",
-    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection."
+    "trade-press": "La Prensa: 30 days' notice of an event, not a decision time || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   },
   {
    "field": "validity",
    "sought": "the stay granted to an artist of public shows",
    "tried": {
-    "institution": "not reached Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502).",
-    "official-register": "Ley 761 art. 22 leaves stays to circulars, not read Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page.",
+    "institution": "not reached Retry 2026-11-01: migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "Ley 761 art. 22 leaves stays to circulars, not read Retry 2026-11-01: legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "as above Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "none",
-    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection."
+    "trade-press": "none || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   },
   {
    "field": "union",
    "sought": "A union consultation for a foreign performer",
    "tried": {
-    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01)",
-    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length.",
+    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01) || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "'Nicaragua Migración y Extranjería artistas extranjeros espectáculos públicos permiso requisitos tarifa dólares migob.gob.ni' (first pass): nothing on this; no further search could run (budget spent, 2026-11-01).",
-    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   },
   {
    "field": "pay",
    "sought": "A minimum pay rule for a foreign performer",
    "tried": {
-    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01)",
-    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length.",
+    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01) || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "'Nicaragua Migración y Extranjería artistas extranjeros espectáculos públicos permiso requisitos tarifa dólares migob.gob.ni' (first pass): nothing on this; no further search could run (budget spent, 2026-11-01).",
-    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   },
   {
    "field": "exempt",
    "sought": "An engagement short enough to need no authorisation",
    "tried": {
-    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01)",
-    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length.",
+    "institution": "migob.gob.ni answers 403; migracion.gob.ni fails (CONNECT 502). (2026-11-01) || 2026-11-04: Dirección General de Migración y Extranjería (https://www.migracion.gob.ni/) => CONNECT tunnel failed, response 502 | curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/ => migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "official-register": "legislacion.asamblea.gob.ni answers 403 over http and resets over https; lagaceta.gob.ni answers but lists only recent editions on its front page. Ley 761 (Justia's copy, saved) names performers among those the Ministry may authorise, with no union step, pay rule or exemption by length. || 2026-11-04: Fetched https://www.lagaceta.gob.ni/ (the register's quotes); tried /la-gaceta-no-125-miercoles-06-de-julio-de-2011/ and ?s=ley+761 => The home lists only 2026 issues; the 2011 issue URL is 404; the search parameter is ignored | curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123 => found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
     "web-search": "'Nicaragua Migración y Extranjería artistas extranjeros espectáculos públicos permiso requisitos tarifa dólares migob.gob.ni' (first pass): nothing on this; no further search could run (budget spent, 2026-11-01).",
-    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "La Prensa (12 March 2024, saved): the producers' registration and 30 days' notice only. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'ni,gob,migracion)' => no capture"
    }
   }
  ],

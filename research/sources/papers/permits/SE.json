@@ -1,6 +1,6 @@
 {
  "country": "SE",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Arbetstillstånd för artister (Migrationsverket)",
  "routeChanged": false,
  "permit": {
@@ -32,7 +32,8 @@
   "exempt": {
    "days": 14,
    "within": 365
-  }
+  },
+  "eligibilityNote": "No criterion of standing: the Aliens Act 6:2 asks an employment contract, pay at least 90% of Sweden's median wage, terms no worse than the collective agreement or the trade's practice, and health insurance for stays of a year or less."
  },
  "sources": [
   {
@@ -62,20 +63,28 @@
    "fields": [
     "processing"
    ]
-  }
- ],
- "blockers": [
+  },
   {
-   "field": "eligibility",
-   "sought": "a criterion of standing for the performer",
-   "tried": {
-    "institution": "the page sets contract, pay and insurance conditions only | 2026-11-01 retry: Migrationsverket artist page re-read: conditions are the contract, pay, insurance and the union's opinion; no merit or reputation criterion.",
-    "official-register": "not read | 2026-11-01 retry: Utlänningsförordningen (2006:97) not reached as text this turn (riksdagen.se not tried); not read.",
-    "web-search": "not separately searched | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
-    "trade-press": "not tried | 2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "not tried | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
+   "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningslag-2005716_sfs-2005-716/",
+   "title": "Sveriges riksdag, Utlänningslag (2005:716), 6 kap. 1-3 §§ (as amended to Lag 2026:295)",
+   "read": "2026-11-04",
+   "said": "6 kap. 2 § Arbetstillstånd får ges till en utlänning som har ett anställningsavtal, om 1. lönen minst uppgår till 90 procent av medianlönen i Sverige vid tidpunkten för ansökan (lönekravet), 2. lönen, försäkringsskyddet och övriga anställningsvillkor inte är sämre än de villkor som följer av svenska kollektivavtal eller praxis inom yrket eller branschen, och 3. utlänningen, vid vistelse som kommer att uppgå till högst ett år, har eller har ansökt om en heltäckande sjukförsäkring som gäller i Sverige. Arbetstillstånd enligt första stycket får endast ges om rekryteringsförfarandet är förenligt med Sveriges åtaganden inom Europeiska unionen. ... Lag (2026:295) ... 2 a § Ett arbetstillstånd enligt 2 § första stycket får inte ges för längre tid än två år.",
+   "kind": "primary",
+   "fields": [
+    "eligibility"
+   ]
+  },
+  {
+   "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningsforordning-200697_sfs-2006-97/",
+   "title": "Sveriges riksdag, Utlänningsförordning (2006:97), 5 kap. 2 § p. 8, 6-7 a §§ (as amended to Förordning 2026:605)",
+   "read": "2026-11-04",
+   "said": "8. För en sammanlagd tid av fjorton arbetsdagar under en tolvmånadersperiod för en utländsk artist samt hans eller hennes tekniker och annan turnépersonal under förutsättning att artisten inbjudits av en arrangör som finns angiven i den förteckning över etablerade arrangörer som förs av Migrationsverket efter samråd med Arbetsförmedlingen. ... Undantag från lönekravet 6 § Lönekravet i 6 kap. 2 § första stycket 1 utlänningslagen (2005:716) gäller inte en utlänning som ansöker om arbetstillstånd för arbete inom något av följande yrken ... [no artist or performer occupation listed] ... 7 a § ... ska Migrationsverket ... ge sammanslutningar av arbetstagare inom det verksamhetsområde som tillståndet avser tillfälle att yttra sig i ärendet.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
- "note": "Migrationsverket's artist page (singers, musicians, dancers, actors, directors and film-makers): a contract signed by both parties giving the tour plan, fee, time and place; pay and terms at least at Swedish collective-agreement level or the trade's custom; the employer's sickness, life, security and occupational pension insurances; and a monthly salary of at least SEK 34,470 (90% of the median wage) unless the occupation is exempt. SEK 1,500 to apply. Up to two years, never longer than the job, extendable. One invited by an established promoter on Migrationsverket's list may work up to 14 days in twelve months without a permit (the list isn't modelled). Migrationsverket states no waiting time."
+ "blockers": [],
+ "note": "Migrationsverket's artist page (singers, musicians, dancers, actors, directors and film-makers): a contract signed by both parties giving the tour plan, fee, time and place; pay and terms at least at Swedish collective-agreement level or the trade's custom; the employer's sickness, life, security and occupational pension insurances; and a monthly salary of at least SEK 34,470 (90% of the median wage) unless the occupation is exempt. SEK 1,500 to apply. Up to two years, never longer than the job, extendable. One invited by an established promoter on Migrationsverket's list may work up to 14 days in twelve months without a permit (the list isn't modelled). Migrationsverket states no waiting time. Read 2026-11-04 on riksdagen.se: the Aliens Act's chapter 6 and the Ordinance, read whole, set no criterion of standing for a performer."
 }

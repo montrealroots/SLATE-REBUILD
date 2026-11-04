@@ -1,6 +1,6 @@
 {
  "country": "MF",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Carte de séjour « talent – profession artistique et culturelle »",
  "routeChanged": false,
  "permit": {
@@ -20,8 +20,8 @@
   ],
   "processing": {
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null
   },
@@ -33,7 +33,8 @@
   "union": null,
   "eligibility": "Vous pouvez obtenir une carte de séjour «talent-profession artistique et culturelle» si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique",
   "pay": "Justifier de ressources au moins égales à 70 % du SMIC brut à temps plein par mois de séjour en France, soit 1 306,91 € dont au moins 51 % provenant de votre activité d'artiste-interprète ou d'auteur d'une œuvre littéraire ou artistique",
-  "exempt": null
+  "exempt": null,
+  "processingNote": "The prefecture must notify its decision on a residence card within 90 days of a complete application, which it may extend by 30 days for a complex case; silence for 90 days is an implicit refusal (CESEDA R. 432-2, as rewritten by Décret 2026-1001 of 26 October 2026). The consulate's long-stay visa decision isn't covered by it, and no time for it was found."
  },
  "sources": [
   {
@@ -53,6 +54,17 @@
     "pay",
     "union"
    ]
+  },
+  {
+   "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+   "title": "CESEDA, consolidated text built from the Légifrance API by codes.droit.org (edition 2026-10-30), art. R. 432-2 as worded by Décret n° 2026-1001 du 26 octobre 2026",
+   "read": "2026-11-04",
+   "said": "La décision de l'autorité administrative sur la demande d'une carte de séjour est notifiée par écrit dans les meilleurs délais, et au plus tard quatre-vingt-dix jours à compter du dépôt d'une demande complète. … Lorsque la demande présente des éléments d'une complexité particulière, ce délai peut être prolongé de trente jours par l'autorité administrative qui en informe l'étranger. … La décision implicite de rejet mentionnée à l'article R.* 432-1 naît au terme d'un délai de quatre-vingt-dix jours à compter du dépôt d'une demande complète.",
+   "kind": "secondary",
+   "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158",
+   "fields": [
+    "processing"
+   ]
   }
  ],
  "blockers": [
@@ -60,13 +72,13 @@
    "field": "exempt",
    "sought": "the days a foreign performer may work in Saint Martin without the card (France's short-engagement exemption for performers)",
    "tried": {
-    "institution": "Service-Public's talent page covers stays over three months only; the Code du travail's exemption article not re-read (Légifrance not tried in this pass)",
-    "official-register": "not re-read; layer 3 holds 90 days",
+    "institution": "Service-Public's talent page covers stays over three months only; the Code du travail's exemption article not re-read (Légifrance not tried in this pass) || 2026-11-04: com-saint-martin.fr home and its Emploi et apprentissage page, links searched for étrangers, autorisation de travail, main-d'œuvre => HTTP 200; no page on foreign workers' authorisation or a short-engagement exemption",
+    "official-register": "not re-read; layer 3 holds 90 days || 2026-11-04: code.travail.gouv.fr (the Ministry of Labour's Code du travail numérique): L5221-2, L5221-2-1, D5221-2-1, L1521-1, L5523-1 to L5523-3, R5523-1 => read: the three-month exemption for performers (D5221-2-1, 3°) sits in Book II Title II, which L5523-1 applies in Guadeloupe, Guyane, Martinique, Mayotte and La Réunion only, not in Saint-Martin, Saint-Barthélemy or Saint-Pierre-et-Miquelon | legifrance.gouv.fr (CESEDA section), by curl => HTTP 403, as on 2026-11-01",
     "web-search": "not separately searched",
-    "trade-press": "not tried",
-    "archive": "not tried"
+    "trade-press": "not tried || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "not tried || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'fr,com-saint-martin)' (2,020 captures), filtered for travail, étranger, autorisation => a France Travail agreement news item and event arrêtés (parades); no page on foreign workers' authorisation or a short-engagement exemption"
    }
   }
  ],
- "note": "France's rule, which layer 3 holds as applying in Saint Martin (read on Service-Public, checked 1 June 2026): a performing artist (artiste-interprète) or author working over three months takes the « talent – profession artistique et culturelle » card (under a year, a long-stay visa standing as residence permit, VLS-TS « talent »); the employer needs no work authorisation and pays no foreign-employment tax. Resources of at least 70% of the gross full-time SMIC per month of stay (€1,306.91), at least 51% from the artistic work; for salaried work, contracts totalling three months or more in twelve with firms whose main activity is creating or exploiting works. €350 on issue (€50 stamp duty plus €300 tax). Valid for the contract's length, at most four years. The prefecture's silence for four months is an implicit refusal, taken as the decision time. Engagements under three months aren't covered by the card and their exemption isn't re-read here (layer 3's 90 days stands)."
+ "note": "France's rule, which layer 3 holds as applying in Saint Martin (read on Service-Public, checked 1 June 2026): a performing artist (artiste-interprète) or author working over three months takes the « talent – profession artistique et culturelle » card (under a year, a long-stay visa standing as residence permit, VLS-TS « talent »); the employer needs no work authorisation and pays no foreign-employment tax. Resources of at least 70% of the gross full-time SMIC per month of stay (€1,306.91), at least 51% from the artistic work; for salaried work, contracts totalling three months or more in twelve with firms whose main activity is creating or exploiting works. €350 on issue (€50 stamp duty plus €300 tax). Valid for the contract's length, at most four years. The prefecture's silence for four months is an implicit refusal, taken as the decision time. Engagements under three months aren't covered by the card and their exemption isn't re-read here (layer 3's 90 days stands). An error found and fixed on 2026-11-04: the card's decision was held at 4 months, the implicit-refusal limit CESEDA set before Décret 2026-1001 of 26 October 2026; R. 432-2 now sets 90 days, extendable by 30 for a complex case."
 }

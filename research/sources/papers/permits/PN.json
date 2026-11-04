@@ -1,20 +1,25 @@
 {
  "country": "PN",
- "read": "2026-11-01",
- "route": "Written permission of the Island Council",
+ "read": "2026-11-04",
+ "route": "Work visa (Governor, after consulting the Island Council; Immigration Control Ordinance, Cap. 12, s. 16)",
  "routeChanged": false,
  "permit": {
   "applies": "the worker, to the Island Council",
-  "first": "entry clearance for a stay over 14 days (NZ$150), and the Island Council's written permission before work begins",
+  "first": "A work visa obtained before travelling: the application form, a medical certificate and chest x-ray, and police certificates.",
   "fees": [
    {
-    "what": "entry clearance application fee, stay over 14 days and under 6 months (non-refundable)",
-    "amount": "150.00",
+    "what": "Work visa application fee",
+    "amount": "300.00",
     "currency": "NZD"
    }
   ],
   "processing": null,
-  "validity": null,
+  "validity": {
+   "n": 6,
+   "unit": "months",
+   "renewable": true,
+   "note": "Issued for six months; an extension may be sought before expiry."
+  },
   "union": null,
   "eligibility": null,
   "pay": null,
@@ -22,17 +27,26 @@
  },
  "sources": [
   {
-   "url": "https://www.visitpitcairn.pn/visa-legal",
-   "title": "Visit Pitcairn (Pitcairn Islands Tourism), Visa and legal requirements",
+   "url": "https://www.government.pn/immigration",
+   "title": "Government of the Pitcairn Islands, Immigration (page)",
    "read": "2026-11-04",
-   "said": "If your visit is for longer than 14 days but less than 6 months you must complete an entry clearance application form well in advance of your visit (at least 3 months is recommended). A NZ$150.00 non-refundable fee is required. … Do I need a visa to work on Pitcairn? Yes, if you have not been granted a settlement visa and are not a permanent resident of Pitcairn you need to obtain written permission from the Island Council before taking up paid employment or entering business on Pitcairn. More info at Para 16 of Immigration Ordinance 2006.",
+   "said": "Coming to Pitcairn to work temporarily? If you wish to come to Pitcairn to work on a temporary basis, you will need to obtain a work visa before travelling. To apply for a work visa, you must: Complete the work visa application form Undertake a medical examination and have the general medical certificate form and chest x-ray form completed Obtain Police certificates setting out any criminal convictions you have from your country of citizenship and any other country you have resided in for more than 12 months Email your completed form, general medical certificate, chest x-ray form, Police certificates and any other supporting documentation to Pitcairn immigration in the below contact form. Pay the application fee (NZ$300) The Governor of Pitcairn will make decisions on applications for work visas, after consultation with the Pitcairn Island Council. You are encouraged to apply well in advance of your intended travel to ensure that there is sufficient time to obtain all necessary documentation and have it considered. Work visas are issued for six months. You can apply for an extension prior to expiry of the visa. Work visa holders must maintain adequate travel and medical insurance for the duration of their visa.",
    "kind": "primary",
    "fields": [
     "route",
-    "applies",
     "first",
     "fees",
-    "exempt"
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.government.pn/s/Cap-12-Immigration-Ordinance-2014-Rev-Ed.pdf",
+   "title": "Government of the Pitcairn Islands, Immigration Control Ordinance, Cap. 12 (2014 Rev. Ed.), s. 16",
+   "read": "2026-11-04",
+   "said": "16.—(1) This section applies to every person who (a) has not been granted entry for settlement; or (b) has not been granted the status of permanent resident; or (c) is not otherwise exempt from control by any of the provisions of section 15. (2) No person to whom this section applies shall be entitled to take up paid employment or enter into business on the Island unless his or her intention to do so has been expressly disclosed to the Island Council and has been approved in writing or permission has been later obtained in writing on-Island from the Island Council or the Governor.",
+   "kind": "primary",
+   "fields": [
+    "route"
    ]
   }
  ],
@@ -41,24 +55,13 @@
    "field": "processing",
    "sought": "the Island Council's time to decide a permission to work",
    "tried": {
-    "institution": "Visit Pitcairn's page (from the Pitcairn Islands Government's) states none; the Pitcairn Islands Office is reached by email only Retry (2026-11-01): government.pn's 'GPI Immigration Visa and Settlement Information Policy Feb 2024' PDF answers 404 (an HTML page); immigration.pn not read.",
-    "official-register": "the Immigration Control Ordinance 2006 text not read in this pass Retry (2026-11-01): Immigration Control Ordinance 2006 (Revised Edition 2014) on PacLII (pacliirms.paclii.org/pn/legis/consol_act/ico281.pdf) and its 2014 amendment (num_act/ico2014361.pdf) answer 403.",
+    "institution": "Visit Pitcairn's page (from the Pitcairn Islands Government's) states none; the Pitcairn Islands Office is reached by email only Retry (2026-11-01): government.pn's 'GPI Immigration Visa and Settlement Information Policy Feb 2024' PDF answers 404 (an HTML page); immigration.pn not read. || 2026-11-04: curl https://www.government.pn/immigration and /laws (the Government of the Pitcairn Islands), read whole => found: a work visa for temporary work, applied for before travelling with medical and police certificates, application fee NZ$300, decided by the Governor after consulting the Island Council, issued for six months and extendable before expiry; no decision time ('apply well in advance')",
+    "official-register": "the Immigration Control Ordinance 2006 text not read in this pass Retry (2026-11-01): Immigration Control Ordinance 2006 (Revised Edition 2014) on PacLII (pacliirms.paclii.org/pn/legis/consol_act/ico281.pdf) and its 2014 amendment (num_act/ico2014361.pdf) answer 403. || 2026-11-04: curl the Government's copies of the Immigration Control Ordinance Cap. 12 (2014 Rev. Ed.) and the Immigration Control Amendment Ordinance 'as published' 27 April 2026 (22 pages); pdftotext => Cap. 12 s. 16(2) read (written permission of the Island Council or Governor before paid work); the 2026 amendment is a scanned image with no text layer and was not OCR'd today (the shared machine's OCR ran too slowly), so whether it enacts the work visa wasn't read",
     "web-search": "not separately searched in this pass Retry (2026-11-01): 'Pitcairn Immigration Control Ordinance work permit Island Council period of stay licence fee' (2026-11-01): the Ordinance's Part IX defines a work permit; no term or decision time in the excerpts.",
     "trade-press": "none expected Retry (2026-11-01): visaatlas.org gives NZD 50 naming no primary; not used.",
     "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
    }
-  },
-  {
-   "field": "validity",
-   "sought": "the term of the Island Council's permission",
-   "tried": {
-    "institution": "not stated Retry (2026-11-01): government.pn's 'GPI Immigration Visa and Settlement Information Policy Feb 2024' PDF answers 404 (an HTML page); immigration.pn not read.",
-    "official-register": "Ordinance not read Retry (2026-11-01): Immigration Control Ordinance 2006 (Revised Edition 2014) on PacLII (pacliirms.paclii.org/pn/legis/consol_act/ico281.pdf) and its 2014 amendment (num_act/ico2014361.pdf) answer 403.",
-    "web-search": "not separately searched Retry (2026-11-01): 'Pitcairn Immigration Control Ordinance work permit Island Council period of stay licence fee' (2026-11-01): the Ordinance's Part IX defines a work permit; no term or decision time in the excerpts.",
-    "trade-press": "none Retry (2026-11-01): visaatlas.org gives NZD 50 naming no primary; not used.",
-    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
-   }
   }
  ],
- "note": "Pitcairn (Visit Pitcairn, repeating the Pitcairn Islands Government's information): anyone without a settlement visa or permanent residence needs the Island Council's written permission before taking paid employment (Immigration Control Ordinance 2006, para. 16). A stay over 14 days and under six months needs entry clearance with a NZ$150 non-refundable fee, applied for at least three months ahead as recommended; the work permission's own fee, decision time and term aren't stated. No exempt days."
+ "note": "Pitcairn (Visit Pitcairn, repeating the Pitcairn Islands Government's information): anyone without a settlement visa or permanent residence needs the Island Council's written permission before taking paid employment (Immigration Control Ordinance 2006, para. 16). A stay over 14 days and under six months needs entry clearance with a NZ$150 non-refundable fee, applied for at least three months ahead as recommended; the work permission's own fee, decision time and term aren't stated. No exempt days. An error found and fixed on 2026-11-04: the route and its NZ$150 fee came from Visit Pitcairn, the tourism site, which describes the entry clearance; the Government's own immigration page sets out a work visa, NZ$300 for six months, extendable, the Governor deciding after consulting the Island Council, so it is held and the tourism page was dropped. No decision time is stated."
 }

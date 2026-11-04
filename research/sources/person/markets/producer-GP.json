@@ -42,6 +42,26 @@
      "said": "le lien culturel du projet avec la Guadeloupe (mise en valeur du territoire de la Guadeloupe dans sa diversité historique, géographique, sociale et culturelle ou des créations d’auteurs guadeloupéens); la qualité artistique du projet ; la faisabilité du projet (artistique et financière) ; la localisation de tout ou partie du tournage de l’œuvre en Guadeloupe"
     }
    ]
+  },
+  {
+   "item": "fund",
+   "finding": "Région Guadeloupe's 2024-2030 regional fund caps its production aid by work: EUR 300,000 for a fiction feature, EUR 200,000 a documentary feature, EUR 500,000 a TV series (its own page, updated 30 June 2026). How many applications it funds isn't published.",
+   "value": {
+    "currency": "EUR",
+    "productionCap": {
+     "fictionFeature": 300000,
+     "documentaryFeature": 200000,
+     "tvSeries": 500000
+    },
+    "period": "2024-2030"
+   },
+   "applies": "Guadeloupe, the Région's own fund (outside the State-CNC-Région convention).",
+   "sources": [
+    {
+     "src": 1,
+     "said": "LMF 300 000€ … LMDOC 200 000€ … FTV-S 500 000€"
+    }
+   ]
   }
  ],
  "country": "GP",
@@ -53,12 +73,19 @@
    "kind": "secondary",
    "quotes": "https://ec.europa.eu/competition/state_aid/cases1/202451/SA_117253_16.pdf",
    "said": "Le montant des aides publiques ne peut excéder : 50% des coûts admissibles pour les aides à la production, 100% des coûts admissibles pour les aides à la préproduction (développement, écriture, …) … Les dates limites de dépôt des dossiers sont les suivantes : 14 janvier 15 juin … le lien culturel du projet avec la Guadeloupe (mise en valeur du territoire de la Guadeloupe dans sa diversité historique, géographique, sociale et culturelle ou des créations d’auteurs guadeloupéens); la qualité artistique du projet ; la faisabilité du projet (artistique et financière) ; la localisation de tout ou partie du tournage de l’œuvre en Guadeloupe"
+  },
+  {
+   "url": "https://aides.regionguadeloupe.fr/cinema-fonds-regional",
+   "title": "Fonds régional d'aide aux œuvres audiovisuelles et cinématographiques 2024–2030 (Région Guadeloupe, aides.regionguadeloupe.fr, mis à jour le 30 juin 2026)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "LMF 300 000€ … LMDOC 200 000€ … FTV-S 500 000€"
   }
  ],
  "blockers": [
   {
    "item": "fund",
-   "sought": "Per-film caps and amounts of Guadeloupe's 2024-2030 regional fund, from the Région itself.",
+   "sought": "The terms a producer works on in Guadeloupe: how many applications the Région's 2024-2030 regional fund funds of how many (its per-work caps are found from 2026-11-04 on the Région's own page).",
    "tried": {
     "institution": "regionguadeloupe.fr not fetched (budget); les-aides.fr sheets read. || Retry 2026-11-01: Retried: regionguadeloupe.fr (http and https) did not answer from this environment (connection failed); les-aides.fr sheets remain the source",
     "official-register": "EU state-aid notice SA (2020-2022) found in search, not fetched. || Retry 2026-11-01: France's constitution art. 73 read (French statutes apply automatically in Guadeloupe)",

@@ -258,7 +258,23 @@
  "DO": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "DZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "EC": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
- "EE": {"unread": "the state's minimum salary is a culture worker's with higher education, which the person's papers don't say"},
+ "EE": {
+  "market": null, "zone": "Europe/Tallinn", "language": {"code": "et", "fig": 1},
+  "agreements": {
+   "ee-film": {"media": ["film"], "currency": "EUR", "minimums": [
+    {"medium": "film", "per": "day", "from": "2023-01-01", "fig": 2, "path": ["film", "shootingDay"]},
+    {"medium": "film", "per": "day", "from": "2023-01-01", "fig": 2, "path": ["film", "rehearsalDay"], "rehearsal": true, "with": ["day"]}
+   ]},
+   "ee-tv-private": {"media": ["television"], "currency": "EUR", "minimums": [
+    {"medium": "television", "per": "day", "role": "lead", "from": "2023-01-01", "fig": 2, "path": ["privateTv", "lead"]},
+    {"medium": "television", "per": "day", "role": "supporting", "from": "2023-01-01", "fig": 2, "path": ["privateTv", "supporting"]}
+   ]},
+   "ee-err": {"media": ["television"], "currency": "EUR", "minimums": [
+    {"medium": "television", "per": "day", "role": "lead", "from": "2023-01-01", "fig": 2, "path": ["err", "lead"]},
+    {"medium": "television", "per": "day", "role": "supporting", "from": "2023-01-01", "fig": 2, "path": ["err", "supporting"]}
+   ]}
+  }
+ },
  "EG": {"unread": "its research gives no minimum, nor that none sets the pay: only the language, the market's city and the union"},
  "ER": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
  "ES": {
@@ -464,7 +480,11 @@
     {"medium": "television", "per": "day", "role": "lead", "from": "2019-02-01", "fig": 1, "path": ["perFilmingDay", "tvLead"], "dated": 0},
     {"medium": "television", "per": "day", "role": "supporting", "from": "2019-02-01", "fig": 1, "path": ["perFilmingDay", "tvNonLead"], "dated": 0},
     {"medium": "film", "per": "day", "role": "actor", "from": "2019-02-01", "fig": 1, "path": ["perFilmingDay", "film"], "dated": 0},
-    {"medium": "film", "per": "day", "role": "beginner", "from": "2019-02-01", "fig": 1, "path": ["perFilmingDay", "filmBeginner"], "dated": 0}
+    {"medium": "film", "per": "day", "role": "beginner", "from": "2019-02-01", "fig": 1, "path": ["perFilmingDay", "filmBeginner"], "dated": 0},
+    {"medium": "television", "per": "day", "role": "lead", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "tvLead"]},
+    {"medium": "television", "per": "day", "role": "supporting", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "tvNonLead"]},
+    {"medium": "film", "per": "day", "role": "actor", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "film"]},
+    {"medium": "film", "per": "day", "role": "beginner", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "filmBeginner"]}
    ]}
   }
  },
@@ -576,7 +596,9 @@
  "MN": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "MO": {"unread": "the only floor its research gives is the general minimum wage of private-sector employees, whose source doesn't say it is a performer's; no agreement sets an actor's pay"},
  "MP": {"unread": "the only floor its research gives is the general minimum wage of the FLSA, by the hour, a term no part is paid by, whose source doesn't say it is a performer's; no agreement sets an actor's pay"},
- "MQ": {"unread": "its research gives no minimum, nor that none sets the pay: only the territory's status"},
+ "MQ": {
+  "market": null, "zone": "America/Martinique", "language": {"code": "fr", "fig": null}, "follows": {"fig": 1, "market": "FR"}
+ },
  "MR": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "MS": {
   "market": null, "zone": "America/Montserrat", "language": {"code": "en", "fig": null},
@@ -729,7 +751,15 @@
     {"medium": "television", "per": "day", "when": {"years": [5, null], "length": [1, 3]}, "from": "2019-05-01", "fig": 6, "path": ["other", "perDayUpTo3Days"]},
     {"medium": "television", "per": "day", "when": {"years": [5, null], "length": [4, null]}, "from": "2019-05-01", "fig": 6, "path": ["other", "perDay4DaysOrMore"]},
     {"medium": "television", "per": "month", "when": {"years": [5, null]}, "from": "2019-05-01", "fig": 6, "path": ["other", "perMonth"]},
-    {"medium": "television", "per": "year", "when": {"years": [5, null]}, "from": "2019-05-01", "fig": 6, "path": ["other", "perYear"]}
+    {"medium": "television", "per": "year", "when": {"years": [5, null]}, "from": "2019-05-01", "fig": 6, "path": ["other", "perYear"]},
+    {"medium": "television", "per": "day", "when": {"years": [0, 4], "length": [1, 3]}, "from": "2026-05-01", "fig": 11, "path": ["junior", "perDayUpTo3Days"]},
+    {"medium": "television", "per": "day", "when": {"years": [0, 4], "length": [4, null]}, "from": "2026-05-01", "fig": 11, "path": ["junior", "perDay4DaysOrMore"]},
+    {"medium": "television", "per": "month", "when": {"years": [0, 4]}, "from": "2026-05-01", "fig": 11, "path": ["junior", "perMonth"]},
+    {"medium": "television", "per": "year", "when": {"years": [0, 4]}, "from": "2026-05-01", "fig": 11, "path": ["junior", "perYear"]},
+    {"medium": "television", "per": "day", "when": {"years": [5, null], "length": [1, 3]}, "from": "2026-05-01", "fig": 11, "path": ["other", "perDayUpTo3Days"]},
+    {"medium": "television", "per": "day", "when": {"years": [5, null], "length": [4, null]}, "from": "2026-05-01", "fig": 11, "path": ["other", "perDay4DaysOrMore"]},
+    {"medium": "television", "per": "month", "when": {"years": [5, null]}, "from": "2026-05-01", "fig": 11, "path": ["other", "perMonth"]},
+    {"medium": "television", "per": "year", "when": {"years": [5, null]}, "from": "2026-05-01", "fig": 11, "path": ["other", "perYear"]}
    ]},
    "no-stage": {"media": ["stage"], "currency": "NOK", "minimums": [
     {"medium": "stage", "per": "year", "from": "2022-04-01", "fig": 7, "path": ["step12PerYear", "2022-04-01"]},

@@ -1,6 +1,6 @@
 {
  "country": "AZ",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (State Migration Service)",
  "routeChanged": false,
  "permit": {
@@ -8,68 +8,43 @@
   "first": "An employer in Azerbaijan (a legal entity, a branch, or an entrepreneur without a legal entity) engaging the foreigner (art. 63.2, as layer 3 read it).",
   "fees": [
    {
-    "what": "State duty, work permit up to 3 months (standard term; 2019 schedule)",
-    "amount": "350",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty, up to 6 months (standard term)",
-    "amount": "600",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty, up to 1 year (standard term)",
-    "amount": "1000",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 15 working days, work permit up to 3 months",
-    "amount": "500",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 15 working days, work permit up to 6 months",
-    "amount": "700",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 15 working days, work permit up to 1 year",
-    "amount": "1200",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 10 working days, work permit up to 3 months",
-    "amount": "700",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 10 working days, work permit up to 6 months",
-    "amount": "900",
-    "currency": "AZN"
-   },
-   {
-    "what": "State duty for a decision within 10 working days, work permit up to 1 year",
+    "what": "State duty for a work permit or its extension, up to 2 years, decided in 20 working days",
     "amount": "1400",
+    "currency": "AZN"
+   },
+   {
+    "what": "State duty for a work permit or its extension, up to 2 years, decided within 10 working days",
+    "amount": "1800",
+    "currency": "AZN"
+   },
+   {
+    "what": "State duty for a work permit or its extension, up to 2 years, decided within 15 working days",
+    "amount": "1600",
     "currency": "AZN"
    }
   ],
   "processing": {
-   "standard": null,
+   "standard": {
+    "n": 20,
+    "unit": "business-days"
+   },
    "premium": {
     "n": 10,
     "unit": "business-days"
    }
   },
-  "processingNote": "The term depends on the duty paid: 10 or 15 working days at the higher duties (Trend, 20 November 2019, on the State Migration Service's amended regulation); the standard term wasn't read on a primary page.",
+  "processingNote": "The State Migration Service decides in 20, 15 or 10 working days, as the duty paid (art. 18.58).",
   "validity": {
-   "n": 1,
+   "n": 2,
    "unit": "years",
-   "renewable": null
+   "renewable": true
   },
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The duty rises with the term and the speed (Law on State Duty, art. 18.58): in 20 working days AZN 350 (3 months), 600 (6 months), 1,000 (1 year), 1,200 (18 months), 1,400 (2 years); in 15, 500, 700, 1,200, 1,400, 1,600; in 10, 700, 900, 1,400, 1,600, 1,800. The two-year duties are held, for the term held. The terms are five working days shorter for a highly qualified migrant's spouse and children under 23 and, for five years from 1 January 2023, for work in the liberated territories (art. 18.58-1); no duty is paid to re-issue a permit on a change of identity data or the employer's name (art. 19.4).",
+  "validityNote": "Issued for up to 3 months, 6 months, 1 year, 18 months or 2 years, and extended on the same duties (art. 18.58)."
  },
  "sources": [
   {
@@ -79,6 +54,14 @@
    "said": "with reference to Azerbaijan’s State Migration Service. Now this permission can be obtained within 10 working days. … In accordance with the previous regulation, the state duty to obtain a work permit for paid labor activities of a foreigner and stateless person in Azerbaijan was set at 350 manat ($206.3) for a period of up to three months, 600 manat ($353.6) - up to six months, and 1,000 manat ($589.3) -up to one year. In accordance with the new regulation, depending on the size of the paid state duty, services will be provided within different periods. Thus, in order to obtain a work permit within 10 working days for a period of up to three months, it will be necessary to pay a state duty in the amount of 700 manat ($412.5), up to six months – 900 manat ($530.4), up to one year – 1,400 manat ($825.1). In order to get the specified permission within 15 working days, it is necessary to pay the state duty in the amount of 500 manat ($294.7), 700 manat ($412.5) and 1,200 manat ($707.3), respectively.",
    "kind": "secondary",
    "quotes": "https://migration.gov.az/",
+   "fields": []
+  },
+  {
+   "url": "https://e-qanun.az/framework/2860",
+   "title": "“Dövlət rüsumu haqqında” Azərbaycan Respublikasının Qanunu (223-IIQ), current consolidated text, art. 18.58 and 18.58-1 (e-qanun.az, the Ministry of Justice's legal database; rendered in Playwright; last amended to October 2026)",
+   "read": "2026-11-04",
+   "said": "18.58. Azərbaycan Respublikasının ərazisində haqqı ödənilən əmək fəaliyyəti ilə məşğul olmaq üçün əcnəbilərə və vətəndaşlığı olmayan şəxslərə iş icazəsinin verilməsinə və müddətinin uzadılmasına görə: 18.58.1. on iş günü müddətində verildikdə və ya müddəti uzadıldıqda: 18.58.1.1. 3 ayadək - 700 manat; 18.58.1.2. 6 ayadək - 900 manat; 18.58.1.3. 1 ilədək - 1400 manat; 18.58.1.4. 1 il 6 ayadək - 1600 manat; 18.58.1.5. 2 ilədək – 1800 manat. 18.58.2. on beş iş günü müddətində verildikdə və ya müddəti uzadıldıqda: 18.58.2.1. 3 ayadək - 500 manat; 18.58.2.2. 6 ayadək - 700 manat; 18.58.2.3. 1 ilədək - 1200 manat; 18.58.2.4. 1 il 6 ayadək - 1400 manat; 18.58.2.5. 2 ilədək – 1600 manat. 18.58.3. iyirmi iş günü müddətində verildikdə və ya müddəti uzadıldıqda: 18.58.3.1. 3 ayadək - 350 manat; 18.58.3.2. 6 ayadək - 600 manat; 18.58.3.3. 1 ilədək - 1000 manat; 18.58.3.4. 1 il 6 ayadək - 1200 manat; 18.58.3.5. 2 ilədək – 1400 manat. 18.58-1. Bu Qanunun 18.58.1-ci, 18.58.2-ci və 18.58.3-cü maddələrində nəzərdə tutulan müddətlər … yüksəkixtisaslı miqrantın ərinə (arvadına) və 23 yaşına çatmamış övladlarına, habelə 2023-cü il yanvarın 1-dən 5 (beş) il müddətinə Azərbaycan Respublikasının işğaldan azad edilmiş ərazilərində … beş iş günü azaldılmaqla tətbiq edilir.",
+   "kind": "primary",
    "fields": [
     "fees",
     "processing",
@@ -88,60 +71,38 @@
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "The standard decision term at the base duty",
-   "tried": {
-    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way.",
-    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried).",
-    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found.",
-    "trade-press": "Report.az's parliamentary report (refused 403) mentions 20 days at 350 AZN.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "Whether the 2019 duty schedule is still in force in 2026",
-   "tried": {
-    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way.",
-    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried).",
-    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found.",
-    "trade-press": "None newer found.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  },
-  {
    "field": "exempt",
    "sought": "Whether art workers invited and registered with the relevant authority are exempt (Migration Code art. 64, as layer 3 read it, conditions not modelled)",
    "tried": {
-    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way.",
-    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried).",
-    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found.",
+    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way. || 2026-11-04: migration.gov.az home (the register's quotes) and its /az/page/37, 63, 72 (others failed to load) => No fee schedule on the pages read | www.migration.gov.az by curl => curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL, as on 2026-11-01",
+    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried). || 2026-11-04: e-qanun.az/framework/2860 rendered in Playwright (15 s wait) => Art. 18.58 read in full with its amendment notes (1624-VQD of 27 June 2019 gave the tiered form; 681-VIQD of 9 December 2022 added the 1 year 6 months and 2 year terms) | e-qanun.az: the site answers (200) and its API (api.e-qanun.az/framework/<id>) serves acts by id; the search endpoint found in the site's script (getDetailSearch?start=0&length=10&orderColumn=8&orderDirection=desc&name=Miqrasiya Məcəlləsi&title=true, and the same for 'Dövlət rüsumu haqqında') => the search answered HTTP 500 (Internal Server Error) both times, so the Migration Code's and the State Duty Law's ids weren't found; nothing read",
+    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found. || 2026-11-04: WebSearch 'e-qanun.az \"Dövlət rüsumu haqqında\" Azərbaycan Respublikasının Qanunu framework' => Gave the law's e-qanun framework id 2860",
     "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   },
   {
    "field": "union",
    "sought": "Any union step",
    "tried": {
-    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way.",
-    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried).",
-    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found.",
+    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way. || 2026-11-04: migration.gov.az home (the register's quotes) and its /az/page/37, 63, 72 (others failed to load) => No fee schedule on the pages read | www.migration.gov.az by curl => curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL, as on 2026-11-01",
+    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried). || 2026-11-04: e-qanun.az/framework/2860 rendered in Playwright (15 s wait) => Art. 18.58 read in full with its amendment notes (1624-VQD of 27 June 2019 gave the tiered form; 681-VIQD of 9 December 2022 added the 1 year 6 months and 2 year terms) | e-qanun.az: the site answers (200) and its API (api.e-qanun.az/framework/<id>) serves acts by id; the search endpoint found in the site's script (getDetailSearch?start=0&length=10&orderColumn=8&orderDirection=desc&name=Miqrasiya Məcəlləsi&title=true, and the same for 'Dövlət rüsumu haqqında') => the search answered HTTP 500 (Internal Server Error) both times, so the Migration Code's and the State Duty Law's ids weren't found; nothing read",
+    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found. || 2026-11-04: WebSearch 'e-qanun.az \"Dövlət rüsumu haqqında\" Azərbaycan Respublikasının Qanunu framework' => Gave the law's e-qanun framework id 2860",
     "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   },
   {
    "field": "pay",
    "sought": "Any pay rule",
    "tried": {
-    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way.",
-    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried).",
-    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found.",
+    "institution": "migration.gov.az (pages 592 and 75) and rome.mfa.gov.az's migration rules: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL. family.gov.az's Migration Code (layer 3's copy) now fails the same way. || 2026-11-04: migration.gov.az home (the register's quotes) and its /az/page/37, 63, 72 (others failed to load) => No fee schedule on the pages read | www.migration.gov.az by curl => curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL, as on 2026-11-01",
+    "official-register": "Migration Code arts. 63–65 (layer 3 read) not re-readable today; Law on State Duty not reached (e-qanun.az not tried). || 2026-11-04: e-qanun.az/framework/2860 rendered in Playwright (15 s wait) => Art. 18.58 read in full with its amendment notes (1624-VQD of 27 June 2019 gave the tiered form; 681-VIQD of 9 December 2022 added the 1 year 6 months and 2 year terms) | e-qanun.az: the site answers (200) and its API (api.e-qanun.az/framework/<id>) serves acts by id; the search endpoint found in the site's script (getDetailSearch?start=0&length=10&orderColumn=8&orderDirection=desc&name=Miqrasiya Məcəlləsi&title=true, and the same for 'Dövlət rüsumu haqqında') => the search answered HTTP 500 (Internal Server Error) both times, so the Migration Code's and the State Duty Law's ids weren't found; nothing read",
+    "web-search": "'Azerbaijan State Migration Service work permit foreigner state duty AZN period 20 working days Migration Code article 64 art workers': Trend (2019) and Report.az (403 to this client) give the tiers; nothing newer found. || 2026-11-04: WebSearch 'e-qanun.az \"Dövlət rüsumu haqqında\" Azərbaycan Respublikasının Qanunu framework' => Gave the law's e-qanun framework id 2860",
     "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   }
  ],
- "note": "Layer 3 read the Migration Code: an employer needs a work permit for every foreigner save art. 64's cases, whose art-worker exemption needs an invitation and registration with the relevant authority, not modelled."
+ "note": "Layer 3 read the Migration Code: an employer needs a work permit for every foreigner save art. 64's cases, whose art-worker exemption needs an invitation and registration with the relevant authority, not modelled. Read 2026-11-04 on e-qanun.az (the Ministry of Justice's legal database): the Law on State Duty, art. 18.58. The 2019 schedule Trend reported (AZN 350, 600 and 1,000 as the standard term) was the law's 20-working-day tier, and the law as amended in December 2022 adds terms of 18 months and 2 years; the standard decision time (20 working days), the duties and the term are now held on the law, not on Trend."
 }

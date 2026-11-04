@@ -72,6 +72,7 @@
   },
   "AR": {
    "agreements": [
+    "ar-film",
     "ar"
    ],
    "unknown": [
@@ -796,9 +797,7 @@
    "agreements": [
     "ie"
    ],
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "IL": {
    "agreements": [
@@ -1227,6 +1226,7 @@
   },
   "MX": {
    "agreements": [
+    "mx-film",
     "mx"
    ],
    "unknown": [
@@ -2087,11 +2087,36 @@
    "unknown": true,
    "fees": []
   },
+  "ar-film": {
+   "country": "AR",
+   "languages": [
+    "es"
+   ],
+   "forms": [
+    "feature"
+   ],
+   "currency": "ARS",
+   "none": false,
+   "unknown": false,
+   "fees": [
+    {
+     "forms": [
+      "feature"
+     ],
+     "kind": null,
+     "when": {},
+     "per": "script",
+     "from": "2025-04-11",
+     "amount": "21000000",
+     "share": null,
+     "cap": null
+    }
+   ]
+  },
   "ar": {
    "country": "AR",
    "languages": [],
    "forms": [
-    "feature",
     "pilot",
     "episode",
     "short"
@@ -5024,13 +5049,74 @@
    "unknown": true,
    "fees": []
   },
+  "mx-film": {
+   "country": "MX",
+   "languages": [
+    "es"
+   ],
+   "forms": [
+    "feature"
+   ],
+   "currency": "MXN",
+   "none": false,
+   "unknown": false,
+   "fees": [
+    {
+     "forms": [
+      "feature"
+     ],
+     "kind": null,
+     "when": {},
+     "per": "script",
+     "from": "2021-05-15",
+     "amount": "209475",
+     "share": null,
+     "cap": null
+    },
+    {
+     "forms": [
+      "feature"
+     ],
+     "kind": null,
+     "when": {},
+     "per": "script",
+     "from": "2022-05-15",
+     "amount": "219948.75",
+     "share": null,
+     "cap": null
+    },
+    {
+     "forms": [
+      "feature"
+     ],
+     "kind": null,
+     "when": {},
+     "per": "script",
+     "from": "2023-05-15",
+     "amount": "230946.19",
+     "share": null,
+     "cap": null
+    },
+    {
+     "forms": [
+      "feature"
+     ],
+     "kind": null,
+     "when": {},
+     "per": "script",
+     "from": "2024-05-15",
+     "amount": "242493.5",
+     "share": null,
+     "cap": null
+    }
+   ]
+  },
   "mx": {
    "country": "MX",
    "languages": [
     "es"
    ],
    "forms": [
-    "feature",
     "pilot",
     "episode",
     "short"

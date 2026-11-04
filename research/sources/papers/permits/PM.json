@@ -1,6 +1,6 @@
 {
  "country": "PM",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Autorisation provisoire de travail (emploi direct)",
  "routeChanged": true,
  "permit": {
@@ -83,33 +83,33 @@
    "field": "fees",
    "sought": "Any fee or employer's tax for the work authorisation",
    "tried": {
-    "institution": "The préfecture's pages (travailleurs étrangers, emploi direct, dispense) name none | Retry 2026-11-01: The préfecture's foreign-worker pages (saved) name no fee and no decision time beyond filing 15 days before arrival.",
+    "institution": "The préfecture's pages (travailleurs étrangers, emploi direct, dispense) name none | Retry 2026-11-01: The préfecture's foreign-worker pages (saved) name no fee and no decision time beyond filing 15 days before arrival. || 2026-11-04: curl the préfecture's Emploi direct page and its procedure sheet (contenu/telechargement/10962/102788/file/2025 APT emploi direct.pdf), pdftotext, read whole => no fee, no decision time (only the 15-day filing lead time), no union step",
     "official-register": "Légifrance answers 403 to this client | Retry 2026-11-01: Code du travail arts. R5523-3 to R5523-15 (code.travail.gouv.fr, read; the Saint-Pierre-et-Miquelon chapter): no fee and no decision period; the OFII employer tax's application to the collectivité not found.",
     "web-search": "Not searched separately beyond the préfecture's pages (2026-11-01) | Retry 2026-11-01: 'Saint-Pierre-et-Miquelon autorisation de travail étranger taxe OFII délai instruction préfecture' (2026-11-01): metropolitan rules only (two months, OFII tax), not shown to apply to Saint-Pierre-et-Miquelon.",
-    "trade-press": "None | Retry 2026-11-01: PayFit, Tissot and FFB pages in the results cover metropolitan France only; not used.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "None | Retry 2026-11-01: PayFit, Tissot and FFB pages in the results cover metropolitan France only; not used. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'fr,gouv,saint-pierre-et-miquelon)' => no capture returned"
    }
   },
   {
    "field": "processing",
    "sought": "The préfecture's stated decision time (it asks the request 15 days before arrival, a lead time)",
    "tried": {
-    "institution": "Not stated | Retry 2026-11-01: The préfecture's foreign-worker pages (saved) name no fee and no decision time beyond filing 15 days before arrival.",
+    "institution": "Not stated | Retry 2026-11-01: The préfecture's foreign-worker pages (saved) name no fee and no decision time beyond filing 15 days before arrival. || 2026-11-04: curl the préfecture's Emploi direct page and its procedure sheet (contenu/telechargement/10962/102788/file/2025 APT emploi direct.pdf), pdftotext, read whole => no fee, no decision time (only the 15-day filing lead time), no union step",
     "official-register": "Légifrance 403 | Retry 2026-11-01: Code du travail arts. R5523-3 to R5523-15 (code.travail.gouv.fr, read; the Saint-Pierre-et-Miquelon chapter): no fee and no decision period; the OFII employer tax's application to the collectivité not found.",
     "web-search": "Not searched separately (2026-11-01) | Retry 2026-11-01: 'Saint-Pierre-et-Miquelon autorisation de travail étranger taxe OFII délai instruction préfecture' (2026-11-01): metropolitan rules only (two months, OFII tax), not shown to apply to Saint-Pierre-et-Miquelon.",
-    "trade-press": "None | Retry 2026-11-01: PayFit, Tissot and FFB pages in the results cover metropolitan France only; not used.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "None | Retry 2026-11-01: PayFit, Tissot and FFB pages in the results cover metropolitan France only; not used. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'fr,gouv,saint-pierre-et-miquelon)' => no capture returned"
    }
   },
   {
    "field": "union",
    "sought": "union",
    "tried": {
-    "institution": "Retry 2026-11-01: Préfecture pages: none.",
+    "institution": "Retry 2026-11-01: Préfecture pages: none. || 2026-11-04: curl the préfecture's Emploi direct page and its procedure sheet (contenu/telechargement/10962/102788/file/2025 APT emploi direct.pdf), pdftotext, read whole => no fee, no decision time (only the 15-day filing lead time), no union step",
     "official-register": "Retry 2026-11-01: Code du travail R5523-3 to -15 read: no union consultation.",
     "web-search": "Retry 2026-11-01: Search above.",
-    "trade-press": "Retry 2026-11-01: None.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Retry 2026-11-01: None. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'fr,gouv,saint-pierre-et-miquelon)' => no capture returned"
    }
   }
  ]

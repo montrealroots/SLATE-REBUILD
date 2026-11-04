@@ -39,6 +39,31 @@
      "said": "1.1 LIBRO ORIGINAL - Derecho de Autor Total 10.000.000 … 1.2 GUION Cinematografico (Conforme ARGENTORES, 5% del costo Bajo la Línea sin impuestos) Total 86.656.713"
     }
    ]
+  },
+  {
+   "item": "fees",
+   "finding": "From 11 April 2025 Argentores' Professional Film Council sets the minimum contract for a film screenplay at ARS 21,000,000 (live action or animation, fiction, and documentaries budgeted like fiction): ARS 10,500,000 for a production that accredits a low budget, ARS 5,880,000 for a documentary that accredits a very low budget. The screenplay line is 5% of the below-the-line budget, the minimum its floor. The game reads the first: it doesn't model a production's accreditation as low-budget, nor a budget split above and below the line.",
+   "value": {
+    "currency": "ARS",
+    "from": "2025-04-11",
+    "screenplayMinimum": 21000000,
+    "lowBudgetMinimum": 10500000,
+    "veryLowBudgetDocumentaryMinimum": 5880000,
+    "screenplayShareOfBelowTheLine": 0.05,
+    "raised": {
+     "from": "2024-03-01",
+     "by": 0.5
+    },
+    "setBy": "Argentores, Consejo Profesional de Cine",
+    "capturedOn": "2026-05-16"
+   },
+   "applies": "Argentina, film screenplays contracted through Argentores, from 11 April 2025 (the page as Common Crawl captured it on 16 May 2026, no later update on it).",
+   "sources": [
+    {
+     "src": 2,
+     "said": "Actualización de los montos mínimos de contratos de cine a partir del 11 de abril de 2025 Como se ha comunicado reiteradamente, el rubro Libro cinematográfico representa el 5% del presupuesto de la película, excluidos los montos correspondientes a Productor/a, Director/a y Autor/a del libro cinematográfico, entendido como costo por debajo de la línea. … nos vemos en la obligación de actualizar los montos mínimos de contratos de cine fijados el 1 de marzo de 2024, con un incremento del 50 % de su valor actual. … Mínimo para los contratos de los libros cinematográficos vivo y animado, ficción y documentales- cuando los presupuestos de estos se inscriban en los rangos de producción similares a los de ficción- : $21.000.000.- Mínimo de contrato para producciones que acrediten bajo presupuesto: $10.500.000.- Mínimo de contrato para documentales que acrediten muy bajo presupuesto : $5.880.000.-"
+    }
+   ]
   }
  ],
  "country": "AR",
@@ -58,12 +83,19 @@
    "kind": "secondary",
    "quotes": "https://argentores.org.ar/",
    "said": "1.1 LIBRO ORIGINAL - Derecho de Autor Total 10.000.000 … 1.2 GUION Cinematografico (Conforme ARGENTORES, 5% del costo Bajo la Línea sin impuestos) Total 86.656.713"
+  },
+  {
+   "url": "https://argentores.org.ar/cine/minimos-de-contrato/",
+   "title": "Argentores, Cine: Mínimos de contrato (Consejo Profesional de Cine), as captured by Common Crawl (CC-MAIN-2026-21) on 16 May 2026",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Actualización de los montos mínimos de contratos de cine a partir del 11 de abril de 2025 Como se ha comunicado reiteradamente, el rubro Libro cinematográfico representa el 5% del presupuesto de la película, excluidos los montos correspondientes a Productor/a, Director/a y Autor/a del libro cinematográfico, entendido como costo por debajo de la línea. … nos vemos en la obligación de actualizar los montos mínimos de contratos de cine fijados el 1 de marzo de 2024, con un incremento del 50 % de su valor actual. … Mínimo para los contratos de los libros cinematográficos vivo y animado, ficción y documentales- cuando los presupuestos de estos se inscriban en los rangos de producción similares a los de ficción- : $21.000.000.- Mínimo de contrato para producciones que acrediten bajo presupuesto: $10.500.000.- Mínimo de contrato para documentales que acrediten muy bajo presupuesto : $5.880.000.-"
   }
  ],
  "blockers": [
   {
    "item": "fees",
-   "sought": "Argentores' current minimum fee (arancel mínimo) for a feature screenplay, a TV episode and a treatment, and its membership terms.",
+   "sought": "Argentores' minimum fee for a TV episode and a treatment, and the budget at which its low-budget minimums apply (the film screenplay's minimum is found: ARS 21,000,000 from 11 April 2025).",
    "tried": {
     "institution": "https://argentores.org.ar/ returns 403 to this environment (2026-11-01); not read another way. || retry 2026-11-01: argentores.org.ar: 403 again (not read another way); incaa.gob.ar financing page read earlier",
     "official-register": "Boletín Oficial (boletinoficial.gob.ar) resets the connection from this environment; Argentores' fees are not a gazetted agreement in any case. || retry 2026-11-01: Boletín Oficial (boletinoficial.gob.ar): no answer from this environment (connection timeout)",

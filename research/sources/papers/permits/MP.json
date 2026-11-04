@@ -1,6 +1,6 @@
 {
  "country": "MP",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "O-1 nonimmigrant petition (Form I-129, USCIS)",
  "routeChanged": false,
  "permit": {
@@ -43,8 +43,8 @@
  "sources": [
   {
    "url": "https://www.ecfr.gov/current/title-8/part-214/section-214.2",
-   "title": "eCFR, 8 CFR 214.2(o) and (p), Special requirements for admission, extension, and maintenance of status (O and P classifications), current as read (saved from the eCFR renderer API for the same section)",
-   "read": "2026-11-01",
+   "title": "eCFR, 8 CFR 214.2(o) and (p), Special requirements for admission, extension, and maintenance of status (O and P classifications), current as read (saved from the eCFR renderer API for the same section) (read again 2026-11-04 through the eCFR's versioner API, this page drawing its text by script)",
+   "read": "2026-11-04",
    "said": "An O-1 or O-2 petition may only be filed by a United States employer, a United States agent, or a foreign employer through a United States agent. … Extraordinary ability in the field of arts means distinction. Distinction means a high level of achievement in the field of arts evidenced by a degree of skill and recognition substantially above that ordinarily encountered to the extent that a person described as prominent is renowned, leading, or well-known in the field of arts. … Extraordinary achievement with respect to motion picture and television productions, as commonly defined in the industry, means a very high level of accomplishment in the motion picture or television industry evidenced by a degree of skill and recognition significantly above that ordinarily encountered to the extent that the person is recognized as outstanding, notable, or leading in the motion picture or television field. … ( A ) Consultation with an appropriate U.S. peer group (which could include a person or persons with expertise in the field), labor and/or management organization regarding the nature of the work to be done and the alien's qualifications is mandatory before a petition for an O-1 or O-2 classification can be approved. … In the case of an alien of extraordinary achievement who will be working on a motion picture or television production, consultation shall be made with the appropriate union representing the alien's occupational peers and a management organization in the area of the alien's ability. … approved petition for an alien classified under section 101(a)(15)(O)(i) of the Act shall be valid for a period of time determined by the Director to be necessary to accomplish the event or activity, not to exceed 3 years. … An extension of stay may be authorized in increments of up to 1 year for an O-1 or O-2 beneficiary to continue or complete the same event or activity for which he or she was admitted",
    "kind": "primary",
    "fields": [
@@ -58,8 +58,8 @@
   },
   {
    "url": "https://www.ecfr.gov/current/title-8/part-106/section-106.2",
-   "title": "eCFR, 8 CFR 106.2, Fees (USCIS benefit request fees) (saved from the eCFR renderer API for the same section)",
-   "read": "2026-11-01",
+   "title": "eCFR, 8 CFR 106.2, Fees (USCIS benefit request fees) (saved from the eCFR renderer API for the same section) (read again 2026-11-04 through the eCFR's versioner API, this page drawing its text by script)",
+   "read": "2026-11-04",
    "said": "( vii ) Petition for O Nonimmigrant Worker with 1 to 25 named beneficiaries: $1,055. ( viii ) Petition or Application for E, H-3, P, Q, R, or TN Nonimmigrant Worker with 1 to 25 named beneficiaries: $1,015. ( ix ) For small employers and nonprofits as defined in § 106.1(f) , the fees in paragraphs … will be one-half the amount in those paragraphs rounded to the nearest $5 increment. … the Asylum Program Fee must be paid by any petitioner filing a Petition for a Nonimmigrant Worker, Form I-129 under 8 CFR 214.2 , … $600. For petitions: ( i ) Filed by a nonprofit as defined in § 106.1(f) : No fee. ( ii ) Filed by a small employer as defined in § 106.1(f) : $300.",
    "kind": "primary",
    "fields": [
@@ -68,8 +68,8 @@
   },
   {
    "url": "https://www.ecfr.gov/current/title-8/part-106/section-106.4",
-   "title": "eCFR, 8 CFR 106.4, Premium processing service (saved from the eCFR renderer API for the same section)",
-   "read": "2026-11-01",
+   "title": "eCFR, 8 CFR 106.4, Premium processing service (saved from the eCFR renderer API for the same section) (read again 2026-11-04 through the eCFR's versioner API, this page drawing its text by script)",
+   "read": "2026-11-04",
    "said": "( 6 ) Petition for classification of a nonimmigrant described in section 101(a)(15)(O)(i) or (ii) of the INA—$2,965. … sification of a nonimmigrant described in section 101(a)(15)(O)(i) or (ii) of the Act: 15 business days.",
    "kind": "primary",
    "fields": [
@@ -83,11 +83,11 @@
    "field": "processing",
    "sought": "USCIS's standard (non-premium) processing time for an O-1 petition",
    "tried": {
-    "institution": "uscis.gov (the O-1 page, I-129, I-907, G-1055 and processing times) answers 403 to this client (2026-11-01)",
-    "official-register": "8 CFR 214.2(o) sets no standard decision time; 8 CFR 106.4 sets the premium 15 business days",
+    "institution": "uscis.gov (the O-1 page, I-129, I-907, G-1055 and processing times) answers 403 to this client (2026-11-01) || 2026-11-04: USCIS processing-times (egov.uscis.gov/processing-times/api/forms, with the page as Referer) and the uscis.gov O-1 page, by curl => HTTP 403 from both (an access refusal; not bypassed)",
+    "official-register": "8 CFR 214.2(o) sets no standard decision time; 8 CFR 106.4 sets the premium 15 business days || 2026-11-04: eCFR API, 8 CFR 214.2 as of 2026-10-30 (with compression), (o) read whole for wage, salary, remuneration; 8 CFR 106.2 I-129 fees => no minimum wage for O-1; 'commanded a high salary' is an optional evidentiary criterion; no standard processing time (only the consultation windows); I-129 O fee USD 1,055 and Asylum Program Fee USD 600 confirmed",
     "web-search": "not separately run: USCIS publishes the standard time only on its processing-times tool, which refuses this client",
     "trade-press": "not used, as a law firm's figure would not be the government's own statement",
-    "archive": "not tried for the processing-times tool, which is script-driven"
+    "archive": "not tried for the processing-times tool, which is script-driven || 2026-11-04: Common Crawl CC-MAIN-2026-43 and -39: cc.py list 'gov,uscis,egov)/processing-times' and 'gov,uscis,egov)/' => no processing-times capture; the crawler itself got 403 on egov.uscis.gov/robots.txt"
    }
   }
  ],

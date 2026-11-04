@@ -1,18 +1,34 @@
 {
  "country": "LV",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Tiesības uz nodarbinātību (with the visa up to 90 days in 180, or with the termiņuzturēšanās atļauja beyond)",
  "routeChanged": false,
  "permit": {
   "applies": "The employer has the Office of Citizenship and Migration Affairs (PMLP) approve an invitation (for the visa) or a call (for the residence permit); PMLP grants the right to employment.",
   "first": "The employer registers the vacancy with the State Employment Agency, open at least a month before going to PMLP (a labour-market test); a creative or performing artist employed by a state- or municipality-funded cultural institution is exempt from it.",
   "fees": [],
-  "processing": null,
-  "validity": null,
+  "processing": {
+   "standard": {
+    "n": 30,
+    "unit": "days"
+   },
+   "premium": null,
+   "note": "A temporary residence permit is decided within 30 days of a complete file (Immigration Law 2026, art. 33(1)(1)); a long-stay visa within 15 days, 60 where further checks are needed (art. 20)."
+  },
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": null
+  },
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": {
+   "days": 14,
+   "within": null,
+   "note": "Performing in shows or concerts, for a stay of 14 days or less (art. 43(1)(1)); any employee also 14 days in any 180 (art. 43(1)(9))."
+  },
+  "validityNote": "A temporary residence permit in connection with employment runs up to one year (art. 27(1)(12))."
  },
  "sources": [
   {
@@ -25,6 +41,28 @@
     "applies",
     "first"
    ]
+  },
+  {
+   "url": "https://likumi.lv/ta/id/370622-imigracijas-likums",
+   "title": "Latvijas Vēstnesis / likumi.lv, Imigrācijas likums of 20 August 2026 (in force 15.09.2026), arts. 20, 27(1)(12), 33(1) and 43(1)",
+   "read": "2026-11-04",
+   "said": "[20. pants] Lēmumu par ilgtermiņa vīzas izsniegšanu pieņem 15 dienu laikā pēc pieteikuma iesniegšanas. Ja ilgtermiņa vīzas izsniegšanai nepieciešama papildu informācija vai pārbaude, lēmumu pieņem 60 dienu laikā. ... [27. pants (1)] 12) uz laiku līdz vienam gadam, ja ārzemnieks pieprasa termiņuzturēšanās atļauju saistībā ar nodarbinātību, izņemot gadījumu, kad darba devējs ir mikrouzņēmumu nodokļa maksātājs; ... 33. pants. (1) Pārvalde pēc visu uzturēšanās atļaujas pieprasīšanai vai reģistrēšanai nepieciešamo dokumentu pieņemšanas tos izskata un atbildi sniedz: 1) par termiņuzturēšanās atļauju — 30 dienu laikā; ... 43. pants. (1) Apliecinājums par tiesībām uz nodarbinātību nav nepieciešams, ja ārzemnieks likumīgi uzturas Latvijas Republikā saistībā ar: 1) dalību izrādēs (koncertos) kā mākslinieks vai kā izrāžu (koncertu) nodrošināšanā iesaistīts administratīvais vai tehniskais darbinieks un paredzētais uzturēšanās ilgums Latvijas Republikā nepārsniedz 14 dienas; ... 9) to, ka ir nodarbināts Latvijas Republikā un viņa uzturēšanās ilgums Latvijas Republikā nepārsniedz 14 dienas jebkurā 180 dienu laikposmā;",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "validity",
+    "exempt"
+   ]
+  },
+  {
+   "url": "https://likumi.lv/ta/id/264304",
+   "title": "likumi.lv, Ministru kabineta 2014. gada 28. janvāra noteikumi Nr. 55 'Noteikumi par ārzemnieku nodarbināšanu' (consolidated, in force)",
+   "read": "2026-11-04",
+   "said": "Atzinumu atļaut ārzemnieka piesaisti vai atzinumu ar atteikumu atļaut ārzemnieka piesaisti aģentūra sniedz 10 darbdienu laikā no brīža, kad brīvā darba vieta publicēta ... 8.1.1. kā radošo vai izpildītājmākslu mākslinieku vai izrāžu (koncertu) nodrošināšanā iesaistītu administratīvo vai tehnisko darbinieku vai par vadītāju no valsts budžeta vai pašvaldības finansētā kultūras iestādē;",
+   "kind": "primary",
+   "fields": [
+    "first"
+   ]
   }
  ],
  "blockers": [
@@ -33,30 +71,19 @@
    "sought": "The state fees for the invitation or call, visa or residence permit and the right to employment",
    "tried": {
     "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no fee.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
-   }
-  },
-  {
-   "field": "processing",
-   "sought": "PMLP's stated decision time",
-   "tried": {
-    "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no decision time.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no fee. || 2026-11-04: likumi.lv: Regulation No. 55 consolidated (id 264304); the Immigration Law of 1 May 2003 (id 68522), which now reads 'Tiesību akts ir zaudējis spēku' and points to the Immigration Law of 20 August 2026 (id 370622, in force 15.09.2026), read for employment, performers, decision times, terms and pay => read: a performer staying 14 days or less needs no right to employment (new law art. 43(1)(1)); the temporary residence permit is decided within 30 days (art. 33(1)(1)), a long-stay visa within 15 days, 60 with further checks (art. 20); a temporary residence permit for employment runs up to one year (art. 27(1)(12)); no pay floor or union step in the law; Reg. 55 gives the Employment Agency's opinion in 10 working days",
+    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'likumi.lv \"Noteikumi par ārzemnieku nodarbināšanu\" Ministru kabineta noteikumi Nr. 55' => the consolidated text's address (likumi.lv/ta/id/264304) and its 2024 amendment (No. 803)",
     "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
   },
   {
    "field": "validity",
-   "sought": "The longest term of the residence permit with the right to employment",
+   "sought": "Whether the temporary residence permit for employment renews",
    "tried": {
     "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no term.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no term. || 2026-11-04: likumi.lv: Regulation No. 55 consolidated (id 264304); the Immigration Law of 1 May 2003 (id 68522), which now reads 'Tiesību akts ir zaudējis spēku' and points to the Immigration Law of 20 August 2026 (id 370622, in force 15.09.2026), read for employment, performers, decision times, terms and pay => read: a performer staying 14 days or less needs no right to employment (new law art. 43(1)(1)); the temporary residence permit is decided within 30 days (art. 33(1)(1)), a long-stay visa within 15 days, 60 with further checks (art. 20); a temporary residence permit for employment runs up to one year (art. 27(1)(12)); no pay floor or union step in the law; Reg. 55 gives the Employment Agency's opinion in 10 working days",
+    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'likumi.lv \"Noteikumi par ārzemnieku nodarbināšanu\" Ministru kabineta noteikumi Nr. 55' => the consolidated text's address (likumi.lv/ta/id/264304) and its 2024 amendment (No. 803)",
     "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
@@ -66,8 +93,8 @@
    "sought": "Any union consultation",
    "tried": {
     "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no union step.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no union step. || 2026-11-04: likumi.lv: Regulation No. 55 consolidated (id 264304); the Immigration Law of 1 May 2003 (id 68522), which now reads 'Tiesību akts ir zaudējis spēku' and points to the Immigration Law of 20 August 2026 (id 370622, in force 15.09.2026), read for employment, performers, decision times, terms and pay => read: a performer staying 14 days or less needs no right to employment (new law art. 43(1)(1)); the temporary residence permit is decided within 30 days (art. 33(1)(1)), a long-stay visa within 15 days, 60 with further checks (art. 20); a temporary residence permit for employment runs up to one year (art. 27(1)(12)); no pay floor or union step in the law; Reg. 55 gives the Employment Agency's opinion in 10 working days",
+    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'likumi.lv \"Noteikumi par ārzemnieku nodarbināšanu\" Ministru kabineta noteikumi Nr. 55' => the consolidated text's address (likumi.lv/ta/id/264304) and its 2024 amendment (No. 803)",
     "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
@@ -77,8 +104,8 @@
    "sought": "Criteria a foreign performer must meet beyond the job offer",
    "tried": {
     "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no performer criterion.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no performer criterion. || 2026-11-04: likumi.lv: Regulation No. 55 consolidated (id 264304); the Immigration Law of 1 May 2003 (id 68522), which now reads 'Tiesību akts ir zaudējis spēku' and points to the Immigration Law of 20 August 2026 (id 370622, in force 15.09.2026), read for employment, performers, decision times, terms and pay => read: a performer staying 14 days or less needs no right to employment (new law art. 43(1)(1)); the temporary residence permit is decided within 30 days (art. 33(1)(1)), a long-stay visa within 15 days, 60 with further checks (art. 20); a temporary residence permit for employment runs up to one year (art. 27(1)(12)); no pay floor or union step in the law; Reg. 55 gives the Employment Agency's opinion in 10 working days",
+    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'likumi.lv \"Noteikumi par ārzemnieku nodarbināšanu\" Ministru kabineta noteikumi Nr. 55' => the consolidated text's address (likumi.lv/ta/id/264304) and its 2024 amendment (No. 803)",
     "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
@@ -88,23 +115,12 @@
    "sought": "Any minimum pay rule for a foreign performer",
    "tried": {
     "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no pay rule.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "Days of work without the right to employment",
-   "tried": {
-    "institution": "pmlp.gov.lv not reached for a fee or time on this route in the searches (PMLP's own downloads surfaced only as a 100-euro residence notice of unclear scope). Retry 2026-11-01: pmlp.gov.lv (lv and en) times out or drops the HTTP/2 stream; nva.gov.lv drops the stream (INTERNAL_ERROR).",
-    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no exemption by length.",
-    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "official-register": "Cabinet Regulation No. 55 (2014) read as first published; its amendments and the state-fee regulation are on likumi.lv, which refuses this client. Retry 2026-11-01: likumi.lv resets the connection; vestnesis.lv answers but the state-fee regulation's issue couldn't be located without a search, and Cabinet Regulation No. 55 (2014, saved) gives no pay rule. || 2026-11-04: likumi.lv: Regulation No. 55 consolidated (id 264304); the Immigration Law of 1 May 2003 (id 68522), which now reads 'Tiesību akts ir zaudējis spēku' and points to the Immigration Law of 20 August 2026 (id 370622, in force 15.09.2026), read for employment, performers, decision times, terms and pay => read: a performer staying 14 days or less needs no right to employment (new law art. 43(1)(1)); the temporary residence permit is decided within 30 days (art. 33(1)(1)), a long-stay visa within 15 days, 60 with further checks (art. 20); a temporary residence permit for employment runs up to one year (art. 27(1)(12)); no pay floor or union step in the law; Reg. 55 gives the Employment Agency's opinion in 10 working days",
+    "web-search": "'pmlp.gov.lv valsts nodeva tiesības uz nodarbinātību vīza termiņuzturēšanās atļauja euro darba devējs ielūgums NVA brīva darba vieta mēnesis': an LV portāls explainer (2020: EUR 69 employer fee for the call, ten working days' vacancy), PMLP and Valsts kontrole documents. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'likumi.lv \"Noteikumi par ārzemnieku nodarbināšanu\" Ministru kabineta noteikumi Nr. 55' => the consolidated text's address (likumi.lv/ta/id/264304) and its 2024 amendment (No. 803)",
     "trade-press": "LV portāls (2020) and LSM interviews; secondary and dated, so not used for the figures.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry 2026-11-01: web.archive.org still resets the connection."
    }
   }
  ],
- "note": "Read from Cabinet Regulation No. 55 of 28 January 2014 as first published (Latvijas Vēstnesis, 12.02.2014, No. 31); amended since (e.g. No. 803 of 2024), not read, likumi.lv refusing this client. For a stay up to 90 days in 180 the right runs with the visa and no longer than the approved invitation; beyond, with the temporary residence permit. A State Audit Office document reports a new Immigration Law passed on 11 June 2026 and returned for reconsideration; its status wasn't established."
+ "note": "Read from Cabinet Regulation No. 55 of 28 January 2014 as first published (Latvijas Vēstnesis, 12.02.2014, No. 31); amended since (e.g. No. 803 of 2024), not read, likumi.lv refusing this client. For a stay up to 90 days in 180 the right runs with the visa and no longer than the approved invitation; beyond, with the temporary residence permit. A State Audit Office document reports a new Immigration Law passed on 11 June 2026 and returned for reconsideration; its status wasn't established. Read 2026-11-04: the State Audit Office's report of a new Immigration Law was right. The Immigration Law of 1 May 2003 lost force and the Immigration Law of 20 August 2026 has been in force since 15 September 2026 (likumi.lv); its decision times, the employment permit's term and the 14 days free of the right to employment are now held. Regulation No. 55, read in its consolidated text, still sets the labour-market test and its exemption for performers of a state- or municipality-funded cultural institution. Fees (the Cabinet's state-fee regulation), pay, union and eligibility weren't found."
 }

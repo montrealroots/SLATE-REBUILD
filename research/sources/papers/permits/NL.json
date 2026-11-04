@@ -1,6 +1,6 @@
 {
  "country": "NL",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Gecombineerde vergunning voor verblijf en arbeid (GVVA); up to 90 days a tewerkstellingsvergunning (TWV) from UWV",
  "routeChanged": false,
  "permit": {
@@ -23,7 +23,8 @@
   "validity": {
    "n": 3,
    "unit": "years",
-   "renewable": null
+   "renewable": true,
+   "note": "The GVVA is extended at the IND (EUR 423, 'Extension including single permit'); a TWV isn't extended but applied for anew when it runs out (UWV)."
   },
   "union": null,
   "eligibility": "\"U werkt in de dans, klassieke muziek, opera, musical, theater of toneel. U gaat werken in een beroep in het topsegment van de lijst met functies.\"",
@@ -80,41 +81,60 @@
    "fields": [
     "exempt"
    ]
+  },
+  {
+   "url": "https://ind.nl/en/fees-costs-of-an-application",
+   "title": "IND, Fees: costs of an application (Work in employment)",
+   "read": "2026-11-04",
+   "said": "Work in employment (including spending leave after work on board a Dutch seagoing vessel or mining installation) First application and change in purpose of stay including single permit € 423,00 Extension including single permit € 423,00 Holder status long-term resident EU in another EU member state € 254,00",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.uwv.nl/nl/werkvergunning/gvva",
+   "title": "UWV, Een GVVA aanvragen of verlengen: de voorwaarden",
+   "read": "2026-11-04",
+   "said": "Wil de werkgever de GVVA verlengen? Dan doet de werkgever een aanvraag bij de IND om de GVVA te verlengen (ind.nl). Bij de aanvraag van een GVVA vraagt de IND advies aan ons. Wij beoordelen of de aanvraag voldoet aan de voorwaarden voor de werkvergunning.",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.uwv.nl/nl/werkvergunning/twv-aanvragen",
+   "title": "UWV, Tewerkstellingsvergunning aanvragen",
+   "read": "2026-11-04",
+   "said": "De werkgever vraagt de TWV aan via het werkgeversportaal van UWV. ... Na de aanvraag ontvangt de werkgever binnen 5 weken een beslissing van ons. ... Een werkgever die al een TWV ... heeft, vraagt een nieuwe werkvergunning voor deze werknemer aan in de volgende situaties: De werkvergunning geldt niet voor ander werk dat de werknemer gaat doen. De werkvergunning van de werknemer verloopt binnenkort.",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://wetten.overheid.nl/BWBR0007149/2026-06-12",
+   "title": "Wet arbeid vreemdelingen (geldend vanaf 12-06-2026), read whole",
+   "read": "2026-11-04",
+   "said": "Artikel 5 1 Onze Minister is bevoegd tot het afgeven en intrekken van tewerkstellingsvergunningen. 2 Onze Minister wijst een instantie aan die Onze Minister van Veiligheid en Justitie adviseert inzake het verlenen, verlengen of intrekken van een gecombineerde vergunning. 3 Het advies, bedoeld in het tweede lid, wordt binnen een termijn van vijf weken na ontvangst van het verzoek om advies uitgebracht.",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "union",
-   "sought": "A union consultation for a foreign performer's TWV or GVVA",
-   "tried": {
-    "institution": "UWV and IND pages read: none named",
-    "official-register": "Wet arbeid vreemdelingen not read (wetten.overheid.nl refused this client in layer 3)",
-    "web-search": "WebSearch (Dutch) on TWV for artists: none named",
-    "trade-press": "DutchCulture page in the results: none quoted",
-    "archive": "web.archive.org refuses this environment (2026-11-01)"
-   }
-  },
-  {
    "field": "fees",
    "sought": "UWV's fee for a TWV (if any)",
    "tried": {
-    "institution": "uwv.nl English work-permits page read: no fee stated; the TWV application page answers 404",
-    "official-register": "Not found",
+    "institution": "uwv.nl English work-permits page read: no fee stated; the TWV application page answers 404 || 2026-11-04: uwv.nl musicus-artiest, twv-voorwaarden, twv-aanvragen and gvva pages; ind.nl fees page (Work in employment rows) => read: the GVVA is extended at the IND (extension fee EUR 423); a TWV is decided within 5 weeks and a new one is asked when it runs out; no UWV page names a TWV fee or any union step",
+    "official-register": "Not found || 2026-11-04: wetten.overheid.nl BWBR0007149 (Wet arbeid vreemdelingen, version from 12-06-2026), read whole; grep for advies, gehoord, raadplegen, sociale partners, leges, vergoeding => read: the only consultation the Act names is UWV's advice to the IND on a GVVA (art. 5(2)-(3), five weeks); no union or guild consultation and no fee for a TWV anywhere in the Act",
     "web-search": "WebSearch on IND leges/TWV: none for the TWV",
     "trade-press": "None",
     "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
    }
-  },
-  {
-   "field": "validity",
-   "sought": "Whether the GVVA for a performer may be extended",
-   "tried": {
-    "institution": "IND GVVA page read: renewal for this function not stated",
-    "official-register": "Not found",
-    "web-search": "WebSearch: an IND newsletter on extension fees, not specific",
-    "trade-press": "None",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
-   }
   }
- ]
+ ],
+ "note": "Read 2026-11-04: the IND's fees page and UWV's GVVA and TWV pages (renewal), and the Wet arbeid vreemdelingen read whole on wetten.overheid.nl, which names only UWV's advice to the IND (art. 5), no union or guild. UWV's fee for a TWV, if any, wasn't stated. Re-read 2026-11-04: ind.nl's copy (arbeid-in-loondienst-gecombineerde-vergunning-verblijf-en-ar) answered with a page without the passage (its text drawn by script, or an image); the fact stands on its reading of 2026-11-01."
 }

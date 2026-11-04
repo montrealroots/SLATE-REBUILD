@@ -79,7 +79,7 @@ describe('the youth rules', () => {
       fund: 'company',
       unions: ['SAG-AFTRA'],
     });
-    expect(rulesOf('CA')).toEqual({ zone: 'America/Toronto', seat: 'CA.08', contract: null, setAside: { share: '0.25', into: null, roles: ['performer'], over: { amount: '2000', currency: 'CAD', per: 'engagement', above: true } }, permit: { issuer: null, under: 'majority', from: { years: 0, days: 15 } }, reach: ['performer'], hours: [{ from: 0, to: null, day: 8, week: null }], company: null, fund: null, unions: [] });
+    expect(rulesOf('CA')).toEqual({ zone: 'America/Toronto', seat: 'CA.08', contract: null, setAside: { share: '0.25', into: null, roles: ['performer'], over: { amount: '2000', currency: 'CAD', per: 'engagement', above: true } }, permit: { issuer: null, under: 'majority', from: { years: 0, days: 15 } }, reach: ['performer'], hours: [{ from: 0, to: null, day: 8, week: null }], company: null, fund: 'company', unions: [] });
     expect(rulesOf('AU')).toEqual({
       zone: 'Australia/Sydney',
       seat: 'AU.02',
@@ -93,13 +93,17 @@ describe('the youth rules', () => {
       unions: [],
     });
     expect(rulesOf('GB')).toEqual({ zone: 'Europe/London', seat: null, contract: null, setAside: null, permit: null, reach: ['performer'], hours: [{ from: 0, to: 5, day: 2, week: null }, { from: 5, to: 9, day: 3, week: null }, { from: 9, to: 'work', day: 5, week: null }], company: 16, fund: 18, unions: [] });
-    expect(rulesOf('FR')).toEqual({ zone: 'Europe/Paris', seat: null, contract: null, setAside: { share: '0.9', into: 'Caisse des dépôts et consignations', roles: ALL, over: null }, permit: null, reach: ALL, hours: [{ from: 0, to: null, day: 8, week: 35 }], company: 16, fund: 'company', unions: [] });
+    expect(rulesOf('FR')).toEqual({ zone: 'Europe/Paris', seat: null, contract: { by: 'guardian', alone: null, roles: ALL }, setAside: { share: '0.9', into: 'Caisse des dépôts et consignations', roles: ALL, over: null }, permit: null, reach: ALL, hours: [{ from: 0, to: null, day: 8, week: 35 }], company: 16, fund: 'company', unions: [] });
     expect(rulesOf('IE')).toEqual({ zone: 'Europe/Dublin', seat: null, contract: { by: 'guardian', alone: null, roles: ALL }, setAside: 'none', permit: null, reach: ['performer'], hours: [{ from: 0, to: 7, day: 2, week: null }, { from: 7, to: 13, day: 3, week: null }, { from: 13, to: 'work', day: 4, week: null }], company: 18, fund: null, unions: [] });
     expect(rulesOf('PH')).toMatchObject({ setAside: { share: '0.3', into: 'trust fund set up by the parent or guardian', roles: ALL, over: { amount: '200000', currency: 'PHP', per: 'year', above: false } }, hours: [{ from: 0, to: 15, day: 4, week: 20 }, { from: 15, to: 18, day: 8, week: 40 }] });
     expect(rulesOf('IN')?.setAside).toEqual({ share: '0.2', into: "fixed deposit in a nationalised bank in the child's name, credited at majority", roles: ALL, over: null });
     expect(rulesOf('LU')?.setAside).toEqual({ share: '1', into: "compte d'épargne bloqué au nom de l'enfant", roles: ALL, over: null });
     expect(rulesOf('AT')?.contract).toEqual({ by: 'guardian', alone: 14, roles: ALL });
     expect(rulesOf('DE')).toMatchObject({ contract: { by: 'guardian', alone: null, roles: ALL }, setAside: 'none', hours: [{ from: 3, to: 6, day: 2, week: null }, { from: 6, to: 15, day: 3, week: null }] });
+    // Read 2026-11-04: directors' ages from the company laws, funds that take only companies, and a contract from sixteen.
+    expect(['KE', 'MY', 'TC', 'VN', 'PK'].map((c) => rulesOf(c)?.company)).toEqual([18, 18, 18, 'majority', 'majority']);
+    expect(['CA', 'CO', 'CR', 'LU', 'MA', 'MY'].map((c) => rulesOf(c)?.fund)).toEqual(['company', 18, 'company', 'company', 'company', 'company']);
+    expect(rulesOf('TC')?.contract).toEqual({ by: 'guardian', alone: 16, roles: ALL });
     expect(Object.keys(RULES)).toHaveLength(252);
     expect(rulesOf('XX')).toBeUndefined();
     expect(rulesOf('toString')).toBeUndefined();
@@ -115,7 +119,10 @@ describe('the youth rules', () => {
     expect(MODEL_LINE).toBe('youth.model');
     expect(t(MODEL_LINE)).toContain("SLATE's own");
     expect(aboutYouth('GB')).toBe(told('United Kingdom', "how a minor's contract is made binding and what of a minor's pay is set aside"));
-    expect(aboutYouth('FR')).toBe(told('France', "how a minor's contract is made binding"));
+    // France was told its contract rule unknown until 2026-11-04, when Service-Public's page was read: every minor needs
+    // the legal representative's authorisation. Turks and Caicos still lacks its majority and what is set aside.
+    expect(aboutYouth('FR')).toBeUndefined();
+    expect(aboutYouth('TC')).toBe(told('Turks and Caicos Islands', "the age of majority, a child performer's permit, what of a minor's pay is set aside, the hours a minor may work and the age from which its public film fund takes an applicant"));
     expect(aboutYouth('AT')).toBe(told('Austria', 'the hours a minor may work and the age from which its public film fund takes an applicant'));
     expect(aboutYouth('XX')).toBeUndefined();
     const us = rulesOf('US') as Rules;
@@ -169,9 +176,11 @@ describe('the youth rules', () => {
     // Austria: the representative's consent below 14, the minor's own signature from it.
     expect(at('2013-03-10', 'AT', 'performer')).toEqual({ barred: null, needs: ['permit', 'guardian'] });
     expect(at('2012-03-10', 'AT', 'performer')).toEqual({ barred: null, needs: ['permit'] });
-    // France: the prefect's authorisation reaches any capacity, so a young director needs it too.
-    expect(at('2014-05-20', 'FR', 'director')).toEqual({ barred: null, needs: ['permit'] });
-    expect(at('2010-05-20', 'FR', 'director')).toEqual({ barred: null, needs: [] });
+    // France: the prefect's authorisation reaches any capacity, so a young director needs it too; below majority, the
+    // legal representative's authorisation as well (read 2026-11-04; until then a sixteen-year-old needed nothing).
+    expect(at('2014-05-20', 'FR', 'director')).toEqual({ barred: null, needs: ['permit', 'guardian'] });
+    expect(at('2010-05-20', 'FR', 'director')).toEqual({ barred: null, needs: ['guardian'] });
+    expect(at('2008-05-20', 'FR', 'director')).toEqual({ barred: null, needs: [] });
     // New South Wales: the authority to employ a child below 16; the minor binds themself.
     expect(at('2016-03-10', 'AU', 'performer')).toEqual({ barred: null, needs: ['permit'] });
     expect(at('2010-03-10', 'AU', 'performer')).toEqual({ barred: null, needs: [] });
@@ -334,7 +343,7 @@ describe('the youth rules, on rules of their own', () => {
     expect(accountOf(after.slices.ledger, ACCOUNT).postings.at(-1)?.what).toBe('set aside, released');
     expect(accountOf(l.slices.ledger, ACCOUNT).postings.at(-1)?.what).toBe('set aside');
     expect(RELEASE_KIND).toBe('youth.release');
-    expect(youthOf(dispatch(life(born('2011-03-10', 'FR'), 'producer', 'EUR'), authoriseWork, { country: 'FR', role: 'producer' })).granted[0]?.needs).toEqual(['permit']);
+    expect(youthOf(dispatch(life(born('2011-03-10', 'FR'), 'producer', 'EUR'), authoriseWork, { country: 'FR', role: 'producer' })).granted[0]?.needs).toEqual(['permit', 'guardian']);
   });
 });
 
@@ -382,7 +391,7 @@ describe("a minor's work in each role", () => {
       p.raised['equity'] = money('EUR', (p.plan as { budget: { minor: number } }).budget.minor);
       return { ...l, slices: { ...l.slices, producing } };
     };
-    expect(() => dispatch(shoot('2011-03-10', false), shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit first');
+    expect(() => dispatch(shoot('2011-03-10', false), shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit and guardian first');
     const before = shoot('2011-03-10', true);
     const done = dispatch(before, shootProject, { project: 1, account: ACCOUNT });
     const days = (projectOf(done.slices.producing, 1).shot as { days: number }).days;
@@ -403,7 +412,7 @@ describe("a minor's work in each role", () => {
   };
   it("has a young French writer's script bought by the production authorised, and its pécule set aside", () => {
     const fr = (date: string) => born(date, 'FR', { languages: [{ lang: 'fr', level: 'C2' }] });
-    expect(() => dispatch(writer(fr('2014-03-10')), shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit first');
+    expect(() => dispatch(writer(fr('2014-03-10')), shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit and guardian first');
     const sold = dispatch(dispatch(writer(fr('2014-03-10')), authoriseWork, { country: 'FR', role: 'author' }), shootProject, { project: 1, account: ACCOUNT });
     expect(projectOf(sold.slices.producing, 1).costs.map((c) => c.role)).toEqual(['writer']);
     expect(youthOf(sold).granted[0]?.used).toBe(true);
@@ -486,7 +495,7 @@ describe("a minor's work", () => {
     expect(() => prepIn(life(born('2011-03-10', 'US'), 'director', 'USD', [], NOW), { form: 'feature', budget: 5_000_000, shoot: 30 })).toThrow('no one under 16 may be employed in United States');
     const teen = life(born('2011-03-10', 'FR'), 'director', 'EUR');
     const args = { form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 } as const;
-    expect(() => prepIn(teen, args)).toThrow('that work in France needs permit first');
+    expect(() => prepIn(teen, args)).toThrow('that work in France needs permit and guardian first');
     const prepped = prepIn(dispatch(teen, authoriseWork, { country: 'FR', role: 'director' }), args);
     expect(youthOf(prepped).granted[0]?.used).toBe(true);
     expect(youthOf(prepped).held).toHaveLength(1);
@@ -524,7 +533,7 @@ describe("a minor's work", () => {
     const s = structuredClone(l.slices);
     expect(engagement(s, 'GB', 'performer', NOW)?.id).toBe(2);
     expect(engagement(s, 'FR', 'performer', NOW)?.id).toBe(1);
-    expect(() => engagement(s, 'FR', 'director', NOW)).toThrow('that work in France needs permit first');
+    expect(() => engagement(s, 'FR', 'director', NOW)).toThrow('that work in France needs permit and guardian first');
     expect(() => engagement(s, 'GB', 'director', NOW)).toThrow('no one under 16 may be employed in United Kingdom');
     expect(engagement(s, 'GB', 'author', NOW)).toBeNull();
     (s.youth.granted[1] as { used: boolean }).used = true;

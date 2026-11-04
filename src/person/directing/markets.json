@@ -194,7 +194,6 @@
     "bl-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -595,7 +594,6 @@
     "idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -640,7 +638,6 @@
     "gf-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -698,7 +695,6 @@
     "gp-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1105,7 +1101,6 @@
     "mc-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1129,7 +1124,6 @@
     "mf-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1200,10 +1194,11 @@
   },
   "MQ": {
    "agreements": [
-    "mq-screen"
+    "mq-idcc-3097",
+    "mq-idcc-2642"
    ],
    "unknown": [
-    "terms"
+    "periods"
    ]
   },
   "MR": {
@@ -1331,7 +1326,6 @@
     "nl-none"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1442,7 +1436,6 @@
     "pm-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1504,7 +1497,6 @@
     "re-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -1967,7 +1959,6 @@
     "yt-idcc-2642"
    ],
    "unknown": [
-    "fees",
     "periods"
    ]
   },
@@ -5292,12 +5283,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "ga-screen": {
    "country": "GA",
@@ -6301,20 +6437,6 @@
    "periods": [],
    "none": false
   },
-  "mq-screen": {
-   "country": "MQ",
-   "forms": [
-    "feature",
-    "hour",
-    "half-hour"
-   ],
-   "currency": null,
-   "month": null,
-   "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
-  },
   "mr-screen": {
    "country": "MR",
    "forms": [
@@ -6538,7 +6660,11 @@
      "steps": [
       [
        "2025-01-01",
-       "50.24"
+       "54.17"
+      ],
+      [
+       "2026-01-01",
+       "57.8"
       ]
      ]
     },
@@ -6557,7 +6683,11 @@
      "steps": [
       [
        "2025-01-01",
-       "50.24"
+       "54.17"
+      ],
+      [
+       "2026-01-01",
+       "57.8"
       ]
      ]
     },
@@ -6576,7 +6706,11 @@
      "steps": [
       [
        "2025-01-01",
-       "50.24"
+       "54.17"
+      ],
+      [
+       "2026-01-01",
+       "57.8"
       ]
      ]
     }
@@ -8827,12 +8961,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "cc-au-award": {
    "country": "CC",
@@ -9045,12 +9324,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "gp-idcc-3097": {
    "country": "GP",
@@ -9119,12 +9543,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "mc-idcc-3097": {
    "country": "MC",
@@ -9194,12 +9763,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
    "periods": [],
-   "none": false,
    "uplift": "0.05"
   },
   "mf-idcc-3097": {
@@ -9269,12 +9983,376 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
+  },
+  "mq-idcc-3097": {
+   "country": "MQ",
+   "forms": [
+    "feature"
+   ],
+   "currency": "EUR",
+   "none": false,
+   "month": null,
+   "short": null,
+   "fees": [
+    {
+     "form": "feature",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       104
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2024-03-01",
+       "3015.27"
+      ]
+     ]
+    },
+    {
+     "form": "feature",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       105,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2024-03-01",
+       "8563.37"
+      ]
+     ]
+    }
+   ],
+   "periods": []
+  },
+  "mq-idcc-2642": {
+   "country": "MQ",
+   "forms": [
+    "hour",
+    "half-hour"
+   ],
+   "currency": "EUR",
+   "none": false,
+   "month": null,
+   "short": null,
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "nf-au-award": {
    "country": "NF",
@@ -9415,12 +10493,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "re-idcc-3097": {
    "country": "RE",
@@ -9489,12 +10712,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   },
   "yt-idcc-3097": {
    "country": "YT",
@@ -9563,12 +10931,157 @@
     "hour",
     "half-hour"
    ],
-   "currency": null,
+   "currency": "EUR",
+   "none": false,
    "month": null,
    "short": null,
-   "fees": [],
-   "periods": [],
-   "none": false
+   "fees": [
+    {
+     "form": "hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "day",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       0,
+       4
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "300.07"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "week",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       5,
+       64
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "1500.96"
+      ]
+     ]
+    },
+    {
+     "form": "half-hour",
+     "per": "month",
+     "phases": [
+      "prep",
+      "shoot",
+      "cut"
+     ],
+     "when": {
+      "days": [
+       65,
+       null
+      ]
+     },
+     "band": null,
+     "floor": null,
+     "first": null,
+     "steps": [
+      [
+       "2023-11-01",
+       "5250.04"
+      ]
+     ]
+    }
+   ],
+   "periods": []
   }
  }
 }

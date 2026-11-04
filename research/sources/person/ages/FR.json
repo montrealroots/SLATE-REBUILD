@@ -1,7 +1,7 @@
 {
  "topic": "ages.FR",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in France: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in France: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page. Integrated 2026-11-04 from that day's research (layer 4's integration, each quote read by the integrator on its page): minorsContracts, unions, and the blockers for them removed.",
  "figures": [
   {
    "item": "minorsContracts",
@@ -197,6 +197,39 @@
      "said": "L'association est ouverte à toute personne de plus de 18 ans ayant réalisé au moins un court ou un long métrage français."
     }
    ]
+  },
+  {
+   "item": "minorsContracts",
+   "finding": "From sixteen a minor may work under any contract, but every minor must be authorised by the legal representative unless emancipated.",
+   "value": {
+    "legalRepresentative": "Tout mineur doit y être autorisé par son représentant légal",
+    "from": 16,
+    "unlessEmancipated": true
+   },
+   "applies": "France, Service-Public.fr (DILA), fiche F1649, checked 1 June 2026; the Code civil's own article on the representatives' powers was not read (Légifrance's bot check).",
+   "sources": [
+    {
+     "src": 16,
+     "said": "Il est possible de travailler dès l'âge de 16 ans, quel que soit le type de contrat ( CDI : titleContent , CDD : titleContent , contrat temporaire). Tout mineur doit y être autorisé par son représentant légal : titleContent (père ou mère, par exemple), sauf s'il est émancipé ."
+    }
+   ]
+  },
+  {
+   "item": "unions",
+   "finding": "Every employee may freely join the union of their choice; the article sets no age.",
+   "value": {
+    "Code du travail": {
+     "minimumAge": null,
+     "rule": "tout salarié peut librement adhérer au syndicat professionnel de son choix"
+    }
+   },
+   "applies": "France, Code du travail art. L2141-1 (the Ministry of Labour's Code du travail numérique).",
+   "sources": [
+    {
+     "src": 17,
+     "said": "Tout salarié peut librement adhérer au syndicat professionnel de son choix et ne peut être écarté pour l'un des motifs visés à l'article L. 1132-1 ."
+    }
+   ]
   }
  ],
  "country": "FR",
@@ -313,30 +346,21 @@
    "read": "2026-11-03",
    "kind": "primary",
    "said": "L'association est ouverte à toute personne de plus de 18 ans ayant réalisé au moins un court ou un long métrage français."
-  }
- ],
- "blockers": [
-  {
-   "item": "minorsContracts",
-   "sought": "who signs a minor's contract (Code civil, the legal representatives' powers) for those 16 and 17",
-   "tried": {
-    "institution": "legifrance bot check | Retry 2026-11-01: legifrance bot check again; service-public.gouv.fr page F31627 404 at its own address (read through the DILA syndication, held under companies)",
-    "official-register": "not tried | Retry 2026-11-01: none other than legifrance",
-    "web-search": "not run | Retry 2026-11-01: 'service-public.gouv.fr jeune de 16 à 18 ans signer contrat de travail autorisation parents mineur peut conclure': legal sites (legisocial, juritravail) say a non-emancipated minor of 16 needs his legal representative's written authorisation; no official page returned",
-    "trade-press": "none | Retry 2026-11-01: legisocial.fr and juritravail.com (no primary URL); not held",
-    "archive": "unreachable | Retry 2026-11-01: web.archive.org closed every connection through the egress proxy (snapshot and CDX requests); archive.ph answered 429; not read another way"
-   }
   },
   {
-   "item": "unions",
-   "sought": "the Code du travail's rule on minors joining a union (legifrance bot-checked)",
-   "tried": {
-    "institution": "not fetched | Retry 2026-11-01: sfa-cgt.fr statutes and guildedesscenaristes.org read (held); lasrf.com (Société des réalisateurs de films) timed out; SRF read at la-srf.fr (held)",
-    "official-register": "none | Retry 2026-11-01: Code du travail (union membership of minors) on legifrance: bot check",
-    "web-search": "not run | Retry 2026-11-01: 'Société des réalisateurs de films SRF statuts adhésion conditions membre réalisateur': no SRF statute returned",
-    "trade-press": "none | Retry 2026-11-01: none",
-    "archive": "not tried | Retry 2026-11-01: web.archive.org closed every connection through the egress proxy (snapshot and CDX requests); archive.ph answered 429; not read another way"
-   }
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1649",
+   "title": "Service-Public.fr (DILA, Premier ministre): À partir de quel âge peut-on travailler ? (vérifié le 01 juin 2026)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Il est possible de travailler dès l'âge de 16 ans, quel que soit le type de contrat ( CDI : titleContent , CDD : titleContent , contrat temporaire). Tout mineur doit y être autorisé par son représentant légal : titleContent (père ou mère, par exemple), sauf s'il est émancipé ."
+  },
+  {
+   "url": "https://code.travail.gouv.fr/code-du-travail/l2141-1",
+   "title": "Code du travail numérique (Ministère du Travail): Code du travail art. L2141-1, version of 29/05/2008",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Tout salarié peut librement adhérer au syndicat professionnel de son choix et ne peut être écarté pour l'un des motifs visés à l'article L. 1132-1 ."
   }
- ]
+ ],
+ "blockers": []
 }

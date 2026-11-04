@@ -1,6 +1,6 @@
 {
  "country": "MK",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Дозвола за привремен престој заради работа (Ministry of Internal Affairs), on the Employment Service Agency's opinion",
  "routeChanged": true,
  "permit": {
@@ -23,7 +23,14 @@
     "currency": "MKD"
    }
   ],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 60,
+    "unit": "business-days"
+   },
+   "premium": null,
+   "note": "Decided within 60 working days when filed at a North Macedonian mission abroad, 30 at the Ministry of Internal Affairs; either may be extended by up to 30 working days (Law on Foreigners art. 75(2),(4)). The Employment Service Agency's opinion is due within 15 working days, silence counting as a negative opinion (art. 83(4),(6))."
+  },
   "validity": {
    "n": 1,
    "unit": "years",
@@ -32,7 +39,8 @@
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None free of papers: work shorter than 90 days takes a work-registration certificate under the special law (arts. 80(2), 82(3))."
  },
  "sources": [
   {
@@ -80,37 +88,27 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://portal.mdt.gov.mk/post-body-files/zakoni-mvr-file-UtsW.pdf",
+   "title": "Ministry of Internal Affairs (mvr.gov.mk/mk-MK/legislativa/zakoni), Закон за странци, редакциски пречистен текст (Sl. vesnik 97/18, 108/19, 294/21, 284/23), arts. 75, 79, 80-83",
+   "read": "2026-11-04",
+   "said": "Член 75 ... (2) Решението со кое се одлучува по поднесено барање за одобрување на привремен престој, Министерството за внатрешни работи го издава во рок од 30 работни дена од денот на приемот на барањето - доколку барањето е поднесено во Министерството за внатрешни работи, односно 60 работни дена - доколку барањето е поднесено во дипломатско-конзуларното претставништво на Република Северна Македонија ... (4) По исклучок од ставот (2) на овој член, роковите можат да бидат продолжени најмногу за 30 работни дена, особено кога е потребно дополнително разгледување на барањето. ... Член 79 (1) Привремен престој се продолжува за време што е потребно за исполнување на целта на престојот, но не подолго од една година. ... (5) Министерството за внатрешни работи, по поднесеното барање согласно со ставот (2) на овој член ќе донесе решение во рок од 30 работни дена од денот на приемот на барањето. ... Член 80 ... (2) По исклучок од ставот (1) на овој член, странец може да престојува и работи во Република Северна Македонија и врз основа на потврда за регистрација за работа, која е издадена во согласност со посебен закон, доколку работата што ја врши странецот е пократка од 90 дена. Член 81 ... (2) Агенцијата по однос на поднесено барање за добивање на мислење издава мислење за периодот кој странецот го навел во барањето, но не подолго од една година. ... Член 83 ... (4) Агенцијата е должна да го достави мислењето од ставот (2) на овој член до Министерството за внатрешни работи во рок од 15 работни дена од ден на приемот на документацијата. ... (6) Доколку Агенцијата не постапи во рокот од ставот (4) на овој член, ќе се смета дека мислењето е негативно.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "validity",
+    "exempt"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "decision time for the residence permit for work (the Agency's own work permit: five working days, art. 8)",
-   "tried": {
-    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time.",
-    "official-register": "Law on Foreigners not read | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers.",
-    "web-search": "not run | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01); the earlier pass ran none for this country either.",
-    "trade-press": "none | Retry 2026-11-01: None reachable without search.",
-    "archive": "none | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "the residence permit's term (the one year recorded is the Agency work permit's, art. 7(2))",
-   "tried": {
-    "institution": "none",
-    "official-register": "Law on Foreigners not read",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
    "field": "union",
    "sought": "union consultation",
    "tried": {
-    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time.",
-    "official-register": "Law art. 5: unions may propose quota measures, no consultation on an engagement | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers.",
+    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time. || 2026-11-04: curl mvr.gov.mk/mk-MK/legislativa/zakoni (the Ministry's own legislation page), took the link for 'ЗАКОН ЗА СТРАНЦИ - пречистен текст' (portal.mdt.gov.mk zakoni-mvr-file-UtsW.pdf), pdftotext; read arts. 71-85 => found: decision 30 working days (filed at the Ministry) or 60 (filed at a mission), extendable by 30; the Agency's opinion due within 15 working days (silence = negative); opinion for the period asked, at most one year; each extension at most one year, decided in 30 working days; work under 90 days on a work-registration certificate under a special law (art. 80(2), 82(3))",
+    "official-register": "Law art. 5: unions may propose quota measures, no consultation on an engagement | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers. || 2026-11-04: curl https://www.slvesnik.com.mk/ (the Official Gazette), first with the system store, then with the issuing CA's intermediate bundle => system store: curl (60) unable to get local issuer certificate; with the bundle: HTTP 301 (reached, not searched further since the Ministry's consolidated text was read)",
     "web-search": "not run | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01); the earlier pass ran none for this country either.",
     "trade-press": "none | Retry 2026-11-01: None reachable without search.",
     "archive": "none | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
@@ -120,8 +118,8 @@
    "field": "eligibility",
    "sought": "criteria",
    "tried": {
-    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time.",
-    "official-register": "none | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers.",
+    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time. || 2026-11-04: curl mvr.gov.mk/mk-MK/legislativa/zakoni (the Ministry's own legislation page), took the link for 'ЗАКОН ЗА СТРАНЦИ - пречистен текст' (portal.mdt.gov.mk zakoni-mvr-file-UtsW.pdf), pdftotext; read arts. 71-85 => found: decision 30 working days (filed at the Ministry) or 60 (filed at a mission), extendable by 30; the Agency's opinion due within 15 working days (silence = negative); opinion for the period asked, at most one year; each extension at most one year, decided in 30 working days; work under 90 days on a work-registration certificate under a special law (art. 80(2), 82(3))",
+    "official-register": "none | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers. || 2026-11-04: curl https://www.slvesnik.com.mk/ (the Official Gazette), first with the system store, then with the issuing CA's intermediate bundle => system store: curl (60) unable to get local issuer certificate; with the bundle: HTTP 301 (reached, not searched further since the Ministry's consolidated text was read)",
     "web-search": "not run | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01); the earlier pass ran none for this country either.",
     "trade-press": "none | Retry 2026-11-01: None reachable without search.",
     "archive": "none | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
@@ -131,24 +129,13 @@
    "field": "pay",
    "sought": "minimum pay",
    "tried": {
-    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time.",
-    "official-register": "none | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers.",
+    "institution": "none | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and its documents for a first employment permit and an extension (read): no decision time; av.gov.mk (Agency) re-checked: no time. || 2026-11-04: curl mvr.gov.mk/mk-MK/legislativa/zakoni (the Ministry's own legislation page), took the link for 'ЗАКОН ЗА СТРАНЦИ - пречистен текст' (portal.mdt.gov.mk zakoni-mvr-file-UtsW.pdf), pdftotext; read arts. 71-85 => found: decision 30 working days (filed at the Ministry) or 60 (filed at a mission), extendable by 30; the Agency's opinion due within 15 working days (silence = negative); opinion for the period asked, at most one year; each extension at most one year, decided in 30 working days; work under 90 days on a work-registration certificate under a special law (art. 80(2), 82(3))",
+    "official-register": "none | Retry 2026-11-01: The Law on Foreigners and its rulebook not reached (slvesnik.com.mk, the Official Gazette: no connection, HTTP 000); the 2015 Law on Employment and Work of Foreigners (Gazi Baba copy, read) sets no decision time, pay rule or criteria for performers. || 2026-11-04: curl https://www.slvesnik.com.mk/ (the Official Gazette), first with the system store, then with the issuing CA's intermediate bundle => system store: curl (60) unable to get local issuer certificate; with the bundle: HTTP 301 (reached, not searched further since the Ministry's consolidated text was read)",
     "web-search": "not run | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01); the earlier pass ran none for this country either.",
     "trade-press": "none | Retry 2026-11-01: None reachable without search.",
     "archive": "none | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
    }
-  },
-  {
-   "field": "exempt",
-   "sought": "days without a permit (art. 11's seven days need a ministry's consent: see note)",
-   "tried": {
-    "institution": "read | Retry 2026-11-01: mvr.gov.mk foreigners' procedures page and documents lists read: no short-engagement exemption named; av.gov.mk re-checked.",
-    "official-register": "art. 11 read | Retry 2026-11-01: 2015 Law on Employment and Work of Foreigners art. 11 (saved) as before; Law on Foreigners not reached (slvesnik.com.mk: HTTP 000).",
-    "web-search": "not run | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "none | Retry 2026-11-01: None reachable without search.",
-    "archive": "none | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
   }
  ],
- "note": "A foreigner providing creative services in culture (music and dance performance, film, video) for a stay of up to seven days needs no work permit but the prior consent of the Ministry of Culture, the Ministry of Economy, the Agency of Youth and Sport or the municipality, and the work registered (art. 11): layer 3 models this as a consent, not days without a permit. Retry 2026-11-01: fees and who may file come from the Ministry of Internal Affairs' own list of documents for a first employment permit (MKD 50 administrative fee on the form, then MKD 4,000 and MKD 2,150; citizens of Serbia, Montenegro and Kosovo pay only the 4,000). The list names the payments without saying what the second is for."
+ "note": "A foreigner providing creative services in culture (music and dance performance, film, video) for a stay of up to seven days needs no work permit but the prior consent of the Ministry of Culture, the Ministry of Economy, the Agency of Youth and Sport or the municipality, and the work registered (art. 11): layer 3 models this as a consent, not days without a permit. Retry 2026-11-01: fees and who may file come from the Ministry of Internal Affairs' own list of documents for a first employment permit (MKD 50 administrative fee on the form, then MKD 4,000 and MKD 2,150; citizens of Serbia, Montenegro and Kosovo pay only the 4,000). The list names the payments without saying what the second is for. Read 2026-11-04 in the Law on Foreigners (the Ministry of Internal Affairs' copy): the decision time (a performer abroad files at a mission), the one-year term, renewable a year at a time (arts. 79(1), 81(2))."
 }

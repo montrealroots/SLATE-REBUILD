@@ -59,7 +59,7 @@
   },
   {
    "item": "rates",
-   "finding": "From 1 January 2025 a screen actor's pay may not fall below the entry fee of €1,100 a shooting day for the first five days on a production and €900 for each day after; the floor does not bind for actors under 18, drama students, untrained lay actors, high-frequency TV (over 16 programme minutes a day) or low-budget cinema (under €15,000 a minute). A working day counts at least 8 hours, the regular week is 40 hours, the daily cap 12.",
+   "finding": "From 1 January 2025 a screen actor's pay may not fall below the entry fee of €1,100 a shooting day for the first five days on a production and €900 for each day after; the floor does not bind for actors under 18, drama students, untrained lay actors, high-frequency TV (over 16 programme minutes a day) or low-budget cinema (under €15,000 a minute). A working day counts at least 8 hours, the regular week is 40 hours, the daily cap 12. The fee did not rise on 1 January 2026: the actors' agreement, read whole again on 2026-11-04, sets this one value from 1 January 2025 with no later step (first terminable 31 December 2026); the 2.5% rise of that date that ver.di and the DGB reported is the crew's, in the Gagentarifvertrag 2024-2026 (weekly fees, e.g. a first assistant director €1,553 to 30 April 2025, €1,592 from 1 May 2025, €1,632 from 1 January 2026).",
    "value": {
     "unit": "EUR per shooting day",
     "from": "2025-01-01",
@@ -80,7 +80,8 @@
      "dailyMax": 12,
      "weeklyMax": 60,
      "weeklyFeeCovers": 50
-    }
+    },
+    "entryFloorUnchangedIn2026": true
    },
    "applies": "Germany, Schauspieltarifvertrag sections 4.3-4.5 and Manteltarifvertrag section 5; productions by members of the Produktionsallianz.",
    "sources": [
@@ -127,6 +128,10 @@
     {
      "src": 1,
      "said": "so dass mit der Wochengage bis zu 50 Arbeitsstunden pro Kalenderwoche abgegolten sind"
+    },
+    {
+     "src": 12,
+     "said": "bis 30.04. 2025 | ab 1.5. 2025 | ab 1.1. 2026 … Regie-Assistenz 1.553 € 1.592 € 1.632 €"
     }
    ]
   },
@@ -444,19 +449,14 @@
    "kind": "secondary",
    "quotes": "https://www.goldmedia.com/wp-content/uploads/2026/02/GOLDMEDIA_Studie_Film-und-Fernsehproduktion_2023-2024_2026-02.pdf",
    "said": "Im Jahr 2024 entstanden 44 Prozent aller Shows, Serien und Filme an Rhein, Ruhr und Lippe. … Im Jahr 2024 wurden in Deutschland 751.432 Minuten für Fernsehen, Video-on-Demand und Kino produziert"
+  },
+  {
+   "url": "https://cms-s3.verdi.de/drupal/public/documents/TV-FFS_Gagentabelle_241012_website.pdf?VersionId=979f560c-3752-4951-9f88-ba50392ba445",
+   "title": "ver.di (a party to the TV FFS): Gagentarifvertrag 2024-2026 of 12 October 2024, 5. Gagentabelle für Film- und Fernsehschaffende",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Gagentabelle für Film- und Fernsehschaffende … bis 30.04. 2025 | ab 1.5. 2025 | ab 1.1. 2026 … Regie-Assistenz 1.553 € 1.592 € 1.632 € … Standfoto 255 € 261 € 268 € Tänzer (bei Sololeistung +50%) 280 € 287 € 294 €"
   }
  ],
- "blockers": [
-  {
-   "item": "rates",
-   "sought": "The Gagentarifvertrag 2024-2026 (crew weekly fees) and the Produktionsallianz's own copies of the TV FFS; and whether the entry fee rose on 1 January 2026.",
-   "tried": {
-    "institution": "produktionsallianz.de/tarifvertraege redirects to a members' login (interner Bereich); the BFFS document list (read) holds the Schauspieltarifvertrag of 18 Dec 2024 and the Mantel of 12 Oct 2024 but no Gagentarifvertrag; the Schauspieltarifvertrag sets the €1,100/€900 floor 'ab dem 01.01.2025' with no later step.",
-    "official-register": "Not tried: no online register of German collective-agreement texts was found or fetched.",
-    "web-search": "'Tarifvertrag Schauspieler BFFS Produktionsallianz Einstiegsgage': DGB/ver.di releases say entry fees 'steigen auf 1.050 Euro Tagesgage' and fees +2.5% from May 2025 and January 2026 (crew); the signed text says €1,100 / €900, which is used.",
-    "trade-press": "verbandsbuero.de and lausen.com summaries, no fee table beyond the DGB figure.",
-    "archive": "Not tried (web.archive.org resets connections from this egress today)."
-   }
-  }
- ]
+ "blockers": []
 }

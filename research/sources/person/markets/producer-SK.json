@@ -5,7 +5,7 @@
  "figures": [
   {
    "item": "incentive",
-   "finding": "The Slovak Audiovisual Fund's audiovisual industry support is a 33% cash rebate on eligible expenses paid in Slovakia, with minimum eligible spend of EUR 300,000 for a fiction TV series, EUR 100,000 for a feature film or documentary series and EUR 50,000 for a documentary or animation, reached within three years of registration; in 2022 it paid more than EUR 7.5 million and registered 92 projects.",
+   "finding": "The Slovak Audiovisual Fund's audiovisual industry support is a 33% cash rebate on eligible expenses paid in Slovakia, with minimum eligible spend of EUR 300,000 for a fiction TV series, EUR 100,000 for a feature film or documentary series and EUR 50,000 for a documentary or animation, reached within three years of registration; in 2022 it paid more than EUR 7.5 million and registered 92 projects. Act 207/2024 kept the 33% (§ 22a(6), in force from 1 August 2024 and as consolidated on 1 January 2026) and added 14% on pay to people not taxed in Slovakia, counted up to 10% of all eligible expenses; there is no legal entitlement to it.",
    "value": {
     "name": "Audiovizuálny fond – podpora audiovizuálneho priemyslu (cash rebate)",
     "rate": 0.33,
@@ -19,7 +19,11 @@
     "paid2022": "more than 7.5 million",
     "registered2022": 92,
     "recipient": "person or entity registered in Slovakia",
-    "applications": "all year round"
+    "applications": "all year round",
+    "rateNotSlovakTaxedPay": 0.14,
+    "notSlovakTaxedPayMaxShareOfEligible": 0.1,
+    "legalEntitlement": false,
+    "law": "Act 516/2008 § 22a(6), as worded by Act 207/2024 from 2024-08-01; unchanged by 294/2025 and 264/2026"
    },
    "applies": "Slovakia, as described by the Slovak Film Institute (2022 data).",
    "sources": [
@@ -30,6 +34,14 @@
     {
      "src": 0,
      "said": "In 2022, the Slovak Audiovisual Fund registered 92 projects of audiovisual industry support and 521 applications for audiovisual culture support, of which 345 (66 %) were supported by the total amount of 10.6 mil. €."
+    },
+    {
+     "src": 4,
+     "said": "36. V § 22a odsek 6 znie: „(6) Fond poskytuje finančné prostriedky na podporu audiovizuálneho priemyslu formou dotácie vo výške a) 33% oprávnených výdavkov podľa odseku 3 písm. a) a b) a b) 14% oprávnených výdavkov podľa odseku 3 písm. c), ktoré však môžu byť uplatnené najviac vo výške 10 % všetkých oprávnených výdavkov."
+    },
+    {
+     "src": 5,
+     "said": "(6) Fond poskytuje finančné prostriedky na podporu audiovizuálneho priemyslu formou dotácie vo výške a) 33% oprávnených výdavkov podľa odseku 3 písm. a) a b) a b) 14% oprávnených výdavkov podľa odseku 3 písm. c), ktoré však môžu byť uplatnené najviac vo výške 10 % všetkých oprávnených výdavkov. … (7) Na poskytnutie finančných prostriedkov na podporu audiovizuálneho priemyslu nie je právny nárok."
     }
    ]
   },
@@ -145,19 +157,21 @@
    "read": "2026-11-04",
    "kind": "primary",
    "said": "A 33% cash rebate on expenses spent on film or TV production in the Slovak Republic. … €300,000 ($300,000) for television series of max. 26 episodes … Register your project for 1,000 EUR."
+  },
+  {
+   "url": "https://static.slov-lex.sk/static/SK/ZZ/2024/207/vyhlasene_znenie.html",
+   "title": "207/2024 Z. z. Zákon z 28. júna 2024, ktorým sa mení a dopĺňa zákon č. 516/2008 Z. z. o Audiovizuálnom fonde (vyhlásené znenie), Slov-lex",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "36. V § 22a odsek 6 znie: „(6) Fond poskytuje finančné prostriedky na podporu audiovizuálneho priemyslu formou dotácie vo výške a) 33% oprávnených výdavkov podľa odseku 3 písm. a) a b) a b) 14% oprávnených výdavkov podľa odseku 3 písm. c), ktoré však môžu byť uplatnené najviac vo výške 10 % všetkých oprávnených výdavkov."
+  },
+  {
+   "url": "https://static.slov-lex.sk/static/SK/ZZ/2008/516/20260101.html",
+   "title": "516/2008 Z. z. Zákon o Audiovizuálnom fonde, znenie účinné od 01.01.2026 (Slov-lex)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "(6) Fond poskytuje finančné prostriedky na podporu audiovizuálneho priemyslu formou dotácie vo výške a) 33% oprávnených výdavkov podľa odseku 3 písm. a) a b) a b) 14% oprávnených výdavkov podľa odseku 3 písm. c), ktoré však môžu byť uplatnené najviac vo výške 10 % všetkých oprávnených výdavkov. … (7) Na poskytnutie finančných prostriedkov na podporu audiovizuálneho priemyslu nie je právny nárok."
   }
  ],
- "blockers": [
-  {
-   "item": "incentive",
-   "sought": "Whether Act 207/2024 changed the 33% rate or the minimum spend set under Act 516/2008 (the 2019 text and the commission's minimums are now found).",
-   "tried": {
-    "institution": "avf.sk home page read: news only, no rules. || retry 2026-11-01: filmcommission.sk cash-rebate page read; sfu.sk read earlier; no actors', writers' or directors' rate card on either",
-    "official-register": "zakonypreludi.sk refused (403); slov-lex.sk text not fetched. || retry 2026-11-01: static.slov-lex.sk Act 304/2019 read (33%); www.slov-lex.sk consolidated 516/2008 is script-rendered (no text served); Act 207/2024 not located",
-    "web-search": "2026-11-01: 'Audiovizuálny fond filmové projekty podpora 33 % oprávnené výdavky minimálne výdavky 2026 avf.sk'. || retry 2026-11-01: WebSearch 2026-11-01: 'Slovakia audiovisual production incentive 33% Act 516/2008 amended 2024 minimum spend Slovak Audiovisual Fund rebate' (results: 2019 raise to 33%, 2020 decree lowering minimums; no 2024 amendment, no pay terms)",
-    "trade-press": "FilmNewEurope 2026 read (grants only). || retry 2026-11-01: kftv/Screen Global Production (2019) and filmneweurope (by snippet): rebate only",
-    "archive": "Not tried. || retry 2026-11-01: archive.org availability API: 429 Too Many Requests this turn; web.archive.org resets the connection from this environment (2026-11-01)"
-   }
-  }
- ]
+ "blockers": []
 }

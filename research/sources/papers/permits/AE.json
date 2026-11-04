@@ -1,6 +1,6 @@
 {
  "country": "AE",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Mission work permit",
  "routeChanged": false,
  "permit": {
@@ -10,6 +10,21 @@
    {
     "what": "MOHRE federal fee, mission work permit (establishments of all categories)",
     "amount": "50.00",
+    "currency": "AED"
+   },
+   {
+    "what": "ICP entry visa for a work mission: application fee",
+    "amount": "100.00",
+    "currency": "AED"
+   },
+   {
+    "what": "ICP entry visa for a work mission: visa issuance fee",
+    "amount": "100.00",
+    "currency": "AED"
+   },
+   {
+    "what": "ICP entry visa for a work mission: smart service fee",
+    "amount": "100.00",
     "currency": "AED"
    }
   ],
@@ -28,13 +43,14 @@
   "union": null,
   "eligibility": "According to the terms of service, individuals of all skill levels and professions are eligible to obtain this type of permit",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "ICP's service page for an entry visa issued to a government, private or free-zone entity for a work mission or residence lists these three fees (the second labelled 'Visit visa issuance fee' even there); its fee block for the category names no financial guarantee, and says public bodies are exempt from providing one, so none is held."
  },
  "sources": [
   {
    "url": "https://gulfmigration.grc.net/wp-content/uploads/2023/01/Administrative-Resolution-No.38-of-2022-Concerning-the-Guidelines-for-Implementing-Ministerial-Resolution-No.46-of-2022-Regarding-Work-Permits-and-Offer-Letters-and-Employment-Contract-Forms.pdf",
    "title": "MOHRE, Administrative Resolution No. (38) of 2022 concerning the guidelines for implementing Ministerial Resolution No. (46) of 2022 regarding work permits, offer letters and employment contract forms (MOHRE's English text, copy held by the Gulf Research Center's GLMM)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "MISSION WORK PERMIT: Service Description Permit granted to an establishment registered with the Ministry for the purpose of recruiting a worker from abroad for temporary or fixed-term work. Permit Duration Three months, renewable once for a similar period … Payment of Federal fees, bank guarantee or insurance upon approval. … Approved employment contract issued by the Ministry, which includes both the employer's and the employee's signatures. … Work Permit applications must be submitted by the establishment's authorized signatory … E- quota is required to obtain mission work permit. 8. According to the terms of service, individuals of all skill levels and professions are eligible to obtain this type of permit Service Response Time Two working days … Federal fee for establishments of all categories : 50 dirhams",
    "kind": "primary",
    "fields": [
@@ -49,20 +65,18 @@
     "pay",
     "exempt"
    ]
-  }
- ],
- "blockers": [
+  },
   {
-   "field": "fees",
-   "sought": "the ICP's fees for the entry permit issued on a mission work permit (application, issue, guarantee)",
-   "tried": {
-    "institution": "icp.gov.ae/en/service/issue-entry-permit returned HTTP 500 with a 'We are coming back soon!' page (2026-11-01); mohre.gov.ae resets this client's connection",
-    "official-register": "uaelegislation.gov.ae surfaced in search but holds the cabinet fee resolutions in Arabic downloads not reached in this pass",
-    "web-search": "searched 'ICP mission entry permit fees dirhams', 'UAE mission work permit 90 days fee' (2026-11-01): only consultancy pages with conflicting figures",
-    "trade-press": "Gulf Today and Economy Middle East give figures but don't quote the current ICP schedule verbatim; Khaleej Times' Dh600 is from 2005",
-    "archive": "web.archive.org has no snapshot of the ICP page; the MOHRE page's snapshot of 2026-03-25 resets the connection"
-   }
+   "url": "https://icp.gov.ae/en/services-details/?serviceid=64afe3c1035448005bd52e60",
+   "title": "ICP (Federal Authority for Identity, Citizenship, Customs & Port Security), Issuance of a Visa, category 'Government, private, or free zone entities for entry visa issuance for a work mission Or Residency': terms and service fees",
+   "read": "2026-11-04",
+   "said": "Service fees … Application Fees - 100 AED | Visit visa issuance fee - 100 AED | Smart Service Fees - 100 AED | Entry visa for employment purposes to obtain the Green Residence - 100 AED … Ministries, departments, government institutions, and local and federal public authorities are exempt from providing the financial guarantee, except for their affiliated institutions and companies that engage in commercial activity. Approval from the Ministry of Human Resources and Emiratisation (MOHRE) is required if the employer is subject to the Labour Relations Regulation Law … The holder must enter the UAE within the 60-day validity period of the entry permit from its date of issuance. The validity may be extended for a similar period in accordance with the applicable rules and procedures.",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
- "note": "MOHRE's guidelines (Administrative Resolution No. 38 of 2022) name no union notice, minimum pay or exempt days for the mission work permit, so those are null; each emirate's performance permit for an event (Dubai, Abu Dhabi) isn't modelled. The entry permit the ICP issues on the mission permit has fees of its own, not read."
+ "blockers": [],
+ "note": "MOHRE's guidelines (Administrative Resolution No. 38 of 2022) name no union notice, minimum pay or exempt days for the mission work permit, so those are null; each emirate's performance permit for an event (Dubai, Abu Dhabi) isn't modelled. The entry permit the ICP issues on the mission permit has fees of its own, not read. Read 2026-11-04: ICP's own fees for the work-mission entry visa, which ICP's entry-permit page (HTTP 500 on 2026-11-01) now reaches through its services listing."
 }

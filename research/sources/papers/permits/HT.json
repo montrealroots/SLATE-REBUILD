@@ -1,6 +1,6 @@
 {
  "country": "HT",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": null,
  "routeChanged": false,
  "permit": {
@@ -20,11 +20,11 @@
    "field": "country",
    "sought": "What Haiti asks of a foreign performer to work there (layer 3 R-1649)",
    "tried": {
-    "institution": "mast.gouv.ht, immigration.gouv.ht, mae.gouv.ht no answer; haiti.org captcha (layer 3). 2026-11-01: mast.gouv.ht CONNECT 502. || Retry 2026-11-01: mast.gouv.ht: CONNECT 502 again (2026-11-01).",
-    "official-register": "Le Moniteur no answer; CEPAL's copy of the Code du travail behind a Cloudflare challenge (layer 3). || Retry 2026-11-01: The ILO's Labour Code of Haiti PDF (ilo.org/dyn/travail/docs/606) answers 404; NATLEX record of the 1984 decree answers 403; Refworld's copy via UNHCR's web archive is behind a browser check.",
+    "institution": "mast.gouv.ht, immigration.gouv.ht, mae.gouv.ht no answer; haiti.org captcha (layer 3). 2026-11-01: mast.gouv.ht CONNECT 502. || Retry 2026-11-01: mast.gouv.ht: CONNECT 502 again (2026-11-01). || 2026-11-04: www.immigration.gouv.ht and mast.gouv.ht fetched by curl => no connection (curl HTTP 000) (both)",
+    "official-register": "Le Moniteur no answer; CEPAL's copy of the Code du travail behind a Cloudflare challenge (layer 3). || Retry 2026-11-01: The ILO's Labour Code of Haiti PDF (ilo.org/dyn/travail/docs/606) answers 404; NATLEX record of the 1984 decree answers 403; Refworld's copy via UNHCR's web archive is behind a browser check. || 2026-11-04: lemoniteur.ht (Le Moniteur, the official journal) by curl => refused by the egress proxy (502)",
     "web-search": "2026-11-01: web search unavailable (the session's shared WebSearch budget was used up), so no new search was run; layer 3 found commercial guides only. || Retry 2026-11-01: WebSearch 'permis de travail étranger Haïti Ministère des Affaires Sociales et du Travail frais gourdes code du travail article étrangers' and 'Haiti Code du travail \"permis de travail\" étrangers article 24 MAST \"Direction de la main-d'oeuvre\"': commercial guides only (Rivermate, Playroll, G-P, Velocity).",
-    "trade-press": "Le Nouvelliste, IJDH, US DOL (layer 3): nothing on foreigners' work permits. || Retry 2026-11-01: Le Petit Journal's guide gives residence-permit fees (5,000 HTG) without a primary; no work-permit figure.",
-    "archive": "A snapshot of haiti.org (2026-10-03) exists; web.archive.org refuses this environment. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "Le Nouvelliste, IJDH, US DOL (layer 3): nothing on foreigners' work permits. || Retry 2026-11-01: Le Petit Journal's guide gives residence-permit fees (5,000 HTG) without a primary; no work-permit figure. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Haiti => no member union listed for Haiti",
+    "archive": "A snapshot of haiti.org (2026-10-03) exists; web.archive.org refuses this environment. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for ht,gouv,immigration)/ (cc.py list) => no captures"
    }
   }
  ],

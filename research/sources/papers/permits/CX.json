@@ -1,6 +1,6 @@
 {
  "country": "CX",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Temporary Activity visa (subclass 408), Entertainment Activities stream",
  "routeChanged": false,
  "permit": {
@@ -15,10 +15,11 @@
   ],
   "processing": {
    "standard": {
-    "n": 47,
+    "n": 40,
     "unit": "days"
    },
-   "premium": null
+   "premium": null,
+   "note": "Home Affairs' global processing times for subclass 408, Entertainment Activities stream: 90% of applications decided in 40 days, 75% in 33, 50% in 23 (applications decided to 30 September 2026, updated 2 November 2026)."
   },
   "validity": {
    "n": 2,
@@ -28,7 +29,9 @@
   "union": "The sponsor or supporter must consult one or more Australian unions before the application: the Musicians Union of Australia for musicians and conductors, the Australian Directors Guild for foreign screen directors, the Media Entertainment and Arts Alliance for all others.",
   "eligibility": "a lead actor or major support actor in a television or film production",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "payNote": "None set: the Migration Regulations' Schedule 2 clauses for the 408 (408.21, 408.229A), read whole, hold no minimum pay; 408.211 bars activity with adverse consequences for Australians' conditions of employment.",
+  "exemptNote": "None: a visitor's 'business visitor activity' excludes work or services for an organisation or person based in Australia (reg. 1.03), so every paid engagement takes the 408."
  },
  "sources": [
   {
@@ -66,17 +69,6 @@
    ]
   },
   {
-   "url": "https://www.widen.com.au/processing-times/408/",
-   "title": "WIDEN (registered migration agent), Temporary Activity (408) processing times, reviewed September 2026, quoting the Department of Home Affairs global visa processing times of 29 September 2026",
-   "read": "2026-11-01",
-   "said": "As published by the Department of Home Affairs on 29 September 2026: Entertainment Activities: 50% within 23 days, 90% within 47 days;",
-   "kind": "secondary",
-   "quotes": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times",
-   "fields": [
-    "processing"
-   ]
-  },
-  {
    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times",
    "title": "Department of Home Affairs, Global visa processing times (the guide tool; figures load by script)",
    "read": "2026-11-04",
@@ -85,31 +77,38 @@
    "fields": [
     "processing"
    ]
-  }
- ],
- "blockers": [
-  {
-   "field": "pay",
-   "sought": "Any minimum pay rule for a sponsored entertainer",
-   "tried": {
-    "institution": "Home Affairs' 408 page sends processing to its 'visa processing time guide tool', which needs a script this client can't run; the page names no pay floor and no days of work without the visa. | Retry 2026-11-01: immi.homeaffairs.gov.au global-visa-processing-times read (saved AU-global-ptimes.html): the 408 page and its streams carry no pay floor and name no days of work without a visa; the page states no general exemption.",
-    "official-register": "Migration Regulations 1994 Sch. 1 item 1237 read for the charge; Schedule 2 Part 408 not searched for a pay rule beyond the page. | Retry 2026-11-01: Migration Regulations 1994 (legislation.gov.au, volumes saved) not searched clause by clause for a 408 pay rule this turn; Schedule 2 Part 408 is in a later volume.",
-    "web-search": "'Temporary Activity visa subclass 408 visa application charge 2026 AUD \"1237\" Migration Regulations Schedule 1': legislation and migration agents' notes on the July 2026 fee change; no processing figure. | Retry 2026-11-01: 'subclass 408 \"Entertainment activities\" stream processing time \"90% of applications\" 2026': migration agents (WIDEN, Roam, thinkhigher) on time and cost; none names a pay floor or an exempt period for the entertainment stream.",
-    "trade-press": "Migration agents' July 2026 updates (thinkhigher, envoyglobal) quote no processing time for the entertainment stream. | Retry 2026-11-01: Ausfilm visas factsheet (June 2026, by search) names the stream and the union consultation, not pay or an exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
   },
   {
-   "field": "exempt",
-   "sought": "An engagement short enough to need no visa",
-   "tried": {
-    "institution": "Home Affairs' 408 page sends processing to its 'visa processing time guide tool', which needs a script this client can't run; the page names no pay floor and no days of work without the visa. | Retry 2026-11-01: immi.homeaffairs.gov.au global-visa-processing-times read (saved AU-global-ptimes.html): the 408 page and its streams carry no pay floor and name no days of work without a visa; the page states no general exemption.",
-    "official-register": "Migration Regulations 1994 Sch. 1 item 1237 read for the charge; Schedule 2 Part 408 not searched for a pay rule beyond the page. | Retry 2026-11-01: Migration Regulations 1994 (legislation.gov.au, volumes saved) not searched clause by clause for a 408 pay rule this turn; Schedule 2 Part 408 is in a later volume.",
-    "web-search": "'Temporary Activity visa subclass 408 visa application charge 2026 AUD \"1237\" Migration Regulations Schedule 1': legislation and migration agents' notes on the July 2026 fee change; no processing figure. | Retry 2026-11-01: 'subclass 408 \"Entertainment activities\" stream processing time \"90% of applications\" 2026': migration agents (WIDEN, Roam, thinkhigher) on time and cost; none names a pay floor or an exempt period for the entertainment stream.",
-    "trade-press": "Migration agents' July 2026 updates (thinkhigher, envoyglobal) quote no processing time for the entertainment stream. | Retry 2026-11-01: Ausfilm visas factsheet (June 2026, by search) names the stream and the union consultation, not pay or an exemption.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
+   "url": "https://immi.homeaffairs.gov.au/_layouts/15/api/GPT.aspx/GetVisaGlobalProcessingTime",
+   "title": "Department of Home Affairs, the visa processing time guide tool's own data service (subclass 408), read 2026-11-04",
+   "read": "2026-11-04",
+   "said": "\"StreamText\":\"Entertainment Activities\",\"Percent75\":\"33 Days\",\"Percent90\":\"40 Days\",\"Percent25\":\"10 Days\",\"Percent50\":\"23 Days\",\"Updated\":\"02 November 2026\",\"EndDate\":\"30 September 2026\"",
+   "kind": "primary",
+   "fields": [
+    "processing"
+   ]
+  },
+  {
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 2, Schedule 2, Subclass 408, clauses 408.21 (common criteria) and 408.229A (entertainment)",
+   "read": "2026-11-04",
+   "said": "408.211 The applicant does not intend to engage in activities that will have adverse consequences for employment or training opportunities, or conditions of employment, for Australian citizens or Australian permanent residents. ... 408.215 The applicant has: (a) adequate means to support himself or herself ... 408.229A ... (2) ... (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non-profit engagements) in Australia; ... (c) either: (i) an eligible sponsor passes the sponsorship test in relation to the applicant; or (ii) if the applicant was outside Australia when the application was made, and stated on the application form that the proposed length of stay did not exceed 3 months—an eligible supporter passes the support test ... (e) the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia.",
+   "kind": "primary",
+   "fields": [
+    "pay"
+   ]
+  },
+  {
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_1/document_1.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 1, regulation 1.03, 'business visitor activity'",
+   "read": "2026-11-04",
+   "said": "business visitor activity: (a) means any of the following activities undertaken by a person: (i) making a general business or employment enquiry; (ii) investigating, negotiating, entering into, or reviewing a business contract; (iii) an activity carried out as part of an official government to government visit; (iv) participation in a conference, trade fair or seminar in Australia unless the person is being paid by an organiser for participation; but (b) does not include either of the following activities: (i) an activity that is, or includes, undertaking work for, or supplying services to, an organisation or other person based in Australia; (ii) an activity that is, or includes, the sale of goods or services directly to the general public.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
- "note": "Christmas Island is deemed part of Australia by the Migration Act (s. 7), so a performer works there on Australia's visa. For a government-subsidised film or television production the Arts certificate confirms the production meets Australian content criteria; for an unsubsidised one, that Australians had reasonable opportunity to take part at all levels and that foreign investment exceeds the spend on sponsored entertainers. The stay is set by the approved activity, at most two years, and the visa can't be extended. Charges for some classes the Minister specifies are lower or nil. Retry 2026-11-01: processing is the Home Affairs figure for the Entertainment Activities stream (90% of applications decided within 47 days, 50% within 23 days, published 29 September 2026). Home Affairs' own guide page (last updated 29/09/2026) loads its figures by a script call this client may not make, so the figure is carried by a registered migration agent quoting that publication; a third-party FOI-based tracker (ternvisa) gives a lower 22 days and is not used."
+ "blockers": [],
+ "note": "Christmas Island is deemed part of Australia by the Migration Act (s. 7), so a performer works there on Australia's visa. For a government-subsidised film or television production the Arts certificate confirms the production meets Australian content criteria; for an unsubsidised one, that Australians had reasonable opportunity to take part at all levels and that foreign investment exceeds the spend on sponsored entertainers. The stay is set by the approved activity, at most two years, and the visa can't be extended. Charges for some classes the Minister specifies are lower or nil. Retry 2026-11-01: processing was then the Home Affairs figure for the Entertainment Activities stream (90% of applications decided within 47 days, 50% within 23 days, published 29 September 2026). Home Affairs' own guide page (last updated 29/09/2026) loads its figures by a script call this client may not make, so the figure is carried by a registered migration agent quoting that publication; a third-party FOI-based tracker (ternvisa) gives a lower 22 days and is not used. An error found and fixed on 2026-11-04: the 408's processing was held at 47 days, Home Affairs' figure updated 29 September 2026; its data service, read again, gives 40 days at 90% (updated 2 November 2026), which is now held. WIDEN's secondary report of the 47 days was dropped for the data service itself. Read 2026-11-04 (Norfolk Island's research, which applies the same federal rules): the 408 sets no pay floor and no paid engagement is free of it. Re-read 2026-11-04: immi.homeaffairs.gov.au's copy (entertainment-activities) answered with a page without the passage (its text drawn by script, or an image); the fact stands on its reading of 2026-11-01."
 }

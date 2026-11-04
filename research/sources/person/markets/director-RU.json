@@ -1,7 +1,7 @@
 {
  "topic": "markets.director.RU",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Russia. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Russia. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker.",
  "figures": [
   {
    "item": "union",
@@ -47,7 +47,8 @@
    "title": "Оплата членских взносов (Союз кинематографистов России)",
    "read": "2026-11-01",
    "kind": "primary",
-   "said": "Вступительный взнос — 8 000 рублей. Оплата только после положительного решения о приеме. Ежегодный членский взнос — 2 000 рублей, для пенсионеров — 250 рублей. Освобождаются от уплаты ежегодных членских взносов члены Союза кинематографистов, достигшие 75-летнего возраста."
+   "said": "Вступительный взнос — 8 000 рублей. Оплата только после положительного решения о приеме. Ежегодный членский взнос — 2 000 рублей, для пенсионеров — 250 рублей. Освобождаются от уплаты ежегодных членских взносов члены Союза кинематографистов, достигшие 75-летнего возраста.",
+   "unreachable": "2026-11-04: HTTP 502 Bad Gateway (curl); its text stands on the read of 2026-11-01."
   }
  ],
  "blockers": [
@@ -55,10 +56,10 @@
    "item": "fees",
    "sought": "Directors' minimum fees, periods, cut rights.",
    "tried": {
-    "institution": "not reached || Retry 2026-11-01: unikino.ru/vznos read again (membership dues only); fond-kino.ru/documents/ and /support/: 1.6 KB script stub (no text); culture.gov.ru: connection reset",
-    "official-register": "none || Retry 2026-11-01: Constitution of Russia read: no rule on screen pay; pravo.gov.ru not reached this turn",
-    "web-search": "not searched separately || Retry 2026-11-01: not run again: the session's web-search budget is spent (2026-11-01, retry brief); institutions fetched directly instead || Web search 2026-11-01: not run: the search pass of 2026-11-01 reached this country after the turn's shared web-search budget (200 calls, shared by every agent) was used up again (about 19:20 UTC, after 27 searches for AD to CK); no result returned.",
-    "trade-press": "none || Retry 2026-11-01: none quoting a primary found",
+    "institution": "not reached || Retry 2026-11-01: unikino.ru/vznos read again (membership dues only); fond-kino.ru/documents/ and /support/: 1.6 KB script stub (no text); culture.gov.ru: connection reset || 2026-11-04: https://www.unikino.ru/ (Союз кинематографистов РФ, home of the Guild of Screenwriters and directors' guild) and https://www.kinosoyuz.ru/; https://culture.gov.ru/ (Ministry of Culture); https://www.rospk.ru/. Result: unikino.ru HTTP 503; kinosoyuz.ru and culture.gov.ru connection reset; rospk.ru TLS certificate expired (not read)",
+    "official-register": "none || Retry 2026-11-01: Constitution of Russia read: no rule on screen pay; pravo.gov.ru not reached this turn || 2026-11-04: https://rostrud.gov.ru/ (Rostrud, which registers federal industry agreements). Result: HTTP 403",
+    "web-search": "not searched separately || Retry 2026-11-01: not run again: the session's web-search budget is spent (2026-11-01, retry brief); institutions fetched directly instead || Web search 2026-11-01: not run: the search pass of 2026-11-01 reached this country after the turn's shared web-search budget (200 calls, shared by every agent) was used up again (about 19:20 UTC, after 27 searches for AD to CK); no result returned. || 2026-11-04: WebSearch 2026-11-04 (Russian): отраслевое соглашение Министерство культуры профсоюз работников культуры 2024-2026 текст артисты оплата. Result: leads only: the Ministry of Culture and the All-Russian Union of Culture Workers' industry agreement for 2023-2025 was extended to 31 December 2028 by an additional agreement (businessofrussia.com PDF, a secondary); the Mincifry press and broadcasting agreement 2024-2026 (garant.ru)",
+    "trade-press": "none || Retry 2026-11-01: none quoting a primary found || 2026-11-04: https://www.garant.ru/products/ipo/prime/doc/408865045/ read (Garant's copy of the Mincifry–culture workers' union agreement for press, TV and radio organisations, 20 March 2024). Result: secondary, about broadcasters' employees, not screen performers per day: its point 31 sets the industry minimum monthly pay for Mincifry's off-budget press and broadcasting organisations at 'не ниже минимального размера оплаты труда, установленного федеральным законом'; no per-shooting-day or per-performance rate",
     "archive": "not tried || Retry 2026-11-01: snapshot https://web.archive.org/web/20160413161024/www.fond-kino.ru/documents/ found; web.archive.org fetch failed 5 times (connection reset, 18:59 UTC)"
    }
   }

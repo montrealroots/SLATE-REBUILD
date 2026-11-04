@@ -1,6 +1,6 @@
 {
  "country": "PR",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "O-1 nonimmigrant (extraordinary ability in the arts, or extraordinary achievement in motion picture or television), on Form I-129",
  "routeChanged": true,
  "permit": {
@@ -21,6 +21,11 @@
     "what": "Premium processing, O petition",
     "amount": "2965.00",
     "currency": "USD"
+   },
+   {
+    "what": "O category nonimmigrant visa application (MRV) fee",
+    "amount": "205.00",
+    "currency": "USD"
    }
   ],
   "processing": {
@@ -38,7 +43,9 @@
   "union": "For a performer of extraordinary achievement working on a motion picture or television production, consultation with the appropriate union representing the alien's occupational peers and a management organization (an advisory opinion, or a letter of no objection); in other arts, a peer group, which may include a labor organization.",
   "eligibility": "Extraordinary achievement in motion picture and television means \"a very high level of accomplishment in the motion picture or television industry evidenced by a degree of skill and recognition significantly above that ordinarily encountered\" (in the arts, \"distinction\").",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "payNote": "None: 8 CFR 214.2(o), read whole, sets no minimum or prevailing wage for the O-1; a high salary is one of the optional evidentiary criteria, and an agent's contract must state the wage offered.",
+  "exemptNote": "None for paid work: the State Department's FAM holds B status not appropriate for a professional entertainer 'regardless of the amount or source of compensation'."
  },
  "sources": [
   {
@@ -76,6 +83,36 @@
     "fees",
     "processing"
    ]
+  },
+  {
+   "url": "https://fam.state.gov/fam/09FAM/09FAM040202.html",
+   "title": "U.S. Department of State, Foreign Affairs Manual, 9 FAM 402.2-5(G) Entertainers and Artists (CT:VISA-1730, 03-10-2023; page last changed CT:VISA-2193, 03-19-2026)",
+   "read": "2026-11-04",
+   "said": "a. (U) Except for the following cases, B visa status is not appropriate for a member of the entertainment profession (professional entertainer) who seeks to enter the United States temporarily to perform services. Instead, performers should be accorded another appropriate visa classification, which in most cases will be P, regardless of the amount or source of compensation, whether the services will involve public appearance(s), or whether the performance is for charity or a U.S. based ethnic society. ... b. (U) The term “member of the entertainment profession” includes not only performing artists such as stage and movie actors, musicians, singers, and dancers ... 9 FAM 402.2-5(G)(1) ... A professional entertainer may be classified B-1 if the entertainer: (1) Is coming to the United States to participate only in a cultural program sponsored by the sending country; (2) Will be performing before a nonpaying audience; and (3) All expenses, including per diem, will be paid by the member’s government. 9 FAM 402.2-5(G)(2) ... A professional entertainer may be classified B-1 if the entertainer is coming to the United States to participate in a competition for which there is no remuneration other than a prize (monetary or otherwise) and expenses.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
+  },
+  {
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-30/title-8.xml?section=214.2",
+   "title": "eCFR, 8 CFR 214.2(o) (as of 2026-10-30), read whole",
+   "read": "2026-11-04",
+   "said": "(o)(3)(iii) ... (8) Evidence that the alien has either commanded a high salary or will command a high salary or other remuneration for services, evidenced by contracts or other reliable evidence. (C) If the criteria in paragraph (o)(3)(iii) of this section do not readily apply to the beneficiary's occupation, the petitioner may submit comparable evidence ... [(o)(2)(iv)(E)(2)] An agent performing the function of an employer must provide the contractual agreement between the agent and the beneficiary which specifies the wage offered and the other terms and conditions of employment of the beneficiary.",
+   "kind": "primary",
+   "fields": [
+    "pay"
+   ]
+  },
+  {
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-30/title-22.xml?section=22.1",
+   "title": "eCFR, 22 CFR 22.1, Schedule of fees for consular services, item 21 (as of 2026-10-30)",
+   "read": "2026-11-04",
+   "said": "21. Nonimmigrant Visa Application and Border Crossing Card Processing Fees (per person): (a) Non-petition-based nonimmigrant visa (except E category) $185 (b) H, L, O, P, Q and R category nonimmigrant visa 205",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
  "blockers": [
@@ -83,45 +120,13 @@
    "field": "processing",
    "sought": "USCIS's stated standard processing time for an O-1 I-129 petition",
    "tried": {
-    "institution": "uscis.gov O-1 page, G-1055 fee page and premium-processing page answer this client 403 (Access Denied), 2026-11-01",
-    "official-register": "8 CFR 214.2(o) (eCFR) read: it names a 15-day window for the consulting organization, no decision time",
+    "institution": "uscis.gov O-1 page, G-1055 fee page and premium-processing page answer this client 403 (Access Denied), 2026-11-01 || 2026-11-04: USCIS processing-times (egov.uscis.gov/processing-times/api/forms, with the page as Referer) and the uscis.gov O-1 page, by curl => HTTP 403 from both (an access refusal; not bypassed) | fam.state.gov 9 FAM 402.2 (B visas), section 402.2-5(G) Entertainers and Artists, by curl (chain completed with the issuing CA's intermediate) => read: no paid performing on a B visa; the two B-1 exceptions are unpaid",
+    "official-register": "8 CFR 214.2(o) (eCFR) read: it names a 15-day window for the consulting organization, no decision time || 2026-11-04: eCFR API, 8 CFR 214.2 as of 2026-10-30 (with compression), (o) read whole for wage, salary, remuneration; 8 CFR 106.2 I-129 fees => no minimum wage for O-1; 'commanded a high salary' is an optional evidentiary criterion; no standard processing time (only the consultation windows); I-129 O fee USD 1,055 and Asylum Program Fee USD 600 confirmed | eCFR API, 22 CFR 22.1 (Department of State schedule of consular fees) as of 2026-10-30 => read: O category visa application fee USD 205",
     "web-search": "WebSearch 'USCIS O-1 visa extraordinary ability motion picture television consultation union peer group': law firms only, no stated USCIS time",
     "trade-press": "Not used: the time is USCIS's own (processing-times tool), which refuses this client",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "The State Department's visa application (MRV) fee for an O visa",
-   "tried": {
-    "institution": "travel.state.gov fees page answers 403, 2026-11-01",
-    "official-register": "22 CFR 22.1 not read in this pass",
-    "web-search": "Same search; no primary",
-    "trade-press": "None quoting the primary read",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "A wage rule for O-1 performers",
-   "tried": {
-    "institution": "uscis.gov 403",
-    "official-register": "8 CFR 214.2(o) read: no wage or market-rate requirement found in its text",
-    "web-search": "Same search: none named",
-    "trade-press": "None",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "Paid performing without a petition for a short engagement",
-   "tried": {
-    "institution": "uscis.gov 403; travel.state.gov 403",
-    "official-register": "8 CFR 214.2(o) read: none named",
-    "web-search": "Same search: none",
-    "trade-press": "None",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read."
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. || 2026-11-04: Common Crawl CC-MAIN-2026-43 and -39: cc.py list 'gov,uscis,egov)/processing-times' and 'gov,uscis,egov)/' => no processing-times capture; the crawler itself got 403 on egov.uscis.gov/robots.txt"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04, Puerto Rico taking the federal rules: the eCFR's 8 CFR 214.2, 22 CFR 22.1 (the O visa's USD 205 fee) and the FAM. USCIS's processing time stays unknown (403)."
 }

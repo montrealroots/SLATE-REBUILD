@@ -1,6 +1,6 @@
 {
  "country": "PY",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Residencia Espontánea u Ocasional",
  "routeChanged": false,
  "permit": {
@@ -17,7 +17,8 @@
   "union": null,
   "eligibility": "aquellos extranjeros cuyas labores estacionales u ocasionales, como integrantes de espectáculos públicos, o como invitados por entes públicos o privados en razón de su arte y/o profesión, obliguen a permanecer en el país, por no más de 90 (noventa) días.",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None: members of public shows staying up to 90 days take the occasional residence (Ley 6984, art. 56); the Law names no engagement free of it."
  },
  "sources": [
   {
@@ -33,6 +34,16 @@
     "validity",
     "eligibility"
    ]
+  },
+  {
+   "url": "https://www.bacn.gov.py/leyes-paraguayas/10973/ley-n-6984-de-migraciones",
+   "title": "Biblioteca y Archivo Central del Congreso Nacional (Paraguay), Ley N° 6984 de Migraciones, arts. 99-100",
+   "read": "2026-11-04",
+   "said": "Artículo 99.- Aranceles. Las personas extranjeras deberán abonar el arancel correspondiente por las solicitudes de Residencia Precaria, Temporal o Permanente, por cambio de información, prórroga de permanencia, cambio de categoría migratoria, expedición de certificados y documentos que exija la Dirección Nacional de Migraciones en cumplimiento de la presente Ley y de su reglamentación. Artículo 100.- Del valor de los aranceles. Las sumas que deberán abonar los extranjeros en concepto de aranceles mencionados en el artículo anterior son las siguientes: 1. Residencia Permanente: 15 (quince) jornales. 2. Residencia Temporaria: 10 (diez) jornales. 3. Residencia Espontánea u Ocasional: 8 (ocho) jornales. 4. Residencia Precaria: 5 (cinco) jornales. 5. Prórroga de residencia temporaria: 11 (once) jornales. 6. Prórroga de permanencia: 5 (cinco) jornales.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
  "blockers": [
@@ -40,8 +51,8 @@
    "field": "fees",
    "sought": "The DNM's fee (arancel) for Residencia Espontánea u Ocasional",
    "tried": {
-    "institution": "migraciones.gov.py (home and aranceles page): curl: (35) Recv failure: Connection reset by peer. The Paraguayan embassy in Berlin's 'Temporary stay' page names no fee. || Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee.",
-    "official-register": "Ley 6984/2022 read: the fee is 'el arancel correspondiente', set outside the law; the DNM's tariff resolution wasn't found. || Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee.",
+    "institution": "migraciones.gov.py (home and aranceles page): curl: (35) Recv failure: Connection reset by peer. The Paraguayan embassy in Berlin's 'Temporary stay' page names no fee. || Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee. || 2026-11-04: curl https://www.migraciones.gov.py/ and https://migraciones.gov.py/ (Dirección Nacional de Migraciones) => no connection (HTTP 000)",
+    "official-register": "Ley 6984/2022 read: the fee is 'el arancel correspondiente', set outside the law; the DNM's tariff resolution wasn't found. || Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee. || 2026-11-04: curl the Congress library's text of Ley 6984 (bacn.gov.py), read the whole HTML text for 'ocasional', 'arancel', 'tasa', 'jornal' => fee found: art. 100(3), eight jornales (daily minimum wages) for the Residencia Espontánea u Ocasional; no decision time, union step, pay rule or permit-free engagement for performers (art. 56 puts members of public shows under this residence for up to 90 days)",
     "web-search": "'Dirección Nacional de Migraciones Paraguay arancel residencia espontánea ocasional 2026 jornales costo': a comparison site's Gs. 892,016 (2025 schedule) and a press note of a new scale from 1 July 2026 for Mercosur residence; neither the DNM's own figure. || Retry 2026-11-01: WebSearch 'Paraguay Migraciones \"radicación temporaria\" artistas \"trabajadores\" tasa jornales 2026 resolución aranceles Dirección General de Migraciones plazo': Última Hora (July 2026, Resolution 407 on solvency), abogados.com.ar, La Política Online; no fee, time, union or pay rule.",
     "trade-press": "Prensa Mercosur (3 September 2026) gives the July 2026 scale's Mercosur temporary residence fee only. || Retry 2026-11-01: Última Hora and La Nación on 2026 changes; no fee schedule quoted.",
     "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
@@ -51,8 +62,8 @@
    "field": "processing",
    "sought": "The DNM's decision time",
    "tried": {
-    "institution": "migraciones.gov.py (home and aranceles page): curl: (35) Recv failure: Connection reset by peer. The Paraguayan embassy in Berlin's 'Temporary stay' page names no fee. || Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee.",
-    "official-register": "Ley 6984/2022 read: the fee is 'el arancel correspondiente', set outside the law; the DNM's tariff resolution wasn't found. || Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee.",
+    "institution": "migraciones.gov.py (home and aranceles page): curl: (35) Recv failure: Connection reset by peer. The Paraguayan embassy in Berlin's 'Temporary stay' page names no fee. || Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee. || 2026-11-04: curl https://www.migraciones.gov.py/ and https://migraciones.gov.py/ (Dirección Nacional de Migraciones) => no connection (HTTP 000)",
+    "official-register": "Ley 6984/2022 read: the fee is 'el arancel correspondiente', set outside the law; the DNM's tariff resolution wasn't found. || Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee. || 2026-11-04: curl the Congress library's text of Ley 6984 (bacn.gov.py), read the whole HTML text for 'ocasional', 'arancel', 'tasa', 'jornal' => fee found: art. 100(3), eight jornales (daily minimum wages) for the Residencia Espontánea u Ocasional; no decision time, union step, pay rule or permit-free engagement for performers (art. 56 puts members of public shows under this residence for up to 90 days)",
     "web-search": "'Dirección Nacional de Migraciones Paraguay arancel residencia espontánea ocasional 2026 jornales costo': a comparison site's Gs. 892,016 (2025 schedule) and a press note of a new scale from 1 July 2026 for Mercosur residence; neither the DNM's own figure. || Retry 2026-11-01: WebSearch 'Paraguay Migraciones \"radicación temporaria\" artistas \"trabajadores\" tasa jornales 2026 resolución aranceles Dirección General de Migraciones plazo': Última Hora (July 2026, Resolution 407 on solvency), abogados.com.ar, La Política Online; no fee, time, union or pay rule.",
     "trade-press": "None. || Retry 2026-11-01: Última Hora and La Nación on 2026 changes; no fee schedule quoted.",
     "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
@@ -62,8 +73,8 @@
    "field": "union",
    "sought": "A union or guild step",
    "tried": {
-    "institution": "Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee.",
-    "official-register": "Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee.",
+    "institution": "Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee. || 2026-11-04: curl https://www.migraciones.gov.py/ and https://migraciones.gov.py/ (Dirección Nacional de Migraciones) => no connection (HTTP 000)",
+    "official-register": "Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee. || 2026-11-04: curl the Congress library's text of Ley 6984 (bacn.gov.py), read the whole HTML text for 'ocasional', 'arancel', 'tasa', 'jornal' => fee found: art. 100(3), eight jornales (daily minimum wages) for the Residencia Espontánea u Ocasional; no decision time, union step, pay rule or permit-free engagement for performers (art. 56 puts members of public shows under this residence for up to 90 days)",
     "web-search": "Retry 2026-11-01: WebSearch 'Paraguay Migraciones \"radicación temporaria\" artistas \"trabajadores\" tasa jornales 2026 resolución aranceles Dirección General de Migraciones plazo': Última Hora (July 2026, Resolution 407 on solvency), abogados.com.ar, La Política Online; no fee, time, union or pay rule.",
     "trade-press": "Retry 2026-11-01: Última Hora and La Nación on 2026 changes; no fee schedule quoted.",
     "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
@@ -73,23 +84,13 @@
    "field": "pay",
    "sought": "A minimum or market pay rule",
    "tried": {
-    "institution": "Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee.",
-    "official-register": "Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee.",
-    "web-search": "Retry 2026-11-01: WebSearch 'Paraguay Migraciones \"radicación temporaria\" artistas \"trabajadores\" tasa jornales 2026 resolución aranceles Dirección General de Migraciones plazo': Última Hora (July 2026, Resolution 407 on solvency), abogados.com.ar, La Política Online; no fee, time, union or pay rule.",
-    "trade-press": "Retry 2026-11-01: Última Hora and La Nación on 2026 changes; no fee schedule quoted.",
-    "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "A short engagement needing no permit",
-   "tried": {
-    "institution": "Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee.",
-    "official-register": "Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee.",
+    "institution": "Retry 2026-11-01: migraciones.gov.py resets the connection again (2026-11-01); the embassy in Berlin's page (read earlier) names no fee. || 2026-11-04: curl https://www.migraciones.gov.py/ and https://migraciones.gov.py/ (Dirección Nacional de Migraciones) => no connection (HTTP 000)",
+    "official-register": "Retry 2026-11-01: Ley 6984/2022 (OAS copy of the earlier law surfaced); the DNM's tariff resolution not found; Agencia IP note on temporary residence requirements surfaced, no fee. || 2026-11-04: curl the Congress library's text of Ley 6984 (bacn.gov.py), read the whole HTML text for 'ocasional', 'arancel', 'tasa', 'jornal' => fee found: art. 100(3), eight jornales (daily minimum wages) for the Residencia Espontánea u Ocasional; no decision time, union step, pay rule or permit-free engagement for performers (art. 56 puts members of public shows under this residence for up to 90 days)",
     "web-search": "Retry 2026-11-01: WebSearch 'Paraguay Migraciones \"radicación temporaria\" artistas \"trabajadores\" tasa jornales 2026 resolución aranceles Dirección General de Migraciones plazo': Última Hora (July 2026, Resolution 407 on solvency), abogados.com.ar, La Política Online; no fee, time, union or pay rule.",
     "trade-press": "Retry 2026-11-01: Última Hora and La Nación on 2026 changes; no fee schedule quoted.",
     "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04: Ley 6984 de Migraciones on the BACN. Its fee is set in daily minimum wages (8 jornales, art. 100(3)), which the game can't price without the wage, so the fee stays unknown."
 }

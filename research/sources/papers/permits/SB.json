@@ -1,6 +1,6 @@
 {
  "country": "SB",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Entertainer Visa – Musician (Commercial)",
  "routeChanged": false,
  "permit": {
@@ -74,44 +74,44 @@
    "field": "processing",
    "sought": "The Immigration Division's decision time for the Entertainer Visa",
    "tried": {
-    "institution": "immigration.gov.sb: the entertainer pages give none; the Division's short-term employment page says the time varies by category and 'there is no specific timeframe'. | Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named.",
-    "official-register": "The Immigration Act 2012 isn't on the Division's pages read; PacLII (paclii.org) refused this client in layer 3 (HTTP 403). | Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached).",
+    "institution": "immigration.gov.sb: the entertainer pages give none; the Division's short-term employment page says the time varies by category and 'there is no specific timeframe'. | Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named. || 2026-11-04: immigration.gov.sb/entertainer-visa-musician-commercial/ by curl => HTTP 403 (refusal recorded, not bypassed)",
+    "official-register": "The Immigration Act 2012 isn't on the Division's pages read; PacLII (paclii.org) refused this client in layer 3 (HTTP 403). | Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached). || 2026-11-04: National Parliament of Solomon Islands (https://parliament.gov.sb/), its Acts listing (business/acts/) => HTTP 200 home; the Immigration Act 2012 and its regulations not found in the served page",
     "web-search": "'Solomon Islands entertainer visa processing time'; only the Division's own pages. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
+    "trade-press": "None found. | Retry 2026-11-01: None reachable without search. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'sb,gov,immigration)' => 1 capture, not the entertainer-visa page (which answers 403 live); nothing read"
    }
   },
   {
    "field": "union",
    "sought": "(as before)",
    "tried": {
-    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named.",
-    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached).",
+    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named. || 2026-11-04: immigration.gov.sb/entertainer-visa-musician-commercial/ by curl => HTTP 403 (refusal recorded, not bypassed)",
+    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached). || 2026-11-04: National Parliament of Solomon Islands (https://parliament.gov.sb/), its Acts listing (business/acts/) => HTTP 200 home; the Immigration Act 2012 and its regulations not found in the served page",
     "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: None reachable without search. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'sb,gov,immigration)' => 1 capture, not the entertainer-visa page (which answers 403 live); nothing read"
    }
   },
   {
    "field": "pay",
    "sought": "(as before)",
    "tried": {
-    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named.",
-    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached).",
+    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named. || 2026-11-04: immigration.gov.sb/entertainer-visa-musician-commercial/ by curl => HTTP 403 (refusal recorded, not bypassed)",
+    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached). || 2026-11-04: National Parliament of Solomon Islands (https://parliament.gov.sb/), its Acts listing (business/acts/) => HTTP 200 home; the Immigration Act 2012 and its regulations not found in the served page",
     "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: None reachable without search. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'sb,gov,immigration)' => 1 capture, not the entertainer-visa page (which answers 403 live); nothing read"
    }
   },
   {
    "field": "exempt",
    "sought": "(as before)",
    "tried": {
-    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named.",
-    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached).",
+    "institution": "Retry 2026-11-01: immigration.gov.sb answers; its entertainer pages and the short-term employment page (saved) say the time varies by category with 'no specific timeframe'; no union step, pay rule or exemption named. || 2026-11-04: immigration.gov.sb/entertainer-visa-musician-commercial/ by curl => HTTP 403 (refusal recorded, not bypassed)",
+    "official-register": "Retry 2026-11-01: paclii.org answers 403 (Immigration Act 2012 not reached). || 2026-11-04: National Parliament of Solomon Islands (https://parliament.gov.sb/), its Acts listing (business/acts/) => HTTP 200 home; the Immigration Act 2012 and its regulations not found in the served page",
     "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
+    "trade-press": "Retry 2026-11-01: None reachable without search. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'sb,gov,immigration)' => 1 capture, not the entertainer-visa page (which answers 403 live); nothing read"
    }
   }
  ]

@@ -1,10 +1,57 @@
 {
  "topic": "ages.MY",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Malaysia: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page.",
- "figures": [],
+ "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Malaysia: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page. Integrated 2026-11-04 from that day's research (layer 4's integration, each quote read by the integrator on its page): companies, funds, and the blockers for them removed.",
+ "figures": [
+  {
+   "item": "companies",
+   "finding": "A director must be a natural person at least eighteen years of age.",
+   "value": {
+    "directorMinAge": 18
+   },
+   "applies": "Malaysia, Companies Act 2016 (Act 777), as at 31 January 2025, s. 196(2).",
+   "sources": [
+    {
+     "src": 0,
+     "said": "196. (1) A company shall have a minimum number of directors as follows: (a) in the case of a private company, one director; or (b) in the case of a public company, two directors. (2) A director shall be a natural person who is at least eighteen years of age. || 235. (1) A company shall have at least one secretary who shall be— (a) a natural person; (b) eighteen years of age and above; and (c) a citizen or permanent resident of Malaysia,"
+    }
+   ]
+  },
+  {
+   "item": "funds",
+   "finding": "FINAS's creative content fund takes a company: one holding a FINAS production or distribution licence active for at least three months, more than 51% owned by Malaysian citizens, with no fund project running.",
+   "value": {
+    "Dana Kandungan Kreatif (FINAS)": {
+     "applicant": "a company (syarikat) holding a FINAS production or distribution licence",
+     "individualsMayApply": false
+    }
+   },
+   "applies": "Malaysia, FINAS's Dana Kandungan Kreatif, its general conditions (read in the research agent's saved copy of FINAS's page; the page refused this integrator's fetch).",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Syarat-Syarat Am Permohonan DKK Lesen pengeluaran / pengedaran FINAS hendaklah masih aktif sekurang-kurangnya 3 bulan sebelum tarikh permohonan dibuat. Lebih daripada lima puluh satu peratus (51%) pemilikan sah dan benefisial pemohon terletak hak pada warganegara Malaysia. Syarikat tidak mempunyai projek DKK yang sedang berjalan (on going) atau telah menerima surat tutup projek daripada FINAS. Bebas dari perintah penggulungan dan senarai muflis."
+    }
+   ]
+  }
+ ],
  "country": "MY",
- "sources": [],
+ "sources": [
+  {
+   "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_as%20at%2031%20January%202025.pdf",
+   "title": "Companies Act 2016 [Act 777], as at 31 January 2025 (Companies Commission of Malaysia, SSM)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "196. (1) A company shall have a minimum number of directors as follows: (a) in the case of a private company, one director; or (b) in the case of a public company, two directors. (2) A director shall be a natural person who is at least eighteen years of age. || 235. (1) A company shall have at least one secretary who shall be— (a) a natural person; (b) eighteen years of age and above; and (c) a citizen or permanent resident of Malaysia,"
+  },
+  {
+   "url": "https://www.finas.gov.my/services/funding",
+   "title": "FINAS - Dana & Pembiayaan: Dana Kandungan Kreatif (DKK)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "Syarat-Syarat Am Permohonan DKK Lesen pengeluaran / pengedaran FINAS hendaklah masih aktif sekurang-kurangnya 3 bulan sebelum tarikh permohonan dibuat. Lebih daripada lima puluh satu peratus (51%) pemilikan sah dan benefisial pemohon terletak hak pada warganegara Malaysia. Syarikat tidak mempunyai projek DKK yang sedang berjalan (on going) atau telah menerima surat tutup projek daripada FINAS. Bebas dari perintah penggulungan dan senarai muflis."
+  }
+ ],
  "blockers": [
   {
    "item": "majority",
@@ -58,28 +105,6 @@
     "official-register": "agc.gov.my home page only",
     "web-search": "not run: the web-search limit shared by every agent this turn (200 calls) was used up before this agent's first query, so no search was made",
     "trade-press": "none found",
-    "archive": "web.archive.org reset the connection (curl 35) and archive.org's availability API answered 429 Too Many Requests, 2026-11-01; not read another way"
-   }
-  },
-  {
-   "item": "funds",
-   "sought": "Malaysia: a film fund's applicant age or capacity rule",
-   "tried": {
-    "institution": "no film fund's rules page known to this agent without a search",
-    "official-register": "agc.gov.my home page only",
-    "web-search": "not run: the web-search limit shared by every agent this turn (200 calls) was used up before this agent's first query, so no search was made",
-    "trade-press": "none found",
-    "archive": "web.archive.org reset the connection (curl 35) and archive.org's availability API answered 429 Too Many Requests, 2026-11-01; not read another way"
-   }
-  },
-  {
-   "item": "companies",
-   "sought": "Malaysia: the age from which a person may form and direct a company",
-   "tried": {
-    "institution": "jtksm.mohr.gov.my (Act 350 reprint): connection reset, 2026-11-01; lom.agc.gov.my answered 200 but its reprint list's data endpoint (json-reprint-2024.php) returned a server error ('Table ... V_LG_TIMELINE_REPRINT_ONLINE_2025 doesn't exist') for every query on 2026-11-01, and act-detail pages need signed tokens only the list gives",
-    "official-register": "agc.gov.my home page only",
-    "web-search": "not run: the web-search limit shared by every agent this turn (200 calls) was used up before this agent's first query, so no search was made",
-    "trade-press": "The Star's search (2026-10-31) not read for these",
     "archive": "web.archive.org reset the connection (curl 35) and archive.org's availability API answered 429 Too Many Requests, 2026-11-01; not read another way"
    }
   }

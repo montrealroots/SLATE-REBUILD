@@ -69,6 +69,33 @@
      },
      "premium": false,
      "when": "grant"
+    },
+    {
+     "what": "ICP entry visa for a work mission: application fee",
+     "money": {
+      "currency": "AED",
+      "minor": 10000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "ICP entry visa for a work mission: visa issuance fee",
+     "money": {
+      "currency": "AED",
+      "minor": 10000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "ICP entry visa for a work mission: smart service fee",
+     "money": {
+      "currency": "AED",
+      "minor": 10000
+     },
+     "premium": false,
+     "when": "grant"
     }
    ],
    "standard": {
@@ -85,9 +112,7 @@
    "union": null,
    "eligibility": "According to the terms of service, individuals of all skill levels and professions are eligible to obtain this type of permit",
    "pay": null,
-   "unknown": [
-    "fees"
-   ]
+   "unknown": []
   },
   "AG": {
    "by": "worker",
@@ -100,6 +125,15 @@
      },
      "premium": false,
      "when": "both"
+    },
+    {
+     "what": "Work permit fee, artist or entertainer, non-CARICOM national, a year (Work Permit (Fees) Order 2017; pro-rated for a shorter permit)",
+     "money": {
+      "currency": "XCD",
+      "minor": 200000
+     },
+     "premium": false,
+     "when": "grant"
     }
    ],
    "standard": null,
@@ -118,8 +152,7 @@
     "union",
     "eligibility",
     "pay",
-    "exempt",
-    "fees"
+    "exempt"
    ]
   },
   "AI": {
@@ -214,11 +247,9 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "No criterion for performers as such: every work-visa applicant shows a literary or professional qualification certificate, a criminal record from the country of origin or residence and a medical certificate (each visaed by the Foreign Ministry and the consulate), a CV in Portuguese, means of subsistence of 200 a day of stay (the sheet names no currency), the ministry's favourable opinion and a notarised contract or promise of contract.",
    "pay": null,
-   "unknown": [
-    "eligibility"
-   ]
+   "unknown": []
   },
   "AR": {
    "by": "engager",
@@ -336,7 +367,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 6,
+    "unit": "weeks"
+   },
    "premium": null,
    "term": {
     "n": 6,
@@ -347,9 +381,7 @@
    "union": "Before the AMS decides, its regional advisory board (Regionalbeirat) is heard, any statement due within one week (AuslBG § 20(2)); no union is named.",
    "eligibility": "The work must consist \"überwiegend aus künstlerischer Gestaltung\"; a permit for an artist may be refused only where the harm to public interests weighs disproportionately more than the harm to the artist's freedom of art.",
    "pay": "No fixed minimum: the permit is granted only where the employer can be trusted to keep the wage and working conditions in force, social insurance included (AuslBG § 4(1) Z 2).",
-   "unknown": [
-    "processing"
-   ]
+   "unknown": []
   },
   "AU": {
    "by": "worker",
@@ -365,7 +397,7 @@
     }
    ],
    "standard": {
-    "n": 47,
+    "n": 40,
     "unit": "days"
    },
    "premium": null,
@@ -378,10 +410,7 @@
    "union": "The sponsor or supporter must consult one or more Australian unions before the application: the Musicians Union of Australia for musicians and conductors, the Australian Directors Guild for foreign screen directors, the Media Entertainment and Arts Alliance for all others.",
    "eligibility": "a lead actor or major support actor in a television or film production",
    "pay": null,
-   "unknown": [
-    "pay",
-    "exempt"
-   ]
+   "unknown": []
   },
   "AW": {
    "by": "worker",
@@ -486,104 +515,51 @@
    "by": "engager",
    "fees": [
     {
-     "what": "State duty, work permit up to 3 months (standard term; 2019 schedule)",
-     "money": {
-      "currency": "AZN",
-      "minor": 35000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "State duty, up to 6 months (standard term)",
-     "money": {
-      "currency": "AZN",
-      "minor": 60000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "State duty, up to 1 year (standard term)",
-     "money": {
-      "currency": "AZN",
-      "minor": 100000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 15 working days, work permit up to 3 months",
-     "money": {
-      "currency": "AZN",
-      "minor": 50000
-     },
-     "premium": true,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 15 working days, work permit up to 6 months",
-     "money": {
-      "currency": "AZN",
-      "minor": 70000
-     },
-     "premium": true,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 15 working days, work permit up to 1 year",
-     "money": {
-      "currency": "AZN",
-      "minor": 120000
-     },
-     "premium": true,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 10 working days, work permit up to 3 months",
-     "money": {
-      "currency": "AZN",
-      "minor": 70000
-     },
-     "premium": true,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 10 working days, work permit up to 6 months",
-     "money": {
-      "currency": "AZN",
-      "minor": 90000
-     },
-     "premium": true,
-     "when": "grant"
-    },
-    {
-     "what": "State duty for a decision within 10 working days, work permit up to 1 year",
+     "what": "State duty for a work permit or its extension, up to 2 years, decided in 20 working days",
      "money": {
       "currency": "AZN",
       "minor": 140000
      },
+     "premium": false,
+     "when": "both"
+    },
+    {
+     "what": "State duty for a work permit or its extension, up to 2 years, decided within 10 working days",
+     "money": {
+      "currency": "AZN",
+      "minor": 180000
+     },
      "premium": true,
-     "when": "grant"
+     "when": "both"
+    },
+    {
+     "what": "State duty for a work permit or its extension, up to 2 years, decided within 15 working days",
+     "money": {
+      "currency": "AZN",
+      "minor": 160000
+     },
+     "premium": true,
+     "when": "both"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 20,
+    "unit": "business-days"
+   },
    "premium": {
     "n": 10,
     "unit": "business-days"
    },
    "term": {
-    "n": 1,
+    "n": 2,
     "unit": "years"
    },
-   "renews": null,
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "processing",
-    "fees",
     "exempt",
     "union",
     "pay"
@@ -740,7 +716,6 @@
    "pay": "The working conditions and pay offered may be no less favourable than those for Bulgarian citizens in the same category of work (art. 7(1)(2)).",
    "unknown": [
     "all",
-    "union",
     "exempt"
    ]
   },
@@ -748,55 +723,28 @@
    "by": "engager",
    "fees": [
     {
-     "what": "Visa issuance, 6-month work permit (2026)",
+     "what": "Work permit service fee, two years (LMRA)",
      "money": {
       "currency": "BHD",
-      "minor": 52500
+      "minor": 390000
      },
      "premium": false,
      "when": "grant"
     },
     {
-     "what": "Health care, 6-month work permit (2026)",
+     "what": "Admin fee (LMRA)",
      "money": {
       "currency": "BHD",
-      "minor": 45000
+      "minor": 5000
      },
      "premium": false,
      "when": "grant"
     },
     {
-     "what": "Visa issuance, 12-month work permit (2026)",
+     "what": "Job advertisement fee, applications from outside the Kingdom (LMRA)",
      "money": {
       "currency": "BHD",
-      "minor": 105000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Health care, 12-month work permit (2026)",
-     "money": {
-      "currency": "BHD",
-      "minor": 90000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Visa issuance, 24-month work permit (2026)",
-     "money": {
-      "currency": "BHD",
-      "minor": 210000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Health care, 24-month work permit (2026)",
-     "money": {
-      "currency": "BHD",
-      "minor": 180000
+      "minor": 30000
      },
      "premium": false,
      "when": "grant"
@@ -820,7 +768,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 21,
+    "unit": "business-days"
+   },
    "premium": null,
    "term": {
     "n": 24,
@@ -832,7 +783,6 @@
    "eligibility": "« أن يكون العامل الأجنبي لائقاً من الناحية الصحية وخالياً من الأمراض المعدية » (the foreign worker must be medically fit and free of infectious diseases; Law No. 19 of 2006, art. 24(b)(4)).",
    "pay": null,
    "unknown": [
-    "processing",
     "union",
     "pay"
    ]
@@ -933,8 +883,8 @@
     }
    ],
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null,
    "term": {
@@ -947,7 +897,6 @@
    "eligibility": "« si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique »",
    "pay": "Resources of at least 70% of the full-time gross SMIC for each month of stay (1,306.91 € a month), at least 51% of it from the artistic activity.",
    "unknown": [
-    "processing",
     "exempt",
     "applies"
    ]
@@ -992,14 +941,12 @@
     "n": 8,
     "unit": "months"
    },
-   "renews": null,
+   "renews": true,
    "renewal": null,
    "union": "Promoters and event organizers must also contact the Bermuda Entertainment Union (bermudaentertainmentunion.com) to provide notification of the event, obtain approval and pay any required dues.",
    "eligibility": "Work permits for foreign musicians/entertainers to perform at commercial locations open to the public (clubs, pubs and hotels) may be granted, provided they are advertised in the normal way.",
    "pay": null,
-   "unknown": [
-    "validity"
-   ]
+   "unknown": []
   },
   "BN": {
    "by": "engager",
@@ -1077,18 +1024,19 @@
    "fees": [],
    "standard": null,
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "The worker is 18 to 45 on the day the first application is made and holds the qualifications the vacancy asks (diploma, experience, languages).",
    "pay": "Pay must be at market rate (marktconform) and at least the minimum wage.",
    "unknown": [
     "fees",
     "processing",
-    "validity",
-    "union",
-    "eligibility"
+    "union"
    ]
   },
   "BR": {
@@ -1349,8 +1297,7 @@
    "pay": "On an LMIA, employment is unlikely to have a positive or neutral effect on the labour market if the wages offered are not consistent with the prevailing wage rate for the occupation.",
    "unknown": [
     "processing",
-    "union",
-    "exempt"
+    "union"
    ]
   },
   "CC": {
@@ -1366,23 +1313,22 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 40,
+    "unit": "days"
+   },
    "premium": null,
    "term": {
     "n": 2,
     "unit": "years"
    },
-   "renews": null,
+   "renews": false,
    "renewal": null,
    "union": "The eligible sponsor or eligible supporter must have consulted with relevant Australian unions about the performer's employment or engagement in Australia.",
    "eligibility": "For a stage performer, the activity \"will bring a net employment benefit to the Australian entertainment industry\"; for an unsubsidised film or television role, a leading, major supporting or cameo role with the Arts Minister's certificate.",
    "pay": null,
    "unknown": [
-    "processing",
-    "fees",
-    "validity",
-    "pay",
-    "exempt"
+    "fees"
    ]
   },
   "CD": {
@@ -1494,8 +1440,7 @@
    "eligibility": "« Es können nur fachlich sehr gut qualifizierte Musikerinnen und Musiker sowie Künstlerinnen und Künstler oder solche mit einem nachgewiesenen Bekanntheitsgrad im In- oder Ausland zugelassen werden. »",
    "pay": "Pay and working conditions must be usual for the place and the trade; for musicians the minimum daily fee is the guideline tariff of the Swiss Musicians' Association (SMV) and ASCO.",
    "unknown": [
-    "processing",
-    "union"
+    "processing"
    ]
   },
   "CI": {
@@ -1744,7 +1689,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 10,
+    "unit": "business-days"
+   },
    "premium": null,
    "term": {
     "n": 90,
@@ -1753,12 +1701,10 @@
    "renews": false,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "A national of a country whose citizens need no visa for a short stay in Colombia, invited to a concert, event or artistic activity by a company registered in Colombia and in SIRE, which undertakes in writing to pay the stay and return; permits may be granted several times a year, up to 180 days in all.",
    "pay": null,
    "unknown": [
-    "processing",
     "union",
-    "eligibility",
     "pay",
     "exempt"
    ]
@@ -1792,6 +1738,26 @@
    "pay": null,
    "unknown": [
     "union",
+    "pay",
+    "exempt"
+   ]
+  },
+  "CU": {
+   "by": "worker",
+   "fees": null,
+   "standard": null,
+   "premium": null,
+   "term": null,
+   "renews": null,
+   "renewal": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "unknown": [
+    "fees",
+    "processing",
+    "validity",
+    "eligibility",
     "pay",
     "exempt"
    ]
@@ -1879,7 +1845,7 @@
     }
    ],
    "standard": {
-    "n": 47,
+    "n": 40,
     "unit": "days"
    },
    "premium": null,
@@ -1892,30 +1858,57 @@
    "union": "The sponsor or supporter must consult one or more Australian unions before the application: the Musicians Union of Australia for musicians and conductors, the Australian Directors Guild for foreign screen directors, the Media Entertainment and Arts Alliance for all others.",
    "eligibility": "a lead actor or major support actor in a television or film production",
    "pay": null,
-   "unknown": [
-    "pay",
-    "exempt"
-   ]
+   "unknown": []
   },
   "CY": {
    "by": "engager",
-   "fees": [],
-   "standard": null,
+   "fees": [
+    {
+     "what": "Entry, residence and work permit for employment, up to 6 months",
+     "money": {
+      "currency": "EUR",
+      "minor": 5000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Registration in the aliens' register, first registration",
+     "money": {
+      "currency": "EUR",
+      "minor": 7000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Bank guarantee for repatriation, ten years (national of the U.S.A., Canada, China, India, Brazil and most countries)",
+     "money": {
+      "currency": "EUR",
+      "minor": 85000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
+   "standard": {
+    "n": 3,
+    "unit": "months"
+   },
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "fees",
-    "processing",
-    "validity",
     "union",
     "eligibility",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "CZ": {
@@ -1946,7 +1939,6 @@
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "union",
     "eligibility",
     "pay",
     "fees"
@@ -2139,6 +2131,48 @@
    "eligibility": "le travailleur étranger possède les titres, diplômes et qualification professionnelle nécessaires à l'emploi à occuper,",
    "pay": "The foreign worker is paid at the post index an Algerian counterpart of the same level could claim, possibly with an increase set by decree (art. 16).",
    "unknown": []
+  },
+  "EC": {
+   "by": "worker",
+   "fees": [
+    {
+     "what": "Visa application",
+     "money": {
+      "currency": "USD",
+      "minor": 5000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Visa grant",
+     "money": {
+      "currency": "USD",
+      "minor": 27000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
+   "standard": null,
+   "premium": null,
+   "term": {
+    "n": 2,
+    "unit": "years"
+   },
+   "renews": null,
+   "renewal": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "unknown": [
+    "union",
+    "eligibility",
+    "pay",
+    "exempt",
+    "processing",
+    "validity"
+   ]
   },
   "EE": {
    "by": "engager",
@@ -2491,11 +2525,10 @@
    "renewal": null,
    "union": null,
    "eligibility": "når væsentlige beskæftigelsesmæssige eller erhvervsmæssige hensyn taler derfor",
-   "pay": null,
+   "pay": "Salary and terms of employment must correspond to Faroese standards: pay, holidays and notice no worse than the standards of the professional field, and as a rule full-time (normally 40 hours a week); the Immigration Office assesses this.",
    "unknown": [
     "fees",
-    "union",
-    "pay"
+    "union"
    ]
   },
   "FR": {
@@ -2530,8 +2563,8 @@
     }
    ],
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null,
    "term": {
@@ -2543,9 +2576,7 @@
    "union": null,
    "eligibility": "« si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique »",
    "pay": "Resources of at least 70% of the full-time gross SMIC for each month of stay (1,306.91 € a month), at least 51% of it from the artistic activity.",
-   "unknown": [
-    "processing"
-   ]
+   "unknown": []
   },
   "GA": {
    "by": "engager",
@@ -2706,8 +2737,7 @@
    "eligibility": "The applicant has an international reputation and record of excellence in their declared field, or ethnic significance, or is manifestly essential to the presentation or production (where necessary).",
    "pay": null,
    "unknown": [
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "GE": {
@@ -2759,8 +2789,6 @@
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "all",
-    "union",
     "eligibility",
     "pay"
    ]
@@ -2801,9 +2829,7 @@
    "union": null,
    "eligibility": "si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique",
    "pay": "Resources of at least 70 % of the full-time gross SMIC per month of stay in France (1 306,91 €), at least 51 % of them from the activity as a performer or author.",
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "GG": {
    "by": "engager",
@@ -2869,16 +2895,21 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 10,
+    "unit": "weeks"
+   },
    "premium": null,
-   "term": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
    "renews": null,
    "renewal": null,
    "union": null,
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "processing",
     "validity",
     "eligibility",
     "union",
@@ -2969,7 +3000,17 @@
   },
   "GM": {
    "by": "engager",
-   "fees": null,
+   "fees": [
+    {
+     "what": "Residential Permit B (to reside and work), non-ECOWAS national (the Alien Card, D2500, included)",
+     "money": {
+      "currency": "GMD",
+      "minor": 770000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
    "standard": {
     "n": 5,
     "unit": "business-days"
@@ -3036,7 +3077,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 90,
+    "unit": "days"
+   },
    "premium": null,
    "term": {
     "n": 4,
@@ -3048,9 +3092,27 @@
    "eligibility": "\"si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique\"",
    "pay": "Resources of at least 70% of the full-time gross SMIC per month of stay (EUR 1,306.91), at least 51% of it from the artistic activity.",
    "unknown": [
+    "exempt"
+   ]
+  },
+  "GQ": {
+   "by": "worker",
+   "fees": [],
+   "standard": null,
+   "premium": null,
+   "term": null,
+   "renews": null,
+   "renewal": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "unknown": [
+    "fees",
     "processing",
     "validity",
     "union",
+    "eligibility",
+    "pay",
     "exempt"
    ]
   },
@@ -3102,8 +3164,7 @@
     "processing",
     "eligibility",
     "union",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "GT": {
@@ -3266,7 +3327,6 @@
    "eligibility": "\"possess special skills, knowledge or experience of value to and not readily available in the HKSAR\"",
    "pay": "The remuneration package must be broadly commensurate with the prevailing market level for professionals in Hong Kong.",
    "unknown": [
-    "union",
     "exempt"
    ]
   },
@@ -3338,7 +3398,6 @@
    "pay": null,
    "unknown": [
     "processing",
-    "union",
     "eligibility",
     "pay"
    ]
@@ -3380,8 +3439,7 @@
    "eligibility": "« c) előadóművész » (Act XC of 2023, § 36 (5): the Card is open to a third-country national who is a performing artist)",
    "pay": null,
    "unknown": [
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "ID": {
@@ -3671,12 +3729,11 @@
    },
    "renews": true,
    "renewal": null,
-   "union": null,
+   "union": "The Directorate of Labour asks the relevant union (or national federation) for its opinion on a temporary work permit (Act 97/2002 art. 7(1)(b)); the opinion doesn't bind the Directorate, and a negative one must give its reasons (Regulation 339/2005 art. 9).",
    "eligibility": null,
    "pay": null,
    "unknown": [
     "eligibility",
-    "union",
     "pay"
    ]
   },
@@ -3728,6 +3785,35 @@
     "union",
     "exempt"
    ]
+  },
+  "JE": {
+   "by": "engager",
+   "fees": [
+    {
+     "what": "Work permit, over 2 up to 3 years (paid by the employer)",
+     "money": {
+      "currency": "GBP",
+      "minor": 35000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
+   "standard": {
+    "n": 3,
+    "unit": "weeks"
+   },
+   "premium": null,
+   "term": {
+    "n": 3,
+    "unit": "years"
+   },
+   "renews": true,
+   "renewal": null,
+   "union": null,
+   "eligibility": "Actors, entertainers and presenters (SOC 3413), dancers (3414) and musicians (3415) are long-term work permit occupations.",
+   "pay": "Actors, entertainers and presenters must be paid at least £30,960 a year or the going rate for the role, whichever is higher (musicians £32,900; arts officers, producers and directors £37,500).",
+   "unknown": []
   },
   "JM": {
    "by": "worker",
@@ -3921,7 +4007,6 @@
    "pay": "For film, broadcast, advertising, commercial photography and recording work, and for performances other than theatre, music and dance: at least the pay a Japanese person would receive for the same work. For theatre, music and dance under criterion (c), a contract obliging the organisation to pay at least 200,000 yen a month.",
    "unknown": [
     "fees",
-    "union",
     "exempt"
    ]
   },
@@ -3989,6 +4074,56 @@
     "eligibility",
     "union",
     "pay",
+    "exempt"
+   ]
+  },
+  "KI": {
+   "by": "worker",
+   "fees": [
+    {
+     "what": "Work permit application form, single journey",
+     "money": {
+      "currency": "AUD",
+      "minor": 4000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Work permit fee (paid to the Ministry of Finance and Economic Development)",
+     "money": {
+      "currency": "AUD",
+      "minor": 15000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Work permit security bond (refunded at the permit's end)",
+     "money": {
+      "currency": "AUD",
+      "minor": 100000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
+   "standard": {
+    "n": 30,
+    "unit": "business-days"
+   },
+   "premium": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
+   "renewal": null,
+   "union": null,
+   "eligibility": "Suitably qualified by training and experience for the job offered, of acceptable health and good character, with funds for maintenance: a salary an immigration officer finds sufficient, the employer's guarantee, own funds, or a sponsor in Kiribati.",
+   "pay": "The employer must pay no less than the minimum wage, and the salary must, in the immigration officer's view, cover maintenance and accommodation unless the employer guarantees them.",
+   "unknown": [
+    "union",
     "exempt"
    ]
   },
@@ -4065,26 +4200,75 @@
     "processing",
     "union",
     "eligibility",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "KR": {
    "by": "engager",
-   "fees": [],
+   "fees": [
+    {
+     "what": "Single-entry visa, stay of 91 days or more (the US-dollar equivalent, charged in the mission's currency)",
+     "money": {
+      "currency": "USD",
+      "minor": 6000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Alien registration card",
+     "money": {
+      "currency": "KRW",
+      "minor": 35000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Extension of the period of stay",
+     "money": {
+      "currency": "KRW",
+      "minor": 60000
+     },
+     "premium": false,
+     "when": "renewal"
+    }
+   ],
+   "standard": null,
+   "premium": null,
+   "term": {
+    "n": 2,
+    "unit": "years"
+   },
+   "renews": true,
+   "renewal": null,
+   "union": null,
+   "eligibility": "Performance, broadcast, or advertising activities under contract with domestic public institutions or private organizations",
+   "pay": null,
+   "unknown": [
+    "processing",
+    "pay",
+    "exempt"
+   ]
+  },
+  "KW": {
+   "by": null,
+   "fees": null,
    "standard": null,
    "premium": null,
    "term": null,
    "renews": null,
    "renewal": null,
    "union": null,
-   "eligibility": "Performance, broadcast, or advertising activities under contract with domestic public institutions or private organizations",
+   "eligibility": null,
    "pay": null,
    "unknown": [
+    "applies",
     "fees",
     "processing",
     "validity",
     "union",
+    "eligibility",
     "pay",
     "exempt"
    ]
@@ -4311,9 +4495,7 @@
    "union": null,
    "eligibility": "Eine Kurzaufenthalts- oder Aufenthaltsbewilligung zur Ausübung einer unselbständigen Erwerbstätigkeit kann nur an Führungskräfte, Spezialisten und andere qualifizierte Arbeitnehmer mit abgeschlossener Berufslehre oder langjähriger Berufserfahrung erteilt werden.",
    "pay": "Ausländer können zur Ausübung einer unselbständigen Erwerbstätigkeit nur zugelassen werden, wenn die orts-, berufs- und branchenüblichen Lohn- und Arbeitsbedingungen eingehalten werden (Art. 15 AuG).",
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "LK": {
    "by": "worker",
@@ -4410,46 +4592,19 @@
    "by": "engager",
    "fees": [
     {
-     "what": "Application fee (non-refundable)",
+     "what": "Application fee, new or renewal (non-refundable)",
      "money": {
       "currency": "LSL",
-      "minor": 50000
+      "minor": 100000
      },
      "premium": false,
-     "when": "grant"
+     "when": "both"
     },
     {
-     "what": "Work permit of 6 months and below",
-     "money": {
-      "currency": "LSL",
-      "minor": 150000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Work permit above 6 months",
-     "money": {
-      "currency": "LSL",
-      "minor": 250000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Work permit for 2 years",
+     "what": "Certificate of employment, two years",
      "money": {
       "currency": "LSL",
       "minor": 300000
-     },
-     "premium": false,
-     "when": "grant"
-    },
-    {
-     "what": "Printing of the work permit card",
-     "money": {
-      "currency": "LSL",
-      "minor": 35000
      },
      "premium": false,
      "when": "grant"
@@ -4467,13 +4622,10 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "No performer criterion: the Director must certify that no qualified citizen is in the labour market database (s. 163(2)).",
    "pay": null,
    "unknown": [
-    "eligibility",
-    "pay",
-    "exempt",
-    "union"
+    "exempt"
    ]
   },
   "LT": {
@@ -4534,22 +4686,26 @@
     "unit": "years"
    },
    "union": null,
-   "eligibility": null,
-   "pay": null,
+   "eligibility": "No criterion particular to performers: a CV, diplomas or proof of professional qualifications and a criminal-record extract under three months old.",
+   "pay": "The contract's gross pay must be at least the monthly social minimum wage (salaire social minimum mensuel).",
    "unknown": [
     "processing",
     "validity",
-    "union",
-    "eligibility",
-    "pay"
+    "union"
    ]
   },
   "LV": {
    "by": "engager",
    "fees": [],
-   "standard": null,
+   "standard": {
+    "n": 30,
+    "unit": "days"
+   },
    "premium": null,
-   "term": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
    "renews": null,
    "renewal": null,
    "union": null,
@@ -4557,12 +4713,10 @@
    "pay": null,
    "unknown": [
     "fees",
-    "processing",
     "validity",
     "union",
     "eligibility",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "LY": {
@@ -4633,8 +4787,6 @@
    "unknown": [
     "processing",
     "validity",
-    "union",
-    "exempt",
     "pay",
     "eligibility"
    ]
@@ -4784,8 +4936,8 @@
     }
    ],
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null,
    "term": {
@@ -4830,8 +4982,7 @@
    "pay": null,
    "unknown": [
     "union",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "MK": {
@@ -4865,7 +5016,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 60,
+    "unit": "business-days"
+   },
    "premium": null,
    "term": {
     "n": 1,
@@ -4877,12 +5031,9 @@
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "processing",
-    "validity",
     "union",
     "eligibility",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "ML": {
@@ -4942,7 +5093,17 @@
   },
   "MO": {
    "by": "engager",
-   "fees": null,
+   "fees": [
+    {
+     "what": "Non-resident worker's identity document, issue or renewal",
+     "money": {
+      "currency": "MOP",
+      "minor": 10000
+     },
+     "premium": false,
+     "when": "both"
+    }
+   ],
    "standard": null,
    "premium": null,
    "term": null,
@@ -5044,15 +5205,13 @@
    "union": null,
    "eligibility": "\"si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique\"",
    "pay": "Resources of at least 70 % of the full-time gross SMIC per month of stay (EUR 1,306.91), at least 51 % of it from the work as performer or author.",
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "MR": {
    "by": "engager",
    "fees": [],
    "standard": {
-    "n": 3,
+    "n": 4,
     "unit": "weeks"
    },
    "premium": null,
@@ -5066,10 +5225,7 @@
    "eligibility": "Que le travailleur étranger justifie les qualifications requises pour l’occupation de l’emploi détermine demandé;",
    "pay": null,
    "unknown": [
-    "fees",
-    "union",
-    "pay",
-    "exempt"
+    "fees"
    ]
   },
   "MS": {
@@ -5132,19 +5288,17 @@
    ],
    "standard": null,
    "premium": null,
-   "term": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
    "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "processing",
-    "validity",
-    "exempt",
-    "union",
-    "eligibility",
-    "pay"
+    "processing"
    ]
   },
   "MT": {
@@ -5218,17 +5372,33 @@
   },
   "MU": {
    "by": "engager",
-   "fees": [],
+   "fees": [
+    {
+     "what": "Processing fee, per application",
+     "money": {
+      "currency": "MUR",
+      "minor": 70000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Annual fee on approval (non-refundable), with the prescribed work permit fee",
+     "money": {
+      "currency": "MUR",
+      "minor": 50000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
    "standard": null,
    "premium": null,
-   "term": {
-    "n": 4,
-    "unit": "years"
-   },
-   "renews": null,
+   "term": null,
+   "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "Generally aged between 20 and 60; no work permit for a holder of a tourist or student visa.",
    "pay": null,
    "unknown": [
     "fees",
@@ -5236,8 +5406,7 @@
     "validity",
     "union",
     "pay",
-    "exempt",
-    "eligibility"
+    "exempt"
    ]
   },
   "MV": {
@@ -5345,14 +5514,12 @@
     "n": 180,
     "unit": "days"
    },
-   "renews": null,
+   "renews": false,
    "renewal": null,
    "union": null,
    "eligibility": "Autoriza al extranjero que cuente con una oferta de empleo, con una invitación por parte de alguna autoridad o institución académica, artística, deportiva o cultural por la cual perciba una remuneración en el país",
    "pay": null,
-   "unknown": [
-    "validity"
-   ]
+   "unknown": []
   },
   "MY": {
    "by": "engager",
@@ -5487,14 +5654,12 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "The government weighs the present and future employment situation in the profession, the employer's compliance with labour law, pay and conditions identical to French workers', and housing (Labour Code of New Caledonia art. R. 452-4).",
    "pay": "Conditions of employment and pay identical to those French workers enjoy.",
    "unknown": [
     "fees",
     "processing",
-    "union",
-    "eligibility",
-    "exempt"
+    "union"
    ]
   },
   "NE": {
@@ -5536,7 +5701,7 @@
     }
    ],
    "standard": {
-    "n": 47,
+    "n": 40,
     "unit": "days"
    },
    "premium": null,
@@ -5549,10 +5714,7 @@
    "union": "You must consult one or more Australian unions before the applicant submits their application under one of the following entertainment categories (film or television performers among them); directors: the Australian Directors Guild (ADG); musicians and conductors: the Musicians Union; all other applications: the Media Entertainment and Arts Alliance (MEAA).",
    "eligibility": "You must have a contract for your performance or work in Australia",
    "pay": null,
-   "unknown": [
-    "pay",
-    "exempt"
-   ]
+   "unknown": []
   },
   "NG": {
    "by": "worker",
@@ -5617,15 +5779,13 @@
     "n": 3,
     "unit": "years"
    },
-   "renews": null,
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": "\"U werkt in de dans, klassieke muziek, opera, musical, theater of toneel. U gaat werken in een beroep in het topsegment van de lijst met functies.\"",
    "pay": "Minimum gross monthly pay by function on UWV's Beroepenlijst artiest en inkomen: actor (acteur) EUR 4,233, director (regisseur) EUR 4,233; pay must also meet the collective agreement for the function.",
    "unknown": [
-    "union",
-    "fees",
-    "validity"
+    "fees"
    ]
   },
   "NO": {
@@ -5699,15 +5859,11 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
-   "pay": null,
+   "eligibility": "No performer criterion: the skill must be unobtainable from Nepali citizens after an advertisement in a national daily (s. 22(2)-(4)).",
+   "pay": "Pay and conditions may not fall below the standards the Labour Act or its Rules set (s. 27(1)).",
    "unknown": [
     "all",
-    "processing",
-    "union",
-    "eligibility",
-    "pay",
-    "exempt"
+    "processing"
    ]
   },
   "NZ": {
@@ -5734,9 +5890,7 @@
    "union": "Before we make a decision about your application, we ask the New Zealand entertainment industry organisation relevant to your role, if they will support your application to work in New Zealand. Skipped for work of 14 days or less, a certified official co-production, or an accredited employer.",
    "eligibility": "you want to work on a film, video or production in New Zealand and you have specific skills that cannot be met by New Zealand's entertainment industry",
    "pay": null,
-   "unknown": [
-    "pay"
-   ]
+   "unknown": []
   },
   "OM": {
    "by": "engager",
@@ -6027,10 +6181,10 @@
    "by": "worker",
    "fees": [
     {
-     "what": "entry clearance application fee, stay over 14 days and under 6 months (non-refundable)",
+     "what": "Work visa application fee",
      "money": {
       "currency": "NZD",
-      "minor": 15000
+      "minor": 30000
      },
      "premium": false,
      "when": "grant"
@@ -6038,15 +6192,17 @@
    ],
    "standard": null,
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 6,
+    "unit": "months"
+   },
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": null,
    "pay": null,
    "unknown": [
-    "processing",
-    "validity"
+    "processing"
    ]
   },
   "PR": {
@@ -6078,6 +6234,15 @@
      },
      "premium": true,
      "when": "grant"
+    },
+    {
+     "what": "O category nonimmigrant visa application (MRV) fee",
+     "money": {
+      "currency": "USD",
+      "minor": 20500
+     },
+     "premium": false,
+     "when": "grant"
     }
    ],
    "standard": null,
@@ -6095,10 +6260,7 @@
    "eligibility": "Extraordinary achievement in motion picture and television means \"a very high level of accomplishment in the motion picture or television industry evidenced by a degree of skill and recognition significantly above that ordinarily encountered\" (in the arts, \"distinction\").",
    "pay": null,
    "unknown": [
-    "processing",
-    "fees",
-    "pay",
-    "exempt"
+    "processing"
    ]
   },
   "PS": {
@@ -6153,7 +6315,7 @@
     "n": 1,
     "unit": "years"
    },
-   "renews": null,
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": "\"que queira permanecer em Portugal para exercer uma atividade artística (atores, músicos ou bailarinos, por exemplo)\"",
@@ -6161,8 +6323,7 @@
    "unknown": [
     "union",
     "pay",
-    "exempt",
-    "validity"
+    "exempt"
    ]
   },
   "PY": {
@@ -6183,8 +6344,7 @@
     "fees",
     "processing",
     "union",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "RE": {
@@ -6219,8 +6379,8 @@
     }
    ],
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null,
    "term": {
@@ -6232,13 +6392,21 @@
    "union": null,
    "eligibility": "« si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique »",
    "pay": "Resources of at least 70% of the full-time gross SMIC for each month of stay (1,306.91 € a month), at least 51% of it from the artistic activity.",
-   "unknown": [
-    "processing"
-   ]
+   "unknown": []
   },
   "RO": {
    "by": "engager",
-   "fees": [],
+   "fees": [
+    {
+     "what": "Long-stay visa (D/AM1, employment), consular fee (Law 198/2008 annex A pt. 4, as amended by OUG 32/2026 art. 47)",
+     "money": {
+      "currency": "EUR",
+      "minor": 30000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
    "standard": {
     "n": 30,
     "unit": "days"
@@ -6254,8 +6422,6 @@
    "eligibility": "străinii care desfăşoară activităţi artistice în instituţii de cultură din România se acordă în baza ordinului ministrului culturii",
    "pay": "On extending the right of stay for work, a full-time contract paying at least the national gross minimum base wage (OUG 194/2002 art. 56(1) as amended by OUG 32/2026); the right runs for the contract's term, at most two years.",
    "unknown": [
-    "fees",
-    "union",
     "exempt"
    ]
   },
@@ -6402,7 +6568,7 @@
    ]
   },
   "SA": {
-   "by": null,
+   "by": "engager",
    "fees": [],
    "standard": null,
    "premium": null,
@@ -6410,15 +6576,12 @@
    "renews": null,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "The worker entered the country legally and is authorised to work; holds skills or qualifications the country needs that no citizen holds, or too few, or is in a category of ordinary worker it needs; and is under contract with an employer and working for it (Labor Law art. 33).",
    "pay": null,
    "unknown": [
-    "applies",
-    "first",
     "processing",
     "validity",
     "union",
-    "eligibility",
     "pay",
     "exempt",
     "fees"
@@ -6495,11 +6658,10 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "The employer's application with the employment approval (the Employment Certificate isn't needed for musicians), a certificate of entitlement, the CV and certificates of competence, the Qualifications Authority's evaluation, and a medical certificate for work over a month.",
    "pay": null,
    "unknown": [
-    "validity",
-    "eligibility"
+    "validity"
    ]
   },
   "SE": {
@@ -6529,9 +6691,7 @@
    "union": "The employer sends the terms of employment to the trade union relevant to the field, which may give its opinion on them (Fackförbundet får möjlighet att yttra sig).",
    "eligibility": null,
    "pay": "För att uppfylla lönekravet ska du ha en månadslön på minst 34 470 kronor . Det motsvarar 90 procent av den aktuella medianlönen som SCB publicerar i juni varje år.",
-   "unknown": [
-    "eligibility"
-   ]
+   "unknown": []
   },
   "SG": {
    "by": "engager",
@@ -6578,9 +6738,7 @@
    "union": null,
    "eligibility": "\"Foreign professionals, managers and executives with a job offer in Singapore who meet the eligibility criteria\" (qualifying salary, then COMPASS).",
    "pay": "Fixed monthly salary from SGD 5,600 (rising with age to SGD 10,700 at 45 and above); from 1 January 2027 for new applications, SGD 6,000 rising to SGD 11,500.",
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "SH": {
    "by": "engager",
@@ -6767,10 +6925,7 @@
    "eligibility": "De mate waarin de vreemdeling voldoet aan de vereisten voor de invulling van de functie waarop de werkvergunningsaanvraag betrekking heeft.",
    "pay": null,
    "unknown": [
-    "validity",
-    "union",
-    "pay",
-    "exempt"
+    "validity"
    ]
   },
   "SS": {
@@ -6853,19 +7008,16 @@
     "unit": "business-days"
    },
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 30,
+    "unit": "days"
+   },
+   "renews": false,
    "renewal": null,
-   "union": null,
-   "eligibility": null,
+   "union": "The show's authorisation by the Dirección de Espectáculos Públicos, Radio y Televisión follows the illustrative opinion of the registered union for the artist's branch of art (art. 97); 10% of the artist's gross pay in El Salvador is paid in advance to the union as its right, or a bond is lodged with it (arts. 96(3), 99); none for free or proven charity work.",
+   "eligibility": "A foreign artist, individually or in a group, entering to perform in any branch of art: music, theatre, singing, dance, announcing, circus, hosting cultural or commercial shows or similar, radio or television, with the cast, technical crew, hosts and models who come with them (art. 95).",
    "pay": null,
-   "unknown": [
-    "validity",
-    "union",
-    "pay",
-    "exempt",
-    "eligibility"
-   ]
+   "unknown": []
   },
   "SX": {
    "by": "engager",
@@ -6875,16 +7027,45 @@
     "unit": "weeks"
    },
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
    "renewal": null,
    "union": null,
    "eligibility": "Een tewerkstellingsvergunning wordt geweigerd: a. indien voor het doen verrichten van de arbeid waarop de tewerkstellingsvergunning betrekking heeft arbeidskrachten op de lokale arbeidsmarkt beschikbaar zijn",
    "pay": null,
    "unknown": [
-    "fees",
+    "fees"
+   ]
+  },
+  "SZ": {
+   "by": "engager",
+   "fees": [
+    {
+     "what": "Temporary residence permit application fee",
+     "money": {
+      "currency": "SZL",
+      "minor": 30000
+     },
+     "premium": false,
+     "when": "grant"
+    }
+   ],
+   "standard": null,
+   "premium": null,
+   "term": null,
+   "renews": null,
+   "renewal": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "unknown": [
+    "processing",
     "validity",
     "union",
+    "eligibility",
     "pay",
     "exempt"
    ]
@@ -7113,11 +7294,9 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "A foreign citizen hired under a labour contract by a legal entity or individual entrepreneur holding the Migration Service's licence to attract foreign labour.",
    "pay": null,
-   "unknown": [
-    "eligibility"
-   ]
+   "unknown": []
   },
   "TL": {
    "by": "worker",
@@ -7148,6 +7327,26 @@
     "union",
     "pay",
     "exempt"
+   ]
+  },
+  "TN": {
+   "by": "engager",
+   "fees": [],
+   "standard": null,
+   "premium": null,
+   "term": null,
+   "renews": null,
+   "renewal": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "unknown": [
+    "fees",
+    "processing",
+    "validity",
+    "union",
+    "eligibility",
+    "pay"
    ]
   },
   "TO": {
@@ -7232,7 +7431,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 30,
+    "unit": "days"
+   },
    "premium": null,
    "term": {
     "n": 1,
@@ -7243,11 +7445,7 @@
    "union": null,
    "eligibility": "Bilimsel, kültürel ve sanatsal faaliyetler kapsamında çalışacak yabancılar",
    "pay": "For a work permit the wage may not be below the gross minimum wage in force at application, rising to twice it for work requiring expertise or mastery, three times for other managers, four times for engineers and architects and five times for senior managers and pilots (the Ministry's evaluation criteria, 3.1).",
-   "unknown": [
-    "processing",
-    "union",
-    "exempt"
-   ]
+   "unknown": []
   },
   "TT": {
    "by": "engager",
@@ -7287,6 +7485,45 @@
     "eligibility"
    ]
   },
+  "TV": {
+   "by": "worker",
+   "fees": [
+    {
+     "what": "Permit to enter and reside for employment, or its extension, lodged outside Tuvalu (principal applicant)",
+     "money": {
+      "currency": "AUD",
+      "minor": 60000
+     },
+     "premium": false,
+     "when": "both"
+    },
+    {
+     "what": "Permit to enter and reside for employment, or its extension, lodged in Tuvalu (principal applicant)",
+     "money": {
+      "currency": "AUD",
+      "minor": 120000
+     },
+     "premium": false,
+     "when": "both"
+    }
+   ],
+   "standard": null,
+   "premium": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
+   "renewal": null,
+   "union": null,
+   "eligibility": "Good health and character, the Act's requirements, and a valid outward ticket or a bond for the cost of repatriation (reg 4(3)).",
+   "pay": null,
+   "unknown": [
+    "processing",
+    "union",
+    "pay"
+   ]
+  },
   "TW": {
    "by": "worker",
    "fees": [
@@ -7314,10 +7551,7 @@
    "union": null,
    "eligibility": "\"Movie, Broadcasting Television, and Pop Music: refers to engaging in the cultural arts by creating, producing, performing, promoting, teaching or sharing (such as workshops or lectures), jury panels, agency, managing or technology, in the fields of film, broadcasting, television and pop music.\"",
    "pay": "No minimum pay: the foreign employee roster's monthly salary may be the contract amount, 'as specified in the contract', 'group expense' or 'gratis' (WDA handbook for foreign artists and performers, 2020).",
-   "unknown": [
-    "exempt",
-    "union"
-   ]
+   "unknown": []
   },
   "TZ": {
    "by": "worker",
@@ -7341,10 +7575,19 @@
      "when": "grant"
     },
     {
-     "what": "residence permit, Class B and C holders",
+     "what": "Residence permit Class B-1 (specific employment by a specific employer)",
      "money": {
       "currency": "USD",
-      "minor": 205000
+      "minor": 200000
+     },
+     "premium": false,
+     "when": "grant"
+    },
+    {
+     "what": "Re-entry pass, each applicant",
+     "money": {
+      "currency": "USD",
+      "minor": 5000
      },
      "premium": false,
      "when": "grant"
@@ -7454,9 +7697,7 @@
    "eligibility": "\"Extraordinary ability in the field of arts means distinction\"; in motion pictures or television, \"a very high level of accomplishment ... recognized as outstanding, notable, or leading\".",
    "pay": null,
    "unknown": [
-    "processing",
-    "pay",
-    "exempt"
+    "processing"
    ]
   },
   "UY": {
@@ -7500,12 +7741,9 @@
    "renewal": null,
    "union": null,
    "eligibility": "Se considera residente temporario la persona extranjera que ingresa al país a desarrollar una actividad por un plazo determinado. ... H) Artistas.",
-   "pay": null,
+   "pay": "Labour law applies to a foreign employee as to a national (Ley 18.250 art. 21); no pay threshold.",
    "unknown": [
-    "processing",
-    "union",
-    "pay",
-    "exempt"
+    "processing"
    ]
   },
   "UZ": {
@@ -7542,14 +7780,9 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
-   "pay": null,
-   "unknown": [
-    "union",
-    "pay",
-    "exempt",
-    "eligibility"
-   ]
+   "eligibility": "Any foreign citizen whose employer obtains the Ministry's confirmation of the right to work; the Ministry checks local labour availability and the employer's real need. A performer is an \"other foreign citizen\" unless they meet the qualified-specialist test (higher education, five years in the specialism, at least US$30,000 a year) or the highly qualified one (a top-1,000 university, five years, at least US$60,000 a year).",
+   "pay": "No pay floor for other foreign citizens; US$30,000 a year for a qualified and US$60,000 for a highly qualified specialist (Labour Migration Law art. 109).",
+   "unknown": []
   },
   "VC": {
    "by": "worker",
@@ -7609,7 +7842,10 @@
      "when": "grant"
     }
    ],
-   "standard": null,
+   "standard": {
+    "n": 8,
+    "unit": "weeks"
+   },
    "premium": null,
    "term": {
     "n": 6,
@@ -7618,12 +7854,10 @@
    "renews": false,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "A prospective employer, or proof of self-employment; over six months a residence permit is also needed.",
    "pay": null,
    "unknown": [
     "fees",
-    "processing",
-    "eligibility",
     "pay",
     "exempt",
     "union"
@@ -7728,9 +7962,7 @@
    "eligibility": "Extraordinary ability in the field of arts means distinction. Distinction means a high level of achievement in the field of arts evidenced by a degree of skill and recognition substantially above that ordinarily encountered to the extent that a person described as prominent is renowned, leading, or well-known in the field of arts.",
    "pay": null,
    "unknown": [
-    "processing",
-    "pay",
-    "exempt"
+    "processing"
    ]
   },
   "VN": {
@@ -7794,8 +8026,7 @@
     "processing",
     "eligibility",
     "union",
-    "pay",
-    "exempt"
+    "pay"
    ]
   },
   "WF": {
@@ -7803,20 +8034,21 @@
    "fees": [],
    "standard": null,
    "premium": null,
-   "term": null,
-   "renews": null,
+   "term": {
+    "n": 1,
+    "unit": "years"
+   },
+   "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "A performer (artiste-interprète) or author with a contract of more than three months with an enterprise whose main business is creating or exploiting works gets the 'profession artistique et culturelle' card, the contract visaed by the authority that grants work authorisations (ordonnance art. 15; décret art. 28); a temporary salaried engagement gets a 'travailleur temporaire' card for the work authorisation's own length (décret art. 21).",
    "pay": null,
    "unknown": [
     "fees",
     "processing",
-    "validity",
     "union",
     "exempt",
-    "pay",
-    "eligibility"
+    "pay"
    ]
   },
   "WS": {
@@ -7853,29 +8085,26 @@
    ]
   },
   "XK": {
-   "by": "engager",
+   "by": null,
    "fees": null,
-   "standard": {
-    "n": 30,
-    "unit": "days"
-   },
+   "standard": null,
    "premium": null,
    "term": {
     "n": 1,
     "unit": "years"
    },
-   "renews": true,
+   "renews": null,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "Within the yearly quota by activity and profession (arts. 68-69); artists working in Kosovo's cultural institutions outside it (art. 70(1)(1.9)).",
    "pay": null,
    "unknown": [
-    "route",
     "fees",
-    "eligibility",
     "pay",
     "union",
-    "exempt"
+    "applies",
+    "processing",
+    "validity"
    ]
   },
   "YE": {
@@ -7931,9 +8160,7 @@
    "union": null,
    "eligibility": "\"si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique\"",
    "pay": "Resources of at least 70 % of the full-time gross SMIC per month of stay (EUR 1,306.91), at least 51 % of it from the work as performer or author.",
-   "unknown": [
-    "union"
-   ]
+   "unknown": []
   },
   "ZA": {
    "by": "worker",
@@ -8017,13 +8244,11 @@
    "renews": true,
    "renewal": null,
    "union": null,
-   "eligibility": null,
+   "eligibility": "A temporary employment permit is issued to a business visitor staying more than 30 days (at most six months in twelve); an employment permit to a person fitted for the work by qualifications or skill, in work with too few people available in Zambia, or of benefit to Zambia (Class A); the employer may hire an expatriate only for a job on the critical-skills list.",
    "pay": null,
    "unknown": [
     "processing",
     "exempt",
-    "union",
-    "eligibility",
     "pay"
    ]
   },

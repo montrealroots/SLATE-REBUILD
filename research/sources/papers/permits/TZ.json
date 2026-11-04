@@ -1,6 +1,6 @@
 {
  "country": "TZ",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Labour Commissioner) and residence permit",
  "routeChanged": false,
  "permit": {
@@ -18,8 +18,13 @@
     "currency": "USD"
    },
    {
-    "what": "residence permit, Class B and C holders",
-    "amount": "2050.00",
+    "what": "Residence permit Class B-1 (specific employment by a specific employer)",
+    "amount": "2000.00",
+    "currency": "USD"
+   },
+   {
+    "what": "Re-entry pass, each applicant",
+    "amount": "50.00",
     "currency": "USD"
    }
   ],
@@ -38,7 +43,8 @@
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The research's USD 2,050 was the B-1 residence permit (USD 2,000; USD 500 for an EAC citizen) and its USD 50 re-entry pass together, now held apart on the Immigration Department's fee page; a short-term residence permit for employment up to six months (B-3) is USD 500."
  },
  "sources": [
   {
@@ -56,6 +62,16 @@
     "processing",
     "validity"
    ]
+  },
+  {
+   "url": "https://www.immigration.go.tz/service-fee",
+   "title": "Tanzania Immigration Services Department, Service Fees, Residence Permit tab (rendered in Playwright; the site is a JavaScript app)",
+   "read": "2026-11-04",
+   "said": "Class - B Residence Matrix RESIDENCE PERMIT CLASS “B” PERMIT CODES RESIDENCE PERMIT CATEGORIES AS PER SECTOR/OCCUPATION ELIGIBILITY FEES IN USD FEES FOR CITIZENS OF EAC IN USD FEES FOR DIASPORA IN USD RE-ENTRY P ASS FOR EACH APPLICANT AND DEPENDANT IN USD B-1 Specific employment by specific employer Persons who have been offered specific employment by specific employer and have the required qualifications and experience 2,000 500 50 … B-3 Specific employment by specific employer (Short Term Residence Permit) Persons who have been offered specific employment by specific employer for the period of not more than 6 months and have the required qualifications and experience 500 250 250 250",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
  "blockers": [
@@ -63,13 +79,13 @@
    "field": "eligibility",
    "sought": "criteria a foreign performer must meet, and the BASATA permit's terms",
    "tried": {
-    "institution": "immigration.go.tz and kazi.go.tz don't load for this client (layer 3)",
-    "official-register": "the Non-Citizens (Employment Regulation) Act 2015 not read",
+    "institution": "immigration.go.tz and kazi.go.tz don't load for this client (layer 3) || 2026-11-04: https://www.immigration.go.tz/ (the register's quotes) rendered in Playwright, then /service-fee with the Residence Permit tab clicked => Residence permit fees read: B-1 USD 2,000 (EAC citizens 500) plus USD 50 re-entry pass; B-3 short-term (≤ 6 months) USD 500 | kazi.go.tz (Prime Minister's Office, Labour Division) home page fetched over https (it loads today, unlike layer 3's attempt); its legislation link 'The_non-citizens_employment_Regulations_Act_sw.pdf' downloaded (29 pages, a scan with no text layer); 'Regulation Non Citizen.pdf FINAL.pdf' refused (HTTP 000) => The Act No. 1 of 2015 read by eye from the page images (pages 7, 13, 14 of the Act: s. 3 definitions, s. 11, s. 13); OCR was not usable (machine load), so each quote was read from the rendered page | immigration.go.tz home => HTTP 200 but an 806-byte page with no content",
+    "official-register": "the Non-Citizens (Employment Regulation) Act 2015 not read || 2026-11-04: tanzlii.org/akn/tz/act/2015/1 (the Act) => HTTP 403",
     "web-search": "not run: the session's web-search budget was spent",
     "trade-press": "Clyde & Co's note names none for performers",
     "archive": "not tried"
    }
   }
  ],
- "note": "Read only in Clyde & Co's note of 6 April 2023 (the Immigration Department's and kazi.go.tz's pages don't load for this client). Applied for online on OWAIS (kazi.go.tz) before entry: the Labour Commissioner decides the work permit, then the Commissioner General of Immigration the residence permit. A performer is taken as Class C (other professions): work permit USD 1,000, residence permit USD 2,050. For short work, the Labour Department's Short Term Permit (USD 550, about one to two weeks, six months, not renewable) is in practice a kind of work permit with no statute behind it; the permit fields here are the STP's, the engagement a performer usually has. The National Arts Council's (BASATA) permit for foreign artists isn't modelled."
+ "note": "Read only in Clyde & Co's note of 6 April 2023 (the Immigration Department's and kazi.go.tz's pages don't load for this client). Applied for online on OWAIS (kazi.go.tz) before entry: the Labour Commissioner decides the work permit, then the Commissioner General of Immigration the residence permit. A performer is taken as Class C (other professions): work permit USD 1,000, residence permit USD 2,050. For short work, the Labour Department's Short Term Permit (USD 550, about one to two weeks, six months, not renewable) is in practice a kind of work permit with no statute behind it; the permit fields here are the STP's, the engagement a performer usually has. The National Arts Council's (BASATA) permit for foreign artists isn't modelled. Read 2026-11-04 on the Immigration Department's own fee page: the residence permit's fee and re-entry pass. The Labour Department's work-permit fees stay on Clyde & Co's secondary."
 }

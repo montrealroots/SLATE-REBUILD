@@ -1,6 +1,6 @@
 {
  "country": "IQ",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Ministry of Labour and Social Affairs)",
  "routeChanged": false,
  "permit": {
@@ -50,55 +50,55 @@
    "field": "fees",
    "sought": "Government work permit fees",
    "tried": {
-    "institution": "molsa.gov.iq not reached in this pass. Retry 2026-11-01: molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403.",
-    "official-register": "Ministry of Justice copy of the instructions on recruiting and employing foreign workers (moj.gov.iq PDF): connection reset. Retry 2026-11-01: moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out.",
+    "institution": "molsa.gov.iq not reached in this pass. Retry 2026-11-01: molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. || 2026-11-04: curl https://molsa.gov.iq/ (the register's quotes) => Redirect loop (curl: Maximum (50) redirects followed); not read | molsa.gov.iq by curl => again a redirect loop (50 redirects) | molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl => redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "official-register": "Ministry of Justice copy of the instructions on recruiting and employing foreign workers (moj.gov.iq PDF): connection reset. Retry 2026-11-01: moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. || 2026-11-04: iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database, for Labour Law 37/2015 and the foreign workers' instructions) by curl => HTTP 403 | iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database) by curl => HTTP 403",
     "web-search": "'Iraq work permit foreign worker fee dinars Ministry of Labour validity one year 2025 instructions اجازة عمل العامل الاجنبي رسوم': only a domestic-worker report (over US$800), no schedule. Retry 2026-11-01: The session's shared web-search budget ran out (2026-11-01) before a new Iraq search could run.",
-    "trade-press": "Al Tamimi (two articles): no fee. Retry 2026-11-01: Channel 8 (March 2025, saved) and Al Tamimi (saved) re-read: no fee.",
-    "archive": "Not tried (archive unreachable this session). Retry 2026-11-01: web.archive.org still resets the connection."
+    "trade-press": "Al Tamimi (two articles): no fee. Retry 2026-11-01: Channel 8 (March 2025, saved) and Al Tamimi (saved) re-read: no fee. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Iraq => no member union listed for Iraq",
+    "archive": "Not tried (archive unreachable this session). Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for iq,gov,molsa)/ (cc.py list; 4 captures) => only 301 redirects; nothing to read"
    }
   },
   {
    "field": "processing",
    "sought": "Decision time",
    "tried": {
-    "institution": "As above. Retry 2026-11-01: molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403.",
-    "official-register": "As above. Retry 2026-11-01: moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out.",
+    "institution": "As above. Retry 2026-11-01: molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. || 2026-11-04: curl https://molsa.gov.iq/ (the register's quotes) => Redirect loop (curl: Maximum (50) redirects followed); not read | molsa.gov.iq by curl => again a redirect loop (50 redirects) | molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl => redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "official-register": "As above. Retry 2026-11-01: moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. || 2026-11-04: iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database, for Labour Law 37/2015 and the foreign workers' instructions) by curl => HTTP 403 | iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database) by curl => HTTP 403",
     "web-search": "Same search: only the 7-day post-entry follow-up. Retry 2026-11-01: The session's shared web-search budget ran out (2026-11-01) before a new Iraq search could run.",
-    "trade-press": "Al Tamimi: none. Retry 2026-11-01: Channel 8 (March 2025, saved) and Al Tamimi (saved) re-read: no decision time.",
-    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection."
+    "trade-press": "Al Tamimi: none. Retry 2026-11-01: Channel 8 (March 2025, saved) and Al Tamimi (saved) re-read: no decision time. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Iraq => no member union listed for Iraq",
+    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for iq,gov,molsa)/ (cc.py list; 4 captures) => only 301 redirects; nothing to read"
    }
   },
   {
    "field": "union",
    "sought": "A union consultation for a foreign worker's permit",
    "tried": {
-    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01)",
-    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01)",
+    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01) || 2026-11-04: curl https://molsa.gov.iq/ (the register's quotes) => Redirect loop (curl: Maximum (50) redirects followed); not read | molsa.gov.iq by curl => again a redirect loop (50 redirects) | molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl => redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01) || 2026-11-04: iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database, for Labour Law 37/2015 and the foreign workers' instructions) by curl => HTTP 403 | iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database) by curl => HTTP 403",
     "web-search": "'Iraq work permit foreign worker fee dinars Ministry of Labour validity one year 2025 instructions اجازة عمل العامل الاجنبي رسوم' (first pass): nothing on this; no further search could run (budget spent).",
-    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Iraq => no member union listed for Iraq",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for iq,gov,molsa)/ (cc.py list; 4 captures) => only 301 redirects; nothing to read"
    }
   },
   {
    "field": "pay",
    "sought": "A minimum pay rule for a foreign worker's permit",
    "tried": {
-    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01)",
-    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01)",
+    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01) || 2026-11-04: curl https://molsa.gov.iq/ (the register's quotes) => Redirect loop (curl: Maximum (50) redirects followed); not read | molsa.gov.iq by curl => again a redirect loop (50 redirects) | molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl => redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01) || 2026-11-04: iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database, for Labour Law 37/2015 and the foreign workers' instructions) by curl => HTTP 403 | iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database) by curl => HTTP 403",
     "web-search": "'Iraq work permit foreign worker fee dinars Ministry of Labour validity one year 2025 instructions اجازة عمل العامل الاجنبي رسوم' (first pass): nothing on this; no further search could run (budget spent).",
-    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Iraq => no member union listed for Iraq",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for iq,gov,molsa)/ (cc.py list; 4 captures) => only 301 redirects; nothing to read"
    }
   },
   {
    "field": "exempt",
    "sought": "An engagement short enough to need no permit",
    "tried": {
-    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01)",
-    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01)",
+    "institution": "molsa.gov.iq loops on redirects (50+), www.molsa.gov.iq doesn't answer, ina.iq answers 403. (2026-11-01) || 2026-11-04: curl https://molsa.gov.iq/ (the register's quotes) => Redirect loop (curl: Maximum (50) redirects followed); not read | molsa.gov.iq by curl => again a redirect loop (50 redirects) | molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl => redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "official-register": "moj.gov.iq (al-Waqai al-Iraqiya) resets the connection; the Iraqi Legal Database (iraqld.hjc.iq) answers 403, its www host fails (CONNECT 502) and its :8080 port times out. (2026-11-01) || 2026-11-04: iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database, for Labour Law 37/2015 and the foreign workers' instructions) by curl => HTTP 403 | iraqld.hjc.iq (the Higher Judicial Council's Iraqi Legal Database) by curl => HTTP 403",
     "web-search": "'Iraq work permit foreign worker fee dinars Ministry of Labour validity one year 2025 instructions اجازة عمل العامل الاجنبي رسوم' (first pass): nothing on this; no further search could run (budget spent).",
-    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "Channel 8 (March 2025) and Al Tamimi (saved): none stated. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Iraq => no member union listed for Iraq",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for iq,gov,molsa)/ (cc.py list; 4 captures) => only 301 redirects; nothing to read"
    }
   }
  ],

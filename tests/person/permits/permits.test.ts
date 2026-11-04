@@ -86,7 +86,7 @@ describe('the permits', () => {
     expect(UNKEPT_LINE).toBe('permits.unkept');
     // Known whole: nothing to tell. Known in part: what isn't. Not known at all: every fact sought.
     expect(aboutPermit('GB')).toBeUndefined();
-    expect(aboutPermit('US')).toBe(t(UNKEPT_LINE, { country: 'United States', missing: 'how long a decision takes, its pay rule and how long a short engagement may be worked without it' }));
+    expect(aboutPermit('US')).toBe(t(UNKEPT_LINE, { country: 'United States', missing: 'how long a decision takes' }));
     expect(aboutPermit('IL')).toBe(t(UNKEPT_LINE, { country: 'Israel', missing: Object.values(MISSING).slice(1, 10).join(', ').replace(/, ([^,]*)$/, ' and $1') }));
     expect(aboutPermit('IL')).toBe("Some of what Israel asks of someone from abroad for a work permit isn't known to this game yet: who applies, what must come first, its fees, how long a decision takes, how long it is granted for, any union consultation, who is eligible, its pay rule and how long a short engagement may be worked without it.");
     // Every passport free, or the country's rules not kept: nothing of a permit to tell (papers.work tells the latter).

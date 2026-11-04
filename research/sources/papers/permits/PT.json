@@ -1,6 +1,6 @@
 {
  "country": "PT",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Visto de estada temporária ou de residência para o exercício de atividade profissional de espetáculos",
  "routeChanged": false,
  "permit": {
@@ -28,7 +28,7 @@
   "validity": {
    "n": 1,
    "unit": "years",
-   "renewable": null
+   "renewable": true
   },
   "union": null,
   "eligibility": "\"que queira permanecer em Portugal para exercer uma atividade artística (atores, músicos ou bailarinos, por exemplo)\"",
@@ -55,8 +55,18 @@
   {
    "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis",
    "title": "Lei n.º 23/2007, de 4 de julho (consolidated, Procuradoria-Geral Regional de Lisboa), artigo 54.º",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "Sem prejuízo do estabelecido em disposição especial, o visto de estada temporária é concedido pelo tempo da duração da estada e é válido para múltiplas entradas em território nacional.",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?ficha=101&artigo_id=&nid=920&pagina=2&tabela=leis&nversao=&so_miolo=",
+   "title": "Lei n.º 23/2007, de 4 de julho (Lei de Estrangeiros), consolidated text, arts. 71 and 72 (Procuradoria-Geral Distrital de Lisboa)",
+   "read": "2026-11-04",
+   "said": "Artigo 71.º Prorrogação de permanência 1 - Aos cidadãos estrangeiros admitidos em território nacional nos termos da presente lei que desejem permanecer no País por período de tempo superior ao inicialmente autorizado pode ser prorrogada a permanência. … 3 - Salvo em casos devidamente fundamentados, a prorrogação a que se refere o n.º 1 pode ser concedida desde que se mantenham as condições que permitiram a admissão do cidadão estrangeiro. … Artigo 72.º Limites da prorrogação de permanência 1 - A prorrogação de permanência pode ser concedida: … e) Até um ano, se o interessado for titular de um visto de estada temporária.",
    "kind": "primary",
    "fields": [
     "validity"
@@ -68,45 +78,35 @@
    "field": "union",
    "sought": "a union consultation for a foreign performer",
    "tried": {
-    "institution": "gov.pt service page read: none named",
-    "official-register": "Lei 23/2007 (PGDL consolidation) searched for espetáculo/artístic: no performer-specific provision found",
+    "institution": "gov.pt service page read: none named || 2026-11-04: gov.pt service page for the espetáculos visa re-read => HTTP 200; no union step, pay rule or permit-free engagement named",
+    "official-register": "Lei 23/2007 (PGDL consolidation) searched for espetáculo/artístic: no performer-specific provision found || 2026-11-04: pgdlisboa.pt Lei 23/2007 articulado (so_miolo) read: art. 54 (visto de estada temporária) lists no performing-arts purpose, is granted for the stay's length (54(2)) with a 30-day decision (54(3)); the extension articles (71-73-A) appear only as headings in the copy fetched => the extension rule and any performer provision not read | pgdlisboa.pt (Procuradoria-Geral Distrital de Lisboa) Lei 23/2007 consolidated articulado, page 2 (arts. 71-72, the extension articles the first wave left unread), fetched by curl (ISO-8859-1, converted) and read; also page 1 art. 54 re-read => read: art. 71(1) lets a foreigner's stay be extended beyond the time first authorised, art. 71(3) as long as the conditions of admission still hold; art. 72(1)(e) caps an extension at one year for the holder of a visto de estada temporária; nothing on a union step, pay or a permit-free engagement",
     "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
+    "trade-press": "none || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names CENA-STE – Sindicato dos Trabalhadores de Espectáculos, do Audiovisual e dos Músicos for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "none || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'pt,aima)' (AIMA, the agency for integration, migration and asylum) => no capture"
    }
   },
   {
    "field": "pay",
    "sought": "a minimum pay rule",
    "tried": {
-    "institution": "gov.pt: none named",
-    "official-register": "Lei 23/2007 not found to set one for performers",
+    "institution": "gov.pt: none named || 2026-11-04: gov.pt service page for the espetáculos visa re-read => HTTP 200; no union step, pay rule or permit-free engagement named",
+    "official-register": "Lei 23/2007 not found to set one for performers || 2026-11-04: pgdlisboa.pt Lei 23/2007 articulado (so_miolo) read: art. 54 (visto de estada temporária) lists no performing-arts purpose, is granted for the stay's length (54(2)) with a 30-day decision (54(3)); the extension articles (71-73-A) appear only as headings in the copy fetched => the extension rule and any performer provision not read | pgdlisboa.pt (Procuradoria-Geral Distrital de Lisboa) Lei 23/2007 consolidated articulado, page 2 (arts. 71-72, the extension articles the first wave left unread), fetched by curl (ISO-8859-1, converted) and read; also page 1 art. 54 re-read => read: art. 71(1) lets a foreigner's stay be extended beyond the time first authorised, art. 71(3) as long as the conditions of admission still hold; art. 72(1)(e) caps an extension at one year for the holder of a visto de estada temporária; nothing on a union step, pay or a permit-free engagement",
     "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
+    "trade-press": "none || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names CENA-STE – Sindicato dos Trabalhadores de Espectáculos, do Audiovisual e dos Músicos for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "none || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'pt,aima)' (AIMA, the agency for integration, migration and asylum) => no capture"
    }
   },
   {
    "field": "exempt",
    "sought": "paid performing allowed on a Schengen short-stay visa",
    "tried": {
-    "institution": "gov.pt points to a Schengen short-stay visa for up to 90 days but does not say paid performing is allowed on it",
-    "official-register": "Lei 23/2007 not found to say",
+    "institution": "gov.pt points to a Schengen short-stay visa for up to 90 days but does not say paid performing is allowed on it || 2026-11-04: gov.pt service page for the espetáculos visa re-read => HTTP 200; no union step, pay rule or permit-free engagement named",
+    "official-register": "Lei 23/2007 not found to say || 2026-11-04: pgdlisboa.pt Lei 23/2007 articulado (so_miolo) read: art. 54 (visto de estada temporária) lists no performing-arts purpose, is granted for the stay's length (54(2)) with a 30-day decision (54(3)); the extension articles (71-73-A) appear only as headings in the copy fetched => the extension rule and any performer provision not read | pgdlisboa.pt (Procuradoria-Geral Distrital de Lisboa) Lei 23/2007 consolidated articulado, page 2 (arts. 71-72, the extension articles the first wave left unread), fetched by curl (ISO-8859-1, converted) and read; also page 1 art. 54 re-read => read: art. 71(1) lets a foreigner's stay be extended beyond the time first authorised, art. 71(3) as long as the conditions of admission still hold; art. 72(1)(e) caps an extension at one year for the holder of a visto de estada temporária; nothing on a union step, pay or a permit-free engagement",
     "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "validity.renewable",
-   "sought": "whether the temporary-stay visa can be extended",
-   "tried": {
-    "institution": "gov.pt silent",
-    "official-register": "Lei 23/2007 art. 54 read; prorogação article not read",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
+    "trade-press": "none || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names CENA-STE – Sindicato dos Trabalhadores de Espectáculos, do Audiovisual e dos Músicos for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "none || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'pt,aima)' (AIMA, the agency for integration, migration and asylum) => no capture"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 in Lei 23/2007 (PGDL Lisboa's copy): the temporary-stay visa's stay can be extended (art. 71(1)), by up to a year (art. 72(1)(e)), while the conditions of admission hold (art. 71(3))."
 }

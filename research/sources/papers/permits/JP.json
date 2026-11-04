@@ -1,6 +1,6 @@
 {
  "country": "JP",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "在留資格「興行」",
  "routeChanged": false,
  "permit": {
@@ -96,6 +96,16 @@
    "fields": [
     "processing"
    ]
+  },
+  {
+   "url": "https://laws.e-gov.go.jp/api/1/lawdata/402M50000010016",
+   "title": "e-Gov 法令検索, 出入国管理及び難民認定法第七条第一項第二号の基準を定める省令 (landing criteria ordinance), read whole",
+   "read": "2026-11-04",
+   "said": "法別表第一の二の表の興行の項の下欄に掲げる活動 一 申請人が演劇、演芸、歌謡、舞踊又は演奏（以下「演劇等」という。）の興行に係る活動に従事しようとする場合は、次のいずれかに該当していること。 … (the whole ordinance holds no 組合 or 労働組合: 0 occurrences)",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
@@ -104,21 +114,10 @@
    "sought": "The visa issuance fee at a Japanese mission",
    "tried": {
     "institution": "Immigration Services Agency (moj.go.jp/isa/applications/status/entertainer.html and _en) and MOFA (mofa.go.jp/j_info/visit/visa) answer this client HTTP 403. Retry 2026-11-01: moj.go.jp/isa (entertainer page and the standard processing periods page processing_index.html), isa.go.jp, mofa.go.jp's visa pages and the embassies in the US, UK, Canada, Australia, India and the Philippines (*.emb-japan.go.jp) all answer 403 to this client.",
-    "official-register": "e-Gov law API read for the Act, the landing criteria ordinance, the Enforcement Regulation and the Cabinet Order: none sets a decision time or the visa fee (set by MOFA notice). Retry 2026-11-01: e-Gov's Enforcement Regulation (saved) re-read: it fixes who applies (art. 6-2, Appended Table IV) but no decision time; the visa fee is set by MOFA notice, not in e-Gov's law data.",
+    "official-register": "e-Gov law API read for the Act, the landing criteria ordinance, the Enforcement Regulation and the Cabinet Order: none sets a decision time or the visa fee (set by MOFA notice). Retry 2026-11-01: e-Gov's Enforcement Regulation (saved) re-read: it fixes who applies (art. 6-2, Appended Table IV) but no decision time; the visa fee is set by MOFA notice, not in e-Gov's law data. || 2026-11-04: e-Gov API v2 laws?law_title=領事官 listed 327CO0000000074 and 327M50000020004; both fetched whole from api/1/lawdata and their revision history from api/2/law_revisions => found: the visa fee is set by Cabinet Order No. 74 of 1952 as a yen band (single entry ¥14,900–15,100; multiple ¥29,900–30,100) and charged in each mission's currency by MOFA Ordinance No. 4 of 1952 (USD 101 / 201 in the United States), both in force from 2026-07-01 (saved JP-327CO0000000074.xml, JP-327M50000020004.xml) | e-Gov landing-criteria ordinance 402M50000010016 fetched and read whole for a union or guild step (組合, 労働組合, 団体) => none: the Entertainer criteria ask contracts, facilities and pay, and no union or guild opinion (saved JP-kijun.xml)",
     "web-search": "Not searched further in this pass beyond the institution and the law database; ISA's standard processing periods page is under the same refused host. Retry 2026-11-01: No search could run: the session's shared web-search budget ran out (2026-11-01).",
     "trade-press": "None used.",
     "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. Retry 2026-11-01: web.archive.org still resets the connection."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "A union or guild consultation",
-   "tried": {
-    "institution": "moj.go.jp/isa (entertainer page and the standard processing periods page processing_index.html), isa.go.jp, mofa.go.jp's visa pages and the embassies in the US, UK, Canada, Australia, India and the Philippines (*.emb-japan.go.jp) all answer 403 to this client. (2026-11-01)",
-    "official-register": "e-Gov law data: none of the Act, the landing-criteria ordinance or the Enforcement Regulation (e-Gov, saved) asks for one.",
-    "web-search": "No search could run: the session's shared web-search budget ran out (2026-11-01).",
-    "trade-press": "None used.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
    }
   },
   {
@@ -126,12 +125,12 @@
    "sought": "An engagement short enough to need no status of residence for paid work",
    "tried": {
     "institution": "moj.go.jp/isa (entertainer page and the standard processing periods page processing_index.html), isa.go.jp, mofa.go.jp's visa pages and the embassies in the US, UK, Canada, Australia, India and the Philippines (*.emb-japan.go.jp) all answer 403 to this client. (2026-11-01)",
-    "official-register": "e-Gov law data: the Act's Temporary Visitor status doesn't allow paid activity, and the Enforcement Regulation and landing-criteria ordinance (e-Gov, saved) carry no days-based exemption for performers.",
+    "official-register": "e-Gov law data: the Act's Temporary Visitor status doesn't allow paid activity, and the Enforcement Regulation and landing-criteria ordinance (e-Gov, saved) carry no days-based exemption for performers. || 2026-11-04: e-Gov API v2 laws?law_title=領事官 listed 327CO0000000074 and 327M50000020004; both fetched whole from api/1/lawdata and their revision history from api/2/law_revisions => found: the visa fee is set by Cabinet Order No. 74 of 1952 as a yen band (single entry ¥14,900–15,100; multiple ¥29,900–30,100) and charged in each mission's currency by MOFA Ordinance No. 4 of 1952 (USD 101 / 201 in the United States), both in force from 2026-07-01 (saved JP-327CO0000000074.xml, JP-327M50000020004.xml) | e-Gov landing-criteria ordinance 402M50000010016 fetched and read whole for a union or guild step (組合, 労働組合, 団体) => none: the Entertainer criteria ask contracts, facilities and pay, and no union or guild opinion (saved JP-kijun.xml)",
     "web-search": "No search could run: the session's shared web-search budget ran out (2026-11-01).",
     "trade-press": "None used.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
    }
   }
  ],
- "note": "The Certificate of Eligibility carries no fee in the Cabinet Order; the fees above apply to change of status and extension in Japan (Cabinet Order as amended in force 14 June 2026). Screenwriters and directors not performing fall under other statuses (e.g. 芸術, Artist) not modelled here."
+ "note": "The Certificate of Eligibility carries no fee in the Cabinet Order; the fees above apply to change of status and extension in Japan (Cabinet Order as amended in force 14 June 2026). Screenwriters and directors not performing fall under other statuses (e.g. 芸術, Artist) not modelled here. Read 2026-11-04: the landing-criteria ordinance, read whole on e-Gov, asks no union or guild opinion for the Entertainer status. The visa fee is set as a yen band and in each mission's currency, so no single fee is held; fees stay unknown."
 }

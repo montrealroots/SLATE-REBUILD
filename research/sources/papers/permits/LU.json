@@ -1,6 +1,6 @@
 {
  "country": "LU",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Autorisation de travail (au-delà de 3 mois, autorisation de séjour en tant que travailleur salarié)",
  "routeChanged": false,
  "permit": {
@@ -25,8 +25,8 @@
    "note": "Renewed for at most 4 years at a time; the first grant's term wasn't found."
   },
   "union": null,
-  "eligibility": null,
-  "pay": null,
+  "eligibility": "No criterion particular to performers: a CV, diplomas or proof of professional qualifications and a criminal-record extract under three months old.",
+  "pay": "The contract's gross pay must be at least the monthly social minimum wage (salaire social minimum mensuel).",
   "exempt": {
    "days": 90,
    "within": 365
@@ -55,6 +55,17 @@
     "fees",
     "validity"
    ]
+  },
+  {
+   "url": "https://guichet.public.lu/fr/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+   "title": "Guichet.lu, Travailler en tant que salarié (ressortissant de pays tiers), read 2026-11-04",
+   "read": "2026-11-04",
+   "said": "votre contrat de travail daté et signé par vous et votre futur employeur légalement établi au Luxembourg et qui comporte un salaire brut qui correspond au moins au salaire social minimum mensuel actuellement en vigueur au Luxembourg ; … vos diplômes ou la preuve de vos qualifications professionnelles ; … En cas d’accord, vous obtenez un visa D pour une durée de 6 mois.",
+   "kind": "primary",
+   "fields": [
+    "pay",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
@@ -62,56 +73,35 @@
    "field": "processing",
    "sought": "The decision time",
    "tried": {
-    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01).",
-    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used.",
+    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01). || 2026-11-04: Guichet.lu (the State's portal): the two held pages re-read (moins-90-jours/sejour-travail, renouvellement-titre-salarie) and the first-issue page for a third-country salaried worker, https://guichet.public.lu/fr/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html (connection reset once, answered on retry), read whole => read: the visa D application must carry a signed contract 'qui comporte un salaire brut qui correspond au moins au salaire social minimum mensuel'; CV, diplomas or proof of professional qualifications and a criminal-record extract; a granted visa D runs 6 months; no decision time stated; no union step; a first-permit term of at most 2 years is listed only under 'Dispositions pas encore applicables / en vigueur (en attente de l'entrée en vigueur du Projet de loi n°8586 relatif au permis unique)'",
+    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used. || 2026-11-04: legilux.public.lu ELI pages for the loi du 29 août 2008 (…/n1/jo and …/n1/consolide/20260801) => HTTP 200 with a 2,118-byte script application shell, no text",
     "web-search": "WebSearch 'guichet.lu autorisation de travail intermittent du spectacle ...' and 'guichet.public.lu autorisation de séjour travailleur salarié droit de chancellerie 80 euros délai décision': only an EUR 80 issue tax on a different permit's form Retry (2026-11-01): 'guichet.public.lu autorisation de séjour travailleur salarié ressortissant pays tiers demande taxe 80 euros délai', 'loi du 29 août 2008 ... texte coordonné article 43 titre de séjour travailleur salarié \"durée maximale\" pdf' (2026-11-01).",
-    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
+    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names Actors.Lu for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lu,public,guichet)/en/citoyens/immigration' => 37 captures; the salaried-worker pages captured (…/ressortissant-tiers/salarie.html and …/salarie-pays-tiers.html) are 404s of the old structure; nothing newer than the live page"
    }
   },
   {
    "field": "validity",
    "sought": "How long the authorisation is granted",
    "tried": {
-    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01).",
-    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used.",
+    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01). || 2026-11-04: Guichet.lu (the State's portal): the two held pages re-read (moins-90-jours/sejour-travail, renouvellement-titre-salarie) and the first-issue page for a third-country salaried worker, https://guichet.public.lu/fr/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html (connection reset once, answered on retry), read whole => read: the visa D application must carry a signed contract 'qui comporte un salaire brut qui correspond au moins au salaire social minimum mensuel'; CV, diplomas or proof of professional qualifications and a criminal-record extract; a granted visa D runs 6 months; no decision time stated; no union step; a first-permit term of at most 2 years is listed only under 'Dispositions pas encore applicables / en vigueur (en attente de l'entrée en vigueur du Projet de loi n°8586 relatif au permis unique)'",
+    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used. || 2026-11-04: legilux.public.lu ELI pages for the loi du 29 août 2008 (…/n1/jo and …/n1/consolide/20260801) => HTTP 200 with a 2,118-byte script application shell, no text",
     "web-search": "WebSearch 'guichet.lu autorisation de travail intermittent du spectacle ...' and 'guichet.public.lu autorisation de séjour travailleur salarié droit de chancellerie 80 euros délai décision': only an EUR 80 issue tax on a different permit's form Retry (2026-11-01): 'guichet.public.lu autorisation de séjour travailleur salarié ressortissant pays tiers demande taxe 80 euros délai', 'loi du 29 août 2008 ... texte coordonné article 43 titre de séjour travailleur salarié \"durée maximale\" pdf' (2026-11-01).",
-    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
+    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names Actors.Lu for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lu,public,guichet)/en/citoyens/immigration' => 37 captures; the salaried-worker pages captured (…/ressortissant-tiers/salarie.html and …/salarie-pays-tiers.html) are 404s of the old structure; nothing newer than the live page"
    }
   },
   {
    "field": "union",
    "sought": "A union consultation",
    "tried": {
-    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01).",
-    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used.",
+    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01). || 2026-11-04: Guichet.lu (the State's portal): the two held pages re-read (moins-90-jours/sejour-travail, renouvellement-titre-salarie) and the first-issue page for a third-country salaried worker, https://guichet.public.lu/fr/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html (connection reset once, answered on retry), read whole => read: the visa D application must carry a signed contract 'qui comporte un salaire brut qui correspond au moins au salaire social minimum mensuel'; CV, diplomas or proof of professional qualifications and a criminal-record extract; a granted visa D runs 6 months; no decision time stated; no union step; a first-permit term of at most 2 years is listed only under 'Dispositions pas encore applicables / en vigueur (en attente de l'entrée en vigueur du Projet de loi n°8586 relatif au permis unique)'",
+    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used. || 2026-11-04: legilux.public.lu ELI pages for the loi du 29 août 2008 (…/n1/jo and …/n1/consolide/20260801) => HTTP 200 with a 2,118-byte script application shell, no text",
     "web-search": "WebSearch 'guichet.lu autorisation de travail intermittent du spectacle ...' and 'guichet.public.lu autorisation de séjour travailleur salarié droit de chancellerie 80 euros délai décision': only an EUR 80 issue tax on a different permit's form Retry (2026-11-01): 'guichet.public.lu autorisation de séjour travailleur salarié ressortissant pays tiers demande taxe 80 euros délai', 'loi du 29 août 2008 ... texte coordonné article 43 titre de séjour travailleur salarié \"durée maximale\" pdf' (2026-11-01).",
-    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "A performer-specific criterion",
-   "tried": {
-    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01).",
-    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used.",
-    "web-search": "WebSearch 'guichet.lu autorisation de travail intermittent du spectacle ...' and 'guichet.public.lu autorisation de séjour travailleur salarié droit de chancellerie 80 euros délai décision': only an EUR 80 issue tax on a different permit's form Retry (2026-11-01): 'guichet.public.lu autorisation de séjour travailleur salarié ressortissant pays tiers demande taxe 80 euros délai', 'loi du 29 août 2008 ... texte coordonné article 43 titre de séjour travailleur salarié \"durée maximale\" pdf' (2026-11-01).",
-    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "A minimum pay rule",
-   "tried": {
-    "institution": "guichet.public.lu short-stay page read: not stated; the salaried-worker pages (citizens' and employers') answer 404 to this client, 2026-11-01 Retry (2026-11-01): Guichet.lu: the first-application pages for a salaried third-country worker (/citoyens/.../salarie/salarie-pays-tiers.html, /entreprises/.../plus-3-mois/salarie.html, /citoyens/.../salarie/autorisation-sejour-salarie.html) answer 404; the renewal page read (EUR 80 issue tax, renewal for at most 4 years) (2026-11-01).",
-    "official-register": "Loi du 29 août 2008 (Legilux) not read in this pass Retry (2026-11-01): Legilux's Loi du 29 août 2008 (eli/etat/leg/loi/2008/08/29/n1/jo) serves a 2 KB script shell; the Council of State's opinion on bill 8586 (chd.lu, 15 July 2026) quotes a proposed 90-day decision time for art. 43, a bill not yet law, so not used.",
-    "web-search": "WebSearch 'guichet.lu autorisation de travail intermittent du spectacle ...' and 'guichet.public.lu autorisation de séjour travailleur salarié droit de chancellerie 80 euros délai décision': only an EUR 80 issue tax on a different permit's form Retry (2026-11-01): 'guichet.public.lu autorisation de séjour travailleur salarié ressortissant pays tiers demande taxe 80 euros délai', 'loi du 29 août 2008 ... texte coordonné article 43 titre de séjour travailleur salarié \"durée maximale\" pdf' (2026-11-01).",
-    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
+    "trade-press": "Frontaliers Grand Est in results: not quoting a primary for this Retry (2026-11-01): frontaliers-grandest.eu says 'en principe de 4 mois maximum', naming no primary; not used. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names Actors.Lu for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. Retry (2026-11-01): web.archive.org resets the connection (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lu,public,guichet)/en/citoyens/immigration' => 37 captures; the salaried-worker pages captured (…/ressortissant-tiers/salarie.html and …/salarie-pays-tiers.html) are 404s of the old structure; nothing newer than the live page"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 on Guichet.lu (salaried worker from a third country). The first term of at most two years is in Bill n° 8586, not yet in force, a lead."
 }

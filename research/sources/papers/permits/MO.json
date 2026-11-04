@@ -1,12 +1,18 @@
 {
  "country": "MO",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Autorização de permanência na qualidade de trabalhador não residente",
  "routeChanged": false,
  "permit": {
   "applies": "The Macao employer first obtains the hiring authorisation (autorização de contratação) under Lei n.º 21/2009; the worker's authorisation to stay as a non-resident worker follows from it.",
   "first": "A contract with an employer covered by art. 5 of Lei n.º 21/2009 and that employer's hiring authorisation.",
-  "fees": null,
+  "fees": [
+   {
+    "what": "Non-resident worker's identity document, issue or renewal",
+    "amount": "100.00",
+    "currency": "MOP"
+   }
+  ],
   "processing": null,
   "validity": null,
   "union": null,
@@ -29,18 +35,28 @@
     "first",
     "exempt"
    ]
+  },
+  {
+   "url": "https://bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1",
+   "title": "Boletim Oficial da RAEM, Regulamento Administrativo n.º 8/2010, Regulamentação da Lei da contratação de trabalhadores não residentes (Common Crawl's capture of 12 September 2026, CC-MAIN-2026-39, WARC CC-MAIN-20260912161414-20260912191414-00869 offset 125575755; the live site resets)",
+   "read": "2026-11-04",
+   "said": "Artigo 7.º ... O não residente só pode exercer a sua actividade laboral na RAEM após concedida a autorização de permanência na qualidade de trabalhador e apenas enquanto essa autorização se mantiver válida. ... Artigo 10.º Validade A autorização de permanência é concedida pelo prazo da autorização de contratação, excepto se prazo mais curto resultar do regime legal da entrada, permanência e autorização de residência na RAEM. ... Artigo 12.º Taxas 1. Pela emissão e renovação do documento de identificação referido no artigo anterior é cobrada uma taxa de 100 patacas. ... Artigo 13.º ... autorizações provisórias de permanência na qualidade de trabalhador, válidas por um período máximo de 45 dias. Artigo 14.º Renovação da autorização de permanência ... Artigo 17.º Periodicidade do pagamento 1. A taxa de contratação é devida mensalmente ...",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
  "blockers": [
   {
    "field": "fees",
-   "sought": "The hiring fee (taxa de contratação, Regulamento Administrativo n.º 8/2010) and any fee for the worker's stay authorisation",
+   "sought": "The hiring fee (taxa de contratação), set in a separate dispatch",
    "tried": {
     "institution": "dsal.gov.mo answers 403 to its Portuguese pages; the PSP's site (fsm.gov.mo/psp) answers 500 Retry (2026-11-01): DSAL's Portuguese pages (dsal.gov.mo) not reachable earlier (403); al.gov.mo attachment uploads/attachment/2026-05/86d2...pdf returns a 117-byte HTML redirect; court.gov.mo ruling pt-74cee53590699 read: a wage dispute, nothing on fees or terms.",
-    "official-register": "Boletim Oficial (bo.io.gov.mo, images.io.gov.mo) refused by this environment's egress proxy (connect_rejected, 2026-11-01) Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text.",
+    "official-register": "Boletim Oficial (bo.io.gov.mo, images.io.gov.mo) refused by this environment's egress proxy (connect_rejected, 2026-11-01) Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text. || 2026-11-04: bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1 live => curl: (35) Recv failure: Connection reset by peer",
     "web-search": "'DSAL Macau pedido de autorização para contratação de trabalhadores não residentes prazo taxa artistas espectáculos', 'dsal.gov.mo trabalhadores não residentes autorização taxa de contratação montante patacas mensal' (2026-11-01): a Legislative Assembly interpellation of 2021 is said to give MOP 200 a month per worker, but al.gov.mo's files redirect this client to its home page Retry (2026-11-01): 'Macau DSAL autorização de contratação trabalhadores não residentes prazo validade taxa de contratação montante patacas Regulamento Administrativo 8/2010': DSAL press statements cite Lei 21/2009 and a six-month period from the hiring authorisation, truncated; no fee amount.",
     "trade-press": "None naming a primary Retry (2026-11-01): None naming a primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl: cc.py list 'mo,gov,dsaj,bo)/bo/i/2010/16/regadm08' in CC-MAIN-2026-39, -30, -21; cc.py get of the 12 September 2026 Portuguese capture, read whole => -39 holds the Portuguese and Chinese pages; read: stay authorisation runs for the hiring authorisation's term (art. 10) and is renewed (art. 14); the worker's identity document costs 100 patacas to issue or renew (art. 12); the hiring fee is monthly (art. 17) but its amount isn't in this regulation"
    }
   },
   {
@@ -48,10 +64,10 @@
    "sought": "DSAL's stated decision time",
    "tried": {
     "institution": "dsal.gov.mo 403 Retry (2026-11-01): DSAL's Portuguese pages (dsal.gov.mo) not reachable earlier (403); al.gov.mo attachment uploads/attachment/2026-05/86d2...pdf returns a 117-byte HTML redirect; court.gov.mo ruling pt-74cee53590699 read: a wage dispute, nothing on fees or terms.",
-    "official-register": "Boletim Oficial refused by the egress proxy Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text.",
+    "official-register": "Boletim Oficial refused by the egress proxy Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text. || 2026-11-04: bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1 live => curl: (35) Recv failure: Connection reset by peer",
     "web-search": "Same searches (2026-11-01) Retry (2026-11-01): 'Macau DSAL autorização de contratação trabalhadores não residentes prazo validade taxa de contratação montante patacas Regulamento Administrativo 8/2010': DSAL press statements cite Lei 21/2009 and a six-month period from the hiring authorisation, truncated; no fee amount.",
     "trade-press": "None Retry (2026-11-01): None naming a primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl: cc.py list 'mo,gov,dsaj,bo)/bo/i/2010/16/regadm08' in CC-MAIN-2026-39, -30, -21; cc.py get of the 12 September 2026 Portuguese capture, read whole => -39 holds the Portuguese and Chinese pages; read: stay authorisation runs for the hiring authorisation's term (art. 10) and is renewed (art. 14); the worker's identity document costs 100 patacas to issue or renew (art. 12); the hiring fee is monthly (art. 17) but its amount isn't in this regulation"
    }
   },
   {
@@ -59,10 +75,10 @@
    "sought": "How long a hiring authorisation and the worker's stay authorisation run, and their renewal",
    "tried": {
     "institution": "dsal.gov.mo 403 Retry (2026-11-01): DSAL's Portuguese pages (dsal.gov.mo) not reachable earlier (403); al.gov.mo attachment uploads/attachment/2026-05/86d2...pdf returns a 117-byte HTML redirect; court.gov.mo ruling pt-74cee53590699 read: a wage dispute, nothing on fees or terms.",
-    "official-register": "Boletim Oficial refused by the egress proxy Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text.",
+    "official-register": "Boletim Oficial refused by the egress proxy Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text. || 2026-11-04: bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1 live => curl: (35) Recv failure: Connection reset by peer",
     "web-search": "Same searches (2026-11-01): a 2026 DSAL document cited in results mentions a six-month period from the authorisation or its renewal, truncated Retry (2026-11-01): 'Macau DSAL autorização de contratação trabalhadores não residentes prazo validade taxa de contratação montante patacas Regulamento Administrativo 8/2010': DSAL press statements cite Lei 21/2009 and a six-month period from the hiring authorisation, truncated; no fee amount.",
     "trade-press": "None Retry (2026-11-01): None naming a primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl: cc.py list 'mo,gov,dsaj,bo)/bo/i/2010/16/regadm08' in CC-MAIN-2026-39, -30, -21; cc.py get of the 12 September 2026 Portuguese capture, read whole => -39 holds the Portuguese and Chinese pages; read: stay authorisation runs for the hiring authorisation's term (art. 10) and is renewed (art. 14); the worker's identity document costs 100 patacas to issue or renew (art. 12); the hiring fee is monthly (art. 17) but its amount isn't in this regulation"
    }
   },
   {
@@ -70,10 +86,10 @@
    "sought": "A criterion for a performer",
    "tried": {
     "institution": "dsal.gov.mo 403 Retry (2026-11-01): DSAL's Portuguese pages (dsal.gov.mo) not reachable earlier (403); al.gov.mo attachment uploads/attachment/2026-05/86d2...pdf returns a 117-byte HTML redirect; court.gov.mo ruling pt-74cee53590699 read: a wage dispute, nothing on fees or terms.",
-    "official-register": "Boletim Oficial refused Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text.",
+    "official-register": "Boletim Oficial refused Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text. || 2026-11-04: bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1 live => curl: (35) Recv failure: Connection reset by peer",
     "web-search": "Same searches (2026-11-01): DSAL refuses hiring where suitable resident workers are available Retry (2026-11-01): 'Macau DSAL autorização de contratação trabalhadores não residentes prazo validade taxa de contratação montante patacas Regulamento Administrativo 8/2010': DSAL press statements cite Lei 21/2009 and a six-month period from the hiring authorisation, truncated; no fee amount.",
     "trade-press": "None Retry (2026-11-01): None naming a primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl: cc.py list 'mo,gov,dsaj,bo)/bo/i/2010/16/regadm08' in CC-MAIN-2026-39, -30, -21; cc.py get of the 12 September 2026 Portuguese capture, read whole => -39 holds the Portuguese and Chinese pages; read: stay authorisation runs for the hiring authorisation's term (art. 10) and is renewed (art. 14); the worker's identity document costs 100 patacas to issue or renew (art. 12); the hiring fee is monthly (art. 17) but its amount isn't in this regulation"
    }
   },
   {
@@ -81,11 +97,12 @@
    "sought": "Any minimum pay for a non-resident worker",
    "tried": {
     "institution": "dsal.gov.mo 403 Retry (2026-11-01): DSAL's Portuguese pages (dsal.gov.mo) not reachable earlier (403); al.gov.mo attachment uploads/attachment/2026-05/86d2...pdf returns a 117-byte HTML redirect; court.gov.mo ruling pt-74cee53590699 read: a wage dispute, nothing on fees or terms.",
-    "official-register": "Boletim Oficial refused Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text.",
+    "official-register": "Boletim Oficial refused Retry (2026-11-01): Boletim Oficial (bo.io.gov.mo) refused by the egress proxy earlier; Regulamento Administrativo 8/2010 not found as text. || 2026-11-04: bo.dsaj.gov.mo/bo/i/2010/16/regadm08.asp?printer=1 live => curl: (35) Recv failure: Connection reset by peer",
     "web-search": "Same searches (2026-11-01) Retry (2026-11-01): 'Macau DSAL autorização de contratação trabalhadores não residentes prazo validade taxa de contratação montante patacas Regulamento Administrativo 8/2010': DSAL press statements cite Lei 21/2009 and a six-month period from the hiring authorisation, truncated; no fee amount.",
     "trade-press": "None Retry (2026-11-01): None naming a primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) Retry (2026-11-01): web.archive.org resets the connection from this environment (retried 2026-11-01). || 2026-11-04: Common Crawl: cc.py list 'mo,gov,dsaj,bo)/bo/i/2010/16/regadm08' in CC-MAIN-2026-39, -30, -21; cc.py get of the 12 September 2026 Portuguese capture, read whole => -39 holds the Portuguese and Chinese pages; read: stay authorisation runs for the hiring authorisation's term (art. 10) and is renewed (art. 14); the worker's identity document costs 100 patacas to issue or renew (art. 12); the hiring fee is monthly (art. 17) but its amount isn't in this regulation"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 in the Boletim Oficial's copy of Administrative Regulation 8/2010: the identity document's fee; the stay authorisation runs for the term of the employer's hiring authorisation (art. 10) and is renewable (art. 14), which the game can't hold as a term."
 }

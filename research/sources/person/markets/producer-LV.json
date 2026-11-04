@@ -78,6 +78,44 @@
      "said": "Nacionālajā Kino centrā noslēdzies 2022. gada jaunu filmu ražošanas konkurss ar pieejamo finansējumu EUR 1 982 472 ; atbalstīti 16 filmu projekti – piecas spēlfilmas, septiņas dokumentālās filmas un četras animācijas filmas. … konkursam tika iesniegts kopā 41 projekts, kopējais projektos pieprasītā finansējuma apjoms bija EUR 6 672 951. … No konkursā pieejamā finansējuma spēlfilmām tiks piešķirti EUR 1 209 046 (piecu pilnmetrāžas filmu ražošanas uzsākšanai), dokumentālajām filmām EUR 414 790 (septiņām dažāda garuma filmām) un animācijas filmām EUR 358 636"
     }
    ]
+  },
+  {
+   "item": "fund",
+   "finding": "All public money a National Film Centre project takes, from any source, may not pass 50% of its eligible costs (80% for a 'difficult' film), under Cabinet Regulation No. 975 point 19 as worded from 30 April 2024.",
+   "value": {
+    "currency": "EUR",
+    "maxPublicAidShare": 0.5,
+    "maxPublicAidShareDifficultFilm": 0.8,
+    "rule": "MK noteikumi Nr. 975 (12.10.2010), p. 19, as worded by MK noteikumi Nr. 265 (30.04.2024)"
+   },
+   "applies": "Latvia, projects the National Film Centre funds.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "19.1. kopējais piešķirtā finansējuma apmērs neatkarīgi no finansējuma avota nepārsniedz 50 % no projekta kopējām attiecināmajām izmaksām. … 19.2. sarežģītas filmas veidošanai kopējais piešķirtā finansējuma apmērs neatkarīgi no finansējuma avota nepārsniedz 80 %"
+    }
+   ]
+  },
+  {
+   "item": "incentive",
+   "finding": "The Latvian co-financing programme for foreign productions pays 30% of eligible production costs for features and animation costing at least EUR 711,436 (documentaries EUR 142,287), with all public money held to 50% of the film's spend in Latvia (the National Film Centre's page, captured by Common Crawl on 2026-10-11).",
+   "value": {
+    "name": "Latvian co-financing programme for foreign productions",
+    "currency": "EUR",
+    "rate": 0.3,
+    "minTotalCostsEUR": {
+     "featureOrAnimation": 711436,
+     "documentary": 142287
+    },
+    "publicAidMaxShareOfLatvianSpend": 0.5
+   },
+   "applies": "Latvia, foreign productions and co-productions, 2026.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "An application can be made for international production service or co-production to receive a cash rebate of 30% on eligible production costs. The support can be combined with other public funding sources in Latvia in case if the Co-financing programme’s support together with other funding sources does not exceed 50% of the film’s total expenses in Latvia. … 711,436 EUR for feature and animation films … 142,287 EUR for documentaries"
+    }
+   ]
   }
  ],
  "country": "LV",
@@ -103,19 +141,21 @@
    "read": "2026-11-04",
    "kind": "primary",
    "said": "Nacionālajā Kino centrā noslēdzies 2022. gada jaunu filmu ražošanas konkurss ar pieejamo finansējumu EUR 1 982 472 ; atbalstīti 16 filmu projekti – piecas spēlfilmas, septiņas dokumentālās filmas un četras animācijas filmas. … konkursam tika iesniegts kopā 41 projekts, kopējais projektos pieprasītā finansējuma apjoms bija EUR 6 672 951. … No konkursā pieejamā finansējuma spēlfilmām tiks piešķirti EUR 1 209 046 (piecu pilnmetrāžas filmu ražošanas uzsākšanai), dokumentālajām filmām EUR 414 790 (septiņām dažāda garuma filmām) un animācijas filmām EUR 358 636"
+  },
+  {
+   "url": "https://likumi.lv/ta/id/220300",
+   "title": "Ministru kabineta noteikumi Nr.975 (12.10.2010) \"Kārtība, kādā Nacionālais kino centrs piešķir publisko finansējumu filmu nozares projektiem\" (Latvijas Vēstnesis's legal portal, status: spēkā esošs; point 19 in the wording of MK 30.04.2024 noteikumi Nr. 265)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "19.1. kopējais piešķirtā finansējuma apmērs neatkarīgi no finansējuma avota nepārsniedz 50 % no projekta kopējām attiecināmajām izmaksām. … 19.2. sarežģītas filmas veidošanai kopējais piešķirtā finansējuma apmērs neatkarīgi no finansējuma avota nepārsniedz 80 %"
+  },
+  {
+   "url": "https://www.nkc.gov.lv/en/cash-rebates",
+   "title": "National Film Centre of Latvia: Cash Rebates (Common Crawl CC-MAIN-2026-43 capture of 2026-10-11, crawl-data/CC-MAIN-2026-43/segments/1791170054614.7; the live site gives an empty reply)",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "An application can be made for international production service or co-production to receive a cash rebate of 30% on eligible production costs. The support can be combined with other public funding sources in Latvia in case if the Co-financing programme’s support together with other funding sources does not exceed 50% of the film’s total expenses in Latvia. … 711,436 EUR for feature and animation films … 142,287 EUR for documentaries"
   }
  ],
- "blockers": [
-  {
-   "item": "fund",
-   "sought": "The maximum share of a budget the National Film Centre may fund (Cabinet Regulation No. 975 and the competition rules)",
-   "tried": {
-    "institution": "nkc.gov.lv (National Film Centre, the fund and the national co-financing programme): empty reply from server and HTTP/2 stream errors on every attempt (www and bare host, /en, /en/cash-rebates, /en/media/13689/download); liaa.gov.lv empty reply | Retry 2026-11-01: nkc.gov.lv/lv/media/19421/download (2026 production competition rules): empty reply from server again; lkdaf.lv and kinosavieniba.lv answer (home pages, no rates); FIA, FSE and FERA member lists read",
-    "official-register": "likumi.lv (Cabinet regulations): connection reset | Retry 2026-11-01: likumi.lv and vvc.gov.lv (English translation of Reg. 975): no answer / timeout",
-    "web-search": "search \"Latvia cash rebate film 25% National Film Centre co-financing foreign films regulations likumi.lv\" listed nkc.gov.lv pages only | Retry 2026-11-01: run 2026-11-01 (Latvian): \"Nacionālais Kino centrs filmu finansējums konkurss maksimālais apjoms procentos aktieru honorāri minimālā likme scenāristu ģilde\": NKC competition rules downloads (nkc.gov.lv, empty reply here), Cabinet Regulation No. 975 (vvc.gov.lv English page timed out), LV portāls 2022 results (read), LSM; no fee floor for actors or writers",
-    "trade-press": "FilmNewEurope 2014 profile read (dated: up to 25%, combined cap 25%); not current | Retry 2026-11-01: none quoting a rate",
-    "archive": "web.archive.org snapshot 20261015062026 of nkc.gov.lv/en: connection reset, then 403 | Retry 2026-11-01: web.archive.org reset 2026-11-01"
-   }
-  }
- ]
+ "blockers": []
 }

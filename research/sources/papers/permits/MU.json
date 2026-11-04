@@ -1,37 +1,59 @@
 {
  "country": "MU",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit and residence permit (Ministry of Labour)",
  "routeChanged": false,
  "permit": {
-  "applies": "A company incorporated in Mauritius applies, for the work permit and the residence permit together, after a prior application to the Ministry of Labour and its agreement in principle.",
-  "first": "A full-time, fixed-term contract for a qualified worker in a specific job with a company incorporated in Mauritius, and the Ministry of Labour's agreement in principle.",
-  "fees": [],
+  "applies": "The employer applies online to the Ministry of Labour and Industrial Relations through the National E-Licensing System (NELS); the residence permit application to the Passport and Immigration Office goes with it automatically.",
+  "first": "Proof the employer tried to recruit locally through the National Employment Department, the vacancy advertised on mauritiusjobs.govmu.org; a vetted contract where the salary is MUR 50,000 a month or less.",
+  "fees": [
+   {
+    "what": "Processing fee, per application",
+    "amount": "700",
+    "currency": "MUR"
+   },
+   {
+    "what": "Annual fee on approval (non-refundable), with the prescribed work permit fee",
+    "amount": "500",
+    "currency": "MUR"
+   }
+  ],
   "processing": null,
   "validity": {
-   "n": 4,
-   "unit": "years",
-   "renewable": null
+   "n": null,
+   "unit": null,
+   "renewable": true
   },
-  "validityNote": "The work permit may not exceed four years (five in the free zone), per the UFE's country file.",
+  "validityNote": "Renewed online, the application filed three months before expiry; ten years' stay at most in all sectors; a permit lapses if not taken up within six months.",
   "union": null,
-  "eligibility": null,
+  "eligibility": "Generally aged between 20 and 60; no work permit for a holder of a tourist or student visa.",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The prescribed work permit fee itself, in the Non-Citizens (Work Permit) (Fees) Regulations 2013, wasn't read."
  },
  "sources": [
   {
-   "url": "https://ufe.org/dossier-pays/maurice/travailler-a-maurice/",
-   "title": "Union des Français de l’Étranger, Travailler à Maurice; rests on the Non-Citizens (Employment Restriction) Act",
+   "url": "https://empment-labour.govmu.org/Documents/Downloads/Workpermit%20Infosheet.pdf",
+   "title": "Ministry of Labour and Industrial Relations (Employment Division), Work Permit Information Sheet: Summary of Main Procedures and Checklist of Documents (February 2026), linked from https://empment-labour.govmu.org/Pages/Work%20Permit/ApplicationWP.aspx",
    "read": "2026-11-04",
-   "said": "Le demandeur ayant pénétré dans le pays avec un visa touristique ne sera pas autorisé à travailler à Maurice ! … Seules les entreprises mauriciennes ou étrangères incorporées à l’île Maurice sont habilitées à déposer une demande de permis de travail et permis de séjour pour un étranger. La demande ne peut être déposée que pour un travailleur qualifié exerçant un travail spécifique, à temps plein et pour une durée déterminée. La demande de permis de travail et de permis de séjour se fait en même temps. L’entreprise doit commencer par faire une demande préalable auprès du ministère du Travail. … le permis de travail ne peut excéder 4 ans, sauf en zone franche où il peut aller jusqu’à 5 ans.",
-   "kind": "secondary",
-   "quotes": "https://labour.govmu.org/",
+   "said": "The non-citizen should generally be aged between 20 and 60 years … Accordingly, applications for a work permit in respect of holders of a tourist visa or student visa will not be entertained. It is to be noted that if the holder of a Work Permit does not travel to Mauritius to take up employment within 6 months of the date of issue of the Work Permit, same will lapse. After completion of the maximum ten years of stay and work in Mauritius, the worker should leave the country … Applications for New, Renewal and Transfer Cases of Work Permit have to be submitted online via the National E-Licensing platform (NELS) upon registration at https://business.edbmauritius.org. … The requirement to obtain a Permission in Principle prior to submitting a Work Permit application is no longer applicable. In addition, the existing quota/ratio system has been abolished, and the maximum allowable period of stay for foreign workers across all sectors has been standardised at ten (10) years. Employers must, however, demonstrate their inability to recruit locally. … a processing fee of Rs 700 should be paid per application within 5 days of post verification of completeness of applications. Upon approval of application, a non-refundable annual fee of Rs. 500 should be paid together with the prescribed work permit fees. … Applications for renewal of work permits should be submitted 3 months prior to the expiry of the current one.",
+   "kind": "primary",
    "fields": [
-    "route",
     "applies",
     "first",
-    "validity"
+    "fees",
+    "validity",
+    "eligibility"
+   ]
+  },
+  {
+   "url": "https://empment-labour.govmu.org/Pages/Work%20Permit/ApplicationWP.aspx",
+   "title": "Ministry of Labour and Industrial Relations, Application of Work Permit (page)",
+   "read": "2026-11-04",
+   "said": "All applications for new or renewal of work permits/certificates of exemption must be submitted online through the National E-Licensing System (NELS ), accessible on https://business.edbmauritius.org.",
+   "kind": "primary",
+   "fields": [
+    "applies"
    ]
   }
  ],
@@ -40,7 +62,7 @@
    "field": "fees",
    "sought": "The Ministry of Labour's work permit fee",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
     "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
@@ -51,7 +73,7 @@
    "field": "processing",
    "sought": "The decision time",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
     "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
@@ -60,9 +82,9 @@
   },
   {
    "field": "validity",
-   "sought": "Whether the work permit is renewable (the UFE gives a four-year cap)",
+   "sought": "The term a work permit is granted for (the Ministry's Information Sheet gives none, only ten years' stay in all)",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official.",
     "trade-press": "None naming the Ministry's figures.",
@@ -73,7 +95,7 @@
    "field": "union",
    "sought": "Any union or arts-body step for a foreign performer",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
     "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
@@ -84,7 +106,7 @@
    "field": "pay",
    "sought": "Any pay rule",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
     "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
@@ -95,18 +117,7 @@
    "field": "exempt",
    "sought": "Any exemption for a short performing engagement",
    "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
-    "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
-    "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
-    "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "Criteria for a performer",
-   "tried": {
-    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached.",
+    "institution": "labour.govmu.org: the home page answers but the work-permit pages tried (labour/Pages/Work-Permit.aspx, the Employment Division's Work Permit Unit page) return 404; no permit page linked from the home page. || Retry 2026-11-01: labour.govmu.org's work permit pages 404 (as before); the e-work permit portal (empment-labour.govmu.org) not reached. || 2026-11-04: labour.govmu.org (the register's quotes) rendered in Playwright; its link to empment-labour.govmu.org (Employment Division); Work Permit pages AboutWP, ApplicationWP; the Information Sheet PDF => Read in full | curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole => found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
     "official-register": "Non-Citizens (Employment Restriction) Act and its fee regulations not found on an official legal database in this pass. || Retry 2026-11-01: The FSC's copy of the Non-Citizens (Employment Restriction) Act 1970 (fscmauritius.org) answers 403 (2026-11-01); the search excerpt says the processing fee is 'such fee as the Ministry may determine'.",
     "web-search": "'Mauritius Ministry of Labour work permit fee Rs processing time artist entertainer short term work permit exemption labour.govmu.org': commercial guides (IBN, Expat.com, Rivermate) and a real-estate site on the EDB's short-term occupation permit (USD 300), none official. || Retry 2026-11-01: WebSearch 'Mauritius \"work permit\" Ministry of Labour fee Rs \"Non-Citizens (Employment Restriction)\" regulations fees processing time weeks \"short-term work permit\"': IBN (MUR 700 processing fee), Expat.com, Rivermate, wikiprocedure; none saved as a primary.",
     "trade-press": "None naming the Ministry's figures. || Retry 2026-11-01: EDB's NSDC guideline is for another scheme; no law firm quoting the Ministry's fee.",
@@ -114,5 +125,5 @@
    }
   }
  ],
- "note": "The Economic Development Board's occupation permits (including a short-term one) are another route for professionals; not modelled for performers, no primary read."
+ "note": "The Economic Development Board's occupation permits (including a short-term one) are another route for professionals; not modelled for performers, no primary read. An error found and fixed on 2026-11-04: the route was held as the UFE's country file had it, with the Ministry's agreement in principle first and a permit of at most four years (five in the free zone); the Ministry's own Information Sheet (February 2026) says there is no Permission in Principle or quota any more, the employer applying online after trying to recruit locally, with ten years' stay at most, so the UFE's file was dropped. The prescribed permit fee, the decision time, any union step, pay rule or short engagement free of it weren't found."
 }

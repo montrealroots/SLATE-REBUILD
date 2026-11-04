@@ -1,6 +1,6 @@
 {
  "country": "UY",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Residencia temporaria (Hoja de Identidad Provisoria)",
  "routeChanged": false,
  "permit": {
@@ -37,14 +37,18 @@
   },
   "union": null,
   "eligibility": "Se considera residente temporario la persona extranjera que ingresa al país a desarrollar una actividad por un plazo determinado. ... H) Artistas.",
-  "pay": null,
-  "exempt": null
+  "pay": "Labour law applies to a foreign employee as to a national (Ley 18.250 art. 21); no pay threshold.",
+  "exempt": {
+   "days": 90,
+   "within": null,
+   "note": "A member of a public, artistic or cultural show, or a person invited for their art, enters as a non-resident and may do that activity, for 90 days renewable once by 90 more (Ley 18.250 arts. 20, 36(2), 36(4); Decreto 394/009 art. 13(a))."
+  }
  },
  "sources": [
   {
    "url": "https://impo.com.uy/bases/decretos/394-2009",
    "title": "IMPO, Decreto N° 394/009: Reglamentación de la Ley N° 18.250 (texto actualizado), art. 8 as worded by Decreto 238/022",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "El extranjero que gestione ante la Dirección Nacional de Migración la residencia temporaria por un plazo inferior a ciento ochenta (180) días, obtendrá la Hoja de Identidad Provisoria cuando acredite: A) la actividad que da origen a su solicitud y fecha de cese de la misma. … En ambos casos, la Hoja de Identidad Provisoria podrá ser renovada, por única vez, por otros cientos ochenta (180) días.",
    "kind": "primary",
    "fields": [
@@ -56,7 +60,7 @@
   {
    "url": "https://www.impo.com.uy/bases/leyes/18250-2008",
    "title": "IMPO, Ley N° 18.250 de Migración (texto actualizado), art. 34",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "Se considera residente temporario la persona extranjera que ingresa al país a desarrollar una actividad por un plazo determinado. … H) Artistas.",
    "kind": "primary",
    "fields": [
@@ -83,6 +87,37 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://www.impo.com.uy/bases/leyes/18250-2008",
+   "title": "Ley N° 18.250 de 06/01/2008, Migración (IMPO, arts. 20, 21, 34, 36)",
+   "read": "2026-11-04",
+   "said": "Artículo 36 Se considera no residente a la persona extranjera que ingresa al país sin ánimo de permanecer en forma definitiva ni temporaria en el territorio nacional. Integran esta categoría migratoria: … 2) Invitados por entes públicos o privados en razón de su profesión o arte. … 4) Integrantes de espectáculos públicos, artísticos o culturales. … Artículo 20 Las personas extranjeras admitidas en la categoría de \"no residente\" no podrán ejercer actividad laboral alguna fuera de las específicas en su categoría. Artículo 21 Las personas físicas o jurídicas que en el territorio nacional ocupen trabajadores extranjeros en relación de dependencia deberán cumplir la normativa laboral vigente, tal como se aplica a los trabajadores nacionales.",
+   "kind": "primary",
+   "fields": [
+    "pay",
+    "exempt"
+   ]
+  },
+  {
+   "url": "https://www.impo.com.uy/bases/decretos/394-2009",
+   "title": "Decreto N° 394/009 de 24/08/2009, reglamentación de la Ley 18.250 (IMPO, art. 13)",
+   "read": "2026-11-04",
+   "said": "Artículo 13 El plazo de permanencia de los no residentes incluidos en el artículo 36 de la Ley Nº 18.250 será: a) De noventa días renovables por noventa días más a las personas comprendidas en los numerales 1, 2, 3, 4, 11 y 12.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
+  },
+  {
+   "url": "https://www.impo.com.uy/bases/leyes/18384-2008",
+   "title": "Ley N° 18.384 de 17/10/2008, Estatuto del Artista y Oficios Conexos (IMPO)",
+   "read": "2026-11-04",
+   "said": "(read whole, 1,150 words: no article on foreign artists; the unions (organizaciones gremiales) appear only as members of the commission that runs the artists' register: 'representantes de las organizaciones gremiales. Los representantes gremiales serán designados por el Ministerio de Trabajo …')",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
@@ -90,46 +125,13 @@
    "field": "processing",
    "sought": "Decision time",
    "tried": {
-    "institution": "Neither the DNM's sheet nor gub.uy's residence page states one. | Retry 2026-11-01: gub.uy (Ministry of Foreign Affairs portal) answers but no residence decision time found on the pages already read; migracion.minterior.gub.uy: no connection (HTTP 000).",
-    "official-register": "Ley 18.250 and Decreto 394/009 set none for this. | Retry 2026-11-01: impo.com.uy answers; Ley 18.250 and Decreto 394/009 (saved) re-read: no decision time, union step, pay rule or exempt engagement.",
+    "institution": "Neither the DNM's sheet nor gub.uy's residence page states one. | Retry 2026-11-01: gub.uy (Ministry of Foreign Affairs portal) answers but no residence decision time found on the pages already read; migracion.minterior.gub.uy: no connection (HTTP 000). || 2026-11-04: gub.uy Ministry of Labour (MTSS) home page fetched (HTTP 200) => the home page names no work permit, foreign worker or migration procedure (no match for extranjero, permiso de trabajo, migra); no decision time found",
+    "official-register": "Ley 18.250 and Decreto 394/009 set none for this. | Retry 2026-11-01: impo.com.uy answers; Ley 18.250 and Decreto 394/009 (saved) re-read: no decision time, union step, pay rule or exempt engagement. || 2026-11-04: IMPO: Ley 18.250 (7,163 words) and Decreto 394/009 as amended (5,566 words) fetched and read whole; searched for artistas, espectáculos, sindicato, salario, remuneración, plazo, resolución => exempt found: members of public, artistic or cultural shows (art. 36(4)) and those invited for their profession or art (art. 36(2)) enter as non-residents, may do the activity specific to their category (art. 20), and stay 90 days renewable for 90 more (Decreto 394/009 art. 13(a)); pay rule: employers must apply labour law to foreign employees as to nationals (art. 21), no pay floor; no union step in either text; no decision period for the residence (Ley 18.250 art. 37 leaves time limits to regulation, and the decree sets none) | IMPO: Ley 18.384 (Estatuto del Artista y Oficios Conexos) and its Decreto 266/009 fetched and read whole (1,150 and 1,158 words), searched for extranjero, sindicato, gremial => no rule on foreign artists and no union consultation; unions appear only on the artists' register commission",
     "web-search": "'gub.uy trámite residencia temporaria Dirección Nacional de Migración costo plazo artistas Hoja de Identidad Provisoria': none. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "Any union consultation",
-   "tried": {
-    "institution": "None named. | Retry 2026-11-01: gub.uy (Ministry of Foreign Affairs portal) answers but no residence decision time found on the pages already read; migracion.minterior.gub.uy: no connection (HTTP 000).",
-    "official-register": "None in Ley 18.250 or Decreto 394/009. | Retry 2026-11-01: impo.com.uy answers; Ley 18.250 and Decreto 394/009 (saved) re-read: no decision time, union step, pay rule or exempt engagement.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "A minimum pay rule",
-   "tried": {
-    "institution": "None named; Ley 18.250 art. 21 asks employers to apply labour law as to nationals, not a pay floor. | Retry 2026-11-01: gub.uy (Ministry of Foreign Affairs portal) answers but no residence decision time found on the pages already read; migracion.minterior.gub.uy: no connection (HTTP 000).",
-    "official-register": "Same. | Retry 2026-11-01: impo.com.uy answers; Ley 18.250 and Decreto 394/009 (saved) re-read: no decision time, union step, pay rule or exempt engagement.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "An engagement short enough to need no permit",
-   "tried": {
-    "institution": "No exemption for paid work named; even under 180 days the Provisional Identity Sheet is asked. | Retry 2026-11-01: gub.uy (Ministry of Foreign Affairs portal) answers but no residence decision time found on the pages already read; migracion.minterior.gub.uy: no connection (HTTP 000).",
-    "official-register": "Ley 18.250 art. 20: non-residents may do no work outside their category's. | Retry 2026-11-01: impo.com.uy answers; Ley 18.250 and Decreto 394/009 (saved) re-read: no decision time, union step, pay rule or exempt engagement.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
     "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
    }
   }
  ],
- "note": "Under 180 days the National Migration Directorate gives a Provisional Identity Sheet on proof of the activity and its end date (Decreto 394/009 art. 8); from 180 days to two years, the temporary residence itself, whose fees are below (the DNM's 2023 requirements sheet; amounts in indexed units, UI, readjusted every six months). Whether the Provisional Identity Sheet carries the same fee isn't stated."
+ "note": "Under 180 days the National Migration Directorate gives a Provisional Identity Sheet on proof of the activity and its end date (Decreto 394/009 art. 8); from 180 days to two years, the temporary residence itself, whose fees are below (the DNM's 2023 requirements sheet; amounts in indexed units, UI, readjusted every six months). Whether the Provisional Identity Sheet carries the same fee isn't stated. Read 2026-11-04 on IMPO: Ley 18.250, Decreto 394/009, Ley 18.384 and Decreto 266/009 read whole: no union step. The earlier attempts' 'no exemption for paid work' missed art. 36(4) with art. 20, which let a show's members work in it as non-residents."
 }

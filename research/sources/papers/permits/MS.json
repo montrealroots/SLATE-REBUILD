@@ -1,6 +1,6 @@
 {
  "country": "MS",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Labour Code, Cap. 15.03, Part on work permits, ss. 126-133); writers are exempt (s. 128(2)(o))",
  "routeChanged": false,
  "permit": {
@@ -43,20 +43,22 @@
    "premium": null
   },
   "validity": {
-   "n": null,
-   "unit": null,
+   "n": 1,
+   "unit": "years",
    "renewable": true
   },
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "validityNote": "A temporary work permit covers a single period not exceeding one year, and may be renewed by the Minister (Labour Code s. 125, s. 127(1)(b),(6)).",
+  "exemptNote": "None for performers or directors (s. 128(2) and the Exemptions Order, read whole); a writer's exemption under the Order holds only for visits of up to 60 days in all in a calendar year, while the Code's s. 128(2)(o) names writers without a limit."
  },
  "sources": [
   {
    "url": "https://parliament.ms/wp-content/uploads/2026/05/15.03-Labour-Code.pdf",
    "title": "Laws of Montserrat, Labour Code Cap. 15.03 (revision date 1 January 2025), ss. 126-129, and Labour Code (Work Permits Fees) Regulations (S.R.O.s 5/1984, 5/1993, 23/2004 and 36/2012)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "a person who is not a Montserratian shall not engage in employment or self-employment in Montserrat unless he or she has a work permit. … A work permit shall be issued by the Governor, acting on the advice of the Cabinet. (b) A renewal, extension or temporary work permit shall be issued by the Minister. (2) An application for a work permit shall be made by the intended employer on behalf of the person for whom the permit is sought, by filing an application, in the prescribed form, with the Labour Commissioner. … (o) writers, journalists, broadcasters, photographers, sculptors and painters (excluding commercial and industrial photographers and painters); … (b) proof of advertisement of the post in Montserrat; (c) the reason for employing a non-national; (d) a statement of the proposed terms of employment, including the basic rate of pay, … Entertainer (under one week) … 300 (over one week) … .. 500 … Application filed on island (stamp) … 20 … The fee for the issue of a work permit to a Non- Caricom National shall be the fee for the issue of work permit to a Caricom National plus an additional $300. … (a) Caricom Nationals $ 75 (b) Non-Caricom Nationals $125",
    "kind": "primary",
    "fields": [
@@ -87,6 +89,20 @@
    "fields": [
     "exempt"
    ]
+  },
+  {
+   "url": "https://parliament.ms/wp-content/uploads/2026/05/15.03-Labour-Code.pdf",
+   "title": "Legislative Assembly of Montserrat, Labour Code Cap. 15.03 (revision 1 Jan 2025): s. 125 definition, ss. 127(1),(6),(8), 128(2), and the Labour Code (Work Permits Exemptions) Order (S.R.O.s 20/1970 ... Act 9 of 2011), para. 3",
+   "read": "2026-11-04",
+   "said": "“temporary work permit” means a work permit issued to a non-resident of Montserrat to enter and work in Montserrat for a single period not exceeding one year. ... 127. (1) ... (b) A renewal, extension or temporary work permit shall be issued by the Minister. ... (8) Despite any other provision, a person who has the written consent of the primary employer may engage the services of a work permit holder for not more than five days per month. ... [Order, para. 3] (g) writers, journalists, broadcasters, photographers, sculptors and painters (excluding commercial and industrial photographers and painters): Provided that, the exemption in respect of any of the classes of persons mentioned in paragraphs (c), (d), (e), (f) and (g) of this Order shall apply only in relation to a visit or to visits not exceeding sixty days in duration in the aggregate in any one calendar year.",
+   "kind": "primary",
+   "fields": [
+    "validity",
+    "exempt",
+    "union",
+    "pay",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
@@ -95,67 +111,12 @@
    "sought": "decision time for a new permit (only renewal or variation is stated, usually 2 weeks)",
    "tried": {
     "institution": "gov.ms services page read",
-    "official-register": "Labour Code read: none",
+    "official-register": "Labour Code read: none || 2026-11-04: curl the Legislative Assembly's Labour Code PDF (parliament.ms), pdftotext; read the work-permit Part (ss. 125-133) and the subsidiary Exemptions Order and Fees Regulations whole => validity found: a temporary work permit is for a single period not exceeding one year (definition), issued or renewed by the Minister; exempt: s. 128(2)(a)-(q) and the Order name no performer, actor or director, so no permit-free engagement for them (absence found); writers' exemption limited by the Order to visits of 60 days in aggregate a calendar year; no decision time, union step, performer criterion or pay floor anywhere in the Part (read whole).",
     "web-search": "run 2026-11-01 (Montserrat work permit fees): none",
     "trade-press": "none",
     "archive": "not tried"
    }
-  },
-  {
-   "field": "validity",
-   "sought": "the longest period a permit is granted for",
-   "tried": {
-    "institution": "gov.ms: none",
-    "official-register": "Labour Code ss. 126-133 read: none stated (fees are per annum)",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "a short-engagement exemption for performers (the 2025 Order exempts only prison support staff)",
-   "tried": {
-    "institution": "none",
-    "official-register": "Labour Code s. 128 and S.R.O. 13 of 2025 read: performers not exempt; an entertainer under one week pays a lower fee instead",
-    "web-search": "run",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "union",
-   "sought": "union consultation",
-   "tried": {
-    "institution": "none",
-    "official-register": "Labour Code: none",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "criteria",
-   "tried": {
-    "institution": "none",
-    "official-register": "Labour Code: none beyond the advertisement",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "minimum pay",
-   "tried": {
-    "institution": "none",
-    "official-register": "Labour Code: the basic rate of pay is stated, not set",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
   }
  ],
- "note": "A screenwriter differs: 'writers' are among the persons the Labour Code exempts from a work permit (s. 128(2)(o)). Performers and directors are not named; an entertainer's permit has its own fee line."
+ "note": "A screenwriter differs: 'writers' are among the persons the Labour Code exempts from a work permit (s. 128(2)(o)). Performers and directors are not named; an entertainer's permit has its own fee line. Read 2026-11-04 in the Labour Code (Parliament's revised edition, May 2026): its work-permit Part, read whole, names no union step, criterion or pay rule; no ministry page states a decision time."
 }

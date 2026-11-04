@@ -439,7 +439,10 @@ describe('the youth compile, run', () => {
     // Antarctica has no place of its own: proven, its research's own finding still cited.
     expect(rows.find((r) => r.key === 'AQ')).toEqual({ key: 'AQ', status: 'proven', register: [ids.get(`${FACT}AQ`)], tests: [NO_PLACES] });
     expect(rows.find((r) => r.key === 'GB')).toEqual({ key: 'GB', status: 'blocked', register: [ids.get(`${BLOCKED}GB`), ids.get(`${FACT}GB`)], tests: [...TESTS, TOLD] });
-    expect(rows.find((r) => r.key === 'KE')).toEqual({ key: 'KE', status: 'blocked', register: [ids.get(`${BLOCKED}KE`)], tests: [...TESTS, TOLD] });
+    // Lebanon's research holds only its blocker: blocked, citing it alone. (Kenya was the example until 2026-11-04, when its
+    // director's age was found and its file came to be cited as research.)
+    expect(rows.find((r) => r.key === 'LB')).toEqual({ key: 'LB', status: 'blocked', register: [ids.get(`${BLOCKED}LB`)], tests: [...TESTS, TOLD] });
+    expect(rows.find((r) => r.key === 'KE')).toEqual({ key: 'KE', status: 'blocked', register: [ids.get(`${BLOCKED}KE`), ids.get(`${FACT}KE`)], tests: [...TESTS, TOLD] });
   });
 
   it('serializes one country to a line, as the engine reads it', () => {

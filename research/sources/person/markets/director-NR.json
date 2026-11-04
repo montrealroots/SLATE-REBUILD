@@ -1,7 +1,7 @@
 {
  "topic": "markets.director.NR",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Nauru. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a director works on in Nauru. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page. Tried again 2026-11-04 (layer 4's research, BRIEF of 2026-11-04): each attempt is in its blocker.",
  "figures": [],
  "country": "NR",
  "sources": [],
@@ -10,11 +10,11 @@
    "item": "fees",
    "sought": "a directors' guild, agreement or minimum fee, or a source saying none",
    "tried": {
-    "institution": "www.naurugov.nr unreachable (timeout) | Retry 2026-11-01: www.naurugov.nr does not answer; ronlaw.gov.nr (Nauru's online legal database) answers but is a script-only app (no searchable page)",
-    "official-register": "no official register reachable | Retry 2026-11-01: ronlaw.gov.nr not searchable without scripts; the 2025 constitution read (Constitute Project) has no official-language or capital clause and no rule on it; PacLII 403",
+    "institution": "www.naurugov.nr unreachable (timeout) | Retry 2026-11-01: www.naurugov.nr does not answer; ronlaw.gov.nr (Nauru's online legal database) answers but is a script-only app (no searchable page) || 2026-11-04: https://www.naurugov.nr/ (Government of Nauru). Result: proxy CONNECT 502; not read | Nauru Bureau of Statistics (nauru.prism.spc.int redirects to https://stats.gov.nr/): home, social-statistics page and WordPress media API (search 'census', PDFs) for the 2021 census report (language, workplace). Result: only census images and 2019 mini-census tables listed; the posts API and documents page then answered a 'One moment, please...' interstitial (a bot check), not got past",
+    "official-register": "no official register reachable | Retry 2026-11-01: ronlaw.gov.nr not searchable without scripts; the 2025 constitution read (Constitute Project) has no official-language or capital clause and no rule on it; PacLII 403 || 2026-11-04: RONLAW API guessed at https://ronlaw.gov.nr/api/search?q=film; the home page again to read its script bundle for the search endpoint. Result: not reached: the API path answered 404 (a Spring error body, path /search); the home page then reset the connection (curl 35) | https://ronlaw.gov.nr/ (RONLAW, Nauru's legal database) home. Result: answers 200 but is a script-only app shell (6 KB, no listing); not searchable without running its scripts",
     "web-search": "session web-search budget exhausted (limit reached 2026-11-01) before this country; no query run | Retry 2026-11-01: run 2026-11-01: \"Nauru film production culture department arts funding filming permit Nauru government\": only production-services and fixer sites (mediapioneers, Emerge) saying there are no incentives or co-production treaties, citing no primary (not used); no Nauru government page",
     "trade-press": "none read (no search available) | Retry 2026-11-01: none quoting a primary",
-    "archive": "web.archive.org returned 429 / connection reset this session | Retry 2026-11-01: web.archive.org reset 2026-11-01"
+    "archive": "web.archive.org returned 429 / connection reset this session | Retry 2026-11-01: web.archive.org reset 2026-11-01 || 2026-11-04: Common Crawl CC-MAIN-2026-39 'nr,gov,ronlaw)/' and 'nr,gov,naurugov)/'. Result: not found: RONLAW captures are its home, one act PDF (nauru_lpms/files/acts/f68fdcd4363b5f0b4630ac4c9c9f1202.pdf) and the Referendum Procedures Act 2025 viewer; naurugov.nr has no capture"
    }
   }
  ]

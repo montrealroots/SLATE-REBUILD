@@ -1,6 +1,6 @@
 {
  "country": "GE",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Labour permit (State Employment Support Agency; Law on Labour Migration and Government Decree No. 70 of 20 February 2026)",
  "routeChanged": false,
  "permit": {
@@ -44,7 +44,8 @@
   "exempt": {
    "days": 120,
    "within": 365
-  }
+  },
+  "validityNote": "A first work right runs six months to one year; it can be extended a year at a time for the first five years, then for one to five years at a time (Decree No. 70, art. 10)."
  },
  "sources": [
   {
@@ -75,52 +76,55 @@
     "processing",
     "applies"
    ]
+  },
+  {
+   "url": "https://matsne.gov.ge/ka/document/view/6791218",
+   "title": "Legislative Herald of Georgia (matsne.gov.ge), Government of Georgia Decree No. 70 of 20 February 2026, შრომით იმიგრანტსა და თვითდასაქმებულ უცხოელზე შრომითი საქმიანობის უფლების გაცემის წესის დამტკიცების შესახებ, consolidated publications 26/02, 13/03 and 09/07/2026 listed; articles 10 and 11 read on the default view and on ?publication=3, identical (saved l4w/files/p1/ge/)",
+   "read": "2026-11-04",
+   "said": "მუხლი 10. … პირველ ჯერზე გაცემული შრომითი საქმიანობის უფლება … მისი მოქმედების ვადა განისაზღვრება ამ უფლების ძალაში შესვლის თარიღიდან 6 თვიდან 1 წლამდე ვადით. … 3. … შრომითი საქმიანობის უფლების მოქმედების ვადა, პირველი ხუთი წლის განმავლობაში, შეიძლება გაგრძელდეს, ყოველ ჯერზე, არაუმეტეს 1 წლის ვადით. … მუხლი 11. შრომითი საქმიანობის უფლების გაცემის მომსახურების საფასური 1. … მომსახურების საფასური დიფერენცირებულია ვადის მიხედვით და შეადგენს: ა) შრომითი საქმიანობის უფლების მოთხოვნა – განცხადებისა და სავალდებულო დოკუმენტაციის სრულად წარდგენიდან 30-ე კალენდარულ დღეს გაცემისას – 200 ლარს; ბ) … მე-10 სამუშაო დღეს გაცემისას – 400 ლარს; გ) შრომითი საქმიანობის უფლების ვადის გაგრძელება – … არაუმეტეს 30-ე კალენდარულ დღისა − 200 ლარს. 2. შრომით იმიგრანტზე შრომითი საქმიანობის უფლების გაცემის მომსახურების საფასურს იხდის ადგილობრივი დამსაქმებელი.",
+   "kind": "primary",
+   "fields": [
+    "fees",
+    "processing",
+    "validity",
+    "union"
+   ]
+  },
+  {
+   "url": "https://matsne.gov.ge/en/document/view/2806732",
+   "title": "Law of Georgia on Labour Migration, consolidated version (final), Legislative Herald of Georgia (Matsne), with amendments to Law No 873 of 26 June 2025",
+   "read": "2026-11-04",
+   "said": "5. After submitting the application provided for by paragraph 2 of this article and the attached documentation in full, the total period for reviewing the application received for the right to work must not exceed 30 calendar days. 6. The total period for reviewing an application for extending the validity period of the right to work must not exceed 30 calendar days. … 8. The service fee for giving the right to work to a labour immigrant, including in the case of giving that right in an expedited administrative manner, shall not be more than GEL 500 to be paid to the budget of the Legal Entity under Public Law – the State Employment Support Agency. 9. The amount of the service fee, the procedure for and conditions of payment shall be defined by an ordinance of the Government of Georgia. … 1. An alien shall have the right to perform a short-term professional activity in Georgia without a right to work and a relevant residence permit … The list of short-term professional activities to be performed by an alien, as well as their duration … shall be determined by an ordinance of the Government of Georgia.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "exempt"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "all",
-   "sought": "the Decree No. 70 text or the Agency's own page",
-   "tried": {
-    "institution": "Ministry and Agency pages not reached (layer 3 too); a 1tv.ge report of the Ministry's clarification answered HTTP 403",
-    "official-register": "matsne.gov.ge not searched (no document id found)",
-    "web-search": "run 2026-11-01 (Georgia labour permit fee GEL Ordinance 70): law-firm summaries only; one gives a GEL 500 maximum that the two read don't",
-    "trade-press": "ExpatHub and MKD Law read, both quoting Decree No. 70",
-    "archive": "not tried"
-   }
-  },
-  {
-   "field": "union",
-   "sought": "union consultation",
-   "tried": {
-    "institution": "none",
-    "official-register": "none",
-    "web-search": "run: none",
-    "trade-press": "none named",
-    "archive": "none"
-   }
-  },
-  {
    "field": "eligibility",
    "sought": "criteria for a performer",
    "tried": {
-    "institution": "none",
-    "official-register": "none",
-    "web-search": "run: none",
+    "institution": "none || 2026-11-04: https://labourmigration.moh.gov.ge/ => HTTP 403",
+    "official-register": "none || 2026-11-04: Fetched https://matsne.gov.ge/en/document/view/2806732 (the register's quotes), English consolidated text, read the articles on the right to work, fees and short-term activity => Law read: review within 30 calendar days (first grant and extension), service fee capped at GEL 500 with the amount left to a Government ordinance, short-term professional activity exempt with its duration left to an ordinance. The GEL 200/400 amounts, the 10-business-day expedited term and the 4-month short-term limit are not in the law. | Matsne search (matsne.gov.ge/ka/document/search, query 'შრომითი იმიგრანტის', number=70) for Government Ordinance No. 70 of 20 February 2026 => Search returned no matching ordinance in its result page (filters didn't narrow); ordinance not reached | matsne.gov.ge/ka/document/view/6791218 (default view and ?publication=3) and /en/ fetched; the Georgian text searched for საფასურ, ლარ, ვადა, ხელოვან/შემოქმედ/არტისტ/შემსრულებ, პროფესიული კავშირ/პროფკავშირ => found: fees, decision times, validity; no union step; no performer-specific rule; the only pay figure is the GEL 15,000 monthly wage that, with a relevant degree, exempts a vacancy from the market test",
+    "web-search": "run: none || 2026-11-04: WebSearch 'matsne.gov.ge დადგენილება №70 2026 შრომითი ნებართვა უცხოელი' (standard) => found the decree's matsne id 6791218 and its amendments (No. 109 of 13 March 2026, a later one); JAM News on the 1 March 2026 tightening",
     "trade-press": "none performer-specific",
-    "archive": "none"
+    "archive": "none || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   },
   {
    "field": "pay",
    "sought": "minimum pay (only a GEL 15,000 monthly salary that lifts the market test and quota)",
    "tried": {
-    "institution": "none",
-    "official-register": "none",
-    "web-search": "run",
+    "institution": "none || 2026-11-04: https://labourmigration.moh.gov.ge/ => HTTP 403",
+    "official-register": "none || 2026-11-04: Fetched https://matsne.gov.ge/en/document/view/2806732 (the register's quotes), English consolidated text, read the articles on the right to work, fees and short-term activity => Law read: review within 30 calendar days (first grant and extension), service fee capped at GEL 500 with the amount left to a Government ordinance, short-term professional activity exempt with its duration left to an ordinance. The GEL 200/400 amounts, the 10-business-day expedited term and the 4-month short-term limit are not in the law. | Matsne search (matsne.gov.ge/ka/document/search, query 'შრომითი იმიგრანტის', number=70) for Government Ordinance No. 70 of 20 February 2026 => Search returned no matching ordinance in its result page (filters didn't narrow); ordinance not reached | matsne.gov.ge/ka/document/view/6791218 (default view and ?publication=3) and /en/ fetched; the Georgian text searched for საფასურ, ლარ, ვადა, ხელოვან/შემოქმედ/არტისტ/შემსრულებ, პროფესიული კავშირ/პროფკავშირ => found: fees, decision times, validity; no union step; no performer-specific rule; the only pay figure is the GEL 15,000 monthly wage that, with a relevant degree, exempts a vacancy from the market test",
+    "web-search": "run || 2026-11-04: WebSearch 'matsne.gov.ge დადგენილება №70 2026 შრომითი ნებართვა უცხოელი' (standard) => found the decree's matsne id 6791218 and its amendments (No. 109 of 13 March 2026, a later one); JAM News on the 1 March 2026 tightening",
     "trade-press": "read",
-    "archive": "none"
+    "archive": "none || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04: the Government's Decree No. 70 in its current consolidation on Matsne (the fees, decision times, term and no union step) and the Law on Labour Migration (30 calendar days at most for a decision or an extension); the fees and times are now held on them."
 }

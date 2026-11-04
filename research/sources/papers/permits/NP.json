@@ -1,6 +1,6 @@
 {
  "country": "NP",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Department of Labour; Labour Act 2074, ss. 22-24; Labour Rules 2075)",
  "routeChanged": false,
  "permit": {
@@ -28,15 +28,16 @@
    "renewable": true
   },
   "union": null,
-  "eligibility": null,
-  "pay": null,
-  "exempt": null
+  "eligibility": "No performer criterion: the skill must be unobtainable from Nepali citizens after an advertisement in a national daily (s. 22(2)-(4)).",
+  "pay": "Pay and conditions may not fall below the standards the Labour Act or its Rules set (s. 27(1)).",
+  "exempt": null,
+  "exemptNote": "None for a performer: the Labour Act 2074 admits only diplomatic immunity and treaty exemptions (s. 23(2)); s. 24(b)'s short licence is for technicians."
  },
  "sources": [
   {
    "url": "https://pioneerlaw.com/wp-content/uploads/2022/01/2021-11-03-10-03-56-Labor-Laws-final-2.pdf",
    "title": "Pioneer Law Associates, Labor Laws of Nepal (presentation, 3 November 2021); rests on the Labour Act 2074, ss. 22-24, and the Labour Rules 2075",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "General Provision (Section 22): - Advertisement in national level Daily Newspaper*, - if no skilled human resource Nepali citizen is found, submit an application to obtain work permit. *Copy of vacancy advertisement published in the daily newspaper should be uploaded in the Job Portal of the Ministry of Labor. … The maximum period of Work permit: 5 years for the expert in technical field and 3 years for others. … The Labor Rules requires foreign nationals to renew the work permit prior to 30 days of its expiry. … Up to 6 months NRs. 15,000 The amount should be paid in the convertible currency if the application for work permit is submitted in the Nepalese embassy or any diplomatic agency. More than 6 months NRs. 20,000",
    "kind": "secondary",
    "quotes": "https://lawcommission.gov.np/",
@@ -57,6 +58,19 @@
    "fields": [
     "validity"
    ]
+  },
+  {
+   "url": "https://giwmscdnone.gov.np/media/pdf_upload/15.%20%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E0%A4%90%E0%A4%A8%2C_oinkgks.pdf",
+   "title": "Nepal Law Commission text (www.lawcommission.gov.np header) of श्रम ऐन, २०७४ (Labour Act 2074, Act no. 14 of 2074), as amended to the Act of 2082, ch. 6, ss. 22-27, on the Government of Nepal's CDN (giwmscdnone.gov.np)",
+   "read": "2026-11-04",
+   "said": "[pdftotext of the text layer; the embedded Kalimati font maps some conjuncts imperfectly, e.g. 'हवदे िी' for विदेशी] २२. ... (३) ... रोजगारदाताले आफूलाई चाहहएको दि श्रममक नेपाली नागररकबाट प्राप्त गनध राहियस्तरको दै मनक पमत्रकामा हवज्ञापन प्रकािन गनुध पनेछ। ... (६) श्रम इजाजत सम्बन्धी दस्तुर तथा अन्य व्यवस्था तोहकए बमोशजम हुनेछ। २३. ... (२) यस ऐनमा अन्यत्र जुनसुकै कुरा ले शखएको भए तापमन कुटनीमतक उन्मुशि पाउने वा नेपाल सरकारसँग भएको कुनै सशन्ध वा सम्झौता अन्तगधत श्रम स्वीकृमत मलन नपने अवस्थामा बाहेक नेपालमा काम गने हवदे िी नागररकले तोहकए बमोशजम श्रम स्वीकृमत मलनु पनेछ। २४. ... (ख) तीन महहना वा सोभन्दा कम अवमधको लामग कुनै मेिीनरी सामान ममधत गनध वा नयाँ प्रहवमधको जडान गनध वा यस्तै अन्य आकशस्मक काम गनधको लामग आउने प्राहवमधक। ... २७. ... (१) हवदे िी श्रममकले काम गरे बापत पाउने पाररश्रममक, सेवाका ितध र सुहवधा यो ऐन वा यस ऐन अन्तगधत बनेको मनयमले मनधाधरण गरे को मापदण्डभन्दा घटी नहुने गरी रोजगारदाता र श्रममकबीच भएको समयगत वा कायधगत रोजगार सम्झौतामा उल्ले ख भए बमोशजम हुनेछ। (२) रोजगार सम्झौतामा समयावमध उल्ले ख भएकोमा सोही बमोशजम र नभएमा ्यस्तो रोजगार सम्झौता तीन वषधसम्म कायम रहनेछ।",
+   "kind": "primary",
+   "fields": [
+    "union",
+    "pay",
+    "exempt",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
@@ -64,8 +78,8 @@
    "field": "all",
    "sought": "the Department of Labour's own page or the Labour Rules 2075 text",
    "tried": {
-    "institution": "dol.gov.np: connection reset by peer (2026-11-01)",
-    "official-register": "lawcommission.gov.np content URL returned an HTML page, no text of the Rules; nepallaws.com section 22 now loads its body by script",
+    "institution": "dol.gov.np: connection reset by peer (2026-11-01) || 2026-11-04: curl https://dol.gov.np/, https://www.dol.gov.np/ (Department of Labour), https://moless.gov.np/ => no connection (HTTP 000) on all three",
+    "official-register": "lawcommission.gov.np content URL returned an HTML page, no text of the Rules; nepallaws.com section 22 now loads its body by script || 2026-11-04: Nepal Law Commission site search (search/?q=श्रम), the Labour Rules 2075 page rendered in Playwright, then its PDF => Rules 10 and 11 read; the PDF's text layer garbles some Devanagari, so page 6 was checked against its rendered image and the quote is as the page shows it | curl the Law Commission's text of the Labour Act 2074 (as amended to 2082) on the Government's CDN, pdftotext; read ch. 6 (ss. 22-27) whole; an OCR check of p. 13 (tesseract nep) was started and timed out on the shared machine => found: the permit is needed by every foreign worker except those with diplomatic immunity or exempted by a treaty with Nepal (s. 23(2)) — no exemption for a performer or a short engagement (s. 24(b)'s direct licence for stays of three months or less covers technicians repairing machinery or installing new technology); the foreign worker's pay and conditions may not fall below the standards the Act or its Rules set (s. 27(1)); an employment agreement with no term runs three years (s. 27(2)); fees and other terms are left to the Rules (s. 22(6)); no union step anywhere in ch. 6.",
     "web-search": "run 2026-11-01 (Department of Labour Nepal work permit fee): secondary sources only; older reports cite NPR 10,000 a year",
     "trade-press": "two law firms read, both quoting the Labour Rules",
     "archive": "not tried"
@@ -75,57 +89,13 @@
    "field": "processing",
    "sought": "decision time",
    "tried": {
-    "institution": "unreachable",
-    "official-register": "not read",
+    "institution": "unreachable || 2026-11-04: curl https://dol.gov.np/, https://www.dol.gov.np/ (Department of Labour), https://moless.gov.np/ => no connection (HTTP 000) on all three",
+    "official-register": "not read || 2026-11-04: Nepal Law Commission site search (search/?q=श्रम), the Labour Rules 2075 page rendered in Playwright, then its PDF => Rules 10 and 11 read; the PDF's text layer garbles some Devanagari, so page 6 was checked against its rendered image and the quote is as the page shows it | curl the Law Commission's text of the Labour Act 2074 (as amended to 2082) on the Government's CDN, pdftotext; read ch. 6 (ss. 22-27) whole; an OCR check of p. 13 (tesseract nep) was started and timed out on the shared machine => found: the permit is needed by every foreign worker except those with diplomatic immunity or exempted by a treaty with Nepal (s. 23(2)) — no exemption for a performer or a short engagement (s. 24(b)'s direct licence for stays of three months or less covers technicians repairing machinery or installing new technology); the foreign worker's pay and conditions may not fall below the standards the Act or its Rules set (s. 27(1)); an employment agreement with no term runs three years (s. 27(2)); fees and other terms are left to the Rules (s. 22(6)); no union step anywhere in ch. 6.",
     "web-search": "run: law firms say 30 to 45 days, not quoting a primary",
     "trade-press": "none quoting a primary",
     "archive": "none"
    }
-  },
-  {
-   "field": "union",
-   "sought": "union consultation",
-   "tried": {
-    "institution": "unreachable",
-    "official-register": "none",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "criteria",
-   "tried": {
-    "institution": "unreachable",
-    "official-register": "none",
-    "web-search": "run: skill not available in Nepal",
-    "trade-press": "read",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "minimum pay",
-   "tried": {
-    "institution": "unreachable",
-    "official-register": "none",
-    "web-search": "run: none",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "a short-engagement exemption for performers (s. 24(b) recording covers only technicians under three months)",
-   "tried": {
-    "institution": "unreachable",
-    "official-register": "none",
-    "web-search": "run: none",
-    "trade-press": "read",
-    "archive": "none"
-   }
   }
  ],
- "note": "Indian nationals work freely (layer 3's rule stands; not re-read)."
+ "note": "Indian nationals work freely (layer 3's rule stands; not re-read). Read 2026-11-04 in the Labour Act 2074 on the government's own host, its chapter on labour permits (ss. 22-27) read whole (the PDF's text layer maps some conjuncts imperfectly). The fees held stay on the law firms' summaries of the Labour Rules 2075, whose PDF's text layer couldn't be read and whose page image wasn't read by OCR in time today."
 }

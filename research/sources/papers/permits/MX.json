@@ -1,6 +1,6 @@
 {
  "country": "MX",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Visitante con permiso para realizar actividades remuneradas",
  "routeChanged": false,
  "permit": {
@@ -23,7 +23,8 @@
   "validity": {
    "n": 180,
    "unit": "days",
-   "renewable": null
+   "renewable": false,
+   "note": "The Law's ceiling is 180 uninterrupted days from entry (art. 52 II); renewal under the Reglamento's art. 152 runs only within what the Law grants, and no renewal article names this visitor. Working longer takes a temporary residence (art. 52 VII), applied for apart."
   },
   "union": null,
   "eligibility": "Autoriza al extranjero que cuente con una oferta de empleo, con una invitación por parte de alguna autoridad o institución académica, artística, deportiva o cultural por la cual perciba una remuneración en el país",
@@ -64,20 +65,28 @@
    "fields": [
     "processing"
    ]
-  }
- ],
- "blockers": [
+  },
   {
-   "field": "validity",
-   "sought": "whether the 180-day visitor stay with paid activities can be extended",
-   "tried": {
-    "institution": "not reached Retry (2026-11-01): INM's Trámite 10 read on the Douglas consulate's page (20 business days); the Embassy in Spain's and Italy's pages answer a Radware bot check; Ventanilla Única (procedure 330, certified by the INM 05/12/2024) read: 30 business days to book the consular interview, no pay rule or union step.",
-    "official-register": "the law says 'ininterrumpido no mayor a ciento ochenta días'; renewal of the document is priced in LFD art. 8 but extension of the stay isn't stated Retry (2026-11-01): DOF 'Acuerdo por el que se reforman y adicionan los Lineamientos' (codigo=5455318) read: other procedures only.",
-    "web-search": "not separately searched Retry (2026-11-01): 'Lineamientos para trámites y procedimientos migratorios DOF visitante con permiso para realizar actividades remuneradas oferta de empleo plazo resolución días hábiles', '\"Lineamientos ...\" \"oferta de empleo\" \"Plazo máximo de resolución\" ...' (2026-11-01).",
-    "trade-press": "not tried Retry (2026-11-01): abogadosencdmx.com gives 15-20 business days, naming no primary; not used.",
-    "archive": "not tried Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
-   }
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LMigra.pdf",
+   "title": "Cámara de Diputados, Ley de Migración (última reforma DOF 15-01-2026), artículo 52, fracciones I y II",
+   "read": "2026-11-04",
+   "said": "II. VISITANTE CON PERMISO PARA REALIZAR ACTIVIDADES REMUNERADAS. Autoriza al extranjero que cuente con una oferta de empleo, con una invitación por parte de alguna autoridad o institución académica, artística, deportiva o cultural por la cual perciba una remuneración en el país, o venga a desempeñar una actividad remunerada por temporada estacional en virtud de acuerdos interinstitucionales celebrados con entidades extranjeras, para permanecer en territorio nacional por un tiempo ininterrumpido no mayor a ciento ochenta días, contados a partir de la fecha de entrada.",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LMigra.pdf",
+   "title": "Cámara de Diputados, Reglamento de la Ley de Migración (última reforma DOF 23-05-2014), artículos 131, 152 a 159",
+   "read": "2026-11-04",
+   "said": "Artículo 131. La condición de estancia de visitante con permiso para realizar actividades remuneradas prevista en el artículo 52, fracción II, de la Ley, se podrá autorizar a la persona extranjera que demuestre contar con una oferta de empleo en la que indique la ocupación que desarrollará, la temporalidad requerida, el lugar de trabajo y los datos de la constancia de inscripción del empleador. ... Artículo 152. ... Cuando la persona extranjera se encuentre en posibilidad de permanecer en el territorio nacional por un lapso mayor al de la vigencia del documento migratorio, otorgado originalmente de conformidad con lo previsto en la Ley, podrá solicitar su renovación en términos de este Reglamento. Artículo 153. Las personas extranjeras que cuenten con la condición de estancia de visitantes por razones humanitarias podrán solicitar las renovaciones ... Artículo 154. El documento migratorio que acredita la condición de estancia de visitante regional, tendrá una vigencia de hasta cinco años ... Artículo 156. La tarjeta que acredita la condición de estancia de residente temporal podrá tener una ...",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
   }
  ],
- "note": "Ley de Migración (last amended DOF 15 January 2026) art. 52 II: a foreigner with a job offer, or invited by an artistic or cultural authority or institution that pays them, stays up to 180 uninterrupted days from entry; longer work is temporary residence, not modelled apart. The Ley Federal de Derechos (last amended DOF 7 November 2025) art. 8 II charges $4,340.77 for receiving, studying and issuing the visitor-with-paid-activities document; the consular visa fee (art. 22) isn't read. The INM's decision time wasn't found."
+ "blockers": [],
+ "note": "Ley de Migración (last amended DOF 15 January 2026) art. 52 II: a foreigner with a job offer, or invited by an artistic or cultural authority or institution that pays them, stays up to 180 uninterrupted days from entry; longer work is temporary residence, not modelled apart. The Ley Federal de Derechos (last amended DOF 7 November 2025) art. 8 II charges $4,340.77 for receiving, studying and issuing the visitor-with-paid-activities document; the consular visa fee (art. 22) isn't read. The INM's decision time wasn't found. Read 2026-11-04 in the Ley de Migración and its Reglamento (the Chamber of Deputies' copies): the visitor with permission for paid activities is not extended."
 }

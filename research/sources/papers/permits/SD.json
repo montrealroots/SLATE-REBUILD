@@ -1,130 +1,87 @@
 {
  "country": "SD",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Work permit (إذن عمل) from the Minister of Labour (Regulation of the Employment of Non-Sudanese Act 2001, s. 5)",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
+  "applies": "The employer, first for an initial permit (إذن مبدئي) while the worker is abroad, then for the permit (s. 7).",
+  "first": "No Sudanese able to do the work; resident foreigners, then Arab and African nationals, have priority (s. 6(a)).",
   "fees": null,
   "processing": null,
-  "validity": null,
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": true,
+   "note": "One year, renewable, unless the work needs less (s. 12)."
+  },
   "union": null,
-  "eligibility": null,
+  "eligibility": "Holds a special or ordinary residence licence under the Passports and Immigration Act 1994 and is at least 21 (s. 6(b)).",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None for performers: diplomats and international missions' staff, persons exempted by a treaty, licensed business owners and free professionals, and others the Minister exempts (s. 4)."
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/syvfev.html",
+   "title": "قانون تنظيم استخدام غير السودانيين لسنة 2001 (Regulation of the Employment of Non-Sudanese Act 2001, 23/5/2001), Ministry of Justice of Sudan, Sudan Laws collection",
+   "read": "2026-11-04",
+   "said": "إذن العمل. 5- لا يجوز لأي شخص غير سوداني أن يزاول عملاً، إلا بعد الحصول على إذن بذلك من الوزير . شروط منح إذن العمل . 6- لا يجوز منح إذن عمل لغير السوداني إلا إذا : (أ ) لم يوجد سوداني يستطيع أن يؤدى ذلك العمـل، وفـي هذه الحالة يمنح غير السوداني المقيم الأولوية على غير السوداني غير المقيم، ويمنح رعايا الدول العربية والإفريقية الأولوية على غيرهم من غير السودانيين ، (ب) كان من حاملي ترخيص الإقامة الخاصة أو العادية بموجب قانون جوازات السفر والهجرة لسنة 1994 ، واللوائح الصادرة بموجبه ولا تقل سنه عن إحدى وعشرين سنة … طلب إذن العمل. 7- (1) يقدم طلب استخدام غير السودانيين من خارج السودان ، من صاحب العمل وذلك بغرض الحصول على إذن مبدئى. … فترة سريان إذن العمل. 12- يسري إذن العمل لمدة سنة قابلة للتجديد ، ما لم تكن المدة المطلوبة للعمل أقل من ذلك .",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first",
+    "eligibility",
+    "validity",
+    "exempt"
+   ]
+  }
+ ],
  "blockers": [
-  {
-   "field": "route",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677)",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "applies",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — applies",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "first",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — first",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
   {
    "field": "fees",
    "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — fees",
    "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
+    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01). || 2026-11-04: mol.gov.sd and www.mol.gov.sd (Ministry of Labour), www.sudanimmigration.gov.sd => no connection (HTTP 000) | www.sudan.gov.sd (government portal) => HTTP 200; not searched further for a work-permit page in this pass",
+    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found. || 2026-11-04: Ministry of Justice (moj.gov.sd) 'قوانين السودان' collection: a Kotobee e-book at https://moj.gov.sd/sudanlaws/; its package (epub/EPUB/package.opf) and table of contents (epub/EPUB/xhtml/contents.html) fetched, and the chapter for قانون تنظيم استخدام غير السودانيين لسنة 2001 (https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/syvfev.html) read whole (16 sections); the same TOC also lists قانون العمل لسنة 1997 and قانون جوازات السفر والهجرة لسنة 1994 (not read) => read: s. 5 no non-Sudanese may work without the Minister of Labour's permit; s. 6 granted only where no Sudanese can do the work (resident foreigners, then Arab and African nationals, have priority), to a holder of a special or ordinary residence licence aged at least 21; s. 7 the employer applies, from abroad first for an initial permit (إذن مبدئي); s. 4 exempts diplomats and international missions' staff, persons exempted by treaty, licensed business owners and free professionals, and anyone the Minister exempts; s. 12 the permit runs one year, renewable, unless the work needs less; no fee, decision time, pay floor or union step (s. 16 leaves conditions and procedure to regulations)",
     "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: archive.org availability API for mol.gov.sd; web.archive.org => the API names a snapshot of 18 May 2013 (http://mol.gov.sd/); web.archive.org resets the connection, so it wasn't read"
    }
   },
   {
    "field": "processing",
    "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — processing",
    "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
+    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01). || 2026-11-04: mol.gov.sd and www.mol.gov.sd (Ministry of Labour), www.sudanimmigration.gov.sd => no connection (HTTP 000) | www.sudan.gov.sd (government portal) => HTTP 200; not searched further for a work-permit page in this pass",
+    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found. || 2026-11-04: Ministry of Justice (moj.gov.sd) 'قوانين السودان' collection: a Kotobee e-book at https://moj.gov.sd/sudanlaws/; its package (epub/EPUB/package.opf) and table of contents (epub/EPUB/xhtml/contents.html) fetched, and the chapter for قانون تنظيم استخدام غير السودانيين لسنة 2001 (https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/syvfev.html) read whole (16 sections); the same TOC also lists قانون العمل لسنة 1997 and قانون جوازات السفر والهجرة لسنة 1994 (not read) => read: s. 5 no non-Sudanese may work without the Minister of Labour's permit; s. 6 granted only where no Sudanese can do the work (resident foreigners, then Arab and African nationals, have priority), to a holder of a special or ordinary residence licence aged at least 21; s. 7 the employer applies, from abroad first for an initial permit (إذن مبدئي); s. 4 exempts diplomats and international missions' staff, persons exempted by treaty, licensed business owners and free professionals, and anyone the Minister exempts; s. 12 the permit runs one year, renewable, unless the work needs less; no fee, decision time, pay floor or union step (s. 16 leaves conditions and procedure to regulations)",
     "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — validity",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — eligibility",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: archive.org availability API for mol.gov.sd; web.archive.org => the API names a snapshot of 18 May 2013 (http://mol.gov.sd/); web.archive.org resets the connection, so it wasn't read"
    }
   },
   {
    "field": "pay",
    "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — pay",
    "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
+    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01). || 2026-11-04: mol.gov.sd and www.mol.gov.sd (Ministry of Labour), www.sudanimmigration.gov.sd => no connection (HTTP 000) | www.sudan.gov.sd (government portal) => HTTP 200; not searched further for a work-permit page in this pass",
+    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found. || 2026-11-04: Ministry of Justice (moj.gov.sd) 'قوانين السودان' collection: a Kotobee e-book at https://moj.gov.sd/sudanlaws/; its package (epub/EPUB/package.opf) and table of contents (epub/EPUB/xhtml/contents.html) fetched, and the chapter for قانون تنظيم استخدام غير السودانيين لسنة 2001 (https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/syvfev.html) read whole (16 sections); the same TOC also lists قانون العمل لسنة 1997 and قانون جوازات السفر والهجرة لسنة 1994 (not read) => read: s. 5 no non-Sudanese may work without the Minister of Labour's permit; s. 6 granted only where no Sudanese can do the work (resident foreigners, then Arab and African nationals, have priority), to a holder of a special or ordinary residence licence aged at least 21; s. 7 the employer applies, from abroad first for an initial permit (إذن مبدئي); s. 4 exempts diplomats and international missions' staff, persons exempted by treaty, licensed business owners and free professionals, and anyone the Minister exempts; s. 12 the permit runs one year, renewable, unless the work needs less; no fee, decision time, pay floor or union step (s. 16 leaves conditions and procedure to regulations)",
     "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "What Sudan asks of a foreign performer to work there (blocked in layer 3, register R-1677) — exempt",
-   "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
-    "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: archive.org availability API for mol.gov.sd; web.archive.org => the API names a snapshot of 18 May 2013 (http://mol.gov.sd/); web.archive.org resets the connection, so it wasn't read"
    }
   },
   {
    "field": "union",
    "sought": "A union or guild step",
    "tried": {
-    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01).",
-    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found.",
+    "institution": "mol.gov.sd doesn't answer (2026-11-01) || Retry 2026-11-01: mol.gov.sd still doesn't answer (2026-11-01). || 2026-11-04: mol.gov.sd and www.mol.gov.sd (Ministry of Labour), www.sudanimmigration.gov.sd => no connection (HTTP 000) | www.sudan.gov.sd (government portal) => HTTP 200; not searched further for a work-permit page in this pass",
+    "official-register": "The labour code and immigration law not reached || Retry 2026-11-01: FAOLEX's copy of the Labour Act 1997 (sud222435.pdf) read: its table of contents has no chapter on employing foreigners (only art. 14, Sudanese employed abroad); the foreigners' permit rule is outside this Act and was not found. || 2026-11-04: Ministry of Justice (moj.gov.sd) 'قوانين السودان' collection: a Kotobee e-book at https://moj.gov.sd/sudanlaws/; its package (epub/EPUB/package.opf) and table of contents (epub/EPUB/xhtml/contents.html) fetched, and the chapter for قانون تنظيم استخدام غير السودانيين لسنة 2001 (https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/syvfev.html) read whole (16 sections); the same TOC also lists قانون العمل لسنة 1997 and قانون جوازات السفر والهجرة لسنة 1994 (not read) => read: s. 5 no non-Sudanese may work without the Minister of Labour's permit; s. 6 granted only where no Sudanese can do the work (resident foreigners, then Arab and African nationals, have priority), to a holder of a special or ordinary residence licence aged at least 21; s. 7 the employer applies, from abroad first for an initial permit (إذن مبدئي); s. 4 exempts diplomats and international missions' staff, persons exempted by treaty, licensed business owners and free professionals, and anyone the Minister exempts; s. 12 the permit runs one year, renewable, unless the work needs less; no fee, decision time, pay floor or union step (s. 16 leaves conditions and procedure to regulations)",
     "web-search": "This session's web-search budget was used up on 2026-11-01 before this country; layer 3's searches (2026-10-29) are in the register || Retry 2026-11-01: WebSearch 'السودان تصريح عمل الأجانب وزارة العمل رسوم قانون العمل 1997 الأجنبي' and 'Sudan \"work permit\" foreigners Ministry of Labour \"Non-Sudanese\" employment regulations fee SDG': only South Sudan's fees and wikiprocedure (undated, no primary).",
-    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "None naming a primary || Retry 2026-11-01: Sudan Tribune results concern South Sudan; Rivermate names no primary. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list (61 countries) names no member union in this country; the Mobility page states no permit rule for any country",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: archive.org availability API for mol.gov.sd; web.archive.org => the API names a snapshot of 18 May 2013 (http://mol.gov.sd/); web.archive.org resets the connection, so it wasn't read"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 in the Ministry of Justice's own collection of Sudanese laws: the 2001 Act, which predates the 2023 war; no amendment was found in the collection. Its fees, decision time and pay are left to the Minister's regulations (s. 16), not found."
 }

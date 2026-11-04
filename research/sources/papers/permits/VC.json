@@ -1,6 +1,6 @@
 {
  "country": "VC",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Office of the Prime Minister)",
  "routeChanged": false,
  "permit": {
@@ -38,14 +38,21 @@
     "currency": "XCD"
    }
   ],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 8,
+    "unit": "weeks"
+   },
+   "premium": null,
+   "note": "An average of six to eight weeks (the Office of the Prime Minister's FAQ); the longer is held."
+  },
   "validity": {
    "n": 6,
    "unit": "months",
    "renewable": false
   },
   "union": null,
-  "eligibility": null,
+  "eligibility": "A prospective employer, or proof of self-employment; over six months a residence permit is also needed.",
   "pay": null,
   "exempt": null
  },
@@ -53,7 +60,7 @@
   {
    "url": "https://svgconsulate.vc/documents/consular/non-nationals/nn-work-permit-req.pdf",
    "title": "St Vincent and the Grenadines Consulate, Work Permit (requirements and fees as of 1 March 2016)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "Complete Work Permit Application Form (in duplicate) along with the following and Return Application Form to the Office of the Prime Minister (Work Permit Department): … Letter from employer … Proof that the position applied for has been advertised … The documents will be sent to Cabinet for approval (see list of fees below upon acceptance) … A work permit ONLY is issued on a one-time basis for not more than six (6) months. Applicants requesting more than six (6) months for a work permit are required to additionally submit an application for a residence permit. Fees – (as of March 01, 2016) - subject to change Work Permits Application Fee EC$200.00 (non-refundable) CARICOM Nationals EC$960.00 per annum Others: For a period up to 30 days EC$700.00 For a period up to 60 days EC$1400.00 For a period up to 90 days EC$2100.00 For a period over 90 days up to 12 months EC$2400.00",
    "kind": "primary",
    "fields": [
@@ -63,6 +70,17 @@
     "fees",
     "validity"
    ]
+  },
+  {
+   "url": "https://pmoffice.gov.vc/pmoffice/index.php/faq",
+   "title": "Office of the Prime Minister, Frequently Asked Questions … regarding citizenship, residence, work permits and alien's land-holding licence",
+   "read": "2026-11-04",
+   "said": "5. How can someone obtain a work permit? A person should have a prospective employer or proof that he/she is self-employed in order to be eligible to apply for a work permit. If the work permit is desired for more than (6) months, a residence permit is also required. … 8. What is the processing time for residence and work permit applications? An average six (6) to eight (8) weeks.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
@@ -70,7 +88,7 @@
    "field": "fees",
    "sought": "Whether the 2016 fees (marked 'subject to change') still stand",
    "tried": {
-    "institution": "svgconsulate.vc's sheet is the only one found; the Office of the Prime Minister's (pmoffice.gov.vc) work permit page not surfaced",
+    "institution": "svgconsulate.vc's sheet is the only one found; the Office of the Prime Minister's (pmoffice.gov.vc) work permit page not surfaced || 2026-11-04: pmoffice.gov.vc (the Office of the Prime Minister, which issues work permits): home, FAQ (515 words, read whole), Departments, Forms; the Forms page's fee schedule and regulations list (scans, read by eye from rendered images) => processing: an average six to eight weeks (FAQ 8); eligibility: a prospective employer or proof of self-employment (FAQ 5); fees: the Office's own forms page still links the schedule 'As at March 01, 2016' with the same amounts layer 3 holds; the governing regulations are named: Employment of Foreign Nationals and Commonwealth Citizens Regulations, Cap. 208 (Revised Laws 2009, vol. 7) | svgconsulate.vc work-permit requirements PDF re-fetched => unchanged; HTTP 200 with a browser user agent",
     "official-register": "The Immigration (Restriction) regulations' fee schedule not found online",
     "web-search": "Not found in the searches for the brief (2026-11-01)",
     "trade-press": "None",
@@ -78,32 +96,10 @@
    }
   },
   {
-   "field": "processing",
-   "sought": "The stated time for Cabinet's approval",
-   "tried": {
-    "institution": "Not stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01).",
-    "official-register": "Not found | 2026-11-01 retry: Immigration (Restriction) Act and regulations not found as text online this turn.",
-    "web-search": "None | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
-    "trade-press": "None | 2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "A criterion for a performer",
-   "tried": {
-    "institution": "None stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01).",
-    "official-register": "Not found | 2026-11-01 retry: Immigration (Restriction) Act and regulations not found as text online this turn.",
-    "web-search": "None | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
-    "trade-press": "None | 2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
-  },
-  {
    "field": "pay",
    "sought": "Any minimum pay",
    "tried": {
-    "institution": "None stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01).",
+    "institution": "None stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01). || 2026-11-04: pmoffice.gov.vc (the Office of the Prime Minister, which issues work permits): home, FAQ (515 words, read whole), Departments, Forms; the Forms page's fee schedule and regulations list (scans, read by eye from rendered images) => processing: an average six to eight weeks (FAQ 8); eligibility: a prospective employer or proof of self-employment (FAQ 5); fees: the Office's own forms page still links the schedule 'As at March 01, 2016' with the same amounts layer 3 holds; the governing regulations are named: Employment of Foreign Nationals and Commonwealth Citizens Regulations, Cap. 208 (Revised Laws 2009, vol. 7) | svgconsulate.vc work-permit requirements PDF re-fetched => unchanged; HTTP 200 with a browser user agent",
     "official-register": "Not found | 2026-11-01 retry: Immigration (Restriction) Act and regulations not found as text online this turn.",
     "web-search": "None | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
     "trade-press": "None | 2026-11-01 retry: None reached this turn (search refused).",
@@ -114,7 +110,7 @@
    "field": "exempt",
    "sought": "Days of work without a permit",
    "tried": {
-    "institution": "None stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01).",
+    "institution": "None stated | 2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01). || 2026-11-04: pmoffice.gov.vc (the Office of the Prime Minister, which issues work permits): home, FAQ (515 words, read whole), Departments, Forms; the Forms page's fee schedule and regulations list (scans, read by eye from rendered images) => processing: an average six to eight weeks (FAQ 8); eligibility: a prospective employer or proof of self-employment (FAQ 5); fees: the Office's own forms page still links the schedule 'As at March 01, 2016' with the same amounts layer 3 holds; the governing regulations are named: Employment of Foreign Nationals and Commonwealth Citizens Regulations, Cap. 208 (Revised Laws 2009, vol. 7) | svgconsulate.vc work-permit requirements PDF re-fetched => unchanged; HTTP 200 with a browser user agent",
     "official-register": "Not found | 2026-11-01 retry: Immigration (Restriction) Act and regulations not found as text online this turn.",
     "web-search": "None | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
     "trade-press": "None | 2026-11-01 retry: None reached this turn (search refused).",
@@ -125,12 +121,13 @@
    "field": "union",
    "sought": "The St Vincent and the Grenadines work permit's remaining terms",
    "tried": {
-    "institution": "2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01).",
+    "institution": "2026-11-01 retry: svgconsulate.vc requirements sheet re-read (fees, a six-month one-time work permit, no decision time); pmoffice.gov.vc answers 503; www.gov.vc (saved VC-govvc.html) is a script shell with no work-permit link, and its search URL answers 404 (2026-11-01). || 2026-11-04: pmoffice.gov.vc (the Office of the Prime Minister, which issues work permits): home, FAQ (515 words, read whole), Departments, Forms; the Forms page's fee schedule and regulations list (scans, read by eye from rendered images) => processing: an average six to eight weeks (FAQ 8); eligibility: a prospective employer or proof of self-employment (FAQ 5); fees: the Office's own forms page still links the schedule 'As at March 01, 2016' with the same amounts layer 3 holds; the governing regulations are named: Employment of Foreign Nationals and Commonwealth Citizens Regulations, Cap. 208 (Revised Laws 2009, vol. 7) | svgconsulate.vc work-permit requirements PDF re-fetched => unchanged; HTTP 200 with a browser user agent",
     "official-register": "2026-11-01 retry: Immigration (Restriction) Act and regulations not found as text online this turn.",
     "web-search": "2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached; no search could be run this turn.",
     "trade-press": "2026-11-01 retry: None reached this turn (search refused).",
     "archive": "2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 on the Office of the Prime Minister's FAQ. The Cap. 208 Regulations were named but their scan wasn't read; they would hold any exemption, union or pay rule."
 }

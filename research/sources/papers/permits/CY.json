@@ -1,18 +1,47 @@
 {
  "country": "CY",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Entry/Temporary Residence and Work Permit for artists (Civil Registry and Migration Department)",
  "routeChanged": false,
  "permit": {
   "applies": "The employer: first to the District Labour Office with the vacancy (a labour market test), then, on the Labour Department's positive answer, for the entry and residence permit to the Civil Registry and Migration Department or through the District Aliens and Immigration Unit of the Police (the EU portal's general route for employed workers; the CRMD's own artists' page was not reached).",
-  "first": "The Labour Department's labour market test on the vacancy and a contract stamped by the Labour Office; the employer provides accommodation and a bank guarantee for repatriation.",
-  "fees": [],
-  "processing": null,
-  "validity": null,
+  "first": "A letter of approval from the Department of Labour, and a ten-year bank guarantee for repatriation.",
+  "fees": [
+   {
+    "what": "Entry, residence and work permit for employment, up to 6 months",
+    "amount": "50.00",
+    "currency": "EUR"
+   },
+   {
+    "what": "Registration in the aliens' register, first registration",
+    "amount": "70.00",
+    "currency": "EUR"
+   },
+   {
+    "what": "Bank guarantee for repatriation, ten years (national of the U.S.A., Canada, China, India, Brazil and most countries)",
+    "amount": "850.00",
+    "currency": "EUR"
+   }
+  ],
+  "processing": {
+   "standard": {
+    "n": 3,
+    "unit": "months"
+   },
+   "premium": null
+  },
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": true
+  },
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The guarantee is EUR 550 for Russia, Ukraine and the other European countries listed, EUR 350 for Israel, Lebanon, Egypt, Turkey, the Gulf and the others listed; the entry permit for up to 3 months needs no registration.",
+  "processingNote": "The Migration Department's stated examination time for a complete application in the non-single-permit route.",
+  "exemptNote": "None: anyone entering to work needs an entry permit, whoever the employer and whatever the job; only tourist representatives and journalists are spared it."
  },
  "sources": [
   {
@@ -26,86 +55,75 @@
     "applies",
     "first"
    ]
+  },
+  {
+   "url": "https://www.gov.cy/mip-md/en/documents/remunerated-employment-single-permit-gen-2/",
+   "title": "Deputy Ministry of Migration and International Protection, Migration Department: Employment – other cases (non-single permit – NSP), posted 31 December 2025",
+   "read": "2026-11-04",
+   "said": "In order for a third-country national to enter the Republic for work purposes, no matter who the employer will be and the kind of job, the third-country national is obliged to obtain an entry permit as per the provisions of the Legislation . Tourist representatives and Journalists/Reporters are excluded from the procedure for an entry permit … Stamps and Fees: Entry permit for employment for a period up to 3 months (Registration in the aliens’ register is not required): €50 Entry permit, residence and work permit for a period of 3 to 6 months: €50 Residence and work permit for a period up to 12 months: €50 Registration in the aliens registry (only in cases of first registration): €70 Examination time of an application The examination of an application and the issuance of a temporary residence and work permit is completed within three months. … Duration of residence permit The duration of a temporary residence and work permit should not exit the period of one year.",
+   "kind": "primary",
+   "fields": [
+    "fees",
+    "processing",
+    "validity",
+    "exempt"
+   ]
+  },
+  {
+   "url": "https://www.gov.cy/media/sites/174/2025/12/ENTRY-PERMIT-AND-WORK-PERMIT-UP-TO-3-MONTHS-1.docx",
+   "title": "Migration Department, General employment: supporting documents, entry permit and temporary work permit for up to 3 months (December 2025)",
+   "read": "2026-11-04",
+   "said": "GENERAL EMPLOYMENT ENTRY PERMIT AND TEMPORARY WORK PERMIT FOR UP TO 3 MONTHS 1 Application Form MNSP3. 2 Copy of a valid passport … 3 Letter of approval from the Department of Labour. 4 Original letter of bank guarantee, of ten years duration, to cover possible repatriation costs.",
+   "kind": "primary",
+   "fields": [
+    "first"
+   ]
+  },
+  {
+   "url": "https://www.gov.cy/mip-md/en/documents/bank-guarantee/",
+   "title": "Migration Department, Bank guarantee: validity and amount by country of origin (posted 2 January 2026)",
+   "read": "2026-11-04",
+   "said": "The bank guarantee should be valid for at least ten (10) years. … The amount of the guarantee that should be submitted depends on the country of origin of the third country national … 211. U.S.A ΑΜΕΡΙΚΗ 850 … 103. RUSSIAN FEDERATION ΕΥΡΩΠΗ 550 … 195. ISRAEL ΑΣΙΑ 350",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "fees",
-   "sought": "the application fee for an artist's permit and the guarantee amount",
-   "tried": {
-    "institution": "migration.gov.cy: proxy CONNECT 502; an old moi.gov.cy/crmd page id: HTTP 404 || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "Aliens and Immigration Law fee regulations not read || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run 2026-11-01 (Cyprus CRMD artists M.58A fee bank guarantee): no artist-specific fee; figures found are other categories' || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none quoting a primary for artists || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "archive.org availability API answered 429; no snapshot of the CRMD artists page found || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "processing",
-   "sought": "decision time",
-   "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "429 || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "permit length",
-   "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "429 || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
    "field": "union",
    "sought": "union consultation",
    "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL. || 2026-11-04: curl https://www.migration.gov.cy/ (the register's quotes) => CONNECT refused by the egress proxy (502); unreachable today | moi.gov.cy/moi/CRMD/crmd.nsf/All/5239EEDC7C5781A0C22588FA00460542 (the search's lead) and the legacy CRMD index (crmd.nsf/index_en/index_en) by curl; Common Crawl CC-MAIN-2026-43 for cy,gov,moi)/moi/crmd => moi.gov.cy answers, but both addresses are 404 ('Lotus Notes Exception - File does not exist'): the legacy site is retired; the crawl holds no capture of it | moi.gov.cy/moi/crmd/crmd.nsf legacy pages (All/5239EEDC…, page17_en, home_en) fetched => HTTP 404: the Civil Registry and Migration Department's old site is gone; gov.cy/moi/crmd/en/ serves a shell",
+    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached. || 2026-11-04: gov.cy/mip-md/en/wp-json/wp/v2/document listing (100 documents) and search 'artist' (empty); read the NSP employment page, the 3-month supporting-documents form, the bank-guarantee pages and the procedure page => the general non-single-permit route's fees, time, term and guarantee found; no artist category or artist rule on the new site (saved l4w/files/p1b/CY-md-*.html, CY-3m-docs.docx)",
+    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's. || 2026-11-04: WebSearch (standard) 'Civil Registry and Migration Department Cyprus artists entry permit bank guarantee fee application artistic groups temporary residence work' (search 13 of 15) => leads only: whatpassport.com's summary (artists through artistic agents, Form M.58A, a bank guarantee by country of origin, applications through the District Aliens and Immigration Branches; no primary address), a moi.gov.cy CRMD page (crmd.nsf/All/5239EEDC…), Mondaq and Legal 500 on bank guarantees; no fee for artists | 'Civil Registry and Migration Department Cyprus artists entry temporary residence work permit fee bank guarantee'; 'gov.cy crmd artists M.58A entry temporary residence employment artistic agent' (gov.cy only) (2026-11-04) => the second found the Migration Department's new site (gov.cy/mip-md); no page there names artists",
+    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Cyprus => lead only: AUC – Actors' Union of Cyprus listed as FIA's member; a member list says nothing of a step in the permit, and no permit source names it",
+    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for cy,gov,moi,crmd)/ (cc.py list) => no captures"
    }
   },
   {
    "field": "eligibility",
    "sought": "criteria",
    "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL. || 2026-11-04: curl https://www.migration.gov.cy/ (the register's quotes) => CONNECT refused by the egress proxy (502); unreachable today | moi.gov.cy/moi/CRMD/crmd.nsf/All/5239EEDC7C5781A0C22588FA00460542 (the search's lead) and the legacy CRMD index (crmd.nsf/index_en/index_en) by curl; Common Crawl CC-MAIN-2026-43 for cy,gov,moi)/moi/crmd => moi.gov.cy answers, but both addresses are 404 ('Lotus Notes Exception - File does not exist'): the legacy site is retired; the crawl holds no capture of it | moi.gov.cy/moi/crmd/crmd.nsf legacy pages (All/5239EEDC…, page17_en, home_en) fetched => HTTP 404: the Civil Registry and Migration Department's old site is gone; gov.cy/moi/crmd/en/ serves a shell",
+    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached. || 2026-11-04: gov.cy/mip-md/en/wp-json/wp/v2/document listing (100 documents) and search 'artist' (empty); read the NSP employment page, the 3-month supporting-documents form, the bank-guarantee pages and the procedure page => the general non-single-permit route's fees, time, term and guarantee found; no artist category or artist rule on the new site (saved l4w/files/p1b/CY-md-*.html, CY-3m-docs.docx)",
+    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's. || 2026-11-04: WebSearch (standard) 'Civil Registry and Migration Department Cyprus artists entry permit bank guarantee fee application artistic groups temporary residence work' (search 13 of 15) => leads only: whatpassport.com's summary (artists through artistic agents, Form M.58A, a bank guarantee by country of origin, applications through the District Aliens and Immigration Branches; no primary address), a moi.gov.cy CRMD page (crmd.nsf/All/5239EEDC…), Mondaq and Legal 500 on bank guarantees; no fee for artists | 'Civil Registry and Migration Department Cyprus artists entry temporary residence work permit fee bank guarantee'; 'gov.cy crmd artists M.58A entry temporary residence employment artistic agent' (gov.cy only) (2026-11-04) => the second found the Migration Department's new site (gov.cy/mip-md); no page there names artists",
+    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Cyprus => lead only: AUC – Actors' Union of Cyprus listed as FIA's member; a member list says nothing of a step in the permit, and no permit source names it",
+    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for cy,gov,moi,crmd)/ (cc.py list) => no captures"
    }
   },
   {
    "field": "pay",
    "sought": "minimum pay",
    "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "days without a permit (even a few days' work takes one)",
-   "tried": {
-    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL.",
-    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached.",
-    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's.",
-    "trade-press": "WhatPassport copy read || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary.",
-    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "institution": "unreachable || Retry 2026-11-01: migration.gov.cy: CONNECT 502 again; moi.gov.cy CRMD pages (3F7678..., 397A54..., 4E5E43...) answer 404 (2026-11-01). The WhatPassport copy of the CRMD artists' page was dropped: it names no primary URL. || 2026-11-04: curl https://www.migration.gov.cy/ (the register's quotes) => CONNECT refused by the egress proxy (502); unreachable today | moi.gov.cy/moi/CRMD/crmd.nsf/All/5239EEDC7C5781A0C22588FA00460542 (the search's lead) and the legacy CRMD index (crmd.nsf/index_en/index_en) by curl; Common Crawl CC-MAIN-2026-43 for cy,gov,moi)/moi/crmd => moi.gov.cy answers, but both addresses are 404 ('Lotus Notes Exception - File does not exist'): the legacy site is retired; the crawl holds no capture of it | moi.gov.cy/moi/crmd/crmd.nsf legacy pages (All/5239EEDC…, page17_en, home_en) fetched => HTTP 404: the Civil Registry and Migration Department's old site is gone; gov.cy/moi/crmd/en/ serves a shell",
+    "official-register": "none || Retry 2026-11-01: The EU Immigration Portal's Cyprus page read: general employed-worker route, residence and employment permit up to four years, not the artists' route; the Aliens and Immigration Law's fee regulations not reached. || 2026-11-04: gov.cy/mip-md/en/wp-json/wp/v2/document listing (100 documents) and search 'artist' (empty); read the NSP employment page, the 3-month supporting-documents form, the bank-guarantee pages and the procedure page => the general non-single-permit route's fees, time, term and guarantee found; no artist category or artist rule on the new site (saved l4w/files/p1b/CY-md-*.html, CY-3m-docs.docx)",
+    "web-search": "run: none || Retry 2026-11-01: WebSearch 'Cyprus Civil Registry and Migration Department artists permit fee €70 entry permit temporary residence artist cabaret M.58' and '\"grants Entry/Temporary Residence and Work Permits to alien artists\" moi.gov.cy crmd': the €70 found is the alien registration certificate's, not the artist permit's. || 2026-11-04: WebSearch (standard) 'Civil Registry and Migration Department Cyprus artists entry permit bank guarantee fee application artistic groups temporary residence work' (search 13 of 15) => leads only: whatpassport.com's summary (artists through artistic agents, Form M.58A, a bank guarantee by country of origin, applications through the District Aliens and Immigration Branches; no primary address), a moi.gov.cy CRMD page (crmd.nsf/All/5239EEDC…), Mondaq and Legal 500 on bank guarantees; no fee for artists | 'Civil Registry and Migration Department Cyprus artists entry temporary residence work permit fee bank guarantee'; 'gov.cy crmd artists M.58A entry temporary residence employment artistic agent' (gov.cy only) (2026-11-04) => the second found the Migration Department's new site (gov.cy/mip-md); no page there names artists",
+    "trade-press": "none || Retry 2026-11-01: Eurofast (2016) on new residence permit types; no artist fee, time or term with a primary. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Cyprus => lead only: AUC – Actors' Union of Cyprus listed as FIA's member; a member list says nothing of a step in the permit, and no permit source names it",
+    "archive": "none || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for cy,gov,moi,crmd)/ (cc.py list) => no captures"
    }
   }
  ],
- "note": "EEA and Swiss nationals work freely (layer 3's eea list; not re-read)."
+ "note": "EEA and Swiss nationals work freely (layer 3's eea list; not re-read). Read 2026-11-04 on the Migration Department's new site (since December 2025): it has no artists' category, so these are its general 'employment – other cases' figures, which on its own words apply whoever the employer and whatever the job; the artists' route through artistic agents, read on the old site through a secondary, may no longer exist as such."
 }

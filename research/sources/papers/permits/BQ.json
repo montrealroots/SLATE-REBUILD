@@ -1,6 +1,6 @@
 {
  "country": "BQ",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Tewerkstellingsvergunning (Wet arbeid vreemdelingen BES)",
  "routeChanged": false,
  "permit": {
@@ -12,23 +12,24 @@
    "premium": null
   },
   "validity": {
-   "n": null,
-   "unit": null,
-   "renewable": null
+   "n": 1,
+   "unit": "years",
+   "renewable": true
   },
   "union": null,
-  "eligibility": null,
+  "eligibility": "The worker is 18 to 45 on the day the first application is made and holds the qualifications the vacancy asks (diploma, experience, languages).",
   "pay": "Pay must be at market rate (marktconform) and at least the minimum wage.",
   "exempt": {
    "days": 28,
    "within": 91
-  }
+  },
+  "validityNote": "A TWV runs one year; the employer may then apply for a new one, assessed exactly like the first and refused if local workers have become available."
  },
  "sources": [
   {
    "url": "https://zoek.officielebekendmakingen.nl/stb-2010-371.pdf",
    "title": "Staatsblad 2010, 371: Besluit uitvoering Wet arbeid vreemdelingen BES, arts. 2, 3 and 8",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "Een aanvraag om een tewerkstellingsvergunning wordt ingediend bij Onze Minister van Sociale Zaken en Werkgelegenheid. … verklaring van het openbaar lichaam waaruit blijkt dat de beschik- baarheid van de te vervullen arbeidsplaats ten minste vijf weken voor het indienen van de aanvraag is gemeld aan het bestuurscollege … die zijn hoofdverblijf heeft buiten de openbare lichamen en gedurende maximaal 4 aaneengesloten weken in een periode van 13 weken incidentele arbeid verricht uitsluitend bestaande uit: … 3°. het werkzaam zijn als artiest, musicus of beeldend kunstenaar;",
    "kind": "primary",
    "fields": [
@@ -48,6 +49,28 @@
     "first",
     "applies"
    ]
+  },
+  {
+   "url": "https://www.rijksdienstcn.com/sociale-zaken-werk/tewerkstellingsvergunning/informatie-over-geldigheid-en-beeindiging-twv",
+   "title": "Rijksdienst Caribisch Nederland (unit SZW), Informatie over geldigheid en beëindiging TWV",
+   "read": "2026-11-04",
+   "said": "Geldigheidsduur De tewerkstellingsvergunning wordt verstrekt voor de duur van 1 jaar. Daarna kunt u een nieuwe vergunning aanvragen en wordt uw aanvraag opnieuw beoordeeld. Die beoordeling is gelijk aan de beoordeling van de eerste aanvraag. Het kan dus voorkomen dat een volgende tewerkstellingsvergunning niet toegekend wordt, omdat er dan wel lokale arbeidskrachten aanwezig zijn.",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.rijksdienstcn.com/sociale-zaken-werk/tewerkstellingsvergunning/informatie-over-aanvraag-tewerkstellingsvergunning",
+   "title": "Rijksdienst Caribisch Nederland (unit SZW), Informatie over aanvraag tewerkstellingsvergunning",
+   "read": "2026-11-04",
+   "said": "U dient uw vacature minimaal vijf weken voordat u een tewerkstellingsvergunning aanvraagt, aan te melden. … Is het salaris dat u aanbiedt minimaal het minimumloon en ‘marktconform’? … Heeft de aangedragen buitenlandse werknemer de gevraagde kwalificaties? (Bijvoorbeeld diploma, werkervaring en talenkennis.) … Is de werknemer waarvoor de tewerkstellingsvergunning wordt aangevraagd minimaal 18 jaar en maximaal 45 jaar op de dag van het indienen van de eerste aanvraag? Biedt u de werknemer waarvoor u de tewerkstellingsvergunning aanvraagt goede huisvesting?",
+   "kind": "primary",
+   "fields": [
+    "eligibility",
+    "pay",
+    "first"
+   ]
   }
  ],
  "blockers": [
@@ -55,8 +78,8 @@
    "field": "fees",
    "sought": "any government fee for a TWV",
    "tried": {
-    "institution": "RCN work permit page: HTTP 404; the RCN employers' brochure (2022) URL: HTTP 404 to this client | Retry 2026-11-01: rijksdienstcn.com: the SZW work-permit brochure (2022-02-22 PDF) and the IND fee schedules for the BES (2024 and 2025 PDFs) and an English fees page all answer 404 at the addresses search gives; ind.nl's Caribbean Netherlands work page answers 404.",
-    "official-register": "Stb 2010-371 and Stcrt 2021-30060 read: no fee named; wetten.overheid.nl refuses this client (layer 3) | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371, saved) and Stcrt. 2021, 30060 (saved) re-read: no fee for a tewerkstellingsvergunning, no union step, no performer criterion beyond the 'artiest, musicus' provision.",
+    "institution": "RCN work permit page: HTTP 404; the RCN employers' brochure (2022) URL: HTTP 404 to this client | Retry 2026-11-01: rijksdienstcn.com: the SZW work-permit brochure (2022-02-22 PDF) and the IND fee schedules for the BES (2024 and 2025 PDFs) and an English fees page all answer 404 at the addresses search gives; ind.nl's Caribbean Netherlands work page answers 404. || 2026-11-04: rijksdienstcn.com: the TWV page and its two information pages (aanvraag; geldigheid en beëindiging) fetched by curl and read whole => found the term (one year, a new application assessed afresh) and the assessment criteria (age 18 to 45 at the first application, the qualifications asked, at least minimum and market pay, good housing); no fee, no decision time and no union step on any of the three pages (saved l4w/files/p1b/BQ-*.html)",
+    "official-register": "Stb 2010-371 and Stcrt 2021-30060 read: no fee named; wetten.overheid.nl refuses this client (layer 3) | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371, saved) and Stcrt. 2021, 30060 (saved) re-read: no fee for a tewerkstellingsvergunning, no union step, no performer criterion beyond the 'artiest, musicus' provision. || 2026-11-04: the Wet arbeid vreemdelingen BES (Stb. 2010, 371) and the 2021 Staatscourant decree re-fetched => unchanged; they give the receipt within two weeks and no fee or term",
     "web-search": "run 2026-11-01 in Dutch twice (tewerkstellingsvergunning BES kosten leges): none found | Retry 2026-11-01: 'tewerkstellingsvergunning BES Unit Werk en Inkomen leges kosten aanvraag Bonaire 2026' and 'IND Caribisch Nederland verblijfsvergunning arbeid in loondienst leges USD Bonaire tarieven 2026' (2026-11-01): fee schedules exist for IND residence permits in USD, none for the TWV; the PDFs found answer 404.",
     "trade-press": "none quoting a primary | Retry 2026-11-01: Rivermate's BES guide names no primary; not used.",
     "archive": "archive.org availability API answered 429 Too Many Requests | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
@@ -66,20 +89,9 @@
    "field": "processing",
    "sought": "decision time (the decree gives only a receipt within two weeks)",
    "tried": {
-    "institution": "RCN pages 404 | Retry 2026-11-01: rijksdienstcn.com's SZW work-permit brochure (2022) and IND BES fee and information pages answer 404 at the addresses search gives (2026-11-01).",
-    "official-register": "Stb 2010-371 read | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371) and Stcrt. 2021, 30060 (saved) re-read: no decision period beyond the receipt and no maximum term.",
+    "institution": "RCN pages 404 | Retry 2026-11-01: rijksdienstcn.com's SZW work-permit brochure (2022) and IND BES fee and information pages answer 404 at the addresses search gives (2026-11-01). || 2026-11-04: rijksdienstcn.com: the TWV page and its two information pages (aanvraag; geldigheid en beëindiging) fetched by curl and read whole => found the term (one year, a new application assessed afresh) and the assessment criteria (age 18 to 45 at the first application, the qualifications asked, at least minimum and market pay, good housing); no fee, no decision time and no union step on any of the three pages (saved l4w/files/p1b/BQ-*.html)",
+    "official-register": "Stb 2010-371 read | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371) and Stcrt. 2021, 30060 (saved) re-read: no decision period beyond the receipt and no maximum term. || 2026-11-04: the Wet arbeid vreemdelingen BES (Stb. 2010, 371) and the 2021 Staatscourant decree re-fetched => unchanged; they give the receipt within two weeks and no fee or term",
     "web-search": "run in Dutch: none | Retry 2026-11-01: 'tewerkstellingsvergunning BES Unit Werk en Inkomen leges kosten aanvraag Bonaire 2026' (2026-11-01): nothing on time or term from a primary.",
-    "trade-press": "none | Retry 2026-11-01: Rivermate's BES guide names no primary; VANEPS's Guide to Doing Business (BES) not read.",
-    "archive": "429 | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "how long a TWV is granted for",
-   "tried": {
-    "institution": "RCN 404 | Retry 2026-11-01: rijksdienstcn.com's SZW work-permit brochure (2022) and IND BES fee and information pages answer 404 at the addresses search gives (2026-11-01).",
-    "official-register": "Wav BES not readable (wetten.overheid.nl refuses this client) | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371) and Stcrt. 2021, 30060 (saved) re-read: no decision period beyond the receipt and no maximum term.",
-    "web-search": "run: a court decision quoted by a third party says at most three years; not read | Retry 2026-11-01: 'tewerkstellingsvergunning BES Unit Werk en Inkomen leges kosten aanvraag Bonaire 2026' (2026-11-01): nothing on time or term from a primary.",
     "trade-press": "none | Retry 2026-11-01: Rivermate's BES guide names no primary; VANEPS's Guide to Doing Business (BES) not read.",
     "archive": "429 | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
    }
@@ -88,23 +100,13 @@
    "field": "union",
    "sought": "union consultation",
    "tried": {
-    "institution": "none | Retry 2026-11-01: rijksdienstcn.com: the SZW work-permit brochure (2022-02-22 PDF) and the IND fee schedules for the BES (2024 and 2025 PDFs) and an English fees page all answer 404 at the addresses search gives; ind.nl's Caribbean Netherlands work page answers 404.",
-    "official-register": "decree: none | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371, saved) and Stcrt. 2021, 30060 (saved) re-read: no fee for a tewerkstellingsvergunning, no union step, no performer criterion beyond the 'artiest, musicus' provision.",
-    "web-search": "run: none | Retry 2026-11-01: 'tewerkstellingsvergunning BES Unit Werk en Inkomen leges kosten aanvraag Bonaire 2026' and 'IND Caribisch Nederland verblijfsvergunning arbeid in loondienst leges USD Bonaire tarieven 2026' (2026-11-01): fee schedules exist for IND residence permits in USD, none for the TWV; the PDFs found answer 404.",
-    "trade-press": "none | Retry 2026-11-01: Rivermate's BES guide names no primary; not used.",
-    "archive": "none | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "criteria for a performer",
-   "tried": {
-    "institution": "none | Retry 2026-11-01: rijksdienstcn.com: the SZW work-permit brochure (2022-02-22 PDF) and the IND fee schedules for the BES (2024 and 2025 PDFs) and an English fees page all answer 404 at the addresses search gives; ind.nl's Caribbean Netherlands work page answers 404.",
-    "official-register": "decree: none beyond the labour-market test | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371, saved) and Stcrt. 2021, 30060 (saved) re-read: no fee for a tewerkstellingsvergunning, no union step, no performer criterion beyond the 'artiest, musicus' provision.",
+    "institution": "none | Retry 2026-11-01: rijksdienstcn.com: the SZW work-permit brochure (2022-02-22 PDF) and the IND fee schedules for the BES (2024 and 2025 PDFs) and an English fees page all answer 404 at the addresses search gives; ind.nl's Caribbean Netherlands work page answers 404. || 2026-11-04: rijksdienstcn.com: the TWV page and its two information pages (aanvraag; geldigheid en beëindiging) fetched by curl and read whole => found the term (one year, a new application assessed afresh) and the assessment criteria (age 18 to 45 at the first application, the qualifications asked, at least minimum and market pay, good housing); no fee, no decision time and no union step on any of the three pages (saved l4w/files/p1b/BQ-*.html)",
+    "official-register": "decree: none | Retry 2026-11-01: Wet arbeid vreemdelingen BES (Stb. 2010, 371, saved) and Stcrt. 2021, 30060 (saved) re-read: no fee for a tewerkstellingsvergunning, no union step, no performer criterion beyond the 'artiest, musicus' provision. || 2026-11-04: the Wet arbeid vreemdelingen BES (Stb. 2010, 371) and the 2021 Staatscourant decree re-fetched => unchanged; they give the receipt within two weeks and no fee or term",
     "web-search": "run: none | Retry 2026-11-01: 'tewerkstellingsvergunning BES Unit Werk en Inkomen leges kosten aanvraag Bonaire 2026' and 'IND Caribisch Nederland verblijfsvergunning arbeid in loondienst leges USD Bonaire tarieven 2026' (2026-11-01): fee schedules exist for IND residence permits in USD, none for the TWV; the PDFs found answer 404.",
     "trade-press": "none | Retry 2026-11-01: Rivermate's BES guide names no primary; not used.",
     "archive": "none | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 on the RCN's own TWV pages: the term and the criteria. The age ceiling of 45 isn't performer-specific."
 }

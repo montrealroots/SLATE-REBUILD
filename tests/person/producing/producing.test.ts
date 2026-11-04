@@ -575,9 +575,9 @@ describe('a young producer', () => {
       const p = projectOf(s, 1);
       p.raised['equity'] = money('EUR', target(p) - raised(p));
     });
-    expect(() => dispatch(l, shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit first');
+    expect(() => dispatch(l, shootProject, { project: 1, account: ACCOUNT })).toThrow('that work in France needs permit and guardian first');
     const shotYoung = dispatch(dispatch(l, authoriseWork, { country: 'FR', role: 'producer' }), shootProject, { project: 1, account: ACCOUNT });
-    expect(shotYoung.slices.youth.granted).toMatchObject([{ country: 'FR', role: 'producer', needs: ['permit'], used: true }]);
+    expect(shotYoung.slices.youth.granted).toMatchObject([{ country: 'FR', role: 'producer', needs: ['permit', 'guardian'], used: true }]);
     expect(project(shotYoung).shot?.fee?.minor).toBeGreaterThan(0);
     expect(shotYoung.slices.youth.held.map((h) => [h.engagement, h.into])).toEqual([['producer:1', 'Caisse des dépôts et consignations']]);
     const days = (project(shotYoung).shot as { days: number }).days;

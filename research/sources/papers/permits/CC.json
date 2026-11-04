@@ -1,6 +1,6 @@
 {
  "country": "CC",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Temporary Activity visa (subclass 408), entertainment activities (Migration Regulations 1994, Schedule 2, cl. 408.229A): Australia's, which applies in the Cocos (Keeling) Islands",
  "routeChanged": false,
  "permit": {
@@ -14,24 +14,31 @@
    }
   ],
   "processing": {
-   "standard": null,
-   "premium": null
+   "standard": {
+    "n": 40,
+    "unit": "days"
+   },
+   "premium": null,
+   "note": "Home Affairs' global processing times for subclass 408, Entertainment Activities stream: 90% of applications decided in 40 days, 75% in 33, 50% in 23 (applications decided to 30 September 2026, updated 2 November 2026)."
   },
   "validity": {
    "n": 2,
    "unit": "years",
-   "renewable": null
+   "renewable": false
   },
   "union": "The eligible sponsor or eligible supporter must have consulted with relevant Australian unions about the performer's employment or engagement in Australia.",
   "eligibility": "For a stage performer, the activity \"will bring a net employment benefit to the Australian entertainment industry\"; for an unsubsidised film or television role, a leading, major supporting or cameo role with the Arts Minister's certificate.",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "validityNote": "The 408 can't be extended: a longer stay needs a new visa (Home Affairs' page); condition 8503 may be imposed (408.611).",
+  "payNote": "None set: the Migration Regulations' Schedule 2 clauses for the 408 (408.21, 408.229A), read whole, hold no minimum pay; 408.211 bars activity with adverse consequences for Australians' conditions of employment.",
+  "exemptNote": "None: a visitor's 'business visitor activity' excludes work or services for an organisation or person based in Australia (reg. 1.03), so every paid engagement takes the 408."
  },
  "sources": [
   {
    "url": "https://www.legislation.gov.au/F1996B03551/latest/text",
-   "title": "Migration Regulations 1994 (Cth), compilation of 2 October 2026, Volume 2: Schedule 2, Subclass 408, cl. 408.229A and 408.511 (Federal Register of Legislation)",
-   "read": "2026-11-01",
+   "title": "Migration Regulations 1994 (Cth), compilation of 2 October 2026, Volume 2: Schedule 2, Subclass 408, cl. 408.229A and 408.511 (Federal Register of Legislation) (read again 2026-11-04 in the compilation of 2 October 2026, the latest/text address serving only the compilation's front)",
+   "read": "2026-11-04",
    "said": "Performing in film or television production subsidised by government (2) This subclause applies to the applicant if: (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non ‑ profit engagements) in Australia; … in a film or television production that is not subsidised in any way by a government in Australia; and (iii) in a leading role, major supporting role or cameo role, or to satisfy ethnic or other special requirements; and (b) the Arts Minister, or a person authorised by the Arts Minister, has provided a certificate confirming that: … (c) either: (i) an eligible sponsor passes the sponsorship test in relation to the applicant; or (ii) if the applicant was outside Australia when the application was made, and stated on the application form that the proposed length of stay did not exceed 3 months—an eligible supporter passes the support test in relation to the applicant; … the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia. … the activity of the applicant referred to in paragraph (a) will bring a net employment benefit to the Australian entertainment industry; … the eligible sponsor or eligible supporter has provided an itinerary specifying the dates and venues for all performances. … for a primary applicant who states on the application form that the proposed length of stay in Australia is 3 months or less—3 months; or (ii) for a primary applicant who satisfies the criterion in clause 408.219A on the basis of clause 408.228A (workplace justice) or clause 408.229 (Australian Government endorsed events)—4 years; or (iii) for any other primary applicant—2 years;",
    "kind": "primary",
    "fields": [
@@ -45,8 +52,8 @@
   },
   {
    "url": "https://www.legislation.gov.au/F1996B03551/latest/text",
-   "title": "Migration Regulations 1994 (Cth), compilation of 2 October 2026, Volume 1: Schedule 1, item 1237 Temporary Activity (Class GG)",
-   "read": "2026-11-01",
+   "title": "Migration Regulations 1994 (Cth), compilation of 2 October 2026, Volume 1: Schedule 1, item 1237 Temporary Activity (Class GG) (read again 2026-11-04 in the compilation of 2 October 2026, the latest/text address serving only the compilation's front)",
+   "read": "2026-11-04",
    "said": "1237 Temporary Activity (Class GG) (1) Form: … First instalment Item Component Amount 1 Base application charge $440 … (vi) for any other applicant: First instalment Item Component Amount 1 Base application charge $535",
    "kind": "primary",
    "fields": [
@@ -56,70 +63,67 @@
   {
    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-activity-408/entertainment-activities",
    "title": "Department of Home Affairs, Temporary Activity visa (subclass 408), Entertainment activities (last updated 24/09/2026)",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "For an indication of processing times for this visa, use the visa processing time guide tool",
    "kind": "primary",
    "fields": [
     "processing",
     "validity"
    ]
+  },
+  {
+   "url": "https://immi.homeaffairs.gov.au/_layouts/15/api/GPT.aspx/GetVisaGlobalProcessingTime",
+   "title": "Department of Home Affairs, visa processing time guide tool's data service, subclass 408 (POST {\"gptRequest\":[{\"VisaSubclassCode\":\"408\",\"StreamCode\":\"\"}]})",
+   "read": "2026-11-04",
+   "said": "\"StreamText\":\"Entertainment Activities\",\"Percent75\":\"33 Days\",\"Percent90\":\"40 Days\",\"Percent25\":\"10 Days\",\"Percent50\":\"23 Days\",\"Updated\":\"02 November 2026\",\"EndDate\":\"30 September 2026\"",
+   "kind": "primary",
+   "fields": [
+    "processing"
+   ]
+  },
+  {
+   "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-activity-408/entertainment-activities",
+   "title": "Department of Home Affairs, Temporary Activity visa (subclass 408), Entertainment Activities stream (embedded page data)",
+   "read": "2026-11-04",
+   "said": "\"text\":\"Stay longer\",\"block\":\" You can't stay in Australia longer by extending this visa. Explore your visa options . \"",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 2, Schedule 2, Subclass 408, clauses 408.21 (common criteria) and 408.229A (entertainment)",
+   "read": "2026-11-04",
+   "said": "408.211 The applicant does not intend to engage in activities that will have adverse consequences for employment or training opportunities, or conditions of employment, for Australian citizens or Australian permanent residents. ... 408.215 The applicant has: (a) adequate means to support himself or herself ... 408.229A ... (2) ... (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non-profit engagements) in Australia; ... (c) either: (i) an eligible sponsor passes the sponsorship test in relation to the applicant; or (ii) if the applicant was outside Australia when the application was made, and stated on the application form that the proposed length of stay did not exceed 3 months—an eligible supporter passes the support test ... (e) the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia.",
+   "kind": "primary",
+   "fields": [
+    "pay"
+   ]
+  },
+  {
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_1/document_1.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 1, regulation 1.03, 'business visitor activity'",
+   "read": "2026-11-04",
+   "said": "business visitor activity: (a) means any of the following activities undertaken by a person: (i) making a general business or employment enquiry; (ii) investigating, negotiating, entering into, or reviewing a business contract; (iii) an activity carried out as part of an official government to government visit; (iv) participation in a conference, trade fair or seminar in Australia unless the person is being paid by an organiser for participation; but (b) does not include either of the following activities: (i) an activity that is, or includes, undertaking work for, or supplying services to, an organisation or other person based in Australia; (ii) an activity that is, or includes, the sale of goods or services directly to the general public.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "stated processing time",
-   "tried": {
-    "institution": "Home Affairs page served to this client points to a guide tool and loads its body by script; the fee shown is filled in by script too",
-    "official-register": "Migration Regulations set none",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "not tried"
-   }
-  },
-  {
    "field": "fees",
    "sought": "which instrument class an entertainment applicant falls in (the $535 line applies only to applicants in no specified class)",
    "tried": {
-    "institution": "Home Affairs price filled by script",
-    "official-register": "Schedule 1 item 1237 read; the 2.07(5) instrument not read",
+    "institution": "Home Affairs price filled by script || 2026-11-04: every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage => see sources: none of them states the blocked fields | Home Affairs 408 entertainment page, the current visa pricing page and the global visa processing times page fetched by curl and searched in their embedded data => all three fill their tables by script; no price, time or extension rule in what is served | POST to immi.homeaffairs.gov.au/_layouts/15/api/GPT.aspx/GetVisaGlobalProcessingTime with {\"gptRequest\":[{\"VisaSubclassCode\":\"408\",\"StreamCode\":\"\"}]} (the 408 page's processing-time tool's data service; the 408 is Australia's visa, which applies in the Cocos (Keeling) Islands); saved l4w/files/f11/CC-gpt => found: Entertainment Activities stream, 90% decided in 40 days, 75% in 33, 50% in 23, 25% in 10 (updated 02 November 2026, applications to 30 September 2026) | Home Affairs 408 Entertainment Activities page fetched whole (1.4 MB) and its embedded JSON searched for extend, further, stay longer, salary, paid, without a visa, Cost; saved l4w/files/f11/AU-408 => found for validity.renewable: 'Stay longer: You can't stay in Australia longer by extending this visa.' No pay rule; no engagement exempt from the visa; the price is filled by script (the block reads 'The visa costs  for the main applicant')",
+    "official-register": "Schedule 1 item 1237 read; the 2.07(5) instrument not read || 2026-11-04: Migration Regulations 1994 compilation of 2 October 2026, volume 2 (legislation.gov.au epub document_2) fetched; Part 408 clauses 408.511 and 408.611-408.612 read => 408.611: the primary applicant's visa is subject to conditions 8107 and 8303, condition 8109 where granted under 408.229A (entertainment), and condition 8503 (no further stay) may be imposed; no extension; no pay floor; the 2.07(5) fee-class instrument not reached",
     "web-search": "not run",
-    "trade-press": "none",
-    "archive": "not tried"
-   }
-  },
-  {
-   "field": "validity.renewable",
-   "sought": "whether the 408 can be extended",
-   "tried": {
-    "institution": "page body not served",
-    "official-register": "408.511 read: a period specified by the Minister; a further application not read",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "a minimum pay rule",
-   "tried": {
-    "institution": "not served",
-    "official-register": "408.229A read: none",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "paid performing without a 408",
-   "tried": {
-    "institution": "not served",
-    "official-register": "none read",
-    "web-search": "not run",
-    "trade-press": "none",
-    "archive": "none"
+    "trade-press": "none || 2026-11-04: MEAA (the union the 408 page names for consultation) home page and its site search for 'foreign artists' fetched (l4w/files/f11/AU-meaa, AU-meaa-foreign) => only news and campaign pages; no statement of an imported performer's pay floor or a visa exemption",
+    "archive": "not tried || 2026-11-04: web.archive.org by curl (2026-11-04) => connection reset (curl 35, HTTP 000); no snapshot read"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04: the 408's processing (40 days at 90%, Home Affairs' data service, updated 2 November 2026), that it can't be extended, and, as for Norfolk Island, no pay floor and no paid engagement free of it. Still unknown: which fee class an entertainment applicant falls in."
 }

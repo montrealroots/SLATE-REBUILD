@@ -1,6 +1,6 @@
 {
  "country": "EE",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Registration of short-term employment",
  "routeChanged": true,
  "permit": {
@@ -81,13 +81,13 @@
    "field": "union",
    "sought": "Any union consultation",
    "tried": {
-    "institution": "The Board's registration page names none.",
-    "official-register": "Aliens Act §§ 104–107 name none.",
+    "institution": "The Board's registration page names none. || 2026-11-04: naitlejateliit.ee (Eesti Näitlejate Liit, the actors' union) by curl => refused by the egress proxy (502)",
+    "official-register": "Aliens Act §§ 104–107 name none. || 2026-11-04: Riigi Teataja: the English Aliens Act (506012026003) and the Estonian Välismaalaste seadus (112072025032, RT I, 12.07.2025, 32) fetched whole through /public-api/api/v1/…/blob-html and searched for 'trade union', 'employees' representative', 'ametiühing', 'töötajate esindaja', 'töötajate usaldusisik' => none in either text, but both are the wording in force 01.01.2026–21.05.2026; the API's version list (/akt/112072025032/redaktsioonid) returned an empty list and riigiteataja.ee/akt/VMS is a script page, so the wording in force today wasn't read",
     "web-search": "'politsei.ee short-term employment registration state fee creative activity artist performer Estonia': none.",
-    "trade-press": "None found.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "trade-press": "None found. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in Estonia => lead only: ENL – Eesti Näitlejate Liit listed as FIA's member; a member list says nothing of a step in the permit, and no permit source names it",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   }
  ],
- "note": "Layer 3 names the temporary residence permit for employment; a foreign performer engaged for up to 365 days within 455 works on the employer's registration of short-term employment with the Police and Border Guard Board, which is the route for an engagement, the residence permit being for longer employment."
+ "note": "Layer 3 names the temporary residence permit for employment; a foreign performer engaged for up to 365 days within 455 works on the employer's registration of short-term employment with the Police and Border Guard Board, which is the route for an engagement, the residence permit being for longer employment. Re-read 2026-11-04: Riigi Teataja now marks the Aliens Act's English translation read here as no longer in force (its wording ran from 1 January to 21 May 2026); the wording in force today wasn't served (the version list came back empty), so the facts stand on it, a later amendment unread."
 }

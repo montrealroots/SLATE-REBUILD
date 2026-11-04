@@ -1,6 +1,6 @@
 {
  "country": "CH",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Bewilligung für Künstlerinnen und Künstler (Art. 19 Abs. 4 lit. b VZAE)",
  "routeChanged": false,
  "permit": {
@@ -27,13 +27,14 @@
    "days": 8,
    "within": 365,
    "note": "Only for work without taking up a post in Switzerland (self-employed, or employed by an employer abroad): a permit is needed beyond eight days in a calendar year (Art. 14 VZAE). Engaged by a Swiss employer, the permit is needed from the first day."
-  }
+  },
+  "validityNote": "An artist may work at most eight months in any twelve, holidays and breaks counted (SEM Weisungen AIG 4.7.12.2.5)."
  },
  "sources": [
   {
    "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/K%C3%BCnstler_IW_AIG.pdf",
    "title": "Kanton Zürich, Migrationsamt, Weisung «Künstler» (15. Februar 2022), following the SEM's directives",
-   "read": "2026-11-01",
+   "read": "2026-11-04",
    "said": "besteht die Möglichkeit, ohne Kontingentierung im Rahmen von Engagements bis zu 8 Monaten innerhalb von 12 Monaten in der Schweiz erwerbstätig zu sein. … Für die Erwerbstätigkeit mit Stellenantritt gilt die Bewilligungspflicht ab dem ersten Tag. … Die Agentur oder der Arbeitgeber haben dem Migrationsamt spätestens sechs Wo- chen vor Einreise des Künstlers das im Original unterzeichnete und mit Stempel ver- sehene Aufenthaltsgesuch (Formular A7/M8//K9) zusammen mit einem von allen Parteien unterzeichneten Original-Arbeitsvertrag einzureichen … Die Aufenthaltsdauer beträgt insgesamt höchstens 8 Monate innerhalb von 12 Mona- ten … Bewilligungen an Künstler können nur erteilt werden, wenn weder auf dem inländi- schen Arbeitsmarkt (Ausländer mit einer Aufenthalts- oder Niederlassungsbewilli- gung und Schweizer) noch aus EU/EFTA-Staaten geeignete Personen zur Verfü- gung stehen (Inländervorrang). Der Lohn- und die Arbeitsbedingungen müssen orts- und branchenüblich … Es können nur fachlich sehr gut qualifizierte Musikerinnen und Musiker sowie Künst- lerinnen und Künstler oder solche mit einem nachgewiesenen Bekanntheitsgrad im In- oder Ausland zugelassen werden. … Bei der Mindest-Tagesgage wird der Richtlinientarif, welcher vom Schweizerischen Musikerverband (SMV) und dem Verband Schweizerischer Konzertlokale, Cabarets, Dancings und Discotheken (ASCO) ausgearbeitet wurde, angewendet … Eine Bewilligung ist erforderlich, wenn eine sol- che Tätigkeit während mehr als acht Tagen innerhalb eines Kalenderjahres ausgeübt",
    "kind": "primary",
    "fields": [
@@ -55,6 +56,16 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/auslaender/weisungen-aug-kap4-d.pdf",
+   "title": "SEM, Weisungen AIG, I. Ausländerbereich, 4 Aufenthalt mit Erwerbstätigkeit (Version 25.10.2013, Stand 30.06.2026), sections 4.6.5 and 4.7.12 (saved l4w/files/p1/ch/kap4.pdf)",
+   "read": "2026-11-04",
+   "said": "Kantonale Vorentscheide über die Zulassung von Künstlerinnen und Künstlern mit Aufenthalt bis zu acht Monaten (Art. 19 Abs. 4 Bst. b VZAE) unterliegen wie bisher nicht der Zustimmungspflicht. … Die Entlöhnung von Unterhaltungsmusikerinnen und Unterhaltungsmusikern muss mindestens zu den Richtlinientarifen erfolgen, die vom Verband Schweizerischer Konzertlokale, Cabarets, Dancings und Discotheken (ASCO) und dem Schweizerischen Musikerverband (smv) gemeinsam festgelegt wurden. … [4.6.5.3] Die nachfolgenden Fristen gelten nur für das Verfahren beim SEM. Das SEM trifft seinen arbeitsmarktlichen Entscheid, gerechnet ab Eingang der vollständigen Unterlagen, innert zehn Tagen, wenn die voraussichtliche Bearbeitungszeit höchstens einige Stunden erfordert (Art. 4 Abs. 1 Bst. a OrFV). Bei Gesuchen mit einem längeren Bearbeitungsbedarf entscheidet das SEM innerhalb von 40 Tagen … respektive drei Monaten",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
@@ -62,23 +73,13 @@
    "field": "processing",
    "sought": "A stated decision time for the artist's permit (the instruction asks the application six weeks before entry, which is a lead time, not a decision time)",
    "tried": {
-    "institution": "zh.ch Migrationsamt instruction read in full: no decision time | 2026-11-01 retry: zh.ch Migrationsamt instruction re-read for a decision time and union step: none (lead time of six weeks before entry only).",
+    "institution": "zh.ch Migrationsamt instruction read in full: no decision time | 2026-11-01 retry: zh.ch Migrationsamt instruction re-read for a decision time and union step: none (lead time of six weeks before entry only). || 2026-11-04: sem.admin.ch: Weisungen AIG (weisungen-aug-d.pdf, Stand 1 November 2026, 301 pp.) and its chapter 4 (weisungen-aug-kap4-d.pdf, Stand 30.06.2026) downloaded; chapter 4 searched for Künstler, Gewerkschaft, Sozialpartner, Berufsverband, Frist, Wochen, and 4.7.12 read whole => union found as an absence (no union or association is consulted; the canton decides without SEM approval) with a union-set pay floor for entertainment musicians; no decision time for the cantonal artist permit: the Ordnungsfristen (10 days, 40 days, 3 months) bind only SEM's approval, which the artist route doesn't need",
     "official-register": "SEM directives I. Ausländerbereich 4.7.12.2 not reached (sem.admin.ch not tried beyond search results) | 2026-11-01 retry: GebV-AIG (Fedlex filestore, saved CH-fedlex-gebv.html) read for fees; VZAE Art. 19 and 14 as cited by the instruction: no decision time and no union consultation; sem.admin.ch directives (Weisungen AIG 4.7.12) not fetched as text.",
     "web-search": "Same searches as for fees (2026-11-01) | 2026-11-01 retry: 'fedlex filestore GebV-AIG 142.209 pdf \"Kantonale Höchstgebühren\" Kurzaufenthaltsbewilligung Franken' (2026-11-01): fee text only; no decision time for artists' permits.",
     "trade-press": "None | 2026-11-01 retry: lexaris.de (GebV-AIG reproduction, saved CH-lexaris-flat.html) and the Bern and Zug fee documents in results: fees only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "union",
-   "tried": {
-    "institution": "2026-11-01 retry: zh.ch Migrationsamt instruction re-read for a decision time and union step: none (lead time of six weeks before entry only).",
-    "official-register": "2026-11-01 retry: GebV-AIG (Fedlex filestore, saved CH-fedlex-gebv.html) read for fees; VZAE Art. 19 and 14 as cited by the instruction: no decision time and no union consultation; sem.admin.ch directives (Weisungen AIG 4.7.12) not fetched as text.",
-    "web-search": "2026-11-01 retry: 'fedlex filestore GebV-AIG 142.209 pdf \"Kantonale Höchstgebühren\" Kurzaufenthaltsbewilligung Franken' (2026-11-01): fee text only; no decision time for artists' permits.",
-    "trade-press": "2026-11-01 retry: lexaris.de (GebV-AIG reproduction, saved CH-lexaris-flat.html) and the Bern and Zug fee documents in results: fees only.",
-    "archive": "2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 in the SEM's instructions (chapter 4): no union is consulted, the canton deciding on an artist's permit of up to eight months without the SEM's approval; entertainment musicians must be paid at least the guideline tariffs of ASCO and the Swiss Musicians' Union (4.7.12.2.4), which binds no actor."
 }

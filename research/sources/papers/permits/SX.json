@@ -1,6 +1,6 @@
 {
  "country": "SX",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Tewerkstellingsvergunning (Landsverordening arbeid vreemdelingen)",
  "routeChanged": false,
  "permit": {
@@ -14,11 +14,17 @@
    },
    "premium": null
   },
-  "validity": null,
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": true,
+   "note": "Renewed a year at a time, three years in all (no cap for higher-professional graduates); then the foreigner must live a year outside Sint Maarten before a new permit."
+  },
   "union": null,
   "eligibility": "Een tewerkstellingsvergunning wordt geweigerd: a. indien voor het doen verrichten van de arbeid waarop de tewerkstellingsvergunning betrekking heeft arbeidskrachten op de lokale arbeidsmarkt beschikbaar zijn",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None for an engagement of any length."
  },
  "sources": [
   {
@@ -33,6 +39,20 @@
     "processing",
     "eligibility"
    ]
+  },
+  {
+   "url": "https://lokaleregelgeving.overheid.nl/CVDR207364/1",
+   "title": "Landsbesluit, houdende algemene maatregelen, ter uitvoering van de artikelen 3, onderdeel e, 5, derde en vierde lid, en 8 … van de Landsverordening arbeid vreemdelingen (Sint Maarten), 'Geldend van 10-10-2010 t/m heden', overheid.nl local-regulation register",
+   "read": "2026-11-04",
+   "said": "Artikel 4 de vergoeding 1. Voor het in behandeling nemen van een aanvraag is de werkgever aan het Land verschuldigd: a. in geval van arbeid in een leidinggevende functie: een vergoeding van NA f 3.000,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van één jaar of minder, NA f 5.400,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste twee jaar doch meer dan één jaar, en NA f 7.500,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste drie jaar doch meer dan twee jaar; b. in overige gevallen: een vergoeding van NA f 1.600,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van één jaar of minder, NA f 2.800,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste twee jaar doch meer dan één jaar, en NA f 3.900,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste drie jaar doch meer dan twee jaar; … Artikel 7 maximale duur tewerkstellingsvergunning 1. Een tewerkstellingsvergunning wordt in beginsel steeds voor één jaar verleend, met de mogelijkheid van vernieuwing in beginsel steeds voor één jaar, met dien verstande dat de totale geldigheidsduur van de tewerkstellingsvergunning, inclusief vernieuwingen, maximaal drie jaar mag bedragen. De totale geldigheidsduur van maximaal drie jaar is niet toepasselijk op vreemdelingen met een opleiding op hbo-niveau of hoger. … Artikel 8 leeftijd Een tewerkstellingsvergunning wordt geweigerd indien de vreemdeling op de dag van de indiening van de aanvraag de leeftijd van 25 jaar nog niet heeft bereikt, of de leeftijd van 57 jaar reeds heeft bereikt. Deze bepaling is niet toepasselijk op vreemdelingen met een opleiding op hbo-niveau of hoger.",
+   "kind": "primary",
+   "fields": [
+    "validity",
+    "exempt",
+    "pay",
+    "union",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
@@ -40,57 +60,13 @@
    "field": "fees",
    "sought": "The application fee (vergoeding) set by landsbesluit",
    "tried": {
-    "institution": "sintmaartengov.org: no fee page found; services PDF lists only standard documents. | Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached.",
-    "official-register": "overheid.nl holds the ordinance; the fee landsbesluit not found there. | Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there.",
+    "institution": "sintmaartengov.org: no fee page found; services PDF lists only standard documents. | Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached. || 2026-11-04: sintmaartengov.org home and guessed labour/work-permit pages => home HTTP 200; the guessed pages 404; not pursued",
+    "official-register": "overheid.nl holds the ordinance; the fee landsbesluit not found there. | Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there. || 2026-11-04: lokaleregelgeving.overheid.nl: search by title 'arbeid vreemdelingen' (12 results); the Sint Maarten Landsverordening (CVDR142001, current from 30-05-2015) re-read (2,163 words) and its implementing Landsbesluit CVDR207364/1 read whole (3,482 words, arts. 1-19) => fees (art. 4), term (art. 7), exemptions (art. 5: part-time gardeners and domestics under 16 hours, company directors with a business licence, indefinite residence holders, spouses of Dutch nationals, those raised in Sint Maarten, Dutch nationals born elsewhere; none for performers or short engagements), an age rule (art. 8), sector quotas (art. 9), a local counterpart (art. 10), social premiums and wage tax on the declared wage (art. 11); no union step in either text (no 'vakbond', 'vakvereniging' or 'werknemersorganisatie')",
     "web-search": "'Sint Maarten tewerkstellingsvergunning work permit fee NAf Ministry VSA short term work permit artists entertainers': no NAf amount. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
     "trade-press": "Rivermate, Global Expansion: no fee with a primary. | Retry 2026-11-01: None reachable without search.",
     "archive": "Not tried (archive unreachable this session). | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
    }
-  },
-  {
-   "field": "validity",
-   "sought": "Longest term granted",
-   "tried": {
-    "institution": "Not stated beyond 'voor bepaalde of onbepaalde tijd'. | Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached.",
-    "official-register": "Ordinance art. 7 read. | Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there.",
-    "web-search": "Same search: none. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "None. | Retry 2026-11-01: None reachable without search.",
-    "archive": "Not tried. | Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "(as before)",
-   "tried": {
-    "institution": "Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached.",
-    "official-register": "Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there.",
-    "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "(as before)",
-   "tried": {
-    "institution": "Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached.",
-    "official-register": "Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there.",
-    "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "(as before)",
-   "tried": {
-    "institution": "Retry 2026-11-01: sintmaartengov.org answers only with a redirect (302) to its home page; no fee or term page reached.",
-    "official-register": "Retry 2026-11-01: Landsverordening arbeid vreemdelingen on overheid.nl (CVDR142001, saved) re-read: art. 7 grants the permit 'voor bepaalde of onbepaalde tijd' without a maximum, no fee; the fee decree not found there.",
-    "web-search": "Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (tool refusal, 2026-11-01).",
-    "trade-press": "Retry 2026-11-01: None reachable without search.",
-    "archive": "Retry 2026-11-01: web.archive.org: no connection from this environment (HTTP 000, 2026-11-01)."
-   }
   }
  ],
- "note": "Landsverordening arbeid vreemdelingen (as overheid.nl's local-regulation register holds it): the employer applies; an application is not taken up unless the job was reported as available at least five weeks before; the decision is due within six weeks; the permit may be for a fixed or indefinite time; it is refused where local labour is available. The fee is set by a national decree (landsbesluit) that was not found in a readable text. No performers' exemption or decree designating performers was found (as at layer 3)."
+ "note": "Landsverordening arbeid vreemdelingen (as overheid.nl's local-regulation register holds it): the employer applies; an application is not taken up unless the job was reported as available at least five weeks before; the decision is due within six weeks; the permit may be for a fixed or indefinite time; it is refused where local labour is available. The fee is set by a national decree (landsbesluit) that was not found in a readable text. No performers' exemption or decree designating performers was found (as at layer 3). Read 2026-11-04 in the decree on lokaleregelgeving.overheid.nl (in force from 10 October 2010): the term, no exemption, pay rule or union step. Its fees (NA f 1,600 for one year of non-managerial work, 2,800 for two, 3,900 for three) are written in Netherlands Antillean guilders; Sint Maarten's change to the Caribbean guilder wasn't read at a primary today, so the fees stay unknown."
 }

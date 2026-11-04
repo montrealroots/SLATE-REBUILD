@@ -1,6 +1,6 @@
 {
  "country": "TR",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Çalışma izni",
  "routeChanged": false,
  "permit": {
@@ -28,7 +28,14 @@
     "currency": "TRY"
    }
   ],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 30,
+    "unit": "days"
+   },
+   "premium": null,
+   "note": "Law 6735 art. 7(8): from a complete application."
+  },
   "validity": {
    "n": 1,
    "unit": "months",
@@ -37,7 +44,8 @@
   "union": null,
   "eligibility": "Bilimsel, kültürel ve sanatsal faaliyetler kapsamında çalışacak yabancılar",
   "pay": "For a work permit the wage may not be below the gross minimum wage in force at application, rising to twice it for work requiring expertise or mastery, three times for other managers, four times for engineers and architects and five times for senior managers and pilots (the Ministry's evaluation criteria, 3.1).",
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None free of papers: up to one month for scientific, cultural and artistic activities a foreigner works on a work-permit exemption, applied for at the Ministry or a Turkish mission, free for under three months (Regulation arts. 48(1)(a), 49(1), 50(3))."
  },
  "sources": [
   {
@@ -103,42 +111,29 @@
    "fields": [
     "first"
    ]
-  }
- ],
- "blockers": [
-  {
-   "field": "processing",
-   "sought": "Decision time",
-   "tried": {
-    "institution": "Not stated on the pages read. | Retry 2026-11-01: csgb.gov.tr/uigm pages read (application types, application guides, legislation, the step-by-step leaflet): no decision time stated; the leaflet says only that the evaluation can be followed on the system.",
-    "official-register": "mevzuat.gov.tr times out and izin.csgb.gov.tr / yabancicalismaizni.gov.tr are refused by this environment's egress (2026-11-01). Law 6735's decision period not read. | Retry 2026-11-01: mevzuat.gov.tr still times out; the Ministry's legislation page links only the Trade Ministry's 'Yabancı Personel Çalışma İzinleri Usul ve Esasları' PDF; Law 6735's decision period not read.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
   },
   {
-   "field": "union",
-   "sought": "Any union consultation",
-   "tried": {
-    "institution": "None named. | Retry 2026-11-01: csgb.gov.tr/uigm pages read (application types, application guides, legislation, the step-by-step leaflet): no decision time stated; the leaflet says only that the evaluation can be followed on the system.",
-    "official-register": "mevzuat.gov.tr times out and izin.csgb.gov.tr / yabancicalismaizni.gov.tr are refused by this environment's egress (2026-11-01). | Retry 2026-11-01: mevzuat.gov.tr still times out; the Ministry's legislation page links only the Trade Ministry's 'Yabancı Personel Çalışma İzinleri Usul ve Esasları' PDF; Law 6735's decision period not read.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01).",
-    "trade-press": "None found. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
+   "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6735.pdf",
+   "title": "Mevzuat Bilgi Sistemi, 6735 sayılı Uluslararası İşgücü Kanunu, madde 7",
+   "read": "2026-11-04",
+   "said": "(5) Bakanlıkça gerek görülen hâllerde, ilgili kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşlarının görüşleri dikkate alınır. ... (7) Başvuruda eksik bilgi veya belgelerin olması hâlinde, bu eksiklikler tamamlanıncaya kadar başvurunun değerlendirilmesi ertelenir. ... (8) Usulüne uygun olarak yapılan başvuruların değerlendirilmesi, bilgi ve belgelerin tam olması kaydıyla otuz gün içinde tamamlanır.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "union"
+   ]
   },
   {
-   "field": "exempt",
-   "sought": "An engagement short enough to need no permit",
-   "tried": {
-    "institution": "The one-month exemption for artistic activities is itself applied for and approved in e-muafiyet (the Ministry's guide of 22 September 2026): no days free of asking. | Retry 2026-11-01: csgb.gov.tr/uigm pages read (application types, application guides, legislation, the step-by-step leaflet): no decision time stated; the leaflet says only that the evaluation can be followed on the system.",
-    "official-register": "mevzuat.gov.tr times out and izin.csgb.gov.tr / yabancicalismaizni.gov.tr are refused by this environment's egress (2026-11-01). | Retry 2026-11-01: mevzuat.gov.tr still times out; the Ministry's legislation page links only the Trade Ministry's 'Yabancı Personel Çalışma İzinleri Usul ve Esasları' PDF; Law 6735's decision period not read.",
-    "web-search": "Same search. | Retry 2026-11-01: No new search possible: the shared web-search budget for this turn was exhausted (2026-11-01).",
-    "trade-press": "Mıhcı Hukuk agrees the exemption is applied for. | Retry 2026-11-01: None reachable without search.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). | Retry 2026-11-01: web.archive.org: no connection (HTTP 000, 2026-11-01)."
-   }
+   "url": "https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.39337.pdf",
+   "title": "Mevzuat Bilgi Sistemi, Uluslararası İşgücü Kanunu Uygulama Yönetmeliği (amended RG 15/10/2024-32693), maddeler 38, 48-50",
+   "read": "2026-11-04",
+   "said": "MADDE 48 – (1) Özel kanunlarda yer alan hükümler ile yabancı ile işverenin diğer kanunlardan doğan yükümlülüklerinin saklı kalması kaydıyla; a) Bilimsel, kültürel ve sanatsal faaliyetler kapsamında çalışacak yabancılar bir aya kadar, ... MADDE 49 – (1) Çalışma izni muafiyeti kapsamında olan yabancılar, çalışma izni muafiyeti almak kaydıyla çalışabilirler. (2) Çalışma izni muafiyeti başvuruları yabancı tarafından yurt içinde sistem üzerinden Bakanlığa, yurt dışında yabancının vatandaşı olduğu veya yasal olarak bulunduğu ülkedeki Türk dış temsilciliğine yapılır. ... MADDE 50 ... (3) Üç aya kadar talep edilen çalışma izni muafiyeti başvuruları; a) Yurtiçinden yapılması halinde Bakanlıkça, b) Yurtdışından yapılması halinde Türk dış temsilciliğince, değerlendirilir. Başvurusu olumlu değerlendirilen yabancılara durumlarını gösterir belge verilir. Bu belge için çalışma izni muafiyeti harcı ve değerli kâğıt bedeli alınmaz.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
- "note": "For scientific, cultural and artistic activities of up to one month the Ministry gives a work-permit exemption (Implementing Regulation art. 48/a), itself applied for through the e-exemption system, free of fee under three months (only the valuable-paper fee if a printed document is asked); beyond a month, the work permit. The harç amounts below are the Ministry's for 2026 work permits."
+ "blockers": [],
+ "note": "For scientific, cultural and artistic activities of up to one month the Ministry gives a work-permit exemption (Implementing Regulation art. 48/a), itself applied for through the e-exemption system, free of fee under three months (only the valuable-paper fee if a printed document is asked); beyond a month, the work permit. The harç amounts below are the Ministry's for 2026 work permits. Read 2026-11-04 on mevzuat.gov.tr: the International Labour Force Law (30 days from a complete application) and its Regulation, read whole: no union consultation, the Ministry able to take public professional bodies' opinions (art. 7(5))."
 }

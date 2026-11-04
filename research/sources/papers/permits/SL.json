@@ -1,6 +1,6 @@
 {
  "country": "SL",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Special work permit (Work Permit Act, 2023, s. 22)",
  "routeChanged": false,
  "permit": {
@@ -38,57 +38,57 @@
    "field": "fees",
    "sought": "The fee for a special work permit",
    "tried": {
-    "institution": "Ministry of Employment, Labour and Social Security site not reached in this pass; nra.gov.sl immigration charges page fails certificate verification.",
-    "official-register": "The Work Permit (Fees) Regulations 2024 on parliament.gov.sl: self-signed certificate, not read; SierraLII search for the regulations found none. Retry 2026-11-01: The Act (SierraLII scan) re-read by eye in ss. 12-26: the fee is 'as prescribed by the Minister' (s. 12(1)(a)); no decision time is set (s. 14 gives the Committee's recommendation and the Minister's issue only); parliament.gov.sl's certificate fails verification and wasn't bypassed.",
-    "web-search": "'Sierra Leone Ministry of Labour work permit fees 2024 non-citizen US$ special work permit artists three months': general figures (NLe 15,000 non-ECOWAS, a hiring guide) with no artist category. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "institution": "Ministry of Employment, Labour and Social Security site not reached in this pass; nra.gov.sl immigration charges page fails certificate verification. || 2026-11-04: nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page => TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges | mlss.gov.sl and immigration.gov.sl => no connection (HTTP 000)",
+    "official-register": "The Work Permit (Fees) Regulations 2024 on parliament.gov.sl: self-signed certificate, not read; SierraLII search for the regulations found none. Retry 2026-11-01: The Act (SierraLII scan) re-read by eye in ss. 12-26: the fee is 'as prescribed by the Minister' (s. 12(1)(a)); no decision time is set (s. 14 gives the Committee's recommendation and the Minister's issue only); parliament.gov.sl's certificate fails verification and wasn't bypassed. || 2026-11-04: curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle => the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "web-search": "'Sierra Leone Ministry of Labour work permit fees 2024 non-citizen US$ special work permit artists three months': general figures (NLe 15,000 non-ECOWAS, a hiring guide) with no artist category. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04) => names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
     "trade-press": "Awoko (revenue report), no category fee.",
-    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection."
+    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org => no captures in either crawl; web.archive.org still resets the connection (curl: (35))"
    }
   },
   {
    "field": "processing",
    "sought": "Decision time",
    "tried": {
-    "institution": "Not stated in the Act's pages read.",
-    "official-register": "As above. Retry 2026-11-01: The Act (SierraLII scan) re-read by eye in ss. 12-26: the fee is 'as prescribed by the Minister' (s. 12(1)(a)); no decision time is set (s. 14 gives the Committee's recommendation and the Minister's issue only); parliament.gov.sl's certificate fails verification and wasn't bypassed.",
-    "web-search": "Same search: none. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01).",
+    "institution": "Not stated in the Act's pages read. || 2026-11-04: nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page => TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges | mlss.gov.sl and immigration.gov.sl => no connection (HTTP 000)",
+    "official-register": "As above. Retry 2026-11-01: The Act (SierraLII scan) re-read by eye in ss. 12-26: the fee is 'as prescribed by the Minister' (s. 12(1)(a)); no decision time is set (s. 14 gives the Committee's recommendation and the Minister's issue only); parliament.gov.sl's certificate fails verification and wasn't bypassed. || 2026-11-04: curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle => the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "web-search": "Same search: none. Retry 2026-11-01: No new search could run: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04) => names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
     "trade-press": "None.",
-    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection."
+    "archive": "Not tried. Retry 2026-11-01: web.archive.org still resets the connection. || 2026-11-04: Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org => no captures in either crawl; web.archive.org still resets the connection (curl: (35))"
    }
   },
   {
    "field": "union",
    "sought": "A union consultation",
    "tried": {
-    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass).",
-    "official-register": "The Act (ss. 11-26, read by eye) asks registration with a professional body only where a law requires it (s. 11), no union consultation. (SierraLII scan, 2026-11-01)",
-    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01).",
+    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass). || 2026-11-04: nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page => TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges | mlss.gov.sl and immigration.gov.sl => no connection (HTTP 000)",
+    "official-register": "The Act (ss. 11-26, read by eye) asks registration with a professional body only where a law requires it (s. 11), no union consultation. (SierraLII scan, 2026-11-01) || 2026-11-04: curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle => the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04) => names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
     "trade-press": "None found.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org => no captures in either crawl; web.archive.org still resets the connection (curl: (35))"
    }
   },
   {
    "field": "pay",
    "sought": "A minimum pay rule",
    "tried": {
-    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass).",
-    "official-register": "The Act sets fines in multiples of the national minimum wage but no pay floor for permit holders. (SierraLII scan, 2026-11-01)",
-    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01).",
+    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass). || 2026-11-04: nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page => TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges | mlss.gov.sl and immigration.gov.sl => no connection (HTTP 000)",
+    "official-register": "The Act sets fines in multiples of the national minimum wage but no pay floor for permit holders. (SierraLII scan, 2026-11-01) || 2026-11-04: curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle => the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04) => names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
     "trade-press": "None found.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org => no captures in either crawl; web.archive.org still resets the connection (curl: (35))"
    }
   },
   {
    "field": "exempt",
    "sought": "An engagement short enough to need no permit",
    "tried": {
-    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass).",
-    "official-register": "The Act has no exemption by length: a performer for up to 3 months needs the special work permit (s. 22); the Minister may exempt in an emergency (s. 24) or by certificate of exemption (s. 25). (SierraLII scan, 2026-11-01)",
-    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01).",
+    "institution": "The Ministry of Employment, Labour and Social Security's site wasn't reached (first pass). || 2026-11-04: nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page => TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges | mlss.gov.sl and immigration.gov.sl => no connection (HTTP 000)",
+    "official-register": "The Act has no exemption by length: a performer for up to 3 months needs the special work permit (s. 22); the Minister may exempt in an emergency (s. 24) or by certificate of exemption (s. 25). (SierraLII scan, 2026-11-01) || 2026-11-04: curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle => the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "web-search": "No search could run for this field: the session's shared web-search budget ran out (2026-11-01). || 2026-11-04: WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04) => names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
     "trade-press": "None found.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org => no captures in either crawl; web.archive.org still resets the connection (curl: (35))"
    }
   }
  ],
- "note": "The Work Permit Act, 2023 (Act No. 11 of 2023) on SierraLII is a scan without a text layer; sections 12, 18, 21 and 22 were read by eye from pages 11, 13 and 15 of the PDF rendered to images. Section 22 lets the Minister issue a special work permit to non-citizen artists, performers, professional athletes, researchers and consultants working in Sierra Leone up to 3 months; longer work takes the ordinary work permit. Fees are 'as prescribed by the Minister after consultation with the Work Permit Committee'; the Work Permit (Fees) Regulations 2024 exist on Parliament's site but parliament.gov.sl and nra.gov.sl fail certificate verification in this client (self-signed / unknown issuer), so they were not read. ECOWAS citizens work as nationals do (layer 3's ecowas list)."
+ "note": "The Work Permit Act, 2023 (Act No. 11 of 2023) on SierraLII is a scan without a text layer; sections 12, 18, 21 and 22 were read by eye from pages 11, 13 and 15 of the PDF rendered to images. Section 22 lets the Minister issue a special work permit to non-citizen artists, performers, professional athletes, researchers and consultants working in Sierra Leone up to 3 months; longer work takes the ordinary work permit. Fees are 'as prescribed by the Minister after consultation with the Work Permit Committee'; the Work Permit (Fees) Regulations 2024 exist on Parliament's site but parliament.gov.sl and nra.gov.sl fail certificate verification in this client (self-signed / unknown issuer), so they were not read. ECOWAS citizens work as nationals do (layer 3's ecowas list). Re-read 2026-11-04: sierralii.gov.sl's copy (source.pdf) answered with a page without the passage (its text drawn by script, or an image); the fact stands on its reading of 2026-11-01."
 }

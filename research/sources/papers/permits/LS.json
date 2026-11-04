@@ -1,6 +1,6 @@
 {
  "country": "LS",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (Ministry of Labour and Employment, 'Provision of Work permits')",
  "routeChanged": false,
  "permit": {
@@ -8,28 +8,13 @@
   "first": "An employment contract, copies of the advertisements for the position, and the name and terms of reference of a local counterpart with a training programme.",
   "fees": [
    {
-    "what": "Application fee (non-refundable)",
-    "amount": "500.00",
+    "what": "Application fee, new or renewal (non-refundable)",
+    "amount": "1000.00",
     "currency": "LSL"
    },
    {
-    "what": "Work permit of 6 months and below",
-    "amount": "1500.00",
-    "currency": "LSL"
-   },
-   {
-    "what": "Work permit above 6 months",
-    "amount": "2500.00",
-    "currency": "LSL"
-   },
-   {
-    "what": "Work permit for 2 years",
+    "what": "Certificate of employment, two years",
     "amount": "3000.00",
-    "currency": "LSL"
-   },
-   {
-    "what": "Printing of the work permit card",
-    "amount": "350.00",
     "currency": "LSL"
    }
   ],
@@ -47,9 +32,10 @@
    "renewable": true
   },
   "union": null,
-  "eligibility": null,
+  "eligibility": "No performer criterion: the Director must certify that no qualified citizen is in the labour market database (s. 163(2)).",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The Labour Act 2024, Fourth Schedule: a certificate of six months and below M2,000, above six months but below two years M2,500, two years M3,000; the band for the term held is held. The Act has no card fee."
  },
  "sources": [
   {
@@ -77,52 +63,33 @@
     "validity",
     "fees"
    ]
+  },
+  {
+   "url": "https://commons.laws.africa/akn/ls/act/2024/3/media/publication/ls-act-2024-3-publication-document.pdf",
+   "title": "Lesotho Government Gazette Extraordinary Vol. 69 No. 22, 2 April 2024: Labour Act, 2024 (Act No. 3 of 2024), ss. 1, 161-163 and the Fourth Schedule (an image of the Gazette's own pages, hosted by Laws.Africa)",
+   "read": "2026-11-04",
+   "said": "1. This Act may be cited as the Labour Act, 2024 and shall come into operation on the date of publication in the Gazette. ... 161. (1) No employer shall employ any person in Lesotho who is not a citizen of Lesotho, and no such person shall accept employment in Lesotho, unless that person is in possession of a valid work permit issued by the Director, National Employment Service. ... (4) For purposes of this section, a person who is not a citizen of Lesotho, but who is engaged in Lesotho to provide temporary services shall not be considered to be employed or to have accepted employment ... 163. ... (2) The Director, National Employment Service shall before he grants a non-citizen of Lesotho with a work permit, certify that within the labour market database there is no citizen of Lesotho who qualifies for the available employment. (3) The Minister shall, on the advice of the NACOLA, specify by regulations, the types of work permits, and the duration of validity of each type. ... FOURTH SCHEDULE ... Fees payable 2. (1) An application fee for - (a) a new application, shall be the sum of One Thousand maloti (M1,000.00); and (b) renewal for certificate of employment, shall be the sum of One Thousand Maloti (M1,000.00) and it is non-refundable. (2) The fees payable for a certificate of employment shall be as follows - (a) six months and below, the sum of - M2,000.00 (b) above six months but below two years, the sum of - M2.500.00; and (c) two years, the sum of - M3,000.00",
+   "kind": "primary",
+   "fields": [
+    "fees",
+    "union",
+    "pay",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "eligibility",
-   "sought": "The work permit under the Labour Act, 2024 (Act 3 of 2024), ss. 161–163 and the fourth schedule's fees (read by layer 3 through archive.org on 2026-10-29; not re-readable this day) — eligibility",
-   "tried": {
-    "institution": "labour.gov.ls doesn't answer; gov.ls's news page on fast-tracked work permits answers 404 (2026-11-01) | 2026-11-01 retry: gov.ls e-service 'Provision of Work permits' and the 2024 fast-track notice (both saved) read: no union step, no performer criterion, no pay rule, no exempt engagement; labour.gov.ls resets, labour.org.ls CONNECT 502.",
-    "official-register": "lesotholii.org answers with a JavaScript bot check ('Just a moment...'), not read another way | 2026-11-01 retry: lesotholii.org (Labour Act 2024, akn/ls/act/2024/3) answers 403 (2026-11-01).",
-    "web-search": "'Lesotho Labour Act 2024 work permit fourth schedule fees \"work permit\" National Employment Service pdf' (2026-11-01) | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached ('Lesotho work permit application fee Maloti Ministry of Labour and Employment Labour Act 2024 foreign national work permit validity' not run); gov.ls's own site search for 'work permit' used instead (saved LS-govls-search.html).",
-    "trade-press": "Search results (2026-11-01) show employer-of-record guides disagreeing: M1,000 application and M2,000–M3,000 certificates, or M500 application, M1,500 up to six months, M2,500 above, M3,000 for two years (the latter said to cite the Ministry's service page); neither read as a primary | 2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "The work permit under the Labour Act, 2024 (Act 3 of 2024), ss. 161–163 and the fourth schedule's fees (read by layer 3 through archive.org on 2026-10-29; not re-readable this day) — pay",
-   "tried": {
-    "institution": "labour.gov.ls doesn't answer; gov.ls's news page on fast-tracked work permits answers 404 (2026-11-01) | 2026-11-01 retry: gov.ls e-service 'Provision of Work permits' and the 2024 fast-track notice (both saved) read: no union step, no performer criterion, no pay rule, no exempt engagement; labour.gov.ls resets, labour.org.ls CONNECT 502.",
-    "official-register": "lesotholii.org answers with a JavaScript bot check ('Just a moment...'), not read another way | 2026-11-01 retry: lesotholii.org (Labour Act 2024, akn/ls/act/2024/3) answers 403 (2026-11-01).",
-    "web-search": "'Lesotho Labour Act 2024 work permit fourth schedule fees \"work permit\" National Employment Service pdf' (2026-11-01) | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached ('Lesotho work permit application fee Maloti Ministry of Labour and Employment Labour Act 2024 foreign national work permit validity' not run); gov.ls's own site search for 'work permit' used instead (saved LS-govls-search.html).",
-    "trade-press": "Search results (2026-11-01) show employer-of-record guides disagreeing: M1,000 application and M2,000–M3,000 certificates, or M500 application, M1,500 up to six months, M2,500 above, M3,000 for two years (the latter said to cite the Ministry's service page); neither read as a primary | 2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
-  },
-  {
    "field": "exempt",
    "sought": "The work permit under the Labour Act, 2024 (Act 3 of 2024), ss. 161–163 and the fourth schedule's fees (read by layer 3 through archive.org on 2026-10-29; not re-readable this day) — exempt",
    "tried": {
-    "institution": "labour.gov.ls doesn't answer; gov.ls's news page on fast-tracked work permits answers 404 (2026-11-01) | 2026-11-01 retry: gov.ls e-service 'Provision of Work permits' and the 2024 fast-track notice (both saved) read: no union step, no performer criterion, no pay rule, no exempt engagement; labour.gov.ls resets, labour.org.ls CONNECT 502.",
-    "official-register": "lesotholii.org answers with a JavaScript bot check ('Just a moment...'), not read another way | 2026-11-01 retry: lesotholii.org (Labour Act 2024, akn/ls/act/2024/3) answers 403 (2026-11-01).",
+    "institution": "labour.gov.ls doesn't answer; gov.ls's news page on fast-tracked work permits answers 404 (2026-11-01) | 2026-11-01 retry: gov.ls e-service 'Provision of Work permits' and the 2024 fast-track notice (both saved) read: no union step, no performer criterion, no pay rule, no exempt engagement; labour.gov.ls resets, labour.org.ls CONNECT 502. || 2026-11-04: curl https://www.gov.ls/eservice/provision-of-work-permits/ (the Ministry's e-service page) => 200, but the served HTML holds only navigation; no requirement, fee, exemption, union or pay text in it",
+    "official-register": "lesotholii.org answers with a JavaScript bot check ('Just a moment...'), not read another way | 2026-11-01 retry: lesotholii.org (Labour Act 2024, akn/ls/act/2024/3) answers 403 (2026-11-01). || 2026-11-04: curl the Labour Act 2024 Gazette publication PDF at commons.laws.africa (akn/ls/act/2024/3/media/publication/...); pdftotext; read ss. 1, 143, 159-165 and the Fourth Schedule => read: s. 161(4) takes a non-citizen engaged to provide temporary services out of 'employment' (so out of the permit rule), with no length given; s. 163(2) labour-market certificate; s. 163(3) leaves types and terms to regulations; Fourth Schedule fees M1,000 application or renewal, M2,000 (six months and below), M2,500 (above six months, below two years), M3,000 (two years). No union step and no pay rule for permit holders in Part on foreign labour; s. 165 fixes wages generally by contract, agreement, award or gazetted notice",
     "web-search": "'Lesotho Labour Act 2024 work permit fourth schedule fees \"work permit\" National Employment Service pdf' (2026-11-01) | 2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached ('Lesotho work permit application fee Maloti Ministry of Labour and Employment Labour Act 2024 foreign national work permit validity' not run); gov.ls's own site search for 'work permit' used instead (saved LS-govls-search.html).",
     "trade-press": "Search results (2026-11-01) show employer-of-record guides disagreeing: M1,000 application and M2,000–M3,000 certificates, or M500 application, M1,500 up to six months, M2,500 above, M3,000 for two years (the latter said to cite the Ministry's service page); neither read as a primary | 2026-11-01 retry: None reached this turn (search refused).",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01) | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
    }
-  },
-  {
-   "field": "union",
-   "sought": "Union step, performer criteria, pay rule or exempt engagement for Lesotho's work permit",
-   "tried": {
-    "institution": "2026-11-01 retry: gov.ls e-service 'Provision of Work permits' and the 2024 fast-track notice (both saved) read: no union step, no performer criterion, no pay rule, no exempt engagement; labour.gov.ls resets, labour.org.ls CONNECT 502.",
-    "official-register": "2026-11-01 retry: lesotholii.org (Labour Act 2024, akn/ls/act/2024/3) answers 403 (2026-11-01).",
-    "web-search": "2026-11-01 retry: Refused on 2026-11-01: the session's shared web-search limit was reached ('Lesotho work permit application fee Maloti Ministry of Labour and Employment Labour Act 2024 foreign national work permit validity' not run); gov.ls's own site search for 'work permit' used instead (saved LS-govls-search.html).",
-    "trade-press": "2026-11-01 retry: None reached this turn (search refused).",
-    "archive": "2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
-   }
   }
- ]
+ ],
+ "note": "An error found and fixed on 2026-11-04: the fees were held from the Ministry's page and its news item (M500 application, M1,500 for six months and below, a M350 card); the Labour Act 2024 (in force 2 April 2024, its Gazette publication read today) sets M1,000 and M2,000 and no card fee, and no regulation made since under s. 163(5) was found, so the Act's figures are held. Its work-permit sections (ss. 161-164 and the Fourth Schedule), read whole, name no union step and no pay rule; a non-citizen engaged to provide temporary services isn't 'employed' (s. 161(4)), with no length stated, so no days are held."
 }

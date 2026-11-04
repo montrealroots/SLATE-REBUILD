@@ -1,6 +1,6 @@
 {
  "country": "GD",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work Permit (Entertainment: Arts, Culture and Sports category)",
  "routeChanged": false,
  "permit": {
@@ -48,7 +48,8 @@
   "union": "The authorisation of the relevant Grenadian professional association or cultural organisation (such as the Spicemas Corporation); the Ministry processes the application if it doesn't object.",
   "eligibility": "The applicant has an international reputation and record of excellence in their declared field, or ethnic significance, or is manifestly essential to the presentation or production (where necessary).",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None by length: every foreign artist or entertainer needs a work permit for every event. Only OECS citizens (work permits abolished, SRO 24/2015) and holders of a CARICOM skills certificate work without one; CARICOM artistes still need the permit but pay no fee (Cabinet Directive of 15 May 2017)."
  },
  "sources": [
   {
@@ -76,6 +77,16 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://llca.gov.gd/labour/wp-content/uploads/sites/3/2023/12/LABOUR-WORK-PERMIT-GUIDE.pdf",
+   "title": "Ministry of Labour (Grenada), Work Permit Guidelines: A General Guide to the Foreign Nationals and Commonwealth Citizens Employment System in Grenada (June 2020), §§ 3.1, 8.2, 9.7.3 (saved l4w/files/p1c/GD-guide.pdf)",
+   "read": "2026-11-04",
+   "said": "3.1.1 Specific Non-Citizen Exemptions from the Requirement to Hold Work Permits Section 10.1 of the Act outlines the various categories of foreign nationals who are not required to obtain Work Permits to engage in employment in Grenada. They are: 1) A Judge of the High Court or the Court of Appeal; 2) An individual employed in the service of the Crown, or the Government in a civil capacity; 3) A legal representative engaged in defending an individual charged with a criminal offence; 3.1.2 Other Exempted Categories – Cabinet Directives 1) Citizens of a Protocol Member State of the Organization of Eastern Caribbean States OECS Citizens - In accordance with SRO24/2015, Work Permits are abolished for OECS Citizens … 3) Holders of any other type of CARICOM Skilled Certificate … 8. 2 Fee Exemptions … 2) CARICOM Entertainers: Waiver of Work Permit fees to CARICOM Artistes only (Cabinet Directive 15th May, 2017); … 9.7.3 Entertainment (Arts, Culture and Sports) Employers, promoters, agents or producers are required to apply for Work Permits, for each foreign artist/entertainer, for all events.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
  "blockers": [
@@ -83,24 +94,13 @@
    "field": "pay",
    "sought": "Any minimum or market pay rule for a foreign entertainer",
    "tried": {
-    "institution": "The Ministry of Labour's June 2020 guidelines (read in full for the entertainment category and fees) set none.",
+    "institution": "The Ministry of Labour's June 2020 guidelines (read in full for the entertainment category and fees) set none. || 2026-11-04: the Labour Ministry's Work Permit Guidelines (June 2020, on llca.gov.gd) re-fetched and read for exemptions (§ 3.1), fee exemptions (§ 8.2) and the entertainment category (§ 9.7.3), searched for exempt, wage, salary, days => exempt found as an absence: the Act's s. 10.1 exempts only judges, Crown or Government civil servants and defence counsel, and Cabinet directives add OECS citizens, St George's University faculty and CARICOM skills certificate holders; a permit is required 'for each foreign artist/entertainer, for all events'. CARICOM artistes' permit fees are waived (Cabinet Directive 15 May 2017). No pay rule anywhere in the guide",
     "official-register": "SROs 26/2015 and 24/2017 read; neither sets pay.",
     "web-search": "'Grenada Foreign Nationals and Commonwealth Citizens (Employment) Regulations work permit fee schedule Ministry of Labour application': nothing on pay.",
     "trade-press": "None found.",
     "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01)."
    }
-  },
-  {
-   "field": "exempt",
-   "sought": "An engagement short enough to need no permit",
-   "tried": {
-    "institution": "The guidelines require a permit 'for each foreign artist/entertainer, for all events'; no days named.",
-    "official-register": "Not in the SROs read.",
-    "web-search": "Same search; nothing.",
-    "trade-press": "None found.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01)."
-   }
   }
  ],
- "note": "OECS citizens need no permit fee (and work freely, layer 3). Promoters must be registered with the Inland Revenue Department and file the event contract with the Ministry of Finance. Fees are paid within 48 hours of approval."
+ "note": "OECS citizens need no permit fee (and work freely, layer 3). Promoters must be registered with the Inland Revenue Department and file the event contract with the Ministry of Finance. Fees are paid within 48 hours of approval. Read 2026-11-04 in the Ministry of Labour's work permit guide (June 2020): no engagement is free of the permit by its length."
 }

@@ -1,6 +1,6 @@
 {
  "country": "UZ",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Подтверждение на право осуществления трудовой деятельности",
  "routeChanged": false,
  "permit": {
@@ -36,10 +36,11 @@
   },
   "validityNote": "For the labour contract's term, at most one year (at most three years for highly qualified and qualified specialists); extension asked at least 20 working days before expiry.",
   "union": null,
-  "eligibility": null,
-  "pay": null,
+  "eligibility": "Any foreign citizen whose employer obtains the Ministry's confirmation of the right to work; the Ministry checks local labour availability and the employer's real need. A performer is an \"other foreign citizen\" unless they meet the qualified-specialist test (higher education, five years in the specialism, at least US$30,000 a year) or the highly qualified one (a top-1,000 university, five years, at least US$60,000 a year).",
+  "pay": "No pay floor for other foreign citizens; US$30,000 a year for a qualified and US$60,000 for a highly qualified specialist (Labour Migration Law art. 109).",
   "exempt": null,
-  "feesNote": "From 1 September 2026 the base calculation amount is UZS 440,000 (Decree УП-115 of 23 June 2026, as reported); the fees here are at the amount in force on 1 January 2026."
+  "feesNote": "From 1 September 2026 the base calculation amount is UZS 440,000 (Decree УП-115 of 23 June 2026, as reported); the fees here are at the amount in force on 1 January 2026.",
+  "exemptNote": "None: art. 110's list names no performers or short engagements."
  },
  "sources": [
   {
@@ -67,53 +68,21 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://lex.uz/ru/docs/5055690",
+   "title": "Law of the Republic of Uzbekistan No. ZRU-642 of 20.10.2020 'On employment of the population' (Аҳоли бандлиги тўғрисида), National Database of Legislation, edition as amended to 25.07.2026, chapter 17 (arts. 107-112), Uzbek text",
+   "read": "2026-11-04",
+   "said": "109-модда … Қуйидаги чет эллик фуқаролар малакали мутахассислар деб эътироф этилади: олий маълумотга эга бўлганлар; талаб қилинган мутахассислик ёхуд дипломидаги мутахассислик бўйича камида беш йиллик иш тажрибасига эга бўлганлар; Ўзбекистон Республикасида меҳнат фаолиятига жалб этиш шартларида йилига ўттиз минг АҚШ доллари эквивалентидаги суммадан кам бўлмаган миқдорда иш ҳақи (мукофот пули) олиши назарда тутилганлар. 110-модда . Ўзбекистон Республикасида хорижий ишчи кучини жалб этиш ва ундан фойдаланиш тартиби ўзига нисбатан татбиқ этилмайдиган чет эллик фуқаролар … Ўзбекистон Республикаси Туризмни ривожлантириш давлат қўмитасининг илтимосномаларига кўра, туризм соҳасидаги ишларга уч ойгача муддатга жалб этиладиган мутахассисларга; … Ўзбекистон Республикаси ҳудудида Ўзбекистон Республикасининг давлатлараро шартномаларига мувофиқ ташкил этилган ташкилотларда меҳнат фаолиятини амалга ошираётган илм-фан ва маданият арбобларига; … 111-модда … Ариза келиб тушган кундан эътиборан беш иш куни ичида ҳудудий меҳнат органи: чет эллик фуқароларни жалб этишнинг мақсадга мувофиқлигини иш берувчи томонидан кўрсатилган бўш (вакант) иш ўринлари учун маҳаллий ишчи кучи мавжудлигини ҳисобга олган ҳолда ўрганади; … малакали мутахассислар учун — базавий ҳисоблаш миқдорининг икки баравари миқдорида; ватандошлар учун — базавий ҳисоблаш миқдорининг икки баравари миқдорида; бошқа чет эллик фуқаролар учун — базавий ҳисоблаш миқдорининг ўттиз баравари миқдорида.",
+   "kind": "primary",
+   "fields": [
+    "eligibility",
+    "pay",
+    "exempt",
+    "union"
+   ]
   }
  ],
- "blockers": [
-  {
-   "field": "union",
-   "sought": "Any union step",
-   "tried": {
-    "institution": "advice.uz's page (on the Ministry of Justice's Adliya network) is the only institutional text reached; it names no union, pay or performers' rule.",
-    "official-register": "lex.uz: the document id guessed for Cabinet of Ministers Resolution No. 86 of 22 February 2022 (lex.uz/ru/docs/5873015) returned 404; the Resolution's real address wasn't found without search.",
-    "web-search": "Search 'Узбекистан иностранные артисты гастроли разрешение на работу не требуется подтверждение трудовой деятельности исключения артисты концерт' refused: the run's web-search budget was spent (2026-11-01); layer 3's searches found no performers' exemption.",
-    "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "Any pay floor",
-   "tried": {
-    "institution": "advice.uz's page (on the Ministry of Justice's Adliya network) is the only institutional text reached; it names no union, pay or performers' rule.",
-    "official-register": "lex.uz: the document id guessed for Cabinet of Ministers Resolution No. 86 of 22 February 2022 (lex.uz/ru/docs/5873015) returned 404; the Resolution's real address wasn't found without search.",
-    "web-search": "Search 'Узбекистан иностранные артисты гастроли разрешение на работу не требуется подтверждение трудовой деятельности исключения артисты концерт' refused: the run's web-search budget was spent (2026-11-01); layer 3's searches found no performers' exemption.",
-    "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "An exemption for performers",
-   "tried": {
-    "institution": "advice.uz's page (on the Ministry of Justice's Adliya network) is the only institutional text reached; it names no union, pay or performers' rule.",
-    "official-register": "lex.uz: the document id guessed for Cabinet of Ministers Resolution No. 86 of 22 February 2022 (lex.uz/ru/docs/5873015) returned 404; the Resolution's real address wasn't found without search.",
-    "web-search": "Search 'Узбекистан иностранные артисты гастроли разрешение на работу не требуется подтверждение трудовой деятельности исключения артисты концерт' refused: the run's web-search budget was spent (2026-11-01); layer 3's searches found no performers' exemption.",
-    "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "Criteria for a performer",
-   "tried": {
-    "institution": "advice.uz's page (on the Ministry of Justice's Adliya network) is the only institutional text reached; it names no union, pay or performers' rule.",
-    "official-register": "lex.uz: the document id guessed for Cabinet of Ministers Resolution No. 86 of 22 February 2022 (lex.uz/ru/docs/5873015) returned 404; the Resolution's real address wasn't found without search.",
-    "web-search": "Search 'Узбекистан иностранные артисты гастроли разрешение на работу не требуется подтверждение трудовой деятельности исключения артисты концерт' refused: the run's web-search budget was spent (2026-11-01); layer 3's searches found no performers' exemption.",
-    "trade-press": "None.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read."
-   }
-  }
- ],
- "note": "A performer falls under 'other foreign nationals' unless qualifying as a qualified or highly qualified specialist; the fee is in base calculation amounts (БРВ), whose som value changes by decree and isn't fixed here."
+ "blockers": [],
+ "note": "A performer falls under 'other foreign nationals' unless qualifying as a qualified or highly qualified specialist; the fee is in base calculation amounts (БРВ), whose som value changes by decree and isn't fixed here. Read 2026-11-04 on lex.uz (the Uzbek text): the law on labour migration's chapter 17."
 }

@@ -34,7 +34,7 @@ const RESEARCH = Object.fromEntries(
     .map((f) => [f.slice(7, -5), JSON.parse(readFileSync(join(SOURCES, f), 'utf8')) as { blockers: { item: string }[] }]),
 );
 
-/** Every minimum as the research gives it (read from each country's writer file, 2026-11-01): forms, tiers, unit, from, amount, its share of the budget and ceiling, what waits for photography. */
+/** Every minimum as the research gives it (read from each country's writer file, 2026-11-01; Argentina's and Mexico's films 2026-11-04): forms, tiers, unit, from, amount, its share of the budget and ceiling. */
 const EXPECTED: Record<string, string[]> = {
   'ca-ipa': [
     'feature budget0-82000 - 2023-05-22 negotiated',
@@ -62,6 +62,9 @@ const EXPECTED: Record<string, string[]> = {
   ],
   'de-p7s1': ['pilot/episode minutes1-45 script 2014-06-03 30500'],
   'dk-feature': ['feature - script 2026-01-01 598836'],
+  // Argentores' film minimum from 11 April 2025; the STPC writers' section's screenplay a film, each year from 15 May.
+  'ar-film': ['feature - script 2025-04-11 21000000'],
+  'mx-film': ['feature - script 2021-05-15 209475', 'feature - script 2022-05-15 219948.75', 'feature - script 2023-05-15 230946.19', 'feature - script 2024-05-15 242493.5'],
   'fr-film': ['feature - script 2026-01-15 17000'],
   'fr-tv': ['pilot/episode hourly0-599999 - 2023-07-01 negotiated', 'pilot/episode hourly600000- hour 2023-07-01 27550 share 0.03 cap 1200000'],
   'gb-pact-film': ['feature budget0-749999 script 1990-10-01 14000', 'feature budget750000-2000000 script 1990-10-01 14000', 'feature budget2000001- script 1990-10-01 23200'],
@@ -91,6 +94,8 @@ const ALL: Form[] = ['feature', 'pilot', 'episode', 'short'];
 const TV: Form[] = ['pilot', 'episode'];
 /** Each agreement's country, languages, currency, forms, and how it pays (none, unknown, or its minimums). */
 const AGREEMENTS: Record<string, [string, string[], string | null, Form[], 'none' | 'unknown' | 'fees']> = {
+  'ar-film': ['AR', ['es'], 'ARS', ['feature'], 'fees'],
+  ar: ['AR', [], null, ['pilot', 'episode', 'short'], 'unknown'],
   'au-awg': ['AU', ['en'], null, ALL, 'unknown'],
   br: ['BR', ['pt'], null, ALL, 'none'],
   'ca-ipa': ['CA', ['en'], 'CAD', ['feature', 'pilot', 'episode'], 'fees'],
@@ -116,7 +121,8 @@ const AGREEMENTS: Record<string, [string, string[], string | null, Form[], 'none
   it: ['IT', ['it'], null, ALL, 'none'],
   jp: ['JP', ['ja'], null, ALL, 'unknown'],
   kr: ['KR', ['ko'], null, ALL, 'none'],
-  mx: ['MX', ['es'], null, ALL, 'unknown'],
+  'mx-film': ['MX', ['es'], 'MXN', ['feature'], 'fees'],
+  mx: ['MX', ['es'], null, ['pilot', 'episode', 'short'], 'unknown'],
   ng: ['NG', ['en'], null, ALL, 'none'],
   nl: ['NL', ['nl'], null, ALL, 'none'],
   'no-film': ['NO', ['no'], 'NOK', ['feature'], 'fees'],
@@ -163,6 +169,7 @@ const UNKNOWN_AGREEMENTS = Object.keys(RESEARCH).filter((cc) => !Object.values(A
 
 /** What the twenty's research couldn't find, and the world's where it compiles an agreement of its own that tells or a market with nothing to sell under. */
 const UNKNOWN: Record<string, string[]> = {
+  AR: ['fees'],
   AU: ['fees', 'language'],
   BR: [],
   CA: [],
@@ -171,7 +178,7 @@ const UNKNOWN: Record<string, string[]> = {
   ES: ['fees'],
   FR: [],
   GB: ['language'],
-  IE: ['union'],
+  IE: [],
   IN: ['union', 'fees'],
   IT: [],
   JP: ['fees'],
@@ -207,7 +214,7 @@ describe('the markets', () => {
   it("are each country's own, every minimum as the research gives it", () => {
     const agreements = compiled.agreements as unknown as Record<string, { country: string; languages: string[]; currency: string | null; forms: Form[]; none: boolean; unknown: boolean; fees: Fee[] }>;
     const unknown = Object.fromEntries(UNKNOWN_AGREEMENTS.map((cc) => [cc.toLowerCase(), [cc, [], null, ALL, 'unknown'] as const]));
-    expect(UNKNOWN_AGREEMENTS).toHaveLength(188);
+    expect(UNKNOWN_AGREEMENTS).toHaveLength(187);
     expect(Object.keys(agreements).sort()).toEqual([...Object.keys(AGREEMENTS), ...Object.keys(unknown)].sort());
     for (const [id, [country, languages, currency, forms, pays]] of Object.entries({ ...AGREEMENTS, ...unknown })) {
       const a = agreements[id];
@@ -308,6 +315,15 @@ describe("a script a production pays for in a market", () => {
     expect(() => fee('dk-feature', 'feature', '2025-12-31')).toThrow('no minimum under dk-feature is known before 2026-01-01');
     expect(fee('fr-film', 'feature', '2026-01-15')).toEqual(money('EUR', '17000'));
     expect(fee('no-film', 'feature', '2026-05-01')).toEqual(money('NOK', '535106'));
+    // Argentina: Argentores' film minimum from 11 April 2025; its TV and short terms unknown, and told.
+    expect(fee('ar-film', 'feature', '2025-04-11')).toEqual(money('ARS', '21000000'));
+    expect(() => fee('ar-film', 'feature', '2025-04-10')).toThrow('no minimum under ar-film is known before 2025-04-11');
+    expect(() => fee('ar-film', 'episode', '2026-11-01')).toThrow('ar-film sets no terms for a episode');
+    expect(() => fee('ar', 'episode', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Argentina', missing: MISSING.fees }));
+    // Mexico: the STPC writers' section's screenplay a film, the year's table from 15 May.
+    const mx: [string, string][] = [['2021-05-15', '209475'], ['2022-05-14', '209475'], ['2022-05-15', '219948.75'], ['2023-05-15', '230946.19'], ['2024-05-14', '230946.19'], ['2024-05-15', '242493.50'], ['2026-11-01', '242493.50']];
+    for (const [date, amount] of mx) expect(fee('mx-film', 'feature', date), date).toEqual(money('MXN', amount));
+    expect(() => fee('mx-film', 'feature', '2021-05-14')).toThrow('no minimum under mx-film is known before 2021-05-15');
     // France's TV: 3% of the budget, at least €27,550 and at most €1.2 million an hour; left to negotiation under €600,000 an hour.
     expect(fee('fr-tv', 'episode', '2026-11-01', 599_999, 60)).toBeNull();
     expect(fee('fr-tv', 'episode', '2026-11-01', 600_000, 60)).toEqual(money('EUR', '27550'));
@@ -373,7 +389,10 @@ describe("a script a production pays for in a market", () => {
       follows: 'whether the agreements of the country whose law it follows reach a script written for a production there',
     });
     expect(aboutMarket('au-awg')).toBe("Some of what a screenwriter is paid or asked in Australia isn't known to this game yet: some of the minimums a script is paid and the language scripts are written in.");
-    expect(aboutMarket('ie')).toBe("Some of what a screenwriter is paid or asked in Ireland isn't known to this game yet: the guild's fees or whom it takes.");
+    expect(aboutMarket('ar-film')).toBe("Some of what a screenwriter is paid or asked in Argentina isn't known to this game yet: some of the minimums a script is paid.");
+    expect(aboutMarket('ar')).toBe(aboutMarket('ar-film'));
+    // Ireland's guild's terms were found on 2026-11-04 (its page as Common Crawl kept it): nothing of its market is untold.
+    expect(aboutMarket('ie')).toBeUndefined();
     // An option's terms aren't told: nothing the life does turns on them.
     expect(aboutMarket('de-zdf')).toBeUndefined();
     expect(aboutMarket('ca-ipa')).toBeUndefined();

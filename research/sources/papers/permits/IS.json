@@ -1,6 +1,6 @@
 {
  "country": "IS",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit and residence permit",
  "routeChanged": false,
  "permit": {
@@ -25,7 +25,7 @@
    "unit": "years",
    "renewable": true
   },
-  "union": null,
+  "union": "The Directorate of Labour asks the relevant union (or national federation) for its opinion on a temporary work permit (Act 97/2002 art. 7(1)(b)); the opinion doesn't bind the Directorate, and a negative one must give its reasons (Regulation 339/2005 art. 9).",
   "eligibility": null,
   "pay": null,
   "exempt": {
@@ -67,6 +67,16 @@
     "validity",
     "processing"
    ]
+  },
+  {
+   "url": "https://files.reglugerd.is/pdf/0339-2005/current",
+   "title": "Reglugerð nr. 339/2005 um atvinnuréttindi útlendinga, the regulation register's 'current' PDF ('Útgáfa í gildi frá 30. mars 2005 (Dags. skjals 11. ágúst 2026)'), arts. 4 and 9 (saved l4w/files/p1/is/r339.pdf)",
+   "read": "2026-11-04",
+   "said": "4. gr. Útlendingar sem undanþegnir eru kröfu um atvinnuleyfi vegna skammrar dvalar. Eftirtaldir útlendingar eru undanþegnir kröfu um atvinnuleyfi vegna vinnu í allt að fjórar vikur á ári hér á landi: … b. Listamenn, að undanskildum hljóðfæraleikurum, sem ráða sig til starfa á veitingahúsum. … [9. gr.] Umsögn stéttarfélags skv. b-lið 1. mgr. 7. gr. laganna er ekki bindandi fyrir Vinnumálastofnun við ákvörðun um veitingu atvinnuleyfis. Stéttarfélagið eða landssambandið er veitir umsögn vegna atvinnuleyfis skal jafnframt sérstaklega rökstyðja neikvæða umsögn.",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
@@ -74,35 +84,24 @@
    "field": "eligibility",
    "sought": "which of the four kinds a performer takes and its criteria",
    "tried": {
-    "institution": "island.is names the kinds, not a performer's || Retry 2026-11-01: island.is's work-permit pages (saekja-um-atvinnuleyfi) and the Directorate of Labour's notice that work permits move to the Directorate of Immigration (8 July 2026) read: no performer-specific rule.",
-    "official-register": "althingi.is refuses || Retry 2026-11-01: Regulation 339/2005 on Ísland.is read in full: art. 4 exempts for four weeks a year only artists engaged at restaurants (musicians excepted), sets no union step, no performer criterion and no pay floor beyond Icelandic terms.",
-    "web-search": "as above: no artist-specific rule found || Retry 2026-11-01: WebSearch 'Útlendingastofnun dvalarleyfi atvinnuleyfi listamenn tímabundið atvinnuleyfi gildistími afgreiðslutími Vinnumálastofnun' (in Icelandic): official news items, nothing on artists.",
+    "institution": "island.is names the kinds, not a performer's || Retry 2026-11-01: island.is's work-permit pages (saekja-um-atvinnuleyfi) and the Directorate of Labour's notice that work permits move to the Directorate of Immigration (8 July 2026) read: no performer-specific rule. || 2026-11-04: files.reglugerd.is (the Government's regulation register) regulation 339/2005 'current' PDF read whole for stéttarfélag, listam, laun, kjarasamning => union found: the Act's art. 7(1)(b) requires a union's or national federation's opinion on a temporary work permit; it isn't binding on the Directorate of Labour, and a negative one must be reasoned (reg. art. 9); no performer pay floor",
+    "official-register": "althingi.is refuses || Retry 2026-11-01: Regulation 339/2005 on Ísland.is read in full: art. 4 exempts for four weeks a year only artists engaged at restaurants (musicians excepted), sets no union step, no performer criterion and no pay floor beyond Icelandic terms. || 2026-11-04: althingi.is/lagas/nuna/2002097.html and the lagasafn PDFs of editions 153c to 157a (Act 97/2002) by curl => HTTP 403, a Cloudflare 'Just a moment...' check, not passed; the Act itself not read",
+    "web-search": "as above: no artist-specific rule found || Retry 2026-11-01: WebSearch 'Útlendingastofnun dvalarleyfi atvinnuleyfi listamenn tímabundið atvinnuleyfi gildistími afgreiðslutími Vinnumálastofnun' (in Icelandic): official news items, nothing on artists. || 2026-11-04: WebSearch 'Vinnumálastofnun atvinnuleyfi umsögn stéttarfélags listamenn tímabundið atvinnuleyfi' (standard) => led to files.reglugerd.is/pdf/0339-2005/current (read); parliamentary answers on union opinions (3,849 opinions, 441 negative, in one period) and a government consultation draft proposing to drop the union opinion and move permits to the Directorate of Immigration, enactment not confirmed",
     "trade-press": "none || Retry 2026-11-01: Stjórnarráðið working-group report on foreigners' work rights listed; not a rule for performers.",
-    "archive": "not tried || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "Any union consultation",
-   "tried": {
-    "institution": "Retry 2026-11-01: island.is's work-permit pages (saekja-um-atvinnuleyfi) and the Directorate of Labour's notice that work permits move to the Directorate of Immigration (8 July 2026) read: no performer-specific rule.",
-    "official-register": "Retry 2026-11-01: Regulation 339/2005 on Ísland.is read in full: art. 4 exempts for four weeks a year only artists engaged at restaurants (musicians excepted), sets no union step, no performer criterion and no pay floor beyond Icelandic terms.",
-    "web-search": "Retry 2026-11-01: WebSearch 'Útlendingastofnun dvalarleyfi atvinnuleyfi listamenn tímabundið atvinnuleyfi gildistími afgreiðslutími Vinnumálastofnun' (in Icelandic): official news items, nothing on artists.",
-    "trade-press": "Retry 2026-11-01: Stjórnarráðið working-group report on foreigners' work rights listed; not a rule for performers.",
-    "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "not tried || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-39 index for is,althingi)/lagas/nuna/2002097 and /20020; CC-MAIN-2026-30; web.archive.org => no capture in 2026-39; the 2026-30 index fetch failed; web.archive.org no connection"
    }
   },
   {
    "field": "pay",
    "sought": "A minimum pay rule",
    "tried": {
-    "institution": "Retry 2026-11-01: island.is's work-permit pages (saekja-um-atvinnuleyfi) and the Directorate of Labour's notice that work permits move to the Directorate of Immigration (8 July 2026) read: no performer-specific rule.",
-    "official-register": "Retry 2026-11-01: Regulation 339/2005 on Ísland.is read in full: art. 4 exempts for four weeks a year only artists engaged at restaurants (musicians excepted), sets no union step, no performer criterion and no pay floor beyond Icelandic terms.",
-    "web-search": "Retry 2026-11-01: WebSearch 'Útlendingastofnun dvalarleyfi atvinnuleyfi listamenn tímabundið atvinnuleyfi gildistími afgreiðslutími Vinnumálastofnun' (in Icelandic): official news items, nothing on artists.",
+    "institution": "Retry 2026-11-01: island.is's work-permit pages (saekja-um-atvinnuleyfi) and the Directorate of Labour's notice that work permits move to the Directorate of Immigration (8 July 2026) read: no performer-specific rule. || 2026-11-04: files.reglugerd.is (the Government's regulation register) regulation 339/2005 'current' PDF read whole for stéttarfélag, listam, laun, kjarasamning => union found: the Act's art. 7(1)(b) requires a union's or national federation's opinion on a temporary work permit; it isn't binding on the Directorate of Labour, and a negative one must be reasoned (reg. art. 9); no performer pay floor",
+    "official-register": "Retry 2026-11-01: Regulation 339/2005 on Ísland.is read in full: art. 4 exempts for four weeks a year only artists engaged at restaurants (musicians excepted), sets no union step, no performer criterion and no pay floor beyond Icelandic terms. || 2026-11-04: althingi.is/lagas/nuna/2002097.html and the lagasafn PDFs of editions 153c to 157a (Act 97/2002) by curl => HTTP 403, a Cloudflare 'Just a moment...' check, not passed; the Act itself not read",
+    "web-search": "Retry 2026-11-01: WebSearch 'Útlendingastofnun dvalarleyfi atvinnuleyfi listamenn tímabundið atvinnuleyfi gildistími afgreiðslutími Vinnumálastofnun' (in Icelandic): official news items, nothing on artists. || 2026-11-04: WebSearch 'Vinnumálastofnun atvinnuleyfi umsögn stéttarfélags listamenn tímabundið atvinnuleyfi' (standard) => led to files.reglugerd.is/pdf/0339-2005/current (read); parliamentary answers on union opinions (3,849 opinions, 441 negative, in one period) and a government consultation draft proposing to drop the union opinion and move permits to the Directorate of Immigration, enactment not confirmed",
     "trade-press": "Retry 2026-11-01: Stjórnarráðið working-group report on foreigners' work rights listed; not a rule for performers.",
-    "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-39 index for is,althingi)/lagas/nuna/2002097 and /20020; CC-MAIN-2026-30; web.archive.org => no capture in 2026-39; the 2026-30 index fetch failed; web.archive.org no connection"
    }
   }
  ],
- "note": "Iceland's residence permits based on work (Directorate of Immigration, with the work permit from the Directorate of Labour) come in four kinds: work requiring expert knowledge, shortage of labour, athletes, and a collaboration or service contract; none is named for performers, and which a performer takes isn't stated, so the kind isn't modelled apart. The application fee is 80,000 ISK; expedited processing is no longer sold. Artists (except musicians employed to perform in restaurants) need no work permit for up to 90 days per calendar year, taken as 90 within 365. vinnumalastofnun.is's temporary work permit page returns 404 to this client. Regulation 339/2005 gives the Directorate of Labour (Vinnumálastofnun) the decision, within two months at most; from 8 July 2026 the Directorate of Immigration (Útlendingastofnun) issues temporary work permits, and the regulation as published has not been re-issued for that change. A first permit runs at most a year (never past the contract) and may be extended up to two years at a time."
+ "note": "Iceland's residence permits based on work (Directorate of Immigration, with the work permit from the Directorate of Labour) come in four kinds: work requiring expert knowledge, shortage of labour, athletes, and a collaboration or service contract; none is named for performers, and which a performer takes isn't stated, so the kind isn't modelled apart. The application fee is 80,000 ISK; expedited processing is no longer sold. Artists (except musicians employed to perform in restaurants) need no work permit for up to 90 days per calendar year, taken as 90 within 365. vinnumalastofnun.is's temporary work permit page returns 404 to this client. Regulation 339/2005 gives the Directorate of Labour (Vinnumálastofnun) the decision, within two months at most; from 8 July 2026 the Directorate of Immigration (Útlendingastofnun) issues temporary work permits, and the regulation as published has not been re-issued for that change. A first permit runs at most a year (never past the contract) and may be extended up to two years at a time. Read 2026-11-04 in Regulation 339/2005 (the version on reglugerd.is, in force from 30 March 2005): the union's opinion. It also exempts artists (other than musicians engaged by restaurants) from the permit for up to four weeks a year (art. 4(b)), which this file's 90 days don't match; later amendments may not be folded into that copy and the Act wasn't readable, so the exemption isn't changed here and is left for papers.work.IS to settle."
 }

@@ -1,6 +1,6 @@
 {
  "country": "CO",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Permiso para Otras Actividades (POA)",
  "routeChanged": false,
  "permit": {
@@ -20,7 +20,13 @@
     "unitValue": "1750905"
    }
   ],
-  "processing": null,
+  "processing": {
+   "standard": {
+    "n": 10,
+    "unit": "business-days"
+   },
+   "premium": null
+  },
   "validity": {
    "n": 90,
    "unit": "days",
@@ -28,9 +34,10 @@
   },
   "validityNote": "For artistic events or activities the POA runs for the length of the event (Resolución 2772 de 2026, art. 1); a stay beyond 90 days needs a visa.",
   "union": null,
-  "eligibility": null,
+  "eligibility": "A national of a country whose citizens need no visa for a short stay in Colombia, invited to a concert, event or artistic activity by a company registered in Colombia and in SIRE, which undertakes in writing to pay the stay and return; permits may be granted several times a year, up to 180 days in all.",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "processingNote": "Migración Colombia's stated time for a POA; the application is filed at least ten working days before the performer arrives, and the fee is paid only after pre-approval."
  },
  "sources": [
   {
@@ -78,36 +85,25 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://www.migracioncolombia.gov.co/tramites-y-servicios/tramites-generales/poa",
+   "title": "Migración Colombia, Permiso para Otras Actividades (POA), trámite page (2026)",
+   "read": "2026-11-04",
+   "said": "Dirigido a: Extranjeros(as) cuya nacionalidad no requiere visa y que pretenden ingresar a Colombia por períodos de estancia corta sin vocación de domicilio ni ánimo de lucro. … Conciertos, eventos o actividades artísticas Permite el ingreso a Colombia a extranjeros(as) para participar en presentaciones o eventos artísticos, como giras, espectáculos o eventos masivos. La vigencia del permiso corresponde a la duración de la participación en los eventos. Se pueden otorgar múltiples permisos al año, siempre que el total no supere los 180 días calendario. … Requisitos y documentación Debe ser nacional de un país que no requiera visa para ingresar a Colombia en estancias cortas. … Costos Tarifa única (2026): $151.884 pesos colombianos. … Características Tipo: Virtual Tiempo: 10 días hábiles Costo: $ 151.884 COP … Radicar la solicitud Debe realizarse con 10 días hábiles de antelación a la llegada del(a) extranjero(a) a Colombia.",
+   "kind": "primary",
+   "fields": [
+    "processing",
+    "eligibility"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "processing",
-   "sought": "How long Migración Colombia takes to decide a POA",
-   "tried": {
-    "institution": "Proimágenes' instructions (quoting Migración Colombia) give only the five-business-day lead and SIRE's three-business-day answer on registration. || Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01).",
-    "official-register": "Resoluciones 0599 and 2772 de 2026 read: fees and lengths, no decision time. || Retry 2026-11-01: Resolución 3167 de 2019 (the POA's base, arts. 13-14) sought in the Cancillería normograma: 403; Resolución 2772 de 2026 (Normograma copy) re-read: lengths only.",
-    "web-search": "'Migración Colombia Permiso Otras Actividades POA tarifa 2026 valor conciertos eventos actividades artísticas': fee items only. || Retry 2026-11-01: WebSearch 'Migración Colombia \"Permiso de Otras Actividades\" POA tiempo de respuesta días hábiles solicitud artistas Resolución 5477 de 2022 artículo': PwC (visa study time, not the POA), Asuntos Legales (3 Aug 2026), Affirma; no POA decision time, union step or pay rule.",
-    "trade-press": "El Universal and Portafolio report the fee only. || Retry 2026-11-01: Asuntos Legales (27 July and 3 August 2026) and INCP on POA holders' tax duties: no decision time.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
    "field": "union",
    "sought": "A union or guild step",
    "tried": {
-    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01).",
-    "official-register": "Retry 2026-11-01: Resolución 3167 de 2019 (the POA's base, arts. 13-14) sought in the Cancillería normograma: 403; Resolución 2772 de 2026 (Normograma copy) re-read: lengths only.",
-    "web-search": "Retry 2026-11-01: WebSearch 'Migración Colombia \"Permiso de Otras Actividades\" POA tiempo de respuesta días hábiles solicitud artistas Resolución 5477 de 2022 artículo': PwC (visa study time, not the POA), Asuntos Legales (3 Aug 2026), Affirma; no POA decision time, union step or pay rule.",
-    "trade-press": "Retry 2026-11-01: Asuntos Legales (27 July and 3 August 2026) and INCP on POA holders' tax duties: no decision time.",
-    "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "A criterion the performer must meet",
-   "tried": {
-    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01).",
+    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01). || 2026-11-04: migracioncolombia.gov.co home page, then /tramites-y-servicios/tramites-generales/poa fetched by curl and read whole => found: the stated time (10 working days, filed at least 10 working days before arrival) and the artistic-events criteria (a visa-exempt nationality, an invitation, the hiring company's SIRE registration and its undertaking to pay the stay and return; up to 180 days a year in total); no pay rule, union step or exempt engagement named (saved l4w/files/p1b/CO-poa.html)",
     "official-register": "Retry 2026-11-01: Resolución 3167 de 2019 (the POA's base, arts. 13-14) sought in the Cancillería normograma: 403; Resolución 2772 de 2026 (Normograma copy) re-read: lengths only.",
     "web-search": "Retry 2026-11-01: WebSearch 'Migración Colombia \"Permiso de Otras Actividades\" POA tiempo de respuesta días hábiles solicitud artistas Resolución 5477 de 2022 artículo': PwC (visa study time, not the POA), Asuntos Legales (3 Aug 2026), Affirma; no POA decision time, union step or pay rule.",
     "trade-press": "Retry 2026-11-01: Asuntos Legales (27 July and 3 August 2026) and INCP on POA holders' tax duties: no decision time.",
@@ -118,7 +114,7 @@
    "field": "pay",
    "sought": "A minimum or market pay rule",
    "tried": {
-    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01).",
+    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01). || 2026-11-04: migracioncolombia.gov.co home page, then /tramites-y-servicios/tramites-generales/poa fetched by curl and read whole => found: the stated time (10 working days, filed at least 10 working days before arrival) and the artistic-events criteria (a visa-exempt nationality, an invitation, the hiring company's SIRE registration and its undertaking to pay the stay and return; up to 180 days a year in total); no pay rule, union step or exempt engagement named (saved l4w/files/p1b/CO-poa.html)",
     "official-register": "Retry 2026-11-01: Resolución 3167 de 2019 (the POA's base, arts. 13-14) sought in the Cancillería normograma: 403; Resolución 2772 de 2026 (Normograma copy) re-read: lengths only.",
     "web-search": "Retry 2026-11-01: WebSearch 'Migración Colombia \"Permiso de Otras Actividades\" POA tiempo de respuesta días hábiles solicitud artistas Resolución 5477 de 2022 artículo': PwC (visa study time, not the POA), Asuntos Legales (3 Aug 2026), Affirma; no POA decision time, union step or pay rule.",
     "trade-press": "Retry 2026-11-01: Asuntos Legales (27 July and 3 August 2026) and INCP on POA holders' tax duties: no decision time.",
@@ -129,12 +125,13 @@
    "field": "exempt",
    "sought": "A short engagement needing no permit",
    "tried": {
-    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01).",
+    "institution": "Retry 2026-11-01: Migración Colombia's site not retried for a time; the Cancillería's official normograma copies of Resoluciones 2772 de 2026 and 3167 de 2019 answer 403 to this client (2026-11-01). || 2026-11-04: migracioncolombia.gov.co home page, then /tramites-y-servicios/tramites-generales/poa fetched by curl and read whole => found: the stated time (10 working days, filed at least 10 working days before arrival) and the artistic-events criteria (a visa-exempt nationality, an invitation, the hiring company's SIRE registration and its undertaking to pay the stay and return; up to 180 days a year in total); no pay rule, union step or exempt engagement named (saved l4w/files/p1b/CO-poa.html)",
     "official-register": "Retry 2026-11-01: Resolución 3167 de 2019 (the POA's base, arts. 13-14) sought in the Cancillería normograma: 403; Resolución 2772 de 2026 (Normograma copy) re-read: lengths only.",
     "web-search": "Retry 2026-11-01: WebSearch 'Migración Colombia \"Permiso de Otras Actividades\" POA tiempo de respuesta días hábiles solicitud artistas Resolución 5477 de 2022 artículo': PwC (visa study time, not the POA), Asuntos Legales (3 Aug 2026), Affirma; no POA decision time, union step or pay rule.",
     "trade-press": "Retry 2026-11-01: Asuntos Legales (27 July and 3 August 2026) and INCP on POA holders' tax duties: no decision time.",
     "archive": "Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 on Migración Colombia's POA page: the decision time and the criteria."
 }

@@ -1,6 +1,6 @@
 {
  "country": "CA",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Work permit (employer-specific, on a Labour Market Impact Assessment or an LMIA exemption such as significant benefit)",
  "routeChanged": false,
  "permit": {
@@ -38,7 +38,11 @@
   "union": null,
   "eligibility": "would create or maintain significant social, cultural or economic benefits or opportunities for Canadian citizens or permanent residents;",
   "pay": "On an LMIA, employment is unlikely to have a positive or neutral effect on the labour market if the wages offered are not consistent with the prevailing wage rate for the occupation.",
-  "exempt": null
+  "exempt": {
+   "days": null,
+   "within": null
+  },
+  "exemptNote": "A performing artist (and integral staff) of a foreign production, or a guest artist in a Canadian one, may work without a permit for a time-limited engagement if not in an employment relationship with the Canadian engager (IRPR s. 186(g)); the law sets no number of days, and a performance primarily for film, television or radio doesn't qualify, so screen work always needs a permit."
  },
  "sources": [
   {
@@ -127,35 +131,24 @@
    "field": "processing",
    "sought": "IRCC's stated processing time for an employer-specific work permit",
    "tried": {
-    "institution": "canada.ca refuses this client: the C14 instructions page returns an HTTP/2 stream error, and an empty reply over HTTP/1.1 (2026-11-01); IRCC's processing times are an interactive tool. Retry (2026-11-01): IRCC Help Centre (ircc.canada.ca/english/helpcentre, readable here) answers qnum 742 (no set maximum term, read) and qnum 170 (processing times vary and are published only in the online tool); the tool's data (canada.ca/content/dam/ircc/documents/json/data-ptime-en.json) gets an empty reply (2026-11-01).",
-    "official-register": "IRPR ss. 186, 196, 200, 203, 205, 299, 303.1 and 315.2 read (Justice Laws, current to 2026-09-30): no stated decision time, no maximum work-permit term (it follows the offer and the LMIA), no union step and no day count. Retry (2026-11-01): IRPR read in the earlier pass states no decision time.",
+    "institution": "canada.ca refuses this client: the C14 instructions page returns an HTTP/2 stream error, and an empty reply over HTTP/1.1 (2026-11-01); IRCC's processing times are an interactive tool. Retry (2026-11-01): IRCC Help Centre (ircc.canada.ca/english/helpcentre, readable here) answers qnum 742 (no set maximum term, read) and qnum 170 (processing times vary and are published only in the online tool); the tool's data (canada.ca/content/dam/ircc/documents/json/data-ptime-en.json) gets an empty reply (2026-11-01). || 2026-11-04: canada.ca C14 exemption-code page by curl over HTTP/1.1 (40 s timeout) => no reply (HTTP 000); the union letter and the processing time stay unread",
+    "official-register": "IRPR ss. 186, 196, 200, 203, 205, 299, 303.1 and 315.2 read (Justice Laws, current to 2026-09-30): no stated decision time, no maximum work-permit term (it follows the offer and the LMIA), no union step and no day count. Retry (2026-11-01): IRPR read in the earlier pass states no decision time. || 2026-11-04: IRPR s. 186 re-fetched from Justice Laws (current to 2026-10-19) and read whole for a day count => found as an absence: s. 186(g) asks only a 'time-limited engagement', with no number of days, and excludes performances primarily for film, television or radio",
     "web-search": "'IRCC exemption code C14 television and film production workers union guild letter work permit performers canada.ca': the canada.ca C14 page (excerpts only) and law firms (BLG, Blaney, Meurrens) describing a union or guild letter; not quotable from a saved primary. Retry (2026-11-01): No new search: IRCC states no fixed time; its published times are live estimates in the tool.",
     "trade-press": "CIC News and immigration2canada summaries of the C14 guild letter (December 2025 update), secondary and not naming a saved primary text. Retry (2026-11-01): Not used: law firms quote the tool's changing estimates.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection (2026-11-01). || 2026-11-04: web.archive.org; Common Crawl CC-MAIN-2026-43 index => web.archive.org no connection; the Common Crawl index fetch failed"
    }
   },
   {
    "field": "union",
    "sought": "The union or guild letter IRCC's C14 instructions ask for film and television workers",
    "tried": {
-    "institution": "canada.ca refuses this client: the C14 instructions page returns an HTTP/2 stream error, and an empty reply over HTTP/1.1 (2026-11-01); IRCC's processing times are an interactive tool. Retry (2026-11-01): IRCC Help Centre (ircc.canada.ca/english/helpcentre, readable here) answers qnum 742 (no set maximum term, read) and qnum 170 (processing times vary and are published only in the online tool); the tool's data (canada.ca/content/dam/ircc/documents/json/data-ptime-en.json) gets an empty reply (2026-11-01).",
-    "official-register": "IRPR ss. 186, 196, 200, 203, 205, 299, 303.1 and 315.2 read (Justice Laws, current to 2026-09-30): no stated decision time, no maximum work-permit term (it follows the offer and the LMIA), no union step and no day count. Retry (2026-11-01): IRPR read in the earlier pass states no decision time.",
+    "institution": "canada.ca refuses this client: the C14 instructions page returns an HTTP/2 stream error, and an empty reply over HTTP/1.1 (2026-11-01); IRCC's processing times are an interactive tool. Retry (2026-11-01): IRCC Help Centre (ircc.canada.ca/english/helpcentre, readable here) answers qnum 742 (no set maximum term, read) and qnum 170 (processing times vary and are published only in the online tool); the tool's data (canada.ca/content/dam/ircc/documents/json/data-ptime-en.json) gets an empty reply (2026-11-01). || 2026-11-04: canada.ca C14 exemption-code page by curl over HTTP/1.1 (40 s timeout) => no reply (HTTP 000); the union letter and the processing time stay unread",
+    "official-register": "IRPR ss. 186, 196, 200, 203, 205, 299, 303.1 and 315.2 read (Justice Laws, current to 2026-09-30): no stated decision time, no maximum work-permit term (it follows the offer and the LMIA), no union step and no day count. Retry (2026-11-01): IRPR read in the earlier pass states no decision time. || 2026-11-04: IRPR s. 186 re-fetched from Justice Laws (current to 2026-10-19) and read whole for a day count => found as an absence: s. 186(g) asks only a 'time-limited engagement', with no number of days, and excludes performances primarily for film, television or radio",
     "web-search": "'IRCC exemption code C14 television and film production workers union guild letter work permit performers canada.ca': the canada.ca C14 page (excerpts only) and law firms (BLG, Blaney, Meurrens) describing a union or guild letter; not quotable from a saved primary. Retry (2026-11-01): No new search: IRCC states no fixed time; its published times are live estimates in the tool.",
     "trade-press": "CIC News and immigration2canada summaries of the C14 guild letter (December 2025 update), secondary and not naming a saved primary text. Retry (2026-11-01): Not used: law firms quote the tool's changing estimates.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "A day count for the s. 186(g) performing-artist exemption",
-   "tried": {
-    "institution": "canada.ca refuses this client: the C14 instructions page returns an HTTP/2 stream error, and an empty reply over HTTP/1.1 (2026-11-01); IRCC's processing times are an interactive tool. Retry (2026-11-01): IRCC Help Centre (ircc.canada.ca/english/helpcentre, readable here) answers qnum 742 (no set maximum term, read) and qnum 170 (processing times vary and are published only in the online tool); the tool's data (canada.ca/content/dam/ircc/documents/json/data-ptime-en.json) gets an empty reply (2026-11-01).",
-    "official-register": "IRPR ss. 186, 196, 200, 203, 205, 299, 303.1 and 315.2 read (Justice Laws, current to 2026-09-30): no stated decision time, no maximum work-permit term (it follows the offer and the LMIA), no union step and no day count. Section 186(g) names a time-limited engagement but no days. Retry (2026-11-01): IRPR read in the earlier pass states no decision time.",
-    "web-search": "'IRCC exemption code C14 television and film production workers union guild letter work permit performers canada.ca': the canada.ca C14 page (excerpts only) and law firms (BLG, Blaney, Meurrens) describing a union or guild letter; not quotable from a saved primary. Retry (2026-11-01): No new search: IRCC states no fixed time; its published times are live estimates in the tool.",
-    "trade-press": "CIC News and immigration2canada summaries of the C14 guild letter (December 2025 update), secondary and not naming a saved primary text. Retry (2026-11-01): Not used: law firms quote the tool's changing estimates.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection (2026-11-01)."
+    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01). Retry (2026-11-01): web.archive.org resets the connection (2026-11-01). || 2026-11-04: web.archive.org; Common Crawl CC-MAIN-2026-43 index => web.archive.org no connection; the Common Crawl index fetch failed"
    }
   }
  ],
- "note": "Performing artists in a time-limited engagement with a foreign production, or as guest artists not employed by the Canadian organisation, need no work permit unless the performance is primarily for film, television or radio (IRPR s. 186(g), layer 3); it names no day count, so none is modelled. Film and television performers usually come under IRCC's C14 exemption (television and film production workers, significant benefit), which by IRCC's guidance asks a letter from the relevant Canadian union or guild; that page refused this client, so the letter isn't modelled as a field."
+ "note": "Performing artists in a time-limited engagement with a foreign production, or as guest artists not employed by the Canadian organisation, need no work permit unless the performance is primarily for film, television or radio (IRPR s. 186(g), layer 3); it names no day count, so none is modelled. Film and television performers usually come under IRCC's C14 exemption (television and film production workers, significant benefit), which by IRCC's guidance asks a letter from the relevant Canadian union or guild; that page refused this client, so the letter isn't modelled as a field. Read 2026-11-04: s. 186(g) sets no day count, so none is held, and it excludes screen work. Re-read 2026-11-04: laws-lois.justice.gc.ca's copy (section-299.html) answered with no connection; the fact stands on its reading of 2026-11-01. Re-read 2026-11-04: laws-lois.justice.gc.ca's copy (section-315.2.html) answered with no connection; the fact stands on its reading of 2026-11-01. Re-read 2026-11-04: laws-lois.justice.gc.ca's copy (section-303.1.html) answered with no connection; the fact stands on its reading of 2026-11-01."
 }

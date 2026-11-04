@@ -1,18 +1,40 @@
 {
  "country": "KR",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "예술흥행(E-6-1) 체류자격",
  "routeChanged": false,
  "permit": {
   "applies": "The inviting public institution or private organisation in Korea, on a contract with the performer, with its business registration and a performance plan.",
   "first": "A contract with a domestic public institution or private organisation for performance, broadcast or advertising activities, and proof of relevant career experience or qualifications.",
-  "fees": [],
+  "fees": [
+   {
+    "what": "Single-entry visa, stay of 91 days or more (the US-dollar equivalent, charged in the mission's currency)",
+    "amount": "60",
+    "currency": "USD"
+   },
+   {
+    "what": "Alien registration card",
+    "amount": "35000",
+    "currency": "KRW"
+   },
+   {
+    "what": "Extension of the period of stay",
+    "amount": "60000",
+    "currency": "KRW"
+   }
+  ],
   "processing": null,
-  "validity": null,
+  "validity": {
+   "n": 2,
+   "unit": "years",
+   "renewable": true
+  },
   "union": null,
   "eligibility": "Performance, broadcast, or advertising activities under contract with domestic public institutions or private organizations",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "A single-entry visa for a stay of 90 days or less is USD 40 (Enforcement Rules art. 71).",
+  "validityNote": "The ceiling for one grant of E-6 is two years (Enforcement Rules, annex 1); an extension of stay is granted on application within the same ceiling (art. 37)."
  },
  "sources": [
   {
@@ -28,74 +50,72 @@
     "first",
     "eligibility"
    ]
+  },
+  {
+   "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=291289&chrClsCd=010202&efYd=20261023",
+   "title": "국가법령정보센터, 출입국관리법 시행규칙 [시행 2026. 10. 23.] [법무부령 제1172호, 2026. 10. 23., 일부개정], arts. 71 and 72 (body read by POST to /LSW/lsInfoR.do, saved KR-rule-body.html)",
+   "read": "2026-11-04",
+   "said": "제71조(사증 등 발급신청 심사수수료) ①사증발급신청에 대한 심사수수료 … 는 다음과 같다. … 1. 단수사증 가. 체류기간 90일 이하: 미합중국통화(이하 “미화”라 한다) 40불 상당의 금액 나. 체류기간 91일 이상: 미화 60불 상당의 금액 2. 복수사증 가. 2회까지 입국할 수 있는 복수사증: 미화 70불 상당의 금액 나. 횟수에 제한 없이 입국할 수 있는 복수사증: 미화 90불 상당의 금액 … 제72조(각종 허가 등에 관한 수수료) … 5. 체류자격 변경 허가: 10만원 … 6. 체류기간 연장 허가: 6만원 … 10. 외국인등록증 발급 및 재발급: 3만 5천원",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=170812861&bylClsCd=110201",
+   "title": "출입국관리법 시행규칙 [별표 1] 체류자격별 체류기간의 상한(제18조의3 관련) <개정 2024. 12. 24.> (PDF, saved kr-annex/KR-annex1.pdf)",
+   "read": "2026-11-04",
+   "said": "기술연수(D-3) 2년 예술흥행(E-6) 2년",
+   "kind": "primary",
+   "fields": [
+    "validity"
+   ]
+  },
+  {
+   "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=170812913&bylClsCd=110201",
+   "title": "출입국관리법 시행규칙 [별표 5] 사증발급 신청 등 첨부서류(제76조제1항 관련) <개정 2024. 12. 24.> (PDF, saved kr-annex/KR-annex5.pdf)",
+   "read": "2026-11-04",
+   "said": "예술흥행(E-6) 1. 「공연법」에 따라 공연을 하고자 하는 경우 ○ 영상물등급위원회의 공연추천서 ○ 공연계획서 2. 「관광진흥법」에 따른 호텔업시설, 유흥업소 등에서 제1호를 제외한 공연 또는 연예활동에 종사하고자 하는 경우 ○ 영상물등급위원회의 공연추천서 ○ 연예활동 계획서 ○ 자격증명서 또는 경력증명서 ○ 신원보증서 3. 그 밖의 경우 ○ 소관 중앙행정기관의 장의 고용추천서 또는 고용의 필요성을 입증할 수 있는 서류 ○ 자격증명서 또는 경력증명서",
+   "kind": "primary",
+   "fields": [
+    "union"
+   ]
   }
  ],
  "blockers": [
   {
-   "field": "fees",
-   "sought": "The visa issuance fee and the extension fee for E-6-1",
-   "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. | Closing retry 2026-11-01: hikorea.go.kr’s E-6 info page again serves a 4.6 kB menu shell",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. | Closing retry 2026-11-01: law.go.kr’s Enforcement Decree page resets the connection; its lsInfoP page serves no annex text; KLRI’s English page id 60598 isn’t the decree",
-    "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table. | Closing retry 2026-11-01: ’E-6-1 예술흥행 체류기간 상한 사증발급인정서 처리기간 하이코리아 수수료’; ’Enforcement Rule Immigration Act \"Maximum period of sojourn\" E-6’: agency pages only",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. | Closing retry 2026-11-01: kowork.kr’s E-6 page (saved) says \"Maximum period of stay that can be granted once: 2 years\" without naming its source, so it isn’t used",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). | Closing retry 2026-11-01: web.archive.org resets the connection from this environment"
-   }
-  },
-  {
    "field": "processing",
    "sought": "The decision time for the visa-issuance confirmation (사증발급인정서)",
    "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. | Closing retry 2026-11-01: hikorea.go.kr’s E-6 info page again serves a 4.6 kB menu shell",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. | Closing retry 2026-11-01: law.go.kr’s Enforcement Decree page resets the connection; its lsInfoP page serves no annex text; KLRI’s English page id 60598 isn’t the decree",
+    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. | Closing retry 2026-11-01: hikorea.go.kr’s E-6 info page again serves a 4.6 kB menu shell || 2026-11-04: hikorea.go.kr info page (InfoDatail.pt, visa categories) by curl => connection reset (curl 35; the proxy reports the tunnel closed mid-exchange); not read",
+    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. | Closing retry 2026-11-01: law.go.kr’s Enforcement Decree page resets the connection; its lsInfoP page serves no annex text; KLRI’s English page id 60598 isn’t the decree || 2026-11-04: https://www.law.go.kr/ (the register's quotes) and /법령/출입국관리법시행령/제12조, curl and Playwright => A redirect to a frameset; the article and Table 1-2 weren't reached | Korea Legislation Research Institute's English law service (elaw.klri.re.kr, a state research institute's translation): main page fetched (200), then its lawTotalSearch.do for 'IMMIGRATION CONTROL' by POST and GET; law.go.kr/LSW/lsInfoR.do?lsiSeq=290501 (the Enforcement Decree's body endpoint) by curl => KLRI's search answers HTTP 500 to both; law.go.kr resets the connection (curl 35); Table 1-2 (E-6) and the Enforcement Rule's fee article not read | law.go.kr: /법령/출입국관리법시행규칙 gave the frame (lsiSeq=291289, efYd=20261023); the body fetched by POST to /LSW/lsInfoR.do (lsiSeq, chrClsCd=010202, efYd, ancYnChk=0), 2.36 MB, and annexes 1 and 5 by /LSW/flDownload.do (PDF) => found: visa fees (art. 71), stay-extension and change fees (art. 72), the E-6 stay ceiling of 2 years per grant (annex 1) and the recommendation each kind of E-6 engagement needs (annex 5); no decision time, pay floor or exemption in the Rules",
     "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table. | Closing retry 2026-11-01: ’E-6-1 예술흥행 체류기간 상한 사증발급인정서 처리기간 하이코리아 수수료’; ’Enforcement Rule Immigration Act \"Maximum period of sojourn\" E-6’: agency pages only",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. | Closing retry 2026-11-01: kowork.kr’s E-6 page (saved) says \"Maximum period of stay that can be granted once: 2 years\" without naming its source, so it isn’t used",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). | Closing retry 2026-11-01: web.archive.org resets the connection from this environment"
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "The maximum period of stay granted at once for E-6-1 and its extension",
-   "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. | Closing retry 2026-11-01: hikorea.go.kr’s E-6 info page again serves a 4.6 kB menu shell",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. | Closing retry 2026-11-01: law.go.kr’s Enforcement Decree page resets the connection; its lsInfoP page serves no annex text; KLRI’s English page id 60598 isn’t the decree",
-    "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table. | Closing retry 2026-11-01: ’E-6-1 예술흥행 체류기간 상한 사증발급인정서 처리기간 하이코리아 수수료’; ’Enforcement Rule Immigration Act \"Maximum period of sojourn\" E-6’: agency pages only",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. | Closing retry 2026-11-01: kowork.kr’s E-6 page (saved) says \"Maximum period of stay that can be granted once: 2 years\" without naming its source, so it isn’t used",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). | Closing retry 2026-11-01: web.archive.org resets the connection from this environment"
-   }
-  },
-  {
-   "field": "union",
-   "sought": "Any union or association step, and whether the Korea Media Rating Board's performance recommendation (required for E-6-2) applies to E-6-1",
-   "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees.",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found.",
-    "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table.",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. | Closing retry 2026-11-01: kowork.kr’s E-6 page (saved) says \"Maximum period of stay that can be granted once: 2 years\" without naming its source, so it isn’t used || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/) read for a Korean performers' union => no South Korean member listed",
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). | Closing retry 2026-11-01: web.archive.org resets the connection from this environment || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for kr,go,hikorea)/ (cc.py list; 136 captures) => board notices (BoardNtcDetailR.pt) only; no E-6 information or fee page captured"
    }
   },
   {
    "field": "pay",
    "sought": "Any pay floor for E-6-1",
    "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees.",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found.",
+    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. || 2026-11-04: hikorea.go.kr info page (InfoDatail.pt, visa categories) by curl => connection reset (curl 35; the proxy reports the tunnel closed mid-exchange); not read",
+    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. || 2026-11-04: https://www.law.go.kr/ (the register's quotes) and /법령/출입국관리법시행령/제12조, curl and Playwright => A redirect to a frameset; the article and Table 1-2 weren't reached | Korea Legislation Research Institute's English law service (elaw.klri.re.kr, a state research institute's translation): main page fetched (200), then its lawTotalSearch.do for 'IMMIGRATION CONTROL' by POST and GET; law.go.kr/LSW/lsInfoR.do?lsiSeq=290501 (the Enforcement Decree's body endpoint) by curl => KLRI's search answers HTTP 500 to both; law.go.kr resets the connection (curl 35); Table 1-2 (E-6) and the Enforcement Rule's fee article not read | law.go.kr: /법령/출입국관리법시행규칙 gave the frame (lsiSeq=291289, efYd=20261023); the body fetched by POST to /LSW/lsInfoR.do (lsiSeq, chrClsCd=010202, efYd, ancYnChk=0), 2.36 MB, and annexes 1 and 5 by /LSW/flDownload.do (PDF) => found: visa fees (art. 71), stay-extension and change fees (art. 72), the E-6 stay ceiling of 2 years per grant (annex 1) and the recommendation each kind of E-6 engagement needs (annex 5); no decision time, pay floor or exemption in the Rules",
     "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table.",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/) read for a Korean performers' union => no South Korean member listed",
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for kr,go,hikorea)/ (cc.py list; 136 captures) => board notices (BoardNtcDetailR.pt) only; no E-6 information or fee page captured"
    }
   },
   {
    "field": "exempt",
    "sought": "An engagement short enough to need no E-6",
    "tried": {
-    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees.",
-    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found.",
+    "institution": "HiKorea (hikorea.go.kr info page) and visa.go.kr answer with menu shells only; law.go.kr's text loads by script (the saved page holds no Decree text). || Retry 2026-11-01: hikorea.go.kr's info page answers a 4.6 kB menu shell again; visa.go.kr not retried; the Ministry of Justice's English pages not found with E-6-1 fees. || 2026-11-04: hikorea.go.kr info page (InfoDatail.pt, visa categories) by curl => connection reset (curl 35; the proxy reports the tunnel closed mid-exchange); not read",
+    "official-register": "National Law Information Center (law.go.kr) not readable by this client; the Decree's fee and stay tables weren't reached. || Retry 2026-11-01: law.go.kr's Immigration Act Enforcement Rules page (lsInfoP) answers 145 kB but the text and the fee table (Rules art. 72, 별표) load by script; KLRI's English law service (elaw.klri.re.kr) answers, but its search URL answers 404 and the Enforcement Decree's page id wasn't found. || 2026-11-04: https://www.law.go.kr/ (the register's quotes) and /법령/출입국관리법시행령/제12조, curl and Playwright => A redirect to a frameset; the article and Table 1-2 weren't reached | Korea Legislation Research Institute's English law service (elaw.klri.re.kr, a state research institute's translation): main page fetched (200), then its lawTotalSearch.do for 'IMMIGRATION CONTROL' by POST and GET; law.go.kr/LSW/lsInfoR.do?lsiSeq=290501 (the Enforcement Decree's body endpoint) by curl => KLRI's search answers HTTP 500 to both; law.go.kr resets the connection (curl 35); Table 1-2 (E-6) and the Enforcement Rule's fee article not read | law.go.kr: /법령/출입국관리법시행규칙 gave the frame (lsiSeq=291289, efYd=20261023); the body fetched by POST to /LSW/lsInfoR.do (lsiSeq, chrClsCd=010202, efYd, ancYnChk=0), 2.36 MB, and annexes 1 and 5 by /LSW/flDownload.do (PDF) => found: visa fees (art. 71), stay-extension and change fees (art. 72), the E-6 stay ceiling of 2 years per grant (annex 1) and the recommendation each kind of E-6 engagement needs (annex 5); no decision time, pay floor or exemption in the Rules",
     "web-search": "'예술흥행 E-6-1 사증발급인정서 수수료 영상물등급위원회 추천서 처리기간 체류기간 상한': agency blogs (visaskorea.com KRW 130,000; immikorea; kowork) giving fees and terms without the Decree's text. || Retry 2026-11-01: WebSearch '하이코리아 예술흥행 E-6-1 체류기간 상한 1년 사증발급 수수료 출입국관리법 시행규칙 별표 수수료' (Korean) and 'elaw.klri.re.kr Enforcement Rules of the Immigration Act fees \"Arts and Entertainment (E-6)\" maximum period of sojourn Table 1': agency blogs (KRW 130,000; 1-2 years) and KLawGuru, none quoting the table.",
-    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period.",
-    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
+    "trade-press": "Only law-firm and agency guides (KLawGuru, VisasKorea), not naming the table that sets the figure. || Retry 2026-11-01: KLawGuru (7 August 2026) cites the Enforcement Decree for the category only, no fee or period. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/) read for a Korean performers' union => no South Korean member listed",
+    "archive": "web.archive.org tried for the authority's page: the connection resets from this environment (curl: (35) Recv failure: Connection reset by peer, 2026-11-01); no snapshot read. || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for kr,go,hikorea)/ (cc.py list; 136 captures) => board notices (BoardNtcDetailR.pt) only; no E-6 information or fee page captured"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 on law.go.kr: the Enforcement Rules' fees, the E-6 ceiling and the recommendation an E-6 needs (the Korea Media Rating Board's for a performance, a ministry's employment recommendation otherwise); no union step."
 }

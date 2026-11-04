@@ -1,120 +1,62 @@
 {
  "country": "JE",
- "read": "2026-11-01",
- "route": "Work permit (Jersey Customs and Immigration Service) and visa",
+ "read": "2026-11-04",
+ "route": "Work permit (Immigration (Work Permits) (Jersey) Rules 1995), with a UK-rules visa where one is needed",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
-  "fees": [],
-  "processing": null,
-  "validity": null,
+  "applies": "The Jersey employer applies and pays; an employee can't apply for their own work permit. A performer living abroad then needs a visa, which follows the UK's rules and is applied for and paid by the performer to the UK Home Office.",
+  "first": "An offer of employment: the employer's application needs the contract of employment and job description, the business licence and the passport's details page.",
+  "fees": [
+   {
+    "what": "Work permit, over 2 up to 3 years (paid by the employer)",
+    "amount": "350.00",
+    "currency": "GBP"
+   }
+  ],
+  "processing": {
+   "standard": {
+    "n": 3,
+    "unit": "weeks"
+   },
+   "premium": null
+  },
+  "validity": {
+   "n": 3,
+   "unit": "years",
+   "renewable": true
+  },
   "union": null,
-  "eligibility": null,
-  "pay": null,
-  "exempt": null
+  "eligibility": "Actors, entertainers and presenters (SOC 3413), dancers (3414) and musicians (3415) are long-term work permit occupations.",
+  "pay": "Actors, entertainers and presenters must be paid at least £30,960 a year or the going rate for the role, whichever is higher (musicians £32,900; arts officers, producers and directors £37,500).",
+  "exempt": {
+   "days": null,
+   "within": null,
+   "note": "A performer holding a UK Tier 5 (Temporary Worker) visa may perform in Jersey for up to 1 month without a work permit; the employer keeps the passport details, the UK endorsement or certificate of sponsorship, and the performance details."
+  },
+  "feesNote": "Fees as of December 2024, by the permit's length: under 1 month £58, 1 to 6 months £85, over 6 to 9 months £115, over 9 to 12 months £175, over 1 to 2 years £290, over 2 to 3 years £350; the band for the term held is held. The employer may not recoup them; the visa's fee is the UK Home Office's.",
+  "processingNote": "3 weeks for the work permit, longer if documents are missing; the visa about 3 weeks more from the visa centre appointment."
  },
- "sources": [],
- "blockers": [
+ "sources": [
   {
-   "field": "applies",
-   "sought": "Who applies for an entertainer's work permit",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "first",
-   "sought": "What must come first",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf).",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html).",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read)."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "The work permit fees (Immigration (Fees) (Jersey) Order 2022)",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "processing",
-   "sought": "The Service's stated decision time",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "How long an entertainer's permit runs",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "union",
-   "sought": "Any union consultation",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "Criteria for the entertainer category",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "Any minimum pay rule",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "The days an entertainer may perform without a Jersey permit",
-   "tried": {
-    "institution": "gov.je Work Permit Policy page and its August 2023 PDF answer HTTP 500 'The URL you requested has been blocked' (saved JE-wpp.html, JE-wpp-aug2023.pdf). | Retry 2026-11-01: gov.je WorkPermits.aspx (with and without www) and the Work Permit Policy August 2023 PDF answer HTTP 500 'The URL you requested has been blocked'; the Home Affairs ministerial decision MD-HA-2015-0035 PDF on gov.je the same.",
-    "official-register": "jerseylaw.je, the Immigration (Work Permits) (Jersey) Rules 1995 (RO_8845.pdf) and the Immigration (Fees) (Jersey) Order 2022 (ro_45_2022), answer the same block (saved JE-wprules-1995.pdf, JE-fees-2022.html). | Retry 2026-11-01: jerseylaw.je (no www) RO_45_2022.pdf (Immigration (Fees) (Jersey) Order 2022) answers the same HTTP 500 block; statesassembly.je written question WQ.21/2026 and statesassembly.gov.je scrutiny report S.R.2/2023 answer Cloudflare 403 ('Sorry, you have been blocked').",
-    "web-search": "'Jersey work permit entertainers fee Customs and Immigration Service gov.je ...'; 'jerseylaw.je \"Immigration (Work Permits) (Jersey) Rules\" fees entertainers': the gov.je and jerseylaw.je documents above, a 2011 States Assembly answer (dated fees) and Jersey Chamber's 2019 fee note. | Retry 2026-11-01: '\"Jersey\" \"work permit\" entertainers overseas \"Customs and Immigration\" application employer weeks' and 'Jersey work permit fee entertainers Immigration (Fees) (Jersey) Order': snippets say the employer applies, '3 weeks' processing and 'UK and overseas entertainers (for up to 1 month)', all on gov.je pages this client can't open; snippets aren't read pages, so nothing filled.",
-    "trade-press": "Jersey Chamber's 'passport and work permit fee increase' (2019) answers 404; Mondaq's explanation of Jersey work permits refers readers to gov.je for fees. | Retry 2026-11-01: Mondaq 'A brief explanation of Jersey work permits' answers 403 to this client.",
-    "archive": "web.archive.org resets the connection from this environment (tried 2026-11-01 for the Policy snapshot of 19 May 2026 that layer 3 read). | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection; archive.org's availability API returns no snapshot for gov.je/Working/WorkingInJersey/Pages/WorkPermits.aspx."
-   }
+   "url": "https://www.gov.je/Working/WorkPermits/Pages/WorkPermitPolicy.aspx",
+   "title": "Government of Jersey, Work permit policy (Jersey Customs and Immigration Service), 'Updated January 2026' (saved l4w/files/p1c/JE-policy-2026-11-04.html)",
+   "read": "2026-11-04",
+   "said": "Work permits are a requirement under the Immigration (Work Permits) (Jersey) Rules 1995 and as such employers are required to apply for a work permit for those individuals who require immigration permission to enter or remain in Jersey for work. … The work permit application form must be completed by someone authorised to do so on behalf of the employer and can make payment for the work permit. An employee cannot apply for their own work permit. … If your prospective employee is living abroad and is granted a Jersey work permit the employee is likely to need a visa before travelling to Jersey. The Jersey visa requirements are aligned to the UK visa requirements. … Long-term work permit (previously skilled work permit) This route is available for those individuals employed in any industry for an initial period of up to 3 years following which a further work permit may be granted. … Employers must demonstrate that an employee will be paid the minimum salary threshold or the going rate for the role whichever is higher. … 3413 Actors, entertainers and presenters Actor Commentator (broadcasting) Costumed interpreter Disc jockey Entertainer Presenter (broadcasting) Singer £30,960 (or the going rate, whichever is higher) … Work permit fees (accurate as of December 2024) are paid for by the employer who should not recoup these costs from the employee. Duration of employee's work in Jersey Fee Less than 1 month £58 1 month and up to 6 months £85 More than 6 months and up to 9 months £115 More than 9 months and up to 12 months £175 More than 1 year and up to 2 years £290 More than 2 years and up to 3 years £350 … Immigration fees (accurate as of December 2024) are set by the UK Home Office. … work permit processing time is 3 weeks however this may take longer if the application is incomplete and additional documents requested visa processing times are approximately 3 weeks from the date that the applicant attends the visa application centre … Entertainers from UK and overseas Entertainers in possession of a UK Tier 5 Temporary Worker visa can work in Jersey as a performer for up to 1 month without the need for a work permit. The employer in the Island should produce the following: copy of the biodata page of the passport and the page showing the current UK Immigration endorsement. In the case when the entertainer has not yet entered the UK or applied for an entry clearance the certificate of sponsorship will suffice details of their performance in Jersey If the entertainer is staying for longer than 1 month or is applying directly from overseas, they may require a work permit and a visa.",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first",
+    "fees",
+    "processing",
+    "validity",
+    "union",
+    "eligibility",
+    "pay",
+    "exempt"
+   ]
   }
  ],
- "note": "Every field is blocked today: gov.je and jerseylaw.je both answer this client with 'The URL you requested has been blocked' (HTTP 500), and web.archive.org resets the connection. Layer 3 read the Work Permit Policy (January 2026) from a Wayback snapshot: the employer applies under the Immigration (Work Permits) (Jersey) Rules 1995, and entertainers holding a UK temporary worker visa may perform up to a month without a Jersey permit. Search results point to the Policy's section 'Entertainers from UK and Overseas' and to the Immigration (Fees) (Jersey) Order 2022 (amended to 2025) for the fees; neither could be read."
+ "blockers": [],
+ "note": "Every field was blocked on 2026-11-01: gov.je and jerseylaw.je both answer this client with 'The URL you requested has been blocked' (HTTP 500), and web.archive.org resets the connection. Layer 3 read the Work Permit Policy (January 2026) from a Wayback snapshot: the employer applies under the Immigration (Work Permits) (Jersey) Rules 1995, and entertainers holding a UK temporary worker visa may perform up to a month without a Jersey permit. Search results point to the Policy's section 'Entertainers from UK and Overseas' and to the Immigration (Fees) (Jersey) Order 2022 (amended to 2025) for the fees; neither could be read then. Read 2026-11-04: the Work Permit Policy (updated January 2026) on gov.je, which answered today after the HTTP 500 block of 2026-11-01; read whole, it names no union step."
 }

@@ -27,6 +27,7 @@
  },
  "FR": {
   "reach": {"roles": "every", "at": "0:reachesRoles"},
+  "contract": {"by": "guardian", "at": {"at": "5:legalRepresentative", "is": "représentant légal"}},
   "hours": [{"from": 0, "to": null, "day": "1:youngWorkers/maxPerDay", "week": "1:youngWorkers/maxPerWeek"}]
  },
  "GB": {
@@ -54,6 +55,9 @@
    {"from": 0, "to": "0:hours/0/under", "day": "0:hours/0/day", "week": "0:hours/0/week"},
    {"from": "0:hours/1/from", "to": "0:hours/1/under", "day": "0:hours/1/day", "week": "0:hours/1/week"}
   ]
+ },
+ "TC": {
+  "contract": {"by": "guardian", "at": {"at": "1:consent", "is": "parent or guardian"}, "alone": "1:employmentContractFrom"}
  },
  "US": {
   "seat": "US.CA",

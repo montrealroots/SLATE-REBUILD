@@ -1,12 +1,18 @@
 {
  "country": "GM",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Expatriate quota clearance",
  "routeChanged": false,
  "permit": {
   "applies": "The employer applies for an expatriate quota under the Minister's Expatriate Quota Regulations; the Expatriate Quota Allocation Board reviews it and advises the Minister, who grants it.",
   "first": "No Gambian with the knowledge, skills or expertise for the position; the employer must take on a Gambian understudy.",
-  "fees": null,
+  "fees": [
+   {
+    "what": "Residential Permit B (to reside and work), non-ECOWAS national (the Alien Card, D2500, included)",
+    "amount": "7700",
+    "currency": "GMD"
+   }
+  ],
   "processing": {
    "standard": {
     "n": 5,
@@ -18,7 +24,8 @@
   "union": "The Expatriate Quota Allocation Board that reviews every application includes one representative from the Trade Unions (Labour Act 2023, s. 31(q)).",
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "An ECOWAS national pays D3,600. The page reads 'D7700 (D2500 for the Alien Card)' and says the card's cost is included in the costs shown."
  },
  "sources": [
   {
@@ -34,63 +41,87 @@
     "processing",
     "union"
    ]
+  },
+  {
+   "url": "https://gid.gov.gm/residential-permit/",
+   "title": "Gambia Immigration Department, Residential Permit (Common Crawl capture of 14 October 2026, CC-MAIN-2026-43)",
+   "read": "2026-11-04",
+   "said": "Resident Permit B This type of permit is issued to persons who intend, upon admission, to live, reside and work in the Gambia. … The prescribed fees, subjected to changes, for Residence Permit A/B, Alien Card and Non-Gambian ID Card are as follows: Residential Permit A (ECOWAS) = D3100 Residential Permit B (ECOWAS) = D3600 Residential Permit A (Non-ECOWAS) = D5700 (D2500 for the Alien Card) Residential Permit B (Non-ECOWAS) = D7700 (D2500 for the Alien Card)",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://assembly.gm/documents/16/download",
+   "title": "Labour Act, 2023 (National Assembly of The Gambia, Acts & Laws, document 16)",
+   "read": "2026-11-04",
+   "said": "(q) one representative from the Trade Unions. … 32. Functions of the Expatriate Quota Allocation Board (1) The Expatriate Quota Allocation Board shall notwithstanding section 9A of the Pay Roll Tax Act, - (a) review all applications for expatriate quota and advise the Minister; … (d) ensure that decisions are taken on applications within five working days from the date of receipt of an application and send its recommendation to the Minister for approval or otherwise within fourteen days; … 38. Training of Gambians by employers (1) Notwithstanding anything contained in the Immigration Act and the Pay Roll Act, an employer of an expatriate to whom an expatriate quota is granted by the Minister, shall employ a Gambian counterpart to understudy the holder of the expatriate position",
+   "kind": "primary",
+   "fields": [
+    "applies",
+    "first",
+    "processing",
+    "union"
+   ]
   }
  ],
  "blockers": [
   {
    "field": "fees",
-   "sought": "The quota fee or the Immigration Department's annual charge",
+   "sought": "The expatriate quota's own fee",
    "tried": {
-    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read.",
-    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search.",
+    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read. || 2026-11-04: assembly.gm home (the register's quotes), Acts & Laws listing rendered in Playwright with search=labour, then /documents/16/download => Labour Act, 2023 PDF read: ss. 31(q), 32(1)(a),(d), 38(1) as FAOLEX quotes | www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl => no connection (curl HTTP 000) | gid.gov.gm/residential-permit/ (Gambia Immigration Department) by curl => TLS chain incomplete (curl 60); not read live",
+    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search. || 2026-11-04: laws.gm by curl => refused by the egress proxy (502)",
     "web-search": "WebSearch 'Gambia Labour Act 2023 expatriate quota fee work permit Department of Labour fee dalasi': commercial guides only (an expatriate payroll tax of GMD 30,000 or 100,000 from a single guide, unverified) | Retry 2026-11-01: 'Gambia expatriate quota fee per year Department of Labour 2025 \"expatriate quota\" dalasi' (2026-11-01): Playroll and Rivermate give GMD 10,000 (ECOWAS) and 50,000 (others) a year; Teamed cites a 2026 notice at GMD 30,000 and 100,000; none quotes the notice or regulations, and they conflict, so nothing filled.",
-    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Gambia => no member union listed for the Gambia",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gm,gov,gid)/ (cc.py list; 9 captures); the capture of https://gid.gov.gm/residential-permit/ of 14 October 2026 (WARC CC-MAIN-20261014154306-20261014184306-00526, offset 209195347) fetched by cc.py get and read whole (l4w/files/f11/GM-rp-cc.html) => found: the Department's prescribed non-refundable fees, 'subjected to changes': Residential Permit B (to live and work) D3600 for ECOWAS citizens and D7700 for others (with D2500 for the Alien Card, which the page says is included in the non-ECOWAS cost); a work permit is a Residence Permit B; renewals need the prior year's permit and a GRA payroll tax receipt. No quota fee, term, performer criterion, pay rule or exempt engagement"
    }
   },
   {
    "field": "validity",
    "sought": "How long a quota is granted",
    "tried": {
-    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read.",
-    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search.",
+    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read. || 2026-11-04: assembly.gm home (the register's quotes), Acts & Laws listing rendered in Playwright with search=labour, then /documents/16/download => Labour Act, 2023 PDF read: ss. 31(q), 32(1)(a),(d), 38(1) as FAOLEX quotes | www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl => no connection (curl HTTP 000) | gid.gov.gm/residential-permit/ (Gambia Immigration Department) by curl => TLS chain incomplete (curl 60); not read live",
+    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search. || 2026-11-04: laws.gm by curl => refused by the egress proxy (502)",
     "web-search": "WebSearch 'Gambia Labour Act 2023 expatriate quota fee work permit Department of Labour fee dalasi': commercial guides only (an expatriate payroll tax of GMD 30,000 or 100,000 from a single guide, unverified) | Retry 2026-11-01: 'Gambia expatriate quota fee per year Department of Labour 2025 \"expatriate quota\" dalasi' (2026-11-01): Playroll and Rivermate give GMD 10,000 (ECOWAS) and 50,000 (others) a year; Teamed cites a 2026 notice at GMD 30,000 and 100,000; none quotes the notice or regulations, and they conflict, so nothing filled.",
-    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Gambia => no member union listed for the Gambia",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gm,gov,gid)/ (cc.py list; 9 captures); the capture of https://gid.gov.gm/residential-permit/ of 14 October 2026 (WARC CC-MAIN-20261014154306-20261014184306-00526, offset 209195347) fetched by cc.py get and read whole (l4w/files/f11/GM-rp-cc.html) => found: the Department's prescribed non-refundable fees, 'subjected to changes': Residential Permit B (to live and work) D3600 for ECOWAS citizens and D7700 for others (with D2500 for the Alien Card, which the page says is included in the non-ECOWAS cost); a work permit is a Residence Permit B; renewals need the prior year's permit and a GRA payroll tax receipt. No quota fee, term, performer criterion, pay rule or exempt engagement"
    }
   },
   {
    "field": "eligibility",
    "sought": "A criterion for performers",
    "tried": {
-    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read.",
-    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search.",
+    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read. || 2026-11-04: assembly.gm home (the register's quotes), Acts & Laws listing rendered in Playwright with search=labour, then /documents/16/download => Labour Act, 2023 PDF read: ss. 31(q), 32(1)(a),(d), 38(1) as FAOLEX quotes | www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl => no connection (curl HTTP 000) | gid.gov.gm/residential-permit/ (Gambia Immigration Department) by curl => TLS chain incomplete (curl 60); not read live",
+    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search. || 2026-11-04: laws.gm by curl => refused by the egress proxy (502)",
     "web-search": "WebSearch 'Gambia Labour Act 2023 expatriate quota fee work permit Department of Labour fee dalasi': commercial guides only (an expatriate payroll tax of GMD 30,000 or 100,000 from a single guide, unverified) | Retry 2026-11-01: 'Gambia expatriate quota fee per year Department of Labour 2025 \"expatriate quota\" dalasi' (2026-11-01): Playroll and Rivermate give GMD 10,000 (ECOWAS) and 50,000 (others) a year; Teamed cites a 2026 notice at GMD 30,000 and 100,000; none quotes the notice or regulations, and they conflict, so nothing filled.",
-    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Gambia => no member union listed for the Gambia",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gm,gov,gid)/ (cc.py list; 9 captures); the capture of https://gid.gov.gm/residential-permit/ of 14 October 2026 (WARC CC-MAIN-20261014154306-20261014184306-00526, offset 209195347) fetched by cc.py get and read whole (l4w/files/f11/GM-rp-cc.html) => found: the Department's prescribed non-refundable fees, 'subjected to changes': Residential Permit B (to live and work) D3600 for ECOWAS citizens and D7700 for others (with D2500 for the Alien Card, which the page says is included in the non-ECOWAS cost); a work permit is a Residence Permit B; renewals need the prior year's permit and a GRA payroll tax receipt. No quota fee, term, performer criterion, pay rule or exempt engagement"
    }
   },
   {
    "field": "pay",
    "sought": "A minimum pay rule",
    "tried": {
-    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read.",
-    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search.",
+    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read. || 2026-11-04: assembly.gm home (the register's quotes), Acts & Laws listing rendered in Playwright with search=labour, then /documents/16/download => Labour Act, 2023 PDF read: ss. 31(q), 32(1)(a),(d), 38(1) as FAOLEX quotes | www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl => no connection (curl HTTP 000) | gid.gov.gm/residential-permit/ (Gambia Immigration Department) by curl => TLS chain incomplete (curl 60); not read live",
+    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search. || 2026-11-04: laws.gm by curl => refused by the egress proxy (502)",
     "web-search": "WebSearch 'Gambia Labour Act 2023 expatriate quota fee work permit Department of Labour fee dalasi': commercial guides only (an expatriate payroll tax of GMD 30,000 or 100,000 from a single guide, unverified) | Retry 2026-11-01: 'Gambia expatriate quota fee per year Department of Labour 2025 \"expatriate quota\" dalasi' (2026-11-01): Playroll and Rivermate give GMD 10,000 (ECOWAS) and 50,000 (others) a year; Teamed cites a 2026 notice at GMD 30,000 and 100,000; none quotes the notice or regulations, and they conflict, so nothing filled.",
-    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Gambia => no member union listed for the Gambia",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gm,gov,gid)/ (cc.py list; 9 captures); the capture of https://gid.gov.gm/residential-permit/ of 14 October 2026 (WARC CC-MAIN-20261014154306-20261014184306-00526, offset 209195347) fetched by cc.py get and read whole (l4w/files/f11/GM-rp-cc.html) => found: the Department's prescribed non-refundable fees, 'subjected to changes': Residential Permit B (to live and work) D3600 for ECOWAS citizens and D7700 for others (with D2500 for the Alien Card, which the page says is included in the non-ECOWAS cost); a work permit is a Residence Permit B; renewals need the prior year's permit and a GRA payroll tax receipt. No quota fee, term, performer criterion, pay rule or exempt engagement"
    }
   },
   {
    "field": "exempt",
    "sought": "A short engagement without a quota",
    "tried": {
-    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read.",
-    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search.",
+    "institution": "Department of Labour and Gambia Immigration Department fee pages not found in this pass | Retry 2026-11-01: gid.gov.gm (the Gambia Immigration Department, the quota's secretariat) fails TLS verification from this environment (curl 60, 'unable to get local issuer certificate'), and its plain-HTTP address redirects to HTTPS; not read. || 2026-11-04: assembly.gm home (the register's quotes), Acts & Laws listing rendered in Playwright with search=labour, then /documents/16/download => Labour Act, 2023 PDF read: ss. 31(q), 32(1)(a),(d), 38(1) as FAOLEX quotes | www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl => no connection (curl HTTP 000) | gid.gov.gm/residential-permit/ (Gambia Immigration Department) by curl => TLS chain incomplete (curl 60); not read live",
+    "official-register": "Labour Act 2023 read (FAOLEX copy): fees left to the Minister and the Expatriate Quota Regulations, not read | Retry 2026-11-01: Labour Act 2023 (FAOLEX, saved) re-read: the fee, term and criteria are left to the Expatriate Quota Regulations, which weren't found on FAOLEX or in search. || 2026-11-04: laws.gm by curl => refused by the egress proxy (502)",
     "web-search": "WebSearch 'Gambia Labour Act 2023 expatriate quota fee work permit Department of Labour fee dalasi': commercial guides only (an expatriate payroll tax of GMD 30,000 or 100,000 from a single guide, unverified) | Retry 2026-11-01: 'Gambia expatriate quota fee per year Department of Labour 2025 \"expatriate quota\" dalasi' (2026-11-01): Playroll and Rivermate give GMD 10,000 (ECOWAS) and 50,000 (others) a year; Teamed cites a 2026 notice at GMD 30,000 and 100,000; none quotes the notice or regulations, and they conflict, so nothing filled.",
-    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "trade-press": "Abokiforex story on localisation: no fee | Retry 2026-11-01: As web search; visaatlas.org says the GID's fee page is 'in flux'. || 2026-11-04: FIA's member list (fia-actors.com/about/fia-members/, fetched and read, l4w/files/f11/fia-mem), for a performers' union in the Gambia => no member union listed for the Gambia",
+    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43 index for gm,gov,gid)/ (cc.py list; 9 captures); the capture of https://gid.gov.gm/residential-permit/ of 14 October 2026 (WARC CC-MAIN-20261014154306-20261014184306-00526, offset 209195347) fetched by cc.py get and read whole (l4w/files/f11/GM-rp-cc.html) => found: the Department's prescribed non-refundable fees, 'subjected to changes': Residential Permit B (to live and work) D3600 for ECOWAS citizens and D7700 for others (with D2500 for the Alien Card, which the page says is included in the non-ECOWAS cost); a work permit is a Residence Permit B; renewals need the prior year's permit and a GRA payroll tax receipt. No quota fee, term, performer criterion, pay rule or exempt engagement"
    }
   }
- ]
+ ],
+ "note": "Read 2026-11-04: the Gambia Immigration Department's Residential Permit B fees, from Common Crawl's capture of 14 October 2026 (the live page's TLS chain is incomplete); and the Labour Act 2023 on the National Assembly's site, which the 2026-11-01 note said wasn't online."
 }

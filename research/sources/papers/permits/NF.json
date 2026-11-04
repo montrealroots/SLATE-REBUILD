@@ -1,6 +1,6 @@
 {
  "country": "NF",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Temporary Activity visa (subclass 408), Entertainment activities stream",
  "routeChanged": false,
  "permit": {
@@ -15,11 +15,11 @@
   ],
   "processing": {
    "standard": {
-    "n": 47,
+    "n": 40,
     "unit": "days"
    },
    "premium": null,
-   "note": "Home Affairs' global processing times for subclass 408, Entertainment Activities stream: 90% of applications decided in 47 days, 75% in 36, 50% in 23 (applications decided to 31 August 2026, updated 29 September 2026)."
+   "note": "Home Affairs' global processing times for subclass 408, Entertainment Activities stream: 90% of applications decided in 40 days, 75% in 33, 50% in 23 (applications decided to 30 September 2026, updated 2 November 2026)."
   },
   "validity": {
    "n": 2,
@@ -29,7 +29,9 @@
   "union": "You must consult one or more Australian unions before the applicant submits their application under one of the following entertainment categories (film or television performers among them); directors: the Australian Directors Guild (ADG); musicians and conductors: the Musicians Union; all other applications: the Media Entertainment and Arts Alliance (MEAA).",
   "eligibility": "You must have a contract for your performance or work in Australia",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "payNote": "None set: the Migration Regulations' Schedule 2 clauses for the 408 (408.21, 408.229A), read whole, hold no minimum pay; 408.211 bars activity with adverse consequences for Australians' conditions of employment.",
+  "exemptNote": "None: a visitor's 'business visitor activity' excludes work or services for an organisation or person based in Australia (reg. 1.03), so every paid engagement takes the 408."
  },
  "sources": [
   {
@@ -59,37 +61,34 @@
   {
    "url": "https://immi.homeaffairs.gov.au/_layouts/15/api/GPT.aspx/GetVisaGlobalProcessingTime",
    "title": "Department of Home Affairs, the visa processing time guide tool's own data service (POST {\"gptRequest\":[{\"VisaSubclassCode\":\"408\",\"StreamCode\":\"\"}]}), the endpoint the 408 page's tool calls (AssetLibrary/dist/js/app.gpt.js) (read for AU on 2026-11-01; the same Australian rule holds on Norfolk Island)",
-   "read": "2026-11-01",
-   "said": "\"StreamText\":\"Entertainment Activities\",\"Percent75\":\"36 Days\",\"Percent90\":\"47 Days\",\"Percent25\":\"8 Days\",\"Percent50\":\"23 Days\",\"Updated\":\"29 September 2026\",\"EndDate\":\"31 August 2026\"",
+   "read": "2026-11-04",
+   "said": "\"StreamText\":\"Entertainment Activities\",\"Percent75\":\"33 Days\",\"Percent90\":\"40 Days\",\"Percent25\":\"10 Days\",\"Percent50\":\"23 Days\",\"Updated\":\"02 November 2026\",\"EndDate\":\"30 September 2026\"",
    "kind": "primary",
    "fields": [
     "processing"
    ]
-  }
- ],
- "blockers": [
-  {
-   "field": "pay",
-   "sought": "pay",
-   "tried": {
-    "institution": "Retry 2026-11-01: Home Affairs' 408 entertainment page (saved for AU) read again: no pay floor for this stream stated and no engagement short enough to need no visa.",
-    "official-register": "Retry 2026-11-01: Migration Regulations Schedule 2, subclass 408 (saved for AU): no pay rule for the entertainment stream found in the parts read.",
-    "web-search": "Retry 2026-11-01: Not run separately for Norfolk Island; the AU file's searches stand.",
-    "trade-press": "Retry 2026-11-01: None.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
-   }
   },
   {
-   "field": "exempt",
-   "sought": "exempt",
-   "tried": {
-    "institution": "Retry 2026-11-01: Home Affairs' 408 entertainment page (saved for AU) read again: no pay floor for this stream stated and no engagement short enough to need no visa.",
-    "official-register": "Retry 2026-11-01: Migration Regulations Schedule 2, subclass 408 (saved for AU): no pay rule for the entertainment stream found in the parts read.",
-    "web-search": "Retry 2026-11-01: Not run separately for Norfolk Island; the AU file's searches stand.",
-    "trade-press": "Retry 2026-11-01: None.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
-   }
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 2, Schedule 2, Subclass 408, clauses 408.21 (common criteria) and 408.229A (entertainment)",
+   "read": "2026-11-04",
+   "said": "408.211 The applicant does not intend to engage in activities that will have adverse consequences for employment or training opportunities, or conditions of employment, for Australian citizens or Australian permanent residents. ... 408.215 The applicant has: (a) adequate means to support himself or herself ... 408.229A ... (2) ... (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non-profit engagements) in Australia; ... (c) either: (i) an eligible sponsor passes the sponsorship test in relation to the applicant; or (ii) if the applicant was outside Australia when the application was made, and stated on the application form that the proposed length of stay did not exceed 3 months—an eligible supporter passes the support test ... (e) the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia.",
+   "kind": "primary",
+   "fields": [
+    "pay"
+   ]
+  },
+  {
+   "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_1/document_1.html",
+   "title": "Federal Register of Legislation, Migration Regulations 1994 (compilation of 2026-10-02), volume 1, regulation 1.03, 'business visitor activity'",
+   "read": "2026-11-04",
+   "said": "business visitor activity: (a) means any of the following activities undertaken by a person: (i) making a general business or employment enquiry; (ii) investigating, negotiating, entering into, or reviewing a business contract; (iii) an activity carried out as part of an official government to government visit; (iv) participation in a conference, trade fair or seminar in Australia unless the person is being paid by an organiser for participation; but (b) does not include either of the following activities: (i) an activity that is, or includes, undertaking work for, or supplying services to, an organisation or other person based in Australia; (ii) an activity that is, or includes, the sale of goods or services directly to the general public.",
+   "kind": "primary",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
- "note": "Norfolk Island takes Australia's permission to work (the Migration Act 1958 extends to it; layer 3's au list), so the permit is Australia's 408 entertainment stream, the same as the AU file. The charge (Migration Regulations Sch. 1) and the processing time (Home Affairs' global processing-time service) are the ones read for Australia's file, the same sources and saved pages. The Migration Act's extension to Norfolk Island is layer 3's finding (legislation.gov.au, read 2026-10-29), not re-read."
+ "blockers": [],
+ "note": "Norfolk Island takes Australia's permission to work (the Migration Act 1958 extends to it; layer 3's au list), so the permit is Australia's 408 entertainment stream, the same as the AU file. The charge (Migration Regulations Sch. 1) and the processing time (Home Affairs' global processing-time service) are the ones read for Australia's file, the same sources and saved pages. The Migration Act's extension to Norfolk Island is layer 3's finding (legislation.gov.au, read 2026-10-29), not re-read. An error found and fixed on 2026-11-04: the 408's processing was held at 47 days, Home Affairs' figure updated 29 September 2026; its data service, read again, gives 40 days at 90% (updated 2 November 2026), which is now held. Read 2026-11-04 (Norfolk Island's research, which applies the same federal rules): the 408 sets no pay floor and no paid engagement is free of it. Re-read 2026-11-04: immi.homeaffairs.gov.au's copy (entertainment-activities) answered with a page without the passage (its text drawn by script, or an image); the fact stands on its reading of 2026-11-01."
 }

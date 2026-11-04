@@ -28,7 +28,10 @@
  }},
  "AQ": {"agreements": {}},
  "AR": {"agreements": {
-  "ar": {"forms": ["feature", "pilot", "episode", "short"], "unknown": true}
+  "ar-film": {"forms": ["feature"], "language": {"code": "es", "actor": 5}, "currency": "ARS", "fees": [
+   {"forms": ["feature"], "per": "script", "from": "2025-04-11", "fig": 2, "path": ["screenplayMinimum"]}
+  ]},
+  "ar": {"forms": ["pilot", "episode", "short"], "unknown": true}
  }},
  "AS": {"agreements": {
   "as": {"forms": ["feature", "pilot", "episode", "short"], "language": [{"code": "sm", "actor": 1}, {"code": "en", "actor": 1}], "none": {"fig": 0, "path": ["agreement"]}}
@@ -528,7 +531,13 @@
   "mw": {"forms": ["feature", "pilot", "episode", "short"], "unknown": true}
  }},
  "MX": {"agreements": {
-  "mx": {"forms": ["feature", "pilot", "episode", "short"], "language": {"code": "es", "fig": null}, "unknown": true}
+  "mx-film": {"forms": ["feature"], "language": {"code": "es", "actor": 6}, "currency": "MXN", "fees": [
+   {"forms": ["feature"], "per": "script", "from": "2021-05-15", "fig": 4, "path": ["perFilm", "2021-05-15", "guion"]},
+   {"forms": ["feature"], "per": "script", "from": "2022-05-15", "fig": 4, "path": ["perFilm", "2022-05-15", "guion"]},
+   {"forms": ["feature"], "per": "script", "from": "2023-05-15", "fig": 4, "path": ["perFilm", "2023-05-15", "guion"]},
+   {"forms": ["feature"], "per": "script", "from": "2024-05-15", "fig": 4, "path": ["perFilm", "2024-05-15", "guion"]}
+  ]},
+  "mx": {"forms": ["pilot", "episode", "short"], "language": {"code": "es", "fig": null}, "unknown": true}
  }},
  "MY": {"agreements": {
   "my": {"forms": ["feature", "pilot", "episode", "short"], "unknown": true}

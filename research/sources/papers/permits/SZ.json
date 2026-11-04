@@ -1,32 +1,117 @@
 {
  "country": "SZ",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Temporary Residence Permit (Employees, Part I)",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
-  "fees": [],
+  "applies": "The employer applies: its covering letter of application goes with the completed Form 3.",
+  "first": "Proof the post was advertised (a full-page advert), police clearance from the country of origin, qualification certificates, a medical certificate and the employer's certificate of incorporation (Forms J and C).",
+  "fees": [
+   {
+    "what": "Temporary residence permit application fee",
+    "amount": "300.00",
+    "currency": "SZL"
+   }
+  ],
   "processing": null,
   "validity": null,
   "union": null,
   "eligibility": null,
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The fee has been E300 since 1 March 2021 (the Ministry of Home Affairs' notice of revised fees, as Common Crawl captured it on 9 August 2026); no later notice was found."
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://gov.sz/index.php/services-sp-22242747/permits",
+   "title": "Government of Eswatini, Ministry of Home Affairs, Permits (Common Crawl's capture of 13 August 2026, CC-MAIN-2026-34, WARC CC-MAIN-20260813202929-20260813232929-00943 offset 261885373; the live site resets the connection)",
+   "read": "2026-11-04",
+   "said": "Temporal Residence Permit Requirements ... EMPLOYEES PART I 1. Complete Application Form (Form 3) 2. Two Passport Size Photos 3. Covering Letter of Application From Employer 4. Proof of Advert of post (Full Page) 5. Original Police Clearance from Country Of Origin (Internationally Recognised) 6. Qualification Certificates (Copies) 7. Medical Certificate 8. Certificate of Incorporation Form J. & Form C SPECIAL PASS 1. Complete Application Form (Form10) 2. Copy of Recent Appeal 3. Application Letter 4. Two photos 5. Passport Copy",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first"
+   ]
+  },
+  {
+   "url": "https://www.gov.sz/images/CORONA/moha-user-fees-effective-date.pdf",
+   "title": "Government of the Kingdom of Eswatini, Ministry of Home Affairs, 1st March 2021 – Effective Date for Revised Civil Registration and Immigration Services (28 December 2020, N.R. Nxumalo, Principal Secretary; Common Crawl's capture of 9 August 2026, CC-MAIN-2026-34, WARC CC-MAIN-20260809093337-20260809123337-00979 offset 663592768)",
+   "read": "2026-11-04",
+   "said": "2. IMMIGRATION DEPARTMENT TEMPORARY RESIDENCE PERMITS ACTIVITY OLD FEES NEW FEES Application fee E300.00 OVERSTAY One Day – 30 days E500.00 31 Days – 90 days E500.00 E1000.00 91 Days – 1 YEAR E2000.00",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  }
+ ],
  "blockers": [
   {
-   "field": "country",
-   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term)",
+   "field": "processing",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (processing)",
    "tried": {
-    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01).",
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
     "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
     "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
     "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
-    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
+   }
+  },
+  {
+   "field": "validity",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (validity)",
+   "tried": {
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
+    "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
+    "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
+    "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
+   }
+  },
+  {
+   "field": "union",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (union)",
+   "tried": {
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
+    "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
+    "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
+    "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
+   }
+  },
+  {
+   "field": "eligibility",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (eligibility)",
+   "tried": {
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
+    "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
+    "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
+    "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
+   }
+  },
+  {
+   "field": "pay",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (pay)",
+   "tried": {
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
+    "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
+    "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
+    "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
+   }
+  },
+  {
+   "field": "exempt",
+   "sought": "the permit a foreign film, television or stage performer must hold to be engaged in Eswatini (route, fees, processing, term) (exempt)",
+   "tried": {
+    "institution": "gov.sz (the Ministry of Home Affairs and its Immigration Department) does not answer this client (connection failure, 2026-11-01; reset on 2026-10-29) | 2026-11-01 retry: gov.sz/index.php/services-sp-22242747/visa (the Ministry of Home Affairs' visa page, which search snippets say sends work to a Temporary Residence Permit) resets the connection (curl: (35), 2026-11-01). || 2026-11-04: https://gov.sz/index.php/services-sp-22242747/permits live, by curl => curl: (35) Recv failure: Connection reset by peer (the agent proxy reports the tunnel closed mid-exchange)",
+    "official-register": "eswatinilii.org answers 403 for the Immigration Act 1982 (akn/sz/act/1982/17); its search page loads but its documents refuse | 2026-11-01 retry: eswatinilii.org documents refuse (403) as before; no other register holds the Immigration Act 1982 as text reachable here.",
+    "web-search": "'Eswatini work permit Temporary Residence Permit Immigration Department requirements fee E foreign artist performer permit Ministry of Home Affairs' (2026-11-01): only employer-of-record and aggregator pages (Playroll, G-P, Visa Atlas, africarrieres), none quoting a primary; a second search was refused because the session's web-search budget was spent | 2026-11-01 retry: 'Eswatini Immigration Act 1982 temporary residence permit work fee Emalangeni Ministry of Home Affairs gov.sz requirements' (2026-11-01): Playroll, Visa Atlas, Rivermate, Velocity Global, G-P, africarrieres only; no primary, no fee.",
+    "trade-press": "the gov.uk 'Living in Eswatini' guidance (read 2026-11-01) says nothing on permits beyond 'contact your destination country's immigration authority'; not saved since it holds no fact | 2026-11-01 retry: gov.uk 'Living in Eswatini' fetched and saved (SZ-govuk.html): no permit fact; aggregators name Form 3 and a committee decision without a primary.",
+    "archive": "not reached in this pass | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-34: cc.py list 'sz,gov)/index.php/services-sp-22242747/permits' and 'sz,gov)/images/corona/moha-user-fees', then cc.py get of each record (the captures layer 3 cited) => both read: the permits page (13 Aug 2026) and the fee notice PDF (9 Aug 2026, 4 pages, pdftotext); saved l4w/files/p2/SZ-permits.html, SZ-fees.pdf"
    }
   }
  ],
- "note": "Eswatini was a blocker for the country on 2026-11-01, as layer 3's was then (in SLATE, register R-1660): no published rule on what a foreign performer must hold was reached. Employer-of-record guides speak of a temporary residence permit for an employee on Form 3 at the Ministry of Home Affairs, without a primary source, so nothing is modelled. Layer 3 read the route on 2026-11-03 (papers.work.SZ, R-9719), in the Ministry of Home Affairs' Permits page as Common Crawl captured it: the temporary residence permit's Part I for employees, on Form 3 with the employer's covering letter, and its application fee of E300 since 1 March 2021. This file was written on 2026-11-01 and its permit's facts weren't sought again, so they stay blocked and the player is told what isn't known; the route's source, read for layer 3, is the lead for the next search."
+ "note": "Eswatini was a blocker for the country on 2026-11-01, as layer 3's was then (in SLATE, register R-1660): no published rule on what a foreign performer must hold was reached. Employer-of-record guides speak of a temporary residence permit for an employee on Form 3 at the Ministry of Home Affairs, without a primary source, so nothing was modelled on them. Layer 3 read the route on 2026-11-03 (papers.work.SZ, R-9719), in the Ministry of Home Affairs' Permits page as Common Crawl captured it: the temporary residence permit's Part I for employees, on Form 3 with the employer's covering letter, and its application fee of E300 since 1 March 2021. When this file was written on 2026-11-01 its permit's facts weren't sought again, so they stayed blocked until 2026-11-04, the route's source, read for layer 3, being the lead for the next search. Brought in on 2026-11-04 (HANDOFF's next step 3): the route layer 3 read (papers.work.SZ, R-9719), read again today in Common Crawl's captures of the Ministry of Home Affairs' Permits page (13 August 2026) and its fee notice, the live site resetting the connection. Nothing is said of performers as such, of the permit's term, the decision time or a short engagement; those stay unknown."
 }

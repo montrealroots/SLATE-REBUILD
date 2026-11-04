@@ -30,7 +30,7 @@ Read `CLAUDE.md` first.
   (2026-11-04: "All ten"), identity, attributes, acting, directing, producing, work (the screenwriter's), genres,
   unions, permits and youth, brought over as SLATE wrote them with their compilers, research, 26 coverage matrices,
   2,107 register entries, 15 catalog lines, six deciders and 33 effects; every compiler's output is byte for byte
-  SLATE's on the rebuild's data, until the owner's rulings of 2026-11-04 rebuilt it around the life's own productions (Assumptions): casting and spec sales went, then the actor's Auditioning attribute and Camera's self-taping part ("Remove them (Recommended)"), the writers' compiled hold-until-photography and option terms, and the headshot research, with R-5213 and R-5216 retired; the director's pitch joined the financing. The register stands at 7,038 entries. Its research hasn't been integrated yet, and a series' or a play's fund, credit and release are still refused while their UK research (read 2026-11-04) is wired. Layers 5 to 7 have not started (6 is
+  SLATE's on the rebuild's data, until the owner's rulings of 2026-11-04 rebuilt it around the life's own productions (Assumptions): casting and spec sales went, then the actor's Auditioning attribute and Camera's self-taping part ("Remove them (Recommended)"), the writers' compiled hold-until-photography and option terms, and the headshot research, with R-5213 and R-5216 retired; the director's pitch joined the financing. Its research was taken through one wave on 2026-11-04 (thirteen research agents and their follow-ups on the blockers, the secondaries and a re-read of the found sources, then six integrators, one per engine: the actor's, director's, producer's and writer's markets, the youth rules and the work permits), merged as 1,669 entries rewritten, 18 new and 40 blockers closed; the register stands at 7,016 entries (4,288 found, 680 secondary, 2,032 blocked, 16 game). A series' or a play's fund, credit and release are still refused while their UK research (read 2026-11-04) is wired. Layers 5 to 7 have not started (6 is
   dropped).
 
 What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:
@@ -297,17 +297,24 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-Layer 4's research, as layers 2 and 3 had (the briefs in `research/rounds/` and this session's: change the date, the
-scratchpad path and the groups, keep the rules):
+Layer 4's first research wave is integrated (2026-11-04). What is left before it is proven, with the research rounds
+run as layers 2 and 3 had them (the briefs in `research/rounds/`: change the date, the scratchpad path and the groups,
+keep the rules):
 
-1. Re-read every source of layer 4's found facts (a script first, checking each quote verbatim; agents for the rest),
-   and take any newer release.
-2. Re-attack every layer 4 blocker by every method, web search included; and seek the primary behind every fact held
-   at second hand.
-3. Bring in what layer 3's sources already state for the work permits (Kiribati's fees and bond, Tuvalu's fees and
-   term, Eswatini's fee, Cuba's contracting body, Kuwait's PAM permit), each reading settled at its source; and the
-   three permit files (SA, BW, TG) that cite ids SLATE itself removed (R-1545, R-1658, R-1688).
-4. Integrate by engine, merge the register, then prove layer 4 on CI (`npm run gate:full`) and record it.
+1. Wire a series' and a play's producing from the UK research of 2026-11-04 (the AVEC's 34% and 39% with the
+   high-end threshold, Theatre Tax Relief's 45% and 40%, the nations' screen funds, Arts Council England's project
+   grants, the stage director's and the playwright's minimums under UK Theatre's, SOLT's and the ITC's agreements),
+   telling the player what isn't known (how often a series is picked up or a play recoups, a series producer's fee);
+   then the same for the other markets, a research wave of its own.
+2. What the integrators found and the engines can't read yet: Azerbaijan's rebate in dollars (the engine holds one
+   currency a market), Canada's DGC 2026-28 and Mexico's STPC director rates, the DGA reaching the US Virgin Islands
+   and the Northern Mariana Islands, Austria's stage minimums, Uruguay's and Ecuador's rate tables, the Hebrew
+   theatre agreement; and for `papers.work` (layer 3) the exempt days the permit research found (Latvia 14, Hungary 10,
+   Uruguay 90, Iceland's four weeks against the 90 days held, Singapore's ended performing-artiste scheme).
+3. Older blockers still carry attempts recorded as "not tried"; each is to be tried and recorded as made. Research
+   figures only casting and spec sales read (the actor's and screenwriter's calibration counts, R-4620's shares of
+   parts, R-4622's spec deals, wealth by occupation and writing programmes) are to be taken out where nothing reads them.
+4. Then the further web-search rounds on what stays blocked, and prove layer 4 on CI (`npm run gate:full`) and record it.
 5. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
    facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,
    Equatorial Guinea, Guinea-Bissau, Eritrea); the 180 sources that answered only with a bot check or a failed

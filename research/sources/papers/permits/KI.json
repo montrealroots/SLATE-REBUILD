@@ -1,103 +1,125 @@
 {
  "country": "KI",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Work visa and work permit (Ministry of Foreign Affairs and Immigration; Immigration Act 2019, Immigration Procedures 2020)",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
-  "fees": null,
-  "processing": null,
-  "validity": null,
+  "applies": "The worker lodges the work visa application on the Ministry of Foreign Affairs and Immigration's form, with the fee; the work permit file also holds the request letter, the employment contract and, for a private business, its localisation plan and advertisement.",
+  "first": "A genuine offer of employment stating the pay, hours, conditions and duration; for an Essential Skills work visa, the employer's genuine attempt to recruit Kiribati citizens or residents, none being available; for a Specific Purpose or Event work visa (media, film and video production crew among its purposes), the production's terms, its duration included.",
+  "fees": [
+   {
+    "what": "Work permit application form, single journey",
+    "amount": "40.00",
+    "currency": "AUD"
+   },
+   {
+    "what": "Work permit fee (paid to the Ministry of Finance and Economic Development)",
+    "amount": "150.00",
+    "currency": "AUD"
+   },
+   {
+    "what": "Work permit security bond (refunded at the permit's end)",
+    "amount": "1000.00",
+    "currency": "AUD"
+   }
+  ],
+  "processing": {
+   "standard": {
+    "n": 30,
+    "unit": "business-days"
+   },
+   "premium": null
+  },
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": true
+  },
   "union": null,
-  "eligibility": null,
-  "pay": null,
-  "exempt": null
+  "eligibility": "Suitably qualified by training and experience for the job offered, of acceptable health and good character, with funds for maintenance: a salary an immigration officer finds sufficient, the employer's guarantee, own funds, or a sponsor in Kiribati.",
+  "pay": "The employer must pay no less than the minimum wage, and the salary must, in the immigration officer's view, cover maintenance and accommodation unless the employer guarantees them.",
+  "exempt": null,
+  "feesNote": "The application form costs AUD 80 for multiple journeys instead of 40.",
+  "processingNote": "The trade portal gives 10 to 30 working days; the longer is held.",
+  "validityNote": "An Essential Skills work visa is granted for 1 year, further visas for the period the employment is offered, up to 3 years in all; a Specific Purpose or Event work visa for media, film and video production crew runs for the period of engagement, further visas granted with evidence of the need."
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://kiribati.tradeportal.org/procedure/120/step/333?l=en",
+   "title": "Kiribati Trade and Investment Portal (Government of Kiribati): Obtain a work permit, step 3 'Submit work permit application' (last modified 17/05/2021)",
+   "read": "2026-11-03",
+   "said": "Entity in charge Ministry of Foreign Affairs and Immigration ... Requirements 1. Work Permit Application Form (original) 2. Passport (Biodata page) ... 4. Employment Contract ... 5. Latest Medical Clearance ... 6. Recent police report from current place of residence ... 10. Work permit application letter (Request letter) ... Private Business 1. Localization Plan ... 2. Advertisement ... 3. Operational Licence ... Processing time takes 10-30 working days",
+   "kind": "primary",
+   "fields": [
+    "applies",
+    "first",
+    "processing"
+   ]
+  },
+  {
+   "url": "https://kiribati.tradeportal.org/procedure/120/step/331?l=en",
+   "title": "Kiribati Trade and Investment Portal: Obtain a work permit, step 1 'Obtain application form for a work permit' (last modified 24/05/2021)",
+   "read": "2026-11-03",
+   "said": "Work Permit Application Form Cost: AUD 40 ... 40.00 (Single) 80.00 (Multiple)",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://kiribati.tradeportal.org/procedure/120/step/332?l=en",
+   "title": "Kiribati Trade and Investment Portal: Obtain a work permit, step 2 'Pay work permit fee' (last modified 20/05/2021)",
+   "read": "2026-11-03",
+   "said": "Ministry of Finance and Economic Development (MFED) ... Cost: AUD 150 ... Work Permit Fee",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://kiribati.tradeportal.org/procedure/120/step/335?l=en",
+   "title": "Kiribati Trade and Investment Portal: Obtain a work permit, step 4 'Pay Work Permit Security Bond Fee' (last modified 24/05/2021)",
+   "read": "2026-11-03",
+   "said": "Cost: AUD 1,000 ... Work Permit Security Bond Fee ... Fee will be reimbursed after finishing the end of the work permit",
+   "kind": "primary",
+   "fields": [
+    "fees"
+   ]
+  },
+  {
+   "url": "https://www.mfa.gov.ki/wp-content/uploads/2020/11/Work-Visa-FINAL.pdf",
+   "title": "Kiribati Immigration, Work Visa Application Form (2020; saved l4w/files/p1c/KI-workvisa.pdf)",
+   "read": "2026-11-04",
+   "said": "You should use this form if you are applying for the following work visa types: • Essential Skills • Religious worker • Specific purpose or event • Domestic worker of consulate staff … All applicants must provide: • Completed, signed application form • Appropriate fee (Contact visaofficer@mfa.gov.ki for details on payment, or go to www.mfa.gov.ki/immigration for more information). … • A job offer, including a job description, details of pay, and conditions of the proposed employment … Applicants for Specific Purpose or Event work visas must also provide • Description of the specific purpose or event for which I am coming to Kiribati • Evidence of the specific purpose or event",
+   "kind": "primary",
+   "fields": [
+    "applies",
+    "first",
+    "route"
+   ]
+  },
+  {
+   "url": "https://www.mfa.gov.ki/wp-content/uploads/2020/11/Immigration-Procedures-2020.pdf",
+   "title": "Kiribati Ministry of Foreign Affairs and Immigration, Immigration Procedures, certified under the Immigration Act 2019, Version 1 (128 pp., 2020), section D 'Temporary Visas: Work Visas' (saved l4w/files/p1c/KI-proc.pdf)",
+   "read": "2026-11-04",
+   "said": "Work means any activity undertaken for gain or reward … 2. Requirements for work visa applicants Unless specifically stated, all work visa applicants must: … b. produce evidence to show that they are suitably qualified by training and experience to do the job they have been offered. … sufficient funds for maintenance. This includes showing at least one of the following: a. a proposed salary that an immigration officer considers sufficient to cover maintenance and accommodation … 3. General requirements for employers … a. paying employees no less than the minimum wage … 5. Offers of employment All offers of employment must be genuine and sustainable and should contain: … iii. details of pay, hours of work and conditions of employment … 11. Essential Skills work visa … may only be granted if: a. the employment is acceptable b. there are no Kiribati citizens or residents available for the work … 13. Currency of Essential Skills work visas An Essential Skills work visa may be granted for 1 year. Further visas may be granted for the period for which the employment is offered, up to a maximum of 3 years. … 15. Specific Purpose or Event work visa … c. the work is time-bound (not permanent or open) d. the applicant is suitably qualified to undertake the work e. the applicant has an approved sponsor (if applicable) … Media, film and video production crew | Terms of production, including duration | For period of engagement | Further visas can be granted with evidence of need for extension",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first",
+    "validity",
+    "eligibility",
+    "pay"
+   ]
+  }
+ ],
  "blockers": [
-  {
-   "field": "country",
-   "sought": "Any published rule on the permit a foreign performer needs",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "applies",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "fees",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "processing",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "validity",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
   {
    "field": "union",
    "sought": "(as above)",
    "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
-    "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
-    "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
-    "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
-    "archive": "web.archive.org refuses this environment (connection reset, 2026-11-01); no snapshot read. | Retry 2026-11-01: web.archive.org and wayback.archive.org reset the connection (2026-11-01)."
-   }
-  },
-  {
-   "field": "pay",
-   "sought": "(as above)",
-   "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
+    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before). || 2026-11-04: mfa.gov.ki Immigration and Visa pages fetched by curl; they link the Kiribati Immigration Act 2019 and 'Immigration procedure 2020' as WordPress attachment pages, whose PDFs (wp-content/uploads/2020/11/Immigration-Procedures-2020.pdf, Kiribati-Immigration-Act-2019.pdf) were fetched => found: the Procedures' work visa section read whole (route, who applies, job offer first, Essential Skills labour test and term, Specific Purpose or Event visa for film crew, minimum wage and maintenance). The Act's PDF (14.9 MB) is image-only and was not OCR'd in this pass | the Work Visa Application Form (layer 3 source) read whole for fee, time and categories => no fee amount (the applicant is told to ask visaofficer@mfa.gov.ki) and no decision time; the Specific Purpose list names 'Media, film and video production crew' but not performers | kiribati.tradeportal.org procedure 120, steps 331, 332, 333 and 335 (layer 3's sources), fetched by curl, plain and with embed=true => each answered HTTP 200 with the portal's page shell only (the step's requirements, cost and time are drawn by script); the figures stand on layer 3's reading of 2026-11-03",
     "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
     "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
@@ -108,7 +130,7 @@
    "field": "exempt",
    "sought": "(as above)",
    "tried": {
-    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before).",
+    "institution": "kiribati.tradeportal.org work-permit procedure steps read: their content is loaded by script and absent from the page this client receives | Retry 2026-11-01: kiribati.tradeportal.org's steps load by script (as before). || 2026-11-04: mfa.gov.ki Immigration and Visa pages fetched by curl; they link the Kiribati Immigration Act 2019 and 'Immigration procedure 2020' as WordPress attachment pages, whose PDFs (wp-content/uploads/2020/11/Immigration-Procedures-2020.pdf, Kiribati-Immigration-Act-2019.pdf) were fetched => found: the Procedures' work visa section read whole (route, who applies, job offer first, Essential Skills labour test and term, Specific Purpose or Event visa for film crew, minimum wage and maintenance). The Act's PDF (14.9 MB) is image-only and was not OCR'd in this pass | the Work Visa Application Form (layer 3 source) read whole for fee, time and categories => no fee amount (the applicant is told to ask visaofficer@mfa.gov.ki) and no decision time; the Specific Purpose list names 'Media, film and video production crew' but not performers | kiribati.tradeportal.org procedure 120, steps 331, 332, 333 and 335 (layer 3's sources), fetched by curl, plain and with embed=true => each answered HTTP 200 with the portal's page shell only (the step's requirements, cost and time are drawn by script); the figures stand on layer 3's reading of 2026-11-03",
     "official-register": "PacLII Immigration regulations (paclii.org/ki/legis/sub_leg/ioir1988549) answer 403 | Retry 2026-11-01: paclii.org/ki/legis/consol_act/ (the consolidated acts index) answers 403, as do the regulations (2026-11-01); natlex.ilo.org answers 403.",
     "web-search": "WebSearch 'Kiribati work permit foreign worker Immigration Ordinance fee Ministry of Employment and Human Resources': conflicting snippets (free; AUD 40; AUD 60 under repealed 1980 rules; USD 150 on wikiprocedure) | Retry 2026-11-01: Not run: the session's shared web-search budget (200 searches a turn) ran out on 2026-11-01 before this country's retry; earlier searches stand.",
     "trade-press": "remotepeople and Rivermate guides: not quoting a primary | Retry 2026-11-01: None reachable quoting a primary.",
@@ -116,5 +138,5 @@
    }
   }
  ],
- "note": "Kiribati was blocked whole on 2026-11-01, the trade portal's steps loading by script. Layer 3 read the route on 2026-11-03 (papers.work.KI, R-9735), on the same portal's steps and the Ministry of Foreign Affairs and Immigration's work visa form: the Ministry's work permit, applied for with an employment contract, medical and police clearances and a request letter; the form AUD 40 (single) or 80 (multiple), the permit fee AUD 150, a security bond of AUD 1,000 refunded at the permit's end, and 10 to 30 working days to process. This file was written on 2026-11-01 and its permit's facts weren't sought again, so they stay blocked and the player is told what isn't known; the route's source, read for layer 3, is the lead for the next search."
+ "note": "Kiribati was blocked whole on 2026-11-01, the trade portal's steps loading by script. Layer 3 read the route on 2026-11-03 (papers.work.KI, R-9735), on the same portal's steps and the Ministry of Foreign Affairs and Immigration's work visa form: the Ministry's work permit, applied for with an employment contract, medical and police clearances and a request letter; the form AUD 40 (single) or 80 (multiple), the permit fee AUD 150, a security bond of AUD 1,000 refunded at the permit's end, and 10 to 30 working days to process. When this file was written on 2026-11-01 its permit's facts weren't sought again, so they stayed blocked until 2026-11-04, the route's source, read for layer 3, being the lead for the next search. Brought in on 2026-11-04 (HANDOFF's next step 3): layer 3's sources for the route (papers.work.KI, R-9735, read 2026-11-03), whose figures the trade portal's steps no longer serve as text today, so they stand on that reading; with the Ministry's Immigration Procedures 2020 (its work visa section read whole today) and the work visa form. Whether an actor, as against production crew, takes the Essential Skills or the Specific Purpose or Event visa isn't stated; the Essential Skills term is held. The Immigration Act 2019's PDF is image only and wasn't read, so no union step or short engagement free of the permit is held as absent; both stay unknown."
 }

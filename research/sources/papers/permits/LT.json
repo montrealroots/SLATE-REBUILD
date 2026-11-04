@@ -1,6 +1,6 @@
 {
  "country": "LT",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Leidimas laikinai gyventi (temporary residence permit as a performer)",
  "routeChanged": false,
  "permit": {
@@ -67,33 +67,33 @@
    "field": "union",
    "sought": "union",
    "tried": {
-    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers.",
-    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client.",
-    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read).",
-    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers. || 2026-11-04: curl https://migracija.lrv.lt/en/services/state-fees-for-services/residence-permits/ (the register's quotes) => HTTP 403, a Cloudflare 'Just a moment' bot check; not passed | Užimtumo tarnyba (Employment Service) foreigners' employment page, https://uzt.lt/darbdaviams/uzsienieciu-idarbinimas/ => HTTP 403 (5,672-byte refusal page); not passed",
+    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client. || 2026-11-04: e-seimas.lrs.lt, the Seimas's register: Law on the Legal Status of Aliens (TAIS.232378/asr) => HTTP 403 (refusal page), as e-tar.lt for the first wave | e-tar.lt legal act page for the Law on the Legal Status of Aliens (TAR.1A1E5FB7D8E0/asr) => HTTP 403",
+    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read). || 2026-11-04: WebSearch 'Užsieniečių teisinės padėties įstatymas atlikėjai meno kolektyvo nariai leidimas dirbti nereikia 58 straipsnis lrs.lt' => no text of the Aliens Law's work-permit exemptions: hits were the Copyright Law's art. 58 amendments (e-seimas), academic papers on performers' rights, and an lrv.lt PDF of August 2026 (EjPfdKNgK9M.pdf), which answers 403 (Cloudflare 'Just a moment'), not passed",
+    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names LAG – Lietuvos Aktorių Gildija for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lt,lrv,migracija)' (the Migration Department's host, whose fee and service pages answer 403 live) => no capture of migracija.lrv.lt in the crawl"
    }
   },
   {
    "field": "pay",
    "sought": "pay",
    "tried": {
-    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers.",
-    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client.",
-    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read).",
-    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers. || 2026-11-04: curl https://migracija.lrv.lt/en/services/state-fees-for-services/residence-permits/ (the register's quotes) => HTTP 403, a Cloudflare 'Just a moment' bot check; not passed | Užimtumo tarnyba (Employment Service) foreigners' employment page, https://uzt.lt/darbdaviams/uzsienieciu-idarbinimas/ => HTTP 403 (5,672-byte refusal page); not passed",
+    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client. || 2026-11-04: e-seimas.lrs.lt, the Seimas's register: Law on the Legal Status of Aliens (TAIS.232378/asr) => HTTP 403 (refusal page), as e-tar.lt for the first wave | e-tar.lt legal act page for the Law on the Legal Status of Aliens (TAR.1A1E5FB7D8E0/asr) => HTTP 403",
+    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read). || 2026-11-04: WebSearch 'Užsieniečių teisinės padėties įstatymas atlikėjai meno kolektyvo nariai leidimas dirbti nereikia 58 straipsnis lrs.lt' => no text of the Aliens Law's work-permit exemptions: hits were the Copyright Law's art. 58 amendments (e-seimas), academic papers on performers' rights, and an lrv.lt PDF of August 2026 (EjPfdKNgK9M.pdf), which answers 403 (Cloudflare 'Just a moment'), not passed",
+    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names LAG – Lietuvos Aktorių Gildija for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lt,lrv,migracija)' (the Migration Department's host, whose fee and service pages answer 403 live) => no capture of migracija.lrv.lt in the crawl"
    }
   },
   {
    "field": "exempt",
    "sought": "exempt",
    "tried": {
-    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers.",
-    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client.",
-    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read).",
-    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection.",
-    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01)."
+    "institution": "Retry 2026-11-01: migracija.lrv.lt and tr.mfa.lt answer 403; VFS's Lithuanian TRP page names no union step, pay rule or exemption for performers. || 2026-11-04: curl https://migracija.lrv.lt/en/services/state-fees-for-services/residence-permits/ (the register's quotes) => HTTP 403, a Cloudflare 'Just a moment' bot check; not passed | Užimtumo tarnyba (Employment Service) foreigners' employment page, https://uzt.lt/darbdaviams/uzsienieciu-idarbinimas/ => HTTP 403 (5,672-byte refusal page); not passed",
+    "official-register": "Retry 2026-11-01: e-tar.lt, e-seimas.lrs.lt and lrv.lt resolutions (2025/12, 2026/2 PDFs) answer 403 to this client. || 2026-11-04: e-seimas.lrs.lt, the Seimas's register: Law on the Legal Status of Aliens (TAIS.232378/asr) => HTTP 403 (refusal page), as e-tar.lt for the first wave | e-tar.lt legal act page for the Law on the Legal Status of Aliens (TAR.1A1E5FB7D8E0/asr) => HTTP 403",
+    "web-search": "Retry 2026-11-01: 'valstybės rinkliavos dydis leidimo laikinai gyventi išdavimas 2026 eurų Migracijos departamentas' and 'Lithuania embassy mfa.lt temporary residence permit application state fee': a 2026 Chamber notice that once the 24,706 quota is used, a work-based permit needs pay of at least 1.2 times the average wage (not a performer rule, and its docx wasn't read). || 2026-11-04: WebSearch 'Užsieniečių teisinės padėties įstatymas atlikėjai meno kolektyvo nariai leidimas dirbti nereikia 58 straipsnis lrs.lt' => no text of the Aliens Law's work-permit exemptions: hits were the Copyright Law's art. 58 amendments (e-seimas), academic papers on performers' rights, and an lrv.lt PDF of August 2026 (EjPfdKNgK9M.pdf), which answers 403 (Cloudflare 'Just a moment'), not passed",
+    "trade-press": "Retry 2026-11-01: migration.lt's 2023 fee note answers 404; workinlithuania.com's 2026 provider PDF resets the connection. || 2026-11-04: FIA (International Federation of Actors) member list, https://fia-actors.com/about/fia-members/, read whole, and its Mobility policy page (https://fia-actors.com/policy-work/working-conditions/mobility/) => The member list names LAG – Lietuvos Aktorių Gildija for this country (a union exists); neither page states any union consultation, pay floor, fee or exemption in the work permit for a foreign performer; the Mobility page speaks only of tax and social security in general",
+    "archive": "Retry 2026-11-01: web.archive.org resets (2026-11-01). || 2026-11-04: Common Crawl CC-MAIN-2026-43: cc.py list 'lt,lrv,migracija)' (the Migration Department's host, whose fee and service pages answer 403 live) => no capture of migracija.lrv.lt in the crawl"
    }
   }
  ],

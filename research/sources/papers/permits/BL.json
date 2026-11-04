@@ -1,6 +1,6 @@
 {
  "country": "BL",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Carte de séjour « talent – profession artistique et culturelle »",
  "routeChanged": false,
  "permit": {
@@ -25,8 +25,8 @@
   ],
   "processing": {
    "standard": {
-    "n": 4,
-    "unit": "months"
+    "n": 90,
+    "unit": "days"
    },
    "premium": null
   },
@@ -38,7 +38,8 @@
   "union": null,
   "eligibility": "« si vous êtes artiste-interprète ou auteur d'œuvre littéraire ou artistique »",
   "pay": "Resources of at least 70% of the full-time gross SMIC for each month of stay (1,306.91 € a month), at least 51% of it from the artistic activity.",
-  "exempt": null
+  "exempt": null,
+  "processingNote": "The prefecture must notify its decision on a residence card within 90 days of a complete application, which it may extend by 30 days for a complex case; silence for 90 days is an implicit refusal (CESEDA R. 432-2, as rewritten by Décret 2026-1001 of 26 October 2026). The consulate's long-stay visa decision isn't covered by it, and no time for it was found."
  },
  "sources": [
   {
@@ -78,29 +79,29 @@
    "fields": [
     "exempt"
    ]
+  },
+  {
+   "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+   "title": "CESEDA, consolidated text built from the Légifrance API by codes.droit.org (edition 2026-10-30), art. R. 432-2 as worded by Décret n° 2026-1001 du 26 octobre 2026",
+   "read": "2026-11-04",
+   "said": "La décision de l'autorité administrative sur la demande d'une carte de séjour est notifiée par écrit dans les meilleurs délais, et au plus tard quatre-vingt-dix jours à compter du dépôt d'une demande complète. … Lorsque la demande présente des éléments d'une complexité particulière, ce délai peut être prolongé de trente jours par l'autorité administrative qui en informe l'étranger. … La décision implicite de rejet mentionnée à l'article R.* 432-1 naît au terme d'un délai de quatre-vingt-dix jours à compter du dépôt d'une demande complète.",
+   "kind": "secondary",
+   "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158",
+   "fields": [
+    "processing"
+   ]
   }
  ],
  "blockers": [
-  {
-   "field": "processing",
-   "sought": "A stated time for the prefecture's decision on the card (the 4 months recorded is the statutory implicit-refusal limit, not a stated processing time) and for the consulate's on the visa",
-   "tried": {
-    "institution": "service-public.gouv.fr F16922 and F16162 read 2026-11-01: only the 4-month implicit refusal; france-visas.gouv.fr answers this client with a 503 bot check (\"One moment please\")",
-    "official-register": "Légifrance (CESEDA R. 432-1 and following) answers 403 to this client",
-    "web-search": "'service-public visa long séjour frais 99 € talent' (2026-11-01): no stated processing time",
-    "trade-press": "None in the same results",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)"
-   }
-  },
   {
    "field": "exempt",
    "sought": "Whether France's exemption from work authorisation for performers' engagements of three months or less (Code du travail L. 5221-2-1, D. 5221-2-1) applies in Saint-Barthélemy, where access of foreigners to work is the Collectivité's competence (CGCT LO 6214-3), and the local rule that replaces it",
    "tried": {
     "institution": "comstbarth.fr: no page on foreign workers found by search (2026-11-01)",
-    "official-register": "Légifrance (CGCT LO 6214-3, CESEDA R. 414-6) answers 403 to this client; the copy at thetradehub.eu answers 'Not Found'; doctrine.fr's CESEDA sections are behind a paywall page",
+    "official-register": "Légifrance (CGCT LO 6214-3, CESEDA R. 414-6) answers 403 to this client; the copy at thetradehub.eu answers 'Not Found'; doctrine.fr's CESEDA sections are behind a paywall page || 2026-11-04: CESEDA consolidated from the Légifrance API (codes.droit.org edition 2026-10-30, 12.6 MB PDF) downloaded and read at R.* 432-1, R. 432-2 and the derogations that cite R. 432-2 (R. 421-26, D. 431-19); Légifrance itself answers 403 => found: the prefecture must notify its decision on a residence card within 90 days of a complete application, extendable by 30 days for a complex case; the talent artistic card (L. 421-20) is not among the exceptions; silence for 90 days is an implicit refusal | CESEDA searched for Saint-Barthélemy's adaptations (Livre IV and the L. 932 chapter) => the code applies there with the State's representative in place of the prefect (no adaptation of R. 432-2 found); the Collectivité's own work-authorisation rule and the Code du travail exemption's reach weren't settled",
     "web-search": "'Saint-Barthélemy \"accès au travail des étrangers\" collectivité autorisation de travail', 'Collectivité de Saint-Barthélemy autorisation de travail salarié étranger code du travail de Saint-Barthélemy' (2026-11-01): only search snippets of CESEDA adaptations, not a readable text",
     "trade-press": "None found",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)"
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   },
   {
@@ -108,11 +109,12 @@
    "sought": "The Collectivité de Saint-Barthélemy's own work authorisation (if any) an employer of a non-European performer must obtain",
    "tried": {
     "institution": "comstbarth.fr: no page on foreign workers found by search (2026-11-01)",
-    "official-register": "Légifrance (CGCT LO 6214-3, CESEDA R. 414-6) answers 403 to this client; the copy at thetradehub.eu answers 'Not Found'; doctrine.fr's CESEDA sections are behind a paywall page",
+    "official-register": "Légifrance (CGCT LO 6214-3, CESEDA R. 414-6) answers 403 to this client; the copy at thetradehub.eu answers 'Not Found'; doctrine.fr's CESEDA sections are behind a paywall page || 2026-11-04: CESEDA consolidated from the Légifrance API (codes.droit.org edition 2026-10-30, 12.6 MB PDF) downloaded and read at R.* 432-1, R. 432-2 and the derogations that cite R. 432-2 (R. 421-26, D. 431-19); Légifrance itself answers 403 => found: the prefecture must notify its decision on a residence card within 90 days of a complete application, extendable by 30 days for a complex case; the talent artistic card (L. 421-20) is not among the exceptions; silence for 90 days is an implicit refusal | CESEDA searched for Saint-Barthélemy's adaptations (Livre IV and the L. 932 chapter) => the code applies there with the State's representative in place of the prefect (no adaptation of R. 432-2 found); the Collectivité's own work-authorisation rule and the Code du travail exemption's reach weren't settled",
     "web-search": "'Saint-Barthélemy \"accès au travail des étrangers\" collectivité autorisation de travail', 'Collectivité de Saint-Barthélemy autorisation de travail salarié étranger code du travail de Saint-Barthélemy' (2026-11-01): only search snippets of CESEDA adaptations, not a readable text",
     "trade-press": "None found",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)"
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || 2026-11-04: web.archive.org by curl => no connection (HTTP 000)"
    }
   }
- ]
+ ],
+ "note": "An error found and fixed on 2026-11-04: the card's decision was held at 4 months, the implicit-refusal limit CESEDA set before Décret 2026-1001 of 26 October 2026; R. 432-2 now sets 90 days, extendable by 30 for a complex case."
 }

@@ -1,32 +1,89 @@
 {
  "country": "TV",
- "read": "2026-11-01",
- "route": null,
+ "read": "2026-11-04",
+ "route": "Permit to Enter and Reside (employment), Immigration Regulations (2022 Revised Edition), regs 3-7",
  "routeChanged": false,
  "permit": {
-  "applies": null,
-  "first": null,
-  "fees": null,
+  "applies": "The worker applies to an immigration officer on Form 3, with the employer's sponsorship form (Form 5).",
+  "first": "The employer's sponsorship form (Form 5 of Schedule 2) and the evidence an immigration officer asks that the applicant fits the purpose; for a stay over a year, medical and radiological examinations and police reports.",
+  "fees": [
+   {
+    "what": "Permit to enter and reside for employment, or its extension, lodged outside Tuvalu (principal applicant)",
+    "amount": "600.00",
+    "currency": "AUD"
+   },
+   {
+    "what": "Permit to enter and reside for employment, or its extension, lodged in Tuvalu (principal applicant)",
+    "amount": "1200.00",
+    "currency": "AUD"
+   }
+  ],
   "processing": null,
-  "validity": null,
+  "validity": {
+   "n": 1,
+   "unit": "years",
+   "renewable": true
+  },
   "union": null,
-  "eligibility": null,
+  "eligibility": "Good health and character, the Act's requirements, and a valid outward ticket or a bond for the cost of repatriation (reg 4(3)).",
   "pay": null,
-  "exempt": null
+  "exempt": null,
+  "feesNote": "The Regulations write the fees in dollars; Tuvalu's currency is the Australian dollar, as layer 3 holds for its other fees. Each dependant pays $150 (outside) or $300 (inside).",
+  "validityNote": "Granted for a stay of up to one year (reg 3(2)) and extended on Form 4, no more than three times in any five years unless the Minister certifies it is in the national interest (reg 4(4)-(5)).",
+  "exemptNote": "None: a visitor's permit allows no employment (reg 2(2)(a)); the special endorsement for business or employment, up to 30 days for $100 more (reg 2(3)), is itself a permission asked for and paid."
  },
- "sources": [],
+ "sources": [
+  {
+   "url": "https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/2014/2014-0003/2014-0003_2.pdf",
+   "title": "Tuvalu Legislation (Attorney General's office), Immigration Regulations, Cap. 24.15.1, 2022 Revised Edition, regulations 2 to 7 and Schedule 2 Form 4's fee note",
+   "read": "2026-11-04",
+   "said": "2 (2) Subject to subsection (3), the conditions of a visitor permit shall be: (a) no employment or conduct of business activities permitted; ... (3) The Principal Immigration Officer may issue to any visitor who intends to engage in business or employment in Tuvalu a visitors permit with a special endorsement to engage in business on such terms and conditions as the Principal Immigration Officer feels fit for a maximum stay of 30 days, upon payment of a fee of $100 in addition to any fee imposed under subsection (1). ... (4) Business activities include attending a conference or training session, performing any professional services in Tuvalu ... 3 (1) The Principal Immigration Officer may issue a permit to enter and reside under section 8 of the Act to a person entering Tuvalu for any the following purposes: ... (b) employment in Tuvalu; ... (e) a cultural or religious purpose; ... (2) A permit to enter and reside may be granted for a maximum stay of one year and may be extended in accordance with subsection 4(4). ... 4 (3) A Permit to Enter and Reside shall be granted only to a person who is able to establish to the satisfaction of the Principal Immigration Officer that the person: (a) is of good health and character; (b) meets all requirements under the Act; and (c) possesses a valid outward bound ticket or has paid a bond ... (5) A permit to enter and reside shall not be extended more than three times in any five year period, unless the Minister ... certifies that to do so is in the national interest. 5 (2) An application for a Permit to Enter and Reside to undertake employment must be accompanied by: (a) an employer sponsorship form in accordance with Form 5 of Schedule 2; and (b) any additional information which the Principal Immigration Officer may require. ... 7 ... (b) for employment in Tuvalu: (i) $600 for the principal applicant and $150 for each dependent if lodged outside Tuvalu, and (ii) $1,200 for the principal applicant and $300 for each dependent if lodged in Tuvalu; ... (e) for a cultural or religious purpose - $100 for the principal applicant and $50 for each dependent",
+   "kind": "primary",
+   "fields": [
+    "route",
+    "applies",
+    "first",
+    "fees",
+    "validity",
+    "eligibility",
+    "exempt"
+   ]
+  }
+ ],
  "blockers": [
   {
-   "field": "country",
-   "sought": "What Tuvalu asks of a foreign performer to work there (blocked in SLATE's layer 3, R-1639; the route read in this one's on 2026-11-03, R-9718)",
+   "field": "processing",
+   "sought": "What Tuvalu asks of a foreign performer to work there (blocked in SLATE's layer 3, R-1639; the route read in this one's on 2026-11-03, R-9718) (processing)",
    "tried": {
     "institution": "No Tuvalu immigration site reachable (layer 3). 2026-11-01: gov.tv CONNECT 502. | 2026-11-01 retry: gov.tv as before (CONNECT 502); no Principal Immigration Officer page found by search.",
-    "official-register": "PacLII 403/reset; tuvalu-legislation.tv 403; legislation.gov.tv no answer (layer 3). | 2026-11-01 retry: Immigration Regulations 2014 and the 2008 revised Immigration Regulations, found by search on PacLII: pacliirms.paclii.org and paclii.org answer 403, pacliirms.austlii.edu.au resets (2026-11-01). Search snippets show a $20 processing fee for a permit to enter and reside and an employer sponsorship form, but the text couldn't be read and saved, so nothing is filled.",
+    "official-register": "PacLII 403/reset; tuvalu-legislation.tv 403; legislation.gov.tv no answer (layer 3). | 2026-11-01 retry: Immigration Regulations 2014 and the 2008 revised Immigration Regulations, found by search on PacLII: pacliirms.paclii.org and paclii.org answer 403, pacliirms.austlii.edu.au resets (2026-11-01). Search snippets show a $20 processing fee for a permit to enter and reside and an employer sponsorship form, but the text couldn't be read and saved, so nothing is filled. || 2026-11-04: https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/2014/2014-0003/2014-0003_2.pdf (the address layer 3 read on 2026-11-03), fetched by curl, pdftotext, regulations 1-10 and Schedule 2 read => HTTP 200, 3,150,736 bytes; the route, fees, term and employer sponsorship read (saved l4w/files/p2/TV-regs.pdf)",
+    "web-search": "2026-11-01: web search unavailable (the session's shared WebSearch budget was used up), so no new search was run; layer 3 found commercial guides only. | 2026-11-01 retry: 'Tuvalu work permit foreign worker Immigration Act Cap 64 fee Department of Immigration Funafuti application' (2026-11-01): PacLII regulation pages (refused) and aggregators.",
+    "trade-press": "RNZ Pacific: nothing on Tuvalu (layer 3). | 2026-11-01 retry: wheretoemigrate.io, visaatlas.org, jarniascyril.com: no primary text quoted that could be saved.",
+    "archive": "No archived copy of gov.tv; web.archive.org refuses this environment. | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
+   }
+  },
+  {
+   "field": "union",
+   "sought": "What Tuvalu asks of a foreign performer to work there (blocked in SLATE's layer 3, R-1639; the route read in this one's on 2026-11-03, R-9718) (union)",
+   "tried": {
+    "institution": "No Tuvalu immigration site reachable (layer 3). 2026-11-01: gov.tv CONNECT 502. | 2026-11-01 retry: gov.tv as before (CONNECT 502); no Principal Immigration Officer page found by search.",
+    "official-register": "PacLII 403/reset; tuvalu-legislation.tv 403; legislation.gov.tv no answer (layer 3). | 2026-11-01 retry: Immigration Regulations 2014 and the 2008 revised Immigration Regulations, found by search on PacLII: pacliirms.paclii.org and paclii.org answer 403, pacliirms.austlii.edu.au resets (2026-11-01). Search snippets show a $20 processing fee for a permit to enter and reside and an employer sponsorship form, but the text couldn't be read and saved, so nothing is filled. || 2026-11-04: https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/2014/2014-0003/2014-0003_2.pdf (the address layer 3 read on 2026-11-03), fetched by curl, pdftotext, regulations 1-10 and Schedule 2 read => HTTP 200, 3,150,736 bytes; the route, fees, term and employer sponsorship read (saved l4w/files/p2/TV-regs.pdf)",
+    "web-search": "2026-11-01: web search unavailable (the session's shared WebSearch budget was used up), so no new search was run; layer 3 found commercial guides only. | 2026-11-01 retry: 'Tuvalu work permit foreign worker Immigration Act Cap 64 fee Department of Immigration Funafuti application' (2026-11-01): PacLII regulation pages (refused) and aggregators.",
+    "trade-press": "RNZ Pacific: nothing on Tuvalu (layer 3). | 2026-11-01 retry: wheretoemigrate.io, visaatlas.org, jarniascyril.com: no primary text quoted that could be saved.",
+    "archive": "No archived copy of gov.tv; web.archive.org refuses this environment. | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
+   }
+  },
+  {
+   "field": "pay",
+   "sought": "What Tuvalu asks of a foreign performer to work there (blocked in SLATE's layer 3, R-1639; the route read in this one's on 2026-11-03, R-9718) (pay)",
+   "tried": {
+    "institution": "No Tuvalu immigration site reachable (layer 3). 2026-11-01: gov.tv CONNECT 502. | 2026-11-01 retry: gov.tv as before (CONNECT 502); no Principal Immigration Officer page found by search.",
+    "official-register": "PacLII 403/reset; tuvalu-legislation.tv 403; legislation.gov.tv no answer (layer 3). | 2026-11-01 retry: Immigration Regulations 2014 and the 2008 revised Immigration Regulations, found by search on PacLII: pacliirms.paclii.org and paclii.org answer 403, pacliirms.austlii.edu.au resets (2026-11-01). Search snippets show a $20 processing fee for a permit to enter and reside and an employer sponsorship form, but the text couldn't be read and saved, so nothing is filled. || 2026-11-04: https://tuvalu-legislation.tv/cms/images/LEGISLATION/SUBORDINATE/2014/2014-0003/2014-0003_2.pdf (the address layer 3 read on 2026-11-03), fetched by curl, pdftotext, regulations 1-10 and Schedule 2 read => HTTP 200, 3,150,736 bytes; the route, fees, term and employer sponsorship read (saved l4w/files/p2/TV-regs.pdf)",
     "web-search": "2026-11-01: web search unavailable (the session's shared WebSearch budget was used up), so no new search was run; layer 3 found commercial guides only. | 2026-11-01 retry: 'Tuvalu work permit foreign worker Immigration Act Cap 64 fee Department of Immigration Funafuti application' (2026-11-01): PacLII regulation pages (refused) and aggregators.",
     "trade-press": "RNZ Pacific: nothing on Tuvalu (layer 3). | 2026-11-01 retry: wheretoemigrate.io, visaatlas.org, jarniascyril.com: no primary text quoted that could be saved.",
     "archive": "No archived copy of gov.tv; web.archive.org refuses this environment. | 2026-11-01 retry: web.archive.org: connection reset from this environment (2026-11-01)."
    }
   }
  ],
- "note": "No published rule was reached for this country on 2026-11-01: a blocker for the country, as layer 3's was then (in SLATE, register R-1639). Layer 3 read the route on 2026-11-03 (papers.work.TV, R-9718): the permit to enter and reside for employment under the Immigration Regulations (2022 Revised Edition), applied for with the employer's sponsorship form, granted for up to a year and extended, at $600 lodged outside Tuvalu or $1,200 inside. This file was written on 2026-11-01 and its permit's facts weren't sought again, so they stay blocked and the player is told what isn't known; the route's source, read for layer 3, is the lead for the next search."
+ "note": "No published rule was reached for this country on 2026-11-01: a blocker for the country, as layer 3's was then (in SLATE, register R-1639). Layer 3 read the route on 2026-11-03 (papers.work.TV, R-9718): the permit to enter and reside for employment under the Immigration Regulations (2022 Revised Edition), applied for with the employer's sponsorship form, granted for up to a year and extended, at $600 lodged outside Tuvalu or $1,200 inside. When this file was written on 2026-11-01 its permit's facts weren't sought again, so they stayed blocked until 2026-11-04, the route's source, read for layer 3, being the lead for the next search. Brought in on 2026-11-04 (HANDOFF's next step 3): the route layer 3 read (papers.work.TV, R-9718) in the Immigration Regulations, read again today: the fees, term and sponsorship. A performer might fit the cultural purpose (reg 3(1)(e), $100) instead of employment; the Regulations don't say which a paid engagement takes, so employment is held. The Regulations, read whole, name no decision time, union step or pay rule; the Immigration Act wasn't read, so those stay unknown."
 }

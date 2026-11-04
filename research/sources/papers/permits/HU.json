@@ -1,6 +1,6 @@
 {
  "country": "HU",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Magyar Kártya (előadóművész)",
  "routeChanged": false,
  "permit": {
@@ -33,7 +33,11 @@
   "union": null,
   "eligibility": "« c) előadóművész » (Act XC of 2023, § 36 (5): the Card is open to a third-country national who is a performing artist)",
   "pay": null,
-  "exempt": null
+  "exempt": {
+   "days": 10,
+   "within": "calendar-year",
+   "note": "No permit is needed for artistic activity of no more than ten working days in a calendar year (Decree 445/2013 § 15(1) 16)."
+  }
  },
  "sources": [
   {
@@ -69,6 +73,17 @@
    "fields": [
     "fees"
    ]
+  },
+  {
+   "url": "https://net.jogtar.hu/jogszabaly?docid=A1300445.KOR",
+   "title": "Wolters Kluwer Jogtár, Hatályos Jogszabályok Gyűjteménye: 445/2013. (XI. 28.) Korm. rendelet (on the employment of third-country nationals, including those employable without a permit), Hatály: 2025.VII.1. - ; § 9 (1) and § 15 (1) (saved l4w/files/p1c/HU-445-2026-11-04.html)",
+   "read": "2026-11-04",
+   "said": "3. Munkavállalási engedély munkaerőpiaci helyzet vizsgálata nélkül 9. § (1) A munkavállalási engedélyt a 3. § (2)–(7) bekezdésében, valamint az 5. § (1) bekezdés a) és e) pontjában meghatározott szempontok vizsgálata nélkül kell kiadni: … 13. a mozgóképszakmai hatóság által, a mozgóképről szóló törvény alapján nyilvántartásba vett filmgyártó vállalkozás által alkalmazni kívánt harmadik országbeli állampolgár munkavégzéséhez, … 18. * olyan harmadik országbeli állampolgár előadóművész foglalkoztatásához, aki Magyar Kártyát kaphat. … 5. A harmadik országbeli állampolgár magyarországi foglalkoztatását érintő engedélyezési kötelezettség alóli mentesség szabályai 15. § (1) A harmadik országbeli állampolgár Magyarország területén foglalkoztatásra irányuló jogviszony keretében történő foglalkoztatásához nincs szükség engedélyre: … 16. a naptári évenként tíz munkanapnál nem hosszabb ideig tartó, oktatási, tudományos vagy művészeti tevékenységhez,",
+   "kind": "secondary",
+   "quotes": "https://njt.hu/jogszabaly/2013-445-20-22",
+   "fields": [
+    "exempt"
+   ]
   }
  ],
  "blockers": [
@@ -77,22 +92,12 @@
    "sought": "Any minimum pay a performing artist's Hungarian Card asks",
    "tried": {
     "institution": "oif.gov.hu: no Magyar Kártya page found by search (2026-11-01)",
-    "official-register": "Act XC of 2023 § 36 and Decree 35/2024 § 23 read in full on net.jogtar.hu: no pay threshold for the Card (one is set only for the EU Blue Card, § 24)",
+    "official-register": "Act XC of 2023 § 36 and Decree 35/2024 § 23 read in full on net.jogtar.hu: no pay threshold for the Card (one is set only for the EU Blue Card, § 24) || 2026-11-04: Government Decree 445/2013 (XI. 28.) on the employment of third-country nationals, in force from 2025.VII.1, fetched whole from net.jogtar.hu and searched for művész, előadó, film; the 2026-11-01 attempts had read only Act XC of 2023 and Decree 35/2024 => found for exempt: § 15 (1) 16 needs no permit for educational, scientific or artistic activity of no more than ten working days in a calendar year. Also § 9 (1) 13 and 18: a work permit is issued without the labour-market test for a worker a registered film production company wants to employ, and for a performing artist eligible for the Hungarian Card | Act XC of 2023 (net.jogtar.hu, A2300090.tv) re-read for a pay rule and a work-without-permit clause => no pay floor for the Hungarian Card (unchanged); § 36 (5) d) now also opens the Card to a third-country national working for a film producer registered under the Motion Picture Act",
     "web-search": "'oif.gov.hu Magyar Kártya kérelem díja ügyintézési határidő előadóművész' (2026-11-01)",
     "trade-press": "None found",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01)"
    }
-  },
-  {
-   "field": "exempt",
-   "sought": "Days a performer may work in Hungary without the Card",
-   "tried": {
-    "institution": "oif.gov.hu: none found",
-    "official-register": "Act XC of 2023 and Decree 35/2024 read: no performers' exemption",
-    "web-search": "Same search (2026-11-01)",
-    "trade-press": "None",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01)"
-   }
   }
- ]
+ ],
+ "note": "Read 2026-11-04 in Jogtár's consolidation of Decree 445/2013 (a secondary naming the state's Nemzeti Jogszabálytár, not fetched)."
 }

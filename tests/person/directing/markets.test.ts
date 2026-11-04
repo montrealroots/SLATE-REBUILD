@@ -131,7 +131,10 @@ const EXPECTED: Record<string, string[]> = {
     'hour day shoot {"budget":[2700001,null]} 16-   2025-07-01 2500',
   ],
   'idcc-3097': ['feature week prep+shoot+cut {"days":[0,104]}    2024-03-01 3015.27', 'feature month prep+shoot+cut {"days":[105,null]}    2024-03-01 8563.37'],
-  'nl-fair-pay': ['feature', 'hour', 'half-hour'].map((x) => `${x} hour prep+shoot+cut {}    2025-01-01 50.24`),
+  // The television directors' accord of 15 September 2023 (IDCC 2642, annex A): by the day under five days, the week from five, the month from thirteen weeks.
+  'idcc-2642': ['hour', 'half-hour'].flatMap((x) => [`${x} day prep+shoot+cut {"days":[0,4]}    2023-11-01 300.07`, `${x} week prep+shoot+cut {"days":[5,64]}    2023-11-01 1500.96`, `${x} month prep+shoot+cut {"days":[65,null]}    2023-11-01 5250.04`]),
+  // The fair-pay tables of November 2025: the 2023 benchmark indexed for 2024 and 2025, applied from 1 January 2025, and 2026's.
+  'nl-fair-pay': ['feature', 'hour', 'half-hour'].map((x) => `${x} hour prep+shoot+cut {}    2025-01-01 54.17 | 2026-01-01 57.8`),
   'virke-feature': [
     ['[0,2]', '4789 | 2025-06-01 5000', '3534 | 2025-06-01 3689'],
     ['[3,5]', '5404 | 2025-06-01 5642', '3589 | 2025-06-01 3747'],
@@ -182,7 +185,7 @@ const BY_HAND: Record<string, Record<string, 'fees' | 'none' | 'unknown'>> = {
   AD: { 'ad-artist': 'fees' }, AR: { 'ar-dac': 'fees' }, AS: { 'as-screen': 'fees' }, AT: { 'at-screen': 'none' }, AZ: { 'az-state-order': 'fees', 'az-screen': 'none' }, BA: { 'ba-screen': 'none' }, BE: { 'be-303-flat': 'fees', 'be-303': 'fees' }, CH: { 'ch-screen': 'none' }, CU: { 'cu-icaic': 'fees' }, GR: { 'gr-ert': 'unknown', 'gr-screen': 'unknown' }, HK: { 'hk-screen': 'none' }, LV: { 'lv-screen': 'none' }, ME: { 'me-screen': 'none' }, PA: { 'pa-screen': 'none' }, PH: { 'ph-screen': 'fees' }, SK: { 'sk-screen': 'none' },
 };
 /** The territories whose research says a director's work there follows its sovereign's terms: the sovereign's agreements, as the territory's own. */
-const FOLLOWS: Record<string, string> = { AX: 'FI', BL: 'FR', CC: 'AU', CX: 'AU', GF: 'FR', GP: 'FR', MC: 'FR', MF: 'FR', NF: 'AU', PM: 'FR', RE: 'FR', YT: 'FR' };
+const FOLLOWS: Record<string, string> = { AX: 'FI', BL: 'FR', CC: 'AU', CX: 'AU', GF: 'FR', GP: 'FR', MC: 'FR', MF: 'FR', MQ: 'FR', NF: 'AU', PM: 'FR', RE: 'FR', YT: 'FR' };
 /** Monaco's wage law: at least what the same profession is owed in Nice, raised by 5% (Loi n° 739; Arrêté ministériel n° 63-131). */
 const UPLIFT: Record<string, string> = { MC: '0.05' };
 const kind = (a: MarketAgreement) => (a.fees.length > 0 ? 'fees' : a.none ? 'none' : 'unknown');
@@ -202,10 +205,10 @@ describe("the director's markets", () => {
     // Where the research says no agreement sets a director's pay, it is left to negotiation; where it couldn't find the terms, they're unknown.
     const bare = Object.entries(AGREEMENTS).filter(([id, a]) => a.fees.length === 0 && oldIds.has(id));
     expect(bare.filter(([, a]) => a.none).map(([id]) => id)).toEqual(['dk-feature', 'es-screen', 'gb-feature', 'ie-screen', 'it-screen', 'nl-none', 'nz-screen', 'za-screen']);
-    expect(bare.filter(([, a]) => !a.none).map(([id]) => id)).toEqual(['br-rj', 'cmpa-dgc', 'dgc-bc', 'dr', 'idcc-2642', 'pact-duk', 'in-screen', 'dgj-eiren', 'kr-screen', 'mx-screen', 'ng-screen']);
+    expect(bare.filter(([, a]) => !a.none).map(([id]) => id)).toEqual(['br-rj', 'cmpa-dgc', 'dgc-bc', 'dr', 'pact-duk', 'in-screen', 'dgj-eiren', 'kr-screen', 'mx-screen', 'ng-screen']);
     for (const [id, a] of OWN().filter(([, x]) => x.fees.length === 0)) expect([a.currency, a.month, a.short, a.periods], id).toEqual([null, null, null, []]);
     expect(OWN().map(([id, a]) => [id, a.country, a.currency ?? '-', a.forms.join('/')].join(' ')).filter((x) => !x.includes(' - '))).toEqual([
-      'ad-artist AD EUR feature/hour/half-hour', 'ar-dac AR ARS feature/hour/half-hour', 'as-screen AS USD feature/hour/half-hour', 'au-award AU AUD feature/hour/half-hour', 'az-state-order AZ AZN feature/hour/half-hour', 'be-303-flat BE EUR feature', 'be-303 BE EUR feature/hour/half-hour', 'br-sp BR BRL feature/hour/half-hour', 'dgc-qc CA CAD feature/hour/half-hour', 'arrq CA CAD hour/half-hour', 'nfb CA CAD feature', 'cu-icaic CU CUP feature/hour/half-hour', 'bvr-cinema DE EUR feature', 'netflix-de DE EUR hour', 'idcc-3097 FR EUR feature', 'nl-fair-pay NL EUR feature/hour/half-hour', 'virke-feature NO NOK feature', 'virke-tv NO NOK hour/half-hour', 'ph-screen PH PHP feature/hour/half-hour', 'medieforetagen SE SEK feature/hour/half-hour', 'svt SE SEK hour/half-hour',
+      'ad-artist AD EUR feature/hour/half-hour', 'ar-dac AR ARS feature/hour/half-hour', 'as-screen AS USD feature/hour/half-hour', 'au-award AU AUD feature/hour/half-hour', 'az-state-order AZ AZN feature/hour/half-hour', 'be-303-flat BE EUR feature', 'be-303 BE EUR feature/hour/half-hour', 'br-sp BR BRL feature/hour/half-hour', 'dgc-qc CA CAD feature/hour/half-hour', 'arrq CA CAD hour/half-hour', 'nfb CA CAD feature', 'cu-icaic CU CUP feature/hour/half-hour', 'bvr-cinema DE EUR feature', 'netflix-de DE EUR hour', 'idcc-3097 FR EUR feature', 'idcc-2642 FR EUR hour/half-hour', 'nl-fair-pay NL EUR feature/hour/half-hour', 'virke-feature NO NOK feature', 'virke-tv NO NOK hour/half-hour', 'ph-screen PH PHP feature/hour/half-hour', 'medieforetagen SE SEK feature/hour/half-hour', 'svt SE SEK hour/half-hour',
     ]);
     expect(OWN().filter(([, a]) => a.month !== null || a.short !== null).map(([id, a]) => [id, a.month, a.short])).toEqual([['virke-tv', 21.67, { upTo: 5, share: '0.1' }], ['medieforetagen', 21, null]]);
     // The DGC Quebec/AQPM agreement's guaranteed prep and shoot (its weeks, five days each) and Director's Cut.
@@ -242,7 +245,7 @@ describe("the director's markets", () => {
       for (const id of market.agreements) expect((AGREEMENTS[id] as MarketAgreement).forms, id).toEqual(id === 'be-303-flat' || id === 'ch-screen' ? ['feature'] : id === 'gr-ert' ? ['hour', 'half-hour'] : id === 'gr-screen' ? ['feature'] : ALL);
     }
     expect(old(Object.fromEntries(Object.entries(MARKETS).map(([cc, x]) => [cc, x.unknown])))).toEqual({
-      AU: [], BR: ['periods', 'agreement'], CA: ['fees', 'union'], DE: ['periods'], DK: ['fees', 'agreement'], ES: ['periods', 'fees'], FR: ['fees', 'periods'], GB: ['fees', 'periods', 'union'], IE: ['periods'], IN: ['fees', 'periods'], IT: ['fees', 'periods'], JP: ['fees', 'periods', 'language'], KR: ['fees', 'periods'], MX: ['union', 'fees', 'periods'], NG: ['none', 'union'], NL: ['fees', 'periods'], NO: ['fees'], NZ: ['periods'], SE: ['fees'], ZA: ['union'],
+      AU: [], BR: ['periods', 'agreement'], CA: ['fees', 'union'], DE: ['periods'], DK: ['fees', 'agreement'], ES: ['periods', 'fees'], FR: ['periods'], GB: ['fees', 'periods', 'union'], IE: ['periods'], IN: ['fees', 'periods'], IT: ['fees', 'periods'], JP: ['fees', 'periods', 'language'], KR: ['fees', 'periods'], MX: ['union', 'fees', 'periods'], NG: ['none', 'union'], NL: ['periods'], NO: ['fees'], NZ: ['periods'], SE: ['fees'], ZA: ['union'],
     });
   });
 });
@@ -294,9 +297,14 @@ describe('a film in a market', () => {
     // France's film production agreement: by the week under five months, by the month from five (21 days each).
     expect(fee({ form: 'feature', country: 'FR', prep: 34, shoot: 40, cut: 30 })).toEqual(m('EUR', '62717.62'));
     expect(fee({ form: 'feature', country: 'FR', prep: 35, shoot: 40, cut: 30 })).toEqual(m('EUR', '42816.85'));
-    // The Dutch fair-pay start rate, level J, by the hour of an eight-hour day.
+    // France's television directors' accord: by the day under five days, by the week from five, by the month (21 days) from 65, at every edge.
+    const tv = (prep: number, shoot: number, cut: number) => fee({ form: 'hour', country: 'FR', prep, shoot, cut });
+    expect([tv(1, 2, 1), tv(1, 3, 1), tv(20, 30, 14), tv(20, 30, 15)]).toEqual(['1200.28', '1500.96', '19212.29', '16250.12'].map((x) => m('EUR', x)));
+    expect(fee({ form: 'half-hour', country: 'FR', prep: 1, shoot: 2, cut: 1 })).toEqual(m('EUR', '1200.28'));
+    // The Dutch fair-pay start rate, level J, by the hour of an eight-hour day: 2025's indexed rate, then 2026's.
     expect(HOURS).toBe(8);
-    expect(fee({ form: 'feature', country: 'NL', agreement: 'nl-fair-pay', prep: 3, shoot: 5, cut: 2 })).toEqual(m('EUR', '4019.20'));
+    expect(fee({ form: 'feature', country: 'NL', agreement: 'nl-fair-pay', prep: 3, shoot: 5, cut: 2 }, day(2025, 12, 31))).toEqual(m('EUR', '4333.60'));
+    expect(fee({ form: 'feature', country: 'NL', agreement: 'nl-fair-pay', prep: 3, shoot: 5, cut: 2 })).toEqual(m('EUR', '4624.00'));
     // Virke's feature agreement: a shooting day and a day of prep or post, by the director's years, at the rate in force.
     const feature = (now: number, directing?: DirectingSlice) => fee({ form: 'feature', country: 'NO', prep: 10, shoot: 20, cut: 10 }, now, directing);
     expect(feature(NOW)).toEqual(m('NOK', '173780'));
@@ -344,12 +352,12 @@ describe('a film in a market', () => {
     expect([dac(1), dac(20), dac(21), dac(60), dac(61), dac(90), dac(30, 'half-hour')]).toEqual(['10530000', '10530000', '16380000', '16380000', '27300000', '27300000', '16380000'].map((x) => m('ARS', x)));
     expect(dac(91)).toBeNull();
     expect(fee({ form: 'feature', country: 'AR', minutes: 100, shoot: 22 })).toBeNull();
-    // A territory following its sovereign is paid the sovereign's minimum (France's film agreement in Guadeloupe and La Réunion, Australia's award on Christmas Island).
-    for (const cc of ['GP', 'RE']) expect(fee({ form: 'feature', country: cc, agreement: `${cc.toLowerCase()}-idcc-3097`, prep: 34, shoot: 40, cut: 30 }), cc).toEqual(m('EUR', '62717.62'));
+    // A territory following its sovereign is paid the sovereign's minimum (France's film agreement in Guadeloupe, La Réunion and Martinique, Australia's award on Christmas Island).
+    for (const cc of ['GP', 'RE', 'MQ']) expect(fee({ form: 'feature', country: cc, agreement: `${cc.toLowerCase()}-idcc-3097`, prep: 34, shoot: 40, cut: 30 }), cc).toEqual(m('EUR', '62717.62'));
     expect(fee({ form: 'hour', country: 'CX', prep: 5, shoot: 8, cut: 4 })).toEqual(m('AUD', '5265.92'));
     // Monaco: France's film agreement (Nice's), raised by 5%.
     expect(fee({ form: 'feature', country: 'MC', agreement: 'mc-idcc-3097', prep: 34, shoot: 40, cut: 30 })).toEqual(m('EUR', '65853.50'));
-    expect(fee({ form: 'hour', country: 'MC', agreement: 'mc-idcc-2642', prep: 5, shoot: 8, cut: 4 })).toBeNull();
+    expect(fee({ form: 'hour', country: 'MC', agreement: 'mc-idcc-2642', prep: 5, shoot: 8, cut: 4 })).toEqual(m('EUR', '5358.42'));
     expect(fee({ form: 'feature', country: 'AX', ...forty })).toBeNull();
     // The world's markets whose research says nothing sets the pay, or can't find what does.
     for (const cc of ['FI', 'HU', 'AT', 'HK', 'AE', 'PL', 'RU', 'HR', 'TZ']) expect(fee({ form: 'feature', country: cc, ...forty }), cc).toBeNull();
@@ -477,7 +485,7 @@ describe('a film in a market', () => {
     expect(aboutMarket('CD')).toBe(t(UNKEPT_LINE, { country: countryName('CD'), missing: 'some of the minimum fees and whether anything sets the pay where no agreement does' }));
     // Known whole, its own or its sovereign's: nothing to tell; a territory following France is told what isn't known of France's.
     for (const cc of ['AD', 'FI', 'AX', 'CC']) expect(aboutMarket(cc), cc).toBeUndefined();
-    expect(aboutMarket('GP')).toBe(t(UNKEPT_LINE, { country: countryName('GP'), missing: 'some of the minimum fees and the prep, shoot and cut a director is guaranteed' }));
+    expect(aboutMarket('GP')).toBe(t(UNKEPT_LINE, { country: countryName('GP'), missing: 'the prep, shoot and cut a director is guaranteed' }));
     expect(aboutMarket('HR')).toBe(t(UNKEPT_LINE, { country: countryName('HR'), missing: 'some of the minimum fees' }));
     expect(aboutMarket('GB')).toBe(t(UNKEPT_LINE, { country: 'United Kingdom', missing: "some of the minimum fees, the prep, shoot and cut a director is guaranteed and the guild's fees or how a director joins" }));
     expect(aboutMarket('NO')).toBe("Some of what a director is paid or given in Norway isn't known to this game yet: some of the minimum fees.");

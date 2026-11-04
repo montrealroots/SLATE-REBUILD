@@ -489,15 +489,31 @@
   "zone": "America/La_Paz"
  },
  "BQ": {
-  "currency": "USD",
+  "currency": "EUR",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [
+   {
+    "budget": [
+     1000000,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.35
+     }
+    ],
+    "base": 0.8,
+    "net": false,
+    "most": 3000000,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
-  "unknown": [
-   "incentive"
-  ],
+  "unknown": [],
   "zone": "America/Kralendijk"
  },
  "BR": {
@@ -1197,7 +1213,7 @@
      {
       "from": 0,
       "to": null,
-      "rate": 0.3
+      "rate": 0.4
      }
     ],
     "base": 1,
@@ -1209,7 +1225,6 @@
   "fees": [],
   "release": null,
   "unknown": [
-   "incentive",
    "fund"
   ],
   "zone": "Europe/Tallinn"
@@ -2019,7 +2034,7 @@
  "IE": {
   "currency": "EUR",
   "fund": {
-   "rate": 0.7307692307692307,
+   "rate": 0.52,
    "tiers": [
     {
      "budget": [
@@ -2134,9 +2149,7 @@
    ]
   ],
   "release": null,
-  "unknown": [
-   "fund"
-  ],
+  "unknown": [],
   "zone": "Europe/Dublin"
  },
  "IL": {
@@ -2683,11 +2696,28 @@
   "currency": "KYD",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [
+   {
+    "budget": [
+     250000,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.15
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": null,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
   "unknown": [
-   "incentive",
    "none"
   ],
   "zone": "America/Cayman"
@@ -2847,14 +2877,63 @@
  },
  "LV": {
   "currency": "EUR",
-  "fund": null,
-  "aid": [],
-  "credit": null,
+  "fund": {
+   "rate": 0.3902439024390244,
+   "tiers": [
+    {
+     "budget": [
+      0,
+      null
+     ],
+     "bands": [],
+     "base": 1,
+     "net": false,
+     "most": null,
+     "sum": null
+    }
+   ]
+  },
+  "aid": [
+   {
+    "budget": [
+     0,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.5
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": null,
+    "sum": null
+   }
+  ],
+  "credit": [
+   {
+    "budget": [
+     711436,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.3
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": null,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
-  "unknown": [
-   "fund"
-  ],
+  "unknown": [],
   "zone": "Europe/Riga"
  },
  "LY": {
@@ -2960,7 +3039,7 @@
      {
       "from": 0,
       "to": null,
-      "rate": 0.25
+      "rate": 0.35
      }
     ],
     "base": 1,
@@ -2972,7 +3051,6 @@
   "fees": [],
   "release": null,
   "unknown": [
-   "incentive",
    "fund"
   ],
   "zone": "Europe/Podgorica"
@@ -3346,12 +3424,28 @@
   "currency": "AUD",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [
+   {
+    "budget": [
+     500000,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.4
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": null,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
-  "unknown": [
-   "incentive"
-  ],
+  "unknown": [],
   "zone": "Pacific/Norfolk"
  },
  "NG": {
@@ -3718,7 +3812,25 @@
   "currency": "XPF",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [
+   {
+    "budget": [
+     100000000,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.15
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": 100000000,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
   "unknown": [
@@ -4220,12 +4332,10 @@
   "currency": "NOK",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [],
   "fees": [],
   "release": null,
-  "unknown": [
-   "incentive"
-  ],
+  "unknown": [],
   "zone": "Arctic/Longyearbyen"
  },
  "SK": {
@@ -4253,9 +4363,7 @@
   ],
   "fees": [],
   "release": null,
-  "unknown": [
-   "incentive"
-  ],
+  "unknown": [],
   "zone": "Europe/Bratislava"
  },
  "SL": {
@@ -4663,12 +4771,28 @@
   "currency": "TWD",
   "fund": null,
   "aid": [],
-  "credit": null,
+  "credit": [
+   {
+    "budget": [
+     30000000,
+     null
+    ],
+    "bands": [
+     {
+      "from": 0,
+      "to": null,
+      "rate": 0.3
+     }
+    ],
+    "base": 1,
+    "net": false,
+    "most": 30000000,
+    "sum": null
+   }
+  ],
   "fees": [],
   "release": null,
-  "unknown": [
-   "incentive"
-  ],
+  "unknown": [],
   "zone": "Asia/Taipei"
  },
  "TZ": {

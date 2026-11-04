@@ -1,11 +1,11 @@
 {
  "country": "NC",
- "read": "2026-11-01",
+ "read": "2026-11-04",
  "route": "Autorisation de travail (Direction du Travail et de l’Emploi)",
  "routeChanged": false,
  "permit": {
-  "applies": "The foreign national, at a French embassy or consulate before entering New Caledonia (the DTE's 2018 guide); the 2023 online form is filled by the employer, a company or association in New Caledonia, or its mandated representative.",
-  "first": "A contract of employment with an employer in New Caledonia, and the job first offered through the province's public placement service to check that no local worker can fill it.",
+  "applies": "The foreigner, the employer established in New Caledonia, the user firm, or a mandated representative files on the New Caledonian government's online service (demarches.gouv.nc).",
+  "first": "A job offer filed with the employment service less than three months before, the contract or mission letter, health and repatriation insurance and proof of housing.",
   "fees": [],
   "processing": null,
   "validity": {
@@ -15,9 +15,10 @@
    "note": "Granted on the work contract: read as the engagement's own term."
   },
   "union": null,
-  "eligibility": null,
+  "eligibility": "The government weighs the present and future employment situation in the profession, the employer's compliance with labour law, pay and conditions identical to French workers', and housing (Labour Code of New Caledonia art. R. 452-4).",
   "pay": "Conditions of employment and pay identical to those French workers enjoy.",
-  "exempt": null
+  "exempt": null,
+  "exemptNote": "None: every foreigner, EU citizens included, needs an authorisation; a short authorisation for an urgent, temporary, one-off or specific mission covers at most 90 days a calendar year, extensions included."
  },
  "sources": [
   {
@@ -54,6 +55,19 @@
    "fields": [
     "applies"
    ]
+  },
+  {
+   "url": "https://dtenc.gouv.nc/vos-droits-et-obligations-embauche-emploi/main-doeuvre-etrangere",
+   "title": "Direction du travail, de l’emploi et de la formation professionnelle de Nouvelle-Calédonie (DTEFP), 'Main-d’œuvre étrangère' (page)",
+   "read": "2026-11-04",
+   "said": "Pour exercer une activité salariée en Nouvelle-Calédonie, tout étranger, y compris le ressortissant européen, doit au préalable obtenir une autorisation de travail délivrée par le gouvernement de la Nouvelle-Calédonie. ... La demande d'autorisation de travail peut être effectuée soit par le ressortissant étranger, soit par l’employeur domicilié en Nouvelle-Calédonie, soit par l’entreprise utilisatrice établie en Nouvelle-Calédonie, soit par un représentant mandaté. Cette demande est effectuée via le téléservice du gouvernement de la Nouvelle-Calédonie : https://demarches.gouv.nc/autorisation_travail_etranger ... le justificatif de dépôt de l’offre d’emploi proposé daté de moins de 3 mois ; ... ► Pour une autorisation de travail d’une durée inférieure ou égale à 90 jours, en cas de 1ère demande ou de prolongation d’une autorisation de travail, joindre : l'itinéraire du billet d'avion aller/retour ... le gouvernement de la Nouvelle-Calédonie prend notamment en considération les éléments d'appréciation suivants prévus à l’article R. 452-4 du code du travail de Nouvelle-Calédonie. la situation de l’emploi présente et à venir dans la profession demandée par le travailleur étranger ; les conditions d’application par l’employeur de la législation relative au travail ; les conditions d’emploi et de rémunération offertes au travailleur étranger, lesquelles doivent être identiques à celles dont bénéficient les travailleurs français ; ... Le renouvellement de l’autorisation de travail doit être demandé au cours du troisième mois et au plus tard au cours du deuxième mois précédant la date d’expiration ... Cas particulier A titre dérogatoire et dans le cadre d’une mission à caractère urgent, temporaire, exceptionnel ou spécifique (exemples : visite unique qui fait suite à une situation d'urgence, un travail ponctuel, une panne, une expertise…). Cette autorisation peut être prolongée dans les mêmes conditions que l’autorisation de travail qui a été accordée précédemment. La durée maximale de 90 jours par année civile comprend l’autorisation initiale et les prolongations. La prolongation s’entend sans interruption. Ce type d’autorisation de travail ne peut pas se cumuler avec une autorisation de travail pour une mission de plus de 90 jours.",
+   "kind": "primary",
+   "fields": [
+    "applies",
+    "first",
+    "eligibility",
+    "exempt"
+   ]
   }
  ],
  "blockers": [
@@ -61,7 +75,7 @@
    "field": "fees",
    "sought": "Any government fee for the work authorisation",
    "tried": {
-    "institution": "Neither DTE document names a fee. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step.",
+    "institution": "Neither DTE document names a fee. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step. || 2026-11-04: curl the DTEFP's 'Main-d’œuvre étrangère' page and its linked 'Procédure de traitement des AT' (Aug 2023) and 'fiche thématique' (Oct 2023) PDFs; read whole (the procedure chart's text layer read with pdftotext) => found: who may apply (the foreigner, the employer in New Caledonia, the user firm, or a mandated representative) on the government's online service; the job offer filed under three months before; the R. 452-4 criteria (employment situation, employer's compliance, pay and conditions identical to French workers', housing); the short authorisation for an urgent, temporary, one-off or specific mission of at most 90 days a calendar year including extensions, which cannot be combined with an over-90-day authorisation; renewal filed in the third or second month before expiry. No fee, no decision time, no union step and no permit-free engagement (every foreigner, Europeans included, needs the authorisation).",
     "official-register": "The Code du travail de Nouvelle-Calédonie (Lp. 451 ff.) not reached on Légifrance or juridoc.gouv.nc in this pass. || Retry 2026-11-01: juridoc.gouv.nc (administrative court rulings citing Code du travail art. Lp. 452-1) surfaced; the Code's foreign-labour chapter not read.",
     "web-search": "'Nouvelle-Calédonie autorisation de travail étranger artistes du spectacle dispense durée code du travail Lp. 451': DTE documents and metropolitan rules only. || Retry 2026-11-01: WebSearch 'Nouvelle-Calédonie \"autorisation de travail\" étranger délai instruction \"Lp. 451\" artistes du spectacle dispense courte durée DTE': DTE documents and metropolitan rules only.",
     "trade-press": "Artcena covers mainland France, not New Caledonia. || Retry 2026-11-01: ARTCENA and the Ministry of Culture's visa guide cover mainland France only.",
@@ -72,7 +86,7 @@
    "field": "processing",
    "sought": "How long a decision takes",
    "tried": {
-    "institution": "Not stated in the DTE documents. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step.",
+    "institution": "Not stated in the DTE documents. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step. || 2026-11-04: curl the DTEFP's 'Main-d’œuvre étrangère' page and its linked 'Procédure de traitement des AT' (Aug 2023) and 'fiche thématique' (Oct 2023) PDFs; read whole (the procedure chart's text layer read with pdftotext) => found: who may apply (the foreigner, the employer in New Caledonia, the user firm, or a mandated representative) on the government's online service; the job offer filed under three months before; the R. 452-4 criteria (employment situation, employer's compliance, pay and conditions identical to French workers', housing); the short authorisation for an urgent, temporary, one-off or specific mission of at most 90 days a calendar year including extensions, which cannot be combined with an over-90-day authorisation; renewal filed in the third or second month before expiry. No fee, no decision time, no union step and no permit-free engagement (every foreigner, Europeans included, needs the authorisation).",
     "official-register": "Not reached. || Retry 2026-11-01: juridoc.gouv.nc (administrative court rulings citing Code du travail art. Lp. 452-1) surfaced; the Code's foreign-labour chapter not read.",
     "web-search": "Same search. || Retry 2026-11-01: WebSearch 'Nouvelle-Calédonie \"autorisation de travail\" étranger délai instruction \"Lp. 451\" artistes du spectacle dispense courte durée DTE': DTE documents and metropolitan rules only.",
     "trade-press": "None found. || Retry 2026-11-01: ARTCENA and the Ministry of Culture's visa guide cover mainland France only.",
@@ -83,35 +97,13 @@
    "field": "union",
    "sought": "Any union consultation",
    "tried": {
-    "institution": "None named. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step.",
+    "institution": "None named. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step. || 2026-11-04: curl the DTEFP's 'Main-d’œuvre étrangère' page and its linked 'Procédure de traitement des AT' (Aug 2023) and 'fiche thématique' (Oct 2023) PDFs; read whole (the procedure chart's text layer read with pdftotext) => found: who may apply (the foreigner, the employer in New Caledonia, the user firm, or a mandated representative) on the government's online service; the job offer filed under three months before; the R. 452-4 criteria (employment situation, employer's compliance, pay and conditions identical to French workers', housing); the short authorisation for an urgent, temporary, one-off or specific mission of at most 90 days a calendar year including extensions, which cannot be combined with an over-90-day authorisation; renewal filed in the third or second month before expiry. No fee, no decision time, no union step and no permit-free engagement (every foreigner, Europeans included, needs the authorisation).",
     "official-register": "Not reached. || Retry 2026-11-01: juridoc.gouv.nc (administrative court rulings citing Code du travail art. Lp. 452-1) surfaced; the Code's foreign-labour chapter not read.",
-    "web-search": "Same search. || Retry 2026-11-01: WebSearch 'Nouvelle-Calédonie \"autorisation de travail\" étranger délai instruction \"Lp. 451\" artistes du spectacle dispense courte durée DTE': DTE documents and metropolitan rules only.",
-    "trade-press": "None found. || Retry 2026-11-01: ARTCENA and the Ministry of Culture's visa guide cover mainland France only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "eligibility",
-   "sought": "The performer's criteria",
-   "tried": {
-    "institution": "The guide's tests are the employment situation in the profession, the employer's compliance, equal pay and housing; nothing for performers. || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step.",
-    "official-register": "Not reached. || Retry 2026-11-01: juridoc.gouv.nc (administrative court rulings citing Code du travail art. Lp. 452-1) surfaced; the Code's foreign-labour chapter not read.",
-    "web-search": "Same search. || Retry 2026-11-01: WebSearch 'Nouvelle-Calédonie \"autorisation de travail\" étranger délai instruction \"Lp. 451\" artistes du spectacle dispense courte durée DTE': DTE documents and metropolitan rules only.",
-    "trade-press": "None found. || Retry 2026-11-01: ARTCENA and the Ministry of Culture's visa guide cover mainland France only.",
-    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
-   }
-  },
-  {
-   "field": "exempt",
-   "sought": "What an engagement of three months or less needs",
-   "tried": {
-    "institution": "The 2023 notice says the authorisation is asked once the mission or contract exceeds three months, without saying what shorter work needs (another procedure or none). || Retry 2026-11-01: The DTE's 2023 form for authorisations under 90 days read: work under 90 days also needs the government's authorisation (so no short engagement is free of it), filed on demarches.gouv.nc; no fee, decision time or union step.",
-    "official-register": "The Code du travail de Nouvelle-Calédonie not reached. || Retry 2026-11-01: juridoc.gouv.nc (administrative court rulings citing Code du travail art. Lp. 452-1) surfaced; the Code's foreign-labour chapter not read.",
     "web-search": "Same search. || Retry 2026-11-01: WebSearch 'Nouvelle-Calédonie \"autorisation de travail\" étranger délai instruction \"Lp. 451\" artistes du spectacle dispense courte durée DTE': DTE documents and metropolitan rules only.",
     "trade-press": "None found. || Retry 2026-11-01: ARTCENA and the Ministry of Culture's visa guide cover mainland France only.",
     "archive": "web.archive.org resets the connection from this environment (2026-11-01). || Retry 2026-11-01: archive.org's availability API (archive.org/wayback/available) answers this client, but every web.archive.org snapshot URL resets the connection (curl: (35) Recv failure: Connection reset by peer, retried 2026-11-01)."
    }
   }
  ],
- "note": "The DTE's 2023 online-application notice says this authorisation is asked as soon as the mission or contract exceeds three months; what an engagement of three months or less needs isn't stated in what was read, so no days are modelled."
+ "note": "The DTE's 2023 online-application notice says this authorisation is asked as soon as the mission or contract exceeds three months; what an engagement of three months or less needs isn't stated in what was read, so no days are modelled. Read 2026-11-04 on the DTEFP's own page: the 2026-11-01 note's open question, what an engagement of three months or less needs, is answered: the authorisation for 90 days or less, not an exemption."
 }

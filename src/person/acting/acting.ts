@@ -66,13 +66,13 @@ export const MODEL_LINE: LineId = 'acting.model';
 /** The agreements the markets engage parts under, as markets.json compiles them (a test holds the two lists one). */
 export const MARKET_AGREEMENTS = [
   'ad-artists', 'ai-all', 'ar-film', 'ar-tv', 'ar-stage', 'at-screen', 'au-screen', 'au-stage', 'be-screen', 'bg-foreign-film', 'bn-screen', 'br-rj-tv', 'br-sp-screen', 'br-rj-stage', 'bw-screen',
-  'cl-screen', 'co-all', 'cu-stage', 'de-screen', 'de-stage', 'de-guest', 'dk-film', 'dk-tv', 'dk-soejle-a', 'dk-copenhagen-stage', 'es-screen', 'es-madrid-stage', 'fi-stage', 'fi-guest',
+  'cl-screen', 'co-all', 'cu-stage', 'de-screen', 'de-stage', 'de-guest', 'dk-film', 'dk-tv', 'dk-soejle-a', 'dk-copenhagen-stage', 'ee-film', 'ee-tv-private', 'ee-err', 'es-screen', 'es-madrid-stage', 'fi-stage', 'fi-guest',
   'fi-screen', 'fr-film', 'fr-tv', 'fr-subsidised-stage', 'fr-private-stage', 'gi-all', 'gr-private-stage', 'hk-film', 'ie-stage', 'il-screen', 'in-screen', 'it-screen', 'it-stage', 'jm-all',
   'jp-nhk', 'jp-live', 'kr-kbs', 'kr-mbc-sbs', 'li-film', 'ms-all', 'mx-televisa', 'mx-azteca', 'mx-other', 'nc-all', 'ng-screen', 'nl-stage', 'nl-screen', 'no-film', 'no-tv', 'no-nrk', 'no-stage',
   'nz-screen', 'nz-court', 'nz-atc', 'ph-screen', 'pn-all', 'se-screen', 'se-stage', 'se-private-stage', 'se-free-stage', 'sh-all', 'th-screen', 'tr-screen', 'va-screen', 'vg-all', 'za-all',
   'ax-fi-stage', 'ax-fi-guest', 'ax-fi-screen', 'bl-fr-film', 'bl-fr-tv', 'bl-fr-subsidised-stage', 'bl-fr-private-stage', 'cc-au-screen', 'cc-au-stage', 'cx-au-screen', 'cx-au-stage', 'gf-fr-film',
   'gf-fr-tv', 'gf-fr-subsidised-stage', 'gf-fr-private-stage', 'gp-fr-film', 'gp-fr-tv', 'gp-fr-subsidised-stage', 'gp-fr-private-stage', 'mc-fr-film', 'mc-fr-tv', 'mc-fr-subsidised-stage',
-  'mc-fr-private-stage', 'mf-fr-film', 'mf-fr-tv', 'mf-fr-subsidised-stage', 'mf-fr-private-stage', 'nf-au-screen', 'nf-au-stage', 'pm-fr-film', 'pm-fr-tv', 'pm-fr-subsidised-stage',
+  'mc-fr-private-stage', 'mf-fr-film', 'mf-fr-tv', 'mf-fr-subsidised-stage', 'mf-fr-private-stage', 'mq-fr-film', 'mq-fr-tv', 'mq-fr-subsidised-stage', 'mq-fr-private-stage', 'nf-au-screen', 'nf-au-stage', 'pm-fr-film', 'pm-fr-tv', 'pm-fr-subsidised-stage',
   'pm-fr-private-stage', 're-fr-film', 're-fr-tv', 're-fr-subsidised-stage', 're-fr-private-stage', 'yt-fr-film', 'yt-fr-tv', 'yt-fr-subsidised-stage', 'yt-fr-private-stage',
 ] as const;
 /** The agreement a part is engaged under. */

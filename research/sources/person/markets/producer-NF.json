@@ -1,11 +1,11 @@
 {
  "topic": "markets.producer.NF",
  "read": "2026-11-01",
- "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a producer works on in Norfolk Island. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page.",
+ "note": "Read 2026-11-01 at the owner's word (\"Want it done now\", of the markets of every country beyond the 21; then \"Retry the blocked market facts once all countries land\"): the terms a producer works on in Norfolk Island. Research, retry and web-search subagents (workbench/briefs/BRIEF-markets-world.md, -retry.md, -search.md), every quote checked by the lead against its saved page. Re-read 2026-11-04: https://www.nirc.gov.au/Customer-Service/Grants-program: nirc.gov.au answered 403 Access Denied on 2026-11-04.",
  "figures": [
   {
    "item": "none",
-   "finding": "Norfolk Island's own council funds no film: its three grant programs are a community support program, a tertiary education bursary and a community strategic plan grant; Commonwealth Acts are in force there (see the producer.incentive blocker on whether Australia's offsets count spend there).",
+   "finding": "Norfolk Island's own council funds no film: its three grant programs are a community support program, a tertiary education bursary and a community strategic plan grant; Commonwealth Acts are in force there (Australia's offsets count spend there, found 2026-11-04: see the incentive).",
    "value": {
     "role": "producer",
     "fund": null,
@@ -27,6 +27,30 @@
      "said": "15 Laws in force in the Territory After the final transition time, the laws in force in the Territory from time to time are: (a) Acts to the extent that they are in force from time to time in, or in relation to, the Territory; … 18A Application of New South Wales laws (1) Subject to this section and section 18B, the provisions of the law of New South Wales (whether made before or after the final transition time), as in force in New South Wales from time to time, are in force in the Territory."
     }
    ]
+  },
+  {
+   "item": "incentive",
+   "finding": "Australia's production offsets count spend on Norfolk Island: the Income Tax Assessment Act 1997 counts goods and services provided in Australia (s 376-145) and takes Australia, in a geographical sense, to include Norfolk Island (s 960-505); the producer offset is 40% of a feature's qualifying spend, from A$500,000 of it (compilation in force from 1 October 2026).",
+   "value": {
+    "countsNorfolkIslandSpend": true,
+    "currency": "AUD",
+    "producerOffset": {
+     "featureFilm": 0.4,
+     "other": 0.3
+    },
+    "minQAPEFeature": 500000
+   },
+   "applies": "Norfolk Island, as part of Australia for the Act.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "(1)Australia, when used in a geographical sense, includes each of the following: (a)Norfolk Island;"
+    },
+    {
+     "src": 3,
+     "said": "A company’s qualifying Australian production expenditure on a *film is the company’s *production expenditure on the film to the extent to which it is incurred for, or is reasonably attributable to: (a)goods and services provided in Australia; … The amount of the producer offset is: (a)if the *film is a *feature film that was produced for commercial exhibition to the public in cinemas—40%; or (b)otherwise—30%; … 1 A *feature film $500,000"
+    }
+   ]
   }
  ],
  "country": "NF",
@@ -44,19 +68,21 @@
    "read": "2026-11-04",
    "kind": "primary",
    "said": "15 Laws in force in the Territory After the final transition time, the laws in force in the Territory from time to time are: (a) Acts to the extent that they are in force from time to time in, or in relation to, the Territory; … 18A Application of New South Wales laws (1) Subject to this section and section 18B, the provisions of the law of New South Wales (whether made before or after the final transition time), as in force in New South Wales from time to time, are in force in the Territory."
+  },
+  {
+   "url": "https://api.prod.legislation.gov.au/v1/documents(titleid='C2004A05138',start=2026-10-01T00:00:00,retrospectivestart=2026-10-01T00:00:00,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=10,format='Word')",
+   "title": "Income Tax Assessment Act 1997, compilation in force from 1 October 2026, volume 10 (sections 900-1 to 995-1), Federal Register of Legislation (Word): section 960-505 and the section 995-1 dictionary",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "(1)Australia, when used in a geographical sense, includes each of the following: (a)Norfolk Island;"
+  },
+  {
+   "url": "https://api.prod.legislation.gov.au/v1/documents(titleid='C2004A05138',start=2026-10-01T00:00:00,retrospectivestart=2026-10-01T00:00:00,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=7,format='Word')",
+   "title": "Income Tax Assessment Act 1997, compilation in force from 1 October 2026, volume 7 (sections 315-1 to 421-85), Federal Register of Legislation (Word): Division 376",
+   "read": "2026-11-04",
+   "kind": "primary",
+   "said": "A company’s qualifying Australian production expenditure on a *film is the company’s *production expenditure on the film to the extent to which it is incurred for, or is reasonably attributable to: (a)goods and services provided in Australia; … The amount of the producer offset is: (a)if the *film is a *feature film that was produced for commercial exhibition to the public in cinemas—40%; or (b)otherwise—30%; … 1 A *feature film $500,000"
   }
  ],
- "blockers": [
-  {
-   "item": "incentive",
-   "sought": "Whether Australia's Location, PDV and Producer Offsets count spend on Norfolk Island (Australian tax law has applied there from 1 July 2016).",
-   "tried": {
-    "institution": "ato.gov.au Norfolk Island tax page: HTTP 403 (refused, not read another way) || Retry 2026-11-01: screenaustralia.gov.au/funding-and-support/producer-offset read (NF-screenaus-offset.html): no mention of Norfolk Island or external territories; nirc.gov.au grants page read: no film grant",
-    "official-register": "aph.gov.au Bills Digest 16bd095: HTTP 403; infrastructure.gov.au newsletter: stream error || Retry 2026-11-01: Territories Legislation Amendment Act 2016 (C2016A00033) read: its Schedule 5 amends the Fair Work Act and others, no income-tax offset item found by search for \"Income Tax\"; Norfolk Island Legislation Amendment Act 2015 (C2015A00059) read: repeals the Norfolk residents' income-tax exemption (ITAA 1936 Div 1A) but says nothing on the screen offsets",
-    "web-search": "\"ATO Norfolk Island 1 July 2016 Australian income tax applies\": search snippets only, pages refused || Retry 2026-11-01: not run again: the session's web-search budget is spent (2026-11-01, retry brief); institutions fetched directly instead || Web search 2026-11-01: not run: the search pass of 2026-11-01 reached this country after the turn's shared web-search budget (200 calls, shared by every agent) was used up again (about 19:20 UTC, after 27 searches for AD to CK); no result returned.",
-    "trade-press": "ministers.treasury.gov.au release: HTTP 403 || Retry 2026-11-01: none quoting a primary found among pages read",
-    "archive": "archive.org availability API: 429 Too Many Requests || Retry 2026-11-01: archive.org availability API for fairwork.gov.au/find-help-for/norfolk-island: 429 Too Many Requests; web.archive.org snapshot fetch: connection reset ×5"
-   }
-  }
- ]
+ "blockers": []
 }

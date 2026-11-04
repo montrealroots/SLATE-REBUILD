@@ -458,7 +458,7 @@ describe('a minor director (person.youth)', () => {
     dispatch(begin(SEED, NOW, { attributes: structuredClone(ATTRIBUTES_START), directing: structuredClone(DIRECTING_START), identity: identity({ born: { date: '2011-03-10', country: 'FR', region: '' }, citizenship: ['FR'], grewUp: { country: 'FR', region: '' } }), acting: structuredClone(ACTING_START), producing: structuredClone(PRODUCING_START), permits: permitsEverywhere(), youth: structuredClone(YOUTH_START), ...purse('EUR') }), chooseAttributes, { role: 'director', all: 50, each: {} });
   const ARGS: Job = { form: 'feature', country: 'FR', agreement: 'idcc-3097', prep: 10, shoot: 20, cut: 10 };
   it("is engaged at prep only with what France's law needs first, each stage's pécule held, the days at the young worker's hours", () => {
-    expect(() => prepWith(teen(), ARGS)).toThrow('that work in France needs permit first');
+    expect(() => prepWith(teen(), ARGS)).toThrow('that work in France needs permit and guardian first');
     const p = prepWith(dispatch(teen(), authoriseWork, { country: 'FR', role: 'director' }), ARGS);
     expect(p.slices.youth.granted).toMatchObject([{ role: 'director', used: true }]);
     expect(p.slices.attributes['director']?.['vision']).toBeCloseTo(grown(50, 10 * (35 / 40)), 10);

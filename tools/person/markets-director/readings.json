@@ -390,7 +390,15 @@
     {"form": "feature", "per": "week", "when": {"days": [0, 104]}, "fig": 1, "steps": [{"from": "2024-03-01", "path": ["weeklyUnder5Months"]}]},
     {"form": "feature", "per": "month", "when": {"days": [105, null]}, "fig": 1, "steps": [{"from": "2024-03-01", "path": ["monthly5MonthsPlus"]}]}
    ]},
-  "idcc-2642": {"forms": ["hour", "half-hour"], "unknown": true}
+  "idcc-2642": {"forms": ["hour", "half-hour"], "currency": "EUR",
+   "fees": [
+    {"form": "hour", "per": "day", "when": {"days": [0, 4]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["daily9h"]}]},
+    {"form": "hour", "per": "week", "when": {"days": [5, 64]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["weekly45h"]}]},
+    {"form": "hour", "per": "month", "when": {"days": [65, null]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["monthly45h"]}]},
+    {"form": "half-hour", "per": "day", "when": {"days": [0, 4]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["daily9h"]}]},
+    {"form": "half-hour", "per": "week", "when": {"days": [5, 64]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["weekly45h"]}]},
+    {"form": "half-hour", "per": "month", "when": {"days": [65, null]}, "fig": 2, "steps": [{"from": "2023-11-01", "path": ["monthly45h"]}]}
+   ]}
  }},
  "GA": {"agreements": {
   "ga-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
@@ -604,9 +612,7 @@
  "MP": {"agreements": {
   "mp-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
- "MQ": {"agreements": {
-  "mq-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
- }},
+ "MQ": {"follows": {"fig": 0, "market": "FR"}},
  "MR": {"agreements": {
   "mr-screen": {"forms": ["feature", "hour", "half-hour"], "unknown": true}
  }},
@@ -653,9 +659,9 @@
  "NL": {"agreements": {
   "nl-fair-pay": {"forms": ["feature", "hour", "half-hour"], "currency": "EUR", "fig": 4,
    "fees": [
-    {"form": "feature", "per": "hour", "fig": 1, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "startRate"]}]},
-    {"form": "hour", "per": "hour", "fig": 1, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "startRate"]}]},
-    {"form": "half-hour", "per": "hour", "fig": 1, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "startRate"]}]}
+    {"form": "feature", "per": "hour", "fig": 6, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "2024-2025"]}, {"from": "2026-01-01", "path": ["levels", "J", "2026"]}]},
+    {"form": "hour", "per": "hour", "fig": 6, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "2024-2025"]}, {"from": "2026-01-01", "path": ["levels", "J", "2026"]}]},
+    {"form": "half-hour", "per": "hour", "fig": 6, "steps": [{"from": "2025-01-01", "path": ["levels", "J", "2024-2025"]}, {"from": "2026-01-01", "path": ["levels", "J", "2026"]}]}
    ]},
   "nl-none": {"forms": ["feature", "hour", "half-hour"], "none": {"fig": 0, "path": ["collectiveAgreement"]}}
  }},
