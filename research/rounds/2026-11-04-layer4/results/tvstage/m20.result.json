@@ -984,6 +984,18 @@
       "stage.incentive",
       "stage.fund"
      ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'mz,gov,inicc)/' (13 captures): 'Notícias' (2026-10-06; saved l4t/files/m20/mz-cc-inicc-23563b.html, sha256 8ac6e1486e500f7d483b4b0c3fd0bac2c581004dcc6136a2a39643a319b75e01) and 'Missão, Visão e Valores' (mz-cc-inicc-07a6ac.html, sha256 6ea38315f7ef1ef2e97d51959a2413fde06ece1b9f9a39e6a534d2a7e52dc848) read, 'agendadetalhe/19' refused by the data host; 'mz,co,tvm)/' (14 captures, every one HTTP 468, the broadcaster's refusal); 'mz,gov,micultura)/', 'mz,gov,mitss)/', 'mz,gov,fundac)/' (none in -43; mitss, fundac and mctur none in -39); Wayback availability for mitss.gov.mz: 429",
+     "result": "read: INICC's news of 01/10/2026 'INICC debate sobre incentivos necessários para fortalecer a economia criativa em Moçambique' (a round table on 'A necessidade de criar incentivos' at the FANCY AFRICA SUMMIT 2026): incentives discussed as needed, none announced; no series, theatre-fund or pay terms in the captures; TVM's pages refused even to the crawler",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
     }
    ]
   },
@@ -994,6 +1006,30 @@
      "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
      "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
      "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "INICC (Instituto Nacional das Indústrias Culturais e Criativas, under the Ministério da Educação e Cultura) https://inicc.gov.mz/pt/legislacao, /decretos, /resolucoes, /politicaseestrategias, /diplomasministeriais read (saved l4t/files/m20/mz-inicc-*.html); downloaded and read its copies of the Lei dos Direitos de Autor e Direitos Conexos, Lei n.º 9/2022 (Boletim da República I Série n.º 124, 29 June 2022; file lei42001.pdf, saved mz-lei-direitos-autor.pdf, sha256 7a631ce26da371f69eb96f316d650c458542dcd8200797499f7e066182429900) and the Regulamento de Espectáculos e Divertimentos Públicos, Decreto n.º 36/2022 of 28 July (saved mz-decreto-36-2022.pdf, sha256 3a717f8878ebb6ad91dbac2914b9d1e92428f6ed19adebe15380dfef00d214fc), by pdftotext",
+     "result": "read: Decreto 36/2022 art. 26 'Para a realização de um espectáculo e divertimento público é necessária a celebração de contrato de prestação de serviços com todos os intervenientes ou representante legal' and art. 27(1)(e) the contract must state 'honorários devidos', (2) the promoter pays the tax 'atinentes ao honorário dos artistas'; no minimum fee for a director or actor. Lei 9/2022: art. 22 a representation needs proof the author consented; art. 40 the author's pay under a publishing contract 'é a que for especialmente estipulada no contrato'; no minimum royalty or commission for a playwright. No collective agreement named",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'mz,gov,inicc)/' (13 captures): 'Notícias' (2026-10-06; saved l4t/files/m20/mz-cc-inicc-23563b.html, sha256 8ac6e1486e500f7d483b4b0c3fd0bac2c581004dcc6136a2a39643a319b75e01) and 'Missão, Visão e Valores' (mz-cc-inicc-07a6ac.html, sha256 6ea38315f7ef1ef2e97d51959a2413fde06ece1b9f9a39e6a534d2a7e52dc848) read, 'agendadetalhe/19' refused by the data host; 'mz,co,tvm)/' (14 captures, every one HTTP 468, the broadcaster's refusal); 'mz,gov,micultura)/', 'mz,gov,mitss)/', 'mz,gov,fundac)/' (none in -43; mitss, fundac and mctur none in -39); Wayback availability for mitss.gov.mz: 429",
+     "result": "read: INICC's news of 01/10/2026 'INICC debate sobre incentivos necessários para fortalecer a economia criativa em Moçambique' (a round table on 'A necessidade de criar incentivos' at the FANCY AFRICA SUMMIT 2026): incentives discussed as needed, none announced; no series, theatre-fund or pay terms in the captures; TVM's pages refused even to the crawler",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 8 of 10 (standard, Portuguese): 'Moçambique teatro actores cachet encenador dramaturgo remuneração grupo de teatro Mutumbela Gogo financiamento Ministério da Cultura salário artistas'",
+     "result": "no fee, wage or agreement for a stage director, playwright or actor; leads: Irish Times 'A radical in two worlds' (Mutumbela Gogo, Teatro Avenida), Wikipedia biographies of Mozambican actors, Urdimento 2024 article on theatre and dance in Maputo (interviews), IPS news",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Irish Times 'A radical in two worlds' https://www.irishtimes.com/culture/tv-radio-web/a-radical-in-two-worlds-1.1266443 (200, saved l4t/files/m20/mz-irishtimes.html, sha256 92efb6dec11257dea41a890589e59645d9687c35edbe54711e957b2941d154a2) read",
+     "result": "read: Mutumbela Gogo (Teatro Avenida, Maputo), 'the first fledgling professional group of black actors known to Mozambique', 'forged a thriving theatre there, despite … zero government funding'; an interview feature with no primary named and no fee, wage or royalty for a director, playwright or actor",
+     "date": "2026-11-04"
     }
    ],
    "8": [
@@ -1001,6 +1037,30 @@
      "method": "official-register",
      "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
      "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "INICC (Instituto Nacional das Indústrias Culturais e Criativas, under the Ministério da Educação e Cultura) https://inicc.gov.mz/pt/legislacao, /decretos, /resolucoes, /politicaseestrategias, /diplomasministeriais read (saved l4t/files/m20/mz-inicc-*.html); downloaded and read its copies of the Lei dos Direitos de Autor e Direitos Conexos, Lei n.º 9/2022 (Boletim da República I Série n.º 124, 29 June 2022; file lei42001.pdf, saved mz-lei-direitos-autor.pdf, sha256 7a631ce26da371f69eb96f316d650c458542dcd8200797499f7e066182429900) and the Regulamento de Espectáculos e Divertimentos Públicos, Decreto n.º 36/2022 of 28 July (saved mz-decreto-36-2022.pdf, sha256 3a717f8878ebb6ad91dbac2914b9d1e92428f6ed19adebe15380dfef00d214fc), by pdftotext",
+     "result": "read: Decreto 36/2022 art. 26 'Para a realização de um espectáculo e divertimento público é necessária a celebração de contrato de prestação de serviços com todos os intervenientes ou representante legal' and art. 27(1)(e) the contract must state 'honorários devidos', (2) the promoter pays the tax 'atinentes ao honorário dos artistas'; no minimum fee for a director or actor. Lei 9/2022: art. 22 a representation needs proof the author consented; art. 40 the author's pay under a publishing contract 'é a que for especialmente estipulada no contrato'; no minimum royalty or commission for a playwright. No collective agreement named",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'mz,gov,inicc)/' (13 captures): 'Notícias' (2026-10-06; saved l4t/files/m20/mz-cc-inicc-23563b.html, sha256 8ac6e1486e500f7d483b4b0c3fd0bac2c581004dcc6136a2a39643a319b75e01) and 'Missão, Visão e Valores' (mz-cc-inicc-07a6ac.html, sha256 6ea38315f7ef1ef2e97d51959a2413fde06ece1b9f9a39e6a534d2a7e52dc848) read, 'agendadetalhe/19' refused by the data host; 'mz,co,tvm)/' (14 captures, every one HTTP 468, the broadcaster's refusal); 'mz,gov,micultura)/', 'mz,gov,mitss)/', 'mz,gov,fundac)/' (none in -43; mitss, fundac and mctur none in -39); Wayback availability for mitss.gov.mz: 429",
+     "result": "read: INICC's news of 01/10/2026 'INICC debate sobre incentivos necessários para fortalecer a economia criativa em Moçambique' (a round table on 'A necessidade de criar incentivos' at the FANCY AFRICA SUMMIT 2026): incentives discussed as needed, none announced; no series, theatre-fund or pay terms in the captures; TVM's pages refused even to the crawler",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 8 of 10 (standard, Portuguese): 'Moçambique teatro actores cachet encenador dramaturgo remuneração grupo de teatro Mutumbela Gogo financiamento Ministério da Cultura salário artistas'",
+     "result": "no fee, wage or agreement for a stage director, playwright or actor; leads: Irish Times 'A radical in two worlds' (Mutumbela Gogo, Teatro Avenida), Wikipedia biographies of Mozambican actors, Urdimento 2024 article on theatre and dance in Maputo (interviews), IPS news",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Irish Times 'A radical in two worlds' https://www.irishtimes.com/culture/tv-radio-web/a-radical-in-two-worlds-1.1266443 (200, saved l4t/files/m20/mz-irishtimes.html, sha256 92efb6dec11257dea41a890589e59645d9687c35edbe54711e957b2941d154a2) read",
+     "result": "read: Mutumbela Gogo (Teatro Avenida, Maputo), 'the first fledgling professional group of black actors known to Mozambique', 'forged a thriving theatre there, despite … zero government funding'; an interview feature with no primary named and no fee, wage or royalty for a director, playwright or actor",
      "date": "2026-11-04"
     }
    ],
@@ -1010,24 +1070,256 @@
      "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
      "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
      "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "INICC (Instituto Nacional das Indústrias Culturais e Criativas, under the Ministério da Educação e Cultura) https://inicc.gov.mz/pt/legislacao, /decretos, /resolucoes, /politicaseestrategias, /diplomasministeriais read (saved l4t/files/m20/mz-inicc-*.html); downloaded and read its copies of the Lei dos Direitos de Autor e Direitos Conexos, Lei n.º 9/2022 (Boletim da República I Série n.º 124, 29 June 2022; file lei42001.pdf, saved mz-lei-direitos-autor.pdf, sha256 7a631ce26da371f69eb96f316d650c458542dcd8200797499f7e066182429900) and the Regulamento de Espectáculos e Divertimentos Públicos, Decreto n.º 36/2022 of 28 July (saved mz-decreto-36-2022.pdf, sha256 3a717f8878ebb6ad91dbac2914b9d1e92428f6ed19adebe15380dfef00d214fc), by pdftotext",
+     "result": "read: Decreto 36/2022 art. 26 'Para a realização de um espectáculo e divertimento público é necessária a celebração de contrato de prestação de serviços com todos os intervenientes ou representante legal' and art. 27(1)(e) the contract must state 'honorários devidos', (2) the promoter pays the tax 'atinentes ao honorário dos artistas'; no minimum fee for a director or actor. Lei 9/2022: art. 22 a representation needs proof the author consented; art. 40 the author's pay under a publishing contract 'é a que for especialmente estipulada no contrato'; no minimum royalty or commission for a playwright. No collective agreement named",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'mz,gov,inicc)/' (13 captures): 'Notícias' (2026-10-06; saved l4t/files/m20/mz-cc-inicc-23563b.html, sha256 8ac6e1486e500f7d483b4b0c3fd0bac2c581004dcc6136a2a39643a319b75e01) and 'Missão, Visão e Valores' (mz-cc-inicc-07a6ac.html, sha256 6ea38315f7ef1ef2e97d51959a2413fde06ece1b9f9a39e6a534d2a7e52dc848) read, 'agendadetalhe/19' refused by the data host; 'mz,co,tvm)/' (14 captures, every one HTTP 468, the broadcaster's refusal); 'mz,gov,micultura)/', 'mz,gov,mitss)/', 'mz,gov,fundac)/' (none in -43; mitss, fundac and mctur none in -39); Wayback availability for mitss.gov.mz: 429",
+     "result": "read: INICC's news of 01/10/2026 'INICC debate sobre incentivos necessários para fortalecer a economia criativa em Moçambique' (a round table on 'A necessidade de criar incentivos' at the FANCY AFRICA SUMMIT 2026): incentives discussed as needed, none announced; no series, theatre-fund or pay terms in the captures; TVM's pages refused even to the crawler",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 8 of 10 (standard, Portuguese): 'Moçambique teatro actores cachet encenador dramaturgo remuneração grupo de teatro Mutumbela Gogo financiamento Ministério da Cultura salário artistas'",
+     "result": "no fee, wage or agreement for a stage director, playwright or actor; leads: Irish Times 'A radical in two worlds' (Mutumbela Gogo, Teatro Avenida), Wikipedia biographies of Mozambican actors, Urdimento 2024 article on theatre and dance in Maputo (interviews), IPS news",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Irish Times 'A radical in two worlds' https://www.irishtimes.com/culture/tv-radio-web/a-radical-in-two-worlds-1.1266443 (200, saved l4t/files/m20/mz-irishtimes.html, sha256 92efb6dec11257dea41a890589e59645d9687c35edbe54711e957b2941d154a2) read",
+     "result": "read: Mutumbela Gogo (Teatro Avenida, Maputo), 'the first fledgling professional group of black actors known to Mozambique', 'forged a thriving theatre there, despite … zero government funding'; an interview feature with no primary named and no fee, wage or royalty for a director, playwright or actor",
+     "date": "2026-11-04"
     }
    ]
   },
-  "found": [],
+  "found": [
+   {
+    "item": 9,
+    "verdict": "partial",
+    "value": {
+     "collectiveAgreement": null,
+     "minimum": null,
+     "contractRequired": "a service contract with every participant in a public show (Decreto 36/2022 art. 26)",
+     "contractMustState": [
+      "parties",
+      "venue",
+      "date and times",
+      "term",
+      "fees due",
+      "penalties"
+     ],
+     "taxOnFees": "the promoter provides for the tax on the artists' fees (art. 27(2))"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bfe73a6c977/decreto362022.pdf",
+      "title": "Decreto n.º 36/2022, de 28 de Julho: Regulamento de Espectáculos e Divertimentos Públicos (Boletim da República, INICC's copy)",
+      "read": "2026-11-04",
+      "said": "ARTIGO 26 (Contrato de Prestação de Serviço) 1. Para a realização de um espectáculo e divertimento público é necessária a celebração de contrato de prestação de serviços com todos os intervenientes ou representante legal. ... ARTIGO 27 (Cláusulas Contratuais) 1. O contrato, referido no artigo 26 do presente Regulamento, deve conter expressamente, dentre outras, as seguintes cláusulas: a) identificação das partes; b) indicação do nome e localização do recinto onde se vai realizar o espectáculo ou divertimento público; c) data, hora de início e término do espectáculo ou divertimento público; d) vigência do contrato; e) honorários devidos; f) sanções previstas em caso de incumprimento parcial ou integral das cláusulas contratuais. 2. Para além das cláusulas previstas no número 1 do presente artigo, o promotor deve prever o pagamento das obrigações fiscais, atinentes ao honorário dos artistas, nos termos da legislação específica.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/mz-decreto-36-2022.pdf",
+      "sha256": "3a717f8878ebb6ad91dbac2914b9d1e92428f6ed19adebe15380dfef00d214fc"
+     }
+    ],
+    "notes": "Applies to every participant in a public show, so to a stage director (item 7) as much as to an actor: terms, no amount. The fee itself stays blocked."
+   }
+  ],
   "notSearched": [],
   "notes": ""
  },
  "PL": {
   "producer": {
    "blocker": "R-10086",
-   "attempts": []
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for 'pl,pisf)/' (PISF: only robots.txt, answered 403 to the crawler; no page captured) and CC-MAIN-2026-43 for 'pl,instytut-teatralny)/' (111 captures) filtered for pay, rates, contracts, directors and playwrights; read the capture of 2026-10-13 of 'Dramatopisanie – IV edycja' https://www.instytut-teatralny.pl/dzialalnosc/projekty-i-programy/dramatopisanie/dramatopisanie-iv-edycja/ (saved l4t/files/m20/pl-cc-it-dramatopisanie4.html, sha256 be4f773fa728a935ca51e42da8075b22986d121dc1b9ac910bc1b4f0aeb19555)",
+     "result": "read: 'Dramatopisanie to program stypendialny Instytutu Teatralnego, rozpoczęty w 2020 roku … W pierwszym wybierani są dramatopisarze, którzy otrzymują stypendium na napisanie tekstu. W drugim etapie wyłaniani są reżyserzy i teatry publiczne'; in the IV edition (call closing 1 December 2023) 'Wybrane mogą zostać maksymalnie dwa teatry, a każdy z nich może otrzymać do 75 tysięcy złotych oraz czasową licencję na korzystanie z tekstu'. The playwright's stipend amount is not on the captured page (the regulations are); no director's or actor's fee; a 2023-24 edition, so a lead for the scheme, not today's terms",
+     "date": "2026-11-04",
+     "items": [
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Wirtualnemedia.pl (the Polish media trade site) search 'zachęty produkcyjne serial' (404, saved l4t/files/m20/pl-wm-s.html); Common Crawl CC-MAIN-2026-43 'pl,wirtualnemedia)/artykul/zachet' (no capture); Gazeta Prawna site search 'zachęty audiowizualne serial' (200, saved pl-gp-s.html, sha256 3d38edb1863f0f9ffb46cb0c54a8a1421e7599e9e9616e78bc229719abb58869: unrelated results); for theatre, Gazeta Prawna's 2020 Dramatopisanie item (read; see the stage attempts)",
+     "result": "no press item on a live-action series' public fund, a series producer-fee cap or TVP's independent pick-up was reached; the stage-fund item read is the Instytut Teatralny's playwriting and staging programme",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    }
+   ]
   },
   "stage": {
-   "7": [],
-   "8": [],
-   "9": []
+   "7": [
+    {
+     "method": "institution",
+     "tried": "ZASP (Związek Artystów Scen Polskich, the stage artists' union, which has a Directors' Section) https://www.zasp.pl/ (200, saved l4t/files/m20/pl-zasp.html, sha256 d1536450ecf55798aabfe4ef4899ab6b83fd8afa39f9d6cb39ac8ed892a19e18) and its WordPress search API for 'stawki minimalne', 'wynagrodzenie reżysera', 'honorarium', 'stawki', 'reżyser', 'wynagrodzenie' (saved pl-zasp-s-*.json); read 'W poniedziałek, 10 lutego, odbyło się Plenarne Zebranie Sekcji Reżyserów' (2025-02-10; saved l4t/files/m20/pl-zasp-3c37ad.html (sha256 0479e1e1f09a890e71a38319e60851e5922c2bd5c4ad44e859b598c2f943ca48) and pl-zasp-20990.json, sha256 bded0d1ef54119a703840491e66775472fa8074a43cdf0ce90488acd4fc637e3) and 'Manifest o godne wynagrodzenie aktorów etatowych' (2025-02-11; saved pl-zasp-manifest.json, sha256 07a05e0c3f50a316f9f2c2d1c176ce8a8975408c4e41bd96a754ae18efc79a2c, page pl-zasp-6d0404.html sha256 25c880df248155f50fab616dae99e2f3ed1464d2e8d002f8f0421b0b9a6ab4b4)",
+     "result": "no rate card, minimum or agreement for a stage director on ZASP's site: the Directors' Section meeting item carries a title and no text; the union's search finds no 'stawki'. The actors' manifesto (for item 9, see found) says staff actors are paid the national minimum wage",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for 'pl,pisf)/' (PISF: only robots.txt, answered 403 to the crawler; no page captured) and CC-MAIN-2026-43 for 'pl,instytut-teatralny)/' (111 captures) filtered for pay, rates, contracts, directors and playwrights; read the capture of 2026-10-13 of 'Dramatopisanie – IV edycja' https://www.instytut-teatralny.pl/dzialalnosc/projekty-i-programy/dramatopisanie/dramatopisanie-iv-edycja/ (saved l4t/files/m20/pl-cc-it-dramatopisanie4.html, sha256 be4f773fa728a935ca51e42da8075b22986d121dc1b9ac910bc1b4f0aeb19555)",
+     "result": "read: 'Dramatopisanie to program stypendialny Instytutu Teatralnego, rozpoczęty w 2020 roku … W pierwszym wybierani są dramatopisarze, którzy otrzymują stypendium na napisanie tekstu. W drugim etapie wyłaniani są reżyserzy i teatry publiczne'; in the IV edition (call closing 1 December 2023) 'Wybrane mogą zostać maksymalnie dwa teatry, a każdy z nich może otrzymać do 75 tysięcy złotych oraz czasową licencję na korzystanie z tekstu'. The playwright's stipend amount is not on the captured page (the regulations are); no director's or actor's fee; a 2023-24 edition, so a lead for the scheme, not today's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 9 of 10 (standard, Polish): 'Dramatopisanie Instytut Teatralny stypendium wysokość zł regulamin 2026 honorarium dramatopisarza reżysera teatr stawki'",
+     "result": "led to Instytut Teatralny regulations: the 2024 'Dramatopisanie' rules (regulamin-konkursu-xxxdramatopisanie-konkurs-na-dramat.pdf, read: see found), the 2026 calls for OFF Polska, KFT and 'konkurs 2026', the 2020 launch announcement, and Gazeta Prawna's 2020 item (read, trade-press); no minimum or rate card for a stage director or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Gazeta Prawna 'Instytut Teatralny czeka na zgłoszenia do II etapu konkursu Dramatopisanie' (11 grudnia 2020) https://www.gazetaprawna.pl/wiadomosci/artykuly/10749593,instytut-teatralny-konkurs-dramatopisanie.html (200, saved l4t/files/m20/pl-gp-10749593.html, sha256 1bab71bd383718a8cff93019d7e1886bf01d361a15fa3125319113ae019ab3e3) read; it quotes the Instytut Teatralny's page",
+     "result": "read: in the first (2020) edition the jury awarded 'półrocznych stypendiów (każde w wysokości 30 tys. złotych)' to two authors; the second stage chose directors and public theatres to stage the plays; a 2020 figure (the 2024 rules raised it to PLN 33,000); no director's or actor's fee",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Sejm ELI API: consolidated text of the Copyright and Related Rights Act (Obwieszczenie Marszałka Sejmu of 6 December 2024, Dz.U. 2025 poz. 24, status obowiązujący) https://api.sejm.gov.pl/eli/acts/DU/2025/24/text.pdf (200, saved l4t/files/m20/pl-du-2025-24.pdf, sha256 1c2e9a082a66fad6e26bba1d4d01a22bd67871657416729cea62b4b9f71cff86) read by pdftotext, arts. 43-46",
+     "result": "read: art. 43(2) 'Wynagrodzenie musi być godziwe i odpowiednie do zakresu udzielonego prawa, charakteru i zakresu korzystania oraz korzyści wynikających z korzystania z utworu', (3) 'Domniemywa się, że wynagrodzenie proporcjonalne do przychodów z korzystania z utworu spełnia wymogi'; art. 44 a disproportionately low fee may be raised by a court; art. 45 a separate fee per field of exploitation. No minimum commission, advance or royalty rate for a playwright in the Act",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for 'pl,pisf)/' (PISF: only robots.txt, answered 403 to the crawler; no page captured) and CC-MAIN-2026-43 for 'pl,instytut-teatralny)/' (111 captures) filtered for pay, rates, contracts, directors and playwrights; read the capture of 2026-10-13 of 'Dramatopisanie – IV edycja' https://www.instytut-teatralny.pl/dzialalnosc/projekty-i-programy/dramatopisanie/dramatopisanie-iv-edycja/ (saved l4t/files/m20/pl-cc-it-dramatopisanie4.html, sha256 be4f773fa728a935ca51e42da8075b22986d121dc1b9ac910bc1b4f0aeb19555)",
+     "result": "read: 'Dramatopisanie to program stypendialny Instytutu Teatralnego, rozpoczęty w 2020 roku … W pierwszym wybierani są dramatopisarze, którzy otrzymują stypendium na napisanie tekstu. W drugim etapie wyłaniani są reżyserzy i teatry publiczne'; in the IV edition (call closing 1 December 2023) 'Wybrane mogą zostać maksymalnie dwa teatry, a każdy z nich może otrzymać do 75 tysięcy złotych oraz czasową licencję na korzystanie z tekstu'. The playwright's stipend amount is not on the captured page (the regulations are); no director's or actor's fee; a 2023-24 edition, so a lead for the scheme, not today's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 9 of 10 (standard, Polish): 'Dramatopisanie Instytut Teatralny stypendium wysokość zł regulamin 2026 honorarium dramatopisarza reżysera teatr stawki'",
+     "result": "led to Instytut Teatralny regulations: the 2024 'Dramatopisanie' rules (regulamin-konkursu-xxxdramatopisanie-konkurs-na-dramat.pdf, read: see found), the 2026 calls for OFF Polska, KFT and 'konkurs 2026', the 2020 launch announcement, and Gazeta Prawna's 2020 item (read, trade-press); no minimum or rate card for a stage director or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Instytut Teatralny im. Zbigniewa Raszewskiego (state cultural institution), 'Regulamin konkursu Dramatopisanie na stworzenie utworu literackiego w postaci dzieła dramatycznego z przeznaczeniem do realizacji scenicznej' https://www.instytut-teatralny.pl/wp-content/uploads/2024/03/regulamin-konkursu-xxxdramatopisanie-konkurs-na-dramat.pdf (200, saved l4t/files/m20/pl-it-regulamin-dramatopisanie-2024.pdf, sha256 ce1e98bd8b6ce3885b99e6ffe99b69d09f09e9647d0a468db36400df1b86fabf) read by pdftotext",
+     "result": "FOUND (see found): a state commission fee for a new play, PLN 33,000 gross in 6 monthly tranches of PLN 5,500, at most 2 laureates, funded by the Minister's targeted grant; a programme's fee, not a market minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Gazeta Prawna 'Instytut Teatralny czeka na zgłoszenia do II etapu konkursu Dramatopisanie' (11 grudnia 2020) https://www.gazetaprawna.pl/wiadomosci/artykuly/10749593,instytut-teatralny-konkurs-dramatopisanie.html (200, saved l4t/files/m20/pl-gp-10749593.html, sha256 1bab71bd383718a8cff93019d7e1886bf01d361a15fa3125319113ae019ab3e3) read; it quotes the Instytut Teatralny's page",
+     "result": "read: in the first (2020) edition the jury awarded 'półrocznych stypendiów (każde w wysokości 30 tys. złotych)' to two authors; the second stage chose directors and public theatres to stage the plays; a 2020 figure (the 2024 rules raised it to PLN 33,000); no director's or actor's fee",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Sejm ELI API: Regulation of the Minister of Culture of 22 October 2015 on the pay of employees of cultural institutions (Dz.U. 2015 poz. 1798, in force, last change 2024-03-14) https://api.sejm.gov.pl/eli/acts/DU/2015/1798/text.html (200, saved l4t/files/m20/pl-du-2015-1798.html, sha256 012c5ff1be132f6465831cd3e75968f6290a817f9b0db11d6a6719fed77cd2cc) read for the stage actor (the earlier round read it for the director)",
+     "result": "read: § 1 the Regulation sets only the conditions of the long-service allowance, the cash equivalent for an artistic employee's own instrument, costume or props (§ 3), the jubilee award, retirement severance, and the amount of the function and special allowances; no base pay or minimum for an actor employed by a theatre. A stage actor on a theatre's staff falls under the national minimum wage and the theatre's own pay rules",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ZASP 'Manifest o godne wynagrodzenie aktorów etatowych' https://www.zasp.pl/aktualnosci/manifest-o-podwyzszenie-wynagrodzen-aktorow-etatowych/ (posted 2025-02-11) read",
+     "result": "read: 'My Aktorzy Teatru Śląskiego oraz Członkowie Oddziału ZASP w Katowicach wzywamy Was … by wystąpić razem przeciwko najniższej płacy krajowej, która jest naszym wynagrodzeniem. Za najniższą krajową nie możemy i nie chcemy już pracować' and asks to raise 'wynagrodzeń aktorów etatowych z najniższej krajowej na średnią krajową dla grupy około 1700 osób'; no agreement or scale: the floor for a staff actor is the statutory minimum wage",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for 'pl,pisf)/' (PISF: only robots.txt, answered 403 to the crawler; no page captured) and CC-MAIN-2026-43 for 'pl,instytut-teatralny)/' (111 captures) filtered for pay, rates, contracts, directors and playwrights; read the capture of 2026-10-13 of 'Dramatopisanie – IV edycja' https://www.instytut-teatralny.pl/dzialalnosc/projekty-i-programy/dramatopisanie/dramatopisanie-iv-edycja/ (saved l4t/files/m20/pl-cc-it-dramatopisanie4.html, sha256 be4f773fa728a935ca51e42da8075b22986d121dc1b9ac910bc1b4f0aeb19555)",
+     "result": "read: 'Dramatopisanie to program stypendialny Instytutu Teatralnego, rozpoczęty w 2020 roku … W pierwszym wybierani są dramatopisarze, którzy otrzymują stypendium na napisanie tekstu. W drugim etapie wyłaniani są reżyserzy i teatry publiczne'; in the IV edition (call closing 1 December 2023) 'Wybrane mogą zostać maksymalnie dwa teatry, a każdy z nich może otrzymać do 75 tysięcy złotych oraz czasową licencję na korzystanie z tekstu'. The playwright's stipend amount is not on the captured page (the regulations are); no director's or actor's fee; a 2023-24 edition, so a lead for the scheme, not today's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 9 of 10 (standard, Polish): 'Dramatopisanie Instytut Teatralny stypendium wysokość zł regulamin 2026 honorarium dramatopisarza reżysera teatr stawki'",
+     "result": "led to Instytut Teatralny regulations: the 2024 'Dramatopisanie' rules (regulamin-konkursu-xxxdramatopisanie-konkurs-na-dramat.pdf, read: see found), the 2026 calls for OFF Polska, KFT and 'konkurs 2026', the 2020 launch announcement, and Gazeta Prawna's 2020 item (read, trade-press); no minimum or rate card for a stage director or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Gazeta Prawna 'Instytut Teatralny czeka na zgłoszenia do II etapu konkursu Dramatopisanie' (11 grudnia 2020) https://www.gazetaprawna.pl/wiadomosci/artykuly/10749593,instytut-teatralny-konkurs-dramatopisanie.html (200, saved l4t/files/m20/pl-gp-10749593.html, sha256 1bab71bd383718a8cff93019d7e1886bf01d361a15fa3125319113ae019ab3e3) read; it quotes the Instytut Teatralny's page",
+     "result": "read: in the first (2020) edition the jury awarded 'półrocznych stypendiów (każde w wysokości 30 tys. złotych)' to two authors; the second stage chose directors and public theatres to stage the plays; a 2020 figure (the 2024 rules raised it to PLN 33,000); no director's or actor's fee",
+     "date": "2026-11-04"
+    }
+   ]
   },
-  "found": [],
+  "found": [
+   {
+    "item": 9,
+    "verdict": "partial",
+    "value": {
+     "collectiveAgreement": null,
+     "floor": "the national minimum wage (najniższa płaca krajowa), which the union says is the pay of staff actors in state theatres",
+     "staffActorsCount": 1700,
+     "asOf": "2025-02-11",
+     "minimumWageAmount": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.zasp.pl/aktualnosci/manifest-o-podwyzszenie-wynagrodzen-aktorow-etatowych/",
+      "title": "Manifest o godne wynagrodzenie aktorów etatowych (ZASP, 2025-02-11)",
+      "read": "2026-11-04",
+      "said": "My Aktorzy Teatru Śląskiego oraz Członkowie Oddziału ZASP w Katowicach wzywamy Was do jedności i solidarności, by wystąpić razem przeciwko najniższej płacy krajowej, która jest naszym wynagrodzeniem. Za najniższą krajową nie możemy i nie chcemy już pracować. ... Zmiana wysokości wynagrodzeń aktorów etatowych z najniższej krajowej na średnią krajową dla grupy około 1700 osób dla budżetu kraju będzie wydatkiem niemal niezauważalnym",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/pl-zasp-6d0404.html",
+      "sha256": "25c880df248155f50fab616dae99e2f3ed1464d2e8d002f8f0421b0b9a6ab4b4"
+     }
+    ],
+    "notes": "The union's statement of what staff actors are paid, not a rule: no agreement sets a stage actor's minimum, so the statutory minimum wage is the floor. Its 2026 amount (the Council of Ministers' regulation) was not read here. 'Około 1700 osób' is the union's figure for staff actors whose pay it seeks to raise."
+   },
+   {
+    "item": 8,
+    "verdict": "partial",
+    "value": {
+     "currency": "PLN",
+     "scheme": "Instytut Teatralny 'Dramatopisanie' (state programme, Minister of Culture's targeted grant)",
+     "commissionFeeGross": 33000,
+     "paidIn": "6 monthly tranches of 5,500",
+     "laureatesMax": 2,
+     "participants": [
+      10,
+      15
+     ],
+     "rulesDated": "2024-03",
+     "earlierFee": {
+      "year": 2020,
+      "amount": 30000,
+      "term": "half-year stipend"
+     },
+     "marketMinimum": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.instytut-teatralny.pl/wp-content/uploads/2024/03/regulamin-konkursu-xxxdramatopisanie-konkurs-na-dramat.pdf",
+      "title": "Regulamin konkursu „Dramatopisanie” (Instytut Teatralny, 2024)",
+      "read": "2026-11-04",
+      "said": "3) Organizacja Konkursu, w tym wynagrodzenia dla Laureatów Konkursu, finansowane są ze środków dotacji celowej przyznanej przez Ministra na rzecz Organizatora Konkursu, ... 10) Wynagrodzenie - świadczenie pieniężne w kwocie 33 000,00 zł (trzydzieści trzy tysiące złotych) brutto wypłacane Laureatowi Konkursu w 6 (sześciu) miesięcznych transzach w wysokości 5 500,00 zł (słownie: pięć tysięcy pięćset złotych) brutto każda stanowiące zapłatę za stworzenie przez Laureata Konkursu, na podstawie Pracy konkursowej, utworu literackiego w postaci dzieła dramatycznego z przeznaczeniem do realizacji scenicznej ... Konkurs przewiduje wypłatę maksymalnie 2 (dwóch) Wynagrodzeń w określonej wyżej kwocie",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/pl-it-regulamin-dramatopisanie-2024.pdf",
+      "sha256": "ce1e98bd8b6ce3885b99e6ffe99b69d09f09e9647d0a468db36400df1b86fabf"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.gazetaprawna.pl/wiadomosci/artykuly/10749593,instytut-teatralny-konkurs-dramatopisanie.html",
+      "title": "Instytut Teatralny czeka na zgłoszenia do II etapu konkursu Dramatopisanie (Gazeta Prawna, 11 Dec 2020)",
+      "read": "2026-11-04",
+      "said": "zdecydowała o przyznaniu półrocznych stypendiów (każde w wysokości 30 tys. złotych)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/pl-gp-10749593.html",
+      "sha256": "1bab71bd383718a8cff93019d7e1886bf01d361a15fa3125319113ae019ab3e3",
+      "quotes": "the Instytut Teatralny's page on Dramatopisanie (instytut-teatralny.pl)"
+     }
+    ],
+    "notes": "A real commission fee a Polish playwright can win from the state, not a minimum every theatre must pay: 2 laureates out of 10-15 invited participants per edition. Whether a 2026 edition runs on the same fee was not read (the 2024 rules are the latest found). The staging stage paid up to PLN 75,000 to each of at most two theatres (IV edition, 2023-24; archive attempt)."
+   }
+  ],
   "notSearched": [],
   "notes": ""
  },

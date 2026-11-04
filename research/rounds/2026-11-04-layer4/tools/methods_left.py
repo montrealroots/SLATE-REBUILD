@@ -1,6 +1,6 @@
 """Reports, for the methods round (briefs/16-methods-round.md), what each m<n>.todo.json still lacks in its
 m<n>.result.json: a producer blocker's missing method with no attempt by it, a stage item (7, 8, 9) with a method
-neither attempted there nor named as an earlier attempt. Run from the repository's root:
+neither attempted there nor named as an earlier attempt (approximate: an earlier attempt named in words the script does not match reads as short, so check a short item in its result file before re-running it). Run from the repository's root:
 python3 -I research/rounds/2026-11-04-layer4/tools/methods_left.py"""
 import json, glob, os
 D = 'research/rounds/2026-11-04-layer4/results/tvstage'

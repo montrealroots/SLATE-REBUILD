@@ -423,7 +423,20 @@
  "KH": {
   "producer": {
    "blocker": "R-9986",
-   "attempts": []
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Cambodianess 'A piece of Cambodia's Theater Heritage for Today's Audience' (17 July 2019), read whole; Phnom Penh Post 'Lack of commitment constrains culture' (fetch); Cambodge Mag interview with Karim Belkacem Saadi on a theatre in Cambodia (fetch); Khmer Times search API and Cambodianess site search for 'drama series' (fetch)",
+     "result": "Cambodianess 2019: the Kok Thlok Association 'had to stop touring three years ago due to lack of funds'; the Ministry of Culture 'authorized them to build an open-air theater' by the National Library, weekend shows (in-kind support, no grant terms, no box office). Phnom Penh Post: Cloudflare 'Just a moment' (403), not read. Cambodge Mag: 429. Khmer Times API: 403. Cambodianess search: results load by script (the same page for any query). No article on a series fund, a TV commissioning term or a theatre fund.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for kh,gov,mcfa)/ (67 records; filtered for theatre, performance, drama, artist, fund, grant, series, film sector, remuneration, salary) and kh,gov,tvk)/ (TVK, the state broadcaster, 2015 records; filtered for programme, production, series, drama, partner, tender)",
+     "result": "mcfa: three hits (the film-sector page, a film-performance news item, the spoken-theatre festival), the film-sector WARC fetch failed (the page was read live by earlier rounds); TVK: no English-slug page on programmes, production or partners (the slugs are Khmer news titles). No fund, commissioning term or stage fee.",
+     "date": "2026-11-04"
+    }
+   ]
   },
   "stage": {
    "7": [
@@ -431,6 +444,30 @@
      "method": "web-search",
      "tried": "1 search (5 of 10, standard): 'Cambodia theatre director playwright actor fee stage performance pay Ministry of Culture and Fine Arts'",
      "result": "Results: Phnom Penh Post 'Lack of commitment constrains culture' (undated; MoCFA performers' salaries and per-performance fees), Cambodianess on senior artists' stipends, mcfa.gov.kh theatre tag page, a JICA administrative-procedure PDF, Cambodia Daily items. No agreement, tariff or minimum for a stage director, playwright or actor in force; the figures surfaced are press reports of state-troupe salaries, not a rule.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cambodianess and Phnom Penh Post articles above, read for any fee to a stage director or playwright",
+     "result": "None names a director's or playwright's fee; the Phnom Penh Post page was blocked (403 challenge).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture and Fine Arts (mcfa.gov.kh): site search ?s=performing arts; 'Opening event of the National Spoken Theater Festival 2026' (1 Oct 2026) read whole",
+     "result": "News of state-backed theatre (the Pamojjathai play, the spoken-theatre festival, a Lancang-Mekong tour); no fee, salary, prize or contract term for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "The Ministry of Culture and Fine Arts' own register of regulations: regulation-type/prakas, /decision, /circular, listing read whole",
+     "result": "Prakas: incentive rewards for public service delivery (2016), film and video visas (2015), the museums department (2008), archaeology department (2007); Decisions: the inter-ministerial film commission (2018), temple zones (1996); Circulars: heritage protection (2002, 2021, 2026). No regulation on performers' pay, a theatre tariff or authors' fees for the stage.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for kh,gov,mcfa)/ (67 records; filtered for theatre, performance, drama, artist, fund, grant, series, film sector, remuneration, salary) and kh,gov,tvk)/ (TVK, the state broadcaster, 2015 records; filtered for programme, production, series, drama, partner, tender)",
+     "result": "mcfa: three hits (the film-sector page, a film-performance news item, the spoken-theatre festival), the film-sector WARC fetch failed (the page was read live by earlier rounds); TVK: no English-slug page on programmes, production or partners (the slugs are Khmer news titles). No fund, commissioning term or stage fee.",
      "date": "2026-11-04"
     }
    ],
@@ -440,6 +477,30 @@
      "tried": "1 search (5 of 10, standard): 'Cambodia theatre director playwright actor fee stage performance pay Ministry of Culture and Fine Arts'",
      "result": "Results: Phnom Penh Post 'Lack of commitment constrains culture' (undated; MoCFA performers' salaries and per-performance fees), Cambodianess on senior artists' stipends, mcfa.gov.kh theatre tag page, a JICA administrative-procedure PDF, Cambodia Daily items. No agreement, tariff or minimum for a stage director, playwright or actor in force; the figures surfaced are press reports of state-troupe salaries, not a rule.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cambodianess and Phnom Penh Post articles above, read for any fee to a stage director or playwright",
+     "result": "None names a director's or playwright's fee; the Phnom Penh Post page was blocked (403 challenge).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture and Fine Arts (mcfa.gov.kh): site search ?s=performing arts; 'Opening event of the National Spoken Theater Festival 2026' (1 Oct 2026) read whole",
+     "result": "News of state-backed theatre (the Pamojjathai play, the spoken-theatre festival, a Lancang-Mekong tour); no fee, salary, prize or contract term for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "The Ministry of Culture and Fine Arts' own register of regulations: regulation-type/prakas, /decision, /circular, listing read whole",
+     "result": "Prakas: incentive rewards for public service delivery (2016), film and video visas (2015), the museums department (2008), archaeology department (2007); Decisions: the inter-ministerial film commission (2018), temple zones (1996); Circulars: heritage protection (2002, 2021, 2026). No regulation on performers' pay, a theatre tariff or authors' fees for the stage.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for kh,gov,mcfa)/ (67 records; filtered for theatre, performance, drama, artist, fund, grant, series, film sector, remuneration, salary) and kh,gov,tvk)/ (TVK, the state broadcaster, 2015 records; filtered for programme, production, series, drama, partner, tender)",
+     "result": "mcfa: three hits (the film-sector page, a film-performance news item, the spoken-theatre festival), the film-sector WARC fetch failed (the page was read live by earlier rounds); TVK: no English-slug page on programmes, production or partners (the slugs are Khmer news titles). No fund, commissioning term or stage fee.",
+     "date": "2026-11-04"
     }
    ],
    "9": [
@@ -447,6 +508,30 @@
      "method": "web-search",
      "tried": "1 search (5 of 10, standard): 'Cambodia theatre director playwright actor fee stage performance pay Ministry of Culture and Fine Arts'",
      "result": "Results: Phnom Penh Post 'Lack of commitment constrains culture' (undated; MoCFA performers' salaries and per-performance fees), Cambodianess on senior artists' stipends, mcfa.gov.kh theatre tag page, a JICA administrative-procedure PDF, Cambodia Daily items. No agreement, tariff or minimum for a stage director, playwright or actor in force; the figures surfaced are press reports of state-troupe salaries, not a rule.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cambodianess 'Senior Artists Struggle with Medical Costs and Loss of Income' (pandemic era), read whole",
+     "result": "State support named: a storyteller's 'monthly stipend of 800,000 riel from the Ministry of Culture and Fine Arts'; a Lakhon Yike teacher's '700,000 riel retirement pension'; no stage actor's pay or minimum. Press, not a rule.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture and Fine Arts (mcfa.gov.kh): site search ?s=performing arts; 'Opening event of the National Spoken Theater Festival 2026' (1 Oct 2026) read whole",
+     "result": "News of state-backed theatre (the Pamojjathai play, the spoken-theatre festival, a Lancang-Mekong tour); no fee, salary, prize or contract term for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "The Ministry of Culture and Fine Arts' own register of regulations: regulation-type/prakas, /decision, /circular, listing read whole",
+     "result": "Prakas: incentive rewards for public service delivery (2016), film and video visas (2015), the museums department (2008), archaeology department (2007); Decisions: the inter-ministerial film commission (2018), temple zones (1996); Circulars: heritage protection (2002, 2021, 2026). No regulation on performers' pay, a theatre tariff or authors' fees for the stage.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for kh,gov,mcfa)/ (67 records; filtered for theatre, performance, drama, artist, fund, grant, series, film sector, remuneration, salary) and kh,gov,tvk)/ (TVK, the state broadcaster, 2015 records; filtered for programme, production, series, drama, partner, tender)",
+     "result": "mcfa: three hits (the film-sector page, a film-performance news item, the spoken-theatre festival), the film-sector WARC fetch failed (the page was read live by earlier rounds); TVK: no English-slug page on programmes, production or partners (the slugs are Khmer news titles). No fund, commissioning term or stage fee.",
      "date": "2026-11-04"
     }
    ]
@@ -458,7 +543,20 @@
  "MA": {
   "producer": {
    "blocker": "R-10016",
-   "attempts": []
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "The Bulletin officiel and legal portals: www.sgg.gov.ma (home and Legislation.aspx) and adala.justice.gov.ma (the Ministry of Justice's legal portal, home and its PDF 'Artiste et métiers artistiques-1711542119027.pdf' named by the search), for any arrêté or decree on support to theatre, a theatre tax measure or the SNRT's cahier des charges",
+     "result": "sgg.gov.ma: no response (curl 000); adala.justice.gov.ma: connection reset, then no response. No gazette text read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: CC-MAIN-2026-43, -39, -30 for ma,gov,mjcc)/ (30, 35, 30 records) filtered for theatre, soutien, cahier, artiste, résultat; CC-MAIN-2026-43 for ma,gov,sgg)/ (136 records, Bulletin officiel PDFs); CC-MAIN-2026-43, -39, -30 for ma,gov,justice,adala)/api/uploads/2024/03/27; CC-MAIN-2026-43 and -39 for ma,bmda)/",
+     "result": "mjcc: three hits in 2026-43, all answering 500 (one titled 'le nombre de festivals culturels bénéficiant de soutien est passé de 23 à 31'), none in -39 or -30; sgg: the BO PDFs captured are 404s; adala and bmda: no records. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
   },
   "stage": {
    "7": [
@@ -466,6 +564,30 @@
      "method": "web-search",
      "tried": "1 search (6 of 10, standard): 'Maroc metteur en scène théâtre cachet minimum dramaturge rémunération comédien barème statut de l artiste'",
      "result": "Results: Loi 71-99 portant statut de l'artiste (WIPO Lex text 496876; adala.justice.gov.ma PDF 'Artiste et métiers artistiques' of 2024-03-27, i.e. loi 68-16), aujourdhui.ma, fnh.ma and ecoactu.ma articles (30% levy on cachets; the law a framework pending implementing texts). No barème or minimum cachet for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "adala.justice.gov.ma PDF 'Artiste et métiers artistiques' (2024-03-27 upload; the law on the artist and artistic trades): connection reset. WIPO Lex text 496876 (WIPO's copy of Dahir 1-03-113 of 19 June 2003 promulgating Loi 71-99 portant statut de l'artiste), read whole",
+     "result": "Loi 71-99, chapter III (Rémunération): 'Le montant de la rémunération doit être mentionné dans le contrat' (art. 10), a fifteen-day advance rule for engagements over fifteen days (art. 9), a privilege for unpaid fees (art. 12); no minimum, scale or tariff for any performer, director or author. This is the 2003 law; the later law on the artist and artistic trades (the adala PDF) was not reached, so whether it sets a minimum is not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc, 'La loi sur le statut de l'artiste adoptée : elle satisfait presque tout le monde' (1 August 2016), read whole",
+     "result": "On the new artists' law: a 10% levy on the cachet of non-resident artists (art. 32, paid by the operator), contracts with foreign artists through the employment ministry; no minimum cachet or fee for directors, writers or actors.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministère de la Jeunesse, de la Culture et de la Communication's Cahier des charges arts 2020 (mjcc.gov.ma/wp-content/uploads/2022/02/CahierdeschargesFrArts20201.pdf, the copy u16 saved, sha256 44093cd9...2f18), read whole for directors', authors' and performers' pay; the Bureau marocain du droit d'auteur (www.bmda.ma, bmda.ma, www.mda.ma) for a dramatic-works tariff",
+     "result": "Cahier: asks for 'pièces justificatives des rémunérations des participants', a 'copie certifiée des contrats de travail avec les artistes' and artists' cards; no rate for a metteur en scène, an author or a comédien. BMDA: no response on all three hosts.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: CC-MAIN-2026-43, -39, -30 for ma,gov,mjcc)/ (30, 35, 30 records) filtered for theatre, soutien, cahier, artiste, résultat; CC-MAIN-2026-43 for ma,gov,sgg)/ (136 records, Bulletin officiel PDFs); CC-MAIN-2026-43, -39, -30 for ma,gov,justice,adala)/api/uploads/2024/03/27; CC-MAIN-2026-43 and -39 for ma,bmda)/",
+     "result": "mjcc: three hits in 2026-43, all answering 500 (one titled 'le nombre de festivals culturels bénéficiant de soutien est passé de 23 à 31'), none in -39 or -30; sgg: the BO PDFs captured are 404s; adala and bmda: no records. Nothing read.",
      "date": "2026-11-04"
     }
    ],
@@ -475,6 +597,30 @@
      "tried": "1 search (6 of 10, standard): 'Maroc metteur en scène théâtre cachet minimum dramaturge rémunération comédien barème statut de l artiste'",
      "result": "Results: Loi 71-99 portant statut de l'artiste (WIPO Lex text 496876; adala.justice.gov.ma PDF 'Artiste et métiers artistiques' of 2024-03-27, i.e. loi 68-16), aujourdhui.ma, fnh.ma and ecoactu.ma articles (30% levy on cachets; the law a framework pending implementing texts). No barème or minimum cachet for a director, playwright or actor.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "adala.justice.gov.ma PDF 'Artiste et métiers artistiques' (2024-03-27 upload; the law on the artist and artistic trades): connection reset. WIPO Lex text 496876 (WIPO's copy of Dahir 1-03-113 of 19 June 2003 promulgating Loi 71-99 portant statut de l'artiste), read whole",
+     "result": "Loi 71-99, chapter III (Rémunération): 'Le montant de la rémunération doit être mentionné dans le contrat' (art. 10), a fifteen-day advance rule for engagements over fifteen days (art. 9), a privilege for unpaid fees (art. 12); no minimum, scale or tariff for any performer, director or author. This is the 2003 law; the later law on the artist and artistic trades (the adala PDF) was not reached, so whether it sets a minimum is not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc, 'La loi sur le statut de l'artiste adoptée : elle satisfait presque tout le monde' (1 August 2016), read whole",
+     "result": "On the new artists' law: a 10% levy on the cachet of non-resident artists (art. 32, paid by the operator), contracts with foreign artists through the employment ministry; no minimum cachet or fee for directors, writers or actors.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministère de la Jeunesse, de la Culture et de la Communication's Cahier des charges arts 2020 (mjcc.gov.ma/wp-content/uploads/2022/02/CahierdeschargesFrArts20201.pdf, the copy u16 saved, sha256 44093cd9...2f18), read whole for directors', authors' and performers' pay; the Bureau marocain du droit d'auteur (www.bmda.ma, bmda.ma, www.mda.ma) for a dramatic-works tariff",
+     "result": "Cahier: asks for 'pièces justificatives des rémunérations des participants', a 'copie certifiée des contrats de travail avec les artistes' and artists' cards; no rate for a metteur en scène, an author or a comédien. BMDA: no response on all three hosts.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: CC-MAIN-2026-43, -39, -30 for ma,gov,mjcc)/ (30, 35, 30 records) filtered for theatre, soutien, cahier, artiste, résultat; CC-MAIN-2026-43 for ma,gov,sgg)/ (136 records, Bulletin officiel PDFs); CC-MAIN-2026-43, -39, -30 for ma,gov,justice,adala)/api/uploads/2024/03/27; CC-MAIN-2026-43 and -39 for ma,bmda)/",
+     "result": "mjcc: three hits in 2026-43, all answering 500 (one titled 'le nombre de festivals culturels bénéficiant de soutien est passé de 23 à 31'), none in -39 or -30; sgg: the BO PDFs captured are 404s; adala and bmda: no records. Nothing read.",
+     "date": "2026-11-04"
     }
    ],
    "9": [
@@ -482,6 +628,30 @@
      "method": "web-search",
      "tried": "1 search (6 of 10, standard): 'Maroc metteur en scène théâtre cachet minimum dramaturge rémunération comédien barème statut de l artiste'",
      "result": "Results: Loi 71-99 portant statut de l'artiste (WIPO Lex text 496876; adala.justice.gov.ma PDF 'Artiste et métiers artistiques' of 2024-03-27, i.e. loi 68-16), aujourdhui.ma, fnh.ma and ecoactu.ma articles (30% levy on cachets; the law a framework pending implementing texts). No barème or minimum cachet for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "adala.justice.gov.ma PDF 'Artiste et métiers artistiques' (2024-03-27 upload; the law on the artist and artistic trades): connection reset. WIPO Lex text 496876 (WIPO's copy of Dahir 1-03-113 of 19 June 2003 promulgating Loi 71-99 portant statut de l'artiste), read whole",
+     "result": "Loi 71-99, chapter III (Rémunération): 'Le montant de la rémunération doit être mentionné dans le contrat' (art. 10), a fifteen-day advance rule for engagements over fifteen days (art. 9), a privilege for unpaid fees (art. 12); no minimum, scale or tariff for any performer, director or author. This is the 2003 law; the later law on the artist and artistic trades (the adala PDF) was not reached, so whether it sets a minimum is not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc, 'La loi sur le statut de l'artiste adoptée : elle satisfait presque tout le monde' (1 August 2016), read whole",
+     "result": "On the new artists' law: a 10% levy on the cachet of non-resident artists (art. 32, paid by the operator), contracts with foreign artists through the employment ministry; no minimum cachet or fee for directors, writers or actors.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministère de la Jeunesse, de la Culture et de la Communication's Cahier des charges arts 2020 (mjcc.gov.ma/wp-content/uploads/2022/02/CahierdeschargesFrArts20201.pdf, the copy u16 saved, sha256 44093cd9...2f18), read whole for directors', authors' and performers' pay; the Bureau marocain du droit d'auteur (www.bmda.ma, bmda.ma, www.mda.ma) for a dramatic-works tariff",
+     "result": "Cahier: asks for 'pièces justificatives des rémunérations des participants', a 'copie certifiée des contrats de travail avec les artistes' and artists' cards; no rate for a metteur en scène, an author or a comédien. BMDA: no response on all three hosts.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: CC-MAIN-2026-43, -39, -30 for ma,gov,mjcc)/ (30, 35, 30 records) filtered for theatre, soutien, cahier, artiste, résultat; CC-MAIN-2026-43 for ma,gov,sgg)/ (136 records, Bulletin officiel PDFs); CC-MAIN-2026-43, -39, -30 for ma,gov,justice,adala)/api/uploads/2024/03/27; CC-MAIN-2026-43 and -39 for ma,bmda)/",
+     "result": "mjcc: three hits in 2026-43, all answering 500 (one titled 'le nombre de festivals culturels bénéficiant de soutien est passé de 23 à 31'), none in -39 or -30; sgg: the BO PDFs captured are 404s; adala and bmda: no records. Nothing read.",
      "date": "2026-11-04"
     }
    ]

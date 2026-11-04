@@ -14,6 +14,13 @@
   "stage": {
    "7": [
     {
+     "method": "official-register",
+     "recorded": "already recorded in u9.result.json (not repeated)",
+     "tried": "moj.gov.af: home and the Official Gazette page (رسمي جریده), which sends to laws.moj.gov.af",
+     "result": "gazette page read (monthly publication in Pashto and Dari); laws.moj.gov.af over https: connection reset; plain http not used",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 1 of 10 (standard): \"Afghanistan theatre artists salary Kabul theatre actors after Taliban 2025\"",
      "result": "No pay figure, agreement or tariff for any stage role. Leads: kabulnow.com (Jan 2026, Herat theatre artists detained), mimeta.org Civsy note, deccanherald (Ariana cinema staff partly unpaid), amu.tv. Both Herat reports fetched (trade-press attempt).",
@@ -40,6 +47,13 @@
    ],
    "8": [
     {
+     "method": "official-register",
+     "recorded": "already recorded in u9.result.json (not repeated)",
+     "tried": "moj.gov.af: home and the Official Gazette page (رسمي جریده), which sends to laws.moj.gov.af",
+     "result": "gazette page read (monthly publication in Pashto and Dari); laws.moj.gov.af over https: connection reset; plain http not used",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 1 of 10 (standard): \"Afghanistan theatre artists salary Kabul theatre actors after Taliban 2025\"",
      "result": "No pay figure, agreement or tariff for any stage role. Leads: kabulnow.com (Jan 2026, Herat theatre artists detained), mimeta.org Civsy note, deccanherald (Ariana cinema staff partly unpaid), amu.tv. Both Herat reports fetched (trade-press attempt).",
@@ -60,7 +74,7 @@
     {
      "method": "institution",
      "tried": "moic.gov.af laws page (قوانین, via its Common Crawl capture of 2026-10-12, af-cc-index__.html) links \"قانون حمایت از حقوق مولف، مصنف هنرمند و محقق\" and \"قانون کاپی رایت\" to Google Drive; both links served the same PDF (files/m3/af-law-copyright.bin, sha256 444c2a5a3b950a141c09adbba4603290eb68f8967be44e9960f941c61c311d90): Official Gazette No. 1230 of 24 Mizan 1395 (the republic's Ministry of Justice), 84 pages",
-     "result": "Title page read by OCR (fas): the issue carries \"قانون حمایت حقوق مولف، مصنف، هنرمند و محقق (کاپی رایت)\" with amendments to the civil-service and labour laws. The text layer is garbled (presentation forms); OCR of pages 2-40 was started (PID 2184) to search for any royalty or fee rate: see notes for what it showed. A pre-2021 law whose standing under the present authorities is not stated.",
+     "result": "Title page read by OCR (fas): the issue carries \"قانون حمایت حقوق مولف، مصنف، هنرمند و محقق (کاپی رایت)\" with amendments to the civil-service and labour laws. The text layer is garbled (presentation forms); OCR of pages 2-40 was started (PID 2184) but at a machine load near 31 tesseract had not finished page 1 after 30 minutes, and this agent stopped its own processes (PIDs 2184, 2973): the law's body was not read, so whether it sets any royalty for a playwright is unknown. A pre-2021 law whose standing under the present authorities is not stated.",
      "date": "2026-11-04"
     },
     {
@@ -71,6 +85,13 @@
     }
    ],
    "9": [
+    {
+     "method": "official-register",
+     "recorded": "already recorded in u9.result.json (not repeated)",
+     "tried": "moj.gov.af: home and the Official Gazette page (رسمي جریده), which sends to laws.moj.gov.af",
+     "result": "gazette page read (monthly publication in Pashto and Dari); laws.moj.gov.af over https: connection reset; plain http not used",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 1 of 10 (standard): \"Afghanistan theatre artists salary Kabul theatre actors after Taliban 2025\"",
@@ -124,7 +145,7 @@
    }
   ],
   "notSearched": [],
-  "notes": ""
+  "notes": "The state theatre exists as civil service: Kabul Nandari under the Directorate of Live Performances (Theatre) advertised Pashto and Dari stage-actor posts at grade 5 for 1405 (found, item 9 partial); the grade-5 civil-service salary is not published on moic.gov.af. The 2016 copyright law (Official Gazette 1230) on the ministry's site was identified, not read."
  },
  "BG": {
   "producer": {
@@ -164,6 +185,13 @@
   },
   "stage": {
    "7": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in t5.result.json (not repeated)",
+     "tried": "uba.bg 2026 branch theatre agreement PDF (scanned, 18 pages), OCR in Bulgarian, art. 24 and 92 checked against the page images",
+     "result": "no director figure",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 2 of 10 (standard): \"хонорар режисьор драматург театър минимален размер колективен трудов договор 2026\"",
@@ -223,6 +251,13 @@
    ],
    "9": [
     {
+     "method": "institution",
+     "recorded": "already recorded in t5.result.json (not repeated)",
+     "tried": "uba.bg 2026 branch theatre agreement PDF (scanned, 18 pages), OCR in Bulgarian, art. 24 and 92 checked against the page images",
+     "result": "no director figure",
+     "date": "2026-11-04"
+    },
+    {
      "method": "trade-press",
      "tried": "Fetched and read bta.bg/en/news/816576 \"Culture Minister Orders Payments of Outstanding Debts to Performing Arts System\" (BTA, 17.01.2025; files/m3/bg-bta.html, sha256 a453947df054c392826c62aa47032880447630c979613bfe150c7aa2ca5bc948)",
      "result": "Only the lead paragraph is open (\"За да прочетете цялата статия\" sign-in wall): the Union of Bulgarian Artists (UBA) signalled that for three months many freelancers had not received payments under their civil contracts. No rate for directors, playwrights or actors in the open text.",
@@ -281,7 +316,7 @@
    }
   ],
   "notSearched": [],
-  "notes": "Incidental to item 8 (not sought, the producer blocker's item 6 is u18's): the Ministry of Culture announced on 29.09.2026 nine sessions of financial support for the professional performing arts, among them 'За създаване на спектакли в областта на професионалното театрално изкуство', open to 'културни организации, осъществяващи професионална дейност в съответната област на сценичните изкуства, които не са държавни или общински културни институти', applications within 20 calendar days, projects finished by 31 August 2027 (files/m3/bg-mc-9sessions.html, sha256 6a5f71b70e50348498d09bae2b66dc2d950b510c6caaf0690f6a3b57ae1c94f7); the amounts sit in the nine notices linked from it, not read. "
+  "notes": "Incidental to item 8 (not sought, the producer blocker's item 6 is u18's): the Ministry of Culture announced on 29.09.2026 nine sessions of financial support for the professional performing arts, among them 'За създаване на спектакли в областта на професионалното театрално изкуство', open to 'културни организации, осъществяващи професионална дейност в съответната област на сценичните изкуства, които не са държавни или общински културни институти', applications within 20 calendar days, projects finished by 31 August 2027 (files/m3/bg-mc-9sessions.html, sha256 6a5f71b70e50348498d09bae2b66dc2d950b510c6caaf0690f6a3b57ae1c94f7); the amounts sit in the nine notices linked from it, not read. Producer gains item 4 (BNT's rules for independent producers) and item 2 spend figures (NFC series scheme 2022-2023)."
  },
  "CG": {
   "producer": {
@@ -297,6 +332,20 @@
   },
   "stage": {
    "7": [
+    {
+     "method": "official-register",
+     "recorded": "already recorded in u1.result.json (not repeated)",
+     "tried": "Read Law 89-2022 (JO N° 5-2023) whole from liziba.cg",
+     "result": "Contract, tax-regime and subsidy articles; no minimum, fund or production incentive.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u1.result.json (not repeated)",
+     "tried": "1 search (French): Congo Brazzaville fonds de soutien à la création artistique théâtre cinéma décret ministère de la culture et des arts",
+     "result": "Led to Law 89-2022 (liziba.cg PDF of the Journal officiel) and the CFRAD-ICC call; most results were DRC.",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "sgg.cg (Secrétariat général du gouvernement): home page (links to the Journal officiel issues) read; its site search (recherche.html, searchword \"droit d'auteur\" and \"artiste\": the filter was not applied, 125,699 results unfiltered); then the Journal officiel N° 5 of 2 February 2023 from sgg.cg itself, https://sgg.cg/JO/2023/congo-jo-2023-05.pdf (files/m3/cg-jo-2023-05.pdf, sha256 04f457926da08663a7a6c755db767a5f37c4af7684c1e3321d8a83a707df4419), Law 89-2022 read whole",
@@ -324,6 +373,13 @@
    ],
    "8": [
     {
+     "method": "web-search",
+     "recorded": "already recorded in u1.result.json (not repeated)",
+     "tried": "1 search (French): Congo Brazzaville fonds de soutien à la création artistique théâtre cinéma décret ministère de la culture et des arts",
+     "result": "Led to Law 89-2022 (liziba.cg PDF of the Journal officiel) and the CFRAD-ICC call; most results were DRC.",
+     "date": "2026-11-04"
+    },
+    {
      "method": "official-register",
      "tried": "sgg.cg (Secrétariat général du gouvernement): home page (links to the Journal officiel issues) read; its site search (recherche.html, searchword \"droit d'auteur\" and \"artiste\": the filter was not applied, 125,699 results unfiltered); then the Journal officiel N° 5 of 2 February 2023 from sgg.cg itself, https://sgg.cg/JO/2023/congo-jo-2023-05.pdf (files/m3/cg-jo-2023-05.pdf, sha256 04f457926da08663a7a6c755db767a5f37c4af7684c1e3321d8a83a707df4419), Law 89-2022 read whole",
      "result": "Read in the primary (until now only liziba.cg's copy was read): Law 89-2022 covers \"auteurs et interprètes dans les domaines des arts de la scène (notamment théâtre, danse et marionnettes)\" (art. 2). Its \"Chapitre 2 : De la rémunération\" (arts. 12-14) sets no minimum, fee or royalty rate: art. 10 requires a written contract stating \"la rémunération\"; art. 12 treats pay for exploiting a recording as non-salary, a function of the proceeds. No stage director, playwright or actor floor.",
@@ -349,6 +405,20 @@
     }
    ],
    "9": [
+    {
+     "method": "official-register",
+     "recorded": "already recorded in u1.result.json (not repeated)",
+     "tried": "Read Law 89-2022 (JO N° 5-2023) whole from liziba.cg",
+     "result": "Contract, tax-regime and subsidy articles; no minimum, fund or production incentive.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u1.result.json (not repeated)",
+     "tried": "1 search (French): Congo Brazzaville fonds de soutien à la création artistique théâtre cinéma décret ministère de la culture et des arts",
+     "result": "Led to Law 89-2022 (liziba.cg PDF of the Journal officiel) and the CFRAD-ICC call; most results were DRC.",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "sgg.cg (Secrétariat général du gouvernement): home page (links to the Journal officiel issues) read; its site search (recherche.html, searchword \"droit d'auteur\" and \"artiste\": the filter was not applied, 125,699 results unfiltered); then the Journal officiel N° 5 of 2 February 2023 from sgg.cg itself, https://sgg.cg/JO/2023/congo-jo-2023-05.pdf (files/m3/cg-jo-2023-05.pdf, sha256 04f457926da08663a7a6c755db767a5f37c4af7684c1e3321d8a83a707df4419), Law 89-2022 read whole",
@@ -377,7 +447,7 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": "Law 89-2022 now read in the Journal officiel's own copy on sgg.cg (JO N° 5, 2 Feb 2023, files/m3/cg-jo-2023-05.pdf, sha256 04f457926da08663a7a6c755db767a5f37c4af7684c1e3321d8a83a707df4419): the absence of a stage minimum that u1 read from liziba.cg's secondary copy stands on the primary. "
+  "notes": "Law 89-2022 now read in the Journal officiel's own copy on sgg.cg (JO N° 5, 2 Feb 2023, files/m3/cg-jo-2023-05.pdf, sha256 04f457926da08663a7a6c755db767a5f37c4af7684c1e3321d8a83a707df4419): the absence of a stage minimum that u1 read from liziba.cg's secondary copy stands on the primary."
  },
  "DO": {
   "producer": {
@@ -399,6 +469,13 @@
   },
   "stage": {
    "7": [
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "1 search: 'República Dominicana tarifa mínima actores teatro sindicato artistas ley del artista remuneración mínima dramaturgo director escénico'",
+     "result": "No Dominican rate; leads: elnuevodiario.com.do 'ministro de cultura aumenta salarios a los artistas' (fetch refused, 429), WIPO paper on Dominican actors (read: no minimum), an actor's call for an arts law (no law exists, by his account).",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "Labour Ministry (mt.gob.do, which registers pactos colectivos): home page read (files/m3/do-mt-home.html, sha256 16f8f6aa52066c32a79f49cdbe37ca39eeaefb398fc9301afaf5db3bb130567d) for a register of collective agreements; its WordPress search API for \"pacto colectivo\", \"artistas\" and \"salario minimo\" (do-mt-s-*.json)",
@@ -422,9 +499,29 @@
      "tried": "Common Crawl CC-MAIN-2026-43 prefix do,gob,cultura)/ (2,038 captures) filtered for teatro, tarifa, honorario, artista, FENATE, convocatoria, dramat; got the capture (2026-10-09) of the Ministry's news \"Ministerio de Cultura abre convocatoria para el IX Festival Nacional de Teatro 2026\" (files/m3/do-cc-fenate2026.html, sha256 d61f656831a591c7ac0ea9606d8ffac52b2fd11ee8ea478f922d0688d240597c); do,gob,mt)/ (10 captures, none a register)",
      "result": "Read: FENATE 2026 is open to professional Dominican companies with at least five years' continuous work; new projects need a production folder with a budget; the Ministry \"no asume costos ni gestiones relacionadas con derechos de autor o licencias\". No fee or minimum for directors, playwrights or actors.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Dominican press, for an article on stage directors' or playwrights' pay: elnuevodiario.com.do (the article \"ministro de cultura aumenta salarios a los artistas\" at its guessed address, and its WordPress search: both 403); acento.com.do search \"dramaturgos teatro pago\" (files/m3/do-acento-s2.html: unrelated current news); diariolibre.com/buscar (script-built, no results in the HTML); Listín Diario theatre section (do-ld-teatro.html, sha256 221d225c98914a0112884cb85e1d5962639269e3e650102170b50e3453df91b6) and its FENATE 2026 review of 1 Nov 2026 (do-ld-fenate.html, 9ba3088106b9aa7d1b25ecfa57e0369731c2d2d5f30d2027a70fc25158df48e5)",
+     "result": "No article on a director's or playwright's fee was found: the section lists reviews and announcements (FENATE 2026, Nacimiento Viviente, productions); the FENATE review read mentions no fee, budget or author's rights. elnuevodiario refused (403).",
+     "date": "2026-11-04"
     }
    ],
    "8": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "cultura.gob.do: FENATE 2026 bases (Resolución 005-2026) and FENATE 2024 bases (Resolución 13-2024), PDFs read",
+     "result": "2024: RD$150,000-250,000 per company for two performances by cast size; 2026: subsidy for new projects by format, no figure; eligibility read. Authors' rights left to the producer.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "1 search: 'República Dominicana tarifa mínima actores teatro sindicato artistas ley del artista remuneración mínima dramaturgo director escénico'",
+     "result": "No Dominican rate; leads: elnuevodiario.com.do 'ministro de cultura aumenta salarios a los artistas' (fetch refused, 429), WIPO paper on Dominican actors (read: no minimum), an actor's call for an arts law (no law exists, by his account).",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "Labour Ministry (mt.gob.do, which registers pactos colectivos): home page read (files/m3/do-mt-home.html, sha256 16f8f6aa52066c32a79f49cdbe37ca39eeaefb398fc9301afaf5db3bb130567d) for a register of collective agreements; its WordPress search API for \"pacto colectivo\", \"artistas\" and \"salario minimo\" (do-mt-s-*.json)",
@@ -442,9 +539,29 @@
      "tried": "Common Crawl CC-MAIN-2026-43 prefix do,gob,cultura)/ (2,038 captures) filtered for teatro, tarifa, honorario, artista, FENATE, convocatoria, dramat; got the capture (2026-10-09) of the Ministry's news \"Ministerio de Cultura abre convocatoria para el IX Festival Nacional de Teatro 2026\" (files/m3/do-cc-fenate2026.html, sha256 d61f656831a591c7ac0ea9606d8ffac52b2fd11ee8ea478f922d0688d240597c); do,gob,mt)/ (10 captures, none a register)",
      "result": "Read: FENATE 2026 is open to professional Dominican companies with at least five years' continuous work; new projects need a production folder with a budget; the Ministry \"no asume costos ni gestiones relacionadas con derechos de autor o licencias\". No fee or minimum for directors, playwrights or actors.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Dominican press, for an article on stage directors' or playwrights' pay: elnuevodiario.com.do (the article \"ministro de cultura aumenta salarios a los artistas\" at its guessed address, and its WordPress search: both 403); acento.com.do search \"dramaturgos teatro pago\" (files/m3/do-acento-s2.html: unrelated current news); diariolibre.com/buscar (script-built, no results in the HTML); Listín Diario theatre section (do-ld-teatro.html, sha256 221d225c98914a0112884cb85e1d5962639269e3e650102170b50e3453df91b6) and its FENATE 2026 review of 1 Nov 2026 (do-ld-fenate.html, 9ba3088106b9aa7d1b25ecfa57e0369731c2d2d5f30d2027a70fc25158df48e5)",
+     "result": "No article on a director's or playwright's fee was found: the section lists reviews and announcements (FENATE 2026, Nacimiento Viviente, productions); the FENATE review read mentions no fee, budget or author's rights. elnuevodiario refused (403).",
+     "date": "2026-11-04"
     }
    ],
    "9": [
+    {
+     "method": "trade-press",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "elnuevodiario.com.do: 'cultura anuncia fondo 20 millones pesos estímulo creación artística' and 'ministro de cultura aumenta salarios a los artistas'",
+     "result": "Both refused this environment (429 Too Many Requests).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "1 search: 'República Dominicana tarifa mínima actores teatro sindicato artistas ley del artista remuneración mínima dramaturgo director escénico'",
+     "result": "No Dominican rate; leads: elnuevodiario.com.do 'ministro de cultura aumenta salarios a los artistas' (fetch refused, 429), WIPO paper on Dominican actors (read: no minimum), an actor's call for an arts law (no law exists, by his account).",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "Labour Ministry (mt.gob.do, which registers pactos colectivos): home page read (files/m3/do-mt-home.html, sha256 16f8f6aa52066c32a79f49cdbe37ca39eeaefb398fc9301afaf5db3bb130567d) for a register of collective agreements; its WordPress search API for \"pacto colectivo\", \"artistas\" and \"salario minimo\" (do-mt-s-*.json)",
@@ -489,12 +606,19 @@
    }
   ],
   "notSearched": [],
-  "notes": ""
+  "notes": "Found (item 9, partial): Ministry of Culture payroll, Sept 2026, four stage actors at the Centro de la Cultura de Santiago at RD$10,000 gross a month. Bellas Artes (Compañía Nacional de Teatro) did not answer. FONPROCINE 2024 categories name no series."
  },
  "GH": {
   "producer": null,
   "stage": {
    "7": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u20.result.json (not repeated)",
+     "tried": "nfa.gov.gh, www.creativearts.gov.gh, www.motac.gov.gh, www.nccghana.gov.gh, www.nationaltheatre.gov.gh, nationaltheatre.com.gh",
+     "result": "No answer from any (the last five are guessed addresses)",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 3 of 10 (standard): \"Ghana National Theatre actors pay per performance playwright fee stage drama 2025\"",
@@ -528,6 +652,13 @@
    ],
    "8": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u20.result.json (not repeated)",
+     "tried": "nfa.gov.gh, www.creativearts.gov.gh, www.motac.gov.gh, www.nccghana.gov.gh, www.nationaltheatre.gov.gh, nationaltheatre.com.gh",
+     "result": "No answer from any (the last five are guessed addresses)",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 3 of 10 (standard): \"Ghana National Theatre actors pay per performance playwright fee stage drama 2025\"",
      "result": "No stage director, playwright or stage actor minimum surfaced. Leads: myjoyonline/graphic (Abeiku Sagoe on National Theatre hire), Samini on film actors pay (2025), Roverman ticket prices, an academic study (Cultural Trends 2025, abstract only), nationaltheatre.gov.gh/?p=1185 (fetched: reset).",
@@ -559,6 +690,13 @@
     }
    ],
    "9": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u20.result.json (not repeated)",
+     "tried": "nfa.gov.gh, www.creativearts.gov.gh, www.motac.gov.gh, www.nccghana.gov.gh, www.nationaltheatre.gov.gh, nationaltheatre.com.gh",
+     "result": "No answer from any (the last five are guessed addresses)",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 3 of 10 (standard): \"Ghana National Theatre actors pay per performance playwright fee stage drama 2025\"",
@@ -593,12 +731,26 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Every stage source points to the National Theatre's resident companies as public servants (PSC scheme of service, reviewed July 2025); no grade or salary published."
  },
  "IE": {
   "producer": null,
   "stage": {
    "8": [
+    {
+     "method": "web-search",
+     "recorded": "already recorded in t4.result.json (not repeated)",
+     "tried": "1 search: Ireland theatre minimum fee playwright commission director rates agreement Theatre Forum Irish Equity 2025",
+     "result": "UK and US rates only; a dance company citing the Arts Council's Paying the Artist policy, no figure",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t4.result.json (not repeated)",
+     "tried": "artscouncil.ie Theatre Project Award 2027 Round 1 page and guidelines PDF",
+     "result": "fund read; no rates for directors or playwrights",
+     "date": "2026-11-04"
+    },
     {
      "method": "archive",
      "tried": "Common Crawl CC-MAIN-2026-43, prefix ie,script)/ (Writers Guild of Ireland, 853 captures listed); filtered for rate, fee, agree, minim, pay, theatre, commission, contract; got /whats-new/2023/02/match-in-the-dark-pay-and-conditions-document/, /contracts-april-15/, /zebbies-discipline/theatre/ (files/m3/ie-cc-mitd.html sha256 8a18bdf27714dfdb8971150377ad67428f5f70cbddace482488feb3dbe9258cb, ie-cc-contracts15.html 22c0bb13bc08ea6fa822e3e5b760b765a4ab73126378f3395556c6f50c98c2a5, ie-cc-zebbies-th.html 14dec6e98f917a1c35a54bfe864c68160732c3b7d8b625de2c61baf515b3b316); /professional-toolkit/the-paperwork/ and /article-category/contract/ (record fetch returned nothing)",
@@ -621,12 +773,26 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Item 8 now stands on all five methods; the Irish Times stage articles behind its paywall were not read through an archived copy."
  },
  "KR": {
   "producer": null,
   "stage": {
    "7": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "arko.or.kr/board/download/{4e46b5a7…, 67412b32…, 0ebe4930…, 7efe4495…}",
+     "result": "2021 venue-rental guide, 2026 창작산실 traditional-arts review, 2018 touring call (hwp), 2026 youth-jobs review: no pay table",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "\"공연예술 예술인 인건비 지급 기준 연출료 작가료 배우 출연료 회당 기준 단가 예술위원회 2026\"",
+     "result": "GOKAMS calls, a thesis on standard pay in theatre grants, four arko.or.kr downloads",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "National Law Information Center (law.go.kr): 예술인 복지법 [시행 2026. 10. 29.] [법률 제21593호, 2026. 4. 28., 일부개정] located (lsiSeq=285689; files/m3/kr-law-welfare.html, kr-law-welfare-p.html sha256 5818f781ce2c6b653979dbc707ee0e6dc1f3a671b72a3c930cf4b2269dca94da), for its written-contract and standard-contract articles; the article view lsSideInfoP.do (joNo 0004/0005) and the DRF open API (OC=test); elaw.klri.re.kr (the state legislation institute's English text); then the article view with the parameter the site itself uses (lsSideInfoP.do?lsiSeq=285689&joNo=0004&joBrNo=04 and joNo=0005, urlMode=lsScJoRltInfoR; files/m3/kr-law-285689-0004-04.html sha256 92ab861e6449e12cc3861d0ecd65ca100e5818ebd1dcfeb7b2395324e6b663fc, kr-law-285689-0005-00.html 19c0f99d754118fb2e842d548532e30384db47c8bb9c39f7767bff63a9b2002b), found from a Common Crawl capture of a 공연법 article frame",
@@ -654,6 +820,27 @@
    ],
    "8": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "arko.or.kr/board/download/{4e46b5a7…, 67412b32…, 0ebe4930…, 7efe4495…}",
+     "result": "2021 venue-rental guide, 2026 창작산실 traditional-arts review, 2018 touring call (hwp), 2026 youth-jobs review: no pay table",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "\"희곡 창작 원고료 기준 극작가 작가료 공연 로열티 표준계약서 문화체육관광부 공연예술 창작자\"",
+     "result": "Not performed: the session's shared search budget was used up",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "\"공연예술 예술인 인건비 지급 기준 연출료 작가료 배우 출연료 회당 기준 단가 예술위원회 2026\"",
+     "result": "GOKAMS calls, a thesis on standard pay in theatre grants, four arko.or.kr downloads",
+     "date": "2026-11-04"
+    },
+    {
      "method": "official-register",
      "tried": "National Law Information Center (law.go.kr): 예술인 복지법 [시행 2026. 10. 29.] [법률 제21593호, 2026. 4. 28., 일부개정] located (lsiSeq=285689; files/m3/kr-law-welfare.html, kr-law-welfare-p.html sha256 5818f781ce2c6b653979dbc707ee0e6dc1f3a671b72a3c930cf4b2269dca94da), for its written-contract and standard-contract articles; the article view lsSideInfoP.do (joNo 0004/0005) and the DRF open API (OC=test); elaw.klri.re.kr (the state legislation institute's English text); then the article view with the parameter the site itself uses (lsSideInfoP.do?lsiSeq=285689&joNo=0004&joBrNo=04 and joNo=0005, urlMode=lsScJoRltInfoR; files/m3/kr-law-285689-0004-04.html sha256 92ab861e6449e12cc3861d0ecd65ca100e5818ebd1dcfeb7b2395324e6b663fc, kr-law-285689-0005-00.html 19c0f99d754118fb2e842d548532e30384db47c8bb9c39f7767bff63a9b2002b), found from a Common Crawl capture of a 공연법 article frame",
      "result": "Read on the second try: 예술인 복지법 제4조의4 requires a written, signed contract for cultural-arts services stating \"1. 계약 금액 ... 5. 수익의 배분에 관한 사항\"; 제5조(표준계약서의 보급): the state develops and distributes standard contracts, and may favour their users in Arts Promotion Fund support. Neither sets an amount: no statutory fee for a stage director, playwright or actor. The full-text view, the open API (IP not registered) and elaw.klri.re.kr (500) did not serve the law. The statutory minimum wage (held in KR.json) remains the only floor for an employed stage actor.",
@@ -679,6 +866,20 @@
     }
    ],
    "9": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "arko.or.kr/board/download/{4e46b5a7…, 67412b32…, 0ebe4930…, 7efe4495…}",
+     "result": "2021 venue-rental guide, 2026 창작산실 traditional-arts review, 2018 touring call (hwp), 2026 youth-jobs review: no pay table",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in u11.result.json (not repeated)",
+     "tried": "\"공연예술 예술인 인건비 지급 기준 연출료 작가료 배우 출연료 회당 기준 단가 예술위원회 2026\"",
+     "result": "GOKAMS calls, a thesis on standard pay in theatre grants, four arko.or.kr downloads",
+     "date": "2026-11-04"
+    },
     {
      "method": "official-register",
      "tried": "National Law Information Center (law.go.kr): 예술인 복지법 [시행 2026. 10. 29.] [법률 제21593호, 2026. 4. 28., 일부개정] located (lsiSeq=285689; files/m3/kr-law-welfare.html, kr-law-welfare-p.html sha256 5818f781ce2c6b653979dbc707ee0e6dc1f3a671b72a3c930cf4b2269dca94da), for its written-contract and standard-contract articles; the article view lsSideInfoP.do (joNo 0004/0005) and the DRF open API (OC=test); elaw.klri.re.kr (the state legislation institute's English text); then the article view with the parameter the site itself uses (lsSideInfoP.do?lsiSeq=285689&joNo=0004&joBrNo=04 and joNo=0005, urlMode=lsScJoRltInfoR; files/m3/kr-law-285689-0004-04.html sha256 92ab861e6449e12cc3861d0ecd65ca100e5818ebd1dcfeb7b2395324e6b663fc, kr-law-285689-0005-00.html 19c0f99d754118fb2e842d548532e30384db47c8bb9c39f7767bff63a9b2002b), found from a Common Crawl capture of a 공연법 article frame",
@@ -713,7 +914,7 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Item 7-9 official-register now reads 예술인 복지법 art. 4-4 and 5 (written contract, standard contracts, no amount)."
  },
  "MG": {
   "producer": {
@@ -748,6 +949,13 @@
   "stage": {
    "7": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u2.result.json (not repeated)",
+     "tried": "mcc.gov.mg home and /culture (Ministère de la Communication et de la Culture)",
+     "result": "answered; news posts in Malagasy only, no scheme, tariff or agreement",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 7 of 10 (standard): \"Madagascar théâtre troupe comédiens cachet rémunération artistes fonds culture subvention série télévisée production malgache 2025\"",
      "result": "No theatre or series fund, no stage agreement or tariff surfaced. Leads: lexpress.mg (July 2025) on artists' social status and fees (read), newsmada on the MCC 2026 budget (fetched: 429), imagesfrancophones.org on the 2011-2012 Serasary fund (read), allafrica (L'Express, Jan 2026, honours; read).",
@@ -774,6 +982,20 @@
    ],
    "8": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u2.result.json (not repeated)",
+     "tried": "omda.mg (Office Malagasy du Droit d'Auteur)",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in u2.result.json (not repeated)",
+     "tried": "mcc.gov.mg home and /culture (Ministère de la Communication et de la Culture)",
+     "result": "answered; news posts in Malagasy only, no scheme, tariff or agreement",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 7 of 10 (standard): \"Madagascar théâtre troupe comédiens cachet rémunération artistes fonds culture subvention série télévisée production malgache 2025\"",
      "result": "No theatre or series fund, no stage agreement or tariff surfaced. Leads: lexpress.mg (July 2025) on artists' social status and fees (read), newsmada on the MCC 2026 budget (fetched: 429), imagesfrancophones.org on the 2011-2012 Serasary fund (read), allafrica (L'Express, Jan 2026, honours; read).",
@@ -799,6 +1021,13 @@
     }
    ],
    "9": [
+    {
+     "method": "institution",
+     "recorded": "already recorded in u2.result.json (not repeated)",
+     "tried": "mcc.gov.mg home and /culture (Ministère de la Communication et de la Culture)",
+     "result": "answered; news posts in Malagasy only, no scheme, tariff or agreement",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 7 of 10 (standard): \"Madagascar théâtre troupe comédiens cachet rémunération artistes fonds culture subvention série télévisée production malgache 2025\"",
@@ -858,7 +1087,7 @@
    }
   ],
   "notSearched": [],
-  "notes": ""
+  "notes": "Found: Décret 2018-069 art. 10, dramatic performances pay authors 12% of receipts (OMDA); Décret 2011-029 art. 4 leaves the artist's pay to agreement. Producer: Arrêté 27647/2015 is a fee regime (filming fees, TV-station flat tax 2,400,000 Ar a year), no incentive or fund."
  },
  "NE": {
   "producer": {
@@ -875,6 +1104,34 @@
   "stage": {
    "7": [
     {
+     "method": "archive",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "archive.org availability API culture.gouv.ne (2024-09-09 snapshot) and sgg.gouv.ne (none); Common Crawl CC-MAIN-2026-43 ne,gouv,culture)/",
+     "result": "No CC capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Niger Fonds de promotion de la culture cinéma théâtre subvention 2025 2026 ministère de la Culture Niamey appel à projets\"",
+     "result": "No Nigerien fund; the OIF 2026 call surfaced",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.sgg.gouv.ne/ (Secrétariat général du gouvernement, Journal officiel)",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.ortn.ne/ (public broadcaster); https://www.culture.gouv.ne/",
+     "result": "ORTN: certificate has expired (curl 60), not read; culture ministry reset (curl 35)",
+     "date": "2026-11-04"
+    },
+    {
      "method": "trade-press",
      "tried": "Le Sahel (lesahel.org, the state daily of ONEP): its WordPress search for \"théâtre comédiens\" and \"fonds cinéma série\" (files/m3/ne-sahel-s1.json, ne-sahel-s2.json); read \"Point de presse du Comité de subvention du Fonds de Développement des Arts et de la Culture (FONDAC) : Une subvention d’environ 250 millions de FCFA accordée à 88 projets artistiques et culturels\" (14 mars 2023; ne-sahel-fondac.html, sha256 2516dbed11e61564cc9799ab6c1a824fe5a12d3d32531403e2efddf0aa8a8eec); \"Jeunes Tréteaux du Niger : Le théâtre de rue agonise\" (connection reset, not read); actuniger.com search (404)",
      "result": "Found, as a lead for the producer blocker (items 2 and 6): a national arts fund exists. Quoting the Ministry of Culture's Secretary General at a press point of 12 March 2023: FONDAC was created by decree under the culture orientation law; its national subsidy committee, installed 15 July 2022, in three sessions (two in 2022, one in 2023) \"a reçu et examiné ... 247 projets culturels, relatifs au Cinéma, à la mode, à la musique, au théâtre ...\"; \"88 ont été jugés éligibles et ont bénéficié de l’appui du FONDAC pour un montant d’environ 250 millions de FCFA\". No address for the decree or the committee's record, so a lead. No stage director, playwright or actor rate in any result.",
@@ -883,6 +1140,34 @@
    ],
    "8": [
     {
+     "method": "archive",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "archive.org availability API culture.gouv.ne (2024-09-09 snapshot) and sgg.gouv.ne (none); Common Crawl CC-MAIN-2026-43 ne,gouv,culture)/",
+     "result": "No CC capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Niger Fonds de promotion de la culture cinéma théâtre subvention 2025 2026 ministère de la Culture Niamey appel à projets\"",
+     "result": "No Nigerien fund; the OIF 2026 call surfaced",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.sgg.gouv.ne/ (Secrétariat général du gouvernement, Journal officiel)",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.ortn.ne/ (public broadcaster); https://www.culture.gouv.ne/",
+     "result": "ORTN: certificate has expired (curl 60), not read; culture ministry reset (curl 35)",
+     "date": "2026-11-04"
+    },
+    {
      "method": "trade-press",
      "tried": "Le Sahel (lesahel.org, the state daily of ONEP): its WordPress search for \"théâtre comédiens\" and \"fonds cinéma série\" (files/m3/ne-sahel-s1.json, ne-sahel-s2.json); read \"Point de presse du Comité de subvention du Fonds de Développement des Arts et de la Culture (FONDAC) : Une subvention d’environ 250 millions de FCFA accordée à 88 projets artistiques et culturels\" (14 mars 2023; ne-sahel-fondac.html, sha256 2516dbed11e61564cc9799ab6c1a824fe5a12d3d32531403e2efddf0aa8a8eec); \"Jeunes Tréteaux du Niger : Le théâtre de rue agonise\" (connection reset, not read); actuniger.com search (404)",
      "result": "Found, as a lead for the producer blocker (items 2 and 6): a national arts fund exists. Quoting the Ministry of Culture's Secretary General at a press point of 12 March 2023: FONDAC was created by decree under the culture orientation law; its national subsidy committee, installed 15 July 2022, in three sessions (two in 2022, one in 2023) \"a reçu et examiné ... 247 projets culturels, relatifs au Cinéma, à la mode, à la musique, au théâtre ...\"; \"88 ont été jugés éligibles et ont bénéficié de l’appui du FONDAC pour un montant d’environ 250 millions de FCFA\". No address for the decree or the committee's record, so a lead. No stage director, playwright or actor rate in any result.",
@@ -890,6 +1175,34 @@
     }
    ],
    "9": [
+    {
+     "method": "archive",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "archive.org availability API culture.gouv.ne (2024-09-09 snapshot) and sgg.gouv.ne (none); Common Crawl CC-MAIN-2026-43 ne,gouv,culture)/",
+     "result": "No CC capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Niger Fonds de promotion de la culture cinéma théâtre subvention 2025 2026 ministère de la Culture Niamey appel à projets\"",
+     "result": "No Nigerien fund; the OIF 2026 call surfaced",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.sgg.gouv.ne/ (Secrétariat général du gouvernement, Journal officiel)",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.ortn.ne/ (public broadcaster); https://www.culture.gouv.ne/",
+     "result": "ORTN: certificate has expired (curl 60), not read; culture ministry reset (curl 35)",
+     "date": "2026-11-04"
+    },
     {
      "method": "trade-press",
      "tried": "Le Sahel (lesahel.org, the state daily of ONEP): its WordPress search for \"théâtre comédiens\" and \"fonds cinéma série\" (files/m3/ne-sahel-s1.json, ne-sahel-s2.json); read \"Point de presse du Comité de subvention du Fonds de Développement des Arts et de la Culture (FONDAC) : Une subvention d’environ 250 millions de FCFA accordée à 88 projets artistiques et culturels\" (14 mars 2023; ne-sahel-fondac.html, sha256 2516dbed11e61564cc9799ab6c1a824fe5a12d3d32531403e2efddf0aa8a8eec); \"Jeunes Tréteaux du Niger : Le théâtre de rue agonise\" (connection reset, not read); actuniger.com search (404)",
@@ -973,6 +1286,13 @@
    ],
    "8": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u16.result.json (not repeated)",
+     "tried": "icp.pr.gov home and convocatorias; Festival de Teatro 2027 call; Certamen de Dramaturgia 2026 call",
+     "result": "Read",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 5 of 10 (standard): \"Puerto Rico teatro actores pago mínimo por función director escénico dramaturgo tarifa Actors' Equity Puerto Rico\"",
      "result": "No Puerto Rican stage rate surfaced. Leads: Ley 134-1986 (Ley de Actores, OGP compilation: read), Primera Hora 2019 on WIPR and the Colegio de Actores (read), Actors' Equity pieces on Los Angeles (not Puerto Rico).",
@@ -1032,7 +1352,7 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Ley 134-1986 art. 17(k) empowers the Colegio de Actores to set a table of minimum tariffs for theatre, TV, radio and film: the table itself was not found (the Colegio's site is not known; four guessed hosts gave CONNECT 502). Item 8's playwright terms beyond the ICP prize (US Dramatists Guild) were not checked."
  },
  "SK": {
   "producer": {
@@ -1043,11 +1363,24 @@
      "tried": "Common Crawl CC-MAIN-2026-43 prefix sk,avf)/ (Audiovisual Fund, 224 captures); got the list page of independent producers (https://www.avf.sk/aboutus/zoznam_n_p.aspx, 2026-10-17; files/m3/sk-cc-avf-np.html, sha256 0963bf71463da4acc121e0cf91a553c6ef667810e2e6c3eccff85be42b65fe9b) and one entry confirmation, NP_01_2026 (sk-cc-avf-np01-2026.pdf, 8b483d86fe23e35d9451fd8f62c07aae1d980071d516fa5a112955efdd29c256); counted the NP_xx_yyyy confirmations captured per year",
      "result": "Read (item 4, how a series reaches the screen): the Fund keeps the statutory list of independent producers under Act 40/2015 § 9; entry, confirmed under § 10(3) (AVF/NP/2026/01 of 12.02.2026, valid to 12.02.2031), lets a producer use the label \"nezávislý producent\" (§ 8(3)), the status broadcasters' independent-production shares count. Captures hold confirmations NP_01 to NP_12 for 2021-2024 and NP_01 to NP_09 for 2026: a count of registrations, not of series picked up. No grant decisions with application counts among the captures; no fee cap; no theatre item.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Slovak press, for an article quoting the Audiovisual Fund or STVR on series support or independent commissions: teraz.sk (TASR) site search (files/m3/sk-teraz-s.html: script-built, no results in the HTML) and the Common Crawl CC-MAIN-2026-43 index of sk,teraz)/kultura/ (avf, audiovizualny, stvr, a: no captures but one); aktuality.sk search \"audiovizuálny fond seriál\" (sk-akt-s.html, sha256 ded542ad10e385c183870d8ba462c3d9e0e2d387bd86b02f334dc5b6745c4a20: it returned the day's general headlines, none on the Fund); pravda.sk search (404); strategie.hnonline.sk search (404); mediaguru.cz WordPress search (404)",
+     "result": "No article was found to read: every search route was script-built, unmatched or missing. Nothing read; the producer blocker's trade-press method stands as tried with no result.",
+     "date": "2026-11-04"
     }
    ]
   },
   "stage": {
    "9": [
+    {
+     "method": "official-register",
+     "recorded": "already recorded in u13.result.json (not repeated)",
+     "tried": "Slov-Lex consolidated Act 553/2003 (version 20260101) and its Annex 3 PDF (salary scale)",
+     "result": "read; scope and scale found; the catalogue (NV 341/2004) and the 2026 KZVS not read",
+     "date": "2026-11-04"
+    },
     {
      "method": "web-search",
      "tried": "WebSearch 6 of 10 (standard): \"herci platy divadlo 2026 kolektívna zmluva tarifný plat herec slobodné povolanie honorár za predstavenie\"",
@@ -1088,7 +1421,7 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "SND's 2025 report gives a whole-house average monthly wage of 1 486 € (785 FTE), not an actor minimum."
  },
  "TM": {
   "producer": {
@@ -1111,12 +1444,25 @@
      "tried": "Mejlis of Turkmenistan legislation register (mejlis.gov.tm, Kanunçylyk > Kanunlar; files/m3/tm-mejlis-laws.html, sha256 b3ea94f7bf92671877ab9c1377c0a99504f4a355f689a325f406dba97c24425d, first of 42 pages: laws to 23.09.2026); read the Law on the State Budget of Turkmenistan for 2026 of 22.11.2025 (single-law/377; tm-mejlis-budget2026.html, eedb0b419eedf7d3384de4439f5b8a2588ae64916919313668fa1c29b7c31ef9) for any pay rise or culture line; minjust.gov.tm home (FAQ page only)",
      "result": "Read: the 2026 budget law makes \"Zähmet haky, pensiýalar, döwlet kömek pullary we talyp haklary\" protected expenditure (art. 6) and sets regional transfers; it states no wage scale, raise or culture-sector figure, and no film, series or theatre incentive. The first register page lists no cinema or theatre law of 2025-2026. So theatre staff pay (per the Theatre Law art. 34) still rests on an unpublished scale; no director, playwright or actor amount.",
      "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefix tm,gov,medeniyet)/ (Ministry of Culture, 145 captures); got its \"Teatr we kino dünýäsi\" news section (2026-10-09; files/m3/tm-cc-9736a9.html, sha256 9c3ed7afe8ec52f4783a17b4188acfa9422268b1901d69bb2d530669d6b4f4c8) and announcement 77 (tm-cc-ec2554.html, df66755a7da3a49821219068190d6adac2abf0fc9def1500f0e7f6fa3c97e5dd)",
+     "result": "Read: news of state theatre competitions (prizes to state drama theatres and their directors for new productions marking the 35th anniversary of independence, 11.09.2026) and the State Circus season; no prize amount, fee, salary, fund, series or commissioning term. Every theatre named is a state theatre.",
+     "date": "2026-11-04"
     }
    ]
   },
   "stage": {
    "7": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "medeniyet.gov.tm: home, /about-ministry, /bildiris (announcements), /category/building/1 (theatres), /category/building/2, /turkmenistanyn-kanuncylygy (legislation list); the Law on Theatre and Theatrical Activity (№ 142-V) and the Law on Culture read whole",
+     "result": "Theatre financing (art. 30), non-state subventions (art. 17), pay per legislation (art. 34), culture tax privileges by legislation (Culture art. 29); no screen incentive, fund or commissioning terms; no figures.",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 8 of 10 (standard): \"Türkmenistan teatr artistleri zähmet haky aýlyk 2026 teleserial önümçilik Türkmen teleradio\"",
      "result": "No pay scale, agreement, fund or series terms. Results were Turkmen embassy news items on theatre competitions and festivals, turkmenistan.gov.tm (Altyn Asyr) on the theatre (read), asiaplus on 2009 royalties (read).",
@@ -1132,11 +1478,24 @@
      "method": "official-register",
      "tried": "Mejlis of Turkmenistan legislation register (mejlis.gov.tm, Kanunçylyk > Kanunlar; files/m3/tm-mejlis-laws.html, sha256 b3ea94f7bf92671877ab9c1377c0a99504f4a355f689a325f406dba97c24425d, first of 42 pages: laws to 23.09.2026); read the Law on the State Budget of Turkmenistan for 2026 of 22.11.2025 (single-law/377; tm-mejlis-budget2026.html, eedb0b419eedf7d3384de4439f5b8a2588ae64916919313668fa1c29b7c31ef9) for any pay rise or culture line; minjust.gov.tm home (FAQ page only)",
      "result": "Read: the 2026 budget law makes \"Zähmet haky, pensiýalar, döwlet kömek pullary we talyp haklary\" protected expenditure (art. 6) and sets regional transfers; it states no wage scale, raise or culture-sector figure, and no film, series or theatre incentive. The first register page lists no cinema or theatre law of 2025-2026. So theatre staff pay (per the Theatre Law art. 34) still rests on an unpublished scale; no director, playwright or actor amount.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefix tm,gov,medeniyet)/ (Ministry of Culture, 145 captures); got its \"Teatr we kino dünýäsi\" news section (2026-10-09; files/m3/tm-cc-9736a9.html, sha256 9c3ed7afe8ec52f4783a17b4188acfa9422268b1901d69bb2d530669d6b4f4c8) and announcement 77 (tm-cc-ec2554.html, df66755a7da3a49821219068190d6adac2abf0fc9def1500f0e7f6fa3c97e5dd)",
+     "result": "Read: news of state theatre competitions (prizes to state drama theatres and their directors for new productions marking the 35th anniversary of independence, 11.09.2026) and the State Circus season; no prize amount, fee, salary, fund, series or commissioning term. Every theatre named is a state theatre.",
      "date": "2026-11-04"
     }
    ],
    "8": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "medeniyet.gov.tm: home, /about-ministry, /bildiris (announcements), /category/building/1 (theatres), /category/building/2, /turkmenistanyn-kanuncylygy (legislation list); the Law on Theatre and Theatrical Activity (№ 142-V) and the Law on Culture read whole",
+     "result": "Theatre financing (art. 30), non-state subventions (art. 17), pay per legislation (art. 34), culture tax privileges by legislation (Culture art. 29); no screen incentive, fund or commissioning terms; no figures.",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 8 of 10 (standard): \"Türkmenistan teatr artistleri zähmet haky aýlyk 2026 teleserial önümçilik Türkmen teleradio\"",
      "result": "No pay scale, agreement, fund or series terms. Results were Turkmen embassy news items on theatre competitions and festivals, turkmenistan.gov.tm (Altyn Asyr) on the theatre (read), asiaplus on 2009 royalties (read).",
@@ -1152,11 +1511,24 @@
      "method": "official-register",
      "tried": "Mejlis of Turkmenistan legislation register (mejlis.gov.tm, Kanunçylyk > Kanunlar; files/m3/tm-mejlis-laws.html, sha256 b3ea94f7bf92671877ab9c1377c0a99504f4a355f689a325f406dba97c24425d, first of 42 pages: laws to 23.09.2026); read the Law on the State Budget of Turkmenistan for 2026 of 22.11.2025 (single-law/377; tm-mejlis-budget2026.html, eedb0b419eedf7d3384de4439f5b8a2588ae64916919313668fa1c29b7c31ef9) for any pay rise or culture line; minjust.gov.tm home (FAQ page only)",
      "result": "Read: the 2026 budget law makes \"Zähmet haky, pensiýalar, döwlet kömek pullary we talyp haklary\" protected expenditure (art. 6) and sets regional transfers; it states no wage scale, raise or culture-sector figure, and no film, series or theatre incentive. The first register page lists no cinema or theatre law of 2025-2026. So theatre staff pay (per the Theatre Law art. 34) still rests on an unpublished scale; no director, playwright or actor amount.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefix tm,gov,medeniyet)/ (Ministry of Culture, 145 captures); got its \"Teatr we kino dünýäsi\" news section (2026-10-09; files/m3/tm-cc-9736a9.html, sha256 9c3ed7afe8ec52f4783a17b4188acfa9422268b1901d69bb2d530669d6b4f4c8) and announcement 77 (tm-cc-ec2554.html, df66755a7da3a49821219068190d6adac2abf0fc9def1500f0e7f6fa3c97e5dd)",
+     "result": "Read: news of state theatre competitions (prizes to state drama theatres and their directors for new productions marking the 35th anniversary of independence, 11.09.2026) and the State Circus season; no prize amount, fee, salary, fund, series or commissioning term. Every theatre named is a state theatre.",
      "date": "2026-11-04"
     }
    ],
    "9": [
     {
+     "method": "institution",
+     "recorded": "already recorded in u5.result.json (not repeated)",
+     "tried": "medeniyet.gov.tm: home, /about-ministry, /bildiris (announcements), /category/building/1 (theatres), /category/building/2, /turkmenistanyn-kanuncylygy (legislation list); the Law on Theatre and Theatrical Activity (№ 142-V) and the Law on Culture read whole",
+     "result": "Theatre financing (art. 30), non-state subventions (art. 17), pay per legislation (art. 34), culture tax privileges by legislation (Culture art. 29); no screen incentive, fund or commissioning terms; no figures.",
+     "date": "2026-11-04"
+    },
+    {
      "method": "web-search",
      "tried": "WebSearch 8 of 10 (standard): \"Türkmenistan teatr artistleri zähmet haky aýlyk 2026 teleserial önümçilik Türkmen teleradio\"",
      "result": "No pay scale, agreement, fund or series terms. Results were Turkmen embassy news items on theatre competitions and festivals, turkmenistan.gov.tm (Altyn Asyr) on the theatre (read), asiaplus on 2009 royalties (read).",
@@ -1172,19 +1544,46 @@
      "method": "official-register",
      "tried": "Mejlis of Turkmenistan legislation register (mejlis.gov.tm, Kanunçylyk > Kanunlar; files/m3/tm-mejlis-laws.html, sha256 b3ea94f7bf92671877ab9c1377c0a99504f4a355f689a325f406dba97c24425d, first of 42 pages: laws to 23.09.2026); read the Law on the State Budget of Turkmenistan for 2026 of 22.11.2025 (single-law/377; tm-mejlis-budget2026.html, eedb0b419eedf7d3384de4439f5b8a2588ae64916919313668fa1c29b7c31ef9) for any pay rise or culture line; minjust.gov.tm home (FAQ page only)",
      "result": "Read: the 2026 budget law makes \"Zähmet haky, pensiýalar, döwlet kömek pullary we talyp haklary\" protected expenditure (art. 6) and sets regional transfers; it states no wage scale, raise or culture-sector figure, and no film, series or theatre incentive. The first register page lists no cinema or theatre law of 2025-2026. So theatre staff pay (per the Theatre Law art. 34) still rests on an unpublished scale; no director, playwright or actor amount.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefix tm,gov,medeniyet)/ (Ministry of Culture, 145 captures); got its \"Teatr we kino dünýäsi\" news section (2026-10-09; files/m3/tm-cc-9736a9.html, sha256 9c3ed7afe8ec52f4783a17b4188acfa9422268b1901d69bb2d530669d6b4f4c8) and announcement 77 (tm-cc-ec2554.html, df66755a7da3a49821219068190d6adac2abf0fc9def1500f0e7f6fa3c97e5dd)",
+     "result": "Read: news of state theatre competitions (prizes to state drama theatres and their directors for new productions marking the 35th anniversary of independence, 11.09.2026) and the State Circus season; no prize amount, fee, salary, fund, series or commissioning term. Every theatre named is a state theatre.",
      "date": "2026-11-04"
     }
    ]
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Every theatre the sources name is a state theatre; pay follows general legislation, no scale published (Theatre Law art. 34; 2026 budget law art. 6 only protects wages)."
  },
  "VU": {
   "producer": null,
   "stage": {
    "7": [
     {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Vanuatu film industry fund OR grant OR incentive Vanuatu Cultural Centre National Film Sound Unit VBTC drama series theatre Wan Smolbag\"",
+     "result": "A short-film festival prize (VT 500,000, vbr.vu: 404 when fetched) and the NZ On Air regional fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.paclii.org/countries/vu.html",
+     "result": "403 challenge",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "vanuatuculturalcentre.gov.vu home (National Film, Sound and Photo unit, film permits); https://www.vbtc.vu/",
+     "result": "VCC: permits and archive, no fund; VBTC home rendered no text (script-built)",
+     "date": "2026-11-04"
+    },
+    {
      "method": "archive",
      "tried": "Common Crawl CC-MAIN-2026-43 for vu,gov,vanuatuculturalcentre)/ (18 captures), vu,vbtc)/ (1,106) and org,wansmolbag)/ (3: all HTTP 465, no page); got the Cultural Centre's filming policy (2026-10-06; files/m3/vu-cc-filmpolicy.html, sha256 bb6aaf719b3d06775b6232f697bd1fbc9a215f26ffaf52b9d4d5c0e127b98e9d) and VBTC's Namatan festival item (vu-cc-namatan.html, 3953622d2d1ac14bf54812b40928cf135c31abe324f5d30e9efa1231be50ff44); filtered vbtc captures for drama, theatre, film, actor, artist",
      "result": "Read: the filming policy sets a Media Production Permit application fee of $179.00, a permit fee on approval and a refundable Archive Bond of Vt 50,000 (costs for foreign crews, not pay); VBTC: Digicel gave 500,000VT to sponsor the 2020 Namatan Short Film Festival prizes. VBTC captures are programme pages (foreign series), no local drama or stage terms. Wan Smolbag (the theatre company) has no readable capture. No director, playwright or actor rate.",
@@ -1199,6 +1598,27 @@
    ],
    "8": [
     {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Vanuatu film industry fund OR grant OR incentive Vanuatu Cultural Centre National Film Sound Unit VBTC drama series theatre Wan Smolbag\"",
+     "result": "A short-film festival prize (VT 500,000, vbr.vu: 404 when fetched) and the NZ On Air regional fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.paclii.org/countries/vu.html",
+     "result": "403 challenge",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "vanuatuculturalcentre.gov.vu home (National Film, Sound and Photo unit, film permits); https://www.vbtc.vu/",
+     "result": "VCC: permits and archive, no fund; VBTC home rendered no text (script-built)",
+     "date": "2026-11-04"
+    },
+    {
      "method": "archive",
      "tried": "Common Crawl CC-MAIN-2026-43 for vu,gov,vanuatuculturalcentre)/ (18 captures), vu,vbtc)/ (1,106) and org,wansmolbag)/ (3: all HTTP 465, no page); got the Cultural Centre's filming policy (2026-10-06; files/m3/vu-cc-filmpolicy.html, sha256 bb6aaf719b3d06775b6232f697bd1fbc9a215f26ffaf52b9d4d5c0e127b98e9d) and VBTC's Namatan festival item (vu-cc-namatan.html, 3953622d2d1ac14bf54812b40928cf135c31abe324f5d30e9efa1231be50ff44); filtered vbtc captures for drama, theatre, film, actor, artist",
      "result": "Read: the filming policy sets a Media Production Permit application fee of $179.00, a permit fee on approval and a refundable Archive Bond of Vt 50,000 (costs for foreign crews, not pay); VBTC: Digicel gave 500,000VT to sponsor the 2020 Namatan Short Film Festival prizes. VBTC captures are programme pages (foreign series), no local drama or stage terms. Wan Smolbag (the theatre company) has no readable capture. No director, playwright or actor rate.",
@@ -1212,6 +1632,27 @@
     }
    ],
    "9": [
+    {
+     "method": "web-search",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "\"Vanuatu film industry fund OR grant OR incentive Vanuatu Cultural Centre National Film Sound Unit VBTC drama series theatre Wan Smolbag\"",
+     "result": "A short-film festival prize (VT 500,000, vbr.vu: 404 when fetched) and the NZ On Air regional fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "https://www.paclii.org/countries/vu.html",
+     "result": "403 challenge",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recorded": "already recorded in t8.result.json (not repeated)",
+     "tried": "vanuatuculturalcentre.gov.vu home (National Film, Sound and Photo unit, film permits); https://www.vbtc.vu/",
+     "result": "VCC: permits and archive, no fund; VBTC home rendered no text (script-built)",
+     "date": "2026-11-04"
+    },
     {
      "method": "archive",
      "tried": "Common Crawl CC-MAIN-2026-43 for vu,gov,vanuatuculturalcentre)/ (18 captures), vu,vbtc)/ (1,106) and org,wansmolbag)/ (3: all HTTP 465, no page); got the Cultural Centre's filming policy (2026-10-06; files/m3/vu-cc-filmpolicy.html, sha256 bb6aaf719b3d06775b6232f697bd1fbc9a215f26ffaf52b9d4d5c0e127b98e9d) and VBTC's Namatan festival item (vu-cc-namatan.html, 3953622d2d1ac14bf54812b40928cf135c31abe324f5d30e9efa1231be50ff44); filtered vbtc captures for drama, theatre, film, actor, artist",
@@ -1228,6 +1669,13 @@
   },
   "found": [],
   "notSearched": [],
-  "notes": ""
+  "notes": "Theatre in Vanuatu is Wan Smolbag's donor-funded work; no rates."
+ },
+ "_meta": {
+  "agent": "m3",
+  "date": "2026-11-04",
+  "webSearches": "10 of 10 used (all ran, none refused)",
+  "files": "files/m3/ (sha256 per file in each attempt; manifest files/m3.sha256)",
+  "stoppedProcesses": "own PIDs 2184 and 2973 (OCR), by PID"
  }
 }

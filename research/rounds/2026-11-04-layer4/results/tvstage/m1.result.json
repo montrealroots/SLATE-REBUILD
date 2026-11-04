@@ -744,5 +744,117 @@
   "found": [],
   "notSearched": [],
   "notes": "No web search was needed. web.archive.org reset every connection this session, so archive attempts used Common Crawl."
+ },
+ "CD": {
+  "producer": {
+   "blocker": "R-9858",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Fonds de Promotion Culturelle RDC financement production audiovisuelle série télévisée montant projets financés 2026'",
+     "result": "No FPC amounts, series line or list of funded projects; leads: the FISTA series festival (ACP, actualite.cd), Fonds Image de la Francophonie (an international fund, not the DRC's), a Wikipedia mirror on the FPC.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "actualite.cd 'RDC : Kinshasa accueillera la première édition du Festival international des séries télévisées africaines du 8 au 15 décembre' (30 Jun 2026) https://actualite.cd/2026/06/30/rdc-kinshasa-accueillera-la-premiere-edition-du-festival-international-des-series (files/m1/cd-actu-fista.html, sha256 2caa580b566b33888533d263a01475b0c576ff7dfad5ce7bacf547ae5f6c66d7); ACP 'RDC : appel à candidatures lancé pour promouvoir les talents de l'audiovisuel au FISTA' (2 May 2026) (files/m1/cd-acp-fista.html, sha256 44d98d47a8f1e9b59dc852c48092cf41471bec79d845ab20cd3dd57d8f82f0a4).",
+     "result": "A private pan-African series festival in Kinshasa (8-15 December 2026); its coordinator: 'La RDC reste toujours en retard dans les industries culturelles et créatives' and 'Nous visons à financer des projets audiovisuels'. No public fund terms, incentive, fee cap, broadcaster commissioning or pickup count; nothing on theatre.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'cd,fondsdepromotionculturelle)/' in CC-MAIN-2026-43, -30 and 2025-51 (48 captures in -30, files/m1/cc-fpc-*.txt); read the 2026-07-12 captures of /cadre-du-fonds/processus-de-selection, /types-d-appui-ou-de-financement, /criteres-d-eligibilite and /beneficiaires (files/m1/cd-cc-fpc-*.html). Common Crawl 'cd,leganet)/' in the same crawls (65 captures) for the 1987 ordinance on the levy.",
+     "result": "The FPC pages: deposit in Kinshasa or a provincial office, file check, decision 'selon les compétences des organes du Fonds', guarantees for a loan, a contract for any financing; support as 'Prêts à court, moyen et long termes, remboursables et assortis d'intérêts', equity, interest subsidy and grants. No amounts, ceilings, series line or count of applications. leganet captures: one agriculture law, no culture text. Nothing for what the blocker seeks beyond what u19 holds.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "1 search (standard): 'RDC Kinshasa théâtre comédiens cachet rémunération metteur en scène dramaturge droits d'auteur SOCODA barème statut de l'artiste loi'",
+     "result": "No pay scale for stage actors, directors or playwrights. Leads: the decree on the status of the artist and cultural professional (adopted by the Council of Ministers in 2025), the SOCODA tariff schedule annexed to a ministerial order of 21 March 2019 on leganet.cd, and ACP reports on SOCODA distributions.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "leganet.cd: 'annexe AM 21 21 03 2019.pdf' (the SOCODA tariff annex) https://www.leganet.cd/Legislation/Droit%20economique/annexe%20AM%2021%2021%2003%202019.pdf; Journal officiel de la RDC https://www.journalofficiel.cd/ (home, a script application) and its /recherche route, for the artist-status decree.",
+     "result": "leganet.cd presented a self-signed certificate (curl 60); TLS verification was not disabled, so not read. The Journal officiel home is an empty application shell; /recherche answered 502. Neither the decree's text nor the tariff was read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "ACP 'Adoption du statut de l'artiste en RDC : la communauté artistique félicite le gouvernement' (9 Mar 2025) https://acp.cd/culture/adoption-du-statut-de-lartiste-en-rdc-la-communaute-artistique-felicite-le-gouvernement/ (files/m1/cd-acp-statut.html, sha256 523a0e262b6a185b1a529082af8e69a4b8156ea178d3b5d00c559c96494175bd).",
+     "result": "The Council of Ministers adopted the draft decree on the status of the artist; artists expect 'un minimum acceptable de la qualité de vie' once it is promulgated. No fee, cachet or minimum stated, and at that date it was a draft. A lead to the decree, not a figure.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'cd,leganet)/' in CC-MAIN-2026-43, -30 and 2025-51 for the 2019 tariff annex and any labour or culture text; the FPC captures (above) for any artists' pay terms.",
+     "result": "No capture of the tariff annex or the artist-status decree; FPC pages state no pay terms. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Searches 4 and 5 of 10. Open leads: the artist-status decree's text and SOCODA's 2019 tariff annex (leganet.cd behind a self-signed certificate)."
  }
 }
