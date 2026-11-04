@@ -1,0 +1,1280 @@
+[
+ {
+  "id": "R-8275",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000?version=136",
+    "title": "Personen- und Gesellschaftsrecht (PGR), LR 216.0, Fassung: 01.09.2026 (Lilex, the Principality's official consolidated law database)",
+    "said": "Art. 11 a) Im Allgemeinen 1) Die Handlungsfähigkeit besitzt, wer mündig und urteilsfähig ist, ... Art. 12 b) Mündigkeit Mündig ist, wer das 18. Lebensjahr vollendet hat. ... Art. 16 Handlungsunfähig sind Personen, die nicht urteilsfähig oder unmündig sind. ... Art. 18 a) Im Allgemeinen 1) Unmündige, die das 14. Lebensjahr vollendet haben, gelten im Zweifel als urteilsfähig. Sie können sich nur mit Zustimmung ihrer gesetzlichen Vertreter durch ihre Handlungen verpflichten oder Rechte aufgeben. || Art. 180 a) Grundsatz 1) Jede Verbandsperson muss eine Verwaltung (Vorstand, Geschäftsführer und dergleichen) haben, die, soweit es nicht anders bestimmt ist, aus einer oder mehreren natürlichen oder juristischen Personen oder Firmen bestehen kann und vom obersten Organ auf die Dauer von drei Jahren aus Mitgliedern der Verbandsperson oder Dritten bestellt wird, ... || Art. 344 a) Bestellung und Ordnung im Allgemeinen 1) Wenn die Verwaltung mehreren Personen oder Firmen anvertraut ist, bilden diese den Verwaltungsrat, ...",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "gesetze.li/konso/1926004000, then the consolidated PDF version 136 (Fassung 01.09.2026, 1035 pages) downloaded and read: Arts. 10-18, 180, 180a, 344-349 (pdftotext; the PDF's footnote numbers run into article numbers, e.g. 'Art. 125' is Art. 12 with footnote 5, checked against the layout)",
+    "result": "found in part: companies (no age in the Verwaltung or Verwaltungsrat articles; capacity is majority at 18)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "director": "the Verwaltung (board, managing director) may be one or more natural or legal persons; the PGR sets no age for a member",
+    "capacity": "full capacity (Handlungsfähigkeit) at majority, 18; a minor of 14 or over who has judgment binds himself only with his legal representatives' consent",
+    "directorFrom": "18 (reading: the board articles set no age; capacity from Arts. 11, 12, 16, 18)",
+    "cite": "PGR Arts. 11, 12, 16, 18, 180, 344 (Fassung 01.09.2026)"
+   }
+  },
+  "notes": "The directorFrom 18 is a reading; Art. 180a (the qualified member resident in the EEA) not read for an age. Unions not found: no search spent.",
+  "sources": []
+ },
+ {
+  "id": "R-8277",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lawnet.gov.lk: Let's Encrypt YR2 certificate; YR2's own intermediate (from its AIA address yr2.i.lencr.org) added, still unverified (its root, ISRG Root YR, is not in the trust store; not added)",
+    "result": "not found: minorsContracts, unions, funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8285",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://filmfund.lu/wp-content/uploads/2026/01/Loi-modifiee-de-2014-relative-au-Fonds-Version-consolidee.pdf",
+    "title": "Loi modifiée du 22 septembre 2014 relative au Fonds national de soutien à la production audiovisuelle, version consolidée au 01 janvier 2026 (Film Fund Luxembourg, linked from filmfund.lu/a-propos/cadre-legislatif/)",
+    "said": "Art. 9. Aide financière sélective L'aide financière sélective au titre de la présente loi ne peut être accordée qu'à des entités juridiquesdont le siège social est situé au Grand-Duché de Luxembourg ou à des entités juridiques dont le siège social est situé dans un autre État membre de l'Union européenne ou dans un État partie à l'Accord sur l'Espace économique européen et opérant de manière effective au Grand-Duché de Luxembourg par l'intermédiaire d'un établissement stable, d'une succursale ou d'une agence permanente au moment du versement de l'aide, qui ont pour objet social principal la production audiovisuelle et qui produisent effectivement des oeuvres cinématographiques ou audiovisuelles. Les entités juridiques requérantes doivent disposer de structures administratives stables et durables, ... Les actionnaires ou associés directs ou indirects y compris les bénéficiaires économiques ainsi que les membres des organes de gérance de l'entité juridique requérante justifient de leur moralité et honorabilité. Il en est de même pour les dirigeants exécutifs des entités juridiques requérantes, qui justifient en outre de leur qualification professionnelle",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "filmfund.lu failed TLS (incomplete chain); completed with Sectigo's own intermediate (CA DV R36, from the certificate's AIA address), verification on; cadre-legislatif page and the consolidated 2014 law PDF read (art. 9)",
+    "result": "found: funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legilux.public.lu/eli/etat/leg/loi/1915/08/10/n1/jo: a script-only page (\"n'est disponible qu'avec un navigateur supportant javascript\"); data.legilux.public.lu filestore PDF path for the 1915 law guessed: 404",
+    "result": "not found: companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: companies, unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "body": "Film Fund Luxembourg (aide financière sélective)",
+    "applicant": "only a legal entity seated in Luxembourg (or in the EU/EEA with a permanent establishment there) whose main object is audiovisual production and which actually produces; its shareholders and managers must show good character, its executives professional qualification (no natural-person applicant, so no applicant age)",
+    "cite": "Loi modifiée du 22 septembre 2014 art. 9 (consolidated to 2026-01-01)"
+   }
+  },
+  "notes": "The Fund's executing regulation of 29 July 2026 is linked on the same page (not read). Unions (ALPA, LARS, actors) not tried for lack of time.",
+  "sources": []
+ },
+ {
+  "id": "R-8287",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://likumi.lv/ta/id/90223",
+    "title": "Civillikums. PIRMĀ DAĻA. Ģimenes tiesības (consolidated, likumi.lv, the official publisher Latvijas Vēstnesis's legal-acts portal)",
+    "said": "219. Nepilngadība personām turpinās tik ilgi, kamēr tās sasniedz astoņpadsmit gadu vecumu. ... 220. Izņēmuma gadījumos un sevišķi svarīgu iemeslu dēļ, kad nepilngadīgā aizbildņi un tuvākie radinieki apliecina, ka viņš uzvedas nevainojami un spēj patstāvīgi aizsargāt un aizstāvēt savas tiesības un izpildīt savus pienākumus, nepilngadīgo var izsludināt par pilngadīgu arī pirms astoņpadsmit gadu vecuma sasniegšanas, bet ne agrāk, kamēr viņš sasniedzis pilnus sešpadsmit gadus. 221. Pilngadību pirms termiņa ( 220. p. ) piešķir attiecīgā bāriņtiesa, kuras lēmumu apstiprina tiesa. Par pilngadīgu uzskatāma persona, kas likumā paredzētajā kārtībā stājusies laulībā pirms astoņpadsmit gadu vecuma. || 195. Par bērnu brīvo mantu, kas izņemta no vecāku pārvaldības, ja bērni sasnieguši sešpadsmit gadu vecumu, jāatzīst: 1) viss, ko bērni ieguvuši ar savu personisko darbu vai ar vecāku piekrišanu patstāvīgi nodarbojoties kādā arodā, rūpniecībā vai tirdzniecībā u. tml.; ... || 260. Savu brīvo mantu ( 195. p. ) nepilngadīgais pārvalda patstāvīgi. Viņš var par šo mantu noslēgt darījumus parastās pārvaldības robežās, un viņš par tiem atbild ar savu brīvo mantu. Ja nepilngadīgais atbilstoši likumiem stājas darba attiecībās vai patstāvīgi nodarbojas kādā arodā, amatniecībā, tirdzniecībā u. tml., viņš var noslēgt darījumus, kas nepieciešami sakarā ar viņa patstāvīgo nodarbošanos, un viņš par tiem atbild ar visu savu mantu. Nepilngadīgais arī šajos gadījumos nevar patstāvīgi slēgt tādus darījumus, kurus aizbildnis nevar slēgt bez bāriņtiesas atļaujas. 261. Izņemot gadījumus, kas paredzēti 221. un 260. pantā , nepilngadīgajam nav rīcības spējas, tādēļ viņu visos tiesiskos darījumos pārstāv aizbildnis. Ja nepilngadīgais noslēdzis darījumu, kaut arī bez sava aizbildņa piedalības, bet acīm redzami sev par labu, tas ir spēkā un saista otru pusi. ... || 293. Aizbildnis var nepilngadīgā lietās un viņa interesēs noslēgt visādus līgumus, kā arī pieņemt un izdarīt maksājumus. Visa tāda darbība saista nepilngadīgo, ja vien aizbildnis to izdarījis labā ticībā, palikdams turklāt saimnieciskās pārvaldības ietvaros un nesaistīdams nepilngadīgo bez sevišķas vajadzības uz ilgāku laiku kā līdz viņa pilngadībai.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "likumi.lv/ta/id/90223 (Civil Law, Part One, Family Law, consolidated with amendments to 21.03.2024) fetched by curl and read; saved files/a2/LV-90223.html",
+    "result": "found: majority (art. 219, 18; early majority from 16 by the Orphans' Court, art. 220-221) and minorsContracts (arts. 195, 260, 261, 293)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "nkc.gov.lv/lv: HTTP/2 INTERNAL_ERROR, then HTTP/1.1 timed out (30 s)",
+    "result": "not found: funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "archive.org availability API for nkc.gov.lv/lv: no snapshots; web.archive.org reset the connection (curl 35); Common Crawl CC-MAIN-2026-43 and -39 listing of lv,gov,nkc)/ read: English pages (budget, cash-rebates, laws-and-regulations only as cookie redirects), no applicant-rule page",
+    "result": "not found: funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "likumi.lv for the Film Law (Filmu likums): site search needs cookies; ids 109264, 67236, 67256, 66890 probed, none the Film Law",
+    "result": "not found: funds",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "age": 18,
+    "early": "from 16 by the Orphans' Court (bāriņtiesa), confirmed by a court; marriage before 18 also confers majority",
+    "cite": "Civillikums arts. 219-221"
+   },
+   "minorsContracts": {
+    "rule": "a minor has no capacity to act; the guardian (parents, the natural guardians, art. 223) contracts for the minor, binding him no longer than to majority without special need; a contract plainly to the minor's benefit binds the other party",
+    "ownEarnings": "from 16, everything earned by the child's own personal work is the child's free property, outside the parents' administration, and the minor manages it and may contract within ordinary administration; a minor lawfully employed may make the transactions that employment needs",
+    "setAside": "none in the Civil Law (no share of pay to be held)",
+    "cite": "Civillikums arts. 195, 223, 260, 261, 293"
+   }
+  },
+  "notes": "funds still blocked: NKC unreachable, Film Law not located on likumi.lv without search. The Civil Law page's own note says art. 219 amended by the law of 29.10.2015 in force 03.12.2015.",
+  "sources": []
+ },
+ {
+  "id": "R-8293",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://legimonaco.mc/code/code-civil@2025.09.30",
+    "title": "Code civil de Monaco, version of 30 September 2025 (Legimonaco, the Principality's official legal portal)",
+    "said": "Article 298 Loi n° 1.261 du 23 décembre 2002 Est mineure, la personne qui n'a pas atteint l'âge de dix-huit ans. ... Article 403 Le mineur est émancipé de plein droit par le mariage. Article 404 Abrogé par la loi n° 1.261 du 23 décembre 2002 . [Articles 405-407 likewise abrogé] ... Article 410 Modifié par la loi n° 1.261 du 23 décembre 2002 Le mineur émancipé a la capacité du majeur pour tous les actes de la vie civile. ... Article 410-1° Loi n° 1.261 du 23 décembre 2002 La majorité est fixée à dix-huit ans ; à cet âge, on est capable de tous les actes de la vie civile. || Article 116 Remplacé par la loi n° 1.382 du 20 juillet 2011 L'homme et la femme ne peuvent se marier avant dix-huit ans. Néanmoins, il est loisible au Prince d'accorder les dispenses d'âge pour motifs graves si le mineur a au moins seize ans.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://legimonaco.mc/code/code-commerce@2026.10.17",
+    "title": "Code de commerce de Monaco, last modified 17 October 2026 (Legimonaco)",
+    "said": "Article 1 Sont commerçants ceux qui exercent des actes de commerce, et en font leur profession habituelle. ... [the only mention of minors:] Les lettres de change souscrites par des mineurs non négociants sont nulles à leur égard, sauf les droits respectifs des parties, conformément à l' article 1159 du Code civil .",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legimonaco.mc: codes list, then the Code de commerce (version 2026.10.17) and the Code civil (version 2025.09.30) fetched whole by curl and searched (mineur, émancipé, capacité, commerçant, dix-huit ans)",
+    "result": "found in part: companies (no age in the Code de commerce; a minor is emancipated only by marriage, possible from 16 with the Prince's dispensation; majority 18)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: unions, funds",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "rule": "the Code de commerce sets no age for a trader, SARL or SAM manager; capacity for every act of civil life comes at 18, or earlier only by marriage (from 16 by the Prince's dispensation for grave reasons), the emancipated minor having the capacity of an adult; voluntary emancipation was abolished in 2002",
+    "directorFrom": "18, or a minor married by dispensation from 16 (reading)",
+    "cite": "Code civil arts. 298, 403-410-1 and 116 (marriage age); Code de commerce"
+   }
+  },
+  "notes": "Monaco's sociétés anonymes rules sit in the Ordonnance of 5 March 1895, not read. Unions and funds not tried for lack of time.",
+  "sources": []
+ },
+ {
+  "id": "R-8320",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://legislation.mt/eli/cap/16/eng/pdf",
+    "title": "Civil Code, Chapter 16 of the Laws of Malta (consolidated PDF, Legiżlazzjoni Malta, the official legislation portal)",
+    "said": "141. (1) The parents shall have the usufruct of such property as devolves on the child by succession, donation, or any other gratuitous title, including property derived from entail. (2) They shall retain such usufruct until the child attains majority, unless the latter dies before that time. 142. The following property shall not be subject to the legal usufruct: ... (b) property given to the child to undertake a career, an art or a profession; ... (d) property which the child may have acquired by his own work or his own separate industry.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.mt/eli/cap/16/eng/pdf (615 pages) downloaded and searched (earning, own work, industry, eighteen); arts. 141-143 read",
+    "result": "found in part: setAside (no share held; what a child earns by his own work is outside the parents' usufruct)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "screenmalta.com answered 403, 2026-11-04",
+    "result": "not found: funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: unions, funds",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "setAside": "none in the Civil Code articles read: property a child acquires by his own work or separate industry is not subject to the parents' legal usufruct (which runs to majority over gratuitously acquired property)",
+   "cite": "Civil Code (Cap. 16) arts. 141-142(d)"
+  },
+  "notes": "The Civil Code was searched, not read whole; employment law (Young Persons (Employment) Regulations) not read for a set-aside. Unions not tried.",
+  "sources": []
+ },
+ {
+  "id": "R-8322",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://companies.govmu.org/cbrd/wp-content/uploads/2026/09/Companies-Act-200131-08-2026.pdf",
+    "title": "The Companies Act 2001 (Act No. 15 of 2001), consolidated to 31 August 2026 (Corporate and Business Registration Department, companies.govmu.org/cbrd/acts/)",
+    "said": "133. Qualifications of directors (1) (a) A company shall appoint a natural person as director. ... (2) No person shall be appointed, or hold office, as a director of a company if he is a person who - (a) is under 18 years of age; (b) subject to section 138(4) to (7), is, in the case of a public company, over 70 years of age; (c) is an undischarged bankrupt;",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "companies.govmu.org/cbrd/acts/ read; the Companies Act 2001 consolidated PDF (to 31-08-2026) downloaded and read (ss. 132-133)",
+    "result": "found: companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "supremecourt.govmu.org legislation search: the Companies Act group (80896) lists only GN 90 of 2025; the Code civil group (80889) returned no documents by query string (the form filters by script)",
+    "result": "not found: majority",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: majority, unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorFrom": 18,
+    "rule": "a director must be a natural person, not under 18 (nor over 70 in a public company, subject to s. 138)",
+    "cite": "Companies Act 2001 s. 133(1)(a), (2)(a)"
+   }
+  },
+  "notes": "majority (Code civil mauricien) and unions not found today.",
+  "sources": []
+ },
+ {
+  "id": "R-8046",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+    "title": "Código Civil Federal, Última reforma publicada DOF 14-11-2025 (Cámara de Diputados)",
+    "said": "Artículo 428.- Los bienes del hijo, mientras esté en la patria potestad, se dividen en dos clases: I. Bienes que adquiera por su trabajo; II. Bienes que adquiera por cualquiera otro título. Artículo 429.- Los bienes de la primera clase pertenecen en propiedad, administración y usufructo al hijo. Artículo 430.- En los bienes de la segunda clase, la propiedad y la mitad del usufructo pertenecen al hijo; la administración y la otra mitad del usufructo corresponden a las personas que ejerzan la patria potestad. ...",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+    "title": "Ley Federal del Trabajo, Última reforma DOF 14-05-2026 (Cámara de Diputados)",
+    "said": "Artículo 175 Bis. Para los efectos de este capítulo, no se considerará trabajo las actividades que bajo la supervisión, el cuidado y la responsabilidad de los padres, tutores o quienes ejerzan la patria potestad, realicen los menores de quince años relacionadas con la creación artística, el desarrollo científico, deportivo o de talento, la ejecución musical o la interpretación artística en cualquiera de sus manifestaciones, cuando se sujeten a las siguientes reglas: a) La relación establecida con el solicitante deberá constar por escrito y contendrá el consentimiento expreso que en nombre del menor manifiesten los padres, tutores o quienes ejerzan la patria potestad, ... b) Las actividades que realice el menor no podrán interferir con su educación, esparcimiento y recreación ... c) Las contraprestaciones que reciba el menor por las actividades que realice nunca serán menores a las que por concepto de salario recibiría un mayor de quince y menor de dieciocho años. || Artículo 100.- El salario se pagará directamente al trabajador.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "diputados.gob.mx LeyesBiblio: LFT.pdf (reformed to DOF 14-05-2026) and CCF.pdf (to DOF 14-11-2025) downloaded and read; the LFT searched whole for ahorro and fideicomiso (only workers' savings funds, retirement accounts and cooperatives appear) and arts. 100, 175 Bis read; CCF arts. 428-430 read",
+    "result": "found: setAside (none federally: a child's earnings from his work are his in ownership, administration and usufruct; artistic activity of under-15s is not 'work' if the written-consent rules are met)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "setAside": "none in federal law: what a child acquires by his own work belongs to him in ownership, administration and usufruct (CCF arts. 428-429); the LFT holds no share back (searched whole) and requires an under-15's artistic pay to be at least the wage of a 15-to-17-year-old (art. 175 Bis c))",
+   "scope": "federal; each state's civil code governs family property in that state (not read)"
+  },
+  "notes": "ANDA and SOGEM statutes not tried for lack of time. State civil codes (e.g. Ciudad de México's) not read.",
+  "sources": []
+ },
+ {
+  "id": "R-8327",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_as%20at%2031%20January%202025.pdf",
+    "title": "Companies Act 2016 [Act 777], as at 31 January 2025 (Companies Commission of Malaysia, SSM)",
+    "said": "196. (1) A company shall have a minimum number of directors as follows: (a) in the case of a private company, one director; or (b) in the case of a public company, two directors. (2) A director shall be a natural person who is at least eighteen years of age. || 235. (1) A company shall have at least one secretary who shall be— (a) a natural person; (b) eighteen years of age and above; and (c) a citizen or permanent resident of Malaysia,",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.finas.gov.my/services/funding",
+    "title": "FINAS - Dana & Pembiayaan: Dana Kandungan Kreatif (DKK)",
+    "said": "Syarat-Syarat Am Permohonan DKK Lesen pengeluaran / pengedaran FINAS hendaklah masih aktif sekurang-kurangnya 3 bulan sebelum tarikh permohonan dibuat. Lebih daripada lima puluh satu peratus (51%) pemilikan sah dan benefisial pemohon terletak hak pada warganegara Malaysia. Syarikat tidak mempunyai projek DKK yang sedang berjalan (on going) atau telah menerima surat tutup projek daripada FINAS. Bebas dari perintah penggulungan dan senarai muflis.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lom.agc.gov.my (Laws of Malaysia, AGC): the acts lists load through an encrypted script endpoint (json-updated-2024.php with responseCrypto.js) and the PDF links are signed tokens; not worked around",
+    "result": "not found: majority, minimumWorkAge, childPerformers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, -30, 2025-51 for my,gov,agc,lom)/ (only robots.txt, status 500) and CC-MAIN-2026-43, -39, 2025-51 for my,gov,mohr,jtksm)/ (no Act 350 PDF)",
+    "result": "not found: majority, childPerformers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "jtksm.mohr.gov.my (Labour Department) reset the connection",
+    "result": "not found: minimumWorkAge, childPerformers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "ssm.com.my Companies Act 2016 page, the consolidated PDF as at 31 January 2025 downloaded and read (s. 196, s. 235)",
+    "result": "found: companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "finas.gov.my failed TLS (incomplete chain); completed with Sectigo's own intermediate (Sectigo Public Server Authentication CA DV R36, fetched from the AIA address crt.sectigo.com), verification on; /services/funding read",
+    "result": "found: funds",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'\"Children and Young Persons (Employment) Act 1966\" Act 350 pdf public entertainment licence gov.my' (standard)",
+    "result": "lead: the Commissioner of Law Revision's reprint (as at 1 October 2019) at jtksm.mohr.gov.my/sites/default/files/2023-03/5.%20Children%20and%20Young%20Persons%20%28Employment%29%20Act%201966_0.pdf, and JTKSM's Malay handbook on the intranet host",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "both JTKSM PDFs fetched three times (HTTP/2 and HTTP/1.1): connection reset each time",
+    "result": "not found: childPerformers (the licence under s. 7 not read)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2025-51 for the reprint's path under my,gov,mohr,jtksm)/sites/default/files/2023-03/: no capture",
+    "result": "not found: childPerformers",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorFrom": 18,
+    "director": "a natural person at least 18; a secretary also at least 18",
+    "cite": "Companies Act 2016 ss. 196(2), 235(1)"
+   },
+   "funds": {
+    "body": "FINAS, Dana Kandungan Kreatif (DKK)",
+    "applicant": "a company holding a FINAS production or distribution licence active at least 3 months, more than 51% legally and beneficially owned by Malaysian citizens, with no DKK project running, not wound up or bankrupt (no natural-person applicant, so no applicant age)"
+   }
+  },
+  "notes": "majority, minimum work age, child performer licence (Children and Young Persons (Employment) Act 1966), unions not found today. Lead: Act 350 allows a child or young person in public entertainment under a licence granted under the Act (search summary only, not read).",
+  "sources": []
+ },
+ {
+  "id": "R-8333",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "juridoc.gouv.nc: certificate name mismatch on www.juridoc.gouv.nc; juridoc.gouv.nc read with Let's Encrypt's YR2 intermediate (from the AIA address) added, verification on; its home frame says Leginova replaced it on 1 October 2026 ('Juridoc reste consultable à titre transitoire, avec un fonds figé au 30 septembre 2026'); the codes page under JdTextes.nsf/codestart answered 404",
+    "result": "not found: majority, minorsContracts, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "leginova.gouv.nc (the new official portal): a script-only application (main-DY32AKIR.js), no text without running it",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Leginova went live 2026-10-01; its search runs in the browser. A browser-capable session could read the Code civil applicable en Nouvelle-Calédonie there.",
+  "sources": []
+ },
+ {
+  "id": "R-8337",
+  "verdict": "found-now",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://api.prod.legislation.gov.au/v1/documents/find(registerId='F2023C00532',type='Primary',format='Pdf',uniqueTypeNumber=0,volumeNumber=0,rectificationVersionNumber=0)",
+    "title": "Norfolk Island Applied Laws Ordinance 2016, Compilation No. 19 (compilation date 28/06/2023, Authorised Version F2023C00532; Federal Register of Legislation, the current version per its API)",
+    "said": "Schedule 1—Suspension 1 Suspension (1) The operation of the legislation of New South Wales, other than an Act specified in the following table or legislation made under such an Act, is suspended in the Territory for the period: (a) beginning on the day this item commences; and (b) subject to subitem (3), ending at the end of 31 December 2026. Legislation of New South Wales that has not been suspended Name of Act Health Services Act 1997 Interpretation Act 1987 Local Government Act 1993 Long Service Leave Act 1955 ... (3) The period for which the operation of an Act specified in column 1 of the following table, and any legislation made under that Act, is suspended in the Territory ends at the start of the day specified in column 2 of the table. [table: Anti-Discrimination Act 1977; Crimes (Domestic and Personal Violence) Act 2007; Education Act 1990; Education Standards Authority Act 2013; Electoral Funding Act 2018; First State Superannuation Act 1992; Government Information (Public Access) Act 2009; Government Sector Employment Act 2013; Industrial Relations Act 1996; Law Enforcement (Powers and Responsibilities) Act 2002; Lobbying of Government Officials Act 2011; Public Finance and Audit Act 1983; Public Health Act 2010; Superannuation Administration Act 1996; Teaching Service Act 1980; Workers Compensation Act 1987; Work Health and Safety Act 2011; Workplace Injury Management and Workers Compensation Act 1998]",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://api.prod.legislation.gov.au/v1/documents/find(registerId='C2015Q00075',type='Primary',format='Pdf',uniqueTypeNumber=0,volumeNumber=0,rectificationVersionNumber=0)",
+    "title": "Age of Majority Act 1980 (NI), Act No. 33 of 1980, continued law in force (Federal Register of Legislation, title C2015Q00075)",
+    "said": "Age of majority 18 years 4. (1) Subject to this Act, a person attains full age for all purposes of the law of Norfolk Island when he attains the age of 18 years. (2) A person who has attained the age of 18 years is not subject to any want of legal capacity by reason only of his age.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://api.prod.legislation.gov.au/v1/documents/find(registerId='C2022Q00010',type='Primary',format='Pdf',uniqueTypeNumber=0,volumeNumber=0,rectificationVersionNumber=0)",
+    "title": "Employment Act 1988 (NI), Compilation No. 8, compilation date 20 September 2022 (Federal Register of Legislation, title C2015Q00125)",
+    "said": "24 Employment of persons under the age of 15 years (1) An employer must not employ a person under the age of 15 years— (a) during any hours that the person is required by law to attend school; or (b) at any time between the hours of 11.00 pm on one day and 6.00 am on the next. Penalty: 20 penalty units. (2) In addition, an employer must not employ a person under the age of 15 years— (a) for more than 20 hours during a week in which the person is required by law to attend school; or (b) for more than 40 hours during any other week. Penalty: 20 penalty units. (3) Subsections 24(1) and 24(2) do not apply to the employment of a person over the age of 14 as an apprentice or in a training position prescribed by the rules for the purposes of this subsection. (4) This Act (other than subsection 24(1)) does not apply to employment of a person under the age of 15 years who belongs to a class prescribed by the rules, for the purposes of this subsection, by reference to— (a) the type of work in which the person is employed; ...",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Federal Register of Legislation API (api.prod.legislation.gov.au/v1/titles and /versions): Norfolk Island Applied Laws titles listed; the Ordinance's current version F2023C00532 (compilation 19) PDF downloaded and Schedule 1 read; titles 'Majority', 'Child Welfare Act 2009', 'Employment Act', 'Companies' searched; Age of Majority Act 1980 (NI), Child Welfare Act 2009 (NI) (compilation C2022Q00003, searched whole for employ, perform, entertain: no child-employment rule) and Employment Act 1988 (NI) (C2022Q00010) downloaded and read",
+    "result": "found: majority (NI's own Act, 18), childPerformers (no permit; NI Employment Act s. 24 limits for under-15s), and the NSW Acts' suspension",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "age": 18,
+    "cite": "Age of Majority Act 1980 (NI) s. 4",
+    "note": "NSW's Minors (Property and Contracts) Act 1970 does not apply: all NSW legislation not listed in Schedule 1 of the Applied Laws Ordinance 2016 is suspended in the Territory until the end of 31 December 2026"
+   },
+   "childPerformers": {
+    "permit": "none: the NSW Children and Young Persons (Care and Protection) Act 1998 (with its child-employment rules) is not among the unsuspended NSW Acts, so is suspended to the end of 2026; the Child Welfare Act 2009 (NI) sets no employment rule",
+    "limits": "under 15: no work in compulsory school hours or between 11 pm and 6 am; at most 20 hours in a school week, 40 in any other week (Employment Act 1988 (NI) s. 24); rules may exempt classes of under-15 work by type, time, extent or employer, except the school-hours and night bar",
+    "cite": "Applied Laws Ordinance 2016 sch. 1 item 1; Employment Act 1988 (NI) s. 24"
+   },
+   "suspensionEnds": "2026-12-31 (unless extended; from 2027 NSW law not listed would apply)"
+  },
+  "notes": "The suspension ends at the end of 31 Dec 2026 as compiled in 2023; an Ordinance extending it after the compilation was not looked for. Rules under s. 24(4) not read. Also: an in-force Norfolk Island Applied Laws and Service Delivery (Queensland) Ordinance 2021 (F2021L01821) exists, not read.",
+  "sources": []
+ },
+ {
+  "id": "R-8050",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "wetten.overheid.nl/BWBR0003045/2026-01-01 (Burgerlijk Wetboek Boek 2): HTTP/2 PROTOCOL_ERROR, then HTTP/1.1 empty reply, 2026-11-04",
+    "result": "not found: companies, setAside",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8052",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lovdata.no/dokument/NL/lov/2013-03-26-3 (vergemålsloven): HTTP/2 405 from Varnish (the site refuses this client), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8341",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://faolex.fao.org/docs/pdf/nep209663.pdf",
+    "title": "The National Civil (Code) Act, 2017 (2074), Act No. 34 of 2017, English text (FAOLEX, FAO's legislative database)",
+    "said": "(e) \"minor\" means a child who has not attained eighteen years of age, ... 32. To attain competency: (1) Every person who attains eighteen years of age shall be considered to become a major, and shall, in the same capacity, be considered to be legally competent. (2) A person who is competent under sub-section (1) may, subject to law, exercise, bear and discharge any right, obligation and duty whatsoever. 33. To be considered incompetent: (1) Notwithstanding anything contained in Section 32, a person who has not attained ten years of age, or even if attained that age, is unable to protect his or her right and interest for the reason of unsoundness of mind shall be considered to be legally incompetent. ... (2) An incompetent person does not have to bear any type of legal obligation, and while exercising a right, it has to be exercised, or cause to be exercised, only with the consent of the guardian or curator or through the guardian or curator, as the case may be. (3) In executing a document on behalf of an incompetent person, it shall be executed, or caused to be executed, through his or her guardian or curator, as the case may be. 34. To be considered quasi-competent: (1) A person who has attained ten years of age but not completed eighteen years of age shall be considered as a quasi-competent person. (2) A quasi-competent person may, subject to law, exercise, bear and discharge any right, obligation and duty whatsoever. (3) A quasi-competent person shall, in exercising a right, obtain the consent of the guardian or curator or exercise the right through the guardian or curator, as the case may be. (4) In executing a document by a quasi-competent person, it shall be executed in the presence of his or her guardian or curator, as the case may be.",
+    "quotes": "https://www.lawcommission.gov.np/ (the Nepal Law Commission's official English translation; the Nepal Gazette publication)",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "lawcommission.gov.np home read (after resets, over HTTP/1.1); category pages probed for the Civil Code: none found",
+    "result": "not found: majority (primary)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2025-51, -2026-43, -2026-21 listings of np,gov,lawcommission)/ grepped: the Act relating to Children, Children Regulation 2078 and Civil Code Procedure 2074 pages, no Civil Code page",
+    "result": "not found: majority (primary)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'lawcommission.gov.np \"National Civil (Code) Act, 2017\" English pdf' (standard)",
+    "result": "lead: the FAOLEX copy",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "faolex.fao.org/docs/pdf/nep209663.pdf downloaded and read (ss. 2(e), 32-34)",
+    "result": "found (secondary): majority, minorsContracts",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "age": 18,
+    "cite": "National Civil (Code) Act 2017 s. 32(1)"
+   },
+   "minorsContracts": {
+    "rule": "under 10: incompetent, bears no obligation, acts only through or with the guardian; 10 to 17: quasi-competent, exercises rights with the guardian's consent or through the guardian, executes documents in the guardian's presence",
+    "setAside": "not found",
+    "cite": "ss. 33-34"
+   }
+  },
+  "notes": "Secondary (FAOLEX) only. Companies Act 2063 director age, associations and Film Development Board not found today.",
+  "sources": []
+ },
+ {
+  "id": "R-8054",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.govt.nz/act/public/1970/0137/latest/whole.html: HTTP 202 (the WAF challenge) again, 2026-11-04",
+    "result": "not found: majority",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, -21 and 2025-51 for nz,govt,legislation)/act/public/1970: no captures; -39 and -30 index reads failed",
+    "result": "not found: majority",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8364",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "bvirtualogp.pr.gov (the Puerto Rico Justice Department's virtual library): DigiCert Global G2 TLS RSA SHA256 2020 CA1 intermediate added from its AIA address, verification still failed; not bypassed",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8368",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cena-ste.org/quemsomos/estatutos.html re-read: the statutes are a Google Drive file (drive.google.com/file/d/1cWuf8TK1i9mvcytVZ0b1U0iX4J3VvUnG); the download answered 'Sorry, the owner hasn't given you permission to download this file'",
+    "result": "not found: unions (the statute's text not readable)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'\"CENA-STE\" estatutos \"Boletim do Trabalho e Emprego\" sócios idade' (standard)",
+    "result": "no CENA-STE statute; a lead to DGERT's BTE indexes",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "dgert.gov.pt (TLS chain completed with Sectigo's OV R36 intermediate from its AIA address, verification on): site search 'CENA-STE' (11 results) and 'Audiovisual e dos Músicos Estatutos'; the BTE indexes 43/2021, 5/2022, 20/2023, 33/2023, 5/2024, 8/2024, 2/2026, 17/2026, 5/2021, 40/2020 read: CENA-STE appears only for elections and its OPART company agreement, no statutes publication",
+    "result": "not found: unions (statutes published before 2020, outside the indexed years, or not indexed)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Next avenue: the BTE full issues at bte.gep.msess.gov.pt/completos/<year>/ for the year CENA-STE's statutes were registered (before 2020), or the OPART-CENA-STE company agreement (BTE 5/2024 revisão global) for a rule on minors.",
+  "sources": []
+ },
+ {
+  "id": "R-8372",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/4845/ley-n-2169",
+    "title": "Ley N° 2169 Que establece la mayoría de edad (sanctioned 26/06/03; Biblioteca y Archivo Central del Congreso Nacional)",
+    "said": "Artículo 1°.- Modificase el Artículo 36 de la Ley N° 1183/85 \"Código Civil\", el cual queda redactado de la siguiente manera: \"Art. 36.- La capacidad de hecho consiste en la aptitud legal de ejercer uno por sí mismo o por si solo sus derechos. Este Código reputa plenamente capaz a todo ser humano que haya cumplido dieciocho años de edad y no haya sido declarado incapaz judicialmente\". Artículo 2º.- Deróganse el inciso a) del Artículo 39 de la Ley N° 1183/85 \"Código Civil\" y el Artículo 7° de la Ley N° 1034/83 \"Del Comerciante\". Artículo 3°.- Modifícase el Artículo 1° de la Ley N° 1702/01 ... a) Niño: toda persona humana desde la concepción hasta los trece años de edad; b) Adolescente: toda persona humana desde los catorce años hasta los diecisiete años de edad; y, c) Mayor de edad: toda persona humana desde los dieciocho años de edad\".",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "bacn.gov.py: its search (buscar?s=) returns only the latest laws whatever the query; the law's address found in Common Crawl CC-MAIN-2026-43 and 2025-51 listings of py,gov,bacn)/leyes-paraguayas/, then leyes-paraguayas/4845/ley-n-2169 fetched live and read",
+    "result": "found: majority",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 and 2025-51 for the Código de la Niñez (Ley 1680/01), Ley 1657/01 and the cinema law (Ley 6106/18): only a 2009 amendment page (Ley 3879, art. 169) listed",
+    "result": "not found: minimumWorkAge, funds",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "age": 18,
+    "cite": "Código Civil art. 36 as amended by Ley 2169/2003 art. 1",
+    "note": "the same Law repealed Código Civil art. 39(a) and art. 7 of Ley 1034/83 del Comerciante; niño to 13, adolescente 14 to 17 (Ley 1702/01 art. 1 as amended)"
+   }
+  },
+  "notes": "Remaining: Código de la Niñez's general minimum age, the Civil Code's minor-company rule, the actors' union and INAP not found today.",
+  "sources": []
+ },
+ {
+  "id": "R-8373",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://api.moj.gov.qa/api/v1/Legislation/66253e38-5696-4b73-84a8-e7696d9508e5",
+    "title": "قانون رقم (11) لسنة 2015 بإصدار قانون الشركات التجارية, status In Force, Official Gazette Issue 13 of 2015 (Ministry of Justice's Al Meezan legal portal, the JSON its page almeezan.qa/legislations/law/2015/11/general loads)",
+    "said": "Article 97 Amended: يُشترط في عضو مجلس الإدارة ما يلي: 1 - ألا يقل عمره عن واحد وعشرين عاماً، وأن يكون متمتعاً بالأهلية الكاملة. 2- ألا يكون قد سبق الحكم عليه بعقوبة جناية، أو في جريمة مُخلّة بالشرف أو الأمانة، أو في جريمة من الجرائم المنصوص عليها في المادتين (334)، (335) من هذا القـانون، أو أن يكون قد قضي بإفلاسه، ما لم يكن قد رد إليه اعتباره.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://api.moj.gov.qa/api/v1/Legislation/800cf3cc-7799-4405-a5eb-c16408300d73",
+    "title": "Law No. 14 of 2004 on the promulgation of Labour Law, status In Force (Al Meezan, Ministry of Justice; the official English text, isMachineTranslated false)",
+    "said": "Article 86: No one under the age of sixteen may be employed in any work, nor are they allowed to enter any workplace. || Article 87 Amended [published 2009-03-23; the 2005 text cancelled that day]: The minor may not be employed before obtaining the approval of his father or guardian and the issuance of a special permit from the Department / Directorate. If the minor is a Qatari student, it is necessary to obtain the approval of the Minister of Education and Higher Education. Minors may not be employed in work whose nature or performance conditions may harm the health, safety, or morals of the minor, and the determination of such work is decided by the minister. || Article 88: The minor may not be employed except after undergoing a medical examination by the competent medical authority and being proven fit for the work to be assigned to him. ... || Article 89: It is not permitted to employ the minor between sunset and sunrise, on rest days, official holidays, or for more than the regular Working Hours. The minor must not be kept at the workplace for more than seven consecutive hours. || Article 90: The regular Working Hours for minors must not exceed thirty-six hours per week at six hours per day, except during the month of Ramadan, when the Working Hours must not exceed twenty-four hours per week at four hours per day. ... so that the minor does not work continuously for more than three consecutive hours.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "almeezan.qa is a script application; its own public API (api.moj.gov.qa/api/v1, named in the site's script) queried: Legislation/published-lookup?searchTerm=<the Companies Law's title> found the law; Legislation/<id> returned the text (345 articles) and was searched for age and capacity (الأهلية, قاصر, واحد وعشرين)",
+    "result": "found: companies (board member of a joint-stock company at least 21 with full capacity)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "the same API: lookup 'قانون العمل رقم (14) لسنة 2004' returned nothing; 'بإصدار قانون العمل' found Law No. 14 of 2004; Legislation/<id> read, arts. 86-92 (the amended art. 87 of 2009 and its cancelled 2005 text)",
+    "result": "found: minorsContracts (guardian's approval plus the Department's special permit), childPerformers (no exception below 16 in arts. 86-92), juvenile hours",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "dfi.org.qa (Doha Film Institute) CONNECT 502",
+    "result": "not found: funds",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "boardMemberFrom": 21,
+    "rule": "a joint-stock company's board member must be at least 21 and of full capacity (Art. 97 as amended); other company forms' managers not read",
+    "cite": "Commercial Companies Law No. 11 of 2015 art. 97 (amended)"
+   },
+   "minorsContracts": {
+    "rule": "a minor (16 to 18) may be employed only with his father's or guardian's approval and a special permit from the Department; a Qatari pupil also needs the Minister of Education's approval; medical fitness first and yearly",
+    "setAside": "none in arts. 86-92",
+    "cite": "Labour Law No. 14 of 2004 arts. 87 (amended 2009), 88"
+   },
+   "childPerformers": {
+    "rule": "no one under 16 may be employed in any work or enter a workplace; no performer exception in the juvenile chapter (reading of arts. 86-92)",
+    "juvenileLimits": "no work sunset to sunrise, on rest days or holidays; 6 hours a day, 36 a week (Ramadan 4 and 24); no more than 3 hours without a break; no more than 7 consecutive hours at the workplace",
+    "cite": "arts. 86, 89, 90"
+   }
+  },
+  "notes": "The Labour Law's exclusions (art. 3) not read for whether performing arts fall outside it. Associations and the Doha Film Institute not reached.",
+  "sources": []
+ },
+ {
+  "id": "R-8377",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislatie.just.ro/Public/DetaliiDocument/798 (Legea 31/1990): HTTP/2 PROTOCOL_ERROR, then HTTP/1.1 empty reply",
+    "result": "not found: companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2025-51 for ro,just,legislatie)/public/detaliidocument/798: only documents 798xx listed, not 798; CC-MAIN-2026-43 and -39 index reads failed (throttled)",
+    "result": "not found: companies",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8380",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://www.consultant.ru/document/cons_doc_LAW_5142/7b6abd47219e2aa6081ac21b41e9e83d80fb45df/",
+    "title": "ГК РФ Статья 26 (ред. от 10.06.2026, с изм. от 22.10.2026), КонсультантПлюс",
+    "said": "2. Несовершеннолетние в возрасте от четырнадцати до восемнадцати лет вправе самостоятельно, без согласия родителей, усыновителей и попечителя: 1) распоряжаться своими заработком, стипендией и иными доходами; 2) осуществлять права автора произведения науки, литературы или искусства, изобретения или иного охраняемого законом результата своей интеллектуальной деятельности; ... 4. При наличии достаточных оснований суд по ходатайству родителей, усыновителей или попечителя либо органа опеки и попечительства может ограничить или лишить несовершеннолетнего в возрасте от четырнадцати до восемнадцати лет права самостоятельно распоряжаться своими заработком, стипендией или иными доходами, за исключением случаев, когда такой несовершеннолетний приобрел дееспособность в полном объеме в соответствии с пунктом 2 статьи 21 или со статьей 27 настоящего Кодекса.",
+    "quotes": "http://pravo.gov.ru/ (Official Internet Portal of Legal Information; the Code's official publication)",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "secondary",
+    "url": "https://www.consultant.ru/document/cons_doc_LAW_17819/a0505ad1f70f2516e6fdf28afb335c3973aed5b3/",
+    "title": "Федеральный закон от 08.02.1998 N 14-ФЗ \"Об обществах с ограниченной ответственностью\" (ред. от 04.08.2026), Статья 40, КонсультантПлюс",
+    "said": "1. Единоличный исполнительный орган общества (директор, генеральный директор и другие) избирается общим собранием участников общества на срок, определенный уставом общества ... 2. В качестве единоличного исполнительного органа общества может выступать только физическое лицо, за исключением случая, предусмотренного статьей 42 настоящего Федерального закона.",
+    "quotes": "http://pravo.gov.ru/",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "pravo.gov.ru (http 503; https reset), publication.pravo.gov.ru reset, 2026-11-04",
+    "result": "unreachable: the official portal",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "consultant.ru (KonsultantPlus, a legal publisher's consolidated text) Civil Code part one art. 26 and Law 14-FZ art. 40 fetched by curl and read",
+    "result": "found in part (secondary): setAside, director",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "setAside": "none: a minor of 14 to 18 disposes of his own earnings and exercises his author's rights without his parents' consent; a court may limit or remove that right on the parents' or the guardianship body's petition (ГК РФ art. 26(2), (4)); no share is held (reading of art. 26)",
+   "companies": {
+    "director": "only a natural person may be an LLC's sole executive body (14-ФЗ art. 40(2)); the Law sets no age",
+    "directorFrom": "not stated in art. 40 (capacity at 18 or on emancipation from 16, ГК РФ arts. 21, 27, not read today)"
+   }
+  },
+  "notes": "secondary only: the official portal unreachable. Unions (Гильдия актёров кино России, Союз кинематографистов) not tried for lack of time.",
+  "sources": []
+ },
+ {
+  "id": "R-8395",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "pisrs.si/pregledPredpisa?id=ZAKO4291 (ZGD-1) and ZAKO7556 (Družinski zakonik), also the old Pis.web path: an Angular shell; its script runs a proof-of-work security check (apiSecurityService.makeSecurityCheck) before serving text; not run or bypassed",
+    "result": "not found: minorsContracts, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8399",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://static.slov-lex.sk/static/SK/ZZ/1991/455/20260817.html",
+    "title": "455/1991 Zb. Živnostenský zákon, version in force from 2026-08-17 (Slov-Lex, the Ministry of Justice's official legal portal)",
+    "said": "§ 6 Všeobecné podmienky prevádzkovania živnosti (1) Všeobecné podmienky prevádzkovania živnosti fyzickými osobami sú: a) dosiahnutie veku 18 rokov, b) spôsobilosť na právne úkony, c) bezúhonnosť, ak tento zákon neustanovuje inak. ... (3) U slovenskej právnickej osoby musí všeobecné podmienky podľa odseku 1 spĺňať fyzická osoba alebo osoby, ktoré sú jej štatutárnym orgánom. Podmienku podľa odseku 1 písm. c) musí spĺňať aj právnická osoba.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://static.slov-lex.sk/static/SK/ZZ/1991/513/20260817.html",
+    "title": "513/1991 Zb. Obchodný zákonník, version in force from 2026-08-17 (Slov-Lex)",
+    "said": "§ 133 ... (2) Konateľom spoločnosti môže byť len fyzická osoba, ktorá nie je v čase vykonania zápisu do obchodného registra ako povinný vedená v registri poverení na vykonanie exekúcie podľa osobitného zákona. ... (4) Konateľov vymenúva valné zhromaždenie z radov spoločníkov alebo iných fyzických osôb. || § 66 ... (4) Ak podľa osobitného predpisu o živnostenskom podnikaní člen štatutárneho orgánu musí spĺňať podmienky na výkon funkcie, jeho funkcia zanikne ku dňu, keď tieto podmienky prestal spĺňať.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Slov-Lex: www.slov-lex.sk is a script page; the static texts static.slov-lex.sk/static/SK/ZZ/1991/513/20260817.html and .../455/20260817.html fetched by curl and read (§§ 66, 133; § 6)",
+    "result": "found: companies (the konateľ of a company that trades under a trade licence must be 18 with full capacity)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "director": "konateľ: a natural person; where the company trades under a trade licence its statutory body must meet the trade's general conditions: 18, legal capacity, good character; the function ends when they are no longer met",
+    "directorFrom": 18,
+    "cite": "Živnostenský zákon § 6(1), (3); Obchodný zákonník §§ 66(4), 133(2)"
+   }
+  },
+  "notes": "Holds for a company running a živnosť (film production is a free trade); a company with no trade licence isn't reached by § 6 (reading). Unions not tried for lack of time.",
+  "sources": []
+ },
+ {
+  "id": "R-8408",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.dna.sr/media/rqvnqwf2/s-b-_2024_no-_164__wet-__boek_1.pdf",
+    "title": "S.B. 2024 no. 164, WET van 5 december 2024, houdende vaststelling van een nieuw Burgerlijk Wetboek, Boek 1 (De Nationale Assemblée)",
+    "said": "Artikel 2 ... 3. Zij treedt in werking op een door de President te bepalen tijdstip. ... Uitgegeven te Paramaribo, de 15e januari 2025. ... Titel 13 Minderjarigheid Afdeling 1 Algemene bepalingen Artikel 233 Minderjarigen zijn degenen, die de ouderdom van achttien jaar niet hebben bereikt. Artikel 234 1. Een minderjarige is, mits hij met toestemming van zijn wettelijke vertegenwoordiger handelt, bekwaam rechtshandelingen te verrichten, voor zover de wet niet anders bepaalt. 2. De toestemming kan slechts worden verleend voor een bepaalde rechtshandeling of voor een bepaald doel. 3. De toestemming wordt aan de minderjarige verondersteld te zijn verleend, indien het een rechtshandeling betreft ten aanzien waarvan in het maatschappelijk verkeer gebruikelijk is dat minderjarigen van zijn leeftijd deze zelfstandig verrichten.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://sris.sr/wp-content/uploads/2025/01/S.B.-2024-no.-168-Aanpassingswet-nieuw-Burgerlijk-Wetboek.pdf",
+    "title": "S.B. 2024 no. 168, Aanpassingswet nieuw Burgerlijk Wetboek (SRIS, the government's publication site)",
+    "said": "2. Zij treedt in werking met ingang van de dag waarop het nieuwe BurgerlijkWetboek in werking treedt. ... [Memorie van toelichting] zouden door de verlaging van de meerderjarigheidsgrens van 21 naar 18 jaar, de 18-, 19- en 20-jarige wezen geen recht meer hebben op wezenpensioen.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Suriname meerderjarigheid 18 jaar wijziging Burgerlijk Wetboek' (standard)",
+    "result": "lead: the new Burgerlijk Wetboek, S.B. 2024 no. 164 and the adjustment law S.B. 2024 no. 168",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "dna.sr: the new BW Book 1 PDF (185 pages, text layer) downloaded and read (Artikel 2 of the enacting law; arts. 233-234); the lists 'wetten na 2005' and 'wijzigingen na 2005' read for a commencement decree: none listed; S.B. 2022 no. 34 (a scan, page 1 viewed) amends art. 63bis on names, not majority",
+    "result": "lead, not in force: majority lowered to 18 by a law whose commencement the President sets; no commencement found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "sris.sr S.B. 2024 no. 168 PDF read (commencement clause and explanatory note)",
+    "result": "lead: confirms the lowering from 21 to 18 takes effect with the new BW",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead, not a fact: the new BW (arts. 233-234: minor under 18, acts with the representative's consent) was enacted 5 Dec 2024 and published 15 Jan 2025 but enters into force on a date the President sets, not found. Until then the 2005 consolidation's 21 stands as the last read in-force rule. Unions and companies not re-tried (Book 2 Rechtspersonen of the new BW holds the director rules; not read).",
+  "sources": []
+ },
+ {
+  "id": "R-8413",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "asamblea.gob.sv (TLS chain completed with Sectigo's OV R36 intermediate, verification on): leyes-y-decretos/vigentes read, a title query returned only the menu; the Buscador de Leyes y Decretos not used (a form)",
+    "result": "not found: majority, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8424",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "krisdika.go.th presents a self-signed 'Default Company Ltd' certificate (no chain to complete), not bypassed; ratchakitcha.soc.go.th 403; ocs.go.th TLS chain incomplete",
+    "result": "not found: majority, minimumWorkAge, childPerformers, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "labour.go.th and legal.labour.go.th reset; thailandfilmoffice.go.th CONNECT 502; mol.go.th and dbd.go.th answer (home pages only, not searched)",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541 มาตรา 44 อายุต่ำกว่าสิบห้าปี ไฟล์ pdf go.th' (standard)",
+    "result": "no go.th copy of the Act; only summaries (trueplookpanya, TCI articles), leads not facts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8437",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "mevzuat.gov.tr/mevzuat?MevzuatNo=4857&MevzuatTur=1&MevzuatTertip=5: timed out with 0 bytes after 60 s, 2026-11-04",
+    "result": "not found: minimumWorkAge, childPerformers, majority, funds, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl: CC-MAIN-2026-39 holds only a 302 for www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf (crawldiagnostics), no body; CC-MAIN-2026-43 nothing for 1.5.4857 or 1.5.4721; -30, -21 and 2025-51 index reads failed (CloudFront error pages, the index throttled)",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No web search spent on Turkey today. mevzuat.gov.tr remains unreachable from this environment three days running.",
+  "sources": []
+ },
+ {
+  "id": "R-8443",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030025",
+    "title": "勞動基準法第四十五條無礙身心健康認定基準及審查辦法 (Ministry of Labor, amended 民國111年05月31日; Laws & Regulations Database of the ROC, Ministry of Justice)",
+    "said": "第 2 條 雇主或受領勞務者使下列人員從事勞動（以下簡稱工作者），應依本辦法申請許可：一、國民中學未畢業，且未滿十五歲受僱從事工作者。二、未滿十五歲透過他人取得工作為第三人提供勞務，或直接為他人提供勞務取得報酬，且未具勞僱關係之工作者。... 第 4 條 工作者之工作時間，應符合下列規定：一、年齡未滿六歲者，每日不得超過二小時。二、年齡六歲以上未滿十二歲者，每日不得超過三小時。三、年齡十二歲以上未滿十五歲者，每日不得超過四小時。前項第一款未滿六個月之工作者，每次工作時間不得超過三十分鐘。各學期間假期之工作日數，不得超過該假期總日數之三分之二，工作時間適用本法第四十七條及第四十八條規定。開學前七日內不得工作。非於本國境內學校就學之工作者，不適用前項之規定。未滿十二歲之工作者從事廣播、電視及電影事業之節目演出、舞台及馬戲團演出、有聲媒體錄製、廣告之拍攝錄製、模特兒展演、才藝及民俗技藝表演之工作時，工作場所應有法定代理人陪同。第 5 條 工作者之待命及準備時間，應計入工作時間。繼續工作二小時，至少應有十五分鐘之休息。工作者應於每週星期六或星期日擇一日全日休息，作為例假。... 第 7 條 雇主或受領勞務者，應於工作者勞務提供起始日起前九十日至二十日之期間，檢具下列文件向勞務提供地之直轄市、縣（市）政府（以下簡稱地方主管機關）申請許可：... 五、學籍所在地或就讀學校之學校同意書。六、法定代理人之同意書。... 第一項許可期間，每次最長為一年。... 第 16 條 ... 本辦法修正條文自中華民國一百十一年五月一日施行。",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://grants.moc.gov.tw/Web/PointDetail.jsp?__viewstate=nfztlCvvnpskpbXVRlZDkZhReKE/NnJJEAWQuw5fI3LYihlyQNN6R3FpMoszINQ0",
+    "title": "115年度國產電影長片輔導金辦理要點 (Ministry of Culture grants portal, linked from bamid.gov.tw News.aspx?n=3591)",
+    "said": "獎補助對象說明 申請人應為無下列各款情形之依中華民國法律設立登記之電影片製作業。申請輔導金補助之國產電影長片由二家以上我國電影片製作業參與製作者，應由所有我國電影片製作業共同提出申請：(一) 曾獲本局補助或獎勵，經撤銷或廢止其補助金或獎勵金受領資格，尚在申請資格受限期間內。(二) 曾獲本局補助或獎勵，其應繳回或給付本局之結餘款、賠償或溢領之補助金、獎金，未完全繳回、給付本局。",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1087",
+    "title": "民法 第1087、1088、77條 (Laws & Regulations Database)",
+    "said": "第 1087 條 未成年子女，因繼承、贈與或其他無償取得之財產，為其特有財產。 || 第 1088 條 未成年子女之特有財產，由父母共同管理。父母對於未成年子女之特有財產，有使用、收益之權。但非為子女之利益，不得處分之。 || 第 77 條 限制行為能力人為意思表示及受意思表示，應得法定代理人之允許。但純獲法律上利益，或依其年齡及身分、日常生活所必需者，不在此限。",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "law.moj.gov.tw one-bar search 第四十五條, then LawAll pcode=N0030025 fetched by curl and read whole (16 articles); saved files/a2/TW-N0030025.html",
+    "result": "found: the LSA art. 45(3) regulation (permit, hours by age, holidays, chaperone)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "bamid.gov.tw (Bureau of Audiovisual and Music Industry Development) 長片輔導金 page, then the grants.moc.gov.tw 115年度國產電影長片輔導金辦理要點 page read; moc.gov.tw and law.moc.gov.tw answered 403",
+    "result": "found: funds (applicant is a film production enterprise registered under ROC law)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "law.moj.gov.tw Civil Code arts. 1087, 1088, 77 read singly (art. 85 reset)",
+    "result": "not found: setAside (the child's special property is only what is gratuitously acquired; no share of a minor's pay is held in the articles read; the Civil Code was not read whole)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "law.moj.gov.tw search 輔導金 returned no central regulation (the subsidy is an administrative 要點, not in the database)",
+    "result": "not found: funds in the database",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "permit": "許可 from the municipal or county government where the work is done (地方主管機關), applied for by the employer or engager 90 to 20 days before the work starts, each permit at most one year",
+    "reaches": "under 15 employed while not finished junior high, and under 15 working without an employment relation (directly for pay or through another)",
+    "consent": "the statutory agent's written consent and the school's consent",
+    "hoursPerDay": {
+     "under6": 2,
+     "6to11": 3,
+     "12to14": 4,
+     "under6months": "30 minutes a time"
+    },
+    "holidays": "no more than two thirds of each school holiday's days; no work in the 7 days before term",
+    "rest": "15 minutes after 2 hours' continuous work; standby and preparation count as work; one of Saturday or Sunday off",
+    "chaperone": "a statutory agent on site for under-12s in broadcasting, television, film, stage, recording, advertising, modelling",
+    "cite": "勞動基準法第四十五條無礙身心健康認定基準及審查辦法 arts. 2, 4, 5, 7 (in force from 2022-05-01)"
+   },
+   "funds": {
+    "body": "Bureau of Audiovisual and Music Industry Development (Ministry of Culture), 國產電影長片輔導金",
+    "applicant": "a film production enterprise registered under ROC law (no natural person, so no applicant age)",
+    "cite": "115年度國產電影長片輔導金辦理要點"
+   },
+   "setAside": "none in Civil Code arts. 1087-1088 (reading of the articles read)"
+  },
+  "notes": "unions not tried for lack of time; set-aside an articles reading, not the whole Civil Code.",
+  "sources": []
+ },
+ {
+  "id": "R-8445",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "parliament.go.tz home read: only 2026 bills and acts (polis.bunge.go.tz uploads) linked; /acts-list a 6.6 KB shell; laws.go.tz refused by the egress proxy (connect_rejected); agctz.go.tz and oagmis.agctz.go.tz CONNECT 502",
+    "result": "not found: majority, childPerformers, minorsContracts, companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "oag.go.tz and lrct.go.tz read: no revised-laws library linked beyond sheria.go.tz",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": []
+ },
+ {
+  "id": "R-8449",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "parliament.go.ug (TLS chain completed with DigiCert's GeoTrust TLS RSA CA G1 intermediate from its AIA address, verification on): /acts list read; its title/search filters and ?page= return the same first page (2023 Acts only), so the Companies Act 2012 and Contracts Act 2010 PDFs were not reached; the list shows The Law Revision (Miscellaneous Amendments) Act, 2023",
+    "result": "not found: companies, minorsContracts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "ursb.go.ug (Uganda Registration Services Bureau) reset the connection; ura.go.ug empty reply",
+    "result": "not found: companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: all",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Uganda's laws were revised in 2023 (Law Revision Act 2023): the Companies Act 2012 and Contracts Act 2010 now carry chapter numbers in the Revised Edition; the sought sections should be read in that edition.",
+  "sources": []
+ },
+ {
+  "id": "R-8453",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.impo.com.uy/bases/leyes/16060-1989",
+    "title": "Ley N° 16060, Ley de Sociedades Comerciales, documento actualizado (IMPO, Centro de Información Oficial)",
+    "said": "Artículo 44 (Principios generales). Para ser socio de una sociedad comercial se requerirá la capacidad para ejercer el comercio, salvo las excepciones establecidas en esta ley. Los padres, tutores y curadores no podrán contratar sociedad ni adquirir participaciones, cuotas sociales o acciones por sus representados sin autorización judicial fundada. En ningún caso se concederá esta autorización si el menor o el incapaz asumieran calidad de socios ilimitadamente responsables. ... Artículo 80 (Condiciones para ser representante o administrador). Podrá ser administrador o representante una persona física o jurídica, socia o extraña. Se requerirá la capacidad para el ejercicio del comercio y no tener prohibido el mismo. Será justa causa de revocación la incapacidad o la afectación por una prohibición legal, sobreviniente a la designación.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.impo.com.uy/bases/codigo-comercio/817-1865",
+    "title": "Código de Comercio (IMPO)",
+    "said": "Artículo 8 Es hábil para ejercer el comercio toda persona que, según las leyes comunes, tiene la libre administración de sus bienes. Los que, según esas mismas leyes, no se obligan por sus pactos o contratos, son igualmente incapaces para celebrar actos de comercio, salvas las modificaciones de los artículos siguientes. ... Artículo 9 Toda persona mayor de diez y ocho años, puede ejercer el comercio, siempre que acredite las circunstancias siguientes: 1. Haber sido legalmente emancipado. 2. Tener capital propio. 3. Caso de no tener padre, haber sido habilitado para la administración de sus bienes, en la forma prescripta por las leyes comunes. (*) Notas: Ver vigencia: Código Civil de 19/10/1994 artículo 280 .",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "impo.com.uy: Ley 16.060 (updated text) and the Código de Comercio fetched by curl (decoded as cp1252) and read: arts. 44, 46, 80 of the Law; arts. 7-10 of the Code",
+    "result": "found in part: companies (an administrator needs capacity to trade, i.e. free administration of his property)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org reset the connection (curl 35), 2026-11-04",
+    "result": "not found: unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "rule": "an administrator or representative, natural or legal person, must have capacity to trade (free administration of one's property) and not be barred; a minor may be a partner only with limited liability and by judicial authorisation",
+    "directorFrom": "majority (reading: Código de Comercio art. 8 ties capacity to free administration of property; art. 9's emancipation route carries IMPO's note to see Código Civil art. 280, not read today)",
+    "cite": "Ley 16.060 arts. 44, 46, 80; Código de Comercio arts. 8-9"
+   }
+  },
+  "notes": "Código Civil art. 280 (majority) not read today. DGU and the directors' association not tried.",
+  "sources": []
+ },
+ {
+  "id": "R-8467",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2020/07/59.signed.pdf",
+    "title": "Luật Doanh nghiệp số 59/2020/QH14 (signed copy, Cổng Thông tin điện tử Chính phủ, signed 08.07.2020; a scan, page 12 read from its image)",
+    "said": "Chương II THÀNH LẬP DOANH NGHIỆP Điều 17. Quyền thành lập, góp vốn, mua cổ phần, mua phần vốn góp và quản lý doanh nghiệp 1. Tổ chức, cá nhân có quyền thành lập và quản lý doanh nghiệp tại Việt Nam theo quy định của Luật này, trừ trường hợp quy định tại khoản 2 Điều này. 2. Tổ chức, cá nhân sau đây không có quyền thành lập và quản lý doanh nghiệp tại Việt Nam: ... đ) Người chưa thành niên; người bị hạn chế năng lực hành vi dân sự; người bị mất năng lực hành vi dân sự; người có khó khăn trong nhận thức, làm chủ hành vi; tổ chức không có tư cách pháp nhân;",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "datafiles.chinhphu.vn (the Government portal's file store) Law 59/2020/QH14 signed PDF downloaded (70 pages, image scan with no text layer); page 12 rendered at 100 dpi and read from the image",
+    "result": "found: companies (a minor may neither found nor manage an enterprise)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "vbpl.vn and thuvienphapluat.vn answered 403, 2026-11-04",
+    "result": "not reached (the consolidated text, so amendments since 2020 not checked)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "rule": "a minor (người chưa thành niên) has no right to found or manage an enterprise in Viet Nam",
+    "directorFrom": "majority (18 under the Civil Code 2015, not read today)",
+    "cite": "Luật Doanh nghiệp 2020 art. 17(2)(đ)"
+   }
+  },
+  "notes": "Read from the 2020 enactment; later amending laws (2022, 2025) not checked for art. 17. Associations' age rules not tried.",
+  "sources": []
+ },
+ {
+  "id": "R-8059",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.za/sites/default/files/gcis_document/201409/266080.pdf",
+    "title": "Government Gazette No. 26608, 29 July 2004, No. R. 882: Basic Conditions of Employment Act, No 75 of 1997, Sectoral Determination 10: Children in the Performance of Advertising, Artistic and Cultural Activities, South Africa (gov.za)",
+    "said": "PART C: REMUNERATION 4 PAYMENT OF REMUNERATION (1) Any remuneration due to a child must be paid to the parent or legal guardian of the child- a) in South African currency; b) daily, weekly, fortnightly or monthly; and c) in cash, by cheque or by direct deposit into an account designated by the child's parent or legal guardian. (2) Any payment in cash or by cheque must be given to the parent or legal guardian of the child- a) at the workplace; b) during the child's working hours; and c) in a sealed envelope which becomes the property of the child, and which the child or the parent or legal guardian of the child is entitled to retain. ... 6 DEDUCTIONS (1) An employer may not make any deduction from a child's remuneration unless (a) the parent or legal guardian of the child agrees in writing to the deduction in respect of a debt specified in the agreement; or (b) the deduction is required or permitted in terms of a law, agreement, court order or arbitration award.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gov.za/sites/default/files/gcis_document/201409/29428.pdf",
+    "title": "Government Gazette No. 29428, 28 November 2006, No. R. 1202: Amendment of Sectoral Determination 10 (gov.za)",
+    "said": "I, Membathisi Mphumzi Shepherd Mdladlana, Minister of Labour, in terms of section 56( 1) of the Basic Conditions of Employment Act, No 75 of 1997, hereby amend Sectoral Determination 10 ... in accordance with the form hereto and fix 01 December 2006 as the date on which this amendment shall become binding. [followed by form SD 10.1, Application For A Permit]",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'South Africa regulations children in performance advertising artistic cultural activities earnings trust gazette' (standard)",
+    "result": "lead: SD10 (R.882 of 2004) and its gov.za gazette PDFs",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gov.za gazette PDFs 266080.pdf (17 pages, text layer from a scan; clauses 4 to 7 checked against the page images at 70 dpi) and 29428.pdf (the 2006 amendment, a permit form) downloaded (after resets) and read; the 2004 text searched whole for trust, saving, invest, account, fund, percent",
+    "result": "found: SD10 sets aside no share; pay goes to the parent or guardian, the cash envelope is the child's property",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "setAside": "none in Sectoral Determination 10: a child performer's remuneration is paid to the parent or legal guardian (cash, cheque or deposit to an account the parent designates; a cash envelope is the child's property); no deduction without the parent's written agreement or a law, order or award; no share is held back",
+   "cite": "SD10 (GN R.882 of 29 July 2004) clauses 4, 6; amended by GN R.1202 of 28 November 2006 (the permit form)"
+  },
+  "notes": "SD10 read whole: silent on any set-aside. Court practice (High Court approval of a minor's contract, Children's Act 38 of 2005) not read, so 'any law or court practice' is answered only for SD10.",
+  "sources": []
+ },
+ {
+  "id": "R-8479",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.parliament.gov.zm/sites/default/files/documents/acts/Companies%20Act%2C%202017.pdf",
+    "title": "The Companies Act, 2017 (Act No. 10 of 2017), National Assembly of Zambia",
+    "said": "Qualifications of director 92. (1) A company shall appoint a natural person as director. (2) A director may not be a member or hold shares in the company, unless the articles provide otherwise. (3) A person shall not be appointed as a director if that person— (a) is under eighteen years of age; (b) is an undischarged bankrupt; (c) is disqualified by section 93 from being a director;",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.parliament.gov.zm/sites/default/files/documents/acts/The%20Employment%20Code%20Act%20No.%203%20of%202019.pdf",
+    "title": "The Employment Code Act, No. 3 of 2019, National Assembly of Zambia",
+    "said": "16. (1) Subject to subsection (3), a person shall not, except under prescribed conditions, employ or cause to be employed, a person under the age of fifteen years. [margin: Minimum contractual age] ... 82. (1) Subject to subsection (2), a person shall not employ a child in a covered work site. (2) Despite subsection (1), a child aged between thirteen and fifteen years may be engaged in light work that is not— (a) likely to be harmful to the child's health or development; and (b) prejudicial to that child's— (i) attendance at an institution of learning; ... (3) Subsection (1) shall not apply to— (a) work constituting the participation of the child in artistic performances in accordance with a statutory instrument, issued by the Minister, prescribing— (i) the number of hours to be worked; (ii) the conditions in which the work may be undertaken; and (iii) other matters that the Minister may consider necessary; ... || 80. ... \"young child\" means a person under the age of fifteen years;",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "parliament.gov.zm (TLS chain completed with DigiCert's RapidSSL TLS RSA CA G1 intermediate from its AIA address, verification on): site search 'Companies Act 2017' and 'Employment Code Act'; node/7264 and node/7948 linked the Acts' PDFs, both downloaded and read (Companies Act s. 92; Employment Code ss. 16, 80-82)",
+    "result": "found: companies; found in part: the artistic-performance exception (the statutory instrument under s. 82(3)(a) itself not found)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "parliament.gov.zm search for the s. 82(3)(a) statutory instrument not made (statutory instruments are not on the Assembly's site)",
+    "result": "not found: the SI",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorFrom": 18,
+    "cite": "Companies Act 2017 s. 92(1), (3)(a)"
+   },
+   "minimumWorkAge": {
+    "general": 15,
+    "lightWork": "13 to 15 at a covered work site, if not harmful and not prejudicial to schooling",
+    "cite": "Employment Code Act 2019 ss. 16(1), 82(2)"
+   },
+   "childPerformers": {
+    "rule": "a child's participation in artistic performances is outside the ban only as a ministerial statutory instrument prescribes (hours, conditions, other matters)",
+    "instrument": "not found",
+    "cite": "Employment Code Act 2019 s. 82(3)(a)"
+   }
+  },
+  "notes": "Contractual capacity (age of majority) and a minor's performing-contract and earnings rule not found today.",
+  "sources": []
+ }
+]

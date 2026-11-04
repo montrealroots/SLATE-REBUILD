@@ -1,0 +1,967 @@
+[
+ {
+  "id": "R-4857",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://csa.gov.lr/wp-content/uploads/2025/06/A-Report-from-The-Analysis-of-the-Alien-Work-Permit-2024.pdf",
+    "status": "same",
+    "now": "Not re-fetched today; held as read 2026-11-01."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://mol.gov.lr/ and https://mol.gov.lr/wp-content/uploads/2025/05/LABOUR-WORK-PERMIT-REQUIREMENTS.pdf, three times; https://www.mol.gov.lr/",
+    "result": "refused: curl (60) 'no alternative certificate subject name matches target host name mol.gov.lr' through the session proxy each time; www.mol.gov.lr does not answer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39, prefix 'lr,gov,mol)': fetched the Ministry's /faq/, /news/ and /library-documentation/ captures of 16 September 2026",
+    "result": "the /faq/ page's 'Tools & Services' lists the Ministry's own downloads: 'Work Permit Requirements' (wp-content/uploads/2025/05/LABOUR-WORK-PERMIT-REQUIREMENTS.pdf), 'Labour Employment Permit' (LABOUR-EMPLOYMENT-PERMIT-REGULATION.pdf, 'pursuant to Section 34.2(a) Chapter 34 of the Executive Law'), the ECOWAS work permit form and a pre-qualification form; /news/ reports the revocation of 19 alien work permits (25 June) and an audit under the Decent Work Act, with no fee, term or time. No permit term, fee or time is on the HTML pages.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21 and 2025-51, prefix 'lr,gov,mol)/wp-content/uploads/2025/05'; archive.org/wayback/available for both PDFs; web.archive.org/web/2025id_/https://mol.gov.lr/",
+    "result": "no capture of the PDFs in any of the five crawls; the availability API answered 429 Too Many Requests; web.archive.org reset the connection (curl 35)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "New lead, not a fact: the Ministry's own 'LABOUR-EMPLOYMENT-PERMIT-REGULATION.pdf' and 'LABOUR-WORK-PERMIT-REQUIREMENTS.pdf' (mol.gov.lr/wp-content/uploads/2025/05/) very likely hold the fees and terms; they are unreachable from here today (the host's certificate fails through the proxy, and no crawl holds them). No web search spent on Liberia today; trade-press and web-search were tried on 2026-11-01 (see the register) and not repeated."
+ },
+ {
+  "id": "R-4859",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.gov.ls/eservice/provision-of-work-permits/",
+    "status": "changed",
+    "now": "The page answers 200 but its served HTML (curl, 2026-11-04) holds only the site's navigation; the requirements list held in the research was not in it (likely drawn by script). Not re-read verbatim today."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://commons.laws.africa/akn/ls/act/2024/3/media/publication/ls-act-2024-3-publication-document.pdf",
+    "title": "Lesotho Government Gazette Extraordinary Vol. 69 No. 22, 2 April 2024: Labour Act, 2024 (Act No. 3 of 2024), ss. 1, 161-163 and the Fourth Schedule (an image of the Gazette's own pages, hosted by Laws.Africa)",
+    "read": "2026-11-04",
+    "said": "1. This Act may be cited as the Labour Act, 2024 and shall come into operation on the date of publication in the Gazette. ... 161. (1) No employer shall employ any person in Lesotho who is not a citizen of Lesotho, and no such person shall accept employment in Lesotho, unless that person is in possession of a valid work permit issued by the Director, National Employment Service. ... (4) For purposes of this section, a person who is not a citizen of Lesotho, but who is engaged in Lesotho to provide temporary services shall not be considered to be employed or to have accepted employment ... 163. ... (2) The Director, National Employment Service shall before he grants a non-citizen of Lesotho with a work permit, certify that within the labour market database there is no citizen of Lesotho who qualifies for the available employment. (3) The Minister shall, on the advice of the NACOLA, specify by regulations, the types of work permits, and the duration of validity of each type. ... FOURTH SCHEDULE ... Fees payable 2. (1) An application fee for - (a) a new application, shall be the sum of One Thousand maloti (M1,000.00); and (b) renewal for certificate of employment, shall be the sum of One Thousand Maloti (M1,000.00) and it is non-refundable. (2) The fees payable for a certificate of employment shall be as follows - (a) six months and below, the sum of - M2,000.00 (b) above six months but below two years, the sum of - M2.500.00; and (c) two years, the sum of - M3,000.00"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.gov.ls/eservice/provision-of-work-permits/ (the Ministry's e-service page)",
+    "result": "200, but the served HTML holds only navigation; no requirement, fee, exemption, union or pay text in it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Labour Act 2024 Gazette publication PDF at commons.laws.africa (akn/ls/act/2024/3/media/publication/...); pdftotext; read ss. 1, 143, 159-165 and the Fourth Schedule",
+    "result": "read: s. 161(4) takes a non-citizen engaged to provide temporary services out of 'employment' (so out of the permit rule), with no length given; s. 163(2) labour-market certificate; s. 163(3) leaves types and terms to regulations; Fourth Schedule fees M1,000 application or renewal, M2,000 (six months and below), M2,500 (above six months, below two years), M3,000 (two years). No union step and no pay rule for permit holders in Part on foreign labour; s. 165 fixes wages generally by contract, agreement, award or gazetted notice",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "exempt: a non-citizen engaged in Lesotho to provide temporary services is not 'employed' for the permit rule (Labour Act 2024 s. 161(4)); no length is stated, so no days are modelled. fees (the Act, in force 2 April 2024, outranking the Ministry's page): [{what:'Application fee, new or renewal (non-refundable)',amount:'1000.00',currency:'LSL'},{what:'Certificate of employment, six months and below',amount:'2000.00',currency:'LSL'},{what:'Certificate of employment, above six months but below two years',amount:'2500.00',currency:'LSL'},{what:'Certificate of employment, two years',amount:'3000.00',currency:'LSL'}]. union: none in the Act's work-permit sections (ss. 161-164, Fourth Schedule, read whole). pay: none for permit holders (s. 165 general wage-fixing only). eligibility: no performer criterion; the Director must certify no qualified citizen in the labour market database (s. 163(2)).",
+  "notes": "Fees conflict: the research holds M500 application, M1,500 (six months and below) and a M350 card from the Ministry's page and its news item; the Act's Fourth Schedule (in force 2 April 2024) says M1,000 and M2,000 and has no card fee. Unless the Ministry's figures come from regulations made after the Act under s. 163(5) (none found), the Act's are the rule in force; the lead should check the date of the Ministry's 'fast-tracks' item. The absences (union, pay) rest on the Act's foreign-labour sections read whole; regulations under s. 163(1),(3) were not found."
+ },
+ {
+  "id": "R-4867",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://lawsociety.ly/en/legislation/announcement-regarding-the-regularization-of-foreign-workers-status/",
+    "status": "same",
+    "now": "Answers 200; not re-read for new terms."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://labour.gov.ly/ and https://www.labour.gov.ly/ (Ministry of Labour and Rehabilitation), https://mol.gov.ly/",
+    "result": "labour.gov.ly answers 200 but serves a script-drawn page behind Cloudflare whose HTML holds no text or links beyond fonts and a challenge endpoint (not passed, by the rulings); mol.gov.ly gives no connection",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees, processing, validity, union, eligibility, pay and exempt stay blocked. No web search spent on Libya today."
+ },
+ {
+  "id": "R-4869",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://taechir.travail.gov.ma/ (the Ministry's foreign-contract platform), https://travail.gov.ma/, https://www.emploi.gov.ma/, https://www.service-public.ma/",
+    "result": "the first three give no connection (HTTP 000); service-public.ma answers 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-30 prefix 'ma,gov,travail' and CC-MAIN-2026-39 prefixes 'ma,gov,travail,taechir)' and 'ma,service-public)', filtered for foreign-worker and contract pages",
+    "result": "no capture found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No web search spent on Morocco today. fees, processing, union, eligibility, pay and exempt stay blocked."
+ },
+ {
+  "id": "R-4873",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl https://www.legis.md/cautare/getResults?doc_id=142949&lang=ro (the State Register of Legal Acts)",
+    "result": "HTTP 403, as on 2026-11-01",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Legea 200/2010 regimul străinilor activități artistice fără drept de ședere provizorie în scop de muncă 90 de zile'",
+    "result": "no page stating a short-engagement exemption for artists; results were draft amendments on particip.gov.md (drafts are leads, not law), a 2020 university copy of Law 200/2010 (asm.usmf.md) and Romanian texts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "curl the asm.usmf.md copy of Law 200/2010 (2020-02) to check for an artists' provision",
+    "result": "connection reset (curl 35); not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "eligibility, union and exempt stay blocked. A Common Crawl lookup of legis.md was started but not used (no doc id known for Law 200/2010's current text)."
+ },
+ {
+  "id": "R-4875",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.zzzcg.me/wp-content/uploads/2025/07/Zakon-o-strancima-1.pdf",
+    "status": "changed",
+    "now": "Fetched again (HTTP 200): its header now reads 'Zakon je objavljen u \"Službenom listu CG\", br. 12/2018, 3/2019, 86/2022, 77/2024 i 3/2026' (consolidated to 3/2026). Arts. 79-85 and 184-185 re-read: same rules as held."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl the Employment Agency's consolidated Zakon o strancima (zzzcg.me), pdftotext, grep the whole text for 'zarad', 'minimaln', 'umjetni', 'kulturn' and read arts. 79-85 and 184-185",
+    "result": "no pay floor for the ordinary permit for temporary residence and work: the only wage rule is the EU Blue Card's (art. 185: gross annual pay at least one and a half times the average gross annual wage). Performers appear only in art. 85 (work-registration certificate: 'autori i izvođači na području filmske, televizijske ... umjetnosti ... ako u Crnoj Gori ne borave duže od 30 dana, odnosno tri mjeseca godišnje sa prekidima'), already held; no performer criterion for the permit.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "pay: the Law read whole holds no pay floor for this permit; the base rulebook's art. 9 (the secondary summary's minimum-wage rule) is still unread, so pay is not recorded as an absence. eligibility: the Law has none for performers. No web search spent."
+ },
+ {
+  "id": "R-4880",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://rmiparliament.org/cms/images/LEGISLATION/PRINCIPAL/2018/2018-0068/2018-0068_2.pdf",
+    "status": "same",
+    "now": "Fetched again (HTTP 200); same text."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://rmiparliament.org/cms/images/LEGISLATION/PRINCIPAL/2018/2018-0068/2018-0068_2.pdf",
+    "title": "Nitijela of the Marshall Islands, Labor (Non-Resident Workers) Act 2018 (16 MIRC ch. 1), s. 108 (the exemptions) and s. 116 (temporary purpose work permit)",
+    "read": "2026-11-04",
+    "said": "§108. Requirement to a hold work permit (1) Any person who is not a citizen of the Republic is prohibited from undertaking employment in the Republic unless that person is: (a) the holder of a work permit granted under this Chapter; or (b) exempt under this Chapter from the requirement to hold a work permit. (2) The following persons are exempt from the requirement to hold a work permit: (a) a person who is for the time being entitled to any immunity from jurisdiction by or under the Diplomatic Privileges and Immunities Act 1988; (b) ... International Organization Immunities Act 1974; (c) a citizen of the United States; (d) a citizen of the Republic Palau or the Federated States of Micronesia; provided that ... reciprocal treatment ...; (e) United States contractor personnel and their official dependents; (f) a member of the crew of any commercial aircraft ... for a period of ten (10) days ...; (g) a member of the crew of any ship fishing ...; (h) any person employed by a Government Ministry, Department or other Government Statutory entity. (i) any person covered under any international agreement ... ; ... §116. Temporary purpose work permit. (1) Any employer intending to hire a non-resident worker for a period of up to six (6) months in any calendar year to: (a) address emergencies if and when they arise; (b) train local staff; or (c) carry out short-term technical work for which suitably skilled labor is not readily available, may apply for a work permit under this section."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl the Nitijela's copy of the 2018 Act (rmiparliament.org), pdftotext; read s. 108 whole and s. 116; searched the whole text for 'exempt', 'union', 'wage', 'entertain', 'temporary', 'days'",
+    "result": "exempt: s. 108(2) is the Act's full list of exemptions and holds no short engagement and no performer (only immunities, US/Palau/FSM citizens, US contractor personnel, aircrew for 10 days, licensed fishing crew, government employees, treaty cases), so no permit-free days for a foreign performer; s. 116's temporary permit (up to six months a year) covers emergencies, training and short-term technical work, not performance. union: the word does not appear in the Act. pay: no pay floor for permit holders in the Act (wages appear only as records an employer keeps).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "exempt: none for a performer — found as an absence (Labor (Non-Resident Workers) Act 2018 s. 108(2), the full list, read). union: none in the Act (read whole). pay: none in the Act (read whole); the Minister's regulations (s. 151) not read.",
+  "notes": "exempt can be set from blocked to an absence on the Act's own exhaustive list. union and pay are absent from the Act, but regulations under s. 151 weren't found, so the lead may keep those two blocked. No web search spent."
+ },
+ {
+  "id": "R-4882",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://mvr.gov.mk/mk-MK/uslugi/upatstvo-i-postapka-za-oddelni-prava-baranja-na-strancite",
+    "status": "same",
+    "now": "Fetched (HTTP 200); still lists the procedure documents on portal.mdt.gov.mk; no decision time on the page itself."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://portal.mdt.gov.mk/post-body-files/zakoni-mvr-file-UtsW.pdf",
+    "title": "Ministry of Internal Affairs (mvr.gov.mk/mk-MK/legislativa/zakoni), Закон за странци, редакциски пречистен текст (Sl. vesnik 97/18, 108/19, 294/21, 284/23), arts. 75, 79, 80-83",
+    "read": "2026-11-04",
+    "said": "Член 75 ... (2) Решението со кое се одлучува по поднесено барање за одобрување на привремен престој, Министерството за внатрешни работи го издава во рок од 30 работни дена од денот на приемот на барањето - доколку барањето е поднесено во Министерството за внатрешни работи, односно 60 работни дена - доколку барањето е поднесено во дипломатско-конзуларното претставништво на Република Северна Македонија ... (4) По исклучок од ставот (2) на овој член, роковите можат да бидат продолжени најмногу за 30 работни дена, особено кога е потребно дополнително разгледување на барањето. ... Член 79 (1) Привремен престој се продолжува за време што е потребно за исполнување на целта на престојот, но не подолго од една година. ... (5) Министерството за внатрешни работи, по поднесеното барање согласно со ставот (2) на овој член ќе донесе решение во рок од 30 работни дена од денот на приемот на барањето. ... Член 80 ... (2) По исклучок од ставот (1) на овој член, странец може да престојува и работи во Република Северна Македонија и врз основа на потврда за регистрација за работа, која е издадена во согласност со посебен закон, доколку работата што ја врши странецот е пократка од 90 дена. Член 81 ... (2) Агенцијата по однос на поднесено барање за добивање на мислење издава мислење за периодот кој странецот го навел во барањето, но не подолго од една година. ... Член 83 ... (4) Агенцијата е должна да го достави мислењето од ставот (2) на овој член до Министерството за внатрешни работи во рок од 15 работни дена од ден на приемот на документацијата. ... (6) Доколку Агенцијата не постапи во рокот од ставот (4) на овој член, ќе се смета дека мислењето е негативно."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl mvr.gov.mk/mk-MK/legislativa/zakoni (the Ministry's own legislation page), took the link for 'ЗАКОН ЗА СТРАНЦИ - пречистен текст' (portal.mdt.gov.mk zakoni-mvr-file-UtsW.pdf), pdftotext; read arts. 71-85",
+    "result": "found: decision 30 working days (filed at the Ministry) or 60 (filed at a mission), extendable by 30; the Agency's opinion due within 15 working days (silence = negative); opinion for the period asked, at most one year; each extension at most one year, decided in 30 working days; work under 90 days on a work-registration certificate under a special law (art. 80(2), 82(3))",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl https://www.slvesnik.com.mk/ (the Official Gazette), first with the system store, then with the issuing CA's intermediate bundle",
+    "result": "system store: curl (60) unable to get local issuer certificate; with the bundle: HTTP 301 (reached, not searched further since the Ministry's consolidated text was read)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "processing: {standard:{n:60,unit:'working days'},premium:null,note:'Decided within 30 working days when filed at the Ministry of Internal Affairs, 60 when filed at a North Macedonian mission abroad; either may be extended by up to 30 working days (Law on Foreigners art. 75(2),(4)). The Employment Service Agency must give its opinion within 15 working days, and silence counts as a negative opinion (art. 83(4),(6)).'}. validity: {n:1,unit:'years',renewable:true} confirmed: the Agency's opinion covers the period asked, at most one year (art. 81(2)); each extension at most one year (art. 79(1)). exempt: work shorter than 90 days on a work-registration certificate under a special law (arts. 80(2), 82(3)) — this is the 2015 Employment of Foreigners Law's registration, layer 3's consent rule, not a permit-free stay.",
+  "notes": "'standard' set to the mission figure (60 working days) since a performer abroad files at a mission; the lead may prefer 30 for a filing inside the country. Union, pay and performer eligibility: none in arts. 71-85 (read); the 2015 Law on Employment and Work of Foreigners (already held) is the other primary."
+ },
+ {
+  "id": "R-4884",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://faolex.fao.org/docs/pdf/mli220143.pdf",
+    "status": "same",
+    "now": "Fetched again (HTTP 200): Loi no 92-020 du 23 septembre 1992 portant code du Travail; arts. L.26-L.29 as held."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl FAOLEX's copy of the Labour Code (Loi 92-020), pdftotext; searched the whole text for 'étranger', 'visa', 'redevance', 'frais', 'durée', 'artist', 'dispens'",
+    "result": "only arts. L.26-L.29 deal with foreign workers' contracts (written, visa of the Direction nationale du travail, 15-day silence rule), already held; no fee, term, union step, performer rule, pay rule or exemption. A fixed-term contract may not exceed two years (art. L.21), which bounds the contract, not the visa.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Code is FAOLEX's copy (secondary) of a 1992 text; the implementing decree on the visa and any later amendment were not found. No web search spent on Mali."
+ },
+ {
+  "id": "R-4887",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl https://legalinfo.mn/mn/detail?lawId=16532226261421 and https://legalinfo.mn/en/edtl/16532226261421 (the Unified Legal Information System)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "curl hhueg.gov.mn, www.hhueg.gov.mn, hudulmur-halamj.gov.mn, labour.gov.mn (guesses at the General Agency for Labour and Social Welfare Services' host), emd.gov.mn, immigration.gov.mn/mn/visa-total/ and consul.mn/visa/c/18",
+    "result": "the labour-agency guesses give no connection; emd.gov.mn is the health-insurance agency (nothing on permits); the Immigration Agency's visa page and the MFA's consular visa page answer 200 but hold visa categories and payment warnings, no work-permit decision time, performer rule, union step, pay floor or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "processing, eligibility, union, pay and exempt stay blocked. No web search spent."
+ },
+ {
+  "id": "R-4895",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://msgg.gov.mr/JO/2018/mauritanie-jo-2018-1410.pdf",
+    "status": "changed",
+    "now": "Still the Journal officiel's copy of decree 2018-025, but that decree is no longer in force: decree 2022-022 of 4 March 2022 (JO no. 1508, 30 April 2022), art. 28, repealed and replaced it."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://msgg.gov.mr/JO/2022/mauritanie-jo-2022-1508.pdf",
+    "title": "Journal officiel de la République Islamique de Mauritanie no. 1508, 30 avril 2022, pp. 310-316: Décret n° 2022-022 du 04 mars 2022 fixant les conditions d’emploi de la main-d’œuvre étrangère et instituant le permis de travail (arts. 2-7, 10-14, 26, 28)",
+    "read": "2026-11-04",
+    "said": "Décret n° 2022-022 du 04 mars 2022 fixant les conditions d’emploi de la main-d’œuvre étrangère et instituant le permis de travail pour les travailleurs étrangers. ... Article 2 : ... Le permis «A» autorise son titulaire à occuper un emploi déterminé au service d’un employeur déterminé pendant une durée maximale d‘un an renouvelable une fois ; ... Article 3 : Le permis «A» est demandé par l’employeur qui désire engager les services d’un travailleur étranger. La demande est adressée au Directeur Général de l’Emploi à travers la plateforme numérique en ligne. ... d) Un exposé des raisons pour lesquelles l’employeur estime ne pas pouvoir engager au même poste un travailleur de nationalité mauritanienne. Les demandes de permis devront recevoir, au préalable, le visa de l’administration de laquelle dépend l’employeur. ... Article 6 : Dans les quatre semaines qui suivent le dépôt de la demande auprès du Ministère chargé de l’emploi, le Directeur général de l’emploi, après avoir vérifié que le profil de poste recherché ne peut être pourvu par un Mauritanien ... fait connaître sa décision au demandeur. ... Article 7 : Si à l’expiration d’un délai de trente jours à compter de la date du dépôt de la demande du permis, aucun avis d’autorisation ou de rejet de la demande ne parvient à l’employeur, le chef de service public de l’emploi, territorialement compétent, doit lui remettre, à sa demande, dans les dix jours suivants, soit un exemplaire de la demande comportant le visa de rejet du Directeur général de l’emploi, soit le permis de travail sollicité. ... Article 10 : ... pour pallier aux situations d’urgence, d’entretiens, de réparations momentanées et/ou en prévision de mise en place d’un plan de Mauritanisation et dans la limite d’un mois renouvelable une fois, une autorisation provisoire d’occuper un travailleur étranger peut être délivrée par le Directeur général de l’emploi. ... Article 13 : Pour être recevable, la demande de renouvellement doit être introduite, auprès des services compétents, au moins un mois avant la date d’expiration du permis. ... Article 26 : Ne sont pas visés par les dispositions du présent décret les experts étrangers agréés par le gouvernement et détachés auprès de l’administration Publique. ... Article 28 : le présent décret abroge et remplace le décret N° 2018-025/PM, en date du 08 février 2018"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Mauritanie permis de travail étranger taxe montant ouguiyas loi de finances autorisation de travail'",
+    "result": "no fee found; the results (NATLEX record, private guides) named decree n° 2022-022 du 4 mars 2022 as the text in force — a lead, followed to the gazette",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "NATLEX records p3_isn=111725, 84146, 14995",
+    "result": "HTTP 403 (Cloudflare 'Attention Required'), not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Journal officiel issues of 2022 on msgg.gov.mr (mauritanie-jo-2022-1504 to -1510.pdf), pdftotext, searched for '2022-022' and 'main-d’œuvre étrangère'; read the decree in no. 1508 (30 April 2022) whole",
+    "result": "found: the decree in force, which repealed decree 2018-025 (art. 28). Permit A: one job with one employer, at most one year, renewable once; applied for by the employer on the online platform to the Director General of Employment, after the visa of the employer's supervising administration; decision within four weeks; if nothing within 30 days, the employment service must hand over the rejection or the permit within ten days; renewal filed at least a month before expiry. No fee, union step, pay rule or performer exemption in the decree (only seconded government experts are outside it, art. 26); a provisional authorisation of up to a month (renewable once) covers emergencies, maintenance and repairs, not performance.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "route: Permis de travail « A » (décret n° 2022-022 du 4 mars 2022, replacing décret 2018-025). applies: 'The employer applies on the Ministry of Employment's online platform to the Director General of Employment, after the visa of the administration it answers to.' first: 'A statement of why the employer can't hire a Mauritanian for the post; the Director General checks the post can't be filled by a Mauritanian (lists A1/A2), and on refusal the employment service proposes Mauritanian candidates for a trial.' processing: {standard:{n:4,unit:'weeks'},premium:null,note:'Decision within four weeks of filing (art. 6); if nothing arrives within 30 days, the employment service must hand over the rejection or the permit within the next ten days (art. 7).'} validity: {n:1,unit:'years',renewable:true,note:'renewable once (art. 2); renewal filed at least one month before expiry (art. 13)'}. exempt: none for performers (absence: the decree read whole; art. 26 excludes only government-approved experts seconded to the public administration). fees: still blocked (none in the decree). union: none for a grant (unions sit only on the appeals commission, art. 23). pay: none in the decree.",
+  "notes": "Route change: the research's decree 2018-025 was repealed by decree 2022-022 (JO 1508). Processing moves from three weeks to four, and validity becomes renewable once only (2018: renewable). The 40-day silence rule the research holds is now 30 days plus 10. Search count: this was search 2."
+ },
+ {
+  "id": "R-4897",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://parliament.ms/wp-content/uploads/2026/05/15.03-Labour-Code.pdf",
+    "status": "same",
+    "now": "Fetched again (HTTP 200, revision date 1 Jan 2025); the definition of a temporary work permit and the Exemptions Order's 60-day limit were in it but not in the research."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://parliament.ms/wp-content/uploads/2026/05/15.03-Labour-Code.pdf",
+    "title": "Legislative Assembly of Montserrat, Labour Code Cap. 15.03 (revision 1 Jan 2025): s. 125 definition, ss. 127(1),(6),(8), 128(2), and the Labour Code (Work Permits Exemptions) Order (S.R.O.s 20/1970 ... Act 9 of 2011), para. 3",
+    "read": "2026-11-04",
+    "said": "“temporary work permit” means a work permit issued to a non-resident of Montserrat to enter and work in Montserrat for a single period not exceeding one year. ... 127. (1) ... (b) A renewal, extension or temporary work permit shall be issued by the Minister. ... (8) Despite any other provision, a person who has the written consent of the primary employer may engage the services of a work permit holder for not more than five days per month. ... [Order, para. 3] (g) writers, journalists, broadcasters, photographers, sculptors and painters (excluding commercial and industrial photographers and painters): Provided that, the exemption in respect of any of the classes of persons mentioned in paragraphs (c), (d), (e), (f) and (g) of this Order shall apply only in relation to a visit or to visits not exceeding sixty days in duration in the aggregate in any one calendar year."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl the Legislative Assembly's Labour Code PDF (parliament.ms), pdftotext; read the work-permit Part (ss. 125-133) and the subsidiary Exemptions Order and Fees Regulations whole",
+    "result": "validity found: a temporary work permit is for a single period not exceeding one year (definition), issued or renewed by the Minister; exempt: s. 128(2)(a)-(q) and the Order name no performer, actor or director, so no permit-free engagement for them (absence found); writers' exemption limited by the Order to visits of 60 days in aggregate a calendar year; no decision time, union step, performer criterion or pay floor anywhere in the Part (read whole).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "validity: {n:1,unit:'years',renewable:true} — a temporary work permit covers a single period not exceeding one year and may be renewed by the Minister (Labour Code s. 125 definition, s. 127(1)(b),(6)). exempt: none for performers or directors (absence, s. 128(2) and the Exemptions Order read whole); for a screenwriter, the Order's writers' exemption holds only for visits up to 60 days in aggregate in a calendar year. union, eligibility, pay, processing: none in the Code's work-permit Part (absence in the Code; no ministry page states a time).",
+  "notes": "The Code's s. 128(2)(o) exempts writers without a time limit, while the 1970 Order (amended to 2011) limits its writers' exemption to 60 days a year; the lead should decide which governs (the Code is the later consolidated statute; the Order is still printed as in force). No web search spent."
+ },
+ {
+  "id": "R-4901",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://ufe.org/dossier-pays/maurice/travailler-a-maurice/",
+    "status": "same",
+    "now": "Not re-fetched; superseded as the route's source by the Ministry's own information sheet below."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://empment-labour.govmu.org/Documents/Downloads/Workpermit%20Infosheet.pdf",
+    "title": "Ministry of Labour and Industrial Relations (Mauritius), Work Permit Information Sheet: Summary of Main Procedures and Checklist of Documents (February 2026)",
+    "read": "2026-11-04",
+    "said": "Every person who intends to employ a foreign worker shall apply to this Ministry for a permit. ... Applications for New, Renewal and Transfer Cases of Work Permit have to be submitted online via the National E-Licensing platform (NELS) upon registration at https://business.edbmauritius.org. ... the existing quota/ratio system has been abolished, and the maximum allowable period of stay for foreign workers across all sectors has been standardised at ten (10) years. Employers must, however, demonstrate their inability to recruit locally. As such, they are required to contact the National Employment Department at their nearest locality to recruit local jobseekers, including evidence of vacancy advertisements placed on https://mauritiusjobs.govmu.org ... It may be noted that as from 1st April 2024 while an online application for Work Permit is submitted, an application for Residence Permit to the Passport and Immigration Office is automatically submitted. ... Applicable Fees for Work Permit: In line with the Non-Citizens (Work permit) (Fees) Regulations 2013 ..., a processing fee of Rs 700 should be paid per application within 5 days of post verification of completeness of applications. Upon approval of application, a non-refundable annual fee of Rs. 500 should be paid together with the prescribed work permit fees. ... Applications for renewal of work permits should be submitted 3 months prior to the expiry of the current one. ... if the holder of a Work Permit does not travel to Mauritius to take up employment within 6 months of the date of issue of the Work Permit, same will lapse."
+   },
+   {
+    "kind": "primary",
+    "url": "https://empment-labour.govmu.org/Pages/Work%20Permit/ApplicationWP.aspx",
+    "title": "Ministry of Labour and Industrial Relations, Application of Work Permit (page)",
+    "read": "2026-11-04",
+    "said": "All applications for new or renewal of work permits/certificates of exemption must be submitted online through the National E-Licensing System (NELS ), accessible on https://business.edbmauritius.org."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the Ministry's Work Permit pages (AboutWP, ApplicationWP, EmpPermit, COE .aspx) and its linked 'Workpermit Infosheet.pdf' (February 2026); pdftotext; read whole",
+    "result": "found: who applies (the employer, online on NELS, with the residence permit application filed automatically), the labour-market step (National Employment Department, vacancy advertised on mauritiusjobs.govmu.org), a Rs 700 processing fee and a Rs 500 non-refundable annual fee plus 'the prescribed work permit fees' (Fees Regulations 2013, not read), renewal three months before expiry, ten years' maximum stay. No decision time, no permit term in months, no performer category, union step, pay floor (only the MUR 50,000 salary line that decides whether the contract is vetted) or exemption for a short engagement.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "applies: 'The employer applies online to the Ministry of Labour and Industrial Relations through the National E-Licensing System (NELS); the residence permit application to the Passport and Immigration Office is filed with it automatically.' first: 'Proof the employer tried to recruit locally through the National Employment Department, with the vacancy advertised on mauritiusjobs.govmu.org; a vetted contract where the salary is MUR 50,000 a month or less.' fees (partial): [{what:'Processing fee, per application',amount:'700',currency:'MUR'},{what:'Annual fee on approval (non-refundable), besides the prescribed work permit fee',amount:'500',currency:'MUR'}] — the prescribed work permit fee itself (Non-Citizens (Work Permit) (Fees) Regulations 2013) not read. validity: no term stated; ten years' maximum stay across permits.",
+  "notes": "The 2013 Fees Regulations ('available on the Ministry's website') would complete fees; not located today. processing, union, pay, exempt and eligibility stay blocked. No web search spent."
+ },
+ {
+  "id": "R-4905",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.immigration.gov.mw/?p=281",
+    "status": "changed",
+    "now": "Now redirects (301) to https://www.immigration.gov.mw/permits/temporary-employee-permit/; same content: the organisation applies at Immigration Headquarters or a Regional Office on payment of the processing fee; TEP Approval Committee, then the Minister; fees due within 30 days of approval; renewable twice, renewal filed 3 months before expiry; new applicants wait outside Malawi. No fee amounts, decision time, performer rule or exemption on it."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the Department of Immigration's Temporary Employee Permit page (via ?p=281), its Temporary Permit page and its 'Notification on Permit Applications' notice",
+    "result": "no decision time: the notice only asks applicants with no answer after more than four months to contact the Department (a follow-up threshold, not a service standard); the Temporary Permit is for persons once declared prohibited immigrants, not a short-engagement route; nothing on performers, unions, pay or exemptions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "processing, eligibility, exempt, pay and union stay blocked; fees as held (2021 Regulations). No web search spent."
+ },
+ {
+  "id": "R-4911",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.senami.gov.mz/, https://senami.gov.mz/ (National Migration Service), https://www.mitess.gov.mz/ (Ministry of Labour), https://www.portaldogoverno.gov.mz/",
+    "result": "SENAMI and MITESS give no connection (HTTP 000; the proxy logs the tunnel to www.senami.gov.mz closed mid-exchange); the government portal only redirects",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Moçambique \"visto de actividade cultural\" Boletim da República decreto validade taxa'",
+    "result": "no text of the cultural-activity visa, its fee or term; results were old gazettes (Decreto 38/2000 border visa) and the Regulamento de Espectáculos e Divertimentos Públicos",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Boletim da República I Série no. 145 (28 July 2022), Regulamento de Espectáculos e Divertimentos Públicos, as hosted on parquemaputo.gov.mz; pdftotext; searched for 'estrangeir', 'visto', 'credencia', 'artista'",
+    "result": "it licenses promoters (alvarás of large, medium and small scale) and fines holding a show without the culture authorities' authorisation 'independentemente com artistas nacionais ou estrangeiros' (MT 100,000-400,000); it sets nothing on the performer's visa, its fee, term or time",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead: the Ministry of Culture's credential named by SENAMI's director-general (held) is presumably the authorisation the 2022 Regulation requires of the promoter; the visa's own rules (the 2022 amendments to the migration law and its regulation) were not found. Search count: this was search 3."
+ },
+ {
+  "id": "R-4913",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.lac.org.na/laws/2018/6647.pdf",
+    "status": "same",
+    "now": "Answers 200 (the 2018 fee notice as held); not re-read."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://mhaiss.gov.na/, https://www.mhaiss.gov.na/ and https://mhaiss.gov.na/fees (Ministry of Home Affairs, Immigration, Safety and Security)",
+    "result": "no connection (HTTP 000) on all three",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees (any change since the 2018 notice), validity, first, processing, union, eligibility and pay stay blocked. No web search spent on Namibia."
+ },
+ {
+  "id": "R-4915",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://dtenc.gouv.nc/sites/default/files/atoms/files/20230328cd_formulaire_specifique_at_moins_90j_def.pdf",
+    "status": "changed",
+    "now": "The DTEFP's page now links the August 2023 version (…/20230822cd_moe_formulaire_specifique_at_moins_90j_def.pdf); the 2023-03 file was not re-fetched."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://dtenc.gouv.nc/vos-droits-et-obligations-embauche-emploi/main-doeuvre-etrangere",
+    "title": "Direction du travail, de l’emploi et de la formation professionnelle de Nouvelle-Calédonie (DTEFP), 'Main-d’œuvre étrangère' (page)",
+    "read": "2026-11-04",
+    "said": "Pour exercer une activité salariée en Nouvelle-Calédonie, tout étranger, y compris le ressortissant européen, doit au préalable obtenir une autorisation de travail délivrée par le gouvernement de la Nouvelle-Calédonie. ... La demande d'autorisation de travail peut être effectuée soit par le ressortissant étranger, soit par l’employeur domicilié en Nouvelle-Calédonie, soit par l’entreprise utilisatrice établie en Nouvelle-Calédonie, soit par un représentant mandaté. Cette demande est effectuée via le téléservice du gouvernement de la Nouvelle-Calédonie : https://demarches.gouv.nc/autorisation_travail_etranger ... le justificatif de dépôt de l’offre d’emploi proposé daté de moins de 3 mois ; ... ► Pour une autorisation de travail d’une durée inférieure ou égale à 90 jours, en cas de 1ère demande ou de prolongation d’une autorisation de travail, joindre : l'itinéraire du billet d'avion aller/retour ... le gouvernement de la Nouvelle-Calédonie prend notamment en considération les éléments d'appréciation suivants prévus à l’article R. 452-4 du code du travail de Nouvelle-Calédonie. la situation de l’emploi présente et à venir dans la profession demandée par le travailleur étranger ; les conditions d’application par l’employeur de la législation relative au travail ; les conditions d’emploi et de rémunération offertes au travailleur étranger, lesquelles doivent être identiques à celles dont bénéficient les travailleurs français ; ... Le renouvellement de l’autorisation de travail doit être demandé au cours du troisième mois et au plus tard au cours du deuxième mois précédant la date d’expiration ... Cas particulier A titre dérogatoire et dans le cadre d’une mission à caractère urgent, temporaire, exceptionnel ou spécifique (exemples : visite unique qui fait suite à une situation d'urgence, un travail ponctuel, une panne, une expertise…). Cette autorisation peut être prolongée dans les mêmes conditions que l’autorisation de travail qui a été accordée précédemment. La durée maximale de 90 jours par année civile comprend l’autorisation initiale et les prolongations. La prolongation s’entend sans interruption. Ce type d’autorisation de travail ne peut pas se cumuler avec une autorisation de travail pour une mission de plus de 90 jours."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the DTEFP's 'Main-d’œuvre étrangère' page and its linked 'Procédure de traitement des AT' (Aug 2023) and 'fiche thématique' (Oct 2023) PDFs; read whole (the procedure chart's text layer read with pdftotext)",
+    "result": "found: who may apply (the foreigner, the employer in New Caledonia, the user firm, or a mandated representative) on the government's online service; the job offer filed under three months before; the R. 452-4 criteria (employment situation, employer's compliance, pay and conditions identical to French workers', housing); the short authorisation for an urgent, temporary, one-off or specific mission of at most 90 days a calendar year including extensions, which cannot be combined with an over-90-day authorisation; renewal filed in the third or second month before expiry. No fee, no decision time, no union step and no permit-free engagement (every foreigner, Europeans included, needs the authorisation).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "applies: 'The foreigner, the employer established in New Caledonia, the user firm, or a mandated representative files on the New Caledonian government's online service (demarches.gouv.nc).' first: 'A job offer filed with the employment service less than three months before, the contract or mission letter, health and repatriation insurance and proof of housing.' eligibility: 'The government weighs the present and future employment situation in the profession, the employer's compliance with labour law, pay and conditions identical to French workers', and housing (Labour Code of New Caledonia art. R. 452-4).' exempt: none — every foreigner, EU citizens included, needs an authorisation (found as stated on the authority's page); a short authorisation for an urgent, temporary, one-off or specific mission covers at most 90 days a calendar year, extensions included (not permit-free).",
+  "notes": "Corrects the research's note: what an engagement of three months or less needs is now stated (the ≤90-day authorisation, not an exemption). fees, processing and union stay blocked (none stated by the DTEFP). The Labour Code articles R. 452-4 ff. were not read in Légifrance/JONC. No web search spent."
+ },
+ {
+  "id": "R-4917",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://anpe-niger.ne/ and https://anpe-niger.ne/services/ (Agence nationale pour la promotion de l’emploi, the public employment service that visas contracts), https://www.emploi.gouv.ne/, https://www.travail.gouv.ne/, https://www.sggouv.ne/",
+    "result": "ANPE's home and services pages answer 200 but hold job postings and service headings, no word on the contract visa, its rate or the foreign-worker rules; the ministry and government secretariat guesses give no connection",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees (the joint Finance-Labour order under art. 129), union, eligibility, pay and exempt stay blocked. No web search spent on Niger."
+ },
+ {
+  "id": "R-4921",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://nigerianconsulatesa.org/?p=133",
+    "status": "same",
+    "now": "Re-read 2026-11-04: F7F entry unchanged (stay not exceeding 90 days, 'Not permitted for work'); no fee or processing time on it."
+   },
+   {
+    "url": "https://immigration.gov.ng/nigerian-visa/",
+    "status": "same",
+    "now": "Re-read 2026-11-04: Creative Arts Visa 'for up to 30 days', invitation letter, 'any necessary endorsements from cultural bodies'; no fee, processing time or exemption."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the NIS visa list (immigration.gov.ng/nigerian-visa/), the Consulate General in Johannesburg's F7F page, and the NIS e-Visa portal https://visa.immigration.gov.ng/",
+    "result": "both pages re-read with no fee or time; the e-Visa portal gives an empty reply (curl 52)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees, processing, pay and exempt stay blocked. The two primaries still disagree on the stay (NIS 30 days, the consulate 90); the research already holds the NIS figure. No web search spent."
+ },
+ {
+  "id": "R-4923",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://nicaragua.justia.com/nacionales/leyes/ley-general-de-migracion-y-extranjeria-jul-6-2011/gdoc/",
+    "status": "same",
+    "now": "Not re-fetched; the Gazette's own pages (below) were read instead."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://sajurin.enriquebolanos.org/docs/G-2011-07-07.pdf",
+    "title": "La Gaceta, Diario Oficial No. 126, 7 July 2011, p. 4167-4168: Ley No. 761, Ley General de Migración y Extranjería (continuación), art. 121 fee table (image of the Gazette's pages, hosted by the Enrique Bolaños foundation's SAJURIN)",
+    "read": "2026-11-04",
+    "said": "Art. 121 De las Tasas por Servicios Migratorios y Multas a Personas Nacionales. Se establecen las siguientes tasas por servicios migratorios exclusivos para personas nacionales: ... Derecho a laborar no residentes máximo de seis meses (pago por mes). C$ 500 ... Cambio de clasificación migratoria C$ 500 ... Art. 122 ... Multa a empleadores o centros laborales por contratar personal extranjero con la documentación apropiada pero sin la debida autorización para laborar, en los casos de reincidencia se aplicará el doble del monto establecido. C$ 5,000.00"
+   },
+   {
+    "kind": "primary",
+    "url": "https://sajurin.enriquebolanos.org/docs/G-2011-07-06.pdf",
+    "title": "La Gaceta, Diario Oficial No. 125, 6 July 2011: Ley No. 761, arts. 15-17, 22 and 120",
+    "read": "2026-11-04",
+    "said": "5) Artistas de espectáculos públicos; ... Art. 17 ... La Dirección General de Migración y Extranjería, autorizará a las personas extranjeras enunciados en el artículo anterior, permiso especial para permanecer y laborar por un periodo hasta de un año ... Art. 22 Estadía para Personas Extranjeras no Residentes. La estadía otorgada a un extranjero al momento de ingresar al país se determina por los instrumentos internacionales suscritos por Nicaragua, resoluciones y circulares emitidas por el Ministerio de Gobernación o en su caso, por la Dirección General de Migración y Extranjería. ... Art. 120 ... Con fundamento en el principio de reciprocidad, el pago de las tasas a que se refiere la presente Ley, no se exigirá a las personas nacionales de los países con los cuales Nicaragua ha suscrito instrumentos internacionales relativos a la materia."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.migob.gob.ni/, https://migob.gob.ni/, https://www.migob.gob.ni/migracion/ (Ministerio del Interior / DGME), https://www.migracion.gob.ni/",
+    "result": "migob.gob.ni answers 403 on all paths; migracion.gob.ni gives no connection",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl La Gaceta Nos. 125 and 126 (6-7 July 2011) from SAJURIN, pdftotext (plain and -layout), read arts. 15-25, 120-123",
+    "result": "found: the Law's own fee for the right of a non-resident to work, C$ 500 a month for at most six months (art. 121's table, read in the layout text with the row and amount on one line); the stay of a non-resident (artists of public shows included) is left to treaties and Ministry/DGME resolutions (art. 22); no union step, pay rule or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "fees: [{what:'Right of a non-resident to work (derecho a laborar no residentes), per month, for at most six months (Ley 761 art. 121, as gazetted 7 July 2011)',amount:'500',currency:'NIO'}]. validity: the same row caps the non-resident work right at six months; the stay itself is set by DGME resolution (art. 22), so no term in days is modelled. union, pay, exempt, processing: none in Ley 761 (arts. read).",
+  "notes": "Caveats for the lead: (1) the row sits in art. 121's table, headed 'exclusivos para personas nacionales', though its subject is non-residents' work; (2) the table is the 2011 original: later reforms to Ley 761 or its fees were not checked (migob.gob.ni refuses). Hold the fee as 'as gazetted 2011' or keep it blocked if a current figure is required. No web search spent."
+ },
+ {
+  "id": "R-4929",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://giwmscdnone.gov.np/media/pdf_upload/15.%20%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E0%A4%90%E0%A4%A8%2C_oinkgks.pdf",
+    "title": "Nepal Law Commission text (www.lawcommission.gov.np header) of श्रम ऐन, २०७४ (Labour Act 2074, Act no. 14 of 2074), as amended to the Act of 2082, ch. 6, ss. 22-27, on the Government of Nepal's CDN (giwmscdnone.gov.np)",
+    "read": "2026-11-04",
+    "said": "[pdftotext of the text layer; the embedded Kalimati font maps some conjuncts imperfectly, e.g. 'हवदे िी' for विदेशी] २२. ... (३) ... रोजगारदाताले आफूलाई चाहहएको दि श्रममक नेपाली नागररकबाट प्राप्त गनध राहियस्तरको दै मनक पमत्रकामा हवज्ञापन प्रकािन गनुध पनेछ। ... (६) श्रम इजाजत सम्बन्धी दस्तुर तथा अन्य व्यवस्था तोहकए बमोशजम हुनेछ। २३. ... (२) यस ऐनमा अन्यत्र जुनसुकै कुरा ले शखएको भए तापमन कुटनीमतक उन्मुशि पाउने वा नेपाल सरकारसँग भएको कुनै सशन्ध वा सम्झौता अन्तगधत श्रम स्वीकृमत मलन नपने अवस्थामा बाहेक नेपालमा काम गने हवदे िी नागररकले तोहकए बमोशजम श्रम स्वीकृमत मलनु पनेछ। २४. ... (ख) तीन महहना वा सोभन्दा कम अवमधको लामग कुनै मेिीनरी सामान ममधत गनध वा नयाँ प्रहवमधको जडान गनध वा यस्तै अन्य आकशस्मक काम गनधको लामग आउने प्राहवमधक। ... २७. ... (१) हवदे िी श्रममकले काम गरे बापत पाउने पाररश्रममक, सेवाका ितध र सुहवधा यो ऐन वा यस ऐन अन्तगधत बनेको मनयमले मनधाधरण गरे को मापदण्डभन्दा घटी नहुने गरी रोजगारदाता र श्रममकबीच भएको समयगत वा कायधगत रोजगार सम्झौतामा उल्ले ख भए बमोशजम हुनेछ। (२) रोजगार सम्झौतामा समयावमध उल्ले ख भएकोमा सोही बमोशजम र नभएमा ्यस्तो रोजगार सम्झौता तीन वषधसम्म कायम रहनेछ।"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://dol.gov.np/, https://www.dol.gov.np/ (Department of Labour), https://moless.gov.np/",
+    "result": "no connection (HTTP 000) on all three",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Law Commission's text of the Labour Act 2074 (as amended to 2082) on the Government's CDN, pdftotext; read ch. 6 (ss. 22-27) whole; an OCR check of p. 13 (tesseract nep) was started and timed out on the shared machine",
+    "result": "found: the permit is needed by every foreign worker except those with diplomatic immunity or exempted by a treaty with Nepal (s. 23(2)) — no exemption for a performer or a short engagement (s. 24(b)'s direct licence for stays of three months or less covers technicians repairing machinery or installing new technology); the foreign worker's pay and conditions may not fall below the standards the Act or its Rules set (s. 27(1)); an employment agreement with no term runs three years (s. 27(2)); fees and other terms are left to the Rules (s. 22(6)); no union step anywhere in ch. 6.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "exempt: none for a performer (absence: Labour Act 2074 s. 23(2) admits only diplomatic immunity and treaty exemptions; s. 24(b)'s short licence is for technicians). pay: 'Pay and conditions may not fall below the standards set by the Labour Act or its Rules' (s. 27(1)). union: none in the Act's chapter on labour permits (ss. 22-27, read whole). eligibility: no performer criterion; the skill must be unobtainable from Nepali citizens after a national-daily advertisement (s. 22(2)-(4)). processing: still blocked (the Labour Rules 2075 not read).",
+  "notes": "The fees held (NPR 15,000 / 20,000) remain from law-firm summaries of the Labour Rules 2075; s. 22(6) confirms they are set by the Rules, which weren't read. The Devanagari quote is the PDF's text layer (font mapping imperfect); the lead may want the page image checked (pdftoppm p. 13). No web search spent."
+ },
+ {
+  "id": "R-4935",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://gulfnews.com/world/gulf/oman/oman-unveils-cultural-visa-to-attract-global-talent-1.500345204",
+    "status": "same",
+    "now": "Not re-fetched; superseded by the decision's text (below), which it reports."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://qanoon.om/p/2025/rop20250156/",
+    "title": "Qanoon.om, Royal Oman Police Decision No. 156/2025 amending the Executive Regulation of the Foreigners' Residence Law (issued 2 November 2025, Official Gazette no. 1621 of 9 November 2025)",
+    "read": "2026-11-04",
+    "said": "شرطة عمان السلطانية: قرار رقم ١٥٦ / ٢٠٢٥ بتعديل بعض أحكام اللائحة التنفيذية لقانون إقامة الأجانب ... المادة الثالثة ينشر هذا القرار في الجريدة الرسمية، ويعمل به من اليوم التالي لتاريخ نشره. صدر في: ١١ من جمادى الأولى ١٤٤٧هـ الموافق: ٢ من نوفمبر ٢٠٢٥م ... نشر في عدد الجريدة الرسمية رقم (١٦٢١) الصادر في ٩ من نوفمبر ٢٠٢٥م . ... المادة (٢) يضاف بند جديد برقم (٢٠) إلى المادة (١٠) من اللائحة التنفيذية لقانون إقامة الأجانب المشار إليها، نصه الآتي: ٢٠ – التأشيرة الثقافية: تمنحها السلطة المختصة بناء على طلب الجهة المختصة وتحت مسؤوليتها، للأجنبي القادم للأغراض الثقافية، وتستخدم التأشيرة خلال (٣) ثلاثة أشهر من تاريخ إصدارها. ... المادة (٤) ... ٩ – إقامة ثقافية: تمنح للأجنبي الذي دخل سلطنة عمان للأغراض الثقافية. المادة (٥) ... أولا: تأشيرات الدخول: ... ٣١ تأشيرة ثقافية لمدة (١) سنة (٥٠) خمسون تأشيرة ثقافية لمدة (٥) خمس سنوات (٥٠) خمسون عن كل سنة تأشيرة ثقافية لمدة (١٠) عشر سنوات (٥٠) خمسون عن كل سنة ... ثانيا: رسوم تجديد الإقامة: ... ١٠ إقامة ثقافية لمدة (١) سنة (٥٠) خمسون إقامة ثقافية لمدة (٥) خمس سنوات (٥٠) خمسون عن كل سنة إقامة ثقافية لمدة (١٠) عشر سنوات (٥٠) خمسون عن كل سنة",
+    "quotes": "Official Gazette of the Sultanate of Oman (الجريدة الرسمية), issue no. 1621, 9 November 2025 (Ministry of Justice and Legal Affairs, https://mjla.gov.om/)"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://evisa.rop.gov.om/en/types-of-visa (ROP eVisa) and https://www.rop.gov.om/",
+    "result": "the eVisa page answers 200 but draws its visa list by script (only the class headings are in the HTML); rop.gov.om gives no connection",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Royal Oman Police cultural visa decision fee validity years rop.gov.om'",
+    "result": "press only (Gulf News, Oman Observer, Muscat Daily, Arabian Business), naming ROP Decision No. 156/2025 in force 10 November 2025 — a lead, followed to the decision's text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl https://mjla.gov.om/ (the Official Gazette's publisher); curl https://qanoon.om/p/2025/rop20250156/ (a legal information site reproducing the Gazette)",
+    "result": "mjla.gov.om gives no connection; Qanoon.om holds the decision's full text with its Gazette issue (no. 1621, 9 November 2025), read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "route: Cultural visa (التأشيرة الثقافية), then cultural residence (ROP Decision 156/2025 adding art. 10 item 20 and art. 19 item 9 to the Executive Regulation of the Foreigners' Residence Law; in force the day after publication, 10 November 2025). applies: 'The Royal Oman Police grants it at the request of the competent body and under that body's responsibility.' fees: [{what:'Cultural visa, per year of its term (1, 5 or 10 years)',amount:'50',currency:'OMR'},{what:'Cultural residence renewal, per year of its term',amount:'50',currency:'OMR'}]. validity: {n:10,unit:'years',renewable:true,note:'Issued for one, five or ten years; must be used within three months of issue.'} (or n:1 if the lead models the shortest term). processing, pay, exempt, union: none in the decision.",
+  "notes": "Secondary only (Qanoon.om says it is not an official source); its primary, Official Gazette no. 1621, was not reachable. The decision doesn't say which 'competent body' requests the visa (press says the Ministry of Culture, Sports and Youth — not in the text). Whether a cultural visa covers a paid screen engagement isn't stated: 'cultural purposes' only. Search count: this was search 4."
+ },
+ {
+  "id": "R-4939",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://cdn.www.gob.pe/uploads/document/file/6331822/5562958-resolucion-jefatural-001021-2024-jz16lim-migraciones.pdf",
+    "status": "same",
+    "now": "Answers 200; not re-read."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.leyes.congreso.gob.pe/Documentos/DecretosLegislativos/01350.pdf",
+    "title": "Congreso de la República, copy of El Peruano, Normas Legales, 7 January 2017: Decreto Legislativo N° 1350, Decreto Legislativo de Migraciones, art. 29.1(b) (scanned; read by OCR and checked against the page image, p. 4)",
+    "read": "2026-11-04",
+    "said": "Artículo 29°.- Tipos de Calidades Migratorias Son tipos de Calidades Migratorias, las siguientes: 29.1. Temporal: Permite el ingreso y permanencia de un extranjero en el territorio de la República, sin ánimo de residencia. Son Calidades Migratorias Temporales las siguientes: ... b. Artística o Deportiva Permite al extranjero desarrollar actividades remuneradas o lucrativas, vinculadas a espectáculos artísticos, culturales, deportivos u otros similares en virtud de un contrato de conformidad con la normativa vigente. Es otorgada por MIGRACIONES, previo al ingreso al país. Permite única entrada. El plazo de permanencia es de noventa (90) días. No es prorrogable."
+   },
+   {
+    "kind": "primary",
+    "url": "https://img.lpderecho.pe/wp-content/uploads/2021/07/Decreto-supremo-007-2021-in-LP.pdf",
+    "title": "El Peruano, Normas Legales, viernes 23 de julio de 2021, pp. 89-90: Decreto Supremo N° 007-2021-IN, art. 1 (creates the 'producción artística' statuses) — image of the gazette's own pages, hosted by LP Derecho",
+    "read": "2026-11-04",
+    "said": "Créase la calidad migratoria producción artística temporal y la calidad migratoria producción artística residente, en los siguientes términos: a. Producción artística temporal Es otorgada por Relaciones Exteriores, permite el ingreso y permanencia de los extranjeros que realizan trabajo artístico o técnico en actividades vinculadas a la industria cultural o artística, incluyendo la producción cinematográfica o audiovisual extranjeras. Esta calidad migratoria le permite al extranjero múltiples ingresos al país, no pudiendo realizar actividades remuneradas o lucrativas por cuenta propia en el país, ni percibir ingresos de fuente peruana. El plazo de permanencia es de hasta ciento ochenta y tres (183) días. b. Producción artística residente Es otorgada por Relaciones Exteriores, ... El plazo de permanencia es de hasta trescientos sesenta y cinco (365) días, prorrogables."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl the Congress's copy of Decreto Legislativo 1350 (leyes.congreso.gob.pe/Documentos/DecretosLegislativos/01350.pdf; El Peruano of 7 January 2017, 12 pages, scanned with no text layer); rendered p. 4 (bottom right column) and pp. 5-6 at 150 dpi, tesseract spa, checked the art. 29.1(b) passage against the page image",
+    "result": "found: 'Artística o Deportiva' — paid activities tied to artistic, cultural, sporting or similar shows under a contract; granted by MIGRACIONES before entry; single entry; stay 90 days, not extendable",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'gob.pe migraciones \"calidad migratoria artística\" plazo de permanencia días prórroga'",
+    "result": "no gob.pe service page for the ART status; led to Decreto Supremo 007-2021-IN (El Peruano page image) and gob.pe's extension pages for other statuses",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the El Peruano pages of DS 007-2021-IN (img.lpderecho.pe), pdftotext, read art. 1",
+    "result": "found: two further statuses for screen work, granted by the Ministry of Foreign Affairs: 'producción artística temporal' (stay up to 183 days, multiple entries) and 'producción artística residente' (up to 365 days, extendable), both for foreigners doing artistic or technical work in the cultural industries including foreign film and audiovisual production — but neither allows paid activity on one's own account in Peru or Peruvian-source income",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "curl https://www.migraciones.gob.pe/, https://spij.minjus.gob.pe/, https://busquedas.elperuano.pe/",
+    "result": "migraciones answers 301 (not followed further today), SPIJ gives no connection, El Peruano's search redirects (302)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "validity: {n:90,unit:'days',renewable:false,note:'Single entry; granted by Migraciones before entry (DL 1350 art. 29.1(b)).'}. eligibility: 'Paid activities tied to artistic, cultural, sporting or similar shows, under a contract (DL 1350 art. 29.1(b)).' route note: a foreign performer hired by a Peruvian company takes the Artística status (ART), as held; one working on a foreign film or audiovisual production shooting in Peru takes 'producción artística temporal' (Ministry of Foreign Affairs; up to 183 days, multiple entries; no Peruvian-source income) or 'producción artística residente' (up to 365 days, extendable) — DS 007-2021-IN art. 1. processing, pay, exempt: still blocked.",
+  "notes": "DL 1350's art. 29 is read in its 2017 original; later amendments to art. 29.1(b) were not checked (SPIJ unreachable), though the 2023-24 TUPA still lists the ART status held. The 2021 'producción artística' statuses may be the better route for a foreign production's cast (they bar Peruvian-source income); the lead decides whether to model them. Search count: this was search 6."
+ },
+ {
+  "id": "R-4941",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.service-public.pf/sefi/service-emploi/les-travailleurs-etrangers/",
+    "status": "same",
+    "now": "Re-read 2026-11-04: every non-French national, EU citizens included, needs a work authorisation obtained by the employer; 'Certaines catégories de salariés, envoyés par leur employeur situé hors de la Polynésie française, pour des missions de moins de trois mois, sont dispensées de permis de travail' (categories not named); no fee, time, term, union or pay rule."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the SEFI page on foreign workers (service-public.pf), read whole",
+    "result": "unchanged; nothing new on fees, processing, validity, union, eligibility, pay or which categories are exempt",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl https://lexpol.cloud.pf/ (the territory's legal register) and its text search for 'LP. 5321-1'; https://www.lexpol.cloud.pf/",
+    "result": "the home page answers 200; the search URL returned an empty body (0 bytes); www.lexpol.cloud.pf gives no connection. The Labour Code articles (LP. 5321-1 ff., A. 5321-1 ff.) were not read.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "All seven fields stay blocked. No web search spent."
+ },
+ {
+  "id": "R-4943",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.dlir.gov.pg/ and https://dlir.gov.pg/ (Department of Labour and Industrial Relations), https://ica.gov.pg/ and https://www.ica.gov.pg/ (Immigration and Citizenship Authority)",
+    "result": "DLIR gives no connection (HTTP 000); ICA redirects to https://icsa.gov.pg/, which answers 403",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees, union, eligibility, pay and exempt stay blocked; the route's only source is still Business Advantage PNG (secondary). The Employment of Non-Citizens Act 2007 and its regulations were not found on a state host today. No web search spent."
+ },
+ {
+  "id": "R-4949",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.saint-pierre-et-miquelon.gouv.fr/Demarches/Travailleurs-etrangers/Emploi-direct",
+    "status": "same",
+    "now": "Re-read 2026-11-04; links the préfecture's procedure sheet '2025 APT emploi direct.pdf' (updated 16/02/2025), which states what the research already holds (offer three weeks at pôle emploi, labour-market criterion inoperative for artistic and cultural professions, filing by e-mail at least 15 days before arrival). No fee, decision time or union step."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the préfecture's Emploi direct page and its procedure sheet (contenu/telechargement/10962/102788/file/2025 APT emploi direct.pdf), pdftotext, read whole",
+    "result": "no fee, no decision time (only the 15-day filing lead time), no union step",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "fees, processing and union stay blocked. No web search spent."
+ },
+ {
+  "id": "R-4951",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.visitpitcairn.pn/visa-legal",
+    "status": "changed",
+    "now": "Not re-fetched; the Government's own immigration page (below) now describes a separate work visa (NZ$300, six months, Governor's decision after consulting the Island Council), not the NZ$150 entry clearance the research takes from Visit Pitcairn."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/immigration",
+    "title": "Government of the Pitcairn Islands, Immigration (page)",
+    "read": "2026-11-04",
+    "said": "Coming to Pitcairn to work temporarily? If you wish to come to Pitcairn to work on a temporary basis, you will need to obtain a work visa before travelling. To apply for a work visa, you must: Complete the work visa application form Undertake a medical examination and have the general medical certificate form and chest x-ray form completed Obtain Police certificates setting out any criminal convictions you have from your country of citizenship and any other country you have resided in for more than 12 months Email your completed form, general medical certificate, chest x-ray form, Police certificates and any other supporting documentation to Pitcairn immigration in the below contact form. Pay the application fee (NZ$300) The Governor of Pitcairn will make decisions on applications for work visas, after consultation with the Pitcairn Island Council. You are encouraged to apply well in advance of your intended travel to ensure that there is sufficient time to obtain all necessary documentation and have it considered. Work visas are issued for six months. You can apply for an extension prior to expiry of the visa. Work visa holders must maintain adequate travel and medical insurance for the duration of their visa."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/s/Cap-12-Immigration-Ordinance-2014-Rev-Ed.pdf",
+    "title": "Government of the Pitcairn Islands, Immigration Control Ordinance, Cap. 12 (2014 Rev. Ed.), s. 16",
+    "read": "2026-11-04",
+    "said": "16.—(1) This section applies to every person who (a) has not been granted entry for settlement; or (b) has not been granted the status of permanent resident; or (c) is not otherwise exempt from control by any of the provisions of section 15. (2) No person to whom this section applies shall be entitled to take up paid employment or enter into business on the Island unless his or her intention to do so has been expressly disclosed to the Island Council and has been approved in writing or permission has been later obtained in writing on-Island from the Island Council or the Governor."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.government.pn/immigration and /laws (the Government of the Pitcairn Islands), read whole",
+    "result": "found: a work visa for temporary work, applied for before travelling with medical and police certificates, application fee NZ$300, decided by the Governor after consulting the Island Council, issued for six months and extendable before expiry; no decision time ('apply well in advance')",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Government's copies of the Immigration Control Ordinance Cap. 12 (2014 Rev. Ed.) and the Immigration Control Amendment Ordinance 'as published' 27 April 2026 (22 pages); pdftotext",
+    "result": "Cap. 12 s. 16(2) read (written permission of the Island Council or Governor before paid work); the 2026 amendment is a scanned image with no text layer and was not OCR'd today (the shared machine's OCR ran too slowly), so whether it enacts the work visa wasn't read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "route: Work visa (Governor, after consultation with the Island Council; Immigration Control Ordinance Cap. 12 s. 16). first: 'A work visa obtained before travelling: application form, medical certificate and chest x-ray, police certificates.' fees: [{what:'Work visa application fee',amount:'300.00',currency:'NZD'}] (replacing the NZ$150 entry clearance held). validity: {n:6,unit:'months',renewable:true,note:'Issued for six months; an extension may be sought before expiry.'}. processing: still blocked (no time stated).",
+  "notes": "The research's route and NZ$150 fee came from Visit Pitcairn (the tourism site); the Government's page sets out a distinct work visa. The 2026 amendment ordinance (scanned) should be OCR'd by the lead to confirm the work visa's legal basis and any fee schedule. No web search spent."
+ },
+ {
+  "id": "R-4955",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.mol.pna.ps/ and https://mol.pna.ps/ (Ministry of Labour, Ramallah), https://www.mol.ps/, and the government e-portal service guide linked from it (eportal.gov.ps/index.php/serviceGuide/168)",
+    "result": "mol.pna.ps gives no connection; mol.ps answers but is the Ministry of Labour in the Gaza Strip (its news, programmes and e-services hold nothing on licences for non-Palestinian workers); the e-portal guide answered 200 with no licence, fee or term text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Minister's regulation (نظام) under the Labour Law art. 15 was not found; all seven fields stay blocked. No web search spent."
+ },
+ {
+  "id": "R-4958",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the Ministry of Human Resources, Culture, Tourism and Development's public announcement PA21-02 of 7 July 2021 (palaugov.pw/wp-content/uploads/2021/07/Nonresident-Worker-Program_Public-Announcement-7.07.2021.pdf), read whole",
+    "result": "a COVID-era placement programme run by the Labor Office in Ngerbeched; names RPPL 10-56 (the CROSS Act) for transfers; no fee, term, time or other permit rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Palau RPPL 10-56 CROSS Act nonresident worker permit fee pdf'",
+    "result": "no primary text; leads: PacLII copies of Palau acts and its consolidated Labor title (pacliirms.austlii.edu.au/pw/legis/consol_act/lt30104.pdf), and Island Times reporting a FY2026 budget bill rider raising the permit fee",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl https://pacliirms.austlii.edu.au/pw/legis/consol_act/lt30104.pdf",
+    "result": "connection reset (curl 35)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "curl Island Times, 'Palau weighs $500 Foreign Worker Fee Amid Employer concerns and Labor shortages'",
+    "result": "reports a bill (FY2026 budget, at third reading in the House of Delegates) to raise the annual permit fee from $150 to $500 and the two-year permit from $300 to $900 — a bill, not law, and press with no primary address: a lead, not a fact",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "All nine fields stay blocked. If the lead pursues it: the enacted FY2026 budget act (RPPL) would hold the fee if the rider passed; the current fee per the press is $150 a year or $300 for two years. Search count: this was search 5."
+ },
+ {
+  "id": "R-4960",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/10973/ley-n-6984-de-migraciones",
+    "status": "same",
+    "now": "Re-read 2026-11-04; arts. 45, 49, 56 as held. Art. 100 holds the fee, not in the research."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/10973/ley-n-6984-de-migraciones",
+    "title": "Biblioteca y Archivo Central del Congreso Nacional (Paraguay), Ley N° 6984 de Migraciones, arts. 99-100",
+    "read": "2026-11-04",
+    "said": "Artículo 99.- Aranceles. Las personas extranjeras deberán abonar el arancel correspondiente por las solicitudes de Residencia Precaria, Temporal o Permanente, por cambio de información, prórroga de permanencia, cambio de categoría migratoria, expedición de certificados y documentos que exija la Dirección Nacional de Migraciones en cumplimiento de la presente Ley y de su reglamentación. Artículo 100.- Del valor de los aranceles. Las sumas que deberán abonar los extranjeros en concepto de aranceles mencionados en el artículo anterior son las siguientes: 1. Residencia Permanente: 15 (quince) jornales. 2. Residencia Temporaria: 10 (diez) jornales. 3. Residencia Espontánea u Ocasional: 8 (ocho) jornales. 4. Residencia Precaria: 5 (cinco) jornales. 5. Prórroga de residencia temporaria: 11 (once) jornales. 6. Prórroga de permanencia: 5 (cinco) jornales."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl https://www.migraciones.gov.py/ and https://migraciones.gov.py/ (Dirección Nacional de Migraciones)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl the Congress library's text of Ley 6984 (bacn.gov.py), read the whole HTML text for 'ocasional', 'arancel', 'tasa', 'jornal'",
+    "result": "fee found: art. 100(3), eight jornales (daily minimum wages) for the Residencia Espontánea u Ocasional; no decision time, union step, pay rule or permit-free engagement for performers (art. 56 puts members of public shows under this residence for up to 90 days)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "fees: [{what:'Residencia Espontánea u Ocasional, arancel (Ley 6984 art. 100(3))',amount:'8',currency:'jornales mínimos (daily minimum wages, PYG)'}]. exempt: none — members of public shows staying up to 90 days take this residence (art. 56), found as an absence of a permit-free engagement in the Law. processing, union, pay: none in Ley 6984 (read); left to the regulation.",
+  "notes": "The fee is set in jornales; the engine needs the current daily minimum wage (a layer-3/world fact) to turn it into guaraníes. Fees found; processing, union and pay remain without a primary beyond the Law's silence (the regulation wasn't read), so the lead may hold them blocked. No web search spent."
+ },
+ {
+  "id": "R-4965",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://igi.mai.gov.ro/wp-content/uploads/2026/05/ORDONANTA-DE-URGENTA-nr.-32-din-23-aprilie-2026.pdf",
+    "status": "same",
+    "now": "Fetched again (HTTP 200, 47 pages); same text. Its art. 47 holds the fee the research lacked (below)."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://igi.mai.gov.ro/wp-content/uploads/2026/05/ORDONANTA-DE-URGENTA-nr.-32-din-23-aprilie-2026.pdf",
+    "title": "Ordonanţa de urgenţă a Guvernului nr. 32 din 23 aprilie 2026 (Monitorul Oficial nr. 335 din 27 aprilie 2026, in force 27-04-2026), art. 47, amending the annex to Law 198/2008 on consular fees (the General Inspectorate for Immigration's copy)",
+    "read": "2026-11-04",
+    "said": "Articolul 47 Legea nr. 198/2008 privind serviciile consulare pentru care se percep taxe şi nivelul taxelor consulare la misiunile diplomatice şi oficiile consulare ale României în străinătate ... se modifică şi se completează după cum urmează: ... 2. La anexă, litera A se modifică şi va avea următorul cuprins: Nr. crt. Denumirea serviciilor Taxa în euro A. Vize ... 4 Viza de lungă şedere 300"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "curl the Inspectorate's copy of OUG 32/2026 (igi.mai.gov.ro), pdftotext, read art. 27^1 (artists in cultural institutions on the Minister of Culture's order), art. 47 (consular fee annex) and arts. 48-49; grep for exemptions ('nu se aplică', 'fără aviz', 'fără permis', 'cu excepţia străinilor')",
+    "result": "fee found: the long-stay visa's consular fee is EUR 300 (Law 198/2008 annex, letter A pt. 4, as replaced by OUG 32/2026 art. 47); no union step and no exemption for a short artistic engagement in OUG 32/2026. The exemptions list of OUG 194/2002 / OG 25/2014 was not re-read (legislatie.just.ro refuses this client, layer 3).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "fees: [{what:'Long-stay visa (D/AM1, employment), consular fee (Law 198/2008 annex A pt. 4, as amended by OUG 32/2026 art. 47)',amount:'300',currency:'EUR'}]. union: none in OUG 32/2026 (read whole). exempt: still blocked (the exemption list outside OUG 32/2026 not read).",
+  "notes": "The EUR 120 figure the 2026-11-01 searches met is superseded: OUG 32/2026 (in force 27 April 2026) set the long-stay visa fee to EUR 300. Platform/registration fees for the employer, if any, not found in the ordinance."
+ },
+ {
+  "id": "R-4973",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://hrsd.gov.sa/en/node/5575987",
+    "status": "changed",
+    "now": "Now redirects (301) to https://www.hrsd.gov.sa/en/توظيف-غير-السعوديين ('Employment of Non-Saudis'); it reproduces Labor Law arts. 32-40 (text below)."
+   },
+   {
+    "url": "https://visa.mofa.gov.sa/",
+    "status": "same",
+    "now": "Answers 200; not re-read for performer visas."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.hrsd.gov.sa/en/%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%8A%D9%86",
+    "title": "Ministry of Human Resources and Social Development, 'Employment of Non-Saudis' (Labor Law arts. 32-40)",
+    "read": "2026-11-04",
+    "said": "Article 32: Recruitment for the purpose of employment shall not be permitted except after the approval of the Ministry. Article 33: Non-Saudis may not practice any work, nor shall they be permitted to do so, except after obtaining a work permit from the Ministry according to the form prepared for this purpose. The following conditions shall be required for granting the license: The worker must have entered the country legally and be authorized to work. The worker must possess the professional competencies or academic qualifications that the country needs, and there are no citizens who possess them, or the number of citizens who possess them is insufficient to meet the need, or the worker must be from the category of ordinary workers that the country needs. The worker must be under contract with and the responsibility of an employer. ... Article 34: The work permit referred to herein shall not substitute for any permit or license required by another authority to practice the work or profession. ... Article 37: The employment contract for a non-Saudi worker must be written and of a fixed term. If the contract does not specify its duration, it is considered to be one year starting from the worker's actual commencement date. ... Article 40: The employer shall bear the costs of recruiting the foreign worker, the residence and work permit fees and their renewals, along with any penalties resulting from delays in such renewals, the fees for changing the profession, exit and re-entry fees, and the cost of the worker’s return ticket to their home country after the termination of the relationship between the two parties."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl the MHRSD 'Employment of Non-Saudis' page (via node/5575987), read whole; curl https://ksavisa.sa/ and https://visa.mofa.gov.sa/",
+    "result": "found: the Ministry's prior approval for recruitment (art. 32), the work permit's three conditions (legal entry, skills the country lacks or an ordinary-worker category it needs, a contract with an employer: art. 33), and that the employer bears the permit and residence fees (art. 40); no fee amount, decision time or term for the permit, no performer category, union step, pay floor or exemption. KSA Visa's home page is drawn by script (no visa text in the HTML).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl https://laws.boe.gov.sa/ (Bureau of Experts at the Council of Ministers)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "applies: 'The employer, after the Ministry of Human Resources and Social Development approves the recruitment, obtains the work permit for the worker and bears its fees and the residence fees (Labor Law arts. 32, 33, 40).' first: 'The Ministry's approval to recruit (art. 32).' eligibility: 'The worker entered legally and is authorised to work; holds skills or qualifications the country needs that no citizen (or too few) holds, or is in an ordinary-worker category it needs; and is under contract with an employer (art. 33).' fees, processing, validity, union, pay, exempt: still blocked (no amount or term in the Law's articles read; the contract, not the permit, defaults to one year, art. 37).",
+  "notes": "The work permit doesn't replace another authority's licence (art. 34): for screen work that would be the Film Commission's or the General Entertainment Authority's, neither read. No web search spent."
+ }
+]

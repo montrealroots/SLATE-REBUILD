@@ -1,0 +1,757 @@
+[
+ {
+  "id": "R-6067",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://api.prod.legislation.gov.au/v1/documents(titleid='C2004A05138',start=2026-10-01T00:00:00,retrospectivestart=2026-10-01T00:00:00,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=10,format='Word')",
+    "title": "Income Tax Assessment Act 1997, compilation in force from 1 October 2026, volume 10 (sections 900-1 to 995-1), Federal Register of Legislation (Word): section 960-505 and the section 995-1 dictionary",
+    "said": "960-505 Meaning of Australia Territories (1) Australia, when used in a geographical sense, includes each of the following: (a) Norfolk Island; (b) the Coral Sea Islands Territory; (c) the Territory of Ashmore and Cartier Islands; (d) the Territory of Christmas Island; (e) the Territory of Cocos (Keeling) Islands; (f) the Territory of Heard Island and the McDonald Islands. ... [995-1] Australia has the meaning affected by section 960-505.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://api.prod.legislation.gov.au/v1/documents(titleid='C2004A05138',start=2026-10-01T00:00:00,retrospectivestart=2026-10-01T00:00:00,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=7,format='Word')",
+    "title": "Income Tax Assessment Act 1997, compilation in force from 1 October 2026, volume 7 (sections 315-1 to 421-85), Federal Register of Legislation (Word): Division 376",
+    "said": "376-145 Qualifying Australian production expenditure—general test A company's qualifying Australian production expenditure on a *film is the company's *production expenditure on the film to the extent to which it is incurred for, or is reasonably attributable to: (a) goods and services provided in Australia; or (b) the use of land located in Australia; or (c) the use of goods that are located in Australia at the time they are used in the *making of the film. ... The amount of the location offset is 30% of the total of the company's *qualifying Australian production expenditure on the *film",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Federal Register of Legislation: api.prod.legislation.gov.au versions/find for C2004A05138 (latest) and documents listing; volumes 7 and 10 of the 1 October 2026 compilation downloaded as Word and read (also ITAA 1936 vol. 1, whose s 6 'Australia' points to the 1997 Act)",
+    "result": "found: s 960-505(1)(a) puts Norfolk Island inside 'Australia' in its geographical sense, and s 376-145 counts production expenditure on goods and services provided, land used and goods located 'in Australia', for the location, PDV and producer offsets alike.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.ato.gov.au/ fetched",
+    "result": "HTTP 403 again (not read another way)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "incentive",
+   "countsNorfolkIslandSpend": true,
+   "basis": "ITAA 1997 s 960-505(1)(a) (Australia, geographical sense, includes Norfolk Island) read with s 376-145 (QAPE: goods and services provided in Australia, land located in Australia, goods located in Australia)",
+   "offsets": {
+    "location": 0.3,
+    "pdvAndProducer": "as held for AU"
+   },
+   "asOf": "compilation in force from 2026-10-01"
+  },
+  "notes": "The finding joins two provisions of the same Act: neither names film spend on Norfolk Island in one sentence. The location offset rate (30%) was read in the same volume; PDV and producer rates were not re-read here."
+ },
+ {
+  "id": "R-5189",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://fairpacct.nl/download/33950/",
+    "title": "Fair pay: Tabellen Richtlijn zzp-starttarieven en Benchmark salarissen Film/AV (culturele) producties 2023 - 2024 - 2025 - 2026 (Platform ACCT Ketentafel Film/AV productie, November 2025), PDF",
+    "said": "Fair pay zzp-starttarieven per uur Film/AV (culturele) producties 2023-2026 ... niveau 2023 2024-2025 2026 ... K € 58,00 € 62,45 € 66,64 ... J € 50,24 € 54,17 € 57,80 ... I € 43,96 € 47,46 € 50,65 ... H € 38,90 € 42,06 € 45,44 ... Index 2026 (t.o.v. 2024-2025): 6,71% de schalen A tm H: 8,03% ... K € 38,20 € 28,44 € 66,64 (2026: minimum basisuurtarief, opslagfactor, zzp-starttarief incl. 74,45%) ... J € 33,13 € 24,67 € 57,80",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://fairpacct.nl/download/33852/",
+    "title": "Opdracht Kompas film- en AV-productie (versie 2.0, december 2024), Excel, sheet 'Opdracht Kompas', column REGIE",
+    "said": "[K, 320 - 359,5] Visualiseert het script en vormt de creatieve inhoud ... Heeft de creatieve verantwoordelijkheid voor het eindproduct. ... Referentie/interview: Regisseur van een grote/complexe audiovisuele productie. [J, 280 - 319,5, same description, no reference line]",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://fairpacct.nl/download/33950/ (PDF) and https://fairpacct.nl/download/33960/ (Excel) fetched with curl over https with a browser User-Agent",
+    "result": "both answered HTTP 200 (application/pdf; spreadsheetml); PDF read whole with pdftotext -layout (10 pages, created 24 Nov 2025): the 1 January 2026 table is in it. Arithmetic checked: 2024-25 rate x 1.0671 (I to K) and x 1.0803 (A to H) gives each 2026 figure.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://fairpacct.nl/download/33852/ (Opdracht Kompas, Excel) fetched and read with openpyxl, columns SCENARIO and REGIE",
+    "result": "director's reference assignment is at level K ('Regisseur van een grote/complexe audiovisuele productie'), level J carries the same director description without a reference line; no prep, shoot or cut periods in it.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://fairpacct.nl/download/33867/ (Handleiding toepassing zzp-starttarieven) fetched",
+    "result": "HTTP 200, PDF of 10 pages saved; not needed for the rates.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fees",
+   "currency": "EUR",
+   "per": "hour",
+   "matrix": "Tabellen Richtlijn zzp-starttarieven Film/AV (culturele) producties, November 2025",
+   "effective": "2026-01-01",
+   "index2026": {
+    "levelsItoK": 0.0671,
+    "levelsAtoH": 0.0803
+   },
+   "levels": {
+    "K": {
+     "base": 38.2,
+     "markup": 28.44,
+     "startRate": 66.64,
+     "rate2024_2025": 62.45
+    },
+    "J": {
+     "base": 33.13,
+     "markup": 24.67,
+     "startRate": 57.8,
+     "rate2024_2025": 54.17
+    }
+   },
+   "markupFactor": 0.7445,
+   "directorLevels": [
+    "J",
+    "K"
+   ],
+   "kReference": "Regisseur van een grote/complexe audiovisuele productie",
+   "binding": false
+  },
+  "notes": "Fees part found (the 2026 table); the periods part (guaranteed prep, shoot, cut periods) still not found: the Kompas holds none, and no other source was tried today beyond these. The Excel 33960 was also saved (fp.bin) but not needed. The 2026 table's text calls the basisuurtarief 'peildatum 1 juli 2025' in a note and 1 juli 2023 elsewhere; the figures are the 2024-25 figures indexed."
+ },
+ {
+  "id": "R-5224",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://fairpacct.nl/download/33950/",
+    "title": "Fair pay: Tabellen Richtlijn zzp-starttarieven en Benchmark salarissen Film/AV (culturele) producties 2023 - 2024 - 2025 - 2026 (Platform ACCT Ketentafel Film/AV productie, November 2025), PDF",
+    "said": "niveau 2023 2024-2025 2026 ... K € 58,00 € 62,45 € 66,64 ... I € 43,96 € 47,46 € 50,65 ... H € 38,90 € 42,06 € 45,44 ... D € 26,88 € 29,23 € 31,58 ... Deelnemers aan de Ketentafel Film/AV productie zijn: ... Auteursbond, Netwerk Scenarioschrijvers ...",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://fairpacct.nl/download/33852/",
+    "title": "Opdracht Kompas film- en AV-productie (versie 2.0, december 2024), Excel, sheet 'Opdracht Kompas', column SCENARIO",
+    "said": "[I, 245 - 279,5] Schrijft documenten en producten, zoals scenarioversies, treatments, karakterbeschrijvingen en pitches en ontwikkelt die door. Het betreft een autonome positie ... Stuurt leden van een schrijfteam aan. Referentie/interview: Hoofdschrijver en/of Scenarist [H, 210 - 244,5] Schrijft onderdelen van documenten ... Werkt dan ook binnen de kaders van een Scenarist en/of Hoofd Schrijver. [K, 320 - 359,5] Heeft creatieve verantwoordelijkheid voor het eindproduct van een complexe productie ... Overziet de creatieve productie en regisseert mogelijkerwijs een of meer afleveringen ... Stuurt andere schrijvers en regisseurs aan [D, 100 - 124,5] Verricht als schrijver in opleiding werkzaamheden ...",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://fairpacct.nl/download/33950/ (PDF) fetched over https with a browser User-Agent and read whole with pdftotext -layout; https://fairpacct.nl/download/33852/ (Opdracht Kompas Excel) read with openpyxl, column SCENARIO",
+    "result": "HTTP 200 both; the 2026 per-hour start rates read, and the Kompas places the screenwriter (Hoofdschrijver en/of Scenarist) at level I, a writer within a lead writer's frame at H, a writer leading the whole creative production at K, a trainee writer at D.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fees",
+   "currency": "EUR",
+   "per": "hour",
+   "effective": "2026-01-01",
+   "binding": false,
+   "instrument": "Richtlijn zzp-starttarieven Film/AV (Ketentafel Film/AV, fairPACCT)",
+   "writerLevels": {
+    "K": {
+     "who": "writer with creative responsibility for a complex production's end product (leads writers and directors)",
+     "startRate": 66.64,
+     "rate2024_2025": 62.45
+    },
+    "I": {
+     "who": "Hoofdschrijver en/of Scenarist (reference)",
+     "startRate": 50.65,
+     "rate2024_2025": 47.46
+    },
+    "H": {
+     "who": "writer of parts of documents within a Scenarist's or head writer's frame",
+     "startRate": 45.44,
+     "rate2024_2025": 42.06
+    },
+    "D": {
+     "who": "writer in training",
+     "startRate": 31.58,
+     "rate2024_2025": 29.23
+    }
+   },
+   "markupFactor": 0.7445,
+   "billableHoursBasis": 1686
+  },
+  "notes": "The rates are per hour and a guideline (the Film Fund and NPO conditions make them bite, per director-NL figures). No per-script or per-version figure exists in the instrument."
+ },
+ {
+  "id": "R-5110",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.skuespillerforbundet.no/wp-content/uploads/2026/08/Norsk-Skuespillerforbund-Radio-og-Fjernsyn-regulert-2026.pdf",
+    "title": "Norsk Skuespillerforbund - Radio og Fjernsyn, avtale nr. 207 (NRK), 'Honorarsatsene er regulert pr. 01.05. 2026' (PDF, 12 pages, created 2 June 2026)",
+    "said": "3.1.1. For skuespillere over 18 år med mindre enn 5 års ansiennitet som skuespiller og for skuespillere med 3-årig skuespillerutdanning fra høyskole og mindre enn 2 års ansiennitet, skal lønnen utgjøre minimum: kr. 885 485,- pr. år kr. 70 842,- pr. måned kr. 7 882,- pr. dag for arbeid i inntil 3 dagers varighet kr. 6 021,- pr. dag for arbeid med varighet på 4 dager eller mer 3.1.2. For øvrige skuespillere skal lønnen utgjøre minimum: kr. 1 239 507,- pr. år kr. 123 969,- pr. måned kr. 12 400,- pr dag for arbeid i inntil 3 dagers varighet kr. 8 855,- pr. dag for arbeid med varighet på 4 dager eller mer Arbeidets varighet skal i begge tilfeller være minimum 14 dager for skuespillere på månedslønn. ... 17.2. Lønnen i avtaleåret som begynner 1. mai reguleres i samsvar med statens ramme i lønnsoppgjøret samme år",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.skuespillerforbundet.no/wp-admin/admin-ajax.php?action=modal_get_modal&id=321",
+    "title": "Skuespillerforbundet, Lønn og tariff: 'NRK drama' (the page's modal, post 321)",
+    "said": "Tariffavtale mellom Norsk rikskringkasting AS (NRK) og Skuespillerforbundet, avtale nr 207. ... 3.1.5. Ved \"til rådighets ansettelse\" betales en garantilønn på minimum kr. 70 842,- pr. måned. For faktisk arbeid i samme periode betaler NRK skuespilleren kr. 3 540,- pr. dag. ... 3.1.6. ... samlet lønn ... minst kr 14 168,- pr. dag eller minst kr 141 677,- pr. måned. ... Leseprøver: kr. 1135,- pr. time Kostyme- og sminkeprøver: kr. 707,- pr. time ... Avtalen ble inngått 13. februar 2015, og gjelder for midlertidig ansatte skuespillere i dramaproduksjoner i NRK ... Oppdaterte satser med virkning fra 1. mai 2026.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://skuespillerforbundet.no/lonn-og-tariff/ re-read; its 'NRK drama' and 'NRK radio' entries open a modal the page loads from admin-ajax.php?action=modal_get_modal&id=321 and id=776 (found in the theme's script 818c0.js); both fetched, and the PDF each links (uploads/2026/08 and 2026/07, 'regulert-2026') downloaded and read with pdftotext",
+    "result": "found: the NRK agreement no. 207 with rates regulated from 1 May 2026; the PDF's figures match the modal's.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "rates",
+   "agreement": "Tariffavtale NRK - Norsk Skuespillerforbund (avtale nr. 207), signed 2015-02-13, rolling yearly; pay regulated each 1 May by the state's settlement frame",
+   "currency": "NOK",
+   "effective": "2026-05-01",
+   "per": "gross, includes making available (§ 9)",
+   "juniorUnder5YearsOrGraduateUnder2": {
+    "year": 885485,
+    "month": 70842,
+    "dayUpTo3Days": 7882,
+    "day4DaysPlus": 6021
+   },
+   "others": {
+    "year": 1239507,
+    "month": 123969,
+    "dayUpTo3Days": 12400,
+    "day4DaysPlus": 8855
+   },
+   "minimumEngagementOnMonthlyPay": "14 days",
+   "onCallGuaranteePerMonth": 70842,
+   "onCallWorkedDay": 3540,
+   "allInMinimum": {
+    "day": 14168,
+    "month": 141677
+   },
+   "perHour": {
+    "readThrough": 1135,
+    "costumeMakeupFitting": 707
+   },
+   "workingDay": "8 hours excl. 30 min meal; year 220 days; month 21 days",
+   "applies": "temporary actors in NRK drama (TV) productions"
+  },
+  "notes": "The 2020-2025 regulated tables were not sought further; the rate in force (from 1 May 2026) is read. Radio rates (3.2) are also in the same PDF and modal 776 if the engine wants them."
+ },
+ {
+  "id": "R-5190",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.filmforbundet.no/avtaler-og-rettigheter/ read 2026-11-04 (244 KB): lists 'Avtalte minstelønnssatser for spillefilm (gjeldende f.o.m 1. juni 2025)' and its protocols (mellomoppgjør 2025, hovedoppgjør 2024); no 2026 feature protocol; the 2026 mediation protocols listed are for the TV agreements only. The agreement PDF (Spillefilmoverenskomsten-Virke-Filmforbundet-2024-2026-1.pdf) read: term '1. juni 2024 – 31. mai 2026'.",
+    "result": "not found: no 2026 feature-film director day rates published",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.virke.no/tariff/tariffavtaler/spillefilmoverenskomsten/ fetched",
+    "result": "HTTP 404 (page moved); https://www.regissor.no/ connection reset (curl 35)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 1 June 2025 rates stand as the latest published."
+ },
+ {
+  "id": "R-5207",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "nfi.no sitemap (https://www.nfi.no/sitemap.xml, 21 section sitemaps, 1,557 URLs) read; all 73 https://www.nfi.no/tilskudd/... pages fetched and searched for produsentlønn, produsentsalær, produsenthonorar, overhead, indirekte kostnader; nfi.no/sok is script-rendered (no results in HTML)",
+    "result": "only the incentive scheme's cost page (tilskudd/insentivordningen-informasjon-om-kostnader, Norwegian and English) names producer fees and overheads, as not approved costs (already held); no cap for production support found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://lovdata.no/dokument/SF/forskrift/2016-10-31-1264 fetched",
+    "result": "HTTP 405 again",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl: cc.py list CC-MAIN-2026-39 'no,lovdata)/dokument/sf/forskrift/2016-10-31-1264' (no lines); CC-MAIN-2026-43, -2026-30, -2025-51 with prefix 'no,lovdata)/dokument/sf/forskrift/2016-10-31'",
+    "result": "2026-39: no capture; the other three: 'fetch failed' on cluster.idx (data.commoncrawl.org did not answer the range request)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-5225",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.dramatiker.no/juss read 2026-11-04",
+    "result": "gives the NRK TV-drama rights fee 'pr. 1. mai 2026 kr 3022 pr. minutt' and NRK lyddrama kr 1127 per minute, and for the Virke drama-series agreement of 12.06.2023 only that it 'regulerer minstesats for rettigheter og royalty'; no indexed series floor or ceiling",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.filmforbundet.no/avtaler-og-rettigheter/ (lists 101024_-Signert_Prosess-for-rammeavtale-om-rettigheter-for-manusforfattere_-2.pdf, a process protocol, not the amounts)",
+    "result": "not found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-5111",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "equity.org.nz WordPress API: media (30 newest, by date) and posts (10 newest) listed 2026-11-04",
+    "result": "newest uploads are the 2026 LONO application form and guidelines (April 2026) and a WIFT awards newsletter (March 2026); the only collective agreements remain the 2024 ATC and Court Theatre agreements; no newer post since 2025-04-30",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-5226",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.nzwg.org.nz/ fetched 2026-11-04 (212 KB)",
+    "result": "answers; the rates guide remains members-only per the 2026-11-01 reading; no public edition later than November 2021 found today",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6098",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dicine.micultura.gob.pa/fondo_cine/ read 2026-11-04 (convocatoria 2025, categorías, ediciones); dicine WordPress API posts search 'Fondo Cine 2025' (empty)",
+    "result": "the page gives the 2025 call (8 categories, B/. 2,355,000.00 in prizes, closed) and the 2025 edition's 17 winners; no count of applications received",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Awards: 17 winners in 8 categories (2025). Applications are what is missing."
+ },
+ {
+  "id": "R-6103",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://estimuloseconomicos.cultura.pe/ fetched; https://www.gob.pe/busquedas?institucion[]=cultura&term=estímulos económicos 2026 audiovisual fetched",
+    "result": "estimuloseconomicos.cultura.pe: no answer (curl 000); gob.pe search is script-rendered (no results in the HTML)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Ministerio de Cultura Perú estímulos económicos 2026 bases concurso largometraje ficción monto máximo resolución directoral DGIA' (2026-11-04)",
+    "result": "only 2021-2022 DGIA/DAFO resolutions (cdn.www.gob.pe) and El Peruano's RM 000096-2026-MC; no 2026 film call",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://busquedas.elperuano.pe/dispositivo/NL/2504249-1 read",
+    "result": "it is RM N° 000096-2026-MC (8 April 2026), the 2026 plan of stimuli for the performing arts, visual arts and music under Ley 32309's second final provision; not the film plan; no film amounts",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6118",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.fdcp.ph/createphfilms",
+    "title": "Production Support - FDCP (Film Development Council of the Philippines), CreatePHFilms",
+    "said": "FUND FOR PROJECT DEVELOPMENT The CreatePHFilms fund for development is a selective and non-recoupable fund of up to Five Hundred Thousand Pesos (P500,000.00) per project, intended to support accepted mid to full-length films that are in the development and pre-production stage. FUND FOR SHORT FILMS ... up to Five Hundred Thousand Pesos (P500,000.00) per project ... Filipino short films ... production to post-production stage. FUND FOR SMALL BUDGET PRODUCTION The CreatePHFilms fund for Small Budget Production is a selective and non-recoupable fund of up to One Million Pesos (P 1,000,000.00) per project, intended to support accepted Filipino films with an overall production budget of below PHP15 Million Pesos (P15,000,000.00). This grant covers principal photography to post-production expenditures of the project. FUND FOR LARGE BUDGET PRODUCTION The CreatePHFilms fund for Large Budget Production is a selective and non-recoupable of Three to Five Million Pesos (P3,000,000.00 to P5,000,000.00) per project, intended to support accepted Filipino films with an overall production budget of at least PHP15 Million Pesos (P15,000,000.00).",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.fdcp.ph/ read; its Programs menu links /createphfilms ('Production Support'), fetched and read 2026-11-04 (83 KB)",
+    "result": "found: the domestic fund (CreatePHFilms) and its per-project caps by tier; no share-of-budget rule and no applications or selection counts on the page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "name": "CreatePHFilms (FDCP)",
+   "currency": "PHP",
+   "nature": "selective, non-recoupable grant",
+   "tiers": {
+    "development": {
+     "max": 500000,
+     "for": "mid to full-length films in development and pre-production"
+    },
+    "shortFilm": {
+     "max": 500000,
+     "for": "Filipino short films, production to post"
+    },
+    "smallBudgetProduction": {
+     "max": 1000000,
+     "budgetBelow": 15000000,
+     "covers": "principal photography to post-production"
+    },
+    "largeBudgetProduction": {
+     "min": 3000000,
+     "max": 5000000,
+     "budgetAtLeast": 15000000,
+     "covers": "principal photography to post-production"
+    }
+   },
+   "shareOfBudget": null,
+   "selectionRate": null,
+   "asOf": "2026-11-04"
+  },
+  "notes": "Still missing: the selection rate (applications against awards). The FDCP annual reports (menu 'Annual Reports') were not read today."
+ },
+ {
+  "id": "R-6128",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.gildiarezyserow.pl/ and https://gildiarezyserow.pl/ fetched 2026-11-04",
+    "result": "no answer (curl 000), as on 2026-11-01",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6127",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gildiascenarzystow.pl (Gildia Scenarzystów Polskich) read 2026-11-04: home, WordPress API list of all 13 pages and all 8 posts (with content), searched for stawk, minimaln, wynagrodze, honorar, zł, PLN",
+    "result": "no minimum fee: the only fee mention is the 2024 credits-rules post hoping for 'sprawiedliwego wynagrodzenia w postaci honorariów i należnych tantiem'",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6141",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.sagaftra.org/ and https://www.sagaftra.org/miami fetched 2026-11-04",
+    "result": "HTTP 403 both (not read another way)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl cc.py list CC-MAIN-2026-39 'org,sagaftra)/miami' (no lines), then 'org,sagaftra)/' and CC-MAIN-2026-30 'org,sagaftra)/miami'",
+    "result": "no capture for /miami in 2026-39; the others 'fetch failed' (data.commoncrawl.org did not serve the index ranges)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6152",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.cena-ste.org/tabelas fetched 2026-11-04 (7.4 KB)",
+    "result": "the page is the menu only (TABELAS heading, no table entries), as on 2026-11-01",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6154",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://apr.pt/ fetched 2026-11-04",
+    "result": "apr.pt is 'APR Technology Solutions | Digital Transformation', a technology company, not the Associação Portuguesa de Realizadores; the 2026-11-01 attempt that read it as the directors' association read the wrong site. https://www.argumentistas.pt/: no answer (curl 000).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Correct the earlier attempt: apr.pt is not the directors' association, so 'apr.pt home read: no fee scale' proved nothing about directors. The association's own site was not identified today."
+ },
+ {
+  "id": "R-6153",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.argumentistas.pt/ fetched 2026-11-04",
+    "result": "no answer (curl 000, connection failed)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6166",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/8426/ley-n-6106-de-fomento-al-audiovisual",
+    "title": "Ley N° 6106 de Fomento al Audiovisual (Biblioteca y Archivo Central del Congreso Nacional), full text, 19 articles",
+    "said": "Artículo 13. RECONOCIMIENTO. Reconócese a la industria audiovisual como actor productivo de desarrollo económico, social y cultural del país. ... La industria será beneficiaria de todos los mecanismos de incentivos provistos por la legislación nacional. ... [Art. 12] Las subvenciones de los incisos a), b), c), d) y e) se reembolsarán al Fondo hasta el 70% (setenta por ciento) de la ayuda, cuando se generen ingresos netos en la comercialización de la producción audiovisual. ... [Art. 11 d)] El 50% (cincuenta por ciento) de las partidas presupuestarias provenientes de las retenciones impositivas derivadas de las operaciones comerciales provenientes de servicios audiovisuales obtenidos por internet del exterior",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.bacn.gov.py/leyes-paraguayas/8426/ley-n-6106-de-fomento-al-audiovisual read whole (Articles 1 to 19, sanctioned June 2018); searched for exonera, exención, tribut, impuesto, fiscal, incentivo, reintegro, devolución, beneficio",
+    "result": "the film law creates no production rebate and no film-specific tax incentive: it funds FONAP grants (repayable up to 70% from net income for production, development and distribution support) and says (Art. 13) the industry benefits from all incentive mechanisms in national legislation",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.inap.gov.py/ fetched",
+    "result": "no answer (curl 000, connection failed), as on 2026-11-01",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.bacn.gov.py/buscar/buscar?s=audiovisual (the library's own search)",
+    "result": "returns the home page's recent laws, no audiovisual law beyond 6106 located",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "incentive",
+   "filmSpecificRebate": null,
+   "filmLaw": "Ley 6106/2018 de Fomento al Audiovisual",
+   "rule": "Art. 13: the audiovisual industry benefits from all incentive mechanisms of national legislation (no film-specific rebate or credit in the law)",
+   "grantRepayment": "production, development and distribution grants (Art. 12 a-e) repaid to FONAP up to 70% of the aid out of net commercial income",
+   "fundIncome": "includes 50% of tax withheld on foreign internet audiovisual services (Art. 11 d)"
+  },
+  "notes": "Absence holds only for the film law (read whole). Whether general national incentive regimes (e.g. maquila or investment laws) are used by productions was not researched; that is what keeps this partial."
+ },
+ {
+  "id": "R-6172",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.dohafilminstitute.com/ and https://www.dohafilminstitute.com/en/funding-industry/funding/grants fetched (231 KB each, Next.js): the HTML carries only the interface strings (Grants Programme subtitle, application-form labels, 'Applications close on Thursday 2nd of July 2026'), no grant amounts; the page body loads from the Drupal backend media.dohafilm.com, whose page answered 403 and /jsonapi and /router/translate-path answered 500",
+    "result": "not found: no grant amounts or caps readable",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Doha Film Institute Feature Film Grants Guidelines pdf media.dohafilm.com' (2026-11-04)",
+    "result": "lead: dohafilminstitute.com/newsletter/FeatureFilmsGuideline-Spring2025.pdf and DFI24-ShortFilmsGuideline-EN.pdf; the snippet (not a figure) speaks of a USD 2.2 million budget ceiling for development and production grants",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://dohafilminstitute.com/newsletter/FeatureFilmsGuideline-Spring2025.pdf and guessed successors (-Spring2026, -Fall2025, -Fall2026, DFI26-FeatureFilmsGuideline-EN) fetched",
+    "result": "each now redirects to the new site's HTML shell (text/html, 231 KB), no PDF",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl cc.py list CC-MAIN-2025-51 and CC-MAIN-2026-21 'com,dohafilminstitute)/newsletter/featurefilmsguideline'",
+    "result": "2025-51: 'fetch failed' on cluster.idx; 2026-21: no capture listed",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The fund exists (DFI Grants Programme, Qatari Film Fund, Co-Finance are named in the site's menu: /en/funding-industry/funding/grants, /qff, /co-finance); its amounts sit in guidelines not reachable today. A 'source saying none exists' would be false."
+ },
+ {
+  "id": "R-6178",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://regionreunion.com/ fetched 2026-11-04",
+    "result": "HTTP 403 (5.9 KB refusal page)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-7805",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur",
+    "title": "Constitution du 4 octobre 1958, texte intégral en vigueur (à jour de la révision du 8 mars 2024), Conseil constitutionnel",
+    "said": "ARTICLE 72-3. ... La Guadeloupe, la Guyane, la Martinique, La Réunion, Mayotte, Saint Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, les îles Wallis et Futuna et la Polynésie française sont régis par l'article 73 pour les départements et les régions d'outre-mer ... ARTICLE 73. Dans les départements et les régions d'outre-mer, les lois et règlements sont applicables de plein droit. Ils peuvent faire l'objet d'adaptations tenant aux caractéristiques et contraintes particulières de ces collectivités. ... La disposition prévue aux deux précédents alinéas n'est pas applicable au département et à la région de La Réunion.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "Conseil constitutionnel's full text of the Constitution in force read 2026-11-04 (articles 72-3 and 73)",
+    "result": "La Réunion is a department and region under article 73: laws and regulations apply there as of right, and La Réunion is excluded from the power to set its own rules; so the Intellectual Property Code and a ministerial extension order (a règlement) apply there unless they say otherwise",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.legifrance.gouv.fr/ fetched 2026-11-04",
+    "result": "HTTP 403 (bot check), not read another way",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "follows",
+   "reachesReunion": "by the Constitution's default rule",
+   "basis": "Constitution art. 73 (laws and regulations apply as of right in overseas departments and regions; La Réunion under art. 72-3) with the agreements' own scope (contracts under French law, no territorial exclusion, already held)",
+   "statedForTheAgreements": false
+  },
+  "notes": "Partial: no source states in one sentence that the 2025 cinema agreement or the 2023 TV agreement covers La Réunion; this joins the constitutional default to the agreements' scope clauses. The extension order on Légifrance stays unread (403)."
+ },
+ {
+  "id": "R-6180",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://legislatie.just.ro/Public/DetaliiDocument/190718 and /DetaliiDocumentAfis/190718 (Legea 153/2017), https://www.cdep.ro/pls/legis/legis_pck.htp_act?ida=150838, https://www.monitoruloficial.ro/ fetched",
+    "result": "none answered (curl 000, connection failed)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://cnc.gov.ro/ (no answer), http://www.cnc.gov.ro/ (503; plain http not a read); https://www.uniter.ro/ answered 200 (168 KB)",
+    "result": "not found: no actors' rate or pay rule read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6184",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://cnc.gov.ro/ and https://www.cnc.gov.ro/ fetched 2026-11-04",
+    "result": "https: no answer; http: 503",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislatie.just.ro, cdep.ro and monitoruloficial.ro fetched for the Cinema Law (OG 39/2005 as amended)",
+    "result": "none answered (connection failed)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null
+ },
+ {
+  "id": "R-6197",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.fond-kino.ru/documents/download/2800/",
+    "title": "Фонд кино: Перечень принявших участие в отборе национальных фильмов, производство которых осуществляется иными организациями кинематографии, не являющимися лидерами отечественного кинопроизводства (2026, PDF, 8 pages)",
+    "said": "Сбор заявок осуществлен посредством электронной платформы для подачи заявок (kino.culture.gov.ru) в отношении национальных фильмов, претендовавших на поддержку за счет средств, источником которых является субсидия, на безвозвратной основе. Срок приема заявок установлен с 13.04.2026 года до 19:00:00 20.05.2026 года (включительно); ... в соответствии с порядком и условиями оказания поддержки, утвержденными приказом Фонда кино от 30.01.2026 года № 5 ... 6 14.05.2026 ... АО \"Киностудия им. М. Горького\" Дива ... 7,0 50 000 000 ... 11 18.05.2026 ... ООО \"1-2-3 Продакшн\" Контора ... 7,6 150 000 000 ... 128 20.05.2026 ... ООО Студия БОНАНЗА Дрон ... Не рекомендован Сценарной рабочей группой (пункт 6.6. Порядка).",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.fond-kino.ru/ (home, 29 KB, server-rendered today) and https://www.fond-kino.ru/documents/official/ read; document 2800 (participants list, 2026 selection for non-leader studios) downloaded and read with pdftotext; rows counted by script (a row = number + 2026 date), awards = rows with a sum in the 'Выделяемая сумма на безвозвратной основе' column",
+    "result": "128 applications in the 2026 non-leader selection, 40 funded on a non-repayable basis, RUB 2,735,000,000 in all, from RUB 20,000,000 to RUB 215,000,000 per film; the Order No. 5 of 30.01.2026 (the Порядок, which would hold the share and cap) is named but not among the listed downloads",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "selection-result news pages for leaders (06.2026) and non-leaders (2026) on fond-kino.ru fetched",
+    "result": "short notices with no counts or shares in their text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "fund": "Фонд кино (Federal Fund for Social and Economic Support of National Cinematography)",
+   "selection2026NonLeaders": {
+    "applications": 128,
+    "funded": 40,
+    "selectionRate": 0.3125,
+    "basis": "non-repayable subsidy",
+    "totalRUB": 2735000000,
+    "perFilmRUB": {
+     "min": 20000000,
+     "max": 215000000
+    },
+    "window": "2026-04-13 to 2026-05-20",
+    "rules": "Fond Kino order No. 5 of 2026-01-30"
+   },
+   "shareOfBudget": null,
+   "capPerFilm": null,
+   "nationalRebate": null
+  },
+  "notes": "Counts are mine from the PDF's rows (checked: all 128 rows parsed, none left over). Other 2026 strands (leaders, animation, Far East, children's) have their own participant lists (documents 2796-2799) not counted here. The share of budget, the cap and the rebate question remain open."
+ }
+]

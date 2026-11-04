@@ -1,0 +1,2233 @@
+[
+ {
+  "id": "R-6056",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://gouv.nc/actualites/31-01-2024/un-site-internet-pour-promouvoir-le-cinema-caledonien",
+    "title": "Un site internet pour promouvoir le cinéma calédonien, Gouvernement de la Nouvelle-Calédonie, 31 janvier 2024",
+    "said": "Il est financé en grande partie par le fonds audiovisuel et cinématographique de Nouvelle-Calédonie (FAC-NC) qui dispose d’une enveloppe annuelle d’environ 135 millions de francs.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://gouv.nc/actualites/13-04-2023/laudiovisuel-une-filiere-qui-cherche-se-developper",
+    "title": "L’audiovisuel, une filière qui cherche à se développer, Gouvernement de la Nouvelle-Calédonie, 13 avril 2023",
+    "said": "Il est financé en grande partie par le fonds audiovisuel et cinématographique de Nouvelle-Calédonie (FAC-NC). Ce dernier dispose d’une enveloppe annuelle d’environ 135 millions de francs, qui contribue largement au développement et à la structuration du secteur.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://gouv.nc/actualites/07-11-2022/une-aide-precieuse-pour-les-projets-audiovisuels-locaux",
+    "title": "Une aide précieuse pour les projets audiovisuels locaux, Gouvernement de la Nouvelle-Calédonie, 7 novembre 2022",
+    "said": "Depuis 2017, le comité du fonds de soutien à la production audiovisuelle se réunit deux fois par an afin d’examiner des projets pour lesquels une aide financière a été sollicitée. 250 aides ont ainsi pu être attribuées depuis sa création.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gouv.nc site search (https://gouv.nc/search/site/audiovisuel, /search/site/FAC-NC, '\"fonds audiovisuel\"' filtered to Décision) and gouv.nc/sitemap.xml scanned for audiovisuel/cinéma/film pages; the 2022, 2023 and 2024 news items read",
+    "result": "found in part: FAC-NC's annual envelope 'environ 135 millions de francs' (stated April 2023 and again January 2024); 250 grants awarded 2017 to October 2022, committee sits twice a year. No 2025 or 2026 envelope and no count of projects submitted against funded on any gouv.nc page found.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gouv.nc 'Décision' content type searched for 'fonds audiovisuel' and FAC-NC",
+    "result": "2 decisions, both of 2017; no 2025-2026 allocation decision found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "name": "Fonds audiovisuel et cinématographique de Nouvelle-Calédonie (FAC-NC)",
+   "annualEnvelopeXPF": 135000000,
+   "approx": true,
+   "asStated": "2023-04-13 and 2024-01-31",
+   "grantsAwarded2017to2022": 250,
+   "sessionsPerYear": 2,
+   "unfound": [
+    "the 2025-2026 envelope",
+    "projects funded of those submitted"
+   ]
+  },
+  "notes": "The 135 million XPF is 'environ' and stated for 2023-2024; nothing later on gouv.nc. The budget primitif documents ('Le budget' page) were not read for the FAC-NC line.",
+  "sources": []
+ },
+ {
+  "id": "R-6058",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.culture.gouv.ne (connection reset), www.sgg.gouv.ne (Secrétariat général du gouvernement, CONNECT 502), www.anfict.ne and www.fondsaculture.ne (CONNECT 502); mcnti.gouv.ne (Ministère de la Communication) home read",
+    "result": "not reached; mcnti.gouv.ne home has no cinema, film or performer item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index listed for SURT prefix 'ne,gouv,' (and CC-MAIN-2026-39 'ne,gouv,culture')",
+    "result": "no culture-ministry, CNCN or SGG host captured (hosts held: agriculture, diplomatie, finances, impots, interieur, justice, mcnti, emploi, elevage and others); no cinema or performer page in the 2026-43 listing",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Niger \"fonds\" cinéma décret \"Centre national de la cinématographie du Niger\" OR \"syndicat des acteurs\" Niamey",
+    "result": "no decree, fund rules or actors' union; leads: ccm.ma Morocco-Niger co-production agreement (already tried, TLS mismatch), imagesfrancophones.org 2012 interview",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "imagesfrancophones.org 'Les directeurs du cinéma parlent…' (20 March 2012) read in full",
+    "result": "lead only: CNCN director Ali Damba said 'il y a un fond national est en train d’être créé avec le ministère de la Culture et le ministère des Finances' and that an ordonnance regulates the film and video professions; no fund amount, rules, union or pay terms, and no later source that the fund was set up",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Leads only: a 2012 statement that a national film fund was 'being created' and an ordonnance regulating the film professions (neither text found). official-register not reachable today (sgg.gouv.ne CONNECT 502).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6060",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.culture.gouv.ne (connection reset), www.sgg.gouv.ne (Secrétariat général du gouvernement, CONNECT 502), www.anfict.ne and www.fondsaculture.ne (CONNECT 502); mcnti.gouv.ne (Ministère de la Communication) home read",
+    "result": "not reached; mcnti.gouv.ne home has no cinema, film or performer item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index listed for SURT prefix 'ne,gouv,' (and CC-MAIN-2026-39 'ne,gouv,culture')",
+    "result": "no culture-ministry, CNCN or SGG host captured (hosts held: agriculture, diplomatie, finances, impots, interieur, justice, mcnti, emploi, elevage and others); no cinema or performer page in the 2026-43 listing",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Niger \"fonds\" cinéma décret \"Centre national de la cinématographie du Niger\" OR \"syndicat des acteurs\" Niamey",
+    "result": "no decree, fund rules or actors' union; leads: ccm.ma Morocco-Niger co-production agreement (already tried, TLS mismatch), imagesfrancophones.org 2012 interview",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "imagesfrancophones.org 'Les directeurs du cinéma parlent…' (20 March 2012) read in full",
+    "result": "lead only: CNCN director Ali Damba said 'il y a un fond national est en train d’être créé avec le ministère de la Culture et le ministère des Finances' and that an ordonnance regulates the film and video professions; no fund amount, rules, union or pay terms, and no later source that the fund was set up",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Leads only: a 2012 statement that a national film fund was 'being created' and an ordonnance regulating the film professions (neither text found). official-register not reachable today (sgg.gouv.ne CONNECT 502).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6061",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.culture.gouv.ne (connection reset), www.sgg.gouv.ne (Secrétariat général du gouvernement, CONNECT 502), www.anfict.ne and www.fondsaculture.ne (CONNECT 502); mcnti.gouv.ne (Ministère de la Communication) home read",
+    "result": "not reached; mcnti.gouv.ne home has no cinema, film or performer item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index listed for SURT prefix 'ne,gouv,' (and CC-MAIN-2026-39 'ne,gouv,culture')",
+    "result": "no culture-ministry, CNCN or SGG host captured (hosts held: agriculture, diplomatie, finances, impots, interieur, justice, mcnti, emploi, elevage and others); no cinema or performer page in the 2026-43 listing",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Niger \"fonds\" cinéma décret \"Centre national de la cinématographie du Niger\" OR \"syndicat des acteurs\" Niamey",
+    "result": "no decree, fund rules or actors' union; leads: ccm.ma Morocco-Niger co-production agreement (already tried, TLS mismatch), imagesfrancophones.org 2012 interview",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "imagesfrancophones.org 'Les directeurs du cinéma parlent…' (20 March 2012) read in full",
+    "result": "lead only: CNCN director Ali Damba said 'il y a un fond national est en train d’être créé avec le ministère de la Culture et le ministère des Finances' and that an ordonnance regulates the film and video professions; no fund amount, rules, union or pay terms, and no later source that the fund was set up",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Leads only: a 2012 statement that a national film fund was 'being created' and an ordonnance regulating the film professions (neither text found). official-register not reachable today (sgg.gouv.ne CONNECT 502).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6059",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.culture.gouv.ne (connection reset), www.sgg.gouv.ne (Secrétariat général du gouvernement, CONNECT 502), www.anfict.ne and www.fondsaculture.ne (CONNECT 502); mcnti.gouv.ne (Ministère de la Communication) home read",
+    "result": "not reached; mcnti.gouv.ne home has no cinema, film or performer item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index listed for SURT prefix 'ne,gouv,' (and CC-MAIN-2026-39 'ne,gouv,culture')",
+    "result": "no culture-ministry, CNCN or SGG host captured (hosts held: agriculture, diplomatie, finances, impots, interieur, justice, mcnti, emploi, elevage and others); no cinema or performer page in the 2026-43 listing",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Niger \"fonds\" cinéma décret \"Centre national de la cinématographie du Niger\" OR \"syndicat des acteurs\" Niamey",
+    "result": "no decree, fund rules or actors' union; leads: ccm.ma Morocco-Niger co-production agreement (already tried, TLS mismatch), imagesfrancophones.org 2012 interview",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "imagesfrancophones.org 'Les directeurs du cinéma parlent…' (20 March 2012) read in full",
+    "result": "lead only: CNCN director Ali Damba said 'il y a un fond national est en train d’être créé avec le ministère de la Culture et le ministère des Finances' and that an ordonnance regulates the film and video professions; no fund amount, rules, union or pay terms, and no later source that the fund was set up",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Leads only: a 2012 statement that a national film fund was 'being created' and an ordonnance regulating the film professions (neither text found). official-register not reachable today (sgg.gouv.ne CONNECT 502).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6063",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL90004",
+    "title": "2021 Norfolk Island, Census All persons QuickStats (SAL90004), Australian Bureau of Statistics",
+    "said": "Language used at home, top responses (other than English) All people Norfolk Island % Norfolk Island ... Norf'k-Pitcairn 667 30.5 ... Fijian 27 1.2 ... Tagalog 18 0.8 ... Filipino 11 0.5 ... Mandarin 10 0.5 ... English only used at home 1,146 52.4 ... Households where a non-English language is used 404 45.0",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "ABS 2021 Census QuickStats SAL90004 (Norfolk Island) fetched and read, the Language used at home table",
+    "result": "found: English only at home 52.4% (1,146 of 2,188 people), Norf'k-Pitcairn 30.5% (667); households using a non-English language 45.0%. The census names no place of screen work (the Industry table's top five hold no film or broadcasting line).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.nirc.gov.au/search?keys=filming (Norfolk Island Regional Council)",
+    "result": "HTTP 403; not read another way",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://www.norfolkisland.com.au/?s=filming (Norfolk Island Tourism search)",
+    "result": "no filming result",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "language",
+   "source": "ABS Census 2021",
+   "englishOnlyAtHomePct": 52.4,
+   "norfkPitcairnAtHomePct": 30.5,
+   "people": 2188,
+   "unfound": [
+    "where screen work on the island is done"
+   ]
+  },
+  "notes": "Replaces the Factbook mirror's 2016 estimate for the language with ABS 2021 (census at home, not language of work: English is the language of work by inference only). The place (Kingston) still has no primary.",
+  "sources": []
+ },
+ {
+  "id": "R-5109",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dgn.org.ng/, https://www.screenwritersguildofnigeria.org/, https://actorsguildofnigerialagos.org/ (all proxy CONNECT 502); https://www.actorsguildofnigeria.org/membership (domain now serves an unrelated site, 404); https://nantap.org/ home re-read",
+    "result": "not reached; nantap.org shows no pay terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, CC-MAIN-2026-30 and CC-MAIN-2025-51 listed for 'ng,org,dgn)', 'org,screenwritersguildofnigeria)' and 'org,actorsguildofnigerialagos)'",
+    "result": "no captures (some range requests failed after retries: screenwritersguildofnigeria in 2026-43 and 2026-30, actorsguildofnigerialagos in 2025-51)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No new route found today; AGN's own domain has lapsed and the Lagos chapter site is refused by the proxy.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-5188",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dgn.org.ng/, https://www.screenwritersguildofnigeria.org/, https://actorsguildofnigerialagos.org/ (all proxy CONNECT 502); https://www.actorsguildofnigeria.org/membership (domain now serves an unrelated site, 404); https://nantap.org/ home re-read",
+    "result": "not reached; nantap.org shows no pay terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, CC-MAIN-2026-30 and CC-MAIN-2025-51 listed for 'ng,org,dgn)', 'org,screenwritersguildofnigeria)' and 'org,actorsguildofnigerialagos)'",
+    "result": "no captures (some range requests failed after retries: screenwritersguildofnigeria in 2026-43 and 2026-30, actorsguildofnigerialagos in 2025-51)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "dgn.org.ng refused (502) again and has no Common Crawl capture in three crawls.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-5206",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://fmacce.gov.ng/post/creative-economy-development-fund-now-open-applications",
+    "title": "Creative Economy Development Fund now open for Applications, Federal Ministry of Arts, Culture, Tourism and the Creative Economy (FMACTCE)",
+    "said": "The Federal Ministry of Arts, Culture, Tourism, and Creative Economy (FMACTCE) is pleased to announce the rollout of the Creative Economy Development Fund (CEDF or the “Fund”), a landmark initiative approved by the Federal Executive Council (FEC). ... The Application will open from 28th April and end on 30th May 2025.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://fmacce.gov.ng/storage/app/media/resource%20center/23042025%20CEDF%20Roll%20Out%20Strategy%20Communication_compressed.pdf",
+    "title": "Creative Economy Development Fund, Roll-out Communication (FMACTCE, 23 April 2025), 15 pages",
+    "said": "Debt Financing Window Offering affordable loans and credit facilities to viable creative businesses. ... Equity/Quasi-Equity Window ... the CEDF can take an investment stake in high-growth potential projects – from film productions to fashion labels ... Grant Funding Window A dedicated grant facility to back innovative ideas and cultural projects ... (for example, community arts programs, experimental films, or heritage preservation initiatives). ... Phase 1 of this Call will prioritize mature projects/businesses requiring significant funding (over $100,000) ... Phase 2 of this Call will prioritize proposals from MSME and SME businesses (under $100,000) ... The Ministry of Finance Incorporated (MOFI), as the government’s investment arm, will act as an anchor shareholder and sponsor of the fund ... An investment committee, largely drawn from private sector experts, will oversee the selection of projects for funding",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "fmacce.gov.ng (Federal Ministry of Arts, Culture, Tourism and the Creative Economy): news and press-release lists pages 1-3 scanned; the CEDF post and the CEDF Roll-out Communication PDF from its Resources Center (served under /storage/app/media/resource center/) downloaded and read in full",
+    "result": "found in part: a federal Creative Economy Development Fund (FEC-approved; MOFI anchor shareholder; debt, equity/quasi-equity and grant windows; first call 28 April to 30 May 2025; phase 1 for projects over $100,000, phase 2 for MSMEs under $100,000; investment committee selects). The document gives no fund size, share of budget, cap, interest rate or selection rate, no producer-fee cap, and nothing on recoupment or a producers' association.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 listed for 'ng,org,dgn)' (and the guild prefixes above) for a producers' guild",
+    "result": "no capture",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "name": "Creative Economy Development Fund (CEDF)",
+   "by": "Federal Ministry of Arts, Culture, Tourism and the Creative Economy, approved by the Federal Executive Council; MOFI anchor shareholder",
+   "windows": [
+    "debt",
+    "equity/quasi-equity",
+    "grant"
+   ],
+   "firstCall": {
+    "opens": "2025-04-28",
+    "closes": "2025-05-30"
+   },
+   "phase1": "projects over USD 100,000",
+   "phase2": "MSMEs under USD 100,000",
+   "selection": "investment committee, largely private-sector experts",
+   "unfound": [
+    "fund size",
+    "share or cap",
+    "selection rate",
+    "producer-fee cap",
+    "recoupment",
+    "producers' association terms"
+   ]
+  },
+  "notes": "This is the ministry's own source for a current federal fund; it is not the 2024 N1.5bn/N5bn Providus Creative Fund that press reported, which still has no primary. Recoupment and producers' association remain blocked.",
+  "sources": []
+ },
+ {
+  "id": "R-5223",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dgn.org.ng/, https://www.screenwritersguildofnigeria.org/, https://actorsguildofnigerialagos.org/ (all proxy CONNECT 502); https://www.actorsguildofnigeria.org/membership (domain now serves an unrelated site, 404); https://nantap.org/ home re-read",
+    "result": "not reached; nantap.org shows no pay terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, CC-MAIN-2026-30 and CC-MAIN-2025-51 listed for 'ng,org,dgn)', 'org,screenwritersguildofnigeria)' and 'org,actorsguildofnigerialagos)'",
+    "result": "no captures (some range requests failed after retries: screenwritersguildofnigeria in 2026-43 and 2026-30, actorsguildofnigerialagos in 2025-51)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "SWGN site refused (502); no Common Crawl capture.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6069",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cinemateca.gob.ni home and its WordPress posts API searched for 'fondo' (https://cinemateca.gob.ni/wp-json/wp/v2/posts?search=fondo, 30 newest)",
+    "result": "no post on a Nicaraguan fund, call, rate card or performers' body (results are Ibermedia, Cuban fund and festival notices)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislacion.asamblea.gob.ni (Asamblea Nacional legal register) for the text of Laws 909, 1132 and 723",
+    "result": "https: connection reset; http: 403; not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2026 budget of the Cinemateca (read for R-6073) sets no pay terms.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6071",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cinemateca.gob.ni home and its WordPress posts API searched for 'fondo' (https://cinemateca.gob.ni/wp-json/wp/v2/posts?search=fondo, 30 newest)",
+    "result": "no post on a Nicaraguan fund, call, rate card or performers' body (results are Ibermedia, Cuban fund and festival notices)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislacion.asamblea.gob.ni (Asamblea Nacional legal register) for the text of Laws 909, 1132 and 723",
+    "result": "https: connection reset; http: 403; not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2026 budget of the Cinemateca (read for R-6073) sets no pay terms.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6073",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.hacienda.gob.ni/presupuesto2026/src/entes/112.CinematecaNacional.pdf",
+    "title": "Presupuesto General de la República 2026, Cinemateca Nacional (Ministerio de Hacienda y Crédito Público), pp. II-70 to II-73",
+    "said": "BASE LEGAL: Ley No. 909, Ley Creadora de la Cinemateca Nacional ... Ley No. 1132, Ley de Reformas y Adiciones a la Ley No. 909 ... OPERACIONES CONSOLIDADAS (Córdobas) ... II. GASTOS 21,570,487 [2024 real] 24,209,200 [2025 estimado] 24,017,200 [2026 programado] ... Transferencias y Donaciones Corrientes Otorgadas 4,305,833 719,467 719,467 ... 552 Transferencias y donaciones corrientes a organismos internacionales 719,467 ... TOTAL CINEMATECA NACIONAL 24,017,200",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cinemateca.gob.ni home and its WordPress posts API searched for 'fondo' (https://cinemateca.gob.ni/wp-json/wp/v2/posts?search=fondo, 30 newest)",
+    "result": "no post on a Nicaraguan fund, call, rate card or performers' body (results are Ibermedia, Cuban fund and festival notices)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislacion.asamblea.gob.ni (Asamblea Nacional legal register) for the text of Laws 909, 1132 and 723",
+    "result": "https: connection reset; http: 403; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Ministerio de Hacienda y Crédito Público, Presupuesto General de la República 2026: the Cinemateca Nacional's entity budget (Anexo 2, entes/112) downloaded and read whole (4 pages)",
+    "result": "found: the Cinemateca's 2026 budget is C$24,017,200 (2025 estimate C$24,209,200; 2024 actual C$21,570,487), of which personnel C$12,958,441 and non-personal services C$9,630,219; its only transfer line is C$719,467 to international organisations (2024 actual transfers were C$4,305,833). No line for a film fund or grants to producers appears.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "body": "Cinemateca Nacional",
+   "budget2026NIO": 24017200,
+   "budget2025estNIO": 24209200,
+   "actual2024NIO": 21570487,
+   "transfers2026NIO": 719467,
+   "transfers2026To": "international organisations",
+   "fundLineInBudget": false,
+   "unfound": [
+    "whether a Fondo de Fomento is budgeted elsewhere",
+    "any amount paid to producers since Law 1132"
+   ]
+  },
+  "notes": "Not a full absence: the Law 1132 fund chapter itself (arts. 24-30) wasn't read today (asamblea register refused), so the fund could be financed off this budget (fees, donations). What the budget shows: no grant or producer transfer line in 2026, and transfers fell from C$4.3m (2024) to C$0.72m.",
+  "sources": []
+ },
+ {
+  "id": "R-6070",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cinemateca.gob.ni home and its WordPress posts API searched for 'fondo' (https://cinemateca.gob.ni/wp-json/wp/v2/posts?search=fondo, 30 newest)",
+    "result": "no post on a Nicaraguan fund, call, rate card or performers' body (results are Ibermedia, Cuban fund and festival notices)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislacion.asamblea.gob.ni (Asamblea Nacional legal register) for the text of Laws 909, 1132 and 723",
+    "result": "https: connection reset; http: 403; not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2026 budget of the Cinemateca (read for R-6073) sets no pay terms.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6075",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://film.gov.np/pages/3/",
+    "title": "Film Associations, Film Development Board (Nepal)",
+    "said": "A) Film Associations in Nepal Film Artist Association of Nepal (FAAN) Gayaneshwor Marg, Kathmandu, Nepal Telephone : 01-4428743 E-mail : filmartistesnepal@gmail.com Chairperson: Mr Mohan Niraula It is a national association of Film artists in Nepal ... Nepal Film Producer's Association (NFPA) Tangal, Gahanapokhari, Kathmandu ... Website: http://nepalfilmproducers.com/ Chairperson: Mr. Nawal Khadka It is a national association of Film Producers in Nepal. Film Director's Guild Of Nepal (FDGN) Address: Ghattekulo Chowk, Kathmandu, Nepal Chairperson: Mr Janak Deep Parajuli ... It is a national association of Film Directors in Nepal.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://film.gov.np/ (Film Development Board; fdb.org.np resets): home, notices, press releases, reports, and the Film Associations page (/pages/3/) read",
+    "result": "the board lists the national associations: Film Artist Association of Nepal (FAAN), Nepal Film Technician Association, Nepal Film Producer's Association (NFPA), Film Director's Guild of Nepal (FDGN), Nepal Motion Pictures Association; no fee, rate or agreement on any FDB page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lawcommission.gov.np search for चलचित्र, न्यूनतम पारिश्रमिक and 'motion picture'; the चलचित्र (निर्माण, प्रदर्शन तथा वितरण) ऐन, २०२६ (9 pp.) and नियमावली, २०५७ (41 pp.) downloaded from giwmscdnone.gov.np",
+    "result": "the Act and Rules regulate permits, censorship and exhibition (text layer garbled by a legacy font; searched for कोष, अनुदान, पारिश्रमिक: one fund mention, a board member's title only); no performer, director or writer pay rule found; no minimum-wage notice in the search results. moless.gov.np: TLS name mismatch; dol.gov.np and rajpatra.dop.gov.np (Nepal Gazette): connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Film Artist Association Nepal membership fee OR \"Film Directors Guild of Nepal\" membership remuneration minimum",
+    "result": "FDB's associations page (read, above) and Ratopati items on FAAN",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://english.ratopati.com/story/55503 (FAAN membership-renewal dispute) read",
+    "result": "lead only (reports the bylaws without an address for them): \"the association's bylaws stipulate a fee of 1,800 Nepali Rupees per year\" for renewal, and 'proof of at least five activities (clips) is required for membership renewal'",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "union",
+   "name": "Film Artist Association of Nepal (FAAN)",
+   "seat": "Gayaneshwor Marg, Kathmandu",
+   "unfound": [
+    "joining terms and fees from FAAN's own bylaws (press reports 1,800 NPR a year, a lead)",
+    "any pay rule or the general minimum wage from its gazette notice"
+   ]
+  },
+  "notes": "FAAN's bylaws are the primary for the fee; not found online.",
+  "sources": []
+ },
+ {
+  "id": "R-6077",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://film.gov.np/pages/3/",
+    "title": "Film Associations, Film Development Board (Nepal)",
+    "said": "A) Film Associations in Nepal Film Artist Association of Nepal (FAAN) Gayaneshwor Marg, Kathmandu, Nepal Telephone : 01-4428743 E-mail : filmartistesnepal@gmail.com Chairperson: Mr Mohan Niraula It is a national association of Film artists in Nepal ... Nepal Film Producer's Association (NFPA) Tangal, Gahanapokhari, Kathmandu ... Website: http://nepalfilmproducers.com/ Chairperson: Mr. Nawal Khadka It is a national association of Film Producers in Nepal. Film Director's Guild Of Nepal (FDGN) Address: Ghattekulo Chowk, Kathmandu, Nepal Chairperson: Mr Janak Deep Parajuli ... It is a national association of Film Directors in Nepal.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://film.gov.np/ (Film Development Board; fdb.org.np resets): home, notices, press releases, reports, and the Film Associations page (/pages/3/) read",
+    "result": "the board lists the national associations: Film Artist Association of Nepal (FAAN), Nepal Film Technician Association, Nepal Film Producer's Association (NFPA), Film Director's Guild of Nepal (FDGN), Nepal Motion Pictures Association; no fee, rate or agreement on any FDB page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lawcommission.gov.np search for चलचित्र, न्यूनतम पारिश्रमिक and 'motion picture'; the चलचित्र (निर्माण, प्रदर्शन तथा वितरण) ऐन, २०२६ (9 pp.) and नियमावली, २०५७ (41 pp.) downloaded from giwmscdnone.gov.np",
+    "result": "the Act and Rules regulate permits, censorship and exhibition (text layer garbled by a legacy font; searched for कोष, अनुदान, पारिश्रमिक: one fund mention, a board member's title only); no performer, director or writer pay rule found; no minimum-wage notice in the search results. moless.gov.np: TLS name mismatch; dol.gov.np and rajpatra.dop.gov.np (Nepal Gazette): connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Film Artist Association Nepal membership fee OR \"Film Directors Guild of Nepal\" membership remuneration minimum",
+    "result": "FDB's associations page (read, above) and Ratopati items on FAAN",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://english.ratopati.com/story/55503 (FAAN membership-renewal dispute) read",
+    "result": "lead only (reports the bylaws without an address for them): \"the association's bylaws stipulate a fee of 1,800 Nepali Rupees per year\" for renewal, and 'proof of at least five activities (clips) is required for membership renewal'",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "union",
+   "name": "Film Director's Guild of Nepal (FDGN)",
+   "seat": "Ghattekulo Chowk, Kathmandu",
+   "unfound": [
+    "agreement, minimum fees, periods, cut rights"
+   ]
+  },
+  "sources": []
+ },
+ {
+  "id": "R-6078",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://film.gov.np/notices/384/",
+    "title": "चलचित्र निर्माणमा प्रोत्साहन अनुदानका लागि आवेदन पेश गर्ने सम्बन्धी सूचना, Film Development Board (Nepal), published 27 October 2026",
+    "said": "चलचित्र निर्माणमा प्रोत्साहन अनुदानका लागि आवेदन पेश गर्ने सम्बन्धी सूचना ... Published: Oct. 27, 2026, 1:14 p.m. ... Downloads: प्रोत्साहन कार्यविधि २०८३.PDF",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://film.gov.np/media/filmgov/uploads/%E0%A4%AA%E0%A4%B0%E0%A4%A4%E0%A4%B8%E0%A4%B9%E0%A4%A8_%E0%A4%95%E0%A4%B0%E0%A4%AF%E0%A4%B5%E0%A4%A7_%E0%A5%A8%E0%A5%A6%E0%A5%AE%E0%A5%A9_cimqct3_compressed_1.pdf",
+    "title": "सांस्कृतिक तथा राष्ट्रिय महत्वको क्षेत्रमा चलचित्र निर्माणको लागि प्रोत्साहन अनुदान उपलब्ध गराउने सम्बन्धी कार्यविधि, २०८३ (Ministry of Information and Communication; 13-page scan attached to FDB notice 384; read by OCR, tesseract nep, pages 1-6, the quoted clauses checked against the page images)",
+    "said": "३. ... मन्त्रालयले ... वार्षिक बजेट तथा कार्यक्रममा समावेश गरी छनोट भएका व्यक्ति वा संस्थालाई स्क्रिप्ट लेखन, प्रोडक्सन र पोष्ट प्रोडक्सनको विधामा प्रोत्साहन अनुदान उपलब्ध गराउन सक्नेछ । ... ४. (१) ... मन्त्रालयले राष्ट्रियस्तरको पत्रिकामा बढीमा एक्काइस दिनको समयावधि तोकी आवेदनका लागि ... सूचना प्रकाशन गर्नु पर्नेछ। ... ६. (ख) (८) चलचित्र निर्माता वा निर्देशकले यस अघि कम्तीमा दुईवटा चलचित्रको निर्माण वा निर्देशन गरेको स्व:घोषणा गरेको हुनु पर्नेछ । ... ११. (२) उपदफा (१) बमोजिमको प्रोत्साहन अनुदान रकम अधिकतम देहाय बमोजिमको संख्यामा उपलव्ध गराउन सकिनेछ। (क) स्क्रिप्ट लेखन पाँच वटा (ख) प्रोडक्सन तीन वटा, र (ग) पोष्ट प्रोडक्सन पाँच वटा ... १३. (ज) चलचित्रको समयावधि कम्तीमा नब्बे मिनेटको हुनु पर्ने, (झ) चलचित्रको छाँयाङ्कन कम्तीमा 4k प्रविधिको क्यामेराले गर्नु पर्ने ... १४. (२) ... सम्झौता बमोजिम प्रदान गरिने अनुदान रकमको बीस प्रतिशत रकम सुरुमा उपलब्ध गराउनेछ । (३) प्रोत्साहन अनुदानको बाँकी रकम सम्झाताका सर्तहरु बमोजिम कार्य सम्पन्न भएको भनी बोर्डले गरेको सिफारिसको आधारमा उपलब्ध गराउनु पर्नेछ ।",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://film.gov.np/pages/3/",
+    "title": "Film Associations, Film Development Board (Nepal)",
+    "said": "Nepal Film Producer's Association (NFPA) Tangal, Gahanapokhari, Kathmandu ... Website: http://nepalfilmproducers.com/ Chairperson: Mr. Nawal Khadka It is a national association of Film Producers in Nepal.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "film.gov.np notice 384 (27 October 2026, call for incentive grants for film production) and its attached procedure प्रोत्साहन कार्यविधि २०८३ (13-page scan) downloaded; pages 1-6 OCRed (tesseract nep) and the quoted clauses checked against the page images; pages 7-13 (annexes: forms, scoring sheets, contract) not OCRed",
+    "result": "found in part: the Ministry of Information and Communication's 2083 procedure gives incentive grants for script writing, production and post-production of films of cultural and national importance, from the annual budget: at most 5 scripts, 3 productions and 5 post-productions a round; 21-day call; producer or director must declare at least two earlier films; film at least 90 minutes, shot on at least 4K, no equipment bought with the grant, no AI, work done within the fiscal year; 20% paid on contract after the work plan, the rest on the board's completion recommendation. Pages 1-6 set no grant amount or cap.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Film Development Board Nepal grant films 2081 2082 anudan selected films amount",
+    "result": "led to film.gov.np; press (Kathmandu Post, 29 October 2026) reports Rs35 million set aside this fiscal year for films on culture, history and tourism, with a 21-day deadline (a lead, not read as a figure)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lawcommission.gov.np: the Motion Picture (Production, Exhibition and Distribution) Act 2026 BS and Rules 2057 downloaded",
+    "result": "permit and censorship law; no fund or incentive rate found in its text layer (legacy-font garbling)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "incentive",
+   "name": "सांस्कृतिक तथा राष्ट्रिय महत्वको क्षेत्रमा चलचित्र निर्माणको लागि प्रोत्साहन अनुदान (incentive grant for films of cultural and national importance)",
+   "by": "Ministry of Information and Communication, recommended through the Film Development Board",
+   "procedure": "कार्यविधि, २०८३",
+   "callPublished": "2026-10-27",
+   "maxGrantsPerRound": {
+    "scriptWriting": 5,
+    "production": 3,
+    "postProduction": 5
+   },
+   "callWindowDaysMax": 21,
+   "eligibility": "producer or director with at least two earlier films (self-declared); script in Nepali Devanagari or a national language; Nepali writer",
+   "conditions": {
+    "minRuntimeMin": 90,
+    "minCamera": "4K",
+    "noEquipmentPurchase": true,
+    "noAI": true,
+    "completeWithinFiscalYear": true
+   },
+   "payment": {
+    "advancePct": 20,
+    "balance": "on the board's completion recommendation"
+   },
+   "producersAssociation": "Nepal Film Producer's Association (NFPA)",
+   "unfound": [
+    "grant amount or cap (not in pp. 1-6; press reports Rs35 million for the year, a lead)",
+    "films made and released",
+    "a production rebate or producer-fee cap"
+   ]
+  },
+  "notes": "Pages 7-13 of the scan (annexes) were not OCRed; an amount, if any, may sit in the contract annex.",
+  "sources": []
+ },
+ {
+  "id": "R-6076",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://film.gov.np/ (Film Development Board; fdb.org.np resets): home, notices, press releases, reports, and the Film Associations page (/pages/3/) read",
+    "result": "the board lists the national associations: Film Artist Association of Nepal (FAAN), Nepal Film Technician Association, Nepal Film Producer's Association (NFPA), Film Director's Guild of Nepal (FDGN), Nepal Motion Pictures Association; no fee, rate or agreement on any FDB page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lawcommission.gov.np search for चलचित्र, न्यूनतम पारिश्रमिक and 'motion picture'; the चलचित्र (निर्माण, प्रदर्शन तथा वितरण) ऐन, २०२६ (9 pp.) and नियमावली, २०५७ (41 pp.) downloaded from giwmscdnone.gov.np",
+    "result": "the Act and Rules regulate permits, censorship and exhibition (text layer garbled by a legacy font; searched for कोष, अनुदान, पारिश्रमिक: one fund mention, a board member's title only); no performer, director or writer pay rule found; no minimum-wage notice in the search results. moless.gov.np: TLS name mismatch; dol.gov.np and rajpatra.dop.gov.np (Nepal Gazette): connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Film Artist Association Nepal membership fee OR \"Film Directors Guild of Nepal\" membership remuneration minimum",
+    "result": "FDB's associations page (read, above) and Ratopati items on FAAN",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://english.ratopati.com/story/55503 (FAAN membership-renewal dispute) read",
+    "result": "lead only (reports the bylaws without an address for them): \"the association's bylaws stipulate a fee of 1,800 Nepali Rupees per year\" for renewal, and 'proof of at least five activities (clips) is required for membership renewal'",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "FDB lists no screenwriters' association among the national film associations.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6079",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.naurugov.nr/ (Government of Nauru)",
+    "result": "proxy CONNECT 502; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://ronlaw.gov.nr/ (RONLAW, Nauru's legal database) home",
+    "result": "answers 200 but is a script-only app shell (6 KB, no listing); not searchable without running its scripts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Nauru Bureau of Statistics (nauru.prism.spc.int redirects to https://stats.gov.nr/): home, social-statistics page and WordPress media API (search 'census', PDFs) for the 2021 census report (language, workplace)",
+    "result": "only census images and 2019 mini-census tables listed; the posts API and documents page then answered a 'One moment, please...' interstitial (a bot check), not got past",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Nauru's own sites are unreachable or bot-checked today; nothing read.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6081",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.naurugov.nr/ (Government of Nauru)",
+    "result": "proxy CONNECT 502; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://ronlaw.gov.nr/ (RONLAW, Nauru's legal database) home",
+    "result": "answers 200 but is a script-only app shell (6 KB, no listing); not searchable without running its scripts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Nauru Bureau of Statistics (nauru.prism.spc.int redirects to https://stats.gov.nr/): home, social-statistics page and WordPress media API (search 'census', PDFs) for the 2021 census report (language, workplace)",
+    "result": "only census images and 2019 mini-census tables listed; the posts API and documents page then answered a 'One moment, please...' interstitial (a bot check), not got past",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Nauru's own sites are unreachable or bot-checked today; nothing read.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6082",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.naurugov.nr/ (Government of Nauru)",
+    "result": "proxy CONNECT 502; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://ronlaw.gov.nr/ (RONLAW, Nauru's legal database) home",
+    "result": "answers 200 but is a script-only app shell (6 KB, no listing); not searchable without running its scripts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Nauru Bureau of Statistics (nauru.prism.spc.int redirects to https://stats.gov.nr/): home, social-statistics page and WordPress media API (search 'census', PDFs) for the 2021 census report (language, workplace)",
+    "result": "only census images and 2019 mini-census tables listed; the posts API and documents page then answered a 'One moment, please...' interstitial (a bot check), not got past",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Nauru's own sites are unreachable or bot-checked today; nothing read.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6080",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.naurugov.nr/ (Government of Nauru)",
+    "result": "proxy CONNECT 502; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://ronlaw.gov.nr/ (RONLAW, Nauru's legal database) home",
+    "result": "answers 200 but is a script-only app shell (6 KB, no listing); not searchable without running its scripts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Nauru Bureau of Statistics (nauru.prism.spc.int redirects to https://stats.gov.nr/): home, social-statistics page and WordPress media API (search 'census', PDFs) for the 2021 census report (language, workplace)",
+    "result": "only census images and 2019 mini-census tables listed; the posts API and documents page then answered a 'One moment, please...' interstitial (a bot check), not got past",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Nauru's own sites are unreachable or bot-checked today; nothing read.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6084",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Niue Government Gazette page https://www.gov.nu/gazette (2023-2026 notices) read; Niue Legislation Tables as at 31 December 2019 (https://www.gov.nu/media/pages/information/65615c113a-1764012763/niue_legislation_tables_ul2022.pdf) read for employment, wage, film, arts and broadcasting laws",
+    "result": "no gazette notice on film, arts, wages or employment terms; the Table of Acts in Force names no employment or minimum-wage Act, and for the screen only the Film and Public Entertainment Act 1979 (1979/45) with its (Fees) regulations 2005/3, the Broadcasting Act 1989 and the Taoga Niue Act 2012 (which repealed the Niue Cultural Council Act). Neither Act was read for pay terms (they are licensing laws by title).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.gov.nu/ home, /information (legislation list) and a site search attempt (wp-json: 404)",
+    "result": "no union, guild, fund or rate card page; no search on the site",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for an absence: the Film and Public Entertainment Act 1979 and Broadcasting Act 1989 are Niue's only screen laws in the 2019 tables; reading both (in niue_laws_vol1-4 on gov.nu/information) could let a 'no statutory fund or pay rule' stand. Not done today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6086",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Niue Government Gazette page https://www.gov.nu/gazette (2023-2026 notices) read; Niue Legislation Tables as at 31 December 2019 (https://www.gov.nu/media/pages/information/65615c113a-1764012763/niue_legislation_tables_ul2022.pdf) read for employment, wage, film, arts and broadcasting laws",
+    "result": "no gazette notice on film, arts, wages or employment terms; the Table of Acts in Force names no employment or minimum-wage Act, and for the screen only the Film and Public Entertainment Act 1979 (1979/45) with its (Fees) regulations 2005/3, the Broadcasting Act 1989 and the Taoga Niue Act 2012 (which repealed the Niue Cultural Council Act). Neither Act was read for pay terms (they are licensing laws by title).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.gov.nu/ home, /information (legislation list) and a site search attempt (wp-json: 404)",
+    "result": "no union, guild, fund or rate card page; no search on the site",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for an absence: the Film and Public Entertainment Act 1979 and Broadcasting Act 1989 are Niue's only screen laws in the 2019 tables; reading both (in niue_laws_vol1-4 on gov.nu/information) could let a 'no statutory fund or pay rule' stand. Not done today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6087",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Niue Government Gazette page https://www.gov.nu/gazette (2023-2026 notices) read; Niue Legislation Tables as at 31 December 2019 (https://www.gov.nu/media/pages/information/65615c113a-1764012763/niue_legislation_tables_ul2022.pdf) read for employment, wage, film, arts and broadcasting laws",
+    "result": "no gazette notice on film, arts, wages or employment terms; the Table of Acts in Force names no employment or minimum-wage Act, and for the screen only the Film and Public Entertainment Act 1979 (1979/45) with its (Fees) regulations 2005/3, the Broadcasting Act 1989 and the Taoga Niue Act 2012 (which repealed the Niue Cultural Council Act). Neither Act was read for pay terms (they are licensing laws by title).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.gov.nu/ home, /information (legislation list) and a site search attempt (wp-json: 404)",
+    "result": "no union, guild, fund or rate card page; no search on the site",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for an absence: the Film and Public Entertainment Act 1979 and Broadcasting Act 1989 are Niue's only screen laws in the 2019 tables; reading both (in niue_laws_vol1-4 on gov.nu/information) could let a 'no statutory fund or pay rule' stand. Not done today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6085",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Niue Government Gazette page https://www.gov.nu/gazette (2023-2026 notices) read; Niue Legislation Tables as at 31 December 2019 (https://www.gov.nu/media/pages/information/65615c113a-1764012763/niue_legislation_tables_ul2022.pdf) read for employment, wage, film, arts and broadcasting laws",
+    "result": "no gazette notice on film, arts, wages or employment terms; the Table of Acts in Force names no employment or minimum-wage Act, and for the screen only the Film and Public Entertainment Act 1979 (1979/45) with its (Fees) regulations 2005/3, the Broadcasting Act 1989 and the Taoga Niue Act 2012 (which repealed the Niue Cultural Council Act). Neither Act was read for pay terms (they are licensing laws by title).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.gov.nu/ home, /information (legislation list) and a site search attempt (wp-json: 404)",
+    "result": "no union, guild, fund or rate card page; no search on the site",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for an absence: the Film and Public Entertainment Act 1979 and Broadcasting Act 1989 are Niue's only screen laws in the 2019 tables; reading both (in niue_laws_vol1-4 on gov.nu/information) could let a 'no statutory fund or pay rule' stand. Not done today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-5191",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.deganz.co.nz/ (DEGANZ; degnz.co.nz redirects there; read over HTTP/1.1 after an HTTP/2 protocol error): home, the Standard Feature Film Director's Agreement page and the SIWA (Screen Industry Workers Act) page",
+    "result": "the standard Director-for-Hire feature agreement (released 17 August 2022) is members-only behind sign-in, not read; the SIWA page says DEGANZ 'will be seeking to negotiate collective agreements with the Screen Production and Development Association for directors, editors and assistant editors' in feature film, TV drama, factual and entertainment and advertising, so no collective agreement setting periods is in force on DEGANZ's own account",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "employment.govt.nz screen-industry-workers page (Screen Industry Workers Act 2022 bargaining)",
+    "result": "404 at https://www.employment.govt.nz/starting-employment/types-of-employees/screen-industry-workers",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Periods would sit in the members-only 2022 standard agreement (a lead) or a future SIWA collective (bargaining sought, not concluded, per DEGANZ).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-5208",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "nzfilm.co.nz sitemap (2,343 URLs) walked; NZFC Statement of Performance Expectations 2025/26 and 2026/27, Annual Reports 2023/24 and 2024/25 downloaded and searched for applications received; the Requests for Official Information page and the OIA response of 25 February 2026 on funding decisions read",
+    "result": "no count of feature-film applications received for NZFC funding in any of them; they count NZSPR rebate applications only (2024/25: Rebate Panel met 16 times, approving 120 applications; 79 approved for $180,863,633 in entitlements). The OIA reply points to the published past-funding-decisions list, which counts approvals, not applications.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead: an OIA request to the NZFC for feature applications received by year would answer it; none published.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6089",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "qanoon.om searched for 'الحد الأدنى للأجور' (minimum wage)",
+    "result": "one result, Royal Decree 65/2008, not the current minimum-wage decision; qanoon.om is a private publisher of gazette texts (secondary), not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.om/ (Ministry of Labour) home",
+    "result": "reached; no performer, film or sector agreement item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Oman's general minimum wage (Omanis only) was not read from the Ministry of Labour's own decision today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6091",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "qanoon.om searched for 'الحد الأدنى للأجور' (minimum wage)",
+    "result": "one result, Royal Decree 65/2008, not the current minimum-wage decision; qanoon.om is a private publisher of gazette texts (secondary), not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.om/ (Ministry of Labour) home",
+    "result": "reached; no performer, film or sector agreement item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Oman's general minimum wage (Omanis only) was not read from the Ministry of Labour's own decision today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6092",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "qanoon.om searched for 'الحد الأدنى للأجور' (minimum wage)",
+    "result": "one result, Royal Decree 65/2008, not the current minimum-wage decision; qanoon.om is a private publisher of gazette texts (secondary), not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.om/ (Ministry of Labour) home",
+    "result": "reached; no performer, film or sector agreement item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Oman's general minimum wage (Omanis only) was not read from the Ministry of Labour's own decision today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6090",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "qanoon.om searched for 'الحد الأدنى للأجور' (minimum wage)",
+    "result": "one result, Royal Decree 65/2008, not the current minimum-wage decision; qanoon.om is a private publisher of gazette texts (secondary), not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.om/ (Ministry of Labour) home",
+    "result": "reached; no performer, film or sector agreement item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Oman's general minimum wage (Omanis only) was not read from the Ministry of Labour's own decision today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6094",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dicine.micultura.gob.pa/ (Dirección de Cine, Ministerio de Cultura) home read for a union, agreement, rate or a statement on where screen work is made",
+    "result": "no union, agreement or rate; the only place named is the ministry's own address (Vía Argentina, Ciudad de Panamá), which is not a statement on where film work is made",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6101",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dafo.cultura.pe/ (Dirección del Audiovisual, la Fonografía y los Nuevos Medios, Ministerio de Cultura) home read for gremio, tarifa, honorario, sindicato, mínimo",
+    "result": "no directors' or screenwriters' minimum or guild terms on the page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6100",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://dafo.cultura.pe/ (Dirección del Audiovisual, la Fonografía y los Nuevos Medios, Ministerio de Cultura) home read for gremio, tarifa, honorario, sindicato, mínimo",
+    "result": "no directors' or screenwriters' minimum or guild terms on the page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6104",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://lexpol.cloud.pf/ (LexPol, the Polynesian legal register) home; its search (LexpolRecherche.php) by POST and GET for 'audiovisuelle'",
+    "result": "POST: empty reply; GET: no results listed. The law was read instead from the JOPF-authenticated copy the DGEN publishes.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.tahitifilmcommission.com/ (CONNECT 502), https://www.culture.gov.pf/ (reset), https://www.cnc.fr/ home",
+    "result": "no page on whether France's TRIP reaches French Polynesia",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "service-public.pf audiovisual search results (DGEN) read for pay terms",
+    "result": "no rate card or agreement; LP. 7 of Loi du pays 2025-20 lists 'les prestations des auteurs, acteurs, comédiens, figurants et artistes' among TVA-exempt services, which sets no pay",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No pay rule; the Polynesian labour code (Code du travail de la Polynésie française) was not reached on LexPol.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6106",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://lexpol.cloud.pf/ (LexPol, the Polynesian legal register) home; its search (LexpolRecherche.php) by POST and GET for 'audiovisuelle'",
+    "result": "POST: empty reply; GET: no results listed. The law was read instead from the JOPF-authenticated copy the DGEN publishes.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.tahitifilmcommission.com/ (CONNECT 502), https://www.culture.gov.pf/ (reset), https://www.cnc.fr/ home",
+    "result": "no page on whether France's TRIP reaches French Polynesia",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "service-public.pf audiovisual search results (DGEN) read for pay terms",
+    "result": "no rate card or agreement; LP. 7 of Loi du pays 2025-20 lists 'les prestations des auteurs, acteurs, comédiens, figurants et artistes' among TVA-exempt services, which sets no pay",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6108",
+  "verdict": "found-now",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.service-public.pf/dgen/wp-content/uploads/sites/3/2025/12/Loi-du-pays-n%C2%B0-2025-20-du-11-juillet-2025.pdf",
+    "title": "Loi du pays n° 2025-20 du 11 juillet 2025 portant diverses mesures de dynamisation du secteur de l'audiovisuel, JOPF authentifié n° 2025-162 du 11 juillet 2025 (copy on the DGEN's service-public.pf site)",
+    "said": "Art. LP. 2. — Œuvres éligibles ... 3° Réaliser en tout ou partie des dépenses de production en Polynésie française pour un montant supérieur ou égal à 100 millions de F CFP. Art. LP. 3. — Bénéficiaires ... les producteurs, coproducteurs, producteurs délégués et producteurs exécutifs polynésiens ... 1° Être constitué en société de production audiovisuelle dont le siège social est situé en Polynésie française depuis au moins 3 années ... Art. LP. 7 I. L’agrément ... ouvre droit à l’exonération de la taxe sur la valeur ajoutée ... Art. LP. 11 I. ... « Soutien aux projets audiovisuels ou cinématographiques d’envergure » (SPACE). Le montant du SPACE est égal à 15 % des dépenses résultant d’une part des opérations mentionnées au II de l’article LP. 7, et d’autre part des rémunérations et charges sociales afférentes aux auteurs, acteurs, comédiens, figurants, artistes, techniciens, ouvriers de la production et collaborateurs salariés. Ces dépenses doivent être effectuées par la société de production polynésienne. Ce taux est porté à 20 % si les deux conditions suivantes sont réunies : - le montant total des dépenses mentionnées au deuxième alinéa s’élève à au moins 200 millions de francs CFP ; - le projet met en exergue la Polynésie française, sa culture, son patrimoine ou son territoire. ... Plafonné à 100 millions de francs CFP par projet, le montant du SPACE est fixé par arrêté pris en conseil des ministres. Il est versé en une seule tranche. La demande de subvention est déposée au plus tard 6 mois après l’achèvement du projet.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.service-public.pf/dgen/soutien-a-la-creation-cinematographique-et-audiovisuelle-scca/",
+    "title": "Soutien à la Création Cinématographique et Audiovisuelle (SCCA), Direction générale de l'économie numérique (DGEN), service-public.pf",
+    "said": "Plafond de l’aide ➡️ L’aide ne peut excéder 50 % des dépenses locales éligibles, dans la limite des plafonds réglementaires applicables selon la nature de l’œuvre et la phase sollicitée. 📌 Les frais généraux sont plafonnés à 7 % de la part locale. 💰 Modalités de versement L’aide est versée en deux tranches : 1ʳᵉ tranche – 50 % : versée à compter de la publication de l’arrêté d’attribution au Journal officiel de la Polynésie française ; 2ᵉ tranche – solde de 50 % : versée sur présentation des justificatifs définitifs",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.service-public.pf/?s=audiovisuel (portal of the Polynesian public services) searched; the DGEN pages on the SCCA fund and the DSA–SPACE scheme read; the Loi du pays n° 2025-20 (JOPF 2025-162) PDF linked there downloaded and read (art. LP. 1 to LP. 18)",
+    "result": "found: the Pays's own incentive (DSA, Loi du pays 2025-20 of 11 July 2025): approved projects spending at least 100 million F CFP locally get a TVA exemption and the SPACE grant of 15% of local eligible spend and local cast and crew pay (20% at 200 million F CFP and more with Polynesian content), capped at 100 million F CFP per project, paid once at completion, through a Polynesian production company established at least 3 years. Separately the SCCA fund: up to 50% of local eligible expenses, overheads capped at 7% of the local share, paid in two halves.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://lexpol.cloud.pf/ (LexPol, the Polynesian legal register) home; its search (LexpolRecherche.php) by POST and GET for 'audiovisuelle'",
+    "result": "POST: empty reply; GET: no results listed. The law was read instead from the JOPF-authenticated copy the DGEN publishes.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.tahitifilmcommission.com/ (CONNECT 502), https://www.culture.gov.pf/ (reset), https://www.cnc.fr/ home",
+    "result": "no page on whether France's TRIP reaches French Polynesia",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "incentive",
+   "name": "Dynamisation du secteur de l'audiovisuel (DSA): SPACE grant and TVA exemption",
+   "law": "Loi du pays n° 2025-20 du 11 juillet 2025 (JOPF n° 2025-162)",
+   "minLocalSpendXPF": 100000000,
+   "ratePct": 15,
+   "enhancedRatePct": 20,
+   "enhancedWhen": "local spend at least 200 million F CFP and the project features French Polynesia, its culture, heritage or territory",
+   "base": "local eligible goods and services (art. LP. 7-II) plus local pay and social charges of authors, actors, extras, artists, technicians and crew, spent by the Polynesian company",
+   "capPerProjectXPF": 100000000,
+   "paid": "once, at completion, claim within 6 months",
+   "beneficiary": "Polynesian production company with its seat in French Polynesia for at least 3 years",
+   "alsoFund": {
+    "name": "SCCA",
+    "maxShareOfLocalEligiblePct": 50,
+    "overheadCapPct": 7,
+    "paid": "two halves"
+   },
+   "unfound": [
+    "whether France's TRIP applies to spend in French Polynesia"
+   ]
+  },
+  "notes": "Answers 'any Polynesian incentive or fund'. The TRIP half is still unread from the CNC or the CGI.",
+  "sources": []
+ },
+ {
+  "id": "R-6105",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://lexpol.cloud.pf/ (LexPol, the Polynesian legal register) home; its search (LexpolRecherche.php) by POST and GET for 'audiovisuelle'",
+    "result": "POST: empty reply; GET: no results listed. The law was read instead from the JOPF-authenticated copy the DGEN publishes.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.tahitifilmcommission.com/ (CONNECT 502), https://www.culture.gov.pf/ (reset), https://www.cnc.fr/ home",
+    "result": "no page on whether France's TRIP reaches French Polynesia",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "service-public.pf audiovisual search results (DGEN) read for pay terms",
+    "result": "no rate card or agreement; LP. 7 of Loi du pays 2025-20 lists 'les prestations des auteurs, acteurs, comédiens, figurants et artistes' among TVA-exempt services, which sets no pay",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6109",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.ncc.gov.pg/ (National Cultural Commission) home read for film, actor, rate",
+    "result": "no film rate, performers' body or production statement",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6111",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.ncc.gov.pg/ (National Cultural Commission) home read for film, actor, rate",
+    "result": "no film rate, performers' body or production statement",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6110",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.ncc.gov.pg/ (National Cultural Commission) home read for film, actor, rate",
+    "result": "no film rate, performers' body or production statement",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6114",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.fdcp.ph/ (Film Development Council of the Philippines) home read for guild, rate card, minimum, Quezon City",
+    "result": "no guild terms, rate card or statement on where film and TV are made",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.officialgazette.gov.ph/2024/07/24/republic-act-no-11996/ (Eddie Garcia Act, for any guild or rate provision)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6120",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.pid.gov.pk/ and https://www.pemra.gov.pk/, also with the issuing CAs' intermediates from the research bundle (verification on)",
+    "result": "pid.gov.pk: connection reset; pemra.gov.pk: TLS chain still incomplete (unable to get local issuer); not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6122",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.pid.gov.pk/ and https://www.pemra.gov.pk/, also with the issuing CAs' intermediates from the research bundle (verification on)",
+    "result": "pid.gov.pk: connection reset; pemra.gov.pk: TLS chain still incomplete (unable to get local issuer); not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6121",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.pid.gov.pk/ and https://www.pemra.gov.pk/, also with the issuing CAs' intermediates from the research bundle (verification on)",
+    "result": "pid.gov.pk: connection reset; pemra.gov.pk: TLS chain still incomplete (unable to get local issuer); not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6125",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.zasp.pl/zasp/dolacz-do-nas/",
+    "title": "Dołącz do nas, Związek Artystów Scen Polskich ZASP – Stowarzyszenie",
+    "said": "Sekcje repartycyjne są przeznaczone dla artystów, którzy posiadają prawa autorskie lub prawa do artystycznych wykonań i powierzają ich zarządzanie ZASP. Należą do nich m.in.: dubbingowcy, aktorzy filmowi i telewizyjni. ... Członkiem sekcji repartycyjnej może zostać osoba, która: Posiada polskie obywatelstwo lub obywatelstwo innego państwa członkowskiego Unii Europejskiej bądź ... (EFTA) ... albo ma miejsce zamieszkania ... w którymś z tych państw ... Zawarła umowę o zbiorowe zarządzanie prawami ... z ZASP oraz Otrzymała co najmniej 1 000 zł brutto przychodów z praw autorskich lub artystycznych wykonań w ostatnich trzech latach ... Sekcje nierepartycyjne ... W ich skład wchodzą m.in.: aktorzy teatralni i estradowi, tancerze, reżyserzy ... Posiada kwalifikacje zawodowe potwierdzone dyplomem wyższej krajowej lub zagranicznej uczelni artystycznej ... albo egzaminem eksternistycznym zdanym przed ZASP, chyba że ... posiada co najmniej trzyletni staż pracy zawodowej ... Jaka jest opłata? Składka dzieli się na dwie części: stałą kwotę na Fundusz Pomocowy (tzw. Fundusz Pogrzebowy) – 6 zł (do 31.12.2023)/ 10 zł (od 1.01.2024) składkę członkowską ustalaną przez dany Oddział ... Ile wynosi opłata manipulacyjna? Opłata manipulacyjna jest jednorazowa, płacona przy złożeniu dokumentów i wynosi 50 zł. Opłata jest bezzwrotna. ... wykluczeniu ... w przypadku zaległości w opłacaniu składek członkowskich przez okres dłuższy niż 24 miesiące.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.zasp.pl/ home; its 'Dołącz do nas' page read in full; the WordPress search API for 'składka'",
+    "result": "found: ZASP membership terms (two kinds of section; repartition sections for film, TV and dubbing actors need a collective-management contract with ZASP and at least 1,000 zł gross a year in rights income over the last three years; non-repartition sections for stage actors need an arts-school diploma or ZASP's external exam, or three years' professional work; EU/EEA citizenship or residence; one-off 50 zł handling fee; dues are a 10 zł Fundusz Pomocowy share from 1 January 2024 plus a branch-set membership fee; struck off after more than 24 months in arrears). No rate card, agreement or pay minimum anywhere on zasp.pl.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "union",
+   "name": "Związek Artystów Scen Polskich (ZASP) – Stowarzyszenie",
+   "joining": {
+    "screenActors": "repartition section: EU/EEA citizen or resident; collective-management contract with ZASP; average at least 1,000 zł gross a year in rights income over the last three full financial years",
+    "stageActors": "non-repartition section: EU/EEA citizen or resident; arts-school diploma or ZASP external exam, or at least three years' professional work"
+   },
+   "handlingFeePLN": 50,
+   "dues": {
+    "fundPLN": 10,
+    "from": "2024-01-01",
+    "membership": "set by each branch (Oddział)"
+   },
+   "strikeOffAfterMonthsInArrears": 24,
+   "unfound": [
+    "any rate card or collective agreement for actors' pay",
+    "a source on where most Polish film and TV is made"
+   ]
+  },
+  "notes": "The membership half of the entry is found; pay and place remain blocked.",
+  "sources": []
+ },
+ {
+  "id": "R-6131",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.spm-ct975.fr/ and its search ?s=audiovisuel (Collectivité territoriale de Saint-Pierre-et-Miquelon)",
+    "result": "HTTP 418 (refused, a bot filter); not got past",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.saint-pierre-et-miquelon.gouv.fr/ (préfecture) home",
+    "result": "reached; no audiovisual, CNC or tournage item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6134",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.spm-ct975.fr/ and its search ?s=audiovisuel (Collectivité territoriale de Saint-Pierre-et-Miquelon)",
+    "result": "HTTP 418 (refused, a bot filter); not got past",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.saint-pierre-et-miquelon.gouv.fr/ (préfecture) home",
+    "result": "reached; no audiovisual, CNC or tournage item on the home page",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6136",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/",
+    "title": "Government of the Pitcairn Islands, home page: Media Visit Requests",
+    "said": "Individuals or organizations seeking to visit the Pitcairn Islands for media-related purposes — including journalism, documentary filming, or other commercial productions — must first submit a Media Visit Request Letter addressed to the Mayor and Island Council. ... Media Visit Request Letters must be submitted, via email to: isec@pitcairn.gov.pn Once the Media Visit Request is approved by the Island Council, applicants must then complete a Business Visa Application with the Pitcairn Island Immigration Officer. ... A non-refundable visa fee of NZD $300 per person applies.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.visitpitcairn.pn/",
+    "title": "Visit Pitcairn (Pitcairn Islands Tourism), home page",
+    "said": "Film Crew from @YesTheory Visits Pitcairn “ This week, we traveled to the most remotely inhabited island on Earth: Pitcairn Island. ... in this epic tale shot by the incredible @cory.s.martin ” — @YesTheory Watch this beautifully shot and informative video just filmed on Pitcairn by the team at @YesTheory which just hit 10 million views!",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.government.pn/ (home and /policies/, a 404 page that carries the same panel) and https://www.visitpitcairn.pn/ (Pitcairn Islands Tourism) read",
+    "result": "found in part: filming on Pitcairn needs a Media Visit Request approved by the Mayor and Island Council, then a business visa (NZD 300 a person, non-refundable); the tourism office names a video filmed on Pitcairn by the YesTheory team. Neither page states the language it was made in.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "market",
+   "filmingRule": "Media Visit Request letter to the Mayor and Island Council (isec@pitcairn.gov.pn), then a Business Visa Application",
+   "businessVisaFeeNZD": 300,
+   "filmedOnIsland": [
+    "a YesTheory video (online documentary), named by Pitcairn Islands Tourism"
+   ],
+   "unfound": [
+    "the language of film or TV made on Pitcairn, from a source"
+   ]
+  },
+  "notes": "The YesTheory production is foreign (an online channel), not local screen work.",
+  "sources": []
+ },
+ {
+  "id": "R-6146",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://moc.pna.ps/ (Palestinian Ministry of Culture) home and menu read; https://www.mol.pna.ps/ (Ministry of Labour) with and without the intermediate bundle",
+    "result": "no actors', directors' or writers' body, agreement or fee; the ministry runs the general Palestinian Cultural Fund (see R-6150). mol.pna.ps TLS chain incomplete (not read).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6148",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://moc.pna.ps/ (Palestinian Ministry of Culture) home and menu read; https://www.mol.pna.ps/ (Ministry of Labour) with and without the intermediate bundle",
+    "result": "no actors', directors' or writers' body, agreement or fee; the ministry runs the general Palestinian Cultural Fund (see R-6150). mol.pna.ps TLS chain incomplete (not read).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6150",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://moc.pna.ps/article/2889/%D9%86%D8%A8%D8%B0%D8%A9-%D8%B9%D9%86-%D8%A7%D9%84%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D9%84%D8%AB%D9%82%D8%A7%D9%81%D9%8A-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A",
+    "title": "نبذة عن الصندوق الثقافي الفلسطيني, وزارة الثقافة - دولة فلسطين",
+    "said": "أُنشئ الصندوق الثقافي الفلسطيني بمبادرة من وزارة الثقافة وبالتعاون مع الحكومة النرويجية وتم توقيع اتفاقية بهذا الخصوص في كانون اول عام 2004 ولمدة 3 سنوات ( المرحلة الاولى )، وفي 30/03/2010 تم تجديد الاتفاقية ... وفي نهاية العام 2013 تم توقيع الاتفاقية الثالثة ... يستهدف الصندوق الثقافي الفلسطيني المؤسسات الثقافية الفلسطينية والأفراد وبتركيز خاص على الأطفال والقدس والمجتمعات المهمشة ... من خلال دعم المبادرات التنموية الثقافية المقدمة من المؤسسات والأفراد العاملين في القطاع الثقافي الفلسطيني ... وقد صادق مجلس الوزراء في جلسته رقم ( 37 ) بتاريخ 15 كانون ثاني ( يناير 2013 ) على مشروع قانون ينظم عمل الصندوق ... وكان قبل ذلك قد أصدر قراراً بإنشائه في جلسته رقم (40) بتاريخ (23/11/2005)",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://moc.pna.ps/article/2905/%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85-%D9%84%D9%85%D9%86%D8%AD-%D8%A7%D9%84%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D9%84%D8%AB%D9%82%D8%A7%D9%81%D9%8A",
+    "title": "التقدم لمنح الصندوق الثقافي, وزارة الثقافة - دولة فلسطين",
+    "said": "يتم التقدم لمنح الصندوق الثقافي الفلسطيني من خلال الضغط على الرابط ادناه طلب التقدم لمنح الصندوق الثقافي مع العلم أنه لا يمكنك التقدّم لطلبات المنح خلال هذه الفترة",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://moc.pna.ps/ (Palestinian Ministry of Culture) home and menu; the Palestinian Cultural Fund pages (about, apply) read; https://www.mol.pna.ps/ (Ministry of Labour) tried with and without the intermediate bundle",
+    "result": "found in part: the Palestinian Cultural Fund (Ministry of Culture, set up by Cabinet decision of 23 November 2005 with Norwegian support; a law to regulate it approved as a draft by Cabinet on 15 January 2013) grants to cultural institutions and individuals; applications closed 'during this period'. No film-specific fund, share, cap or production incentive stated. mol.pna.ps: TLS chain incomplete even with the bundle (not read).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "name": "الصندوق الثقافي الفلسطيني (Palestinian Cultural Fund)",
+   "by": "Ministry of Culture, State of Palestine",
+   "established": "Cabinet decision, session 40, 2005-11-23",
+   "partner": "Government of Norway (agreements 2004, 2010, end of 2013)",
+   "targets": "Palestinian cultural institutions and individuals, especially children, Jerusalem and marginalised communities",
+   "filmSpecific": false,
+   "applicationsOpen": false,
+   "unfound": [
+    "a film-specific fund or production incentive",
+    "amounts, share or cap"
+   ]
+  },
+  "notes": "A general cultural fund, not a film fund; the 2013 regulating law was a draft (lead), so the fund's legal footing is the 2005 Cabinet decision.",
+  "sources": []
+ },
+ {
+  "id": "R-6147",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://moc.pna.ps/ (Palestinian Ministry of Culture) home and menu read; https://www.mol.pna.ps/ (Ministry of Labour) with and without the intermediate bundle",
+    "result": "no actors', directors' or writers' body, agreement or fee; the ministry runs the general Palestinian Cultural Fund (see R-6150). mol.pna.ps TLS chain incomplete (not read).",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6157",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.palaugov.pw/ (Government of Palau) home read; its site search (?s=minimum+wage) and WordPress search and media APIs",
+    "result": "home reached (links only to ministries, the legislature and a 2025 public-service pay scale under RPPL 11-40); every search request answered 502 Bad Gateway",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://pcc.palau.edu/ (Palau Community College) home",
+    "result": "reached; no film, performer or union item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Palau minimum wage RPPL hourly 2024 2025 Minimum Wage Act amended Olbiil Era Kelulau",
+    "result": "leads only, no primary address: press (islandtimes.org, islandsbusiness.com, pina.com.fj) and WageIndicator report the minimum wage rising from $3.50 to $4.25 an hour from 1 October 2024 through the FY2024 supplemental budget (signed 10 June 2024), and $5.00 from 1 October 2025 for all workers other than foreign workers; the enacting RPPL was not found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "For the actor entry (R-6157), the general minimum wage ($5.00 from 2025-10-01, non-foreign workers) is a lead: it needs the RPPL text from the Olbiil Era Kelulau or the Palau Code.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6159",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.palaugov.pw/ (Government of Palau) home read; its site search (?s=minimum+wage) and WordPress search and media APIs",
+    "result": "home reached (links only to ministries, the legislature and a 2025 public-service pay scale under RPPL 11-40); every search request answered 502 Bad Gateway",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://pcc.palau.edu/ (Palau Community College) home",
+    "result": "reached; no film, performer or union item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Palau minimum wage RPPL hourly 2024 2025 Minimum Wage Act amended Olbiil Era Kelulau",
+    "result": "leads only, no primary address: press (islandtimes.org, islandsbusiness.com, pina.com.fj) and WageIndicator report the minimum wage rising from $3.50 to $4.25 an hour from 1 October 2024 through the FY2024 supplemental budget (signed 10 June 2024), and $5.00 from 1 October 2025 for all workers other than foreign workers; the enacting RPPL was not found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "For the actor entry (R-6157), the general minimum wage ($5.00 from 2025-10-01, non-foreign workers) is a lead: it needs the RPPL text from the Olbiil Era Kelulau or the Palau Code.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6160",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.palaugov.pw/ (Government of Palau) home read; its site search (?s=minimum+wage) and WordPress search and media APIs",
+    "result": "home reached (links only to ministries, the legislature and a 2025 public-service pay scale under RPPL 11-40); every search request answered 502 Bad Gateway",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://pcc.palau.edu/ (Palau Community College) home",
+    "result": "reached; no film, performer or union item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Palau minimum wage RPPL hourly 2024 2025 Minimum Wage Act amended Olbiil Era Kelulau",
+    "result": "leads only, no primary address: press (islandtimes.org, islandsbusiness.com, pina.com.fj) and WageIndicator report the minimum wage rising from $3.50 to $4.25 an hour from 1 October 2024 through the FY2024 supplemental budget (signed 10 June 2024), and $5.00 from 1 October 2025 for all workers other than foreign workers; the enacting RPPL was not found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "For the actor entry (R-6157), the general minimum wage ($5.00 from 2025-10-01, non-foreign workers) is a lead: it needs the RPPL text from the Olbiil Era Kelulau or the Palau Code.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6158",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.palaugov.pw/ (Government of Palau) home read; its site search (?s=minimum+wage) and WordPress search and media APIs",
+    "result": "home reached (links only to ministries, the legislature and a 2025 public-service pay scale under RPPL 11-40); every search request answered 502 Bad Gateway",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://pcc.palau.edu/ (Palau Community College) home",
+    "result": "reached; no film, performer or union item",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04: Palau minimum wage RPPL hourly 2024 2025 Minimum Wage Act amended Olbiil Era Kelulau",
+    "result": "leads only, no primary address: press (islandtimes.org, islandsbusiness.com, pina.com.fj) and WageIndicator report the minimum wage rising from $3.50 to $4.25 an hour from 1 October 2024 through the FY2024 supplemental budget (signed 10 June 2024), and $5.00 from 1 October 2025 for all workers other than foreign workers; the enacting RPPL was not found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "For the actor entry (R-6157), the general minimum wage ($5.00 from 2025-10-01, non-foreign workers) is a lead: it needs the RPPL text from the Olbiil Era Kelulau or the Palau Code.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6162",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.inap.gov.py/ (Instituto Nacional del Audiovisual Paraguayo) and https://www.uap.org.py/ (Unión de Actores del Paraguay)",
+    "result": "inap.gov.py connection reset; uap.org.py CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 listed for 'py,org,uap)' and 'py,gov,inap)'",
+    "result": "no captures",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6164",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.inap.gov.py/ (Instituto Nacional del Audiovisual Paraguayo) and https://www.uap.org.py/ (Unión de Actores del Paraguay)",
+    "result": "inap.gov.py connection reset; uap.org.py CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 listed for 'py,org,uap)' and 'py,gov,inap)'",
+    "result": "no captures",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6163",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.inap.gov.py/ (Instituto Nacional del Audiovisual Paraguayo) and https://www.uap.org.py/ (Unión de Actores del Paraguay)",
+    "result": "inap.gov.py connection reset; uap.org.py CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 listed for 'py,org,uap)' and 'py,gov,inap)'",
+    "result": "no captures",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6168",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.almeezan.qa/LawPage.aspx?id=8239 (Al Meezan legal portal, for Law No. 17 of 2020 on the minimum wage)",
+    "result": "redirected to the almeezan.qa home shell (6 KB, script-rendered); the law text not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.qa/ (Ministry of Labour); https://mediacity.qa/en/ home",
+    "result": "mol.gov.qa connection reset; mediacity.qa home (Media City Qatar) holds no talent agreement or rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Qatar's Law No. 17 of 2020 (minimum wage) is the obvious statutory rule for any employed performer; its text was not reached on Al Meezan today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6170",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.almeezan.qa/LawPage.aspx?id=8239 (Al Meezan legal portal, for Law No. 17 of 2020 on the minimum wage)",
+    "result": "redirected to the almeezan.qa home shell (6 KB, script-rendered); the law text not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.qa/ (Ministry of Labour); https://mediacity.qa/en/ home",
+    "result": "mol.gov.qa connection reset; mediacity.qa home (Media City Qatar) holds no talent agreement or rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Qatar's Law No. 17 of 2020 (minimum wage) is the obvious statutory rule for any employed performer; its text was not reached on Al Meezan today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6169",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.almeezan.qa/LawPage.aspx?id=8239 (Al Meezan legal portal, for Law No. 17 of 2020 on the minimum wage)",
+    "result": "redirected to the almeezan.qa home shell (6 KB, script-rendered); the law text not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.qa/ (Ministry of Labour); https://mediacity.qa/en/ home",
+    "result": "mol.gov.qa connection reset; mediacity.qa home (Media City Qatar) holds no talent agreement or rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Qatar's Law No. 17 of 2020 (minimum wage) is the obvious statutory rule for any employed performer; its text was not reached on Al Meezan today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6174",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.agencefilmreunion.com/ (Agence Film Réunion's former domain), https://filmreunion.re/, https://www.regionreunion.com/",
+    "result": "agencefilmreunion.com now serves an unrelated Indonesian-language shop page (domain lapsed); filmreunion.re CONNECT 502; regionreunion.com HTTP 403",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The agency's current domain was not identified today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6182",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ucin.ro/statut2026_ucin.docx",
+    "title": "Statutul Uniunii Cineaștilor din România (UCIN), Editura UCIN 2023 (file statut2026_ucin.docx linked from ucin.ro)",
+    "said": "Art. 12 1. Primirea în UCIN se face pe baza cererii individuale, însoţită de un Curriculum Vitae şi o recomandare din partea unor membri UCIN cu o vechime de minim cinci ani care să ateste îndeplinirea criteriilor de admitere în UCIN. 2. Documentele ... se transmit Biroului Asociaţiei profesionale de profil care analizează dosarul şi înaintează Comitetului Director al UCIN, recomandarea ... 3. Primirea în UCIN se face cel mai târziu cu cel puţin 5 ani înainte de împlinirea vârstei legale de pensionare. ... Art. 16 Membrii UCIN au următoarele îndatoriri: a) să achite cotizația stabilită de consiliul UCIN până la data de 01 decembrie a anului în curs",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.ucin.ro/criterii_admitere2018.doc",
+    "title": "Anexa 2, Baremuri profesionale pentru admiterea în UCIN (UCIN, saved 3 January 2018)",
+    "said": "I. ASOCIATIA AUTORILOR DE FILM ŞI TV A) Secţia regizorilor de film şi TV a) absolvent al unei forme de învăţământ superior b) 1 film de lung metraj ficţiune c) 3 filme de scurt metraj fictiune d) 10 filme documentar artistice e) 15 filme de televiziune/ 25 emisiuni f) 5 titluri de filme de animaţie g) 20 titluri de reclame h) Un serial de animaţie sau 1 lung metraj de animaţie B) Secţia scenariştilor de film şi TV a) absolvenţi ai unei forme de învăţământ superior b) autori a cel puţin 5 scenarii de film documentar, ştiinţific, etnografic, de artă, cu tematică muzicală, de desen animat, videoclipuri realizate şi difuzate la TV c) 2 scenarii de film de ficţiune.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.ucin.ro/ (Uniunea Cineaştilor din România) home; its statute (statut2026_ucin.docx, the 2023 edition) and admission criteria (criterii_admitere2018.doc) downloaded and read (statute searched for cotizaţie, onorariu, tarif, remuneraţie, minim, contract); https://dacinsara.ro/ (DACIN SARA, the directors' and screenwriters' collective-management society) home and procedura-inscriere read; https://www.cnc.gov.ro/ (connection reset); https://www.gildaregizorilor.ro/ (CONNECT 502)",
+    "result": "found: UCIN is the guild (sections for film and TV directors and for screenwriters within its Asociaţia Autorilor de Film şi TV); admission by application with CV and a recommendation from members of at least five years, on professional thresholds; annual dues set by the UCIN council, due by 1 December; the statute sets no fee, rate or minimum for members' work. DACIN SARA's enrolment procedure sets no fee either. No minimum fee found.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "union",
+   "name": "Uniunea Cineaştilor din România (UCIN), Secţia regizorilor de film şi TV",
+   "joining": "application with CV and a recommendation from UCIN members of at least five years' standing; professional threshold, e.g. a degree and 1 fiction feature, or 3 fiction shorts, or 10 documentaries, or 15 TV films/25 programmes, or 20 commercials; no later than 5 years before legal retirement age",
+   "dues": "annual cotizaţie set by the UCIN council, due by 1 December",
+   "minimumFee": null,
+   "unfound": [
+    "any minimum fee (the statute sets none)",
+    "prep, shoot or cut periods"
+   ]
+  },
+  "notes": "Absence of a minimum rests on the guild's statute only, not on an agreement (none exists that was found).",
+  "sources": []
+ },
+ {
+  "id": "R-6181",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ucin.ro/statut2026_ucin.docx",
+    "title": "Statutul Uniunii Cineaștilor din România (UCIN), Editura UCIN 2023 (file statut2026_ucin.docx linked from ucin.ro)",
+    "said": "Art. 12 1. Primirea în UCIN se face pe baza cererii individuale, însoţită de un Curriculum Vitae şi o recomandare din partea unor membri UCIN cu o vechime de minim cinci ani care să ateste îndeplinirea criteriilor de admitere în UCIN. 2. Documentele ... se transmit Biroului Asociaţiei profesionale de profil care analizează dosarul şi înaintează Comitetului Director al UCIN, recomandarea ... 3. Primirea în UCIN se face cel mai târziu cu cel puţin 5 ani înainte de împlinirea vârstei legale de pensionare. ... Art. 16 Membrii UCIN au următoarele îndatoriri: a) să achite cotizația stabilită de consiliul UCIN până la data de 01 decembrie a anului în curs",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.ucin.ro/criterii_admitere2018.doc",
+    "title": "Anexa 2, Baremuri profesionale pentru admiterea în UCIN (UCIN, saved 3 January 2018)",
+    "said": "I. ASOCIATIA AUTORILOR DE FILM ŞI TV A) Secţia regizorilor de film şi TV a) absolvent al unei forme de învăţământ superior b) 1 film de lung metraj ficţiune c) 3 filme de scurt metraj fictiune d) 10 filme documentar artistice e) 15 filme de televiziune/ 25 emisiuni f) 5 titluri de filme de animaţie g) 20 titluri de reclame h) Un serial de animaţie sau 1 lung metraj de animaţie B) Secţia scenariştilor de film şi TV a) absolvenţi ai unei forme de învăţământ superior b) autori a cel puţin 5 scenarii de film documentar, ştiinţific, etnografic, de artă, cu tematică muzicală, de desen animat, videoclipuri realizate şi difuzate la TV c) 2 scenarii de film de ficţiune.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.ucin.ro/ (Uniunea Cineaştilor din România) home; its statute (statut2026_ucin.docx, the 2023 edition) and admission criteria (criterii_admitere2018.doc) downloaded and read (statute searched for cotizaţie, onorariu, tarif, remuneraţie, minim, contract); https://dacinsara.ro/ (DACIN SARA, the directors' and screenwriters' collective-management society) home and procedura-inscriere read; https://www.cnc.gov.ro/ (connection reset); https://www.gildaregizorilor.ro/ (CONNECT 502)",
+    "result": "found: UCIN is the guild (sections for film and TV directors and for screenwriters within its Asociaţia Autorilor de Film şi TV); admission by application with CV and a recommendation from members of at least five years, on professional thresholds; annual dues set by the UCIN council, due by 1 December; the statute sets no fee, rate or minimum for members' work. DACIN SARA's enrolment procedure sets no fee either. No minimum fee found.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "union",
+   "name": "Uniunea Cineaştilor din România (UCIN), Secţia scenariştilor de film şi TV",
+   "joining": "application with CV and a recommendation from UCIN members of at least five years' standing; threshold: a degree and at least 5 produced and broadcast non-fiction or animation scripts, or 2 fiction feature scripts",
+   "dues": "annual cotizaţie set by the UCIN council, due by 1 December",
+   "minimumFee": null,
+   "unfound": [
+    "any minimum fee (the statute sets none)"
+   ]
+  },
+  "notes": "As R-6182.",
+  "sources": []
+ },
+ {
+  "id": "R-6186",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.udus.org.rs/ (Udruženje dramskih umetnika Srbije): home, delatnost.php, kako-postati-clan.php, pravilnici-udus-a.php (its rules: statute, ethics code, data and anti-corruption acts, award rules) and samostalci.php read; its work report 1 May 2025 to 30 April 2026 (izvestaj-o-radu PDF) downloaded",
+    "result": "no fee rule (pravilnik o honorarima), tariff or collective agreement among UDUS's published rules; the work report is a scanned PDF with no text layer and was not OCRed today. No site for the film directors' or screenwriters' associations reached.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.fcs.rs/ (Filmski centar Srbije) home",
+    "result": "reached; no fee minimum item",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "OCR (srp) of UDUS's 2025-26 work report is the one untried lead on the site.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6188",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.udus.org.rs/ (Udruženje dramskih umetnika Srbije): home, delatnost.php, kako-postati-clan.php, pravilnici-udus-a.php (its rules: statute, ethics code, data and anti-corruption acts, award rules) and samostalci.php read; its work report 1 May 2025 to 30 April 2026 (izvestaj-o-radu PDF) downloaded",
+    "result": "no fee rule (pravilnik o honorarima), tariff or collective agreement among UDUS's published rules; the work report is a scanned PDF with no text layer and was not OCRed today. No site for the film directors' or screenwriters' associations reached.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.fcs.rs/ (Filmski centar Srbije) home",
+    "result": "reached; no fee minimum item",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "OCR (srp) of UDUS's 2025-26 work report is the one untried lead on the site.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6187",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.udus.org.rs/ (Udruženje dramskih umetnika Srbije): home, delatnost.php, kako-postati-clan.php, pravilnici-udus-a.php (its rules: statute, ethics code, data and anti-corruption acts, award rules) and samostalci.php read; its work report 1 May 2025 to 30 April 2026 (izvestaj-o-radu PDF) downloaded",
+    "result": "no fee rule (pravilnik o honorarima), tariff or collective agreement among UDUS's published rules; the work report is a scanned PDF with no text layer and was not OCRed today. No site for the film directors' or screenwriters' associations reached.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.fcs.rs/ (Filmski centar Srbije) home",
+    "result": "reached; no fee minimum item",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "OCR (srp) of UDUS's 2025-26 work report is the one untried lead on the site.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6191",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.unikino.ru/ (Союз кинематографистов РФ, home of the Guild of Screenwriters and directors' guild) and https://www.kinosoyuz.ru/; https://culture.gov.ru/ (Ministry of Culture); https://www.rospk.ru/",
+    "result": "unikino.ru HTTP 503; kinosoyuz.ru and culture.gov.ru connection reset; rospk.ru TLS certificate expired (not read)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://rostrud.gov.ru/ (Rostrud, which registers federal industry agreements)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04 (Russian): отраслевое соглашение Министерство культуры профсоюз работников культуры 2024-2026 текст артисты оплата",
+    "result": "leads only: the Ministry of Culture and the All-Russian Union of Culture Workers' industry agreement for 2023-2025 was extended to 31 December 2028 by an additional agreement (businessofrussia.com PDF, a secondary); the Mincifry press and broadcasting agreement 2024-2026 (garant.ru)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://www.garant.ru/products/ipo/prime/doc/408865045/ read (Garant's copy of the Mincifry–culture workers' union agreement for press, TV and radio organisations, 20 March 2024)",
+    "result": "secondary, about broadcasters' employees, not screen performers per day: its point 31 sets the industry minimum monthly pay for Mincifry's off-budget press and broadcasting organisations at 'не ниже минимального размера оплаты труда, установленного федеральным законом'; no per-shooting-day or per-performance rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for actors: the Ministry of Culture industry agreement (extended to 2028) covers state theatres' staff, a monthly-salary floor at most; no per-day or per-performance rate is known to exist in it. Text not reached (culture.gov.ru reset, Rostrud 403).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6195",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.unikino.ru/ (Союз кинематографистов РФ, home of the Guild of Screenwriters and directors' guild) and https://www.kinosoyuz.ru/; https://culture.gov.ru/ (Ministry of Culture); https://www.rospk.ru/",
+    "result": "unikino.ru HTTP 503; kinosoyuz.ru and culture.gov.ru connection reset; rospk.ru TLS certificate expired (not read)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://rostrud.gov.ru/ (Rostrud, which registers federal industry agreements)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04 (Russian): отраслевое соглашение Министерство культуры профсоюз работников культуры 2024-2026 текст артисты оплата",
+    "result": "leads only: the Ministry of Culture and the All-Russian Union of Culture Workers' industry agreement for 2023-2025 was extended to 31 December 2028 by an additional agreement (businessofrussia.com PDF, a secondary); the Mincifry press and broadcasting agreement 2024-2026 (garant.ru)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://www.garant.ru/products/ipo/prime/doc/408865045/ read (Garant's copy of the Mincifry–culture workers' union agreement for press, TV and radio organisations, 20 March 2024)",
+    "result": "secondary, about broadcasters' employees, not screen performers per day: its point 31 sets the industry minimum monthly pay for Mincifry's off-budget press and broadcasting organisations at 'не ниже минимального размера оплаты труда, установленного федеральным законом'; no per-shooting-day or per-performance rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for actors: the Ministry of Culture industry agreement (extended to 2028) covers state theatres' staff, a monthly-salary floor at most; no per-day or per-performance rate is known to exist in it. Text not reached (culture.gov.ru reset, Rostrud 403).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6193",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.unikino.ru/ (Союз кинематографистов РФ, home of the Guild of Screenwriters and directors' guild) and https://www.kinosoyuz.ru/; https://culture.gov.ru/ (Ministry of Culture); https://www.rospk.ru/",
+    "result": "unikino.ru HTTP 503; kinosoyuz.ru and culture.gov.ru connection reset; rospk.ru TLS certificate expired (not read)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://rostrud.gov.ru/ (Rostrud, which registers federal industry agreements)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04 (Russian): отраслевое соглашение Министерство культуры профсоюз работников культуры 2024-2026 текст артисты оплата",
+    "result": "leads only: the Ministry of Culture and the All-Russian Union of Culture Workers' industry agreement for 2023-2025 was extended to 31 December 2028 by an additional agreement (businessofrussia.com PDF, a secondary); the Mincifry press and broadcasting agreement 2024-2026 (garant.ru)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "https://www.garant.ru/products/ipo/prime/doc/408865045/ read (Garant's copy of the Mincifry–culture workers' union agreement for press, TV and radio organisations, 20 March 2024)",
+    "result": "secondary, about broadcasters' employees, not screen performers per day: its point 31 sets the industry minimum monthly pay for Mincifry's off-budget press and broadcasting organisations at 'не ниже минимального размера оплаты труда, установленного федеральным законом'; no per-shooting-day or per-performance rate",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for actors: the Ministry of Culture industry agreement (extended to 2028) covers state theatres' staff, a monthly-salary floor at most; no per-day or per-performance rate is known to exist in it. Text not reached (culture.gov.ru reset, Rostrud 403).",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6199",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rdb.rw WordPress search API for 'film' (30 results) and the three Rwanda Film Office grant announcements read in full; https://www.rfo.rw/ (Rwanda Film Office) and https://www.rwandafilm.rw/",
+    "result": "RDB's film pages hold grants only; no pay rule, rate card or performers' body named. rfo.rw HTTP 500; rwandafilm.rw CONNECT 502.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6201",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rdb.rw WordPress search API for 'film' (30 results) and the three Rwanda Film Office grant announcements read in full; https://www.rfo.rw/ (Rwanda Film Office) and https://www.rwandafilm.rw/",
+    "result": "RDB's film pages hold grants only; no pay rule, rate card or performers' body named. rfo.rw HTTP 500; rwandafilm.rw CONNECT 502.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6203",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://rdb.rw/rwanda-film-office-launches-creative-grants-initiative-2024-with-e360000-to-support-filmmakers/",
+    "title": "Rwanda Film Office Launches Creative Grants Initiative 2024 with €360,000 to Support Filmmakers, Rwanda Development Board, 13 December 2024",
+    "said": "The Rwanda Film Office (RFO) has unveiled its Creative Grants Initiative, providing €360,000 in funding to support Rwandan filmmakers. ... supported by the Rwanda Development Board (RDB), the Organisation Internationale de la Francophonie (OIF), and the ACP-EU. It will provide funding for two production support projects and two post-production support projects. ... The RFO, established at RDB in 2019",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://rdb.rw/rwandas-film-industry-advances-with-support-for-four-film-projects-under-the-creative-grants-initiative2024/",
+    "title": "Rwanda’s Film Industry Advances with Support for Four Film Projects under the Creative Grants Initiative 2024, Rwanda Development Board, 15 July 2025",
+    "said": "... two in post-production — have been awarded a total of €360,000 in funding. The grants are co-financed equally by the Rwanda Development Board and the Organisation Internationale de la Francophonie, with additional support from the ACP-EU Culture Programme.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://rdb.rw/rwandas-film-industry-takes-a-step-forward-with-support-of-33-projects/",
+    "title": "Rwanda’s Film Industry takes a step forward with support of 33 projects, Rwanda Development Board, 31 January 2023",
+    "said": "A total of 33 film and series projects in early development (pitch, writing, rewriting) and in production phase (fiction, documentary, short films) will be supported to a tune of over Rwf184 million. ... Of the 8 projects submitted by women, 7 have be[en selected]",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rdb.rw WordPress search API for 'film' (30 results) and the three Rwanda Film Office grant announcements read in full; https://www.rfo.rw/ (Rwanda Film Office) and https://www.rwandafilm.rw/",
+    "result": "found: grants, not a rebate. RFO's first call (results 31 January 2023): 33 projects, over Rwf184 million; Creative Grants Initiative 2024: €360,000 to 4 projects (2 production, 2 post-production), co-financed equally by RDB and the OIF with ACP-EU support (laureates 15 July 2025). No page names a production rebate or tax incentive. rfo.rw answered HTTP 500; rwandafilm.rw CONNECT 502.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 for 'rw,rwandafilm)'",
+    "result": "no result returned (the lookup ran past its time limit)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "item": "fund",
+   "name": "Rwanda Film Office grants (RDB)",
+   "calls": [
+    {
+     "year": 2022,
+     "results": "2023-01-31",
+     "projects": 33,
+     "totalRWF": 184000000,
+     "over": true
+    },
+    {
+     "name": "Creative Grants Initiative 2024",
+     "totalEUR": 360000,
+     "projects": 4,
+     "split": "2 production, 2 post-production",
+     "cofinance": "RDB and OIF equally, ACP-EU support"
+    }
+   ],
+   "rebate": null,
+   "unfound": [
+    "a production rebate (none named on any RDB page read)"
+   ]
+  },
+  "notes": "The rebate sought isn't on RDB's site; grants are what the state offers by its own pages. 'No rebate' isn't an absence that stands (RFO's own site was not readable).",
+  "sources": []
+ },
+ {
+  "id": "R-6200",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rdb.rw WordPress search API for 'film' (30 results) and the three Rwanda Film Office grant announcements read in full; https://www.rfo.rw/ (Rwanda Film Office) and https://www.rwandafilm.rw/",
+    "result": "RDB's film pages hold grants only; no pay rule, rate card or performers' body named. rfo.rw HTTP 500; rwandafilm.rw CONNECT 502.",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6205",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://film.moc.gov.sa/, https://www.moc.gov.sa/ (connection reset), https://cinema.org.sa/ and https://theater.moc.gov.sa/ (CONNECT 502), https://www.film.sa/ (TLS name mismatch, not read)",
+    "result": "none reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://laws.boe.gov.sa/ (Bureau of Experts laws database)",
+    "result": "connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index for 'sa,gov,moc,film)', 'sa,film)', 'sa,org,cinema)'",
+    "result": "the data host served an error page for cluster.idx (919 bytes) on each try; no index read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04 (Arabic): هيئة الأفلام السعودية عقد نموذجي الممثلين المخرجين أجور جمعية السينما عضوية",
+    "result": "no model contract, pay rule or membership terms; results on licensing-fee cuts, the Saudi Cinema Association running the Saudi Film Festival, and a new film critics' association (eremnews, saudifilmfestival.org)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39 retried for 'sa,gov,moc,film)' after a pause",
+    "result": "index read; no captures of film.moc.gov.sa",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Every Saudi official host refused or reset today.",
+  "sources": [],
+  "newSources": []
+ },
+ {
+  "id": "R-6207",
+  "verdict": "still-blocked",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://film.moc.gov.sa/, https://www.moc.gov.sa/ (connection reset), https://cinema.org.sa/ and https://theater.moc.gov.sa/ (CONNECT 502), https://www.film.sa/ (TLS name mismatch, not read)",
+    "result": "none reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://laws.boe.gov.sa/ (Bureau of Experts laws database)",
+    "result": "connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index for 'sa,gov,moc,film)', 'sa,film)', 'sa,org,cinema)'",
+    "result": "the data host served an error page for cluster.idx (919 bytes) on each try; no index read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 2026-11-04 (Arabic): هيئة الأفلام السعودية عقد نموذجي الممثلين المخرجين أجور جمعية السينما عضوية",
+    "result": "no model contract, pay rule or membership terms; results on licensing-fee cuts, the Saudi Cinema Association running the Saudi Film Festival, and a new film critics' association (eremnews, saudifilmfestival.org)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39 retried for 'sa,gov,moc,film)' after a pause",
+    "result": "index read; no captures of film.moc.gov.sa",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Every Saudi official host refused or reset today.",
+  "sources": [],
+  "newSources": []
+ }
+]

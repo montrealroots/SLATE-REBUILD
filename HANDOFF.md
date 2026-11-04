@@ -297,6 +297,54 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
+### Resume here (written 2026-11-04, before a session switch)
+
+The session of 2026-11-04 stopped with work that wasn't yet committed, because the gate was red on it. All of it is
+kept in `research/rounds/2026-11-04-layer4/` (its `README.md` says what each file is). Do these in order:
+
+1. Look before working (CLAUDE.md's rules 2 and 3): `git status -sb`, `git log --oneline -5`, `git stash list`,
+   `git worktree list`; `npm ci`. If a later commit than this one already says it holds the series-and-play integration,
+   skip to step 4.
+2. Restore the uncommitted integration onto this commit, as the package's README says (`git apply --binary` its
+   `wip-tracked.patch`, then `tar xzf` its `wip-untracked.tgz`). It holds: a series and a play in every market, wired by
+   four role integrators from the research of 2026-11-04 (first wave t1-t8, follow-up u1-u25: 217 country-items found,
+   510 in part, 94 found not to exist, 1,386 blocked), their register patches merged (565 entries patched, about 400
+   new, ids R-9793 to R-10204), their catalog lines merged, the four role compiles rebuilt. In it: a series' incentive
+   in 49 markets, a series' fund in 5, its fee cap in 13, a play's credit in 1 and fund in 4; a play directed in CA, US,
+   FI, AX, KG, AT, NL, CU, AD (NC, PN, GS, IO, VA holding that nothing sets it); a play written in DK, NO, IS, CA, AD and,
+   by royalty alone, FR, SK, LT, UY, IT, CZ, with BL, GF, MF, PM, YT through France; a stage part in IS, CZ, CA (by
+   theatre company category, `ca-cta-a`..`ca-cta-g`) and VA; the pick-up and recoup chances the game's own, told; and the
+   errors the integrators fixed (Argentina's Buenos Aires rebate in place of the 2022 figures, Malta's EUR 5M cap,
+   Ghana's GH¢20m split between the Film Fund and a Creative Arts Fund, refused searches dropped as attempts).
+3. Run `npm run gate`. It is red on two things only: 235 producer blockers (`person.markets.producer.blocked.<CC>.tvstage`,
+   listed in the package's `results/tvstage/gaps.json`) stand on fewer than the five methods, and 39 director rows are
+   pending (no stage director's minimum and no blocker: AN AQ AR AS AU AZ BA BE BL BW CC CH CL CS CX GF GP GU HK HM JE
+   LI LV MC ME MF MP MQ NF PA PH PM PR RE SK TH UM VI YT). The methods round closes both: twenty agents, one per
+   `results/tvstage/m<n>.todo.json`, on the brief `briefs/16-methods-round.md`, each making every missing attempt for
+   real. If `results/tvstage/m<n>.result.json` are in the package, the round ran; else run it (the owner chose it,
+   2026-11-04: "Run the methods round (Recommended)"; at most ten web searches an agent, the session's allowance being
+   200 in all). Then write the attempts into the register: append each `producer.attempts` to its blocker; for each
+   stage item (7 director, 8 writer, 9 actor) append the attempts to that role's blocker
+   (`person.markets.director.blocked.<CC>`, `person.markets.writer.blocked.<CC>`, `person.markets.blocked.<CC>`),
+   extending its `sought` to name the stage pay, or create the blocker where the todo names none (the director's 39);
+   whatever an attempt found goes to its role's research file and engine as the integrators did. Rebuild the four role
+   compiles (`npx tsx tools/person/markets{,-director,-producer,-writer}/build.ts`), then `npm run gate:write` and
+   `npm run gate`, and commit and push when green.
+4. Then the rest of this section below, in order: what the integrators found and the engines can't read yet, the older
+   "not tried" attempts, the web-search rounds on what stays blocked (the items the follow-up agents name under
+   `notSearched` or "no web search" first: the session's search allowance ran out midway), and proving layer 4 on CI.
+
+Found on 2026-11-04 and not yet in any engine, for step 4: Germany's NV Bühne went out of force for the GDBA and BFFS
+on 30 June 2026 (the Bühnenverein's own page), which the actor's `de-stage` and the director's German terms still
+read; the US has no stage terms for an actor (Actors' Equity's are held only at second hand, and the US isn't in the
+actor's markets compile, so the player isn't told); Kyrgyzstan's and Belgium's stage pay are near compilable (the
+table's columns; Flemish-subsidised employers only); Estonia's culture-worker minimum (EUR 1,720) rests on press with no
+start date; Vietnam's Decree 287/2026 stage table was never reached; Uzbekistan's rebate (PF-6202 para. 9) names
+series, not yet wired; Lebanon's Ministry of Culture funds films, its terms not found; the items only the first
+wave's agents marked found from what the repository already held, not read again.
+
+### After that
+
 Layer 4's first research wave is integrated (2026-11-04). What is left before it is proven, with the research rounds
 run as layers 2 and 3 had them (the briefs in `research/rounds/`: change the date, the scratchpad path and the groups,
 keep the rules):

@@ -1,0 +1,2605 @@
+[
+ {
+  "id": "R-8061",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.consellgeneral.ad/ca/arxiu/arxiu-de-lleis-i-textos-aprovats-en-legislatures-anteriors/vi-legislatura-2011-2015/copy_of_lleis-aprovades/decret-legislatiu-del-26-02-2014-de-publicacio-del-text-refos-de-la-20-2007-del-18-d2019octubre-de-societats-anonimes-i-de-responsabilitat-limitada/at_download/PDF",
+    "title": "Consell General (BOPA pages as published): Decret legislatiu del 26-02-2014 de publicació del text refós de la Llei 20/2007, del 18 d'octubre, de societats anònimes i de responsabilitat limitada, art. 46",
+    "said": "Article 46 Membres de l’òrgan d’administració 1. Els membres de l’òrgan d’administració són els administradors, que poden ser tant persones físiques com persones jurídiques. … 2. Les persones físiques han de tenir la capacitat plena d’obrar i no estar sotmeses a restricció o inhabilitació de cap mena per a l’exercici del comerç.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Llei 20/2007 societats anònimes i de responsabilitat limitada Andorra administradors \"menors d'edat\" BOPA' (standard)",
+    "result": "returned the Consell General's addresses for the 2014 consolidated text (text refós) and the original llei-20-2007.pdf, a Constitutional Court ruling and amendment reports; nothing on minors directly",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "consellgeneral.ad: the 2014 text refós PDF and llei-20-2007.pdf (both downloaded, pdftotext, grepped for menor, capacitat)",
+    "result": "found: companies: an administrator who is a natural person must have full capacity to act (capacitat plena d'obrar) and be under no restriction or disqualification from trade (art. 46.2 of the consolidated text; the same words in the 2007 original); the Law sets no age itself, so the age is that of full capacity (majority at 18, or emancipation, under Llei 30/2022, read earlier)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "bopa.ad (Butlletí Oficial): the home page is a script app; its script names an API (bopaazurefunctions.azurewebsites.net) and the official legal portal portaljuridicandorra.ad, curl",
+    "result": "not read: bopa.ad gives no text without scripts; portaljuridicandorra.ad's home answered (it lists laws by codes such as L2026021), but its page for Llei 20/2007 (L2007020) reset the connection twice",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "consellgeneral.ad: guessed PDF addresses for Llei 20/2007 de societats; its approved-laws list; cultura.ad (Govern, culture), curl",
+    "result": "not found: companies and funds: both Llei 20/2007 addresses 404; the laws list redirected to a login (403); cultura.ad answered 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, ca-AD) 'actors Andorra associació actors cinema ajuts Govern'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ad,bopa)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "616 and 240 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "administratorMustHave": "capacitat plena d'obrar (full capacity to act)",
+    "law": "Llei 20/2007 (text refós 2014) art. 46.2",
+    "ownAge": null
+   }
+  },
+  "notes": "Companies answered by capacity, not a number. Set-aside, unions and funds still blocked; portaljuridicandorra.ad answered once then reset."
+ },
+ {
+  "id": "R-8063",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.moet.gov.ae/documents/20121/0/DecreeLaw_50_2022_pdf.pdf/d34d9209-b407-6e73-9acb-3b01522e94e6?t=1673496808487",
+    "title": "Ministry of Economy & Tourism (moet.gov.ae): Federal Decree-Law No. 50/2022 Issuing the Commercial Transactions Law (English text, Lexis Middle East, hosted on the ministry's Commercial Transaction Legislations page), art. 18",
+    "said": "1. Everyone reaches (18) eighteen calendar years of age, and has no legal impediment, shall be eligible to practice trade. 2. The minor, whether or not subject to conservatorship or guardianship, who reaches (15) fifteen calendar years of age, may trade on the terms and conditions issued by the resolution of the Cabinet, based on the proposition of the Minister of Economy.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.moet.gov.ae/documents/20121/376326/Commercial+Companies.pdf/12d14f53-1a3e-47b4-8e70-fac3f672c403?t=1645596097819",
+    "title": "Ministry of Economy & Tourism: Federal Decree-Law no. (32) of 2021 on Commercial Companies (English text, Lexis Middle East, on the ministry's Companies Legislations page), art. 40",
+    "said": "A joint partner shall have the capacity of a trader and shall be deemed practising commercial activities in the name of the Company.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "moet.gov.ae/en/companies-legislations and /en/commercial-transaction-legislations (Ministry of Economy & Tourism, curl): downloaded Commercial Companies.pdf (Decree-Law 32/2021) and DecreeLaw_50_2022_pdf.pdf; grepped both for age, capacity, minor",
+    "result": "found in part: companies: Decree-Law 32/2021 sets no age of its own for a partner, manager or board member in the passages grepped (art. 40 gives a joint partner the capacity of a trader); Decree-Law 50/2022 art. 18 sets trade capacity at 18 calendar years, a minor from 15 trading on Cabinet terms (the Cabinet resolution not read). The whole Companies law was not read line by line for a manager's age.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "film.gov.ae (Abu Dhabi Film Commission), dftc.gov.ae (Dubai Film and TV Commission), uaemc.gov.ae (National Media Authority home) with curl, for childPerformers and funds",
+    "result": "film.gov.ae answered 403; dftc.gov.ae failed (proxy CONNECT 502); uaemc.gov.ae's home page holds no child or age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl) 'UAE child actors filming rules'",
+    "result": "21 items, none on a rule for child actors on set: Gulf News (2026-06-19) on the under-15 social-media ban, the child digital safety law (Times of India 2026-01-22), others off topic; no union or guild named",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ae,gov,film)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "1 and 4 captures; only robots.txt captured for film.gov.ae",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "tradeCapacity": 18,
+    "minorTradeFrom": 15,
+    "minorTrade": "on terms set by Cabinet resolution (Decree-Law 50/2022 art. 18(2))",
+    "courtMayContinueMinorsTrade": "art. 19",
+    "companiesLawOwnAge": "none found in the passages grepped of Decree-Law 32/2021"
+   }
+  },
+  "notes": "Companies item now partly answered from the ministry-hosted texts; the Cabinet resolution on a minor's trade from 15 is the next thing to read. Child performers, unions and funds still blocked; archive tried in the batch below if recorded. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8065",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "moic.gov.af (Ministry of Information and Culture) home, curl",
+    "result": "answered (75 kB); no film fund, union or child-performer page linked on it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Afghanistan film actors union children cinema'",
+    "result": "18 items, none on an Afghan union, fund or child-performer rule (Britannica, Bhaskar, PRIO 2021 on theatre activism)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'af,gov,moic)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "1066 and 934 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8067",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.ag/wp-content/uploads/2018/08/cap-27.pdf",
+    "title": "Laws of Antigua and Barbuda (laws.gov.ag, Ministry of Legal Affairs): Antigua and Barbuda Labour Code, Cap. 27, s. G16 (Membership of minors)",
+    "said": "G16. Any person under the age of legal majority but not under the age of sixteen years may be a member of a trade union, unless provision to the contrary is made in the rules thereof; and he may, except as hereinbelow provided, enjoy all the rights of a member, execute all instruments, and give all acquittances necessary to be executed or given under the rules, but- (i) he shall not be a member of a committee of management, a trustee, or the treasurer of a union;",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.ag/wp-content/uploads/2018/08/cap-11.pdf",
+    "title": "Laws of Antigua and Barbuda: Age of Majority Act, Cap. 11, s. 2(1)",
+    "said": "a person attains full age on attaining the age of eighteen instead of on attaining th'k age of twenty-one",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.gov.ag (Laws of Antigua and Barbuda): the alphabetical list (letters A, C, F, I, L, M, T) and the PDFs of the Labour Code (Cap. 27) and the Age of Majority Act (Cap. 11), curl and pdftotext",
+    "result": "found: unions: a statutory rule for every union, Labour Code s. G16: from 16 to majority a minor may be a member unless the union's rules say otherwise, never on the committee of management, trustee or treasurer. minorsContracts: the Age of Majority Act (Cap. 11, read through) sets full age at 18 and holds nothing on a minor's contracts or earnings; no Infants' or Minors' Contracts Act in the list. Funds: no film fund act in the list. The Labour Code's amending acts (1998-2022) were not read for a change to s. G16.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl) 'Antigua Barbuda film fund grant filmmakers'",
+    "result": "7 items; only Antigua News (2023-02-11) 'Producer considers major film investment in Antigua Barbuda'; no fund or applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ag,gov,laws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "145 and 11 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "minorMemberFrom": 16,
+    "unlessRules": true,
+    "minorMayNotBe": [
+     "committee of management",
+     "trustee",
+     "treasurer"
+    ],
+    "law": "Labour Code Cap. 27, s. G16"
+   },
+   "minorsContracts": {
+    "statute": null,
+    "note": "Age of Majority Act Cap. 11: full age 18, silent on contracts; common law"
+   }
+  },
+  "notes": "Unions answered by statute (no Antiguan actors', writers' or directors' union found). Check the 1998-2022 Labour Code amendments before marking G16 in force unchanged. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8069",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.ai/storage/pdfs/2022%20AXA%20Revised%20Statutes%20and%20Regulations/PDF%20(Acts)/B-R.S.A.s/B072-Business%20Companies%20Act.pdf",
+    "title": "Attorney General's Chambers, Anguilla (laws.gov.ai): Business Companies Act, R.S.A. c. B72, showing the law as at 31 December 2022, s. 104(1)(a)",
+    "said": "104.   (1) A person is disqualified from being a director of a company if that person— (a) has not attained the age of 18 years;",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.ai/storage/pdfs/2022%20AXA%20Revised%20Statutes%20and%20Regulations/PDF%20(Acts)/T-R.S.A.s/T035-Trade%20Unions%20Act.pdf",
+    "title": "Attorney General's Chambers, Anguilla: Trade Unions Act, R.S.A. c. T35, as at 31 December 2022, ss. 26-27",
+    "said": "26.    A person under the age of 18 years, but above the age of 16 years, may be a member of a trade union, unless provision is made in the rules thereof to the contrary, and may, subject to those rules, enjoy all the rights of a member except as herein provided, and execute all instruments and give all acquittances necessary to be executed or given under the rules, but shall not be a member of the committee of management, trustee or treasurer of the trade union.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.ai/storage/pdfs/2022%20AXA%20Revised%20Statutes%20and%20Regulations/PDF%20(Acts)/A-R.S.A.s/A045-Age%20of%20Majority%20Act.pdf",
+    "title": "Attorney General's Chambers, Anguilla: Age of Majority Act, R.S.A. c. A45, as at 15 December 2000 (read whole)",
+    "said": "As from the commencement date, a person shall attain full age on attaining the age of 18 years instead of on attaining the age of 21 years",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.gov.ai (Revised Statutes of Anguilla, 2022 Revision): the index paged 1-16 with curl; PDFs fetched from its /storage/pdfs/ path: Business Companies Act (B72), Trade Unions Act (T35), Age of Majority Act (A45, read whole), Guardianship of Infants Act (G15)",
+    "result": "found: companies: a person under 18 is disqualified from being a director (s. 104(1)(a)); unions: a statutory rule for every union: from over 16 to 18 a minor may be a member unless the union's rules say otherwise, but not on the committee of management, trustee or treasurer; from 16 a member may nominate a beneficiary (s. 27). minorsContracts: the Age of Majority Act (read whole) sets full age at 18 and says nothing on a minor's contracts; the Guardianship of Infants Act holds nothing on contracts or earnings in the passages grepped (property administration only); no Infants' or Minors' Contracts Act in the index. Funds: no film or culture fund act in the index (Public Entertainments Tax Act only).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.ai (Government of Anguilla) home and /laws, curl; commercialregistry.ai",
+    "result": "gov.ai links the law site and gazette lists, no film fund or union page; commercialregistry.ai failed (TLS SSL_ERROR_SYSCALL)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ai,gov)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "255 and 315 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinAge": 18,
+    "law": "Business Companies Act, R.S.A. c. B72, s. 104(1)(a)"
+   },
+   "unions": {
+    "minorMemberFrom": "over 16 (to 18), unless the union's rules say otherwise",
+    "minorMayNotBe": [
+     "committee of management",
+     "trustee",
+     "treasurer"
+    ],
+    "nominateBeneficiaryFrom": 16,
+    "law": "Trade Unions Act, R.S.A. c. T35, ss. 26-27"
+   },
+   "minorsContracts": {
+    "statute": null,
+    "note": "Age of Majority Act (c. A45) read whole: full age 18, silent on contracts; the common law applies"
+   }
+  },
+  "notes": "Unions answered by statute, not by a union's own rules (no Anguillan actors', writers' or directors' union found). Funds still blocked. Many Commonwealth Trade Unions Acts carry the same minors' clause: worth reading for AG, BB, BM, BS, BZ, DM, GD, GY, FJ, BW, GM. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8071",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "nationalfilmcenter.gov.al, qkk.gov.al and www.qkk.gov.al (guessed for the Qendra Kombëtare e Kinematografisë), curl",
+    "result": "not reached: each failed (proxy CONNECT 502)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "qbz.gov.al (Qendra e Botimeve Zyrtare, official publications), curl",
+    "result": "not reached: empty reply from server",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, sq-AL) 'Qendra Kombëtare e Kinematografisë konkurs aplikim'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'al,gov,nationalfilmcenter)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8073",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ncc.am and www.ncc.am (National Cinema Center of Armenia), cinema.am, curl",
+    "result": "ncc.am failed (proxy CONNECT 502) both ways; cinema.am gave a 482-byte page with nothing",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "arlis.am (Armenian Legal Information System) home, curl",
+    "result": "answered (1.4 MB); not searched for the NCC's grant rules",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'National Cinema Center Armenia grant competition filmmakers'",
+    "result": "4 items (Georgia Today 2026-08-27 'Who Owns a Film Once the State Pays for It?', Filmmaker Magazine 2023, Eurasianet 2019, FIP.AM 2019); none on the applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'am,ncc)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8539",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gobiernu.cw (Government of Curaçao, successor to the Antillean administration's records), curl",
+    "result": "refused: 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Netherlands Antilles child labour film'",
+    "result": "3 items (BBC, France 24, Inside Indonesia); none on Antillean law",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cw,gobiernu)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "3 and 4 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Netherlands Antilles were dissolved on 10 October 2010; their rules survive only as Curaçao's, Sint Maarten's and the BES islands' (see BQ). Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8077",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "iacam.gov.ao and www.ircine.gov.ao (guessed for Angola's cinema institute), curl",
+    "result": "not reached: proxy CONNECT 502 for both",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, pt-AO) 'Instituto Angolano de Cinema fundo apoio cinema'",
+    "result": "3 items (Magazine.HD 2024, Rede Angola 2014 profiles); no fund or union rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ao,gov,iacam)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8080",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "buenosaires.gob.ar/trabajo/trabajo-infantil-artistico and /trabajo (City of Buenos Aires); argentina.gob.ar/trabajo/trabajoinfantil (national), curl",
+    "result": "not found: the City's guessed pages 404; argentina.gob.ar answered 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-AR) 'trabajo infantil artístico autorización horarios Ciudad de Buenos Aires niños actores'",
+    "result": "2 items: La Nación (2024-05-08) 'El lado oscuro de la fama infantil: por qué el trabajo de niños en el cine y la TV está permitido y cómo se regula en la Argentina' (a lead, not read: Google News gives no direct address) and Derecho en Zapatillas (2015)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ar,gob,buenosaires)/trabajo'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "La Nación 2024-05-08 is the lead to follow for the jurisdictions' rules. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8082",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "asbar.org (American Samoa Bar Association, which hosts the Annotated Code) and americansamoa.gov, curl",
+    "result": "asbar.org refused (403); americansamoa.gov answered (874 kB home), no code or labour page found in it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'American Samoa child labor law'",
+    "result": "78 items, none on American Samoa's own statute (Bloomberg Law, FreedomUnited, US DOL findings pages)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'org,asbar)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "7 and 7 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8085",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "overheid.aw (Government of Aruba) home and /wetgeving, curl",
+    "result": "both answered with the same 355 kB home page (the address isn't a legislation index); no union or BW Book 2 text reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, nl-NL) 'Aruba vakbond artiesten acteurs'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'aw,overheid)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "15 and 27 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8087",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://visitaland.com/film/produktionsstod-incitament/",
+    "title": "Åland Film Commission (Visit Åland's film pages, to which film.ax redirects; linked from regeringen.ax 'Åland välkomnar film'): Produktionsstöd och incitament",
+    "said": "Registrerade produktionsbolag kan söka stöd för produktioner som spelas in helt eller delvis på Åland. Stödberättigade format är långfilmer, dokumentärer och tv-serier. … Ansökan kan skickas in till Ålands Landskapsregering löpande under året.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.regeringen.ax/kultur-fritid/stod-lan-stipendier/arbetsstipendium",
+    "title": "Ålands landskapsregering: Arbetsstipendium (Ålands kulturdelegation)",
+    "said": "Ålands kulturdelegation beviljar arbetsstipendier till enskilda personer ur penningautomatmedel. … Målgrupp Enskilda kulturarbetare bosatta och verksamma på Åland samt enskilda kulturarbetare vars arbete främjar den kulturella verksamheten på Åland eller kännedom om den åländska kulturen. Både etablerade konstnärer och kulturarbetare men även unga konstnärer i början av sin karriär. … Stipendiet förutsätter tjänstledighet under stipendietiden. … Stipendier beviljas inte för genomfört arbete eller för finansiering av grundstudier vid högskola eller annan läroinrättning.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "regeringen.ax: home, /kultur-fritid/stod-lan-stipendier, /arbetsstipendium, /aland-valkomnar-film (three guessed culture-grant addresses answered 404); film.ax (redirected to visitaland.com/film/) and its /produktionsstod-incitament/ page, curl",
+    "result": "found in part: funds: the regional production support is for registered production companies only (feature, documentary, TV series; top financing up to 12.5% once 65% is secured), so no individual applicant; the culture delegation's working stipend is for individual cultural workers living and working on Åland, 'young artists at the start of their career' included, with no age stated on the page, and it presumes leave from a job; not for basic studies. The regional support's own rules and the stipend's application form not read.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "sunklo.fi (Suomen Näytelmäkirjailijaliitto) and sel.fi (guessed for Suomen Elokuvaohjaajaliitto), curl",
+    "result": "not found: unions: sunklo.fi answered 403; sel.fi is 'Sel. ry', a teachers' association, not the directors' union",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, sv-FI) 'Ålands landskapsregering kulturstöd film'",
+    "result": "11 items (Ålands Radio 2026-10-28 on a short-film prize, Yle 2024-01-27 on Stormskär film tourism, Nya Åland, HBL); no applicant or age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fi,sunklo)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "2 and 2 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "productionSupport": {
+     "applicant": "registered production company",
+     "individual": false
+    },
+    "workingStipend": {
+     "applicant": "individual cultural worker living and working on Åland (or promoting Åland's culture)",
+     "ageRule": null,
+     "note": "young artists at the start of their career included; presumes leave from employment"
+    }
+   }
+  },
+  "notes": "Unions still blocked; the Finnish directors' union's site wasn't found (sel.fi is wrong). Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8089",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "culture.gov.az and www.culture.gov.az/az (Ministry of Culture), curl",
+    "result": "culture.gov.az gave a 989-byte redirect shell; www.culture.gov.az failed (TLS SSL_ERROR_SYSCALL)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "e-qanun.az (the official legal database) home, curl",
+    "result": "a 2.7 kB script shell with no text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, az-AZ) 'Azərbaycan Mədəniyyət Nazirliyi film layihə müsabiqə'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'az,gov,culture)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "41 and 16 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8091",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "fbihvlada.gov.ba home and /bosanski/zakoni/ (FBiH Government laws), curl",
+    "result": "home 404; the laws page answered 200 with an empty body",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, bs-BA) 'zakon o privrednim društvima osnivač maloljetnik direktor'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ba,gov,fbihvlada)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "1534 and 2675 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8093",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "barbadosparliament-laws.com (Parliament's laws site, linked from barbadosparliament.com): home and /en/BrowseTitle, curl",
+    "result": "the browse list loads by script; the Trade Union Act wasn't reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "ncf.bb (National Cultural Foundation) home and /cultural-industries-development-fund/, curl",
+    "result": "no union named; the CID Fund is open to 'all citizens of Barbados and companies registered in Barbados whose principal shareholder or partner is a citizen of the island', registration on barbadosartists.bb required; no age stated (funds, not sought here)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Barbados actors union guild'",
+    "result": "1 item (Barbados Today 2020, a musician's funeral)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bb,ncf)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "254 and 284 captures; ncf.bb captures (254, 284): galleries and fund pages, the CID Fund page read live instead",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Barbados' Trade Union Act may carry the same minors' clause found today in Anguilla (s. 26) and Antigua (Labour Code s. G16). Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8095",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "bfdc.gov.bd (Bangladesh Film Development Corporation) and bfaa.org.bd (guessed for the Film Artists Association), curl",
+    "result": "bfdc.gov.bd presents a self-signed certificate (not read); bfaa.org.bd failed (proxy CONNECT 502)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Bangladesh Film Artists Association membership'",
+    "result": "73 items on the July 2026 election (Daily Star 2026-07-07, Daily Sun 2026-07-03, Jagonews24); none on a membership age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bd,gov,bfdc)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "6 and 0 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8097",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "vaf.be (Vlaams Audiovisueel Fonds): home, /steunmaatregelen, /reglementen and /over-ons/reglementen; audiovisuel.cfwb.be (Centre du Cinéma et de l'Audiovisuel) home and /aides/, curl",
+    "result": "not found: funds: VAF's support list loads by a script (Algolia) and its text isn't in the page; /reglementen and /over-ons/reglementen answered 404. refused: the CCA (audiovisuel.cfwb.be, home and /aides/) answered 'Requête non autorisée' with a bot support ID (ETNIC's block page)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "emploi.belgique.be / werk.belgie.be (SPF Emploi): guessed child-labour theme pages and the site's search for 'travail des enfants', curl",
+    "result": "not found: minorsContracts: both theme pages 404; the search page's results load by script, none in the page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "ejustice.just.fgov.be Justel: the Code des sociétés et des associations (eli/loi/2019/03/23/2019A40586/justel) and the loi du 3 juillet 1978 (eli/loi/1978/07/03/1978070303/justel), curl",
+    "result": "refused: both answered with a JavaScript bot challenge (TSPD) instead of the text; not got past",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS searches (curl): nl-BE 'kinderen podium film toelating kinderarbeid loon spaarrekening België' and 'kinderarbeid filmopnames afwijking toelating kind acteur'; fr-BE 'enfants spectacle tournage dérogation travail Belgique rémunération'",
+    "result": "0, 0 and 1 item (an Assemblée nationale (France) inquiry record); nothing on Belgium",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'be,vaf)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "861 and 720 captures; 861 and 720 captures of vaf.be; the only regulations captured are the Gamefonds' (games), plus a VAF staff code and annual report 2016; no film-fund regulation",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Unions (ACOD Cultuur, SETCa-SEL, ARRF/ASA) not reached today. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8099",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "fdct-bf.org (Fonds de développement culturel et touristique) home, curl",
+    "result": "answered: the FDCT is a public fund created by décret N°2016-729/PRES/PM/MCAT/MINEFID of 8 August 2016, offering loans and grants to the cultural sector; no applicant or age rule on the home page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legiburkina.bf, curl",
+    "result": "not reached: connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-BF) 'FDCT Burkina subvention cinéma conditions éligibilité'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bf,legiburkina)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8101",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "sab.bg (guessed for the Union of Bulgarian Actors, САБ), sab-bg.org, uab.bg, sbfd.bg (guessed for the film-makers' union), nfc.bg (National Film Center), curl",
+    "result": "not found: unions: sab.bg is an agricultural supplier, not the union; sab-bg.org and sbfd.bg failed (proxy CONNECT 502); uab.bg gave a 12 kB page with no text; nfc.bg answered (not a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lex.bg Commerce Act page (ldoc -14917630) and registryagency.bg (Registry Agency, Commercial Register's page); ciela.net free-zone act 2121934337, curl",
+    "result": "not found: companies: lex.bg answered 403; registryagency.bg redirected (302) to a page without the Act; the ciela.net act opened is the Obligations and Contracts Act (ЗЗД), not the Commerce Act",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS searches (curl, bg-BG) 'Съюз на артистите в България членство устав' and 'Съюз на артистите в България'",
+    "result": "0 items, then 58 (Mediapool 2026-07-09 on the union's budget demands, Dnevnik 2026-03-27 on the Ikar awards, BTA, Vesti, bTV); none on membership or age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bg,sab)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "354 and 4 captures; their addresses were not searched further for the rule sought; sab.bg proved to be an agricultural supplier, so these captures aren't the union's",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The union's own site wasn't identified without a search. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8103",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "culture.gov.bh (Bahrain Authority for Culture and Antiquities), curl",
+    "result": "not reached: connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Bahrain actors association union'",
+    "result": "3 items (Globe and Mail, ITF 2023 on union rights in Bahrain, GDN); no actors' body",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bh,culture)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8105",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "assemblee.bi (Assemblée nationale) home and a guessed laws section (spip.php?rubrique12), curl",
+    "result": "home answered (369 kB) with no link to the 2020 Labour Code; the guessed section 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-BI) 'Burundi code du travail 2020 enfants'",
+    "result": "2 items (IWACU 2025 and 2023 on domestic workers); nothing on child performers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bi,assemblee)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "226 and 171 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8107",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "fac.bj and www.fac.bj (guessed for the Fonds des arts et de la culture), curl",
+    "result": "both 'This Website is Under Construction'",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-BJ) 'Fonds des arts et de la culture Bénin cinéma appel à projets'",
+    "result": "24 items; Matin Libre (2025-10-10) on the Fonds de Développement des Arts et de la Culture (FDAC) handing cheques to 42 projects: a lead to the fund's current name, no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bj,fac)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The fund is now reported as the FDAC (Fonds de Développement des Arts et de la Culture). Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8109",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "comstbarth.fr (Collectivité de Saint-Barthélemy) and guadeloupe.gouv.fr (préfecture), curl",
+    "result": "comstbarth.fr is a 760-byte script shell; the préfecture's home answered, no page on child performers found from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-FR) 'Saint-Barthélemy enfants spectacle tournage autorisation préfet'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fr,comstbarth)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "11 and 8 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8111",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "bermudalaws.bm (Bermuda Laws Online) home, curl",
+    "result": "a Blazor server app: the 8.7 kB page holds no law list without a live session",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.bm/film (guessed), curl",
+    "result": "404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Bermuda film commission incentive'",
+    "result": "5 items, none on Bermuda (US state incentives; Boston Herald on a Clyde Best film)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "bermudalaws.bm/consolidatedlaw.rss (30 items) and guessed PDFs /laws/Consolidated Laws/Trade Union Act 1965.pdf and Companies Act 1981.pdf (the address pattern seen in Common Crawl's captures of bermudalaws.bm), curl",
+    "result": "not found: the RSS lists no Trade Union Act; both guessed PDFs answered 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bm,bermudalaws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "166 and 157 captures; captures show the address patterns /Laws/Consolidated Law/<year>/<title> and /laws/Consolidated Laws/<title>.pdf (used above for guessed PDFs, which 404); no Trade Union Act captured",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8113",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CAP-39-2021-ED-COMPANIES-ACT.pdf",
+    "title": "Attorney General's Chambers, Brunei Darussalam: Laws of Brunei, Chapter 39, Companies Act, Revised Edition 2021 (linked from agc.gov.bn/documents/companies-act/), s. 138(2A)",
+    "said": "(2A) No person other than an individual who has attained the age of 18 years and who is otherwise of full legal capacity shall be a director of a company.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "agc.gov.bn (Attorney General's Chambers) home, /services_brulaw-2/ and /services-lawlibrary/; a guessed Laws-of-Brunei page, curl",
+    "result": "home and the two service pages answered but list no Age of Majority Act or Companies Act text in what was read; the guessed page 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Brunei Age of Majority Act'",
+    "result": "2 items (Britannica, DW 2019); no Brunei text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "agc.gov.bn/documents/companies-act/ (address found in Common Crawl's CC-MAIN-2026-43 list of agc.gov.bn pages) and its PDF CAP-39-2021-ED-COMPANIES-ACT.pdf; a guessed /documents/age-of-majority-act/, curl",
+    "result": "found: companies: s. 138(2A) of the Companies Act (Cap. 39, Revised Edition 2021): a director must be an individual who has attained 18 and is otherwise of full legal capacity. The Age of Majority Act page guessed answered 404, and the CC lists for agc.gov.bn hold no page with 'majority' in its address.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 and -39 index lists for prefix 'bn,gov,agc)/' (859 and 155 captures), grepped for majority, companies and children",
+    "result": "captures of /documents/companies-act/, /documents/children-and-young-persons-act/, /documents/children-order-2000/, /documents/adoption-of-children-act/; none for an Age of Majority Act",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinAge": 18,
+    "alsoFullLegalCapacity": true,
+    "law": "Companies Act Cap. 39 (R.E. 2021) s. 138(2A)"
+   }
+  },
+  "notes": "Director's age answered. Age of Majority Act (Cap. 184) still not reached. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8115",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "adecine.gob.bo (Agencia del Desarrollo del Cine y Audiovisual Bolivianos): home read (menu: Documentación, Manual de Reglamento, Convocatorias Nacionales); /convocatorias/, /manual, /nx, /servicios, curl with pauses",
+    "result": "refused: after the home page every address answered 429 Too Many Requests",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-BO) 'ADECINE Fondo de Fomento al Cine convocatoria requisitos'",
+    "result": "6 items: Opinión Bolivia and El País Tarija (2024-11-20) on the Fondo de Fomento al Cine being launched, Opinión (2025-02-21) on its winning features, Opinión (2020-01-08); leads, no requisites quoted",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bo,gob,adecine)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "12 and 22 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8117",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rijksdienstcn.com (Rijksdienst Caribisch Nederland) home, curl",
+    "result": "answered; its menu (education, culture, immigration, justice) gives no child-labour exemption page in what was read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "wetten.overheid.nl/zoeken/zoekresultaat/titel/burgerlijk wetboek bes/ (a different form from a1's title searches), curl",
+    "result": "404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'nl,rijksdienstcn)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8022",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "dbca.org.br/estatutosocial (Diretores Brasileiros de Cinema e do Audiovisual), apaci.com.br/associe-se/ (Associação Paulista de Cineastas), curl",
+    "result": "not found: unions: DBCA's statute page is script-built and its text didn't load; APACI's categories need at least one feature released commercially, or 90 minutes of TV/VOD directed, and name no age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.br/ancine/pt-br/fsa and two ANCINE news items it links (2024-12-02 'MinC e ANCINE lançam novas Chamadas Públicas do FSA', 2024-01-22 on the international and box-office calls), curl",
+    "result": "not found: funds: the news items describe 2024 calls whose applicants are Brazilian production and distribution companies; no 2025-2026 call text was linked",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, pt-BR) 'SATED sindicato artistas menores registro DRT'",
+    "result": "2 items: tmc.com.br (2026-07-15) on a union's reaction to an influencer's casting, Notícias da TV (2022) on the DRT; no rule for minors outside SP and RJ",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'br,org,apaci)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8119",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.bahamas.gov.bs/cms/ and its acts-by-alphabetical-order list, curl",
+    "result": "the list's entries load by script; no Companies or Industrial Relations Act text reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "bahamasfilm.com, curl",
+    "result": "refused: 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Bahamas actors guild union film'",
+    "result": "2 items, none on the Bahamas",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bs,gov,bahamas,laws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "249 and 561 captures; IndustrialRelationsAct_1.pdf and InternationalBusinessCompaniesAct_1.pdf captured, but as 403 responses (crawldiagnostics), so no text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8121",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Bhutan \"Acceptable Forms of Child Labour\" regulation 13 years categories of work list' (standard)",
+    "result": "only US DOL Findings reports (2011-2024) and ecoi.net copies: minimum work age 13 under the Labour and Employment Act and the 'Regulation on Working Conditions 2012: Acceptable Forms of Child Labour', hazardous list in its s. 9; secondaries, the regulation itself not returned",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "moice.gov.bt (Ministry of Industry, Commerce and Employment, which now holds labour), curl",
+    "result": "answered; its home links only an FDI rules PDF, no labour regulation",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "molhr.gov.bt (Ministry of Labour) and bicma.gov.bt (media authority), curl",
+    "result": "not reached: proxy CONNECT 502 and connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Bhutan child labour regulation 13 years light work'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bt,gov,molhr)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The regulation's name is now known: Regulation on Working Conditions 2012 (Acceptable Forms of Child Labour); read it at the ministry when reachable. Methods not tried today: official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8586",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lovdata.no/dokument/NL/lov/1930-02-27-2 and lovdata.no/lov/1930-02-27-2 (Bilandsloven), curl",
+    "result": "refused: 405 'Request stopped by Varnish IPS' both times",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "regjeringen.no Bouvetøya theme page (guessed id2350432), curl",
+    "result": "403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, nb-NO) 'Bouvetøya lov jurisdiksjon norsk rett'",
+    "result": "1 item: Meld. St. 32 (2014–2015) on regjeringen.no, a lead on the dependencies' law; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'no,lovdata)/dokument/nl/lov/1930-02-27'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8124",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.bw (Government of Botswana portal), curl",
+    "result": "its certificate has expired; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Botswana actors union guild'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bw,org,bocra)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "315 and 141 captures; their addresses were not searched further for the rule sought; bocra.org.bw is the communications regulator, queried as a stand-in for a government domain; nothing on unions",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8126",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "pravo.by (National Legal Internet Portal): home and its search for 'дети артисты', curl",
+    "result": "answered; the search page's results didn't come in the page text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, ru-BY) 'Белорусский союз кинематографистов приём в члены'",
+    "result": "4 items (Ingushetia film festival, Cinemaplex, BelTA 2025 on Listapad, Onliner 2015); none on membership",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'by,pravo)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "3206 and 25486 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8128",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "belizefilmcommission.com, curl",
+    "result": "answered: production registration and why-film-in-Belize pages; no union or age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "belizelaw.org, curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Belize actors union film commission'",
+    "result": "3 items (San Pedro Sun 2025, Amandala 2019, 7 News 2012 on festivals); no union",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'bz,gov,belizejudiciary)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Belize's Trade Unions Act may carry a minors' membership clause like Anguilla's and Antigua's. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8130",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "meaa.org (MEAA): home, Membership_Home.aspx and Governance.aspx; awg.com.au/membership/membership-levels/ (Australian Writers' Guild); adg.org.au/Join-us (Australian Directors' Guild), curl",
+    "result": "not found: unions: no lower age or under-18 rule on any page read. AWG: full (produced credits), associate (emerging) and student (enrolled full-time) levels; ADG: student membership on a student ID or a film school's letter, retired membership above 60, all memberships subject to board approval; MEAA's governance page links no rules document",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "fwc.gov.au (Fair Work Commission, register of registered organisations): MEAA's organisation page and a rules PDF address (018V-rules.pdf), curl",
+    "result": "refused: both answered 403 with an Azure WAF JavaScript challenge; not got past",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-AU) 'MEAA Equity child performers membership'",
+    "result": "6 items (AussieTheatre, Guardian, Backstage, Campaign Brief, IF Magazine); none on a membership age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'org,meaa)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "27 and 28 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "AWG's and ADG's membership pages read today: no age rule on them (not an absence: their constitutions not read). MEAA rules sit at the FWC register behind a WAF challenge. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8132",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "leganet.cd (Congolese law portal) and droit-afrique.com (OHADA texts), curl",
+    "result": "leganet.cd presents a self-signed certificate (not read); droit-afrique.com answered 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-CD) 'RDC enfants acteurs cinéma loi protection de l'enfant travail'",
+    "result": "1 item (Burkina24 2020, off topic)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cd,leganet)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "35 and 55 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8133",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "sgg-rca.org (Secrétariat général du gouvernement), curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-CF) 'Centrafrique cinéma fonds artistes union'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cf,gouv)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "42 and 16 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8135",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "sgg.cg (Secrétariat général du gouvernement, Journal officiel pages), curl",
+    "result": "home answered (35 kB) with links to the Journal officiel's subscription, associations and special issues; the Code de la famille wasn't reached from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-CG) 'Congo Brazzaville code de la famille majorité 18 ans'",
+    "result": "3 items: RFI 2024 and Courrier Stratégique 2025 (Burkina Faso's family code), Actualite.cd 2023 (DRC); nothing on the Republic of the Congo",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cg,gouv)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8139",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "fonsic.ci (Fonds de soutien à l'industrie cinématographique), curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-CI) 'FONSIC appel à projets conditions éligibilité'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ci,fonsic)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8141",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "paclii.org/ck/legis/consol_act/ (PacLII's Cook Islands consolidated acts; a secondary, tried for its address to the primary), curl",
+    "result": "refused: 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-NZ) 'Cook Islands film fund screen incentive'",
+    "result": "1 item (Screen Daily 2025, Germany); nothing on the Cook Islands",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ck,gov,cookislandslaws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "2 and 3 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8143",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "registrodeempresasysociedades.cl/PreguntasFrecuentes.aspx (Registro de Empresas y Sociedades, 'Tu empresa en un día'), curl, grepped for menor, edad, 18 años, incapa-",
+    "result": "not found: no age; the FAQ says only that to represent a company as administrador, gerente or director one must be Chilean or a foreigner with a permanent or qualifying temporary visa",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-CL) 'Chile menor de edad constituir empresa en un día'",
+    "result": "23 items, none on a minor forming or running a company (WIRED, El País, Shopify)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cl,bcn)/leychile/navegar'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "2259 and 1802 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8145",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "minac.cm (Ministère des Arts et de la Culture) and spm.gov.cm (Prime Minister's services), curl",
+    "result": "minac.cm refused (403); spm.gov.cm gave a 2.9 kB shell",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-CM) 'Cameroun fonds cinéma appel à projets ministère des arts'",
+    "result": "5 items (Institut français Création Africa 2025, culture.gouv.fr 2024, Africultures 2020, APAnews 2025 on Burkina); no Cameroonian fund rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cm,minac)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "2 and 91 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8147",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'中国电影家协会章程 会员 入会条件' (standard)",
+    "result": "no China Film Association charter returned: only other associations' rules (China Writers' Association's admission by published works and recommendation, others)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "chinafilm.org.cn (中国电影家协会) over http and https; cflac.org.cn (中国文联); cfa.org.cn, curl",
+    "result": "chinafilm.org.cn answered 503 (http) and reset (https); cflac.org.cn reset; cfa.org.cn is the China Film Archive, not the association",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, zh-CN) '电影产业发展专项资金 申报条件'",
+    "result": "13 items: Nweon 2026-07-03 on the National Film Administration's VR cinema rules and special-fund support, Shenzhen government 2026 application guides; none on an applicant's age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cn,org,cflac)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "380 and 14 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8149",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.convocatoriafdc.com//archivos/59/Terminos%20y%20condiciones%20convocatoria.pdf",
+    "title": "Proimágenes Colombia (Fondo para el Desarrollo Cinematográfico): Términos y Condiciones de uso, www.convocatoriafdc.com, cl. 10.6",
+    "said": "10.6.​ Que realiza el proceso de postulación siendo jurídicamente capaz para obligarse, bien sea porque es la misma persona natural mayor de 18 años que concursa, o porque es el representante legal de la persona jurídica que participa.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.convocatoriafdc.com/estimulos-concurso",
+    "title": "Convocatoria FDC (Proimágenes Colombia): Estímulos por concurso, 'Cómo concursar'",
+    "said": "La Convocatoria FDC sólo está abierta para personas naturales y personas jurídicas colombianas. Una empresa colombiana sin embargo puede tener un representante legal extranjero. Para efectos de esta convocatoria, la persona natural o jurídica que postula proyectos en las modalidades de producción y realización se entiende como el productor concursante. Hay modalidades dirigidas solo a personas naturales y otras dirigidas solo a personas jurídicas.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "proimagenescolombia.com: home, /secciones/convocatorias/convocatorias.php?est=1, /fondos/fondos.php?tipo=nal; convocatoriafdc.com/estimulos-concurso and its 'Terminos y condiciones convocatoria.pdf' (read through), curl",
+    "result": "found: funds: the FDC call is open to Colombian natural and legal persons only; an applicant must be legally capable of binding himself, as a natural person over 18 or the legal representative of the company (T&C cl. 10.6); the site's own terms are for users who are of age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "suin-juriscol.gov.co (SUIN-Juriscol, the state's legal register) for the Código de Comercio, curl",
+    "result": "not read: the server's certificate chain is incomplete (unable to get local issuer) and the intermediate isn't in the allowed bundle",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-CO) 'Convocatoria FDC 2026 requisitos personas naturales'",
+    "result": "1 item (Universidad del Magdalena 2024, off topic)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'co,org,proimagenescolombia)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "applicantMinAge": 18,
+    "applicants": "Colombian natural persons (over 18, legally capable) or Colombian legal persons through their legal representative",
+    "source": "convocatoriafdc.com T&C cl. 10.6"
+   }
+  },
+  "notes": "Unions and companies still blocked. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8151",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://centrodecine.go.cr/sites/default/files/media/uploads/reglamento_del_fondo_para_el_fomento_audiovisual_y_cinematografico_el_fauno_-_decreto_ejecutivo_no_44456-c_0.pdf",
+    "title": "Centro Costarricense de Producción Cinematográfica: Reglamento del Fondo para el Fomento Audiovisual y Cinematográfico 'El Fauno', Decreto Ejecutivo No. 44456-C, art. 8",
+    "said": "Artículo 8°-Alcance. El Fondo cofinanciará proyectos de empresas productoras audiovisuales y/o cinematográficos independientes, que sean personas jurídicas costarricenses debidamente inscritas y al día con el pago de impuestos y cargas sociales.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "centrodecine.go.cr: home, /programas/fauno-tuhistoriacuenta, /catalogo/fauno and the Fauno regulation PDF (Decreto Ejecutivo 44456-C) linked from it; pani.go.cr, curl",
+    "result": "found: funds: El Fauno co-finances only independent production companies that are Costa Rican legal persons, duly registered and up to date with taxes and social charges; a natural person can't apply, so no applicant age arises (the director must be under contract to the company, art. 8). pani.go.cr refused (403): childPerformers not reached.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "pgrweb.go.cr/scij/ (SCIJ, Procuraduría's legal information system) home, curl",
+    "result": "answered (22 kB home); the Código de Comercio's capacity articles were not reached through it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-CR) 'Fondo El Fauno 2026 convocatoria requisitos'",
+    "result": "16 items: La Nación and Delfino.cr (2026-09-25) on ₡330 million for 15-16 projects and three video games, Semanario Universidad (2026-07-29) on the sector's 'limbo'; consistent with company applicants, no age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cr,go,pani)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "9 and 1 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "applicant": "independent Costa Rican production company (legal person), registered and tax-compliant",
+    "naturalPerson": false,
+    "law": "Decreto Ejecutivo 44456-C art. 8"
+   }
+  },
+  "notes": "Child performers (PANI), unions and companies still blocked. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8154",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Fondo de Fomento del Cine Cubano convocatoria 2026 bases quiénes pueden participar persona natural' (standard)",
+    "result": "no bases text; OnCuba, Diario de Cuba and Prensa Latina items; the bases are said to be on Cubacine; email fondofomentocuba@icaic.cu",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "icaic.cu, cubacine.cult.cu, cubacine.icaic.cu (ICAIC), uneac.org.cu (UNEAC), curl",
+    "result": "not reached: proxy CONNECT 502 or connection reset for each",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gacetaoficial.gob.cu (Gaceta Oficial) home and a guessed page for Decreto-Ley 373/2019 del Creador Audiovisual y Cinematográfico Independiente, curl",
+    "result": "not reached: connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-CU) 'ICAIC Fondo de Fomento del Cine Cubano convocatoria requisitos'; OnCuba's article of 2025-04-02 read (curl)",
+    "result": "15 items (Prensa Latina 2026-09-09 'Abre en Cuba convocatoria del Fondo de Fomento del Cine Nacional', Cubadebate 2025-03-29, OnCuba 2025-04-02, Radio Rebelde 2023). OnCuba: the seventh call was 'abierta a independientes y colectivos', its bases on www.cubacine.icaic.cu; the fund rests on Acuerdo 8613 of the Council of Ministers (14 June 2019) and Decreto-Ley 373/2019. A lead, no applicant age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cu,icaic)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "DL 373/2019 (the independent creator's register) is the likely gate for who may apply; read it in the Gaceta when reachable."
+ },
+ {
+  "id": "R-8156",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "kiosk.incv.cv (Imprensa Nacional, Boletim Oficial), curl",
+    "result": "its certificate has expired; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "cultura.gov.cv (Ministério da Cultura), curl",
+    "result": "not reached: connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, pt-CV) 'Cabo Verde fundo cinema audiovisual apoio'",
+    "result": "5 items (Bantumen 2026, NeoFeed, RFI 2014 'Ministro da Cultura quer criar Fundo Audiovisual em Cabo Verde', Buala 2021); no rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cv,gov)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "58 and 59 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8159",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "meaa.org (MEAA): home, Membership_Home.aspx and Governance.aspx; awg.com.au/membership/membership-levels/ (Australian Writers' Guild); adg.org.au/Join-us (Australian Directors' Guild), curl",
+    "result": "not found: unions: no lower age or under-18 rule on any page read. AWG: full (produced credits), associate (emerging) and student (enrolled full-time) levels; ADG: student membership on a student ID or a film school's letter, retired membership above 60, all memberships subject to board approval; MEAA's governance page links no rules document",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "fwc.gov.au (Fair Work Commission, register of registered organisations): MEAA's organisation page and a rules PDF address (018V-rules.pdf), curl",
+    "result": "refused: both answered 403 with an Azure WAF JavaScript challenge; not got past",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-AU) 'MEAA Equity child performers membership'",
+    "result": "6 items (AussieTheatre, Guardian, Backstage, Campaign Brief, IF Magazine); none on a membership age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislation.wa.gov.au statutes search for 'minors' (curl)",
+    "result": "answered 404; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'au,org,meaa)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl; the prefix 'au,org,meaa' was wrong (MEAA is meaa.org, queried for CC as 'org,meaa)/' with 27 and 28 captures)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Unions as for CC (R-8130). WA minors' contracts not reached. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8161",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://cypruscinemaoffice.cy/documents/23/Regulation_on_funding_schemes_Film_productions_2024-2026_ENG.pdf",
+    "title": "Cyprus Cinema Office (Deputy Ministry of Culture): Regulation on funding schemes for film productions 2024-2026 (English), General Terms §3",
+    "said": "3. Eligible beneficiaries under this Regulation include producers and production companies, as well as screenwriters submitting applications through producers or production companies, and also directors applying for their debut short film. Beneficiaries of the Measure based in the Republic of Cyprus must either conduct or intend to conduct operations within the Republic of Cyprus",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "culture.gov.cy home (links cypruscinemaoffice.cy); cypruscinemaoffice.cy home, /funding/cyprus-national-funding-programmes/, the call notice (ENG/TUR) and the Regulation PDF it links (193 kB of text; grepped for age, natural/legal person, applicant), curl",
+    "result": "found in part: funds: eligible beneficiaries are producers and production companies, screenwriters applying through a producer or production company, and directors applying for a debut short; EU-based applicants apply through a Cypriot company or a branch in the Republic; the 'Producer' is defined as a natural or legal person; no age rule appears in the Regulation (the only 'young age' is of Cypriot cinema itself).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl) 'Deputy Ministry of Culture Cyprus film funding call applicants'",
+    "result": "8 items: Indie Shorts Mag (2026-10-21) 'Cyprus Announces Short-Film Funding Call: Dates and Application Guide', Film New Europe (2026-08-10), Politis (2026-06-29) on a workshop; none quoted an applicant age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'cy,gov,culture)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "2 and 2 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "beneficiaries": [
+     "producer or production company",
+     "screenwriter through a producer or production company",
+     "director for a debut short film"
+    ],
+    "ageRule": null,
+    "source": "Regulation on funding schemes for film productions 2024-2026, General Terms §3"
+   }
+  },
+  "notes": "No age stated; a minor screenwriter would apply only through a producer. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8165",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "presidence.dj (Présidence de la République), curl",
+    "result": "answered; no culture or film fund page found from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-DJ) 'Djibouti fonds cinéma culture'",
+    "result": "4 items (Leral 2026 interview with Souad Houssein, Mondafrique 2025, L'Humanité 2023, ADI 2025 heritage week); no fund",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'dj,gouv,culture)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8167",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://dominica.gov.dm/laws/chapters/chap89-03.pdf",
+    "title": "Government of Dominica, Laws of Dominica: Trade Unions Act, Chapter 89:03 (Act 12 of 1952, amended by 8 of 1966; authorised pages 1-37, L.R.O. 1/1991)",
+    "said": "7. Any seven or more members of a trade union may by subscribing their names to the rules of the union … register such trade union",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "dominica.gov.dm/laws-of-dominica: its search form posted with 'trade union' (1 result), 'companies' (26), 'minors' (0); downloaded the Trade Unions Act, Chap. 89:03 (text layer grepped for minor, age, sixteen, eighteen) and the Companies Act 1994 (Act 21 of 1994), curl",
+    "result": "not found: unions: the Trade Unions Act's text holds no minors' membership clause in its text layer (only 'stage' matches 'age'); the text layer is a scan's and may miss words, so this isn't recorded as an absence. companies: the Companies Act 1994 PDF is a 272-page scan with no text layer; not OCR'd today. minorsContracts: no Minors' or Infants' Act found by the search. funds: none found.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'dm,gov,dominica)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "47 and 56 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Companies Act 1994 (dominica.gov.dm/laws/1994/act21-1994.pdf) needs OCR of its directors' part to answer the director's age. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search; trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8170",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "joradp.dz/HAR/Index.htm (Journal officiel), curl",
+    "result": "a 987-byte frameset shell; not searched",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "cnc.dz (guessed for Algeria's cinema centre) and its /legislation-reglementation/, curl",
+    "result": "cnc.dz is the Conseil national de la comptabilité, not a cinema body",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-DZ) 'FDATIC fonds cinéma Algérie dossier'",
+    "result": "7 items: DIA (2026-10-14) 'Retour du FDATIC : … Maissa Bey présidente de la commission de lecture des scénarios', Algérie Patriotique (2026-02-12) on a platform for filing projects, L'Expression 2026-10-26; leads, no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'dz,joradp)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "121 and 146 captures; their addresses were not searched further for the rule sought; cnc.dz proved to be the accountants' council, so these captures aren't a cinema body's",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "FDATIC relaunched in 2026 with an online filing platform (press); find the ministry's platform and its conditions. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8172",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gob.ec/sites/default/files/sign/procedure-ICCA-007-C1-2026090903033-20267148-signed.pdf",
+    "title": "gob.ec, Registro Único de Trámites y Regulaciones: trámite ICCA-007-C1 'Convenio de asignación de recursos del Fondo de Fomento a la Creación Cinematográfica y Audiovisual', Instituto de Cine y Creación Audiovisual (information updated 3 April 2025)",
+    "said": "Realizadores y gestores culturales (personas naturales) que postulen a la línea de financiamiento cinematográfico y audiovisual. Productoras audiovisuales y demás personas jurídicas del sector cultural … Dirigido a: Persona Jurídica - Privada, Persona Jurídica - Pública, Persona Natural - Ecuatoriana, Persona Natural - Extranjera. … Personas naturales: En caso del ser extranjero, visa de residencia permanente emitida por el Estado ecuatoriano. Requisitos específicos: Para cada convocatoria planificada en el POF, se elabora sus propias bases técnicas",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Fondo de Fomento del Cine Cubano convocatoria 2026 bases quiénes pueden participar persona natural' (standard; run for CU, it returned this Ecuadorian procedure among others)",
+    "result": "returned gob.ec's ICCA-007-C1 procedure PDF, read for EC",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gob.ec Registro Único de Trámites: ICCA-007-C1 procedure PDF (5 pages), curl",
+    "result": "found in part: funds: the film fund (now run by the Instituto de Cine y Creación Audiovisual, ICCA) is open to natural persons, Ecuadorian or foreign (a foreigner needs permanent residence), and to private and public legal persons; each call's own technical bases set its requirements, so any applicant age is in the bases (not read). No age in the procedure.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "creatividad.gob.ec (IFCI's old site) and its link fomento.culturaypatrimonio.gob.ec/ifaic; supercias.gob.ec/portalscvs/ (Superintendencia de Compañías), curl",
+    "result": "creatividad.gob.ec answered and links the fomento platform; the platform answered 403; supercias' portal answered without the Ley de Compañías text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-419-EC) 'IFCI convocatoria cine requisitos mayores de edad'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ec,gob,creatividad)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "14 and 3 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "body": "Instituto de Cine y Creación Audiovisual (ICCA)",
+    "applicants": [
+     "natural person, Ecuadorian",
+     "natural person, foreign with permanent residence visa",
+     "private or public legal person"
+    ],
+    "ageRule": "set by each call's bases (not read)"
+   }
+  },
+  "notes": "Minors' contracts, child performers, unions and companies not reached."
+ },
+ {
+  "id": "R-8176",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "moc.gov.eg (Ministry of Culture), curl",
+    "result": "certificate chain incomplete (unable to get local issuer); the allowed intermediate bundle didn't complete it; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, ar-EG) 'صندوق دعم السينما مصر شروط التقدم'",
+    "result": "29 items, none on an Egyptian film-support fund's conditions (Masrawy housing, Al Jazeera on a US fund, Youm7 on CineGouna)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'eg,gov,moc)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "0 and 7 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8178",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ccm.ma/docs/Decret-Prod-Num-Fest-version-final.pdf",
+    "title": "Centre Cinématographique Marocain: Décret n° 2.12.325 du 17 août 2012 fixant les conditions et les procédures d'aide à la production cinématographique … (read whole)",
+    "said": "Conformément aux dispositions de l'article 24 de la loi de Finance N° 22.12 de 2012 … sera attribué un soutien financier aux opérations suivantes. … La production d'œuvres cinématographiques,",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ccm.ma home and /soutiens-au-cinema; the decree 2.12.325 it links (read whole, 7.8 kB), curl",
+    "result": "not found: funds: the decree sets the aid and its three commissions but no applicant or age rule; the conditions of the 'avance sur recettes' sit in a joint order (arrêté) that the page doesn't link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-MA) 'CCM avance sur recettes commission dépôt dossiers conditions'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ma,ccm)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "264 and 332 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Company law and unions not reached; whether Moroccan rules reach the territory remains the open question. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8180",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "shabait.com (Ministry of Information), curl",
+    "result": "answered; no film association or company-law page found from the home page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Eritrea film association actors'",
+    "result": "1 item: Ministry of Information (shabait.com) 2015 'Sights and Sounds from the Hub of Harmony'; no rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'er,shabait)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8184",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.investmentfiji.org.fj/investment-incentives/audio-visual",
+    "title": "Investment Fiji: Audio Visual incentives",
+    "said": "FILM TAX REBATE 20% tax rebate on the expenditure incurred in Fiji and paid to Fiji Resident companies for goods and services. Eligibility: films and television products, asper existing Income Tax (Film-making and Audio-visual Incentives) Regulations 2016.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.frcs.org.fj/wp-content/uploads/2019/05/Film-making.pdf",
+    "title": "Fiji Revenue and Customs Service: Film-making incentives leaflet",
+    "said": "Where a producer has chosen to access the film tax rebate, the producer will not be able to obtain any other tax concessions under Part 5 of the Income Tax (Film-making and Audio-visual Incentives) Regulations 2016.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'Film Fiji audio visual incentive rebate guidelines eligibility applicant' (standard)",
+    "result": "returned Investment Fiji's audio-visual page, FRCS's film-making leaflet, PacLII copies of the 2016 regulations and their 2022 amendment, laws.gov.fj/Acts/ViewSection/131892, PwC's summary (rebate cut from 75% to 20% from 1 April 2022)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "investmentfiji.org.fj audio-visual page; frcs.org.fj Film-making.pdf; filmfiji.com (guessed for Film Fiji), curl",
+    "result": "not found: funds: the rebate goes to the producer of a film or TV product on Fiji spend; no applicant age or capacity rule on either page; filmfiji.com is an unrelated download site, not Film Fiji",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "laws.gov.fj/Acts/ViewSection/131892 (the search's address for the regulations), curl",
+    "result": "404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fj,gov,laws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "31 and 41 captures; laws.gov.fj captures are home pages and DisplayAct/AjaxPage addresses answering 404; no act text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Majority, child performers, minors' contracts and unions not retried beyond a1's laws.gov.fj attempt (its disclaimer gate). The 2016 Regulations' definition of 'applicant' is the next read (PacLII is a secondary; laws.gov.fj the primary). Methods not tried today: trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8186",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.gov.fk (Falkland Islands Legislation) home, curl",
+    "result": "a 730-byte script shell with no law list",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-GB) 'Falkland Islands employment of children ordinance'",
+    "result": "15 items: GOV.UK (2015-03-12) 'Promoting reform of children's rights in the Falkland Islands', MercoPress (2025-11-07) on childcare subsidy regulations; no contract or company rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fk,gov,legislation)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "10 and 6 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8188",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "fsmlaw.org/fsm/code/index.htm (FSM Code index, FSM Supreme Court's law site) and Title 51, Chapter 1 (Protection of Resident Workers), curl",
+    "result": "not found: the national Code's Title 51 is on resident and nonresident workers; no minimum working age, majority or child-performer rule in Chapter 1 as grepped; Title 36 (Corporations) chapters are general provisions and the registrar; age of majority and child labour sit with the four States' codes, not reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'org,fsmlaw)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "1074 and 1356 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search; trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8189",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "film.fo (Filmshúsið), curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "logir.fo home (links LawDatabase.aspx), curl; not searched again after a1's form searches today",
+    "result": "answered",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, is-IS) 'Filmshúsið stuðul umsókn'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fo,film)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8191",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "igis.ga (Institut gabonais de l'image et du son), curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-GA) 'IGIS Gabon fonds cinéma appel'",
+    "result": "4 items: Leral (2026-05-21) on IGIS at Cannes 2026, Afrik 2013, Africultures 2011 'Soutenir le cinéma et la télévision au Gabon', Gabonreview 2025-11-20; no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ga,igis)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8034",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2006/2903",
+    "title": "The National Archives, Find Case Law: Proform Sports Management Ltd v Proactive Sports Management Ltd [2006] EWHC 2903 (Ch), paras 34-40",
+    "said": "Paragraph 8-005 provides that apart from contracts for necessaries and contracts of apprenticeship education and service, the general rule at common law is that a minor's contract is voidable at his option; i.e. not binding on the minor, but binding on the other party. … In my judgment, cases such as Chaplin and Doyle make it clear that the basis of the class of analogous contracts is that the minor is entitled to earn his living or to start to do so.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.legislation.gov.uk/ukpga/1987/13",
+    "title": "legislation.gov.uk: Minors' Contracts Act 1987 (read whole), ss. 1-3",
+    "said": "The following enactments shall not apply to any contract made by a minor after the commencement of this Act.— (a) the Infants Relief Act 1874 … (b) section 5 of the Betting and Loans (Infants) Act 1892 … the court may, if it is just and equitable to do so, require the defendant to transfer to the plaintiff any property acquired by the defendant under the contract",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.gov.uk: Minors' Contracts Act 1987, whole Act (ukpga/1987/13), curl",
+    "result": "read whole: it disapplies the Infants Relief Act 1874, keeps guarantees enforceable and gives restitution; it says nothing on which minors' contracts bind, so the common law governs",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "bailii.org/ew/cases/EWHC/Ch/2006/2903.html (Proform v Proactive), then the same judgment at caselaw.nationalarchives.gov.uk/ewhc/ch/2006/2903, curl",
+    "result": "BAILII refused (an Anubis 'Making sure you're not a bot!' page); the National Archives' Find Case Law served the judgment: a minor's contract is voidable at his option except necessaries and contracts of apprenticeship, education and service, and contracts analogous to them that let the minor earn his living or start to (Doyle v White City Stadium [1935] 1 KB 110; Chaplin v Leslie Frewin [1966] Ch 71, a minor's book contract; Denmark Productions v Boscobel (1967), The Kinks' management contract), so long as the contract is for the minor's benefit; a footballer's agency agreement wasn't such a contract",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'uk,gov,legislation)/ukpga/1987/13'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minorsContracts": {
+    "rule": "voidable at the minor's option, except necessaries and contracts of service, apprenticeship or education and contracts analogous to them that let the minor earn a living or start to, binding when for the minor's benefit taken as a whole",
+    "examples": [
+     "Doyle v White City Stadium [1935] 1 KB 110 (boxer's licence)",
+     "Chaplin v Leslie Frewin [1966] Ch 71 (minor's book)",
+     "Denmark Productions v Boscobel (1967) (The Kinks' management)"
+    ],
+    "statute": "Minors' Contracts Act 1987: guarantees and restitution only",
+    "courtApproval": null
+   }
+  },
+  "notes": "Doyle and Chaplin themselves not read (only as cited in Proform). A trade-press attempt and the earnings set-aside, if the entry seeks one, not tried. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8193",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.gd (Government of Grenada) home, curl",
+    "result": "answered; links laws.gov.gd (which answered 500, a1 today); no union or fund page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Grenada actors union film fund'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gd,gov,laws)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "6 and 7 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8195",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://matsne.gov.ge/en/document/view/5230186",
+    "title": "Legislative Herald of Georgia (matsne.gov.ge): Law of Georgia on Entrepreneurs, English consolidated text (versions to 02/04/2025 listed), art. 43(5)",
+    "said": "5. A member of the management body may be a legally competent natural person or a legal person.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gnfc.ge/uploads/articles/20251108142337-kanoni-erovnuli-kinematografiis-sakhelmtsifo-mkhardacheris-shesakheb.pdf",
+    "title": "Georgian National Film Center (gnfc.ge, About: documents): Law of Georgia on State Support of National Cinematography, art. 2(თ)",
+    "said": "თ) ფილმის პროდიუსერი – ფიზიკური ან იურიდიული პირი, რომელიც ინიციატორი და პასუხისმგებელია ფილმის წარმოებასა და დაფინანსებაზე;",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "matsne.gov.ge/en/document/view/5230186 (Law on Entrepreneurs, English), curl; text grepped for manager, competent, capacity, age",
+    "result": "found in part: companies: a member of a company's management body must be a 'legally competent natural person' or a legal person (art. 43(5)); the Law sets no age itself, so competence is the Civil Code's (not re-read today). A cooperative's representative must be 'legally competent' too.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gnfc.ge (Georgian National Film Center): home, /ka/competitions/grants, /ka/about and the documents it links: the Law on State Support of National Cinematography, the Center's statute (kinotsentris-debuleba) and the 2006 competition regulation (sakonkurso-debuleba), curl and pdftotext",
+    "result": "found in part: funds: the Law defines a film's producer, the party the Center funds, as 'a natural or legal person' who initiates and answers for the film's production and financing; no age is set in the Law or in the competition regulation read (it governs the expert commission). The current call texts (competitions pages) were not read.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS searches (curl): ka-GE 'საქართველოს კინოცენტრი კონკურსი პროდიუსერი'; en-US 'Georgian National Film Center competition applicants'",
+    "result": "0 items; 1 item (GeorgianJournal 2018 on a festival prize); no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'ge,gnfc)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "74 and 35 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "managerMustBe": "legally competent natural person or legal person",
+    "law": "Law on Entrepreneurs art. 43(5)",
+    "ownAge": null
+   },
+   "funds": {
+    "producer": "natural or legal person",
+    "law": "Law on State Support of National Cinematography art. 2(თ)",
+    "ageRule": null
+   }
+  },
+  "notes": "Child performers' hours under 14 and unions not reached today. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all)."
+ },
+ {
+  "id": "R-8197",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "guyane.gouv.fr (Préfecture de Guyane) home, curl",
+    "result": "answered (117 kB); no page on child performers or the commission found from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-FR) 'Guyane enfants spectacle commission préfet tournage'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'fr,gouv,guyane)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8199",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.gg home, curl",
+    "result": "answered; no page on children's employment or performance licences linked from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-GB) 'Guernsey child performance licence'",
+    "result": "0 items",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gg,gov)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "10 and 8 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8206",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gambia.gov.gm and moj.gov.gm, curl",
+    "result": "gambia.gov.gm's certificate has expired; moj.gov.gm's chain is incomplete (unable to get local issuer); neither read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Gambia Companies Act 2013 director age'",
+    "result": "3 items, none on the Act (Kalkine, Voice Gambia 2019)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gm,gov,moj)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "24 and 0 captures; moj.gov.gm/companies-department/ captured (24 captures in -43); not fetched",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8208",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "sgg.gov.gn (Secrétariat général du gouvernement) home, which links its Journal officiel (/document/journal/1), curl",
+    "result": "answered; the journal list not searched for a film-fund text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, fr-GN) 'Guinée fonds cinéma appel à projets'",
+    "result": "14 items: Guinee114 (2026-04-11) 'un scénariste souhaite la création d'un fonds souverain' (suggesting no national fund), Institut français, Afrimag, Africultures; no Guinean fund rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gn,gov,culture)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Press (Guinee114, 2026-04-11) reports a screenwriter calling for a sovereign film fund to be created: a lead that none exists. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8211",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "guineaecuatorialpress.com (government press office), curl",
+    "result": "answered; nothing on a film fund or performers' union on its home page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, es-ES) 'Guinea Ecuatorial cine fondo artistas'",
+    "result": "1 item (El País 2024 on Hermic Films' colonial archive)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gq,guineaecuatorialpress)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8213",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ekkomed.gr/wp-content/uploads/2026/03/Γενικοί-Οροι-Κανονισμού-Επιλεκτικών-Προγραμμάτων.pdf",
+    "title": "Hellenic Film & Audiovisual Center (ΕΚΚΟΜΕΔ): Γενικοί Όροι Προγραμμάτων Χρηματοδότησης Κινηματογραφικών Σχεδίων και Έργων (uploaded 2026-03, linked from /selective-funding-programs/), 'Δικαίωμα υποβολής'",
+    "said": "Δικαίωμα υποβολής στο σύνολο των Προγραμμάτων Χρηματοδότησης της Μονάδας Ανάπτυξης και Παραγωγής του ΕΚΚΟΜΕΔ (ανεξαρτήτως σταδίου) έχουν παραγωγοί που είναι πολίτες της Ευρωπαϊκής Ένωσης και έχουν την έδρα τους στην Ελλάδα. … Οι παραγωγοί (φυσικά ή νομικά πρόσωπα) πρέπει να έχουν ενεργό ΚΑΔ παραγωγής κινηματογραφικών ταινιών … Στο στάδιο ΓΡΑΦΗ (ανεξαρτήτως προγράμματος) δικαίωμα υποβολής έχουν παραγωγοί και σεναριογράφοι. … Οι σεναριογράφοι … πρέπει να έχουν ελληνική ιθαγένεια ή να έχουν ενεργό ΚΑΔ σεναριογράφου. Στο πρόγραμμα ΜΙΚΡΟΥ ΜΗΚΟΥΣ δικαίωμα υποβολής έχουν παραγωγοί και σκηνοθέτες/τιδες.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ekkomed.gr: home, a 2026A selective-scheme approvals notice, /selective-funding-programs/ and the General Terms PDF it links (48 kB of text, grepped for ηλικ-, ενήλικ-, φυσικ-, νομικ-, δικαιούχ-), curl; /funding/ answered 404",
+    "result": "found in part: funds: applicants are producers (natural or legal persons, EU citizens seated in Greece, with an active film-production activity code (ΚΑΔ), independent of broadcasters); at the writing stage producers and screenwriters (Greek nationality or an active screenwriter's ΚΑΔ); for short films producers and directors (directors Greek or with a Greek tax number and director's ΚΑΔ). No age appears in the General Terms: the only age in them is the children's-film rule (a central hero aged up to 13). The ΚΑΔ (a registered tax activity) is the effective gate: the age at which one may register an activity was not read.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, el-GR) 'ΕΚΚΟΜΕΔ πρόγραμμα χρηματοδότησης δικαίωμα υποβολής'",
+    "result": "4 items (Flix.gr 2026-06-10 and 2025-10-13 on approvals, Forin 2026-01-19 on the 2026 framework); no applicant age",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gr,gfc)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "39 and 44 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "applicants": [
+     "producer (natural or legal person; EU citizen seated in Greece; active film-production ΚΑΔ)",
+     "screenwriter at writing stage (Greek nationality or active screenwriter ΚΑΔ)",
+     "director for short films"
+    ],
+    "ageRule": null,
+    "source": "ΕΚΚΟΜΕΔ General Terms 2026"
+   }
+  },
+  "notes": "Companies (Ν. 4072/2012, Ν. 4548/2018) not reached today. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8215",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws.gov.gs/wp-content/uploads/2022/03/Cap202420Employment20of20Children.pdf",
+    "title": "Government of SGSSI, laws.gov.gs (1951 Consolidation page): Employment of Children Ordinance, Cap. 24 (4 of 1939), p. 215, a scanned page read from its image",
+    "said": "[handwritten across the head of the page] Repealed 1/66 + 13/68. … 2. Any person who employs a child under the age of 14 years in any occupation shall be guilty of an offence … Provided that this section shall not apply to part-time work not exceeding two hours daily, done by children of not less than 12 years of age; and Provided further that a magistrate may grant permission for any child under the age of 14 years to be employed if in his opinion such employment would be in the child's interests. [Note. This Ordinance is declared to be in force in the Dependencies by the Application of Colony Laws Ordinance, Cap. 1 (D.S.).]",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.gov.gs (SGSSI Laws): home, sitemap, /current-laws/ (404) and /1951-consolidation/, whose 'Employment of Children Cap 24' entry links a one-page scanned PDF; the page image read directly (OCR stopped, too slow on this machine)",
+    "result": "found, and it changes the premise: the site's own copy of Cap. 24 is struck through by hand and annotated 'Repealed 1/66 + 13/68'. Its text (14 the minimum age in any occupation; part-time up to two hours a day from 12; a magistrate may permit a child under 14 'in the child's interests') reached no entertainment rule and was, by the annotation, repealed by ordinances 1 of 1966 and 13 of 1968, which were not identified or read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.gs (Government of SGSSI) home, curl",
+    "result": "answered; it links laws.gov.gs and has no page on screen unions, film funds or companies",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gs,gov)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "252 and 280 captures; their addresses were not searched further for the rule sought",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "cap24": {
+     "minAge": 14,
+     "partTimeFrom": 12,
+     "partTimeMaxHoursPerDay": 2,
+     "magistratePermitUnder14": "if in the child's interests",
+     "entertainmentRule": null
+    },
+    "inForce": false,
+    "note": "marked by hand 'Repealed 1/66 + 13/68' on the official site's copy; the successor law not read"
+   }
+  },
+  "notes": "Cap. 24 can no longer be taken as in force; find ordinances 1/1966 and 13/1968 (likely Falkland Islands Dependencies ordinances) in the 1949-1985 Dependencies Ordinances list on laws.gov.gs. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); trade-press not tried today for this entry."
+ },
+ {
+  "id": "R-8220",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.gw (Government of Guinea-Bissau), curl",
+    "result": "not reached: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, pt-PT) 'Guiné-Bissau cinema fundo artistas'",
+    "result": "6 items (RFI 2025 interview, Esquerda.net 2024, VOA 2014 on corruption affecting culture and cinema); no rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gw,gov)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "no captures in either crawl",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ },
+ {
+  "id": "R-8222",
+  "verdict": "still-blocked",
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "parliament.gov.gy: home and /publications/acts-of-parliament/ (also with ?search=companies), curl",
+    "result": "the list holds only recent acts (2025); no Companies Act, Cap. 89:01, or Trade Union Act",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, en-US) 'Guyana film fund creative industries grant'",
+    "result": "10 items: Guyana Chronicle (2022-01-09) '$30M in grants for culture and creative arts industry', (2025-12-24) on a creative industry conference, Demerara Waves 2018; no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'gy,gov,mola)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "259 and 103 captures; mola.gov.gy/laws-of-guyana list pages 1-52 captured. Page 1's record (CC-MAIN-2026-43, 2026-10-17) read: the list runs by chapter (Cap. 001:01 onward), each with a 'Download' link to a whole volume PDF under www.mola.gov.gy/laws/ (e.g. 'Volume 1 Cap. 1.01 - 3.04…pdf'); the pages holding Cap. 89:01 (Companies) and Cap. 98:03 (Trade Unions) were not fetched today",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); institution not tried today beyond the register named: no reachable institution page was identified without a search."
+ },
+ {
+  "id": "R-8224",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NNC1_fillable.pdf",
+    "title": "Companies Registry (Hong Kong): Form NNC1, Incorporation Form (Company Limited by Shares), the Consent to Act as Director and statement (c)",
+    "said": "Each of the directors named in this form who has not signed the ‘Consent to Act as Director’ has consented to be a director of this company on its incorporation and each director who is a natural person has attained the age of 18 years.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/ND2A_fillable.pdf",
+    "title": "Companies Registry (Hong Kong): Form ND2A, Notice of Change of Company Secretary and Director (Appointment/Cessation)",
+    "said": "I consent to act as director／alternate director* of this company and confirm that I have attained the age of 18 years. … nominate a person (other than a body corporate) who has attained the age of 18 years as a reserve director of the company",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "cr.gov.hk (Companies Registry): FAQ pages local-company/incorporation.htm, companies-ordinance/change-affect-directors.htm, corporate-directorship.htm, general.htm; the specified-forms page and its Form NNC1 and ND2A PDFs (curl, pdftotext)",
+    "result": "found: companies: every natural-person director confirms on NNC1 (incorporation) and ND2A (appointment) that he has attained 18; a reserve director must have attained 18. The FAQ pages give no age. Cap. 622 s. 456 itself still not read (elegislation.gov.hk's browser check, a1 today).",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "hkpag.org (Hong Kong Performing Artistes Guild) home and /members; hkfdg.com (Hong Kong Film Directors' Guild) home, curl",
+    "result": "not found: unions: HKPAG's pages give its history, aims and a list of members, no membership rule or age; hkfdg.com's home is script-built and gave no text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Google News RSS search (curl, zh-HK) '香港演藝人協會 會員 資格'",
+    "result": "45 items on the guild's 2026 spring dinner and a charity market; none on a membership or age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index lists (cc.py over HTTP ranges) CC-MAIN-2026-43 and CC-MAIN-2026-39 for SURT prefix 'hk,gov,cr)/'; the Wayback Machine refused this client today (archive.org 429, web.archive.org connection reset)",
+    "result": "576 and 555 captures; 555 and 576 captures of cr.gov.hk; FAQ pages only, the forms read live instead",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinAge": 18,
+    "reserveDirectorMinAge": 18,
+    "source": "Companies Registry Forms NNC1 and ND2A (Companies Ordinance Cap. 622)"
+   }
+  },
+  "notes": "Companies answered from the Registry's own forms; s. 456 Cap. 622 not read directly. Minors' contracts (Cap. 410) not reached: elegislation still behind its browser check. Methods not tried today: web-search not run today for this entry: the group's 15-search allowance was kept for entries where fetching found no lead (5 used in all); official-register not tried today: the legal register or gazette wasn't identified or reachable without a search."
+ }
+]

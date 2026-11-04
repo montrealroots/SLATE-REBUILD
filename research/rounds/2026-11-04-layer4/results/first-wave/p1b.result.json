@@ -1,0 +1,2035 @@
+[
+ {
+  "id": "R-4629",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.altaveu.com/uploads/s1/80/35/48/reglament-autoritzacio-treball.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://govern.ad/documents/d/guest/t2g019",
+    "status": "same"
+   },
+   {
+    "url": "https://www.consellgeneral.ad/fitxers/documents/lleis-2012/llei-9-2012.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.consellgeneral.ad/fitxers/documents/lleis-2013/llei-16-2013",
+    "status": "same"
+   },
+   {
+    "url": "https://www.consellgeneral.ad/fitxers/documents/lleis-2018/llei-10-2018-del-17-de-maig-qualificada-de-modificacio-de-la-llei-9-2012-del-31-de-maig-de-modificacio-de-la-llei-qualificada-d2019immigracio",
+    "status": "same",
+    "now": "reachable; the automatic check matched 3/5 fragments of the quoted passage (the rest split across page or column breaks); not re-read by eye"
+   },
+   {
+    "url": "https://www.govern.ad/documents/d/guest/nota-informativa-autoritzacio-extracomunitaris-1",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (6) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "bopa.ad home page fetched by curl to reach Decree 335/2025",
+    "result": "a 995-byte script shell with no search or documents served to this client; the decree not reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2021 salary table (group 25, 1,351 €) remains the only one read; Decree 335/2025 not reached. processing, eligibility, union unchanged: the laws read whole (Llei 9/2012, 16/2013, 10/2018) set none."
+ },
+ {
+  "id": "R-4631",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://icp.gov.ae/en/service/issue-entry-permit",
+    "status": "changed",
+    "now": "HTTP 200 now (was 500 on 2026-11-01): it lands on ICP's Interactive services listing, whose 'Issuance of a Visa' entry links the service-details page read below"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://icp.gov.ae/en/services-details/?serviceid=64afe3c1035448005bd52e60",
+    "title": "ICP (Federal Authority for Identity, Citizenship, Customs & Port Security), Issuance of a Visa, category 'Government, private, or free zone entities for entry visa issuance for a work mission Or Residency': terms and service fees",
+    "read": "2026-11-04",
+    "said": "Service fees … Application Fees - 100 AED | Visit visa issuance fee - 100 AED | Smart Service Fees - 100 AED | Entry visa for employment purposes to obtain the Green Residence - 100 AED … Ministries, departments, government institutions, and local and federal public authorities are exempt from providing the financial guarantee, except for their affiliated institutions and companies that engage in commercial activity. Approval from the Ministry of Human Resources and Emiratisation (MOHRE) is required if the employer is subject to the Labour Relations Regulation Law … The holder must enter the UAE within the 60-day validity period of the entry permit from its date of issuance. The validity may be extended for a similar period in accordance with the applicable rules and procedures."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "icp.gov.ae/en/service/issue-entry-permit fetched by curl (it answered 500 on 2026-11-01); followed to the Interactive services listing and the 'Issuance of a Visa' service-details page (serviceid=64afe3c1035448005bd52e60); the fee block tagged for the work-mission category (class 'fees-info GovernmentprivateorfreezoneentitiesforentryvisaissuanceforaworkmissionOrResidency') read from the HTML",
+    "result": "found: application 100 AED, visa issuance 100 AED, smart service 100 AED for the work-mission entry visa; no guarantee amount in that category's fee block (saved l4w/files/p1b/AE-svc5e60.html)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "MOHRE federal fee, mission work permit (establishments of all categories)",
+     "amount": "50.00",
+     "currency": "AED"
+    },
+    {
+     "what": "ICP entry visa for a work mission: application fee",
+     "amount": "100.00",
+     "currency": "AED"
+    },
+    {
+     "what": "ICP entry visa for a work mission: visa issuance fee",
+     "amount": "100.00",
+     "currency": "AED"
+    },
+    {
+     "what": "ICP entry visa for a work mission: smart service fee",
+     "amount": "100.00",
+     "currency": "AED"
+    }
+   ],
+   "feesNote": "ICP lists these three fees for an entry visa issued to a government, private or free-zone entity for a work mission or residence. Its fee block for that category names no financial guarantee amount; the page says public bodies are exempt from the guarantee, without saying what others pay."
+  },
+  "notes": "The guarantee part of the sought triple isn't in the work-mission category's fee block (only the visitor categories list 1,000/2,000 AED guarantees); left as not stated rather than borrowed. The page labels the second fee 'Visit visa issuance fee' even under the work-mission category; quoted as it stands."
+ },
+ {
+  "id": "R-4632",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://molsa.gov.af/sites/default/files/2019-04/%D9%85%D9%82%D8%B1%D8%B1%D9%87%20%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%20%D8%A7%D8%AA%D8%A8%D8%A7%D8%B9%20%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C.pdf",
+    "title": "Ministry of Labour and Social Affairs (molsa.gov.af), مقرره استخدام اتباع خارجی در ادارات افغانستان (Regulation on the Employment of Foreign Nationals in Afghanistan's Institutions), Official Gazette no. 858 (1384), Dari text, arts. 2, 5, 6 and 7 (gazette pp. 3-6), read by OCR and checked against the page images of pp. 5 and 6",
+    "read": "2026-11-04",
+    "said": "مادهٔ دوم … ۱- ادارات: عبارت از تمام ادارات دولتی، مختلط، خصوصی و مؤسسات غیر دولتی مقیم افغانستان می باشد. … مادهٔ پنجم: (۱) اتباع خارجی که سن هجده سالگی را تکمیل نموده، به سن نهائی تقاعد مندرج قانون کار نرسیده و تصدیق صحی کشور متبوع و مراجع مربوط وزارت صحت عامهٔ افغانستان را کسب نموده باشد، به اشکال ذیل در ادارات استخدام شده میتوانند … (۲) استخدام اتباع خارجی در امور تخصصی خلاف رشتهٔ تحصیلی و تخصص جواز ندارد. … مادهٔ ششم: در صورت موجودیت کارگران داخلی و خارجی به کارگران داخلی اولویت داده می شود. مادهٔ هفتم: (۱) وزارت کار و امور اجتماعی جواز کار را در بدل قیمت معینه اعطاء می نماید. (۲) قیمت جواز مندرج فقرهٔ (۱) این ماده با نظر داشت شرایط زمانی از طریق وزارت های کار و امور اجتماعی و مالیه تثبیت میگردد. … مدت اعتبار جواز کار الی یک سال بوده، در صورت تمدید مدت قرارداد، مدت اعتبار جواز کار برای دور دیگر تمدید شده می تواند."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "molsa.gov.af regulations page (/dr/مقرره-ها) fetched; the Regulation on the Employment of Foreign Nationals (Official Gazette 858, 1384; 88-page scan) downloaded (saved l4w/files/p1b/AF-estekhdam.pdf); pages 1 and 3-10 OCR'd with tesseract (fas), and the key sentences of pp. 9-10 checked against the page images",
+    "result": "found the rule's text: it covers all state, mixed and private bodies and NGOs in Afghanistan (art. 2); a foreigner 18 or over, below the Labour Law's retirement age, with health certificates from home and from Afghanistan's Ministry of Public Health, may be employed on an agreement or on his own request once he holds residence (art. 5(1)), never outside his field of study and specialty (art. 5(2)); nationals have priority (art. 6); the Ministry of Labour and Social Affairs issues the work permit for a set price fixed by the Labour and Finance ministries (art. 7(1)-(2)); the permit is valid up to one year and may be extended with the contract (art. 7). The decree enacting it is no. 32 of 1384/4/9 (2005). OCR text in l4w/files/p1b/afocr/p-*.txt, q-*.txt",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "the same gazette is the register copy; laws.moj.gov.af not retried",
+    "result": "not retried",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "route": "جواز کار (work permit) of the Ministry of Labour and Social Affairs",
+   "applies": "The employing body in Afghanistan (state, mixed, private or an NGO); the Ministry of Labour and Social Affairs issues the permit.",
+   "first": "A contract on the ministry's model and, for an individual request, the foreigner's residence permit; nationals have priority where both are available.",
+   "fees": [],
+   "feesNote": "The permit is issued for a set price fixed by the Labour and Finance ministries; the amount wasn't found.",
+   "validity": {
+    "n": 1,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "Up to one year, extended for a further period when the contract is extended.",
+   "eligibility": "Aged 18 or over and below the retirement age in the Labour Law, with health certificates from the home country and from Afghanistan's Ministry of Public Health; not to be employed outside the field of the person's studies and specialty.",
+   "processing": null,
+   "union": null,
+   "pay": null,
+   "exempt": null
+  },
+  "notes": "Partial, and the lead must weigh standing: the regulation was enacted in 2005 under the former Islamic Republic and is still published on the present Ministry of Labour's own regulations page; no later text replacing it was found, but none was searched for today, and since 2021 the authorities have restricted music and public performance, which the engine may need to reflect (not researched here). Pages 11 onward (remaining articles, possibly on the fee and duties) weren't OCR'd. 'first' joins art. 5(1)-2 and art. 6 with art. 8's model contract (p. 10)."
+ },
+ {
+  "id": "R-4634",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://laws.gov.ag/wp-content/uploads/2018/08/cap-27.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://faolex.fao.org/docs/pdf/ant212656.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "labour.gov.ag fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Labour Code (Cap. 27) and the 2020 amendment re-read: unchanged; no decision time, criteria, pay rule, exemption or grant fee found in them."
+ },
+ {
+  "id": "R-4636",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://gov.ai/document/labour/Labour%20(Relations)%20Act%202022.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://gov.ai/service/forms-labour-forms",
+    "status": "same"
+   },
+   {
+    "url": "https://gov.ai/document/labour/Work%20Permit%20Regulations,%202023%20-%20G.pdf",
+    "status": "same",
+    "now": "reachable; an image-only PDF, so the quoted text could not be re-matched without OCR"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.ai/employment and gov.ai/service/immigration-labour-visas-travel fetched and searched for a work permit page",
+    "result": "only the e-visa portal and a travel permit form; no work permit decision time, exemption, union step or pay rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Work Permit Regulations 2023 PDF still answers but is an image with no text layer (the earlier OCR read stands)."
+ },
+ {
+  "id": "R-4638",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://asp.gov.al/wp-content/uploads/2025/11/Ligj-PER-TE-HUAJT-2021-06-24-79-perditesuar-2025-PDF.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://asp.gov.al/wp-content/uploads/2024/11/2-vendim-2021-12-29-858-iperditesuar-LEJE-QENDRIMI-DOKUMENTACION-1.docx",
+    "status": "unreachable",
+    "now": "HTTP 000 curl: (52) Empty reply from server"
+   },
+   {
+    "url": "https://e-albania.al/assets/services/DPPSH/15146_anglisht_kerkese_leje_unike.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "akpa.gov.al fetched by curl",
+    "result": "no connection (HTTP 000); asp.gov.al's DCM 858 docx answers with an empty reply",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Law 79/2021 (updated 2025) and the e-albania form re-read: unchanged; no fee amount, union, pay or exemption for the special-category permit."
+ },
+ {
+  "id": "R-4641",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://consuladogeral-angola.pt/wp-content/uploads/2023/04/Visto-Trabalho_Lei13_19_1.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.plmj.com/xms/files/03_Novidades_legislativas/2020/06_junho/Angola/ING/Colab_Regulation_of_the_Law_on_the_Legal_Framework_of_Foreign_Citizen....pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://consuladogeral-angola.pt/wp-content/uploads/2023/04/Visto-Trabalho_Lei13_19_1.pdf",
+    "title": "Consulado Geral da República de Angola em Lisboa, Visto de Trabalho à luz da Lei n.º 13/19 (requisitos), re-read in full",
+    "read": "2026-11-04",
+    "said": "7. Parecer favorável para a concessão de Visto de trabalho. 8. Comprovativo de meios de subsistência, equivalente a 200,00 por dia de permanência em território angolano … 10. Cópia do Contrato de Trabalho ou Contrato Promessa de Trabalho, efectuado pela empresa contratante em Angola reconhecida pelo Cartório Notarial. 11. Curriculum Vitae traduzido em português; 12. Certificado de Habilitação Literária ou Profissional, visado pelo Ministério dos Negócios Estrangeiros e pelo Consulado Geral … 13. Registo Criminal emitido pelas autoridades do país de origem ou de residência actual … 14. Atestado Médico passado pelo Centro de Saúde …"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "sme.gov.ao home page fetched; its catalogue link /ao/catalogue/actos/visto-de-trabalho/ followed",
+    "result": "the act page now redirects to the SME login (Área Reservada): no criteria readable without an account",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Lei n.º 13/19 regime jurídico dos cidadãos estrangeiros Angola visto de trabalho requisitos artistas desportistas pdf' (2026-11-04)",
+    "result": "the consulate's requirements sheet (already a source), lex.ao and angolex copies of the law, law-firm notes; nothing performer-specific",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "the Consulate General in Lisbon's requirements sheet (existing source) re-read whole for the applicant's own conditions (saved l4w/files/p1b/AO-consul.pdf)",
+    "result": "the applicant's conditions read: a qualification certificate, a criminal record, a medical certificate (each visaed), a CV in Portuguese, proof of means of 200 a day of stay, the ministry's favourable opinion and a notarised contract; none specific to performers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "eligibility": "No rule specific to performers. The worker must show a literary or professional qualification certificate, a criminal record from the country of origin or residence and a medical certificate (each visaed by the Foreign Ministry and the consulate), a CV in Portuguese, and means of 200 a day of stay, on top of the ministry's favourable opinion and a notarised contract or promise of contract."
+  },
+  "notes": "Partial: the general conditions every work-visa applicant meets, from the consulate's sheet; no performer criterion exists in it. The sheet doesn't name the currency of the 200 a day (the lead should leave it unstated). The law (Lei 13/19 arts. 55 and 68) and Decreto Presidencial 163/20 were not read today."
+ },
+ {
+  "id": "R-4643",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.argentina.gob.ar/node/37335",
+    "status": "same"
+   },
+   {
+    "url": "https://www.argentina.gob.ar/cuadro-tasas-migratorias",
+    "status": "same"
+   },
+   {
+    "url": "https://www.argentina.gob.ar/node/143972",
+    "status": "same"
+   },
+   {
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27203-255670/texto",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (4) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "argentina.gob.ar node/37335 (permiso de ingreso, artistas) and node/143972 (autorización de trabajo transitoria) re-read for a time",
+    "result": "no decision time on either; node/143972 points to the paid urgent regime (Disposición DNM 2145/12) without a day count; a tourist who is to work must change status, so no engagement is exempt by length",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Ley 25.871 on infoleg not retried today."
+ },
+ {
+  "id": "R-4645",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://asbar.org/regulation/41-1005-employment-of-aliens/",
+    "status": "unreachable",
+    "now": "HTTP 403 "
+   },
+   {
+    "url": "https://asbar.org/code-annotated/41-0408-sponsors/",
+    "status": "unreachable",
+    "now": "HTTP 403 "
+   },
+   {
+    "url": "https://asbar.org/regulation/41-0319-fees/",
+    "status": "unreachable",
+    "now": "HTTP 403 "
+   },
+   {
+    "url": "https://asbar.org/regulation/41-0409-bonds/",
+    "status": "unreachable",
+    "now": "HTTP 403 "
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (4) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Common Crawl for asbar.org regulations (org,asbar)/regulation/41) in CC-MAIN-2026-43, -39, -30, -21, 2025-51",
+    "result": "no captures",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "All four asbar.org sources now answer 403 to this client (they answered before)."
+ },
+ {
+  "id": "R-4651",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/toelatingsbeleid_2012.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.gobierno.aw/en/work-and-residence-permit",
+    "status": "same"
+   },
+   {
+    "url": "https://cuatro.sim-cdn.nl/arubaoverheid2858bd/uploads/0418ab89.061.pdf",
+    "status": "same",
+    "now": "reachable; the automatic check matched 5/6 fragments of the quoted passage (the rest split across page or column breaks); not re-read by eye"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "dimasaruba.aw home page and its site search for 'artiest' fetched",
+    "result": "only a permit-validation link; no page on performers, pay, union or exemptions",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4653",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://regeringen.ax/sites/default/files/attachments/protocol/nr1-2025-enskild-n1.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.gov.uk/guidance/travel-to-finland-for-work",
+    "status": "same"
+   },
+   {
+    "url": "https://api.hankeikkuna.fi/asiakirjat/1e0d6c83-f156-4a39-81ed-8c8cf1d2e70d/28be4aef-f61c-4e9b-9618-e076773e354a/KIRJE_20251229062929.PDF",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Common Crawl for migri.fi (fi,migri)/en/, /en/working, /en/residence-permit-for-an-employed, /sv/arbet) in CC-MAIN-2026-43, -39, -30, -21, 2025-51",
+    "result": "the employed person's permit and processing-time pages are not in any of the five crawls (only news items, a 404 of /en/processing-fees and a 500 of an employer page)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "migri.fi still Cloudflare-blocked; Finlex not retried."
+ },
+ {
+  "id": "R-4657",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://fuzip.gov.ba/wp-content/uploads/2022/10/Zakon_o_zaposljavanju_stranaca_sl_novine_fbih_br_111_12-2.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://unija.com/bs/zaposljavanje-stranaca-u-fbih/",
+    "status": "unreachable",
+    "now": "a bot-verification page, not passed"
+   },
+   {
+    "url": "https://fbihvlada.gov.ba/uploads/documents/prijedlog-zakona-o-zaposljavanju-stranaca-b_1764846594.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://zdk-szz.ba/trazioci-posla/informacije-za-strane-drzavljane/?print=pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (4) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The unija.com law-firm page now serves a bot check (\"Please wait while your request is being verified\"), not passed; the FBiH law and the canton page re-read unchanged with no performer criterion, union step or pay rule."
+ },
+ {
+  "id": "R-4659",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://immigration.gov.bb/pages/WorkPermit.aspx",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "immigration.gov.bb WorkPermit page re-read: still the BBD 300 application fee with the final fee left to the fee regulations, no table, time or criteria."
+ },
+ {
+  "id": "R-4661",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://cdn1.ogrlegal.com/files/visa/Visa_Circular_1655_30122019.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "visa.gov.bd fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4663",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.vlaanderen.be/werken/een-buitenlander-in-vlaanderen-tewerkstellen/categorieen/schouwspelartiest",
+    "status": "same"
+   },
+   {
+    "url": "https://www.altius.com/en/news/new-flemish-fee-for-single-permit-applications-from-1-september-2026/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "vlaanderen.be performer page re-read for 'beslis', 'termijn', 'dagen'",
+    "result": "only the exemption periods (90 days in 180; 21 days a quarter for artists of international repute); no decision time and no union step",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4664",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://service-public.gov.bf/thematiques/divers/autres-demande-de-visas-de-contrat-de-travail-des-non-nationaux",
+    "title": "Service Public (Gouvernement du Burkina Faso), Demande de visas de contrat de travail des non nationaux (mis à jour le 04/05/2026)",
+    "read": "2026-11-04",
+    "said": "Demande de visas de contrat de travail des non nationaux … Mis à jour le 04/05/2026 Coût 100 000 FCFA Délai Variable Public Tout public Description Formalité pour vérifier les conditions d'emploi, la conformité du contrat à la législation sociale, le contrôle de la main d''uvre non nationale Qui peut faire cette démarche ? Néant Pièces à fournir Aucune pièce n'est à fournir pour cette procedure"
+   },
+   {
+    "kind": "primary",
+    "url": "https://service-public.gov.bf/thematiques/divers/administration-du-travail-visa-de-contrat-de-travail",
+    "title": "Service Public (Gouvernement du Burkina Faso), Visa de contrat de travail (mis à jour le 04/11/2026)",
+    "read": "2026-11-04",
+    "said": "Visa de contrat de travail … Mis à jour le 04/11/2026 Coût Gratuit Délai Variable … Description Formalité administrative à vérifier la conformité des clauses contractuelles aux dispositions législatives, règlementaires et conventionnelles. Qui peut faire cette démarche ? Etre employeur"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "service-public.gov.bf (the government's e-services portal) fetched; its search for 'visa contrat de travail' gave three procedures; the links it prints (thematiques/autres/…, thematiques/administration-du-travail/…) answer 404, and the same slugs under thematiques/divers/ answer 200 and were read",
+    "result": "found the route (a visa of the work contract for non-nationals), its cost (100,000 FCFA) and its time ('Variable'); the general contract visa, which the employer applies for, is free; no term, union, criteria, pay or exemption on either page (saved l4w/files/p1b/BF-vct-nonnationaux.html, BF-vct2.html)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legiburkina.bf by HTTPS; Common Crawl for 'bf,legiburkina)/' in CC-MAIN-2026-43, -39, -30, -21 and 2025-51",
+    "result": "no connection (HTTP 000); no captures in any of the five crawls, so the Labour Code (Loi 028-2008/AN) still not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "connection reset (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "route": "Visa de contrat de travail des non nationaux",
+   "applies": "The employer has the work contract of a non-national visaed by the labour administration, which checks the conditions of employment, the contract's conformity with social legislation and the control of non-national labour.",
+   "first": null,
+   "fees": [
+    {
+     "what": "Visa of a non-national's work contract",
+     "amount": "100000",
+     "currency": "XOF"
+    }
+   ],
+   "processing": null,
+   "processingNote": "The portal gives the time as 'Variable'.",
+   "validity": null,
+   "union": null,
+   "eligibility": null,
+   "pay": null,
+   "exempt": null
+  },
+  "notes": "The 'applies' sentence joins the two pages: the non-nationals' page leaves 'who may apply' blank ('Néant'), the general contract-visa page says the employer. The labour code that would give term, criteria and any exemption wasn't reachable. The portal's search prints wrong links (thematiques/autres/...); the working path is thematiques/divers/..."
+ },
+ {
+  "id": "R-4668",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://taxnews.ey.com/news/2026-0212-bahrain-hikes-visa-issuance-fees-health-care-fees-and-monthly-contributions-for-work-permits-effective-1-january-2026",
+    "status": "same"
+   },
+   {
+    "url": "https://www.lloc.gov.bh/Legislation/HTM/K1906",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://lmra.gov.bh/en/page/show/106",
+    "title": "Labour Market Regulatory Authority, New Work Permit (service page, last update 30-10-2026)",
+    "read": "2026-11-04",
+    "said": "Fees Service fee: Six Months: BHD 142.5. (Available for expatriate employees inside the Kingdom of Bahrain (Cancelled work permit)). One year: BHD 195. Two years: BHD 390. Dependants: BHD 270. Admin fee: BHD 5. Job advertisement fees for expatriate employees applications from outside the Kingdom of Bahrain only: BHD 30. Processing Time 3 working days for expatriate employees’ applications from inside the Kingdom of Bahrain (Labour Market Regulatory Authority (LMRA) approval). 21 working days for expatriate employees’ applications from outside the Kingdom of Bahrain."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'LMRA Bahrain work permit application processing time working days service level lmra.gov.bh' (2026-11-04)",
+    "result": "pointed to LMRA's New Work Permit service page (page/show/106)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "lmra.gov.bh/en/page/show/106 fetched by curl and read whole (documents, process, legal basis, fees, processing time)",
+    "result": "found the processing time: 21 working days for a worker outside Bahrain, 3 for one inside; the page sets no minimum pay and names no union step (saved l4w/files/p1b/BH-lmra106.html)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 21,
+     "unit": "business-days"
+    },
+    "premium": null
+   },
+   "processingNote": "LMRA's stated time for a new work permit for a worker applying from outside Bahrain; three working days if the worker is already inside the Kingdom."
+  },
+  "notes": "pay and union not found: LMRA's page and Decision 76/2008 (named as its basis, not read today) were the routes; still blocked for those two. The page's fees (BHD 195 a year, 390 for two, 142.5 for six months inside the Kingdom, BHD 5 admin, BHD 30 advertisement for applicants from abroad, last update 30-10-2026) differ from the EY-sourced 2026 figures the research holds (52.50 issuance + 45 health for six months): the lead should compare them, the LMRA page being the primary."
+ },
+ {
+  "id": "R-4670",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://migration.gov.bi/Services",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "pafe.gov.bi fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4672",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://sgg.gouv.bj/doc/loi-98-004/download",
+    "status": "same"
+   },
+   {
+    "url": "https://beninwebtv.bj/benin-le-permis-de-travail-delivre-en-ligne-aux-travailleurs-etrangers/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "service-public.bj home page and a search for 'travailleur etranger' fetched",
+    "result": "the portal answers but serves a script shell; no procedure for a foreign worker read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4676",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.parliament.bm/admin/uploads/ministerials/0bdb00398ec2be853cd0b7700ad58aff.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.bm/articles/requirements-extending-term-work-permit-holder",
+    "title": "Government of Bermuda (Department of Immigration), Requirements for extending the term of a work permit holder (published 3 March 2016, last updated 13 April 2026)",
+    "read": "2026-11-04",
+    "said": "If an employer intends to continue to employ a work permit holder in the same job beyond the expiry date of the current work permit, they must apply for a new permit. The same process that was followed to obtain the original permit must be followed again. Applications should be submitted no less than one month and no more than three months before the current work permit expires."
+   },
+   {
+    "kind": "secondary",
+    "url": "https://cloudfront.bernews.com/wp-content/uploads/2025/06/DOI-Work-Permit-Policy-5-June-2025.pdf",
+    "title": "Department of Immigration, Work Permit Policy, 5 June 2025 (copy hosted by Bernews), §4.1 Renewals and §7.7 Musician or Entertainer",
+    "read": "2026-11-04",
+    "said": "4.1 Renewals If employers intend to continue to employ a work permit holder in the same job beyond the expiry date of the current work permit, they must apply for a new permit. … Provided that the employer has submitted a complete application within the time frame specified above, the incumbent may continue working beyond the expiry of the work permit if the work permit expires while their new application is still pending. … Note: An employer cannot apply for a Short Term Work Permit in these circumstances. … 7.7 … The maximum period for a work permit in the entertainment industry will normally be a Seasonal Work Permit of eight (8) months.",
+    "quotes": "https://www.gov.bm/sites/default/files/2025-06/DOI%20Work%20Permit%20Policy%205%20June%202025.pdf"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'gov.bm seasonal work permit entertainer renewal \"seasonal\" work permit Bermuda Department of Immigration' (2026-11-04)",
+    "result": "led to gov.bm's article on extending a work permit holder's term and the 2025 policy PDF's addresses",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.bm/articles/requirements-extending-term-work-permit-holder fetched by curl; gov.bm/sites/default/files/2025-06/DOI%20Work%20Permit%20Policy%205%20June%202025.pdf and gov.bm/sites/default/files/Entertainment%20Policy.docx-1.pdf fetched",
+    "result": "the article (last updated 13 April 2026) read: continuing past expiry takes a new permit by the same process, applied for 1 to 3 months before expiry; both gov.bm PDFs answer 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "Bernews' hosted copy of the 5 June 2025 Work Permit Policy (cloudfront.bernews.com) downloaded and read whole for 'renew' and 'seasonal'",
+    "result": "§4.1 Renewals matches the gov.bm article and adds that the holder may keep working while a timely application is pending; §7.7 keeps the normal eight-month cap; no rule bars a seasonal entertainer's permit from being renewed (saved l4w/files/p1b/BM-bernews2025.pdf)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "validity": {
+    "n": 8,
+    "unit": "months",
+    "renewable": true
+   },
+   "validityNote": "An entertainer's permit is normally a Seasonal Work Permit of up to eight months. To keep working past it, the employer applies for a new permit by the same process, one to three months before expiry, and the performer may keep working while a timely application is pending; nothing in the policy limits this for seasonal permits, though the eight-month figure is the normal maximum for any one permit."
+  },
+  "notes": "The policy names this a renewal (§4.1) but it is a fresh application; the engine's renewable:true should carry the note. Bermuda's search result mentions a May 2026 version of the policy that wasn't found to read; the gov.bm article updated 13 April 2026 states the same renewal rule. §7.7 also has the event organizer notify and obtain approval from the Bermuda Entertainment Union and pay its fee, if the lead wants it for union (not in this entry's sought)."
+ },
+ {
+  "id": "R-4678",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.immigration.gov.bn/bahagian-pas-kerja/",
+    "status": "same"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/KqcTSahPWh/Photo_Gallery/670218_%E0%B8%9A%E0%B8%A3%E0%B8%A3%E0%B8%A2%E0%B8%B2%E0%B8%A2/WORK_PASS_SECTION.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "immigration.gov.bn Bahagian Pas Kerja page fetched and read whole (saved l4w/files/p1b/BN-pk.html)",
+    "result": "document lists only: an employer's letter, the Foreign Worker Licence (LPA) from the Labour Department, the visa form, passport valid six months, Borang 23; an extension service exists (Permohonan Menyambung Pas Kerja) but no term, decision time, criteria, pay, union or exemption is stated",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The page confirms the pass is renewable but not for how long; the LPA from the Labour Department comes first."
+ },
+ {
+  "id": "R-4680",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://visas.cancilleria.gob.bo/REQUISITOS_PARA_LA_EMISI%C3%93N_DE_VISAS.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.lexivox.org/norms/BO-DS-N1923.html",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "migracion.gob.bo fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The fee resolution remains unread."
+ },
+ {
+  "id": "R-4682",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://zoek.officielebekendmakingen.nl/stb-2010-371.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://zoek.officielebekendmakingen.nl/stcrt-2021-30060.html",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.rijksdienstcn.com/sociale-zaken-werk/tewerkstellingsvergunning/informatie-over-geldigheid-en-beeindiging-twv",
+    "title": "Rijksdienst Caribisch Nederland (unit SZW), Informatie over geldigheid en beëindiging TWV",
+    "read": "2026-11-04",
+    "said": "Geldigheidsduur De tewerkstellingsvergunning wordt verstrekt voor de duur van 1 jaar. Daarna kunt u een nieuwe vergunning aanvragen en wordt uw aanvraag opnieuw beoordeeld. Die beoordeling is gelijk aan de beoordeling van de eerste aanvraag. Het kan dus voorkomen dat een volgende tewerkstellingsvergunning niet toegekend wordt, omdat er dan wel lokale arbeidskrachten aanwezig zijn."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.rijksdienstcn.com/sociale-zaken-werk/tewerkstellingsvergunning/informatie-over-aanvraag-tewerkstellingsvergunning",
+    "title": "Rijksdienst Caribisch Nederland (unit SZW), Informatie over aanvraag tewerkstellingsvergunning",
+    "read": "2026-11-04",
+    "said": "U dient uw vacature minimaal vijf weken voordat u een tewerkstellingsvergunning aanvraagt, aan te melden. … Is het salaris dat u aanbiedt minimaal het minimumloon en ‘marktconform’? … Heeft de aangedragen buitenlandse werknemer de gevraagde kwalificaties? (Bijvoorbeeld diploma, werkervaring en talenkennis.) … Is de werknemer waarvoor de tewerkstellingsvergunning wordt aangevraagd minimaal 18 jaar en maximaal 45 jaar op de dag van het indienen van de eerste aanvraag? Biedt u de werknemer waarvoor u de tewerkstellingsvergunning aanvraagt goede huisvesting?"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rijksdienstcn.com: the TWV page and its two information pages (aanvraag; geldigheid en beëindiging) fetched by curl and read whole",
+    "result": "found the term (one year, a new application assessed afresh) and the assessment criteria (age 18 to 45 at the first application, the qualifications asked, at least minimum and market pay, good housing); no fee, no decision time and no union step on any of the three pages (saved l4w/files/p1b/BQ-*.html)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "the Wet arbeid vreemdelingen BES (Stb. 2010, 371) and the 2021 Staatscourant decree re-fetched",
+    "result": "unchanged; they give the receipt within two weeks and no fee or term",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "validity": {
+    "n": 1,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "A TWV runs one year; the employer may then apply for a new one, which is assessed exactly like the first and can be refused if local workers have become available.",
+   "eligibility": "The worker must be 18 to 45 years old on the day the first application is made and hold the qualifications the vacancy asks (diploma, experience, languages); the employer must first report the vacancy to Plenchi di Trabou (Bonaire) or the island's labour unit at least five weeks before applying, and advertise it in at least two media for five weeks.",
+   "pay": "At least the minimum wage and 'market-conform' for the job and its qualifications, and the same figure in the application and the contract."
+  },
+  "notes": "fees, processing and union still not found (RCN's pages and the law say nothing on them). The age ceiling of 45 isn't performer-specific and would bar older performers on a TWV; the lead should weigh whether a short engagement takes this route at all (RCN's flowchart, 'stroomschema', wasn't read)."
+ },
+ {
+  "id": "R-4684",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www2.camara.leg.br/legin/fed/lei/2017/lei-13445-24-maio-2017-784925-publicacaooriginal-152812-pl.html",
+    "status": "same"
+   },
+   {
+    "url": "https://www2.camara.leg.br/legin/fed/decret/2017/decreto-9199-20-novembro-2017-785772-publicacaooriginal-154263-pe.html",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Lei 13.445 art. 113 read (its consular fees are in a 'tabela anexa'); the annex sought on planalto.gov.br and camara.leg.br's norma page",
+    "result": "planalto.gov.br blocks this client ('Acesso Negado'); the Câmara's publication page carries no annex text; the norma-pl page doesn't answer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.br Polícia Federal fee pages (servicos-pf/imigracao/taxas, assuntos/imigracao/taxas-e-valores) guessed",
+    "result": "both 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The law's annex, even when read, may not be the fee in force (art. 113 § 1 lets the executive adjust it). Decreto 9.199 read for a decision time: only registration deadlines (90 days after entry)."
+ },
+ {
+  "id": "R-4686",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.immigration.gov.bs/residence/short-term-work-permit/",
+    "status": "same"
+   },
+   {
+    "url": "https://www.immigration.gov.bs/?p=28867",
+    "status": "same"
+   },
+   {
+    "url": "https://www.immigration.gov.bs/applying-to-stay/immigration-fee-scale/",
+    "status": "same"
+   },
+   {
+    "url": "https://mofa.gov.bs/applying-for-short-term-work-permit/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (4) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'immigration.gov.bs short term work permit entertainers musicians requirements fee Bahamas Department of Immigration' (2026-11-04)",
+    "result": "the Department's own pages already held; nothing on pay or exemption",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "immigration.gov.bs Short Term Work Permit page and the 17 Dec 2025 notice re-read whole",
+    "result": "short-term permits are for emergencies and a one-time application; only board meetings, disaster-preparedness meetings and Trusted Travellers need just a notice; no performer criterion beyond the union letter already held, no pay rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The page's 'meant for emergencies only and should be a one-time application' is a general condition, offered if the lead wants it as eligibility."
+ },
+ {
+  "id": "R-4687",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "doi.gov.bt by curl; Common Crawl for bt,gov,doi)/ in five crawls; the captured notification page (?p=1885, CC-MAIN-2025-51) read",
+    "result": "the site gives no connection (HTTP 000); the capture lists the Immigration Rules and Regulations 2023 (wp-content/uploads/2023/11/IRRs_11_Nov_2023.pdf), but that PDF is in none of the five crawls",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'\"Immigration Rules and Regulations of the Kingdom of Bhutan, 2023\" work permit foreign worker pdf' (2026-11-04)",
+    "result": "found the doi.gov.bt PDF address (unreachable), a refworld record (403) and an eregulations copy of the Rules as revised in December 2015",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "bhutan.eregulations.org copy of the Immigration Rules & Regulations (Rev. Dec 2015) downloaded and its Work Permit rules (117-134) read",
+    "result": "superseded by the 2023 Rules, so a lead only: Department of Labour approval first, the employer then obtains the permit from the Immigration Office, age 18 and over, a permit for one job and area, a three-year stay followed by six months out (saved l4w/files/p1b/BT-ereg.pdf)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2015 rules are not the rule in force; nothing recorded as a value."
+ },
+ {
+  "id": "R-4689",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://botswanaembassy.org/node/1692",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.bw home page fetched",
+    "result": "answers, no work permit page linked from it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4691",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://ilex.by/news/trudyashhiesya-immigranty-opredelen-poryadok-polucheniya-i-prodleniya-spetsrazresheniya/",
+    "status": "same",
+    "now": "reachable; the automatic check matched 0/0 fragments of the quoted passage (the rest split across page or column breaks); not re-read by eye"
+   },
+   {
+    "url": "https://gomelisp.gov.by/wp-content/uploads/2025/03/po-trudoustrojstvu-v-rb.pdf",
+    "status": "same",
+    "now": "reachable; the automatic check matched 0/0 fragments of the quoted passage (the rest split across page or column breaks); not re-read by eye"
+   },
+   {
+    "url": "https://ilex.by/news/bazovaya-velichina-minimalnaya-zarplata-i-bazovaya-stavka-razmery/",
+    "status": "same",
+    "now": "reachable; the automatic check matched 0/0 fragments of the quoted passage (the rest split across page or column breaks); not re-read by eye"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mvd.gov.by fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4693",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://immigration.gov.bz/?p=405",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "immigration.gov.bz ?p=405 re-read unchanged: fees and 30-day time only."
+ },
+ {
+  "id": "R-4697",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.legislation.gov.au/F1996B03551/latest/text",
+    "status": "same",
+    "now": "reachable; the served text is the front of the compilation, so the quoted Schedule passages could not be re-matched"
+   },
+   {
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-activity-408/entertainment-activities",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "Home Affairs 408 entertainment page, the current visa pricing page and the global visa processing times page fetched by curl and searched in their embedded data",
+    "result": "all three fill their tables by script; no price, time or extension rule in what is served",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "legislation.gov.au serves only the first part of the Migration Regulations as text."
+ },
+ {
+  "id": "R-4699",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.legavox.fr/blog/yav-associates/droit-travail-engagement-licenciement-travailleurs-7451.htm?PAGE=4",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "onem.cd home page fetched",
+    "result": "answers; no foreign worker card procedure linked",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4701",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://faolex.fao.org/docs/pdf/caf158592.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No Central African labour ministry site reached."
+ },
+ {
+  "id": "R-4703",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://newlandchase.com/locations/middle-east-and-africa/congo-brazzaville/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gouvernement.cg home page fetched",
+    "result": "answers; no work authorisation procedure found on it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4707",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://loidici.biz/2026/05/19/decret-n-2026-197-du-15-avril-2026-relatif-au-contrat-de-travail/lois-article-par-article/plus-de-textes-de-lois/76761/naty/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Côte d'Ivoire visa du contrat de travail travailleur étranger frais montant arrêté interministériel AGEPE FCFA' (2026-11-04)",
+    "result": "found loidici.biz's copy of Arrêté n° 4810 MEFPPS/AGEPE of 21 April 1997 and a civlii.laws.africa address for Decree 96-287 (consolidated to 2023-07-18)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "loidici.biz (a private legal-information site) copy of Arrêté n° 4810 MEFPPS/AGEPE du 21 avril 1997 fetched and read whole (saved l4w/files/p1b/CI-4810.html); civlii.laws.africa/en/akn/ci/act/decree/1996/287/fra@2023-07-18 fetched",
+    "result": "a lead, not a fact: art. 4 sets the contract-visa form fee by origin and grade whatever the contract's length (non-African worker: direction 750,000 FCFA, cadre 500,000, agent de maîtrise 300,000, ouvrier spécialisé ou employé qualifié 100,000, manœuvre 40,000; non-ECOWAS African 300,000 to 20,000; ECOWAS 100,000 to 10,000); art. 1 has the worker obtain within three months a work card 'renouvelable une fois par an'; art. 2 requires two months' advertising before a non-Ivorian may be hired. The copy names no Journal officiel reference to quote, the order dates from 1997 and may have been replaced under the 2015 Labour Code, so nothing is recorded as a value. The civlii page answered 404.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "agepe.ci and its site search for 'visa' fetched",
+    "result": "answers; no page on the contract visa's fee or term in what is served",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Strong lead: Arrêté 4810/1997 (fees by origin and grade, a yearly work card) if its Journal officiel page or AGEPE's own copy can be found and its standing under Loi 2015-532 confirmed. A performer's grade under it isn't stated."
+ },
+ {
+  "id": "R-4708",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mfai.gov.ck fee schedule, criteria and awareness-campaign pages; the 2023 Regulations v6.1, 2023 public notice, 2023 Visas and Permits and 2024 policy-changes PDFs",
+    "result": "pages 403; the PDFs now 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "paclii.org/ck/legis/sub_leg/ciia2021ciir2023607.pdf (the Immigration Regulations 2023 on PacLII, found by search) over https and http; pacliirms.austlii.edu.au; Common Crawl for mfai.gov.ck and paclii.org/ck/legis",
+    "result": "PacLII 403; austlii mirror no connection; Common Crawl holds only 403 captures of mfai.gov.ck and no PacLII copy",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Cook Islands \"work permit\" immigration regulations 2023 pdf schedule of fees international worker' (2026-11-04)",
+    "result": "addresses of the regulations and the fee schedule, all unreachable here; snippets not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "cookislandsnews.com on community concerns over permit fees (June 2023)",
+    "result": "paywalled after the first paragraph",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4710",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://serviciomigraciones.cl/permanencia-transitoria/autorizacion-de-trabajo/",
+    "status": "same"
+   },
+   {
+    "url": "https://www.chileatiende.gob.cl/fichas/104214",
+    "status": "same"
+   },
+   {
+    "url": "https://serviciomigraciones.cl/aranceles-migratorios/",
+    "status": "same"
+   },
+   {
+    "url": "https://serviciomigraciones.cl/wp-content/uploads/2023/06/129194.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://serviciomigraciones.cl/permanencia-transitoria/",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://nuevo.leychile.cl/servicios/Navegar/get_norma_json?idNorma=210676",
+    "title": "Biblioteca del Congreso Nacional de Chile (LeyChile), Ley 19.880, bases de los procedimientos administrativos, texto vigente, artículo 27",
+    "read": "2026-11-04",
+    "said": "Artículo 27. Salvo caso fortuito o fuerza mayor, el procedimiento administrativo no podrá exceder de 6 meses, desde su iniciación hasta la fecha en que se emita la decisión final."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (5) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "serviciomigraciones.cl and chileatiende.gob.cl ficha 104214 re-read for 'plazo', 'demora', 'días hábiles'",
+    "result": "no decision time; nothing on union, pay or a paid engagement without the authorisation",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Ley 19.880 (general administrative procedure law) fetched from LeyChile's JSON service (idNorma=210676) and read for a decision limit (saved l4w/files/p1b/CL-19880.json)",
+    "result": "art. 27: an administrative procedure may not exceed six months from its start to the final decision, save fortuitous event or force majeure; Ley 21.325 (the migration law) was not searched today for a shorter period of its own",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 6,
+     "unit": "months"
+    },
+    "premium": null
+   },
+   "processingNote": "No time stated by SERMIG; the general law caps any administrative procedure at six months from its start to the final decision (Ley 19.880, art. 27). It is the law's ceiling, not a measured average."
+  },
+  "notes": "Partial: processing from the general administrative law's ceiling, as for Austria's AVG § 73; the lead may prefer to keep it blocked until Ley 21.325 or its regulation is read for a migration-specific period. union, pay and exempt still not found."
+ },
+ {
+  "id": "R-4712",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://cameroon-tribune.cm/article.html/77985/fr.html/details_2",
+    "status": "same"
+   },
+   {
+    "url": "https://ufe.org/dossier-pays/cameroun/travailler-au-cameroun/",
+    "status": "same"
+   },
+   {
+    "url": "https://unstats.un.org/unsd/methodology/m49/overview/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "minefop.gov.cm fetched",
+    "result": "answers with a short page linking only emploijeune.cm",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4714",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://bio.visaforchina.cn/LHE4_EN/qianzhengyewu/jichuzhishi/banliliucheng/551668046985564179.html",
+    "status": "same"
+   },
+   {
+    "url": "https://cbtb.quanzhou.gov.cn/zwgk/zcfg/202412/P020241216527072941858.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.mct.gov.cn/whzx/ggtz/201501/W020150119601458280810.doc",
+    "status": "same",
+    "now": "reachable; its text is in a Word binary whose Chinese the automatic check couldn't match, not re-read by eye"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://bio.visaforchina.cn/LHE4_EN/qianzhengyewu/jichuzhishi/feiyongbiaozhunjishixian",
+    "title": "Chinese Visa Application Service Center, Lahore: Visa Fees, payment methods and schedule of fees (in force from 1 June 2024; visa fees collected on behalf of the Chinese Embassy)",
+    "read": "2026-11-04",
+    "said": "The new fee standards will be implemented from June 1st, 2024. … 2. Schedule of Fees (Unit: PKR) Fee Category Pakistani Citizen Third Country Citizen US Citizen … Single Entry 0 7200 39400 … Double Entries 0 10800 39400 … Multiple entries 6 Months 0 14400 39400 … Multiple entries 1 year 0 21600 39400 … Express Fees Non-Pakistani Citizen 6500 … Urgent Fees Non-Pakistani Citizen 9600 … Visa Application Service Fees Regular Service 13300 (Inclusive of GST) … Notes: 1. Visa Fees are collected on behalf of the Chinese Embassy. 2. Application Service Fees are charged by the Centre and they are non-refundable."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "visaforchina.cn Lahore centre (the research's existing source host) 'Visa Fees' page fetched by curl and read whole",
+    "result": "the embassy's visa fee schedule at one post, by applicant nationality (PKR), with the centre's service fee; no fee for the cultural authority's approval of a commercial performance (saved l4w/files/p1b/CN-vfc-fees.html)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "the Quanzhou PDF and the Ministry of Culture and Tourism's 2015 document (existing sources) re-fetched",
+    "result": "both answer and are unchanged where the check could read them; neither sets an approval fee, a union step, criteria, pay or an exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "Visa fee, single entry, third-country citizen, at the Lahore visa centre (collected for the Chinese Embassy; varies by post and nationality)",
+     "amount": "7200",
+     "currency": "PKR"
+    },
+    {
+     "what": "Visa fee, single entry, US citizen, at the Lahore visa centre",
+     "amount": "39400",
+     "currency": "PKR"
+    },
+    {
+     "what": "Visa application service fee, regular service, Lahore visa centre",
+     "amount": "13300",
+     "currency": "PKR"
+    }
+   ],
+   "feesNote": "China's visa fee depends on the post and the applicant's nationality; these are the Lahore centre's figures from 1 June 2024. No fee for the culture authority's approval of the commercial performance was found."
+  },
+  "notes": "Only one post's schedule was read; a generic Z-visa fee doesn't exist. union, eligibility, pay and exempt not found today (no further search spent). The lead may prefer to keep fees blocked if one post's schedule isn't wanted."
+ },
+ {
+  "id": "R-4716",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://comisionfilmicacolombia.com/wp-content/uploads/2026/02/fc-in-1-v5-instructivo-ingreso-extranjeros-solicitud-visas-certificacion-de-obra-audiovisual.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_uaemc_0599_2026.htm",
+    "status": "same"
+   },
+   {
+    "url": "https://normograma.com/keralty/compilacion/docs/resolucion_uaemc_2772_2026.htm",
+    "status": "same"
+   },
+   {
+    "url": "https://normativa.colpensiones.gov.co/colpensiones/compilacion/docs/decreto_1469_2025.htm",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.migracioncolombia.gov.co/tramites-y-servicios/tramites-generales/poa",
+    "title": "Migración Colombia, Permiso para Otras Actividades (POA), trámite page (2026)",
+    "read": "2026-11-04",
+    "said": "Dirigido a: Extranjeros(as) cuya nacionalidad no requiere visa y que pretenden ingresar a Colombia por períodos de estancia corta sin vocación de domicilio ni ánimo de lucro. … Conciertos, eventos o actividades artísticas Permite el ingreso a Colombia a extranjeros(as) para participar en presentaciones o eventos artísticos, como giras, espectáculos o eventos masivos. La vigencia del permiso corresponde a la duración de la participación en los eventos. Se pueden otorgar múltiples permisos al año, siempre que el total no supere los 180 días calendario. … Requisitos y documentación Debe ser nacional de un país que no requiera visa para ingresar a Colombia en estancias cortas. … Costos Tarifa única (2026): $151.884 pesos colombianos. … Características Tipo: Virtual Tiempo: 10 días hábiles Costo: $ 151.884 COP … Radicar la solicitud Debe realizarse con 10 días hábiles de antelación a la llegada del(a) extranjero(a) a Colombia."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "migracioncolombia.gov.co home page, then /tramites-y-servicios/tramites-generales/poa fetched by curl and read whole",
+    "result": "found: the stated time (10 working days, filed at least 10 working days before arrival) and the artistic-events criteria (a visa-exempt nationality, an invitation, the hiring company's SIRE registration and its undertaking to pay the stay and return; up to 180 days a year in total); no pay rule, union step or exempt engagement named (saved l4w/files/p1b/CO-poa.html)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 10,
+     "unit": "business-days"
+    },
+    "premium": null
+   },
+   "processingNote": "Migración Colombia's stated time for a POA; the application must be filed at least ten working days before the performer arrives, and the fee is paid only after pre-approval.",
+   "eligibility": "A national of a country whose citizens need no visa for a short stay in Colombia, invited to a concert, event or artistic activity by a company registered in Colombia and in SIRE, which undertakes in writing to pay the performer's stay and return; permits may be granted several times a year up to 180 days in all."
+  },
+  "notes": "pay, union and exempt not found: the POA page names none and was the strongest route tried. The 180-day yearly total and the visa-exempt-nationality condition may matter to the engine's validity and route choice (a visa-required national would need a visa instead)."
+ },
+ {
+  "id": "R-4718",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.tse.go.cr/pdf/normativa/reglamentodeextranjeria.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "migracion.go.cr fetched by curl",
+    "result": "HTTP 411 to this client",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4719",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mtss.gob.cu by curl; Common Crawl for cu,gob,mtss)/",
+    "result": "no connection; Common Crawl holds news pages of the ministry (one on the draft labour code update) but no foreign-worker procedure",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gacetaoficial.gob.cu by curl; Common Crawl for cu,gob,gacetaoficial)/: its 'actividades artísticas' tag page (2026-09-07 capture) read",
+    "result": "no connection direct; the tag lists Ministry of Culture resolutions 34/2001, 101/2003, 27/2010, MEP 293/2006 and MTSS 21/2012, none read today; no migration tag page reached in the time",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Gaceta Oficial Cuba Ley de Extranjería 2024 residente temporal trabajador extranjero permiso de trabajo artista contratado' (2026-11-04)",
+    "result": "press on the 2024 Ley de Extranjería (in force 180 days after publication, gazette number not found), the Spanish consulate in Havana's page on working in Cuba, and a report of Decreto-Ley 137 with MTSS Resolución 62/2026 (Gaceta of 2 October 2026) on foreign representations' hiring",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "exteriores.gob.es/Consulados/lahabana/es/ViajarA/Paginas/Trabajar.aspx (Spain's consulate in Havana, 'Trabajar', 26 November 2024) fetched and read whole (saved l4w/files/p1b/CU-exteriores.html)",
+    "result": "a lead, not a fact (another state's summary naming no Cuban text): 'Los extranjeros que se propongan trabajar en Cuba, deben haber obtenido un permiso de trabajo ante el Ministerio de Trabajo y Seguridad Social (MTSS). Corresponde a la empresa o institución contratante solicitar ese permiso. … Una vez autorizado el permiso de trabajo, el MTSS pide a la Dirección de Identificación, Emigración y Extranjería … otorgar al extranjero la categoría migratoria de Residente Temporal … El MTSS emitirá el permiso de trabajo cuando su titular llegue al territorio nacional.' No fee, term, criteria, pay or exemption.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead for the route: an MTSS work permit requested by the Cuban contracting entity, then Temporary Resident status from the Interior Ministry's DIEE (Spanish consulate's summary, 2024). The Cuban texts (the 2024 Ley de Extranjería and its regulation; MTSS resolutions; Resolución 21/2012 MTSS listed under the gazette's 'actividades artísticas' tag) are the primaries to seek; the gazette's tag pages are in Common Crawl."
+ },
+ {
+  "id": "R-4721",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://sniac.cv/wp-content/uploads/2018/03/Lei-n%C2%BA-66-VIII-2014-de-17-de-julho-Regime-Juridico-de-Entrada-Pernmanencia-e-Saida-de-Estrangeiros.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://boe.incv.cv/Bulletins/DownloadAct?id=88604",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (2) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Lei 66/VIII/2014 re-downloaded (sniac.cv) and searched again for 'decidid', 'prazo' (layout and raw text)",
+    "result": "only art. 44 (a residence authorisation decided in 90 days, renewal in 45) and visa competences (art. 30, the DEF director); no time for a temporary visa",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "portondinosilhas.gov.cv fetched",
+    "result": "a 320-byte redirect shell; no DEF service page read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Decreto-Lei 2/2015 (as republished) still unread as text."
+ },
+ {
+  "id": "R-4723",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://lokaleregelgeving.overheid.nl/CVDR1591/1",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gobiernu.cw fetched by curl",
+    "result": "HTTP 429 (rate limit) to this client",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4727",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.whatpassport.com/countries/Cyprus/Work_Skills_and_Ancestry/Employment_Visas_for_Alien_Artists",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.cy/mip-md/en/documents/remunerated-employment-single-permit-gen-2/",
+    "title": "Deputy Ministry of Migration and International Protection, Migration Department: Employment – other cases (non-single permit – NSP), posted 31 December 2025",
+    "read": "2026-11-04",
+    "said": "In order for a third-country national to enter the Republic for work purposes, no matter who the employer will be and the kind of job, the third-country national is obliged to obtain an entry permit as per the provisions of the Legislation . Tourist representatives and Journalists/Reporters are excluded from the procedure for an entry permit … Stamps and Fees: Entry permit for employment for a period up to 3 months (Registration in the aliens’ register is not required): €50 Entry permit, residence and work permit for a period of 3 to 6 months: €50 Residence and work permit for a period up to 12 months: €50 Registration in the aliens registry (only in cases of first registration): €70 Examination time of an application The examination of an application and the issuance of a temporary residence and work permit is completed within three months. … Duration of residence permit The duration of a temporary residence and work permit should not exit the period of one year."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gov.cy/media/sites/174/2025/12/ENTRY-PERMIT-AND-WORK-PERMIT-UP-TO-3-MONTHS-1.docx",
+    "title": "Migration Department, General employment: supporting documents, entry permit and temporary work permit for up to 3 months (December 2025)",
+    "read": "2026-11-04",
+    "said": "GENERAL EMPLOYMENT ENTRY PERMIT AND TEMPORARY WORK PERMIT FOR UP TO 3 MONTHS 1 Application Form MNSP3. 2 Copy of a valid passport … 3 Letter of approval from the Department of Labour. 4 Original letter of bank guarantee, of ten years duration, to cover possible repatriation costs."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gov.cy/mip-md/en/documents/bank-guarantee/",
+    "title": "Migration Department, Bank guarantee: validity and amount by country of origin (posted 2 January 2026)",
+    "read": "2026-11-04",
+    "said": "The bank guarantee should be valid for at least ten (10) years. … The amount of the guarantee that should be submitted depends on the country of origin of the third country national … 211. U.S.A ΑΜΕΡΙΚΗ 850 … 103. RUSSIAN FEDERATION ΕΥΡΩΠΗ 550 … 195. ISRAEL ΑΣΙΑ 350"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "moi.gov.cy/moi/crmd/crmd.nsf legacy pages (All/5239EEDC…, page17_en, home_en) fetched",
+    "result": "HTTP 404: the Civil Registry and Migration Department's old site is gone; gov.cy/moi/crmd/en/ serves a shell",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Civil Registry and Migration Department Cyprus artists entry temporary residence work permit fee bank guarantee'; 'gov.cy crmd artists M.58A entry temporary residence employment artistic agent' (gov.cy only) (2026-11-04)",
+    "result": "the second found the Migration Department's new site (gov.cy/mip-md); no page there names artists",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gov.cy/mip-md/en/wp-json/wp/v2/document listing (100 documents) and search 'artist' (empty); read the NSP employment page, the 3-month supporting-documents form, the bank-guarantee pages and the procedure page",
+    "result": "the general non-single-permit route's fees, time, term and guarantee found; no artist category or artist rule on the new site (saved l4w/files/p1b/CY-md-*.html, CY-3m-docs.docx)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "Entry permit for employment up to 3 months (no aliens' register entry needed)",
+     "amount": "50.00",
+     "currency": "EUR"
+    },
+    {
+     "what": "Entry, residence and work permit, 3 to 6 months",
+     "amount": "50.00",
+     "currency": "EUR"
+    },
+    {
+     "what": "Registration in the aliens' register, first registration",
+     "amount": "70.00",
+     "currency": "EUR"
+    },
+    {
+     "what": "Bank guarantee for repatriation, ten years (national of the U.S.A., Canada, China, India, Brazil and most countries)",
+     "amount": "850.00",
+     "currency": "EUR"
+    },
+    {
+     "what": "Bank guarantee (Russia, Ukraine and other European countries listed)",
+     "amount": "550.00",
+     "currency": "EUR"
+    },
+    {
+     "what": "Bank guarantee (Israel, Lebanon, Egypt, Turkey, the Gulf and other listed countries)",
+     "amount": "350.00",
+     "currency": "EUR"
+    }
+   ],
+   "processing": {
+    "standard": {
+     "n": 3,
+     "unit": "months"
+    },
+    "premium": null
+   },
+   "validity": {
+    "n": 1,
+    "unit": "years",
+    "renewable": true
+   },
+   "first": "A letter of approval from the Department of Labour, and a ten-year bank guarantee for repatriation.",
+   "exempt": null,
+   "exemptNote": "Anyone entering to work needs an entry permit, whoever the employer and whatever the job; only tourist representatives and journalists are spared it.",
+   "processingNote": "The Migration Department's stated examination time for a complete application in the non-single-permit route; incomplete applications take longer."
+  },
+  "notes": "Partial, and a judgement call for the lead: the new Migration Department site (since December 2025) has no artist category, so these are the general 'employment – other cases (NSP)' figures, which on its own words apply 'no matter who the employer will be and the kind of job'. The route name in the research (an artists' permit through artistic agents) comes from the old CRMD site via whatpassport and may no longer exist as such. renewable:true rests on the page's renewal and change-of-employer passages, not on an artist rule. union, eligibility (beyond Labour Department approval) and pay not found."
+ },
+ {
+  "id": "R-4732",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.icnl.org/wp-content/uploads/Djibouti_labcode.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www4.aucegypt.edu/CMRS/Files/28.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://ccd.dj/wp-content/uploads/2022/06/Textes-modifiant-ou-completant-le-Code-du-Travail.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (3) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Djibouti autorisation de travail étranger tarif frais visa contrat de travail ministère du travail arrêté francs Djibouti' (2026-11-04)",
+    "result": "only the 2013 amendment (200,000 FD a year) already held, and commercial guides",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "guichet-unique.dj/wp-content/uploads/2018/04/Loi_Permis_Travail.pdf (Loi 172/AN/17) by curl; Common Crawl for dj,guichet-unique)/wp-content/uploads/2018 in CC-MAIN-2026-43, -39 and 2025-51",
+    "result": "no connection (HTTP 000); no captures",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "travail.gouv.dj fetched by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-4735",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://investdominica.com/talent/work-residency-permit/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "every source the research holds for this country (1) re-fetched by curl and checked for its quoted passage",
+    "result": "see sources: none of them states the blocked fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "dominica.gov.dm home page and labour.gov.dm fetched and searched for a work permit page",
+    "result": "both answer; neither links a work permit page with a decision time, criteria, pay, union or exemption",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl (2026-11-04)",
+    "result": "connection reset (curl 35, HTTP 000); no snapshot read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": ""
+ }
+]

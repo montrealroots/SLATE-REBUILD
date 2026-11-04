@@ -1,0 +1,1192 @@
+[
+ {
+  "id": "R-8082",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "uscode.house.gov view.xhtml for 29 U.S.C. 203 and 213 (to read whether the FLSA's child-labour rules and its performer exemption reach American Samoa)",
+    "result": "both answered 404 at the granule addresses tried; not read",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8020",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.nsw.gov.au/view/html/inforce/current/act-1970-060 (Minors (Property and Contracts) Act 1970) and legislation.sa.gov.au (Age of Majority (Reduction) Act 1971) with curl",
+    "result": "refused: both answered 403 Cloudflare challenge pages; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl index CC-MAIN-2026-43 and -39 for 'au,gov,nsw,legislation)/view/html/inforce/current/act-1970-060' (cc.py list); CC-MAIN-2026-30 and 2025-51 index shards failed to fetch",
+    "result": "no capture found in the two crawls read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "meaa.org/about-meaa/rules/ (redirected to the home page); fwc.gov.au registered-organisations pages and search (to read MEAA's registered rules)",
+    "result": "not found: unions: MEAA's site holds no rules page at that address; the Fair Work Commission answered 403 Cloudflare pages",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "austlii.edu.au viewdoc pages for NSW s 9 and SA s 3 (a legal information institute, as a secondary)",
+    "result": "refused: 403 Cloudflare pages",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "archive.org's availability API for legislation.nsw.gov.au/view/html/inforce/current/act-1970-060 (answered: a 200 snapshot of 2025-09-15, http://web.archive.org/web/20250915170555/https://legislation.nsw.gov.au/view/html/inforce/current/act-1970-060); fetching it from web.archive.org reset the connection (curl 35) twice",
+    "result": "not read: the snapshot exists but web.archive.org couldn't be reached",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Wayback Machine unreachable today (connection failed). No web search spent on AU."
+ },
+ {
+  "id": "R-8117",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "wetten.overheid.nl title searches ('burgerlijk wetboek bes', 'burgerlijk wetboek bes boek 2', 'boek 2', 'arbeidswet 2000 bes', 'arbeidsbesluit bes', 'jeugdige bes', 'kinderarbeid bes') with curl",
+    "result": "not found: the searches returned only BW BES Book 8 amending acts and the national Book 2; neither BW BES Book 2 nor an order under art. 19(2) of the Arbeidswet 2000 BES was identified",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8022",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.br/ancine/pt-br/fsa/chamadas-publicas (redirected to -capa) and brde.com.br/fsa/ with its 'Chamadas Públicas: Desenvolvimento' tab",
+    "result": "not found: funds: BRDE's development tab lists PRODAV calls of 2013-2017 only (all closed); no 2025-2026 call text was linked from the pages read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Directors' bodies (DBCA, APACI) not retried."
+ },
+ {
+  "id": "R-8024",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://telefilm.ca/wp-content/uploads/2026/10/Guidelines_Production-Program_27-28.pdf",
+    "title": "Telefilm Canada: Canada Feature Film Fund, Production Program Guidelines, applicable as of October 14, 2026, s. 1.1 Basic Eligibility Criteria for Applicants",
+    "read": "2026-11-04",
+    "said": "An applicant must meet all the following eligibility criteria: a) be a Canadian-controlled corporation, as determined under sections 26 to 28 of the Investment Canada Act; b) have its head office and carry out its activities in Canada; and c) operate as an audiovisual production company. Furthermore, individual producers and other key production personnel exercising creative and financial control over the project submitted to Telefilm must be Canadian citizens, within the definition of the Citizenship Act, or permanent residents within the definition of the Immigration and Refugee Protection Act."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.wgc.ca/sites/default/files/2024-06/NEWMemberApplicationFillableMay312024.pdf",
+    "title": "Writers Guild of Canada: New Member Application (May 31 2024)",
+    "read": "2026-11-04",
+    "said": "Professional Name: ___________________________ Date of Birth: ________________"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "telefilm.ca/en/programmes/production-program and its Guidelines PDF for 2027-28 (applicable 14 Oct 2026), read; searched whole for age, minor",
+    "result": "found: funds: the applicant must be a Canadian-controlled audiovisual production corporation; individual producers and key creative personnel must be citizens or permanent residents; no age rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "wgc.ca home, /wgc-join-form, /screenwriters/benefits-of-membership and the New Member Application PDF; dgc.ca home (a script-built page with no links served)",
+    "result": "not found: unions: the WGC's application asks a date of birth and sets no age; its constitution or by-laws aren't linked from the pages read; the DGC's national pages gave no text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "Telefilm Canada Production Program 2027-28": {
+     "applicant": "Canadian-controlled corporation operating as an audiovisual production company",
+     "individualsInControl": "Canadian citizens or permanent residents",
+     "ageRule": null
+    }
+   }
+  },
+  "notes": "A minor reaches Telefilm money only through a corporation, so the company-law age (open for Quebec's Business Corporations Act: legisquebec still blocked, not retried) governs. Quebec's art. 153 and its labour-standards regulation, and Ontario's O. Reg. 191/15, weren't retried today."
+ },
+ {
+  "id": "R-8132",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ohada.org: the Uniform Act on commercial companies' page (/droit-des-societes-commerciales-et-du-gie/, curl and headless Chrome) and the only file it links, attachments/article/537/AUSCGIE-EN_Unofficial_Translation.pdf",
+    "result": "not read: the page holds no Act text and its linked translation answered 404; a guessed page for the Act answered 404",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Child performers, unions and funds not retried."
+ },
+ {
+  "id": "R-8137",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de",
+    "title": "Fedlex: Obligationenrecht (OR), Stand am 1. Oktober 2026, Art. 707 and Art. 809",
+    "read": "2026-11-04",
+    "said": "Art. 707 1 Der Verwaltungsrat der Gesellschaft besteht aus einem oder mehreren Mitgliedern. … 3 Ist an der Gesellschaft eine juristische Person oder eine Handelsgesellschaft beteiligt, so ist sie als solche nicht als Mitglied des Verwaltungsrates wählbar … Art. 809 … 2 Als Geschäftsführer können nur natürliche Personen eingesetzt werden."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de",
+    "title": "Fedlex: Zivilgesetzbuch (ZGB), Stand am 1. Juli 2026, Art. 13, 14, 17, 19",
+    "read": "2026-11-04",
+    "said": "Die Handlungsfähigkeit besitzt, wer volljährig und urteilsfähig ist. … Volljährig ist, wer das 18. Lebensjahr zurückgelegt hat. … Handlungsunfähig sind urteilsunfähige Personen, Minderjährige sowie Personen unter umfassender Beistandschaft. … 1 Urteilsfähige handlungsunfähige Personen können nur mit Zustimmung ihres gesetzlichen Vertreters Verpflichtungen eingehen oder Rechte aufgeben."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "fedlex.admin.ch (the Confederation's legal register) OR and ZGB consolidated texts rendered in headless Chrome; OR searched for minderjährig, handlungsunfähig, Mündig across the board and management provisions (Art. 707, 718, 809)",
+    "result": "found: companies: the OR sets no age for a board member (AG) or managing director (GmbH), only that they be natural persons; capacity to act comes at majority (18, ZGB 14) and a minor capable of judgment may take on obligations only with the legal representative's consent (ZGB 19)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "minimumAge": null,
+    "rule": "OR 707 (AG board) and 809 (GmbH managers) set no age; natural persons only",
+    "capacity": {
+     "fullFrom": 18,
+     "minorCapableOfJudgment": "may assume obligations only with the legal representative's consent (ZGB 19(1)), given beforehand or by later approval (19a)"
+    }
+   }
+  },
+  "notes": "Whether a commercial register accepts a minor as a board member with the representative's consent (HRegV) wasn't read; the reading that a minor may serve with consent is mine from ZGB 19, not stated in the OR."
+ },
+ {
+  "id": "R-8141",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "cookislandslaws.gov.ck (Cook Islands Parliament's law site): home and #/Consolidated-Laws rendered in headless Chrome; its main.js read for an API (only AWS SDK routes found)",
+    "result": "not read: the site is a script-built page whose law list never loaded in the render",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8143",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "bcn.cl/leychile/navegar?idNorma=1974 (Código de Comercio) rendered in headless Chrome (only the first 15 kB of articles loaded); its export link (nuevo.leychile.cl/servicios/Consulta/Exportar … 1974.2023-09-23) with curl",
+    "result": "not read: the render stopped before the commerce-capacity articles; the export answered 401 with an empty body",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8149",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "secretariasenado.gov.co/senado/basedoc/codigo_comercio.html (Senate's official base of the Código de Comercio) over https, four tries",
+    "result": "https reset the connection each time (curl 35); the page answered only over plain http, which isn't a read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Unions and funds not retried today."
+ },
+ {
+  "id": "R-8163",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://hereckaasociace.cz/o-nas/stanovy/",
+    "title": "Herecká asociace: Stanovy, Čl. III Členství v Asociaci",
+    "read": "2026-11-04",
+    "said": "Řádným členem Asociace se může stát zletilý občan České republiky, který profesionálně vykonává hereckou činnost a souhlasí se stanovami Asociace. Před nabytím zletilosti se může stát členem Asociace i student umělecké školy v oborech živého umění. … Členem Asociace se může dočasně stát i zletilá osoba nesplňující podmínku občanství České republiky, a to po dobu, kdy zde vykonává některou z činností specifikovaných v odstavci 4) nebo 5)."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "hereckaasociace.cz (www.herecka-asociace.cz redirects there): /o-nas/stanovy/ and /clenstvi/ fetched with curl and read",
+    "result": "found: unions: a full member must be of age (zletilý, a Czech citizen acting professionally); before majority only a student of an art school in the live arts may join; a non-citizen must be of age",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "Herecká asociace": {
+     "fullMemberFrom": "majority (zletilost, 18)",
+     "belowMajority": "only a student of an art school in the live-arts fields",
+     "nonCitizen": "of age, temporary membership while working in the Czech Republic"
+    }
+   }
+  },
+  "notes": "The statute page carries no adoption date. Majority (zletilost) at 18 is the Civil Code's, held elsewhere in the CZ file."
+ },
+ {
+  "id": "R-8026",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://cms-s3.verdi.de/drupal/public/2026-06/ver.di-Satzung%20Ma%CC%88rz%202026.pdf?VersionId=a6fbee90-08fc-4887-976e-dd5e8d4bfd45",
+    "title": "ver.di: Satzung, Ausgabe September 2023 (geändert März 2026), § 6 Mitgliedschaft and § 60 Jugend",
+    "read": "2026-11-04",
+    "said": "1. Mitglied kann werden: a) wer im Organisationsbereich der ver.di in einem Arbeits-, Dienst-, Amts- oder Ausbildungsverhältnis steht, b) wer im Organisationsbereich der ver.di selbstständig tätig ist, c) wer an Hochschulen, Akademien oder vergleichbaren Einrichtungen studiert, sofern sie/er ein Studienfach studiert, das eine spätere Tätigkeit im Organisationsbereich der ver.di ermöglicht oder sie/er eine Tätigkeit in diesem Bereich anstrebt; entsprechendes gilt für Schüler*innen, … 4. Die Mitglieder der ver.di bis zum vollendeten 28. Lebensjahr bilden die ver.di-Jugend."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "verdi.de/ueber-uns (redirected to /verdi-sind-wir), its linked Satzung PDF (März 2026) downloaded and searched whole for Lebensjahr, minderjährig, Alter, Jugend, Schüler",
+    "result": "found: ver.di (FilmUnion's union): membership is by work, training, self-employment or study in its field, pupils included; no minimum age; members up to their 28th birthday form the ver.di-Jugend",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "www.drehbuchautoren.de (Verband Deutscher Drehbuchautoren) home page, with curl and with the proxy's CA plus the issuers' bundle",
+    "result": "refused: the site presents a self-signed certificate (curl 60); not read (TLS verification is never turned off)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "ver.di (FilmUnion)": {
+     "minimumAge": null,
+     "members": "anyone employed, in training, self-employed or studying in its field; pupils (Schüler*innen) expressly included",
+     "youthSection": "members until their 28th birthday"
+    },
+    "VDD": null
+   }
+  },
+  "notes": "FilmUnion is ver.di's film section; the Satzung binds it. VDD's own Satzung remains unread (self-signed certificate)."
+ },
+ {
+  "id": "R-8028",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.dfi.dk/stoette/spillefilm-konsulentordningen",
+    "title": "Det Danske Filminstitut: Spillefilm - Konsulentordningen, 'Hvem kan ansøge?'",
+    "read": "2026-11-04",
+    "said": "Hvem kan ansøge? Produktions- og udviklingsstøtte kan ydes til en producent. Støtte der kun omhandler udvikling af manuskript kan ydes til en instruktør, forfatter eller producent."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "dfi.dk/stoette and /stoette/spillefilm-konsulentordningen: curl answered 403 (a 94-byte refusal); the pages were rendered in headless Chrome, which the site served without any challenge; the linked terms PDFs (almindelige vilkår, vilkår for spillefilm, Retningslinjer børnemedvirkende) answered curl 403 and weren't read",
+    "result": "partial: funds: the feature-film consultant scheme gives production and development support to a producer, and script-development support to a director, writer or producer; no age rule on the page; the general terms that may define 'producent' weren't read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "DFI Spillefilm - Konsulentordningen": {
+     "productionAndDevelopment": "a producer",
+     "scriptDevelopmentOnly": "a director, writer or producer",
+     "ageRule": null
+    }
+   }
+  },
+  "notes": "The lead should judge the Chrome render: curl was refused with 403 while a browser was served the page normally, with no bot check shown. DFI's 'Retningslinjer børnemedvirkende' (guidelines for child participants, 2025-03) is linked and may hold child-performer terms worth reading by another route."
+ },
+ {
+  "id": "R-8174",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.riigiteataja.ee/akt/%C3%84S",
+    "title": "Riigi Teataja: Äriseadustik (Commercial Code), terviktekst in force from 01.03.2024 ('hetkel kehtiv'), § 180(2) and § 308(2)",
+    "read": "2026-11-04",
+    "said": "§ 180 (2) Juhatusel võib olla üks liige (juhataja) või mitu liiget. Juhatuse liige ei pea olema osanik. Juhatuse liige peab olema teovõimeline füüsiline isik. … § 308 (2) Juhatuse liige peab olema teovõimeline füüsiline isik."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.riigiteataja.ee/akt/TS%C3%9CS",
+    "title": "Riigi Teataja: Tsiviilseadustiku üldosa seadus (General Part of the Civil Code Act), terviktekst in force from 01.01.2025, §§ 8, 9, 11",
+    "read": "2026-11-04",
+    "said": "(2) Täielik teovõime on 18-aastaseks saanud isikul (täisealisel). Alla 18-aastasel isikul (alaealisel) … on piiratud teovõime. … § 9 (1) Kohus võib vähemalt 15-aastase alaealise piiratud teovõimet laiendada, kui see on alaealise huvides ja alaealise arengutase seda võimaldab. Sel juhul otsustab kohus, milliseid tehinguid võib alaealine teha iseseisvalt. … § 11 (1) Piiratud teovõimega isiku poolt seadusliku esindaja eelneva nõusolekuta tehtud mitmepoolne tehing on tühine, välja arvatud, kui seaduslik esindaja tehingu hiljem heaks kiidab."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.ekl.ee/liikmetele/pohikiri/",
+    "title": "Eesti Kirjanike Liit: Põhikiri (adopted by the general assembly 10 April 2015), point 5",
+    "read": "2026-11-04",
+    "said": "5. EKL-i liikmeks võivad olla teovõimelised füüsilised isikud, kes on avaldanud ilukirjandusliku väärtusega, kirjandusega seotud või kirjandusteaduslikke algupärandeid või tõlkeid."
+   },
+   {
+    "kind": "primary",
+    "url": "https://kinoliit.ee/pohikiri",
+    "title": "Eesti Kinoliit: Mittetulundusühingu Eesti Kinoliit Põhikiri, II Liidu liikmelisus, 2.1",
+    "read": "2026-11-04",
+    "said": "2.1 Liidu liikmeks võib saada professionaalses filmiloomes tegutsev isik, kes on Eesti Vabariigi kodanik või elab alaliselt Eestis. Liikmeks vastuvõtu eelduseks on liikmelisuse taotleja loometegevus ja/või filmialane haridus."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Riigi Teataja (riigiteataja.ee, the state's legal register) /akt/ÄS and /akt/TsÜS rendered in headless Chrome (the site is now script-built; curl gets an empty shell); both texts read as in force",
+    "result": "found: companies (ÄS § 180(2), § 308(2) with TsÜS § 8(2), § 9)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "ekl.ee/liikmetele/pohikiri/ (Estonian Writers' Union statute) and kinoliit.ee/pohikiri (Estonian Film Union statute) fetched with curl and read whole; eestikirjanikeliit.ee: proxy 502",
+    "result": "found: unions (EKL: members must have active legal capacity; Kinoliit's statute read whole sets no age, only professional film work and citizenship or residence)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "managementBoardMember": "natural person with active legal capacity (teovõimeline füüsiline isik), OÜ and AS alike (ÄS §§ 180(2), 308(2))",
+    "fullCapacityFrom": 18,
+    "courtMayExtendFrom": 15,
+    "minorFounding": "a minor's multilateral transaction without the legal representative's prior consent is void unless later approved (TsÜS § 11(1))"
+   },
+   "unions": {
+    "EKL": {
+     "members": "natural persons with active legal capacity (teovõimelised) who have published",
+     "ageReading": "18, or a minor whose capacity a court extended (TsÜS §§ 8-9)"
+    },
+    "Eesti Kinoliit": {
+     "ageRule": null,
+     "members": "a person working in professional film-making, an Estonian citizen or permanent resident, admitted by the council on two members' recommendations"
+    }
+   }
+  },
+  "notes": "Whether 'teovõimeline' in ÄS § 180(2) is met by a minor whose capacity a court extended under TsÜS § 9 isn't said in either Act: my reading is full capacity (18), with a § 9 extension as the only door below it. Kinoliit's statute page carries no adoption date. Riigi Teataja needed headless Chrome (google-chrome --dump-dom through the proxy)."
+ },
+ {
+  "id": "R-8030",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+    "title": "BOE: Código Civil (texto consolidado), arts. 164 and 165",
+    "read": "2026-11-04",
+    "said": "Artículo 164. Los padres administrarán los bienes de los hijos con la misma diligencia que los suyos propios … Se exceptúan de la administración paterna: … 3. Los que el hijo mayor de dieciséis años hubiera adquirido con su trabajo o industria. Los actos de administración ordinaria serán realizados por el hijo, que necesitará el consentimiento de los padres para los que excedan de ella. … Artículo 165. Pertenecen siempre al hijo no emancipado los frutos de sus bienes, así como todo lo que adquiera con su trabajo o industria. No obstante, los padres podrán destinar los del menor que viva con ambos o con uno sólo de ellos, en la parte que le corresponda, al levantamiento de las cargas familiares, y no estarán obligados a rendir cuentas de lo que hubiesen consumido en tales atenciones."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.boe.es/eli/es/rd/1985/08/01/1435/con",
+    "title": "BOE: Real Decreto 1435/1985, de 1 de agosto, relación laboral especial de los artistas en espectáculos públicos (texto consolidado), art. 2.Uno",
+    "read": "2026-11-04",
+    "said": "Uno. La autoridad laboral podrá autorizar excepcionalmente la participación de menores de dieciséis años en espectáculos públicos, siempre que dicha participación no suponga peligro para su salud física ni para su formación profesional y humana. La autorización habrá de solicitarse por los representantes legales del menor, acompañando el consentimiento de éste, si tuviera suficiente juicio"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "BOE consolidated texts of the Código Civil (BOE-A-1889-4763) and RD 1435/1985 (by its ELI, /eli/es/rd/1985/08/01/1435/con, BOE-A-1985-17303) fetched with curl; RD 1435/1985 searched whole for menor, depósito, cuenta, and arts. 164-165 of the Code read",
+    "result": "found: minorsContracts: no statutory share is set aside; a child's earnings always belong to the child (CC 165), parents administer them except that a child over sixteen administers what they earn by their own work (CC 164.3), and parents living with the child may apply them to family charges without accounting; RD 1435/1985 sets no deposit",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "unionactores.com and almaguionistas.es home pages",
+    "result": "proxy answered CONNECT 502 for both; not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minorsContracts": {
+    "setAside": null,
+    "earningsBelongTo": "the child (Código Civil art. 165)",
+    "childAdministersOwnWorkEarningsFrom": 16,
+    "parentsMayUse": "for family charges when the child lives with them, without accounting (art. 165)"
+   }
+  },
+  "notes": "The absence of a set-aside rests on the Civil Code's arts. 164-165 and RD 1435/1985 read today; no other statute was searched. Unions remain open."
+ },
+ {
+  "id": "R-8184",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.gov.fj (Office of the Attorney-General): /Search/Index?searchText=majority (404) and the home page in headless Chrome",
+    "result": "not read: the site shows a disclaimer that must be accepted ('I Agree') before any law is listed; a page dump can't accept it",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8189",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "\"logir.fo lóg um verjumál myndugleiki 18 ár Føroyar\" (standard)",
+    "result": "no Faroese guardianship or majority law returned; only logting.fo bills on other subjects and logir.fo's English home page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "logir.fo (Lógasavnið, the Faroese law collection): its search form posted to Redirect.aspx?command=search with 'værgemål', 'partafeløg', 'børn' (title) and 'løgræði' (free text), following its 302 to List.aspx with the session cookie; a guessed /Bekendtgorelse/453-af-28-04-2010; logir.fo/v2",
+    "result": "not found: List.aspx served the search page's category tree (it names a 'Løgræði' subject) without a result list (results are drawn by script); the guessed address answered LawNotFound; /v2 answered 404",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8032",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://code.travail.gouv.fr/code-du-travail/l2141-1",
+    "title": "Code du travail numérique (Ministère du Travail): Code du travail art. L2141-1, version of 29/05/2008",
+    "read": "2026-11-04",
+    "said": "Tout salarié peut librement adhérer au syndicat professionnel de son choix et ne peut être écarté pour l'un des motifs visés à l'article L. 1132-1 ."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1649",
+    "title": "Service-Public.fr (DILA, Premier ministre): À partir de quel âge peut-on travailler ? (vérifié le 01 juin 2026)",
+    "read": "2026-11-04",
+    "said": "Il est possible de travailler dès l'âge de 16 ans, quel que soit le type de contrat ( CDI : titleContent , CDD : titleContent , contrat temporaire). Tout mineur doit y être autorisé par son représentant légal : titleContent (père ou mère, par exemple), sauf s'il est émancipé ."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "code.travail.gouv.fr (the Labour Ministry's Code du travail numérique, which serves the Code's articles without Légifrance's bot check) /code-du-travail/l2141-1 fetched with curl",
+    "result": "found: unions: L2141-1 lets every employee (tout salarié) join the union of their choice; no age is set in the article",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "service-public.fr/particuliers/vosdroits/F1649 (redirected to service-public.gouv.fr), checked 01 June 2026",
+    "result": "found: minorsContracts: from 16 a minor may work under any contract, authorised by the legal representative unless emancipated; it cites Code du travail L4153-1 to L4153-7 and L7124-1, not a Code civil article",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "rule": "any employee (tout salarié) may join the union of their choice (Code du travail L2141-1); no age floor in the article",
+    "minorEmployee": "a minor who is an employee is within 'tout salarié'"
+   },
+   "minorsContracts": {
+    "from16": "may sign any employment contract with the legal representative's authorisation, unless emancipated",
+    "under16": "child performers need the prefect's individual authorisation (L7124-1, already in the file)"
+   }
+  },
+  "notes": "The Code civil article on the legal representative's powers (art. 388-1-1) wasn't read: Légifrance's bot check stands and was not passed. Service-Public is the State's own guidance, dated 01 June 2026; the article text of the Code civil still outranks it if they ever differ. The pre-2008 article that let minors over sixteen join a union was not read and isn't relied on."
+ },
+ {
+  "id": "R-8193",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.gov.gd (Laws of Grenada) home page",
+    "result": "answered 500 with an empty body",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8199",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "\"Guernsey child performance licence children employment law minimum age 13 gov.gg\" (standard)",
+    "result": "no Guernsey source: English local authorities' child-licensing pages, a Jersey article and an Arts Guernsey busking form only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "guernseylegalresources.gg home page; gov.gg home and gov.gg/search?q=employment+of+children",
+    "result": "guernseylegalresources.gg answered 403; gov.gg's search address answered 404",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8201",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://orc.gov.gh/legislation/Act-992.pdf",
+    "title": "Office of the Registrar of Companies, Ghana (orc.gov.gh/legislations.php): Companies Act, 2019 (Act 992), ss. 12, 98(4), 173(1) and the interpretation of 'infant'",
+    "read": "2026-11-04",
+    "said": "12. Subject to this Act, a person of the age of eighteen years and above may apply for the incorporation of a company under this Act. … 173. (1) The following persons are not qualified to be appointed or to act as directors of a company: (a) an infant; … “infant” means a natural person under the age of eighteen years or any other age that is declared by an enactment to be of full age for legal purposes; … a company may refuse to register a transfer of shares to a person who is an infant"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "orc.gov.gh/legislations.php (the Registrar of Companies' legislation list), its Act-992.pdf downloaded and searched whole for eighteen, age of, minor, infant",
+    "result": "found: companies: incorporation may be applied for from 18 (s. 12); an infant (under 18) is not qualified to be a director (s. 173(1)(a)); a company may refuse to register a share transfer to an infant",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "mayApplyToIncorporateFrom": 18,
+    "minimumDirectorAge": 18,
+    "infantShareholder": "a company may refuse to register a transfer to an infant (s. 98(4))"
+   }
+  },
+  "notes": "How a minor's contract binds and the guilds' age rules were not retried today."
+ },
+ {
+  "id": "R-8203",
+  "verdict": "found-now",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gibraltarlaws.gov.gi/uploads/legislations/companies/2014-19/2014-19(01-08-25).pdf",
+    "title": "Government of Gibraltar (gibraltarlaws.gov.gi): Companies Act 2014 (2014-19), version of 01 Aug 2025, the page's 'Current Version' (Last Update 01 Aug 2025), ss. 215-220 'Directors and managers'",
+    "read": "2026-11-04",
+    "said": "215. Every company shall have at least two directors except in the case of a private company which shall have at least one director. … 219.(1) Without prejudice to the restrictions imposed by section 218, it shall be the duty of every director who is required by the articles of the company to hold a specified share qualification … 220.(1) A person being an undischarged bankrupt, who acts as director or secretary …"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "gibraltarlaws.gov.gi/legislations/companies-act-2014-3106 (the Government's legislation site): its current version's PDF (01 Aug 2025, 496 pages) downloaded and its whole text searched for 'age', 'minor', 'infant', 'eighteen', 'sixteen', 'years of age', 'natural person' and every director-qualification provision",
+    "result": "found as an absence: the Act sets no minimum age for a director; the only hits are s. 'minor child' (a connected person) and a change of name made before 18; the directors' part (ss. 215-221) sets number, secretary, share qualification and bankruptcy rules only",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "minimumDirectorAge": null,
+    "source": "Companies Act 2014 (version 01 Aug 2025): no age set; a minor's capacity turns on the general law (not read)"
+   }
+  },
+  "notes": "Absence read from the Act's whole text by search, not page by page. The general law of a minor's capacity in Gibraltar (the English common law as applied) wasn't read."
+ },
+ {
+  "id": "R-8218",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://col.guamcourts.gov/sites/default/files/19gc011.pdf",
+    "title": "Compiler of Laws, Judiciary of Guam: 19 GCA ch. 11 Child Labor Law, §§ 11102, 11104, 11108",
+    "read": "2026-11-04",
+    "said": "This Chapter shall be administered and enforced by the Wage and Hour Commissioner … No minor under the age of sixteen (16) years of age shall be employed or permitted to work until the employer of such minor procures and keeps on file an employment certificate for such minor issued by the Commissioner pursuant to regulations. … The Commissioner may make, subject to the approval of the Governor and promulgation by the Executive Order, regulations … (c) Working conditions and circumstances under which minors below the age of sixteen (16) years may be employed or permitted to work as dancers, singers, musicians, entertainers, motion picture or theatrical performers."
+   },
+   {
+    "kind": "primary",
+    "url": "https://col.guamcourts.gov/sites/default/files/18gc028.pdf",
+    "title": "Compiler of Laws, Judiciary of Guam: 18 GCA ch. 28 Guam Business Corporation Act, §§ 28201, 28802, 28803",
+    "read": "2026-11-04",
+    "said": "One or more persons may act as the incorporator or incorporators of a corporation by delivering articles of incorporation to the Director of Revenue & Taxation for filing. … The articles of incorporation or bylaws may prescribe qualifications for directors. A director need not be a resident of Guam or a shareholder of the corporation unless the articles of incorporation or bylaws so prescribe. … (a) A board of directors must consist of one or more individuals"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "col.guamcourts.gov (the Judiciary's Compiler of Laws) GCA index; 19gc011.pdf (Child Labor Law) and 18gc028.pdf (Business Corporation Act) downloaded and read; ch. 28 searched whole for age, minor, eighteen",
+    "result": "found: companies (the Act sets no director age: directors are individuals, qualifications left to the articles or bylaws) and, in part, childPerformers (an employment certificate from the Wage and Hour Commissioner for any minor under 16; the performers' working conditions are left to the Commissioner's regulations, which weren't read)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "minimumDirectorAge": null,
+    "rule": "directors are individuals; qualifications as the articles or bylaws prescribe (18 GCA § 28802)"
+   },
+   "childPerformers": {
+    "permit": "employment certificate issued by the Wage and Hour Commissioner, kept on file by the employer (19 GCA § 11104)",
+    "under": 16,
+    "conditions": "by the Commissioner's regulations for minors under 16 working as entertainers or motion picture or theatrical performers (§ 11108(c)); regulations not read"
+   }
+  },
+  "notes": "The regulations would be in the Guam Administrative Rules and Regulations (col.guamcourts.gov/guam-administrative-rules-regulations), not searched today. SAG-AFTRA, WGA and DGA coverage and funds not retried."
+ },
+ {
+  "id": "R-8222",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "mola.gov.gy/laws/ (Ministry of Legal Affairs, Laws of Guyana)",
+    "result": "refused: 403 (787 bytes)",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8224",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "elegislation.gov.hk/hk/cap622!en.pdf with curl (redirected to checkClientConfig.jsp, a browser-configuration check); /hk/cap622!en with an xpid and with SEARCH_WITHIN_CAP_TXT=age of 18 rendered in headless Chrome",
+    "result": "not read: Chrome rendered the site's frame and menus but the section text never loaded",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "How a minor's contract binds and the guilds' rules not retried."
+ },
+ {
+  "id": "R-8690",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.legislation.act.gov.au/DownloadFile/a/2008-19/current/PDF/2008-19.PDF",
+    "title": "ACT Legislation Register: Children and Young People Act 2008 (A2008-19), Republication No 97, effective 16 November 2025, ch. 21 ss. 793-800",
+    "read": "2026-11-04",
+    "said": "light work means work that— (a) is not contrary to the best interests of a child or young person; and (b) is declared by regulation to be light work. … 795 … (1) A person commits an offence if— (a) the person employs a child or young person; and (b) the child or young person is under 15 years old. … 796 (1) Section 795 (1) does not apply to the employment of a child or young person if— (a) the employment is in light work; and (b) the child or young person is employed for 10 hours per week or less. (2) … for more than 10 hours per week if— (a) the employment is in light work; and (b) the proposed employer has, at least 7 days before the day the employment starts, told the director-general in writing about the employment. … 799 (1) An employer may apply for a permit to employ a child or young person who is under 15 years old in high risk employment (a high risk employment permit)."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.act.gov.au /a/2008-19/ (lists R97, 16 Nov 2025, as current) and its current PDF; chapter 21 (ss. 780-804) read",
+    "result": "partial: childPerformers: the ACT bars employing anyone under 15 except in light work declared by regulation (10 h a week, or more with 7 days' notice to the director-general) or in a family business, and a high-risk employment permit from the director-general with a carer's written consent; whether screen work is declared light work or high risk turns on the regulation and the High Risk Employment Declaration 2009 (No 1), not read; the Legislation Act 2001's majority wasn't read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "ACT": {
+     "generalBarUnder": 15,
+     "lightWork": "declared by regulation; up to 10 h a week, more with 7 days' written notice to the director-general (s. 796)",
+     "familyBusiness": "light work for a parent's business (s. 797)",
+     "highRiskPermit": "director-general's permit with written consent of a person with daily care responsibility (ss. 799-800)"
+    }
+   }
+  },
+  "notes": "The light-work regulation and the High Risk Employment Declaration remain to be read to place screen work."
+ },
+ {
+  "id": "R-8230",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://havc.hr/o-nama/poticaji-za-hrvatska-av-djela",
+    "title": "Hrvatski audiovizualni centar: Poticaji za hrvatska AV djela (financial incentive for independent producers' development and production, Pravilnik NN 118/26)",
+    "read": "2026-11-04",
+    "said": "Financijski poticaj razvoju i proizvodnji hrvatskih audiovizualnih djela producenata koji se smatraju neovisnim proizvođačima temelji se na Zakonu o audiovizualnim djelatnostima (NN 61/18, 114/22 i 123/24) i Pravilniku o financijskom poticaju razvoju hrvatskih audiovizualnih djela producenata koji se smatraju neovisnim proizvođačima ( NN 118/26 ). … Podnositelj zahtjeva mora biti neovisni proizvođač sukladno definiciji utvrđenoj propisima koji reguliraju elektroničke medije."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "havc.hr home, /o-nama/poticaji-za-hrvatska-av-djela and /o-nama/javni-pozivi (lists only council-session decisions on calls) fetched with curl",
+    "result": "partial: funds: HAVC's development-and-production incentive (Pravilnik NN 118/26) takes applications only from an independent producer as the electronic-media rules define one; no age rule on the page; the National Programme's call rules weren't found on the pages read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "HAVC incentive for independent producers (NN 118/26)": {
+     "applicant": "an independent producer (neovisni proizvođač) as defined by the electronic-media regulations",
+     "ageRule": null
+    }
+   }
+  },
+  "notes": "The definition of independent producer (Zakon o elektroničkim medijima) and the Pravilnik's own text weren't read. Unions (HDDU) not retried."
+ },
+ {
+  "id": "R-8036",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.siptu.ie/wp-content/uploads/2026/09/SIPTURuleBookNov20250826.pdf",
+    "title": "SIPTU: Rules of the Services, Industrial, Professional & Technical Union, November 2025, Rule 5 (Membership of the Union)",
+    "read": "2026-11-04",
+    "said": "5. The Union shall consist of any number of persons who at the time of their application for membership are not less than the minimum statutory age for working who accept the principles, objects and Rules of the Union and whose applications for membership are, subject to the provisions of Rule 6, accepted by any officer authorised for the purpose or by the National Executive Council of the Union."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "siptu.ie home page, its linked rule book PDF (SIPTURuleBookNov20250826.pdf, 'November 2025') downloaded and its whole text searched for age, aged, minor, sixteen, eighteen",
+    "result": "found: SIPTU's (Irish Equity's union's) rule 5: a member must be not less than the minimum statutory age for working at application; no other age rule in the book",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "writersguild.ie (Writers Guild of Ireland) home page",
+    "result": "proxy answered CONNECT 502; not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "SIPTU (Irish Equity)": {
+     "memberFrom": "the minimum statutory age for working (Rule 5)"
+    },
+    "Writers Guild of Ireland": null
+   }
+  },
+  "notes": "Irish Equity is a section of SIPTU; the rule book doesn't name Equity, so its rule 5 binds Equity members as SIPTU members (my reading). The statutory minimum age for working is the IE file's own minimumWorkAge figure."
+ },
+ {
+  "id": "R-8237",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://desc.gov.im/media/r1upzwbz/performances-by-children-regulations-2004.pdf",
+    "title": "Isle of Man Department of Education, Sport and Culture: Performances by Children Regulations 2004 (SD No. 2004/0439, under the Education Act 2001), regs. 2, 5, 10, 14, 27, 29-31",
+    "read": "2026-11-04",
+    "said": "“child” means a child below the upper limit of compulsory school age; … “welfare”, in relation to a child, includes his health, treatment and supervision, and the application of any earnings from the performance in question. … 5 (1) Subject to paragraphs (2) and (3), no child shall take part in any performance except under the authority of and in accordance with the terms of a licence granted by the Department. … (3) A licence is not required under paragraph (1) in respect of a performance by a child who has not taken part in other performances on more than 3 days in the 6 months preceding the performance. … 27 (2) A child shall not take part in performances, or rehearsals for performances, on more than 5 days in any period of 7 days. … 29 (2) A child who has attained the age of 9 years and has not attained the age of 13 years shall not be present at a place of performance or rehearsal — (a) for more than 9½ hours in any day, or (b) before 7 am or after 7 pm. … (4) A child who has attained the age of 9 years shall not take part in a performance or rehearsal on any day — (a) for a continuous period of more than one hour without an interval for rest; (b) for a total period of more than 4 hours. … 30 (2) A child who has attained the age of 5years but has not attained the age of 9 years shall not be present at a place of performance of rehearsal — (a) for more than 7½ hours in any day, or (b) before 9 am or after 4.30 pm. (3) … (b) for a total period of more than 3 hours. … 31 (2) A child who has not attained the age of 5 years shall not be present at a place of performance or rehearsal — (a) for more than 5 hours in any day … (3) … (b) for a total period of more than 2 hours. … 14 (1) A person, who may be a man or a woman, approved by the Department (in these Regulations referred to as a “matron”) shall be in charge of the child at all times"
+   },
+   {
+    "kind": "primary",
+    "url": "https://desc.gov.im/media/m4zfvuj5/employment-of-children-no-2.pdf",
+    "title": "Isle of Man: Employment of Children (No. 2) Regulations 2018 (SD No. 2018/0121), regs. 4 and 7",
+    "read": "2026-11-04",
+    "said": "(1) No child may be employed in any work if they are under the age of 13 years. (2) No child under the age of 16 years may be employed in work other than light work in accordance with regulation 5 (permitted employment of children aged 13 and above). (3) No child under the age of 16 years may be employed — (a) in any cinema, theatre or night club, except in connection with an age appropriate performance; … 7 (1) No child may be employed in any work for more than 28 hours in any week, if they are under the age of 16 years. (2) No child may be employed in any work on a school day before 7.00 am or after 9.00 pm. (3) No child of school age may be employed in any work — (a) on a school day, which is followed by a day which is a school day, for more than 2 hours in total; … (4) … (b) for more than 7 hours in total. (5) No child of school age may be employed in any work on more than 6 days in any week."
+   },
+   {
+    "kind": "primary",
+    "url": "https://desc.gov.im/media/zo4j44ff/performances-by-children-amendment-regulations-2018.pdf",
+    "title": "Isle of Man: Performances by Children (Amendment) Regulations 2018 (SD No. 2018/0068), in operation 1 April 2018 (a scan; read by OCR, eng)",
+    "read": "2026-11-04",
+    "said": "(2) In regulation 1 (citation, commencement and interpretation) in paragraph (2) after the definition of “the Act”, insert — “approved body” means a group or organisation which uses children in their performances or productions and which is approved by the Department for the purpose of regulation 5(2)(c); … 9A Application to be an approved body … (a) no payment is to be made to a child or another person, on behalf of a child, other than for defraying expenses, and if applicable, modest prizes for class winners;"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.im site search ('child performance licence', 'employment of children', 'age of majority', 'director minimum age'); its Employment of children category redirected to desc.gov.im/corporate/corporate/employment-and-performances-of-children/, whose linked regulations were downloaded and read",
+    "result": "found: minimumWorkAge (no employment under 13; light work only 13-15; 28 h a week, 2 h on a school day, 7 h otherwise) and childPerformers (a Department licence for every performance by a child of compulsory school age, film and television included; daily caps by age 0-4, 5-8, 9-12, 13+; at most 5 days in 7; medical certificate for film and TV; an approved matron in charge); the 2018 amendment of the performance regulations is linked on the page but wasn't read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislation.gov.im/cms/ (the Isle of Man's legislation site)",
+    "result": "answered 202 with a 173-byte body (a script challenge); not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "desc.gov.im's linked Performances by Children (Amendment) Regulations 2018 PDF (a 10-page scan) rendered at 200 dpi and read by tesseract (eng)",
+    "result": "read: the amendment only adds the approved-body definition, its application (reg. 9A, Schedule 2A) and conditions, and changes reg. 7's school-absence wording; it leaves the film and television caps (regs. 27-31) unchanged; the 2004 PDF read already carries the 'approved body' definition with its footnote, so it is the consolidated text",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minimumWorkAge": {
+    "general": 13,
+    "lightWorkOnly": "13-15",
+    "weeklyHoursUnder16": 28,
+    "schoolDayHours": 2,
+    "nonSchoolDayHours": 7,
+    "maxDaysPerWeek": 6
+   },
+   "childPerformers": {
+    "permit": "licence granted by the Department of Education, Sport and Culture (Performances by Children Regulations 2004 reg. 5)",
+    "reaches": "a child below the upper limit of compulsory school age, any performance incl. film and television",
+    "noLicenceNeeded": "3 days or fewer in the preceding 6 months, or unpaid performances arranged by the Department, a school or an approved body",
+    "maxDaysIn7": 5,
+    "filmTvByAge": [
+     {
+      "ages": "under 5",
+      "presentHours": 5,
+      "performHours": 2,
+      "continuousMinutes": 30
+     },
+     {
+      "ages": "5-8",
+      "presentHours": 7.5,
+      "window": "09:00-16:30",
+      "performHours": 3,
+      "continuousMinutes": 45
+     },
+     {
+      "ages": "9-12",
+      "presentHours": 9.5,
+      "window": "07:00-19:00",
+      "performHours": 4,
+      "continuousMinutes": 60
+     },
+     {
+      "ages": "13+",
+      "presentHours": "12 on one day, 10 on two or 9.5 on three in a week, 07:00-19:00 or 10:00-22:00",
+      "performHours": 4,
+      "continuousMinutes": 60
+     }
+    ],
+    "medical": "certificate required for film and television licences",
+    "chaperone": "matron approved by the Department",
+    "earnings": "'welfare' includes the application of the child's earnings; no set share found"
+   }
+  },
+  "notes": "The 2018 amendment was read by OCR (eng) and should be checked against its page images (files/a1/imocr/p-03.png to p-10.png) before landing; it doesn't touch the caps relied on. Majority, companies, how a minor's contract binds, funds and unions remain open (legislation.gov.im behind a script challenge)."
+ },
+ {
+  "id": "R-8038",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.mib.gov.in/sites/default/files/2024-05/27-12-21.pdf",
+    "title": "Ministry of Information and Broadcasting, No. N-28011/9/2021-BC.III (December 2021): Compliance with provisions of the Child and Adolescent Labour (Prohibition and Regulation) Act, 2016 and Rules, 1988 in media production",
+    "read": "2026-11-04",
+    "said": "vide section 3(2)(b) this does not apply where the child \"works as an artist in audio- visual entertainment indust,y, induding advertisement, films, television serials or any such other entertainment subject to such conditions and safety measures, as may be prescribed provided that no such work under this clause shall effect the school education of the child' Such conditions and safety measures as prescribed in Rule 2(c) of Child and Adolescent Labour (Prohibition and Regulation) Rules, 1988 are required to be strictly complied with. 2. Rule 2 C (b) of Child and Adolescent Labour (Prohibition and Regulation) Rules, 1988 prescribes as under:- \"producer of any audio -visual media production or any commerdal event involving the parnciation of a child, shall involve a child in partici/'ation and ensure that all screening of his films and television programmes shall be made with a disdaimer speciljving that if any child has been engaged in the shooting, then, all the measures were taken to ensure that there has been no abuse, neglect or exploitation of such child during the entire process of the shooting \""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "\"Child and Adolescent Labour (Prohibition and Regulation) Amendment Rules 2017 rule 2C audio-visual entertainment pdf labour.gov.in\" (standard)",
+    "result": "no labour.gov.in or Gazette copy returned; led to the Ministry of Information and Broadcasting's December 2021 advisory (mib.gov.in) and secondary copies (LegitQuest, Indian Kanoon, Comply4HR, Drishti IAS: leads only); the amendment was GSR 392(E), notified 2 June 2017 (per the secondary results; not checked against the Gazette)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mib.gov.in advisory PDF (two connection resets, then read); labour.gov.in/childlabour and /acts-rules-child-labour (8.6 kB script shells; headless Chrome rendered 305 bytes); clc.gov.in reset the connection",
+    "result": "partial: the Ministry's own quotation of s. 3(2)(b) and Rule 2C(b) (the producer's disclaimer); the rest of Rule 2C (hours, permission, set-aside) not read from a primary",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "central": {
+     "exemption": "s. 3(2)(b): a child working as an artist in the audio-visual entertainment industry, subject to prescribed conditions, without affecting school education",
+     "rule2Cb": "producer must screen a disclaimer that measures were taken against abuse, neglect or exploitation of any child in the shoot (as quoted by MIB, Dec 2021)"
+    }
+   }
+  },
+  "notes": "The MIB letter's OCR-like typos are in its own text layer (copied verbatim). Companies and unions not retried today (indiacode.nic.in timed out on the Companies Act PDF; swaindia.org reset the connection)."
+ },
+ {
+  "id": "R-8245",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "althingi.is/lagas/nuna/1994138.html (lög nr. 138/1994 um einkahlutafélög) with curl (403) and in headless Chrome",
+    "result": "refused: a Cloudflare 'Just a moment… Performing security verification' page; not passed",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Lögræðislög 71/1997 is on the same site; not tried separately."
+ },
+ {
+  "id": "R-8040",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "normattiva.it N2Ls URN for codice civile art. 2382 (curl, and headless Chrome with both the codice.civile and regio.decreto URNs); its caricaArticolo endpoint for idArticolo=2382, versions 1-3, with a session cookie",
+    "result": "not read: the URN page returned the Code's index without the article text in both renders, and the article endpoint reset the connection",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Set-aside and the actors' CCNL not retried today."
+ },
+ {
+  "id": "R-8247",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
+    "title": "Jersey Legal Information Board: Companies (Jersey) Law 1991, current version (30 Sep 2026), Arts. 3(6), 28 and 73(3)",
+    "read": "2026-11-04",
+    "said": "( 6 ) A person mentioned in paragraph (1) or paragraph (2) must not be – ( a ) a minor; … 28 Prohibition of minors etc. A person mentioned in Article 3(6)(a) to (c) may not become a member of a company unless his or her rights of membership were transmitted to the person on the death of the holder thereof. … 73 Directors … ( 3 ) A person may not be a director of a company if the person – ( a ) has not attained the age of 18 years;"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.jerseylaw.je/laws/current/l_50_2002",
+    "title": "Jersey Legal Information Board: Children (Jersey) Law 2002, current version (06 Apr 2026), Art. 50 Restrictions on children taking part in performances",
+    "read": "2026-11-04",
+    "said": "( 1 ) Subject to the provisions of this Article, a child under the age of 16 years shall not take part in a performance to which this Article applies except under the authority of a licence granted by the Minister. … ( e ) any performance recorded (by whatever means) with a view to its use in a broadcast, a programme service or in a film intended for public exhibition … ( 3 ) A licence under this Article shall not be required for any child to take part in a performance to which this Article applies if – ( a ) in the 6 months preceding the performance the child has not taken part in other performances to which this Article applies on more than 3 days … ( 4 ) The Minister may grant a licence for a child to take part in a performance or series of performances if the Minister is satisfied that – ( a ) the child is fit to do so; ( b ) proper provision has been made to secure the child’s health and welfare; and ( c ) … the child’s education will not suffer."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.jerseylaw.je/laws/current/ro_77_2011",
+    "title": "Jersey Legal Information Board: Children (Regulation of Employment) (Jersey) Order 2011, current version (06 Apr 2026), Arts. 1-5, 9",
+    "read": "2026-11-04",
+    "said": "“child” means a person who has not attained the age of 16 years and is below the upper limit of compulsory school age … A child who is under the age of 13 years shall not be employed … A child may only be employed, on any day, outside school hours, between 6 a.m. and 8.15 p.m.. … ( 1 ) A child shall not be employed – … any school day, for more than 2 hours; … school week, for more than 12 hours. ( 2 ) A child aged under 15 years shall not be employed – … any day which is not a school day, for more than 7 hours; … holiday week, for more than 25 hours. ( 3 ) A child aged 15 years shall not be employed – … any day which is not a school day, for more than 8 hours; … holiday week, for more than 35 hours. … A child shall not be employed on more than 6 days in a week. … this Order shall not apply to the employment of a child to the extent that … the employment of a child under the age of 13 or the employment of a child outside the hours permitted by Article 3 is authorized by a licence granted by the Minister under Article 50 of the Children (Jersey) Law 2002"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "jerseylaw.je (Jersey Legal Information Board) /laws/current/l_30_1991, Companies (Jersey) Law 1991, point-in-time version 30 Sep 2026 marked Current, fetched with curl and read",
+    "result": "found: companies: a minor may not apply to form a company (Art. 3(6)(a)) nor become a member except by transmission on death (Art. 28); a director must have attained 18 (Art. 73(3)(a))",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "jerseylaw.je current-laws search for 'children employment' (curl and headless Chrome): the search answered with the unfiltered alphabetical list's first page (topic facets 'Children' 116, 'Employment & Work' 17); /laws/current/l_29_2002 (a guessed address for the Children (Jersey) Law 2002) answered 404",
+    "result": "not found: minimumWorkAge, childPerformers, minorsContracts (the employment-of-children law's address not reached today)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "\"Jersey law children performances licence employment of children order jerseylaw.je\" (standard)",
+    "result": "led to the Children (Regulation of Employment) (Jersey) Order 2011 (ro_77_2011) and gov.je's child-employment pages; the Order's page linked the parent Law at l_50_2002",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "jerseylaw.je /laws/current/ro_77_2011 and /laws/current/l_50_2002 fetched with curl, both marked 06 Apr 2026 (Current); Art. 50 and the Order read whole; the Law searched for earnings, remuneration",
+    "result": "found: minimumWorkAge (no employment under 13; under-16 hours caps) and childPerformers (a Minister's licence for any under-16 in a recorded, broadcast or paid performance, film included; none needed for 3 days or fewer in 6 months or unpaid school or approved-body shows); no earnings set-aside found in the Law",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minimumWorkAge": {
+    "general": 13,
+    "childUnder": 16,
+    "hours": {
+     "window": "06:00-20:15 outside school hours",
+     "schoolDay": 2,
+     "schoolWeek": 12,
+     "nonSchoolDayUnder15": 7,
+     "holidayWeekUnder15": 25,
+     "nonSchoolDayAt15": 8,
+     "holidayWeekAt15": 35,
+     "maxDaysPerWeek": 6,
+     "restHours": 14
+    }
+   },
+   "childPerformers": {
+    "permit": "licence granted by the Minister for Children and Families (Children (Jersey) Law 2002 Art. 50)",
+    "under": 16,
+    "reaches": "paid, licensed-premises, broadcast, programme-service performances and any performance recorded for broadcast or a film for public exhibition, rehearsals included",
+    "noLicenceNeeded": "3 days or fewer of such performances in the preceding 6 months, or unpaid school or approved-body performances",
+    "grantTests": [
+     "child fit",
+     "health and welfare provided for",
+     "education will not suffer"
+    ],
+    "setAside": null
+   },
+   "companies": {
+    "minimumDirectorAge": 18,
+    "minorMayFound": false,
+    "minorMayBeMember": "only by transmission on a holder's death"
+   }
+  },
+  "notes": "Unions and funds not retried today (no Jersey union or screen-fund site known by address; no web search spent). | The set-aside reads as an absence in the Law searched by word only (no Order on performance conditions read). Unions, funds and how a minor's contract binds remain open."
+ },
+ {
+  "id": "R-8249",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "moj.gov.jm (Ministry of Justice, Laws of Jamaica): its chain is incomplete, so DigiCert's own intermediate (DigiCert Global G2 TLS RSA SHA256 2020 CA1, from cacerts.digicert.com, chaining to the trusted DigiCert Global Root G2) was added with verification on; /laws/companies-act and two guessed /sites/default/files/laws/ PDF paths answered 404; the laws search returned the site's menu only; orcjamaica.com (Companies Office) answered 503",
+    "result": "not found: companies",
+    "date": "2026-11-04"
+   }
+  ]
+ },
+ {
+  "id": "R-8042",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "nippairen.com (日本俳優連合) home, /about, /about/organization.html, /about/jau_guideline.html read; guessed /nyukai, /join, /about/teikan.html redirected to the home page",
+    "result": "not found: unions: no membership or articles (定款) page is linked; the organization page mentions only that its committee drafts 定款 and 規約 changes",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Set-aside and the Gazette notice not retried today."
+ },
+ {
+  "id": "R-8252",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://brs.go.ke/wp-content/uploads/2023/03/CompaniesAct17of2015.pdf",
+    "title": "Business Registration Service, Kenya (brs.go.ke/acts/): Companies Act No. 17 of 2015, Revised Edition 2021, s. 131",
+    "read": "2026-11-04",
+    "said": "131. Minimum age for director (1) A person who has not reached eighteen years of age may not be appointed to be a director of a company. (2) An appointment made in contravention of subsection (1) is void."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "new.kenyalaw.org/akn/ke/act/2015/17, /2022/29 (Children Act) and /2007/11 (Employment Act): each answered 202 with an empty body (a script challenge), not passed; kenyalaw.org's old PDF paths answered 403",
+    "result": "not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "brs.go.ke/acts/ (the Business Registration Service, the companies registrar): its Companies Act PDF (Revised Edition 2021) read and searched for eighteen, age of",
+    "result": "found: companies: no one under eighteen may be appointed a director; such an appointment is void (s. 131)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "kfcb.go.ke/acts (Kenya Film Classification Board: lists the Films and Stage Plays Act Cap. 222, the Constitution and the Programming Code); kenyafilm.go.ke (Kenya Film Commission): proxy 502",
+    "result": "not found: funds and childPerformers (the KFCB list holds no child-performer rule; the Commission's site wasn't reached)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "minimumDirectorAge": 18,
+    "underAgeAppointment": "void (s. 131(2))"
+   }
+  },
+  "notes": "The registrar's copy is the 2021 revised edition; later amendments to s. 131, if any, weren't checked (kenyalaw.org behind a challenge). How a minor's contract binds, child-performer permits, unions and funds remain open."
+ },
+ {
+  "id": "R-8253",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "\"cbd.minjust.gov.kg Трудовой кодекс Кыргызской Республики 2025 новый\" (standard)",
+    "result": "the new Labour Code is Кодекс КР от 23 января 2025 года № 23 (in force from late January 2025 per economist.kg, a lead); a result named its edition of 14.11.2025 at cbd.minjust.gov.kg/3-45/edition/25298",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "cbd.minjust.gov.kg/3-45/edition/25298/ru in headless Chrome (HTTP/2 protocol error; with HTTP/2 off, an empty response) and its API (cbd.minjust.gov.kg/api/v1/GetEdition?editionId=25298, GetDocument?DocumentCode=3-45, found in the site's main.js) with curl over HTTP/2 and HTTP/1.1",
+    "result": "not read: the server closed every request to a document or the API (curl 92 / 52); only the home page shell answers",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "refworld.org/node/150138 holds the Code (a secondary, not fetched)."
+ },
+ {
+  "id": "R-8044",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.law.go.kr/LSW//lsInfoP.do?lsiSeq=270187&chrClsCd=010202&urlMode=lsInfoP&efYd=20250926&ancYnChk=0",
+    "title": "국가법령정보센터 (Ministry of Government Legislation): 대중문화예술산업발전법 [시행 2025. 9. 26.] [법률 제20833호, 2025. 3. 25., 일부개정], 제25조 (the version the law's own page, law.go.kr/법령/대중문화예술산업발전법, frames as current on 2026-11-04)",
+    "read": "2026-11-04",
+    "said": "제25조(청소년 대중문화예술용역보수의 청구) ① 청소년 대중문화예술인은 독자적으로 대중문화예술용역보수를 대중문화예술제작업자 또는 대중문화예술기획업자에게 청구할 수 있다. ② 제1항의 청구가 있는 경우 대중문화예술제작업자 또는 대중문화예술기획업자는 보수청구권이 친권자 등 법정대리인에게 있다는 계약이 있더라도 해당 청소년 대중문화예술인에게 보수를 지급하여야 계약 상의 보수지급 채무를 이행한 것으로 본다."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "law.go.kr/법령/대중문화예술산업발전법 (its frame points to lsiSeq=270187, in force from 2025-09-26) rendered in headless Chrome; the whole Act searched for 신탁 (trust), 적립 (set aside), 계좌 (account), and its youth chapter (제2절, arts. 19-25) read",
+    "result": "found as an absence: minorsContracts: the Act in force (Law 20833, in force 26 Sep 2025) holds no trust account or set-aside of a youth performer's earnings, so the 2024 trust-account proposal wasn't enacted in it; art. 25 lets a youth (under 19) claim their own pay, and payment to the youth discharges the debt even where the contract gives the claim to a parent",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minorsContracts": {
+    "setAside": null,
+    "youthMayClaimOwnPay": true,
+    "youthUnder": 19,
+    "paymentToYouthDischarges": "even where the contract gives the claim to a parent or other legal representative (art. 25(2))",
+    "inForce": "Law 20833, in force 2025-09-26"
+   }
+  },
+  "notes": "Unions (한국방송연기자노동조합 and the guilds) not retried today. The Act also bars a minor from running a management (기획업) business (art. 27(1)); the KR file may already hold it."
+ },
+ {
+  "id": "R-8269",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://adilet.zan.kz/rus/docs/Z980000220_",
+    "title": "НЦПС «Әділет» (Ministry of Justice): Закон Республики Казахстан от 22 апреля 1998 г. № 220-1 «О товариществах с ограниченной и дополнительной ответственностью», current text, ст. 51",
+    "read": "2026-11-04",
+    "said": "4. В качестве члена исполнительного органа товарищества может выступать только физическое лицо. Оно может и не быть участником товарищества."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "adilet.zan.kz/rus/docs/Z980000220_ (the LLP Law, the state's legal register) rendered in headless Chrome (curl gets a script shell); the whole text searched for несовершеннолет, дееспособ, возраст",
+    "result": "found as an absence: companies: the LLP Law sets no age for a director (единоличный исполнительный орган); art. 51(4) asks only a natural person; capacity then follows the Civil Code (not read today)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "LLP (ТОО) director": {
+     "minimumAge": null,
+     "rule": "only a natural person may sit on the executive body (Law 220-1 art. 51(4)); age follows civil capacity"
+    }
+   }
+  },
+  "notes": "Unions (Союз кинематографистов Казахстана) not retried today. The Civil Code's capacity article wasn't read; the KZ file's majority figure stands for it."
+ }
+]

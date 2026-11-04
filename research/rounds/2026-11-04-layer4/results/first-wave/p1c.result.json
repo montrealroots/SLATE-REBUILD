@@ -1,0 +1,1350 @@
+[
+ {
+  "id": "R-4736",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://migracion.gob.do/en/servicio/permit-for-artists-sports-and-exchange-students-padei/",
+    "status": "unreachable",
+    "now": "HTTP 403 (Cloudflare) again"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://vnm.mirex.gob.do/wp-content/uploads/2023/08/ENGLISH-DOMINICAN-REPUBLIC-VISA-REQUIREMENTS.pdf",
+    "title": "Ministry of Foreign Affairs of the Dominican Republic, Consular Section in Hanoi: Dominican Republic Visa Requirements (August 2023), 'Working Visa / Visa de Trabajo' (saved l4w/files/p1c/DO-vnm.pdf)",
+    "read": "2026-11-04",
+    "said": "WORKING VISA/ VISA DE TRABAJO Required Documentation for - Working Visa 1. A passport with validity of at least eighteen (18) months. 2. A visa application form duly completed and signed by the applicant. … 8. An invitation letter by a Dominican company addressed to the applicant - The applicant must present an invitation letter written in Spanish, which must be notarized and legalized by the Attorney General's Office of the Dominican Republic … 10. An offering letter o a labour contract already signed by a company located in the Dominican Republic. 11. A Certificate issued by the Ministry of Labor of the Dominican Republic indicating that the company is registered in the Integrated Labor Registration System (SIRLA), and in compliance with the provisions of the Article 135 of the Dominican Labor Code (nationalization of labor) (no more than 3 months). … 13. A Certificate issued by the Ministry of Labor of the Dominican Republic indicating the starting date, job title, salary and any additional benefits/allowances granted by the company."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "migracion.gob.do PADEI page (English) fetched by curl",
+    "result": "HTTP 403 (Cloudflare), as on 2026-11-01",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'consulado dominicano visa artistas requisitos \"artistas\" visa de trabajo República Dominicana consulado.gob.do OR mirex.gob.do costo'",
+    "result": "the DGM's PADEI title (page refused), wheretoemigrate.io (no primary), and the Foreign Ministry's Hanoi consular section PDF of visa requirements, fetched and read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "vnm.mirex.gob.do Visa Requirements PDF (2023) read whole: business visa, working visa, residence visa sections",
+    "result": "found for the working visa: the applicant applies at the consulate with a Dominican company's notarised invitation, a signed offer or labour contract, and Labour Ministry certificates that the company is on SIRLA and meets art. 135 of the Labour Code (nationalisation of labour), and stating salary and job. No fee, time, term, union step or artist rule; residence visa holders must register with the DGM within 30 days of arrival",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "applies": "The performer applies to a Dominican consulate for the working visa, on a Dominican company's notarised and legalised invitation letter, then registers with the General Directorate of Migration.",
+   "first": "An offer letter or labour contract signed by a company in the Dominican Republic, and Labour Ministry certificates (under 3 months old) that the company is registered in SIRLA and complies with the Labour Code's art. 135 on the nationalisation of labour, and stating the job, start date and salary."
+  },
+  "notes": "route (PADEI v. temporary residence), fees, processing, validity, union, eligibility, pay, exempt still blocked. The consular list is general (not for artists) and from one mission's 2023 PDF; the business visa (same PDF) is the short-work route layer 3 named, with a Dominican company's invitation."
+ },
+ {
+  "id": "R-4738",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-deportista-artista-gestor-cultural",
+    "status": "same",
+    "now": "read whole today; 'Fecha de última actualización: 2026/01/20'"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-deportista-artista-gestor-cultural",
+    "title": "Ecuador, Guía Oficial de Trámites y Servicios, Ministerio de Relaciones Exteriores y Movilidad Humana: Concesión de visa de residencia temporal para deportista, artista o gestor cultural (last updated 2026/01/20; saved l4w/files/p1c/EC-gobec.html)",
+    "read": "2026-11-04",
+    "said": "Autorización de residencia temporal que otorga el Estado ecuatoriano a las personas extranjeras que tienen la intención de establecerse en el país para realizar actividades deportivas, artísticas o culturales. Se emite a través de las Misiones Diplomáticas u Oficinas Consulares del Ecuador en el exterior y en las Direcciones Zonales en el Ecuador. … Dirigido a: Persona Natural - Extranjera. … Pago de la tarifa fijada por la autoridad de movilidad humana; y, Demás documentos que la autoridad requiera en los casos que amerite. Acreditar medios de vida lícitos conforme el Acuerdo Ministerial No. 70, de 28 de junio de 2024. … Requisitos Especiales: Contrato o convenio en virtud del cual está vinculado a una institución, club deportivo, productora, organización no gubernamental, u otra organización afín a esta categoría, cuya sede se encuentre legalmente constituida en territorio ecuatoriano; y, Documentos de constitución y funcionamiento de la persona jurídica contratante. … El trámite de solicitud de visa se realiza únicamente de manera virtual, a través de la plataforma oficial del Ministerio de Relaciones Exteriores y Movilidad Humana denominada e-VISAS. … ¿Cuál es el costo del trámite? Solicitud de visa USD $50, Otorgamiento de visa USD $270. No grava IVA … ¿Cuál es la vigencia de lo emitido al completar el trámite? 2 años … Base Legal Acuerdo Ministerial No. 0000026 - Arancel Consular y Diplomático 2023 … Ley Orgánica de Movilidad Humana 2023 - Art(s). Art. 60 … Reglamento a la Ley Orgánica de Movilidad Humana 2023 - Art(s). Art. 72"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gob.ec's official procedures guide for the MREMH's artist temporary residence visa (the layer 3 source) fetched by curl and read whole, every section (who, requirements, how, cost, where, validity, legal basis)",
+    "result": "found: the foreign artist applies online on e-VISAS (abroad or in Ecuador while in regular status); a contract with an institution or producer legally constituted in Ecuador comes first; USD 50 to apply and USD 270 on grant; valid 2 years; legal means of living per Acuerdo Ministerial 70. No decision time, union step, pay rule or exemption on the page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Acuerdo Ministerial 0000070 of 28 June 2024 (cancilleria.gob.ec/wp-content/uploads/2024/07/0000070.pdf), linked by the page, fetched (chain completed with the issuing CA's intermediate, verification on), 26 pages, image-only; OCR (spa) started",
+    "result": "the OCR had not finished within this pass on the shared machine: its income threshold for 'medios de vida lícitos' not read (saved l4w/files/p1c/EC-am70.pdf)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "applies": "The foreign artist applies online on the Foreign Ministry's e-VISAS platform, from abroad or in Ecuador while in regular status, and pays the application fee the same day.",
+   "first": "A contract or agreement with an institution, producer or similar organisation legally constituted in Ecuador, with that organisation's constitution and operating documents; proof of lawful means of living (Acuerdo Ministerial 70 of 2024).",
+   "fees": [
+    {
+     "what": "Visa application",
+     "amount": "50.00",
+     "currency": "USD"
+    },
+    {
+     "what": "Visa grant",
+     "amount": "270.00",
+     "currency": "USD"
+    }
+   ],
+   "validity": {
+    "n": 2,
+    "unit": "years",
+    "renewable": null
+   }
+  },
+  "notes": "Still blocked: processing, union, pay, exempt, eligibility (beyond the contract and means of living). Renewal not stated on the page. AM 70's PDF is saved for OCR (l4w/files/p1c/EC-am70.pdf, page images in l4w/files/p1c/ec70/); its means-of-living amount would be a lead for pay/eligibility."
+ },
+ {
+  "id": "R-4742",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'نقابة المهن التمثيلية تصريح عمل الفنان الأجنبي رسوم قرار لائحة تصاريح الأجانب مصر'",
+    "result": "no syndicate decision or fee schedule; almutalee.com and vetogate.com news on the actors' syndicate fining a producer for using a non-member, Al-Jarida quoting a Lebanese unionist that a foreign artist pays 40 % of the contract in Egypt (no primary); not used",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The syndicates' own permit rules (Law 35 of 1978 and their bylaws) still not reached; the 40 % figure is a lead only."
+ },
+ {
+  "id": "R-4743",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "anapec.org and taechir.emploi.gov.ma (Morocco's employment agency and its foreign-employment platform, which would cover the part Morocco administers) fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No SADR authority publishes a rule (layer 3); the territory's answer still hangs on Morocco's, which these pages would hold."
+ },
+ {
+  "id": "R-4745",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://faolex.fao.org/docs/pdf/eri200711.pdf",
+    "status": "same",
+    "now": "not re-read; it was read whole on 2026-11-01"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mol.gov.er (a Ministry of Labour and Human Welfare site) fetched by curl",
+    "result": "no connection (curl HTTP 000); no Eritrean labour ministry page reached",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Labour Proclamation 118/2001 leaves the permit to Ministry guidelines, which aren't published online as far as found."
+ },
+ {
+  "id": "R-4748",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://mols.gov.et/wp-content/uploads/2022/07/Labour-proclamation-1156.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://mols.gov.et/wp-content/uploads/2022/07/Labour-proclamation-1156.pdf",
+    "title": "Ministry of Labour and Skills, Labour Proclamation No. 1156/2019, Federal Negarit Gazette No. 89, 5 September 2019, art. 176 (p. 11782-11783; image-only PDF read by OCR and checked against the page image, saved l4w/files/p1c/ET-1156-p92.png)",
+    "read": "2026-11-04",
+    "said": "176. Employment of Foreign Nationals 1/any foreigner may only be employed in any type of work in Ethiopia where he possesses a work permit given to him by the Ministry. 2/a work permit shall be given for an employment in a specific type of work for three years and shall be renewed every year; provided, however, that the Ministry may vary the three years limit as required. 3/ Where the Ministry ascertains that the foreigner is not required for the work, the work permit may be cancelled. 4/ The Ministry may, in accordance with the law, charge service fees for the issuance, renewal or replacement of work permit."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Labour Proclamation 1156/2019 (layer 3's work source on mols.gov.et, 103 pages, image-only) fetched; pages 88-103 OCR'd (eng) and art. 176 checked against the page image",
+    "result": "art. 176 read whole: the Ministry's permit, three years for a specific type of work, renewed yearly, cancellable where the foreigner isn't required, fees by law. Nothing on who applies, a decision time, a union step, a criterion, pay or an exempt engagement",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "All seven fields still blocked; art. 176(3) ('not required for the work') is a lead for a labour-market test (first), not stated as one. Validity already held from other sources agrees with art. 176(2)."
+ },
+ {
+  "id": "R-4752",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.immigration.gov.fj/authority-to-work-or-study-while-on-a-visitors-permit/",
+    "status": "unreachable",
+    "now": "HTTP 403 to this client"
+   },
+   {
+    "url": "https://www.immigration.gov.fj/application-forms-publications-fees",
+    "status": "unreachable",
+    "now": "HTTP 403 to this client"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "immigration.gov.fj authority-to-work page and the forms, publications and fees page fetched by curl",
+    "result": "both HTTP 403 (548-byte block page); not read today",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Layer 3's reads (2026-11-01) stand; nothing new."
+ },
+ {
+  "id": "R-4754",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.gov.fk/customs/work-permit/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.fk/customs/work-permit/ re-fetched and searched for fee, £, charge",
+    "result": "no fee table in the page served to this client (as on 2026-11-01); no union, criterion, pay or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "FIG legislation site and the Immigration Ordinance's fee regulations not retried in this pass."
+ },
+ {
+  "id": "R-4756",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.cfsm.gov.fm/wp-content/uploads/2024/07/PUBLIC_LAW_NO__22-159.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Congress of the FSM, Public Law 22-159 (cfsm.gov.fm PDF) re-fetched and read whole",
+    "result": "unchanged: new s. 121A of title 51 exempts private-sector nonresident employees from chapter 1's hiring rules until 30 September 2027; no fee, time, term, union or pay rule. fsmlaw.org (Title 50) not retried (HTTP 406 on 2026-11-01)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2005 Immigration Regulations (entry permit fees) remain unfound."
+ },
+ {
+  "id": "R-4758",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.euraxess.fo/faroe-islands/information-assistance/work-permit",
+    "status": "same",
+    "now": "not re-fetched; the Immigration Office's own pages read instead"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.utlendingastovan.fo/en/permits/you-want-to-apply-for/work-permit/work-in-the-faroe-islands-applicants-from-third-countries-including-sports-agreement",
+    "title": "Útlendingastovan (Faroese Immigration Office), Work in the Faroe Islands - applicants from third countries (saved l4w/files/p1c/FO-third.html)",
+    "read": "2026-11-04",
+    "said": "Your salary and terms of employment must correspond to Faroese standards Your salary and terms of employment must correspond to Faroese standards. This means that your salary, holiday entitlements, terms of notice etc. must not be inferior to the standards within the professional field where you are going to work. As a rule, your employment must be full-time, which normally means 40 hours work per week. … When your application for a residence and work permit has been submitted, the Immigration Office will assess whether your salary and terms of employment correspond to Faroese standards."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.utlendingastovan.fo/en/permits/you-want-to-apply-for/work-permit/exemption-from-the-requirement-of-a-work-permit",
+    "title": "Útlendingastovan, Exemption from the requirement of a work permit (saved l4w/files/p1c/FO-exempt.html)",
+    "read": "2026-11-04",
+    "said": "You can work in the Faroe Islands without a work permit if your stay is shorter than 3 months, and if you are: … an artist, musician, performer or similar, and you have made an agreement with an organiser on the Faroe Islands prior to your event,"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "utlendingastovan.fo (the Immigration Office's own site) navigated by curl: Work permit hub, the third-country page, the exemption page and the About/FAQ page read whole, searched for fee, DKK, cost, union",
+    "result": "found for pay: salary and terms must match Faroese standards in the field, normally full time (40 hours); the exemption page confirms the 3-month rule for performers with an organiser's agreement. No government fee and no union step stated on these pages; the sitemap answers 403",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "pay": "Your salary and terms of employment must correspond to Faroese standards: pay, holidays and notice no worse than the standards of the professional field, and as a rule full-time (normally 40 hours a week); the Immigration Office assesses this."
+  },
+  "notes": "fees and union still blocked. Exempt (already held at 90 days) is confirmed by the Immigration Office's own page, which adds the condition of an agreement with a Faroese organiser before the event."
+ },
+ {
+  "id": "R-4762",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://journal-officiel.ga/21766-0150-pr-mtlcc-/",
+    "status": "unreachable",
+    "now": "no connection (curl HTTP 000)"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "journal-officiel.ga decree page (layer 3's source) fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "dgdi.ga (Direction générale de la documentation et de l'immigration) fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Neither the Journal officiel nor the DGDI answered today."
+ },
+ {
+  "id": "R-4765",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://llca.gov.gd/labour/wp-content/uploads/sites/3/2023/12/LABOUR-WORK-PERMIT-GUIDE.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://llca.gov.gd/labour/wp-content/uploads/sites/3/2023/12/LABOUR-WORK-PERMIT-GUIDE.pdf",
+    "title": "Ministry of Labour (Grenada), Work Permit Guidelines: A General Guide to the Foreign Nationals and Commonwealth Citizens Employment System in Grenada (June 2020), §§ 3.1, 8.2, 9.7.3 (saved l4w/files/p1c/GD-guide.pdf)",
+    "read": "2026-11-04",
+    "said": "3.1.1 Specific Non-Citizen Exemptions from the Requirement to Hold Work Permits Section 10.1 of the Act outlines the various categories of foreign nationals who are not required to obtain Work Permits to engage in employment in Grenada. They are: 1) A Judge of the High Court or the Court of Appeal; 2) An individual employed in the service of the Crown, or the Government in a civil capacity; 3) A legal representative engaged in defending an individual charged with a criminal offence; 3.1.2 Other Exempted Categories – Cabinet Directives 1) Citizens of a Protocol Member State of the Organization of Eastern Caribbean States OECS Citizens - In accordance with SRO24/2015, Work Permits are abolished for OECS Citizens … 3) Holders of any other type of CARICOM Skilled Certificate … 8. 2 Fee Exemptions … 2) CARICOM Entertainers: Waiver of Work Permit fees to CARICOM Artistes only (Cabinet Directive 15th May, 2017); … 9.7.3 Entertainment (Arts, Culture and Sports) Employers, promoters, agents or producers are required to apply for Work Permits, for each foreign artist/entertainer, for all events."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "the Labour Ministry's Work Permit Guidelines (June 2020, on llca.gov.gd) re-fetched and read for exemptions (§ 3.1), fee exemptions (§ 8.2) and the entertainment category (§ 9.7.3), searched for exempt, wage, salary, days",
+    "result": "exempt found as an absence: the Act's s. 10.1 exempts only judges, Crown or Government civil servants and defence counsel, and Cabinet directives add OECS citizens, St George's University faculty and CARICOM skills certificate holders; a permit is required 'for each foreign artist/entertainer, for all events'. CARICOM artistes' permit fees are waived (Cabinet Directive 15 May 2017). No pay rule anywhere in the guide",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": "None by length: every foreign artist or entertainer needs a work permit for every event. Only OECS citizens (work permits abolished, SRO 24/2015) and holders of a CARICOM skills certificate work without one; CARICOM artistes still need the permit but pay no fee (Cabinet Directive of 15 May 2017)."
+  },
+  "notes": "pay still blocked (the guide has none; the Act and SRO 66 of 1968 not read). The guide is dated June 2020; later Cabinet directives not checked."
+ },
+ {
+  "id": "R-4771",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://gov.gg/eppfaq",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.gg Population Management FAQ (gov.gg/eppfaq) re-fetched and searched for fee, £, entertain, perform, artist",
+    "result": "no work visa fee, no visitor work rule, no union step; only 'fees are applied' for a change of immigration permission",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "guernseylegalresources.gg (the Fees Order 2025 and the Immigration Rules) bot-checked on 2026-11-01 and wasn't retried; no search spent on it."
+ },
+ {
+  "id": "R-4773",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://gis.gov.gh/fees-and-charges/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gis.gov.gh Fees and Charges (effective 15 May 2025) re-read whole, all 44 lines",
+    "result": "no processing time, term, criterion, union, pay or exemption for performers; lines for work permits (companies, missionaries/NGOs, immigrant quota, GIPC), rotators' permits up to 6 months (US$647) and 6-12 months (US$1,000), an emergency entry visa (US$200)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead: the rotators' permit (up to 6 months) may be the short-engagement route; GIS doesn't say whom it covers. GhaLII (Act 573) bot-checks this client (2026-11-01), not retried."
+ },
+ {
+  "id": "R-4775",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.gibraltar.gov.gi/department-employment/employment-service-registration-explained",
+    "status": "same"
+   },
+   {
+    "url": "https://www.gibraltar.gov.gi/uploads/documents/employment/Department%20of%20Employment%20Information%20Leaflet-2025.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gibraltar.gov.gi 'Registration Explained' page and the Department of Employment Information Leaflet 2025 re-fetched and searched for entertain, perform, artist, working days, exempt, union, permit",
+    "result": "nothing for performers: the employer must apply for a work permit before a non-EU national starts; vacancies registered 10 days ahead (£9.50, penalties £15/£30); detached workers notified 5 working days ahead. No decision time, criterion, exemption or union step",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Employment Act and Employment Regulations on gibraltarlaws.gov.gi not retried in this pass; web search, trade press and archive not retried."
+ },
+ {
+  "id": "R-4777",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/The-Faroe-Islands-and-Greenland/Work-in-Greenland",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "SIRI's Work in Greenland page re-fetched and searched for conditions, requirement, qualification, union, artist",
+    "result": "unchanged: the employer's municipal permit to employ foreign labour 'as a rule', pay and terms to Greenlandic standards, the 3-month exemption excluding performers; no performer criterion and no union step",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Greenland Government's Danish-only page on work in Greenland (linked from SIRI) not fetched in this pass."
+ },
+ {
+  "id": "R-4779",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://faolex.fao.org/docs/pdf/gam231810.pdf",
+    "status": "same",
+    "now": "not re-read; read whole on 2026-11-01"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mole.gov.gm (Ministry of Trade/Labour site) fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The expatriate quota's fee and term would sit in regulations under the Labour Act 2023, not found."
+ },
+ {
+  "id": "R-4781",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://faolex.fao.org/docs/pdf/gui212958.pdf",
+    "status": "same",
+    "now": "not re-read; read on 2026-11-01"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.emploi.gov.gn (Guinea's employment ministry) fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "AGUIPE's fee schedule still not reached."
+ },
+ {
+  "id": "R-4784",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://exteriores.gob.es/Embajadas/malabo/es/ViajarA/Paginas/Trabajar.aspx",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "the Spanish Embassy in Malabo's 'Trabajar' page (layer 3's work source) re-read",
+    "result": "Spain's description of Equatorial Guinea (a work permit and a residence permit, 'lentos y costosos'; minimum wage 120,000 CFA francs): a page about another country, so a lead, not Equatorial Guinea's own rule; no Equatoguinean ministry page reached",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No Equatoguinean authority page found in this pass; web search not spent."
+ },
+ {
+  "id": "R-4786",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.taxheaven.gr/law/5038/2023/arthro/70",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Ν. 5038/2023 (Migration Code), Taxheaven copy: the law's index read for the fee article and art. 171 (Παράβολα - Πρόστιμα) fetched and read",
+    "result": "art. 171 § 1 sets residence-permit fees for categories Ε, Ο, Β and Η (e.g. €150, €75, €450, €2,000) and names no Ζ category, so the Ζ.3 creative artists' permit fee isn't there; the national visa fee (a consular fee) isn't in the law. Art. 70 re-read: no term, time or pay",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead: art. 171's silence on category Ζ (as read on Taxheaven, a secondary of the ΦΕΚ). mfa.gr consular fee pages (403 on 2026-11-01) not retried."
+ },
+ {
+  "id": "R-4788",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://gov.gs/entry-control-order-permit-application/",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://gov.gs/wp-content/uploads/2025/07/Entry_Control_Ordiance_Deemed_Permission_Policy.pdf",
+    "title": "GSGSSI Policy Paper 01-25 (in force 1 August 2025), Entry Control Ordinance 2022, section 9 – Schedule 2: policy on those persons who do not require an Entry Permit (Deemed Permission), dated 5 June 2025 (saved l4w/files/p1c/GS-deemed.pdf)",
+    "read": "2026-11-04",
+    "said": "Section 9 of the 2022 Ordinance sets out those persons who are considered to have “deemed” permission to enter the Territories and so do not require an Entry Permit under Section7 of that ordinance. These are set out in Schedule 2 to the Ordinance. … Part A - Persons who have deemed permission to enter the Territories for work or work-related reasons. 1. Any person who is a member of the naval, military or air forces of the Crown … 4. Any person employed or engaged in the provision of goods or services for the purposes of the Government of South Georgia and the South Sandwich Islands. … It does not cover persons who have received a permit or permission from the Government to undertake work in the Territories that is not for or under contract to the Government. 5. Any person who works for or on behalf of the British Antarctic Survey … Part B - Deemed permission for ships’ crews. … Part C – Persons who have deemed permission for other reasons."
+   },
+   {
+    "kind": "primary",
+    "url": "https://gov.gs/entry-control-order-permit-application/",
+    "title": "GSGSSI, Entry Control Ordinance – Permit Application (saved l4w/files/p1c/GS-entry.html)",
+    "read": "2026-11-04",
+    "said": "Applications should be received and paid for at least 8 days prior to the 1st intended date of arrival (disembarkation) in the Territories. … Under section 6(5) of the Entry Control Ordinance 2022, applications made 14 days or less before the first intended date of arrival may only be accepted where it was not reasonably practicable to apply earlier. … no application submitted 3 days or less before arrival will be approved."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.gs Entry Control permit page re-read and the two policy PDFs it links (Deemed Permission Policy 01-25; General Conditions Applying to the Use of Entry Permits) fetched",
+    "result": "exempt found as an absence: the Deemed Permission policy, read whole, gives work without a permit only to Crown forces and civil servants, those working for or under contract to the Government or the British Antarctic Survey, emergency responders and ships' crews, so a performer or film crew needs the work Entry Permit. Processing: the page sets lead times (apply at least 8 days before arrival; within 14 days only if earlier wasn't practicable; never within 3 days), not a decision time. The General Conditions PDF yields no text layer (not OCR'd)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": "None for performers: under Schedule 2 of the Entry Control Ordinance 2022 (Deemed Permission Policy 01-25), only Crown forces and civil servants, people working for or under contract to the Government or the British Antarctic Survey, emergency responders and ships' crews work without an Entry Permit.",
+   "processingNote": "No decision time is published; an application must be made and paid at least 8 days before the first arrival, one made 14 days or less before is accepted only if earlier wasn't practicable, and none is approved 3 days or less before."
+  },
+  "notes": "processing (a decision time), eligibility, union and pay still blocked. The General Conditions PDF (l4w/files/p1c/GS-cond.pdf) is image-only and wasn't OCR'd."
+ },
+ {
+  "id": "R-4790",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://mcd.gob.gt/wp-content/uploads/2022/01/REQUISITOS-PARA-ARTISTAS-NACIONALES-Y-EXTRANJEROS.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "the Culture Ministry's requisites sheet (Acuerdos Ministeriales 1106-2015 and 544-2016) re-fetched and read whole",
+    "result": "unchanged: per-event licence, 15 business days ahead, all procedures free, the IPSA artistic guarantee stamps with no price, a union's letter of consent for foreign events; no term, criterion, pay floor or exemption",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "igm.gob.gt and www.igm.gob.gt (Instituto Guatemalteco de Migración) fetched by curl for a performer's migration status",
+    "result": "connection reset (curl: (35) Recv failure: Connection reset by peer)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "route (the IGM's status), fees (IPSA stamps), validity, eligibility, pay and exempt still blocked."
+ },
+ {
+  "id": "R-4793",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mininterior.gov.gw fetched by curl for the Direcção Geral de Migração e Fronteiras",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No Bissau-Guinean ministry or migration page reached; country still open."
+ },
+ {
+  "id": "R-4795",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://moha.gov.gy/wp-content/uploads/2021/12/REQUIREMENTS-FOR-LANDING-PERMIT-FOR-EMPLOYMENT-STATUS.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "Ministry of Home Affairs 'Requirements for Landing Permit for Employment Status' re-fetched and read whole",
+    "result": "unchanged: the vacancy advertised for three consecutive months, the contract, credentials; 'Each application takes one (I) month to process'; no term, union step, criterion, pay rule or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Immigration Act Cap. 14:02 not retried today."
+ },
+ {
+  "id": "R-4799",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://inm.gob.hn/extranjeria",
+    "status": "changed",
+    "now": "redesigned, 'Última actualización 30 de septiembre de 2026': a list of services (permisos de permanencia, residencias, categorías migratorias) with no requirements, fees or times"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "inm.gob.hn/extranjeria fetched and read whole; its links searched for a spectacle or permit page",
+    "result": "no procedure page for the permiso especial de permanencia for public spectacles; no fee, time or union step",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Ley de Migración y Extranjería and its reglamento not retried today."
+ },
+ {
+  "id": "R-4802",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.immigration.gouv.ht and mast.gouv.ht fetched by curl",
+    "result": "no connection (curl HTTP 000) (both)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Country still open; no Haitian authority answered."
+ },
+ {
+  "id": "R-4804",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.tv",
+    "status": "same"
+   },
+   {
+    "url": "https://net.jogtar.hu/jogszabaly?docid=A2400035.KOR",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=A1300445.KOR",
+    "title": "Wolters Kluwer Jogtár, Hatályos Jogszabályok Gyűjteménye: 445/2013. (XI. 28.) Korm. rendelet (on the employment of third-country nationals, including those employable without a permit), Hatály: 2025.VII.1. - ; § 9 (1) and § 15 (1) (saved l4w/files/p1c/HU-445-2026-11-04.html)",
+    "read": "2026-11-04",
+    "said": "3. Munkavállalási engedély munkaerőpiaci helyzet vizsgálata nélkül 9. § (1) A munkavállalási engedélyt a 3. § (2)–(7) bekezdésében, valamint az 5. § (1) bekezdés a) és e) pontjában meghatározott szempontok vizsgálata nélkül kell kiadni: … 13. a mozgóképszakmai hatóság által, a mozgóképről szóló törvény alapján nyilvántartásba vett filmgyártó vállalkozás által alkalmazni kívánt harmadik országbeli állampolgár munkavégzéséhez, … 18. * olyan harmadik országbeli állampolgár előadóművész foglalkoztatásához, aki Magyar Kártyát kaphat. … 5. A harmadik országbeli állampolgár magyarországi foglalkoztatását érintő engedélyezési kötelezettség alóli mentesség szabályai 15. § (1) A harmadik országbeli állampolgár Magyarország területén foglalkoztatásra irányuló jogviszony keretében történő foglalkoztatásához nincs szükség engedélyre: … 16. a naptári évenként tíz munkanapnál nem hosszabb ideig tartó, oktatási, tudományos vagy művészeti tevékenységhez,",
+    "quotes": "https://njt.hu/jogszabaly/2013-445-20-22"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Government Decree 445/2013 (XI. 28.) on the employment of third-country nationals, in force from 2025.VII.1, fetched whole from net.jogtar.hu and searched for művész, előadó, film; the 2026-11-01 attempts had read only Act XC of 2023 and Decree 35/2024",
+    "result": "found for exempt: § 15 (1) 16 needs no permit for educational, scientific or artistic activity of no more than ten working days in a calendar year. Also § 9 (1) 13 and 18: a work permit is issued without the labour-market test for a worker a registered film production company wants to employ, and for a performing artist eligible for the Hungarian Card",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Act XC of 2023 (net.jogtar.hu, A2300090.tv) re-read for a pay rule and a work-without-permit clause",
+    "result": "no pay floor for the Hungarian Card (unchanged); § 36 (5) d) now also opens the Card to a third-country national working for a film producer registered under the Motion Picture Act",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": {
+    "days": 10,
+    "within": "calendar-year",
+    "note": "No permit is needed for artistic activity of no more than ten working days in a calendar year (Decree 445/2013 § 15 (1) 16). The ten are working days."
+   }
+  },
+  "notes": "pay still blocked (none in the Act or decrees read; an absence not claimed since the Card's pay may sit in a ministerial notice). Jogtár is a commercial consolidation: secondary, quoting the state's Nemzeti Jogszabálytár (njt.hu), which wasn't fetched in this pass. Eligibility lead for the lead: Act XC 2023 § 36 (5) d) (film production workers) beside c) (performing artists)."
+ },
+ {
+  "id": "R-4808",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://lawoffice.org.il/en/israeli-work-visa-for-a-foreign-artist/",
+    "status": "same",
+    "now": "not re-read"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'gov.il BlobFolder נוהל הזמנת אמנים מחו\"ל רשות האוכלוסין וההגירה אשרת עבודה B/1 אומן זר'",
+    "result": "the Population and Immigration Authority's service page 'הזמנת אומנים מחוץ לארץ' (gov.il/he/service/request_to_invite_artists_from_abroad); the result summary says the inviter applies in person with a commitment letter, the artists' promotional material and the Culture Ministry's recommendation, and that a tour over a month also needs a work permit; a snippet, not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.il/he/service/request_to_invite_artists_from_abroad and its /en/ twin fetched by curl",
+    "result": "HTTP 403 (bot protection) to this client",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21 indexes for il,gov)/he/service/request_to_invite_artists_from_abroad and /en/",
+    "result": "no captures",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Strong lead (unread): the Authority's 'Inviting artists from abroad' service page; retry by another client. Nothing filled from a snippet."
+ },
+ {
+  "id": "R-4810",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://gov.im/categories/working-in-the-isle-of-man/work-permits/temporary-exemptions",
+    "status": "same"
+   },
+   {
+    "url": "https://gov.im/categories/working-in-the-isle-of-man/work-permits/work-permit-fees/",
+    "status": "same"
+   },
+   {
+    "url": "https://gov.im/categories/travel-traffic-and-motoring/immigration/work/workers/tier-5-temporary-workers",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.im/categories/travel-traffic-and-motoring/immigration/visit",
+    "title": "Isle of Man Government, Immigration: Visit (saved l4w/files/p1c/IM-visit.html)",
+    "read": "2026-11-04",
+    "said": "cannot do paid or unpaid work for an Isle of Man company or as a self-employed person as a visitor. You will need to apply for a Worker Migrant visa. If you are being paid by an Isle of Man organisation as an expert in your profession, you may get permission to visit the Isle of Man for a Permitted Paid Engagement."
+   },
+   {
+    "kind": "primary",
+    "url": "https://gov.im/categories/working-in-the-isle-of-man/work-permits/temporary-exemptions",
+    "title": "Isle of Man Government, Work permits: Temporary Exemptions (page last updated 28 February 2017; saved l4w/files/p1c/IM-exempt.html)",
+    "read": "2026-11-04",
+    "said": "The following exemptions are for temporary employment for up to 48 days a year: … Theatrical and musical productions"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.im Immigration 'Visit' page fetched by curl and searched for paid engagement, entertain, perform, artist",
+    "result": "found: a visitor paid by an Isle of Man organisation as an expert in their profession may come for a Permitted Paid Engagement, without the Tier 5 visa; no length or list of qualifying activities given there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.im Tier 5 (Temporary Worker) page and the work permit fees page re-read for the entry clearance fee, decision time, union notice and pay",
+    "result": "none stated: Tier 5 stay up to 12 or 24 months or the certificate's time plus 28 days; the work permit fee is £60 paid by the employer (as held)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": {
+    "days": null,
+    "within": null,
+    "note": "A performer paid by an Isle of Man organisation as an expert in their profession may visit for a Permitted Paid Engagement instead of taking the Tier 5 visa; theatrical and musical productions are also exempt from the work permit for up to 48 days a year."
+   }
+  },
+  "notes": "fees (the entry clearance fee), processing, union and pay still blocked; the Isle of Man Immigration Rules (the Permitted Paid Engagement's length and activities) not read in this pass."
+ },
+ {
+  "id": "R-4812",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://indianvisaonline.gov.in/visa/visa-category.html",
+    "status": "changed",
+    "now": "the Film Visa entry is commented out of the page's HTML; no exemption or union rule stated"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "indianvisaonline.gov.in visa categories page fetched and searched for film, artist, entertain, performer",
+    "result": "no performer exemption; the Film Visa card is present only as commented-out HTML",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "union and exempt still blocked; MHA's Visa Manual not retried."
+ },
+ {
+  "id": "R-4815",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "molsa.gov.iq (Ministry of Labour and Social Affairs) fetched by curl",
+    "result": "redirect loop: curl stopped after 50 redirects (HTTP 301 to itself)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "No Iraqi ministry text reached."
+ },
+ {
+  "id": "R-4817",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mcls.gov.ir and eatba.mcls.gov.ir (the Ministry's foreign nationals' employment portal) fetched by curl",
+    "result": "no connection (curl HTTP 000) (both)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Labour Law arts. 120-129 still not read in an official copy."
+ },
+ {
+  "id": "R-4821",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:1999-08-31;394~art40",
+    "status": "same"
+   },
+   {
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-07-25;286~art27",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Normattiva D.P.R. 394/1999 art. 40 re-fetched and read whole (commi 1-16)",
+    "result": "no decision time, pay floor or union step for show-business workers (comma 14: nulla osta from the Rome and Palermo show-business placement offices, initial period up to twelve months; comma 3: nulla osta to be used within 120 days). Comma 15 is a lead for exempt: entry visas for foreign artists doing self-employed work of short duration, in any case under 90 days, are issued outside the quotas, bound to the one producer; it doesn't say the nulla osta is waived",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Ministry circulars 34/2006 and Nota 524/2011 (the procedure) still not reached; not retried today."
+ },
+ {
+  "id": "R-4822",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.gov.je/Working/WorkPermits/Pages/WorkPermitPolicy.aspx",
+    "status": "changed",
+    "now": "answers HTTP 200 to this client (it answered HTTP 500 'The URL you requested has been blocked' on 2026-11-01); 'Updated January 2026'"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.je/Working/WorkPermits/Pages/WorkPermitPolicy.aspx",
+    "title": "Government of Jersey, Work permit policy (Jersey Customs and Immigration Service), 'Updated January 2026' (saved l4w/files/p1c/JE-policy-2026-11-04.html)",
+    "read": "2026-11-04",
+    "said": "Work permits are a requirement under the Immigration (Work Permits) (Jersey) Rules 1995 and as such employers are required to apply for a work permit for those individuals who require immigration permission to enter or remain in Jersey for work. … The work permit application form must be completed by someone authorised to do so on behalf of the employer and can make payment for the work permit. An employee cannot apply for their own work permit. … If your prospective employee is living abroad and is granted a Jersey work permit the employee is likely to need a visa before travelling to Jersey. The Jersey visa requirements are aligned to the UK visa requirements. … Long-term work permit (previously skilled work permit) This route is available for those individuals employed in any industry for an initial period of up to 3 years following which a further work permit may be granted. … Employers must demonstrate that an employee will be paid the minimum salary threshold or the going rate for the role whichever is higher. … 3413 Actors, entertainers and presenters Actor Commentator (broadcasting) Costumed interpreter Disc jockey Entertainer Presenter (broadcasting) Singer £30,960 (or the going rate, whichever is higher) … Work permit fees (accurate as of December 2024) are paid for by the employer who should not recoup these costs from the employee. Duration of employee's work in Jersey Fee Less than 1 month £58 1 month and up to 6 months £85 More than 6 months and up to 9 months £115 More than 9 months and up to 12 months £175 More than 1 year and up to 2 years £290 More than 2 years and up to 3 years £350 … Immigration fees (accurate as of December 2024) are set by the UK Home Office. … work permit processing time is 3 weeks however this may take longer if the application is incomplete and additional documents requested visa processing times are approximately 3 weeks from the date that the applicant attends the visa application centre … Entertainers from UK and overseas Entertainers in possession of a UK Tier 5 Temporary Worker visa can work in Jersey as a performer for up to 1 month without the need for a work permit. The employer in the Island should produce the following: copy of the biodata page of the passport and the page showing the current UK Immigration endorsement. In the case when the entertainer has not yet entered the UK or applied for an entry clearance the certificate of sponsorship will suffice details of their performance in Jersey If the entertainer is staying for longer than 1 month or is applying directly from overseas, they may require a work permit and a visa."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.je Work permit policy page (www.gov.je/Working/WorkPermits/Pages/WorkPermitPolicy.aspx) fetched by curl and read whole (166,389 characters of text), searched for entertain, actor, fee, processing, union, valid",
+    "result": "found: the page now answers; the employer applies, an employee can't; long-term permit up to 3 years then renewable; actors, entertainers and presenters (SOC 3413) on the long-term route at £30,960 or the going rate; fees £58 to £350 by length, paid by the employer; 3 weeks to process; entertainers with a UK Tier 5 visa perform up to 1 month without a permit. No union step anywhere in the policy",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "applies": "The Jersey employer applies and pays; an employee can't apply for their own work permit. A performer living abroad then needs a visa, which follows the UK's rules and is applied for and paid by the performer to the UK Home Office.",
+   "first": "An offer of employment: the employer's application needs the contract of employment and job description, the business licence and the passport's details page.",
+   "fees": [
+    {
+     "what": "Work permit, less than 1 month",
+     "amount": "58.00",
+     "currency": "GBP"
+    },
+    {
+     "what": "Work permit, 1 month up to 6 months",
+     "amount": "85.00",
+     "currency": "GBP"
+    },
+    {
+     "what": "Work permit, over 6 up to 9 months",
+     "amount": "115.00",
+     "currency": "GBP"
+    },
+    {
+     "what": "Work permit, over 9 up to 12 months",
+     "amount": "175.00",
+     "currency": "GBP"
+    },
+    {
+     "what": "Work permit, over 1 up to 2 years",
+     "amount": "290.00",
+     "currency": "GBP"
+    },
+    {
+     "what": "Work permit, over 2 up to 3 years",
+     "amount": "350.00",
+     "currency": "GBP"
+    }
+   ],
+   "feesNote": "Fees as of December 2024, paid by the employer, who may not recoup them from the employee; the visa's fee is the UK Home Office's.",
+   "processing": {
+    "standard": {
+     "n": 3,
+     "unit": "weeks"
+    },
+    "premium": null
+   },
+   "processingNote": "3 weeks for the work permit, longer if documents are missing; the visa about 3 weeks more from the visa centre appointment.",
+   "validity": {
+    "n": 3,
+    "unit": "years",
+    "renewable": true
+   },
+   "eligibility": "Actors, entertainers and presenters (SOC 3413), dancers (3414) and musicians (3415) are long-term work permit occupations.",
+   "pay": "Actors, entertainers and presenters must be paid at least £30,960 a year or the going rate for the role, whichever is higher (musicians £32,900; arts officers, producers and directors £37,500).",
+   "exempt": {
+    "days": null,
+    "within": null,
+    "note": "A performer holding a UK Tier 5 (Temporary Worker) visa may perform in Jersey for up to 1 month without a work permit; the employer keeps the passport details, the UK endorsement or certificate of sponsorship, and the performance details. A performer applying directly from overseas needs the work permit and a visa."
+   },
+   "union": "None: the work permit policy, read whole, names no union step."
+  },
+  "notes": "The page answered today after the HTTP 500 block of 2026-11-01. Shapes of pay/exempt follow what the lead's permit files take; adjust to the engine's. Musicians' and producers' thresholds read from Appendix 1 of the same page. exempt.days left null: the policy says 1 month, not a count of days."
+ },
+ {
+  "id": "R-4824",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.mlss.gov.jm/departments/work-permit/",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mlss.gov.jm Work Permit page re-read; it links the Foreign Nationals and Commonwealth Citizens (Employment) Exemptions Regulations 1964 at laws.moj.gov.jm",
+    "result": "the page states no decision time, union step, criterion or pay rule; exemptions are those the 1964 Regulations list",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "laws.moj.gov.jm/legislation/subsids/F/The Foreign Nationals and Commonwealth Citizens (Employment) Act.pdf fetched (its chain completed with DigiCert's own intermediate, DigiCertGlobalG2TLSRSASHA2562020CA1, verification on)",
+    "result": "HTTP 503 (an HTML error page); the Regulations not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 1964 Exemptions Regulations are the primary for 'exempt'; retry laws.moj.gov.jm later."
+ },
+ {
+  "id": "R-4826",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.mol.gov.jo/ebv4.0/root_storage/en/eb_list_page/the_principles_for_issuing_work_permits_for_non-jordanian_workers_with_specialized_skills_for_the_year_2024.pdf",
+    "status": "same",
+    "now": "not re-read"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mol.gov.jo home page (Arabic) fetched and searched for فنان, الفنية and رسوم تصاريح",
+    "result": "only news items (a call to regularise workers, 2 November 2026); no artists' permit page linked",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Stamp duty, decision time, union, pay and exempt still blocked."
+ },
+ {
+  "id": "R-4832",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://cbd.minjust.gov.kg/230045488/edition/0/ru",
+    "status": "unreachable",
+    "now": "a script-only shell; its API (cbd.minjust.gov.kg/api/v1/document/230045488) answers 403 and the documents path resets (HTTP/2 INTERNAL_ERROR)"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "the Ministry of Justice's legal database page for the Temporary Regulation (Resolution 312 of 30 April 2026), the old act/view URL and the API paths in its script",
+    "result": "no text: the page loads by script behind reCAPTCHA; API 403",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Regulation's fees, terms and conditions still unread."
+ },
+ {
+  "id": "R-4834",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.tilleke.com/insights/cambodia-sets-new-work-permit-rules-for-foreign-employees/9/",
+    "status": "same",
+    "now": "not re-read"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mlvt.gov.kh, www.foreignerservice.mlvt.gov.kh and www.fwcms.mlvt.gov.kh fetched by curl",
+    "result": "the Ministry's home page answers with no work-permit fee or rule; the two foreign-worker portals give no connection",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Cambodia MLVT Prakas work permit employment card fee foreign worker 2024 2025 riel per year foreignerservice.mlvt.gov.kh'",
+    "result": "DFDL, Tilleke, ASEAN Briefing and others: penalties (KHR 12.6 million; KHR 50.4 million) and renewal deadlines, and that fees are set by a Joint Prakas of the MLVT and the Ministry of Economy and Finance, with no amounts; not used",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The Joint Prakas on work permit fees is the primary to find."
+ },
+ {
+  "id": "R-4835",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.mfa.gov.ki/wp-content/uploads/2020/11/Work-Visa-FINAL.pdf",
+    "status": "same",
+    "now": "read whole today (layer 3's work source)"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.mfa.gov.ki/wp-content/uploads/2020/11/Immigration-Procedures-2020.pdf",
+    "title": "Kiribati Ministry of Foreign Affairs and Immigration, Immigration Procedures, certified under the Immigration Act 2019, Version 1 (128 pp., 2020), section D 'Temporary Visas: Work Visas' (saved l4w/files/p1c/KI-proc.pdf)",
+    "read": "2026-11-04",
+    "said": "Work means any activity undertaken for gain or reward … 2. Requirements for work visa applicants Unless specifically stated, all work visa applicants must: … b. produce evidence to show that they are suitably qualified by training and experience to do the job they have been offered. … sufficient funds for maintenance. This includes showing at least one of the following: a. a proposed salary that an immigration officer considers sufficient to cover maintenance and accommodation … 3. General requirements for employers … a. paying employees no less than the minimum wage … 5. Offers of employment All offers of employment must be genuine and sustainable and should contain: … iii. details of pay, hours of work and conditions of employment … 11. Essential Skills work visa … may only be granted if: a. the employment is acceptable b. there are no Kiribati citizens or residents available for the work … 13. Currency of Essential Skills work visas An Essential Skills work visa may be granted for 1 year. Further visas may be granted for the period for which the employment is offered, up to a maximum of 3 years. … 15. Specific Purpose or Event work visa … c. the work is time-bound (not permanent or open) d. the applicant is suitably qualified to undertake the work e. the applicant has an approved sponsor (if applicable) … Media, film and video production crew | Terms of production, including duration | For period of engagement | Further visas can be granted with evidence of need for extension"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.mfa.gov.ki/wp-content/uploads/2020/11/Work-Visa-FINAL.pdf",
+    "title": "Kiribati Immigration, Work Visa Application Form (2020; saved l4w/files/p1c/KI-workvisa.pdf)",
+    "read": "2026-11-04",
+    "said": "You should use this form if you are applying for the following work visa types: • Essential Skills • Religious worker • Specific purpose or event • Domestic worker of consulate staff … All applicants must provide: • Completed, signed application form • Appropriate fee (Contact visaofficer@mfa.gov.ki for details on payment, or go to www.mfa.gov.ki/immigration for more information). … • A job offer, including a job description, details of pay, and conditions of the proposed employment … Applicants for Specific Purpose or Event work visas must also provide • Description of the specific purpose or event for which I am coming to Kiribati • Evidence of the specific purpose or event"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mfa.gov.ki Immigration and Visa pages fetched by curl; they link the Kiribati Immigration Act 2019 and 'Immigration procedure 2020' as WordPress attachment pages, whose PDFs (wp-content/uploads/2020/11/Immigration-Procedures-2020.pdf, Kiribati-Immigration-Act-2019.pdf) were fetched",
+    "result": "found: the Procedures' work visa section read whole (route, who applies, job offer first, Essential Skills labour test and term, Specific Purpose or Event visa for film crew, minimum wage and maintenance). The Act's PDF (14.9 MB) is image-only and was not OCR'd in this pass",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "the Work Visa Application Form (layer 3 source) read whole for fee, time and categories",
+    "result": "no fee amount (the applicant is told to ask visaofficer@mfa.gov.ki) and no decision time; the Specific Purpose list names 'Media, film and video production crew' but not performers",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "route": "Work visa (Kiribati Immigration Act 2019; Immigration Procedures 2020): an Essential Skills work visa for a job, or a Specific Purpose or Event work visa for time-bound work such as a film or video production",
+   "applies": "The performer applies to Kiribati Immigration (Ministry of Foreign Affairs and Immigration) on the Work Visa Application Form, with the fee.",
+   "first": "A genuine job offer stating pay, hours, conditions and duration; for an Essential Skills visa, the employer's genuine attempt to recruit Kiribati citizens or residents, none being available; for a Specific Purpose or Event visa, evidence of the event and the production's terms.",
+   "validity": {
+    "n": 1,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "Essential Skills: 1 year, further visas up to 3 years in all; a film, media or video crew's Specific Purpose visa for the period of engagement, extendable with evidence.",
+   "eligibility": "Suitably qualified by training and experience for the job offered; health and character requirements.",
+   "pay": "The employer must pay no less than the minimum wage, and the salary must be enough, in the officer's view, to cover maintenance and accommodation (or the employer guarantees them).",
+   "union": "None: the Immigration Procedures, read whole for the work visa section and searched for 'union' and 'labour', name no union step."
+  },
+  "notes": "Still blocked: fees (the form gives none; contact address only), processing, exempt. Whether an actor (as opposed to 'production crew') falls under the Specific Purpose list or needs Essential Skills isn't stated: route given as both. The Act 2019 PDF saved for OCR (l4w/files/p1c/KI-act.pdf)."
+ },
+ {
+  "id": "R-4836",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.travail.gouv.km fetched by curl",
+    "result": "no connection (curl HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Country still open."
+ },
+ {
+  "id": "R-4838",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://lawcommission.gov.kn/wp-content/documents/Revised-Acts-of-St-Kitts-and-Nevis/Revised-Acts-of-St-Kitts-and-Nevis-2020/Ch-06_02-Immigration-Act.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://www.sknis.gov.kn/2020/09/28/ministry-of-national-security-reminds-employers-of-work-permit-procedures",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://lawcommission.gov.kn/wp-content/documents/Revised-Acts-of-St-Kitts-and-Nevis/Revised-Acts-of-St-Kitts-and-Nevis-2020/Ch-06_02-Immigration-Act.pdf",
+    "title": "Law Commission of St Kitts and Nevis, Immigration Act Cap. 6.02 (Revision Date 31 Dec 2020), s. 19 and Second Schedule, with the Immigration Regulations reg. 23 (saved l4w/files/p1c/KN-act.pdf)",
+    "read": "2026-11-04",
+    "said": "19. (1) A person, other than a citizen, an approved CARICOM citizen or a citizen of a Protocol Member State, shall not, while in Saint Christopher and Nevis, engage in any occupation or accept employment without having first obtained a written permit granted by the Minister for that purpose. … (4) An applicant for a work permit shall make the application while the prospective employee is outside of the Federation, except that this provision shall not apply in respect of an application for renewal of a work permit or any other case as the Minister may, by Order, direct. … SECOND SCHEDULE PERMITTED ENTRANTS … PART II … 5. Persons entering Saint Christopher and Nevis for the purpose of engaging in sport, dramatic, artistic or other cultural activities. … 23. The fee for the issue of Work Permits shall be as follows— … (d) Entertainers(5 or more persons) $ 900.00 (e) Entertainers (1 to 4 persons) $ 175.00 each"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "the revised Immigration Act Cap. 6.02 (Law Commission PDF) fetched and searched whole for exempt, entertain, perform, artist; ss. 8, 9, 14, 19-21 and the Second Schedule read",
+    "result": "exempt found as an absence: s. 19(1) excepts only citizens, approved CARICOM citizens and citizens of a Protocol Member State (OECS); there is no day-count exemption, and reg. 23 sets entertainers' own permit fees. The Second Schedule, Part II, lets an immigration officer admit a person for 'dramatic, artistic or other cultural activities' for up to six months (s. 14(1)(b)), which is the entry permission, not leave to work. No decision time, union step, criterion or pay rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": "None for a foreign performer: only citizens, approved CARICOM citizens and citizens of an OECS Protocol Member State work without the permit (Immigration Act s. 19(1)); entertainers pay their own permit fee (reg. 23). Entry for dramatic or artistic activities (Second Schedule, Part II) is permission to enter for up to six months, not to work without the permit."
+  },
+  "notes": "processing, union, eligibility and pay still blocked. Web search, trade press and archive not retried in this pass."
+ },
+ {
+  "id": "R-4839",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "naenara.com.kp (http) and www.mfa.gov.kp fetched by curl",
+    "result": "naenara http 503 (and https isn't a read); mfa.gov.kp no connection",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Country still open."
+ },
+ {
+  "id": "R-4842",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.moi.gov.kw/main/eservices/residence/procedures/33",
+    "status": "same",
+    "now": "answers again (HTTP 200) on retry"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "moi.gov.kw residence procedures page and procedure 33 (entry visa for work in the private sector) fetched; the residence section's 'Ministerial Decree on the Regulation of the Residence Law' (main/content/docs/residence/residency-rules-957.pdf, 8 pp., 2019) fetched",
+    "result": "the procedures name no artist or cultural visa; the decree's Arabic text layer is garbled (presentation forms) and wasn't read for a performers' rule; the visa fees page loads its amounts by script",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Kuwait still asks the PAM work permit for private-sector work (layer 3); whether a visiting performer uses it or the 2023 cultural entry visa is unread. Decree 957 (2019) predates the 2024 residence law; saved l4w/files/p1c/KW-957.pdf for OCR."
+ },
+ {
+  "id": "R-4844",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://my.egov.ky/web/worc/work-permit-permanent-residency-faq",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "WORC Work Permit & Permanent Residency FAQ re-fetched and searched for entertain, perform, business day, weeks, exempt, union, salary",
+    "result": "nothing on these fields",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "legislation.gov.ky search page; caymanlawschool.ky's Immigration (Transition) (Temporary Work Permits and Business Visitors' Permits) Regulations 2022 Revision PDF; gov.ky page for the (Amendment) Regulations 2026 (LG23 S2)",
+    "result": "legislation.gov.ky answered 404/500; caymanlawschool.ky no connection (HTTP 000); the gov.ky 2026 page answers but was read on 2026-11-01 (amends citations and fees only)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Caymanian Protection (Temporary Work Permits and Business Visitors' Permits) Regulations entertainers legislation.gov.ky'",
+    "result": "Cayman Compass and Cayman News Service items (2019-2023) on entertainers' temporary work permits, a Mondaq comparative guide; none reproduces the regulation; not used",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 and -39 indexes for ky,caymanlawschool)/n0c-storage/legislation3/immigration-transition-temporary-work-permits",
+    "result": "no captures",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The 2022 Revision of the TWP and Business Visitors' Permits Regulations is the primary for exempt/eligibility; unreachable today."
+ },
+ {
+  "id": "R-4847",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://laotradeportal.gov.la/upload/files/90._Permit_for_Foreign_Labour_to_Work_in_Lao.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "Lao Trade Portal datasheet 90 (Permit for Foreign Labour to Work in Lao) re-fetched and read whole",
+    "result": "unchanged: issuing and renewal fees 50000.00 service + 10000.00 application = 60000.00, no currency printed, citing Notice 0295/MOLSW of 15 February 2012; no union step, pay rule or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The fee's currency (almost surely kip) stays unconfirmed by a primary."
+ },
+ {
+  "id": "R-4849",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.general-security.gov.lb/en/posts/40",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.general-security.gov.lb/en/posts/40",
+    "title": "General Directorate of General Security (Lebanon), Artists: Definition and Formalities, 3-2 Definition of artistic categories (saved l4w/files/p1c/LB-40.html)",
+    "read": "2026-11-04",
+    "said": "\"Artists\" category: - Singers, musicians, animators, circus artists, as well as dancers. - International orchestras groups, ballet dancers, sport show artists, water-skiing artists, figure skating artists, theater, are not considered artists and are exempted from artist taxes. They are granted a touristic visa, except the sports players, and coaches, that come to work In Lebanon for a period superior to one year. The latter have to have In hand the related contracts, and work documents required, that conform to foreign regulations. - Arab or foreign singers, that are filming a video clip, or a promotional clip, a or music video, are exempted from artist taxes as well and are granted an entry visa by the general director department."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "General Security's artists page (posts/40) re-read whole by curl, every category, for a decision time, a pay floor and any engagement outside the artist visa",
+    "result": "found for exempt: international orchestras, ballet dancers and theatre are 'not considered artists', are exempt from the artist taxes and are granted a tourist visa; a singer filming a video clip is exempt from the artist taxes and gets an entry visa from the director-general's department. No standard decision time or pay floor",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": {
+    "days": null,
+    "within": null,
+    "note": "Theatre companies, international orchestras and ballet dancers aren't counted as 'artists': they are exempt from the artist taxes and come on a tourist visa. A singer filming a music or promotional video is exempt from the artist taxes and is given an entry visa by the director-general's department."
+   }
+  },
+  "notes": "processing (standard) and pay still blocked; Law 56/2008 and Decree 3705/2016 (amended 13043/2024) not reached as text in this pass. Whether a screen actor (not 'theater') falls under the exemption isn't stated: the 'Advertisements actors' category is a separate one with the 6-month limit."
+ },
+ {
+  "id": "R-4851",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.attorneygeneralchambers.com/laws-of-saint-lucia/labour-act/section-317",
+    "status": "same"
+   },
+   {
+    "url": "https://www.attorneygeneralchambers.com/laws-of-saint-lucia/labour-act/section-318",
+    "status": "same"
+   },
+   {
+    "url": "https://www.govt.lc/news/work-permit-requirement-for-employment-of-foreign-nationals-mandatory",
+    "status": "same"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Attorney General's Chambers, Revised Laws of Saint Lucia (2023), Labour Act: sections 317 to 322 re-read, Schedules 1 to 10 fetched and read, and the Act's list of subsidiary instruments read",
+    "result": "no fee, decision time, term, union step, criterion or pay rule for a work permit: s. 318 leaves the form and fee 'prescribed'; the only schedule of fees (Schedule 6) is for registering trade unions and employers' organisations. The subsidiary list holds SI 83/2014 (exemption for citizens of a Protocol member state) and SI 128/2019, the Labour (Work Permit Fees) (Exemption) (Events Company of St. Lucia Inc.) Order, 'in force 18 April 2019 (Terminating 17 April 2021)', whose text isn't shown on the page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Saint Lucia work permit fees regulations Labour Act Cap 16.04 work permit fee schedule Department of Labour'",
+    "result": "no official fee schedule; aggregators (Rivermate, Playroll, visaatlas, wheretoemigrate, remotepeople) give EC$100 application and other figures naming no primary; not used. It led to SI 128/2019 above",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "govt.lc's Department of Labour notice re-read",
+    "result": "names only s. 317 and the Work Permit Unit's telephone numbers",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Lead: an events company's foreign performers were once exempted from work permit fees by Order under s. 322 (SI 128/2019, lapsed 17 April 2021); the instrument that prescribes the fees themselves wasn't found on the AG's site. Trade-press and archive not retried in this pass (web.archive.org reset this environment on 2026-11-01)."
+ }
+]

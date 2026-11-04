@@ -1,0 +1,3865 @@
+[
+ {
+  "country": "AG",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Antigua and Barbuda: laws.gov.ag lists no film fund, incentive or performers' act (producer-AG.json, retry 2026-11-01); no broadcaster commissioning or theatre fund is held."
+ },
+ {
+  "country": "AU",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The Producer Offset's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "Federal Register of Legislation: Income Tax Assessment Act 1997, Volume 7 (Division 376), compilation as at 1 October 2026",
+      "said": "376 ‑ 60 Amount of the producer offset The amount of the producer offset is: (a) if the * film is a * feature film that was produced for commercial exhibition to the public in cinemas—40%; or (b) otherwise—30%; of the total of the company’s * qualifying Australian production expenditure on the film … (b) the film is: (i) a * feature film or a film of a like nature; or (ii) a mini ‑ series of television drama; or (iii) a television series that is not covered by subparagraph (i) or (ii); and (c) the film is not, or is not to a substantial extent: … (ii) a film for exhibition as an advertising program or a commercial; or (iii) a film for exhibition as a discussion program, a quiz program, game show, a panel prog … (5) … (i) the series is made up of at least 2 episodes; and (ii) each episode of the series is at least one half of a commercial hour in duration, except where the film is predominantly made using cell, stop motion, digital or other animation, in which case each episode is at least one quarter of a commercial hour in duration … 5 A * film where the application for the certificate is for a series and not for a season of that series, and the series is not a * documentary $1 million $500,000 … 7 A * film where the application for the certificate is for a season of a series, and the series is not a * documentary $1 million $500,000 … (7) The amount worked out for a * film under this subsection is the amount worked out using the formula: where: duration of film in hours means the total length of the * film, measured in hours. total QAPE means the total of the company’s * qualifying Australian production expenditure on the * film … (ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film; (c) for a series other than a drama series, or a season of a series other than a drama series—expenditure on an episode beyond the episode in which the 65th commercial hour of the series is reached.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     }
+    ],
+    "value": {
+     "law": "ITAA 1997 Div 376 (compilation 2026-10-01)",
+     "rate": 0.3,
+     "featureInCinemas": 0.4,
+     "minQAPE_AUD": 1000000,
+     "minQAPEPerHourAUD": 500000,
+     "perHour": "total QAPE / duration in hours (the formula is an image; its terms are read)",
+     "minEpisodes": 2,
+     "minEpisodeHours": 0.5,
+     "minEpisodeHoursAnimation": 0.25,
+     "aboveTheLineCountedUpTo": 0.2,
+     "nonDramaHoursCounted": 65,
+     "excludes": [
+      "advertising",
+      "discussion, quiz, game, panel programs"
+     ],
+     "locationOffsetAlready": "producer-AU.json (30%, A$20m, A$1.5m an hour)"
+    },
+    "notes": "A series is a film under s376-20; drama series have no 65-hour limit. Significant Australian content (s376-70) is a further test not read here."
+   },
+   {
+    "item": 2,
+    "fact": "Screen Australia's production funding for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines, issued 1 July 2025, updated 31 July 2026",
+      "said": "funding will generally be provided by way of grant if direct funding is at or below $500,000 or as a recoupable equity investment if direct funding is over $500,000; and o the minimum funding amount requested at time of application must be $150,000. … For Television projects only: o for any application that is for a subsequent season, Screen Australia will normally treat any approved funding as a recoupable equity investment. … Children’s Television - 20% 20% 10% 7% 10% Max. 50% Television - 15% 15% 10% 7.5% 5% Max. 45% [columns: Up to $5,000,000; $5,000,001-$10,000,000; $10,000,001-$15,000,000; $15,000,001-$20,000,000; $20,000,001-$30,000,000; Direct Funding and Producer Offset combined Cap]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "currency": "AUD",
+     "from": "2025-07-01",
+     "updated": "2026-07-31",
+     "minRequest": 150000,
+     "grantUpTo": 500000,
+     "aboveThat": "recoupable equity",
+     "laterSeason": "recoupable equity",
+     "directShareOfBudget": {
+      "television": {
+       "upTo5m": 0.15,
+       "5to10m": 0.15,
+       "10to15m": 0.1,
+       "15to20m": 0.075,
+       "20to30m": 0.05,
+       "withOffsetMax": 0.45
+      },
+      "childrensTelevision": {
+       "upTo5m": 0.2,
+       "5to10m": 0.2,
+       "10to15m": 0.1,
+       "15to20m": 0.07,
+       "20to30m": 0.1,
+       "withOffsetMax": 0.5
+      }
+     },
+     "rateOfYes": null
+    },
+    "notes": "How often Screen Australia says yes to a series isn't in the guidelines; its funding-approvals pages are behind a Cloudflare challenge (as is the whole HTML site)."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "ITAA 1997 Div 376 (as item 1)",
+      "said": "(ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines",
+      "said": "television projects must have a contingency of 8% of below-the-line",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "cap": null,
+     "offsetCountsAboveTheLineUpTo": 0.2,
+     "tvContingencyOfBTL": 0.08
+    },
+    "notes": "producer-AU.json already holds that the Terms of Trade (2017) set no producer-fee percentage; the 2025 guidelines name none either (read whole for 'fee' and 'overhead')."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines",
+      "said": "For episodic or feature length projects for which Television (including SVOD or BVOD) is the first and primary window, applicants must: o have a local commissioning platform secured on terms acceptable to Screen Australia, including meeting the following minimum licence fee requirements*, … a confirmed minimum licence fee of $550,000 per broadcast hour allocated toward the initial licence period (3 years) against the primary right … for Children’s content, a confirmed minimum of: • $125,000 per broadcast half hour for one commissioning platform with limited exclusivity holdbacks; or • $144,000 for (i) combination of commissioning platforms; or (ii) one commissioning platform with full exclusivity … o have secured a ROW Distributor with a letter of offer (LOO) … the first funding decision within the updated minimum licence fee requirements being in force from 1 July 2026",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "fundedSeriesNeeds": "a local commissioning platform and a rest-of-world distributor",
+     "minLicenceFeePerHourAUD": 550000,
+     "childrensPerHalfHourAUD": {
+      "one": 125000,
+      "combinedOrExclusive": 144000
+     },
+     "licenceYears": 3,
+     "from": "2026-07-01",
+     "secondary": {
+      "avodForFTA": 14000,
+      "ftaForSVOD": 50000
+     },
+     "pickupRate": null
+    },
+    "notes": "No count of how often an independent Australian series is picked up was found; the Drama Report HTML is challenge-blocked."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "ITAA 1997 Div 376",
+      "said": "(a) a refundable tax offset for Australian expenditure in making an Australian film (the producer offset); … (b) … (the location offset); and (c) a refundable tax offset for Australian expenditure on post, digital and visual effects production for any film (the PDV offset).",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     }
+    ],
+    "value": {
+     "theatreOffset": null
+    },
+    "notes": "Division 376 covers films only. No federal theatre offset was found; the whole ITAA 1997 was not searched beyond this volume, so absence is not proved."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://creative.gov.au/investments-opportunities/arts-projects-individuals-and-groups",
+      "title": "Creative Australia: Arts Projects for Individuals and Groups",
+      "said": "Funding of between $10,000 and $50,000 for a range of activities and projects, both national and international, across all arts practices. … Applications close: Tuesday 1 September 2026 … You must be an Australian citizen or an Australian permanent resident, and a practicing artist or arts professional. … How competitive are your grants rounds? As a national arts funding body, all our grant rounds are competitive. Success rates are usually between 10% and 15%.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ca-apig.html",
+      "read": "2026-11-04",
+      "sha256": "5eb6eb564c32a03fb3f85685f5bac12f44fd88a1d41dae37d8f3533395484200"
+     }
+    ],
+    "value": {
+     "currency": "AUD",
+     "leastAUD": 10000,
+     "mostAUD": 50000,
+     "who": "Australian citizen or permanent resident, practising artist or arts professional (individuals and groups)",
+     "rounds": [
+      "2026-09-01",
+      "2027-03-02"
+     ],
+     "rateOfYes": {
+      "low": 0.1,
+      "high": 0.15,
+      "basis": "all rounds, 'usually'"
+     }
+    },
+    "notes": "Across all art forms; Theatre is one panel. Arts Projects for Organisations not read."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://awards.fairwork.gov.au/MA000081.html",
+      "title": "Fair Work Commission: Live Performance Award 2020 (MA000081), varied from 1 July 2026",
+      "said": "Deputy Rehearsal Director/Rehearsal Director (for Company Dancers) … will be paid a minimum of $136.42 extra per week in addition to their weekly rate.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ma81.html",
+      "read": "2026-11-04",
+      "sha256": "fa6165c854a82bc2da815574cd676feca76698808d37e3587823c1d073922e30"
+     }
+    ],
+    "value": {
+     "award": null
+    },
+    "notes": "The award, read for 'director', classifies no stage director; any MEAA director agreement wasn't reached."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://awg.com.au/contracts-and-rates/",
+      "title": "Australian Writers' Guild: Contracts and Rates",
+      "said": "The Theatre Industry Agreement was negotiated with the Australian Major Performing Arts Group (AMPAG). Theatre Industry Agreement 2016 … Theatre Industry Agreement Minimum Rates 2025 Members Only",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-awg-rates.html",
+      "read": "2026-11-04",
+      "sha256": "f124a8200250d021473d668af378fe4f273748817ce8c3a27f7396b10ff9803e"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://canberrayouththeatre.com.au/emerging/commissions/",
+      "title": "Canberra Youth Theatre: 2026 Emerging Playwright Commission",
+      "said": "The selected playwright will receive the full commissioning fee of $17,700 (aligned with the Australian Writers’ Guild rates)",
+      "quotes": "AWG Theatre Industry Agreement Minimum Rates (members only)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-cyt.html",
+      "read": "2026-11-04",
+      "sha256": "dec1effce793d3b1b0fa34c64bf21ef351cffaacbd535c57593a71924b9d24c6"
+     }
+    ],
+    "value": {
+     "agreement": "AWG-AMPAG Theatre Industry Agreement 2016",
+     "ratesPublic": false,
+     "oneCommission2026AUD": 17700
+    },
+    "notes": "The AWG's rate sheet is members only; the CYT figure is one company's commission for a work of at least 60 minutes, said to align with AWG rates. A lead, not the minimum."
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "research/sources/person/markets/AU.json (Live Performance Award 2020, A$1,221.10 a week from 1 July 2026)"
+    },
+    "notes": "Already held by the acting research. Held from the earlier research, not re-read today."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": {
+     "recoup": null
+    },
+    "notes": "Live Performance Australia's survey page address returned 404; no count of runs recouping found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     3,
+     5
+    ],
+    "tried": "legislation.gov.au ITAA 1997 Vol 7 (Div 376) compilation 2026-10-01, read for the producer offset's series thresholds, ATL cap and scope",
+    "result": "read; series terms found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2,
+     3,
+     4
+    ],
+    "tried": "screenaustralia.gov.au HTML pages (producer-offset, drama production): Cloudflare challenge (403); its PDF guidelines Guidelines-Narrative-Content-Production.pdf and Guidelines-Producer-Offset-2024.pdf",
+    "result": "HTML refused; PDFs read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "items": [
+     2,
+     4
+    ],
+    "tried": "Common Crawl CC-MAIN-2026-39, -43, -30, -21 for au,gov,screenaustralia)/funding-and-support/",
+    "result": "2026-21 record of /television/production is the challenge page; others 301/404 only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     2
+    ],
+    "tried": "1 search: screenaustralia.gov.au wp-content uploads Drama Production Funding guidelines pdf series",
+    "result": "led to the Narrative Content Production guidelines PDF",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6
+    ],
+    "tried": "creative.gov.au investments list (art_form=Theatre) and Arts Projects for Individuals and Groups page",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     7
+    ],
+    "tried": "awards.fairwork.gov.au MA000081 Live Performance Award read for director classifications",
+    "result": "no stage director classified",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     8
+    ],
+    "tried": "1 search: Australian Writers' Guild theatre playwright commission minimum fee rates 2026",
+    "result": "led to awg.com.au contracts page (rates members-only) and Canberra Youth Theatre commission",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     8
+    ],
+    "tried": "awg.com.au/contracts-and-rates/; canberrayouththeatre.com.au/emerging/commissions/",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     10
+    ],
+    "tried": "liveperformance.com.au ticket attendance and revenue survey address",
+    "result": "404",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Screen Australia's HTML is Cloudflare-challenged; its wp-content PDFs are not."
+ },
+ {
+  "country": "BF",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-BF.json: the Fonds de développement culturel et touristique (FDCT, decree of 8 August 2016) finances culture, film included"
+    },
+    "notes": "Its series and theatre terms weren't read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-BF.json: the FDCT covers culture generally"
+    },
+    "notes": "Theatre terms not read."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BF.json) holds what is known."
+   }
+  ],
+  "attempts": [],
+  "notes": ""
+ },
+ {
+  "country": "BO",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-BO.json: ADECINE's Fondo de Fomento al Cine y Arte Audiovisual Bolivianos (Law 1134); share and cap unknown"
+    },
+    "notes": "ADECINE's home page, read today, names no series line."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-BO.json) holds what is known."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "adecine.gob.bo home read for a series line",
+    "result": "no series mention",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "BZ",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-BZ.json"
+    },
+    "notes": "Belize publishes no production rebate or film fund (Belize Film Commission pages read 2026-11-01)."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-BZ.json"
+    },
+    "notes": "As item 1."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "producer-BZ.json: Belize publishes no production rebate or film fund; the Film Commission licenses shoots."
+ },
+ {
+  "country": "CK",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Cook Islands: a self-governing state in free association with New Zealand; producer-CK.json found no film legislation, fund or commission (a line producer said provisions are spread over immigration, customs and business law)."
+ },
+ {
+  "country": "CW",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-CW.json: inForce false as of 2025-02-21 (proposed 26%)"
+    },
+    "notes": "Secondary (Curaçao Chronicle quoting Telefilm Canada); no later approval found."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Curaçao: producer-CW.json: no film incentive in force in February 2025 (a 26% programme proposed); the Netherlands-Canada co-production treaty applies."
+ },
+ {
+  "country": "DO",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The transferable tax credit's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://dgcine.gob.do/descargar/2445/marco-legal/19277/ley-no-108-10-para-el-fomento-de-la-actividad-cinematografica-en-la-republica-dominicana.pdf",
+      "title": "DGCINE: Ley No. 108-10 para el Fomento de la Actividad Cinematográfica (text as amended by Ley 82-13), from its Marco Legal page",
+      "said": "Párrafo III.-En adición a las obras cinematográficas, podrán acogerse a los incentivos fiscales de la presente ley las siguientes obras audiovisuales: películas para televisión, series y miniseries de televisión para distribución nacional o internacional, documentales, telenovelas y videos musicales. Estas obras audiovisuales deberán contar con una calificación previa de la DGCINE … Artículo 39. Crédito Fiscal Transferible (Modificado por la Ley No. 82-13 de fecha 27 de junio de 2013 …). Podrán optar por beneficiarse de un crédito fiscal equivalente a un veinticinco (25%) de todos los gastos realizados en la República Dominicana, las personas naturales o jurídicas que produzcan obras cinematográficas y audiovisuales dominicanas o extranjeras en el territorio dominicano. … Párrafo II.- El crédito fiscal podrá ser solicitado respecto a presupuestos ejecutados parcial o totalmente, siempre y cuando el monto de los gastos realizados al momento de la solicitud sea igual o mayor a la suma de quinientos mil dólares (US$500,000.00).",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/do-ley108.pdf",
+      "read": "2026-11-04",
+      "sha256": "ea01978d1ceb8b3d223896e074af807dcb812b063dce57f86cf359b9707b2b9f"
+     }
+    ],
+    "value": {
+     "rate": 0.25,
+     "base": "all spending in the Dominican Republic",
+     "minSpendUSD": 500000,
+     "series": "TV series and miniseries, telenovelas, with DGCINE's prior qualification",
+     "transferable": true,
+     "law": "Ley 108-10 art. 39 as amended by Ley 82-13"
+    },
+    "notes": "The DGCINE PDF may predate later amendments; producer-DO.json's figure agrees."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-DO.json: FONPROCINE's 2026 (15th) public contest, RD$17.5 million for 16 projects"
+    },
+    "notes": "Whether the contest takes series wasn't read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Ley 108-10, read today, covers cinematographic and audiovisual works only; no theatre incentive in it."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     5
+    ],
+    "tried": "dgcine.gob.do home and Marco Legal page; Ley 108-10 PDF read",
+    "result": "read; the law's incentives name no stage work",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "ET",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-ET.json) holds what is known."
+   }
+  ],
+  "attempts": [],
+  "notes": "The earlier research holds no Ethiopian producer, fund or incentive figures."
+ },
+ {
+  "country": "GD",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-GD.json: duty and VAT concessions on equipment for registered creatives, television included, from 2023-03-01; no rebate"
+    },
+    "notes": "Held."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-GD.json: Cultural and Creative Industries Business Development Fund (Grenada Development Bank)"
+    },
+    "notes": "Series and theatre terms not read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "producer-GD.json: Grenada's creatives' concessions (100% CET and VAT on equipment, S.R.&O. 11 and 13 of 2023, film and television named) and a Cultural and Creative Industries fund; no production rebate."
+ },
+ {
+  "country": "GN",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-GN.json"
+    },
+    "notes": "No national film fund found by the earlier research."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "producer-GN.json: Guinea has no national film fund found; ONACIG issues production visas; a UEMOA regional co-production fund was committed in March 2026."
+ },
+ {
+  "country": "GY",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-GY.json"
+    },
+    "notes": "No film commission, fund or incentive yet (October 2024)."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-GY.json"
+    },
+    "notes": "As item 1."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "producer-GY.json: Guyana has no film commission or film fund yet (the President to Parliament, October 2024)."
+ },
+ {
+  "country": "IE",
+  "items": [
+   {
+    "item": 1,
+    "fact": "Section 481's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.irishstatutebook.ie/eli/2019/si/119/made/en/print",
+      "title": "S.I. No. 119 of 2019, Film Regulations 2019 (Irish Statute Book)",
+      "said": "Categories of films eligible for certification 5. Subject to Regulation (6), films which are within any of the following categories may be eligible for certification by the Minister: (1) Feature film, (2) Short film of feature quality, (3) Television drama (feature length or series), (4) Animation (whether computer generated or otherwise, but excluding computer games), (5) Creative documentary",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-si119.html",
+      "read": "2026-11-04",
+      "sha256": "4dd1b3412288635deae103ac2c385c664cd33c592720daa359fa90ae3d188c1d"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.revenue.ie/en/tax-professionals/tdm/income-tax-capital-gains-tax-corporation-tax/part-15/15-02-04.pdf",
+      "title": "Revenue Tax and Duty Manual Part 15-02-04, Section 481 Film Corporation Tax Credit (last reviewed August 2026)",
+      "said": "The film credit is calculated at 32% of the lowest of: a) eligible expenditure, b) 80% of the total cost of production of the film, or c) €125,000,000 … The film credit is available in respect of projects certified up to 31 December 2028. … the eligible expenditure amount is less than €125,000; the total cost of the production of the film is less than €250,000; … for the purposes of a series, completion relates to the entire series.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-tdm.pdf",
+      "read": "2026-11-04",
+      "sha256": "65854e7b96225c011142e8166c616b3e78c7cd80a5a26fe268fe056e8e82f0ee"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.irishstatutebook.ie/eli/2025/si/197/made/en/print",
+      "title": "S.I. No. 197/2025, Film (Enhanced Credit for Lower Budget Film) (Amendment) Regulations 2025",
+      "said": "(a) that the film will be a feature film or animated film of feature length, … (3) (a) … a film shall be considered a feature film or animated film of feature length where the film is intended for theatrical release.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-si197.html",
+      "read": "2026-11-04",
+      "sha256": "96340ae2067f43f40b378515cb51e15ad4acdf1336e0c4d4fb352db401840919"
+     }
+    ],
+    "value": {
+     "rate": 0.32,
+     "counted": "min(eligible expenditure, 0.8 x total cost, EUR 125m)",
+     "maxCountedEUR": 125000000,
+     "minEligibleEUR": 125000,
+     "minTotalEUR": 250000,
+     "categories": [
+      "television drama (feature length or series)",
+      "animation",
+      "creative documentary"
+     ],
+     "enhanced40Applies": false,
+     "certifiedUntil": "2028-12-31",
+     "seriesCompletion": "whole series"
+    },
+    "notes": "The 40% Scéal uplift is for theatrical features only, so a series takes 32%."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.screenireland.ie/funding/funding-process-and-procedure/production-funding-guidelines",
+      "title": "Screen Ireland: Production Funding Guidelines",
+      "said": "TV Drama Production (Eligible for Enhanced Production Funding for Female Talent) Projects with budgets up to €6.5 million Screen Ireland can provide 20% of budget to a max of €650,000 Projects with budgets of more than €6.5 million Screen Ireland can provide 10% of budget to a max of €950,000",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-si-prodg.html",
+      "read": "2026-11-04",
+      "sha256": "272cfe36553b7eb1ae87db9022118ec2693e6b23811bb64c02337a031b48a19c"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.screenireland.ie/industry-insights/gender-and-diversity/gender-statistics-2024",
+      "title": "Screen Ireland: Gender Statistics 2024",
+      "said": "Production totals Irish Feature % Anim. Feat. % Anim. TV % Creative Co-Pro. % Doc Feature % Doc Co-Pro. % Doc. Series % TV Drama % Completion Funding % Applications assessed 163 50 … 16 10% 19 12% … Successful Applications 94 26 52%(g) 1 100% 11 85% 9 50% 15 45% 2 50% 5 56% 14 88% 11 58%",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-si-gender24.html",
+      "read": "2026-11-04",
+      "sha256": "c4a385474d420d03c6c3a72ec9bb32077feddf5341294559baae561faee02c5e"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.cnam.ie/new-sound-vision-round-open/",
+      "title": "Coimisiún na Meán: New Sound & Vision round open (15.10.2026)",
+      "said": "Round 62 of the Sound & Vision broadcasting funding scheme is now open. We welcome funding applications from independent producers and broadcasters to support the production of high-quality broadcast content that reflects Irish culture, heritage, language and diversity … by 12 noon on Thursday, 26 November 2026. Decisions can be expected by the end of March 2027.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-cnam-sv2.html",
+      "read": "2026-11-04",
+      "sha256": "0702711cd2e5232dbd809db2ab348034841d7ea24821588841cd8ffde5fa8cf5"
+     }
+    ],
+    "value": {
+     "screenIreland": {
+      "currency": "EUR",
+      "upTo6_5m": {
+       "share": 0.2,
+       "maxEUR": 650000
+      },
+      "over6_5m": {
+       "share": 0.1,
+       "maxEUR": 950000
+      },
+      "rateOfYes2024": {
+       "assessed": 16,
+       "funded": 14,
+       "rate": 0.875
+      }
+     },
+     "soundAndVision": {
+      "round": 62,
+      "closes": "2026-11-26",
+      "decisionsBy": "2027-03",
+      "terms": null
+     }
+    },
+    "notes": "Sound & Vision's own guide (rates, broadcaster commitment) was not read: its scheme page address 404'd."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.revenue.ie/en/tax-professionals/tdm/income-tax-capital-gains-tax-corporation-tax/part-15/15-02-04.pdf",
+      "title": "Revenue TDM 15-02-04",
+      "said": "These fees will be categorised in the budget as including “Producer”, “Co- Producer”, “Executive Producer” fees and “Production/Overhead” corporate fees. … i.that the eligible producer-related fees do not exceed 15% of the global budget where the eligible expenditure is in excess of 80% of the global budget; or ii.that the eligible producer-related fees do not exceed 10% of the global budget where the eligible expenditure is less than 80% of the global budget. … the percentages may be higher where it can be substantiated.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-tdm.pdf",
+      "read": "2026-11-04",
+      "sha256": "65854e7b96225c011142e8166c616b3e78c7cd80a5a26fe268fe056e8e82f0ee"
+     }
+    ],
+    "value": {
+     "producerAndOverheadMax": {
+      "eligibleOver80pct": 0.15,
+      "eligibleUnder80pct": 0.1
+     },
+     "higherIfSubstantiated": true,
+     "appliesTo": "every qualifying film, a TV drama included"
+    },
+    "notes": "Already in producer-IE.json for a film; the same guidance governs a series."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": {
+     "pickup": null
+    },
+    "notes": "RTÉ's commissioning terms and any pickup count were not reached; Screen Ireland's 14 of 16 is a funding rate, not a pickup rate."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.irishstatutebook.ie/eli/2019/si/119/made/en/print",
+      "title": "Film Regulations 2019",
+      "said": "(1) Feature film, (2) Short film of feature quality, (3) Television drama (feature length or series), (4) Animation … (5) Creative documentary",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-si119.html",
+      "read": "2026-11-04",
+      "sha256": "4dd1b3412288635deae103ac2c385c664cd33c592720daa359fa90ae3d188c1d"
+     }
+    ],
+    "value": {
+     "theatreRelief": null
+    },
+    "notes": "Section 481's categories hold no stage work; no Irish theatre tax relief was found, but the whole tax code wasn't read."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://artscouncil.ie/wp-content/uploads/2025/01/2027-Theatre-Project-Award-Round-1-Guidelines.pdf",
+      "title": "Arts Council: Theatre Project Award Round 1 2027 Guidelines (deadline 23 July 2026)",
+      "said": "Strand 1: Play Development Up to €15,000 Strand 2: Theatre Creation Up to €26,000 Strand 3: Theatre Presentation Up to €80,000 Strand 4: Theatre Production Up to €175,000 … A minimum of 80% of the total budget for the Theatre Project Award Round 1 2027 will be ring-fenced to fund proposals for Strand 3 and Strand 4. … Individuals and groups of individuals based in the Republic of Ireland. … This award is open to organisations working in theatre who are based in the Republic of Ireland. It is not open to organisations in receipt of Strategic Funding, Arts Centre Partnership Funding or Partnership Funding. … We may accept applications from organisations who are not based in the Republic of Ireland. In this case, you must explain … how your proposal would benefit the arts in the Republic of Ireland.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ie-ac-tpa.pdf",
+      "read": "2026-11-04",
+      "sha256": "8350371c88922e5a92b14d2ccdba21ff434b080b10a60cdadee1d2207db92542"
+     }
+    ],
+    "value": {
+     "currency": "EUR",
+     "strands": {
+      "playDevelopment": 15000,
+      "creation": 26000,
+      "presentation": 80000,
+      "production": 175000
+     },
+     "based": "Republic of Ireland (others by explanation)",
+     "rateOfYes": null
+    },
+    "notes": "No success rate in the guidelines."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No Irish stage-director agreement found."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No Irish playwright minimum found; the Arts Council guidelines let Strand 1 pay the playwright for time but set no rate."
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "research/sources/person/markets/IE.json: Irish Equity theatre rate EUR 464.26 a week from 1 October 2008, no later figure; Abbey House Agreement unpublished"
+    },
+    "notes": "Not re-searched."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": {
+     "recoup": null
+    },
+    "notes": "Not found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     5
+    ],
+    "tried": "irishstatutebook.ie S.I. 119/2019 (Film Regulations), S.I. 197/2025, s481 as enacted 1997; revisedacts.lawreform.ie s481 revised (404)",
+    "result": "categories and enhanced-credit scope read; revised Act 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     3
+    ],
+    "tried": "revenue.ie TDM 15-02-04 PDF and film-relief index page",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2
+    ],
+    "tried": "screenireland.ie production funding guidelines and gender statistics 2024; cnam.ie Sound & Vision (scheme page 404, news of round 62 read)",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6,
+     7,
+     8
+    ],
+    "tried": "artscouncil.ie Theatre Project Award 2027 Round 1 page and guidelines PDF",
+    "result": "fund read; no rates for directors or playwrights",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     7,
+     8
+    ],
+    "tried": "1 search: Ireland theatre minimum fee playwright commission director rates agreement Theatre Forum Irish Equity 2025",
+    "result": "UK and US rates only; a dance company citing the Arts Council's Paying the Artist policy, no figure",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "IT",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The tax credit's terms for a series (opere televisive e web)",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/10/20260618_Consolidato_TC-art.-15_Modifica-2026_rev-19-ottobre.pdf",
+      "title": "MiC-DGCA: Testo consolidato del D.I. 10 luglio 2024 n. 225 con le modifiche del D.I. 6 luglio 2026 n. 281 (rev. 19 ottobre 2026); struck old figures print before the new",
+      "said": "Articolo 16 Requisiti per la richiesta del credito d’imposta per la produzione di opere televisive e web 1. Sono ammissibili le opere televisive e web … prodotte da produttori indipendenti originari e per le quali il richiedente: a. è in grado di comprovare … la copertura finanziaria di almeno il 50 per cento del costo di produzione dell’opera; … b. ha sottoscritto un accordo con un’emittente televisiva di ambito nazionale … c. in alternativa alla lettera b), … un accordo relativo ai diritti SVOD … con un fornitore … avente un fatturato pari almeno a euro 5.000.000 in Italia; … a. in caso di associazione produttiva, partecipi all’opera con una quota pari ad almeno il 20 per cento del costo complessivo dell’opera … b. in caso di preacquisto, acquisto e licenza, riconosca un corrispettivo pari ad almeno il 20 per cento del costo complessivo … 6. Le opere di cui al comma 1 devono essere opere di fiction, singole o seriali, … di durata complessiva non inferiore a 52 minuti e con un costo complessivo non inferiore a euro 2.000 al minuto. … Articolo 17 Aliquote applicate 1. Il credito di imposta è concesso nella misura del 25 20 per cento del costo eleggibile di produzione, nel rispetto dei limiti previsti all’articolo 5. Tale aliquota è incrementata al 35 30 per cento, alternativamente, nei casi di: a. opera tv in coproduzione internazionale … b. … risorse internazionali pari ad almeno il 30 per cento … c. opere in preacquisto, acquisto o licenza di prodotto; d. opere in associazione produttiva per le quali: [rights retained] … 2. … ridotte: a. di tre cinque punti percentuali per la parte del costo eleggibile superiore a euro 10.000.000 e fino a euro 20.000.000; b. di ulteriori tre cinque punti percentuali per la parte di costo eleggibile superiore a euro 20.000.000. … 2) opere televisive e web di cui al Capo III … fino all’ammontare massimo di euro 7.000.000 per opera e fino all’ammontare massimo annuo di euro 15.000.000 per impresa … fino a euro 10.000.000 per le opere televisive e web [with at least 40% foreign finance]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/it-tc.pdf",
+      "read": "2026-11-04",
+      "sha256": "ad5b625c871c9610e53965bd3afc640ca291c3c1947f34bc0c833201ae226773"
+     }
+    ],
+    "value": {
+     "amendedBy": "D.I. 6 luglio 2026 n. 281",
+     "rate": 0.2,
+     "raisedRate": 0.3,
+     "raisedWhen": [
+      "international co-production (not merely financial)",
+      "at least 30% international resources",
+      "pre-purchase, purchase or licence",
+      "production association with rights retained (50% SVOD + all TVOD/pay-TV, 6-month holdback; or free-TV rights, 18-month holdback)"
+     ],
+     "previous": {
+      "rate": 0.25,
+      "raised": 0.35
+     },
+     "highCapacityCut": {
+      "10to20mEUR": 0.05,
+      "over20mEUR": 0.1
+     },
+     "capPerWorkEUR": 7000000,
+     "capPerYearPerCompanyEUR": 15000000,
+     "capWith40pctForeignEUR": 10000000,
+     "needs": {
+      "financeCovered": 0.5,
+      "broadcasterOrSVOD": "national broadcaster, or SVOD with at least EUR 5m Italian turnover",
+      "broadcasterShareOfCost": 0.2
+     },
+     "minMinutes": 52,
+     "minCostPerMinuteEUR": 2000,
+     "fiction": "single or serial"
+    },
+    "notes": "The struck/new reading follows producer-IT.json's (40 30 for a feature). The rest (eligible-cost rules, the 25% ATL cap) is the decree's Art. 3, common to film and series."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cinema.cultura.gov.it/cosa-facciamo/sostegni-economici/linee-di-sostegno/contributi-selettivi/selettivi-produzione/",
+      "title": "MiC-DGCA: Contributi selettivi, Produzione (2026)",
+      "said": "PRODOTTI ELEGGIBILI Lungometraggi, opere seriali o non seriali a carattere narrativo o documentaristico … RIPARTO RISORSE 2026: € 32.700.000 opere cinematografiche di lungometraggio di giovani autori: €7.800.000; opere cinematografiche di lungometraggio prime e seconde: €7.500.000; documentari cinematografici, televisivi o web di particolare qualità artistica …: €4.000.000; cortometraggi cinematografici, televisivi o web: €900.000 di euro; opere d’animazione cinematografiche, televisive o web di particolare qualità artistica …: €5.000.000; film di particolare qualità artistica e film su personaggi e avvenimenti dell’identità culturale italiana:€7.500.000.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/it-sel.html",
+      "read": "2026-11-04",
+      "sha256": "c846246e5ae156c5518551104e7a0c97a62c97db6857e0343a7ea25d995c318d"
+     }
+    ],
+    "value": {
+     "nationalLiveActionFictionSeries": null,
+     "tvLines2026EUR": {
+      "documentaries": 4000000,
+      "shorts": 900000,
+      "animation": 5000000
+     }
+    },
+    "notes": "The 2026 split has no line for a live-action fiction series; regional film commissions' funds were not read. A selectively funded series is also eligible for the credit (art. 16(3))."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/10/20260618_Consolidato_TC-art.-15_Modifica-2026_rev-19-ottobre.pdf",
+      "title": "MiC-DGCA consolidated tax-credit decree, art. 3",
+      "said": "c. non sono eleggibili il compenso per la produzione (“producer fee”) e le spese generali dell’impresa; ciascuna delle due voci è imputabile nel costo complessivo di produzione nella misura massima del 7,5 per cento del medesimo costo;",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/it-tc.pdf",
+      "read": "2026-11-04",
+      "sha256": "ad5b625c871c9610e53965bd3afc640ca291c3c1947f34bc0c833201ae226773"
+     }
+    ],
+    "value": {
+     "producerFeeMax": 0.075,
+     "overheadsMax": 0.075,
+     "eligible": false,
+     "appliesTo": "every audiovisual work, series included"
+    },
+    "notes": "As producer-IT.json holds for a film."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/10/20260618_Consolidato_TC-art.-15_Modifica-2026_rev-19-ottobre.pdf",
+      "title": "MiC-DGCA consolidated tax-credit decree, art. 16",
+      "said": "b. ha sottoscritto un accordo con un’emittente televisiva di ambito nazionale per la diffusione al pubblico italiano dell’opera … riconosca un corrispettivo pari ad almeno il 20 per cento del costo complessivo dell’opera",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/it-tc.pdf",
+      "read": "2026-11-04",
+      "sha256": "ad5b625c871c9610e53965bd3afc640ca291c3c1947f34bc0c833201ae226773"
+     }
+    ],
+    "value": {
+     "creditNeedsCommission": true,
+     "broadcasterAtLeastShareOfCost": 0.2,
+     "pickupRate": null
+    },
+    "notes": "A series gets the credit only once a national broadcaster or qualifying SVOD has signed; no count of independent series picked up was found."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No theatre production credit found; the DG Spettacolo site refused (502)."
+   },
+   {
+    "item": 6,
+    "fact": "Public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The Fondo nazionale per lo spettacolo dal vivo is run by the DG Spettacolo, whose site returned 502 to this environment."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "IT.json holds the theatre CCNL (2018), whose category a names the assistant director and stage manager (EUR 74.30 a day in all from 2020); a director's own minimum wasn't found."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "research/sources/person/markets/IT.json: CCNL teatri 2018, actor EUR 72.78 a day in all from 1 January 2020"
+    },
+    "notes": "Already held. Held from the earlier research, not re-read today."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     3,
+     4
+    ],
+    "tried": "cinema.cultura.gov.it consolidated tax-credit decree PDF (rev. 19 Oct 2026), Capo III arts 16-17 and art 3",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2
+    ],
+    "tried": "cinema.cultura.gov.it selettivi-produzione page (2026 split)",
+    "result": "read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     5
+    ],
+    "tried": "1 search: credito d'imposta produzione spettacoli teatrali 2026 decreto Ministero della Cultura spettacolo dal vivo",
+    "result": "only cinema/audiovisual credit results",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     5,
+     6
+    ],
+    "tried": "spettacolodalvivo.cultura.gov.it home",
+    "result": "CONNECT 502",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Theatre items rest on IT.json's CCNL; DG Spettacolo unreachable."
+ },
+ {
+  "country": "KI",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Kiribati: producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law; no fund, agreement or guild."
+ },
+ {
+  "country": "LA",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Laos: the earlier research holds only language and capital; no film fund or incentive found."
+ },
+ {
+  "country": "LU",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive for a series",
+    "verdict": "none-exists",
+    "sources": [],
+    "value": {
+     "held": "producer-LU.json: no automatic tax credit for audiovisual production (Chamber of Deputies dossier 8566, avis of 15 April 2026)"
+    },
+    "notes": "Luxembourg funds series only through the Film Fund's selective aid (item 2)."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://gouvernement.lu/fr/actualites/toutes_actualites/communiques/2026/07-juillet/28-filmfund-3-session.html",
+      "title": "Gouvernement du Luxembourg: Film Fund, troisième session 2026 (communiqué, July 2026)",
+      "said": "26 projets ont été soutenus en Aides Financières Sélectives (AFS) à l'écriture et/ou développement et à la production, dont 10 longs-métrages live, 2 longs-métrages d'animation, 3 longs-métrages documentaire, 4 séries live, 1 série animation, 3 courts-métrages live, 1 court-métrage animation et 2 projets XR. … Séries live FIRST DAY … AFS allouée: 40 000 € NOTHING EVER HAPPENS … AFS allouée: 35 000 € TROUBLEMAKER … AFS allouée: 60 000 € … Serie de fiction FAGNES Genre: Policier, Drame, Thriller … Coproduction entre le Luxembourg et la Belgique AFS allouée selon les dépenses investies dans l'économie du secteur audiovisuel luxembourgeois: 1 500 000 € pour un budget global de 4 490 000 € Pourcentage de l'AFS: 33.41% Début de tournage: janvier 2027",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/lu-gov-ff.html",
+      "read": "2026-11-04",
+      "sha256": "68ae892b6a49a987a712d894776aa2d087eccfdbce6cd93e568f570a172dec84"
+     }
+    ],
+    "value": {
+     "currency": "EUR",
+     "scheme": "Aide financière sélective (AFS), Film Fund Luxembourg",
+     "basis": "spend invested in Luxembourg's audiovisual economy",
+     "july2026": {
+      "liveSeriesSupported": 4,
+      "animatedSeries": 1,
+      "writingDevelopmentLiveSeriesEUR": [
+       40000,
+       35000,
+       60000
+      ],
+      "productionExample": {
+       "title": "FAGNES",
+       "awardEUR": 1500000,
+       "budgetEUR": 4490000,
+       "share": 0.3341,
+       "copro": "LU-BE"
+      }
+     },
+     "rateOfYes": null
+    },
+    "notes": "The Fund publishes awards, not applications, so no rate of yes; its own site failed TLS verification (missing intermediate; the bundle didn't complete it)."
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The Fund's rules (filmfund.lu) unreadable here."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "RTL Lëtzebuerg's commissioning terms not reached."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not searched."
+   },
+   {
+    "item": 6,
+    "fact": "Theatre fund",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Ministry of Culture and Kultur | lx not reached in this run."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "LU.json: no pay scale; intermittent performers' daily benefit"
+    },
+    "notes": ""
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     3
+    ],
+    "tried": "www.filmfund.lu with system CA, then with research5 bundle.pem added",
+    "result": "TLS: unable to get local issuer certificate (refused, not bypassed)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2
+    ],
+    "tried": "gouvernement.lu communiqué on the Film Fund's third 2026 session",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "MG",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Madagascar: the earlier research holds only language and capital; no film fund or incentive found."
+ },
+ {
+  "country": "MQ",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "follows": "France"
+    },
+    "notes": "Martinique is a French region: France's credits (crédit d'impôt audiovisuel) apply as in France; the FR research holds them."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-MQ.json: Collectivité Territoriale de Martinique territorial fund under the 2023-2025 CNC-State-CTM convention: production aid at most EUR 200,000 for a series, development EUR 40,000 (EUR 80,000 animated); Executive Council decides on a reading committee's opinion"
+    },
+    "notes": "Held; read 2026-11-01. The 2023-2025 convention's successor wasn't checked. Held from the earlier research, not re-read today."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-MQ.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-MQ.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "follows": "France"
+    },
+    "notes": "France's crédit d'impôt spectacle vivant applies as in France (FR research)."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-MQ.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "follows": "France"
+    },
+    "notes": "director-MQ.json: national collective agreements apply in Martinique (Code du travail L2222-1)."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-MQ.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "follows": "France"
+    },
+    "notes": "MQ.json: France's performer agreements apply."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-MQ.json) holds what is known."
+   }
+  ],
+  "attempts": [],
+  "notes": "Under French law; series and stage terms are France's except the territorial fund."
+ },
+ {
+  "country": "MY",
+  "items": [
+   {
+    "item": 1,
+    "fact": "FIMI's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://filminmalaysia.com/app/uploads/2016/12/FIMI-GD_LATEST_2025_DOMESTIC_CULTURE-TEST-TAMBAHAN.pdf",
+      "title": "FINAS: Film in Malaysia Incentive (FIMI) Guidelines (Domestic Production) [GUIDE01], 2025",
+      "said": "4. A series or season A series or season of a series is a multiple-episode film that does not receive a cinema release but is exhibited commercially on another medium: e.g. straight to DVD or via the internet. A series or a season of a series must be at least two (2) episodes. Each episode must be at least twenty-two (22) minutes in length, with the exception of animation programs which must be at least two (2) minutes and above. … Please note that the FIMI for Production Activity, will only be issued after completion of the entire series, with a minimum spend of QMPE Threshold … Multiple seasons in one (1) application are not allowed. … (a) the entire television series (excluding television series which is predominantly a digital animation or other animation …) is to be completed within eighteen (18) months upon commencement of expenditure.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/my-fimi.pdf",
+      "read": "2026-11-04",
+      "sha256": "1f186396f2fc6f519b98fd59daa6b41b84dae2dac9be509d0ad058931b51e6e1"
+     }
+    ],
+    "value": {
+     "rate": 0.3,
+     "culturalTestUplift": 0.05,
+     "minQMPE_MYR": 1000000,
+     "minEpisodes": 2,
+     "minEpisodeMinutes": 22,
+     "animationMinEpisodeMinutes": 2,
+     "liveActionCompleteWithinMonths": 18,
+     "paidOn": "completion of the entire series",
+     "oneSeasonPerApplication": true
+    },
+    "notes": "Rate, floor and salary cap as held in producer-MY.json; this guideline names series as eligible."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "FINAS's content funds not reached."
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "RTM's commissioning terms not reached."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not searched."
+   },
+   {
+    "item": 6,
+    "fact": "Theatre fund",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not searched."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "MY.json holds no agreement."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1
+    ],
+    "tried": "filminmalaysia.com FIMI domestic guidelines 2025 PDF read for series",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the series incentive was researched today; the rest wasn't reached in this run's budget."
+ },
+ {
+  "country": "NL",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.filmfonds.nl/en/funding/fund/netherlands-film-production-incentive-high-end-series",
+      "title": "Netherlands Film Fund: Netherlands Film Production Incentive High-End Series",
+      "said": "The scheme provides a financial benefit of up to 35% (cash rebate) of the qualifying production costs of national and international high-end drama, documentary and animated series and single episodes that have demonstrably been spent in the Netherlands. … Up to 3 million euros per project per year per applicant production company The grant contribution is a maximum of 35% (cash rebate) of the demonstrably spent qualifying Dutch production costs. … The annual budget for 2026 is € 9,5 million for high-end series, divided across 3 application rounds. … The television/VOD broadcast in the Netherlands is guaranteed. If the TV series is an international co-production, the television/VOD broadcast is guaranteed in two or more countries, including the Netherlands. The series is fully developed from an artistic/content perspective. … A minimum minute price applies as lower limit for the production budget: Documentary series: 4,000 euros per broadcast minute Animated series: 8,000 euros per broadcast minute Drama series for children below the age of 12: a minimum of 10,000 euros in production costs per broadcast minute for a TV series between 10 and 25 minutes per episode, or a minimum of 8,000 euros per broadcast minute for series longer than 25 minutes Drama series (other): 12,000 euros per broadcast minute To be eligible for a financial contribution for a Single Episode the production costs per episode must be a minimum of one million euros.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-ff-hes.html",
+      "read": "2026-11-04",
+      "sha256": "1d6bdc6b88d9ffe31fe3ace2b0d24fc5f1802ee5f8f8641e4c18a11ef360e1f7"
+     },
+     {
+      "kind": "primary",
+      "url": "https://zoek.officielebekendmakingen.nl/stcrt-2026-24849.pdf",
+      "title": "Staatscourant 2026, 24849: Reglement Stimuleringsmaatregel Filmproductie in Nederland (15 juli 2026)",
+      "said": "speelfilm: een filmproductie in het genre fictie met een vertoningsduur van tenminste 60 minuten, die primair bestemd is voor bioscoopuitbreng … Een instrumentele of promotionele uitbreng waarbij het primaire doel niet de uitbreng in de bioscoop is maar bijvoorbeeld de uitbreng op televisie of via een streamingdienst, voldoet niet aan de definitie van bioscoopuitbreng van het fonds.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-stcrt.pdf",
+      "read": "2026-11-04",
+      "sha256": "268d83b0d90056430f1fe908dbdeaebba7520eedb447001e4a6920130e9601c3"
+     }
+    ],
+    "value": {
+     "scheme": "Film Production Incentive High-End Series",
+     "rate": 0.35,
+     "capPerProjectPerYearEUR": 3000000,
+     "budget2026EUR": 9500000,
+     "rounds2026": 3,
+     "minPerBroadcastMinuteEUR": {
+      "drama": 12000,
+      "childrensUnder12_10to25min": 10000,
+      "childrensUnder12_over25min": 8000,
+      "animation": 8000,
+      "documentary": 4000
+     },
+     "singleEpisodeMinEUR": 1000000,
+     "needs": [
+      "guaranteed TV/VOD broadcast in the Netherlands",
+      "independence test",
+      "fully developed scripts"
+     ],
+     "applicants": "Netherlands, Bonaire, Sint Eustatius and Saba",
+     "filmIncentive": "cinema films only (Stcrt 2026, 24849)"
+    },
+    "notes": "The series scheme's own regulation (Annex 1, ineligible costs) was not read; the page names it."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series and its rate of yes",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "research/sources/person/markets/producer-NL.json (Film Facts & Figures 2025): in 2024 the incentive's series line took 28 applications and made 23 grants"
+    },
+    "notes": "The series incentive is the Fund's series money; NPO's and the Media Fund's terms weren't read today."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-NL.json: in a Film Fund budget, producer's fee at most 7.5% and overhead at most 7.5% capped at EUR 350,000 (Financieel & Productioneel Protocol, 1 July 2026)",
+     "series": null
+    },
+    "notes": "Whether the protocol's limits bind the series incentive wasn't read (Annex 1 of its regulation)."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.filmfonds.nl/en/funding/fund/netherlands-film-production-incentive-high-end-series",
+      "title": "Netherlands Film Fund: Film Production Incentive High-End Series",
+      "said": "The television/VOD broadcast in the Netherlands is guaranteed.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-ff-hes.html",
+      "read": "2026-11-04",
+      "sha256": "1d6bdc6b88d9ffe31fe3ace2b0d24fc5f1802ee5f8f8641e4c18a11ef360e1f7"
+     }
+    ],
+    "value": {
+     "creditNeedsBroadcaster": true,
+     "pickupRate": null
+    },
+    "notes": "No count of independent series picked up."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "None found; not searched beyond the fund's schemes."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://fondspodiumkunsten.nl/subsidies/productiesubsidie",
+      "title": "Fonds Podiumkunsten: Productiesubsidie",
+      "said": "In 2025 is 35% van de 257 behandelde aanvragen gehonoreerd. Subsidierondes 2027 Ronde 1: Indienen vanaf: 6 januari 2027 Uiterste indiendeadline: 6 april 2027 … Het maximale subsidiebedrag bedraagt: €78.750 per productie; €52.500 wanneer het een concours betreft; €105.000 wanneer de productie minimaal 50% van de totale kosten dekt met eigen inkomsten. Wanneer binnen de productie een of meer nieuwe composities, libretto’s of theaterteksten tot stand komen, kan hiervoor maximaal € 26.250 extra worden verstrekt. De totale subsidie bedraagt nooit meer dan € 78.750 bij een concours en € 105.000 in alle andere gevallen. … Je kunt alleen aanvragen als je een rechtspersoon zonder winstoogmerk bent",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-fpk-ps.html",
+      "read": "2026-11-04",
+      "sha256": "aae2a358b15bae19787b767217acc8f84cf62c34bc916c9d51d944805b3ae953"
+     },
+     {
+      "kind": "primary",
+      "url": "https://fondspodiumkunsten.nl/subsidies/investeringsregeling-vrije-producties",
+      "title": "Fonds Podiumkunsten: Investeringsregeling Vrije Producties",
+      "said": "MAXIMALE BIJDRAGE € 500.000 … In 2025 is 80% van de 9 behandelde aanvragen gehonoreerd. … De regeling is bedoeld voor grootschalige producties binnen theater, dans, muziek en muziektheater die een breed publiek bereiken. Er kan subsidie worden aangevraagd voor één specifiek nieuwe productie met een beoogd bereik van minimaal 20.000 bezoekers. … de productie in Nederland wordt geproduceerd; … Subsidiehoogte 20% van de begrote inkomsten, tot een maximum van € 500.000. 20% van de extra inkomsten wanneer de productie meer inkomsten realiseert dan begroot … Deze verplichting geldt tot maximaal vijf jaar na de definitieve vaststelling van de subsidie.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-fpk-ivp.html",
+      "read": "2026-11-04",
+      "sha256": "83b58ad32673b94aa4d7747e781f4be375cefa414bfbbd9d61aa4402cae3e866"
+     }
+    ],
+    "value": {
+     "currency": "EUR",
+     "production": {
+      "max": 78750,
+      "maxIfOwnIncomeHalf": 105000,
+      "newTextExtra": 26250,
+      "rate2025": 0.35,
+      "handled2025": 257,
+      "who": "non-profit legal entity"
+     },
+     "commercial": {
+      "scheme": "Investeringsregeling Vrije Producties",
+      "share": 0.2,
+      "of": "budgeted income",
+      "max": 500000,
+      "minAudience": 20000,
+      "repay": "20% of income above budget, up to five years",
+      "rate2025": 0.8,
+      "handled2025": 9,
+      "madeIn": "the Netherlands"
+     }
+    },
+    "notes": "Two routes: subsidised (non-profit) and commercial free producers."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "NL.json holds the Cao Toneel en Dans actor scales; whether it scales a director wasn't read."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum or fund",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://fondspodiumkunsten.nl/subsidies/werkbijdrage-theatertekst",
+      "title": "Fonds Podiumkunsten: Werkbijdrage theatertekst",
+      "said": "Deze subsidie is voor theaterauteurs om nieuw werk voor theater te schrijven. … 60% van de 37 behandelde aanvragen is gehonoreerd. Let op: in 2025 was er eenmalig extra geld beschikbaar voor deze regeling. … In 2027 komt er een nieuwe regeling voor podiumschrijvers. … Ik heb minstens twee werken geschreven die zijn gepubliceerd of uitgevoerd door een professionele producent. … Voor de werkbijdrage theatertekst is in 2026 270.000 euro beschikbaar. … Een theaterauteur kan hoogstens eens in de twee jaar een werkbijdrage ontvangen.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/nl-fpk-wtt.html",
+      "read": "2026-11-04",
+      "sha256": "3ddd7595b035084ec56f205a552082980da7de8b0d9ab51a34252b1a2ca2f3a9"
+     }
+    ],
+    "value": {
+     "minimum": null,
+     "writingGrant": {
+      "pool2026EUR": 270000,
+      "rate2025": 0.6,
+      "handled2025": 37,
+      "needs": "two works published or staged professionally",
+      "oncePerYears": 2,
+      "replacedIn": 2027
+     },
+     "productionExtraForNewTextEUR": 26250
+    },
+    "notes": "No playwright tariff found; the fund's grants are what pays a new text."
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "NL.json: Cao Toneel en Dans, Acteur I from EUR 3,077 a month (2026)"
+    },
+    "notes": "Held. Held from the earlier research, not re-read today."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     1
+    ],
+    "tried": "Staatscourant 2026, 24849 (film incentive regulation) read for series",
+    "result": "cinema films only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     4
+    ],
+    "tried": "filmfonds.nl English incentive page (500) and High-End Series page",
+    "result": "series page read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6,
+     8
+    ],
+    "tried": "fondspodiumkunsten.nl all-schemes list (3 pages), Productiesubsidie, Investeringsregeling Vrije Producties, Werkbijdrage theatertekst",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "PE",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www3.congreso.gob.pe/Docs/DGP/DIDP/files/ds_001-2026-mc.pdf",
+      "title": "El Peruano, 14 de febrero de 2026, Normas Legales: Decreto Supremo N° 001-2026-MC, Reglamento de la Ley N° 32309 (copy on the Congress's site)",
+      "said": "5.27 Obra audiovisual: Toda creación intelectual expresada mediante una serie de imágenes asociadas que den sensación de movimiento, con o sin sonorización incorporada, susceptible de ser proyectada, exhibida o ejecutada a través de aparatos idóneos, o por cualquier otro medio de comunicación de la imagen y del sonido, conocido o por conocerse … La obra audiovisual incluye, más no se limita, a la obra cinematográfica. … Para efectos de la aplicación de los incentivos fiscales previstos en los artículos 16, 17 y 18 de la Ley Nº 32309, será de aplicación la definición de “domiciliado” establecida en la normativa tributaria vigente. … Toda actividad comprendida en el ámbito de aplicación de la Ley Nº 32309 y de su reglamento se ejecuta de manera condicionada y sujeta a la disponibilidad presupuestal",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/pe-ds001.pdf",
+      "read": "2026-11-04",
+      "sha256": "235cb51dbda4ebefb453daefa9fa5643d0be86b46c77f922081d9d14eb968359"
+     }
+    ],
+    "value": {
+     "law": "Ley 32309 (2025), Reglamento D.S. 001-2026-MC (14 Feb 2026)",
+     "audiovisualWorkIncludesSeries": "by definition (any audiovisual work; series not named)",
+     "fiscalIncentives": "arts 16-18 of the law; their terms not read",
+     "held": "producer-PE.json: CIPA certificates; donations deductible up to 20%"
+    },
+    "notes": "Whether the fiscal incentives are in force (trade press says they await an MEF regulation) wasn't read in a primary."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www3.congreso.gob.pe/Docs/DGP/DIDP/files/ds_001-2026-mc.pdf",
+      "title": "El Peruano, 14 de febrero de 2026, Normas Legales: Decreto Supremo N° 001-2026-MC, Reglamento de la Ley N° 32309 (copy on the Congress's site)",
+      "said": "5.27 Obra audiovisual: Toda creación intelectual expresada mediante una serie de imágenes asociadas que den sensación de movimiento, con o sin sonorización incorporada, susceptible de ser proyectada, exhibida o ejecutada a través de aparatos idóneos, o por cualquier otro medio de comunicación de la imagen y del sonido, conocido o por conocerse … La obra audiovisual incluye, más no se limita, a la obra cinematográfica. … Para efectos de la aplicación de los incentivos fiscales previstos en los artículos 16, 17 y 18 de la Ley Nº 32309, será de aplicación la definición de “domiciliado” establecida en la normativa tributaria vigente. … Toda actividad comprendida en el ámbito de aplicación de la Ley Nº 32309 y de su reglamento se ejecuta de manera condicionada y sujeta a la disponibilidad presupuestal",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/pe-ds001.pdf",
+      "read": "2026-11-04",
+      "sha256": "235cb51dbda4ebefb453daefa9fa5643d0be86b46c77f922081d9d14eb968359"
+     }
+    ],
+    "value": {
+     "held": "producer-PE.json: at least 6,000 UIT a year of economic stimuli",
+     "scope": "cinematographic and/or audiovisual works",
+     "subjectToBudget": true
+    },
+    "notes": "Series lines in the Ministry's calls weren't read; the regulation makes every stimulus subject to the budget."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-PE.json) holds what is known."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "1 search: gob.pe ley que promueve la actividad cinematográfica y audiovisual 2025 texto series obras audiovisuales El Peruano",
+    "result": "led to D.S. 001-2026-MC on congreso.gob.pe",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "El Peruano pages of D.S. 001-2026-MC (Congress's PDF copy) read",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "PR",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production tax credit for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://puertoricofilm.pr.gov/our-incentives",
+      "title": "Puerto Rico Film Program (DDEC): Our Incentives",
+      "said": "Up to 40% production tax credit on all payments to Puerto Rico Resident Companies & Individuals. Up to 20% production tax credit on all payments to Qualified Nonresident individuals. Eligible Projects Feature films Short films Documentaries Television programs Series in episodes Mini-series Music videos National & international commercials … the applicant is required to pay a mandatory filing feeequivalent of 1% of the Production Expenses in Puerto Rico, up to a maximumrate of two hundred and fifty thousand dollars ($250,000). … Submit your application … beforethe end of Principal Photography",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/pr-inc.html",
+      "read": "2026-11-04",
+      "sha256": "1083fcddf0682c627dbc18988f030de14a4ef37fb53f792cd7f0538f6fddc39d"
+     }
+    ],
+    "value": {
+     "residentPaymentsRate": 0.4,
+     "nonresidentIndividualsRate": 0.2,
+     "series": true,
+     "filingFee": 0.01,
+     "filingFeeMaxUSD": 250000,
+     "law": "Act 60-2019 as held in producer-PR.json"
+    },
+    "notes": "Same credit as a film (producer-PR.json); 'up to' rates."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No Puerto Rican series fund found."
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The film credit's eligible projects list no stage work."
+   },
+   {
+    "item": 6,
+    "fact": "Theatre fund",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Instituto de Cultura Puertorriqueña not reached."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "PR files: labour relations under US federal law (NLRB Region 12); US agreements apply"
+    },
+    "notes": "Whether SDC's agreements reach a Puerto Rican theatre wasn't read."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "PR.json: US system"
+    },
+    "notes": ""
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     5
+    ],
+    "tried": "puertoricofilm.pr.gov/our-incentives read",
+    "result": "series eligible",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "US territory: unions and agreements are the US system's."
+ },
+ {
+  "country": "RS",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The cash rebate's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://www.filminserbia.com/incentives/",
+      "title": "Serbian Film Commission: Incentives",
+      "said": "The Ministry of Culture of the Government of Serbia has adopted a Regulation for film and TV incentives on March 21, 2026 … 2.AMOUNT 25% of Qualifying Serbian Spend for features, TV Series, documentaries, animation and post-production 20% for TV Commercials 30% for projects with Serbian Spend of minimum 5.000.000 EUR … 4.WHO CAN APPLY Applicants must be a legal entity registered in Serbia … 5.MINIMUM LOCAL SPEND Feature films, TV films and TV series: 300.000 EUR ( ~ $331.000), with 150.000 EUR minimum per episode for TV series … 6.FORMATS … -TV series containing at least three episodes not shorter than 40 minutes",
+      "quotes": "Regulation on film and TV incentives, Government of Serbia, 21 March 2026",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/rs-fis.html",
+      "read": "2026-11-04",
+      "sha256": "08334cc7e780eac1d3b63b93967e799c29d3cd495ff3bbb87dd64ebe6aa5eafa"
+     }
+    ],
+    "value": {
+     "rate": 0.25,
+     "over5mEUR": 0.3,
+     "minSpendEUR": 300000,
+     "minPerEpisodeEUR": 150000,
+     "minEpisodes": 3,
+     "minEpisodeMinutes": 40,
+     "regulation": "2026-03-21"
+    },
+    "notes": "The film commission (an association) quotes the Government's regulation; the regulation's own text wasn't read."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-RS.json: the Law on Cinematography's co-financing calls were not held in 2025"
+    },
+    "notes": ""
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "RTS's terms not reached."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 6,
+    "fact": "Theatre fund",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Ministry of Culture calls not reached."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "RS.json holds no agreement."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "trade-press",
+    "items": [
+     1
+    ],
+    "tried": "filminserbia.com/incentives/ (Serbian Film Commission) read",
+    "result": "series terms read, quoting the 2026 regulation",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "SG",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.imda.gov.sg/-/media/imda/files/industry-development/grants-and-schemes/guidelines-for-production-assistance--broadcast-international-tv-v218.pdf?la=en",
+      "title": "IMDA: Production Assistance (Broadcast – International TV) Application and Scheme Guidelines, updated 19 Jan 2017",
+      "said": "The Production Assistance is open to Singapore-registered companies (excluding sole … 2.1 IMDA will support up to 40% of the qualifying expenses that are directly linked to the … Applicant’s fixed overheads / recurring expenses does not qualify. … 2.3 The IMDA funding amount is capped at 20 times the applicant’s paid-up capital, for",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/sg-pa-tv.pdf",
+      "read": "2026-11-04",
+      "sha256": "e1bdfbdf48b6381c766f422f27acd6157839cb83181c0a4e05fd23337c19d9cc"
+     }
+    ],
+    "value": {
+     "scheme": "IMDA Production Assistance (International TV)",
+     "share": 0.4,
+     "overheadsQualify": false,
+     "capTimesPaidUpCapital": 20,
+     "asOf": "2017-01-19",
+     "inForce": "unconfirmed"
+    },
+    "notes": "Singapore has no tax incentive for production; IMDA grants are discretionary. The 2017 guideline is the only series text read; whether it still runs wasn't confirmed (IMDA's scheme pages redirect to its home)."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.imda.gov.sg/-/media/imda/files/industry-development/call-for-proposals/media-talent-progression-programme/external-guidelines-for-mtpp---content-grants-080925.pdf",
+      "title": "IMDA: Guidelines for MTPP Content Grants – 2025 Features CFP (updated 8 Sep 2025)",
+      "said": "Long-Form Content Grant (for feature films of at least 70 minutes): … Long-Form Content Up to $300,000* per … Grant – New SG Director … Up to $600,000* per … Grant – Go-Global … Up to $900,000 or 50% of qualifying expenses of project, whichever is lower* [Go-Global+]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/sg-mtpp.pdf",
+      "read": "2026-11-04",
+      "sha256": "ebbb785502f606bd020b6f6f517f95fc75b1a9a02fb6b5a45f9e2004842a731f"
+     }
+    ],
+    "value": {
+     "current2025Call": "features only",
+     "series": null,
+     "rateOfYes": null
+    },
+    "notes": "The 2025 MTPP call is for features; a series call wasn't found."
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.imda.gov.sg/-/media/imda/files/industry-development/grants-and-schemes/guidelines-for-production-assistance--broadcast-international-tv-v218.pdf?la=en",
+      "title": "IMDA PA (International TV) 2017",
+      "said": "Applicant’s fixed overheads / recurring expenses does not qualify.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/sg-pa-tv.pdf",
+      "read": "2026-11-04",
+      "sha256": "e1bdfbdf48b6381c766f422f27acd6157839cb83181c0a4e05fd23337c19d9cc"
+     }
+    ],
+    "value": {
+     "overheadsQualify": false,
+     "producerFeeCap": null
+    },
+    "notes": ""
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Mediacorp's commissioning terms not reached."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "None found."
+   },
+   {
+    "item": 6,
+    "fact": "Public fund for a theatre production",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.nac.gov.sg/find-your-funding/projects/general-presentation-and-participation-grant/",
+      "title": "National Arts Council: Presentation & Participation Grant (General), last updated 28 October 2026",
+      "said": "the funding cap for the Presentation & Participation (General) Grant has been raised to $100,000 per applicant per financial year . For applications submitted on or after 16 April 2026 … Individuals, Collectives and Non-Profit Organisations Up to 70% of a realistic budget [1] , up to $100,000 per financial year for each applicant For-Profit Organisations Up to 50% of a realistic budget [1] , up to $100,000 per financial year for each applicant … Who can apply Individuals Arts organisations (non-profit and for-profit) Collectives … Applications now open three times a year instead of once",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/sg-nac-gppg.html",
+      "read": "2026-11-04",
+      "sha256": "4ce7a4169a9c10ef95805c37d3b8fb8321017bdc279d32f5a06f8d8fca751359"
+     }
+    ],
+    "value": {
+     "currency": "SGD",
+     "from": "2026-04-16",
+     "shareOfBudget": {
+      "individualOrNonProfit": 0.7,
+      "forProfit": 0.5
+     },
+     "maxPerApplicantPerFY": 100000,
+     "roundsPerYear": 3,
+     "rateOfYes": null
+    },
+    "notes": "Its guideline PDF (citizenship rules) wasn't read."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No collective agreement known; not searched."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not searched."
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "SG.json holds no agreement; Singapore has no general minimum wage."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "imda.gov.sg/how-we-can-help/singapore-media-fund (redirects to home)",
+    "result": "no scheme page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "1 search: IMDA Singapore Media Fund production assistance series support up to percentage qualifying costs",
+    "result": "led to the 2017 PA International TV guideline and the 2025 MTPP guidelines (both read); STB On-screen Fund in trade press only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6
+    ],
+    "tried": "nac.gov.sg find-your-funding and the P&P (General) grant page; creation-grant address 404",
+    "result": "P&P read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "country": "SO",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Somalia: the earlier research holds only language; no film fund, incentive or theatre fund found."
+ },
+ {
+  "country": "TC",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Turks and Caicos Islands: a British Overseas Territory; producer-TC.json found no film body, fund, incentive, guild or agreement (gov.tc 406/404)."
+ },
+ {
+  "country": "TM",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Turkmenistan: the earlier research holds only language and capital; no film fund or incentive found."
+ },
+ {
+  "country": "UA",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The cash rebate's terms for a series",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://pravo.uteka.ua/doc/pro-vnesennya-zmin-do-zakonu-ukraini-pro-derzhavnu-pidtrimku-kinematografii-v-ukraini-shhodo-nadannya-derzhavnoi-subsidii-dlya-povernennya-chastini-kvalifikovanix-vitrat-zdijsnenix-inozemnim-subyektom-kinematografii-pri-virobnictvi-stvorenni-filmu-v-ukrai",
+      "title": "Uteka: Law 130-IX (20 September 2019) amending the Law on State Support of Cinematography",
+      "said": "1) пункт 4 частини першої після слова \"здійснених\" доповнити словом \"іноземним\"; 2) частину другу доповнити абзацами другим та третім такого змісту: \"Державна підтримка на виробництво (створення) одного фільму (серіалу) здійснюється лише в одній з форм, передбачених пунктами 1-4 частини першої цієї статті. … \"1) відшкодування частини фактично здійснених суб’єктом кінематографії кваліфікованих витрат (платежів) на виробництво (створення) фільмів - у розмірі 25 відсотків загального обсягу таких кваліфікованих витрат (платежів)",
+      "quotes": "Law of Ukraine No. 130-IX (Verkhovna Rada); zakon.rada.gov.ua reset the connection",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/ua-uteka.html",
+      "read": "2026-11-04",
+      "sha256": "2dcb7e2e75a7ef95ca113cfcf897b7626dc0970a523bacc660a977228d17c435"
+     }
+    ],
+    "value": {
+     "rate": 0.25,
+     "culturalUplift": 0.05,
+     "for": "foreign film companies' qualifying costs in Ukraine",
+     "seriesNamed": "one film (series) takes only one form of state support",
+     "seriesThresholds": null
+    },
+    "notes": "A Ukrainian producer's own series takes the subsidy of art. 7 (item 2), not the rebate, which the 2019 amendment gives to foreign companies. Series thresholds weren't found."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "partial",
+    "sources": [],
+    "value": {
+     "held": "producer-UA.json: Law 1977-VIII art. 7(1): state subsidy up to 50% of a TV film's or series' budget, the applicant showing at least 50% (kodeksy.com.ua copy)",
+     "rateOfYes": null
+    },
+    "notes": "Held; Derzhkino's competition results weren't counted today. Held from the earlier research, not re-read today."
+   },
+   {
+    "item": 3,
+    "fact": "Fee cap",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Suspilne's commissioning terms not reached."
+   },
+   {
+    "item": 5,
+    "fact": "Theatre tax incentive",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 6,
+    "fact": "Theatre fund",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The Ukrainian Cultural Foundation's calls not reached."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "UA.json: the 2023-2028 sectoral agreement names no pay minimum."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   },
+   {
+    "item": 9,
+    "fact": "Stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "As UA.json."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": ""
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     1
+    ],
+    "tried": "zakon.rada.gov.ua/laws/show/130-20",
+    "result": "connection reset",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1
+    ],
+    "tried": "kodeksy.com.ua Law 1977-VIII art. 1; pravo.uteka.ua Law 130-IX copy read for series",
+    "result": "read (secondary copies)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Wartime; Rada site unreachable."
+ },
+ {
+  "country": "VE",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-VE.json) holds what is known."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "cnac.gob.ve (Centro Nacional Autónomo de Cinematografía) home",
+    "result": "CONNECT 502",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The earlier research holds no Venezuelan film figures."
+ },
+ {
+  "country": "YE",
+  "items": [
+   {
+    "item": 1,
+    "fact": "A production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No source on this was found by the earlier markets research and none was sought today; recorded as not modeled, not as absent."
+   }
+  ],
+  "attempts": [],
+  "notes": "Yemen: the earlier research holds only language and capital; no film fund or incentive found."
+ }
+]

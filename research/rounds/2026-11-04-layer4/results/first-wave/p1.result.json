@@ -1,0 +1,1060 @@
+[
+ {
+  "id": "R-4647",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.jusline.at/gesetz/auslbg/paragraf/20",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://www.jusline.at/gesetz/auslbg/gesamt",
+    "title": "JUSLINE, AuslBG (Ausländerbeschäftigungsgesetz), whole consolidated text, Stand der Gesetzgebung 04.11.2026: § 20a Verfahrensdauer and § 20b",
+    "read": "2026-11-04",
+    "said": "§ 20a AuslBG Verfahrensdauer § 20a . Über Anträge auf Beschäftigungsbewilligungen und Sicherungsbescheinigungen ist von der regionalen Geschäftsstelle des Arbeitsmarktservice binnen sechs Wochen zu entscheiden. § 20b AuslBG Vorläufige Berechtigung zur Beschäftigungsaufnahme (1) Wird dem Antragsteller die Entscheidung über den Antrag auf Beschäftigungsbewilligung nicht innerhalb der im § 20a genannten Frist zugestellt, kann der Arbeitgeber den Ausländer beschäftigen und hat Anspruch auf eine diesbezügliche Bescheinigung, es sei denn, daß diese Frist durch eine Mitteilung der regionalen Geschäftsstelle des Arbeitsmarktservice an den Arbeitgeber wegen einer durch diesen verursachten Verzögerung gehemmt wird.",
+    "quotes": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008365"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "RIS GeltendeFassung AuslBG (ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008365) fetched by curl",
+    "result": "HTTP 503 again; the law read instead in JUSLINE's consolidated copy (secondary, quoting RIS)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "jusline.at/gesetz/auslbg/gesamt (whole AuslBG, Stand 04.11.2026) fetched and searched for 'binnen … Wochen' and 'Verfahrensdauer'; the 2026-11-01 attempt had read § 20 only",
+    "result": "found: § 20a sets the AMS decision period at six weeks, and § 20b lets the employer employ provisionally if the decision isn't served in that time (saved l4w/files/p1/AT-auslbg-gesamt.html)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org/web/2026/https://www.ris.bka.gv.at/ by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 6,
+     "unit": "weeks"
+    },
+    "premium": null
+   },
+   "processingNote": "The AMS regional office must decide within six weeks (AuslBG § 20a); if the decision isn't served by then, the employer may employ the artist provisionally (§ 20b), unless the office has stopped the clock for a delay the employer caused. The six weeks is the law's limit, not a measured average."
+  },
+  "notes": "The earlier read of § 20 alone missed § 20a. The residence route (Niederlassungsbewilligung – Künstler) keeps the general AVG § 73 limit of six months (jusline.at/gesetz/avg/paragraf/73 read 2026-11-04, saved AT-avg73.html: 'spätestens aber sechs Monate nach deren Einlangen den Bescheid zu erlassen'), if the lead wants a note for it. Secondary until RIS answers."
+ },
+ {
+  "id": "R-4649",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+    "title": "Migration Regulations 1994, compilation of 2 October 2026, volume 2, Sch. 2 cl. 408.229A (saved l4w/files/p1/au/vol2.html)",
+    "read": "2026-11-04",
+    "said": "Performing in film or television production subsidised by government (2) This subclause applies to the applicant if: (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non‑profit engagements) in Australia; … (e) the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Migration Regulations 1994 volume 2 (compilation of 2026-10-02, legislation.gov.au epub document_2) re-fetched; Schedule 2 Part 408 (from 'Subclass 408' to 'Subclass 410') searched for salary, remuneration, wage, pay, paid, market rate, terms and conditions, and clause 408.229A read",
+    "result": "no pay floor in clause 408.229A: its criteria are a performing contract for specific engagements, an Arts Minister certificate (screen work) or a net employment benefit (other work), a sponsorship or support test, licences and consultation with the relevant Australian unions; the one wage rule in Part 408 ('employed in Australia in accordance with the standards for wages and working conditions provided for under relevant Australian legislation and awards') belongs to another clause; the sponsorship obligations in Part 2A of the Regulations weren't read, so an absence isn't declared. No days of paid performing without the visa found in Part 408",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Close to an absence for pay: read Part 2A (sponsorship obligations, reg. 2.87 and following, volume 1) before declaring it. Exempt: the Short Stay Specialist (400) and Visitor (600) streams' exclusion of performers was not re-read today."
+ },
+ {
+  "id": "R-4655",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.migration.gov.az by curl",
+    "result": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL, as on 2026-11-01",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "e-qanun.az: the site answers (200) and its API (api.e-qanun.az/framework/<id>) serves acts by id; the search endpoint found in the site's script (getDetailSearch?start=0&length=10&orderColumn=8&orderDirection=desc&name=Miqrasiya Məcəlləsi&title=true, and the same for 'Dövlət rüsumu haqqında')",
+    "result": "the search answered HTTP 500 (Internal Server Error) both times, so the Migration Code's and the State Duty Law's ids weren't found; nothing read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "api.e-qanun.az/framework/<id> works for known ids (46947 is the Criminal Code); with the Migration Code's id the fee and term could be read."
+ },
+ {
+  "id": "R-4666",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.mlsp.government.bg/uploads/78/sdrmi/za-trudovata-migratsiya-i-trudovata-mobilnost.pdf",
+    "status": "same",
+    "now": "Ciela copy dated 13.02.2026, last amendment ДВ бр. 52 от 27 юни 2025"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.mlsp.government.bg/uploads/78/sdrmi/za-trudovata-migratsiya-i-trudovata-mobilnost.pdf",
+    "title": "Ministry of Labour and Social Policy, Закон за трудовата миграция и трудовата мобилност (consolidated, Ciela, 13.02.2026), arts. 14-15, read whole for union and performer provisions (saved l4w/files/p1/bg/zttm.pdf)",
+    "read": "2026-11-04",
+    "said": "Чл. 14. … (2) За разрешението по ал. 1 министърът на труда и социалната политика изисква становища от съответните държавни органи, както и от представителните организации на работодателите и на работниците и служителите на национално равнище, от творчески съюзи, спортни федерации и национални спортни организации, от органите на местното самоуправление. … Чл. 15. (1) Достъп до пазара на труда с Единно разрешение за пребиваване и работа се разрешава от Министерството на вътрешните работи след получено положително писмено становище от изпълнителния директор на Агенцията по заетостта. (2) В случаите по ал. 1 условието по чл. 7, ал. 1, т. 1 не се прилага за работа на: … 3. артисти-изпълнители по смисъла на чл. 74 от Закона за авторското право и сродните му права с доказана професионална компетентност - след потвърден от Министерството на културата интерес от наемането им;"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "the Labour Migration and Labour Mobility Act in the Ministry of Labour's consolidated copy (mlsp.government.bg PDF) searched whole for синдика, работниците и служителите, социални партньори, артист, изпълнител, творч",
+    "result": "union found as an absence for the single permit: the Interior Ministry decides on the Employment Agency's opinion (art. 15(1)); the unions' and creative unions' opinions are asked only for the Labour Minister's exceptional access under art. 14. Performers with proven competence skip the labour-market test once the Ministry of Culture confirms the interest in hiring them (art. 15(2)(3))",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "No union step for the single permit: the Interior Ministry decides on the Employment Agency's written opinion (art. 15(1)). The opinions of unions and creative unions are asked only when the Labour Minister grants access outside the usual limits (art. 14(2))."
+  },
+  "notes": "'all' (fees, decision times, the Agency's pages) and exempt still blocked. Lead for eligibility: art. 15(2)(3), performers within art. 74 of the Copyright Act with proven professional competence, after the Ministry of Culture confirms the interest in hiring them, without the labour-market test. The copy is dated 13.02.2026; amendments after ДВ 52/2025 weren't checked (lex.bg refuses this client)."
+ },
+ {
+  "id": "R-4674",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA, consolidated text built from the Légifrance API by codes.droit.org (edition 2026-10-30), art. R. 432-2 as worded by Décret n° 2026-1001 du 26 octobre 2026 (saved l4w/files/p1/fr/ceseda.pdf)",
+    "read": "2026-11-04",
+    "said": "La décision de l'autorité administrative sur la demande d'une carte de séjour est notifiée par écrit dans les meilleurs délais, et au plus tard quatre-vingt-dix jours à compter du dépôt d'une demande complète. Cette disposition n'est pas applicable pour les demandes de cartes mentionnées au second alinéa de l'article R. 421-23, à l'article R. 421-26 et au troisième alinéa de l'article R. 421-37-7. Lorsque la demande présente des éléments d'une complexité particulière, ce délai peut être prolongé de trente jours par l'autorité administrative qui en informe l'étranger. … La décision implicite de rejet mentionnée à l'article R.* 432-1 naît au terme d'un délai de quatre-vingt-dix jours à compter du dépôt d'une demande complète.",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "CESEDA consolidated from the Légifrance API (codes.droit.org edition 2026-10-30, 12.6 MB PDF) downloaded and read at R.* 432-1, R. 432-2 and the derogations that cite R. 432-2 (R. 421-26, D. 431-19); Légifrance itself answers 403",
+    "result": "found: the prefecture must notify its decision on a residence card within 90 days of a complete application, extendable by 30 days for a complex case; the talent artistic card (L. 421-20) is not among the exceptions; silence for 90 days is an implicit refusal",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "CESEDA searched for Saint-Barthélemy's adaptations (Livre IV and the L. 932 chapter)",
+    "result": "the code applies there with the State's representative in place of the prefect (no adaptation of R. 432-2 found); the Collectivité's own work-authorisation rule and the Code du travail exemption's reach weren't settled",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 90,
+     "unit": "days"
+    },
+    "premium": null
+   },
+   "processingNote": "The prefecture must notify its decision on a residence card within 90 days of a complete application, which it may extend by 30 days for a complex case; silence for 90 days is an implicit refusal (CESEDA R. 432-2, as rewritten by Décret 2026-1001 of 26 October 2026). The consulate's long-stay visa decision isn't covered by it."
+  },
+  "notes": "BL.json's 4 months is stale for the same reason as FR's. exempt and applies still blocked."
+ },
+ {
+  "id": "R-4695",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2002-227/section-186.html",
+    "status": "same",
+    "now": "current to 2026-10-19, last amended 2026-07-15"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2002-227/section-186.html",
+    "title": "Justice Laws Website, Immigration and Refugee Protection Regulations s. 186 (current to 2026-10-19)",
+    "read": "2026-11-04",
+    "said": "(g) as a performing artist appearing alone or in a group in an artistic performance — other than a performance that is primarily for a film production or a television or radio broadcast — or as a member of the staff of such a performing artist or group who is integral to the artistic performance, if (i) they are part of a foreign production or group, or are a guest artist in a Canadian production or group, performing a time-limited engagement, and (ii) they are not in an employment relationship with the organization or business in Canada"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "IRPR s. 186 re-fetched from Justice Laws (current to 2026-10-19) and read whole for a day count",
+    "result": "found as an absence: s. 186(g) asks only a 'time-limited engagement', with no number of days, and excludes performances primarily for film, television or radio",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "canada.ca C14 exemption-code page by curl over HTTP/1.1 (40 s timeout)",
+    "result": "no reply (HTTP 000); the union letter and the processing time stay unread",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org; Common Crawl CC-MAIN-2026-43 index",
+    "result": "web.archive.org no connection; the Common Crawl index fetch failed",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "exempt": {
+    "days": null,
+    "within": null
+   },
+   "exemptNote": "A performing artist (and integral staff) of a foreign production, or a guest artist in a Canadian one, may work without a permit for a time-limited engagement if not in an employment relationship with the Canadian engager (IRPR s. 186(g)); the law sets no number of days, and a performance primarily for film, television or radio doesn't qualify, so screen work always needs a permit."
+  },
+  "notes": "processing and union still blocked (canada.ca unreachable). The film/TV exclusion in s. 186(g) matters to the engine: a screen actor never uses this exemption."
+ },
+ {
+  "id": "R-4705",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/K%C3%BCnstler_IW_AIG.pdf",
+    "status": "same",
+    "now": "not re-read; the SEM directive below is the federal text it applies"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/auslaender/weisungen-aug-kap4-d.pdf",
+    "title": "SEM, Weisungen AIG, I. Ausländerbereich, 4 Aufenthalt mit Erwerbstätigkeit (Version 25.10.2013, Stand 30.06.2026), sections 4.6.5 and 4.7.12 (saved l4w/files/p1/ch/kap4.pdf)",
+    "read": "2026-11-04",
+    "said": "Kantonale Vorentscheide über die Zulassung von Künstlerinnen und Künstlern mit Aufenthalt bis zu acht Monaten (Art. 19 Abs. 4 Bst. b VZAE) unterliegen wie bisher nicht der Zustimmungspflicht. … Die Entlöhnung von Unterhaltungsmusikerinnen und Unterhaltungsmusikern muss mindestens zu den Richtlinientarifen erfolgen, die vom Verband Schweizerischer Konzertlokale, Cabarets, Dancings und Discotheken (ASCO) und dem Schweizerischen Musikerverband (smv) gemeinsam festgelegt wurden. … [4.6.5.3] Die nachfolgenden Fristen gelten nur für das Verfahren beim SEM. Das SEM trifft seinen arbeitsmarktlichen Entscheid, gerechnet ab Eingang der vollständigen Unterlagen, innert zehn Tagen, wenn die voraussichtliche Bearbeitungszeit höchstens einige Stunden erfordert (Art. 4 Abs. 1 Bst. a OrFV). Bei Gesuchen mit einem längeren Bearbeitungsbedarf entscheidet das SEM innerhalb von 40 Tagen … respektive drei Monaten"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "sem.admin.ch: Weisungen AIG (weisungen-aug-d.pdf, Stand 1 November 2026, 301 pp.) and its chapter 4 (weisungen-aug-kap4-d.pdf, Stand 30.06.2026) downloaded; chapter 4 searched for Künstler, Gewerkschaft, Sozialpartner, Berufsverband, Frist, Wochen, and 4.7.12 read whole",
+    "result": "union found as an absence (no union or association is consulted; the canton decides without SEM approval) with a union-set pay floor for entertainment musicians; no decision time for the cantonal artist permit: the Ordnungsfristen (10 days, 40 days, 3 months) bind only SEM's approval, which the artist route doesn't need",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "No union is consulted: the canton decides on an artist's permit of up to eight months without the SEM's approval. For entertainment musicians, pay must be at least the guideline tariffs set jointly by the venue owners' association ASCO and the Swiss Musicians' Union (smv) (SEM Weisungen AIG 4.7.12.2.4).",
+   "validityNote": "An artist may work at most eight months in any twelve, holidays and breaks counted (Weisungen 4.7.12.2.5); work without taking up a post (for a foreign employer or self-employed) needs a permit only beyond eight days in a calendar year (4.7.12.2.2, Art. 14 VZAE)."
+  },
+  "notes": "processing still blocked: the SEM's Ordnungsfristen don't apply to the cantonal artist permit (no Zustimmungspflicht), and no canton's decision time was read. The 8-days rule (Art. 14 VZAE) and the 90-day residency rule (4.7.12.2.3) may already be in CH.json's exempt; check before landing validityNote."
+ },
+ {
+  "id": "R-4725",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.legislation.gov.au/F1996B03551/2026-10-02/2026-10-02/text/original/epub/OEBPS/document_2/document_2.html",
+    "title": "Migration Regulations 1994, compilation of 2 October 2026, volume 2, Sch. 2 cl. 408.229A (saved l4w/files/p1/au/vol2.html)",
+    "read": "2026-11-04",
+    "said": "Performing in film or television production subsidised by government (2) This subclause applies to the applicant if: (a) the applicant seeks to enter or remain in Australia to perform: (i) as an entertainer under a performing contract for one or more specific engagements (other than non‑profit engagements) in Australia; … (e) the eligible sponsor or eligible supporter has consulted with relevant Australian unions in relation to the employment or engagement of the applicant in Australia."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Migration Regulations 1994 volume 2 (compilation of 2026-10-02, legislation.gov.au epub document_2) re-fetched; Schedule 2 Part 408 (from 'Subclass 408' to 'Subclass 410') searched for salary, remuneration, wage, pay, paid, market rate, terms and conditions, and clause 408.229A read",
+    "result": "no pay floor in clause 408.229A: its criteria are a performing contract for specific engagements, an Arts Minister certificate (screen work) or a net employment benefit (other work), a sponsorship or support test, licences and consultation with the relevant Australian unions; the one wage rule in Part 408 ('employed in Australia in accordance with the standards for wages and working conditions provided for under relevant Australian legislation and awards') belongs to another clause; the sponsorship obligations in Part 2A of the Regulations weren't read, so an absence isn't declared. No days of paid performing without the visa found in Part 408",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Christmas Island uses Australia's Migration Regulations; same state as R-4649 (AU)."
+ },
+ {
+  "id": "R-4729",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.zakonyprolidi.cz/cs/2004-435",
+    "status": "same",
+    "now": "Aktuální znění 01.07.2026 - 31.12.2026 (verze 87)"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://www.zakonyprolidi.cz/cs/2004-435",
+    "title": "Zákony pro lidi, zákon č. 435/2004 Sb., o zaměstnanosti, aktuální znění 01.07.2026–31.12.2026 (verze 87), read whole (saved l4w/files/p1/cz/zoz.html)",
+    "read": "2026-11-04",
+    "said": "§ 92 (1) Krajská pobočka Úřadu práce vydá povolení k zaměstnání za podmínek, že se jedná o a) oznámené volné pracovní místo (§ 86) a b) volné pracovní místo nelze s ohledem na požadovanou kvalifikaci nebo nedostatek volných pracovních sil obsadit jinak … (2) O povolení k zaměstnání vydává krajská pobočka Úřadu práce rozhodnutí. Povolení se vydává nejdéle na dobu 2 let. (odborové organizace appear only in §§ 2, 4, 7, 8 and 12, on employment policy, discrimination and advisory boards; none in Part Four, §§ 85–103, on foreigners' employment)",
+    "quotes": "https://www.e-sbirka.cz/sb/2004/435"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "zákon 435/2004 Sb. in its current wording (zakonyprolidi.cz, verze 87, 01.07.2026–31.12.2026) searched whole for 'odborov' (unions), 'minimální mzd', 'nižší než', 'mzda' and 'uměleck'",
+    "result": "union: found as an absence, no union step in the work-permit procedure (§§ 85–103); pay: the only wage floor in Part Four is for the seasonal permit (§ 96(3): not below the monthly minimum wage), none for the § 92 permit a performer gets",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "eur-lex.europa.eu CELEX 32024R1415 (the Schengen visa fee, for the short-term visa) by curl",
+    "result": "HTTP 202 with an empty body (a bot check); not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "None: the Employment Act (read whole, as in force from 1 July 2026) asks no union's opinion on a work permit; unions appear only in its general employment-policy and advisory-board provisions."
+  },
+  "notes": "eligibility, pay and fees still blocked. Secondary (zakonyprolidi reproduces the Sbírka); e-sbirka.cz not fetched. § 98(v) exempts a member of an artistic ensemble of a public cultural institution (a lead if CZ.json's exempt lacks it)."
+ },
+ {
+  "id": "R-4740",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.riigiteataja.ee/public-api/api/v1/en/akt/506012026003/blob-html",
+    "status": "changed",
+    "now": "The API now marks this translation 'KEHTINUD' (no longer in force): its wording ran from 01.01.2026 to 21.05.2026."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Riigi Teataja: the English Aliens Act (506012026003) and the Estonian Välismaalaste seadus (112072025032, RT I, 12.07.2025, 32) fetched whole through /public-api/api/v1/…/blob-html and searched for 'trade union', 'employees' representative', 'ametiühing', 'töötajate esindaja', 'töötajate usaldusisik'",
+    "result": "none in either text, but both are the wording in force 01.01.2026–21.05.2026; the API's version list (/akt/112072025032/redaktsioonid) returned an empty list and riigiteataja.ee/akt/VMS is a script page, so the wording in force today wasn't read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Very likely an absence (no union step in the Aliens Act through May 2026); needs the current consolidated id to stand. The Act exempts a creative worker in a performing arts institution from the pay requirement (English text, 'employment in a performing arts institution as person engaged in creative activities for the purposes of the Performing Arts Institutions Act'): a lead for EE's pay field."
+ },
+ {
+  "id": "R-4750",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://finlex.fi/fi/lainsaadanto/2004/301",
+    "status": "same",
+    "now": "the page (6.3 MB) carries the Act's headings only (2,157 text nodes, no section bodies); the text loads by script"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "finlex.fi/fi/lainsaadanto/2004/301 fetched and its embedded text searched for ammattiliit, työntekijäjärjest, työmarkkinajärjest, kulttuuri, taide",
+    "result": "only headings in the payload; no section text to read for a union step or a decision time",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The image-only consolidated PDF (finlex.fi/api/media/statute-consolidated/1144138/media/8402.pdf) could be OCR'd with tessdata 'fin' to settle the union absence; not done in this pass."
+ },
+ {
+  "id": "R-4760",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16922",
+    "status": "same",
+    "now": "not re-read"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA, consolidated text built from the Légifrance API by codes.droit.org (edition 2026-10-30), art. R. 432-2 as worded by Décret n° 2026-1001 du 26 octobre 2026 (saved l4w/files/p1/fr/ceseda.pdf)",
+    "read": "2026-11-04",
+    "said": "La décision de l'autorité administrative sur la demande d'une carte de séjour est notifiée par écrit dans les meilleurs délais, et au plus tard quatre-vingt-dix jours à compter du dépôt d'une demande complète. Cette disposition n'est pas applicable pour les demandes de cartes mentionnées au second alinéa de l'article R. 421-23, à l'article R. 421-26 et au troisième alinéa de l'article R. 421-37-7. Lorsque la demande présente des éléments d'une complexité particulière, ce délai peut être prolongé de trente jours par l'autorité administrative qui en informe l'étranger. … La décision implicite de rejet mentionnée à l'article R.* 432-1 naît au terme d'un délai de quatre-vingt-dix jours à compter du dépôt d'une demande complète.",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "CESEDA consolidated from the Légifrance API (codes.droit.org edition 2026-10-30, 12.6 MB PDF) downloaded and read at R.* 432-1, R. 432-2 and the derogations that cite R. 432-2 (R. 421-26, D. 431-19); Légifrance itself answers 403",
+    "result": "found: the prefecture must notify its decision on a residence card within 90 days of a complete application, extendable by 30 days for a complex case; the talent artistic card (L. 421-20) is not among the exceptions; silence for 90 days is an implicit refusal",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "legifrance.gouv.fr by curl",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 90,
+     "unit": "days"
+    },
+    "premium": null
+   },
+   "processingNote": "The prefecture must notify its decision on a residence card within 90 days of a complete application, which it may extend by 30 days for a complex case; silence for 90 days is an implicit refusal (CESEDA R. 432-2, as rewritten by Décret 2026-1001 of 26 October 2026). The consulate's long-stay visa decision isn't covered by it."
+  },
+  "notes": "The card's decision time found (replaces the 4-month implicit refusal, which the October 2026 decree cut to 90 days: FR.json's 4 months is now stale). The consulate's visa decision time is still blocked. Décret 2026-1001's commencement date wasn't read on the JORF (Légifrance 403); codes.droit.org shows it as the article's current wording. GF.json already holds this source (read 2026-11-04)."
+ },
+ {
+  "id": "R-4767",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://expathub.ge/labour-permit-in-georgia-a-consolidated-guide/",
+    "status": "same",
+    "now": "not re-read; superseded for these fields by the decree itself"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://matsne.gov.ge/ka/document/view/6791218",
+    "title": "Legislative Herald of Georgia (matsne.gov.ge), Government of Georgia Decree No. 70 of 20 February 2026, შრომით იმიგრანტსა და თვითდასაქმებულ უცხოელზე შრომითი საქმიანობის უფლების გაცემის წესის დამტკიცების შესახებ, consolidated publications 26/02, 13/03 and 09/07/2026 listed; articles 10 and 11 read on the default view and on ?publication=3, identical (saved l4w/files/p1/ge/)",
+    "read": "2026-11-04",
+    "said": "მუხლი 10. … პირველ ჯერზე გაცემული შრომითი საქმიანობის უფლება … მისი მოქმედების ვადა განისაზღვრება ამ უფლების ძალაში შესვლის თარიღიდან 6 თვიდან 1 წლამდე ვადით. … 3. … შრომითი საქმიანობის უფლების მოქმედების ვადა, პირველი ხუთი წლის განმავლობაში, შეიძლება გაგრძელდეს, ყოველ ჯერზე, არაუმეტეს 1 წლის ვადით. … მუხლი 11. შრომითი საქმიანობის უფლების გაცემის მომსახურების საფასური 1. … მომსახურების საფასური დიფერენცირებულია ვადის მიხედვით და შეადგენს: ა) შრომითი საქმიანობის უფლების მოთხოვნა – განცხადებისა და სავალდებულო დოკუმენტაციის სრულად წარდგენიდან 30-ე კალენდარულ დღეს გაცემისას – 200 ლარს; ბ) … მე-10 სამუშაო დღეს გაცემისას – 400 ლარს; გ) შრომითი საქმიანობის უფლების ვადის გაგრძელება – … არაუმეტეს 30-ე კალენდარულ დღისა − 200 ლარს. 2. შრომით იმიგრანტზე შრომითი საქმიანობის უფლების გაცემის მომსახურების საფასურს იხდის ადგილობრივი დამსაქმებელი."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'matsne.gov.ge დადგენილება №70 2026 შრომითი ნებართვა უცხოელი' (standard)",
+    "result": "found the decree's matsne id 6791218 and its amendments (No. 109 of 13 March 2026, a later one); JAM News on the 1 March 2026 tightening",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "matsne.gov.ge/ka/document/view/6791218 (default view and ?publication=3) and /en/ fetched; the Georgian text searched for საფასურ, ლარ, ვადა, ხელოვან/შემოქმედ/არტისტ/შემსრულებ, პროფესიული კავშირ/პროფკავშირ",
+    "result": "found: fees, decision times, validity; no union step; no performer-specific rule; the only pay figure is the GEL 15,000 monthly wage that, with a relevant degree, exempts a vacancy from the market test",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "Work right, issued on the 30th calendar day after a complete application (paid by the employer)",
+     "amount": "200",
+     "currency": "GEL"
+    },
+    {
+     "what": "Work right, issued on the 10th working day (paid by the employer)",
+     "amount": "400",
+     "currency": "GEL"
+    },
+    {
+     "what": "Extension of the work right (within 30 calendar days)",
+     "amount": "200",
+     "currency": "GEL"
+    }
+   ],
+   "processing": {
+    "standard": {
+     "n": 30,
+     "unit": "days"
+    },
+    "premium": {
+     "n": 10,
+     "unit": "business-days"
+    }
+   },
+   "validity": {
+    "n": 1,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "A first work right runs six months to one year from the D1 visa or work residence permit; it can be extended a year at a time for the first five years, then for one to five years at a time (Decree No. 70, art. 10).",
+   "union": "None: the decree (read in its current consolidation) asks no union's opinion; the State Employment Support Agency decides after the vacancy has been offered to local candidates."
+  },
+  "notes": "eligibility and pay still blocked for a performer (no performer rule; the GEL 15,000 figure lifts the market test, it isn't a floor). The 'all' blocker is resolved by the decree. The English matsne page wasn't checked for a translation of the current version."
+ },
+ {
+  "id": "R-4769",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "status": "same",
+    "now": "edition 2026-10-30"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA (codes.droit.org edition 2026-10-30), read whole for 'syndica': the code's one union consultation, L. 414-13",
+    "read": "2026-11-04",
+    "said": "La liste de ces métiers et zones géographiques est établie et actualisée au moins une fois par an par l'autorité administrative après consultation des organisations syndicales représentatives d'employeurs et de salariés. (L. 414-13, on the shortage-occupation list for titles that need a prior work authorisation; the only occurrence of 'syndica' in the code)",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "the same CESEDA PDF searched whole for 'syndica'",
+    "result": "found as an absence: the only union consultation is on the shortage-occupation list (L. 414-13) for titles that need a prior work authorisation; the talent artistic card needs none, and no article asks a union's opinion on it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "None: the entry and residence code (read whole) asks no union's opinion on the talent artistic card; its one union consultation is on the shortage-occupation list for titles that need a work authorisation, which this card doesn't."
+  },
+  "notes": "The 2026-11-01 attempt had read the card's articles and R. 432-2; today's read covers the whole code."
+ },
+ {
+  "id": "R-4783",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA, consolidated text built from the Légifrance API by codes.droit.org (edition 2026-10-30), art. R. 432-2 as worded by Décret n° 2026-1001 du 26 octobre 2026 (saved l4w/files/p1/fr/ceseda.pdf)",
+    "read": "2026-11-04",
+    "said": "La décision de l'autorité administrative sur la demande d'une carte de séjour est notifiée par écrit dans les meilleurs délais, et au plus tard quatre-vingt-dix jours à compter du dépôt d'une demande complète. Cette disposition n'est pas applicable pour les demandes de cartes mentionnées au second alinéa de l'article R. 421-23, à l'article R. 421-26 et au troisième alinéa de l'article R. 421-37-7. Lorsque la demande présente des éléments d'une complexité particulière, ce délai peut être prolongé de trente jours par l'autorité administrative qui en informe l'étranger. … La décision implicite de rejet mentionnée à l'article R.* 432-1 naît au terme d'un délai de quatre-vingt-dix jours à compter du dépôt d'une demande complète.",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   },
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA (codes.droit.org edition 2026-10-30), art. L. 421-20 and R. 421-37-2",
+    "read": "2026-11-04",
+    "said": "L'étranger qui exerce la profession d'artiste-interprète, définie à l'article L. 212-1 du code de la propriété intellectuelle, ou qui est auteur d'une œuvre littéraire ou artistique mentionnée à l'article L. 112-2 du même code se voit délivrer une carte de séjour pluriannuelle portant la mention \" talent \" d'une durée maximale de quatre ans, sous réserve de justifier du seuil de rémunération fixé par décret en Conseil d'Etat.",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   },
+   {
+    "kind": "secondary",
+    "url": "https://codes.droit.org/PDF/Code%20de%20l%27entr%C3%A9e%20et%20du%20s%C3%A9jour%20des%20%C3%A9trangers%20et%20du%20droit%20d%27asile.pdf",
+    "title": "CESEDA (codes.droit.org edition 2026-10-30), read whole for 'syndica': the code's one union consultation, L. 414-13",
+    "read": "2026-11-04",
+    "said": "La liste de ces métiers et zones géographiques est établie et actualisée au moins une fois par an par l'autorité administrative après consultation des organisations syndicales représentatives d'employeurs et de salariés. (L. 414-13, on the shortage-occupation list for titles that need a prior work authorisation; the only occurrence of 'syndica' in the code)",
+    "quotes": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070158"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "CESEDA consolidated from the Légifrance API (codes.droit.org edition 2026-10-30, 12.6 MB PDF) downloaded and read at R.* 432-1, R. 432-2 and the derogations that cite R. 432-2 (R. 421-26, D. 431-19); Légifrance itself answers 403",
+    "result": "found: the prefecture must notify its decision on a residence card within 90 days of a complete application, extendable by 30 days for a complex case; the talent artistic card (L. 421-20) is not among the exceptions; silence for 90 days is an implicit refusal",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "the same CESEDA PDF searched whole for 'syndica'",
+    "result": "found as an absence: the only union consultation is on the shortage-occupation list (L. 414-13) for titles that need a prior work authorisation; the talent artistic card needs none, and no article asks a union's opinion on it",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "CESEDA L. 421-20 read for the artistic mention's own term",
+    "result": "found: L. 421-20 itself gives the card for artists-performers and authors 'd'une durée maximale de quatre ans', separable from the other talent mentions",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "processing": {
+    "standard": {
+     "n": 90,
+     "unit": "days"
+    },
+    "premium": null
+   },
+   "processingNote": "The prefecture must notify its decision on a residence card within 90 days of a complete application, which it may extend by 30 days for a complex case; silence for 90 days is an implicit refusal (CESEDA R. 432-2, as rewritten by Décret 2026-1001 of 26 October 2026). The consulate's long-stay visa decision isn't covered by it.",
+   "validity": {
+    "n": 4,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "The artistic talent card runs at most four years (CESEDA L. 421-20).",
+   "union": "None: the entry and residence code (read whole) asks no union's opinion on the talent artistic card; its one union consultation is on the shortage-occupation list for titles that need a work authorisation, which this card doesn't."
+  },
+  "notes": "exempt.within still blocked (the Code du travail's three-month exemption sets no reference period in what was read). renewable kept from GP.json; not re-proved here."
+ },
+ {
+  "id": "R-4792",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "egov.uscis.gov/processing-times/api/processingtime/I-129/VSC/129O and /processing-times/api/forms by curl",
+    "result": "HTTP 403, a Cloudflare 'Attention Required!' page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index for gov,uscis,egov)/processing-times/api (cc.py list); web.archive.org",
+    "result": "the crawl index fetch failed ('fetch failed cc-index/collections/CC-MAIN-2026-43/indexes/cluster.idx'); web.archive.org no connection",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The premium 15 business days (8 CFR 106.4) stands as GU.json holds it."
+ },
+ {
+  "id": "R-4797",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.immd.gov.hk/eng/services/visas/GEP.html",
+    "status": "same",
+    "now": "not re-read; the guidebook below is ImmD's full statement of the scheme"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.immd.gov.hk/pdforms/ID(E)991.pdf",
+    "title": "Immigration Department, Guidebook for Entry for Employment as Professionals in Hong Kong, ID(E) 991 (04/2026), read whole (saved l4w/files/p1/hk/g991.pdf)",
+    "read": "2026-11-04",
+    "said": "(c) there is a genuine job vacancy; (d) the applicant has a confirmed offer of employment and is employed in a job relevant to his academic qualifications or work experience that cannot be readily taken up by the local work force; and (e) the remuneration package including income, accommodation, medical and other fringe benefits is broadly commensurate with the prevailing market level for professionals in the HKSAR. … For applications submitted under GEP and ASMTP, it normally takes four weeks upon receipt of all the required documents and the relevant application fee. (the guidebook's every 'union' is a civil union or UnionPay; no union, guild or trade body is consulted)"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ImmD guidebook ID(E) 991 (04/2026) for GEP, ASMTP and IANG downloaded and read whole for union, guild, association, entertain, perform, artist; ID(E) 998 (dependants, 04/2026) fetched by mistake and set aside; ID(E)990 answers 404",
+    "result": "union found as an absence: the GEP's criteria (vacancy, local work force, market-level pay) involve no union or guild; the guidebook says nothing of short visits, so exempt.within isn't settled",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "None: the General Employment Policy (ImmD's guidebook, April 2026, read whole) asks no union's or guild's opinion; the test is a genuine vacancy that the local work force can't readily fill, at market-level pay."
+  },
+  "notes": "exempt.within still blocked. If HK.json lacks processing or pay: 'normally takes four weeks' and pay 'broadly commensurate with the prevailing market level' are in the same guidebook. Cap. 115 not read."
+ },
+ {
+  "id": "R-4801",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.zakon.hr/z/142/Zakon-o-strancima",
+    "status": "same",
+    "now": "NN 133/20, 114/22, 151/22, 40/25, 55/26, na snazi od 04.06.2026"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "secondary",
+    "url": "https://www.zakon.hr/z/142/Zakon-o-strancima",
+    "title": "zakon.hr, Zakon o strancima (NN 133/20 … 55/26, na snazi od 04.06.2026), read whole (saved l4w/files/p1/hr/zos.html)",
+    "read": "2026-11-04",
+    "said": "Članak 110. Izdavanje dozvole za boravak i rad bez testa tržišta rada i mišljenja Hrvatskog zavoda za zapošljavanje Bez provedbe testa tržišta rada iz članka 98. ovoga Zakona i bez mišljenja Hrvatskog zavoda za zapošljavanje iz članka 99. ovoga Zakona, a na zahtjev državljanina treće zemlje ili poslodavca, Ministarstvo, putem policijske uprave odnosno policijske postaje, može izdati dozvolu za boravak i rad: … 8. umjetnicima za rad u ustanovama u kulturi, stručnjacima na području zaštite kulturne baštine, knjižničarstva i arhivistike u Republici Hrvatskoj … (the Act's every mention of 'sindikat' is the equal-treatment right to join a union; no union is consulted on a permit)",
+    "quotes": "https://narodne-novine.nn.hr/"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "zakon.hr's consolidated Zakon o strancima (in force from 04.06.2026) fetched and searched whole for 'sindikat', 'umjetni', 'minimaln… plać', 'prosječn… bruto' and 'visini plaće'",
+    "result": "union found as an absence (only equal-treatment rights; the opinion asked is the Croatian Employment Service's, art. 99, which art. 110 waives for artists in cultural institutions); pay: wage floors only for key staff, self-employment and highly qualified workers (1.5 average gross wages), none for a performer; no decision time for art. 97 or 110 permits",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "None: no union is consulted. The opinion the law asks is the Croatian Employment Service's (art. 99), with a labour-market test (art. 98), and both are waived for artists working in cultural institutions (art. 110 point 8)."
+  },
+  "notes": "processing, pay and eligibility still blocked. Lead for eligibility: art. 110 point 8 (artists for work in cultural institutions, no labour-market test) and art. 110 point 29 / the 90-day list (artists, authors and crew on demanding audiovisual productions). Secondary: Narodne novine's own consolidated text not read."
+ },
+ {
+  "id": "R-4807",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.irishimmigration.ie/coming-to-work-in-ireland/atypical-working-scheme/",
+    "status": "same",
+    "now": "Re-read 2026-11-04: among those who cannot apply, 'You are entering the State for employment purposes of 14 calendar days or less'; the page doesn't say what permission, if any, such work needs. It states 'a minimum of 20 working days for your application to be processed', and that the general category includes the entertainment industry."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "irishimmigration.ie Atypical Working Scheme page re-read in full (saved IE-aws.html) for days, 'performer', 'artist', 'entertainment', a union or a standard of renown",
+    "result": "not found: work of 14 calendar days or less is excluded from the Scheme, with no rule saying whether it needs any permission; no union step; no performer standard beyond the 'general' category",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Ireland employment permit not required \"14 days\" performer OR artist \"Employment Permits\" regulations exemption' (standard)",
+    "result": "not found: law-firm notes (William Fry, Mondaq) and an Oireachtas question; the only performer rule surfaced is that circus artistes need an employment permit from 1 November 2025 (EIG Law, EY, MRCI, irishimmigration.ie ?p=20755); 14-day performer exemptions found are Norway's and Denmark's",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "EIG Law and EY (July 2025) on the circus artistes' employment permit, in the same results",
+    "result": "not found: no exemption for short performance work; a lead that circus artistes now need an Employment Permit",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000) from this environment",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "Common Crawl index (cc.py list CC-MAIN-2026-43) for another host in this pass",
+    "result": "the crawl's cluster.idx fetch failed from this environment ('fetch failed cc-index/collections/CC-MAIN-2026-43/indexes/cluster.idx'); irishstatutebook.ie not reached this pass",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The AWS page's 20-working-day minimum is a processing fact if the file lacks it. Lead: from 2025-11-01 circus artistes need an Employment Permit (irishimmigration.ie/?p=20755, not fetched)."
+ },
+ {
+  "id": "R-4819",
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://files.reglugerd.is/pdf/0339-2005/current",
+    "title": "Reglugerð nr. 339/2005 um atvinnuréttindi útlendinga, the regulation register's 'current' PDF ('Útgáfa í gildi frá 30. mars 2005 (Dags. skjals 11. ágúst 2026)'), arts. 4 and 9 (saved l4w/files/p1/is/r339.pdf)",
+    "read": "2026-11-04",
+    "said": "4. gr. Útlendingar sem undanþegnir eru kröfu um atvinnuleyfi vegna skammrar dvalar. Eftirtaldir útlendingar eru undanþegnir kröfu um atvinnuleyfi vegna vinnu í allt að fjórar vikur á ári hér á landi: … b. Listamenn, að undanskildum hljóðfæraleikurum, sem ráða sig til starfa á veitingahúsum. … [9. gr.] Umsögn stéttarfélags skv. b-lið 1. mgr. 7. gr. laganna er ekki bindandi fyrir Vinnumálastofnun við ákvörðun um veitingu atvinnuleyfis. Stéttarfélagið eða landssambandið er veitir umsögn vegna atvinnuleyfis skal jafnframt sérstaklega rökstyðja neikvæða umsögn."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "althingi.is/lagas/nuna/2002097.html and the lagasafn PDFs of editions 153c to 157a (Act 97/2002) by curl",
+    "result": "HTTP 403, a Cloudflare 'Just a moment...' check, not passed; the Act itself not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39 index for is,althingi)/lagas/nuna/2002097 and /20020; CC-MAIN-2026-30; web.archive.org",
+    "result": "no capture in 2026-39; the 2026-30 index fetch failed; web.archive.org no connection",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Vinnumálastofnun atvinnuleyfi umsögn stéttarfélags listamenn tímabundið atvinnuleyfi' (standard)",
+    "result": "led to files.reglugerd.is/pdf/0339-2005/current (read); parliamentary answers on union opinions (3,849 opinions, 441 negative, in one period) and a government consultation draft proposing to drop the union opinion and move permits to the Directorate of Immigration, enactment not confirmed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "files.reglugerd.is (the Government's regulation register) regulation 339/2005 'current' PDF read whole for stéttarfélag, listam, laun, kjarasamning",
+    "result": "union found: the Act's art. 7(1)(b) requires a union's or national federation's opinion on a temporary work permit; it isn't binding on the Directorate of Labour, and a negative one must be reasoned (reg. art. 9); no performer pay floor",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "The Directorate of Labour asks the relevant union (or national federation) for its opinion on a temporary work permit (Act 97/2002 art. 7(1)(b)); the opinion doesn't bind the Directorate, and a negative one must give its reasons (Regulation 339/2005 art. 9)."
+  },
+  "notes": "eligibility and pay still blocked. CONFLICT to check: Regulation 339/2005 art. 4(b) exempts artists (other than musicians engaged by restaurants; not nightclub dancers) for up to four weeks a year, while IS.json holds exempt {days: 90, within: 365}. The PDF's header says 'version in force from 30 March 2005' with a document date of 11 August 2026, so later amendments may not be folded in; the Act wasn't readable. A consultation draft (samradapi.island.is, not read) proposes abolishing the union opinion: a lead to watch."
+ },
+ {
+  "id": "R-4828",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/402M50000010016",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/327CO0000000074",
+    "title": "e-Gov 法令検索, 領事官の徴収する手数料に関する政令 (Cabinet Order No. 74 of 1952), as amended by Cabinet Order No. 204 of 2026, in force 2026-07-01 (e-Gov law_revisions: CurrentEnforced)",
+    "read": "2026-11-04",
+    "said": "第一条 … 第二号から第十八号までに掲げる事務各一件については当該領事官の所在国ごとに当該国の通貨 … をもつて外務省令で定める額とする。ただし、それらの額を外国貨幣換算率 … によつて換算した邦貨額は、当該各号に定める金額の範囲内でなければならない。 … 三 一般入国査証 一万四千九百円以上一万五千百円以下 四 数次入国査証 二万九千九百円以上三万百円以下 … 附則（令和八年六月二四日政令第二〇四号）この政令は、令和八年七月一日から施行する。"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/327M50000020004",
+    "title": "e-Gov 法令検索, 領事官の徴収する手数料の額を定める省令 (MOFA Ordinance No. 4 of 1952), 別表第一, as amended by MOFA Ordinance No. 18 of 2026, in force 2026-07-01",
+    "read": "2026-11-04",
+    "said": "国又は地別 ミクロネシア アメリカ合衆国 カナダ … 単位 ドル ドル カナダ・ドル … ３ 一般入国査証 １０１ １０１ １４０ … ４ 数次入国査証 ２０１ ２０１ ２８０ …"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/402M50000010016",
+    "title": "e-Gov 法令検索, 出入国管理及び難民認定法第七条第一項第二号の基準を定める省令 (landing criteria ordinance), read whole",
+    "read": "2026-11-04",
+    "said": "法別表第一の二の表の興行の項の下欄に掲げる活動 一 申請人が演劇、演芸、歌謡、舞踊又は演奏（以下「演劇等」という。）の興行に係る活動に従事しようとする場合は、次のいずれかに該当していること。 … (the whole ordinance holds no 組合 or 労働組合: 0 occurrences)"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "e-Gov API v2 laws?law_title=領事官 listed 327CO0000000074 and 327M50000020004; both fetched whole from api/1/lawdata and their revision history from api/2/law_revisions",
+    "result": "found: the visa fee is set by Cabinet Order No. 74 of 1952 as a yen band (single entry ¥14,900–15,100; multiple ¥29,900–30,100) and charged in each mission's currency by MOFA Ordinance No. 4 of 1952 (USD 101 / 201 in the United States), both in force from 2026-07-01 (saved JP-327CO0000000074.xml, JP-327M50000020004.xml)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "e-Gov landing-criteria ordinance 402M50000010016 fetched and read whole for a union or guild step (組合, 労働組合, 団体)",
+    "result": "none: the Entertainer criteria ask contracts, facilities and pay, and no union or guild opinion (saved JP-kijun.xml)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "Single-entry visa at a Japanese mission (set in each mission's currency within a yen band of ¥14,900–15,100; from 2026-07-01)",
+     "amount": "15000",
+     "currency": "JPY"
+    },
+    {
+     "what": "Single-entry visa, at missions in the United States",
+     "amount": "101",
+     "currency": "USD"
+    },
+    {
+     "what": "Multiple-entry visa, at missions in the United States",
+     "amount": "201",
+     "currency": "USD"
+    }
+   ],
+   "feesNote": "Cabinet Order No. 74 of 1952 (as amended 2026-06-24, in force 2026-07-01) sets the visa fee as a yen band, single entry ¥14,900–15,100 and multiple ¥29,900–30,100; MOFA Ordinance No. 4 of 1952's first table sets each country's amount in its currency (USD 101 and 201 in the United States). The ¥15,000 is the band's midpoint, not a charged amount. Fee waivers by agreement weren't read.",
+   "union": "None: the landing-criteria ordinance, read whole, asks no union or guild opinion for the Entertainer status."
+  },
+  "notes": "exempt still blocked (moj.go.jp/isa and mofa.go.jp not retried; web.archive.org unreachable). The 'amount' 15000 is a midpoint: the lead may prefer to record only the USD row or a range field. The union value is an absence from the ordinance read whole; the Act's other ordinances were read for it on 2026-11-01."
+ },
+ {
+  "id": "R-4830",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "new.kenyalaw.org/akn/ke/act/ln/2012/64 and /eng@2022-12-31 (the Kenya Citizenship and Immigration Regulations, 2012) by curl",
+    "result": "HTTP 202 with an empty body (a bot check), not bypassed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "Not retried: immigration.go.ke (self-signed chain, layer 3)."
+ },
+ {
+  "id": "R-4841",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://klawguru.com/2026/08/07/koreas-e-6-arts-and-entertainment-visa-a-practical-guide/",
+    "status": "same",
+    "now": "not re-read; superseded for these fields by the Enforcement Rules"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=291289&chrClsCd=010202&efYd=20261023",
+    "title": "국가법령정보센터, 출입국관리법 시행규칙 [시행 2026. 10. 23.] [법무부령 제1172호, 2026. 10. 23., 일부개정], arts. 71 and 72 (body read by POST to /LSW/lsInfoR.do, saved KR-rule-body.html)",
+    "read": "2026-11-04",
+    "said": "제71조(사증 등 발급신청 심사수수료) ①사증발급신청에 대한 심사수수료 … 는 다음과 같다. … 1. 단수사증 가. 체류기간 90일 이하: 미합중국통화(이하 “미화”라 한다) 40불 상당의 금액 나. 체류기간 91일 이상: 미화 60불 상당의 금액 2. 복수사증 가. 2회까지 입국할 수 있는 복수사증: 미화 70불 상당의 금액 나. 횟수에 제한 없이 입국할 수 있는 복수사증: 미화 90불 상당의 금액 … 제72조(각종 허가 등에 관한 수수료) … 5. 체류자격 변경 허가: 10만원 … 6. 체류기간 연장 허가: 6만원 … 10. 외국인등록증 발급 및 재발급: 3만 5천원"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=170812861&bylClsCd=110201",
+    "title": "출입국관리법 시행규칙 [별표 1] 체류자격별 체류기간의 상한(제18조의3 관련) <개정 2024. 12. 24.> (PDF, saved kr-annex/KR-annex1.pdf)",
+    "read": "2026-11-04",
+    "said": "기술연수(D-3) 2년 예술흥행(E-6) 2년"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=170812913&bylClsCd=110201",
+    "title": "출입국관리법 시행규칙 [별표 5] 사증발급 신청 등 첨부서류(제76조제1항 관련) <개정 2024. 12. 24.> (PDF, saved kr-annex/KR-annex5.pdf)",
+    "read": "2026-11-04",
+    "said": "예술흥행(E-6) 1. 「공연법」에 따라 공연을 하고자 하는 경우 ○ 영상물등급위원회의 공연추천서 ○ 공연계획서 2. 「관광진흥법」에 따른 호텔업시설, 유흥업소 등에서 제1호를 제외한 공연 또는 연예활동에 종사하고자 하는 경우 ○ 영상물등급위원회의 공연추천서 ○ 연예활동 계획서 ○ 자격증명서 또는 경력증명서 ○ 신원보증서 3. 그 밖의 경우 ○ 소관 중앙행정기관의 장의 고용추천서 또는 고용의 필요성을 입증할 수 있는 서류 ○ 자격증명서 또는 경력증명서"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "law.go.kr: /법령/출입국관리법시행규칙 gave the frame (lsiSeq=291289, efYd=20261023); the body fetched by POST to /LSW/lsInfoR.do (lsiSeq, chrClsCd=010202, efYd, ancYnChk=0), 2.36 MB, and annexes 1 and 5 by /LSW/flDownload.do (PDF)",
+    "result": "found: visa fees (art. 71), stay-extension and change fees (art. 72), the E-6 stay ceiling of 2 years per grant (annex 1) and the recommendation each kind of E-6 engagement needs (annex 5); no decision time, pay floor or exemption in the Rules",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "fees": [
+    {
+     "what": "Single-entry visa, stay of 90 days or less (the US-dollar equivalent, charged in the mission's currency)",
+     "amount": "40",
+     "currency": "USD"
+    },
+    {
+     "what": "Single-entry visa, stay of 91 days or more",
+     "amount": "60",
+     "currency": "USD"
+    },
+    {
+     "what": "Extension of the period of stay",
+     "amount": "60000",
+     "currency": "KRW"
+    },
+    {
+     "what": "Alien registration card",
+     "amount": "35000",
+     "currency": "KRW"
+    }
+   ],
+   "validity": {
+    "n": 2,
+    "unit": "years",
+    "renewable": true
+   },
+   "validityNote": "The ceiling for one grant of E-6 is two years (Enforcement Rules, annex 1); an extension of stay is granted on application within the same ceiling (art. 37) and costs ₩60,000.",
+   "union": "No union step. A performance under the Performance Act, or entertainment in hotels and entertainment venues, needs the Korea Media Rating Board's performance recommendation; any other E-6 engagement needs an employment recommendation from the competent central ministry or documents proving the need to employ (Enforcement Rules, annex 5)."
+  },
+  "notes": "processing, pay and exempt still blocked (the Rules set none; HiKorea and the Ministry of Justice's processing guidance not reached this pass). E-6-1 vs E-6-2 is a sub-division the annex doesn't draw; annex 5 case 3 is the likely route for screen and broadcast acting (E-6-1), case 1 for stage work under the Performance Act."
+ },
+ {
+  "id": "R-4853",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.gesetze.li/konso/pdf/2008311000",
+    "status": "same",
+    "now": "Fassung 12.06.2026"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gesetze.li/konso/pdf/2008311000",
+    "title": "gesetze.li, Ausländergesetz (AuG), LGBl. 2008 Nr. 311, Fassung 12.06.2026, read whole",
+    "read": "2026-11-04",
+    "said": "Art. 40 Förderung der Integration 1) Die Behörden des Landes und der Gemeinden, die Sozialpartner sowie die Ausländer- und Nichtregierungsorganisationen berücksichtigen bei der Erfüllung ihrer Aufgaben die Anliegen der Integration. (the Act's only mention of the social partners; no Gewerkschaft, Arbeitnehmerverband or union step in the permit procedure)"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gesetze.li/konso/pdf/2008350000",
+    "title": "gesetze.li, Verordnung über die Zulassung und den Aufenthalt von Ausländern (ZAV), LGBl. 2008 Nr. 350, Fassung 12.06.2026, read whole",
+    "read": "2026-11-04",
+    "said": "Art. 3 … 2) Als unselbständige Erwerbstätigkeit gilt namentlich auch die Tätigkeit als: … g) Künstler; … Wichtige öffentliche Interessen (Art. 21 AuG) Personen, denen aus wichtigen öffentlichen Interessen eine Kurzaufenthalts- oder Aufenthaltsbewilligung erteilt werden kann, sind: … e) Künstler; (no union or social-partner step in the ordinance)"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "gesetze.li konso PDFs of the AuG (2008311000) and the ZAV (2008350000), both Fassung 12.06.2026, downloaded and searched whole for Gewerkschaft, Sozialpartner, Arbeitnehmerverband, Arbeitnehmervertretung and Künstler",
+    "result": "found as an absence: neither the Act nor the ordinance asks a union's or the social partners' opinion on a permit; the social partners appear only in the integration article (AuG art. 40). Artists count as employees (ZAV art. 3(2)(g)) and may be admitted on important public interests (ZAV, Art. 21 AuG list, e)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org by curl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "union": "None: neither the Aliens Act nor its admission ordinance (both read whole, as in force on 12 June 2026) asks a union's or the social partners' opinion on a performer's permit."
+  },
+  "notes": "ZAV names artists among those who may be admitted on 'important public interests' (Art. 21 AuG): a lead for LI's eligibility if the file lacks it."
+ }
+]

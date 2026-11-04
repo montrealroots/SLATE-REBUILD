@@ -1,0 +1,1804 @@
+[
+ {
+  "country": "CA",
+  "items": [
+   {
+    "item": 10,
+    "fact": "How a play fares: performances, attendance and box office per performance",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/21100186-eng.zip",
+      "title": "Statistics Canada Table 21-10-0186-01, Performing arts, performances and attendance, not-for-profit (biennial; reference years 2014-2024)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ca-statcan-21100186.zip",
+      "said": "\"2024\",\"Canada\",\"2016A000011124\",\"Theatre (except musical) companies [711111]\",\"Total performances\",\"Number\",...,\"26339\" | \"Total attendance\" ... \"5185704\" | \"Average attendance per performance\" ... \"197\"",
+      "sha256": "487e90af598dac509e6474a9c6e78a7d343ed606a8e58973e1d9ef20f4cf1afa",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/21100188-eng.zip",
+      "title": "Statistics Canada Table 21-10-0188-01, Performing arts, sources of performance revenue, not-for-profit",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ca-statcan-21100188.zip",
+      "said": "\"2024\",\"Canada\",...,\"Theatre (except musical) companies [711111]\",\"Total performance revenue\",\"Dollars\",\"81\",\"thousands\",...,\"176996.9\" | \"Subscriptions\" ... \"26551.6\" | \"Single tickets\" ... \"124006.5\" | \"Contract production\" ... \"7210.7\" | \"Touring income\" ... \"19228.0\"",
+      "sha256": "73139fb30de3514873275fb326724eaa62e06756301b3453a92d4ba14c45c45a",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "scope": "not-for-profit theatre (except musical) companies, NAICS 711111, Canada, surveyed portion",
+     "year": 2024,
+     "performances": 26339,
+     "attendance": 5185704,
+     "avgAttendancePerPerformance": 197,
+     "performanceRevenueCAD": 176996900,
+     "ofWhich": {
+      "singleTickets": 124006500,
+      "subscriptions": 26551600,
+      "contractProduction": 7210700,
+      "touring": 19228000
+     },
+     "revenuePerPerformanceCAD_derived": 6720,
+     "year2022": {
+      "performances": 20223,
+      "attendance": 3646585,
+      "avgAttendancePerPerformance": 180,
+      "performanceRevenueCAD": 102209900
+     },
+     "recoupOrExtensionCount": null
+    },
+    "notes": "Revenue per performance is the table's performance revenue divided by its performance count (arithmetic). The tables cover the not-for-profit sector's surveyed portion only (footnote 3: the smallest firms are excluded); commercial theatre (Mirvish and the like) is outside them. No count of runs recouping or extended was found. The CSV downloads came from StatCan's own table service; the WDS metadata call (getCubeMetadata) named the tables (survey 3108, released 2026-01-22 for table 21-10-0184)."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     10
+    ],
+    "tried": "Statistics Canada WDS getCubeMetadata for tables 21100180-21100191; CSV downloads of 21-10-0186-01 and 21-10-0188-01",
+    "result": "read: 2024 and 2022 theatre-company performances, attendance and performance revenue",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only item 10 was in this todo. No web search spent on it. Not tried: CAPACOA or PACT reports on run lengths, the Wayback copy of any recoupment count."
+ },
+ {
+  "country": "CX",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The Producer Offset's terms for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "Federal Register of Legislation: Income Tax Assessment Act 1997, Volume 7 (Division 376), compilation as at 1 October 2026",
+      "said": "376 ‑ 60 Amount of the producer offset The amount of the producer offset is: (a) if the * film is a * feature film that was produced for commercial exhibition to the public in cinemas—40%; or (b) otherwise—30%; of the total of the company’s * qualifying Australian production expenditure on the film … (b) the film is: (i) a * feature film or a film of a like nature; or (ii) a mini ‑ series of television drama; or (iii) a television series that is not covered by subparagraph (i) or (ii); and (c) the film is not, or is not to a substantial extent: … (ii) a film for exhibition as an advertising program or a commercial; or (iii) a film for exhibition as a discussion program, a quiz program, game show, a panel prog … (5) … (i) the series is made up of at least 2 episodes; and (ii) each episode of the series is at least one half of a commercial hour in duration, except where the film is predominantly made using cell, stop motion, digital or other animation, in which case each episode is at least one quarter of a commercial hour in duration … 5 A * film where the application for the certificate is for a series and not for a season of that series, and the series is not a * documentary $1 million $500,000 … 7 A * film where the application for the certificate is for a season of a series, and the series is not a * documentary $1 million $500,000 … (7) The amount worked out for a * film under this subsection is the amount worked out using the formula: where: duration of film in hours means the total length of the * film, measured in hours. total QAPE means the total of the company’s * qualifying Australian production expenditure on the * film … (ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film; (c) for a series other than a drama series, or a season of a series other than a drama series—expenditure on an episode beyond the episode in which the 65th commercial hour of the series is reached.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_10/document_10.html",
+      "title": "Income Tax Assessment Act 1997, compilation 268 (1 October 2026), volume 10, s 960-505",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/cx-itaa-d10.html",
+      "said": "960 ‑ 505 Meaning of Australia Territories (1) Australia , when used in a geographical sense, includes each of the following: (a) Norfolk Island; (b) the Coral Sea Islands Territory; (c) the Territory of Ashmore and Cartier Islands; (d) the Territory of Christmas Island; (e) the Territory of Cocos (Keeling) Islands; (f) the Territory of Heard Island and the McDonald Islands.",
+      "sha256": "0688810c4d7053ee2eca6262c99e2b5b825e8d4032f57834dbe746cb8b802970",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "law": "ITAA 1997 Div 376 (compilation 2026-10-01)",
+      "rate": 0.3,
+      "featureInCinemas": 0.4,
+      "minQAPE_AUD": 1000000,
+      "minQAPEPerHourAUD": 500000,
+      "perHour": "total QAPE / duration in hours (the formula is an image; its terms are read)",
+      "minEpisodes": 2,
+      "minEpisodeHours": 0.5,
+      "minEpisodeHoursAnimation": 0.25,
+      "aboveTheLineCountedUpTo": 0.2,
+      "nonDramaHoursCounted": 65,
+      "excludes": [
+       "advertising",
+       "discussion, quiz, game, panel programs"
+      ],
+      "locationOffsetAlready": "producer-AU.json (30%, A$20m, A$1.5m an hour)"
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: A series is a film under s376-20; drama series have no 65-hour limit. Significant Australian content (s376-70) is a further test not read here."
+   },
+   {
+    "item": 2,
+    "fact": "Screen Australia's production funding for a series",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines, issued 1 July 2025, updated 31 July 2026",
+      "said": "funding will generally be provided by way of grant if direct funding is at or below $500,000 or as a recoupable equity investment if direct funding is over $500,000; and o the minimum funding amount requested at time of application must be $150,000. … For Television projects only: o for any application that is for a subsequent season, Screen Australia will normally treat any approved funding as a recoupable equity investment. … Children’s Television - 20% 20% 10% 7% 10% Max. 50% Television - 15% 15% 10% 7.5% 5% Max. 45% [columns: Up to $5,000,000; $5,000,001-$10,000,000; $10,000,001-$15,000,000; $15,000,001-$20,000,000; $20,000,001-$30,000,000; Direct Funding and Producer Offset combined Cap]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "currency": "AUD",
+      "from": "2025-07-01",
+      "updated": "2026-07-31",
+      "minRequest": 150000,
+      "grantUpTo": 500000,
+      "aboveThat": "recoupable equity",
+      "laterSeason": "recoupable equity",
+      "directShareOfBudget": {
+       "television": {
+        "upTo5m": 0.15,
+        "5to10m": 0.15,
+        "10to15m": 0.1,
+        "15to20m": 0.075,
+        "20to30m": 0.05,
+        "withOffsetMax": 0.45
+       },
+       "childrensTelevision": {
+        "upTo5m": 0.2,
+        "5to10m": 0.2,
+        "10to15m": 0.1,
+        "15to20m": 0.07,
+        "20to30m": 0.1,
+        "withOffsetMax": 0.5
+       }
+      },
+      "rateOfYes": null
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: How often Screen Australia says yes to a series isn't in the guidelines; its funding-approvals pages are behind a Cloudflare challenge (as is the whole HTML site)."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "ITAA 1997 Div 376 (as item 1)",
+      "said": "(ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines",
+      "said": "television projects must have a contingency of 8% of below-the-line",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "cap": null,
+      "offsetCountsAboveTheLineUpTo": 0.2,
+      "tvContingencyOfBTL": 0.08
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: producer-AU.json already holds that the Terms of Trade (2017) set no producer-fee percentage; the 2025 guidelines name none either (read whole for 'fee' and 'overhead')."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+      "title": "Screen Australia: Narrative Content Production Funding Guidelines",
+      "said": "For episodic or feature length projects for which Television (including SVOD or BVOD) is the first and primary window, applicants must: o have a local commissioning platform secured on terms acceptable to Screen Australia, including meeting the following minimum licence fee requirements*, … a confirmed minimum licence fee of $550,000 per broadcast hour allocated toward the initial licence period (3 years) against the primary right … for Children’s content, a confirmed minimum of: • $125,000 per broadcast half hour for one commissioning platform with limited exclusivity holdbacks; or • $144,000 for (i) combination of commissioning platforms; or (ii) one commissioning platform with full exclusivity … o have secured a ROW Distributor with a letter of offer (LOO) … the first funding decision within the updated minimum licence fee requirements being in force from 1 July 2026",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ncp.pdf",
+      "read": "2026-11-04",
+      "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "fundedSeriesNeeds": "a local commissioning platform and a rest-of-world distributor",
+      "minLicenceFeePerHourAUD": 550000,
+      "childrensPerHalfHourAUD": {
+       "one": 125000,
+       "combinedOrExclusive": 144000
+      },
+      "licenceYears": 3,
+      "from": "2026-07-01",
+      "secondary": {
+       "avodForFTA": 14000,
+       "ftaForSVOD": 50000
+      },
+      "pickupRate": null
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: No count of how often an independent Australian series is picked up was found; the Drama Report HTML is challenge-blocked."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+      "title": "ITAA 1997 Div 376",
+      "said": "(a) a refundable tax offset for Australian expenditure in making an Australian film (the producer offset); … (b) … (the location offset); and (c) a refundable tax offset for Australian expenditure on post, digital and visual effects production for any film (the PDV offset).",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-itaa7.html",
+      "read": "2026-11-04",
+      "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_10/document_10.html",
+      "title": "Income Tax Assessment Act 1997, compilation 268 (1 October 2026), volume 10, s 960-505",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/cx-itaa-d10.html",
+      "said": "960 ‑ 505 Meaning of Australia Territories (1) Australia , when used in a geographical sense, includes each of the following: (a) Norfolk Island; (b) the Coral Sea Islands Territory; (c) the Territory of Ashmore and Cartier Islands; (d) the Territory of Christmas Island; (e) the Territory of Cocos (Keeling) Islands; (f) the Territory of Heard Island and the McDonald Islands.",
+      "sha256": "0688810c4d7053ee2eca6262c99e2b5b825e8d4032f57834dbe746cb8b802970",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "theatreOffset": null
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: Division 376 covers films only. No federal theatre offset was found; the whole ITAA 1997 was not searched beyond this volume, so absence is not proved."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://creative.gov.au/investments-opportunities/arts-projects-individuals-and-groups",
+      "title": "Creative Australia: Arts Projects for Individuals and Groups",
+      "said": "Funding of between $10,000 and $50,000 for a range of activities and projects, both national and international, across all arts practices. … Applications close: Tuesday 1 September 2026 … You must be an Australian citizen or an Australian permanent resident, and a practicing artist or arts professional. … How competitive are your grants rounds? As a national arts funding body, all our grant rounds are competitive. Success rates are usually between 10% and 15%.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ca-apig.html",
+      "read": "2026-11-04",
+      "sha256": "5eb6eb564c32a03fb3f85685f5bac12f44fd88a1d41dae37d8f3533395484200"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "currency": "AUD",
+      "leastAUD": 10000,
+      "mostAUD": 50000,
+      "who": "Australian citizen or permanent resident, practising artist or arts professional (individuals and groups)",
+      "rounds": [
+       "2026-09-01",
+       "2027-03-02"
+      ],
+      "rateOfYes": {
+       "low": 0.1,
+       "high": 0.15,
+       "basis": "all rounds, 'usually'"
+      }
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: Across all art forms; Theatre is one panel. Arts Projects for Organisations not read."
+   },
+   {
+    "item": 7,
+    "fact": "Stage director's minimum",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://awards.fairwork.gov.au/MA000081.html",
+      "title": "Fair Work Commission: Live Performance Award 2020 (MA000081), varied from 1 July 2026",
+      "said": "Deputy Rehearsal Director/Rehearsal Director (for Company Dancers) … will be paid a minimum of $136.42 extra per week in addition to their weekly rate.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-ma81.html",
+      "read": "2026-11-04",
+      "sha256": "fa6165c854a82bc2da815574cd676feca76698808d37e3587823c1d073922e30"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "award": null
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: The award, read for 'director', classifies no stage director; any MEAA director agreement wasn't reached."
+   },
+   {
+    "item": 8,
+    "fact": "Playwright's minimum",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://awg.com.au/contracts-and-rates/",
+      "title": "Australian Writers' Guild: Contracts and Rates",
+      "said": "The Theatre Industry Agreement was negotiated with the Australian Major Performing Arts Group (AMPAG). Theatre Industry Agreement 2016 … Theatre Industry Agreement Minimum Rates 2025 Members Only",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-awg-rates.html",
+      "read": "2026-11-04",
+      "sha256": "f124a8200250d021473d668af378fe4f273748817ce8c3a27f7396b10ff9803e"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://canberrayouththeatre.com.au/emerging/commissions/",
+      "title": "Canberra Youth Theatre: 2026 Emerging Playwright Commission",
+      "said": "The selected playwright will receive the full commissioning fee of $17,700 (aligned with the Australian Writers’ Guild rates)",
+      "quotes": "AWG Theatre Industry Agreement Minimum Rates (members only)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t4/au-cyt.html",
+      "read": "2026-11-04",
+      "sha256": "dec1effce793d3b1b0fa34c64bf21ef351cffaacbd535c57593a71924b9d24c6"
+     }
+    ],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "agreement": "AWG-AMPAG Theatre Industry Agreement 2016",
+      "ratesPublic": false,
+      "oneCommission2026AUD": 17700
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: The AWG's rate sheet is members only; the CYT figure is one company's commission for a work of at least 60 minutes, said to align with AWG rates. A lead, not the minimum."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": {
+     "follows": "AU",
+     "au": {
+      "recoup": null
+     }
+    },
+    "notes": "Christmas Island follows Australia: the ITAA 1997 takes 'Australia' in a geographical sense to include the Territory of Christmas Island (s 960-505, read today in the 1 October 2026 compilation), and Commonwealth law applies there unless excluded (Acts Interpretation Act 1901, as producer-CX.json holds from ALRC Report 80), the Fair Work Act included. This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. AU's note: Live Performance Australia's survey page address returned 404; no count of runs recouping found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     5
+    ],
+    "tried": "legislation.gov.au ITAA 1997 compilation of 2026-10-01, volume 10 (document_10), for s 960-505",
+    "result": "read: 'Australia' includes the Territory of Christmas Island, so the producer offset's terms reach a production made there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10
+    ],
+    "tried": "Read the first wave's AU object (t4.result.json) and producer-CX.json",
+    "result": "No search spent: each item carried over from Australia with AU's sources and verdicts. Not checked separately: whether Screen Australia's or Creative Australia's eligibility text names Christmas Island; both take an Australian citizen or permanent resident (AU item 6).",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Christmas Island has no trade of its own; every item is Australia's (t4 AU). AU item 7 and item 10 were blocked there and stay blocked here. Item 9 (held: cx-au-stage) was not in this todo."
+ },
+ {
+  "country": "KI",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.mict.gov.ki/sites/default/files/publications/CAP%206A.%20BPA.pdf",
+      "title": "Broadcasting and Publications Authority Ordinance, Cap. 6A (1979 revised edition), published by Kiribati's Ministry of Information, Communications and Transport (scanned; page 3 read from its image)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ki-bpa-act.pdf",
+      "said": "3. (1) The function of the Authority relating to broadcasting shall be to provide in accordance with the provisions of this Ordinance such local sound broadcasting services for Kiribati as may from time to time be reasonably practicable. ... 4. ... (3) The Authority shall have exclusive rights in respect of the broadcasting of any matters.",
+      "sha256": "dfc72db326b638486bdfe3d30bda78e55e74d280c5e36fd0424f1a816d090787",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.rnz.co.nz/international/pacific-news/211076/kiribati-tv-closes-amid-money-and-production-woes",
+      "title": "RNZ Pacific: Kiribati TV closes amid money and production woes (26 March 2013)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ki-rnz-2013.html",
+      "said": "The President, Anote Tong, says that apart from the broadcaster's serious financial problems, it lacks expertise and knowledge in programming and production. ... TV Kiribati is the only channel in Kiribati that broadcasts local and foreign programmes to viewers in South Tarawa and Betio.",
+      "quotes": "President Anote Tong (no address)",
+      "sha256": "4d363e32d38595ac256c8a0e4dfe5ee1cc4fca43130b2c10932fcd7917bfd9fe",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.rnz.co.nz/international/pacific-news/384167/kiribati-tv-providing-culturally-sensitive-news",
+      "title": "RNZ Pacific: Kiribati TV providing culturally sensitive news (7 March 2019)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ki-rnz-2019.html",
+      "said": "Locally owned and operated, Wave TV is also the only television station to produce and broadcast local content in Kiribati.",
+      "quotes": "RNZ's own reporting",
+      "sha256": "cd90d6d4a1bcbc2a0c5ab7578a7fafdba8d94a8eb8dd7a4e11519eed18cbe71f",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "statutoryBroadcaster": "Broadcasting and Publications Authority (sound broadcasting, exclusive broadcasting rights under Cap. 6A, 1979 ed.)",
+     "stateTV": "TV Kiribati, closed 2013",
+     "localTV2019": "Wave TV (private, news and current affairs)",
+     "commissioningTerms": null,
+     "pickupRate": null
+    },
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it. The 1979 Ordinance as published may have been amended since (the 'exclusive rights' clause predates private TV); amendments were not read."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Kiribati shows no series or theatre trade of its own in what could be read: its statutory broadcaster (the BPA) was created for sound broadcasting, the state's TV Kiribati closed in 2013 for lack of money and production skill (RNZ, quoting the president), and by 2019 the one local TV producer was a private news station, Wave TV (RNZ). producer-KI.json found only the Exhibition of Films Ordinance (1978), an exhibitors' licensing law. kiribati.gov.ki answered 503 and PacLII's Kiribati index served a Cloudflare challenge today. Not modeled; none-exists is not claimed, since no current primary covers it."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "www.kiribati.gov.ki; www.mict.gov.ki (home and its publications list); www.mhaca.gov.ki",
+    "result": "kiribati.gov.ki 503; mict.gov.ki read, its BPA Ordinance PDF downloaded (scanned; OCR stalled on a loaded machine, page 3 read from the image, page 14 by OCR); mhaca.gov.ki CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     2,
+     3,
+     5,
+     6
+    ],
+    "tried": "PacLII www.paclii.org/ki/legis/consol_act/",
+    "result": "403 Cloudflare 'Just a moment' challenge",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     4,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "WebSearch 'Kiribati Broadcasting and Publications Authority television local drama production film Kiribati Ministry Culture theatre'",
+    "result": "Wikipedia, RNZ (2013 closure of TV Kiribati; 2019 Wave TV), WIPO Lex entry for the BPA Ordinance; nothing on drama, film or theatre production",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     4
+    ],
+    "tried": "rnz.co.nz pacific-news 211076 and 384167",
+    "result": "read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Items with no web search: 1, 2, 3, 5. Pages 1-2 and 4-22 of the BPA Ordinance were not read (OCR stopped); they would hold the Authority's constitution and publications part, not a series fund."
+ },
+ {
+  "country": "MN",
+  "items": [
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series (the Cinema Support Fund)",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://ikon.mn/n/3kix",
+      "title": "ikon.mn: Кино урлагийг дэмжих сангаас 3 кинонд санхүүжилт олгохоор болжээ (2026-01-06)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/mn-ikon-3kix.html",
+      "said": "Тус сангаас 2025 оны сонгон шалгаруулалтаар гурван төсөл, арга хэмжээнд тодорхой хувийн эргэн төлөгдөх нөхцөлгүй санхүүжилт олгохоор шийдвэрлэжээ. Кино урлагийн зөвлөлийн ажлын албанаас \"2025 оны сонгон шалгаруулалтад төсөл мэдүүлсэн уран бүтээлчид 2026 онд зарлагдах Кино урлагийг дэмжих сангийн сонгон шалгаруулалтад мэдүүлгээ сайжруулан дахин илгээх боломжтой\" хэмээн мэдэгдсэн байна.",
+      "quotes": "the Film Council's office (Кино урлагийн зөвлөлийн ажлын алба), no address given: a lead",
+      "sha256": "7596c4af6ee356c2d85891437f9ec0167f5242ed30e6b33fb2017df2eee6b02e",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "fund": "Кино урлагийг дэмжих сан (Cinema Support Fund)",
+     "lead": {
+      "selection": 2025,
+      "projectsFunded": 3,
+      "form": "non-repayable",
+      "nextSelection": 2026
+     },
+     "seriesTerms": null,
+     "rateOfYes": null
+    },
+    "notes": "Lead only: trade press quoting the Film Council's office without an address; the number of applications is not given, so no rate of yes. The fund's own portal (kuds.filmmongolia.gov.mn) opens on a login page, and filmmongolia.gov.mn answered HTTP 500 with an empty body. The 2021 law (first wave, read whole) defines 'кино' as any connected moving-image work for public distribution, so a series is not excluded, but it sets no series terms; the fund's shares are set by government (producer-MN.json)."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen (MNB commissioning)",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "mnb.mn home page read: it links Тендер (tenders) and Тайлан (reports) but names no commissioning terms for independent producers; the tender section was not read. Not web-searched."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The cinema law's rebate (first wave) covers film only by its definition of 'кино'. The Law on Culture was not read (legalinfo.mn is script-driven; its law id not found). Not web-searched."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production (Culture and Arts Support Fund)",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://moc.gov.mn/",
+      "title": "Ministry of Culture, Sports, Tourism and Youth (redirects to mocsty.gov.mn), home page links",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/mn-moc.gov.mn.html",
+      "said": "Соёл урлагийг дэмжих сан [https://suds.moc.gov.mn/] ... Кино урлагийг дэмжих сан [https://kuds.filmmongolia.gov.mn]",
+      "sha256": "3c564d1036faa7264b9d00a40222f580aeff9ac0a643790cde6865e7c27e8150",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "fund": "Соёл урлагийг дэмжих сан (Culture and Arts Support Fund), Ministry of Culture",
+     "portal": "suds.moc.gov.mn (login only)",
+     "range": null,
+     "eligibility": null,
+     "rateOfYes": null
+    },
+    "notes": "The fund exists (the ministry links it); its portal redirects to /auth/login with no public terms. One web search (Mongolian) found nothing on its 2026 selection. Arts Council of Mongolia (artscouncil.mn, an NGO) read: no theatre-production grant on its home page."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Mongolia's main theatres are state academic theatres (the ministry lists Улсын Драмын эрдмийн театр, Улсын Дуурь бүжгийн Эрдмийн театр, Улсын Хүүхэлдэйн театр); their staff pay scale was not found. drama.mn home page read: no terms. Not web-searched."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; not web-searched."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "As item 7; the acting research holds no stage agreement for Mongolia."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "drama.mn home page holds no ticket or attendance figures; not web-searched."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     6
+    ],
+    "tried": "moc.gov.mn (mocsty.gov.mn) home page; suds.moc.gov.mn; kuds.filmmongolia.gov.mn; filmmongolia.gov.mn and its Film Council page; mcst.gov.mn; filmcouncil.mn; cinema.gov.mn",
+    "result": "ministry page read (links both funds); both fund portals are login-only; filmmongolia.gov.mn HTTP 500 empty; mcst.gov.mn reset; filmcouncil.mn and cinema.gov.mn CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "mnb.mn home page",
+    "result": "read; no commissioning terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "artscouncil.mn; drama.mn home pages",
+    "result": "read; no grant terms, fees, pay or box-office figures",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     2,
+     5,
+     6
+    ],
+    "tried": "legalinfo.mn home page; re-read the first wave's saved 2021 cinema law (files/t1/mn-law.docx.txt) for the fund's articles",
+    "result": "legalinfo.mn is script-driven (no law reached); the law names the special fund and the Council's role in recommending projects, no amounts or series terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     2,
+     6
+    ],
+    "tried": "WebSearch 'Соёл урлагийг хөгжүүлэх сан төсөл сонгон шалгаруулалт 2026 театр жүжиг санхүүжилт'",
+    "result": "no culture-fund result; one ikon.mn article on the Cinema Support Fund's 2025 selection (read, a lead)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     2
+    ],
+    "tried": "ikon.mn/n/3kix",
+    "result": "read: three projects funded non-repayably in 2025, quoting the Film Council's office (no address)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Items with no web search: 4, 5, 7, 8, 9, 10. A later round should try the Culture and Arts Support Fund's and the Film Council's Facebook pages (official accounts) and legalinfo.mn's Law on Culture (Соёлын тухай хууль, 2021) by a working route."
+ },
+ {
+  "country": "MW",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No production incentive for film or television found. mra.mw (Malawi Revenue Authority) serves a script-only app; not readable. One web search found only calls for incentives (a lecturer and FAMA quoted in the press), no scheme."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Leads only (search results, not read): MACRA's Universal Service Fund backed a feature film; FAMA's chair, in the press, named an 'Integrated Arts Development Fund'. manaonline.gov.mw (the state news agency) CONNECT 502; the two mwnation.com articles tried answered 404. No fund terms read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No public funder's rules found (item 2), so none read."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://mbc.mw/procurement/",
+      "title": "Malawi Broadcasting Corporation: Tenders & Documents (updated 27 March 2025)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/mw-mbc-proc.html",
+      "said": "Tender notices and related documents will be published on this page. At present, there are no open tenders. ... Malawi Broadcasting Corporation (MBC) is the only public broadcaster in Malawi and derives its mandate from an Act of Parliament 1964, the Communications Act 1998",
+      "sha256": "5a9ff73db853f1bfd6130215496a4651865a5332325b172cf5b606055e5e9564",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "publicBroadcaster": "MBC (only public broadcaster)",
+     "publishedCommissioningTerms": null,
+     "openTenders": 0,
+     "pickupRate": null
+    },
+    "notes": "MBC publishes tenders on its procurement page and had none open (page last updated 27 March 2025). Its TV rate card page served a bot-verification challenge (not counted). Leads from one search (not read): MultiChoice's OneZed and Zambezi Magic channels commission Malawian series (private, not public terms)."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. Not web-searched."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. Two web searches (funds; theatre) found no theatre grant."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. Not web-searched."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. Not web-searched."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. One web search on Malawian theatre found no pay figures."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The culture ministry's site (culture.gov.mw) and information.gov.mw answered CONNECT 502; cosoma.org is a parked domain; malawi.gov.mw home page read, no arts fund terms. The acting research (MW.json) found no collective agreement or union rate card for performers. One web search on Malawian theatre found no ticket or attendance figures; Nation Online's coverage (search results, not read) describes few groups performing regularly."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "mbc.mw home, /procurement/, /rate-card/",
+    "result": "home and procurement read; rate card behind a bot-verification challenge",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "tried": "cosoma.org, macra.mw, mra.mw, culture.gov.mw, information.gov.mw, malawi.gov.mw",
+    "result": "cosoma.org parked; macra.mw reset; mra.mw script-only; culture.gov.mw and information.gov.mw CONNECT 502; malawi.gov.mw read (no fund)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     6
+    ],
+    "tried": "WebSearch 'Malawi film television drama production fund incentive Ministry of Information Department of Arts theatre grant MBC independent producers'",
+    "result": "press leads only (MACRA USF, FAMA/UNESCO, MultiChoice commissions, calls for a film fund) (a fund's rules, which would hold a fee cap, were not found)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     2
+    ],
+    "tried": "manaonline.gov.mw item 9913 (MACRA USF); mwnation.com 'filmmakers-demand-government-funding' and 'fama-to-fund-malawian-films'",
+    "result": "MANA CONNECT 502; both mwnation addresses 404",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     6,
+     9,
+     10
+    ],
+    "tried": "WebSearch 'Malawi theatre play production ticket sales audience performances Nanzikambe Arts Blantyre theatre industry figures'",
+    "result": "descriptive coverage (Nanzikambe Arts, Mwezi Wawala festival, a 2017 Leeds thesis); no ticket, attendance or pay figures",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Malawi has a public broadcaster (MBC) and an organised film trade (FAMA), so it is not a no-trade country; but no fund, incentive or stage agreement was reachable today. Items with no web search: 5, 7, 8."
+ },
+ {
+  "country": "NR",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://en.wikipedia.org/wiki/Nauru_Television",
+      "title": "Wikipedia: Nauru Television",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/nr-wiki-ntv.html",
+      "said": "Nauru Television (NTV), established on 31 May 1991, is the government-owned , non-commercial sole television company in the Republic of Nauru . It is operated by the Nauru Broadcasting Service and overseen by the Nauru Media Bureau . ... In 2002, UNESCO reported that NTV's \"only locally produced programme is a popular daily half-hour news bulletin produced by NTV personnel in the S-VHS format.",
+      "quotes": "UNESCO, Pacific Islands Television Survey Report 2002 (archived at wayback.archive-it.org/all/20160104071623/http://portal.unesco.org/ci/en/files/8179/10469365274BENTLEY_TV_Survey_Report__-_210203.DOC)",
+      "sha256": "f6872b621319cee9e649e6d183054d2a0cabdd3d54face563ee9387ced8d4ce9",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "broadcaster": "NTV (Nauru Television), government-owned, non-commercial, sole TV service",
+     "localProduction2002": "a daily half-hour news bulletin only",
+     "commissioningTerms": null
+    },
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Nauru shows no series or theatre trade in what could be read: its one television service is the government's non-commercial NTV, whose only local programme was a news bulletin when UNESCO surveyed it in 2002 (secondary, via Wikipedia; nothing newer read). The government site (naurugov.nr) and the legal database (ronlaw.gov.nr, a script-only app) gave no text; PacLII's Nauru legislation index served a Cloudflare challenge. Not modeled; not claimed as none-exists, since no current primary was read."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "www.naurugov.nr",
+    "result": "CONNECT tunnel 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "tried": "ronlaw.gov.nr (https); PacLII www.paclii.org/nr/legis/num_act/",
+    "result": "ronlaw: script-only shell, no law text; PacLII: 403 Cloudflare 'Just a moment' challenge",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     4,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "WebSearch 'Nauru Media Bureau NTV television local programme production theatre arts Nauru Department of Culture'",
+    "result": "Wikipedia and mirrors, 1991-1999 gazettes on PacLII RMS; no theatre or drama production found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     4
+    ],
+    "tried": "en.wikipedia.org/wiki/Nauru_Television",
+    "result": "read: NTV government-owned, sole TV; 2002 UNESCO: only local programme a news bulletin",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Nauru has a sole government broadcaster and no fund, incentive, guild or theatre company found. The existing research files hold no figures. Items with no web search: 1, 2, 3, 5."
+ },
+ {
+  "country": "RO",
+  "items": [
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series (CNC under the amended Cinema Law; AFCN)",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/media/GHID%20Solicitant%20Culturale%20I_2027-1.pdf",
+      "title": "AFCN, Ghidul solicitantului (proiecte culturale), sesiunea I/2027",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-ghid-2027.pdf",
+      "said": "NU pot fi înscrise proiecte ce propun documentarea, producţia și/sau realizarea de film (documentar, ficţiune)",
+      "sha256": "6849d49192dcf1a569d7869dfd75bde33af07cde70da64fd0e4c6e91e1db2982",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "cnc": null,
+     "afcn": "excludes film production (said under the visual-arts area); no series line in any AFCN area"
+    },
+    "notes": "The CNC's terms for a series under the amended Cinema Law were not read: cnc.gov.ro reset every connection today; Common Crawl holds cnc.gov.ro only from December 2025 (CC-MAIN-2025-51), before the June 2026 relaunch, and nothing in CC-MAIN-2026-30 or -39. One web search returned only older CNC rounds (direct credits for films) and Moldova's CNC. Whether the amended law funds a television series is not known. AFCN's exclusion is quoted as read; it sits under the visual-arts area's description, so it binds that area as written."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen: TVR's commissioning terms; a count of independent series picked up",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.cna.ro/a-legea-audiovizualului-nr-504-din-11-iulie-2002-ek494g7anqurfn6husrhoo4a/",
+      "title": "CNA (Consiliul Național al Audiovizualului): Legea audiovizualului nr. 504 din 11 iulie 2002, 'Text în vigoare începând cu data de 28 februarie 2011'",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-l504.html",
+      "said": "ART. 24 (1) Orice radiodifuzor aflat sub jurisdicţia României va rezerva operelor europene create de producători independenţi faţă de acei radiodifuzori cel puţin 10% din timpul său de difuzare, cu excepţia timpului consacrat informaţiilor, manifestărilor sportive, jocurilor, publicităţii, precum şi serviciilor de teletext şi teleshopping, sau cel puţin 10% din bugetul său de programe. (2) În operele europene create de producători independenţi va fi inclusă o proporţie corespunzătoare de opere recente, respectiv de opere difuzate în următorii 5 ani după producerea lor. (3) Un producător este independent faţă de un anumit radiodifuzor dacă activitatea sa de realizare a unor producţii audiovizuale este susţinută financiar într-o proporţie mai mică de 25% din aceleaşi surse cu serviciul de programe în cadrul căruia se difuzează producţia sa şi dacă deţine mai puţin de 25% din capitalul societăţii care finanţează serviciul de programe în cauză.",
+      "sha256": "6f647b251b87dd2da07efbe1a5ab82442fb0c5e6c90b24278d2b59af186fae7f",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "independentQuota": {
+      "shareOfAirtimeAtLeast": 0.1,
+      "orShareOfProgrammeBudgetAtLeast": 0.1,
+      "excludes": [
+       "news",
+       "sport",
+       "games",
+       "advertising",
+       "teletext",
+       "teleshopping"
+      ],
+      "recentWorks": "an appropriate share, broadcast within 5 years of production",
+      "independentIf": "less than 25% of its production funded from the same sources as the channel, and less than 25% of the channel's financing company's capital"
+     },
+     "tvrTariff": null,
+     "pickupRate": null
+    },
+    "notes": "CNA labels its copy as the text in force from 28 February 2011; later amendments (including the transposition of the 2018 AVMS Directive) were not checked, so the article may have moved or changed. The quota binds every broadcaster, TVR included; TVR's own commissioning terms were not read (tvr.ro reset the connection). No count of independent series picked up was found."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://ofic.ro/wp-content/uploads/2025/02/HG-421-2018-consolidata-la-15-ianuarie-2025.pdf",
+      "title": "HG 421/2018, consolidated to 15 January 2025 (OFIC)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/t3/ro-hg421.pdf",
+      "said": "(3) Scopul schemei de ajutor de stat îl reprezintă sprijinirea culturii de film şi producţiei de film în România, constând atât în filme cinematografice, astfel cum sunt definite de art. 1 din Ordonanţa Guvernului nr. 39/2005 privind cinematografia ... cât şi în filme şi seriale de televiziune, precum şi orice alte producţii audiovizuale astfel cum sunt definite în Convenţia Europeană asupra coproducţiilor cinematografice",
+      "sha256": "c27383b783e240d9a75a5138b4a08e05f447903db0aba00e9245615e88d2f697",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "theatreIncentive": null,
+     "onlyProductionIncentive": "HG 421/2018 cash rebate, audiovisual works only"
+    },
+    "notes": "Romania's one production incentive (the OFIC cash rebate) covers film and audiovisual work only, by its own scope article; no theatre incentive was found. The Fiscal Code (sponsorship deductions) was not read, so 'none exists' is not claimed."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production: AFCN's theatre area",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/media/Plafoane%20finantare%20si%20alocare%20buget%20sesiunea%201%20-%202027-final%20-%201.pdf",
+      "title": "AFCN, Alocare buget și plafoane de finanțare, sesiunea I/2027 (31.08.2026)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-plafoane-2027.pdf",
+      "said": "Bugetul disponibil pentru Sesiunea I/2027 este de 71.000.000 lei și acoperă 7 arii de finanțare ... 2 TEATRU 12,000,000 220,000",
+      "sha256": "a1cf3d384e3892865ba213bec99f0a59539856096619200bb10230ff4df2d4ca",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/media/GHID%20Solicitant%20Culturale%20I_2027-1.pdf",
+      "title": "AFCN, Ghidul solicitantului (proiecte culturale), sesiunea I/2027",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-ghid-2027.pdf",
+      "said": "a) este persoană fizică autorizată, întreprindere individuală, întreprindere familială sau persoană juridică de drept public ori privat, română sau cu sediul în străinătate, înfiinţată în condiţiile legii române ori ale ţării de origine, după caz; ... c) asigură minimum 10% din valoarea proiectului, din contribuţie proprie sau/și surse atrase ... Un operator cultural poate înscrie în concurs maximum 2 (două) proiecte culturale pe sesiune. ... Cheltuieli indirecte eligibile ... (nu vor depăși 5% din totalul finanţării",
+      "sha256": "6849d49192dcf1a569d7869dfd75bde33af07cde70da64fd0e4c6e91e1db2982",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/files/2026/2-2026/c2/ast.pdf",
+      "title": "AFCN, Rezultatele sesiunii II/2026 după soluționarea contestațiilor, aria Artele Spectacolului Teatru (afișat 18 august 2026)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-ast-2-2026.pdf",
+      "said": "1 CALL25-AST-848 Asociația Culturală 2081 economia intimă // spectacol de teatru ... 98,33 248.748,00 ... Proiecte culturale care nu au obținut finanțare",
+      "sha256": "1634690f33b95dafb770d084494df8b8780804f39475e32e80991915078fbf95",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/files/2026/1-2026/dupa-sc/ast.pdf",
+      "title": "AFCN, Rezultatele sesiunii I/2026 după soluționarea contestațiilor, aria Artele Spectacolului Teatru (afișat 19 decembrie 2025)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-ast-1-2026.pdf",
+      "said": "21 CALL14-AST-135 Asociația Țais Noroc să ai 90,33 250.000,00 ... Proiecte culturale respinse după etapa a doua de concurs ... Proiecte culturale care nu au obținut finanțare ... Proiecte respinse administrativ",
+      "sha256": "3b6a35cb402fa96d0c5b84e8b70261b24a11e2c6db5f9d9433223b4463395b91",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.afcn-proiecte.ro/files/2027/ses1/cea/Tabel%20rezultate%20contestatii%20evaluare%20administrativa%20AST%20SI_2027.pdf",
+      "title": "AFCN, sesiunea I/2027, aria Teatru, rezultate verificare administrativă după contestații (afișat 13 octombrie 2026)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-afcn-ast-1-2027-adm.pdf",
+      "said": "1 CALL32-AST-968 Asociația HEARTH Marioara Voiculescu. Un spectacol, o arhivă, o casă Acceptată 220.000,00",
+      "sha256": "ab2f6de615efa8f39c4ec2391df0ca4553991aed1433d634a1105c4ad5fe2999",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "fund": "Administrația Fondului Cultural Național (AFCN), aria Teatru",
+     "currency": "RON",
+     "form": "non-repayable grant, competitive, two sessions a year (1 September, 1 March)",
+     "session": "I/2027 (call closed 2026-09-30)",
+     "areaBudgetRON": 12000000,
+     "capPerProjectRON": 220000,
+     "capPerProjectRON_2026": 250000,
+     "applicantMayBe": "an authorised individual, sole or family enterprise, or a public or private legal person, Romanian or seated abroad",
+     "ownShareAtLeast": 0.1,
+     "indirectCostsAtMost": 0.05,
+     "projectsPerSession": 2,
+     "rateOfYes": {
+      "II/2026": {
+       "funded": 20,
+       "listed": 103,
+       "rate": 0.194,
+       "fundedTotalRON": 4848640.58
+      },
+      "I/2026": {
+       "funded": 25,
+       "listed": 80,
+       "rate": 0.3125,
+       "fundedTotalRON": 5866274.65
+      }
+     }
+    },
+    "notes": "Rates of yes are counted from the published tables: funded rows over every row the theatre-area table lists (funded, not funded, rejected at stage two, rejected administratively); applications rejected before these tables (if any are omitted) would lower the rate. The 250,000 lei 2026 cap is the largest award in both 2026 tables (many rows at exactly 250.000,00), not a ceiling read in a 2026 document; the 220,000 lei 2027 cap is read. I/2027's final results were not yet published (only the administrative check: 138 rows)."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Romania's public theatres pay staff under the unified public-pay law 153/2017, Annex III (culture), and engage guest directors on author's-rights contracts. Neither the annex in force (legislatie.just.ro refused connection) nor a theatre's salary-transparency table was read: Teatrul Național Iași's 'Transparența veniturilor 2026' and Bulandra's public-information page both served a bot-verification challenge, TNB and Odeon reset or refused. A web search found only a philharmonic's grid (not theatre posts) and a secondary pay estimate. UNITER's home page names no rate card."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No playwrights' agreement found; UNITER's site (read) names a Romanian-texts competition but no fee terms."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "As item 7: the Law 153/2017 Annex III grid and theatres' salary-transparency tables were not reachable today."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.teatrulgeorgeciprian.ro/wp-content/uploads/2026/04/Raport-Activitate-Gina-Chivulescu-2025.pdf",
+      "title": "Teatrul „George Ciprian” Buzău (county public theatre), management activity report for 2025",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/ro-tgc-2025.pdf",
+      "said": "Raportat la numărul total de spectatori (48.982), cele 17.699 de bilete plătite reprezintă aproximativ 36% din participări. ... Numărul de reprezentații ale producțiilor proprii a crescut de la 81 la 87 ... 33.10.19 Venituri din bilete 479.000 592.541 124% ... I. VENITURI PROPRII 860.000 1.128.403 131% ... TOTAL VENITURI APROBATE : 16.905.000",
+      "sha256": "919cd450665d8ce1d194fea7f20c2717c10029d49b8fd95680c458ee1f10393b",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "scope": "one county drama theatre (Buzău), 2025",
+     "currency": "RON",
+     "spectators": 48982,
+     "paidTickets": 17699,
+     "paidShare": 0.36,
+     "ownProductionPerformances": 87,
+     "ticketRevenue": 592541,
+     "ownRevenue": 1128403,
+     "totalApprovedRevenue": 16905000,
+     "ticketRevenuePerOwnPerformance_derived": 6811,
+     "recoupCount": null
+    },
+    "notes": "A single public theatre's own report, not a national count: ticket revenue covers every event the theatre ran (220 actions including hosted ones), so revenue per own performance (592,541 / 87) overstates what one own performance takes. Tickets cover about 3.5% of the theatre's approved revenue (the county budget pays the rest), so 'recouping' is not how a Romanian public theatre's play fares. One web search for INS's national performing-arts counts found only a 2019-2022 county table; INS TEMPO was not read. No national count of runs recouping or extended found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     6
+    ],
+    "tried": "afcn.ro (home, finantari), afcn-proiecte.ro proiecte-culturale and apel-finantare pages; AFCN 2027 ceilings, 2027 applicant's guide, theatre-area results for I/2026, II/2026 and I/2027's administrative check (PDFs over https)",
+    "result": "Read; AFCN theatre grants found with caps, eligibility and counts; AFCN excludes film production",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2,
+     4
+    ],
+    "tried": "cnc.gov.ro, ofic.ro/cash-rebate/, ofic.ro/legislatie/, tvr.ro",
+    "result": "cnc.gov.ro, tvr.ro and ofic.ro/cash-rebate reset the connection; ofic.ro/legislatie read: it links Decizie 659/2024 (the 2024 procedure) only to legislatie.just.ro",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     4,
+     7,
+     9
+    ],
+    "tried": "legislatie.just.ro DetaliiDocument (HTTP/2, then HTTP/1.1)",
+    "result": "HTTP/2 PROTOCOL_ERROR, then empty reply; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     5
+    ],
+    "tried": "Re-read the first wave's saved HG 421/2018 consolidated PDF (files/t3/ro-hg421.pdf) whole by text extraction for fee caps and scope",
+    "result": "No producer-fee or overhead cap; scope is film and audiovisual only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "items": [
+     2
+    ],
+    "tried": "Common Crawl CC-MAIN-2026-39, -30 and 2025-51 for 'ro,gov,cnc)/'",
+    "result": "none in 2026-39 or -30; 2025-51 holds the December 2025 site (before the June 2026 relaunch), not read as the rule in force",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     2
+    ],
+    "tried": "WebSearch 'CNC concurs 2026 proiecte cinematografice seriale granturi nerambursabile legea cinematografiei modificata'",
+    "result": "only older CNC rounds and Moldova's CNC; nothing on the amended law's series terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     7,
+     9
+    ],
+    "tried": "WebSearch 'Legea 153/2017 anexa III cultură actor regizor artistic salariu de bază teatru 2026 grila'",
+    "result": "a philharmonic's transparency PDF, Senate files, a secondary estimate; no theatre grid",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "uniter.ro; tnb.ro; bulandra.ro (public information); teatrulodeon.ro; teatrulnationalcluj.ro; teatrulnationaliasi.ro (Transparența veniturilor 2026); nottara.ro; teatrul-act.ro",
+    "result": "UNITER read (no rate card); TNB reset; Odeon and ACT 502; Bulandra and Iași served a bot-verification challenge (not counted); Cluj and Nottara home pages hold no salary links",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "cna.ro home, its 'Legi' listing and its copy of Legea audiovizualului 504/2002",
+    "result": "read: art. 24, 10% independent quota",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     10
+    ],
+    "tried": "WebSearch 'INS activitatea instituțiilor și companiilor de spectacole 2025 număr spectatori reprezentații teatre comunicat'",
+    "result": "INS county table to 2022; theatres' 2025 activity reports (Buzău, TNOMID)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     10
+    ],
+    "tried": "teatrulgeorgeciprian.ro 2025 activity report PDF",
+    "result": "read: 48,982 spectators, 17,699 paid tickets, 87 own performances, RON 592,541 ticket revenue",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Romania's live-theatre pay sits in the public-pay law 153/2017 and each theatre's mandatory salary-transparency table; both were out of reach today (legislatie.just.ro refusing, theatre sites challenged). A later round with a working route to legislatie.just.ro should read Law 153/2017 Annex III and OUG 7/2026. Items with no web search: 3, 4, 5, 6 (found by institution), 8. Outside this todo (item 3 stands as the first wave left it, blocked): today's whole-text search of the first wave's saved HG 421/2018 (files/t3/ro-hg421.pdf, sha256 c27383b7...) found no producer-fee or overhead cap; the only percentages are the 35%/30%/10% aid rates, the 20% minimum Romanian spend and the sitcom's 80% studio share; the cost detail sits in OFIC's Decizie 659/2024, not reachable (legislatie.just.ro refused). The lead may use this for item 3."
+ },
+ {
+  "country": "TH",
+  "items": [
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series (Thai Media Fund)",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://www.thaipost.net/public-relations-news/971986/",
+      "title": "Thai Post, public-relations news (30 March 2569/2026): the Thai Media Fund's 2569 grant results",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-thaipost-971986.html",
+      "said": "30 มีนาคม 2569 กองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์ประกาศผลการพิจารณาโครงการหรือกิจกรรมที่ได้รับการสนับสนุนเงิน ประจำปี 2569 ทางเว็บไซต์ https://www.thaimediafund.or.th/download/granting-2569/ โดยมีผลการพิจารณาโครงการหรือกิจกรรมที่ได้รับการสนับสนุน จำนวน 259 โครงการ งบประมาณรวม 274,292,000 บาท แบ่งเป็น 5 ประเภท 1) ประเภททุนอุดหนุนทั่วไป จำนวน 196 โครงการ 2) ประเภททุนนิติบุคคลด้านสื่อหรือวิสาหกิจเพื่อสังคม จำนวน 28 โครงการ 3) ประเภททุนเชิงยุทธศาสตร์ จำนวน 15 โครงการ 4) ประเภททุนความร่วมมือ จํานวน 18 โครงการ 5) ประเภททุนสนับสนุนบางส่วนสำหรับโครงการขนาดใหญ่ จํานวน 2 โครงการ",
+      "quotes": "the Thai Media Fund's announcement at https://www.thaimediafund.or.th/download/granting-2569/ (Cloudflare-challenged today)",
+      "sha256": "542f1f4d54e721092aaf38486db85d2234f3211fd3952c4a7a8d51b9524bb107",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.thaipost.net/public-relations-news/934878/",
+      "title": "Thai Post, public-relations news (21 January 2026): the fund's board on the 2569 call",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-thaipost-934878.html",
+      "said": "การเปิดรับโครงการหรือกิจกรรมที่ขอรับการสนับสนุนเงินจากกองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์ ประจำปี 2569 วงเงินงบประมาณ 300 ล้านบาท โดยมีจำนวนโครงการฯ ที่ยื่นเสนอ จำนวน 982 โครงการ งบประมาณที่ขอรับรวม 3,134 ล้านบาท แบ่งเป็น 5 ประเภท",
+      "quotes": "the Thai Media Fund board's meeting report (fund release; no separate address)",
+      "sha256": "2d71cb72d45e61cba59ec427c27dc1e66464a5b69b78e0e1185c4900e8a0605f",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.naewna.com/n/pr-news/25982/",
+      "title": "Naewna, PR news (26 August 2569/2026): the fund's 2570 call",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-naewna-25982.html",
+      "said": "กองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์ เปิดรับข้อเสนอโครงการหรือกิจกรรมเพื่อขอรับการสนับสนุนเงินจากกองทุนฯ ประจำปี 2570 ระหว่างวันที่ 1 ตุลาคม – 15 พฤศจิกายน 2569 รวมวงเงินทั้งสิ้น 300 ล้านบาท ครอบคลุมทุน 5 ประเภท",
+      "quotes": "the Thai Media Fund's call (www.thaimediafund.or.th)",
+      "sha256": "c3699bae629614ba578fc7a229ef844c175c7daa2a308a03ac9dd20b8f8a2526",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "fund": "กองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์ (Thai Media Fund)",
+     "currency": "THB",
+     "grantTypes": 5,
+     "year2569": {
+      "budget": 300000000,
+      "applications": 982,
+      "requested": 3134000000,
+      "funded": 259,
+      "awarded": 274292000,
+      "rateOfYes_derived": 0.264,
+      "byType": {
+       "general": 196,
+       "mediaEntityOrSocialEnterprise": 28,
+       "strategic": 15,
+       "cooperation": 18,
+       "partialForLargeProjects": 2
+      }
+     },
+     "year2570": {
+      "callOpen": "2026-10-01",
+      "callClose": "2026-11-15",
+      "budget": 300000000
+     },
+     "seriesTerms": null
+    },
+    "notes": "All media types, not series alone: the counts cover every project the fund backs (series, documentaries, online content, activities). Rate of yes is 259 of 982 (arithmetic). The fund's own pages answer a Cloudflare challenge (403); its May 2026 home page in Common Crawl links the rules and the results but those pages are not in the crawls tried; the figures stand on its releases as Thai Post and Naewna printed them, the 2569 results naming the fund's own address. Per-type ceilings and whether a scripted series qualifies were not read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Neither the Thai Media Fund's rules (unreachable, item 2) nor Thai PBS's procurement terms (the award notices read name only a total price) state one. Not web-searched."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen: the public broadcaster's commissioning",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.thaipbs.or.th/org/procurement/?keyword=&procurement_type=items&announcement_type=&procurement_method=",
+      "title": "Thai PBS, ประกาศจัดซื้อจัดจ้าง: ประกาศจัดหารายการ (programme-procurement notices)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-tpbs-producers.html",
+      "said": "ประกาศคัดสรร ประกาศผู้ผ่านคัดสรร ... ประกาศผู้ชนะการเสนอราคา จ้างผลิตรายการ Echoes of Heroes (ชื่ออาจมีการเปลี่ยนแปลง) โดยวิธีคัดเลือก ประกาศผลผู้ชนะ 8 ต.ค. 69",
+      "sha256": "fa73fd4125ce9dc8b04d8bb8da6a1ce21ffb3f735403d7e9f718eb7719b1d444",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://d16lcjvfn270cj.cloudfront.net/uploads/2025/12/8857_1.pdf",
+      "title": "Thai PBS notice of the winning bid: จ้างซีรีส์ CORRUPTION THE SERIES (ชื่ออาจมีการเปลี่ยนแปลง) โดยวิธีเฉพาะเจาะจง, 11 December 2568 (2025), linked from thaipbs.or.th/org/procurement/8857/",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-tpbs-8857.pdf",
+      "said": "ซีรีส์ CORRUPTION THE SERIES (ชื่ออาจมีการเปลี่ยนแปลง) จำนวน ๘ หน่วย/unit ผู้ได้รับการคัดเลือก ได้แก่ บริษัท ไบสัน ไอเดีย จำกัด (ให้บริการ) โดยเสนอราคา เป็นเงินทั้งสิ้น ๒๐,๐๐๐,๐๐๐.๐๐ บาท (ยี่สิบล้านบาทถ้วน) รวมภาษีมูลค่าเพิ่มและภาษีอื่น ค่าขนส่ง ค่าจดทะเบียน และค่าใช้จ่ายอื่นๆ ทั้งปวง",
+      "sha256": "7c296b50d4f0937861719d9bf9acf981e972163d1e0720c923b4bb7753533a7a",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://d16lcjvfn270cj.cloudfront.net/uploads/2026/10/pur69100601-1.pdf",
+      "title": "Thai PBS notice of the winning bid: จ้างผู้เขียนบทซีรีส์ เพลงลำสะเลเต โดยวิธีเฉพาะเจาะจง, 6 October 2569 (2026), linked from thaipbs.or.th/org/procurement/50420/",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-tpbs-pur69100601.pdf",
+      "said": "ผู้เขียนบทซีรีส์ เพลงลำสะเลเต จำนวน ๑๖ หน่วย/unit ผู้ได้รับการคัดเลือก ได้แก่ นาง ทิพย์ธิดา ศรัทธาทิพย์ โดยเสนอราคา เป็นเงินทั้งสิ้น ๔๐๐,๐๐๐.๐๐ บาท (สี่แสนบาทถ้วน) รวมภาษีมูลค่าเพิ่มและภาษีอื่น",
+      "sha256": "ad52abebfbb4c79ac57e411d09f00b5683f27617f23966b6f946942a2bd69cb3",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "route": "Thai PBS commissions a series from an independent company by public procurement (selection 'คัดสรร/คัดเลือก' or the specific method 'เฉพาะเจาะจง'), publishing each award",
+     "currency": "THB",
+     "example": {
+      "series": "CORRUPTION THE SERIES",
+      "episodes": 8,
+      "totalInclVAT": 20000000,
+      "perEpisode_derived": 2500000,
+      "awarded": "2025-12-11",
+      "method": "specific (เฉพาะเจาะจง)"
+     },
+     "scriptwriterExample": {
+      "series": "เพลงลำสะเลเต",
+      "episodes": 16,
+      "totalInclVAT": 400000,
+      "perEpisode_derived": 25000,
+      "awarded": "2026-10-06"
+     },
+     "tariff": null,
+     "pickupRate": null
+    },
+    "notes": "Per-episode figures are division of the stated totals (arithmetic). Thai PBS's published notices give prices, not a tariff or a rate of acceptance; the open-call notices (ประกาศคัดสรร) and their terms were listed but not read. The commercial broadcasters' commissioning is not public. The scriptwriter award is also a Thai series-writer fee data point (writer-TH)."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://ocacartfund.go.th/file/content/files/LzVeE7BvdmfWlo8MCnMYg21qwf11Q65S.pdf",
+      "title": "คู่มือกองทุนส่งเสริมศิลปะร่วมสมัย (Contemporary Art Promotion Fund handbook, OCAC, Ministry of Culture), linked from ocacartfund.go.th/Guide",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-artfund-manual.pdf",
+      "said": "การลดหย่อนภาษี ๑. สำหรับบุคคลธรรมดา ให้ยกเว้นภาษีสำหรับเงินได้พึงประเมิน ... เป็นจำนวนสองเท่าของจำนวนเงินที่บริจาค ... ๒. สำหรับบริษัทหรือห้างหุ้นส่วนนิติบุคคล ให้ยกเว้นภาษีสำหรับเงินได้เป็นจำนวนสองเท่าของรายจ่ายที่บริจาค ... ต้องไม่เกินร้อยละสิบของกำไรสุทธิ",
+      "sha256": "22082704409f9fcc6cd7ce1af066991a23097a1fb622bdc5451ccdca40345468",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "theatreProductionIncentive": null,
+     "donorDeduction": {
+      "to": "Contemporary Art Promotion Fund",
+      "multiple": 2,
+      "capShareOfIncomeOrProfit": 0.1
+     }
+    },
+    "notes": "The only theatre-related tax rule found is a donor's double deduction for gifts to the art fund (up to 10% of income or net profit), not a production incentive. The film-office incentive (item 1, first wave) is for foreign film and television shoots. No production incentive for theatre was found; the Revenue Code was not read whole, so none-exists is not claimed. Not web-searched."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://ocacartfund.go.th/file/content/files/LzVeE7BvdmfWlo8MCnMYg21qwf11Q65S.pdf",
+      "title": "คู่มือกองทุนส่งเสริมศิลปะร่วมสมัย (Contemporary Art Promotion Fund handbook, OCAC, Ministry of Culture), linked from ocacartfund.go.th/Guide",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-artfund-manual.pdf",
+      "said": "คุณสมบัติของผู้ขอรับการส่งเสริม ๑. บุคคลธรรมดา มีสัญชาติไทย ... ๒. กลุ่มบุคคล ต้องมีคุณสมบัติและไม่มีลักษณะต้องห้ามตามข้อ ๑. ตั้งแต่สองคนขึ้นไปที่มารวมตัวกัน ... ๓. มูลนิธิหรือสมาคม ต้องจดทะเบียนในประเทศไทย และมีวัตถุประสงค์เพื่อดำเนินงานด้านศิลปวัฒนธรรม ๔. สถานศึกษา ... ประกาศคณะกรรมการบริหารกองทุนส่งเสริมศิลปะร่วมสมัย เรื่องหลักเกณฑ์และวิธีการพิจารณาอนุมัติโครงการที่มีวงเงินไม่เกินสองแสนบาท ของผู้อำนวยการสำนักงานศิลปวัฒนธรรมร่วมสมัย",
+      "sha256": "22082704409f9fcc6cd7ce1af066991a23097a1fb622bdc5451ccdca40345468",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://ocacartfund.go.th/news-release/0270db78-a57e-4415-a4d3-4d4aececc577",
+      "title": "Contemporary Art Promotion Fund news: board meeting 10/2569 (6 October 2569)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-artfund-news.html",
+      "said": "โดยปี 2569 มีโครงการที่ได้รับการส่งเสริมจากกองทุนส่งเสริมศิลปะร่วมสมัย 44 โครงการ ครอบคลุมศิลปะร่วมสมัยทั้ง 9 สาขา ได้แก่ ทัศนศิลป์ ศิลปะการแสดง ออกแบบเครื่องแต่งกาย ภาพยนตร์ ดนตรี วรรณศิลป์ สถาปัตยกรรม มัณฑนศิลป์ เรขศิลป์",
+      "sha256": "d6ffee73bd4c032981e98908bf107fee153646ff63999cd652d834f7c2d5c68a",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://ocacartfund.go.th/news-release/e4f4bbbd-706a-44f9-98b8-8954d8c7d90f",
+      "title": "Contemporary Art Promotion Fund: call for FY2570 applications",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/th-artfund-call.html",
+      "said": "กองทุนส่งเสริมศิลปะร่วมสมัย เปิดรับโครงการ ตั้งแต่วันนี้ - 30 กันยายน 2569 ... การขอรับการส่งเสริมจากกองทุนส่งเสริมศิลปะร่วมสมัย ประจำปีงบประมาณ พ.ศ. 2570",
+      "sha256": "b12994c2e3c3aaf8d36e6b17caeabb795c1aecbc72db09916ffb2ef5eee351a8",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "fund": "กองทุนส่งเสริมศิลปะร่วมสมัย (Contemporary Art Promotion Fund), OCAC, Ministry of Culture; Contemporary Art Promotion Act B.E. 2551",
+     "currency": "THB",
+     "branches": 9,
+     "performingArtsIncluded": true,
+     "applicant": [
+      "a Thai national",
+      "a group of two or more such persons",
+      "a foundation or association registered in Thailand",
+      "an educational institution"
+     ],
+     "directorApprovesUpTo": 200000,
+     "supportedFY2569": 44,
+     "callClosedForFY2570": "2026-09-30",
+     "range": null,
+     "rateOfYes": null
+    },
+    "notes": "44 projects across all nine branches in FY2569 (not the performing-arts count). The 200,000 baht figure is the ceiling a project may have for the OCAC director to approve it alone, not a grant ceiling. Applications and their count are not published on the pages read, so no rate of yes. The handbook is undated (it cites a FY2561 project). The site is script-rendered (Inertia); its embedded page data was read."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement or union for stage directors found; the acting research (TH.json) holds that no collective agreement sets Thai performers' pay (Labour Ministry, July 2026). no institution of stage directors located. One web search (Thai) found no fee figures."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No playwrights' agreement found. Thai PBS's series scriptwriter award (item 4) is a television, not a stage, fee. One web search (Thai) found no fee figures."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No count of runs or box office found. One search and one article read give only anecdotes of sell-outs and added performances (a 2022 restage at KBank Siam Pic-Ganesha; a National Theatre test round reported as full in 13 minutes, not read)."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     3
+    ],
+    "tried": "thaimediafund.or.th and www.thaimediafund.or.th",
+    "result": "403 Cloudflare 'Attention Required' challenge both times; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "items": [
+     2,
+     3
+    ],
+    "tried": "Common Crawl CC-MAIN-2026-39, -30, -21 for 'th,or,thaimediafund)/'; got the 2026-05-12 home page; looked up 'download/granting' in -21, -30, -39",
+    "result": "home page read (links to grant rules and 2569 results); the rules and results pages are not in those crawls",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     4,
+     3
+    ],
+    "tried": "thaipbs.or.th/org procurement listing (programme procurement), keyword search 'ซีรีส์', two award notices (procurement/8857 and /50420) and their PDFs",
+    "result": "read; awards give totals and units, no tariff, no fee cap",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     5,
+     6
+    ],
+    "tried": "ocac.go.th home; ocacartfund.go.th home, /Guide (handbook PDF), /Promotion-Support page, two news releases",
+    "result": "read; art fund eligibility, the 200,000 baht director-approval limit, 44 projects in 2569, donors' double deduction",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2,
+     6
+    ],
+    "tried": "culture.go.th, m-culture.go.th, thaifilmfund.org",
+    "result": "culture.go.th and m-culture.go.th returned stub/redirect pages with no fund terms; thaifilmfund.org CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     2
+    ],
+    "tried": "WebSearch 'กองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์ ประกาศผลการพิจารณา ทุน ประจำปี 2569 จำนวนโครงการ ยื่นข้อเสนอ ซีรีส์ ละคร วงเงิน'",
+    "result": "Thai Post and Naewna fund releases",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     2
+    ],
+    "tried": "thaipost.net public-relations-news 971986, 934878, 970102; naewna.com pr-news 25982",
+    "result": "read: 982 applications, 259 funded, THB 274,292,000 in 2569; 2570 call THB 300m",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     7,
+     8,
+     10
+    ],
+    "tried": "WebSearch 'ละครเวที ค่าตอบแทน ผู้กำกับ นักเขียนบทละครเวที อัตรา รายได้ต่อรอบ บัตรขายหมด เพิ่มรอบ 2569'",
+    "result": "no fee or per-performance revenue figures; a 2017 SWU thesis on commercial theatre (ticket tiers, outsourced crews); a Fine Arts Department sell-out and added performances (as reported); a 2022 restage",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     10
+    ],
+    "tried": "naewna.com/entertain/691834",
+    "result": "read: a 2022 (B.E. 2565) restage of 'เพลงรักเพลงแผ่นดิน' after sell-outs, with added performances; an anecdote, not a count",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Items with no web search: 3, 4, 5, 6. A later round should read the Thai Media Fund's per-type rules (ประกาศเกี่ยวกับทุน) through a route that is not challenged."
+ },
+ {
+  "country": "US",
+  "items": [
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen: public media's commissioning terms; a count of independent series picked up",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://itvs.org/funds/open-call/",
+      "title": "ITVS (Independent Television Service, public media's funder of independent work): Open Call",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/us-itvs-oc.html",
+      "said": "What Open Call Funds Production or post-production support for nonfiction documentaries between 10 and 90 minutes. Up to $400k in funding for long-form features Up to $50k in funding for stand-alone shorts ... Open Call is not a grant. You’ll receive funding in the form of a co-production agreement that assigns ITVS certain broadcast and streaming rights to your project during the contract term. ... Early-stage funding for nonfiction web series and features",
+      "sha256": "dd3987865f03f681ae62398b0cab2afc1e0234bf52ca38ef320fa8f25b54b4a3",
+      "read": "2026-11-04"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.advanced-television.com/2026/02/09/research-us-scripted-commissions-defy-slump/",
+      "title": "Advanced Television, 'Research: US scripted commissions defy slump' (9 February 2026)",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u25/us-advtv-ampere.html",
+      "said": "Research from Ampere Analysis shows that scripted TV commissioning in North America continued its recovery in 2025, with total commissions up 3 per cent year-on-year — marking the second consecutive year of growth. First-run scripted commissions grew even faster, rising 7 per cent year-on-year",
+      "quotes": "Ampere Analysis research (no address given in the article: a lead for the figures)",
+      "sha256": "d3717fb8304279dd7e43f7b7ece1469b46a9438469b54d8a9251e84109f2363d",
+      "read": "2026-11-04"
+     }
+    ],
+    "value": {
+     "publicMediaRoute": {
+      "body": "ITVS (co-production, not a grant)",
+      "form": "nonfiction only",
+      "maxUSD": {
+       "feature": 400000,
+       "short": 50000
+      },
+      "rights": "ITVS takes certain broadcast and streaming rights for the contract term",
+      "scripted": null
+     },
+     "scriptedRoute": "commercial networks and streamers; no published tariff",
+     "pickupRate": null,
+     "leadNorthAmericaCommissions2025": {
+      "total": "+3% year on year",
+      "firstRun": "+7%"
+     }
+    },
+    "notes": "Public media's open route for an independent producer (ITVS Open Call) funds nonfiction only, so a scripted series has no public commissioning tariff in the US. No count of how often an independent series or pilot is picked up was found: one search for FX Research's scripted-series count found press figures for earlier years (516 in 2023 per press) and none for 2025 from FX itself; a total count of series is not a pick-up rate. The Ampere figures are growth rates without a base and without the primary's address: a lead."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "itvs.org/funding/open-call/ (redirected to /funds/open-call/)",
+    "result": "read: nonfiction co-production up to $400,000",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     4
+    ],
+    "tried": "WebSearch 'FX Research scripted original series count 2025 total number of scripted series US'",
+    "result": "press on FX counts for 2021-2023, Luminate and Ampere 2025 trends; no FX 2025 count, no pick-up rate",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     4
+    ],
+    "tried": "advanced-television.com 2026-02-09 Ampere article",
+    "result": "read: commissions +3% (first-run +7%) in North America, 2025",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only item 4 was in this todo. Archive not tried for item 4."
+ }
+]

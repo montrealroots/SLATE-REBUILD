@@ -1,0 +1,3119 @@
+[
+ {
+  "id": "R-8228",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.congresonacional.hn/ fetched with curl",
+    "result": "refused or unreachable: curl 60, SSL: no alternative certificate subject name matches target host name 'www.congresonacional.hn'",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.tsc.gob.hn/web/leyes/ fetched with curl",
+    "result": "HTTP 403 (403 - Forbidden: Access is denied.)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "poderjudicial.gob.hn CEDIJ: Leyes page and guessed Documents/CodigoNinezAdolescencia.pdf",
+    "result": "refused or unreachable: curl 35, connection reset by peer, for both",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 prefix hn,gob,tsc)/: 60 captures listed; the capture of tsc.gob.hn/biblioteca/index.php/codigos (2026-10-10) fetched and read; prefixes for codigos/506 and codigos?start= gave no captures",
+    "result": "the library's code list names the Código de la Niñez y de la Adolescencia (entry 506), the Código del Trabajo and the Código de Familia, with their PDF paths",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "tsc.gob.hn/biblioteca/index.php/codigos/506-codigo-de-la-ninez-y-de-la-adolescencia fetched directly (200), its PDF Codigo_niñezyadolescencia_2013.pdf downloaded (18.6 MB, La Gaceta 33,222) and read by text; eight guessed PDF names for the Niñez and Comercio codes answered 404",
+    "result": "the library links only the 2013 reforming decree (Decreto 35-2013), which amends art 128 (labour inspection of child workers, fines of 5-15 minimum wages) but none of the articles on permits or hours for artistic work; the base Code's text (Decreto 73-96) and the Código de Comercio were not reached",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.tsc.gob.hn/web/leyes/Codigo_ni%C3%B1ezyadolescencia_2013.pdf",
+    "title": "La Gaceta No. 33,222, 6 de septiembre de 2013: Decreto No. 35-2013 reforming the Código de la Niñez y de la Adolescencia (Decreto 73-96), via the TSC legal library",
+    "said": "ARTÍCULO 1.- Reformar los Artículos 1,5,20,21,32, 96, 97, 98, 99, 102, 104, 105, 113, 128, 139, ... \"ARTÍCULO 128.- La Secretaría de Estado en los Despachos de Trabajo y Seguridad Social inspeccionará regular y periódicamente a las empresas, centros y lugares de trabajo y casas de habitación ... para verificar si tienen a su servicio niños y niñas y si están cumpliendo las normas que los protegen. Quién transgreda dichas normas será sancionado(a) con multa de cinco (5) a quince (15) salarios mínimos en su valor más alto.",
+    "read": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "The base Code (Decreto 73-96, arts 114-133 on child labour) is still sought; the TSC library page for it links only the 2013 reform. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8231",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://mast.gouv.ht/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ht,gouv,mast)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8234",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://parfi.or.id/ fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed (parfi.or.id redirected to infosurabaya.com, not PARFI's own site)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Indonesia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix id,or,parfi)/",
+    "result": "1 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8236",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.shaham.org.il/%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA_%D7%9C%D7%A9%D7%97%22%D7%9D",
+    "title": "הצטרפות לשח\"ם (Joining Shaham), Shaham, the Israel Actors' Association",
+    "said": "ההצטרפות היא מגיל 16 וכרוכה בעמידה בתנאי הסף , מילוי טופס הצטרפות (ישלח אליכם לאחר קיום ראיון טלפוני) ותשלום דמי חבר .",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "shaham.org.il home; its join page (הצטרפות לשח\"ם) read; the association's articles (תקנון שחם מעודכן, a 10-page scanned PDF) downloaded and OCR'd in Hebrew",
+    "result": "unions: membership of Shaham opens at sixteen, with threshold conditions, a form and dues",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Israel's FIA affiliate is Shaham; FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix il,org,shaham)/",
+    "result": "22 capture(s) listed (the first 40 lines of the listing kept), 3 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "body": "Shaham (Israel Actors' Association)",
+    "memberFrom": 16
+   }
+  },
+  "notes": "Companies (Israeli Companies Law) not reached today. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read.",
+  "sources": []
+ },
+ {
+  "id": "R-8239",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://biot.gov.io/ fetched with curl",
+    "result": "HTTP 200 (British Indian Ocean Territory); its text and links were searched for funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://biot.gov.io/legislation/ fetched with curl",
+    "result": "HTTP 404 (Page not found)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in British Indian Ocean Territory among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix io,gov,biot)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.biot.gov.io/governance/legislation/revised-regulations/; https://www.biot.gov.io/wp-content/uploads/20251216-BIOT-CA-Civ-1-APPROVED-JUDGMENT-FOR-HAND-DOWN.pdf; https://www.biot.gov.io/wp-content/uploads/Judgment-31.3.26-RMandarin-v-Comm-of-BIOT-FINAL.pdf?utm_source=openai; https://www.biot.gov.io/wp-content/uploads/The-Imports-Exports-Control-Ord-2009-F.2.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8241",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://iraqld.hjc.iq/ fetched with curl",
+    "result": "HTTP 403 (Attention Required!)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Iraq among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix iq,hjc,iraqld)/",
+    "result": "1 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8243",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://rc.majlis.ir/fa/law/show/97937",
+    "title": "قانون مدنی (Civil Code), Islamic Parliament Research Center (مرکز پژوهشها), as captured by Common Crawl CC-MAIN-2026-43 on 2026-10-17 (crawl-data/CC-MAIN-2026-43/segments/1791170349490.60/warc/CC-MAIN-20261017081029-20261017111029-00449.warc.gz, offset 386033836)",
+    "said": "ماده 1207 - اشخاص ذیل محجوروازتصرف دراموال وحقوق مالی خودممنوع هستند - 1 - صغار 2 - اشخاص غیررشید 3 - مجانین ... ماده 1210 - هیچکس را نمی توان بعد از رسیدن به سن بلوغ بعنوان جنون یا عدم رشد محجور نمود مگر آنکه عدم رشد یا جنون او ثابت شده باشد . ( اصلاحی 8/10/1361 ) تبصره 1 - سن بلوغ در پسر پانزده سال تمام قمری و در دختر نه سال تمام قمری است . ( الحاقی 8/10/61 ) تبصره 2 - اموال صغیری را که بالغ شده است در صورتی می توان به او دادکه رشد او ثابت شده باشد .",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://rc.majlis.ir/fa/law/show/97937",
+    "title": "قانون مدنی arts 1209, 1212, 1214 (same capture)",
+    "said": "ماده 1209 - هر کس که دارای 18 سال تمام نباشد در حکم غیر رشید است معذالک در صورتی که بعد از 15 سال تمام رشد کسی در محکمه ثابت شود از تحت قیمومت خارج میشود . ( در اصلاحات 8/10/1361 و 14/8/1370 حذف شده است ) ... ماده 1212 - اعمال واقوال صغیرتاحدی که مربوط به اموال وحقوق مالی اوباشدباطل وبلااثراست معذلک صغیرممیزمی تواندتملک بلاعوض کندمثل قبول هبه وصلح بلاعوض وحیازت مباحات . ... ماده 1214 - معاملات وتصرفات غیررشیددراموال خودنافذنیست مگر بااجازه ولی یاقیم اواعم ازاینکه این اجازه قبلاداده شده باشدیابعداز انجام عمل .",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "rc.majlis.ir/fa/law/show/97937 (Civil Code) and /90813 with curl",
+    "result": "refused: connection reset by peer (curl 35)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43, prefix ir,majlis,rc)/fa/law/show/97937: one capture (2026-10-17, HTTP 200), fetched by range request and read",
+    "result": "majority and minorsContracts: Civil Code book 10 (on interdiction) read at arts 1207-1215",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Iran among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ir,majlis,rc)/fa/law/show/98187",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "puberty": {
+     "male": "15 full lunar years",
+     "female": "9 full lunar years"
+    },
+    "propertyHandedOver": "only on proof of maturity (rushd) (art 1210 n. 2)",
+    "art1209_18years": "deleted by the amendments of 1361 and 1370"
+   },
+   "minorsContracts": {
+    "minorsActsOnProperty": "void, except gratuitous acquisition by a discerning minor (art 1212)",
+    "nonRashidTransactions": "effective only with the guardian's permission, before or after (art 1214)",
+    "setAside": null
+   }
+  },
+  "notes": "Labour Law arts 79-84 (minimumWorkAge, childPerformers), Commercial Code, unions and funds still blocked. The capture's page carries the Majlis Research Center's consolidated text with amendment notes. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read.",
+  "sources": []
+ },
+ {
+  "id": "R-8245",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://island.is/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for companies, minorsContracts; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'einkahlutafélag stjórnarmenn framkvæmdastjóri skulu vera lögráða lög 138/1994 66. gr.' (standard)",
+    "result": "leads only: althingi.is lagasafn 1994138 (current and 153a editions, behind the Cloudflare check met in the first wave) and Alþingi papers on amendments; no text of art 66 in any result",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix is,althingi)/lagas/nuna/1994138",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix is,althingi)/lagas/nuna/1997071",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8040",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.slc-cgil.it/ fetched with curl",
+    "result": "HTTP 200 (SLC CGIL - Home); its text and links were searched for companies, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.slc-cgil.it/contratti.html fetched with curl",
+    "result": "HTTP 200 (SLC CGIL - Contratti); its text and links were searched for companies, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Italy's FIA affiliate is SLC (Sindacato Lavoratori Comunicazione, CGIL); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'CCNL attori scritturati produzioni cinematografiche audiovisive 2024 2027 minori di anni 18 testo pdf slc-cgil' (standard)",
+    "result": "leads: ilccnl.it's consolidated text of the CCNL of 20/12/2023 (ANICA, APA, APE with SLC-CGIL, FISTEL CISL, UILCOM UIL; in force 1 March 2024 to 28 February 2027), SLC-CGIL's joint note of 5 January 2024, UILCOM's internal note on the signing; none quoted a clause on minors",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "ilccnl.it/ccnl/cineaudiovisive---attori-e-interpreti/... (an aggregator reproducing the consolidated CCNL; a secondary) and uilfpc.it's copy of UILCOM's NOTA INTERNA (August 2023) read",
+    "result": "ilccnl's page shows the preamble and art 1 only, its full PDF behind a script button (not fetched); the UILCOM note announces the signing (1 August 2023) without terms on minors; no rule for performers under 18 read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "slc-cgil.it home and Contratti page searched for attori, teatro, spettacolo, cinema, audiovisivo, doppiaggio, scritturati",
+    "result": "no link to the actors' CCNL text on the pages read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix it,slc-cgil)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 39 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix it,normattiva)/uri-res/n2ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2382",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-8249",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.jamaicafilm.org/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.orcjamaica.com/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.orcjamaica.com/FAQ/DIRECTOR%20DUTIES.pdf fetched with curl",
+    "result": "HTTP 200; its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Companies Office of Jamaica director must be at least 18 years of age Companies Act section 175' (standard)",
+    "result": "leads: an incorporation guide (expanship.com) saying 18 without a section (a lead), PwC Jamaica guides naming ss 175, 178, 181, 183, WIPO Lex's copy of a Jamaican Act (jm033en.pdf, a secondary), the Companies Office's directors leaflet",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "orcjamaica.com/FAQ/DIRECTOR%20DUTIES.pdf (Companies Office of Jamaica, 'Directors' leaflet, 2009) read",
+    "result": "no age: it covers who a director is, numbers, appointment by the Articles and Form 23, duties and disqualification by the Court",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix jm,gov,moj)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 24 with HTTP 200; captures whose paths could bear on the item (not fetched): https://moj.gov.jm/members; https://moj.gov.jm/sites/default/files/2020-10/Mediation_versus_Restorative_Practice.pdf; https://moj.gov.jm/sites/default/files/2020-10/Ministry%20of%20Justice%20Jamaica%20-%20Restorative%20Justice.pdf; https://moj.gov.jm/sites/default/files/2020-10/Restorative%20Justice%20Policy_Revised_%20Final_Policy_March_18.pdf",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix jm,gov,moj)/laws/compan",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8251",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.lob.gov.jo/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.mol.gov.jo/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for childPerformers, majority, minimumWorkAge, minorsContracts; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "mol.gov.jo (Ministry of Labour of Jordan): the laws list (AR/List/القوانين) read; 'قانون العمل رقم 8 لسنة 1996 وتعديلاته وملحقاته' downloaded (ebv4.0/root_storage/ar/eb_list_page/قانون_العمل_رقم_8_لسنة_1996_وتعديلاته_وملحقاته.pdf, 812 KB) and its text extracted",
+    "result": "not read: the PDF's text layer is broken (a faulty ToUnicode map yields reversed and garbled Arabic, with no searchable word for حدث); the file is saved under files/f2/R-8251/jo-labour.pdf for OCR. lob.gov.jo (Legislation and Opinion Bureau) reset the connection.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix jo,gov,lob)/",
+    "result": "5 capture(s) listed (the first 40 lines of the listing kept), 3 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8042",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+    "title": "労働基準法（昭和二十二年法律第四十九号）, e-Gov 法令検索 API (Digital Agency), chapter 6 年少者 (arts 56-64) read whole",
+    "said": "（未成年者の労働契約） 第五十八条 親権者又は後見人は、未成年者に代つて労働契約を締結してはならない。 親権者若しくは後見人又は行政官庁は、労働契約が未成年者に不利であると認める場合においては、将来に向つてこれを解除することができる。 第五十九条 未成年者は、独立して賃金を請求することができる。 親権者又は後見人は、未成年者の賃金を代つて受け取つてはならない。",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+    "title": "労働基準法 第六十一条第五項",
+    "said": "第一項及び第二項の時刻は、第五十六条第二項の規定によつて使用する児童については、第一項の時刻は、午後八時及び午前五時とし、第二項の時刻は、午後九時及び午前六時とする。",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laws.e-gov.go.jp API v1 lawdata 322AC0000000049 (the Labour Standards Act, current text) chapter 6 (arts 56-64) read whole; the e-Gov browse page answers only an 800-byte script shell; MHLW's 法令等データベース keyword search (t_doc_keyword, '演劇の事業') answered its error page",
+    "result": "setAside: the Act's chapter on minors sets no share aside; it bars a parent or guardian from signing the minor's labour contract or receiving the minor's wages and lets the minor claim wages independently (an absence for set-aside in the Labour Standards Act, read whole for chapter 6). Notice: art 61(5) itself sets 8 p.m./5 a.m. for children employed under art 56(2), and 9 p.m./6 a.m. where the Minister moves the times under art 61(2); the Minister's notice text was not reached.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Japan's FIA affiliate is JAU (Japan Actors Union); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'労働基準法第六十一条第二項 厚生労働大臣が定める 演劇 児童 午後九時 告示 平成十六年 第407号' (standard)",
+    "result": "no text of the notice: ja.wikibooks (a note that the 9 p.m.-6 a.m. option has no instance of use), MHLW's 2004 council minutes (s1116-7: the draft notice extending theatre child actors' hours to 9 p.m.), a Gifu Labour Bureau brochure; the Gifu PDF (jsite.mhlw.go.jp/gifu-roudoukyoku/content/contents/002670275.pdf) fetched, but its fonts carry no text layer (pdftotext found no characters)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix com,nippairen)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minorsContracts": {
+    "parentsMaySignForMinor": false,
+    "minorClaimsWagesAlone": true,
+    "parentsMayReceiveWages": false,
+    "terminableIfUnfavourable": "by parent, guardian or labour authority, for the future",
+    "setAside": null,
+    "setAsideAbsence": "Labour Standards Act ch. 6 read whole: none"
+   },
+   "childPerformers": {
+    "nightLimitAct": "20:00-05:00 for children under art 56(2); 21:00-06:00 where the Minister moves the times (art 61(5))",
+    "noticeText": null
+   }
+  },
+  "notes": "The Civil Code (民法) was not read for a set-aside; the absence is the Labour Standards Act's. Notice (平成16年厚生労働省告示) text and Japan Actors Union rule still blocked.",
+  "sources": []
+ },
+ {
+  "id": "R-8253",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://kino.kg/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.kino.gov.kg/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Kyrgyzstan's FIA affiliate is CWUK (Cultural Workers Union of Kyrgyzstan); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Трудовой кодекс Кыргызской Республики 2025 статья минимальный возраст приема на работу 16 лет 14 лет творческие работники несовершеннолетние' (standard)",
+    "result": "leads only: WageIndicator (a summary citing § 54 of the 2025 Labour Code: 16 general, 14-15 light work with a parent's consent, holiday and term-time hour caps), US DOL ILAB reports, economist.kg (2026-06-13) reporting the Ministry of Labour's reminder on teenagers' hours; nothing on creative workers; no primary text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "economist.kg/society/2026/06/13/podrostki-rabota-kyrgyzstan/ (the article reporting the Ministry's statement)",
+    "result": "refused: a 'Client Challenge' bot page (HTTP 200, 3 KB); not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix kg,gov,minjust,cbd)/act/view/ru-ru/111",
+    "result": "7 capture(s) listed (the first 40 lines of the listing kept), 7 with HTTP 200; captures whose paths could bear on the item (not fetched): https://cbd.minjust.gov.kg/act/view/ru-ru/111258; https://cbd.minjust.gov.kg/act/view/ru-ru/111486/40?cl=ky-kg&mode=tekst; https://cbd.minjust.gov.kg/act/view/ru-ru/111520; https://cbd.minjust.gov.kg/act/view/ru-ru/111565?cl=ru-ru",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-8255",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.mcfa.gov.kh/ fetched with curl",
+    "result": "HTTP 200 (Ministry of Culture and Fine Arts &#8211; The Kingdom of Cambodia); its text and links were searched for childPerformers, companies, funds, majority, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.moc.gov.kh/ fetched with curl",
+    "result": "HTTP 403 (Site Under Maintenance)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Cambodia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "moj.gov.kh (Ministry of Justice of Cambodia) home",
+    "result": "HTTP 200 (Khmer home page); its links searched for the Civil Code and the Law on Commercial Enterprises; no law text linked from the home page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mcfa.gov.kh/film-sector/ (Ministry of Culture and Fine Arts, Film Sector page) read",
+    "result": "no film fund or grant: the page describes the department's services (production information, consultation, support for international co-operation); no applicant rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix kh,gov,mcfa)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8257",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.president.gov.ki/ fetched with curl",
+    "result": "HTTP 200 (President Taneti Maamau - Home); its text and links were searched for companies, funds, majority, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Kiribati among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ki,gov",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 32 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8259",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.beit-salam.km/ fetched with curl",
+    "result": "HTTP 200 (Beit-Salam); its text and links were searched for childPerformers, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.gouvernement.km/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Comoros among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix km,gouv",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 39 with HTTP 200; captures whose paths could bear on the item (not fetched): https://finances.gouv.km/actualite_post/adoption-de-cinq-articles-du-projet-de-loi-de-reglement-2023-par-la-commission-de-finances/; https://finances.gouv.km/actualite_post/atelier-de-travail-darbitrage-et-de-validation-du-projet-de-loi-de-finances-2026/; https://finances.gouv.km/actualite_post/expose-de-motif-du-projet-de-loi-de-finances-rectificatif-2025/; https://finances.gouv.km/actualite_post/expose-de-motif-du-projet-de-loi-de-reglement-2023/",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8261",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://lawcommission.gov.kn/ fetched with curl",
+    "result": "HTTP 200 (St. Kitts and Nevis Law Commission &#8211; Chambers of the Attorney General); its text and links were searched for funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://lawcommission.gov.kn/revised-acts-of-st-kitts-and-nevis/revised-acts-of-st-kitts-and-nevis/ fetched with curl",
+    "result": "HTTP 200 (Revised Acts of St. Kitts and Nevis &#8211; St. Kitts and Nevis Law Commission); its text and links were searched for funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saint Kitts and Nevis among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lawcommission.gov.kn (St Kitts and Nevis Law Commission, Attorney General's Chambers): Revised Acts index; the 2020, 2017 and 2009 Revised Acts folders listed (66, 110 and 110 file names) and searched for infant, minor, child, employ, labour, film, majority, guardian; the Guardianship, Custody and Access to Children Act (Ch 12.05) and the Protection of Employment Act (Ch 18.27) read by text for contract, earnings, minor, under the age",
+    "result": "minorsContracts: neither Act makes a minor's engagement binding by a court's or officer's approval or sets earnings aside (the Guardianship Act's only age is 'a person under the age of 18 years' as a child); no Infants, Minors' Contracts or Employment of Children Act among the file names seen (the folders' further pages were not reached: the eePage parameter returned the first page again)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix kn,gov,lawcommission)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; captures whose paths could bear on the item (not fetched): https://lawcommission.gov.kn/annual-laws/annual-laws-of-st-kitts-and-nevis/; https://lawcommission.gov.kn/annual-laws/annual-laws-of-st-kitts-and-nevis/?eeFolder=Annual-Laws/2018&eeFront=1&eeListID=1&ee=1; https://lawcommission.gov.kn/annual-laws/annual-laws-of-st-kitts-and-nevis/?eeFolder=Annual-Laws/2019&eeFront=1&eeListID=1&ee=1; https://lawcommission.gov.kn/annual-laws/annual-laws-of-st-kitts-and-nevis/?eeFolder=Annual-Laws/2020&eeFront=1&eeListID=1&ee=1",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8263",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "http://naenara.com.kp/ fetched with curl",
+    "result": "refused or unreachable: curl 6, Could not resolve host: naenara.com.kp",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in North Korea among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix kp,com,naenara)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 19 with HTTP 200; captures whose paths could bear on the item (not fetched): http://www.naenara.com.kp/Exhibition/children/en",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8265",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.moj.gov.kw/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for majority; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.moj.gov.kw/AR/Pages/MojLaws.aspx fetched with curl",
+    "result": "HTTP 200; its text and links were searched for majority; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix kw,gov,moj)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 33 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.moj.gov.kw/AR/Apps/DailyBulletin/%D9%86%D8%B4%D8%B1%D8%A9%20%D8%B5%D8%AD%D8%A7%D9%81%D8%A9%202021/JAN/PressRelease%20%204-1-2021.pdf; https://www.moj.gov.kw/AR/Apps/DailyBulletin/2019/dec/10-12-2019.pdf; https://www.moj.gov.kw/AR/Apps/DailyBulletin/2019/dec/3-12-2019.pdf; https://www.moj.gov.kw/AR/Apps/DailyBulletin/2019/feb/%D9%86%D8%B4%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AB%D9%86%D9%8A%D9%86%204-2-2019.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8267",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://legislation.gov.ky/cms/images/LEGISLATION/PRINCIPAL/1961/1961-0003/1961-0003_2026%20Revision.pdf",
+    "title": "Companies Act (2026 Revision), Supplement No. 7 published with Legislation Gazette No. 4 dated 29th January, 2026 (204 pages)",
+    "said": "Read whole by text (pdftotext, 204 pages): the words age, aged, minor, infant, eighteen and full age appear nowhere; no minimum age for a director, member or subscriber. The 2025 Revision (196 pages) read the same way is likewise silent.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://legislation.gov.ky/cms/images/LEGISLATION/PRINCIPAL/1977/1977-0027/1977-0027_1999%20Revision.pdf",
+    "title": "Age of Majority Law (1999 Revision)",
+    "said": "2. (1) As from 19th December, 1977, a person shall attain full age on attaining the age of eighteen instead of on attaining the age of twenty-one.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "legislation.gov.ky (the Cayman Islands Government's legislation site): by-title list; Companies Act 2026 Revision and 2025 Revision PDFs (guessed from the 1961-0003 principal path) read whole by text; Age of Majority Law (1999 Revision) read whole",
+    "result": "companies: the Companies Act sets no age (absence, read whole); minorsContracts: the Age of Majority Law sets full age at 18 and says nothing of a minor's contracts or earnings (the common law rule is unwritten in Cayman statute)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "caymanfilm.ky (Cayman Islands Film Commission) home",
+    "result": "refused: proxy CONNECT 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Cayman Islands among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ky,caymanfilm)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinimumAge": null,
+    "absence": "Companies Act (2026 Revision) read whole: no age rule"
+   },
+   "majority": 18
+  },
+  "notes": "minorsContracts, unions and funds remain blocked. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ },
+ {
+  "id": "R-8270",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/ilovepdf_merged%20(4).pdf",
+    "title": "Civil Code of the Lao PDR (English translation with the Minister of Justice's remarks), Lao Official Gazette (laoofficialgazette.gov.la, Ministry of Justice), listed under ປະມວນກົດໝາຍ ແພ່ງ, dated 06-12-2018, posted 11-05-2020",
+    "said": "Article 69 Sui Juris and Alieni juris A sui juris person refers to a person who is eighteen years of age and above. A sui juris person has full capacity to act unless a person who is restricted or loses the capacity to act. An Alieni juris refers to a minor who is below eighteen years of age and has an incompetent capacity to act.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/ilovepdf_merged%20(4).pdf",
+    "title": "Civil Code of the Lao PDR, arts 72-74",
+    "said": "Article 72 Involvement of Minors in the Civil Relationship A minor involving in the civil relationship shall obtain consent from father, mother or guardians, except daily activities that are suitable with ages of a minor. Juristic act of minors which has no consent from father, mother or guardians shall be voidable. Article 73 A Minor Doing Businesses A minor has the capacity to do businesses including commerce, services, productions based on the consent of father, mother or guardians and consistency with Laws. A minor has the capacity to act in doing business as similar to sui juris. Article 74 Labouring of a minor A minor has the capacity to labour following the consent of father, mother or parents based on basics of Law on Labour and other related Laws.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "laoofficialgazette.gov.la (Lao Official Gazette): home; the Civil Code list (legaltype=1) and laws list (legaltype=6); the Civil Code PDF (167 pages, English) downloaded and searched for eighteen, majority, capacity, minor; the Ministry of Labour and Social Welfare's list located (agencies_id=16), not read",
+    "result": "majority 18 (art 69); a minor's juristic acts need a parent's or guardian's consent and are voidable without it (art 72); a minor doing business with that consent acts as an adult (art 73: reaches companies); a minor may work with parental consent under the Labour Law (art 74); no set-aside found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Laos among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix la,gov,laoofficialgazette)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": 18,
+   "minorsContracts": {
+    "consent": "father, mother or guardian, except everyday acts suited to the minor's age",
+    "withoutConsent": "voidable",
+    "setAside": null
+   },
+   "companies": {
+    "minorMayDoBusiness": "with parental or guardian consent, with an adult's capacity (art 73)"
+   },
+   "minimumWorkAge": {
+    "civilCode": "minor may labour with parental consent under the Labour Law (art 74)",
+    "labourLawAge": null
+   }
+  },
+  "notes": "The gazette's Civil Code is the English translation posted by the Ministry of Justice; the Lao text is the authoritative one (not read). Labour Law minimum age, child performers, unions and funds remain blocked. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today.",
+  "sources": []
+ },
+ {
+  "id": "R-8271",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.lp.gov.lb/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for childPerformers, companies, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Lebanon among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix lb,gov,lp)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 14 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8273",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.govt.lc/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.govt.lc/ministries/tourism fetched with curl",
+    "result": "HTTP 500 (Object reference not set to an instance of an object.)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saint Lucia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix lc,govt)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 37 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.govt.lc/forms/company-name-search-and-reservation-form",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8277",
+  "attempts": [
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Sri Lanka among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix lk,gov,lawnet)/",
+    "result": "20 capture(s) listed (the first 40 lines of the listing kept), 4 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8279",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://mol.gov.lr/ fetched with curl",
+    "result": "refused or unreachable: curl 60, SSL: no alternative certificate subject name matches target host name 'mol.gov.lr'",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://lbr.gov.lr/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.moj.gov.lr/ fetched with curl",
+    "result": "HTTP 200 (Home); its text and links were searched for childPerformers, companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.moj.gov.lr/publications/document-type/acts fetched with curl",
+    "result": "HTTP 200 (Acts); its text and links were searched for childPerformers, companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Liberia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix lr,gov,mol)/",
+    "result": "1 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8281",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.parliament.ls/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.gov.ls/ fetched with curl",
+    "result": "HTTP 200 (Home - Government of Lesotho); its text and links were searched for funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Lesotho among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ls,parliament)/",
+    "result": "3 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8283",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.e-tar.lt/portal/lt/legalAct/f6d686707e7011e6b969d7ae07280e89/asr fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.lkc.lt/ fetched with curl",
+    "result": "HTTP 200 (Lietuvos kino centras); its text and links were searched for minimumWorkAge; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/f6d686707e7011e6b969d7ae07280e89/asr fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.vdi.lt/ fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/f6d686707e7011e6b969d7ae07280e89?jfwid= fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Darbo kodeksas 23 straipsnis vaikų darbas nuo 7 iki 13 metų kūrybinė veikla leidimas socmin.lrv.lt' (standard)",
+    "result": "no finding: e-seimas index entries, vle.lt encyclopedia entries on children's and minors' work (a general statement that younger children may do creative work such as filming, theatre and concerts, with no article cited), lrv.lt PDFs; nothing from socmin.lrv.lt; the Labour Code's own text not reached (e-seimas.lrs.lt, e-tar.lt and vdi.lt all answer a Cloudflare check)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix lt,lrs,e-seimas)/portal/legalact/lt/tad/f6d686707e7011e6b969d7ae07280e89",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8289",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://culture.gov.ly/ fetched with curl",
+    "result": "HTTP 200 (الرئيسية - وزارة الثقافة والتنمية المعرفية); its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Libya among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ly,gov,culture)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8291",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.ccm.ma/docs/arrete-soutien-a-la-production.pdf",
+    "title": "Arrêté conjoint n° 2490.12 du 19 septembre 2012 fixant les conditions, les critères et les modalités d'octroi de l'aide à la production des œuvres cinématographiques, as amended by arrêté n° 319.15 du 22 juin 2015, version consolidée en date du 17 février 2017 (Centre Cinématographique Marocain)",
+    "said": "Article 3. Conditions générales Les dossiers de demande d’aide déposés par les sociétés de production, à l’exception des demandes spécifiques d’aide à l’écriture des scénarios, doivent remplir les conditions suivantes. - Le réalisateur doit être de nationalité marocaine, détenteur d’une carte professionnelle de réalisateur, pour les projets de films de longs métrages de fiction ainsi que pour les projets de films documentaires de long ou de court métrage.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.ccm.ma/docs/cahierfd2021.pdf",
+    "title": "Cahier des charges du fonds d'aide à la production cinématographique nationale (CCM, 2021)",
+    "said": "Article 1 : Formes d'aides L’aide est accordée aux sociétés de production marocaines autorisées par le Centre Cinématographique Marocain sous forme d'avance sur recettes pour :",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "ccm.ma: home, Avance sur recette, Soutien à la production nationale, Textes juridiques et réglementaires; the arrêté on production aid (867 lines) and the 2021 cahier des charges (1843 lines) read by text for âge, majeur, mineur, personne physique, société de production, nationalité",
+    "result": "funds: the applicant is a Moroccan production company holding the CCM's authorisation; the director must be a Moroccan national with a professional card; no age appears in either text (the capacity rule is the company form and the professional card)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "sgg.gov.ma (Secrétariat Général du Gouvernement): Arabic home, نصوص موطدة and نصوص مهمة pages fetched for the Moudawana and the Commercial Code",
+    "result": "no consolidated Family Code or Commercial Code link on the pages read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA member list (fia-actors.com/fia_member-sitemap.xml)",
+    "result": "Morocco's FIA affiliate is the SMPT (Syndicat Marocain des Professionnels du Théâtre); its FIA page carries no terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ma,gov,sgg)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 7 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "applicant": "Moroccan production company authorised by the CCM",
+    "director": "Moroccan national holding a professional card",
+    "ageRule": null
+   }
+  },
+  "notes": "Majority (Moudawana art 209), companies and the SMPT's own rule remain blocked. The arrêté's consolidated version is dated 17 February 2017; no later version was linked on ccm.ma. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ },
+ {
+  "id": "R-8295",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.legis.md/ fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Moldova's FIA affiliate is FSLC (Federația Sindicatelor Lucrătorilor din Cultură); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix md,legis)/cautare/getresults?document_id=1",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8297",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.sluzbenilist.me/ fetched with curl",
+    "result": "HTTP 200 (Službeni list Crne Gore); its text and links were searched for companies, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://regis.sluzbenilist.me fetched with curl",
+    "result": "HTTP 200 (Regis); its text and links were searched for companies, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Montenegro among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Zakon o privrednim društvima Crne Gore 65/2020 izvršni direktor poslovno sposobno lice osnivač maloljetno lice pdf gov.me' (standard)",
+    "result": "leads: the 2020 Act's text at biznis-api.gov.me, the Skupština's legislative site, sluzbenilist.me downloads, paragraf.me and NATLEX; a report of a new Act (Sl. list 90/2025) whose date of application the sources give differently (August 2025 or 1 January 2026); no result quoted the provisions on founders or directors",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "biznis-api.gov.me/media/files/1648105687-zakon-o-privrednim-drustvima.pdf (twice) and zakoni.skupstina.me/.../3838-22315-06-1-25-2-6.pdf; sluzbenilist.me/propisi/395379, 387623 and 386667 downloads read",
+    "result": "not reached: the gov.me file reset the connection both times and the Skupština file answered 404; the three Službeni list downloads were other acts (the Law on managing state-owned companies, and two Government decisions citing the Law on Business Organisations as 'Službeni list CG, br. 65/20, 146/21 i 34/24')",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix me,sluzbenilist)/",
+    "result": "38 capture(s) listed (the first 40 lines of the listing kept), 5 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": ""
+ },
+ {
+  "id": "R-8299",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.saint-barth-saint-martin.gouv.fr/ fetched with curl",
+    "result": "HTTP 200 (Accueil -); its text and links were searched for childPerformers, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.saint-barth-saint-martin.gouv.fr/Rechercher?keywords=enfants+spectacle fetched with curl",
+    "result": "HTTP 404 (kernel (20) -)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saint Martin among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix fr,gouv,saint-barth-saint-martin)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8301",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.justice.gov.mg/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.cnlegis.gov.mg/ fetched with curl",
+    "result": "HTTP 200 (loi); its text and links were searched for companies, funds, majority, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Madagascar among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mg,gov,justice)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8302",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://rmiparliament.org/cms/images/LEGISLATION/PRINCIPAL/2015/2015-0050/2015-0050_1.pdf",
+    "title": "Child Rights Protection Act 2015 (26 MIRC Ch. 10), Nitijela of the Republic of the Marshall Islands",
+    "said": "“Exploitation” shall mean: ... Economic exploitation, including the worst forms of child labor, child begging, children’s work and child domestic work not in accordance with the regulations of this Act",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "rmiparliament.org Acts of Nitijela by title (limit=0, every title): titles with child, labor, employ, youth, minor or entertain listed; the Child Rights Protection Act 2015 read by text for labor, employ, work, perform, entertain, film",
+    "result": "lead: children's work is lawful only 'in accordance with the regulations of this Act'; the Act itself sets no child-performer permit or hours, and no regulations under it are in the Nitijela's list (subordinate legislation list not read whole). No Labor or Employment Act of general application with a working age is in the title list.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix org,rmiparliament)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 39 with HTTP 200; captures whose paths could bear on the item (not fetched): https://rmiparliament.org/cms/contacts/90-legislation-support.html; https://rmiparliament.org/cms/contacts/92-legislation-staff.html; https://rmiparliament.org/cms/images/LEGISLATION/AMENDING/2026/2026-0080A/2026-0080A.pdf; https://rmiparliament.org/cms/images/LEGISLATION/BILLS/2016/2016-0006/2016-0006.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "statute": "Child Rights Protection Act 2015 makes children's work not in accordance with its regulations exploitation",
+    "regulations": null
+   }
+  },
+  "notes": "The regulations under the CRPA 2015 would hold the rule; not found. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; institution: only the legal register was reachable or relevant today.",
+  "sources": []
+ },
+ {
+  "id": "R-8304",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://zdum.mk/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.slvesnik.com.mk/ fetched with curl",
+    "result": "refused or unreachable: curl 60, SSL certificate problem: unable to get local issuer certificate",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in North Macedonia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mk,zdum)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8306",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.cncm.ml/ fetched with curl",
+    "result": "HTTP 200 (Accueil); its text and links were searched for companies, funds, majority, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.cncm.ml/appels-projets-financements/ fetched with curl",
+    "result": "HTTP 200 (Appels à Projets et Financements); its text and links were searched for companies, funds, majority, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Mali among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ml,cncm)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8307",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.myco.dica.gov.mm/documentation/mm/MCL.en-US.pdf",
+    "title": "The Myanmar Companies Law 2017, English text posted by DICA (Directorate of Investment and Company Administration) on MyCO, s 175",
+    "said": "175. Qualification of director ... (b) Only a natural person who is at least 18 may be appointed as a director. (c) A director must be of sound mind.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "dica.gov.mm/en (connection reset); myco.dica.gov.mm home read, its 'The Myanmar Companies Law 2017' PDF downloaded (first try reset, second 200) and read by text for eighteen, 18, minor, qualification",
+    "result": "companies: a director must be a natural person of at least 18 (s 175(b))",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Myanmar among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mm,gov,dica)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinAge": 18,
+    "naturalPersonOnly": true
+   }
+  },
+  "notes": "The PDF's table of contents is headed 'DRAFT MYANMAR COMPANIES LAW' although DICA links it as 'The Myanmar Companies Law 2017'; the lead should weigh it against the enacted Burmese text (Pyidaungsu Hluttaw Law No. 29/2017), not read. Working age, child performers, contracts, funds and unions not reached today. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read.",
+  "sources": []
+ },
+ {
+  "id": "R-8309",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://legalinfo.mn/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.parliament.mn/ fetched with curl",
+    "result": "HTTP 200 (Монгол Улсын Их Хурал); its text and links were searched for childPerformers, companies, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Mongolia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mn,legalinfo)/mn/detail",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8311",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://bo.io.gov.mo/bo/i/99/31/codcomcn/default.asp fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.fdc.gov.mo/ fetched with curl",
+    "result": "HTTP 200 (文化體育局 — 澳門特別行政區政府入口網站); its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Macao among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'文化發展基金 長片製作支持計劃 申請資格 年滿18歲 澳門居民 申請人' (standard)",
+    "result": "leads: the Instituto Cultural's feature-film support plan forms of 2016 and 2020 on edocs.icm.gov.mo; the rest Hong Kong's Film Development Fund (another territory)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "edocs.icm.gov.mo/DPICC/SPS/2020/featurefilms/: 2AppFormC.pdf (application form) and 1RulesC.pdf (rules) downloaded; guessed 1RegulationC, 1RegC, 1GuidelinesC, 1RegulamentoP answered 404; the rules read by text",
+    "result": "funds: the applicant applies as an individual, must hold a Macao permanent resident ID and be at least 18, and must be the film's director or producer; the director must be a permanent resident and at least half the key crew residents",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mo,gov,io,bo)/bo/i/99/31/codcomcn",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://edocs.icm.gov.mo/DPICC/SPS/2020/featurefilms/1RulesC.pdf",
+    "title": "第四屆電影長片製作支援計劃 申請規定 (4th Feature Film Production Support Plan, application rules), 澳門特別行政區政府文化局 (Instituto Cultural), 2020",
+    "said": "3. 申請條件 本支援計劃的申請者必須同時符合以下各項規定： 3.1 申請者應以個人形式申請，且須持有有效的澳門特別行政區永久性居民身份證及年滿 18 歲； 3.2 申請者須為擬製作本支援計劃的申請個案影片（下稱“影片＂）之導演或監製；",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://edocs.icm.gov.mo/DPICC/SPS/2020/featurefilms/1RulesC.pdf",
+    "title": "same, 5.1-5.2",
+    "said": "5.1 影片之導演必須持有有效的澳門特別行政區永久性居民身份證； 5.2 影片製作團隊之主要成員中，本澳居民比例不得少於二分之一",
+    "read": "2026-11-04"
+   }
+  ],
+  "value": {
+   "funds": {
+    "scheme": "Instituto Cultural, Feature Film Production Support Plan (4th edition, 2020)",
+    "applicantMinAge": 18,
+    "applicant": "individual holding a Macao permanent resident ID, the film's director or producer",
+    "director": "Macao permanent resident"
+   }
+  },
+  "notes": "The rules are the 4th edition's (2020); a later edition was not found today. The Cultural Development Fund's (FDC) own film schemes and the Código Comercial remain unread (bo.io.gov.mo answered 502). Methods not tried today, and why: official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8313",
+  "verdict": "found-now",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://cnmilaw.gov/docs/cmc_section/T4/4442.pdf",
+    "title": "4 CMC § 4442, Qualifications of Directors (CNMI Law Revision Commission)",
+    "said": "The articles of incorporation or bylaws may prescribe qualifications for directors. A director need not be a resident of the Commonwealth or a shareholder of the corporation unless the articles of incorporation or bylaws so prescribe.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://cnmilaw.gov/docs/cmc_section/T4/4301.pdf",
+    "title": "4 CMC § 4301, Incorporators",
+    "said": "One or more persons may act as the incorporator or incorporators of a corporation by delivering articles of incorporation to the Registrar of Corporations for filing.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://cnmilaw.gov/docs/cmc_section/T8/1106.pdf",
+    "title": "8 CMC § 1106, Age of Majority",
+    "said": "All persons, whether male or female, residing in the Commonwealth, who have attained the age of 18 years shall be regarded as of legal age and their period of minority to have ceased.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://cnmilaw.gov/docs/cmc_section/T4/9122.pdf",
+    "title": "4 CMC § 9122, Minimum Age for Employment",
+    "said": "(a) Children under the age of 16 years may not be employed on Commonwealth vessels engaged in foreign trade, except on vessels on which only members of the same family are employed, school ships, or training ships.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title29/html/USCODE-2023-title29-chap8-sec213.htm",
+    "title": "29 U.S.C. 213(c)(3) (Fair Labor Standards Act), U.S. Code 2023 edition, govinfo (U.S. Government Publishing Office)",
+    "said": "(3) The provisions of section 212 of this title relating to child labor shall not apply to any child employed as an actor or performer in motion pictures or theatrical productions, or in radio or television productions.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title29/html/USCODE-2023-title29-chap8-sec203.htm",
+    "title": "29 U.S.C. 203(c)",
+    "said": "(c) \"State\" means any State of the United States or the District of Columbia or any Territory or possession of the United States.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "cnmilaw.gov (the CNMI Law Revision Commission's Commonwealth Code): site search for 'age of majority', 'incorporators', 'qualifications of directors', 'minimum age employment', 'employment of minors', 'child labor', 'child employment', 'minors work', 'under the age of sixteen', 'entertainment minor'; section PDFs 8 CMC 1106, 4 CMC 4301, 4401, 4442, 9122, 9223 read",
+    "result": "companies: no statutory age for an incorporator ('one or more persons') or director (qualifications left to the articles or bylaws); childPerformers: the Code's only minimum employment age is 16 on vessels in foreign trade; no CNMI child-performer statute surfaced in any search",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "govinfo.gov U.S. Code 2023 edition, 29 U.S.C. 203 and 213 (uscode.house.gov's prelim view answered 404 to both URL forms tried)",
+    "result": "childPerformers: the FLSA's child-labour provisions, which reach every Territory or possession, do not apply to a child employed as an actor or performer in film, theatre, radio or television",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix gov,cnmilaw)/",
+    "result": "7 capture(s) listed (the first 40 lines of the listing kept), 2 with HTTP 200; captures whose paths could bear on the item (not fetched): https://cnmilaw.gov/docs/supreme/2024-MP-08.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "localStatute": null,
+    "federal": "FLSA child-labour rules exempt child actors and performers (29 U.S.C. 213(c)(3)); the FLSA reaches the Territories (203(c))",
+    "vesselsMinAge": 16
+   },
+   "companies": {
+    "incorporatorAge": null,
+    "directorAge": null,
+    "rule": "qualifications only as the articles or bylaws prescribe (4 CMC 4442)"
+   },
+   "majority": 18
+  },
+  "notes": "The childPerformers absence rests on code searches, not a read of all of Title 4 Division 9; the minorsContracts part of the sought text was not reached. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; institution: only the legal register was reachable or relevant today.",
+  "sources": []
+ },
+ {
+  "id": "R-8316",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.msgg.gov.mr/ fetched with curl",
+    "result": "HTTP 200 (Ministère chargé du Secrétariat Général du Gouvernement); its text and links were searched for childPerformers, companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://msgg.gov.mr/fr/journal-officiel.html fetched with curl",
+    "result": "HTTP 404 (Page non trouvée - sgg-mauritanie : Secrétariat Général de la Mauritanie)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Mauritania among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mr,gov,msgg)/",
+    "result": "2 capture(s) listed (the first 40 lines of the listing kept), 2 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8318",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.gov.ms/ fetched with curl",
+    "result": "HTTP 200 (Government of Montserrat); its text and links were searched for childPerformers, funds, majority, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.gov.ms/government/legislative-branch/ fetched with curl",
+    "result": "HTTP 200 (Legislative Branch - Government of Montserrat); its text and links were searched for childPerformers, funds, majority, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://agc.gov.ms/ fetched with curl",
+    "result": "HTTP 404 (<TITLE>Not Found)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Montserrat among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ms,gov)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 40 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.gov.ms/2018/09/06/communications-ministry-working-to-update-montserrats-ict-laws/",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8324",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://agoffice.gov.mv/ fetched with curl",
+    "result": "HTTP 200 (Attorney General&#039;s Office -); its text and links were searched for majority; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://agoffice.gov.mv/en/ fetched with curl",
+    "result": "HTTP 200 (Attorney General&#039;s Office -); its text and links were searched for majority; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mv,gov,agoffice)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 36 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8326",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.registrargeneral.gov.mw/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.parliament.gov.mw/ fetched with curl",
+    "result": "refused: 403 with a Cloudflare \"Just a moment\" check; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Malawi among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mw,gov,registrargeneral)/",
+    "result": "7 capture(s) listed (the first 40 lines of the listing kept), 6 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8329",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.inac.gov.mz/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.imprensanacional.gov.mz/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Mozambique among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix mz,gov,inac)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8331",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.bipa.na/ fetched with curl",
+    "result": "HTTP 200 (BIPA &#8211; The Home of Business and IP Registrations, Administration and Regul); its text and links were searched for companies, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.bipa.na/business-registration/companies/private/ fetched with curl",
+    "result": "HTTP 200 (Private Companies &#8211; BIPA); its text and links were searched for companies, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://laws.parliament.na/ fetched with curl",
+    "result": "HTTP 200 (Public); its text and links were searched for companies, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Namibia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix na,bipa)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 32 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.bipa.na/business-registration/companies/public/; https://www.bipa.na/business-registration/companies/section-21ngo/; https://www.bipa.na/company-documents/?cp=6&doing_wp_cron=1765430752.7618579864501953125000; https://www.bipa.na/company-documents/?doing_wp_cron=1791209889.1496319770812988281250",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8335",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.sgg.gouv.ne/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.presidence.ne/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for childPerformers, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Niger among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ne,gouv,sgg)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8048",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://actorsguildofnigeria.org/ fetched with curl",
+    "result": "HTTP 200 after a redirect to rotikitchen.com, a lottery-results page: the domain actorsguildofnigeria.org no longer belongs to the guild (or was taken over)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://agn.ng/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://nass.gov.ng/ fetched with curl",
+    "result": "HTTP 200 (National Assembly of Nigeria); its text and links were searched for childPerformers, majority, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Nigeria's FIA affiliate is AGN (Actors Guild of Nigeria); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix org,actorsguildofnigeria)/",
+    "result": "3 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8339",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "http://legislacion.asamblea.gob.ni/normaweb.nsf/ fetched with curl",
+    "result": "HTTP 403 (403 Forbidden)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ni,gob,asamblea,legislacion)/",
+    "result": "19 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8050",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://zoek.officielebekendmakingen.nl/kst-29752-18.pdf",
+    "title": "Kamerstukken II 2024-2025, 29 752, nr. 18, Brief van de Staatssecretaris van Justitie en Veiligheid, 15 april 2025 (officielebekendmakingen.nl)",
+    "said": "De minderjarigheid staat niet in de weg aan het oprichten door de ouders van een bv in naam van het kind of aan het oprichten van een eigen bv die vervolgens wordt overgedragen aan het kind. De rechten die aan de aandelen verbonden zijn, worden door de ouders als wettelijk vertegenwoordigers van hun minderjarig kind uitgeoefend. In het ondernemingsrecht is geen van het personen- en familierecht of algemene vermogensrecht afwijkende leeftijdsgrens opgenomen voor het oprichten van een rechtspersoon of het houden van aandelen en het uitoefenen van de daaraan verbonden rechten.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://ondernemersplein.overheid.nl/wetten-en-regels/regels-voor-minderjarige-ondernemers/",
+    "title": "Regels voor minderjarige ondernemers, Ondernemersplein (KVK and the Dutch government)",
+    "said": "Bent u minderjarig en wilt u beslissingen nemen zonder toestemming van uw ouders of verzorgers? Dan moet u een handlichting aanvragen bij de kantonrechter. Hiervoor moet u 16 of 17 jaar zijn. De handlichting vervalt automatisch als u 18 wordt. U bent dan meerderjarig. Jongeren onder de 16 hebben altijd toestemming nodig van ouders of verzorgers en kunnen geen handlichting aanvragen. Er geldt geen minimumleeftijd voor het starten van een bedrijf.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'kvk.nl minderjarig bedrijf starten handlichting toestemming kantonrechter BV bestuurder' (standard)",
+    "result": "leads: kst-29752-18 (Kamerbrief on baby-bv's), Ondernemersplein's rules for minor entrepreneurs, KVK's handlichting page; no source on a minor as BV bestuurder",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "kvk.nl guessed pages (kan-ik-als-minderjarige..., kun-je-als-minderjarige...) answered 404; kvk.nl/starten/handlichting-geen-18-toch-ondernemen/ and ondernemersplein.overheid.nl/wetten-en-regels/regels-voor-minderjarige-ondernemers/ read",
+    "result": "no minimum age to start a business; under 16 always with the parents' consent; at 16 or 17 a handlichting from the kantonrechter, lapsing at 18",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "zoek.officielebekendmakingen.nl/kst-29752-18.pdf (the State Secretary of Justice's letter to the Tweede Kamer, 15 April 2025) read",
+    "result": "companies: company law sets no age limit of its own for founding a legal person or holding shares; parents exercise a minor's shareholder rights; the minister declined to introduce an age limit",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in The Netherlands among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix nl,overheid,wetten)/bwbr0003045",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix nl,overheid,wetten)/bwbr0003045",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "foundingOrShareholdingAgeLimit": null,
+    "minorShareholderRights": "exercised by the parents as legal representatives",
+    "ownBusiness": {
+     "under16": "parents' consent always",
+     "16to17": "handlichting by the kantonrechter (lapses at 18)"
+    },
+    "bestuurderAge": null
+   }
+  },
+  "notes": "Whether a minor may be a BV's bestuurder remains unstated in the sources read; guild rules and set-aside still blocked.",
+  "sources": []
+ },
+ {
+  "id": "R-8052",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-organisering-ledelse-og-medvirkning/",
+    "title": "Forskrift om organisering, ledelse og medvirkning (fastsatt av Arbeidsdepartementet 6. desember 2011), kap. 12, Arbeidstilsynet's consolidated copy with its commentary",
+    "said": "§ 12-3. Adgang til å sette barn til kulturelt eller lignende arbeid Barn som er under 15 år eller er skolepliktig etter lov 17. juli 1998 nr. 61 om grunnskolen og den videregående opplæringa kan utføre kulturelt, kunstnerisk, sportslig eller reklamemessig arbeid så fremt arbeidet ikke påvirker deres sikkerhet, helse eller utvikling på en uheldig måte og ikke går ut over deres skolegang, ... Før barn settes til arbeid som nevnt i første ledd skal arbeidsgiver innhente forhåndssamtykke fra Arbeidstilsynet. Samtykket etter § 12-4 skal vedlegges søknaden til Arbeidstilsynet. Når det er verne- og helsemessig forsvarlig, kan Arbeidstilsynet etter søknad gi forhåndssamtykke til at barn kan nyttes til kulturelt, kunstnerisk eller sportslig arbeid utover to timer i døgnet og tolv timer i uken.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.arbeidstilsynet.no/regelverk/forskrifter/forskrift-om-organisering-ledelse-og-medvirkning/",
+    "title": "same, §§ 12-4 and 12-8",
+    "said": "§ 12-4. Samtykke fra foreldre eller foresatte Før barn som er under 15 år eller er skolepliktig settes til arbeid, skal arbeidsgiver sørge for at det innhentes skriftlig samtykke fra foreldre eller andre foresatte. ... § 12-8. Adgang til å sette barn til kulturelt, kunstnerisk eller sportslig arbeid Barn som er under 15 år eller er skolepliktig kan utføre kulturelt, kunstnerisk eller sportslig arbeid i perioden mellom kl. 20.00 og kl. 23.00 på de vilkår som er nevnt i § 12-3 . Den arbeidsfrie perioden skal i tilfeller der arbeidet avsluttes etter kl. 22.00 vare til kl. 07.00.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "'arbeidstilsynet barn under 13 år kulturelle forestillinger film melding forskrift om arbeid av barn' (standard)",
+    "result": "lead: Arbeidstilsynet's regulation page, chapter 12 (§§ 12-3, 12-8); the rest Danish, Icelandic, Swedish",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "arbeidstilsynet.no: guessed pages barn-og-ungdom/... and barn-og-unge/ (both 404); the regulation page forskrift-om-organisering-ledelse-og-medvirkning (chapter 12 path redirected to the whole regulation) read at §§ 12-1 to 12-8 and its amendment list",
+    "result": "the regulation on children's cultural work: under 15 or of school age, cultural, artistic, sporting or advertising work with Arbeidstilsynet's prior consent and the parents' written consent; past two hours a day and twelve a week only on application; 20.00-23.00 allowed, with rest to 07.00 if work ends after 22.00",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix no,lovdata)/dokument/nl/lov/2013-03-26-3",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix no,lovdata)/dokument/nl/lov/2013-03-26-3",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "childPerformers": {
+    "under": "15 or of compulsory school age",
+    "consent": "Arbeidstilsynet's prior consent (forhåndssamtykke) plus parents' written consent",
+    "defaultLimit": "2 hours a day, 12 a week, more on application",
+    "evening": "20:00-23:00 allowed; rest until 07:00 if work ends after 22:00"
+   }
+  },
+  "notes": "The consolidated vergemålsloven (2013) and aksjeloven as in force in 2026 were not reached (lovdata.no refused the first wave; Common Crawl queued). Arbeidstilsynet's commentary to § 12-4 still names the 1927 vergemålsloven, which the 2010 Act (in force 2013) replaced. Methods not tried today, and why: trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search.",
+  "sources": []
+ },
+ {
+  "id": "R-8343",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://ronlaw.gov.nr/ fetched with curl",
+    "result": "HTTP 200 (RONLAW - Nauru's Online Legal Database); its text and links were searched for childPerformers, funds, minimumWorkAge, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://ronlaw.gov.nr/nauru_lpms/index.php/act fetched with curl",
+    "result": "HTTP 200 (RONLAW - Nauru's Online Legal Database); its text and links were searched for childPerformers, funds, minimumWorkAge, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Nauru among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix nr,gov,ronlaw)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 21 with HTTP 200; captures whose paths could bear on the item (not fetched): https://ronlaw.gov.nr/assets/docs%2Facts%2F2024%2FNauru%20Economic%20and%20Climate%20Resilience%20Citizenship%20Act%202024_serv4%20%283%29.pdf; https://ronlaw.gov.nr/nauru_lpms/files/acts/756fa3748b7358b592030ac7e22efdee.pdf; https://ronlaw.gov.nr/nauru_lpms/files/acts/8ecdcb3de5609b6ae4b6ea34b2b0e94d.pdf; https://ronlaw.gov.nr/nauru_lpms/files/acts/a4ebbef9c9ce74435bb526a5b9b4078e.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8345",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gov.nu/media/pages/information/65615c113a-1764012763/niue_legislation_tables_ul2022.pdf",
+    "title": "Niue Legislation 2019 (updated 2022): Legislation Tables and Laws Volumes 1-4, Supplements 2021-2024, gov.nu/information (Government of Niue)",
+    "said": "Searched by text: no Act, Part or section titled employment of children, child labour or minimum age of employment; the only age rules found are the minimum age of marriage (Niue Act 1966 s 525) and a radio-licence age limit; no 'full age', 'age of majority' or 'infant' provision in Volumes 1-4.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "gov.nu/information (the Government of Niue's legislation page): all 30 linked PDFs downloaded (Constitution, Laws Volumes 1-4 updated 2022, Legislation Tables, Supplements 2021-2024 parts 1-4, Acts 358-388, the Family Relationships Act 2022); text-searched for employment of children, minimum age, under the age of, child labour, full age, majority, infant",
+    "result": "minimumWorkAge and childPerformers: no Niue enactment found that sets a working age or regulates children's work (searched, not read whole); majority: the Family Relationships Act 2022 is a 58-page scan with no text layer; OCR was started and stopped (one page did not finish in 100 seconds on the shared machine), so its definition of a child or of full age was not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Niue among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix nu,gov)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 39 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.gov.nu/media-releases/government-of-niue-grants-permanent-residence-status-to-new-residence",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The Family Relationships Act 2022 (gov.nu/media/pages/information/.../family-relationships-act-2022-1.pdf, 58 pages, saved under files/f2/R-8345/) is the likeliest source for majority; it needs OCR. No Niue union or film fund appears on gov.nu. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today.",
+  "sources": [],
+  "value": null
+ },
+ {
+  "id": "R-8054",
+  "verdict": "still-blocked",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.employment.govt.nz/starting-employment/hiring/hiring-young-people",
+    "title": "Hiring young people, Employment New Zealand (MBIE)",
+    "said": "There are rules employers need to follow when they hire people 19 years old or under. ... Employees 17 years old or under can sign an employment agreement, but you should make sure they understand the terms and conditions. ... If you hire any school-aged students who are 15 years old or under, their work hours must: be outside of school hours only (this is an education requirement) not be between 10pm and 6am (this is a health and safety requirement).",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "employment.govt.nz: the guessed young-employees path (404); its sitemap (sitemap.xml and SilverStripe-CMS-Model-SiteTree/1) searched for young, age, child, minor; 'Hiring young people' read whole; worksafe.govt.nz 'Young people in the workplace' and 'Young people at work' read",
+    "result": "no statement that New Zealand sets no general minimum working age: the agency lists every age-based restriction (school hours to 15, no work 10pm-6am to 15, hazardous places under 15, licensed premises and casinos under 18 or 20) and names no minimum age of employment, but does not say so in terms (a lead, not the statement sought). setAside: none mentioned. Age of Majority Act 1970 s 4: not on these pages.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix nz,govt,legislation)/act/public/1970/0137",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39 index (cc.py, range requests on cluster.idx), SURT prefix nz,govt,legislation)/act/public/1970/0137",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-30 index (cc.py, range requests on cluster.idx), SURT prefix nz,govt,legislation)/act/public/1970/0137",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": null,
+  "notes": "legislation.govt.nz still answers 202 (WAF challenge); Common Crawl CC-MAIN-2026-39 and -30 lookups for the Age of Majority Act queued (see the archive attempts). Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search.",
+  "sources": []
+ },
+ {
+  "id": "R-8347",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://mjla.gov.om/ fetched with curl",
+    "result": "refused or unreachable: curl 60, SSL certificate problem: unable to get local issuer certificate",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Oman among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix om,gov,mjla)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 34 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8349",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.gacetaoficial.gob.pa/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for childPerformers, companies, funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.unap.org.pa/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Panama's FIA affiliate is UNAP (Unión Nacional de Artistas de Panamá); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Panamá Código de Trabajo artículo 117 menores de catorce años espectáculos artísticos autorización MITRADEL texto' (standard)",
+    "result": "no finding: news of MITRADEL inspections (diaadia.com.pa, laestrella.com.pa: under 14 may not work, 14-17 only under conditions; Ley 59 de 2017 fines for each minor working without permits, a lead), theses on core.ac.uk; no text of the Code's articles on minors in shows",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pa,gob,gacetaoficial)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 8 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.gacetaoficial.gob.pa/storage/gacetas/2008/07/26090/GacetaNo_26090_20080724.pdf; https://www.gacetaoficial.gob.pa/storage/gacetas/2009/11/26406_C/23027.pdf",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8351",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://spij.minjus.gob.pe/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.saip.pe/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "Peru's FIA affiliate is SAIP (Sindicato de Artistas Intérpretes del Perú); FIA's member page carries no membership terms or link",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "leyes.congreso.gob.pe/Documentos/Leyes/26887.pdf (the Congress's archive of laws: Ley General de Sociedades, Ley 26887, as published in El Peruano, 40 pages) downloaded",
+    "result": "not read: the PDF is page images of the gazette with only headings in its text layer (98 lines with letters); OCR not run on the shared machine (a single page did not finish in 100 seconds earlier today), so the director-impediment article (art 161) was not read. The file is saved under files/f2/R-8351/lgs-26887.pdf for OCR.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pe,gob,minjus,spij)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8353",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://lexpol.cloud.pf/ fetched with curl",
+    "result": "HTTP 200 (Lexpol - Le Service Public de la Diffusion du Droit en Polyn&eacute;sie Fran&cce); its text and links were searched for childPerformers, companies, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://lexpol.cloud.pf/LexpolAfficheCodes.php?2 fetched with curl",
+    "result": "HTTP 200 (Lexpol - Les codes); its text and links were searched for childPerformers, companies, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=335343&lang=fr fetched with curl",
+    "result": "HTTP 200 (Lexpol - Le Service Public de la Diffusion du Droit en Polyn&eacute;sie Fran&cce); its text and links were searched for childPerformers, companies, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=339998&lang=fr fetched with curl",
+    "result": "HTTP 200 (Lexpol - Le Service Public de la Diffusion du Droit en Polyn&eacute;sie Fran&cce); its text and links were searched for childPerformers, companies, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in French Polynesia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "lexpol.cloud.pf (Lexpol, French Polynesia's public law service): Les codes; Code du travail, Partie lois du pays (texte=335343) and Partie Arrêtés (texte=339998) fetched with curl and the first rendered in headless Chrome (virtual time 20 s)",
+    "result": "not read: both pages are shells whose text loads in a PDF viewer by script; the rendered DOM (550 lines) holds the navigation only, no article text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pf,cloud,lexpol)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8354",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.parliament.gov.pg/ fetched with curl",
+    "result": "HTTP 200 (Parliament of Papua New Guinea &#8211; National Parliament); its text and links were searched for childPerformers, companies, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.lawreform.gov.pg/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Papua New Guinea among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pg,gov,parliament)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 18 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8357",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
+    "title": "The Companies Act, 2017 (Act XIX of 2017), updated till 7.10.2022, Pakistan Code (Ministry of Law and Justice), s 153",
+    "said": "153. Ineligibility of certain persons to become director.—A person shall not be eligible for appointment as a director of a company, if he — (a) is a minor; (b) is of unsound mind;",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
+    "title": "The Companies Act, 2017, s 2(7)(c)",
+    "said": "(c) the minor son or daughter of an officer where “son” includes step-son and “daughter” includes step-daughter; and “minor” means a person under the age of eighteen years;",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "pakistancode.gov.pk (Ministry of Law and Justice): Laws in Alphabetical Order, letter C pages 1-4; the Companies Act, 2017 page and its PDF (401 pages, updated till 7.10.2022) read by text for minor, eighteen, age",
+    "result": "companies: a minor is ineligible to be a director (s 153(a)); the Act's own definition of a minor (in s 2(7)(c)) is a person under eighteen",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "secp.gov.pk/laws/acts/ and the Companies Act 2017 download (SECP)",
+    "result": "refused: Cloudflare 'Just a moment' check, 403; not passed",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Pakistan among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pk,gov,secp)/laws",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinor": "ineligible (Companies Act 2017 s 153(a))",
+    "minorUnder": 18
+   }
+  },
+  "notes": "The s 2(7)(c) definition is given inside the beneficial-ownership definition; the Majority Act 1875 (18) governs generally. The 2022 consolidation was the newest on Pakistan Code; later amendments not checked. Film Finance Fund, unions and provincial working ages not reached today. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ },
+ {
+  "id": "R-8360",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.saint-pierre-et-miquelon.gouv.fr/ fetched with curl",
+    "result": "HTTP 200 (Accueil -); its text and links were searched for childPerformers, companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.saint-pierre-et-miquelon.gouv.fr/Actions-de-l-Etat/Travail fetched with curl",
+    "result": "HTTP 200 (Travail -); its text and links were searched for childPerformers, companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saint Pierre and Miquelon among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix fr,gouv,saint-pierre-et-miquelon)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8362",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/s/Revised-Laws-of-Pitcairn-Henderson-Ducie-and-Oeno-Islands-2017-Rev-Ed-Volume-1.pdf",
+    "title": "The Laws of Pitcairn, Henderson, Ducie and Oeno Islands, 2017 Rev. Ed., Volume 1 (Pitcairn Constitution Order 2010, Constitution s 42 and s 1 definitions)",
+    "said": "42.—(1) Subject to subsection (2), the common law, the rules of equity and the statutes of general application as in force in and for England for the time being shall be in force in Pitcairn. (2) All the laws of England extended to Pitcairn by subsection (1) shall be in force in Pitcairn so far only as the local circumstances and the limits of local jurisdiction permit and subject to any existing or future Ordinance",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/s/Revised-Laws-of-Pitcairn-Henderson-Ducie-and-Oeno-Islands-2017-Rev-Ed-Volume-1.pdf",
+    "title": "Constitution of Pitcairn, interpretation",
+    "said": "“minor” means a person who has not attained the age of eighteen years or such other age as may be prescribed for the purposes of this Constitution by any other law;",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/s/Trade-Unions-and-Trade-Disputes-Ordinance.pdf",
+    "title": "Trade Unions and Trade Disputes Ordinance (Revised Edition 2001, Chapter XXIII)",
+    "said": "Read whole (416 lines of text): no age, minimum age or minor appears; registration and rules only.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.government.pn/s/Cap-16-Registration-of-Business-Names.pdf",
+    "title": "Registration of Business Names Ordinance (Cap 16)",
+    "said": "Read whole: no age or minor rule for a registrant.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "government.pn/laws (the Government's own list of Ordinances): downloaded the 2017 Revised Edition Volumes 1 and 2, the Children Ordinance (Cap 41), the Trade Unions and Trade Disputes Ordinance, the Registration of Business Names Ordinance (Cap 16) and the Judicature (Courts) Ordinance (Cap 2); pdftotext of all and searched for full age, majority, minor, infant, eighteen, employment of children, English law",
+    "result": "majority: the Constitution defines a minor as under eighteen for its own purposes and s 42 receives English common law, equity and statutes of general application 'for the time being' (so England's age of majority and minors' contracts law reach Pitcairn so far as local circumstances permit); no Pitcairn Ordinance sets a working age or regulates children's employment (the list and both volumes hold none); the Trade Unions Ordinance and the Business Names Ordinance set no age; no company law of Pitcairn's own (only business names); no fund.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "government.pn home and laws-overview pages read for an employment, arts or film body",
+    "result": "none listed: no union, film fund or labour office of Pitcairn's own",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Pitcairn among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pn,government)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 12 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.government.pn/laws",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": {
+    "constitutionMinorUnder": 18,
+    "generalLaw": "English common law, equity and statutes of general application as in force in England for the time being (Constitution s 42)"
+   },
+   "minimumWorkAge": null,
+   "companies": "no Pitcairn companies Ordinance; Registration of Business Names Ordinance sets no age",
+   "unions": "Trade Unions and Trade Disputes Ordinance sets no member age; no union found",
+   "funds": null
+  },
+  "notes": "The English-law route (Family Law Reform Act 1969 s 1, Minors' Contracts Act 1987) applies through Constitution s 42 'so far only as the local circumstances ... permit'; the UK Acts themselves were not read today (legislation.gov.uk not tried). Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ },
+ {
+  "id": "R-8364",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.estado.pr.gov/ fetched with curl",
+    "result": "HTTP 200 (Departamento de Estado); its text and links were searched for companies, funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.puertoricofilm.com/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.estado.pr.gov/corporaciones fetched with curl",
+    "result": "HTTP 200 (Registrar Corporaciones); its text and links were searched for companies, funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Puerto Rico among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'Panamá Código de Trabajo artículo 117 menores de catorce años espectáculos artísticos autorización MITRADEL texto' (standard; run for Panama, it returned Puerto Rico's Department of Labor file)",
+    "result": "lead: trabajo.pr.gov's copy of Ley Núm. 112 de 1985",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "trabajo.pr.gov/docs/Normas_del_Trabajo/Leyes/Ley Num_112_13_julio_1985_Reglamentar Contratac.pdf (Puerto Rico Department of Labor and Human Resources) read whole (3 pages)",
+    "result": "minorsContracts: a child under 14 may be engaged for artistic or entertainment work (actors named) only with the Secretary of Labor's prior authorisation, on the terms it sets; the regulation must cover health, schooling and hours; fines $75-200, $100-500 on repeat. No set-aside of earnings in the Act.",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix com,puertoricofilm)/",
+    "result": "14 capture(s) listed (the first 40 lines of the listing kept), 11 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "partial",
+  "sources": [],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://trabajo.pr.gov/docs/Normas_del_Trabajo/Leyes/Ley%20Num_112_13_julio_1985_Reglamentar%20Contratac.pdf",
+    "title": "Ley Núm. 112 de 13 de julio de 1985 (contratación de menores de 14 años en actividades artísticas y del espectáculo), Departamento del Trabajo y Recursos Humanos, Negociado de Normas de Trabajo, 'Legislación Laboral en Acción', Rev. 3/09",
+    "said": "Sección 1 - ... Independientemente de lo establecido en otras leyes vigentes dirigidas a reglamentar el empleo de menores de edad se podrá contratar o utilizar, previa autorización del Secretario del Trabajo y Recursos Humanos, a menores de catorce (14) años, para trabajar o dedicarse a actividades artísticas o a actividades propias del género del espectáculo, tales como músicos, bailarines, cantantes, actores, presentadores, locutores, animadores, modelos, declamadores que no sean perjudiciales a la salud o a la moral, o que de alguna manera amenacen la vida o integridad física del menor. La participación del menor en tales actividades estará sujeta a los términos y condiciones que el Secretario del Trabajo y Recursos Humanos imponga en la autorización expedida.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://trabajo.pr.gov/docs/Normas_del_Trabajo/Leyes/Ley%20Num_112_13_julio_1985_Reglamentar%20Contratac.pdf",
+    "title": "Ley Núm. 112 de 1985, Secciones 2-3",
+    "said": "El Secretario del Trabajo y Recursos Humanos, en coordinación con el Secretario de Educación y el Secretario de Salud, definirá mediante reglamento los términos “actividades artísticas” y “actividades propias del género del espectáculo” y promulgará, además, las reglas necesarias para el fiel cumplimiento de esta Ley. El reglamento deberá incluir, entre otras, las siguientes áreas: lo relativo al estado de salud, estudios académicos, y horas de trabajo requeridas al menor. ... será culpable de delito menos grave y castigada con multa que no será menor de setenta y cinco dólares ($75) ni mayor de doscientos dólares ($200).",
+    "read": "2026-11-04"
+   }
+  ],
+  "value": {
+   "minorsContracts": {
+    "under14Performers": "prior authorisation of the Secretary of Labor and Human Resources, on the terms set in it (Ley 112-1985 s 1)",
+    "regulationCovers": [
+     "health",
+     "schooling",
+     "hours"
+    ],
+    "setAside": null
+   }
+  },
+  "notes": "The regulation under Ley 112 (the sought Reglamento 3479) was not reached; the Civil Code 2020 and the corporations law not read today."
+ },
+ {
+  "id": "R-8366",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://muqtafi.birzeit.edu/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.moj.pna.ps/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Palestinian Territory among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix edu,birzeit,muqtafi)/",
+    "result": "15 capture(s) listed (the first 40 lines of the listing kept), 13 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8370",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.palaugov.pw/ fetched with curl",
+    "result": "HTTP 200 (PalauGov.pw &#8211; Your guide to finding and using Palau National Government se); its text and links were searched for companies, funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.palauoek.org/ fetched with curl",
+    "result": "HTTP 200 (OEK/Palau National Congress -); its text and links were searched for companies, funds, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Palau among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix pw,palaugov)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 35 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.palaugov.pw/2018-year-of-good-health-grants-awarded/; https://www.palaugov.pw/2018-year-of-good-health-small-grants-program-strengthens-health-education-and-improves-quality-of-life/; https://www.palaugov.pw/2019-year-of-innovative-learning-and-excellence-india-palau-small-grants-program-is-open-for-application/; https://www.palaugov.pw/24th-national-law-enforcement-academy-commencement-exercise/",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8375",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://reunion.deets.gouv.fr/ fetched with curl",
+    "result": "HTTP 200 (Direction de l'économie, de l'emploi, du travail et des solidarités (DEETS)); its text and links were searched for childPerformers; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://reunion.deets.gouv.fr/spip.php?page=recherche&recherche=enfants+du+spectacle fetched with curl",
+    "result": "HTTP 200 (Résultats de la recherche - Direction de l'économie, de l'emploi, du travail et ); its text and links were searched for childPerformers; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "'DEETS La Réunion enfants du spectacle autorisation préfet commission mannequins dossier' (standard)",
+    "result": "no Réunion page: DREETS notices of Normandie, Pays de la Loire, Auvergne-Rhône-Alpes and prefectures of Var, Hérault, Loire-Atlantique, Lozère (other departments; leads only)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "reunion.deets.gouv.fr site search (spip.php?page=recherche&recherche=enfants+du+spectacle)",
+    "result": "results only on the éducateur de jeunes enfants diploma; no page on child performers",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix fr,gouv,deets,reunion)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 39 with HTTP 200; captures whose paths could bear on the item (not fetched): https://reunion.deets.gouv.fr/Le-code-du-travail-numerique-code-travail-gouv-fr; https://reunion.deets.gouv.fr/Presentation-du-service-Fonds-social-europeen-FSE",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8377",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.onrc.ro/index.php/ro/ fetched with curl",
+    "result": "HTTP 200 (Request Rejected); its text and links were searched for companies, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://cnc.gov.ro/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.monitoruloficial.ro/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Romania among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix ro,just,legislatie)/public/detaliidocument/798",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-21 index (cc.py, range requests on cluster.idx), SURT prefix ro,just,legislatie)/public/detaliidocument/798",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8382",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.rwandafilm.rw/ fetched with curl",
+    "result": "refused or unreachable: curl 56, CONNECT tunnel failed, response 502",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://rdb.rw/ fetched with curl",
+    "result": "HTTP 200 (Home - Official Rwanda Development Board (RDB) Website); its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.minijust.gov.rw/ fetched with curl",
+    "result": "HTTP 200 (Home); its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.minijust.gov.rw/official-gazette fetched with curl",
+    "result": "HTTP 200 (Official Gazette); its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://www.minijust.gov.rw/official-gazette?tx_filelist_filelist%5Baction%5D=list&tx_filelist_filelist%5Bcontroller%5D=File&tx_filelist_filelist%5Bpath%5D=%2Fuser_upload%2FMinijust%2FOfficial_gazettes_2%2F_________2021_Official_Gazettes%2F&cHash=080c385866d730e2ca547435bed15811 fetched with curl",
+    "result": "HTTP 200 (Official Gazette); its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://amategeko.gov.rw/ fetched with curl",
+    "result": "HTTP 200 (Portal of Rwandan Laws and Case Laws); its text and links were searched for companies; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix rw,rwandafilm)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; trade-press: no union item is sought for this entry, so FIA's member list (the route used for the group) did not apply; no trade report naming a primary was found without search."
+ },
+ {
+  "id": "R-8384",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://laws.boe.gov.sa/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://film.moc.gov.sa/ fetched with curl",
+    "result": "refused or unreachable: curl 35, Recv failure: Connection reset by peer",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saudi Arabia among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sa,gov,boe,laws)/",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; official-register: no legal register for this item was reachable beyond the institution's own pages read."
+ },
+ {
+  "id": "R-8385",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://www.parliament.gov.sb/ fetched with curl",
+    "result": "HTTP 200 (National Parliament of Solomon Islands); its text and links were searched for childPerformers, companies, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "https://parliament.gov.sb/business/acts/ fetched with curl",
+    "result": "HTTP 200 (Acts - National Parliament of Solomon Islands); its text and links were searched for childPerformers, companies, funds, majority, minimumWorkAge, minorsContracts, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Solomon Islands among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sb,gov,parliament)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 33 with HTTP 200; captures whose paths could bear on the item (not fetched): https://parliament.gov.sb/bills/2008/College%20of%20Higher%20Education%20(Amendment)%20Bill%202008.pdf; https://parliament.gov.sb/bills/2008/The%202008%20Appropriation%20Bill%202008.pdf; https://parliament.gov.sb/bills/2008/The%202008%20Supplementary%20Appropriation%20Bill%202008.pdf; https://parliament.gov.sb/bills/2008/The%20Constitution%20(Ammendment)%20(No.%201)%20Bill%202008.PDF",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8387",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.gazette.sc/sites/default/files/2021-01/CIVIL%20CODE%20OF%20SEYCHELLES%20ACT%2C%202020%20-%20%20FINAL%20FOR%20GAZETTE_0.pdf",
+    "title": "Civil Code of Seychelles Act, 2020, Supplement to Official Gazette, 4th January, 2021 (gazette.sc)",
+    "said": "16. A minor is a person under the age of 18. 17. An adult is a person aged 18 or older. ... 18. An adult has full legal capacity.",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.gazette.sc/sites/default/files/2021-01/CIVIL%20CODE%20OF%20SEYCHELLES%20ACT%2C%202020%20-%20%20FINAL%20FOR%20GAZETTE_0.pdf",
+    "title": "Civil Code of Seychelles 2020, arts 391, 1123-1124, 1307, 1311",
+    "said": "391. A minor is under the guardianship of the parents. ... 1123. Every person may enter into a contract unless subject to some legal incapacity. 1124. Wards and those under a supervision order are subject to a legal incapacity to enter into a contract. ... 1307. A minor who represents that he or she is adult is not barred from a claim for rescission. ... 1311. A minor cannot rescind a contract concluded during minority if the minor has ratified that contract on becoming adult, whether the contract was null in form or subject only to rescission.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "gazette.sc (Official Gazette of the Republic of Seychelles): Acts 2020 and 2021 lists (all pages); the Civil Code of Seychelles Act, 2020 (gazetted 4 January 2021) downloaded and searched by text for minor, majority, capacity, ward, earnings; Companies (Amendment) Act 2020 listed (not read)",
+    "result": "majority 18 with full capacity at 18; a minor is under the parents' guardianship and a ward lacks capacity to contract; a minor's contract is rescindable, ratifiable at majority, with prescription running from majority; no set-aside of a minor's earnings found in the Code's text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Seychelles among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sc,gazette)/",
+    "result": "7 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "majority": 18,
+   "minorsContracts": {
+    "capacity": "minor under parents' guardianship (art 391); wards incapable of contracting (art 1124)",
+    "rescindable": true,
+    "ratifiableAtMajority": true,
+    "setAside": null
+   }
+  },
+  "notes": "Companies Act 1972 (director age), fund and union not reached. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today.",
+  "sources": []
+ },
+ {
+  "id": "R-8389",
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "https://moj.gov.sd/ fetched with curl",
+    "result": "HTTP 200; its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://moj.gov.sd/sudanlaws fetched with curl",
+    "result": "HTTP 200 (ÙÙØ§ÙÙÙ Ø§ÙØ³ÙØ¯Ø§Ù); its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Sudan among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sd,gov,moj)/",
+    "result": "40 capture(s) listed (the first 40 lines of the listing kept), 35 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead; institution: only the legal register was reachable or relevant today."
+ },
+ {
+  "id": "R-8391",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.acra.gov.sg/register/business/registering-different-business-structures/local-company/appointing-company-directors-other-key-officers/",
+    "title": "Appointing company directors and other key officers, ACRA (Accounting and Corporate Regulatory Authority)",
+    "said": "Eligibility requirements Under the Companies Act , company directors must: Be ordinarily resident Be 18 years old or older Be mentally fit to make decisions",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "acra.gov.sg: the guessed company-officers path answered 404; the sitemap (acra.gov.sg/sitemap.xml) searched for director and officer pages; 'Resignation or disqualification of position holders' and 'Appointing company directors and other key officers' read",
+    "result": "companies: ACRA states a director must be 18 or older under the Companies Act (the regulator's own page; s 145 itself not reached: sso.agc.gov.sg answered 403)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "sso.agc.gov.sg/Act/CoA1967 (Singapore Statutes Online) with curl",
+    "result": "refused: 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Singapore among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sg,gov,agc,sso)/act/coa1967",
+    "result": "1 capture(s) listed (the first 40 lines of the listing kept), 0 with HTTP 200; their paths are home, news, contact or asset pages, none a page holding the rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sg,gov,agc,sso)/act/cla1909",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "companies": {
+    "directorMinAge": 18,
+    "source": "ACRA, under the Companies Act"
+   }
+  },
+  "notes": "Majority (Civil Law Act s 35), minors' contracts, unions and IMDA funding not reached today. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ },
+ {
+  "id": "R-8393",
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "https://www.sainthelena.gov.sh/ fetched with curl",
+    "result": "HTTP 200 (St Helena); its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "https://www.sainthelena.gov.sh/st-helena/government/legislation/laws-of-st-helena/ fetched with curl",
+    "result": "HTTP 200 (Laws of St Helena &#8211; St Helena); its text and links were searched for companies, funds, unions; no page or text holding the rule was found there",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list: fia-actors.com/fia_member-sitemap.xml (174 member entries) and the member pages",
+    "result": "no FIA affiliate in Saint Helena among the 174 member entries (a lead that no actors' union of that country is affiliated, not an absence of a union)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix sh,gov,sainthelena)/",
+    "result": "38 capture(s) listed (the first 40 lines of the listing kept), 31 with HTTP 200; captures whose paths could bear on the item (not fetched): https://www.sainthelena.gov.sh/helping-children-with-worries/",
+    "date": "2026-11-04"
+   }
+  ],
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "value": null,
+  "notes": "Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead."
+ },
+ {
+  "id": "R-8395",
+  "verdict": "partial",
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.dsr.si/clanstvo/dolocila-statuta-o-vclanitvi",
+    "title": "Določila statuta o včlanitvi (III. Članstvo), Društvo slovenskih režiserjev (DSR)",
+    "said": "(2) Član društva lahko postane vsak: a) polnoletni državljan Republike Slovenije, ki se poklicno ukvarja z režijo, ... b) član društva lahko postane tudi vsak polnoletni državljan Republike Slovenije, ki pri produkciji filmov poklicno opravlja delo asistenta režiserja ... c) član društva lahko postane tudi vsak polnoletni državljan Republike Slovenije, ki se poklicno ukvarja s pisanjem scenarijev",
+    "read": "2026-11-04"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.zdus.si/o-clanstvu/",
+    "title": "O članstvu, ZDUS (Združenje dramskih umetnikov Slovenije)",
+    "said": "Redni član ZDUS lahko postane vsak državljan Republike Slovenije, ki mu je dramska umetnost osnovni poklic, ki sprejme statut, se ravna po njem, izrazi željo postati član ZDUS ter v ta namen upravnemu odboru poda pisno prošnjo (prijavnico), ki ji priloži bibliografijo s podatki o delu na področju dramske umetnosti in plača članarino.",
+    "read": "2026-11-04"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "dsr.si: Članstvo and the statute's membership articles (dolocila-statuta-o-vclanitvi) read; zdus.si: O članstvu and Članstvo read; sfc.si: home and Razpisi in pozivi / Film in AV listing read (javni-pozivi path answered 404)",
+    "result": "unions: the directors' guild DSR admits only adults (polnoletni) as directors, assistant directors and screenwriters; ZDUS's membership page names no age (citizens whose basic profession is dramatic art); SFC applicant rule not read in a call's text",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "tried": "FIA (International Federation of Actors) member list, fia-actors.com/fia_member-sitemap.xml (174 entries) and member pages",
+    "result": "Slovenia's FIA affiliates: SAGS (Screen Actors Guild of Slovenia), ZDUS, GLOSA and SVIZ; FIA's member pages carry no terms or links",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix si,pisrs)/pregledpredpisa?id=zako4291",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 index (cc.py, range requests on cluster.idx), SURT prefix si,pisrs)/pregledpredpisa?id=zako7556",
+    "result": "no captures under that prefix",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": {
+   "unions": {
+    "DSR": {
+     "directorsWritersAssistants": "adults only (polnoletni)"
+    },
+    "ZDUS": {
+     "ageRule": null,
+     "condition": "dramatic art as basic profession"
+    }
+   }
+  },
+  "notes": "ZDUS's statute itself not read. ZGD-1 and Družinski zakonik remain behind pisrs.si's proof-of-work check. Methods not tried today, and why: web-search: not run for this entry today; the group's fifteen standard searches (shared across thirteen agents) were spent on entries where fetching had found no lead.",
+  "sources": []
+ }
+]

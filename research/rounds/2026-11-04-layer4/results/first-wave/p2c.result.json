@@ -1,0 +1,1111 @@
+[
+ {
+  "id": "R-4978",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mol.gov.sd and www.mol.gov.sd (Ministry of Labour), www.sudanimmigration.gov.sd",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "www.sudan.gov.sd (government portal)",
+    "result": "HTTP 200; not searched further for a work-permit page in this pass",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "archive.org availability API for mol.gov.sd; web.archive.org",
+    "result": "the API names a snapshot of 18 May 2013 (http://mol.gov.sd/); web.archive.org resets the connection, so it wasn't read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The authorities don't answer; the 2013 snapshot would predate the war in any case."
+ },
+ {
+  "id": "R-4982",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/key-facts",
+    "status": "same"
+   },
+   {
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+    "status": "same"
+   },
+   {
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/apply-for-a-pass",
+    "status": "same"
+   },
+   {
+    "url": "https://www.mom.gov.sg/passes-and-permits/work-pass-exempt-activities/eligible-activities",
+    "status": "same"
+   },
+   {
+    "url": "https://www.mom.gov.sg/passes-and-permits/work-permit-for-performing-artiste",
+    "status": "changed",
+    "now": "The Work Permit (Performing Artiste) scheme has ceased . MOM no longer accepts applications for this pass. Businesses can instead consider engaging entertainment service providers or hiring eligible foreigners on a regular work pass. (Last Updated: 3 June 2026)"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+    "title": "Ministry of Manpower, Employment Pass: Eligibility (COMPASS)",
+    "read": "2026-11-04",
+    "said": "C6. Strategic Economic Priorities bonus Show This bonus recognises organisations that are either: Undertaking ambitious investment, innovation and internationalisation activities in partnership with economic agencies Endorsed by National Trades Union Congress (NTUC) as strong partners on company and workforce transformation activities"
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/apply-for-a-pass",
+    "title": "Ministry of Manpower, Employment Pass: Apply for a pass",
+    "read": "2026-11-04",
+    "said": "You are required to advertise your job opening on MyCareersFuture to consider all applicants fairly , before you can apply for an Employment Pass."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "curl of MOM's four Employment Pass pages (key-facts, eligibility, apply-for-a-pass) and the work-pass-exempt-activities page, read whole as text (773, 3,471, 2,388 and 1,631 words) and searched for 'union', 'NTUC', 'consult'",
+    "result": "HTTP 200 for all; no union consultation, notice or approval at any step; the only union named is NTUC endorsement of the employer as a COMPASS bonus criterion (C6, 10 points); the pre-application step is an advertisement on MyCareersFuture, not a union",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "curl of https://www.mom.gov.sg/passes-and-permits/work-permit-for-performing-artiste (layer 3's second source)",
+    "result": "HTTP 200: the Work Permit (Performing Artiste) scheme has ceased; MOM no longer accepts applications (page last updated 3 June 2026)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "union: null (none): MOM's Employment Pass pages, read whole on 2026-11-04, require no union consultation; the employer advertises on MyCareersFuture before applying. NTUC appears only as an optional COMPASS bonus for the employer (C6 Strategic Economic Priorities).",
+  "notes": "Absence stands as found: the authority's pages that set every EP step were read in full and are silent on any union step. Layer 3 also cites the Work Permit for performing artiste page; that scheme has ceased (MOM, updated 3 June 2026), which the lead may want to carry into papers.work.SG."
+ },
+ {
+  "id": "R-4990",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://sierralii.gov.sl/akn/sl/act/2023/11/eng@2023-04-28/source.pdf",
+    "status": "same",
+    "now": "not re-fetched today"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'Sierra Leone \"Work Permit\" fees regulations 2024 statutory instrument non-citizen fee schedule Ministry of Employment Labour' (2026-11-04)",
+    "result": "names the instrument: The Work Permit (Fees) Regulations 2024 (S.I. No. 1 of 2024, made under s. 27 of the Work Permit Act 2023, laid 13 February 2024) at parliament.gov.sl/uploads/statutory_instruments/The Work Permit (Fees) Regulations 2024.pdf; the snippet's amounts are not legible and are not a figure",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "curl of the Regulations' PDF on www.parliament.gov.sl, with the system CAs and with the scratchpad's intermediate bundle",
+    "result": "the server presents 'TRAEFIK DEFAULT CERT' (self-signed): not verifiable, not bypassed; not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "nra.gov.sl/node/174 (National Revenue Authority's immigration charges), completing the chain with GeoTrust TLS RSA CA G1 from the bundle (verification on); also www.nra.gov.sl/node/174 and the home page",
+    "result": "TLS verified; /node/174 now answers HTTP 404 (JSON 'Not Found'); the new home page (57 KB) links no immigration or work-permit charges",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mlss.gov.sl and immigration.gov.sl",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-39 for 'sl,gov,parliament)/uploads/statutory_instruments/the%20work'; web.archive.org",
+    "result": "no captures in either crawl; web.archive.org still resets the connection (curl: (35))",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "fees: the instrument that sets them is named (S.I. No. 1 of 2024), so the blocker is now one document behind a self-signed certificate. processing, union, pay and exempt weren't retried beyond this: the earlier reading of ss. 11-26 of the Act stands."
+ },
+ {
+  "id": "R-4992",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.gendarmeria.sm/contents/instance54/files/document/98845ResidenzeePermes.pdf",
+    "status": "same",
+    "now": "the Gendarmeria's foreigners' office page (ufficio-stranieri.html) still links this coordinated text as its only document"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gendarmeria.sm home and its Ufficio Stranieri page (196 words) read",
+    "result": "lists the permit types it issues (permesso di soggiorno per lavoro among them) and links only the coordinated Law 118/2010; no fee, decision time, eligibility, pay, union or exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the foreigners' office was retried today."
+ },
+ {
+  "id": "R-4994",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.vie-publique.sn/docs/56984d14-34a4-459e-8820-dbca07d9393c/JO-7931-du-17-septembre-2026.pdf",
+    "status": "same",
+    "now": "art. 105 re-read: 'Le visa d'embauche, de renouvellement ou de prolongation de la durée du contrat de travail du travailleur étranger est assujetti à l'acquittement de frais selon les modalités prévues par arrêté conjoint du Ministre chargé des Finances et du Ministre chargé du Travail. Les autres conditions et les modalités d'embauche du travailleur étranger sont fixées par décret.'"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "Journal officiel No. 7931 of 17 September 2026 (vie-publique.sn) downloaded again and the new Labour Code's art. 105 and the foreign-worker passages (arts. 105-110, 366-367) read",
+    "result": "the visa is needed before work starts, decided in seven clear days (silence is approval); fees by a joint arrêté of the Finance and Labour Ministers and other conditions by decree, neither of which the Code fixes; no union step, pay rule, exemption by length or term in these articles",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The joint arrêté on visa fees and the decree on foreign workers' hiring under Law 2026-18 weren't sought further today; they may not yet be published (the Code is of September 2026). The 1997 Code's fee arrêté, if any, doesn't carry over automatically."
+ },
+ {
+  "id": "R-4996",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://immigration.gov.so/services",
+    "status": "same",
+    "now": "read whole (592 words): 'The Agency processes and issues work permits for foreign nationals employed in Somalia, supporting lawful employment while protecting the domestic labour market.' An 'Applicable service fee' line names no amount."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "immigration.gov.so/services (Immigration and Citizenship Agency) fetched and read whole",
+    "result": "HTTP 200; no fee amount, decision time, term, union, eligibility, pay, exemption or first step",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the Agency's page was retried today."
+ },
+ {
+  "id": "R-4998",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.dna.sr/media/c0higvnc/werkvergunning_vreemdelingen.pdf",
+    "status": "same"
+   },
+   {
+    "url": "https://gov.sr/wp-content/uploads/2025/03/WV-folder-Nederlandse-versie-2024pdf.pdf",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.dna.sr/media/c0higvnc/werkvergunning_vreemdelingen.pdf",
+    "title": "Wet Werkvergunning Vreemdelingen (S.B. 1981 no. 162, as amended by S.B. 2002 no. 23), the National Assembly's text",
+    "read": "2026-11-04",
+    "said": "Artikel 2 Deze wet is niet van toepassing op: a. personen van wie ingevolge bepalingen, vastgesteld bij overeenkomst met andere mogendheden dan wel bij een voor Suriname verbindend besluit van een volkenrechtelijke organisatie, een werkvergunning niet mag worden verlangd; b. personen, die behoren tot een bij staatsbesluit aangewezen categorie. … Artikel 5 1. In een werkvergunning wordt de naam van de vreemdeling vermeld die de werkgever mag doen arbeiden, alsmede die van de onderneming waarin zulks mag geschieden. 2. Een werkvergunning kan onder voorwaarden worden verleend."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "dna.sr's text of the Wet Werkvergunning Vreemdelingen downloaded and read whole today (1,234 words, arts. 1-15)",
+    "result": "no union consultation, no pay rule, no exemption by length of engagement (exemptions only by treaty or by a category a state decree names, art. 2); no term of validity (art. 5 lets the permit carry conditions)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gov.sr: the Ministry of Labour's 2024 work-permit folder downloaded and read whole (1,005 words)",
+    "result": "no union step, pay rule, short-engagement exemption or term of validity; the assessment weighs the availability of Surinamese workers, the length of stay, integration and fitness for the job",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "union: null (none: the Act and the Ministry's folder, read whole, name no union step). pay: null (none: neither sets a pay rule). exempt: null (none by length: the Act exempts only treaty cases and categories named by state decree, art. 2; the decree of 13 October 1983, S.B. 1983 no. 108, read on 2026-11-01, names no performers). validity: still blocked.",
+  "notes": "The 1983 exemption decree wasn't re-read today; the exempt finding rests on the Act read today and that earlier reading. validity: neither the Act nor the folder states a term; it would sit in the permit's conditions (art. 5(2)) or a ministerial practice not published."
+ },
+ {
+  "id": "R-5000",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://mol.gov.ss/page/work-permit-applications",
+    "status": "same",
+    "now": "read whole (547 words): application form $100; 'a payment voucher is produced for the alien to pay the required work permit fee to the prescribed bank account for non-oil revenue'; 'a work permit smart card is issued to the alien with a validity of one year from the date of issuance'. No amount for the permit fee, no time, union, eligibility, pay or exemption."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "mol.gov.ss: the work-permit page, the home page's links, /page/documents/Regulations, /page/frequently-asked-questions, /page/documents/circulars; the Recruitment Guidelines PDF (2021-02) read",
+    "result": "the FAQ repeats the procedure and adds fingerprinting at the CID within a week of arrival ('There is often a fee for fingerprints collection'); the Regulations page lists only the NGO Regulations 2016; the Recruitment Guidelines are the NGO recruitment guidelines of 18 March 2019 (17 pages), with no work-permit fee or rule for foreigners; the circulars are holidays and the December 2025 enforcement notice (layer 3's source)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The permit fee itself is set on the payment voucher, by no published schedule found. The FAQ links the Labour Act 2017 and the Passports and Immigration Act 2011 only over plain http (172.104.243.103), not read."
+ },
+ {
+  "id": "R-5002",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.gov.st (government portal) and www.parlamento.st (National Assembly)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the state's hosts were retried today."
+ },
+ {
+  "id": "R-5004",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.elsalvador.com/?p=1271522",
+    "status": "same",
+    "now": "not re-fetched; the Directorate's own page and the law were read instead"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2010-2019/2019/04/D49FF.PDF",
+    "title": "Ley Especial de Migración y de Extranjería, Decreto Legislativo No. 286 (2019), consolidated text with reforms to D.L. No. 531 of 17 March 2026 (D.O. No. 57, Tomo 450), Supreme Court of Justice's legal documentation centre (PDF created 7 April 2026)",
+    "read": "2026-11-04",
+    "said": "Art. 95.- Para efectos migratorios artista extranjero es toda persona que de forma individual o colectiva ingrese al país, con el fin de realizar presentaciones en las diferentes ramas del arte, la ejecución de música, teatro, canto, baile, locución, circense, animación de espectáculos culturales, comerciales o cualquier otra actividad similar, radio o televisión. También se incluirá a todo el elenco, personal técnico que le acompaña, edecanes y modelos que ingresan al país para los fines anteriores. Art. 96.- La persona interesada en el ingreso al país de un artista extranjero, sea éste remunerado o no, deberá obtener permiso especial, cumpliendo con los requisitos siguientes: 1) Presentar solicitud de ingreso ante la Dirección General, al menos con quince días de antelación, adjuntando la documentación de viaje y los instrumentos contractuales respectivos. 2) Presentar la autorización del espectáculo emitida por la autoridad competente. 3) Presentar constancia extendida por la Dirección General de Espectáculos Públicos, que se efectuó el pago anticipado por derechos de actuación por desplazamiento escénico de artista nacional, equivalente al diez por ciento de la remuneración bruta que perciban en el país. … Si no fuere posible el pago anticipado, por ser incierta e indeterminada la suma a percibirse, el contratista deberá rendir una caución suficiente a favor del sindicato respectivo, para responder del porcentaje a pagar. … Se exceptúa del pago al sindicato correspondiente al artista extranjero que ingresa al territorio nacional con el objeto de prestar sus servicios en forma gratuita o con fines benéficos comprobados. … Art. 97.- La Dirección de Espectáculos Públicos, Radio y Televisión, otorgará la autorización del espectáculo, previa opinión ilustrativa de los sindicatos legalmente establecidos correspondiente a la actividad artística a que se dedica el artista extranjero. … Art. 99.- El derecho de actuación que cancelen los artistas extranjeros por sus presentaciones en el país, constituye una participación obligatoria a cargo de la persona interesada a favor de los sindicatos legalmente inscritos en el ramo de Gobernación y Desarrollo Territorial … Art. 100.- El plazo para el cual los artistas extranjeros serán autorizados para sus presentaciones en el país, no podrá exceder de treinta días consecutivos o la realización de igual número de presentaciones por intervalos, dentro del plazo de un año contado desde el primer día de su actuación."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.migracion.gob.sv/servicios/permiso-especial-de-ingreso-para-artistas-extranjeros-pei-artistas/",
+    "title": "Dirección General de Migración y Extranjería, Solicitud y pago en línea de Permiso Especial de Ingreso para artistas extranjeros (published 15-08-2024)",
+    "read": "2026-11-04",
+    "said": "Realiza el Pago por la tasa migratoria de Permiso Especial de Ingreso para Artistas centroamericanos ($60.00) y no centroamericanos ($100.00). … En el plazo de 5 días hábiles, se notificará la resolución correspondiente a favor de los artistas extranjeros mediante el correo electrónico proporcionado por la persona natural o jurídica."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch '\"Ley Especial de Migración y de Extranjería\" El Salvador artistas \"permiso especial de ingreso\" plazo días pdf' (2026-11-04)",
+    "result": "led to the Supreme Court's consolidated text of the law (jurisprudencia.gob.sv D49FF.PDF) and DGME service sheets on transparencia.gob.sv",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "jurisprudencia.gob.sv D49FF.PDF downloaded (text layer) and arts. 95-100, 325 and the reform notes read",
+    "result": "eligibility (art. 95), the permit needed paid or unpaid with the application at least 15 days ahead (art. 96(1)), 10% of gross pay paid in advance as the actuación right to the union, or a bond to it (art. 96(3), 99), the union's illustrative opinion before the show's authorisation (art. 97), and the term: at most 30 consecutive days, or as many performances at intervals, within a year from the first (art. 100); fees $60 Central American, $100 others (art. 325) match the Directorate's page. Arts. 95-100 carry no reform marker; the text is consolidated to D.L. 531 of 17 March 2026",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "migracion.gob.sv PEI artistas page fetched (it now serves text; earlier only a script shell)",
+    "result": "HTTP 200, read whole (445 words): steps, fees, and a 5-working-day decision",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "transparencia.gob.sv DGME service sheets 9729, 9731, 9732 (from the search)",
+    "result": "HTTP 404",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "validity: {n: 30, unit: 'days', renewable: false, note: 'at most 30 consecutive days, or the same number of performances at intervals, within a year from the first performance (art. 100)'}; union: 'The show's authorisation by the Dirección de Espectáculos Públicos, Radio y Televisión follows the illustrative opinion of the registered union for the artist's branch of art (art. 97); 10% of the artist's gross pay in El Salvador is paid in advance to the union as the actuación right, or a bond is lodged with it (arts. 96(3), 99); 2.5% of daily gross takings for circuses; none for free or proven charity work.' pay: the 10% levy above, no pay floor. exempt: null (none: the permit is needed whether the artist is paid or not, art. 96). eligibility: 'A foreign artist, individually or in a group, entering to perform in any branch of art: music, theatre, singing, dance, announcing, circus, hosting cultural or commercial shows or similar, radio or television, with the cast, technical crew, hosts and models who come with them (art. 95).' Also: application at least 15 days before (art. 96(1)); decision in 5 working days (DGME page).",
+  "notes": "Whether a film or television drama actor falls under art. 95 rests on 'cualquier otra actividad similar, radio o televisión'; it names no film shoot. The 10% is a levy to the union, which the engine may want as a fee of 10% of gross pay rather than a pay rule. The consolidated text is the Supreme Court's copy (a state body's copy of the law)."
+ },
+ {
+  "id": "R-5006",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://lokaleregelgeving.overheid.nl/CVDR142001",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://lokaleregelgeving.overheid.nl/CVDR207364/1",
+    "title": "Landsbesluit, houdende algemene maatregelen, ter uitvoering van de artikelen 3, onderdeel e, 5, derde en vierde lid, en 8 … van de Landsverordening arbeid vreemdelingen (Sint Maarten), 'Geldend van 10-10-2010 t/m heden', overheid.nl local-regulation register",
+    "read": "2026-11-04",
+    "said": "Artikel 4 de vergoeding 1. Voor het in behandeling nemen van een aanvraag is de werkgever aan het Land verschuldigd: a. in geval van arbeid in een leidinggevende functie: een vergoeding van NA f 3.000,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van één jaar of minder, NA f 5.400,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste twee jaar doch meer dan één jaar, en NA f 7.500,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste drie jaar doch meer dan twee jaar; b. in overige gevallen: een vergoeding van NA f 1.600,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van één jaar of minder, NA f 2.800,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste twee jaar doch meer dan één jaar, en NA f 3.900,00 indien de tewerkstellingsvergunning verleend wordt voor de duur van ten hoogste drie jaar doch meer dan twee jaar; … Artikel 7 maximale duur tewerkstellingsvergunning 1. Een tewerkstellingsvergunning wordt in beginsel steeds voor één jaar verleend, met de mogelijkheid van vernieuwing in beginsel steeds voor één jaar, met dien verstande dat de totale geldigheidsduur van de tewerkstellingsvergunning, inclusief vernieuwingen, maximaal drie jaar mag bedragen. De totale geldigheidsduur van maximaal drie jaar is niet toepasselijk op vreemdelingen met een opleiding op hbo-niveau of hoger. … Artikel 8 leeftijd Een tewerkstellingsvergunning wordt geweigerd indien de vreemdeling op de dag van de indiening van de aanvraag de leeftijd van 25 jaar nog niet heeft bereikt, of de leeftijd van 57 jaar reeds heeft bereikt. Deze bepaling is niet toepasselijk op vreemdelingen met een opleiding op hbo-niveau of hoger."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lokaleregelgeving.overheid.nl: search by title 'arbeid vreemdelingen' (12 results); the Sint Maarten Landsverordening (CVDR142001, current from 30-05-2015) re-read (2,163 words) and its implementing Landsbesluit CVDR207364/1 read whole (3,482 words, arts. 1-19)",
+    "result": "fees (art. 4), term (art. 7), exemptions (art. 5: part-time gardeners and domestics under 16 hours, company directors with a business licence, indefinite residence holders, spouses of Dutch nationals, those raised in Sint Maarten, Dutch nationals born elsewhere; none for performers or short engagements), an age rule (art. 8), sector quotas (art. 9), a local counterpart (art. 10), social premiums and wage tax on the declared wage (art. 11); no union step in either text (no 'vakbond', 'vakvereniging' or 'werknemersorganisatie')",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "sintmaartengov.org home and guessed labour/work-permit pages",
+    "result": "home HTTP 200; the guessed pages 404; not pursued",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "fees: [{what: 'Work permit, non-managerial work, one year or less', amount: '1600.00', currency: 'ANG'}, {what: '... more than one up to two years', amount: '2800.00'}, {what: '... more than two up to three years', amount: '3900.00'}, {what: 'Managerial post, one year or less / up to two / up to three years', amounts: '3000.00 / 5400.00 / 7500.00'}] (proof of the one-year fee with the application, the difference before issue for a longer term); validity: {n: 1, unit: 'years', renewable: true, note: 'renewed a year at a time, three years in all (no cap for higher-professional graduates); then the foreigner must live a year outside Sint Maarten before a new permit'}; exempt: null (none for an engagement of any length); pay: null (no pay floor; the employer must pay social premiums and wage tax on the wage declared in the application, art. 11); union: null (none). Also for eligibility: refused under 25 or from 57 unless higher-professional education (art. 8); first applications refused for the unskilled jobs art. 6 lists.",
+  "notes": "The amounts are written 'NA f' (Netherlands Antillean guilder). Sint Maarten's currency change to the Caribbean guilder (XCG) wasn't read from a primary today, so the lead should check the currency code before storing. The decree's register entry is 'Geldend van 10-10-2010 t/m heden'; no later amendment shows in the register's search."
+ },
+ {
+  "id": "R-5007",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mosal.gov.sy and molsa.gov.sy (Ministry of Social Affairs and Labour)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the ministry's hosts were retried today."
+ },
+ {
+  "id": "R-5012",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://onape.td/autorisation-demploi/",
+    "status": "same",
+    "now": "read whole (437 words): describes the work-authorisation and contract-visa programme; no fee, term, union step, criterion, pay rule or exemption"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "onape.td/autorisation-demploi/ (ONAPE, the employment office that visas contracts) fetched and read whole",
+    "result": "HTTP 200; no fee, validity, union, eligibility, pay or exemption; the page offers an employer account login",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the authority's page was retried today."
+ },
+ {
+  "id": "R-5014",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://taaf.fr/acceder-aux-territoires/demandes-dactivites-et-dacces/acces-et-mouillage-dans-les-australes/",
+    "status": "same",
+    "now": "not re-read today"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "taaf.fr: home page and the site's search for 'journal officiel' (the Journal officiel des TAAF); guessed /journal-officiel/ pages",
+    "result": "the search lists Journal officiel issues (e.g. of 30 March 2020); the guessed pages redirect to a 404; no issue was opened for an activity-authorisation fee or term",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Low yield: the TAAF have no employers or resident population; the activity authorisation is the prefect's, and the earlier reading found no permit fee."
+ },
+ {
+  "id": "R-5016",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://service-public.gouv.tg/category/emploi-securite-sociale/62197bd333c0179346497413",
+    "status": "changed",
+    "now": "HTTP 200 but a script shell (143 words of menus): the procedure's text loads by script and wasn't served to this client"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "service-public.gouv.tg's employment category page (layer 4's source) fetched",
+    "result": "the page body loads by script; no procedure text, fee, union, eligibility, pay or exemption read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "A browser that runs scripts may reach the procedure; none was used."
+ },
+ {
+  "id": "R-5018",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.thailand.go.th/issue-focus-detail/001_03_376",
+    "status": "changed",
+    "now": "HTTP 200 but a 212-byte script stub today; the fee text layer 4 read isn't served to this client"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "thailand.go.th issue page (the research's source); doe.go.th, doe.go.th/prd/, workpermit.doe.go.th (Department of Employment); mol.go.th (Ministry of Labour)",
+    "result": "thailand.go.th serves a script stub; every doe.go.th host fails to connect (HTTP 000); mol.go.th answers (HTTP 200) but wasn't searched for the decree's text in this pass",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "krisdika.go.th (Council of State legal database) and ratchakitcha.soc.go.th (Royal Gazette)",
+    "result": "krisdika no connection (HTTP 000); the Royal Gazette answers 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'พระราชกำหนดการบริหารจัดการการทำงานของคนต่างด้าว พ.ศ. 2560 ฉบับรวม pdf mol.go.th' (2026-11-04)",
+    "result": "university and iLaw articles about the Emergency Decree on Managing the Work of Foreigners B.E. 2560 (amended B.E. 2561); no official consolidated text from a reachable host",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org",
+    "result": "still resets the connection, 2026-11-04",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The Emergency Decree B.E. 2560 as amended B.E. 2561 is the primary for applies, first, processing, validity, eligibility and exempt; no reachable official copy found today. The research's thailand.go.th source no longer serves text to this client."
+ },
+ {
+  "id": "R-5020",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://base.spinform.ru/show_doc.fwx?rgn=25516",
+    "status": "same",
+    "now": "not re-fetched today; the Migration Service's own pages below were read instead"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://migration.tj/i%d2%b7ozat-baroi-kor-ba-sha%d2%b3rvandoni-hori%d2%b7i/",
+    "title": "Migration Service of the Ministry of Labour, Migration and Employment, 'Иҷозат барои кор ба шаҳрвандони хориҷӣ' (work permit for foreign citizens: documents)",
+    "read": "2026-11-04",
+    "said": "ИҶОЗАТ БАРОИ КОР БА ШАҲРВАНДОНИ ХОРИҶИ 1. Мактуб ба номи Сардори ХМ; 2. Ариза; 3. Нусхаи Ичозатнома (Лицензия); 4. Нусхаи РМА,Иктибос,Шаходатнома; 5. Нусхаи шиносномаи Рохбар; 6. 2 дона сурат 3х4; 7. Маълумотномаи тибби шакли 029 (Медгородок); 8. Маълумотномаи ВИЧ СПИД; 9. Шартномаи мехнатї; 10. Нусхаи шиноснома, раводид, варакаи бакайдгирии шахрванди хоричї; 11. Ваколатномаи шахси масъул. 12. Расидхо (квитанция) 4680 сомонї; 13. 3744 сомони – Боҷи ҷумхурӣ; 14. 936 сомони – Хизматрасонии Хадамоти Муҳоҷират."
+   },
+   {
+    "kind": "primary",
+    "url": "https://migration.tj/i%d2%b7ozatnoma-baroi-%d2%b7albi-%d2%9buvvai-korii-h/",
+    "title": "Migration Service, 'Иҷозатнома барои ҷалби қувваи кории хориҷӣ' (licence to attract foreign labour)",
+    "read": "2026-11-04",
+    "said": "Мақоми иҷроияи додани иҷозатнома барои ҷалби қувваи кории хориҷӣ Хадамоти муҳоҷират мебошад. Тибқи қарори Ҳукумати Ҷумҳурии Тоҷикистон ва талаботҳои муқаррарнамудаи Хадамоти муҳоҷиарт шаҳрвандон барои дархости расмии гирифтани иҷозатнома барои ҷалби қувваи кории хориҷӣ номгӯи ҳуҷатҳои зеринро пешниҳод менамоянд: … – Расидҳо сомонӣ 468 (312+156 c); – Ваколатномаи шахси масъул."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "migration.tj (the Migration Service's site) fetched over https: home page, then its pages 'ИҶОЗАТ БАРОИ КОР БА ШАҲРВАНДОНИ ХОРИҶӢ' and 'ИҶОЗАТНОМА БАРОИ ҶАЛБИ ҚУВВАИ КОРИИ ХОРИҶӢ' (Tajik), read whole",
+    "result": "HTTP 200; the work permit is applied for with the employer's licence to attract foreign labour (item 3), the employer's registration documents, a labour contract, medical and HIV certificates, the foreigner's passport, visa and registration; fees 4,680 somoni (3,744 state duty + 936 Migration Service service); the licence (issued by the Migration Service to a legal entity or individual entrepreneur) costs 468 somoni (312 + 156). No criterion by occupation, so no performer-specific rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "adlia.tj (Ministry of Justice legal register): https://adlia.tj/ and https://www.adlia.tj/",
+    "result": "no connection over https (HTTP 000); http answers 503, not a read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mehnat.tj and www.mehnat.tj (Ministry of Labour, Migration and Employment)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "eligibility: 'A foreign citizen hired under a labour contract by a legal entity or individual entrepreneur that holds the Migration Service's licence to attract foreign labour; no occupation is excluded or required.' (also for first: the employer's licence, 468 somoni, 312 + 156). The 4,680-somoni payment the research holds is, on the Migration Service's page, 3,744 somoni state duty plus 936 somoni service.",
+  "notes": "The documents page is undated. The 4,680 somoni equals the 60 calculation indicators at TJS 78 already held, so the fee stands; the lead may split it into its two receipts and add the employer's licence fee. 'No occupation excluded' is read from the page's silence on occupation: the lead may prefer to store only the licensed-employer condition."
+ },
+ {
+  "id": "R-5025",
+  "verdict": "still-blocked",
+  "sources": [],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "emploi.gov.tn/fr/128/emploi-des-etrangers and /129/contrat-de-travail (Ministry of Employment) over https; the home page over http",
+    "result": "https no connection (HTTP 000); http answers 503 (and a plain-http page isn't a read)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "iort.gov.tn (Official Gazette) and legislation.tn",
+    "result": "both no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The Tunisian state hosts don't answer this client today, as on 2026-11-01."
+ },
+ {
+  "id": "R-5027",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://tongaembassycn.gov.to/en/going-to-tonga-en/visas-en/employment-visa-en",
+    "status": "same",
+    "now": "read whole (1,093 words): USD 230 at the Embassy in Beijing; 'An Employment Visa normally takes one month to process.'; documents for 2 or more years; no validity, union, eligibility, pay or exemption"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "Tonga Embassy in Beijing's Employment Visa page fetched and read whole",
+    "result": "HTTP 200; no term, union step, criterion, pay rule or short-engagement exemption; a business-intent visitor must advise Immigration in writing or pay T$1,150",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Only the embassy page was retried today."
+ },
+ {
+  "id": "R-5031",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://homelandsecurity.gov.tt/services/work-permit/",
+    "status": "same",
+    "now": "read whole (1,894 words): 'A person entering Trinidad and Tobago to engage in gainful occupation for one period not exceeding thirty days in every twelve consecutive months, need not apply for a work permit.' No decision time, term, union step, criterion or pay rule."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "homelandsecurity.gov.tt/services/work-permit/ (Ministry of Homeland Security, the work-permit page) fetched and read whole",
+    "result": "HTTP 200; the 30-days-in-twelve-months exemption confirmed; no processing time, validity, union step, eligibility criterion or pay rule",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org snapshot of a page",
+    "result": "still resets the connection (curl: (35) Recv failure), 2026-11-04",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Not pursued further today beyond the Ministry's page; the Immigration Act was read on 2026-11-01. The Ministry's page has moved from the Ministry of National Security to homelandsecurity.gov.tt (Ministry of Homeland Security), which the lead may want to note."
+ },
+ {
+  "id": "R-5036",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://www.clydeco.com/en/insights/2023/04/tanzania-work-and-residence-permit-application-pro",
+    "status": "same",
+    "now": "not re-fetched; the Act on the Labour Division's site was read instead"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.kazi.go.tz/uploads/documents/en-1599586892-sw1563554394-The_non-citizens_employment_Regulations_Act_sw.pdf",
+    "title": "Non-Citizens (Employment Regulation) Act, 2015 (Act No. 1 of 2015), as published in the Gazette's Acts Supplement, scan on the Prime Minister's Office (Labour) site kazi.go.tz",
+    "read": "2026-11-04",
+    "said": "13.-(1) There shall be five categories of work permits as follows: (a) Class A which shall be issued to a foreign investor who is a self-employed; (b) Class B which shall be issued to a non-citizen who is in possession of a prescribed profession; (c) Class C which shall be issued to a non-citizen who is in possession of such other profession; (d) Class D which shall be issued to a non-citizen employed or engaged in a registered religious and charitable activities; and (e) Class E which shall be issued torefugees. … \"prescribed profession\" includes medical and health care professionals, experts in oil and gas and teachers and university lecturers in science and mathematics; … 11.-(2) The Labour Commissioner shall, before approving an application for a work permit, satisfy himself that all possible efforts have been explored to obtain a local expert."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "kazi.go.tz (Prime Minister's Office, Labour Division) home page fetched over https (it loads today, unlike layer 3's attempt); its legislation link 'The_non-citizens_employment_Regulations_Act_sw.pdf' downloaded (29 pages, a scan with no text layer); 'Regulation Non Citizen.pdf FINAL.pdf' refused (HTTP 000)",
+    "result": "The Act No. 1 of 2015 read by eye from the page images (pages 7, 13, 14 of the Act: s. 3 definitions, s. 11, s. 13); OCR was not usable (machine load), so each quote was read from the rendered page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "tanzlii.org/akn/tz/act/2015/1 (the Act)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "immigration.go.tz home",
+    "result": "HTTP 200 but an 806-byte page with no content",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "eligibility: 'A performer is not a prescribed profession (medical and health care, oil and gas, teachers and lecturers in science and mathematics), so the permit is Class C, for a non-citizen with any other profession; the Labour Commissioner must be satisfied that every effort was made to find a local expert (s. 11(2)).' Also read: s. 12(4) a work permit runs 24 months, renewable to five years in all.",
+  "notes": "The Act as gazetted in 2015; later amendments (the Written Laws (Miscellaneous Amendments) Acts of 2015 and 2016 the site also lists) weren't read, so the lead should check they leave s. 13 and s. 11(2) as they are. The validity the research already holds may be compared with s. 12(4)."
+ },
+ {
+  "id": "R-5044",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://impo.com.uy/bases/decretos/394-2009",
+    "status": "same"
+   },
+   {
+    "url": "https://www.impo.com.uy/bases/leyes/18250-2008",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.impo.com.uy/bases/leyes/18250-2008",
+    "title": "Ley N° 18.250 de 06/01/2008, Migración (IMPO, arts. 20, 21, 34, 36)",
+    "read": "2026-11-04",
+    "said": "Artículo 36 Se considera no residente a la persona extranjera que ingresa al país sin ánimo de permanecer en forma definitiva ni temporaria en el territorio nacional. Integran esta categoría migratoria: … 2) Invitados por entes públicos o privados en razón de su profesión o arte. … 4) Integrantes de espectáculos públicos, artísticos o culturales. … Artículo 20 Las personas extranjeras admitidas en la categoría de \"no residente\" no podrán ejercer actividad laboral alguna fuera de las específicas en su categoría. Artículo 21 Las personas físicas o jurídicas que en el territorio nacional ocupen trabajadores extranjeros en relación de dependencia deberán cumplir la normativa laboral vigente, tal como se aplica a los trabajadores nacionales."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.impo.com.uy/bases/decretos/394-2009",
+    "title": "Decreto N° 394/009 de 24/08/2009, reglamentación de la Ley 18.250 (IMPO, art. 13)",
+    "read": "2026-11-04",
+    "said": "Artículo 13 El plazo de permanencia de los no residentes incluidos en el artículo 36 de la Ley Nº 18.250 será: a) De noventa días renovables por noventa días más a las personas comprendidas en los numerales 1, 2, 3, 4, 11 y 12."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.impo.com.uy/bases/leyes/18384-2008",
+    "title": "Ley N° 18.384 de 17/10/2008, Estatuto del Artista y Oficios Conexos (IMPO)",
+    "read": "2026-11-04",
+    "said": "(read whole, 1,150 words: no article on foreign artists; the unions (organizaciones gremiales) appear only as members of the commission that runs the artists' register: 'representantes de las organizaciones gremiales. Los representantes gremiales serán designados por el Ministerio de Trabajo …')"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "IMPO: Ley 18.250 (7,163 words) and Decreto 394/009 as amended (5,566 words) fetched and read whole; searched for artistas, espectáculos, sindicato, salario, remuneración, plazo, resolución",
+    "result": "exempt found: members of public, artistic or cultural shows (art. 36(4)) and those invited for their profession or art (art. 36(2)) enter as non-residents, may do the activity specific to their category (art. 20), and stay 90 days renewable for 90 more (Decreto 394/009 art. 13(a)); pay rule: employers must apply labour law to foreign employees as to nationals (art. 21), no pay floor; no union step in either text; no decision period for the residence (Ley 18.250 art. 37 leaves time limits to regulation, and the decree sets none)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "IMPO: Ley 18.384 (Estatuto del Artista y Oficios Conexos) and its Decreto 266/009 fetched and read whole (1,150 and 1,158 words), searched for extranjero, sindicato, gremial",
+    "result": "no rule on foreign artists and no union consultation; unions appear only on the artists' register commission",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "gub.uy Ministry of Labour (MTSS) home page fetched (HTTP 200)",
+    "result": "the home page names no work permit, foreign worker or migration procedure (no match for extranjero, permiso de trabajo, migra); no decision time found",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "exempt: {n: 90, unit: 'days', renewable: 'once, 90 more', note: 'a member of a public, artistic or cultural show, or a person invited for their art, enters as a non-resident and may do that activity (Ley 18.250 arts. 20, 36(2), 36(4); Decreto 394/009 art. 13(a))'}; pay: 'labour law applies to a foreign employee as to a national (Ley 18.250 art. 21); no pay threshold'; union: null (none: Ley 18.250, Decreto 394/009, Ley 18.384 and Decreto 266/009 read whole, no union step); processing: still blocked.",
+  "notes": "Earlier attempts recorded 'no exemption for paid work': that missed art. 36(4) with art. 20, which lets a show's members work in the show as non-residents. The lead may want the route for a short engagement to read as the non-resident category. processing stays blocked: no decision time in law, decree or the DNM pages read; migracion.minterior.gub.uy not retried."
+ },
+ {
+  "id": "R-5046",
+  "verdict": "found-now",
+  "sources": [
+   {
+    "url": "https://advice.uz/ru/document/364",
+    "status": "same",
+    "now": "not re-fetched; the law itself was read"
+   },
+   {
+    "url": "https://lex.uz/ru/docs/5055690",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://lex.uz/ru/docs/5055690",
+    "title": "Law of the Republic of Uzbekistan No. ZRU-642 of 20.10.2020 'On employment of the population' (Аҳоли бандлиги тўғрисида), National Database of Legislation, edition as amended to 25.07.2026, chapter 17 (arts. 107-112), Uzbek text",
+    "read": "2026-11-04",
+    "said": "109-модда … Қуйидаги чет эллик фуқаролар малакали мутахассислар деб эътироф этилади: олий маълумотга эга бўлганлар; талаб қилинган мутахассислик ёхуд дипломидаги мутахассислик бўйича камида беш йиллик иш тажрибасига эга бўлганлар; Ўзбекистон Республикасида меҳнат фаолиятига жалб этиш шартларида йилига ўттиз минг АҚШ доллари эквивалентидаги суммадан кам бўлмаган миқдорда иш ҳақи (мукофот пули) олиши назарда тутилганлар. 110-модда . Ўзбекистон Республикасида хорижий ишчи кучини жалб этиш ва ундан фойдаланиш тартиби ўзига нисбатан татбиқ этилмайдиган чет эллик фуқаролар … Ўзбекистон Республикаси Туризмни ривожлантириш давлат қўмитасининг илтимосномаларига кўра, туризм соҳасидаги ишларга уч ойгача муддатга жалб этиладиган мутахассисларга; … Ўзбекистон Республикаси ҳудудида Ўзбекистон Республикасининг давлатлараро шартномаларига мувофиқ ташкил этилган ташкилотларда меҳнат фаолиятини амалга ошираётган илм-фан ва маданият арбобларига; … 111-модда … Ариза келиб тушган кундан эътиборан беш иш куни ичида ҳудудий меҳнат органи: чет эллик фуқароларни жалб этишнинг мақсадга мувофиқлигини иш берувчи томонидан кўрсатилган бўш (вакант) иш ўринлари учун маҳаллий ишчи кучи мавжудлигини ҳисобга олган ҳолда ўрганади; … малакали мутахассислар учун — базавий ҳисоблаш миқдорининг икки баравари миқдорида; ватандошлар учун — базавий ҳисоблаш миқдорининг икки баравари миқдорида; бошқа чет эллик фуқаролар учун — базавий ҳисоблаш миқдорининг ўттиз баравари миқдорида."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "lex.uz (National Database of Legislation) document 5055690 fetched (third try; the first returned HTTP 000) and chapter 17 'Foreign citizens' labour activity in Uzbekistan' (arts. 107-112) read whole; the whole law (7,356 words of text) searched for performers, culture, unions (касаба уюшма) and pay",
+    "result": "art. 109: highly qualified specialists (a top-1,000 university degree, five years' experience in the specialism, pay of at least US$60,000 a year) and qualified specialists (higher education, five years' experience, pay of at least US$30,000 a year); art. 110: the list of foreigners outside the procedure names no performers and no short engagement (tourism specialists up to three months on the State Committee's request; founders of foreign or joint enterprises up to three months; figures of science and culture in organisations set up under interstate treaties; and others); art. 111: the regional labour body checks local labour availability within five working days, the Ministry decides within fifteen; the issue fee is 1 BCA for highly qualified, 2 for qualified and compatriots, 30 for other foreigners. Unions appear only in chapters on dismissals and councils, never in chapter 17",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "eligibility: 'Any foreign citizen whose employer obtains the Ministry's confirmation of the right to work; the Ministry checks local labour availability and the employer's real need. A performer is an \"other foreign citizen\" unless they meet the qualified-specialist test (higher education, five years in the specialism, at least US$30,000 a year) or the highly-qualified one (top-1,000 university, five years, at least US$60,000 a year).' pay: 'No pay floor for other foreign citizens; US$30,000 a year for a qualified and US$60,000 for a highly qualified specialist (art. 109).' exempt: null (none: art. 110's list names no performers or short engagements). union: null (none in chapter 17).",
+  "notes": "The text read is in Uzbek (lex.uz serves the Uzbek text at the /ru/ address for this edition). Art. 109's three conditions are listed one after another without 'or'; whether all must be met is read as the list's plain sense, and the lead may check the Russian text. Art. 111's 30-BCA fee for other foreigners can be compared with the research's held fee."
+ },
+ {
+  "id": "R-5049",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://svgconsulate.vc/documents/consular/non-nationals/nn-work-permit-req.pdf",
+    "status": "same",
+    "now": "HTTP 200 with a browser user agent (403 without); unchanged: 'Fees – (as of March 01, 2016) - subject to change'; 'A work permit ONLY is issued on a one-time basis for not more than six (6) months.'"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://pmoffice.gov.vc/pmoffice/index.php/faq",
+    "title": "Office of the Prime Minister, Frequently Asked Questions … regarding citizenship, residence, work permits and alien's land-holding licence",
+    "read": "2026-11-04",
+    "said": "5. How can someone obtain a work permit? A person should have a prospective employer or proof that he/she is self-employed in order to be eligible to apply for a work permit. If the work permit is desired for more than (6) months, a residence permit is also required. … 8. What is the processing time for residence and work permit applications? An average six (6) to eight (8) weeks."
+   },
+   {
+    "kind": "primary",
+    "url": "https://pmoffice.gov.vc/pmoffice/images/stories/Forms/fees%20for%20residence%20etc0001.pdf",
+    "title": "Office of the Prime Minister, 'Fees for Residence Permits, Work Permits Citizenship and Renunciation of Citizenship As at March 01, 2016' (scan, linked today from the Office's Forms page as 'Fees for Residence, Work Permits, Citizenship etc.'), read from the page image",
+    "read": "2026-11-04",
+    "said": "Work permits Application fee $200.00 (non-refundable) CARICOM nationals $960.00 per annum Others for a period up to 30 days $700.00 for a period up to 60 days $1400.00 for a period up to 90 days $2100.00 for a period over 90 days up to12 months $2400.00 … Replacement fee for all categories of permits/certificates $100.00"
+   },
+   {
+    "kind": "primary",
+    "url": "https://pmoffice.gov.vc/pmoffice/images/stories/Forms/regulations2.pdf",
+    "title": "Office of the Prime Minister, 'Regulations' (scan, read from the page image)",
+    "read": "2026-11-04",
+    "said": "Employment of Foreign Nationals and Commonwealth Citizens Regulations Cap 208 of the Revised Laws of St. Vincent and the Grenadines 2009 Volume 7"
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "pmoffice.gov.vc (the Office of the Prime Minister, which issues work permits): home, FAQ (515 words, read whole), Departments, Forms; the Forms page's fee schedule and regulations list (scans, read by eye from rendered images)",
+    "result": "processing: an average six to eight weeks (FAQ 8); eligibility: a prospective employer or proof of self-employment (FAQ 5); fees: the Office's own forms page still links the schedule 'As at March 01, 2016' with the same amounts layer 3 holds; the governing regulations are named: Employment of Foreign Nationals and Commonwealth Citizens Regulations, Cap. 208 (Revised Laws 2009, vol. 7)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "svgconsulate.vc work-permit requirements PDF re-fetched",
+    "result": "unchanged; HTTP 200 with a browser user agent",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "processing: {standard: {n: 6, unit: 'weeks', note: 'an average of six to eight weeks (OPM FAQ)'}, premium: null}; eligibility: 'A person with a prospective employer, or proof of self-employment; over six months a residence permit is also needed.' fees: the 2016 schedule stands as the Office of the Prime Minister's current published schedule (same amounts). pay, exempt, union: still blocked.",
+  "notes": "The Cap. 208 Regulations were named but not reached; they would hold any exemption, union or pay rule. The six-to-eight-week figure is stated as an average, so the lead may store 6 to 8 weeks rather than a single value."
+ },
+ {
+  "id": "R-5051",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.saime.gob.ve/extranjeria-2-2/",
+    "status": "same",
+    "now": "read whole (644 words): 'REQUISITOS PARA LA RENOVACIÓN DE TRANSEÚNTE LABORAL (TR-L) … Autorización laboral expedida por el Ministerio del Poder Popular para el Proceso Social de Trabajo.' No decision time, union step, criterion, pay rule or exemption."
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "saime.gob.ve (SAIME, the immigration service) 'Extranjería' page fetched and read whole",
+    "result": "HTTP 200; only renewal requirements for the TR-L (passport, stamps, last visas, the Labour Ministry's work authorisation); nothing on processing, union, eligibility, pay or a short-engagement exemption",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "SAIME's TR-L renewal asks for the Labour Ministry's work authorisation, while the research's 'first' says no Labour Ministry permit for artists (from the 2000 joint resolution): the lead may want to check which holds for an artist's first grant."
+ },
+ {
+  "id": "R-5053",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.gov.vg/news/department-labour-urges-employers-comply-labour-code",
+    "status": "same",
+    "now": "'urging employers to submit work permit applications at least 10 days prior to the commencement of work during the upcoming VI Emancipation Festival … all employers operating on the Festival Grounds are urged to apply for and obtain a work permit for non-Belongers or non-Virgin Islander'"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "gov.vg festival bulletin re-read; gov.vg and bvi.gov.vg guessed Department of Labour and work-permit service pages; gov.vg site search",
+    "result": "bulletin unchanged; the guessed pages answer 404; the site search answers 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'British Virgin Islands work permit fees schedule Labour Code (Work Permit) Regulations gov.vg Department of Labour and Workforce Development' (2026-11-04)",
+    "result": "law-firm notes (Mondaq/Harneys 2016-2017, Carey Olsen) say fees sit in the Statutory Rates, Fees and Charges Act 2005 as amended by a 2017 order, by industry and role; a government press release URL on bvi.gov.vg/media-centre",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "the press release at bvi.gov.vg/media-centre/government-moving-ahead-plans-amend-work-permit-fees and at gov.vg/media-centre/…",
+    "result": "HTTP 404 on both",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-39 for 'vg,gov)/media-centre/government-moving-ahead'; web.archive.org",
+    "result": "the crawl's index returned an error page (919 bytes), no lookup; web.archive.org still resets",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The primary that would hold the fee is the Statutory Rates, Fees and Charges (Amendment) Order 2017 under the Act of 2005 (named by law firms, not read). The Labour Code 2010 itself wasn't reached."
+ },
+ {
+  "id": "R-5057",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-393-2026-nd-cp-470855.htm",
+    "status": "unreachable",
+    "now": "TLS connection reset by peer (curl: (35)), 2026-11-04"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "official-register",
+    "tried": "congbao.chinhphu.vn (Official Gazette) page of Decree 393/2026/ND-CP; vbpl.vn (national legal database); thuvienphapluat.vn",
+    "result": "congbao resets the TLS connection; vbpl.vn answers but is a script application whose search API wasn't found; thuvienphapluat.vn 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'lệ phí cấp giấy phép lao động người nước ngoài Hà Nội nghị quyết HĐND 2026 đồng/giấy phép' (2026-11-04)",
+    "result": "consultancy figures (VND 400,000 to 1,000,000, varying by province) with no resolution named; a Hanoi document PLQDPVHCC-637-2026.pdf on datafiles.hanoi.gov.vn",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "datafiles.hanoi.gov.vn PLQDPVHCC-637-2026.pdf, hanoi.gov.vn, dichvucong.gov.vn",
+    "result": "all reset the connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "Common Crawl CC-MAIN-2026-43 for 'vn,gov,chinhphu,congbao)/van-ban/nghi-dinh-so-393' and 'vn,gov,hanoi,datafiles)/gov-hni/6244/vanban/2026/5/11'; web.archive.org",
+    "result": "no captures; web.archive.org resets",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The consultancy pages say the fee varies by province (a lead, not read from a primary today). union and pay weren't retried: they rest on Decree 393/2026's text, not reached."
+ },
+ {
+  "id": "R-5061",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.wallis-et-futuna.gouv.fr/Demarches/Entree-et-sejour-des-etrangers",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/720/4841/file/Ordonnance_2000-371.pdf",
+    "title": "Ordonnance n° 2000-371 du 26 avril 2000 relative aux conditions d'entrée et de séjour des étrangers dans les îles Wallis et Futuna (the Prefecture's PDF, original text), arts. 14-15",
+    "read": "2026-11-04",
+    "said": "Article 14 La durée de validité de la carte de séjour temporaire ne peut être supérieure à un an et ne peut dépasser la durée de validité des documents et visas mentionnés à l'article 4 de la présente ordonnance. … Article 15 … La carte de séjour temporaire délivrée à un artiste-interprète tel que défini par l'article L.212-1du code de la propriété intellectuelle ou à un auteur d'une œuvre littéraire ou artistique visée à l'article L. 112-2 du même code, titulaire d'un contrat de plus de trois mois passé avec une entreprise ou un établissement dont l'activité principale comporte la création ou l'exploitation d'une œuvre de l'esprit, porte la mention « profession artistique et culturelle »."
+   },
+   {
+    "kind": "primary",
+    "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/723/4860/file/D%C3%A9cret%20n%C2%B02001-634%20du%2017%20juillet%202001.pdf",
+    "title": "Décret n° 2001-634 du 17 juillet 2001 pris pour l'application de l'ordonnance du 26 avril 2000 (the Prefecture's PDF), arts. 21 and 28",
+    "read": "2026-11-04",
+    "said": "Article 21 … Lorsque l'étranger est autorisé, en application de la réglementation locale, à exercer à titre temporaire une activité salariée chez un employeur déterminé, il reçoit une carte de séjour temporaire portant la mention \" travailleur temporaire \" faisant référence à l'autorisation provisoire de travail dont il bénéficie et de même durée de validité. … Article 28 Pour l'application du troisième alinéa de l'article 15 de l'ordonnance du 26 avril 2000 susvisée, l'étranger artiste-interprète ou auteur d'œuvre littéraire ou artistique doit présenter à l'appui de sa demande un contrat d'une durée supérieure à trois mois conclu avec une entreprise ou un établissement dont l'activité principale comporte la création ou l'exploitation d'œuvres de l'esprit. Ce contrat est visé : 1° S'il s'agit d'un contrat de travail, par l'autorité compétente pour délivrer une autorisation de travail ; 2° Dans les autres cas, par l'autorité compétente en matière artistique ou culturelle."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "wallis-et-futuna.gouv.fr 'Entrée et séjour des étrangers' re-read (2,414 words) and its two linked texts downloaded (the first try returned HTTP 000, the second 200) and read as text (10,398 and 10,472 words)",
+    "result": "eligibility: a performer or author with a contract of more than three months with a creative or exploiting enterprise gets the 'profession artistique et culturelle' card, the contract visaed by the work-authorisation authority (a work contract) or the cultural authority; a temporary salaried worker gets a 'travailleur temporaire' card as long as the provisional work authorisation; validity: a temporary card at most one year (art. 14). No fee, union step, pay rule or short-stay exemption in either text (no 'syndic'); the visa page lists nationals of the US, Australia, Brazil, Japan, Mexico, South Korea and Venezuela as needing a visa even under three months to do paid work",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "eligibility: 'A performer (artiste-interprète) or author with a contract of more than three months with an enterprise whose main business is creating or exploiting works gets the \"profession artistique et culturelle\" card; the work contract is visaed by the authority that grants work authorisations (ordonnance art. 15; décret art. 28). A temporary salaried engagement gets a \"travailleur temporaire\" card for the work authorisation's own length (décret art. 21).' validity: {n: 1, unit: 'years', renewable: true, note: 'a temporary residence card is at most one year (ordonnance art. 14); the temporary-worker card matches the provisional work authorisation'}. fees, processing, union, pay, exempt: still blocked.",
+  "notes": "These are the original 2000 and 2001 texts as the Prefecture posts them; later amendments (the ordinance has been amended since) weren't read on Légifrance, so the lead should check arts. 14-15 stand. The work authorisation itself is governed by the territory's labour rules (the Code du travail des TOM of 1952 and local arrêtés), not reached."
+ },
+ {
+  "id": "R-5065",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://cps.rks-gov.net/wp-content/uploads/2020/09/LAW-ON-GRANTING-PERMIT-FOR-WORK-AND-EMPLOYMENT-OF-FOREIGN-CITIZENS-IN-REPUBLIC-OF-KOSOVO.",
+    "status": "changed",
+    "now": "not re-fetched; the Official Gazette's record of Law No. 04/L-219 on Foreigners (published 05.09.2013, OG 35/2013) lists under 'Shfuqizon' (repeals): 'LIGJI NR.03/L-136 PËR DHËNIEN E LEJES PËR PUNË DHE PUNËSIMIN E SHTETASVE TË HUAJ NË REPUBLIKËN E KOSOVËS'. The research's route rests on a repealed law."
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://gzk.rks-gov.net/ActDetail.aspx?ActID=8876",
+    "title": "Official Gazette of the Republic of Kosovo, record of Law No. 04/L-219 on Foreigners (amended by Law No. 06/L-036, 03.05.2018, and Law No. 08/L-262, 08.08.2024)",
+    "read": "2026-11-04",
+    "said": "LIGJI NR. 04/L-219 PËR TË HUAJT … Data e publikimit: 05.09.2013 Gazeta Zyrtare: 35/2013 … Ndryshohet/Plotësohet nga LIGJI NR. 06/L-036 … Data e publikimit: 03.05.2018 Ndryshohet/Plotësohet nga LIGJI NR. 08/L-262 … Data e publikimit: 08.08.2024 … Shfuqizon LIGJI NR.03/L-136 PËR DHËNIEN E LEJES PËR PUNË DHE PUNËSIMIN E SHTETASVE TË HUAJ NË REPUBLIKËN E KOSOVËS"
+   },
+   {
+    "kind": "primary",
+    "url": "https://gzk.rks-gov.net/ActDocumentDetail.aspx?ActID=8876",
+    "title": "Law No. 04/L-219 on Foreigners, the Gazette's PDF (55 pages), arts. 70, 74, 76",
+    "read": "2026-11-04",
+    "said": "Neni 70 … 1. Lejeqëndrimi për punë jashtë kuotës vjetore mund të lëshohet: … 1.9. artistëve që punojnë në institucionet e kulturës në Republikën e Kosovës; … Neni 74 … 1. Lidhur me kërkesën për lëshimin e lejeqëndimit për punë vendos DSHAM-i, pas konfirmimit për lejimin e punës nga MPMS-ja. … 2. Lejeqëndrimi për punë i lëshohet shtetasit të huaj për kohën sa është e nevojshme për kryerjen e punëve, respektivisht për kohën për të cilin është lidhur kontrata e punës ose kontrata tjetër përkatëse, e më së gjati deri një (1) vit. … Neni 76 … 3. Në bazë të vërtetimit për lajmërimin e punës, deri në gjashtëdhjetë (60) ditë brenda një (1) viti, mund të punojnë të huajt si vijon: … 3.3. artistët dhe personeli teknik, për shfaqjet e operave, baletit, teatrit, koncerteve dhe shfaqjeve tjera kulturore, respektivisht autorët dhe ekzekutuesit në fushën e artit të filmit dhe televizionit; … 4. Në bazë të vërtetimit mbi lajmërimin e punës, deri në tridhjetë (30) ditë gjatë vitit, mund të punojnë shtetasit e huaj siç vijon: 4.1. autorët dhe ekzekutuesit në fushën e muzikës, muzikës së skenës dhe artit të vallëzimit si dhe ekzekutuesit përcjellës, personeli teknik; … 5. Lajmërimi nga paragrafi 1. 3. dhe 4. i këtij neni bëhet në MPMS, e cila i lëshon një vërtetim për lajmërimin e punës dhe menjëherë e njofton Administratën Tatimore, DSHAM-in, dhe Policinë Kufitare."
+   },
+   {
+    "kind": "primary",
+    "url": "https://cps.rks-gov.net/wp-content/uploads/2020/09/LIGJI_NR._06_L-036__P%C3%8BR_NDRYSHIMIN_DHE_PLOT%C3%8BSIMIN_E_LIGJIT_NR._04_L-219_P%C3%8BR_T%C3%8B_HUAJT.pdf",
+    "title": "Law No. 06/L-036 amending Law No. 04/L-219 on Foreigners (Official Gazette No. 6, 3 May 2018), arts. 20 and 22",
+    "read": "2026-11-04",
+    "said": "1. Titulli i nenit 76, i Ligjit bazik, riformulohet me tekstin si në vijim: \"Leje pune afatshkurtër për të huaj\". … 5. Në tërë tekstin e ligjit bazik, termi \"vërtetim për lajmërimin e punës\", të zëvendësohet me termin \"leje pune afatshkurtër për të huaj\"."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "tried": "WebSearch 'gzk.rks-gov.net ActDetail Ligji Nr. 08/L-296 për të huajt' (2026-11-04)",
+    "result": "no such law found; results gave the 2018 amendment 06/L-036 on cps.rks-gov.net and Albanian (not Kosovo) laws",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "gzk.rks-gov.net (Official Gazette): ActDetail.aspx IDs probed from 8865 to 8877 to find Law 04/L-219 (ActID 8876); its record read; its PDF obtained by the page's own PDF button (form post) and read as text (55 pages, 25,561 words); Law 06/L-036 (cps.rks-gov.net) read",
+    "result": "Law 04/L-219 repealed Law 03/L-136; the route is the residence permit for work (lejeqëndrim për punë), within the yearly quota or, for artists working in Kosovo's cultural institutions, outside it (art. 70(1)(1.9)); decided by the DSHAM after the Ministry of Labour's confirmation (art. 74(1)); granted for the work's or contract's time, at most one year (art. 74(2)). Short engagements work on a short-term work permit (renamed in 2018) registered with the Ministry of Labour: up to 60 days a year for artists and crew of opera, ballet, theatre, concerts and other cultural shows and for authors and performers in film and television (art. 76(3)(3.3)); up to 30 days a year for music, stage music and dance (art. 76(4)(4.1)). No union step (no 'sindikat' in the law); no fee in the law",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "mpms.rks-gov.net (Ministry of Labour) and mfpt.rks-gov.net, mpb.rks-gov.net",
+    "result": "mpms no connection (HTTP 000); mfpt and mpb answer (HTTP 200) but weren't searched for fees in this pass",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "route: 'Lejeqëndrim për punë (residence permit for work), Law No. 04/L-219 on Foreigners; for up to 60 days a year (film, television, theatre, opera, ballet, concerts) or 30 days (music, dance), a short-term work permit (leje pune afatshkurtër) registered with the Ministry of Labour.' eligibility: 'Artists working in Kosovo's cultural institutions get the permit outside the yearly quota (art. 70(1)(1.9)); others within the quota the Government sets each year by activity and profession (arts. 68-69).' exempt: {n: 60, unit: 'days', per: 'year', note: 'not an exemption from papers but a short-term permit on registration with the Ministry of Labour (art. 76(3)(3.3), (5)); 30 days for music and dance (art. 76(4)(4.1))'}; validity: at most one year, for the contract's time (art. 74(2)). union: null (none in the law). fees, pay: still blocked.",
+  "notes": "Law No. 08/L-262 (08.08.2024) amends 04/L-219 among many laws to fit the general administrative procedure law; it wasn't read and may change deadlines. Regulation (QRK) No. 05/2026 amending Regulation 09/2019 and Administrative Instruction (MPB) No. 09/2019 on stay-permit procedure are listed under the law and weren't read; the fee for a stay permit would sit in a fee act not found. The 'exempt' days are a lighter permit, not none: the lead must decide whether the engine's exempt field fits it."
+ },
+ {
+  "id": "R-5067",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://wageindicator.org/ar-ye/work-in-yemen/labour-law/employment-security",
+    "status": "same",
+    "now": "not re-fetched today"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour), www.yemen.gov.ye (national portal)",
+    "result": "no connection (HTTP 000)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs, the laws' publisher); agoyemen.net (Office of the Attorney General, which publishes a law library): home page and its law lists ntopicsslist.php?id=2, 4, 5, 8, 9, 10, 11, 12 read",
+    "result": "mola.gov.ye no connection (HTTP 000); agoyemen.net answers (HTTP 200) but its first list pages hold commercial, fiscal and penal laws and regulations, no Labour Code or work-licence regulation; later pages of the lists weren't paged",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "ILO NATLEX PDF of the Labour Code (YEM44043.pdf)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org",
+    "result": "still resets the connection (curl: (35)), 2026-11-04",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "No web search spent here. The fee, term and decision time would sit in a ministerial resolution under the Labour Code (arts. 19-26), which no reachable channel holds."
+ },
+ {
+  "id": "R-5073",
+  "verdict": "partial",
+  "sources": [
+   {
+    "url": "https://www.zambiaimmigration.gov.zm/permit-types/",
+    "status": "same"
+   }
+  ],
+  "newSources": [
+   {
+    "kind": "primary",
+    "url": "https://zamimmigration.azurewebsites.net/wp-content/uploads/2019/10/Immigration_and_Deportation-_Act-.pdf",
+    "title": "Immigration and Deportation Act, No. 18 of 2010 (the Department of Immigration's copy, linked from zambiaimmigration.gov.zm/publications/legislation/)",
+    "read": "2026-11-04",
+    "said": "28. (1) On application being made in the prescribed manner, the Director-General of Immigration may, in consultation with the Ministry responsible for labour, issue an employment permit to any foreigner outside Zambia who— (a) is not a prohibited immigrant; (b) belongs to class A specified in the First Schedule; … (10) The Director-General of Immigration may issue a temporary employment permit to any business visitor who intends to remain in Zambia for a period in excess of thirty days, except that any period granted under a temporary employment permit shall not exceed six months in any period of twelve months. … FIRST SCHEDULE … Class A Any person who intends for gain to engage in any trade, business, profession, employment or other occupation — (a) for which the person is fitted by virtue of the person's academic or professional qualifications, standard of education, skill and financial resources; (b) in which, having regard to the productivity and efficiency of the persons already engaged therein, there is not already a sufficient number of persons engaged or available in Zambia to meet the requirements of the inhabitants of Zambia; or (c) which is likely to be of benefit to the inhabitants of Zambia generally."
+   },
+   {
+    "kind": "primary",
+    "url": "https://zamimmigration.azurewebsites.net/wp-content/uploads/2019/10/The-Immigration-and-Deportation-Actl-No.-19-2016.pdf",
+    "title": "Immigration and Deportation (Amendment) Act, No. 19 of 2016 (the Department's copy)",
+    "read": "2026-11-04",
+    "said": "9. The principal Act is amended by the repeal of section twenty-four. 10. Section twenty-eight of the principal Act is amended by— (a) the deletion of subsection (2); and (b) the deletion in subsection (5) of the word \"five\" and the substitution therefor of the word \"ten\"."
+   },
+   {
+    "kind": "primary",
+    "url": "https://zamimmigration.azurewebsites.net/wp-content/uploads/2019/10/The-Employment-Code-Act-No.-3-of-2019.pdf",
+    "title": "Employment Code Act, No. 3 of 2019 (the Department's copy), Division 3.4, Employment of Expatriates",
+    "read": "2026-11-04",
+    "said": "61. (1) Subject to the Immigration and Deportation Act, 2010, an employer shall not— (a) employ, in the name of the employer, an expatriate to engage in work that is not a critical skill under a list prepared under section 65 (1)(d); (b) cause the expatriate to engage in work other than that authorised under the permit issued in accordance with the Immigration and Deportation Act, 2010;"
+   },
+   {
+    "kind": "primary",
+    "url": "https://zamimmigration.azurewebsites.net/wp-content/uploads/2019/10/Guide-on-Immigration-Permits-Visas.pdf",
+    "title": "Department of Immigration, Guide on Immigration Permits & Visas: Requirements & Fees (PDF created 1 August 2017)",
+    "read": "2026-11-04",
+    "said": "All ordinary visitors (including tourists) are entitled to a free ninety (90) days visit in any period of twelve (12) months from the day of first entry into Zambia while business visitors are entitled to a free thirty (30) days visit in any period of twelve (12) months. … B. Extension of Number of Days (Business Visitor) If a business visitor wishes to remain in Zambia, he/she should apply for a Temporary Employment Permit."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "zambiaimmigration.gov.zm/permit-types/ re-read (3,931 words) and /publications/legislation/ listed; the Department's copies of the Act 2010, the Amendment Act 2016, the Employment Code Act 2019, SI 38 of 2013, SI 113 of 2021 and the Guide (2017) downloaded and read as text; SI 69 of 2022 refused (HTTP 000)",
+    "result": "eligibility found: a TEP goes to a business visitor staying over 30 days (s. 28(10)); an employment permit to a Class A person (First Schedule); the employer may employ an expatriate only in a critical-skill job on the s. 65(1)(d) list (Employment Code s. 61(1)(a)). The Act's consultation is with the labour ministry, never a union (no 'union' in the Act). No decision period in the Act or the Guide. Exempt: business visitors have a free 30 days in 12 months (Guide 2017); the 30-day business permit of s. 24 was repealed in 2016",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "zambialii.org (Act No. 18 of 2010) and parliament.gov.zm",
+    "result": "zambialii 403; parliament.gov.zm no connection (HTTP 000)",
+    "date": "2026-11-04"
+   }
+  ],
+  "value": "eligibility: 'A temporary employment permit is issued to a business visitor staying more than 30 days (at most six months in twelve); an employment permit to a person fitted for the work by qualifications or skill, in work with too few people available in Zambia, or of benefit to Zambia (Class A); the employer may hire an expatriate only for a job on the critical-skills list.' union: null (none: Immigration and Deportation Act read whole, consultation is with the labour ministry). exempt (lead): up to 30 days in 12 months as a business visitor (Department's Guide, 2017, and the current Permit Types page's 'exceeding thirty (30) days'); the Act's s. 24 business permit was repealed in 2016. processing and pay: still blocked (Employment Code Division 3.4 sets no pay rule; the Code wasn't read whole for one).",
+  "notes": "The exempt days are a lead, not a fact: neither the Act nor the Guide says a paid performer is a 'business visitor' (the Act's definition lists meetings, conferences, deals, contracts and overseas engineers), and the 2017 Guide predates the 2021 and 2022 SIs not all read. The critical-skills list (s. 65(1)(d)) wasn't sought; whether performers are on it decides eligibility for a long engagement."
+ },
+ {
+  "id": "R-5075",
+  "verdict": "still-blocked",
+  "sources": [
+   {
+    "url": "https://www.zimimmigration.gov.zw/?page_id=6958",
+    "status": "same",
+    "now": "the fee table: temporary employment permit, ordinary US$500; short term permit US$500; extensions US$500; no term, time or conditions"
+   },
+   {
+    "url": "https://www.zimimmigration.gov.zw/?page_id=6980",
+    "status": "same",
+    "now": "Temporary Employment Permit requirements (1,161-word page): contract, local newspaper advertisement, CVs of shortlisted candidates and understudies, 'Professionals to be cleared by relevant authorities'; no validity, decision time, union step, pay rule or exemption"
+   }
+  ],
+  "newSources": [],
+  "attempts": [
+   {
+    "method": "institution",
+    "tried": "zimimmigration.gov.zw fee page (?page_id=6958) and permit requirements page (?page_id=6980) re-read whole",
+    "result": "no validity, decision time, union, pay or short-engagement exemption",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "tried": "National Arts Council of Zimbabwe (nacz.co.zw): home page, Registration Requirements page read whole (571 words), site search (wp-json search 'foreign'); natartszim.co.zw and nacz.org.zw",
+    "result": "nacz.co.zw answers: it registers promoters and arts organisations and lists benefits; no clearance, permit or fee for a foreign performer; the other two domains don't connect",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "tried": "zimlii.org Immigration Regulations (S.I. 195 of 1998)",
+    "result": "HTTP 403",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "archive",
+    "tried": "web.archive.org",
+    "result": "still resets the connection, 2026-11-04",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The site's 'Professionals to be cleared by relevant authorities' names no body for performers; the National Arts Council's site has no foreign-artist clearance page."
+ }
+]

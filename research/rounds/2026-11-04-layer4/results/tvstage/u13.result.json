@@ -1,0 +1,1622 @@
+[
+ {
+  "country": "DK",
+  "items": [
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://virk.dk/myndigheder/stat/SLKS/selvbetjening/Refusionsudvalget_-_Refusionsgodkendelse_af_forestillinger_Boerne-_og_voksen_opsoegende_teater/",
+      "title": "Virk (Slots- og Kulturstyrelsen self-service): Refusionsudvalget - Refusionsgodkendelse af forestillinger: Børne- og voksen opsøgende teater",
+      "read": "2026-11-04",
+      "said": "Producenter af professionel scenekunst kan ansøge Refusionsudvalget om at få en børne- eller voksenopsøgende forestilling godkendt til refusion. Ved køb af godkendte forestillinger/billetter kan kommuner få 50% af prisen refunderet. … Forestillinger, der er produceret med støtte i henhold til Lov om scenekunst er automatisk refusionsgodkendte. … Denne ansøgningsrunde gælder for sæson 2017.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/dk_refusion.html",
+      "sha256": "332e015838a80f0ec854220c0ffc884c0c80cda95426467f096c63330271fa77"
+     }
+    ],
+    "value": {
+     "taxIncentive": null,
+     "related": {
+      "scheme": "Refusionsordningen (demand-side refund, not a tax relief)",
+      "municipalRefundShareOfPrice": 0.5,
+      "covers": "professional performances for children and young people (to age 15) and outreach performances for adults; works produced with support under the Performing Arts Act are approved automatically",
+      "pageSeason": "2017"
+     }
+    },
+    "notes": "No Danish tax relief for theatre production was found; the search surfaced only subsidies and the 2026 film/TV production rebate. The refund page read is marked for the 2017 round, so its 50% figure is not shown to be in force today; the Performing Arts Act's current refund rules were not read."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares: runs, extensions, box office per performance",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://api.statbank.dk/v1/data (table SCENE01A, CSV, TEATTYP 100/105/144, AKTIVITET *, GENRE 160/165, Tid 2023/2024-2024/2025)",
+      "title": "Danmarks Statistik, SCENE01A Produktioner og opførelser på danske teatre (egen scene), updated 2026-01-20",
+      "read": "2026-11-04",
+      "said": "Teatre i alt;Produktioner, egne scener;Genrer i alt;2024/2025;644 … Teatre i alt;Produktioner, egne scener;Skuespil;2024/2025;259 … Teatre i alt;Opførelser, egne scener;Genrer i alt;2024/2025;9321 … Teatre i alt;Opførelser, egne scener;Skuespil;2024/2025;4612",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/SCENE01A.csv",
+      "sha256": "45174f367256647dd4e400b62d06e509e9398c11c09029422cb6f873bab3660c"
+     },
+     {
+      "kind": "primary",
+      "url": "https://api.statbank.dk/v1/data (table SCENE01B, CSV, AKTIVITET 103 Tilskuere i alt)",
+      "title": "Danmarks Statistik, SCENE01B Tilskuere på danske teatre (egen scene), updated 2026-01-20",
+      "read": "2026-11-04",
+      "said": "Teatre i alt;Tilskuere i alt;Genrer i alt;2024/2025;2001703 … Teatre i alt;Tilskuere i alt;Skuespil;2024/2025;835010",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/SCENE01B.csv",
+      "sha256": "b0211d9aaf7e36bcc6940a6ba5ae5fb1d34ab5c1a7e76d0e2226e0f40b6ea295"
+     },
+     {
+      "kind": "primary",
+      "url": "https://api.statbank.dk/v1/data (table SCENE08A, CSV, Tid 2024/2025)",
+      "title": "Danmarks Statistik, SCENE08A Statsstøttede teatres økonomi, updated 2026-01-20",
+      "read": "2026-11-04",
+      "said": "Teatre i alt;Indtægter i alt (1.000 kr.);2024/2025;2352103 Teatre i alt;Statslige tilskud (1.000 kr.);2024/2025;1226569 Teatre i alt;Kommunale tilskud (1.000 kr.);2024/2025;340200 Teatre i alt;Egne indtægter (1.000 kr.);2024/2025;785334 Teatre i alt;Resultat, overskud (2021/2022-) (antal teatre);2024/2025;117 Teatre i alt;Resultat, underskud (2021/2022-) (antal teatre);2024/2025;40",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/SCENE08A.csv",
+      "sha256": "aee80698765c0d7ca13373d485c9f9930be58bb2bc83629593f08bc27c32390b"
+     }
+    ],
+    "value": {
+     "season": "2024/2025",
+     "ownStage": {
+      "productions": 644,
+      "dramaProductions": 259,
+      "performances": 9321,
+      "dramaPerformances": 4612,
+      "attendance": 2001703,
+      "dramaAttendance": 835010
+     },
+     "stateSupportedTheatres": {
+      "incomeDKKk": 2352103,
+      "stateGrantsDKKk": 1226569,
+      "municipalGrantsDKKk": 340200,
+      "ownIncomeDKKk": 785334,
+      "theatresInSurplus": 117,
+      "theatresInDeficit": 40
+     },
+     "derived": {
+      "performancesPerProduction": 14.5,
+      "dramaPerformancesPerProduction": 17.8,
+      "attendancePerPerformance": 215,
+      "dramaAttendancePerPerformance": 181,
+      "ownIncomeShare": 0.334
+     },
+     "boxOffice": null,
+     "recoupCount": null
+    },
+    "notes": "Derived values are this agent's division of the published totals. Statistics Denmark publishes no ticket revenue as such ('egne indtægter' includes all own earnings) and no count of runs recouped or extended; the surplus/deficit counts are of theatres, not productions."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "items": [
+     5
+    ],
+    "tried": "1 search (standard): 'Danmark skattefradrag teaterproduktion scenekunst skatteincitament producent ordning'",
+    "result": "no theatre tax relief; results were subsidies (Statens Kunstfond, the refund scheme) and the film/TV rebate",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     5
+    ],
+    "tried": "virk.dk Slots- og Kulturstyrelsen self-service page for the Refusionsudvalget",
+    "result": "read; a 50% municipal refund on approved performances, page marked for season 2017",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     10
+    ],
+    "tried": "Statistics Denmark StatBank API: table list (POST /v1/tables), tableinfo for SCENE08A, SCENE01A, SCENE01B; data in CSV",
+    "result": "read; 2024/2025 productions, performances, audience and state-supported theatres' finances",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Item 10 can feed a run-length draw (about 14.5 own-stage performances per production, 17.8 for drama) and an audience per performance; box office per performance isn't published."
+ },
+ {
+  "country": "GA",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series, or that none exists",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://media.unesco.org/sites/default/files/webform/dce002/QPR_2020_GA_b9b0f74d-e1be-4dfd-834a-7e33b4019800_21.pdf",
+      "title": "Gabon, Quadrennial Periodic Report 2020 to UNESCO (2005 Convention), submitted by the Government of Gabon",
+      "read": "2026-11-04",
+      "said": "Redevance audiovisuelle et cinématographique contenue dans le Code de la Communication. … La redevance audiovisuelle et cinématographique est due par tout opérateur économique exerçant dans le secteur de la communication et de la cinématographie et par toute personne physique disposant d’un terminal numérique. … Financement des activités audiovisuelles et cinématographiques ; Renforcement de l’autonomie financière des structures audiovisuelles et cinématographiques publiques. … Décret N°00453/PR/MCAEP, du 23 Mai 2006, fixant la tarification des redevances relatives des Droits d’auteurs et des droits voisins … Ce qui a permis d’aboutir à la création d’un organe de gestion collective le Bureau Gabonais des Droits d’Auteurs et à la mise en place le statut de l’artiste en Avril 2018 par le Sénat.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ga_qpr2020.pdf",
+      "sha256": "f6e1021742e5763048f31af7ea3c3108365bd4b2fd4289ca24de4c79f473896f"
+     }
+    ],
+    "value": null,
+    "notes": "No rebate or tax incentive found. The government's 2020 UNESCO report, searched whole for incitat/fiscal/fonds, lists the audiovisual and cinema levy (which funds the sector and public audiovisual bodies) but no production incentive; a 2020 report doesn't settle what is in force in 2026."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The IGIS support (about XAF 100M to about 15 filmmakers and actors in 2024) is held in producer-GA.json; whether it reaches a series was not found: igis.ga refused (proxy 502) and the web-search budget was spent before a Gabon search ran."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; no funder's rules reached."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "A channel, Gabon 1ère, is named in an sgg.gouv.ga search-result title as where the government held its '100 jours' broadcast, but no commissioning terms were reached: rtg.ga and gabon24.ga refused (502, connection reset); the HAC's site refused (502)."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; the UNESCO report names no theatre measure."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; culture.gouv.ga reset the connection."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://media.unesco.org/sites/default/files/webform/dce002/QPR_2020_GA_b9b0f74d-e1be-4dfd-834a-7e33b4019800_21.pdf",
+      "title": "Gabon, Quadrennial Periodic Report 2020 to UNESCO (2005 Convention), submitted by the Government of Gabon",
+      "read": "2026-11-04",
+      "said": "Redevance audiovisuelle et cinématographique contenue dans le Code de la Communication. … La redevance audiovisuelle et cinématographique est due par tout opérateur économique exerçant dans le secteur de la communication et de la cinématographie et par toute personne physique disposant d’un terminal numérique. … Financement des activités audiovisuelles et cinématographiques ; Renforcement de l’autonomie financière des structures audiovisuelles et cinématographiques publiques. … Décret N°00453/PR/MCAEP, du 23 Mai 2006, fixant la tarification des redevances relatives des Droits d’auteurs et des droits voisins … Ce qui a permis d’aboutir à la création d’un organe de gestion collective le Bureau Gabonais des Droits d’Auteurs et à la mise en place le statut de l’artiste en Avril 2018 par le Sénat.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ga_qpr2020.pdf",
+      "sha256": "f6e1021742e5763048f31af7ea3c3108365bd4b2fd4289ca24de4c79f473896f"
+     }
+    ],
+    "value": null,
+    "notes": "Lead: Décret N°00453/PR/MCAEP of 23 May 2006 (amended by Décret N°00472 of 10 October 2012) sets the tariff of authors' royalties, collected by the Bureau Gabonais des Droits d'Auteurs; its text was not reached, so no playwright's royalty is recorded."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum (no stage agreement held for GA)",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; the statut de l'artiste (loi 016/2023, per earlier rounds) was not reached."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     4,
+     6
+    ],
+    "tried": "www.igis.ga, igis.ga, www.culture.gouv.ga, www.communication.gouv.ga, www.rtg.ga, www.gabon24.ga, www.haute-autorite-communication.ga, hac.ga",
+    "result": "none read: proxy CONNECT 502 (igis, rtg, HAC) or connection reset (culture, communication, gabon24)",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1,
+     5,
+     6,
+     8,
+     9
+    ],
+    "tried": "sgg.gouv.ga (Secrétariat Général du Gouvernement) site search over https for 'cinematographie', 'audiovisuel', 'theatre', 'culture', 'communication'; opened the Conseil des Ministres communiqués of 18 September 2026 and '08/11/2026' that the search listed",
+    "result": "the communiqués' text holds none of those words (the search matched page furniture); no law or decree on film, TV or theatre funding found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     8
+    ],
+    "tried": "UNESCO-hosted QPR 2020 submitted by the Government of Gabon, re-read 2026-11-04 for incentives, funds, quotas and theatre",
+    "result": "levy and royalty-tariff decree named; no incentive, theatre fund or TV commissioning terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "1 search attempted (standard): 'Gabon IGIS fonds d'aide production série télévisée Gabon 1ère RTG commande producteurs indépendants théâtre subvention 2026'",
+    "result": "refused: the turn's shared web-search budget (200 calls) was used up; not worked around",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Gabon's state bodies (IGIS, RTG, the culture and communication ministries) are unreachable from here today; the only government text read is the 2020 UNESCO report. The search budget was spent before Gabon's search ran."
+ },
+ {
+  "country": "ME",
+  "items": [
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series: terms and rate of yes",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://fccg.me/vijesti/otvoreni-javni-konkursi-za-sufinansiranje-kinematografskih-djela-2026",
+      "title": "Filmski centar Crne Gore: Otvoreni javni konkursi za sufinansiranje kinematografskih djela 2026 (27 April 2026)",
+      "read": "2026-11-04",
+      "said": "Filmski centar Crne Gore objavljuje javne konkurse za sufinansiranje kinematografskih djela za 2026. godinu. Pozivaju se sva zainteresovana pravna lica, registrovana za proizvodnju kinematografskih djela (šifra djelatnosti 5911: proizvodnja filmova, video-zapisa i televizijskog programa), najmanje šest mjeseci prije objavljivanja konkursa, da se prijave za sufinansiranje u sljedećim kategorijama: Proizvodnja dugometražnih igranih filmova (potkategorije: debitantski filmovi, žanrovski filmovi sa komercijalnim potencijalom, niskobudžetni filmovi); Proizvodnja dugometražnih dokumentarnih filmova; Manjinske koprodukcije; Filmovi u proizvodnji.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/fccg_k2026.html",
+      "sha256": "4b1e37e133f1afa0126856166f324b1db78b94b3df41d37ec20c396002fc4623"
+     },
+     {
+      "kind": "primary",
+      "url": "https://fccg.me/vijesti/filmski-centar-crne-gore-podrzao-22-projekta-u-ukupnom-iznosu-od-130200000-eura",
+      "title": "Filmski centar Crne Gore podržao 22 projekta u ukupnom iznosu od 1.302.000,00 eura (20 October 2026)",
+      "read": "2026-11-04",
+      "said": "Sredstva su dodijeljena u četiri kategorije: dugometražni igrani film, film u proizvodnji, dugometražni dokumentarni film i manjinske koprodukcije. U kategoriji sufinansiranja dugometražnih igranih filmova, od ukupno 15 prijavljenih projekata, podržana su dva, za koja je opredijeljeno ukupno 632.000,00 eura … U kategoriji sufinansiranja filmova u proizvodnji, od ukupno 11 prijavljenih projekata, podržano je sedam, za koje je opredijeljeno ukupno 170.000,00 eura … od ukupno devet prijavljenih projekata, podržana su četiri, za koja je opredijeljeno ukupno 130.000,00 eura … od ukupno 41 prijavljenog projekta, podržano je devet crnogorskih manjinskih koprodukcija, za koje je opredijeljeno ukupno 370.000,00 eura",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/fccg_22.html",
+      "sha256": "e1c1c577759748703de74becc07fcf83039e329bde407f9811b9b2b372a7bc8c"
+     }
+    ],
+    "value": {
+     "fund": "Filmski centar Crne Gore, production co-financing 2026",
+     "seriesCategory": null,
+     "categories2026": [
+      "feature fiction (debut, genre, low-budget)",
+      "feature documentary",
+      "minority co-production",
+      "film in production"
+     ],
+     "results2026": {
+      "projectsSupported": 22,
+      "totalEUR": 1302000,
+      "featureFiction": {
+       "applied": 15,
+       "supported": 2,
+       "EUR": 632000
+      },
+      "filmsInProduction": {
+       "applied": 11,
+       "supported": 7,
+       "EUR": 170000
+      },
+      "featureDocumentary": {
+       "applied": 9,
+       "supported": 4,
+       "EUR": 130000
+      },
+      "minorityCoproduction": {
+       "applied": 41,
+       "supported": 9,
+       "EUR": 370000
+      }
+     },
+     "applicant": "a legal person registered under activity code 5911 at least six months before the call"
+    },
+    "notes": "The 2026 call, read whole, has no series category, so the Film Centre's co-financing doesn't reach a series this year; whether the Law on Cinematography's rules (the Pravila PDF, a 10-page scan not OCR'd) allow a series in other years is not known. The Agency for Electronic Media's media-pluralism fund (for broadcasters) was not reached."
+   },
+   {
+    "item": 3,
+    "fact": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No cap found. RTCG's general acts on selecting independent works (the law's art. 14 para. 5) were not located among its posted regulations; FCCG's Pravila (scan) not read."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen and any pickup count",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://rtcg.me/upload//media/2024/6/2/14/2/424/1782572/Zakon_o_nacionalnom_javnom_emiteru_-_Javnom_medijskom_servisu_Crne_Gore.pdf",
+      "title": "Zakon o nacionalnom javnom emiteru - Javnom medijskom servisu Crne Gore (Službeni list Crne Gore, br. 060/24 od 24.06.2024), as posted on rtcg.me (Dokumenti > Regulativa)",
+      "read": "2026-11-04",
+      "said": "Član 14 … Javni medijski servis dužan je da obezbijedi da audiovizuelna djela nezavisnih proizvođača, uključujući crnogorske nezavisne proizvođače, čine najmanje 10% godišnjeg vremena emitovanja svakog opšteg televizijskog programa. Javni medijski servis dužan je da obezbijedi da najmanje 50% djela iz stava 3 ovog člana čine djela crnogorskih nezavisnih proizvođača koja su proizvedena izvorno na crnogorskom jeziku, jezicima u službenoj upotrebi ili romskom jeziku. Kriterijumi i način izbora djela iz st. 3 i 4 ovog člana utvrđuje se opštim aktima Javnog medijskog servisa … Izvještaj o ispunjenosti obaveza iz st. 1 do 4 ovog člana generalni direktor … dužan je da dostavi Savjetu i regulatornom organu, do 31. marta tekuće za prethodnu godinu. Izvještaj iz stava 7 ovog člana objavljuje se na Internetskoj publikaciji do 31. maja.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/rtcg_zakon.pdf",
+      "sha256": "aef8645fce11965d1cc14e13fce2e65de34245496a2d1c348b64569b2e75cea1"
+     }
+    ],
+    "value": {
+     "broadcaster": "RTCG (Javni medijski servis Crne Gore), law of 2024 (OG 60/24)",
+     "independentShareOfAnnualAirtimeMin": 0.1,
+     "montenegrinOriginalShareOfThatMin": 0.5,
+     "europeanWorksShareMin": 0.51,
+     "selection": "criteria set by RTCG's general acts",
+     "reporting": "compliance report to the Council and regulator by 31 March; published by 31 May",
+     "pickup": null
+    },
+    "notes": "The quota is by airtime, not by commissions; the compliance report (which would give the realised share) was not located on rtcg.me. RTCG co-financed at least one feature (FCCG news of 'Crna truba', 'realizovan uz podršku … Radio i Televizije Crne Gore')."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.sluzbenilist.me/propisi/395872/download",
+      "title": "Zakon o izmjenama i dopunama Zakona o pozorišnoj djelatnosti (adopted 2 July 2026, promulgated 7 July 2026; Službeni list Crne Gore)",
+      "read": "2026-11-04",
+      "said": "U Zakonu o pozorišnoj djelatnosti („Službeni list RCG”, broj 60/01 i „Službeni list CG”, broj 75/10) u članu 4 stav 1 mijenja se i glasi: „Pozorište je slobodno, nezavisno i samostalno u obavljanju svoje djelatnosti.” … „9a) daje saglasnost, sa aspekta raspoloživosti budžetskih sredstava, na predlog umjetničkog plana",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/me_sl_395872.pdf",
+      "sha256": "15b57473074533443700bd1b93fe75a25b011eef7782611a2b19abc227dcc20e"
+     }
+    ],
+    "value": null,
+    "notes": "None found. The 2026 amendment to the Law on Theatre Activity, read whole (4 pages), sets no tax measure; the base law (OG 60/01, 75/10) was not read, so no absence is claimed for it."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The Ministry's 2026 call for culture projects (stage work) was not found by search or on the pages reached; the search surfaced only Serbian calls and a 2008 Montenegrin one."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cnp.me/wp-content/uploads/2019/05/Granski-kolektivni-ugovor-za-oblast-kulture.pdf",
+      "title": "Granski kolektivni ugovor za oblast kulture (Službeni list Crne Gore, br. 064/16 od 10.10.2016), as posted by the Crnogorsko narodno pozorište (cnp.me)",
+      "read": "2026-11-04",
+      "said": "uređuju … pojedina prava i obaveze iz radnog odnosa zaposlenih u javnim ustanovama kulture kojima se zarade finansiraju iz budžeta Crne Gore … Odredbe ovog Ugovora važe i za opštinske ustanove kulture dok se ne zaključe kolektivni ugovori sa osnivačem. … Član 14 Osnovna zarada zaposlenog za puno radno vrijeme i standardni radni učinak utvrđuje se množenjem koeficijenta složenosti iz člana 16 ovog Ugovora sa obračunskom vrijednošću koeficijenta koji utvrđuje Vlada. … V d Režiser, glumac, orkestarski muzičar, operski pjevač, slikar, vajar, koreograf, scenograf, dramaturg, kostimograf, pozorišni kompozitor, pisac, asistent dirigenta, dirigent, producent, montažer … šesti nivo (VI) 180 kredita 6.50 … sedmi nivo, podnivo 1 (VII1) 240 kredita CSPK-a 8.80 … 4) umjetničkih i stvaralačkih zvanja: - glumac II grupe … 15%, - glumac I grupe, solista … 20%, - prvak drame, koncert majstor, dirigent … 25%, - doajen, šef dirigent 30%; … Ovaj Ugovor zaključuje se na neodređeno vrijeme.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/me_gku_kultura.pdf",
+      "sha256": "96e5902d4ca3a5e72a2538e892ae1bb33ff27af9d84a2b239f5b6cc89b3d66e1"
+     }
+    ],
+    "value": {
+     "basis": "sector collective agreement for culture (OG 64/16), employees of budget-funded public culture institutions (and municipal ones until they sign their own)",
+     "role": "Režiser (employed)",
+     "coefficient": {
+      "levelVI_180credits": 6.5,
+      "levelVII1_240credits": 8.8
+     },
+     "pay": "coefficient x the Government's value of the coefficient (not read)",
+     "guestDirectorFee": null
+    },
+    "notes": "This is an employed director's basic-pay coefficient, not a fee for a guest staging; whether the 2016 agreement still holds after the public-sector pay law's 2026 amendment (OG 26/26) was not verified, and the coefficient's euro value was not read."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum (commission fee, advance, royalty)",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cnp.me/wp-content/uploads/2019/05/Granski-kolektivni-ugovor-za-oblast-kulture.pdf",
+      "title": "Granski kolektivni ugovor za oblast kulture (Službeni list Crne Gore, br. 064/16 od 10.10.2016), as posted by the Crnogorsko narodno pozorište (cnp.me)",
+      "read": "2026-11-04",
+      "said": "uređuju … pojedina prava i obaveze iz radnog odnosa zaposlenih u javnim ustanovama kulture kojima se zarade finansiraju iz budžeta Crne Gore … Odredbe ovog Ugovora važe i za opštinske ustanove kulture dok se ne zaključe kolektivni ugovori sa osnivačem. … Član 14 Osnovna zarada zaposlenog za puno radno vrijeme i standardni radni učinak utvrđuje se množenjem koeficijenta složenosti iz člana 16 ovog Ugovora sa obračunskom vrijednošću koeficijenta koji utvrđuje Vlada. … V d Režiser, glumac, orkestarski muzičar, operski pjevač, slikar, vajar, koreograf, scenograf, dramaturg, kostimograf, pozorišni kompozitor, pisac, asistent dirigenta, dirigent, producent, montažer … šesti nivo (VI) 180 kredita 6.50 … sedmi nivo, podnivo 1 (VII1) 240 kredita CSPK-a 8.80 … 4) umjetničkih i stvaralačkih zvanja: - glumac II grupe … 15%, - glumac I grupe, solista … 20%, - prvak drame, koncert majstor, dirigent … 25%, - doajen, šef dirigent 30%; … Ovaj Ugovor zaključuje se na neodređeno vrijeme.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/me_gku_kultura.pdf",
+      "sha256": "96e5902d4ca3a5e72a2538e892ae1bb33ff27af9d84a2b239f5b6cc89b3d66e1"
+     }
+    ],
+    "value": null,
+    "notes": "No commission fee or royalty found. The culture agreement lists 'pisac' and 'dramaturg' among employed staff at coefficient 6.50/8.80, which is not a playwright's commission. No authors' society's theatre tariff was tried."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum (no stage agreement held for ME)",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://cnp.me/wp-content/uploads/2019/05/Granski-kolektivni-ugovor-za-oblast-kulture.pdf",
+      "title": "Granski kolektivni ugovor za oblast kulture (Službeni list Crne Gore, br. 064/16 od 10.10.2016), as posted by the Crnogorsko narodno pozorište (cnp.me)",
+      "read": "2026-11-04",
+      "said": "uređuju … pojedina prava i obaveze iz radnog odnosa zaposlenih u javnim ustanovama kulture kojima se zarade finansiraju iz budžeta Crne Gore … Odredbe ovog Ugovora važe i za opštinske ustanove kulture dok se ne zaključe kolektivni ugovori sa osnivačem. … Član 14 Osnovna zarada zaposlenog za puno radno vrijeme i standardni radni učinak utvrđuje se množenjem koeficijenta složenosti iz člana 16 ovog Ugovora sa obračunskom vrijednošću koeficijenta koji utvrđuje Vlada. … V d Režiser, glumac, orkestarski muzičar, operski pjevač, slikar, vajar, koreograf, scenograf, dramaturg, kostimograf, pozorišni kompozitor, pisac, asistent dirigenta, dirigent, producent, montažer … šesti nivo (VI) 180 kredita 6.50 … sedmi nivo, podnivo 1 (VII1) 240 kredita CSPK-a 8.80 … 4) umjetničkih i stvaralačkih zvanja: - glumac II grupe … 15%, - glumac I grupe, solista … 20%, - prvak drame, koncert majstor, dirigent … 25%, - doajen, šef dirigent 30%; … Ovaj Ugovor zaključuje se na neodređeno vrijeme.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/me_gku_kultura.pdf",
+      "sha256": "96e5902d4ca3a5e72a2538e892ae1bb33ff27af9d84a2b239f5b6cc89b3d66e1"
+     }
+    ],
+    "value": {
+     "basis": "Granski kolektivni ugovor za oblast kulture (OG 64/16), indefinite term",
+     "role": "glumac (employed in a public theatre)",
+     "coefficient": {
+      "levelVI_180credits": 6.5,
+      "levelVII1_240credits": 8.8
+     },
+     "uplifts": {
+      "actorGroupII": 0.15,
+      "actorGroupI": 0.2,
+      "leadingActor_prvakDrame": 0.25,
+      "doyen": 0.3
+     },
+     "specialPart": "70% of the coefficient's value (meal and holiday allowance)",
+     "coefficientValueEUR": null
+    },
+    "notes": "The euro value of one coefficient point is set by the Government and was not read (the pay law's 2026 text was reset at amrrs.gov.me); whether the coefficients still apply after the 2026 amendment is open. Freelance actors have no published minimum."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares: runs, extensions, box office per performance",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Monstat's culture page carries only the methodology; its statistical yearbook page (publikacije_page.php?id=2488) answered with a verification challenge ('Please wait while your request is being verified'), not counted as read."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     3
+    ],
+    "tried": "fccg.me home, /vijesti?category=konkursi, /p/javni-pozivi, /propisi-i-akti; the 2026 call and 2026 results news; downloaded the Pravila o sufinansiranju PDF (a 10-page scan, text layer empty; not OCR'd, the machine's load near 190)",
+    "result": "read; no series category in 2026; acceptance counts by category",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     3,
+     4
+    ],
+    "tried": "rtcg.me home, Javna rasprava i javni pozivi, Dokumenti > Regulativa; downloaded the 2024 Law on the national public broadcaster and the 2026 programme-production plan (pp2026.pdf, 18 MB scan, no text layer)",
+    "result": "read the law; independent quota 10% of airtime; no tariff, commissioning call or compliance report found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     5,
+     6
+    ],
+    "tried": "1 search (standard): 'Ministarstvo kulture Crne Gore konkurs sufinansiranje scensko stvaralaštvo pozorišne produkcije 2026'",
+    "result": "no 2026 Montenegrin theatre call; led to the July 2026 amendment of the Law on Theatre Activity",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     5,
+     6
+    ],
+    "tried": "sluzbenilist.me propisi/395872 (Law amending the Law on Theatre Activity, 2026)",
+    "result": "read whole; no fund or tax terms",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     7,
+     8,
+     9
+    ],
+    "tried": "1 search (standard): 'Zakon o zaradama zaposlenih u javnom sektoru Crna Gora koeficijent glumac pozorište reditelj honorar Crnogorsko narodno pozorište'",
+    "result": "led to the culture sector collective agreement on cnp.me and the pay law",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     7,
+     8,
+     9
+    ],
+    "tried": "cnp.me Granski kolektivni ugovor za oblast kulture PDF; amrrs.gov.me copy of the public-sector pay law (connection reset)",
+    "result": "agreement read; pay law not reached",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     10
+    ],
+    "tried": "monstat.org: home, Kultura page (id=78), Statistički godišnjak page (id=2590) and its publication page (publikacije_page.php?id=2488)",
+    "result": "culture page: methodology only; publication page: verification challenge, not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "The culture agreement gives coefficients, not euros; with the Government's coefficient value (not read) it would give an employed actor's or director's monthly base pay. Item 2's FCCG acceptance rates are for films and may still help a series' film-fund draw if the engine needs a Montenegrin rate."
+ },
+ {
+  "country": "MZ",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series, or that none exists",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bfde45b5045/decreto572024.pdf",
+      "title": "Decreto n.º 57/2024, de 31 de Julho: Regulamento da Lei do Audiovisual e do Cinema (Boletim da República, I Série, Número 148), revoking Decreto n.º 41/2017; posted by INICC (Legislação > Decretos)",
+      "read": "2026-11-04",
+      "said": "ARTIGO 53 (Apoio e Financiamento) 1. A fim de desenvolver as actividades audiovisuais e cinematográficas, o Estado, através do FUNDAC ou de outro fundo criado para o efeito, dispõe de meios de Apoio e Financiamento ao Audiovisual e Cinema. 2. Os fundos do Estado são provenientes, para além de outras fontes, das taxas de produção, distribuição e exibição e difusão, multas e investimento público no sector. 3. O INICC, IP, e operadores audiovisuais e cinematográficos e de televisão podem celebrar contratos de investimento para a promoção e desenvolvimento de actividades audiovisuais e cinematográficas. … 5. O valor do contrato de investimento depende do volume de negócios anuais do operador, a sua quota no mercado e as necessidades do investimento anual dos sectores audiovisuais e cinematográficos, incluindo da televisão. … 7. As condições de acesso ao financiamento são definidas em Regulamento próprio por Diploma do Ministro que superintende a área da cultura. … Os distribuidores de televisão com serviços de acesso condicionado contribuem com um valor suportado pelo subscritor, correspondente a 1% do valor do pacote ou serviço a que aderiram. … ARTIGO 63 (Contratos de investimentos plurianuais) 1. O INICC, IP, ou outro fundo criado para o efeito pode celebrar e renovar contratos de investimento plurianuais com os operadores ou distribuidores de televisão. 2. … b) a duração dos contratos não pode ser inferior a três anos. … 2. A taxa de autorização de rodagem de produção nacional é de 10 % do salário mínimo em vigor na função pública. … ARTIGO 41 (Taxa de rodagem estrangeira) 1. A autorização de rodagem para produção estrangeira está sujeita ao pagamento de uma taxa que incide sobre o orçamento da produção em território moçambicano",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_dec572024.pdf",
+      "sha256": "6049eaae6f48ecb3405f530dc71578527ac16b720fccd0d2ea9ca5f80fb0c641"
+     }
+    ],
+    "value": {
+     "incentive": null,
+     "regulationReadForIt": "Decreto 57/2024 (text layer searched whole for incentivo, isenção, benefício)",
+     "exemptionsFound": "fee exemptions only (e.g. music videos pay no filming fee); a national filming permit costs 10% of the public-service minimum wage; foreign productions pay a filming fee on their Mozambican budget (Annex VIII)"
+    },
+    "notes": "The regulation holds no production rebate or tax credit; the parent Law 1/2017 (a 16-page scan on inicc.gov.mz, saved as mz_lei12017.pdf, sha256 4942efae…) was not read, so the absence is stated for the regulation only. A foreign series pays a fee rather than earning a rebate."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series: terms and rate of yes",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bff0c954964/diploma802024.pdf",
+      "title": "Diploma Ministerial n.º 80/2024, de 20 de Setembro: Regulamento que estabelece regras e procedimentos para o Apoio e Financiamento à Actividade Audiovisual e Cinematográfica (Boletim da República, I Série, Número 185; a 4-page scan, read from the page images mz_dm/p-1..p-3.png at 110 dpi)",
+      "read": "2026-11-04",
+      "said": "Artigo 2 (Âmbito de aplicação) 1. O apoio e o financiamento aplica-se: a) aos novos talentos e a primeira obra; b) a projectos de cineastas consolidados; c) a projectos de finalização da produção; d) à criação de escrita e desenvolvimento de séries de filmes de animação e documentário cinematográficos; e) à produção, de longas-metragens, curtas-metragens, documentários cinematográficos, trailer, programa de apoio à co-produções, vídeo clipes; … Artigo 4 (Concurso Público) O acesso ao apoio e financiamento às actividades audiovisuais e cinematográficas é através de concurso público, aberto pelo INICC,IP para o efeito. … Artigo 5 … 1. Podem candidatar-se ao apoio e financiamento as actividades audiovisuais e cinematográficas, as entidades licenciadas no INICC,IP … 2. Podem igualmente candidatar-se, pessoas singulares ou colectivas não constituídas como empresa audiovisual e cinematográfica, devendo estar associadas a uma produtora licenciada no INICC,IP … Artigo 10 … 2. Só é admissível um projecto por realizador … Artigo 20 (Decisão de atribuição de apoio) 1. Cabe ao INICC, IP a decisão de atribuição dos apoios, respectivos montantes e as condições do apoio.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_dm802024.pdf",
+      "sha256": "1dad06c4f997a63411e3e9fc48a046abb8b6be596c35a321b6995057b56370ee"
+     },
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bfde45b5045/decreto572024.pdf",
+      "title": "Decreto n.º 57/2024, de 31 de Julho: Regulamento da Lei do Audiovisual e do Cinema (Boletim da República, I Série, Número 148), revoking Decreto n.º 41/2017; posted by INICC (Legislação > Decretos)",
+      "read": "2026-11-04",
+      "said": "ARTIGO 53 (Apoio e Financiamento) 1. A fim de desenvolver as actividades audiovisuais e cinematográficas, o Estado, através do FUNDAC ou de outro fundo criado para o efeito, dispõe de meios de Apoio e Financiamento ao Audiovisual e Cinema. 2. Os fundos do Estado são provenientes, para além de outras fontes, das taxas de produção, distribuição e exibição e difusão, multas e investimento público no sector. 3. O INICC, IP, e operadores audiovisuais e cinematográficos e de televisão podem celebrar contratos de investimento para a promoção e desenvolvimento de actividades audiovisuais e cinematográficas. … 5. O valor do contrato de investimento depende do volume de negócios anuais do operador, a sua quota no mercado e as necessidades do investimento anual dos sectores audiovisuais e cinematográficos, incluindo da televisão. … 7. As condições de acesso ao financiamento são definidas em Regulamento próprio por Diploma do Ministro que superintende a área da cultura. … Os distribuidores de televisão com serviços de acesso condicionado contribuem com um valor suportado pelo subscritor, correspondente a 1% do valor do pacote ou serviço a que aderiram. … ARTIGO 63 (Contratos de investimentos plurianuais) 1. O INICC, IP, ou outro fundo criado para o efeito pode celebrar e renovar contratos de investimento plurianuais com os operadores ou distribuidores de televisão. 2. … b) a duração dos contratos não pode ser inferior a três anos. … 2. A taxa de autorização de rodagem de produção nacional é de 10 % do salário mínimo em vigor na função pública. … ARTIGO 41 (Taxa de rodagem estrangeira) 1. A autorização de rodagem para produção estrangeira está sujeita ao pagamento de uma taxa que incide sobre o orçamento da produção em território moçambicano",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_dec572024.pdf",
+      "sha256": "6049eaae6f48ecb3405f530dc71578527ac16b720fccd0d2ea9ca5f80fb0c641"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://forbesafricalusofona.com/governo-mocambicano-disponibiliza-933-mil-euros-para-concurso-de-audiovisuais-e-cinema/",
+      "title": "Forbes África Lusófona, 'Governo moçambicano disponibiliza 93,3 mil euros para concurso de audiovisuais e cinema' (19 October 2024, citing Lusa and the Ministério da Cultura e Turismo)",
+      "read": "2026-11-04",
+      "said": "O Governo de Moçambique vai financiar, este ano, com 6,5 milhões de meticais (93,3 mil euros) a segunda edição do concurso de apoio audiovisual e cinema, lançado no passado dia 15 de Outubro pelo Instituto Nacional das Indústrias Culturais e Criativas (INICC) … pretende apoiar ou financiar a produção cinematográfica com enfoque nos novos talentos e primeiras obras, produção de videoclipes musicais, distribuição e exibição de obras audiovisuais e cinematográfica",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_forbes.html",
+      "sha256": "fc06664e4cc6ce0a9e4cfea11b4c6ece6b2b67f26c7a4b2bc7a4f79325d2a363",
+      "quotes": "Ministério da Cultura e Turismo announcement at the launch of INICC's 2nd CONFIACC (no address for the primary)"
+     }
+    ],
+    "value": {
+     "fund": "INICC concurso (CONFIACC), under Diploma Ministerial 80/2024 and Decreto 57/2024 art. 53 (FUNDAC or another fund)",
+     "seriesScope": "writing and development of animated and documentary series only; production lines cover features, shorts, documentaries, co-productions and music videos",
+     "applicants": "companies licensed with INICC, or persons associated with one",
+     "onePerDirector": true,
+     "amounts": "set by INICC per award",
+     "edition2024MZN": 6500000,
+     "edition2020MZN": 5000000,
+     "rateOfYes": null
+    },
+    "notes": "A live-action drama series has no line in the Diploma's scope. The 2024 pot is from a secondary quoting the Ministry. No count of applications against awards was read (a Club of Mozambique item on '13 productions' redirected to an image)."
+   },
+   {
+    "item": 3,
+    "fact": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bff0c954964/diploma802024.pdf",
+      "title": "Diploma Ministerial n.º 80/2024, de 20 de Setembro: Regulamento que estabelece regras e procedimentos para o Apoio e Financiamento à Actividade Audiovisual e Cinematográfica (Boletim da República, I Série, Número 185; a 4-page scan, read from the page images mz_dm/p-1..p-3.png at 110 dpi)",
+      "read": "2026-11-04",
+      "said": "Artigo 2 (Âmbito de aplicação) 1. O apoio e o financiamento aplica-se: a) aos novos talentos e a primeira obra; b) a projectos de cineastas consolidados; c) a projectos de finalização da produção; d) à criação de escrita e desenvolvimento de séries de filmes de animação e documentário cinematográficos; e) à produção, de longas-metragens, curtas-metragens, documentários cinematográficos, trailer, programa de apoio à co-produções, vídeo clipes; … Artigo 4 (Concurso Público) O acesso ao apoio e financiamento às actividades audiovisuais e cinematográficas é através de concurso público, aberto pelo INICC,IP para o efeito. … Artigo 5 … 1. Podem candidatar-se ao apoio e financiamento as actividades audiovisuais e cinematográficas, as entidades licenciadas no INICC,IP … 2. Podem igualmente candidatar-se, pessoas singulares ou colectivas não constituídas como empresa audiovisual e cinematográfica, devendo estar associadas a uma produtora licenciada no INICC,IP … Artigo 10 … 2. Só é admissível um projecto por realizador … Artigo 20 (Decisão de atribuição de apoio) 1. Cabe ao INICC, IP a decisão de atribuição dos apoios, respectivos montantes e as condições do apoio.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_dm802024.pdf",
+      "sha256": "1dad06c4f997a63411e3e9fc48a046abb8b6be596c35a321b6995057b56370ee"
+     }
+    ],
+    "value": null,
+    "notes": "Diploma 80/2024's pages read (1-3) set evaluation of the budget's 'adequação' but no cap; page 4 not read. TVM (tvm.co.mz) answered HTTP 468, not read."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inicc.gov.mz/download/legislacao/69bfde45b5045/decreto572024.pdf",
+      "title": "Decreto n.º 57/2024, de 31 de Julho: Regulamento da Lei do Audiovisual e do Cinema (Boletim da República, I Série, Número 148), revoking Decreto n.º 41/2017; posted by INICC (Legislação > Decretos)",
+      "read": "2026-11-04",
+      "said": "ARTIGO 53 (Apoio e Financiamento) 1. A fim de desenvolver as actividades audiovisuais e cinematográficas, o Estado, através do FUNDAC ou de outro fundo criado para o efeito, dispõe de meios de Apoio e Financiamento ao Audiovisual e Cinema. 2. Os fundos do Estado são provenientes, para além de outras fontes, das taxas de produção, distribuição e exibição e difusão, multas e investimento público no sector. 3. O INICC, IP, e operadores audiovisuais e cinematográficos e de televisão podem celebrar contratos de investimento para a promoção e desenvolvimento de actividades audiovisuais e cinematográficas. … 5. O valor do contrato de investimento depende do volume de negócios anuais do operador, a sua quota no mercado e as necessidades do investimento anual dos sectores audiovisuais e cinematográficos, incluindo da televisão. … 7. As condições de acesso ao financiamento são definidas em Regulamento próprio por Diploma do Ministro que superintende a área da cultura. … Os distribuidores de televisão com serviços de acesso condicionado contribuem com um valor suportado pelo subscritor, correspondente a 1% do valor do pacote ou serviço a que aderiram. … ARTIGO 63 (Contratos de investimentos plurianuais) 1. O INICC, IP, ou outro fundo criado para o efeito pode celebrar e renovar contratos de investimento plurianuais com os operadores ou distribuidores de televisão. 2. … b) a duração dos contratos não pode ser inferior a três anos. … 2. A taxa de autorização de rodagem de produção nacional é de 10 % do salário mínimo em vigor na função pública. … ARTIGO 41 (Taxa de rodagem estrangeira) 1. A autorização de rodagem para produção estrangeira está sujeita ao pagamento de uma taxa que incide sobre o orçamento da produção em território moçambicano",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_dec572024.pdf",
+      "sha256": "6049eaae6f48ecb3405f530dc71578527ac16b720fccd0d2ea9ca5f80fb0c641"
+     }
+    ],
+    "value": {
+     "route": "multi-year investment contracts (at least 3 years) between INICC and TV operators or distributors, sized by turnover and market share; pay-TV subscribers contribute 1% of their package to the sector",
+     "publicBroadcasterTerms": null,
+     "pickup": null
+    },
+    "notes": "No contract under art. 63 was found published; TVM's site refused (HTTP 468) on 2026-11-04."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "None found; the 1% and box-office levies in Decreto 57/2024 are for audiovisual works."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.fundac.gov.mz/",
+      "title": "FUNDAC (Fundo para o Desenvolvimento Artístico e Cultural) home page",
+      "read": "2026-11-04",
+      "said": "O Fundo para o desenvolvimento Artistico e cultural, abreviamente designado por FUNDAC, foi criado ao abrigo do Decreto nº 9/88, de 7 de Junho … MISSÃO Prestar apoio financeiro a programas de formação, bolsas de estudo, investigação sobre temas e estudos culturais, aperfeiçoamento e qualificação profissional para o desenvolvimento do trabalho cultural, preservação do património cultural e desenvolvimento artístico.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/mz_fundac.html",
+      "sha256": "034cc9846b391f7d085ac9dbdd81abd8eb8b96ae166612db698a68b1c76f87d1"
+     }
+    ],
+    "value": {
+     "fund": "FUNDAC, created by Decreto 9/88 of 7 June",
+     "mission": "financial support for training, scholarships, cultural research, professional qualification, heritage and artistic development",
+     "ranges": null,
+     "eligibility": null,
+     "rateOfYes": null
+    },
+    "notes": "FUNDAC's site is a template (placeholder text, its menu links lead nowhere); it names no theatre call, range or rate. FUNDAC also receives 20% of a box-office additional under Decreto 57/2024."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement or fee found."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No tariff found; the copyright law (Lei 9/2022) and its regulation (Decreto 46/2024) are on inicc.gov.mz but were not read for a theatre tariff."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement found."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No theatre statistics found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2,
+     5,
+     6
+    ],
+    "tried": "1 search (standard): 'Moçambique Lei do Audiovisual e Cinema incentivos fiscais produção séries Fundo de Desenvolvimento Artístico e Cultural FUNDAC financiamento teatro'",
+    "result": "led to INICC's competition (Forbes África Lusófona, Club of Mozambique) and the PLMJ note on Law 1/2017",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "tried": "inicc.gov.mz (it answers today; inac.gov.mz did not earlier): home, Financiamento, Leis, Decretos, Diplomas Ministeriais; downloaded Lei 1/2017 (scan), Decreto 57/2024 (text), Diploma Ministerial 80/2024 (scan, read from images)",
+    "result": "regulation and funding diploma read; no incentive; series only for animation/documentary development",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     2
+    ],
+    "tried": "forbesafricalusofona.com (2024 edition), clubofmozambique.com 2020 launch item; clubofmozambique ?p=176265 (redirected to an image); plmj.com legal insight (page shell only)",
+    "result": "2024 pot MZN 6.5M and 2020 pot MZN 5M read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6
+    ],
+    "tried": "fundac.gov.mz home",
+    "result": "template site; mission text only",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     3,
+     4
+    ],
+    "tried": "tvm.co.mz and www.tvm.co.mz",
+    "result": "HTTP 468 (refused), not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "INICC (Instituto Nacional das Indústrias Culturais e Criativas) replaced INAC; its site answers, unlike inac.gov.mz in the earlier rounds. Law 1/2017 there is a scan: reading it would settle item 1 for the law itself."
+ },
+ {
+  "country": "SK",
+  "items": [
+   {
+    "item": 3,
+    "fact": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.avf.sk/Libraries/Z%c3%a1kony_a_predpisy/VP_AVF_4_2018_zasady_poskytovania.sflb.ashx",
+      "title": "Audiovizuálny fond, VP AVF č. 4/2018 Zásady poskytovania finančných prostriedkov z Audiovizuálneho fondu na podporu audiovizuálnej kultúry, v znení z 21.8.2025 (linked from avf.sk/aboutus/interalregulations.aspx)",
+      "read": "2026-11-04",
+      "said": "Limitované oprávnené výdavky 7.9 Ako oprávnené výdavky v určenom limite sú pri poskytnutí finančných prostriedkov formou dotácie akceptované aj nepriame výdavky na realizáciu projektu, ktorými sú paušálne výdavky podľa § 22aa ods. 4 zákona v sume neprevyšujúcej 7% z celkovej sumy poskytnutých finančných prostriedkov a výdavky na právne služby, účtovnícke služby, ekonomické služby a audit v súčte takýchto výdavkov neprevyšujúcom 5% z celkovej sumy poskytnutých finančných prostriedkov. … [neoprávnené výdavky] o) autorské alebo iné odmeny pre prijímateľa dotácie alebo pôžičky, ktorý je fyzickou osobou, p) odmeny štatutárnemu orgánu alebo členom orgánov právnickej osoby, ktorá je prijímateľom, ak nie sú tieto osoby zúčastnené na projekte na základe osobitného zmluvného vzťahu, q) dividendy a odmeny spoločníkom právnickej osoby, ktorá je prijímateľom,",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/avf_zasady.pdf",
+      "sha256": "eb553e6d686e8bf26f251b3b7469f583d3c6fb77eb028ab4941c4cc941795c30"
+     }
+    ],
+    "value": {
+     "funder": "Audiovizuálny fond (selective grants, programme 1 incl. TV series)",
+     "overheadCapShareOfGrant": 0.07,
+     "legalAccountingAuditCapShareOfGrant": 0.05,
+     "producerFeeCap": null,
+     "ineligible": [
+      "authors' or other fees to a recipient who is a natural person",
+      "pay to the recipient's statutory body or board unless engaged on the project under a separate contract",
+      "dividends and pay to the recipient company's partners"
+     ],
+     "inForce": "VP AVF 4/2018 as amended 21.8.2025"
+    },
+    "notes": "The overhead cap is a share of the grant, not of the budget. No cap on a producer's fee as such was found in the Zásady or the 2026 Štruktúra; the incentive (programme 5, Metodické usmernenie VP AVF 3/2023) was not read for a fee cap. STVR's own commissioning caps were not found."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen (the public broadcaster's commissioning terms) and any pickup count",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://static.slov-lex.sk/static/SK/ZZ/2024/157/vyhlasene_znenie.html",
+      "title": "Zákon č. 157/2024 Z. z. o Slovenskej televízii a rozhlase (Slov-Lex, vyhlásené znenie)",
+      "read": "2026-11-04",
+      "said": "6. minimálneho podielu vysielacieho času vyhradeného pre nezávislú produkciu 36 ) na jednotlivých televíznych programových službách, 7. minimálneho podielu výroby a vysielania audiovizuálnych diel vyrobených nezávislými producentmi 37 ) so sídlom v Slovenskej republike alebo v spolupráci Slovenskej televízie a rozhlasu s týmito subjektmi,",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/sk_157_2024.html",
+      "sha256": "0792603d2c1e7cb32b4b9a4d2065ec4d69e43cbf89adc248ba6250dbb8d25eb5"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.avf.sk/Libraries/Struktury/SPC_2026__verzia_25_06_2026.sflb.ashx",
+      "title": "Audiovizuálny fond, VP AVF č. 1/2025 Štruktúra podpornej činnosti Audiovizuálneho fondu na rok 2026 (version of 25.06.2026, the one linked from the internal-regulations page; the 11.12.2025 version linked from vyzvy2026.aspx was also read: avf_spc2026.pdf, same text at 3.3)",
+      "read": "2026-11-04",
+      "said": "3.3 Osobitnými prioritami podpornej činnosti fondu v podprogramoch 1.1 až 1.3 pre vývoj a produkciu audiovizuálnych diel primárne určených pre televízne vysielanie alebo pre nové distribučné platformy sú projekty … 3.3.3 zamerané na prvé série pôvodných viacdielnych audiovizuálnych diel v rozsahu najviac 13 častí v jednej sérii (v prípade animovaných audiovizuálnych diel v rozsahu najviac 26 častí v jednej sérii), 3.3.4 s medzinárodným distribučným potenciálom, 3.3.5 s podpísanou zmluvou o spolupráci, alebo záväzným prísľubom o budúcej koprodukcii (tzv. „letter of commitment“) s televíznym vysielateľom, alebo poskytovateľom audiovizuálnej mediálnej služby na požiadanie ako prílohou k žiadosti o podporu produkcie, s dátumom platnosti nie starším ako 12 mesiacov pred podaním žiadosti. … 3.8 Maximálna suma dotácie v podprogramoch 1.1 až 1.3 na produkciu jedného a toho istého dlhometrážneho audiovizuálneho diela je 1,2 milióna EUR.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/avf_spc2026_v0625.pdf",
+      "sha256": "97618873586c1d061756a288ba99e80cc9b4d6885a487fc7a797af50698d2272"
+     }
+    ],
+    "value": {
+     "publicBroadcaster": "Slovenská televízia a rozhlas (STVR), Act 157/2024",
+     "independentQuota": "a minimum share of airtime for independent production and of works by Slovak independent producers, fixed in the state's contract with STVR (figure not read)",
+     "fundRoute": "AVF priority for TV/VOD series: first seasons of up to 13 episodes (26 animated), with a signed co-operation agreement or letter of commitment from a broadcaster or VOD service not older than 12 months",
+     "fundMaxPerWorkEUR": 1200000,
+     "pickup": null
+    },
+    "notes": "The STVR act leaves the percentages to the contract with the state (zmluva so štátom), not read. No count of independent series picked up was found; STVR's 'Projekty' page lists only EU-funded projects."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found. The Audiovisual Fund Act's rebate covers audiovisual works only; no Slovak text on a theatre tax relief was read whole, so no absence is claimed."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.lita.sk/s/26_sadzobnik_divadelny_s-inflaciou_od-112026_scan.pdf",
+      "title": "LITA, autorská spoločnosť: Sadzobník odmien, Dramatické diela, divadelné diela a ďalšie s nimi súvisiace diela, účinný od 1.1.2026 (scan, 8 pages; linked from lita.sk/zakladne-dokumenty; read from the page images p-1 to p-4 rendered at 200 dpi, ocr_lita/p-*.png)",
+      "read": "2026-11-04",
+      "said": "LITA, autorská spoločnosť (ďalej len „LITA“) vydáva s účinnosťou od 1.1.2026 tento Sadzobník odmien … 13. Odmeny (tantiémy) sú určené percentuálnym podielom z hrubej tržby za každé predstavenie. Základom pre výpočet odmeny je hrubý príjem zo vstupného, vrátane predplatného, všetkých režijných, zľavnených, prípadne iných vstupeniek pred odpočítaním akýchkoľvek položiek. … 16. Odmeny sa vzťahujú len na diela autorov zastupovaných LITA na základe zmluvy o zastupovaní. … Článok II Osobitná časť 1. Verejné vykonanie dramatických a hudobnodramatických diel a) pôvodné dramatické dielo 10 - 12% b) pôvodné dramatické dielo pre deti a mládež, vrátane bábkovej tvorby 10 - 15% c) literárna predloha 6-9% d) dramatizácia literárnej predlohy 6-9% e) divadelná réžia 4-6% f) preklad diela 5-8% … 7.1. Sprístupňovanie záznamov bez výberu akéhokoľvek poplatku od verejnosti: a) Dramatické inscenácie pre deti a mládež … pôvodné dramatické dielo 14,0088 € [do 90 min] … divadelná réžia 3,74400 €",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/lita_sadz_div_2026.pdf",
+      "sha256": "8c79a2808a45ca152e2dace13e34424700f251ecd16befc403dcc48d22b44c41"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.lita.sk/divadlo",
+      "title": "LITA, Divadlo (theatre authors' page)",
+      "read": "2026-11-04",
+      "said": "Autor má zabezpečenú licenčnú odmenu za každé predstavenie doma i v zahraničí – na domácej scéne divadla aj pri zájazdoch súborov Licenčná odmena môže mať formu percentuálneho podielu z hrubých tržieb (tzv. tantiémy) alebo formu paušálu za každé odohrané predstavenie, napr. pri predstaveniach bez výberu vstupného. Pri dojednávaní odmeny LITA vychádza z požiadaviek autora, z aktuálneho sadzobníka",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/lita_divadlo.html",
+      "sha256": "61e88cb848dd781606b3a78b3790685d55a4d353ba41c2d3b575041e048132b4"
+     }
+    ],
+    "value": {
+     "basis": "LITA theatre tariff (a collecting society's rate card for authors it represents, not a collective agreement)",
+     "from": "2026-01-01",
+     "directionRoyaltyShareOfGross": [
+      0.04,
+      0.06
+     ],
+     "base": "gross box office per performance incl. subscriptions, before any deduction",
+     "streamFreeChildrenUpTo90minEUR": 3.744,
+     "fee": null
+    },
+    "notes": "A royalty on gross takings for a director represented by LITA; it binds only works of LITA-represented authors. No minimum staging fee (honorár) or collective agreement for stage directors was found."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum (commission fee, advance, royalty)",
+    "verdict": "found",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.lita.sk/s/26_sadzobnik_divadelny_s-inflaciou_od-112026_scan.pdf",
+      "title": "LITA, autorská spoločnosť: Sadzobník odmien, Dramatické diela, divadelné diela a ďalšie s nimi súvisiace diela, účinný od 1.1.2026 (scan, 8 pages; linked from lita.sk/zakladne-dokumenty; read from the page images p-1 to p-4 rendered at 200 dpi, ocr_lita/p-*.png)",
+      "read": "2026-11-04",
+      "said": "LITA, autorská spoločnosť (ďalej len „LITA“) vydáva s účinnosťou od 1.1.2026 tento Sadzobník odmien … 13. Odmeny (tantiémy) sú určené percentuálnym podielom z hrubej tržby za každé predstavenie. Základom pre výpočet odmeny je hrubý príjem zo vstupného, vrátane predplatného, všetkých režijných, zľavnených, prípadne iných vstupeniek pred odpočítaním akýchkoľvek položiek. … 16. Odmeny sa vzťahujú len na diela autorov zastupovaných LITA na základe zmluvy o zastupovaní. … Článok II Osobitná časť 1. Verejné vykonanie dramatických a hudobnodramatických diel a) pôvodné dramatické dielo 10 - 12% b) pôvodné dramatické dielo pre deti a mládež, vrátane bábkovej tvorby 10 - 15% c) literárna predloha 6-9% d) dramatizácia literárnej predlohy 6-9% e) divadelná réžia 4-6% f) preklad diela 5-8% … 7.1. Sprístupňovanie záznamov bez výberu akéhokoľvek poplatku od verejnosti: a) Dramatické inscenácie pre deti a mládež … pôvodné dramatické dielo 14,0088 € [do 90 min] … divadelná réžia 3,74400 €",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/lita_sadz_div_2026.pdf",
+      "sha256": "8c79a2808a45ca152e2dace13e34424700f251ecd16befc403dcc48d22b44c41"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.lita.sk/divadlo",
+      "title": "LITA, Divadlo (theatre authors' page)",
+      "read": "2026-11-04",
+      "said": "Autor má zabezpečenú licenčnú odmenu za každé predstavenie doma i v zahraničí – na domácej scéne divadla aj pri zájazdoch súborov Licenčná odmena môže mať formu percentuálneho podielu z hrubých tržieb (tzv. tantiémy) alebo formu paušálu za každé odohrané predstavenie, napr. pri predstaveniach bez výberu vstupného. Pri dojednávaní odmeny LITA vychádza z požiadaviek autora, z aktuálneho sadzobníka",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/lita_divadlo.html",
+      "sha256": "61e88cb848dd781606b3a78b3790685d55a4d353ba41c2d3b575041e048132b4"
+     }
+    ],
+    "value": {
+     "basis": "LITA theatre tariff",
+     "from": "2026-01-01",
+     "royaltyShareOfGross": {
+      "originalPlay": [
+       0.1,
+       0.12
+      ],
+      "originalPlayChildren": [
+       0.1,
+       0.15
+      ],
+      "adaptation": [
+       0.06,
+       0.09
+      ],
+      "sourceWork": [
+       0.06,
+       0.09
+      ],
+      "translation": [
+       0.05,
+       0.08
+      ]
+     },
+     "base": "gross box office per performance",
+     "noTicketsCase": "a sum derived from average takings, or from audience size and average ticket price for a like production",
+     "commissionFee": null,
+     "advance": null
+    },
+    "notes": "The rates are LITA's 'obvyklá odmena' (usual fee) for authors it represents; foreign authors and those not under contract with LITA are outside it. No commission fee or advance was found."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum (no stage agreement held for SK)",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://static.slov-lex.sk/static/SK/ZZ/2003/553/20260101.html",
+      "title": "Zákon č. 553/2003 Z. z. o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme, consolidated text in force from 1.1.2026 (Slov-Lex)",
+      "read": "2026-11-04",
+      "said": "c) príspevkové organizácie štátu, obce a vyššieho územného celku 3 ) okrem príspevkových organizácií, ktorých objem výdavkov na mzdy, platy, služobné príjmy a ostatné osobné vyrovnania je vyšší ako príspevok z rozpočtu zriaďovateľa, Slovenského národného divadla, Slovenskej filharmónie … (7) Kvalifikačný predpoklad vzdelania sa nevzťahuje na zamestnanca, ktorý je samostatným divadelným umelcom, divadelným umelcom v zbore, v orchestri alebo v inom umeleckom zoskupení alebo ktorý je ďalším umeleckým zamestnancom 9a ) (ďalej len „umelecký zamestnanec“). … (8) Zamestnávateľ môže zaradiť umeleckého zamestnanca 9a ) … do platovej triedy podľa najnáročnejšej vykonávanej pracovnej činnosti, aj keď pre túto platovú triedu nespĺňa kva[lifikačné predpoklady]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/sk_553_2003.html",
+      "sha256": "372b8c398e965a9601bbccb95c0465b60553120a43ce6aa3d0355374e037b679"
+     },
+     {
+      "kind": "primary",
+      "url": "https://static.slov-lex.sk/pdf/prilohy/SK/ZZ/2003/553/20260101_4919218-2.pdf",
+      "title": "Príloha č. 3 k zákonu č. 553/2003 Z. z.: Základná stupnica platových taríf zamestnancov pri výkone práce vo verejnom záujme (v eurách mesačne), version 20260101",
+      "read": "2026-11-04",
+      "said": "1 do 2 520,00 530,50 551,50 583,50 629,00 688,50 729,00 806,00 883,50 961,00 1040,00 … 14 nad 40 624,00 637,00 662,00 700,50 755,00 826,50 875,00 967,50 1060,50 1153,50 1248,00",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/sk_553_p3.pdf",
+      "sha256": "b60450649cbabfdf1a9b2dafe30389df079f862c58f769aa877285e100e04e59"
+     }
+    ],
+    "value": {
+     "basis": "Act 553/2003 on pay in the public interest, for actors employed by theatres that are contribution organisations of the state, regions or towns (SND excluded by name)",
+     "scaleEURMonth": {
+      "class1Step1": 520.0,
+      "class11Step1": 1040.0,
+      "class11Step14": 1248.0
+     },
+     "actorClass": null,
+     "artistsMayBeGradedByMostDemandingWork": true
+    },
+    "notes": "Which salary class an actor is placed in sits in the catalogue of work activities (a government regulation not read), and the 2026 higher-level collective agreement for public-interest work, which can raise the tariffs, was not read; the statutory minimum wage also floors pay. Freelance (SZČO) actors, 2,408 of the artistic workers in 2024 per KULT 12-01, have no published minimum."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares: runs, extensions, box office per performance",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.culture.gov.sk/storage/2025/11/KULT12-01_subjekty_profesion_scenickeho_umenia-sumar_SR_2024.pdf",
+      "title": "Ministerstvo kultúry SR, KULT (MK SR) 12-01 Ročný výkaz o subjektoch v oblasti profesionálneho scénického umenia za rok 2024, sumár SR (published 2025-11; linked from culture.gov.sk 'Štátne štatistické zisťovanie … výsledky za rok 2024')",
+      "read": "2026-11-04",
+      "said": "počet spravodajských jednotiek 163 … Počet inscenácií v repertoári spolu 1 1 542 783 … Počet premiér spolu 3 295 177 … Počet predstavení odohraných súbormi divadla/ tanečného subjektu spolu (riadky 6 až 8) 5 11 256 6 051 … na domovskej scéne 6 6 582 3 915 … Počet ponúknutých miest (počet sedadiel) v hľadisku na všetkých predstaveniach … 1 2 174 369 1 254 606 … Počet návštevníkov na predstaveniach divadla/ tanečného subjektu spolu (riadky 7 až 9) 6 1 775 620 1 005 711 … zo vstupného 15 16 512 992 … Príjmy (výnosy) spolu … 1 119 793 190 … transfery, granty, dary a príspevky spolu 2 87 074 488 … Náklady na činnosť divadla spolu … 19 120 974 683",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/sk_kult1201_2024.pdf",
+      "sha256": "24324ad2c17dba7de8d1fae3ef05d332a13c668208de07fd5ff9cd796cbb9961"
+     }
+    ],
+    "value": {
+     "year": 2024,
+     "reportingUnits": 163,
+     "productionsInRepertoire": 1542,
+     "dramaProductions": 783,
+     "premieres": 295,
+     "dramaPremieres": 177,
+     "performances": 11256,
+     "dramaPerformances": 6051,
+     "seatsOffered": 2174369,
+     "attendance": 1775620,
+     "dramaAttendance": 1005711,
+     "boxOfficeEUR": 16512992,
+     "incomeEUR": 119793190,
+     "grantsAndTransfersEUR": 87074488,
+     "costsEUR": 120974683,
+     "derived": {
+      "boxOfficePerPerformanceEUR": 1467,
+      "attendancePerPerformance": 158,
+      "occupancy": 0.817
+     }
+    },
+    "notes": "The derived figures are this agent's division of the published totals (box office over all performances incl. touring), not printed. No count of runs that recouped or were extended exists in the summary; theatres as a whole earned about 14% of income at the box office."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     3,
+     4
+    ],
+    "tried": "avf.sk: home, vyzvy2026.aspx, support.aspx, aboutus/interalregulations.aspx; downloaded Štruktúra podpornej činnosti 2026 (versions 11.12.2025 and 25.06.2026), Zásady poskytovania VP AVF 4/2018 and its Annex 1",
+    "result": "read; overhead cap 7% and legal/accounting 5% of grant (Zásady 7.9); TV-series priority needs a broadcaster or VOD letter of commitment (Štruktúra 3.3.5); no producer-fee cap found by searching both texts for honorár/réžia/nepriame",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "stvr.sk home and /televizia/clanky/159943/projekty",
+    "result": "read; the Projekty page lists EU-funded projects only; no call for independent producers or tariff found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     4
+    ],
+    "tried": "Slov-Lex static text of Act 157/2024 on STVR, searched for nezávisl and %",
+    "result": "read; the independent-production shares are left to the contract with the state",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     9
+    ],
+    "tried": "Slov-Lex consolidated Act 553/2003 (version 20260101) and its Annex 3 PDF (salary scale)",
+    "result": "read; scope and scale found; the catalogue (NV 341/2004) and the 2026 KZVS not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     7,
+     8
+    ],
+    "tried": "lita.sk home, /divadlo, /zakladne-dokumenty; downloaded the theatre tariff from 1.1.2026 (scan) and read pages 1-4 from rendered images; tesseract (slk) was started but stopped by this agent (PID 723, the machine's load near 190) and the figures were read from the images",
+    "result": "read; royalties by role found",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     10,
+     5
+    ],
+    "tried": "1 search (standard): 'štatistika divadiel Slovensko 2025 predstavenia návštevníci tržby Národné osvetové centrum KULT divadlá'",
+    "result": "led to the Ministry of Culture's KULT 12-01 summaries; no theatre tax incentive surfaced",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     10
+    ],
+    "tried": "culture.gov.sk statistika-kultury and the 2024 results page; the KULT12-01 2024 summary PDF (first a 404 at the /wp-content/ address the search gave, an empty reply once, then read at /storage/2025/11/); theatre.sk 'Divadlo v číslach' PDF opened (introduction only, undated)",
+    "result": "read; 2024 totals found; no 2025 summary was looked for on the site",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Items 3 and 4 rest on the Audiovisual Fund's own rules and the STVR act; the percentages STVR must give independents sit in the state contract, not read. The LITA tariff is a collecting society's usual fee for represented authors, the nearest Slovak text to a playwright's or director's minimum."
+ },
+ {
+  "country": "UG",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series, or that none exists",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.ucc.co.ug/content-development-support-programme-cdsp/",
+      "title": "Uganda Communications Commission: Content Development Support Programme (CDSP)",
+      "read": "2026-11-04",
+      "said": "This includes feature films, short films, animations, documentaries, and television dramas. … Exclusion Areas: The Programme does not support the following: Corporate videos; Non-governmental organisations and other institutions or companies not primarily involved in the film and television industry; Individuals or companies who are not Ugandan citizens; Training programmes primarily focusing on the performing arts; … Successful applicants or beneficiaries have a one-year period (financial year) to raise and utilise the approved support. … The Content Development Support Programme will operate on a recoupment basis where applicable.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ug_cdsp.html",
+      "sha256": "1b5e19682da44fe1dd0bd2caca4ef1de0e82e8950330c5b17437f44925114852"
+     }
+    ],
+    "value": null,
+    "notes": "No rebate or tax incentive was found. The UCC's CDSP is a selective grant (held under item 2 by the first wave), not an incentive. No Ugandan text that would hold an incentive was read whole, so no absence is claimed."
+   },
+   {
+    "item": 3,
+    "fact": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.ucc.co.ug/content-development-support-programme-cdsp/",
+      "title": "Uganda Communications Commission: Content Development Support Programme (CDSP)",
+      "read": "2026-11-04",
+      "said": "This includes feature films, short films, animations, documentaries, and television dramas. … Exclusion Areas: The Programme does not support the following: Corporate videos; Non-governmental organisations and other institutions or companies not primarily involved in the film and television industry; Individuals or companies who are not Ugandan citizens; Training programmes primarily focusing on the performing arts; … Successful applicants or beneficiaries have a one-year period (financial year) to raise and utilise the approved support. … The Content Development Support Programme will operate on a recoupment basis where applicable.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ug_cdsp.html",
+      "sha256": "1b5e19682da44fe1dd0bd2caca4ef1de0e82e8950330c5b17437f44925114852"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.ucc.co.ug/wp-content/uploads/2025/01/CDSP-III-Application-Form-2024-2025.pdf",
+      "title": "UCC, CDSP III Application Form 2024-2025",
+      "read": "2026-11-04",
+      "said": "o TV Drama Series … Total Funding Amount Needed for the Project (UGX): … 7 Pilot outline (for TV Drama Series projects only) … 10 Budget breakdown",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ug_cdsp_form.pdf",
+      "sha256": "be28f9a836e8194ecafd4d0dfe491402a5e2ba88b0e1a18de3183d5051cf6fce"
+     }
+    ],
+    "value": null,
+    "notes": "Neither the CDSP page nor its 2024-25 application form, read whole, sets a cap on a producer's fee or overheads; they ask for a budget breakdown and say support is recouped 'where applicable'. A cap may sit in the award contract, not read."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen and any pickup count",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.ucc.co.ug/wp-content/uploads/2023/10/Content-Regulations-2019.pdf",
+      "title": "The Uganda Communications (Content) Regulations, 2019 (S.I. 2019 No. 91, Statutory Instruments Supplement No. 30 to the Uganda Gazette No. 57 of 8 November 2019), as posted by the Uganda Communications Commission (a scan; reg. 32 read from the page image at 130 dpi, ug_cr/p22-22.png, sha256 96563fa0efb3be5aa9ec08529336f154d308579a7871efcf04311cd8d2edb291)",
+      "read": "2026-11-04",
+      "said": "PART V — PROMOTION OF LOCAL CONTENT 32. Local content. (1) Every Free-to-Air operator shall promote the incorporation of a minimum of at least 70% local content of all programme content in its programming schedule. (2) Where a Free-to-Air broadcaster elects to provide programming that does not comply with subregulation (1), the Commission may impose a fine on the operator. (3) Local content shall comprise of content produced within and outside the territory of the Republic of Uganda and must be content — (a) produced by natural persons who are citizens or permanent residents of Uganda or produced by legal persons whose legal domicile and a majority of whose shareholders and directors are citizens or permanently residing in Uganda; and (b) which reflects the artistic creativity, culture, socio-economic conditions and values of Uganda. (4) The Contents Committee shall issue guidelines to benchmark a minimum percentage of local content produced and supplied to operators by independent local producers;",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ug_content_regs_2019.pdf",
+      "sha256": "8fb746b5469c969d76c1ce9535d47d108a595779ef587812700c4134e4cdfa87"
+     }
+    ],
+    "value": {
+     "rule": "Uganda Communications (Content) Regulations 2019, reg. 32",
+     "freeToAirLocalContentMin": 0.7,
+     "sanction": "a fine at the Commission's discretion",
+     "localContentTest": "made by Ugandan citizens/residents or companies majority-owned and directed by them, reflecting Uganda",
+     "independentProducerBenchmark": "to be set by the Contents Committee's guidelines (not found)",
+     "publicBroadcaster": "Uganda Broadcasting Corporation (ubc.go.ug answers; no commissioning terms found)",
+     "pickup": null
+    },
+    "notes": "The quota binds free-to-air broadcasters' schedules; it doesn't say they must buy from independents or at what price. The Contents Committee's independent-producer guideline wasn't found. No count of independent series picked up exists in what was read."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "None found by search."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.ucc.co.ug/content-development-support-programme-cdsp/",
+      "title": "Uganda Communications Commission: Content Development Support Programme (CDSP)",
+      "read": "2026-11-04",
+      "said": "This includes feature films, short films, animations, documentaries, and television dramas. … Exclusion Areas: The Programme does not support the following: Corporate videos; Non-governmental organisations and other institutions or companies not primarily involved in the film and television industry; Individuals or companies who are not Ugandan citizens; Training programmes primarily focusing on the performing arts; … Successful applicants or beneficiaries have a one-year period (financial year) to raise and utilise the approved support. … The Content Development Support Programme will operate on a recoupment basis where applicable.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/ug_cdsp.html",
+      "sha256": "1b5e19682da44fe1dd0bd2caca4ef1de0e82e8950330c5b17437f44925114852"
+     }
+    ],
+    "value": null,
+    "notes": "The only public screen-and-content fund found (UCC CDSP) excludes 'training programmes primarily focusing on the performing arts' and funds audio-visual work only. The Uganda National Cultural Centre (uncc.go.ug) was refused by the proxy (connect_rejected)."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement or fee found."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement, commission fee or royalty tariff found."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement found; no statutory minimum wage was looked for in this round."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No statistics on runs, attendance or box office found; the National Theatre's 377 seats come only from search-result text (not read), so not recorded."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "web-search",
+    "items": [
+     3,
+     4
+    ],
+    "tried": "1 search (standard): 'Uganda Communications Commission local content quota television prime time percentage regulations independent producers content development support programme guidelines'",
+    "result": "2013-2019 news of a 70% prime-time quota; led to UCC's Content Regulations",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     3,
+     4,
+     6
+    ],
+    "tried": "ucc.co.ug: site search 'content regulations', the CDSP page, its CDSP III application form, the Content Regulations 2019 download page and its attachment (found via the site's wp-json media listing); the regulations are a scan, reg. 32 read from the page image",
+    "result": "read; 70% local-content rule found; no cap; no incentive",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "ubc.go.ug home page",
+    "result": "answers; news only, no commissioning call or terms on the page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "trade-press",
+    "items": [
+     4
+    ],
+    "tried": "uccinfoblog (wordpress) post 'Measuring broadcasting local content quota' and Nile Post 'UCC expands film support to regions'",
+    "result": "the blog is private (login wall); Nile Post quotes a UCC official on the 2014 quota, no primary address beyond UCC",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "1 search (standard): 'Uganda National Cultural Centre National Theatre Kampala hire charges theatre productions support fund playwrights actors pay 2026'",
+    "result": "no fund, tariff or pay terms; UNCC Act cited without amounts",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     6,
+     10
+    ],
+    "tried": "uncc.go.ug and www.uncc.go.ug",
+    "result": "proxy connect_rejected (502), not read",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "Uganda's screen route is a statutory 70% local-content duty on free-to-air schedules plus the UCC's selective CDSP grants; nothing was found for the stage."
+ },
+ {
+  "country": "VG",
+  "items": [
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. No fund found today: the Government's site search (gov.vg/search/node) answered 403 for 'culture grant' and 'film commission', and bvifilm.com now redirects to a hosting 'suspended page' (cgi-sys/suspendedpage.cgi), so the Film Commission's pages can no longer be read."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. No funder exists in what was read to set one."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. No public broadcaster's commissioning terms found; none was reached."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. Not found."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. gov.vg search for 'theatre' answered 403."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. Only the minimum wage (US$7.25 an hour from 1 July 2025, vg-all) applies to an employee."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. Not found."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "The earlier research (producer-VG.json, read 2026-11-01) found no film, television or stage agreement, fund or guild in the British Virgin Islands and no cash rebate on the BVI Film Commission's pages. Not found."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     2,
+     4,
+     6
+    ],
+    "tried": "gov.vg site search ('culture grant', 'theatre', 'film commission')",
+    "result": "403 for each, not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2,
+     3,
+     4
+    ],
+    "tried": "bvifilm.com (BVI Film Commission)",
+    "result": "redirects over http to www.bvifilm.com/cgi-sys/suspendedpage.cgi (a suspended hosting account); not readable as the Commission's page",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10
+    ],
+    "tried": "not run: the turn's shared web-search budget (200 calls) was used up before the British Virgin Islands were reached; the brief also bars spending searches to prove a negative the earlier research holds",
+    "result": "not worked around",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "A British Overseas Territory with no film, TV or stage agreement, fund or guild found; its Film Commission site is suspended today, which the producer-VG.json source (bvifilm.com, read 2026-11-01) should be checked against."
+ },
+ {
+  "country": "WF",
+  "items": [
+   {
+    "item": 1,
+    "fact": "The production incentive's terms for a series, or that none exists",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Whether France's audiovisual tax credit (CGI) or CNC support reaches a production made in Wallis and Futuna was not settled: the territory has its own tax regime under its 1961 statute (earlier rounds), Légifrance answered 403 and cnc.fr's search 404; no territorial incentive was found on the Préfecture's site."
+   },
+   {
+    "item": 2,
+    "fact": "A public fund for a producer's series",
+    "verdict": "blocked",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.wallis-et-futuna.gouv.fr/Publications/Appels-a-projets/FONDS-PACIFIQUE-APPEL-A-PROJETS-POUR-L-ANNEE-2027",
+      "title": "Préfecture de Wallis-et-Futuna: FONDS PACIFIQUE – APPEL A PROJETS POUR L’ANNÉE 2027",
+      "read": "2026-11-04",
+      "said": "Le Fonds de coopération économique, sociale et culturelle pour le Pacifique, dit « Fonds Pacifique », est un instrument de coopération régionale financé par le ministère de l’Europe et des Affaires étrangères. Il contribue à l’insertion régionale de la Nouvelle-Calédonie, de la Polynésie française et de Wallis et Futuna, à travers des actions de coopération avec les États indépendants du Pacifique. Pour être éligible, un projet doit : associer au moins une des trois collectivités françaises du Pacifique à un partenariat avec un État indépendant du Pacifique ; prévoir un cofinancement , la contribution du Fonds Pacifique ne pouvant dépasser 50 % du coût total du projet . … la coopération culturelle ; … Les dossiers doivent être adressés directement au SPP, au plus tard le 31 décembre 2026",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/wf_fp2027.html",
+      "sha256": "7bd973beab2aa4cf83ef58c0ea8f18bbb7279ee8c929522aac9ce7912d2ee698"
+     }
+    ],
+    "value": null,
+    "notes": "None found for a series. The Fonds Pacifique (foreign ministry) co-funds regional-cooperation projects, cultural ones included, at most 50% of cost and only with an independent Pacific state as partner; it isn't a production fund."
+   },
+   {
+    "item": 3,
+    "fact": "A cap on a series producer's fee and overheads",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   },
+   {
+    "item": 4,
+    "fact": "How a series reaches the screen",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://la1ere.franceinfo.fr/wallisfutuna/",
+      "title": "Wallis-et-Futuna La 1ère (Outre-mer La 1ère network, la1ere.franceinfo.fr), home page",
+      "read": "2026-11-04",
+      "said": "Wallis-et-Futuna La 1ère : actualités et info en direct de Wallis-et-Futuna, replays TV et radio - Outre-mer La 1ère … Portail La 1ère Guadeloupe Guyane Martinique Mayotte Nouvelle-Calédonie Polynésie Réunion Saint-Pierre-et-Miquelo[n]",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/wf1.html",
+      "sha256": "f7d3cab96fe563a116ddd3887f935798c8b93ae4bf4ca6293d50d0d1d3d234c6"
+     }
+    ],
+    "value": {
+     "broadcaster": "Wallis-et-Futuna La 1ère, a station of the Outre-mer La 1ère network (la1ere.franceinfo.fr)",
+     "commissioningTerms": null,
+     "pickup": null
+    },
+    "notes": "The territory's broadcaster belongs to the Outre-mer La 1ère network, so a series would reach air through that network's commissioning (terms not read; the FR research may hold them). No local commissioning call was found."
+   },
+   {
+    "item": 5,
+    "fact": "A tax incentive for theatre production",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found."
+   },
+   {
+    "item": 6,
+    "fact": "A public fund for a theatre production",
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.wallis-et-futuna.gouv.fr/Publications/Appels-a-projets/Campagnes-de-subvention-FDVA-FEBECS",
+      "title": "Préfecture de Wallis-et-Futuna: Campagnes de subvention FDVA - FEBECS",
+      "read": "2026-11-04",
+      "said": "Campagnes de subvention FDVA / FEBECS Check - List : déposer une demande de subvention … Page 1 : Préciser dans la ligne « Etat – Ministère » la subvention demandée : FDVA ou FEBECS ☐ Page 2 : Remplir les informations « 1. Identification de l'association » … Page 9 : « Attestations » : Remplir et signer le formulaire, en mentionnant la somme des subventions demandées dans la ligne « demander une subvention de … euros au titre de l’exercice 2026 » … les pièces sont à envoyer aux adresses mails suivantes : secretariat@stjs.wf",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/wf_febecs.html",
+      "sha256": "9680cf3bf3d2a703670768777b3db6e643cd9c8387b5ee0e6e90c29885a1dffd"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.wallis-et-futuna.gouv.fr/Publications/Appels-a-projets/FONDS-PACIFIQUE-APPEL-A-PROJETS-POUR-L-ANNEE-2027",
+      "title": "Préfecture de Wallis-et-Futuna: FONDS PACIFIQUE – APPEL A PROJETS POUR L’ANNÉE 2027",
+      "read": "2026-11-04",
+      "said": "Le Fonds de coopération économique, sociale et culturelle pour le Pacifique, dit « Fonds Pacifique », est un instrument de coopération régionale financé par le ministère de l’Europe et des Affaires étrangères. Il contribue à l’insertion régionale de la Nouvelle-Calédonie, de la Polynésie française et de Wallis et Futuna, à travers des actions de coopération avec les États indépendants du Pacifique. Pour être éligible, un projet doit : associer au moins une des trois collectivités françaises du Pacifique à un partenariat avec un État indépendant du Pacifique ; prévoir un cofinancement , la contribution du Fonds Pacifique ne pouvant dépasser 50 % du coût total du projet . … la coopération culturelle ; … Les dossiers doivent être adressés directement au SPP, au plus tard le 31 décembre 2026",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/u13/wf_fp2027.html",
+      "sha256": "7bd973beab2aa4cf83ef58c0ea8f18bbb7279ee8c929522aac9ce7912d2ee698"
+     }
+    ],
+    "value": {
+     "funds": [
+      "FEBECS (state subsidy campaign 2026, for associations; applications go to secretariat@stjs.wf)",
+      "Fonds Pacifique (regional cooperation incl. culture, max 50% of cost, needs a Pacific-state partner; 2027 call closes 2026-12-31)"
+     ],
+     "ranges": null,
+     "rateOfYes": null,
+     "applicant": "an association (FEBECS); institutional or civil-society bearers of regional projects (Fonds Pacifique)"
+    },
+    "notes": "The FEBECS 2026 call PDF (AAP Campagne FEBECS 2026) was refused twice (HTTP/2 ENHANCE_YOUR_CALM, then an empty reply), so its purpose and amounts are not read; neither text names theatre."
+   },
+   {
+    "item": 7,
+    "fact": "The stage director's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement; the territory's pay floor (SMIG, held in WF.json) is the only one known."
+   },
+   {
+    "item": 8,
+    "fact": "The playwright's minimum",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; whether SACD's French tariffs reach the territory was not read."
+   },
+   {
+    "item": 9,
+    "fact": "The stage actor's minimum (no stage agreement held for WF)",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "No agreement found; the SMIG (XPF 575/hour from 2024-Q3) in WF.json is the general floor."
+   },
+   {
+    "item": 10,
+    "fact": "How a play fares",
+    "verdict": "blocked",
+    "sources": [],
+    "value": null,
+    "notes": "Not found; no theatre is listed on the pages read."
+   }
+  ],
+  "attempts": [
+   {
+    "method": "institution",
+    "items": [
+     4
+    ],
+    "tried": "la1ere.franceinfo.fr/wallisfutuna home page",
+    "result": "read; the station exists as part of the Outre-mer La 1ère network",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     2,
+     6
+    ],
+    "tried": "wallis-et-futuna.gouv.fr: site search (the search term was not applied, 406 unfiltered results), Publications > Appels à projets list, the FDVA-FEBECS campaign page, the Fonds Pacifique 2027 call; the FEBECS 2026 PDF",
+    "result": "pages read; PDF refused twice",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "official-register",
+    "items": [
+     1
+    ],
+    "tried": "legifrance.gouv.fr CGI article page",
+    "result": "403, not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "institution",
+    "items": [
+     1,
+     2
+    ],
+    "tried": "cnc.fr/rechercher?q=Wallis",
+    "result": "404, not read",
+    "date": "2026-11-04"
+   },
+   {
+    "method": "web-search",
+    "items": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "tried": "not run: the turn's shared web-search budget (200 calls) was used up before Wallis and Futuna was reached",
+    "result": "not worked around",
+    "date": "2026-11-04"
+   }
+  ],
+  "notes": "A French overseas collectivity with its own statute (1961) and tax regime; its broadcaster is Wallis-et-Futuna La 1ère (Outre-mer La 1ère network). Whether France's CNC rules and tax credit reach it is still the open question the earlier rounds left."
+ }
+]
