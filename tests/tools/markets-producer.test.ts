@@ -13,6 +13,7 @@ import {
   creditOf,
   FACT,
   figureOf,
+  foreignOnlyOf,
   fundOf,
   ITEMS,
   KEPT,
@@ -58,6 +59,15 @@ const OWN = {
 } as Research;
 const CAL = { country: 'calibration', figures: [{ item: 'financing', value: { cap: 0.49, most: 500_000, unit: 'CAD', rate: 0.111, rebate: false } }], blockers: [] } as Research;
 const S: Sources = { country: 'XX', own: OWN, calibration: CAL };
+/** The market with its incentive's sources: a primary that limits it to productions from abroad, a secondary that says more. */
+const LIMITED: Sources = {
+  ...S,
+  own: {
+    ...OWN,
+    figures: [OWN.figures[0], OWN.figures[1], { item: 'incentive', value: { rate: 0.3 }, sources: [{ src: 1, said: 'the press says foreign productions' }, { src: 0, said: 'for foreign productions alone, says the law' }] }] as Research['figures'],
+    sources: [{ kind: 'primary' }, { kind: 'secondary' }],
+  },
+};
 const R = { s: S, currency: 'EUR' as const, fig: OWN.figures[0] ?? null };
 const BARE = { s: S, currency: 'EUR' as const, fig: null };
 /** A clock that keeps two zones, one by a link. */
@@ -317,8 +327,10 @@ describe("the producer's markets compile", () => {
       fees: [[{ fig: 0, budget: [0, null], share: ['share'] }], []],
       release: [{ fig: 0, budget: [0, null], rate: ['share'] }],
     };
-    expect(marketOf(S, reading)).toEqual({ currency: 'EUR', fund: { rate: 0.25, tiers: [T({ bands: [] })] }, aid: [T()], credit: [], fees: [[T()], []], release: [{ budget: [0, null], rate: 0.4 }], unknown: ['fund', 'union'] });
-    expect(marketOf(S, { currency: 'EUR' })).toEqual({ currency: 'EUR', fund: null, aid: [], credit: null, fees: [], release: null, unknown: ['fund', 'union'] });
+    expect(marketOf(S, reading)).toEqual({ currency: 'EUR', fund: { rate: 0.25, tiers: [T({ bands: [] })] }, aid: [T()], credit: [], foreignOnly: false, fees: [[T()], []], release: [{ budget: [0, null], rate: 0.4 }], unknown: ['fund', 'union'] });
+    expect(marketOf(S, { currency: 'EUR' })).toEqual({ currency: 'EUR', fund: null, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: ['fund', 'union'] });
+    const paid = { currency: 'EUR', credit: [{ fig: 0, budget: [0, null], share: ['share'] }] };
+    expect(marketOf(LIMITED, { ...paid, foreignOnly: { fig: 2, said: 'foreign productions alone' } }).foreignOnly).toBe(true);
     expect(() => marketOf(S, { ...reading, fund: null })).toThrow("XX's cap on public aid holds no fund");
     expect(marketOf(S, { ...reading, fund: null, aid: [] }).fund).toBeNull();
     expect(() => marketOf(S, { ...reading, aid: [] })).toThrow("XX's tier gives nothing");
@@ -335,6 +347,30 @@ describe("the producer's markets compile", () => {
     expect(() => marketOf({ ...S, country: 'JP' }, { currency: 'USD' })).toThrow("JP's research gives no term in USD, which isn't its country's");
     expect(() => marketOf(S, {})).toThrow("XX pays in undefined, which isn't a currency");
     expect(() => marketOf({ ...S, country: 'AQ' }, {})).toThrow("AQ pays in , which isn't a currency");
+  });
+
+  it("holds an incentive its own words pay only to a production from abroad, on a primary source's quote", () => {
+    const reading = { fig: 2, said: 'foreign productions alone' };
+    const credit = [T()];
+    expect(foreignOnlyOf(LIMITED, undefined, credit)).toBe(false);
+    expect(foreignOnlyOf(LIMITED, reading, credit)).toBe(true);
+    // The words stand in what a primary source of the incentive's figure said, not a secondary's, nor another figure's.
+    expect(() => foreignOnlyOf(LIMITED, { fig: 2, said: 'alone, the law says' }, credit)).toThrow(`XX's incentive's primary sources don't say "alone, the law says"`);
+    expect(() => foreignOnlyOf(LIMITED, { fig: 2, said: 'the press says' }, credit)).toThrow(`XX's incentive's primary sources don't say "the press says"`);
+    // Words, not a list of them a string would match.
+    expect(() => foreignOnlyOf(LIMITED, { fig: 2, said: ['foreign productions alone'] }, credit)).toThrow(`XX's incentive's primary sources don't say "foreign productions alone"`);
+    for (const said of ['', 5, undefined]) expect(() => foreignOnlyOf(LIMITED, { fig: 2, said }, credit), String(said)).toThrow(`XX's incentive's primary sources don't say "${String(said)}"`);
+    expect(() => foreignOnlyOf(S, reading, credit)).toThrow(`XX's incentive's primary sources don't say "foreign productions alone"`);
+    // A figure's sources name the file's by their place, which a file without its sources can't vouch for.
+    const { sources: _, ...bare } = LIMITED.own;
+    expect(() => foreignOnlyOf({ ...LIMITED, own: bare }, reading, credit)).toThrow(`XX's incentive's primary sources don't say "foreign productions alone"`);
+    const astray = { ...LIMITED.own, figures: [OWN.figures[0], OWN.figures[1], { item: 'incentive', value: {}, sources: [{ src: 9, said: 'foreign productions alone' }] }] } as Research;
+    expect(() => foreignOnlyOf({ ...LIMITED, own: astray }, reading, credit)).toThrow(`XX's incentive's primary sources don't say "foreign productions alone"`);
+    expect(() => foreignOnlyOf(LIMITED, { fig: 0, said: 'foreign productions alone' }, credit)).toThrow("XX's figure 0 isn't its incentive");
+    // An incentive that pays nothing, or isn't known, has nothing to limit.
+    for (const none of [null, []]) expect(() => foreignOnlyOf(LIMITED, reading, none), String(none)).toThrow("XX's incentive pays nothing the game knows, so nothing reads a limit on it");
+    expect(() => foreignOnlyOf(LIMITED, { ...reading, in: 'calibration' }, credit)).toThrow("XX's limit names in, which the game doesn't read");
+    expect(() => foreignOnlyOf(LIMITED, 'x', credit)).toThrow("XX's limit is not an object");
   });
 
   it('reads each market as the register cites it, with the calibration, and refuses a file or a reading without the other', () => {
@@ -366,7 +402,7 @@ describe("the producer's markets compile", () => {
     put(READINGS, { AA: reading, BB: { currency: 'EUR' } });
     const out = readMarkets(root);
     expect(Object.keys(out)).toEqual(['AA', 'BB']);
-    expect(out['AA']).toEqual({ currency: 'CAD', fund: { rate: 0.111, tiers: [T({ bands: [{ from: 0, to: null, rate: 0.49 }], most: 500_000 })] }, aid: [], credit: null, fees: [], release: null, unknown: [], zone: null });
+    expect(out['AA']).toEqual({ currency: 'CAD', fund: { rate: 0.111, tiers: [T({ bands: [{ from: 0, to: null, rate: 0.49 }], most: 500_000 })] }, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: [], zone: null });
     expect(out['BB']?.unknown).toEqual(['fund']);
     expect(serialize(out)).toBe(`${JSON.stringify(out, null, 1)}\n`);
     expect(cited(root, { entries: all as never }, CALIBRATED, CALIBRATION)).toEqual(CAL);
@@ -428,7 +464,7 @@ describe("the producer's markets compile", () => {
     expect(readResearch(root, { entries } as never, 'BB')).toEqual({ research: { country: 'BB', figures: [], blockers: [{ item: 'fund' }, { item: 'none' }, { item: 'fund' }] }, blocked: true });
     // Barbados: its country's currency.
     put(`${PLACES}/BB.tsv`, '1\tBridgetown\t\tBB.08\t13.1\t-59.6\tEurope/Monaco\t98511\t\n');
-    expect(readMarkets(root)).toEqual({ BB: { currency: 'BBD', fund: null, aid: [], credit: null, fees: [], release: null, unknown: ['fund', 'none'], zone: 'Europe/Monaco' } });
+    expect(readMarkets(root)).toEqual({ BB: { currency: 'BBD', fund: null, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: ['fund', 'none'], zone: 'Europe/Monaco' } });
     // Its blockers are all it holds: a reading can point at no figure of it.
     put(READINGS, { AA: null, BB: { credit: [{ fig: 0, budget: [0, null], share: ['share'] }] } });
     expect(() => readMarkets(root)).toThrow('BB has no figure 0');

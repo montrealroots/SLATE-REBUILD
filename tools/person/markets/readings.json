@@ -501,7 +501,7 @@
     {"medium": "film", "per": "day", "role": "actor", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "film"]},
     {"medium": "film", "per": "day", "role": "beginner", "from": "2026-11-04", "fig": 5, "path": ["perFilmingDay", "filmBeginner"]}
    ]},
-   "il-hebrew-theatre": {"media": ["stage"], "currency": "ILS", "minimums": [
+   "il-hebrew-theatre": {"media": ["stage"], "currency": "ILS", "age": {"fig": 6, "least": 18, "said": "הסכם זה לא יחול על שחקנים מתחת לגיל 18"}, "minimums": [
     {"medium": "stage", "per": "performance", "when": {"years": [0, 2]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "0-2"]},
     {"medium": "stage", "per": "performance", "when": {"years": [3, 4]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "3-4"]},
     {"medium": "stage", "per": "performance", "when": {"years": [5, 6]}, "from": "2025-02-17", "fig": 6, "path": ["perShowBySeniority", "5-6"]},
@@ -950,7 +950,24 @@
  "UA": {"unread": "its research gives no minimum, nor that none sets the pay: only an agreement without its rates and the language"},
  "UG": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "UM": {"unread": "the islands have no inhabitants and no local market; filming there is a federal permit's"},
- "UY": {"unread": "SUA's minimums, the totals the Wage Council's agreement of 2025 has it publish, are a fee for the part beside a day rate, and no term a part is paid by is a fee for the part"},
+ "UY": {
+  "market": null, "zone": "America/Montevideo", "language": {"code": "es", "fig": null},
+  "agreements": {
+   "uy-screen": {"media": ["film"], "currency": "UYU", "minimums": [
+    {"medium": "film", "per": "day", "role": "lead", "from": "2026-01-01", "fig": 1, "path": ["dayRate"]},
+    {"medium": "film", "per": "day", "role": "co-lead", "from": "2026-01-01", "fig": 1, "path": ["dayRate"]},
+    {"medium": "film", "per": "day", "role": "supporting", "from": "2026-01-01", "fig": 1, "path": ["dayRate"]},
+    {"medium": "film", "per": "day", "role": "small", "from": "2026-01-01", "fig": 1, "path": ["dayRate"]},
+    {"medium": "film", "per": "day", "role": "featured-extra", "from": "2026-01-01", "fig": 1, "path": ["dayRate"]},
+    {"medium": "film", "per": "day", "role": "lead", "fee": true, "from": "2026-01-01", "fig": 1, "path": ["feature", "lead"]},
+    {"medium": "film", "per": "day", "role": "co-lead", "fee": true, "from": "2026-01-01", "fig": 1, "path": ["feature", "coLead"]},
+    {"medium": "film", "per": "day", "role": "supporting", "fee": true, "from": "2026-01-01", "fig": 1, "path": ["feature", "supporting"]},
+    {"medium": "film", "per": "day", "role": "small", "fee": true, "when": {"length": [1, 2]}, "from": "2026-01-01", "fig": 1, "path": ["feature", "smallUpTo2Days"]},
+    {"medium": "film", "per": "day", "role": "small", "fee": true, "when": {"length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["feature", "smallFrom3Days"]},
+    {"medium": "film", "per": "day", "role": "featured-extra", "fee": true, "from": "2026-01-01", "fig": 1, "path": ["feature", "featuredExtra"]}
+   ]}
+  }
+ },
  "UZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "VA": {
   "market": null, "zone": "Europe/Vatican", "language": {"code": "it", "fig": null},

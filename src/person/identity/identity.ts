@@ -47,8 +47,10 @@ export const ETHNICITIES = ['white', 'black', 'latino', 'asian', 'middle-eastern
 export type Ethnicity = (typeof ETHNICITIES)[number];
 
 /**
- * What the family did: outside the business, or in it, by the trades Follows counts among the parents of actors in US
- * films of 2000-2025 (acting, directing, music, producing) and the writers among the families of writers (R-4622).
+ * What the family did: outside the business, or in it, by the trades Giggster counts among the industry parents of young
+ * actors in US films of 2000-2025 (acting, directing, music, producing; R-4622), and writing, the screenwriter's trade,
+ * which no source counts among parents apart. Until 2026-11-04 the list also cited Follows's share of writers with family
+ * in film or TV; that figure went from the research that day, nothing reading it.
  */
 export const FAMILY = ['outside', 'acting', 'directing', 'writing', 'producing', 'music'] as const;
 export type Family = (typeof FAMILY)[number];
@@ -154,7 +156,7 @@ export function suggestedLanguages(born: CountryCode, grewUp: CountryCode): stri
 /** The citizenship the birthplace suggests: the nationality its people hold. */
 export const suggestedCitizenship = (born: CountryCode): CountryCode | undefined => nationality(born);
 
-/** The person's sex, as the papers, a part and the awards read it: an actor is male, an actress female. */
+/** The person's sex, as the papers and a part read it: an actor is male, an actress female. The game has no awards, so the acting awards' categories by sex, researched with it, went from the research on 2026-11-04. */
 export const sexOf = (p: Person): Sex => (p.billedAs === 'actor' ? 'male' : 'female');
 
 /** The title pronouns settle: he an actor, she an actress; they settle neither (KEEP entry 3). */

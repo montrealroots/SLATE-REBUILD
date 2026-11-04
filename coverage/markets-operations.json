@@ -12,7 +12,8 @@
    "acting.perform (a part in any compiled market: paid at its minimum or left to negotiation, refused a term, role, medium or rehearsal it doesn't set, permitted in its own country)",
    "aboutMarket (a country's or an agreement's unknowns, compiled or not; a follower's with its followed country's)",
    "coverage: all 252 countries (axis country), the kept three on R-4614",
-   "compile: unread readings, blockers-only countries, followers, the zone without a city, undated rates"
+   "compile: unread readings, blockers-only countries, followers, the zone without a city, undated rates",
+   "agreement-age"
   ]
  },
  "rows": [
@@ -111,6 +112,17 @@
     "tests/tools/markets.test.ts::the markets compile > reads a country cited only by its blockers from them, one that says why it isn't read without a market, and a follower after the rest",
     "tests/tools/markets.test.ts::the markets compile > reads a territory that follows another country's terms under that country's agreements, as its own",
     "tests/person/acting/markets.test.ts::the markets > read every country the register cites, or say why not"
+   ]
+  },
+  {
+   "key": "agreement-age",
+   "status": "researched",
+   "register": [
+    "R-5770"
+   ],
+   "tests": [
+    "tests/person/acting/markets.test.ts::a market's part, played > engages no one younger than its agreement's text covers: the Hebrew Theatre's none under 18",
+    "tests/tools/markets.test.ts::the markets compile > holds the age an agreement covers actors from, where its own words in a primary source write it"
    ]
   }
  ]

@@ -4,7 +4,7 @@ import { civilFromDays, SECONDS_PER_DAY } from '../../core/time/calendar.ts';
 import { t, type LineId } from '../../core/text/text.ts';
 import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { componentOf, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
-import { ETHNICITIES, identifiesAs, personOf, playingAge, speaks, type Ethnicity, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
+import { ageOf, ETHNICITIES, identifiesAs, personOf, playingAge, speaks, type Ethnicity, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
 import type { DirectingSlice } from '../directing/directing.ts';
 import { budgetMajor, financedOf, holds as plays, MEDIUM as MEDIUM_OF, payOut, projectOf, type Paying, type ProducingSlice, type Theatre } from '../producing/producing.ts';
@@ -22,10 +22,11 @@ import compiled from './markets.json' with { type: 'json' };
  *
  * Casting went that day: the breakdowns casting put out at the trade's shares of gender, ethnicity and age (Sowa's 2017
  * count, 2025's major film characters), the submissions under a headshot, the self-taped or room audition and its
- * booking chance (1 in 50 to a little under 1 in 3, the game's own, R-4614's blocker) were removed, because no one else
- * casts the life now. A part is written by the production the life acts in, as it would write any: for men, women,
- * either or a non-binary performer, naming an ethnicity or not, for an age range, in a language (the market's where it
- * names none). The life plays a part written for its sex or for either, and a they/them life any part (the owner,
+ * booking chance (1 in 50 to a little under 1 in 3, the game's own) were removed, because no one else casts the life now;
+ * the research only they read went with them the same day, R-4614's blocker on the audition-to-booking ratio among it.
+ * A part is written by the production the life acts in, as it would write any: for men, women, either or a non-binary
+ * performer, naming an ethnicity or not, for an age range, in a language (the market's where it names none). The life
+ * plays a part written for its sex or for either, and a they/them life any part (the owner,
  * 2026-11-01: "Actor (Male) Actress (Female) and for They/Them it could be either or", read through what the person is
  * billed as); a part for the ages it can play, an ethnicity it gives where the part names one (read only as the part
  * writes it, never as an ability, a judgment of the work, a pay rate or a chance; KEEP entry 4), and a language it
@@ -81,6 +82,14 @@ import compiled from './markets.json' with { type: 'json' };
  * pay, it is left to negotiation, as under the Micro-Budget agreement. The actor's years are the whole years since the
  * first part they played, the game's reading (person.markets.model); what a country's research couldn't find is told,
  * whether its market is compiled or not.
+ *
+ * A market's agreement may pay a fee for the part beside its term's units (Uruguay's SUA table of January 2026: the
+ * feature's cachet by role, beside a day rate for each day; its last step kept past the 2.8% rise of 1 July 2026, which
+ * SUA hasn't yet published; its 25% more for a film without the Cinema Agency's national or co-production certificate,
+ * and a short's or a medium-length film's share of the cachet, aren't read). Until 2026-11-04 no term was a fee for the
+ * part, and Uruguay's table went unpaid. And an agreement whose own text covers actors from an age engages no one
+ * younger (the Hebrew Theatre's, none under 18, its clause 1.2); until 2026-11-04 nothing held that apart, and a minor was
+ * engaged under it.
  */
 
 /** The line that tells the player these figures are the game's own (person.acting.model). */
@@ -92,7 +101,7 @@ export const MARKET_AGREEMENTS = [
   'cl-screen', 'co-all', 'cu-stage', 'de-screen', 'de-stage', 'de-guest', 'dk-film', 'dk-tv', 'dk-soejle-a', 'dk-copenhagen-stage', 'ec-sectoral', 'ee-film', 'ee-tv-private', 'ee-err', 'es-screen', 'es-madrid-stage', 'fi-stage', 'fi-guest',
   'fi-screen', 'fr-film', 'fr-tv', 'fr-subsidised-stage', 'fr-private-stage', 'gi-all', 'gr-private-stage', 'hk-film', 'ie-stage', 'il-screen', 'il-hebrew-theatre', 'in-screen', 'it-screen', 'it-stage', 'jm-all',
   'jp-nhk', 'jp-live', 'kr-kbs', 'kr-mbc-sbs', 'li-film', 'ms-all', 'mx-televisa', 'mx-azteca', 'mx-other', 'nc-all', 'ng-screen', 'nl-stage', 'nl-screen', 'no-film', 'no-tv', 'no-nrk', 'no-stage',
-  'nz-screen', 'nz-court', 'nz-atc', 'ph-screen', 'pn-all', 'se-screen', 'se-stage', 'se-private-stage', 'se-free-stage', 'sh-all', 'th-screen', 'tr-screen', 'va-screen', 'vg-all', 'za-all',
+  'nz-screen', 'nz-court', 'nz-atc', 'ph-screen', 'pn-all', 'se-screen', 'se-stage', 'se-private-stage', 'se-free-stage', 'sh-all', 'th-screen', 'tr-screen', 'uy-screen', 'va-screen', 'vg-all', 'za-all',
   'ax-fi-stage', 'ax-fi-guest', 'ax-fi-screen', 'bl-fr-film', 'bl-fr-tv', 'bl-fr-subsidised-stage', 'bl-fr-private-stage', 'cc-au-screen', 'cc-au-stage', 'cx-au-screen', 'cx-au-stage', 'gf-fr-film',
   'gf-fr-tv', 'gf-fr-subsidised-stage', 'gf-fr-private-stage', 'gp-fr-film', 'gp-fr-tv', 'gp-fr-subsidised-stage', 'gp-fr-private-stage', 'mc-fr-film', 'mc-fr-tv', 'mc-fr-subsidised-stage',
   'mc-fr-private-stage', 'mf-fr-film', 'mf-fr-tv', 'mf-fr-subsidised-stage', 'mf-fr-private-stage', 'mq-fr-film', 'mq-fr-tv', 'mq-fr-subsidised-stage', 'mq-fr-private-stage', 'nf-au-screen', 'nf-au-stage', 'pm-fr-film', 'pm-fr-tv', 'pm-fr-subsidised-stage',
@@ -216,6 +225,8 @@ interface Scale {
   readonly rehearsal?: Table;
   /** A market's part: the minimums for its term, each paying the engagement's units from one to another (to none: the rest). */
   readonly bands?: readonly Band[];
+  /** A market's part: the fee for the part, paid once beside its term's units, where its agreement sets one. */
+  readonly fee?: Table;
 }
 
 export interface Band {
@@ -231,6 +242,8 @@ export interface Minimum {
   readonly role: string | null;
   readonly per: Term;
   readonly rehearsal: boolean;
+  /** A fee for the part, paid once beside the units of its term (`per`). */
+  readonly fee?: true;
   readonly with: readonly Term[] | null;
   readonly when: Readonly<Partial<Record<Tier, readonly [number, number | null]>>>;
   readonly from: string;
@@ -246,6 +259,8 @@ export interface MarketAgreement {
   readonly follows?: Agreement;
   /** Where the minimum is the followed one raised by a share (Monaco's: Nice's, plus 5%), that share. */
   readonly uplift?: string;
+  /** The age its text covers actors from, where it sets one (the Hebrew Theatre's, 18). */
+  readonly age?: number;
 }
 /** What a market's research couldn't find, by the item its blockers name. */
 export type Unknown = 'agreements' | 'rates' | 'none' | 'union' | 'language' | 'market' | 'terms' | 'successors';
@@ -280,7 +295,7 @@ function holds(m: Minimum, part: Part, years: number): boolean {
 /** A slot's minimums as a table of steps: the compile writes each agreement's minimums by date. */
 const tableOf = (ms: readonly Minimum[]): Table => ms.map((m) => [m.from, m.amount] as const);
 
-/** A market's part's scale: its term's minimums, band by band, and its rehearsal's; none where no agreement sets the pay. */
+/** A market's part's scale: its term's minimums, band by band, its fee for the part and its rehearsal's; none where no agreement sets the pay. */
 function marketScale(part: Part, a: MarketAgreement, years: number): Scale | null {
   const medium = mediumOf(part);
   if (a.none) return null;
@@ -290,11 +305,13 @@ function marketScale(part: Part, a: MarketAgreement, years: number): Scale | nul
   if (!roles.includes(role)) throw new Error(roles.includes(null) ? `${part.agreement} sets no minimum by role` : `a part under ${part.agreement} is one of its roles: ${roles.join(', ')}`);
   const fit = own.filter((m) => m.role === role && holds(m, part, years));
   const bands = new Map<string, Minimum[]>();
-  for (const m of fit.filter((x) => !x.rehearsal && x.per === part.term)) {
+  for (const m of fit.filter((x) => !x.rehearsal && x.fee !== true && x.per === part.term)) {
     const key = JSON.stringify(m.when.nth ?? [1, null]);
     bands.set(key, [...(bands.get(key) ?? []), m]);
   }
   const rehearsal = fit.filter((m) => m.rehearsal && (m.with === null || m.with.includes(part.term)));
+  // Stryker disable next-line ConditionalExpression: Uruguay's, the one fee, goes with its day rate, and a part under it by another term has no minimum and is refused before its fee is read.
+  const fee = fit.filter((m) => m.fee === true && m.per === part.term);
   return {
     currency: a.currency as CurrencyCode,
     bands: [...bands.entries()].map(([key, ms]) => {
@@ -302,6 +319,7 @@ function marketScale(part: Part, a: MarketAgreement, years: number): Scale | nul
       return { from, to, table: tableOf(ms) };
     }),
     ...(rehearsal.length > 0 ? { rehearsal: tableOf(rehearsal) } : {}),
+    ...(fee.length > 0 ? { fee: tableOf(fee) } : {}),
   };
 }
 
@@ -430,6 +448,7 @@ function marketPay(part: Part, scale: Scale & { bands: readonly Band[] }, date: 
   for (const b of scale.bands) {
     if (part.length >= b.from) total = add(total, multiply(rateAt(scale.currency, b.table, date), String(Math.min(part.length, b.to ?? part.length) - b.from + 1)));
   }
+  if (scale.fee !== undefined) total = add(total, rateAt(scale.currency, scale.fee, date));
   if (part.rehearsal === 0) return total;
   if (scale.rehearsal === undefined) throw new Error("there's no rehearsal minimum for that part");
   return add(total, multiply(rateAt(scale.currency, scale.rehearsal, date), String(part.rehearsal)));
@@ -509,7 +528,7 @@ export const FLUENT: Level = 'C1';
 /** What a part is written for, as the life's fit for it is read. */
 export type Written = Pick<Cast, 'part' | 'gender' | 'ethnicity' | 'ages' | 'language'>;
 
-/** Why the person may not play a part as written, or null where they may. */
+/** Why the person may not play a part as written, or null where they may: its agreement's age among the rest. */
 export function misfit(p: Person, w: Written, now: number): string | null {
   // @slate:consumer identity.make
   // A part for men is an actor's, one for women an actress's, one for either anyone's, and a they/them life plays any
@@ -518,6 +537,10 @@ export function misfit(p: Person, w: Written, now: number): string | null {
     if (w.gender === 'non-binary') return 'the part is written for a non-binary performer';
     if ((w.gender === 'men') !== (p.billedAs === 'actor')) return `the part is written for an ${w.gender === 'men' ? 'actor' : 'actress'}`;
   }
+  // An agreement whose text covers actors from an age engages no one younger (the Hebrew Theatre's: none under 18).
+  const least = marketOf(w.part.agreement)?.age ?? 0;
+  const age = ageOf(p, now, MARKET[w.part.agreement].zone);
+  if (age < least) return `the agreement this part is engaged under covers actors from ${least}, and you're ${age}`;
   const [from, to] = playingAge(p, now, MARKET[w.part.agreement].zone);
   if (to < w.ages[0] || from > w.ages[1]) return `the part is for ${w.ages[0]} to ${w.ages[1]}, and you play ${from} to ${to}`;
   if (w.ethnicity !== 'open' && w.ethnicity !== 'silent' && !identifiesAs(p, w.ethnicity)) return `the part names an ethnicity you don't give (${w.ethnicity})`;

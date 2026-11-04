@@ -122,7 +122,10 @@ import compiled from './markets.json' with { type: 'json' };
  * each stage is the market's where its research sets it, by the budget where it sets it by budget: the fee and
  * overheads at each cap a funder sets (none where it sets none), the credit at the incentive's rate on the share it
  * counts, at most its cap, nothing below its threshold or where the research says there is none, none where it isn't
- * known (an incentive set in another currency, Azerbaijan's rebate in US dollars, read at the day's rate, money.rates);
+ * known (an incentive set in another currency, Azerbaijan's rebate in US dollars, read at the day's rate, money.rates),
+ * and nothing, told, where its own terms pay it only to a production from abroad and the life's company makes the film at
+ * home (the production company is the life's own, in its first citizenship's country; until 2026-11-04 such an incentive
+ * was paid at home too);
  * the public fund's yes at its rate as the package sells it, an award at the most its terms allow (its share, its cap or
  * its fixed sum, and what the cap on all public aid leaves after the credit), refused where the market's fund
  * isn't known or the budget is outside it; a cinema release at the market's rate, refused where none is known, and
@@ -208,6 +211,8 @@ export interface Market {
   readonly unknown: readonly Unknown[];
   /** Its most populous place's zone on the map, where the actor's engine keeps no city there; none where the map has none. */
   readonly zone: string | null;
+  /** Whether its incentive is paid only to a production from abroad (or a co-production with a foreign partner), as its research's own words limit it. */
+  readonly foreignOnly: boolean;
 }
 export const MARKETS = compiled as unknown as Readonly<Record<string, Market>>;
 
@@ -813,6 +818,23 @@ export function onDay(tier: Tier, currency: CurrencyCode, date: string): Tier | 
 }
 
 /**
+ * Whether a market's incentive is refused to a production: one limited to productions from abroad, made in the life's own
+ * country, where its company is (the game's reading, person.markets.producer.model: a co-production with a foreign
+ * partner, which some such incentives also take, isn't one the game makes). shortcut: "abroad" is read as another country
+ * than the life's first citizenship, so a Dane's film in Greenland is foreign there; upgrade when a territory's research
+ * says whose productions it counts as its own.
+ */
+export const creditRefused = (s: { identity: IdentitySlice }, market: string): boolean =>
+  // @slate:consumer identity.make
+  MARKETS[market]?.foreignOnly === true && market === residenceOf(personOf(s.identity));
+
+export const ABROAD_LINE: LineId = 'producing.abroad';
+/** What the player is told where a film's incentive is refused because the film is made at home; nothing where it isn't. */
+export function aboutCredit(s: { identity: IdentitySlice }, p: Pick<Project, 'format' | 'market'>): string | undefined {
+  return p.format === 'film' && creditRefused(s, p.market) ? t(ABROAD_LINE, { country: countryName(p.market as CountryCode) }) : undefined;
+}
+
+/**
  * A market's credit on a budget on a day: nothing where no tier holds it (below the threshold, or none at all); none
  * where it isn't known, or is set in a currency whose rate the game doesn't know that day.
  */
@@ -881,8 +903,8 @@ export function tradeDays(p: Pick<Project, 'series'>, weeks: Plan['weeks']): num
   return p.series === null ? FEATURE_SHOOT : EPISODES[p.series.form].shoot * p.series.episodes;
 }
 
-/** Budgets and schedules a project: the days it needs, the days the plan gives it, a film's fee, and the credit. */
-function plan(s: Producing, a: PlanArgs, c: Context): void {
+/** Budgets and schedules a project: the days it needs, the days the plan gives it, a film's fee, and the credit (nothing where it's refused at home). */
+function plan(s: Starting, a: PlanArgs, c: Context): void {
   const p = projectOf(s.producing, a.project);
   const v = producerValues(s, p);
   if (p.plan !== null) throw new Error(`project ${p.id} is planned`);
@@ -899,7 +921,8 @@ function plan(s: Producing, a: PlanArgs, c: Context): void {
   const home = p.market === HOME;
   const film = p.format === 'film';
   const fee = !film ? null : home ? amount(currency, (budget.minor * FEE_SHARE) / (1 + FEE_SHARE)) : feeIn(m, budget);
-  p.plan = { budget, needed, scheduled, weeks, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget, dateOf(c.now)) : null };
+  const credit = home ? homeCredit(p, budget, dateOf(c.now)) : !film ? null : creditRefused(s, p.market) ? amount(currency, 0) : creditIn(m, budget, dateOf(c.now));
+  p.plan = { budget, needed, scheduled, weeks, fee, credit };
   learn(s, p, [C.plan, C.costs], 1);
 }
 
@@ -1236,7 +1259,7 @@ export const directedAs = (p: Pick<Project, 'format' | 'series'>): Directed => (
 export const optionMaterial = defineCommand<Optioning, OptionArgs>({ id: 'producing.option', reads: ['genres', 'identity'], writes: ['attributes', 'producing', 'accounts', 'ledger'], run: option });
 export const developScript = defineCommand<Developing, DevelopArgs>({ id: 'producing.develop', reads: ['identity', 'scripts'], writes: ['producing'], run: develop });
 export const renewOption = defineCommand<{ producing: ProducingSlice } & Holding, PayingArgs>({ id: 'producing.renew', reads: [], writes: ['producing', 'accounts', 'ledger'], run: renew });
-export const planProject = defineCommand<Producing, PlanArgs>({ id: 'producing.plan', reads: [], writes: ['attributes', 'producing'], run: plan });
+export const planProject = defineCommand<Starting, PlanArgs>({ id: 'producing.plan', reads: ['identity'], writes: ['attributes', 'producing'], run: plan });
 export const applyToFunder = defineCommand<Applying, ProjectArgs>({ id: 'producing.apply', reads: ['identity', 'career', 'directing'], writes: ['attributes', 'producing'], run: apply });
 export const raiseMoney = defineCommand<Raising, DaysArgs & ProjectArgs>({ id: 'producing.raise', reads: ['identity', 'career', 'directing'], writes: ['attributes', 'producing'], run: raise });
 export const shootProject = defineCommand<Shooting, PayingArgs>({ id: 'producing.shoot', reads: ['identity', 'acting', 'directing', 'permits', 'scripts'], writes: ['attributes', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'], run: shoot });

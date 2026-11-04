@@ -39,10 +39,11 @@ import compiled from './markets.json' with { type: 'json' };
  * prep and shooting days and its program rate); the Director's Cut (ten weeks or a day for every two shooting days,
  * whichever is longer, above $11 million; the sideletter's periods below; four days for an hour episode, a day and up to
  * one more for a half-hour); a feature's 32 shooting days (the CNC's mean, 2024); each festival's selection rate, as
- * its own counts give it; a debut director's chance of a second feature within five years (25.3%; 45% where the debut
- * found an audience; Stephen Follows's count of 146,603 debuts), moved by a family in the business as Follows's debut
- * directors were (72% of those with family in film or TV went on to a second feature against 66% of everyone else; R-4622).
- * The last two were read until 2026-11-04, when the second feature's draw went.
+ * its own counts give it. Until 2026-11-04 it also read a debut director's chance of a second feature within five years
+ * (25.3%, 45% where the debut found an audience: Stephen Follows's count of 146,603 debuts, then in R-4613) and how a
+ * family in the business moved it (72% of the debut directors with family in film or TV went on to a second feature
+ * against 66% of everyone else, then in R-4622). The second feature's draw went that day, and both figures went from the
+ * research with it, since nothing else read them.
  *
  * The job's terms are its production's: its country, its budget, its shooting days as the producer's plan schedules
  * them, its running time, and its form (a feature, or a series' hour or half-hour episodes, each episode a job on the

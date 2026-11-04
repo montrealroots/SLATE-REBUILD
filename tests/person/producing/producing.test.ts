@@ -547,7 +547,7 @@ describe('the producer', () => {
       { id: 'producing.option', reads: ['genres', 'identity'], writes: ['attributes', 'producing', 'accounts', 'ledger'] },
       { id: 'producing.develop', reads: ['identity', 'scripts'], writes: ['producing'] },
       { id: 'producing.renew', reads: [], writes: ['producing', 'accounts', 'ledger'] },
-      { id: 'producing.plan', reads: [], writes: ['attributes', 'producing'] },
+      { id: 'producing.plan', reads: ['identity'], writes: ['attributes', 'producing'] },
       { id: 'producing.apply', reads: ['identity', 'career', 'directing'], writes: ['attributes', 'producing'] },
       { id: 'producing.raise', reads: ['identity', 'career', 'directing'], writes: ['attributes', 'producing'] },
       { id: 'producing.shoot', reads: ['identity', 'acting', 'directing', 'permits', 'scripts'], writes: ['attributes', 'producing', 'accounts', 'ledger', 'tax', 'schedule', 'youth'] },

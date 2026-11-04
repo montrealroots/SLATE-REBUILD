@@ -318,15 +318,17 @@ keep the rules):
    dollar terms read at the day's rate), Canada's DGC 2026-28 schedule, Mexico's STPC feature rate, the DGA's terms in
    the US territories (VI, MP, PR, GU, AS, UM), Austria's stage soloists, Ecuador's sectoral minimums, Israel's Hebrew
    Theatre agreement; papers.work's exempt days corrected (Latvia 14 in 180, Hungary 10 in 365, Uruguay 90, Bahrain
-   14). Left: foreign-only rebates are paid to the life's own production at home (Azerbaijan's and 35 others: a
-   production made in the life's home country isn't foreign); Israel's theatre agreement excludes actors under 18 and
-   nothing bars them; Uruguay's table pays a fee per part, which the engine has no term for; whether the WGA and
-   SAG-AFTRA reach the US territories as the DGA does; code comments citing research removed on 2026-11-04 (acting.ts,
-   directing.ts, the genres engine and compile) and the permit files IS and SG's "left for papers.work".
+   14). Since then (2026-11-04): a rebate whose quoted terms limit it to foreign productions (AZ, CO, EE, LV, GL, ME,
+   MN, PA, PH, TW) isn't paid to a film made in the life's own country, told; an agreement holds the age its text covers
+   from (Israel's Hebrew Theatre agreement, 18); a minimum may be a fee per part beside its day rate (Uruguay's
+   uy-screen); comments citing removed research rewritten. Left: the mirror case, incentives limited to domestic
+   productions (ES, IT, KR, NZ's 40%, TT's local tier, MY, ZA) paid to a foreign life's film; the limits the research
+   states only in its own wording (XK, TR, TH, MA, KZ, MD, FO, CH; DK's and NO's under-18 exclusions), each to be read
+   in a quote; whether the WGA and SAG-AFTRA reach the US territories; identity's `sexOf`, read by nothing but its test.
 3. Older blockers still carry attempts recorded as "not tried"; each is to be tried and recorded as made. Research
    figures only casting and spec sales read were taken out on 2026-11-04; others that look unread remain to be checked
    (R-4620's awards figures, R-4622's CNC genre, UK class and family-share figures, R-4608's staffing, hiring and pay by
-   rung).
+   rung): taken out on 2026-11-04.
 4. Then the further web-search rounds on what stays blocked, and prove layer 4 on CI (`npm run gate:full`) and record it.
 5. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
    facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,

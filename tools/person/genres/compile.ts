@@ -14,8 +14,9 @@ import { join } from 'node:path';
  *
  * Each genre is placed in one of the BFI's groups (GROUPS, below). Where the group bears the genre's own name, the
  * source makes the placing; everywhere else it is the game's reading, held in the register entry person.genres.model.
- * A genre's effect on a spec's sale is not modeled: no source counts the specs written by genre, so the trackers' deal
- * counts (Go Into The Story, R-4622) can't be turned into odds.
+ * A genre's effect on a spec's sale was never modeled: no source counted the specs written by genre, so the trackers'
+ * deal counts (Go Into The Story's, then in R-4622) couldn't be turned into odds. Spec sales went on 2026-11-04, and those
+ * counts went from the research with them.
  */
 export const OUTPUT = 'src/person/genres/genres.json';
 export const DEFINITIONS = { fact: 'person.identity.genres', file: 'research/sources/person/identity/genres.json' } as const;

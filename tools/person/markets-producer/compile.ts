@@ -22,7 +22,10 @@ import countries from '../../../src/world/gazetteer/countries.json' with { type:
  * none (null): the engine refuses what rests on it and tells the player; an incentive the research says doesn't exist
  * pays nothing. An incentive's bounds and cap may be set in another currency than the market's (Azerbaijan's rebate in
  * US dollars, paid in manat), each standing in a figure that names it: the engine reads them in the market's currency at
- * the day's rate (money.rates), so a market keeps one currency, its agreements' and its budget's.
+ * the day's rate (money.rates), so a market keeps one currency, its agreements' and its budget's. An incentive whose own
+ * terms pay it only to a production from abroad (or a co-production with a foreign partner) is held so (`foreignOnly`), on
+ * a quote of its figure that a primary source said (the reading names the words); the engine refuses it to a production
+ * the life's company makes at home. Until 2026-11-04 no limit was read, and every such incentive was paid at home too.
  *
  * Every country's research is read (the gazetteer's 251 beyond the UK): a market's currency is its country's (the
  * gazetteer's) unless its reading names another its research's terms are given in; a reading of none (null) is a
@@ -86,17 +89,22 @@ export interface Market {
   unknown: Item[];
   /** The zone of its most populous place on the map; none where the map has none. */
   zone: string | null;
+  /** Whether its incentive is paid only to a production from abroad, as its research's own words limit it. */
+  foreignOnly: boolean;
 }
 export type Markets = Record<string, Market>;
 
 interface Figure {
   item: string;
   value: unknown;
+  /** What each of its sources (by its place in the file's) said of it. */
+  sources?: { src: number; said: string }[];
 }
 export interface Research {
   country: string;
   figures: Figure[];
   blockers: { item: string }[];
+  sources?: { kind: string }[];
 }
 /** The figures a reading may point into: the market's own, and the calibration's. */
 export interface Sources {
@@ -348,6 +356,23 @@ export function creditOf(s: Sources, currency: CurrencyCode, reading: unknown): 
   return [];
 }
 
+/**
+ * Whether a market's incentive is paid only to a production from abroad: where the reading names the words of the
+ * incentive's figure that limit it so, each standing in what a primary source of the figure said; no limit where it names
+ * none. Refused on an incentive that pays nothing or isn't known, since nothing would read the limit.
+ */
+export function foreignOnlyOf(s: Sources, reading: unknown, credit: readonly Tier[] | null): boolean {
+  if (reading === undefined) return false;
+  const r = record(reading, `${s.country}'s limit`);
+  only(r, ['fig', 'said'], `${s.country}'s limit`);
+  if (credit === null || credit.length === 0) throw new Error(`${s.country}'s incentive pays nothing the game knows, so nothing reads a limit on it`);
+  const f = figureOf(s, r);
+  const said = r['said'];
+  if (f.item !== 'incentive') throw new Error(`${s.country}'s figure ${String(r['fig'])} isn't its incentive`);
+  if (typeof said !== 'string' || said === '' || !(f.sources ?? []).some((x) => x.said.includes(said) && s.own.sources?.[x.src]?.kind === 'primary')) throw new Error(`${s.country}'s incentive's primary sources don't say "${String(said)}"`);
+  return true;
+}
+
 /** A market's chance of a release by budget. */
 export function releaseOf(s: Sources, currency: CurrencyCode, reading: unknown): { budget: Range; rate: number }[] | null {
   if (reading === null) return null;
@@ -393,7 +418,7 @@ export function zoneIn(root: string, cc: string, zones: ReadonlySet<string>): st
 /** A market, as its reading reads its research. */
 export function marketOf(s: Sources, reading: unknown): Omit<Market, 'zone'> {
   const m = record(reading, `the reading of ${s.country}`);
-  only(m, ['currency', 'fund', 'aid', 'credit', 'fees', 'release'], `the reading of ${s.country}`);
+  only(m, ['currency', 'fund', 'aid', 'credit', 'foreignOnly', 'fees', 'release'], `the reading of ${s.country}`);
   const own = (countries as Record<string, { currency: string }>)[s.country]?.currency;
   const currency = String(m['currency'] ?? own);
   if (!isCurrency(currency)) throw new Error(`${s.country} pays in ${currency}, which isn't a currency`);
@@ -403,7 +428,8 @@ export function marketOf(s: Sources, reading: unknown): Omit<Market, 'zone'> {
   if (fund === null && aid.length > 0) throw new Error(`${s.country}'s cap on public aid holds no fund`);
   const fees = m['fees'] ?? [];
   if (!Array.isArray(fees)) throw new Error(`${s.country}'s fees are a list`);
-  return { currency, fund, aid, credit: creditOf(s, currency, m['credit'] ?? null), fees: fees.map((f) => tiersOf(s, currency, f, 'fee')), release: releaseOf(s, currency, m['release'] ?? null), unknown: unknownOf(s.own.blockers) };
+  const credit = creditOf(s, currency, m['credit'] ?? null);
+  return { currency, fund, aid, credit, foreignOnly: foreignOnlyOf(s, m['foreignOnly'], credit), fees: fees.map((f) => tiersOf(s, currency, f, 'fee')), release: releaseOf(s, currency, m['release'] ?? null), unknown: unknownOf(s.own.blockers) };
 }
 
 /** A file the register cites by a fact, checked against its SHA-256 before a byte is read. */

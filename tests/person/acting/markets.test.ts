@@ -50,6 +50,7 @@ import { identity, person } from '../../support/person.ts';
 import { production } from '../../support/production.ts';
 import { ACCOUNT, purse } from '../../support/purse.ts';
 import { YOUTH_START, type YouthSlice } from '../../../src/person/youth/youth.ts';
+import { falsifyAny } from '../../support/falsify-core.ts';
 
 type Acting = { attributes: AttributesSlice; acting: ActingSlice; identity: IdentitySlice; unions: UnionsSlice; permits: PermitsSlice; directing: DirectingSlice; producing: ProducingSlice; youth: YouthSlice } & ReturnType<typeof purse>;
 const ROOT = resolve(import.meta.dirname, '../../..');
@@ -594,6 +595,19 @@ const EXPECTED: Record<string, string[]> = {
   's - performance years21- 2025-02-17 1800',
   's - session R performance 2025-02-17 150',
 ],
+'uy-screen': [
+  'f lead day 2026-01-01 4691',
+  'f co-lead day 2026-01-01 4691',
+  'f supporting day 2026-01-01 4691',
+  'f small day 2026-01-01 4691',
+  'f featured-extra day 2026-01-01 4691',
+  'f lead day fee 2026-01-01 135563',
+  'f co-lead day fee 2026-01-01 110798',
+  'f supporting day fee 2026-01-01 61480',
+  'f small day fee length1-2 2026-01-01 16944',
+  'f small day fee length3- 2026-01-01 33890',
+  'f featured-extra day fee 2026-01-01 4691',
+],
 'be-screen': [],
 'bn-screen': [],
 'bw-screen': [],
@@ -617,7 +631,7 @@ const EXPECTED: Record<string, string[]> = {
 
 const line = (m: Minimum) => {
   const when = Object.entries(m.when).map(([k, [lo, hi]]) => `${k}${lo}-${hi ?? ''}`).join(' ');
-  return [m.medium[0], m.role ?? '-', m.per, m.rehearsal ? 'R' : '', (m.with ?? []).join(','), when, m.from, m.amount].filter((x) => x !== '').join(' ');
+  return [m.medium[0], m.role ?? '-', m.per, m.rehearsal ? 'R' : '', m.fee === true ? 'fee' : '', (m.with ?? []).join(','), when, m.from, m.amount].filter((x) => x !== '').join(' ');
 };
 
 describe('the markets', () => {
@@ -670,6 +684,7 @@ describe('the markets', () => {
       SH: ['en', 'Atlantic/St_Helena', 'sh-all'],
       TH: ['th', 'Asia/Bangkok', 'th-screen'],
       TR: ['tr', 'Europe/Istanbul', 'tr-screen'],
+      UY: ['es', 'America/Montevideo', 'uy-screen'],
       VA: ['it', 'Europe/Vatican', 'va-screen'],
       VG: ['en', 'America/Tortola', 'vg-all'],
       AX: ['sv', 'Europe/Mariehamn', 'ax-fi-stage ax-fi-guest ax-fi-screen'],
@@ -732,7 +747,7 @@ describe('the markets', () => {
       const how = Object.hasOwn(MARKETS, cc) ? 'market' : unread.includes(cc) ? 'unread' : cited.includes(cc) ? 'neither' : (UNKNOWN[cc] as readonly string[]).length > 0 ? 'blocked' : 'neither';
       expect(how, cc).not.toBe('neither');
     }
-    expect([Object.keys(MARKETS).length, unread.length, Object.keys(UNKNOWN).length - cited.length]).toEqual([60, 166, 23]);
+    expect([Object.keys(MARKETS).length, unread.length, Object.keys(UNKNOWN).length - cited.length]).toEqual([61, 165, 23]);
     expect(Object.keys(MARKETS).filter((cc) => unread.includes(cc))).toEqual([]);
     expect(readings['CH']?.unread).toBe("the screen fees are the actors' associations' recommendations, which bind no one, and the stage agreements' monthly minimums are by the house, which no part names");
   });
@@ -878,6 +893,15 @@ describe("a market's part", () => {
     expect(at('il-hebrew-theatre', { term: 'performance', length: 10, rehearsal: 4 }, '2025-02-17', 7)).toEqual(money('ILS', '8100'));
     expect(() => at('il-hebrew-theatre', { term: 'performance' }, '2025-02-16')).toThrow('no minimum is known before 2025-02-17');
     expect(() => partOf(part('il-hebrew-theatre', { term: 'month' }))).toThrow("there's no month minimum for that part");
+    // Uruguay: SUA's table of January 2026, the feature's fee for the part by role beside a day rate for each day; a small
+    // part's fee by its days, two or fewer or three and more; its last step kept past the 2.8% rise SUA hasn't published.
+    expect(at('uy-screen', { medium: 'film', role: 'lead', length: 20 }, '2026-01-01')).toEqual(money('UYU', String(135_563 + 20 * 4_691)));
+    expect(at('uy-screen', { medium: 'film', role: 'lead', length: 20 }, '2027-01-01')).toEqual(money('UYU', String(135_563 + 20 * 4_691)));
+    expect([1, 2, 3, 10].map((length) => at('uy-screen', { medium: 'film', role: 'small', length }, '2026-11-01'))).toEqual([16_944 + 4_691, 16_944 + 2 * 4_691, 33_890 + 3 * 4_691, 33_890 + 10 * 4_691].map((n) => money('UYU', String(n))));
+    expect([at('uy-screen', { medium: 'film', role: 'co-lead' }, '2026-11-01'), at('uy-screen', { medium: 'film', role: 'supporting' }, '2026-11-01'), at('uy-screen', { medium: 'film', role: 'featured-extra' }, '2026-11-01')]).toEqual(['115489', '66171', '9382'].map((n) => money('UYU', n)));
+    expect(() => at('uy-screen', { medium: 'film', role: 'lead' }, '2025-12-31')).toThrow('no minimum is known before 2026-01-01');
+    expect(() => partOf(part('uy-screen', { medium: 'film', role: 'lead', term: 'week' }))).toThrow("there's no week minimum for that part");
+    expect(() => partOf(part('uy-screen', { medium: 'television', role: 'lead' }))).toThrow('uy-screen sets no terms for television');
     // Austria's stage: a soloist's month at the Bühnenverein's theatres, in its three steps.
     expect(at('at-stage', { term: 'month', length: 2 }, '2026-07-01')).toEqual(money('EUR', '5116.44'));
     expect([['2027-07-31', '2558.22'], ['2027-08-01', '2616.52'], ['2028-09-01', '2675.72']].map(([d]) => at('at-stage', { term: 'month' }, d as string))).toEqual(['2558.22', '2616.52', '2675.72'].map((n) => money('EUR', n)));
@@ -997,7 +1021,7 @@ describe("a market's part", () => {
     const told = Object.keys(UNKNOWN).filter((cc) => aboutMarket(cc as CountryCode) !== undefined);
     expect(told).toEqual(Object.keys(UNKNOWN).filter((cc) => (UNKNOWN[cc] as readonly string[]).length > 0));
     expect(told).toHaveLength(223);
-    expect(told.filter((cc) => Object.hasOwn(MARKETS, cc))).toEqual(['AI', 'AT', 'AU', 'BG', 'BN', 'BR', 'BW', 'CL', 'CO', 'CU', 'EC', 'EE', 'FI', 'FR', 'GF', 'GI', 'GR', 'HK', 'IE', 'IN', 'JM', 'JP', 'KR', 'MC', 'MS', 'MX', 'NC', 'NF', 'NG', 'NZ', 'PH', 'PM', 'PN', 'RE', 'SE', 'SH', 'TH', 'TR', 'VG', 'ZA']);
+    expect(told.filter((cc) => Object.hasOwn(MARKETS, cc))).toEqual(['AI', 'AT', 'AU', 'BG', 'BN', 'BR', 'BW', 'CL', 'CO', 'CU', 'EC', 'EE', 'FI', 'FR', 'GF', 'GI', 'GR', 'HK', 'IE', 'IN', 'JM', 'JP', 'KR', 'MC', 'MS', 'MX', 'NC', 'NF', 'NG', 'NZ', 'PH', 'PM', 'PN', 'RE', 'SE', 'SH', 'TH', 'TR', 'UY', 'VG', 'ZA']);
   });
 });
 
@@ -1021,6 +1045,10 @@ describe("a market's part, played", () => {
     expect(() => dispatch(made(day(2026, 10, 1), identity(), [booked(part('ar-film', { role: 'day-player' }))]), playPart, { part: 1, account: ACCOUNT })).toThrow('the person may not work in AR without a permit');
     expect(play(made(day(2026, 10, 1), identity({ citizenship: ['FR'] }), [first, booked(part('mf-fr-tv', { length: 2 }), 2)]))).toEqual(at('fr-tv', { length: 2 }, '2026-10-01'));
     expect(play(made(day(2026, 10, 1), identity({ citizenship: ['AR'] }), [first, booked(part('ar-film', { role: 'day-player' }), 2)]))).toEqual(money('ARS', '489011'));
+    // Uruguay's part is paid its fee for the part beside each day's rate: a lead's and a supporting part's days pay alike, their fees don't.
+    const uy = (role: string) => play(made(day(2026, 11, 1), identity({ citizenship: ['UY'], languages: [{ lang: 'es', level: 'C1' }] }), [first, booked(part('uy-screen', { medium: 'film', role, length: 5 }), 2)]));
+    expect([uy('lead'), uy('supporting')]).toEqual([money('UYU', String(135_563 + 5 * 4_691)), money('UYU', String(61_480 + 5 * 4_691))]);
+    falsifyAny({ feature: 'acting.perform', claim: 'bites', says: "five days as the lead of a Uruguayan feature pay SUA's UYU 135,563 fee beside the days' UYU 23,455; as a supporting part, UYU 61,480 beside the same days", base: 'lead', twin: 'supporting', outcome: uy });
     const none = made(NOW, identity({ citizenship: ['ZA'] }), [booked(part('za-all', { medium: 'stage', term: 'week', length: 2 }))]);
     expect(dispatch(none, playPart, { part: 1, account: ACCOUNT }).slices.acting.parts[0]?.work?.pay).toBeNull();
   });
@@ -1037,5 +1065,17 @@ describe("a market's part, played", () => {
     const aged = (a: Agreement) => misfit(person(), { part: part(a, { medium: 'film' }), gender: 'open', ethnicity: 'open', ages: [31, 40], language: 'en' }, late);
     expect(aged('au-screen')).toBeNull();
     expect(aged('sag-aftra')).toBe('the part is for 31 to 40, and you play 20 to 30');
+  });
+
+  it("engages no one younger than its agreement's text covers: the Hebrew Theatre's none under 18", () => {
+    expect(marketOf('il-hebrew-theatre')?.age).toBe(18);
+    // Every other agreement covers any age its research gives, so none holds one.
+    expect(MARKET_AGREEMENTS.filter((a) => marketOf(a)?.age !== undefined)).toEqual(['il-hebrew-theatre']);
+    const stage = (born: string, agreement: Agreement = 'il-hebrew-theatre') => misfit(person({ born: { date: born, country: 'US', region: 'US.CA' } }), { part: part(agreement, { term: 'performance', medium: 'stage' }), gender: 'open', ethnicity: 'open', ages: [0, 120], language: 'en' }, NOW);
+    // On 1 July 2026 in Jerusalem: 18 the day before, 17 the day after.
+    expect([stage('2008-06-30'), stage('2008-07-01'), stage('2008-07-02')]).toEqual([null, null, "the agreement this part is engaged under covers actors from 18, and you're 17"]);
+    expect(stage('2016-01-01')).toBe("the agreement this part is engaged under covers actors from 18, and you're 10");
+    expect(stage('2016-01-01', 'ec-sectoral')).toBeNull();
+    falsifyAny({ feature: 'acting.cast', claim: 'bites', says: "a part at the Hebrew Theatre is open to an actor of 18 and refused one of 17, its agreement covering none under 18", base: '2008-06-30', twin: '2009-06-30', outcome: (born: string) => stage(born) });
   });
 });

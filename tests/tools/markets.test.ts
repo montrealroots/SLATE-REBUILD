@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
+  ageOf,
   agreementOf,
   apart,
   at,
@@ -108,6 +109,12 @@ describe('the markets compile', () => {
     expect(read({})).toEqual({ medium: 'film', role: null, per: 'day', rehearsal: false, with: null, when: {}, from: '2026-01-01', amount: '100.5' });
     expect(read({ role: 'lead', rehearsal: true, with: ['performance'], when: { nth: [1, 5], years: [0, null] }, path: ['day', 'other'], from: '2025-04-01', per: 'performance', medium: 'stage' })).toEqual({ medium: 'stage', role: 'lead', per: 'performance', rehearsal: true, with: ['performance'], when: { nth: [1, 5], years: [0, null] }, from: '2025-04-01', amount: '80' });
     expect(read({ rehearsal: false }).rehearsal).toBe(false);
+    // A fee for the part, paid once beside its term's units: named only where it is one, never a rehearsal's or by the unit.
+    expect(read({ fee: true })).toEqual({ ...read({}), fee: true });
+    expect(read({ fee: false })).not.toHaveProperty('fee');
+    for (const over of [{ rehearsal: true }, { with: ['day'] }]) expect(() => read({ fee: true, ...over }), JSON.stringify(over)).toThrow("a fee for the part goes with its term, and isn't a rehearsal's");
+    expect(() => read({ fee: true, when: { nth: [1, null] } })).toThrow('a fee for the part is paid once, not by the unit');
+    expect(read({ fee: true, when: { length: [1, 2] } }).when).toEqual({ length: [1, 2] });
     expect(() => read({ note: 'x' })).toThrow("a minimum names note, which the game doesn't read");
     // Undated rates dated by the agreement's figure, where the reading names it; then only there.
     expect(read({ from: '2019-02-01', dated: 7 }).from).toBe('2019-02-01');
@@ -142,14 +149,17 @@ describe('the markets compile', () => {
     expect(apart(min({ when: { budget: [0, 9], nth: [1, 1] } }), min({ when: { budget: [0, 9], nth: [2, null] } }))).toBe(true);
     const ok = [min({ when: { nth: [1, 5] } }), min({ when: { nth: [6, null] } }), min({ per: 'week' }), min({ medium: 'stage', role: 'lead' }), min({ from: '2027-01-01' }), min({ rehearsal: true, per: 'session' }), min({ rehearsal: true, per: 'session', from: '2027-01-01' })];
     expect(() => checkAgreement('a', [...ok.slice(2), min()])).not.toThrow();
-    expect(() => checkAgreement('a', [...ok, min()])).toThrow('a sets two minimums for one part (film||day|false|2026-01-01)');
+    expect(() => checkAgreement('a', [...ok, min()])).toThrow('a sets two minimums for one part (film||day|false|false|2026-01-01)');
+    // A fee for the part shares its term with the units' minimum, and is a minimum apart from it, one to a part as well.
+    expect(() => checkAgreement('a', [min(), min({ fee: true })])).not.toThrow();
+    expect(() => checkAgreement('a', [min({ fee: true }), min({ fee: true })])).toThrow('a sets two minimums for one part (film||day|false|true|2026-01-01)');
     expect(() => checkAgreement('a', ok.slice(0, 2))).not.toThrow();
     expect(() => checkAgreement('a', [min(), min({ role: 'lead' })])).toThrow("a's film minimums name a role and none");
     expect(() => checkAgreement('a', [min({ medium: 'stage' }), min({ medium: 'stage', role: 'lead', from: '2027-01-01' })])).toThrow("a's stage minimums name a role and none");
     expect(() => checkAgreement('a', [min({ medium: 'television', role: 'lead' }), min({ medium: 'television', role: 'other' })])).not.toThrow();
     expect(() => checkAgreement('a', [min({ rehearsal: true }), min({ rehearsal: true, per: 'session' })])).toThrow("a's rehearsals are paid by more than one term");
     for (const turns of [[[2, null]], [[1, 5]], [[1, 4], [6, null]], [[1, 5], [6, 9]]] as [number, number | null][][]) {
-      expect(() => checkAgreement('a', turns.map((nth) => min({ when: { nth } }))), JSON.stringify(turns)).toThrow("a's minimums by the unit don't pay every unit (film||day|false|2026-01-01)");
+      expect(() => checkAgreement('a', turns.map((nth) => min({ when: { nth } }))), JSON.stringify(turns)).toThrow("a's minimums by the unit don't pay every unit (film||day|false|false|2026-01-01)");
     }
     expect(() => checkAgreement('a', [[6, null], [1, 2], [3, 5]].map((nth) => min({ when: { nth: nth as [number, number | null] } })))).not.toThrow();
     // Turns are counted within one tier: another tier's are its own.
@@ -171,6 +181,28 @@ describe('the markets compile', () => {
     // Each slot's steps by date, whatever the reading's order; equals kept in it.
     const late = { ...one, from: '2025-04-01', path: ['day', 'other'] };
     expect(agreementOf('a', RESEARCH, { media: ['film', 'stage'], currency: 'EUR', minimums: [one, { ...one, medium: 'stage' }, late] }).minimums.map((m) => [m.from, m.medium])).toEqual([['2025-04-01', 'film'], ['2026-01-01', 'film'], ['2026-01-01', 'stage']]);
+  });
+
+  it('holds the age an agreement covers actors from, where its own words in a primary source write it', () => {
+    const figures = [{ item: 'agreements', value: {}, sources: [{ src: 1, said: 'the press: none under 16' }, { src: 0, said: 'this agreement shall not apply to actors under 18 years' }] }, { item: 'rates', value: {} }, { item: 'none', value: {}, sources: [{ src: 0, said: 'actors under 18' }] }];
+    const r = { ...RESEARCH, figures, sources: [{ kind: 'primary' }, { kind: 'secondary' }] } as Research;
+    const age = { fig: 0, least: 18, said: 'shall not apply to actors under 18' };
+    expect(ageOf('a', r, undefined)).toEqual({});
+    expect(ageOf('a', r, age)).toEqual({ age: 18 });
+    expect(agreementOf('a', r, { media: ['film'], none: { fig: 2 }, age })).toEqual({ country: 'XX', currency: null, media: ['film'], none: true, minimums: [], age: 18 });
+    expect(agreementOf('a', RESEARCH, { media: ['film'], currency: 'EUR', minimums: [{ medium: 'film', per: 'day', from: '2026-01-01', fig: 1, path: ['day', 'lead'] }], age: undefined })).not.toHaveProperty('age');
+    expect(() => ageOf('a', r, { ...age, said: 'none under 16', least: 16 })).toThrow(`XX's figure 0's primary sources don't say "none under 16"`);
+    expect(() => ageOf('a', { ...r, figures: [{ item: 'agreements', value: {}, sources: [{ src: 9, said: age.said }] }] }, age)).toThrow(`XX's figure 0's primary sources don't say "shall not apply to actors under 18"`);
+    expect(() => ageOf('a', { ...RESEARCH, figures }, age)).toThrow(`XX's figure 0's primary sources don't say "shall not apply to actors under 18"`);
+    expect(() => ageOf('a', r, { ...age, fig: 1 })).toThrow(`XX's figure 1's primary sources don't say "shall not apply to actors under 18"`);
+    // The words write the age itself, not a longer number holding it.
+    for (const said of ['actors under 180', 'actors under 118', 'no actor']) expect(() => ageOf('a', r, { ...age, said }), said).toThrow(`a's words don't write the age 18`);
+    for (const said of [5, 18]) expect(() => ageOf('a', r, { ...age, said }), String(said)).toThrow("a's words don't write the age 18");
+    for (const least of [0, 1.5, '18', undefined]) expect(() => ageOf('a', r, { ...age, least }), String(least)).toThrow(`a covers actors from an age in whole years (${String(least)})`);
+    expect(ageOf('a', { ...r, figures: [{ item: 'rates', value: {}, sources: [{ src: 0, said: 'not under 1' }] }] }, { fig: 0, least: 1, said: 'not under 1' })).toEqual({ age: 1 });
+    expect(() => ageOf('a', r, { ...age, fig: 2 })).toThrow("XX's figure 2 isn't one of its rates or agreements");
+    expect(() => ageOf('a', r, { ...age, from: 18 })).toThrow("a's age names from, which the game doesn't read");
+    expect(() => ageOf('a', r, 18)).toThrow("a's age is not an object");
   });
 
   it("reads a market: its language, its city's zone, its agreements and what isn't known", () => {

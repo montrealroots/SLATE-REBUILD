@@ -14,9 +14,13 @@ import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/mone
  * each by medium, by role where the agreement names roles, by the term it pays (a day, a week, a month, a year, a
  * session, a performance or an episode), by the tier it sets (the budget, the lines, the seats, an episode's minutes,
  * the engagement's length, the actor's years in the work, the day or performance of the engagement it pays), from the
- * date it applies, in the agreement's currency; a rehearsal's apart. Every amount is read from the research at its
- * place, never written here; every date and currency is checked to stand in the research's figure. An agreement whose
- * research says no agreement sets an actor's pay (`none`) leaves it to negotiation, and has no minimums.
+ * date it applies, in the agreement's currency; a rehearsal's apart, and a fee for the part paid once beside the units of
+ * its term (Uruguay's cachet beside its day rate; read from 2026-11-04, before which no term the engine held was a fee for
+ * the part, so Uruguay's table went unpaid). Every amount is read from the research at its place, never written here;
+ * every date and currency is checked to stand in the research's figure. An agreement whose research says no agreement
+ * sets an actor's pay (`none`) leaves it to negotiation, and has no minimums. An agreement whose own text covers actors
+ * from an age (the Hebrew Theatre's, from 18) holds it, on a quote of its figure a primary source said that writes the
+ * age; the engine engages no one younger under it. Until 2026-11-04 no agreement held an age.
  *
  * A market gives the language its parts are cast in (one a person can be made to speak: identity's languages), its
  * city's time zone (one the clock keeps, by its own name or a link; where the research names no city, the zone of the
@@ -62,6 +66,8 @@ export interface Minimum {
   per: Term;
   /** A rehearsal's minimum, paid for each rehearsal unit beside the engagement's. */
   rehearsal: boolean;
+  /** A fee for the part, paid once beside the units of the term it goes with (`per`); none where it's a unit's minimum. */
+  fee?: true;
   /** The terms of engagement a rehearsal's minimum goes with; every term where none are named. */
   with: Term[] | null;
   when: Partial<Record<Tier, Range>>;
@@ -80,6 +86,8 @@ export interface Agreement {
   follows?: string;
   /** Where the territory's minimum is the followed one raised by a share (Monaco's: Nice's, plus 5%), that share. */
   uplift?: string;
+  /** The age its text covers actors from, where it sets one. */
+  age?: number;
 }
 
 export interface Market {
@@ -98,11 +106,14 @@ export interface Markets {
 interface Figure {
   item: string;
   value: unknown;
+  /** What each of its sources (by its place in the file's) said of it. */
+  sources?: { src: number; said: string }[];
 }
 export interface Research {
   country: string;
   figures: Figure[];
   blockers: { item: string }[];
+  sources?: { kind: string }[];
 }
 interface Register {
   entries: { fact: string; value?: { file?: string; sha256?: string }; attempts?: { result: string }[] }[];
@@ -149,7 +160,7 @@ export const dated = (text: string, from: string): boolean => text.includes(from
 /** One minimum, read from the research at its place. */
 export function minimumOf(r: Research, reading: unknown, currency: CurrencyCode, media: readonly Medium[]): Minimum {
   const m = record(reading, 'a minimum');
-  for (const k of Object.keys(m)) if (!['medium', 'role', 'per', 'rehearsal', 'with', 'when', 'from', 'fig', 'path', 'dated'].includes(k)) throw new Error(`a minimum names ${k}, which the game doesn't read`);
+  for (const k of Object.keys(m)) if (!['medium', 'role', 'per', 'rehearsal', 'fee', 'with', 'when', 'from', 'fig', 'path', 'dated'].includes(k)) throw new Error(`a minimum names ${k}, which the game doesn't read`);
   const figure = figureOf(r, m['fig'], ['rates', 'agreements']);
   const text = JSON.stringify(figure);
   if (!media.includes(m['medium'] as Medium)) throw new Error(`a minimum's medium ${String(m['medium'])} isn't its agreement's`);
@@ -158,6 +169,9 @@ export function minimumOf(r: Research, reading: unknown, currency: CurrencyCode,
   if (role !== null && (typeof role !== 'string' || role === '')) throw new Error('a role is named');
   const terms = m['with'] ?? null;
   if (terms !== null && (!Array.isArray(terms) || !terms.every((x) => TERMS.includes(x as Term)))) throw new Error('a rehearsal goes with terms');
+  const fee = m['fee'] === true;
+  // A fee for the part goes with its term's units as named by `per`: neither a rehearsal's nor paid by the unit in turn.
+  if (fee && (m['rehearsal'] === true || terms !== null)) throw new Error("a fee for the part goes with its term, and isn't a rehearsal's");
   const when: Partial<Record<Tier, Range>> = {};
   for (const [k, v] of Object.entries(record(m['when'] ?? {}, 'a tier'))) {
     if (!TIERS.includes(k as Tier)) throw new Error(`a minimum's tier turns on ${k}, which the game doesn't read`);
@@ -171,10 +185,11 @@ export function minimumOf(r: Research, reading: unknown, currency: CurrencyCode,
   const amount = at(figure.value, m['path'] as (string | number)[]);
   if (typeof amount !== 'number' || !(amount > 0)) throw new Error(`${r.country}'s figure ${String(m['fig'])} has no amount at ${(m['path'] as unknown[]).join('.')}`);
   fromMajor(currency, String(amount));
-  return { medium: m['medium'] as Medium, role, per: m['per'] as Term, rehearsal: m['rehearsal'] === true, with: terms as Term[] | null, when, from, amount: String(amount) };
+  if (fee && when.nth !== undefined) throw new Error("a fee for the part is paid once, not by the unit");
+  return { medium: m['medium'] as Medium, role, per: m['per'] as Term, rehearsal: m['rehearsal'] === true, ...(fee ? { fee } : {}), with: terms as Term[] | null, when, from, amount: String(amount) };
 }
 
-const slot = (m: Minimum) => [m.medium, m.role, m.per, m.rehearsal, m.from].join('|');
+const slot = (m: Minimum) => [m.medium, m.role, m.per, m.rehearsal, m.fee === true, m.from].join('|');
 
 /**
  * Whether an agreement's minimums are one to a part: where two share a slot (medium, role, term, rehearsal or not, date)
@@ -198,14 +213,31 @@ export function checkAgreement(id: string, all: readonly Minimum[]): void {
   }
 }
 
-/** One agreement: the pay left to negotiation where the research says none sets it, or its minimums. */
+/**
+ * The age an agreement covers actors from, where the reading names its words: a quote of the agreement's figure that a
+ * primary source of it said, writing the age; none where the reading names none.
+ */
+export function ageOf(id: string, r: Research, reading: unknown): { age?: number } {
+  if (reading === undefined) return {};
+  const a = record(reading, `${id}'s age`);
+  for (const k of Object.keys(a)) if (!['fig', 'least', 'said'].includes(k)) throw new Error(`${id}'s age names ${k}, which the game doesn't read`);
+  const figure = figureOf(r, a['fig'], ['rates', 'agreements']);
+  const [least, said] = [a['least'], a['said']];
+  if (!Number.isSafeInteger(least) || (least as number) < 1) throw new Error(`${id} covers actors from an age in whole years (${String(least)})`);
+  if (typeof said !== 'string' || !new RegExp(`(?<!\\d)${String(least)}(?!\\d)`).test(said)) throw new Error(`${id}'s words don't write the age ${String(least)}`);
+  if (!(figure.sources ?? []).some((x) => x.said.includes(said) && r.sources?.[x.src]?.kind === 'primary')) throw new Error(`${r.country}'s figure ${String(a['fig'])}'s primary sources don't say "${said}"`);
+  return { age: least as number };
+}
+
+/** One agreement: the pay left to negotiation where the research says none sets it, or its minimums; and the age it covers actors from, where it sets one. */
 export function agreementOf(id: string, r: Research, reading: unknown): Agreement {
   const a = record(reading, `the reading of ${id}`);
   const media = a['media'];
   if (!Array.isArray(media) || media.length === 0 || !media.every((x) => MEDIA.includes(x as Medium))) throw new Error(`${id} covers film, television or the stage`);
+  const age = ageOf(id, r, a['age']);
   if (a['none'] !== undefined) {
     figureOf(r, record(a['none'], 'none')['fig'], ['none']);
-    return { country: r.country, currency: null, media: media as Medium[], none: true, minimums: [] };
+    return { country: r.country, currency: null, media: media as Medium[], none: true, minimums: [], ...age };
   }
   const currency = String(a['currency']);
   if (!isCurrency(currency)) throw new Error(`${id} pays in ${currency}, which isn't a currency`);
@@ -213,7 +245,7 @@ export function agreementOf(id: string, r: Research, reading: unknown): Agreemen
   // By date, so each slot's steps run in order (as the engine's tables are read); the reading's order kept between equals.
   const minimums = a['minimums'].map((m) => minimumOf(r, m, currency, media as Medium[])).sort((x, y) => x.from.localeCompare(y.from));
   checkAgreement(id, minimums);
-  return { country: r.country, currency, media: media as Medium[], none: false, minimums };
+  return { country: r.country, currency, media: media as Medium[], none: false, minimums, ...age };
 }
 
 /** The items a file's blockers name, each once, in the research's order. */
