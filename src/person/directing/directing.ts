@@ -8,7 +8,7 @@ import { personOf, type IdentitySlice } from '../identity/identity.ts';
 import { spread } from '../work/work.ts';
 import type { ActingSlice } from '../acting/acting.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
-import { budgetMajor, directedAs, financedOf, holds as directs, payOut, projectOf, qualityOf, type Paying, type Project, type Stage as Staged } from '../producing/producing.ts';
+import { budgetMajor, directedAs, financedOf, holds as directs, payOut, projectOf, qualityOf, type Paying, type Plan, type Project, type Stage as Staged } from '../producing/producing.ts';
 import { engagement as engaged, hoursShare } from '../youth/youth.ts';
 import compiled from './markets.json' with { type: 'json' };
 
@@ -50,17 +50,22 @@ import compiled from './markets.json' with { type: 'json' };
  * done, as it pays anyone.
  *
  * A UK play (research/sources/person/work/tvstage-GB.json, person.markets.director.GB.stage) is one job: prepped in the
- * days the contract gives (the published rates guarantee none), then staged in the days the producer's plan schedules
- * for its rehearsal and run, with no cut; its direction is what the staging brought of the three parts planned. Its fee
- * is the production's minimum: UK Theatre's with Equity for a freelance director at a subsidised theatre, by the
- * theatre's MRSL grade; SOLT's with Equity in the West End, by the theatre's category of seats; each year's from the
- * day it applies; and the ITC's with Equity for an ITC company's play, its preparatory fee by the play's running time
- * (a full-length play over 70 minutes, a short one 70 or fewer, as the ITC's writers' agreement draws the line) and its
- * weekly rehearsal payment, pro rata over the staging's days at five a week, as a weekly fee is paid elsewhere here
- * (research/sources/person/work/nations-GB.json; its 2026/27 column repeats 2025/26's, both from 1 April, "dates
- * represent the financial year"). shortcut: UK Theatre's 20% of the fee for each week over four isn't paid, and the
- * ITC's rehearsal payment is paid over the run as well, since a play's days aren't split between rehearsal and run
- * (person.directing.model); upgrade when a play's rehearsal is planned apart.
+ * days the contract gives (the published rates guarantee none), then staged in the rehearsal weeks the producer's plan
+ * names (five days each, as the actor's engine counts a week), with no cut, the run being played without its
+ * director; its direction is what the rehearsal brought of the three parts planned. Its fee is the production's
+ * minimum: UK Theatre's with Equity for a freelance director at a subsidised theatre, by the theatre's MRSL grade, and,
+ * as its rates card says under each year's fee, "Any week/s over 4 wks are payable at 20% of Directors Fee" (M4/23,
+ * updated 20 March 2026): a fifth of the grade's fee for each rehearsal week past the fourth, the card naming no
+ * period and a freelance director's weeks being the rehearsal's (the game's reading, person.directing.model); its
+ * "Daily fee is 1/6th of Weekly Fee" is left aside, a rehearsal being planned in whole weeks. SOLT's with Equity in the
+ * West End, by the theatre's category of seats, whose card (M15/23, updated 20 March 2026) gives the minimum fees
+ * alone and no weeks over any number, so its fee is the same whatever the rehearsal; each year's from the day it
+ * applies. And the ITC's with Equity for an ITC company's play, its preparatory fee by the play's running time (a
+ * full-length play over 70 minutes, a short one 70 or fewer, as the ITC's writers' agreement draws the line) and its
+ * "Rehearsals: Weekly payment" for each rehearsal week (research/sources/person/work/nations-GB.json; its 2026/27
+ * column repeats 2025/26's, both from 1 April, "dates represent the financial year"). Until 2026-11-04 a play's plan
+ * named one count of days, rehearsal and run together, so the ITC's weekly payment was paid pro rata over the run as
+ * well as the rehearsal, and UK Theatre's weeks over four weren't paid at all; the plan names the two apart since.
  *
  * Beyond the US, the market of every country and territory whose research the engine can read (src/person/directing/
  * markets.json, compiled by tools/person/markets-director from the research, person.markets.director.<CC>): a job there
@@ -120,6 +125,9 @@ export const STAGE_FEES = {
 
 /** The ITC/Equity director's preparatory fee, full-length and short, and weekly rehearsal payment, in pounds, from 1 April 2025. */
 export const ITC_DIRECTOR = { from: '2025-04-01', full: '1916.75', short: '1326.25', weekly: '601.00', over: 70 } as const;
+
+/** UK Theatre/Equity's freelance director in subsidised repertory: each rehearsal week over four at 20% of the fee. */
+export const OVER_FOUR = { weeks: 4, share: '0.2' } as const;
 
 /** A theatrical feature's guaranteed prep (two weeks) and the weeks its minimum pays (2 prep, 10 employment, 1 cutting). */
 export const FEATURE = { prep: 14, weeks: 13 } as const;
@@ -230,7 +238,7 @@ export function finish(v: Values, days: number, needed: number): number {
 
 /**
  * The shooting days a director needs: the trade's schedule (the CNC's 32 for a feature, the DGA's guaranteed period for
- * an episode, a play's staging as its plan schedules it) for one at 50 in holding a schedule (Time Management, and
+ * an episode, a play's rehearsal as its plan names it) for one at 50 in holding a schedule (Time Management, and
  * planning each shot), a quarter less at 100, a quarter more at 0.
  */
 export function shootNeeded(v: Values, film: Pick<Film, 'form'> & Partial<Pick<Film, 'shootDays'>>): number {
@@ -448,32 +456,39 @@ function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
 
 /**
  * An ITC company's director's fee on a date: the preparatory fee by the play's running time, and the weekly rehearsal
- * payment over the staging's days; refused where the play names no running time, or before the first rates read.
+ * payment for each rehearsal week; refused where the play names no running time, or before the first rates read.
  */
-export function itcFee(minutes: number | null, shoot: number, date: string): Money {
+export function itcFee(minutes: number | null, weeks: number, date: string): Money {
   if (minutes === null) throw new Error("a play under the ITC's directors' agreement names its running time");
   if (date < ITC_DIRECTOR.from) throw new Error(`no minimum is known before ${ITC_DIRECTOR.from}`);
   const prep = fromMajor('GBP', minutes > ITC_DIRECTOR.over ? ITC_DIRECTOR.full : ITC_DIRECTOR.short);
-  return add(prep, multiply(fromMajor('GBP', ITC_DIRECTOR.weekly), String(shoot / WEEK_DAYS)));
+  return add(prep, multiply(fromMajor('GBP', ITC_DIRECTOR.weekly), String(weeks)));
+}
+
+/** A subsidised theatre's director's fee: the grade's, and a fifth of it for each rehearsal week past the fourth. */
+export function subsidisedFee(fee: Money, weeks: number): Money {
+  return add(fee, multiply(multiply(fee, OVER_FOUR.share), String(Math.max(0, weeks - OVER_FOUR.weeks))));
 }
 
 /**
- * The schedule and the pay of a UK play: the prep its contract gives, the staging its plan schedules, no cut; its fee by
- * the theatre's grade (a subsidised theatre's, UK Theatre's), seats (the West End's, SOLT's) or the play's running time
- * (an ITC company's), on the day prep starts. The producer refuses a play the life directs anywhere else
+ * The schedule and the pay of a UK play: the prep its contract gives, its staging the rehearsal's days (whole weeks of
+ * five, as its plan names them), no cut; its fee by the theatre's grade and the rehearsal's weeks (a subsidised
+ * theatre's, UK Theatre's), seats (the West End's, SOLT's) or the play's running time and the rehearsal's weeks (an ITC
+ * company's), on the day prep starts. The producer refuses a play the life directs anywhere else
  * (src/person/producing), so a play here has its stage.
  */
 function stageTerms(a: JobArgs, now: number): Terms {
   if (a.cut !== undefined) throw new Error("a play isn't cut");
   if (a.agreement !== undefined) throw new Error("a play's theatre sets its directors' agreement");
   wholeAtLeast(a.prep, 1, 'the prep days');
+  const weeks = a.shoot / WEEK_DAYS;
+  wholeAtLeast(weeks, 1, "a play's weeks of rehearsal");
   const stage = a.stage as Staged;
   const job = { country: 'GB', budget: null, prepDays: a.prep as number, shootDays: a.shoot, cutDays: 0 };
-  if (stage.theatre === 'itc') return { ...job, agreement: 'itc-equity', minutes: a.minutes, fee: itcFee(a.minutes, a.shoot, dateOf(now)) };
-  const subsidised = stage.theatre === 'subsidised';
-  const steps = subsidised ? STAGE_FEES.subsidised[stage.grade as 1 | 2 | 3] : (STAGE_FEES['west-end'].findLast((t) => (stage.seats as number) >= t.seats) as { steps: Fee['steps'] }).steps;
-  const fee = fromMajor('GBP', stepAt(steps, dateOf(now)));
-  return { ...job, agreement: subsidised ? 'uk-theatre-equity' : 'solt-equity', minutes: null, fee };
+  if (stage.theatre === 'itc') return { ...job, agreement: 'itc-equity', minutes: a.minutes, fee: itcFee(a.minutes, weeks, dateOf(now)) };
+  if (stage.theatre === 'subsidised') return { ...job, agreement: 'uk-theatre-equity', minutes: null, fee: subsidisedFee(fromMajor('GBP', stepAt(STAGE_FEES.subsidised[stage.grade as 1 | 2 | 3], dateOf(now))), weeks) };
+  const steps = (STAGE_FEES['west-end'].findLast((t) => (stage.seats as number) >= t.seats) as { steps: Fee['steps'] }).steps;
+  return { ...job, agreement: 'solt-equity', minutes: null, fee: fromMajor('GBP', stepAt(steps, dateOf(now))) };
 }
 
 /** The schedule and the pay of a job: the DGA's in the US, a UK play's its theatre's, a market's agreement's abroad. */
@@ -484,11 +499,14 @@ export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
 
 /**
  * A production's job, as its terms read it: one episode's for a series (its share of the shooting days the plan
- * schedules, at least one), the feature's otherwise; and how many such jobs the production is.
+ * schedules, at least one), a play's its rehearsal weeks' days as the plan names them, the feature's otherwise; and how
+ * many such jobs the production is.
  */
-export function jobOf(p: Project & { plan: { scheduled: number } }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
+export function jobOf(p: Project & { plan: Pick<Plan, 'scheduled' | 'weeks'> }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
   const times = p.series?.episodes ?? 1;
-  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: budgetMajor(p), shoot: Math.max(1, Math.round(p.plan.scheduled / times)), minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
+  // @slate:consumer producing.plan
+  const shoot = p.plan.weeks === null ? Math.max(1, Math.round(p.plan.scheduled / times)) : p.plan.weeks.rehearsal * WEEK_DAYS;
+  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: budgetMajor(p), shoot, minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
 }
 
 /** A job's engagement, for the permit it may need: the country it is made in and the days it works there. */

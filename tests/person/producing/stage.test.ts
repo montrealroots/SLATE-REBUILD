@@ -5,11 +5,11 @@ import { draws, seedFromText } from '../../../src/core/rng/rng.ts';
 import { daysFromCivil, SECONDS_PER_DAY } from '../../../src/core/time/calendar.ts';
 import { addMonths } from '../../../src/core/time/dates.ts';
 import { exchangeOn } from '../../../src/money/rates/rates.ts';
-import { ACTING_START, castOf, castPart, ITC, pay, playPart, SOLT, THEATRE_AGREEMENT, UK_SUBSIDISED, type ActingSlice, type Agreement } from '../../../src/person/acting/acting.ts';
+import { ACTING_START, castOf, castPart, daysWorked, ITC, pay, playPart, SOLT, THEATRE_AGREEMENT, UK_SUBSIDISED, type ActingSlice, type Agreement } from '../../../src/person/acting/acting.ts';
 import { ATTRIBUTES_START, chooseAttributes, componentValues, type AttributesSlice } from '../../../src/person/attributes/attributes.ts';
-import { cutFilm, DIRECTING_START, EPISODES, filmOf, ITC_DIRECTOR, itcFee, PLANNED, prepFilm, shootFilm, shootNeeded, STAGE_FEES, submitFilm, terms, type DirectingSlice } from '../../../src/person/directing/directing.ts';
+import { cutFilm, DIRECTING_START, EPISODES, filmOf, ITC_DIRECTOR, itcFee, jobOf, OVER_FOUR, PLANNED, subsidisedFee, prepFilm, shootFilm, shootNeeded, STAGE_FEES, submitFilm, terms, type DirectingSlice } from '../../../src/person/directing/directing.ts';
 import type { GenresSlice } from '../../../src/person/genres/genres.ts';
-import type { IdentitySlice } from '../../../src/person/identity/identity.ts';
+import { homeRegionOf, personOf, type IdentitySlice } from '../../../src/person/identity/identity.ts';
 import type { PermitsSlice } from '../../../src/person/permits/permits.ts';
 import {
   aboutMarket,
@@ -19,6 +19,7 @@ import {
   applyToFunder,
   AVEC,
   developScript,
+  engagementOf,
   factor,
   HIRED,
   HOME_MISSING,
@@ -29,6 +30,7 @@ import {
   optionMaterial,
   packagePitch,
   planProject,
+  planSkill,
   PLAY_WRITING,
   PRODUCING_START,
   producerValues,
@@ -42,6 +44,7 @@ import {
   stageCredit,
   target,
   THEATRES,
+  tradeDays,
   TTR,
   UNKEPT_LINE,
   type Project,
@@ -90,8 +93,10 @@ const SUBSIDISED = { theatre: 'subsidised', grade: 2, touring: false };
 const COMMERCIAL = { theatre: 'commercial', seats: 600, touring: false };
 const WEST_END = { theatre: 'west-end', seats: 900, touring: false };
 const ITC_COMPANY = { theatre: 'itc', touring: true, minutes: 90 };
-/** A British actress, at home in the UK. */
+/** A British actress, at home in the UK, who grew up in California. */
 const british = () => identity({ citizenship: ['GB'] });
+/** A British actress who grew up, and so lives, in a region of the UK ('' for none named). */
+const grewUpIn = (region: string) => identity({ citizenship: ['GB'], grewUp: { country: 'GB', region } });
 /** Material optioned for a UK production of a format, the life holding the roles given; a play at a subsidised theatre unless named. */
 /** Args as given, a key given as undefined left out (a command's arguments are plain data). */
 const named = (args: Record<string, unknown>) => Object.fromEntries(Object.entries(args).filter(([, v]) => v !== undefined)) as never;
@@ -104,7 +109,8 @@ const playArgs = (format: string, extra: Record<string, unknown>) => ({
 /** Material optioned for a UK production of a format, the life holding the roles given. */
 const opt = (format: string, extra: Record<string, unknown> = {}, roles: string[] = ['producer'], l: Life<Lives> = life()) =>
   dispatch(l, optionMaterial, named({ format, roles, account: ACCOUNT, days: 1, genre: 'drama', market: 'GB', ...playArgs(format, extra), ...extra }));
-const plan = (l: Life<Lives>, budget: string, days?: number) => dispatch(l, planProject, { project: 1, budget, ...(days === undefined ? {} : { days }) });
+/** Plans a project on a budget; a play its weeks of rehearsal and of the run. */
+const plan = (l: Life<Lives>, budget: string, weeks?: readonly [number, number]) => dispatch(l, planProject, { project: 1, budget, ...(weeks === undefined ? {} : { rehearsal: weeks[0], run: weeks[1] }) });
 const project = (l: Life<Lives>, id = 1) => projectOf(l.slices.producing, id);
 const edit = (l: Life<Lives>, f: (p: Project) => void): Life<Lives> => {
   const producing = structuredClone(l.slices.producing);
@@ -181,16 +187,51 @@ describe("a UK production's nation", () => {
     for (const nation of ['GB.SCT', 'GB.WLS', 'GB.NIR']) expect(() => opt('stage', { ...WEST_END, nation })).toThrow('a West End theatre is in London, so a play there is made in England');
     expect(project(opt('stage', { ...SUBSIDISED, nation: 'GB.SCT' })).stage?.theatre).toBe('subsidised');
   });
+
+  it('is the nation the life grew up in where it names none and the life grew up in the UK, still nameable', () => {
+    for (const nation of ['GB.ENG', 'GB.SCT', 'GB.WLS', 'GB.NIR']) {
+      expect(project(opt('stage', { nation: undefined }, ['producer'], life({ producer: 60 }, grewUpIn(nation)))).nation).toBe(nation);
+      expect(project(opt('series', { episode: 'hour', episodes: 1, nation: undefined }, ['producer'], life({ producer: 60 }, grewUpIn(nation)))).nation).toBe(nation);
+    }
+    expect(project(opt('stage', { nation: 'GB.WLS' }, ['producer'], life({ producer: 60 }, grewUpIn('GB.SCT')))).nation).toBe('GB.WLS');
+    expect(() => opt('stage', { nation: undefined }, ['producer'], life({ producer: 60 }, grewUpIn('')))).toThrow('a play made in the UK names its nation: GB.ENG, GB.NIR, GB.SCT, GB.WLS (undefined)');
+    expect(() => opt('stage', { ...WEST_END, nation: undefined }, ['producer'], life({ producer: 60 }, grewUpIn('GB.SCT')))).toThrow('a West End theatre is in London, so a play there is made in England');
+    expect(project(opt('film', {}, ['producer'], life({ producer: 60 }, grewUpIn('GB.SCT')))).nation).toBeNull();
+    expect(homeRegionOf(personOf(grewUpIn('GB.WLS')))).toBe('GB.WLS');
+  });
+
+  it('identity.make: where the life grew up sets the nation its play is made in', () => {
+    const won = (region: string) =>
+      Array.from({ length: 20 }, (_, i) => project(dispatch(plan(opt('stage', { nation: undefined }, ['producer'], life({ producer: 60 }, grewUpIn(region), seedOf(i + 1))), '300000', [3, 6]), applyToFunder, { project: 1 })).raised);
+    falsifyAny({ feature: 'identity.make', claim: 'downstream', says: "a life that grew up in England makes its play, naming no nation, in England, and applies to Arts Council England; one that grew up in Scotland makes it in Scotland and applies to Creative Scotland's Open Fund", base: 'GB.ENG', twin: 'GB.SCT', outcome: won });
+  });
 });
 
 describe('a series and a play', () => {
-  it("are planned on their own days: a series' episodes the DGA's shooting days, a play's run as given", () => {
+  it("are planned on their own days: a series' episodes the DGA's shooting days, a play's weeks of rehearsal and run as named, five days each", () => {
     const series = project(plan(opt('series', { episode: 'hour', episodes: 6 }), '3000000')).plan;
     expect(series?.needed).toBe(Math.round(EPISODES.hour.shoot * 6 * (1 + MODEL.need * (2 * dr(SEED, 'plan', 1).float() - 1))));
-    expect(project(plan(opt('stage'), '300000', 45)).plan?.needed).toBe(45);
-    expect(() => plan(opt('stage'), '300000')).toThrow("a play's days is a whole number of at least 1 (undefined)");
-    expect(() => plan(opt('film'), '300000', 10)).toThrow("a film's days are the trade's");
-    expect(() => plan(opt('series', { episode: 'hour', episodes: 2 }), '300000', 10)).toThrow("a series's days are the trade's");
+    expect(series?.weeks).toBeNull();
+    const l = plan(opt('stage'), '300000', [3, 6]);
+    const play = project(l).plan;
+    expect([play?.needed, play?.weeks]).toEqual([45, { rehearsal: 3, run: 6 }]);
+    // The producer schedules the play's days about its need as about a film's, and is engaged for them all.
+    const k = planSkill(producerValues(l.slices, project(l)));
+    expect(play?.scheduled).toBe(Math.max(1, Math.round(45 * (1 + MODEL.planned * (1 - k / 100) * (2 * dr(SEED, 'plan', 1).float() - 1)))));
+    expect(engagementOf(project(l))).toEqual({ country: 'GB', days: play?.scheduled });
+    expect([tradeDays({ series: null }, { rehearsal: 1, run: 1 }), tradeDays({ series: null }, { rehearsal: 4, run: 2 })]).toEqual([10, 30]);
+    expect(() => plan(opt('stage'), '300000')).toThrow("a play's weeks of rehearsal is a whole number of at least 1 (undefined)");
+    expect(() => plan(opt('stage'), '300000', [0, 6])).toThrow("a play's weeks of rehearsal is a whole number of at least 1 (0)");
+    expect(() => dispatch(opt('stage'), planProject, { project: 1, budget: '300000', rehearsal: 3 })).toThrow("a play's weeks of performance is a whole number of at least 1 (undefined)");
+    expect(() => plan(opt('stage'), '300000', [3, 0])).toThrow("a play's weeks of performance is a whole number of at least 1 (0)");
+    for (const weeks of [{ rehearsal: 3 }, { run: 6 }]) {
+      expect(() => dispatch(opt('film'), planProject, { project: 1, budget: '300000', ...weeks })).toThrow("a film's days are the trade's");
+      expect(() => dispatch(opt('series', { episode: 'hour', episodes: 2 }), planProject, { project: 1, budget: '300000', ...weeks })).toThrow("a series's days are the trade's");
+    }
+  });
+
+  it("producing.plan: a play's longer run engages its producer for more days", () => {
+    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: 'a play planned for three weeks of rehearsal and six of performance schedules its producer 45 days or so, one with ten weeks of performance 65 or so, the days a permit to work there asks', base: 6, twin: 10, outcome: (run: number) => engagementOf(project(plan(opt('stage'), '300000', [3, run]))).days });
   });
 });
 
@@ -294,27 +335,27 @@ describe('a UK play', () => {
     expect(stageCredit(true, gbp('200000000'), '2025-06-01')).toEqual(gbp('72000000'));
     expect(stageCredit(true, gbp('300000'), '2025-03-31')).toBeNull();
     expect(stageCredit(true, gbp('300000'), '2025-04-01')).toEqual(gbp('108000'));
-    const planned = project(plan(opt('stage'), '300000', 45)).plan;
+    const planned = project(plan(opt('stage'), '300000', [3, 6])).plan;
     expect([planned?.fee, planned?.credit, planned?.needed]).toEqual([null, gbp('96000'), 45]);
-    expect(project(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', 45)).plan?.credit).toBeNull();
+    expect(project(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', [3, 6])).plan?.credit).toBeNull();
   });
 
   it('producing.option: a play that tours claims more of its costs', () => {
-    falsifyAny({ feature: 'producing.option', claim: 'downstream', says: "a £300,000 UK play that tours claims Theatre Tax Relief at 45%, one that doesn't at 40%", base: false, twin: true, outcome: (touring: boolean) => project(plan(opt('stage', { touring }), '300000', 45)).plan?.credit });
+    falsifyAny({ feature: 'producing.option', claim: 'downstream', says: "a £300,000 UK play that tours claims Theatre Tax Relief at 45%, one that doesn't at 40%", base: false, twin: true, outcome: (touring: boolean) => project(plan(opt('stage', { touring }), '300000', [3, 6])).plan?.credit });
   });
 
   it("applies to Arts Council England once: a yes at 29.4% as the package sells it, an award of what's left to raise, £1,000 to £100,000", () => {
     expect(ACE).toEqual({ rate: 0.294, least: 1_000, most: 100_000 });
     // £300,000: £246,000 to close, £96,000 of it the credit; £150,000 left, held to £100,000.
-    expect(grantFor(project(plan(opt('stage'), '300000', 45)), ACE, ACE_NAME)).toEqual({ rate: 0.294, award: 10_000_000 });
-    expect(grantFor(project(plan(opt('stage'), '150000', 45)), ACE, ACE_NAME)).toEqual({ rate: 0.294, award: 7_500_000 });
-    const short = (left: number) => edit(plan(opt('stage'), '150000', 45), (p) => (p.raised['equity'] = money('GBP', target(p) - raised(p) - left)));
+    expect(grantFor(project(plan(opt('stage'), '300000', [3, 6])), ACE, ACE_NAME)).toEqual({ rate: 0.294, award: 10_000_000 });
+    expect(grantFor(project(plan(opt('stage'), '150000', [3, 6])), ACE, ACE_NAME)).toEqual({ rate: 0.294, award: 7_500_000 });
+    const short = (left: number) => edit(plan(opt('stage'), '150000', [3, 6]), (p) => (p.raised['equity'] = money('GBP', target(p) - raised(p) - left)));
     expect(grantFor(project(short(100_000)), ACE, ACE_NAME)).toEqual({ rate: 0.294, award: 100_000 });
     expect(() => grantFor(project(short(99_999)), ACE, ACE_NAME)).toThrow("Arts Council England's project grants start at £1,000, more than project 1 has left to raise");
     expect(() => dispatch(short(99_999), applyToFunder, { project: 1 })).toThrow("Arts Council England's project grants start at £1,000, more than project 1 has left to raise");
     const said = Array.from({ length: 20 }, (_, i) => {
       const seed = seedOf(i + 1);
-      const l = plan(opt('stage', {}, ['producer'], life({ producer: 60 }, identity(), seed)), '300000', 45);
+      const l = plan(opt('stage', {}, ['producer'], life({ producer: 60 }, identity(), seed)), '300000', [3, 6]);
       const after = project(dispatch(l, applyToFunder, { project: 1 }));
       const p = project(l);
       const yes = dr(seed, 'apply', 1).float() < ACE.rate * factor(l.slices.producing, packagePitch(l.slices, producerValues(l.slices, p), p), p, T0, l.slices.directing);
@@ -325,18 +366,18 @@ describe('a UK play', () => {
     expect(said).toContain(true);
     expect(said).toContain(false);
     // The BFI's ten months left on an option is the BFI's own: a play's option with five left still applies.
-    const late = edit(plan(opt('stage'), '300000', 45), (p) => (p.expires = addMonths('Europe/London', T0, 5)));
+    const late = edit(plan(opt('stage'), '300000', [3, 6]), (p) => (p.expires = addMonths('Europe/London', T0, 5)));
     expect(project(dispatch(late, applyToFunder, { project: 1 })).applied).toBe(true);
-    expect(() => dispatch(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', 45), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a play isn't known to this game");
+    expect(() => dispatch(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', [3, 6]), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a play isn't known to this game");
   });
 
   it('producing.plan: a bigger play asks Arts Council England for more', () => {
-    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: "a £150,000 UK play asks Arts Council England for the £75,000 it has left to raise; a £300,000 one for the £100,000 most", base: '150000', twin: '300000', outcome: (budget: string) => grantFor(project(plan(opt('stage'), budget, 45)), ACE, ACE_NAME).award });
+    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: "a £150,000 UK play asks Arts Council England for the £75,000 it has left to raise; a £300,000 one for the £100,000 most", base: '150000', twin: '300000', outcome: (budget: string) => grantFor(project(plan(opt('stage'), budget, [3, 6])), ACE, ACE_NAME).award });
   });
 
   it("applies in Scotland to Creative Scotland's Open Fund for Individuals, as an artist living there: a yes at 535 of 1,761, £500 to £50,000", () => {
     expect(OPEN_FUND).toEqual({ rate: 535 / 1761, least: 500, most: 50_000 });
-    const scottish = (budget = '300000', who = british()) => plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, who)), budget, 45);
+    const scottish = (budget = '300000', who = grewUpIn('GB.SCT')) => plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, who)), budget, [3, 6]);
     const name = "Creative Scotland's Open Fund for Individuals' grants";
     expect(grantFor(project(scottish()), OPEN_FUND, name)).toEqual({ rate: 535 / 1761, award: 5_000_000 });
     const short = (left: number) => edit(scottish('150000'), (p) => (p.raised['equity'] = money('GBP', target(p) - raised(p) - left)));
@@ -345,7 +386,7 @@ describe('a UK play', () => {
     expect(() => dispatch(short(49_999), applyToFunder, { project: 1 })).toThrow("Creative Scotland's Open Fund for Individuals' grants start at £500, more than project 1 has left to raise");
     const said = Array.from({ length: 20 }, (_, i) => {
       const seed = seedOf(i + 1);
-      const l = plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, british(), seed)), '300000', 45);
+      const l = plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, grewUpIn('GB.SCT'), seed)), '300000', [3, 6]);
       const p = project(l);
       const yes = dr(seed, 'apply', 1).float() < OPEN_FUND.rate * factor(l.slices.producing, packagePitch(l.slices, producerValues(l.slices, p), p), p, T0, l.slices.directing);
       expect(project(dispatch(l, applyToFunder, { project: 1 })).raised).toEqual(yes ? { 'creative-scotland': gbp('50000') } : {});
@@ -353,13 +394,14 @@ describe('a UK play', () => {
     });
     expect(said).toContain(true);
     expect(said).toContain(false);
-    expect(() => dispatch(scottish('300000', identity()), applyToFunder, { project: 1 })).toThrow("Creative Scotland's Open Fund for Individuals takes artists living in Scotland");
+    // A life lives where it grew up: in the US, in England, or in the UK but in no region named, it doesn't live in Scotland.
+    for (const who of [identity(), british(), grewUpIn('GB.ENG'), grewUpIn('')]) expect(() => dispatch(scottish('300000', who), applyToFunder, { project: 1 })).toThrow("Creative Scotland's Open Fund for Individuals takes artists living in Scotland");
     // The UK's age for a public fund, 18, is the Open Fund's own.
     expect(() => dispatch(scottish('300000', identity({ citizenship: ['GB'], born: { date: '2010-01-01', country: 'GB', region: 'GB.SCT' } })), applyToFunder, { project: 1 })).toThrow("United Kingdom's public fund takes no applicant under 18");
   });
 
   it('is refused a fund in Wales and Northern Ireland, whose arts councils publish no rate of yes', () => {
-    const apply = (nation: string) => () => dispatch(plan(opt('stage', { nation }, ['producer'], life({ producer: 60 }, british())), '300000', 45), applyToFunder, { project: 1 });
+    const apply = (nation: string) => () => dispatch(plan(opt('stage', { nation }, ['producer'], life({ producer: 60 }, british())), '300000', [3, 6]), applyToFunder, { project: 1 });
     expect(ARTS_COUNCIL).toEqual({ 'GB.WLS': 'the Arts Council of Wales', 'GB.NIR': 'the Arts Council of Northern Ireland' });
     expect(apply('GB.WLS')).toThrow("the Arts Council of Wales publishes what its project funds give but not how often it says yes, so its fund isn't modeled in this game");
     expect(apply('GB.NIR')).toThrow("the Arts Council of Northern Ireland publishes what its project funds give but not how often it says yes, so its fund isn't modeled in this game");
@@ -367,25 +409,25 @@ describe('a UK play', () => {
 
   it("producing.option: a play's nation sets the fund it applies to", () => {
     const won = (nation: string) =>
-      Array.from({ length: 20 }, (_, i) => project(dispatch(plan(opt('stage', { nation }, ['producer'], life({ producer: 60 }, british(), seedOf(i + 1))), '300000', 45), applyToFunder, { project: 1 })).raised);
+      Array.from({ length: 20 }, (_, i) => project(dispatch(plan(opt('stage', { nation }, ['producer'], life({ producer: 60 }, grewUpIn('GB.SCT'), seedOf(i + 1))), '300000', [3, 6]), applyToFunder, { project: 1 })).raised);
     falsifyAny({ feature: 'producing.option', claim: 'downstream', says: "a £300,000 play made in England wins Arts Council England's £100,000 at 29.4%; made in Scotland, Creative Scotland's £50,000 at 30.4%", base: 'GB.ENG', twin: 'GB.SCT', outcome: won });
   });
 
   it("producing.apply: Creative Scotland's Open Fund reads where the life lives", () => {
-    const applied = (citizenship: string) => {
+    const applied = (region: string) => {
       try {
-        return project(dispatch(plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, identity({ citizenship: [citizenship as 'GB'] }))), '300000', 45), applyToFunder, { project: 1 })).applied;
+        return project(dispatch(plan(opt('stage', { nation: 'GB.SCT' }, ['producer'], life({ producer: 60 }, grewUpIn(region))), '300000', [3, 6]), applyToFunder, { project: 1 })).applied;
       } catch {
         return false;
       }
     };
-    falsifyAny({ feature: 'identity.make', claim: 'downstream', says: "a life at home in the UK applies to Creative Scotland's Open Fund for its play made in Scotland; one at home in the US is refused", base: 'GB', twin: 'US', outcome: applied });
+    falsifyAny({ feature: 'identity.make', claim: 'downstream', says: "a life that grew up in Scotland, and so lives there, applies to Creative Scotland's Open Fund for its play made in Scotland; one that grew up in England is refused", base: 'GB.SCT', twin: 'GB.ENG', outcome: applied });
   });
 
   it("opens once staged, its run earning back its cost at the game's 20% as the play and its campaign sell it", () => {
     const recouped = Array.from({ length: 30 }, (_, i) => {
       const seed = seedOf(i + 1);
-      const l = dispatch(shot(plan(opt('stage', {}, ['producer'], life({ producer: 60 }, identity(), seed)), '300000', 45)), releaseFilm, { project: 1 });
+      const l = dispatch(shot(plan(opt('stage', {}, ['producer'], life({ producer: 60 }, identity(), seed)), '300000', [3, 6])), releaseFilm, { project: 1 });
       const p = project(l);
       const quality = qualityOf(l.slices, p);
       const audience = dr(seed, 'release', 1).float() < MODEL.recoup * (0.5 + sellSkill(producerValues(l.slices, p), quality) / 100);
@@ -395,7 +437,7 @@ describe('a UK play', () => {
     expect(recouped).toContain(true);
     expect(recouped).toContain(false);
     const fr = opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' });
-    expect(() => dispatch(shot(plan(fr, '300000', 45)), releaseFilm, { project: 1 })).toThrow("how a play made in France fares once it's made isn't known to this game");
+    expect(() => dispatch(shot(plan(fr, '300000', [3, 6])), releaseFilm, { project: 1 })).toThrow("how a play made in France fares once it's made isn't known to this game");
   });
 });
 
@@ -436,22 +478,23 @@ describe("the life's own play", () => {
     expect([itc(50, '2025-06-01'), itc(20, '2027-04-01'), itc(5, '2025-06-01')]).toEqual(['6873.75', '3790.05', '1000.00'].map(gbp));
     expect(() => itc(90, '2025-05-31')).toThrow('no minimum under itc-wggb is known before 2025-06-01');
     expect(() => itc(null)).toThrow('a play under itc-wggb names its running time');
-    const l = shot(plan(develop({ agreement: 'uk-theatre-wggb' }), '300000', 45));
+    const l = shot(plan(develop({ agreement: 'uk-theatre-wggb' }), '300000', [3, 6]));
     expect(project(l).costs.filter((c) => c.role === 'writer').map((c) => [c.what, c.amount])).toEqual([['the script', gbp('9383.49')]]);
     expect(l.slices.tax.paid[0]).toMatchObject({ what: 'the script', work: 'author', country: 'GB', gross: 938_349 });
-    const independent = shot(plan(develop({ ...COMMERCIAL, minutes: 90 }), '300000', 45));
+    const independent = shot(plan(develop({ ...COMMERCIAL, minutes: 90 }), '300000', [3, 6]));
     expect(project(independent).costs.filter((c) => c.role === 'writer').map((c) => c.amount)).toEqual([gbp('10942.38')]);
-    expect(() => shot(plan(develop(COMMERCIAL), '300000', 45))).toThrow('a play under itc-wggb names its running time');
+    expect(() => shot(plan(develop(COMMERCIAL), '300000', [3, 6]))).toThrow('a play under itc-wggb names its running time');
   });
 
   it("producing.develop: a play for a better-graded theatre pays its script more", () => {
-    falsifyAny({ feature: 'producing.develop', claim: 'downstream', says: "the life's play at a grade 1 subsidised theatre is paid UK Theatre's £11,598.60, at grade 3 £8,281.65", base: 1, twin: 3, outcome: (grade: number) => project(shot(plan(develop({ grade, agreement: 'uk-theatre-wggb' }), '300000', 45))).costs.map((c) => c.amount) });
+    falsifyAny({ feature: 'producing.develop', claim: 'downstream', says: "the life's play at a grade 1 subsidised theatre is paid UK Theatre's £11,598.60, at grade 3 £8,281.65", base: 1, twin: 3, outcome: (grade: number) => project(shot(plan(develop({ grade, agreement: 'uk-theatre-wggb' }), '300000', [3, 6]))).costs.map((c) => c.amount) });
   });
 });
 
 describe('a UK play the life directs', () => {
   const stage = (over: Partial<Stage> = {}): Stage => ({ theatre: 'subsidised', grade: 1, seats: null, touring: false, ...over });
-  const fee = (s: Stage, date = TODAY) => terms({ form: 'play', country: 'GB', stage: s, budget: 300_000, shoot: 30, minutes: null, prep: 10 }, { films: [] }, daysFromCivil(...(date.split('-').map(Number) as [number, number, number])) * SECONDS_PER_DAY).fee;
+  // Four weeks of rehearsal: no week over four.
+  const fee = (s: Stage, date = TODAY) => terms({ form: 'play', country: 'GB', stage: s, budget: 300_000, shoot: 20, minutes: null, prep: 10 }, { films: [] }, daysFromCivil(...(date.split('-').map(Number) as [number, number, number])) * SECONDS_PER_DAY).fee;
 
   it("is paid its theatre's directors' minimum: UK Theatre's with Equity by the grade, SOLT's in the West End by the seats", () => {
     const years = (amounts: string[]) => ['2023-07-03', '2024-04-01', '2025-03-31', '2026-04-06'].map((d, i) => [d, amounts[i]]);
@@ -469,17 +512,42 @@ describe('a UK play the life directs', () => {
     expect([we(1), we(799), we(800), we(1099), we(1100), we(2000)]).toEqual(['5809', '5809', '6390', '6390', '7347', '7347'].map(gbp));
     expect([we(500, '2023-07-03'), we(900, '2024-04-01'), we(1200, '2025-03-31')]).toEqual(['5018', '5796', '6998'].map(gbp));
     expect(() => fee(stage(), '2023-07-02')).toThrow('no minimum is known before 2023-07-03');
-    const job = { form: 'play' as const, country: 'GB', stage: stage(), budget: 300_000, shoot: 30, minutes: null };
-    expect(terms({ ...job, prep: 10 }, { films: [] }, T0)).toEqual({ country: 'GB', agreement: 'uk-theatre-equity', budget: null, minutes: null, prepDays: 10, shootDays: 30, cutDays: 0, fee: gbp('4644.34') });
+    const job = { form: 'play' as const, country: 'GB', stage: stage(), budget: 300_000, shoot: 20, minutes: null };
+    expect(terms({ ...job, prep: 10 }, { films: [] }, T0)).toEqual({ country: 'GB', agreement: 'uk-theatre-equity', budget: null, minutes: null, prepDays: 10, shootDays: 20, cutDays: 0, fee: gbp('4644.34') });
+    // A rehearsal is planned in whole weeks of five days.
+    for (const shoot of [7, 0]) expect(() => terms({ ...job, shoot, prep: 10 }, { films: [] }, T0)).toThrow(`a play's weeks of rehearsal is a whole number of at least 1 (${shoot / 5})`);
     expect(terms({ ...job, stage: stage({ theatre: 'west-end', grade: null, seats: 900 }), prep: 5 }, { films: [] }, T0).agreement).toBe('solt-equity');
     expect(() => terms(job, { films: [] }, T0)).toThrow('the prep days is a whole number of at least 1 (undefined)');
     expect(() => terms({ ...job, prep: 10, cut: 3 }, { films: [] }, T0)).toThrow("a play isn't cut");
     expect(() => terms({ ...job, prep: 10, agreement: 'x' }, { films: [] }, T0)).toThrow("a play's theatre sets its directors' agreement");
   });
 
-  it("is prepped, then staged in its plan's days with no cut, its direction what the staging brought", () => {
-    const l = dispatch(funded(plan(opt('stage', {}, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', 30)), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
-    const scheduled = project(l).plan?.scheduled as number;
+  it("is paid UK Theatre's 20% of the fee for each rehearsal week over four at a subsidised theatre, and SOLT's fee alone in the West End", () => {
+    expect(OVER_FOUR).toEqual({ weeks: 4, share: '0.2' });
+    // 20% of £4,644.34 is £928.868, a week's £928.87.
+    expect([0, 1, 4, 5, 6, 10].map((weeks) => subsidisedFee(gbp('4644.34'), weeks))).toEqual(['4644.34', '4644.34', '4644.34', '5573.21', '6502.08', '10217.56'].map(gbp));
+    const at = (s: Stage, weeks: number) => terms({ form: 'play', country: 'GB', stage: s, budget: 300_000, shoot: weeks * 5, minutes: null, prep: 10 }, { films: [] }, T0).fee;
+    expect([4, 5, 6].map((weeks) => at(stage({ grade: 3 }), weeks))).toEqual(['3824.54', '4589.45', '5354.36'].map(gbp));
+    const westEnd = stage({ theatre: 'west-end', grade: null, seats: 900 });
+    expect([1, 4, 6, 10].map((weeks) => at(westEnd, weeks))).toEqual(['6390', '6390', '6390', '6390'].map(gbp));
+  });
+
+  it("is directed over the plan's rehearsal weeks alone: the run doesn't move the fee or the days", () => {
+    const directed = (weeks: readonly [number, number], theatre: Record<string, unknown> = {}) => filmOf(dispatch(funded(plan(opt('stage', theatre, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', weeks)), prepFilm, { project: 1, prep: 10, account: ACCOUNT }).slices.directing, 1);
+    expect([directed([6, 4]), directed([6, 12])].map((f) => [f.shootDays, f.fee])).toEqual([[30, gbp('5679.64')], [30, gbp('5679.64')]]);
+    expect([directed([3, 4], ITC_COMPANY), directed([3, 12], ITC_COMPANY)].map((f) => [f.shootDays, f.fee])).toEqual([[15, gbp('3719.75')], [15, gbp('3719.75')]]);
+    // The job reads the rehearsal's days, not the producer's schedule of rehearsal and run.
+    const p = project(funded(plan(opt('stage'), '300000', [2, 9])));
+    expect(jobOf(p as Project & { plan: NonNullable<Project['plan']> }, { prep: 10 }).job.shoot).toBe(10);
+  });
+
+  it('producing.plan: more rehearsal weeks pay the director more', () => {
+    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: "a play the life directs at a grade 2 subsidised theatre with four weeks of rehearsal pays UK Theatre's £4,056.88; with six, £1,622.76 more, 20% of the fee for each week over four", base: 4, twin: 6, outcome: (weeks: number) => filmOf(dispatch(funded(plan(opt('stage', {}, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', [weeks, 6])), prepFilm, { project: 1, prep: 10, account: ACCOUNT }).slices.directing, 1).fee });
+  });
+
+  it("is prepped, then staged in its plan's rehearsal weeks with no cut, its direction what the staging brought", () => {
+    const l = dispatch(funded(plan(opt('stage', {}, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', [2, 4])), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
+    const scheduled = 10;
     expect(filmOf(l.slices.directing, 1)).toMatchObject({ form: 'play', episodes: 1, country: 'GB', agreement: 'uk-theatre-equity', prepDays: 10, shootDays: scheduled, cutDays: 0, fee: gbp('4056.88') });
     expect(project(l).costs.map((c) => c.what)).toEqual(['prep']);
     const staged = dispatch(l, shootFilm, { film: 1, account: ACCOUNT });
@@ -498,7 +566,7 @@ describe('a UK play the life directs', () => {
 
   it("producing.option: a play at a better-graded theatre pays its director more", () => {
     falsifyAny({ feature: 'producing.option', claim: 'downstream', says: "a play the life directs at a grade 1 subsidised theatre pays UK Theatre's £4,644.34, at grade 3 £3,824.54", base: 1, twin: 3, outcome: (grade: number) => {
-      const l = dispatch(funded(plan(opt('stage', { grade }, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', 30)), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
+      const l = dispatch(funded(plan(opt('stage', { grade }, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', [2, 4])), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
       return filmOf(l.slices.directing, 1).fee;
     } });
   });
@@ -509,39 +577,64 @@ describe("an ITC company's play the life directs", () => {
   const job = (minutes: number | null, shoot = 30) => ({ form: 'play' as const, country: 'GB', stage: { theatre: 'itc' as const, grade: null, seats: null, touring: true }, budget: 300_000, shoot, minutes, prep: 10 });
   const at = (date: string) => daysFromCivil(...(date.split('-').map(Number) as [number, number, number])) * SECONDS_PER_DAY;
 
-  it("is paid the ITC's preparatory fee by its running time and its weekly rehearsal payment over the staging's days", () => {
+  it("is paid the ITC's preparatory fee by its running time and its weekly rehearsal payment for each rehearsal week", () => {
     expect(ITC_DIRECTOR).toEqual({ from: '2025-04-01', full: '1916.75', short: '1326.25', weekly: '601.00', over: 70 });
-    // 30 days staged are six weeks of five: £3,606 with the preparatory fee.
-    expect(itcFee(90, 30, TODAY)).toEqual(gbp('5522.75'));
-    expect(itcFee(71, 30, TODAY)).toEqual(gbp('5522.75'));
-    expect(itcFee(70, 30, TODAY)).toEqual(gbp('4932.25'));
-    expect(itcFee(90, 7, TODAY)).toEqual(gbp('2758.15'));
-    expect(itcFee(90, 30, '2025-04-01')).toEqual(gbp('5522.75'));
-    expect(() => itcFee(90, 30, '2025-03-31')).toThrow('no minimum is known before 2025-04-01');
-    expect(() => itcFee(null, 30, TODAY)).toThrow("a play under the ITC's directors' agreement names its running time");
+    // Six weeks of rehearsal: £3,606 with the preparatory fee.
+    expect(itcFee(90, 6, TODAY)).toEqual(gbp('5522.75'));
+    expect(itcFee(71, 6, TODAY)).toEqual(gbp('5522.75'));
+    expect(itcFee(70, 6, TODAY)).toEqual(gbp('4932.25'));
+    expect(itcFee(90, 1, TODAY)).toEqual(gbp('2517.75'));
+    expect(itcFee(90, 6, '2025-04-01')).toEqual(gbp('5522.75'));
+    expect(() => itcFee(90, 6, '2025-03-31')).toThrow('no minimum is known before 2025-04-01');
+    expect(() => itcFee(null, 6, TODAY)).toThrow("a play under the ITC's directors' agreement names its running time");
     expect(terms(job(90), { films: [] }, T0)).toEqual({ country: 'GB', agreement: 'itc-equity', budget: null, minutes: 90, prepDays: 10, shootDays: 30, cutDays: 0, fee: gbp('5522.75') });
     expect(terms(job(60), { films: [] }, at('2026-04-01')).fee).toEqual(gbp('4932.25'));
   });
 
   it('producing.option: a longer ITC play pays its director the full-length preparatory fee', () => {
     falsifyAny({ feature: 'producing.option', claim: 'downstream', says: "a 90-minute ITC play the life directs pays the ITC's full-length £1,916.75 preparatory fee; a 60-minute one the short play's £1,326.25", base: 90, twin: 60, outcome: (minutes: number) => {
-      const l = dispatch(funded(plan(opt('stage', { ...ITC_COMPANY, minutes }, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', 30)), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
+      const l = dispatch(funded(plan(opt('stage', { ...ITC_COMPANY, minutes }, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', [2, 4])), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
       return filmOf(l.slices.directing, 1).fee;
     } });
+  });
+
+  it("producing.plan: more rehearsal weeks pay the ITC's director more weekly payments", () => {
+    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: "a 90-minute ITC play the life directs with two weeks of rehearsal pays £1,916.75 and two weekly payments of £601; with three, a third", base: 2, twin: 3, outcome: (weeks: number) => filmOf(dispatch(funded(plan(opt('stage', ITC_COMPANY, ['producer', 'director'], life({ producer: 60, director: 60 })), '300000', [weeks, 4])), prepFilm, { project: 1, prep: 10, account: ACCOUNT }).slices.directing, 1).fee });
   });
 });
 
 describe('a UK play the life acts in', () => {
-  const ARGS = { project: 1, agreement: 'uk-theatre', term: 'week', length: 4, lines: 40, rehearsal: 2, asks: [], gender: 'open', ages: [0, 120] };
-  const cast = (seats: number, extra: Record<string, unknown> = {}) => dispatch(plan(opt('stage', { ...COMMERCIAL, seats }, ['producer', 'actor'], life({ producer: 60, actor: 60 })), '300000', 45), castPart, { ...ARGS, ...extra });
+  // A UK play's part names neither its weeks of performance nor of rehearsal: its plan's are four and two.
+  const ARGS = { project: 1, agreement: 'uk-theatre', term: 'week', lines: 40, asks: [], gender: 'open', ages: [0, 120] };
+  const cast = (seats: number, extra: Record<string, unknown> = {}, weeks: readonly [number, number] = [2, 4]) => dispatch(plan(opt('stage', { ...COMMERCIAL, seats }, ['producer', 'actor'], life({ producer: 60, actor: 60 })), '300000', weeks), castPart, { ...ARGS, ...extra });
   /** A part played in a play at a theatre, under the agreement named (the theatre's own where none is), on a day. */
   const played = (theatre: Record<string, unknown>, agreement: string, date = T0) => {
-    const l = dispatch(funded(plan(opt('stage', theatre, ['producer', 'actor'], life({ producer: 60, actor: 60 }, identity(), SEED, date)), '300000', 45)), castPart, { ...ARGS, agreement });
+    const l = dispatch(funded(plan(opt('stage', theatre, ['producer', 'actor'], life({ producer: 60, actor: 60 }, identity(), SEED, date)), '300000', [2, 4])), castPart, { ...ARGS, agreement });
     return castOf(dispatch(l, playPart, { part: 1, account: ACCOUNT }).slices.acting, 1);
   };
   it("is engaged under UK Theatre's commercial agreement at its theatre's seats, which the part doesn't name", () => {
     expect(castOf(cast(600).slices.acting, 1).part.seats).toBe(600);
     expect(() => cast(600, { seats: 200 })).toThrow("a UK play's seats are its theatre's");
+  });
+
+  it("is engaged for its plan's weeks: the rehearsal at the rehearsal rate, the run at the week's minimum", () => {
+    expect(castOf(cast(600, {}, [3, 7]).slices.acting, 1).part).toMatchObject({ term: 'week', length: 7, rehearsal: 3 });
+    for (const named of [{ length: 4 }, { rehearsal: 2 }]) expect(() => cast(600, named)).toThrow("a UK play's weeks of rehearsal and performance are its plan's");
+    // At 600 seats, tier B's: £545.58 a rehearsal week, £569.14 a week of performance.
+    const paid = (weeks: readonly [number, number]) => castOf(dispatch(funded(cast(600, {}, weeks)), playPart, { part: 1, account: ACCOUNT }).slices.acting, 1).work?.pay;
+    expect([paid([2, 4]), paid([3, 4]), paid([2, 5])]).toEqual(['3367.72', '3913.30', '3936.86'].map(gbp));
+    // What a part engages a minor's or a foreigner's days for: the plan's weeks, five days each.
+    expect(daysWorked(castOf(cast(600, {}, [3, 7]).slices.acting, 1).part)).toBe(50);
+    // A part is cast in a play once it is planned.
+    expect(() => dispatch(opt('stage', COMMERCIAL, ['producer', 'actor'], life({ producer: 60, actor: 60 })), castPart, ARGS)).toThrow('project 1 has no budget');
+    // A play abroad engages its part in its agreement's own units, as the part names them.
+    const french = identity({ citizenship: ['FR'], languages: [{ lang: 'fr', level: 'C2' }] });
+    const abroad = dispatch(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }, ['producer', 'actor'], life({ producer: 60, actor: 60 }, french)), '300000', [2, 4]), castPart, { ...ARGS, agreement: 'fr-private-stage', term: 'performance', length: 10, rehearsal: 0 });
+    expect(castOf(abroad.slices.acting, 1).part).toMatchObject({ term: 'performance', length: 10, rehearsal: 0 });
+  });
+
+  it('producing.plan: more rehearsal weeks pay the actor more', () => {
+    falsifyAny({ feature: 'producing.plan', claim: 'downstream', says: "a part in the life's play at a 600-seat commercial theatre pays UK Theatre's £545.58 for each of its plan's rehearsal weeks, two or three, beside its four weeks of performance", base: 2, twin: 3, outcome: (weeks: number) => castOf(dispatch(funded(cast(600, {}, [weeks, 4])), playPart, { part: 1, account: ACCOUNT }).slices.acting, 1).work?.pay });
   });
 
   it("is engaged under its theatre's agreement: UK Theatre's subsidised, SOLT's in the West End, the ITC's for an ITC company", () => {
@@ -574,8 +667,10 @@ describe('a UK play the life acts in', () => {
   });
 
   it('acts in and directs one play: the part and the direction each paid from its budget', () => {
-    const l = dispatch(funded(plan(opt('stage', ITC_COMPANY, ['producer', 'actor', 'director'], life({ producer: 60, actor: 60, director: 60 })), '300000', 30)), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
+    const l = dispatch(funded(plan(opt('stage', ITC_COMPANY, ['producer', 'actor', 'director'], life({ producer: 60, actor: 60, director: 60 })), '300000', [2, 4])), prepFilm, { project: 1, prep: 10, account: ACCOUNT });
     const cast = dispatch(dispatch(l, castPart, { ...ARGS, agreement: 'itc-equity' }), playPart, { part: 1, account: ACCOUNT });
+    expect(castOf(cast.slices.acting, 1).part).toMatchObject({ length: 4, rehearsal: 2 });
+    expect(filmOf(cast.slices.directing, 1).shootDays).toBe(10);
     expect(project(cast).costs.map((c) => c.role)).toEqual(['director', 'actor']);
   });
 

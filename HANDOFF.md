@@ -307,10 +307,13 @@ keep the rules):
    Council England's in England and Creative Scotland's Open Fund for Individuals in Scotland, refused in Wales and
    Northern Ireland (no rate of yes published), a series' fund refused in all four; the actor plays a subsidised, West
    End or ITC company's play on its agreement, so the life may act in and direct one play; the ITC's years run from 1
-   April on its own word. Left: identity holds no home within a country, so a life at home in the UK is read as living
-   in the play's nation (Creative Scotland asks an artist living in Scotland); a play's days aren't split between
-   rehearsal and run, so the ITC director's rehearsal rate is paid over the run and UK Theatre's 20% for each week over
-   four isn't paid; then the other markets' series and plays, a research wave of its own.
+   April on its own word. A play's plan names its rehearsal and run weeks apart: the ITC director's weekly payment covers
+   rehearsal alone, UK Theatre's director is paid 20% of the fee for each rehearsal week over four (the card's clause;
+   that its weeks are rehearsal weeks is the game's reading, R-4615), and the actor's rehearsal and run weeks are read
+   from the plan. The life lives where it grew up (the owner, 2026-11-04: "Where it grew up (Recommended)"), so a UK
+   production's nation defaults to that region's and Creative Scotland's fund takes a life from Scotland alone. Left:
+   a play outside the UK still names its run in its agreement's units (no source gives performances a week); then the
+   other markets' series and plays, a research wave of its own.
 2. What the integrators found and the engines can't read yet: Azerbaijan's rebate in dollars (the engine holds one
    currency a market), Canada's DGC 2026-28 and Mexico's STPC director rates, the DGA reaching the US Virgin Islands
    and the Northern Mariana Islands, Austria's stage minimums, Uruguay's and Ecuador's rate tables, the Hebrew
@@ -361,6 +364,9 @@ keep the rules):
   that film's budget at the union's minimum for the part, through the production's accounts, tax and union rules.
   SLATE's ruling of 2026-11-01 had said the same and left casting and spec sales standing until the own-production
   work was built; layer 4 takes them out now.
+- The life lives in the region it grew up in (the owner, 2026-11-04, asked how the game knows where in a country the
+  life lives: "Where it grew up (Recommended)"); layer 5 may let it move. A UK production's nation and Creative
+  Scotland's fund read it (`homeRegionOf`, src/person/identity).
 - The four roles work as one (the owner, 2026-11-04: "Remember them 4 should work in cohesiveness"): screenwriter,
   producer, director and actor work on one and the same own production, each stage read by the next: the script the
   life writes is what its production develops, the production is the film it directs, and the parts in that film are

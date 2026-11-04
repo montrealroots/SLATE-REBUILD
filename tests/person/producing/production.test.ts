@@ -385,7 +385,7 @@ describe('what a production comes out as', () => {
   });
 
   it('is what the release reads, and keeps', () => {
-    const l = withProject(life({ producer: 60 }), production({ market: 'GB', roles: ['producer'], plan: { budget: money('GBP', 200_000_000), needed: 32, scheduled: 32, fee: null, credit: null }, raised: { equity: money('GBP', 200_000_000) }, shot }));
+    const l = withProject(life({ producer: 60 }), production({ market: 'GB', roles: ['producer'], plan: { budget: money('GBP', 200_000_000), needed: 32, scheduled: 32, weeks: null, fee: null, credit: null }, raised: { equity: money('GBP', 200_000_000) }, shot }));
     expect(project(dispatch(l, releaseFilm, { project: 1 })).release?.quality).toBe((70 + 3 * HIRED) / 4);
   });
 });

@@ -43,7 +43,8 @@ import compiled from './markets.json' with { type: 'json' };
  * Cinema Films Agreement for UK features of £3 million and over; ACTRA's Independent Production Agreement, a principal
  * by the day or week and a part of five lines or fewer by the day; and a UK play's, under its theatre's agreement
  * (research/sources/person/work/nations-GB.json, person.markets.actor.GB.stage), a week of performance or rehearsal
- * at a time:
+ * at a time, for the weeks of rehearsal and of the run its producer's plan names (src/person/producing), which the
+ * part doesn't name; until 2026-11-04 the plan named one count of days and the part named its own weeks of each:
  *
  * - UK Theatre/Equity's commercial theatre weeks, by the venue's seats, rehearsal weeks at the rehearsal rate (R-4614).
  * - UK Theatre/Equity's Subsidised Theatre Agreement: a performer's minimum salary, one for MRSL grades 1 to 3 (its
@@ -60,6 +61,10 @@ import compiled from './markets.json' with { type: 'json' };
  *   fewer is left aside, a stage engagement being by the week.
  *
  * Until 2026-11-04 a UK play's part was paid at a commercial theatre alone, the other three's minimums unread.
+ *
+ * shortcut: a play beyond the UK engages its part in its agreement's own units (a month, a performance, a session), which
+ * the plan's weeks don't give without a count of performances a week or days a month that no source here holds, so its
+ * part names its own run and rehearsal; upgrade when that market's stage research reads them.
  *
  * The production engages its parts under the agreements of the country it is made in, in the medium its format is (a
  * film, a series on television, a play on stage), and its budget is the one the tiers read.
@@ -532,9 +537,10 @@ export interface CastArgs {
   project: number;
   agreement: string;
   term: string;
-  length: number;
+  /** Days or weeks engaged, and weeks of rehearsal: a UK play's are its plan's, which the part doesn't name. */
+  length?: number;
   lines: number;
-  rehearsal: number;
+  rehearsal?: number;
   /** The venue's seats, on stage: a market's play's (a UK play's are its theatre's, as its producer named them). */
   seats?: number;
   asks: string[];
@@ -570,6 +576,10 @@ function cast(s: Casting, a: CastArgs, c: Context): void {
   // @slate:consumer producing.develop
   if (p.stage !== null && agreement !== THEATRE_AGREEMENT[p.stage.theatre]) throw new Error(`a part in a UK play is engaged under its theatre's agreement, ${THEATRE_AGREEMENT[p.stage.theatre]}`);
   if (p.stage !== null && a.seats !== undefined) throw new Error("a UK play's seats are its theatre's");
+  // A UK play's part is engaged for the weeks its plan names: the rehearsal at the rehearsal rate, the run at the week's minimum.
+  // @slate:consumer producing.plan
+  if (p.stage !== null && (a.length !== undefined || a.rehearsal !== undefined)) throw new Error("a UK play's weeks of rehearsal and performance are its plan's");
+  const weeks = p.stage === null ? null : p.plan?.weeks;
   const part = partOf({
     agreement,
     // @slate:consumer producing.plan
@@ -580,8 +590,8 @@ function cast(s: Casting, a: CastArgs, c: Context): void {
     seats: p.stage?.seats ?? a.seats ?? 0,
     lines: a.lines,
     term: a.term as Term,
-    length: a.length,
-    rehearsal: a.rehearsal,
+    length: (weeks?.run ?? a.length) as number,
+    rehearsal: (weeks?.rehearsal ?? a.rehearsal) as number,
     asks: a.asks,
     ...(market ? { medium: MEDIUM_OF[p.format] } : {}),
     ...(a.role === undefined ? {} : { role: a.role }),

@@ -451,7 +451,7 @@ describe('playing a part', () => {
     expect(() => dispatch(l, playPart, { part: 2, account: 'everyday:9' })).toThrow('no account everyday:9 is held at a bank');
     expect(parts(after).filter((a) => a.work !== null).map((a) => a.id)).toEqual([2]);
     // A budget that can't cover the part's minimum refuses it; one that just can pays it.
-    const tight = (minor: number) => dispatch(withParts(made(50), [cast(part())], { plan: { budget: money('USD', minor), needed: 32, scheduled: 32, fee: null, credit: null }, raised: { equity: money('USD', minor) } }), playPart, { part: 1, account: ACCOUNT });
+    const tight = (minor: number) => dispatch(withParts(made(50), [cast(part())], { plan: { budget: money('USD', minor), needed: 32, scheduled: 32, weeks: null, fee: null, credit: null }, raised: { equity: money('USD', minor) } }), playPart, { part: 1, account: ACCOUNT });
     expect(() => tight(384_899)).toThrow("project 1's budget can't pay a part's pay");
     expect(castOf(tight(384_900).slices.acting, 1).work?.pay).toEqual(usd('3849'));
   });

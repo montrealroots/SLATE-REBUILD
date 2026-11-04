@@ -6,13 +6,13 @@ import { payCost, type Holding } from '../../money/accounts/accounts.ts';
 import { exchangeOn } from '../../money/rates/rates.ts';
 import { earn, type Earning, type Work } from '../../money/tax/tax.ts';
 import { countryName, regionName, regionsOf, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
-import { AGREEMENTS, COUNTRY, dateOf, MARKET as WORK, MARKETS as ACTED, type ActingSlice, type Medium } from '../acting/acting.ts';
+import { AGREEMENTS, COUNTRY, dateOf, MARKET as WORK, MARKETS as ACTED, WEEK_DAYS, type ActingSlice, type Medium } from '../acting/acting.ts';
 import { ATTRIBUTES, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
 import { EPISODES, FEATURE_SHOOT, pitchSkill as directorsPitch, type DirectingSlice, type Form as Directed } from '../directing/directing.ts';
 import { boxOfficeFactor, lovesOrRefuse, type GenresSlice } from '../genres/genres.ts';
 import { scriptOf, spread, type Form as Written, type ScriptsSlice } from '../work/work.ts';
 import { aboutMarket as writersUnknown, countryOf, KEPT, kindOf, languagesOf, marketOf as writerMarketOf, MARKETS as WRITTEN, minimumOf, pitchOf, playMinimum, quality, WRITES_IN, type CareerSlice, type PlayAgreement, type Screen } from '../work/career.ts';
-import { inTheBusiness, personOf, residenceOf, speaks, type IdentitySlice } from '../identity/identity.ts';
+import { homeRegionOf, inTheBusiness, personOf, residenceOf, speaks, type IdentitySlice } from '../identity/identity.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
 import { engagement, fundRefuses, holdBack, hoursShare, type YouthSlice } from '../youth/youth.ts';
 import compiled from './markets.json' with { type: 'json' };
@@ -47,7 +47,9 @@ import compiled from './markets.json' with { type: 'json' };
  *   script is developed instead: no option, the rights being the life's.
  * - Budgeting and scheduling (Production's detailed plan, Financing's production costs): the days the production needs
  *   (a feature around the CNC's 32 shooting days, the director's FEATURE_SHOOT; a series the DGA's shooting days for
- *   each episode; a play the run it schedules), and the days the plan schedules, nearer the need the better the plan;
+ *   each episode; a play its weeks of rehearsal and of the run, which the plan names apart, as the trade engages a
+ *   company by the week, each week the actor's engine's five days), and the days the plan schedules, nearer the need the
+ *   better the plan;
  *   for a film the producer's fee and overheads at the BFI's 7 to 8% of direct costs and the UK's tax credit, 53% (the
  *   IFTC, budgets to £15m) or 34% (the AVEC) of the 80% of core costs it counts.
  * - Financing (Development's pitch, Financing's sources and strategy, Dealmaking's network, words and terms): the BFI
@@ -98,15 +100,17 @@ import compiled from './markets.json' with { type: 'json' };
  *   published card doesn't define) and a West End writers' agreement, none found. The life acted only at a commercial
  *   theatre until 2026-11-04, when the subsidised theatres', the West End's and the ITC's actors' minimums were read.
  * - A UK series or play names its nation, England, Scotland, Wales or Northern Ireland, as the map holds them (the
- *   gazetteer's first-level regions of GB). The lead's brief had it default to the nation of the life's home where the
- *   map gives it; identity holds the life's home as a country alone (its first citizenship, money.tax.model), so the map
- *   gives none, and the nation is named. A West End theatre is in London, so its play is made in England. A play's fund
- *   is its nation's arts council's: Arts Council England's National Lottery Project Grants in England (a yes at their
- *   29.4%, 2024/25 across art forms, an award of what is left to raise, £1,000 to £100,000; where ACE takes an
- *   applicant from wasn't readable, so it is held for a play made in England and told); Creative Scotland's Open Fund
- *   for Individuals in Scotland, the life applying as itself (a yes at its 535 of 1,761, 2024/25, £500 to £50,000, to an
- *   artist living in Scotland); refused in Wales and Northern Ireland, whose arts councils publish the ranges of their
- *   project funds but not how often they say yes, told.
+ *   gazetteer's first-level regions of GB), or is made in the nation the life lives in where it names none: the region
+ *   it grew up in (identity's homeRegionOf; the owner, 2026-11-04, "Where it grew up (Recommended)"), where that is a
+ *   nation of the UK. A life that grew up elsewhere, or in no region named, names the nation. Until that ruling identity
+ *   held the life's home as a country alone, and every UK series and play named its nation. A West End theatre is in
+ *   London, so its play is made in England. A play's fund is its nation's arts council's: Arts Council England's
+ *   National Lottery Project Grants in England (a yes at their 29.4%, 2024/25 across art forms, an award of what is left
+ *   to raise, £1,000 to £100,000; where ACE takes an applicant from wasn't readable, so it is held for a play made in
+ *   England and told); Creative Scotland's Open Fund for Individuals in Scotland, the life applying as itself (a yes at
+ *   its 535 of 1,761, 2024/25, £500 to £50,000, to an artist living in Scotland, so to a life that grew up there);
+ *   refused in Wales and Northern Ireland, whose arts councils publish the ranges of their project funds but not how
+ *   often they say yes, told.
  *
  * The producer options material in the genres they love (the game's reading of the Genres page, person.genres.model).
  *
@@ -325,8 +329,10 @@ export const MODEL = {
 
 export interface Plan {
   budget: Money;
-  /** The days the production needs: a film's or a series' shooting days, a play's run. */
+  /** The days the production needs: a film's or a series' shooting days, a play's weeks of rehearsal and run. */
   needed: number;
+  /** A play's weeks of rehearsal and of the run, as its plan names them; none for a film or a series. */
+  weeks: { readonly rehearsal: number; readonly run: number } | null;
   /** The days the plan schedules. */
   scheduled: number;
   /** The producer's fee and overheads; none where the market caps neither, or for a series or a play (none is published for either). */
@@ -582,18 +588,22 @@ function playRoles(roles: readonly Role[], market: string, stage: Stage | null):
 }
 
 /**
- * A UK series' or play's nation as named, by the map's key: none for a film (the BFI's fund is the UK's whole, so
- * nothing reads one) or a production made beyond the UK. Identity holds the life's home as a country alone, so the map
- * gives no nation to default to, and a UK series or play names its own.
+ * A UK series' or play's nation, by the map's key: the one named, else the nation the life lives in, where it grew up
+ * in one (identity's homeRegionOf); none for a film (the BFI's fund is the UK's whole, so nothing reads one) or a
+ * production made beyond the UK. Until 2026-11-04 identity held the life's home as a country alone, and a UK series or
+ * play always named its own.
  */
-function nationOf(a: MakingArgs, format: Format, market: string): string | null {
+function nationOf(s: Starting, a: MakingArgs, format: Format, market: string): string | null {
   if (market !== HOME || format === 'film') {
     if (a.nation !== undefined) throw new Error(market !== HOME ? "a production's nation is named in the UK alone" : "a film's public fund, the BFI's, is the whole UK's, so a film names no nation");
     return null;
   }
   const nations = regionsOf(HOME).map((r) => r.key);
-  if (!nations.includes(a.nation as string)) throw new Error(`a ${format === 'stage' ? 'play' : format} made in the UK names its nation: ${nations.join(', ')} (${String(a.nation)})`);
-  return a.nation as string;
+  // @slate:consumer identity.make
+  const home = homeRegionOf(personOf(s.identity));
+  const nation = a.nation ?? (nations.includes(home) ? home : undefined);
+  if (!nations.includes(nation as string)) throw new Error(`a ${format === 'stage' ? 'play' : format} made in the UK names its nation: ${nations.join(', ')} (${String(nation)})`);
+  return nation as string;
 }
 
 /** A production as named: refused for a format or a role there isn't, no role or one twice, a series without its episodes, a play's roles the research doesn't cover. */
@@ -619,7 +629,7 @@ function making(s: Starting, a: MakingArgs): Making {
   if (format === 'stage' && market === HOME) stage = stageOf(a);
   else if ([a.theatre, a.grade, a.seats, a.touring].some((x) => x !== undefined)) throw new Error(format === 'stage' ? "a play's theatre is named in the UK alone, the one market whose theatres the game knows" : `a ${format} has no theatre`);
   if (format === 'stage') playRoles(roles, market, stage);
-  const nation = nationOf(a, format, market);
+  const nation = nationOf(s, a, format, market);
   if (stage?.theatre === 'west-end' && nation !== ENGLAND) throw new Error('a West End theatre is in London, so a play there is made in England');
   return { format, series, minutes: a.minutes ?? null, stage, nation, roles: [...roles], market };
 }
@@ -752,8 +762,9 @@ export interface PlanArgs {
   project: number;
   /** In the market's currency. */
   budget: string;
-  /** A play's: the days of rehearsal and performance it runs. */
-  days?: number;
+  /** A play's: its weeks of rehearsal, and of performance (the run). */
+  rehearsal?: number;
+  run?: number;
 }
 
 /** The UK's credit on a budget: the IFTC's 53% to £15m (its £6.36m most is 53% of 80% of £15m), the AVEC's 34% above. */
@@ -826,14 +837,26 @@ function homeCredit(p: Project, budget: Money, date: string): Money | null {
 /** How near the need a producer schedules, 0 to 100: the detailed plan and the production's costs. */
 export const planSkill = (v: Values): number => 0.5 * of(v, C.plan) + 0.5 * of(v, C.costs);
 
-/** The trade's days for a production, before its own need: a feature's 32 shooting days, a series' episodes' guaranteed shooting days, a play's run as given. */
-export function tradeDays(p: Pick<Project, 'format' | 'series'>, days: number | undefined): number {
+/**
+ * A play's weeks as its plan names them, rehearsal and the run apart, as the trade engages a company: the actor's
+ * rehearsal weeks at the rehearsal rate and the run's at the performance minimum, the director's rehearsal payment and
+ * UK Theatre's weeks over four over the rehearsal alone. None for a film or a series, whose days are the trade's.
+ * Until 2026-11-04 a play's plan named one count of days, rehearsal and performance together.
+ */
+export function weeksOf(p: Pick<Project, 'format'>, a: Pick<PlanArgs, 'rehearsal' | 'run'>): Plan['weeks'] {
   if (p.format !== 'stage') {
-    if (days !== undefined) throw new Error(`a ${p.format}'s days are the trade's`);
-    return p.series === null ? FEATURE_SHOOT : EPISODES[p.series.form].shoot * p.series.episodes;
+    if (a.rehearsal !== undefined || a.run !== undefined) throw new Error(`a ${p.format}'s days are the trade's`);
+    return null;
   }
-  whole(days, "a play's days", 1);
-  return days as number;
+  whole(a.rehearsal, "a play's weeks of rehearsal", 1);
+  whole(a.run, "a play's weeks of performance", 1);
+  return { rehearsal: a.rehearsal as number, run: a.run as number };
+}
+
+/** The trade's days for a production, before its own need: a feature's 32 shooting days, a series' episodes' guaranteed shooting days, a play's weeks of rehearsal and run, five days each. */
+export function tradeDays(p: Pick<Project, 'series'>, weeks: Plan['weeks']): number {
+  if (weeks !== null) return (weeks.rehearsal + weeks.run) * WEEK_DAYS;
+  return p.series === null ? FEATURE_SHOOT : EPISODES[p.series.form].shoot * p.series.episodes;
 }
 
 /** Budgets and schedules a project: the days it needs, the days the plan gives it, a film's fee, and the credit. */
@@ -845,15 +868,16 @@ function plan(s: Producing, a: PlanArgs, c: Context): void {
   const currency = currencyOf(p.market);
   const budget = fromMajor(currency, a.budget);
   if (budget.minor < 10 ** minorUnits(currency)) throw new RangeError(`a budget is at least 1 ${currency} (${a.budget})`);
-  const base = tradeDays(p, a.days);
+  const weeks = weeksOf(p, a);
+  const base = tradeDays(p, weeks);
   const d = c.draws('producing.work', 'plan', p.id);
-  const needed = p.format === 'stage' ? base : Math.round(base * (1 + MODEL.need * (2 * d.float() - 1)));
+  const needed = weeks !== null ? base : Math.round(base * (1 + MODEL.need * (2 * d.float() - 1)));
   const scheduled = Math.max(1, Math.round(needed * (1 + MODEL.planned * (1 - planSkill(v) / 100) * (2 * d.float() - 1))));
   const m = MARKETS[p.market] as Market;
   const home = p.market === HOME;
   const film = p.format === 'film';
   const fee = !film ? null : home ? amount(currency, (budget.minor * FEE_SHARE) / (1 + FEE_SHARE)) : feeIn(m, budget);
-  p.plan = { budget, needed, scheduled, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget) : null };
+  p.plan = { budget, needed, scheduled, weeks, fee, credit: home ? homeCredit(p, budget, dateOf(c.now)) : film ? creditIn(m, budget) : null };
   learn(s, p, [C.plan, C.costs], 1);
 }
 
@@ -924,15 +948,16 @@ export function grantFor(p: Project, fund: { readonly rate: number; readonly lea
 
 /**
  * A UK play's fund, by its nation: Arts Council England's project grants in England; Creative Scotland's Open Fund for
- * Individuals in Scotland, to an artist living there; refused in Wales and Northern Ireland, told. shortcut: identity
- * holds the life's home as a country alone, so a life at home in the UK is read as living in the nation its play is
- * made in; upgrade when a home within a country is held.
+ * Individuals in Scotland, to an artist living there, the life living in the region it grew up in (identity's
+ * homeRegionOf; the owner, 2026-11-04: "Where it grew up"); refused in Wales and Northern Ireland, told. Until that
+ * ruling identity held the life's home as a country alone, and a life at home in the UK (its first citizenship) was
+ * read as living in the nation its play was made in, so any British life could apply to the Open Fund and no other.
  */
-function playFund(p: Project, home: CountryCode): { rate: number; award: number; source: string } {
+function playFund(p: Project, home: string): { rate: number; award: number; source: string } {
   const nation = p.nation as string;
   if (nation === ENGLAND) return { ...grantFor(p, ACE, "Arts Council England's project grants"), source: 'ace' };
   if (nation === SCOTLAND) {
-    if (home !== HOME) throw new Error("Creative Scotland's Open Fund for Individuals takes artists living in Scotland");
+    if (home !== SCOTLAND) throw new Error("Creative Scotland's Open Fund for Individuals takes artists living in Scotland");
     return { ...grantFor(p, OPEN_FUND, "Creative Scotland's Open Fund for Individuals' grants"), source: 'creative-scotland' };
   }
   throw new Error(`${ARTS_COUNCIL[nation] as string} publishes what its project funds give but not how often it says yes, so its fund isn't modeled in this game`);
@@ -943,7 +968,7 @@ function playFund(p: Project, home: CountryCode): { rate: number; award: number;
  * any nation (refused, told what is known: no fund across the UK or in England backs one, and each other nation's
  * screen agency funds its own nation's series without publishing how often it says yes).
  */
-function homeFund(p: Project, home: CountryCode): { rate: number; award: number; source: string } {
+function homeFund(p: Project, home: string): { rate: number; award: number; source: string } {
   if (p.format === 'series') {
     const agency = SCREEN_AGENCY[p.nation as string];
     if (agency === undefined) throw new Error("no public fund across the UK or in England backs a drama series: the BFI's Global Screen Fund takes television only as an international co-production in animation or documentary");
@@ -968,7 +993,7 @@ function apply(s: Applying, a: ProjectArgs, c: Context): void {
   // @slate:consumer producing.option
   // @slate:consumer producing.develop
   // @slate:consumer identity.make
-  const { rate, award, source } = home ? homeFund(p, residenceOf(personOf(s.identity))) : { ...fundFor(p), source: 'fund' };
+  const { rate, award, source } = home ? homeFund(p, homeRegionOf(personOf(s.identity))) : { ...fundFor(p), source: 'fund' };
   p.applied = true;
   // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
   if (c.draws('producing.work', 'apply', p.id).float() < rate * factor(s.producing, packagePitch(s, v, p), p, c.now, s.directing)) p.raised[source] = amount(planOf(p).budget.currency, award);

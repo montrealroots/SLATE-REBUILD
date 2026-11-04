@@ -26,7 +26,7 @@ export function production(over: Partial<Project> = {}, budget = 500_000_000): P
     expires: null,
     options: [],
     material: 50,
-    plan: { budget: b, needed: 32, scheduled: 32, fee: null, credit: null },
+    plan: { budget: b, needed: 32, scheduled: 32, weeks: null, fee: null, credit: null },
     applied: false,
     raised: { equity: b },
     shot: null,

@@ -131,6 +131,13 @@ export const inTheBusiness = (p: Person): Family | null => (p.family === 'outsid
 /** Where the person lives, for tax: until a residence is held, the country of their first citizenship (money.tax.model). */
 export const residenceOf = (p: Person): CountryCode => p.citizenship[0] as CountryCode;
 
+/**
+ * Where in its country the person lives: the region it grew up in, by the map's key ("GB.SCT"), empty where creation
+ * named none (the owner, 2026-11-04, asked how the game knows where in a country the life lives: "Where it grew up
+ * (Recommended)"; a later layer may let it move).
+ */
+export const homeRegionOf = (p: Person): string => p.grewUp.region;
+
 /** The languages a place speaks, most spoken first (CLDR 49); none where CLDR doesn't list it. */
 export const languagesOf = (country: CountryCode) => TERRITORIES[country] ?? [];
 
