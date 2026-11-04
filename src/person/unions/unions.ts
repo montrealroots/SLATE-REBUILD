@@ -26,8 +26,9 @@ import type { LineId } from '../../core/text/text.ts';
  *
  * - SAG-AFTRA: one day as a principal on a SAG-AFTRA film above the Ultra Low Budget tier (Ultra Low Budget, Student
  *   and Short Films don't count), or a paid-up year in ACTRA and a part played under ACTRA; $3,121, $246.14 a year.
- * - Equity (UK): £750 earned from the work, or a part on an Equity contract (Pact/Equity, UK Theatre/Equity); no joining
- *   fee named; the 2026 subscription by the average of the three tax years before, half for the subsidised ages.
+ * - Equity (UK): £750 earned from the work, or a part on an Equity contract (Pact/Equity, UK Theatre/Equity's commercial
+ *   and subsidised agreements, SOLT/Equity's, ITC/Equity's: the last three from 2026-11-04, when a UK play's part came
+ *   under them); no joining fee named; the 2026 subscription by the average of the three tax years before, half for the subsidised ages.
  * - ACTRA: a Canadian citizen's three parts on ACTRA permits for Full membership ($1,600, $195 a year), one for an
  *   Apprentice's ($75).
  * - Canadian Actors' Equity: three years' paid professional experience (the game's reading: a part first played three
@@ -99,7 +100,7 @@ export const UNITS: Readonly<Record<Exclude<Form, 'short' | 'play'>, number>> = 
 /** The DGA, July 2026 to June 2027: a director's initiation fee, feature or television and low-budget feature, its ceiling, and $50 a quarter. */
 export const DGA = { initiation: usd('15703'), low: usd('5000'), ceiling: 11_000_000, dues: usd('200') } as const;
 /** Equity (UK): the earnings that open it (pence), its contracts, the subsidised ages and its income ceiling (pence). */
-export const EQUITY_UK = { earned: 75_000, contracts: ['pact-equity', 'uk-theatre'] as readonly Agreement[], young: [10, 17], old: 66, ceiling: 4_000_000 } as const;
+export const EQUITY_UK = { earned: 75_000, contracts: ['pact-equity', 'uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity'] as readonly Agreement[], young: [10, 17], old: 66, ceiling: 4_000_000 } as const;
 /** Equity (UK)'s 2026 full subscription by gross annual income, each band up to its ceiling in pence. */
 export const EQUITY_BANDS: readonly (readonly [upTo: number, fee: Money])[] = [
   // Stryker disable next-line StringLiteral: as above.

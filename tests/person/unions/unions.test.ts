@@ -100,7 +100,7 @@ describe("the unions' figures", () => {
     expect(WGA).toEqual({ initiation: usd('2500'), units: 24, associate: usd('100'), dues: usd('100'), years: 3 });
     expect(UNITS).toEqual({ feature: 24, pilot: 8, episode: 8 });
     expect(DGA).toEqual({ initiation: usd('15703'), low: usd('5000'), ceiling: 11_000_000, dues: usd('200') });
-    expect(EQUITY_UK).toEqual({ earned: 75_000, contracts: ['pact-equity', 'uk-theatre'], young: [10, 17], old: 66, ceiling: 4_000_000 });
+    expect(EQUITY_UK).toEqual({ earned: 75_000, contracts: ['pact-equity', 'uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity'], young: [10, 17], old: 66, ceiling: 4_000_000 });
     expect(EQUITY_BANDS).toEqual([
       [4_000_000, gbp('198')],
       [8_000_000, gbp('396')],
@@ -175,7 +175,7 @@ describe('Equity (UK)', () => {
   it('takes a part on an Equity contract, with no joining fee', () => {
     expect(() => join({}, 'equity-uk')).toThrow(refused);
     expect(() => join({ parts: [unplayed('pact-equity')] }, 'equity-uk')).toThrow(refused);
-    for (const a of ['pact-equity', 'uk-theatre'] as const) {
+    for (const a of ['pact-equity', 'uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity'] as const) {
       expect(join({ parts: [played(a, 0, 5_000_000, null)] }, 'equity-uk')).toEqual([{ union: 'equity-uk', at: NOW, standing: 'full', name: 'Ada Reyes', initiation: null, dues: gbp('198') }]);
     }
   });

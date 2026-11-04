@@ -278,8 +278,10 @@ type Plays = { readonly 'uk-theatre-wggb': Readonly<Record<1 | 2 | 3, Steps>>; r
  *   grade, from 4 May 2026 (the earlier years' weren't read, so a play staged before is refused).
  * - The ITC's with the WGGB, for a play by an ITC member's company, by its running time (over 70 minutes, 31 to 70, 11 to
  *   30, 10 or less), each year's from its start: 2025/26 from 1 June 2025, as its rate card says; 2026/27 and 2027/28
- *   from 1 April, the day the agreement's financial terms are revised each year (the game's reading of its "relevant
- *   year", person.producing.model).
+ *   from 1 April, on the ITC's own word that its rates' "dates represent the financial year" (research/sources/person/
+ *   work/nations-GB.json), the day the agreement's financial terms are revised each year. 1 April was the game's
+ *   reading of the agreement's "relevant year" until that page was read on 2026-11-04. The 2026/27 year's "agreed
+ *   transition period" is told to ITC members only, so it isn't held.
  *
  * Their royalties (at least 8% of the net box office, the advances recouped against it) aren't modelled: the game keeps
  * no box office.

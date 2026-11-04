@@ -92,7 +92,7 @@ describe('a part', () => {
   it('asks the craft every role uses, its medium, its lines, and what else it calls for', () => {
     expect(CRAFT).toEqual(['acting-techniques', 'understanding-character-and-situation', 'text-analysis', 'own-interpretation', 'research-roles', 'study-roles-from-scripts', 'ability-to-take-direction', 'konzentrationsf-higkeit']);
     expect(MEDIUM).toEqual({ screen: ['acting-for-the-camera'], stage: ['appropriation-d-espace-sc-nique', 'speaking'] });
-    expect(STAGE).toEqual(['uk-theatre']);
+    expect(STAGE).toEqual(['uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity']);
     expect(demands(part())).toEqual([...CRAFT, 'memorise-lines', 'acting-for-the-camera']);
     expect(demands(part({ lines: 0 }))).toEqual([...CRAFT, 'acting-for-the-camera']);
     expect(demands(part({ lines: 1 }))).toContain('memorise-lines');

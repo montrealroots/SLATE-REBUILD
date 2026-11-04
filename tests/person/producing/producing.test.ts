@@ -128,7 +128,7 @@ describe('optioning material', () => {
     for (const days of [1, 5, 30]) {
       const l = optioned(60, { development: 70 }, days);
       const e = eye(v(made(60, { development: 70 })));
-      expect(project(l), String(days)).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, roles: ['producer'], script: null, writing: null, genre: GENRE, market: 'GB', expires: addMonths(ZONE, T0, 18), options: [OPTION_FEE], material: picked(e, days, 1), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
+      expect(project(l), String(days)).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, nation: null, roles: ['producer'], script: null, writing: null, genre: GENRE, market: 'GB', expires: addMonths(ZONE, T0, 18), options: [OPTION_FEE], material: picked(e, days, 1), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
       expect(held(l)['development']).toBeCloseTo(grown(70, days), 10);
       expect(held(l)['financing']).toBe(60);
     }

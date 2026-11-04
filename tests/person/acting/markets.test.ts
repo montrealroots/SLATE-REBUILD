@@ -600,7 +600,7 @@ const line = (m: Minimum) => {
 describe('the markets', () => {
   it("are each country's own, every minimum as the research gives it", () => {
     expect(MARKET_AGREEMENTS).toEqual(Object.keys(compiled.agreements));
-    expect(AGREEMENTS).toEqual(['sag-aftra', 'pact-equity', 'uk-theatre', 'actra', ...MARKET_AGREEMENTS]);
+    expect(AGREEMENTS).toEqual(['sag-aftra', 'pact-equity', 'uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity', 'actra', ...MARKET_AGREEMENTS]);
     expect(Object.fromEntries(Object.entries(MARKETS).map(([cc, m]) => [cc, [m.language, m.zone, m.agreements.join(' ')]]))).toEqual({
       AU: ['en', 'Australia/Sydney', 'au-screen au-stage'],
       BR: ['pt', 'America/Sao_Paulo', 'br-rj-tv br-sp-screen br-rj-stage'],

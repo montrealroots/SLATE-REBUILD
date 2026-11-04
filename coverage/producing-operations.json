@@ -22,6 +22,7 @@
    "series-credit",
    "series-fund",
    "series-release",
+   "nation",
    "stage-theatre",
    "stage-credit",
    "stage-fund",
@@ -284,10 +285,11 @@
    "key": "series-fund",
    "status": "researched",
    "register": [
-    "R-9775"
+    "R-9775",
+    "R-9782"
    ],
    "tests": [
-    "tests/person/producing/stage.test.ts::a UK series > is refused a fund: no public fund across the UK backs a drama series, and elsewhere the research doesn't say"
+    "tests/person/producing/stage.test.ts::a UK series > is refused a fund in every nation, told what is known: none across the UK or in England, each other nation's screen agency's without a rate of yes; elsewhere the research doesn't say"
    ]
   },
   {
@@ -306,17 +308,30 @@
    ]
   },
   {
+   "key": "nation",
+   "status": "game",
+   "register": [
+    "R-4617"
+   ],
+   "tests": [
+    "tests/person/producing/stage.test.ts::a UK production's nation > is named for a UK series or play as the map keys it, none for a film or beyond the UK",
+    "tests/person/producing/stage.test.ts::a UK production's nation > is refused unnamed or unknown, on a film, beyond the UK, and anywhere but England for a West End play"
+   ]
+  },
+  {
    "key": "stage-theatre",
    "status": "game",
    "register": [
     "R-4617",
     "R-9778",
-    "R-9779"
+    "R-9779",
+    "R-9785",
+    "R-9786"
    ],
    "tests": [
     "tests/person/producing/stage.test.ts::a UK play's theatre > names its theatre, a subsidised theatre by its grade or another by its seats, and whether it tours, in the UK alone",
     "tests/person/producing/stage.test.ts::a UK play's theatre > is refused a theatre there is not, a grade or seats out of turn, a touring left unsaid, or a theatre outside the UK or off the stage",
-    "tests/person/producing/stage.test.ts::a UK play's theatre > lets the life direct a subsidised or a West End play and act in a commercial one, and refuses the rest, told"
+    "tests/person/producing/stage.test.ts::a UK play's theatre > lets the life act in a play at any UK theatre and direct one at a subsidised theatre, in the West End or for an ITC company, and refuses a commercial theatre's director, told"
    ]
   },
   {
@@ -335,11 +350,15 @@
    "status": "game",
    "register": [
     "R-4617",
-    "R-9777"
+    "R-9777",
+    "R-9788"
    ],
    "tests": [
     "tests/person/producing/stage.test.ts::a UK play > applies to Arts Council England once: a yes at 29.4% as the package sells it, an award of what's left to raise, £1,000 to £100,000",
-    "tests/person/producing/stage.test.ts::a UK play > producing.plan: a bigger play asks Arts Council England for more"
+    "tests/person/producing/stage.test.ts::a UK play > producing.plan: a bigger play asks Arts Council England for more",
+    "tests/person/producing/stage.test.ts::a UK play > applies in Scotland to Creative Scotland's Open Fund for Individuals, as an artist living there: a yes at 535 of 1,761, £500 to £50,000",
+    "tests/person/producing/stage.test.ts::a UK play > producing.option: a play's nation sets the fund it applies to",
+    "tests/person/producing/stage.test.ts::a UK play > producing.apply: Creative Scotland's Open Fund reads where the life lives"
    ]
   },
   {
@@ -360,10 +379,11 @@
    "key": "play-writing",
    "status": "researched",
    "register": [
-    "R-9779"
+    "R-9779",
+    "R-9787"
    ],
    "tests": [
-    "tests/person/producing/stage.test.ts::the life's own play > is written for a UK subsidised or commercial theatre, paid under UK Theatre's or the ITC's, and refused for the West End and elsewhere",
+    "tests/person/producing/stage.test.ts::the life's own play > is written for a UK subsidised or commercial theatre or an ITC company, paid under UK Theatre's or the ITC's, and refused for the West End and elsewhere",
     "tests/person/producing/stage.test.ts::the life's own play > is paid its agreement's minimum when it's staged: UK Theatre's by the theatre's grade, the ITC's by its running time",
     "tests/person/producing/stage.test.ts::the life's own play > producing.develop: a play for a better-graded theatre pays its script more"
    ]
@@ -374,12 +394,16 @@
    "register": [
     "R-9780",
     "R-9781",
-    "R-9782",
     "R-9783",
-    "R-9784"
+    "R-9784",
+    "R-9789",
+    "R-9790",
+    "R-9791",
+    "R-9792"
    ],
    "tests": [
-    "tests/person/producing/stage.test.ts::a UK series > tells what the UK's research couldn't find of a series and a play"
+    "tests/person/producing/stage.test.ts::a UK series > tells what the UK's research couldn't find of a series and a play, in each nation",
+    "tests/person/producing/stage.test.ts::a UK play > is refused a fund in Wales and Northern Ireland, whose arts councils publish no rate of yes"
    ]
   },
   {

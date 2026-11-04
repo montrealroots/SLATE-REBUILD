@@ -7,7 +7,7 @@ import { componentOf, componentValues, practise, skillOf, type AttributesSlice }
 import { ETHNICITIES, identifiesAs, personOf, playingAge, speaks, type Ethnicity, type IdentitySlice, type Level, type Person } from '../identity/identity.ts';
 import { permitted, type PermitsSlice } from '../permits/permits.ts';
 import type { DirectingSlice } from '../directing/directing.ts';
-import { budgetMajor, financedOf, holds as plays, MEDIUM as MEDIUM_OF, payOut, projectOf, type Paying, type ProducingSlice } from '../producing/producing.ts';
+import { budgetMajor, financedOf, holds as plays, MEDIUM as MEDIUM_OF, payOut, projectOf, type Paying, type ProducingSlice, type Theatre } from '../producing/producing.ts';
 import { mayTakeUnionWork, type UnionsSlice } from '../unions/unions.ts';
 import { spread } from '../work/work.ts';
 import { engagement, hoursShare } from '../youth/youth.ts';
@@ -40,13 +40,29 @@ import compiled from './markets.json' with { type: 'json' };
  *
  * The pay is the agreement's minimum (R-4614): SAG-AFTRA's day and weekly performers, its low-budget tiers by the
  * production's budget (none set under $20,000, the Micro-Budget agreement leaving it to negotiation); Pact/Equity's
- * Cinema Films Agreement for UK features of £3 million and over; UK Theatre/Equity's commercial theatre weeks by the
- * venue's seats, rehearsal weeks at the rehearsal rate (a UK play at a commercial theatre outside the West End, the
- * theatre's seats; its agreement covers neither a subsidised theatre nor the West End, whose actors' minimums aren't
- * known, so the producer refuses the life's part in a play there); ACTRA's Independent Production Agreement, a principal by the
- * day or week and a part of five lines or fewer by the day. The production engages its parts under the agreements of
- * the country it is made in, in the medium its format is (a film, a series on television, a play on stage), and its
- * budget is the one the tiers read.
+ * Cinema Films Agreement for UK features of £3 million and over; ACTRA's Independent Production Agreement, a principal
+ * by the day or week and a part of five lines or fewer by the day; and a UK play's, under its theatre's agreement
+ * (research/sources/person/work/nations-GB.json, person.markets.actor.GB.stage), a week of performance or rehearsal
+ * at a time:
+ *
+ * - UK Theatre/Equity's commercial theatre weeks, by the venue's seats, rehearsal weeks at the rehearsal rate (R-4614).
+ * - UK Theatre/Equity's Subsidised Theatre Agreement: a performer's minimum salary, one for MRSL grades 1 to 3 (its
+ *   card's grade rows are another line, which the agreement, members-only, defines), each year's from its first day,
+ *   rehearsal weeks at the same minimum, the card printing no performer's rehearsal rate apart. Its last agreed year
+ *   ended on 5 April 2026, and Equity's notice of 9 October 2026 says the agreement is still in negotiation, so that
+ *   year's £547.29 is kept past its term, as every agreement's last step is (rateAt).
+ * - SOLT/Equity's West End agreement of 2026 to 2029: the eight-show minimum by the theatre's category of seats (C up
+ *   to 799, B 800 to 1,099, A 1,100 and over), for 6 April 2026 to 4 April 2027 and 5 April 2027 to 2 April 2028;
+ *   rehearsal weeks at the same minimum, the card's ceiling salary during rehearsals being those figures. A play here
+ *   plays eight shows a week, the card's twelve-show rate left aside; its third year is set by a CPI not yet published.
+ * - The ITC/Equity agreement for an ITC member's company: the minimum weekly salary, 2025/26 and 2026/27 from 1 April
+ *   (the ITC: "dates represent the financial year"), rehearsal weeks at the same; its daily rate for three days or
+ *   fewer is left aside, a stage engagement being by the week.
+ *
+ * Until 2026-11-04 a UK play's part was paid at a commercial theatre alone, the other three's minimums unread.
+ *
+ * The production engages its parts under the agreements of the country it is made in, in the medium its format is (a
+ * film, a series on television, a play on stage), and its budget is the one the tiers read.
  *
  * Beyond them, every market the research gives terms for (src/person/acting/markets.json, compiled by
  * tools/person/markets from the research, register facts person.markets.<CC>): each agreement a part can be engaged
@@ -78,8 +94,8 @@ export const MARKET_AGREEMENTS = [
   'pm-fr-private-stage', 're-fr-film', 're-fr-tv', 're-fr-subsidised-stage', 're-fr-private-stage', 'yt-fr-film', 'yt-fr-tv', 'yt-fr-subsidised-stage', 'yt-fr-private-stage',
 ] as const;
 /** The agreement a part is engaged under. */
-export type Agreement = 'sag-aftra' | 'pact-equity' | 'uk-theatre' | 'actra' | (typeof MARKET_AGREEMENTS)[number];
-export const AGREEMENTS: readonly Agreement[] = ['sag-aftra', 'pact-equity', 'uk-theatre', 'actra', ...MARKET_AGREEMENTS];
+export type Agreement = 'sag-aftra' | 'pact-equity' | 'uk-theatre' | 'uk-theatre-subsidised' | 'solt-equity' | 'itc-equity' | 'actra' | (typeof MARKET_AGREEMENTS)[number];
+export const AGREEMENTS: readonly Agreement[] = ['sag-aftra', 'pact-equity', 'uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity', 'actra', ...MARKET_AGREEMENTS];
 export const TERMS = ['day', 'week', 'month', 'year', 'session', 'performance', 'episode'] as const;
 export type Term = (typeof TERMS)[number];
 export const MEDIA = ['film', 'television', 'stage'] as const;
@@ -91,7 +107,7 @@ export interface Part {
   agreement: Agreement;
   /** The production's budget, in the agreement's currency's major units (SAG-AFTRA's tiers, Pact/Equity's threshold turn on it): the production's own. */
   budget: number;
-  /** The theatre's seats (UK Theatre's tiers turn on it). */
+  /** The theatre's seats (UK Theatre's commercial tiers and SOLT's categories turn on it). */
   seats: number;
   /** The lines the part speaks. */
   lines: number;
@@ -158,9 +174,12 @@ export const CRAFT = ['acting-techniques', 'understanding-character-and-situatio
 /** What the medium asks besides: the camera on screen; on stage the space and the voice that fills it. */
 export const MEDIUM = { screen: ['acting-for-the-camera'], stage: ['appropriation-d-espace-sc-nique', 'speaking'] } as const;
 
-export const STAGE: readonly Agreement[] = ['uk-theatre'];
+export const STAGE: readonly Agreement[] = ['uk-theatre', 'uk-theatre-subsidised', 'solt-equity', 'itc-equity'];
 
-/** Whether a part is played on stage: UK Theatre's, or a market's part whose medium is the stage. */
+/** The agreement a UK play's part is engaged under, by its theatre. */
+export const THEATRE_AGREEMENT: Readonly<Record<Theatre, Agreement>> = { subsidised: 'uk-theatre-subsidised', commercial: 'uk-theatre', 'west-end': 'solt-equity', itc: 'itc-equity' };
+
+/** Whether a part is played on stage: a UK theatre's agreement's, or a market's part whose medium is the stage. */
 export const onStage = (part: Part): boolean => STAGE.includes(part.agreement) || (marketOf(part.agreement) !== undefined && mediumOf(part) === 'stage');
 
 /** Every component a part asks for. */
@@ -314,6 +333,21 @@ export const UK_THEATRE: readonly (Scale & { readonly seats: number })[] = [
   { seats: 1500, currency: 'GBP', rehearsal: [['2025-03-31', '551.57']], week: [['2025-03-31', '590.33']] },
 ];
 
+/** UK Theatre/Equity's Subsidised Theatre Agreement, a performer at MRSL grades 1 to 3, from 3 April 2023; rehearsal at the same. */
+const SUBSIDISED_YEARS = steps(['2023-04-03', '2024-04-01', '2025-03-31'], ['482.00', '526.24', '547.29']);
+export const UK_SUBSIDISED = { currency: 'GBP', week: SUBSIDISED_YEARS, rehearsal: SUBSIDISED_YEARS } as const satisfies Scale;
+
+/** SOLT/Equity's eight-show minimum in the West End by the theatre's category of seats, C, B and A, from 6 April 2026; rehearsal at the same. */
+const westEnd = (seats: number, amounts: readonly string[]): Scale & { readonly seats: number } => {
+  const table = steps(['2026-04-06', '2027-04-05'], amounts);
+  return { seats, currency: 'GBP', week: table, rehearsal: table };
+};
+export const SOLT: readonly (Scale & { readonly seats: number })[] = [westEnd(0, ['790.30', '829.82']), westEnd(800, ['878.32', '922.24']), westEnd(1100, ['965.55', '1013.83'])];
+
+/** The ITC/Equity minimum weekly salary, 2025/26 and 2026/27 from 1 April; rehearsal at the same. */
+const ITC_YEARS = steps(['2025-04-01', '2026-04-01'], ['601.00', '631.00']);
+export const ITC = { currency: 'GBP', week: ITC_YEARS, rehearsal: ITC_YEARS } as const satisfies Scale;
+
 /** ACTRA's Independent Production Agreement, January 2025 to December 2027 (R-4614). */
 export const ACTRA = {
   principal: { currency: 'CAD', day: steps(ACTRA_YEARS, ['935.25', '972.75', '1006.75']), week: steps(ACTRA_YEARS, ['3974.50', '4133.50', '4278.25']) },
@@ -338,6 +372,12 @@ export function scaleOf(part: Part, years = 0): Scale | null {
       return PACT;
     case 'uk-theatre':
       return UK_THEATRE.findLast((t) => part.seats >= t.seats) as Scale;
+    case 'uk-theatre-subsidised':
+      return UK_SUBSIDISED;
+    case 'solt-equity':
+      return SOLT.findLast((t) => part.seats >= t.seats) as Scale;
+    case 'itc-equity':
+      return ITC;
     default:
       return part.lines <= ACTRA_FEW_LINES ? ACTRA.few : ACTRA.principal;
   }
@@ -451,6 +491,9 @@ export const MARKET: Readonly<Record<Agreement, { readonly language: string; rea
   'sag-aftra': { language: 'en', zone: 'America/Los_Angeles' },
   'pact-equity': { language: 'en', zone: 'Europe/London' },
   'uk-theatre': { language: 'en', zone: 'Europe/London' },
+  'uk-theatre-subsidised': { language: 'en', zone: 'Europe/London' },
+  'solt-equity': { language: 'en', zone: 'Europe/London' },
+  'itc-equity': { language: 'en', zone: 'Europe/London' },
   actra: { language: 'en', zone: 'America/Toronto' },
   ...(Object.fromEntries(Object.values(MARKETS).flatMap((m) => m.agreements.map((id) => [id, { language: m.language, zone: m.zone }]))) as Record<(typeof MARKET_AGREEMENTS)[number], { language: string; zone: string }>),
 };
@@ -522,7 +565,10 @@ function cast(s: Casting, a: CastArgs, c: Context): void {
   if (COUNTRY[agreement] !== p.market) throw new Error(`a part in a production made in ${p.market} isn't engaged under ${agreement}`);
   const market = marketOf(agreement) !== undefined;
   if (!market && STAGE.includes(agreement) !== (p.format === 'stage')) throw new Error(`a ${p.format} isn't engaged under ${agreement}`);
-  // A UK play's seats are its theatre's, as the producer named it (a commercial theatre's: the producer refuses the life's part anywhere else).
+  // A UK play's part is engaged under its theatre's agreement, and its seats are its theatre's, as the producer named it.
+  // @slate:consumer producing.option
+  // @slate:consumer producing.develop
+  if (p.stage !== null && agreement !== THEATRE_AGREEMENT[p.stage.theatre]) throw new Error(`a part in a UK play is engaged under its theatre's agreement, ${THEATRE_AGREEMENT[p.stage.theatre]}`);
   if (p.stage !== null && a.seats !== undefined) throw new Error("a UK play's seats are its theatre's");
   const part = partOf({
     agreement,
@@ -563,11 +609,14 @@ export interface PlayArgs {
   account: string;
 }
 
-/** The country each agreement's work is in: SAG-AFTRA's the US, Pact/Equity's and UK Theatre's the UK, ACTRA's Canada, a market's its own. */
+/** The country each agreement's work is in: SAG-AFTRA's the US, Pact/Equity's and the UK theatres' the UK, ACTRA's Canada, a market's its own. */
 export const COUNTRY: Readonly<Record<Agreement, CountryCode>> = {
   'sag-aftra': 'US',
   'pact-equity': 'GB',
   'uk-theatre': 'GB',
+  'uk-theatre-subsidised': 'GB',
+  'solt-equity': 'GB',
+  'itc-equity': 'GB',
   actra: 'CA',
   ...(Object.fromEntries(MARKET_AGREEMENTS.map((id) => [id, (COMPILED[id] as MarketAgreement).country])) as Record<(typeof MARKET_AGREEMENTS)[number], CountryCode>),
 };

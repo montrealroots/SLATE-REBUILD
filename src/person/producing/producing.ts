@@ -5,7 +5,7 @@ import { t, type LineId } from '../../core/text/text.ts';
 import { payCost, type Holding } from '../../money/accounts/accounts.ts';
 import { exchangeOn } from '../../money/rates/rates.ts';
 import { earn, type Earning, type Work } from '../../money/tax/tax.ts';
-import { countryName, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
+import { countryName, regionName, regionsOf, type CountryCode } from '../../world/gazetteer/gazetteer.ts';
 import { AGREEMENTS, COUNTRY, dateOf, MARKET as WORK, MARKETS as ACTED, type ActingSlice, type Medium } from '../acting/acting.ts';
 import { ATTRIBUTES, componentValues, practise, skillOf, type AttributesSlice } from '../attributes/attributes.ts';
 import { EPISODES, FEATURE_SHOOT, pitchSkill as directorsPitch, type DirectingSlice, type Form as Directed } from '../directing/directing.ts';
@@ -76,24 +76,37 @@ import compiled from './markets.json' with { type: 'json' };
  *   that is neither has it only where its core costs reach £1m an hour of slot length (an hour episode an hour, a
  *   half-hour episode half), nothing below. Every episode the game makes fills a slot over the Act's 20 minutes, so
  *   that condition holds for every series. No UK-wide public fund backs a series (the BFI's Global Screen Fund takes
- *   television only as an international co-production in animation or documentary; each nation's screen fund backs its
- *   own nation's work, and a production here names no nation), so its fund is refused, told; no broadcaster or fund
- *   publishes a cap on a series producer's fee (the BBC's price folds one in "in line with the Terms of Trade"), so it
- *   has none, told as unknown. Once shot it is offered to broadcasters: how often one picks it up isn't counted by any
+ *   television only as an international co-production in animation or documentary), and none in England; Screen
+ *   Scotland, Creative Wales and Northern Ireland Screen each fund series made in their nation, on terms they publish,
+ *   but none publishes how often it says yes (research/sources/person/work/nations-GB.json), so a series' fund is
+ *   refused in every nation, told what is known. Until 2026-11-04 a production named no nation and the refusal said
+ *   so. No broadcaster or fund publishes a cap on a series producer's fee (the BBC's price folds one in "in line with
+ *   the Terms of Trade"), so it has none, told as unknown. Once shot it is offered to broadcasters: how often one picks it up isn't counted by any
  *   source, so the chance is the game's own, moved by the series and its campaign as a film's release is.
  * - A play names its theatre: a subsidised theatre by its MRSL grade, a commercial theatre outside the West End or a
- *   West End theatre by its seats; and whether it tours. Its credit is Theatre Tax Relief (CTA 2009 ss. 1217J, 1217K,
- *   1217KC; accounting periods from 1 April 2025): 45% touring, 40% otherwise, of the lower of UK core costs and 80% of
- *   core costs, at most the Act's €50 million. Its fund is Arts Council England's National Lottery Project Grants: a yes
- *   at their 29.4% (2024/25, across art forms) as the package sells it, an award of what is left to raise, £1,000 to
- *   £100,000. It opens once rehearsed and staged; how often a UK run earns back its cost isn't counted by any source, so
- *   that chance is the game's own, moved as a film's release is. Who may take which role turns on whose agreements the
- *   theatre's body has with the unions: the life directs a subsidised play (UK Theatre's with Equity) or a West End one
- *   (SOLT's with Equity), and acts in a commercial one (UK Theatre's commercial theatre agreement, the actor's engine's
- *   own); it writes a play for a subsidised theatre (UK Theatre's with the WGGB, or the ITC's) or a commercial one (the
- *   ITC's). What the sources don't give is refused, told: a commercial theatre's director's minimum (its rates turn on a
- *   run's length and level that the published card doesn't define), the subsidised theatre's and the West End's actors'
- *   minimums, and a West End writers' agreement, none found.
+ *   West End theatre by its seats, or an ITC member's company (the Independent Theatre Council's, a kind of its own
+ *   since 2026-11-04, whose agreements pay by the play's running time); and whether it tours. Its credit is Theatre Tax
+ *   Relief (CTA 2009 ss. 1217J, 1217K, 1217KC; accounting periods from 1 April 2025): 45% touring, 40% otherwise, of
+ *   the lower of UK core costs and 80% of core costs, at most the Act's €50 million. Its fund is its nation's arts
+ *   council's (below). It opens once rehearsed and staged; how often a UK run earns back its cost isn't counted by any
+ *   source, so that chance is the game's own, moved as a film's release is. Who may take which role turns on whose
+ *   agreements the theatre's body has with the unions: the life acts in a play at any of the four (the actor's engine
+ *   pays UK Theatre's subsidised or commercial agreement, SOLT's in the West End, the ITC's), directs one at a
+ *   subsidised theatre, in the West End or for an ITC company, and writes one for a subsidised theatre (UK Theatre's
+ *   with the WGGB, or the ITC's), a commercial one or an ITC company (the ITC's). What the sources don't give is
+ *   refused, told: a commercial theatre's director's minimum (its rates turn on a run's length and level that the
+ *   published card doesn't define) and a West End writers' agreement, none found. The life acted only at a commercial
+ *   theatre until 2026-11-04, when the subsidised theatres', the West End's and the ITC's actors' minimums were read.
+ * - A UK series or play names its nation, England, Scotland, Wales or Northern Ireland, as the map holds them (the
+ *   gazetteer's first-level regions of GB). The lead's brief had it default to the nation of the life's home where the
+ *   map gives it; identity holds the life's home as a country alone (its first citizenship, money.tax.model), so the map
+ *   gives none, and the nation is named. A West End theatre is in London, so its play is made in England. A play's fund
+ *   is its nation's arts council's: Arts Council England's National Lottery Project Grants in England (a yes at their
+ *   29.4%, 2024/25 across art forms, an award of what is left to raise, £1,000 to £100,000; where ACE takes an
+ *   applicant from wasn't readable, so it is held for a play made in England and told); Creative Scotland's Open Fund
+ *   for Individuals in Scotland, the life applying as itself (a yes at its 535 of 1,761, 2024/25, £500 to £50,000, to an
+ *   artist living in Scotland); refused in Wales and Northern Ireland, whose arts councils publish the ranges of their
+ *   project funds but not how often they say yes, told.
  *
  * The producer options material in the genres they love (the game's reading of the Genres page, person.genres.model).
  *
@@ -137,11 +150,11 @@ export const MEDIUM: Readonly<Record<Format, Medium>> = { film: 'film', series: 
 /**
  * A UK play's theatre, as the bodies that agree its terms with the unions sort theatres: a subsidised theatre (UK
  * Theatre's subsidised members, graded 1 to 3 by the MRSL), a commercial theatre outside the West End (UK Theatre's
- * commercial members) or a West End theatre (SOLT's).
+ * commercial members), a West End theatre (SOLT's), or an ITC member's company (the Independent Theatre Council's).
  */
-export const THEATRES = ['subsidised', 'commercial', 'west-end'] as const;
+export const THEATRES = ['subsidised', 'commercial', 'west-end', 'itc'] as const;
 export type Theatre = (typeof THEATRES)[number];
-/** A UK play's theatre, its grade (a subsidised theatre's) or seats (a commercial or a West End theatre's), and whether it tours. */
+/** A UK play's theatre, its grade (a subsidised theatre's) or seats (a commercial or a West End theatre's; an ITC company's neither), and whether it tours. */
 export interface Stage {
   readonly theatre: Theatre;
   readonly grade: 1 | 2 | 3 | null;
@@ -240,6 +253,23 @@ export const TTR = { from: '2025-04-01', touring: 0.45, other: 0.4, cap: fromMaj
 /** Arts Council England's National Lottery Project Grants: 29.4% of eligible applications funded (2024/25), £1,000 to £100,000. */
 export const ACE = { rate: 0.294, least: 1_000, most: 100_000 } as const;
 
+/**
+ * Creative Scotland's Open Fund for Individuals: 535 of 1,761 applications funded (2024/25, its annual report and
+ * accounts), £500 to £50,000, to freelance artists living in Scotland and at least 18 (its own page; the UK's age for a
+ * public fund, person.youth, is the same 18). Its organisations' strand (153 of 365, £1,000 to £100,000) is a company's.
+ */
+export const OPEN_FUND = { rate: 535 / 1761, least: 500, most: 50_000 } as const;
+
+/** The nations' screen agencies, which fund series made in their nation on terms they publish, but publish no rate of yes. */
+export const SCREEN_AGENCY: Readonly<Record<string, string>> = { 'GB.SCT': 'Screen Scotland', 'GB.WLS': 'Creative Wales', 'GB.NIR': 'Northern Ireland Screen' };
+
+/** The arts councils of Wales and Northern Ireland, which publish their project funds' ranges but no rate of yes. */
+export const ARTS_COUNCIL: Readonly<Record<string, string>> = { 'GB.WLS': 'the Arts Council of Wales', 'GB.NIR': 'the Arts Council of Northern Ireland' };
+
+/** England, as the map keys it: Arts Council England's nation, and the West End's. */
+export const ENGLAND = 'GB.ENG';
+export const SCOTLAND = 'GB.SCT';
+
 /** The BFI's production funding: 13% of applicants funded (2013/14), awards 22% of the budget (2018/19), at most £1.25m (Impact). */
 export const BFI = { rate: 0.13, share: 0.22, most: 1_250_000 } as const;
 
@@ -334,6 +364,8 @@ export interface Project {
   readonly minutes: number | null;
   /** A UK play's theatre and touring; none for a film, a series or a play made elsewhere. */
   readonly stage: Stage | null;
+  /** A UK series' or play's nation, by the map's key (GB.ENG, GB.SCT, GB.WLS, GB.NIR); none for a film or beyond the UK. */
+  readonly nation: string | null;
   /** The roles the life holds on it; the rest are hired. */
   readonly roles: readonly Role[];
   /** The life's own script it makes, by id; none where the material is optioned. */
@@ -504,6 +536,8 @@ export interface MakingArgs {
   episodes?: number;
   /** The film's or an episode's running time, where an agreement's minimums turn on it. */
   minutes?: number;
+  /** A UK series' or play's nation, by the map's key (GB.ENG, GB.SCT, GB.WLS, GB.NIR). */
+  nation?: string;
   /** A UK play's: its theatre, a subsidised theatre's grade or another's seats, and whether it tours. */
   theatre?: string;
   grade?: number;
@@ -511,9 +545,9 @@ export interface MakingArgs {
   touring?: boolean;
 }
 
-type Making = Pick<Project, 'format' | 'series' | 'minutes' | 'stage' | 'roles' | 'market'>;
+type Making = Pick<Project, 'format' | 'series' | 'minutes' | 'stage' | 'nation' | 'roles' | 'market'>;
 
-/** A UK play's theatre as named: a subsidised theatre by its grade, a commercial or West End theatre by its seats, and whether it tours. */
+/** A UK play's theatre as named: a subsidised theatre by its grade, a commercial or West End theatre by its seats, an ITC company by neither, and whether it tours. */
 function stageOf(a: MakingArgs): Stage {
   const theatre = a.theatre as Theatre;
   if (!THEATRES.includes(theatre)) throw new Error(`a play made in the UK names its theatre: ${THEATRES.join(', ')} (${String(a.theatre)})`);
@@ -522,6 +556,9 @@ function stageOf(a: MakingArgs): Stage {
     if (a.seats !== undefined) throw new Error('a subsidised theatre names its grade, not its seats');
     if (![1, 2, 3].includes(a.grade as number)) throw new Error(`a subsidised theatre's grade is 1, 2 or 3 (${String(a.grade)})`);
     grade = a.grade as 1 | 2 | 3;
+  } else if (theatre === 'itc') {
+    // The ITC's agreements pay by the play's running time, not a theatre's grade or seats.
+    if (a.grade !== undefined || a.seats !== undefined) throw new Error("an ITC company's play names neither a grade nor seats");
   } else {
     if (a.grade !== undefined) throw new Error(`a ${theatre === 'commercial' ? 'commercial' : 'West End'} theatre names its seats, not a grade`);
     whole(a.seats, "the theatre's seats", 1);
@@ -533,17 +570,30 @@ function stageOf(a: MakingArgs): Stage {
 
 /**
  * The roles the research lets the life hold on a play: directing it only in the UK, at a subsidised or a West End
- * theatre, whose directors' minimums are known; acting in a UK play only at a commercial theatre, whose actors' agreement
- * the actor's engine keeps. Elsewhere a play's parts are engaged under the market's agreements (src/person/acting).
+ * theatre or for an ITC company, whose directors' minimums are known. A UK play's parts are engaged under its
+ * theatre's actors' agreement, every one of the four known since 2026-11-04 (src/person/acting); elsewhere under the
+ * market's agreements.
  */
 function playRoles(roles: readonly Role[], market: string, stage: Stage | null): void {
   if (roles.includes('director')) {
     if (stage === null) throw new Error(`a stage director's terms in ${countryName(market as CountryCode)} aren't known to this game, so a play there is directed by someone hired`);
     if (stage.theatre === 'commercial') throw new Error("a commercial theatre director's minimum turns on a run's length and level that the published rates don't define, so a play there is directed by someone hired");
   }
-  if (stage !== null && stage.theatre !== 'commercial' && roles.includes('actor')) {
-    throw new Error(`${stage.theatre === 'subsidised' ? "a subsidised theatre's" : "the West End's"} actors' minimum isn't known to this game, so a play there is acted by people hired`);
+}
+
+/**
+ * A UK series' or play's nation as named, by the map's key: none for a film (the BFI's fund is the UK's whole, so
+ * nothing reads one) or a production made beyond the UK. Identity holds the life's home as a country alone, so the map
+ * gives no nation to default to, and a UK series or play names its own.
+ */
+function nationOf(a: MakingArgs, format: Format, market: string): string | null {
+  if (market !== HOME || format === 'film') {
+    if (a.nation !== undefined) throw new Error(market !== HOME ? "a production's nation is named in the UK alone" : "a film's public fund, the BFI's, is the whole UK's, so a film names no nation");
+    return null;
   }
+  const nations = regionsOf(HOME).map((r) => r.key);
+  if (!nations.includes(a.nation as string)) throw new Error(`a ${format === 'stage' ? 'play' : format} made in the UK names its nation: ${nations.join(', ')} (${String(a.nation)})`);
+  return a.nation as string;
 }
 
 /** A production as named: refused for a format or a role there isn't, no role or one twice, a series without its episodes, a play's roles the research doesn't cover. */
@@ -569,7 +619,9 @@ function making(s: Starting, a: MakingArgs): Making {
   if (format === 'stage' && market === HOME) stage = stageOf(a);
   else if ([a.theatre, a.grade, a.seats, a.touring].some((x) => x !== undefined)) throw new Error(format === 'stage' ? "a play's theatre is named in the UK alone, the one market whose theatres the game knows" : `a ${format} has no theatre`);
   if (format === 'stage') playRoles(roles, market, stage);
-  return { format, series, minutes: a.minutes ?? null, stage, roles: [...roles], market };
+  const nation = nationOf(a, format, market);
+  if (stage?.theatre === 'west-end' && nation !== ENGLAND) throw new Error('a West End theatre is in London, so a play there is made in England');
+  return { format, series, minutes: a.minutes ?? null, stage, nation, roles: [...roles], market };
 }
 
 const started = (s: Producing, id: number, at: number, m: Making, rest: Pick<Project, 'script' | 'writing' | 'genre' | 'expires' | 'options' | 'material'>): void => {
@@ -624,10 +676,10 @@ export const WRITTEN_FOR: Readonly<Record<Format, readonly Written[]>> = { film:
 
 /**
  * The writers' agreements that cover a UK play by its theatre (src/person/work/career.ts, PLAYS): a subsidised
- * theatre's UK Theatre's, or the ITC's where the life's company is an ITC member; a commercial theatre's the ITC's; the
- * West End's none found (person.markets.writer.blocked.GB.stage.west-end).
+ * theatre's UK Theatre's, or the ITC's where the life's company is an ITC member; a commercial theatre's and an ITC
+ * company's the ITC's; the West End's none found (person.markets.writer.blocked.GB.stage.west-end).
  */
-export const PLAY_WRITING: Readonly<Record<Theatre, readonly PlayAgreement[]>> = { subsidised: ['uk-theatre-wggb', 'itc-wggb'], commercial: ['itc-wggb'], 'west-end': [] };
+export const PLAY_WRITING: Readonly<Record<Theatre, readonly PlayAgreement[]>> = { subsidised: ['uk-theatre-wggb', 'itc-wggb'], commercial: ['itc-wggb'], 'west-end': [], itc: ['itc-wggb'] };
 
 /** The agreements that pay a play made in a market: a UK play's by its theatre; refused elsewhere, and for the West End, where none is known. */
 function playAgreements(market: string, stage: Stage | null): readonly string[] {
@@ -856,26 +908,52 @@ export function fundFor(p: Project): { rate: number; award: number } {
 /** What a production's noun is, as a refusal names it. */
 const noun = (p: Pick<Project, 'format'>): string => (p.format === 'stage' ? 'play' : p.format);
 
+/** A pound figure as a refusal says it: £1,000, £500. */
+const pounds = (n: number): string => `£${n.toLocaleString('en-GB')}`;
+
 /**
- * Arts Council England's project grant for a UK play: a yes at its rate, an award of what is left to raise, at most
- * £100,000; refused where less than its £1,000 is left.
+ * An arts council's project grant for a UK play: a yes at its rate, an award of what is left to raise, at most its
+ * most; refused where less than its least is left. Arts Council England's in England, Creative Scotland's Open Fund for
+ * Individuals in Scotland.
  */
-export function aceFor(p: Project): { rate: number; award: number } {
-  const ask = Math.min(target(p) - raised(p), ACE.most * 100);
-  if (ask < ACE.least * 100) throw new Error(`Arts Council England's project grants start at £1,000, more than project ${p.id} has left to raise`);
-  return { rate: ACE.rate, award: ask };
+export function grantFor(p: Project, fund: { readonly rate: number; readonly least: number; readonly most: number }, name: string): { rate: number; award: number } {
+  const ask = Math.min(target(p) - raised(p), fund.most * 100);
+  if (ask < fund.least * 100) throw new Error(`${name} start at ${pounds(fund.least)}, more than project ${p.id} has left to raise`);
+  return { rate: fund.rate, award: ask };
 }
 
-/** The UK's fund for a production: the BFI's for a film, Arts Council England's for a play; none across the UK for a series (refused, told). */
-function homeFund(p: Project): { rate: number; award: number; source: string } {
-  if (p.format === 'series') {
-    throw new Error("no public fund across the UK backs a drama series: the BFI's Global Screen Fund takes television only as an international co-production in animation or documentary, and each nation's screen fund backs its own nation's work");
+/**
+ * A UK play's fund, by its nation: Arts Council England's project grants in England; Creative Scotland's Open Fund for
+ * Individuals in Scotland, to an artist living there; refused in Wales and Northern Ireland, told. shortcut: identity
+ * holds the life's home as a country alone, so a life at home in the UK is read as living in the nation its play is
+ * made in; upgrade when a home within a country is held.
+ */
+function playFund(p: Project, home: CountryCode): { rate: number; award: number; source: string } {
+  const nation = p.nation as string;
+  if (nation === ENGLAND) return { ...grantFor(p, ACE, "Arts Council England's project grants"), source: 'ace' };
+  if (nation === SCOTLAND) {
+    if (home !== HOME) throw new Error("Creative Scotland's Open Fund for Individuals takes artists living in Scotland");
+    return { ...grantFor(p, OPEN_FUND, "Creative Scotland's Open Fund for Individuals' grants"), source: 'creative-scotland' };
   }
-  if (p.format === 'stage') return { ...aceFor(p), source: 'ace' };
+  throw new Error(`${ARTS_COUNCIL[nation] as string} publishes what its project funds give but not how often it says yes, so its fund isn't modeled in this game`);
+}
+
+/**
+ * The UK's fund for a production: the BFI's for a film, the nation's arts council's for a play; none for a series in
+ * any nation (refused, told what is known: no fund across the UK or in England backs one, and each other nation's
+ * screen agency funds its own nation's series without publishing how often it says yes).
+ */
+function homeFund(p: Project, home: CountryCode): { rate: number; award: number; source: string } {
+  if (p.format === 'series') {
+    const agency = SCREEN_AGENCY[p.nation as string];
+    if (agency === undefined) throw new Error("no public fund across the UK or in England backs a drama series: the BFI's Global Screen Fund takes television only as an international co-production in animation or documentary");
+    throw new Error(`${agency} funds series made in ${regionName(p.nation as string) as string}, but it doesn't publish how often it says yes, so its fund isn't modeled in this game`);
+  }
+  if (p.format === 'stage') return playFund(p, home);
   return { rate: BFI.rate, award: Math.min(planOf(p).budget.minor * BFI.share, BFI.most * 100), source: 'bfi' };
 }
 
-/** Applies to the market's fund (the BFI for a UK film, Arts Council England for a UK play), once a project: a yes at its rate as the package sells it, and its award. */
+/** Applies to the market's fund (the BFI for a UK film, a UK play's nation's arts council), once a project: a yes at its rate as the package sells it, and its award. */
 function apply(s: Applying, a: ProjectArgs, c: Context): void {
   const p = projectOf(s.producing, a.project);
   const v = producerValues(s, p);
@@ -887,7 +965,10 @@ function apply(s: Applying, a: ProjectArgs, c: Context): void {
   if (refused !== null) throw new Error(refused);
   // The BFI's ten months left on an option is the BFI's own rule.
   seeking(p, c.now, home && p.format === 'film' ? MONTHS_LEFT : 0);
-  const { rate, award, source } = home ? homeFund(p) : { ...fundFor(p), source: 'fund' };
+  // @slate:consumer producing.option
+  // @slate:consumer producing.develop
+  // @slate:consumer identity.make
+  const { rate, award, source } = home ? homeFund(p, residenceOf(personOf(s.identity))) : { ...fundFor(p), source: 'fund' };
   p.applied = true;
   // Stryker disable next-line EqualityOperator: a draw is continuous, so it equals the chance with no probability.
   if (c.draws('producing.work', 'apply', p.id).float() < rate * factor(s.producing, packagePitch(s, v, p), p, c.now, s.directing)) p.raised[source] = amount(planOf(p).budget.currency, award);
@@ -1068,19 +1149,32 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
 /**
  * What the UK's research of 2026-11-04 couldn't find of a series and a play, as the player is told it (the register's
  * person.markets.producer.blocked.GB.* and person.markets.writer.blocked.GB.stage.west-end); a film's is known whole.
+ * What Northern Ireland Screen's fund gives a series was told here until the research found its terms the same day.
  */
 export const HOME_MISSING: Readonly<Record<Format, readonly string[]>> = {
   film: [],
-  series: ["the cap a broadcaster or funder sets on a series producer's fee", 'how often a broadcaster picks up a series made without one', "what Northern Ireland Screen's fund gives a series"],
+  series: ["the cap a broadcaster or funder sets on a series producer's fee", 'how often a broadcaster picks up a series made without one'],
   stage: ['how often a play earns back its cost', "the playwright's minimum in the West End"],
 };
 
-/** What the player is told of a market, for a production of a format, where its research couldn't find all of it: "a, b and c"; nothing where it is known whole. */
-export function aboutMarket(market: string, format: Format = 'film'): string | undefined {
-  const missing = [...(MARKETS[market]?.unknown ?? []).map((u) => MISSING[u]), ...(market === HOME ? HOME_MISSING[format] : [])];
+/** What each nation's research couldn't find of a series' or a play's fund, as the player is told it. */
+export const NATION_MISSING: Readonly<Record<string, { readonly series: readonly string[]; readonly stage: readonly string[] }>> = {
+  'GB.ENG': { series: [], stage: ["where Arts Council England's project grants take an applicant from"] },
+  'GB.SCT': { series: ['how often Screen Scotland says yes to a series'], stage: [] },
+  'GB.WLS': { series: ['how often Creative Wales says yes to a series'], stage: ['how often the Arts Council of Wales says yes to a play'] },
+  'GB.NIR': { series: ['how often Northern Ireland Screen says yes to a series'], stage: ['how often the Arts Council of Northern Ireland says yes to a play'] },
+};
+
+/**
+ * What the player is told of a market, for a production of a format (a UK series or play in its nation, named by the
+ * nation), where its research couldn't find all of it: "a, b and c"; nothing where it is known whole.
+ */
+export function aboutMarket(market: string, format: Format = 'film', nation: string | null = null): string | undefined {
+  const national = nation === null || format === 'film' ? [] : (NATION_MISSING[nation] as (typeof NATION_MISSING)[string])[format];
+  const missing = [...(MARKETS[market]?.unknown ?? []).map((u) => MISSING[u]), ...(market === HOME ? [...HOME_MISSING[format], ...national] : [])];
   if (missing.length === 0) return undefined;
   const list = missing.length > 1 ? `${missing.slice(0, -1).join(', ')} and ${missing.at(-1) as string}` : (missing[0] as string);
-  return t(UNKEPT_LINE, { country: countryName(market as CountryCode), missing: list });
+  return t(UNKEPT_LINE, { country: nation === null ? countryName(market as CountryCode) : (regionName(nation) as string), missing: list });
 }
 
 /** Where a project is made and the days it is scheduled for, as a permit to work there would ask. */

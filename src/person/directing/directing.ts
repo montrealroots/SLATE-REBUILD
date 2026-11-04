@@ -21,8 +21,9 @@ import compiled from './markets.json' with { type: 'json' };
  * cohesiveness"): a film's feature, or every episode of a series, prepped once the production is financed, shot and
  * cut, then a feature goes to festivals on what the production comes out as, a festival's choice counting toward how
  * financiers take the life's next production (src/person/producing). A play's direction was refused until 2026-11-04,
- * when the UK's stage directors' minimums were read: a UK play at a subsidised or a West End theatre is directed as a
- * play (below); elsewhere, and at a commercial theatre, a play is directed by someone hired. The debut's chance of leading to a
+ * when the UK's stage directors' minimums were read: a UK play at a subsidised or a West End theatre, or for an ITC
+ * company (from later that day), is directed as a play (below); elsewhere, and at a commercial theatre, a play is
+ * directed by someone hired. The debut's chance of leading to a
  * second feature (Follows's 25.3%, 45% where it found an audience, moved by a family in the business) was removed on
  * 2026-11-04: the next production rests on what the life can finance (the lead's reading), so no one else's yes is
  * drawn. The direction's parts come from the director's broad attributes, each read through its researched components and their
@@ -53,8 +54,13 @@ import compiled from './markets.json' with { type: 'json' };
  * for its rehearsal and run, with no cut; its direction is what the staging brought of the three parts planned. Its fee
  * is the production's minimum: UK Theatre's with Equity for a freelance director at a subsidised theatre, by the
  * theatre's MRSL grade; SOLT's with Equity in the West End, by the theatre's category of seats; each year's from the
- * day it applies. shortcut: UK Theatre's 20% of the fee for each week over four isn't paid, since a play's days aren't
- * split between rehearsal and run (person.directing.model); upgrade when a play's rehearsal is planned apart.
+ * day it applies; and the ITC's with Equity for an ITC company's play, its preparatory fee by the play's running time
+ * (a full-length play over 70 minutes, a short one 70 or fewer, as the ITC's writers' agreement draws the line) and its
+ * weekly rehearsal payment, pro rata over the staging's days at five a week, as a weekly fee is paid elsewhere here
+ * (research/sources/person/work/nations-GB.json; its 2026/27 column repeats 2025/26's, both from 1 April, "dates
+ * represent the financial year"). shortcut: UK Theatre's 20% of the fee for each week over four isn't paid, and the
+ * ITC's rehearsal payment is paid over the run as well, since a play's days aren't split between rehearsal and run
+ * (person.directing.model); upgrade when a play's rehearsal is planned apart.
  *
  * Beyond the US, the market of every country and territory whose research the engine can read (src/person/directing/
  * markets.json, compiled by tools/person/markets-director from the research, person.markets.director.<CC>): a job there
@@ -111,6 +117,9 @@ export const STAGE_FEES = {
     { seats: 1100, steps: stageSteps(['6347.00', '6664.00', '6998.00', '7347.00']) },
   ],
 } as const;
+
+/** The ITC/Equity director's preparatory fee, full-length and short, and weekly rehearsal payment, in pounds, from 1 April 2025. */
+export const ITC_DIRECTOR = { from: '2025-04-01', full: '1916.75', short: '1326.25', weekly: '601.00', over: 70 } as const;
 
 /** A theatrical feature's guaranteed prep (two weeks) and the weeks its minimum pays (2 prep, 10 employment, 1 cutting). */
 export const FEATURE = { prep: 14, weeks: 13 } as const;
@@ -438,19 +447,33 @@ function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
 }
 
 /**
+ * An ITC company's director's fee on a date: the preparatory fee by the play's running time, and the weekly rehearsal
+ * payment over the staging's days; refused where the play names no running time, or before the first rates read.
+ */
+export function itcFee(minutes: number | null, shoot: number, date: string): Money {
+  if (minutes === null) throw new Error("a play under the ITC's directors' agreement names its running time");
+  if (date < ITC_DIRECTOR.from) throw new Error(`no minimum is known before ${ITC_DIRECTOR.from}`);
+  const prep = fromMajor('GBP', minutes > ITC_DIRECTOR.over ? ITC_DIRECTOR.full : ITC_DIRECTOR.short);
+  return add(prep, multiply(fromMajor('GBP', ITC_DIRECTOR.weekly), String(shoot / WEEK_DAYS)));
+}
+
+/**
  * The schedule and the pay of a UK play: the prep its contract gives, the staging its plan schedules, no cut; its fee by
- * the theatre's grade (a subsidised theatre's, UK Theatre's) or seats (the West End's, SOLT's), on the day prep starts.
- * The producer refuses a play the life directs anywhere else (src/person/producing), so a play here has its stage.
+ * the theatre's grade (a subsidised theatre's, UK Theatre's), seats (the West End's, SOLT's) or the play's running time
+ * (an ITC company's), on the day prep starts. The producer refuses a play the life directs anywhere else
+ * (src/person/producing), so a play here has its stage.
  */
 function stageTerms(a: JobArgs, now: number): Terms {
   if (a.cut !== undefined) throw new Error("a play isn't cut");
   if (a.agreement !== undefined) throw new Error("a play's theatre sets its directors' agreement");
   wholeAtLeast(a.prep, 1, 'the prep days');
   const stage = a.stage as Staged;
+  const job = { country: 'GB', budget: null, prepDays: a.prep as number, shootDays: a.shoot, cutDays: 0 };
+  if (stage.theatre === 'itc') return { ...job, agreement: 'itc-equity', minutes: a.minutes, fee: itcFee(a.minutes, a.shoot, dateOf(now)) };
   const subsidised = stage.theatre === 'subsidised';
   const steps = subsidised ? STAGE_FEES.subsidised[stage.grade as 1 | 2 | 3] : (STAGE_FEES['west-end'].findLast((t) => (stage.seats as number) >= t.seats) as { steps: Fee['steps'] }).steps;
   const fee = fromMajor('GBP', stepAt(steps, dateOf(now)));
-  return { country: 'GB', agreement: subsidised ? 'uk-theatre-equity' : 'solt-equity', budget: null, minutes: null, prepDays: a.prep as number, shootDays: a.shoot, cutDays: 0, fee };
+  return { ...job, agreement: subsidised ? 'uk-theatre-equity' : 'solt-equity', minutes: null, fee };
 }
 
 /** The schedule and the pay of a job: the DGA's in the US, a UK play's its theatre's, a market's agreement's abroad. */

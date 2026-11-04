@@ -151,7 +151,7 @@ describe("the life's own script", () => {
     const l = dispatch(writer(70, 'feature', 60), readScript, { script: 1, reader: 'black-list' });
     const p = project(dispatch(l, developScript, DEVELOP));
     const script = l.slices.scripts.written[0] as NonNullable<ScriptsSlice['written'][number]>;
-    expect(p).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, roles: ['writer', 'producer'], script: 1, writing: 'wga', genre: 'drama', market: 'US', expires: null, options: [], material: quality(script), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
+    expect(p).toEqual({ id: 1, optioned: T0, format: 'film', series: null, minutes: null, stage: null, nation: null, roles: ['writer', 'producer'], script: 1, writing: 'wga', genre: 'drama', market: 'US', expires: null, options: [], material: quality(script), plan: null, applied: false, raised: {}, shot: null, costs: [], release: null });
     expect(p.material).toBe((script.reads.at(-1)?.overall as number) * 10);
     // No option is paid for the life's own script, and none can be renewed.
     expect(minorIn(dispatch(l, developScript, DEVELOP).slices.ledger, ACCOUNT)).toBe(100_000_000);
@@ -167,7 +167,7 @@ describe("the life's own script", () => {
     expect(project(dispatch(two, developScript, DEVELOP), 3).script).toBe(1);
     expect(() => dispatch(l, developScript, { ...DEVELOP, market: 'BV' })).toThrow("where the work in BV is made isn't known to this game");
     expect(() => dispatch(l, developScript, { ...DEVELOP, script: 2 })).toThrow("there's no script 2");
-    expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'stage', theatre: 'subsidised', grade: 1, touring: false, market: 'GB' })).toThrow('a play is made from a play, not a feature');
+    expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'stage', theatre: 'subsidised', grade: 1, touring: false, market: 'GB', nation: 'GB.ENG' })).toThrow('a play is made from a play, not a feature');
     expect(() => dispatch(l, developScript, { ...DEVELOP, format: 'series', episode: 'hour', episodes: 2 })).toThrow('a series is made from a pilot or episode, not a feature');
     expect(() => dispatch(writer(70, 'pilot', 60), developScript, DEVELOP)).toThrow('a film is made from a feature or short, not a pilot');
     expect(project(dispatch(writer(70, 'short', 60), developScript, DEVELOP)).writing).toBe('wga');
@@ -175,7 +175,7 @@ describe("the life's own script", () => {
   });
 
   it("is paid under the market's writers' agreement for its form, named where it has several, refused where its figures aren't known or the writer doesn't write its language", () => {
-    const at = (market: string, form = 'feature', agreement?: string, who = identity()) => project(dispatch(writer(70, form, 60, who), developScript, { ...DEVELOP, market, ...(agreement === undefined ? {} : { agreement }), ...(form === 'feature' ? {} : { format: 'series', episode: 'hour', episodes: 1 }) })).writing;
+    const at = (market: string, form = 'feature', agreement?: string, who = identity()) => project(dispatch(writer(70, form, 60, who), developScript, { ...DEVELOP, market, ...(agreement === undefined ? {} : { agreement }), ...(form === 'feature' ? {} : { format: 'series', episode: 'hour', episodes: 1, ...(market === 'GB' ? { nation: 'GB.ENG' } : {}) }) })).writing;
     expect(at('US')).toBe('wga');
     expect(at('PR')).toBe('wga');
     expect(at('GB')).toBe('gb-pact-film');

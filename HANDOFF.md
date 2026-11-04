@@ -303,11 +303,14 @@ keep the rules):
 
 1. A series and a play are made in the UK since 2026-11-04 (the AVEC, Theatre Tax Relief, Arts Council England's
    project grants, the stage director's and playwright's minimums; the pick-up and recoup chances the game's own, told).
-   Left: a production in the UK names no nation, so England's Arts Council stands for all four (the nations' own funds
-   and Screen Scotland's and Creative Wales' series terms are read but not wired); the actor's minimums at subsidised and
-   West End theatres aren't researched, so the life can't act there, nor act in and direct one play; when the ITC's
-   2026/27 year begins isn't stated (the game reads it from 1 April, the agreement's revision day); then the other
-   markets' series and plays, a research wave of its own.
+   Since then a UK series or play names its nation (England, Scotland, Wales, Northern Ireland): a play's fund is Arts
+   Council England's in England and Creative Scotland's Open Fund for Individuals in Scotland, refused in Wales and
+   Northern Ireland (no rate of yes published), a series' fund refused in all four; the actor plays a subsidised, West
+   End or ITC company's play on its agreement, so the life may act in and direct one play; the ITC's years run from 1
+   April on its own word. Left: identity holds no home within a country, so a life at home in the UK is read as living
+   in the play's nation (Creative Scotland asks an artist living in Scotland); a play's days aren't split between
+   rehearsal and run, so the ITC director's rehearsal rate is paid over the run and UK Theatre's 20% for each week over
+   four isn't paid; then the other markets' series and plays, a research wave of its own.
 2. What the integrators found and the engines can't read yet: Azerbaijan's rebate in dollars (the engine holds one
    currency a market), Canada's DGC 2026-28 and Mexico's STPC director rates, the DGA reaching the US Virgin Islands
    and the Northern Mariana Islands, Austria's stage minimums, Uruguay's and Ecuador's rate tables, the Hebrew
