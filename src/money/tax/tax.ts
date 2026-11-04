@@ -326,6 +326,10 @@ export function earn(s: Earning, a: EarnArgs, c: Context): Paid {
 export function reckon(s: { tax: TaxSlice }, item: Item, c: Context): void {
   const { country, year } = item.data as { country: string; year: string };
   const where = taxOf(country) as Country;
+  // @slate:consumer acting.perform
+  // @slate:consumer directing.prep
+  // @slate:consumer script.pitch
+  // @slate:consumer producing.shoot
   const list = s.tax.paid.filter((p) => p.home === country && yearOf(where, dateOf(p.at)).start === year);
   const cur = where.currency as CurrencyCode;
   const income = money(cur, sumOf(list, 'counted'));

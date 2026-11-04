@@ -25,7 +25,13 @@ Read `CLAUDE.md` first.
 - Layer 3 (the person's papers and money) is proven: all nineteen of SLATE's layer 3 engines, at the owner's word
   ("Every single one of them"), its research taken through three waves and four web-search rounds (below); the full
   gate green on GitHub Actions in a fresh clone at `e8b573910dad`, recorded in `registry/layers.json` (2026-11-04).
-  The owner pulls and merges it. Layers 4 to 7 have not started (6 is dropped).
+  The owner merged it (`88256bf`) and the branch restarted from `main` there.
+- Layer 4 (the person) is built but **not proven**: all ten of SLATE's layer 4 engines, at the owner's word
+  (2026-11-04: "All ten"), identity, attributes, acting, directing, producing, work (the screenwriter's), genres,
+  unions, permits and youth, brought over as SLATE wrote them with their compilers, research, 26 coverage matrices,
+  2,107 register entries, 15 catalog lines, six deciders and 33 effects; every compiler's output is byte for byte
+  SLATE's on the rebuild's data. Its research hasn't been read again yet. Layers 5 to 7 have not started (6 is
+  dropped).
 
 What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:
 
@@ -290,16 +296,21 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 3 (the branch is `claude/quirky-gauss-gnub7q`, proven at `e8b573910dad`); the
-   branch then restarts from `main`.
-2. The owner picks what comes over in layer 4 (the person: SLATE's own layer 4 engines, one at a time or all of
-   them), and the work goes on as it did for layers 1 to 3: bring each engine over, read every source again, try every
-   blocker again, then prove the layer.
-3. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
+Layer 4's research, as layers 2 and 3 had (the briefs in `research/rounds/` and this session's: change the date, the
+scratchpad path and the groups, keep the rules):
+
+1. Re-read every source of layer 4's found facts (a script first, checking each quote verbatim; agents for the rest),
+   and take any newer release.
+2. Re-attack every layer 4 blocker by every method, web search included; and seek the primary behind every fact held
+   at second hand.
+3. Bring in what layer 3's sources already state for the work permits (Kiribati's fees and bond, Tuvalu's fees and
+   term, Eswatini's fee, Cuba's contracting body, Kuwait's PAM permit), each reading settled at its source; and the
+   three permit files (SA, BW, TG) that cite ids SLATE itself removed (R-1545, R-1658, R-1688).
+4. Integrate by engine, merge the register, then prove layer 4 on CI (`npm run gate:full`) and record it.
+5. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
    facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,
    Equatorial Guinea, Guinea-Bissau, Eritrea); the 180 sources that answered only with a bot check or a failed
-   connection on 2026-11-03; the sweep for newer editions of dated fee schedules. Each register entry records what
-   was tried.
+   connection on 2026-11-03; the sweep for newer editions of dated fee schedules.
 
 ## Verification evidence
 
@@ -329,6 +340,11 @@ SLATE proved at a 100% mutation score:
   the proof.
 
 ## Assumptions
+
+- SLATE's own ruling of 2026-11-01, "own productions only", takes casting (`acting.breakdown`, the auditions) and spec
+  sales out once the own-production work is built; until then both stand in layer 4 as SLATE wrote them.
+- `src/person/work/career.ts` is the screenwriter's networking and selling, not the first SLATE's career engine (its
+  `pro.*` engine), which stays out of the first build.
 
 - The family means' income (the owner, 2026-11-03, after WID's own ratio proved unavailable: "National-accounts
   ratio"): WID's post-tax national income bands (adiinc992j) are scaled by each country's ratio of households'
