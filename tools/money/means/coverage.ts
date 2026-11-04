@@ -37,6 +37,6 @@ export function coverageOf(root: string): string {
   const withPlaces = new Set(readdirSync(join(root, 'src/world/gazetteer/places')).map((f) => f.slice(0, 2)));
   const means = read('src/money/means/means.json') as { countries: Record<string, { includesPublic?: true }> };
   const facts = new Map((read('research/register.json') as { entries: { id: string; fact: string }[] }).entries.map((e) => [e.fact, e.id] as const));
-  const unscaled = new Set(Object.entries(means.countries).flatMap(([k, m]) => (m.includesPublic === true ? [k] : [])));
+  const unscaled = new Set(Object.entries(means.countries).filter(([, m]) => m.includesPublic === true).map(([k]) => k));
   return serializeCoverage(meansCoverage(countries, withPlaces, new Set(Object.keys(means.countries)), unscaled, facts));
 }
