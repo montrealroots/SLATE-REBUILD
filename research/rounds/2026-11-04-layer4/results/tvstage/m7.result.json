@@ -1,0 +1,2230 @@
+{
+ "AM": {
+  "producer": {
+   "blocker": "R-9805",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl lists for 'am,ncca)/' (National Cinema Centre, now the Cinema Foundation of Armenia): CC-MAIN-2026-43 and -39: 0 captures; CC-MAIN-2026-30: 356; CC-MAIN-2026-21: 129 (m7w/cc202630_am_ncca__.txt, cc202621_am_ncca__.txt). Got /en/about/cash-rebate (20 Jul 2026, files/m7/am_cc30_rebate.html sha256 01458823ffd380d821be84cef3a51011607e9664d28390307fbb3946b0d5b8dc), /en/competitions/regulations (11 May 2026, files/m7/am_cc21_regs.html sha256 0a585fc15d6c6f2e1d99f7181fc087490d8676f067b7f77658f3f2998eba1c43), /en/about/activities (files/m7/am_cc21_activities.html sha256 63293b8ed1a9b6dff77d604a8f8fe210212baa37381101b8421ad7da2454b3b7). Wayback: availability API gave a 2026-04-26 snapshot of ncca.am, web.archive.org reset the connection twice (curl 35/000)",
+     "result": "Cash rebate page (archived): 'A film producer may receive 25% rebate for expenses directly related to film production in the Republic of Armenia. An additional rebate of up to 10% ...'; who: filmmakers classified under J59.11 or J59.12 (which include television programme production); the page speaks only of 'film production' and never of a series, episode or television. The Regulations and Activities captures hold only the menu, no text. No series fund terms, fee cap, commissioning or pickup count among the captures. The page's contact is info@cfarmenia.am (a new domain for the Foundation, not yet tried).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "institution",
+     "tried": "escs.am and escs.am/am (Ministry of Education, Science, Culture and Sport); sundukyan.am (Sundukyan National Academic Theatre); theatre.am and www.armtheatre.am (theatre union guesses); ncca.am and filmfoundation.am",
+     "result": "escs.am: HTTP 403 Forbidden (a WAF page with a transaction id, files/m7/am_escs_am_.html sha256 see notes); sundukyan.am: the domain now serves a Russian-language gambling app page (1win), not the theatre (files/m7/am_sundukyan_am_.html); theatre.am, armtheatre.am, ncca.am, filmfoundation.am: no connection (curl 000). No theatre's or ministry's pay terms read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "arka.am site search 'theatre salaries' (files/m7/am_arka_search_sal.html sha256 bbcf769826c89af69934052217350a14441cb0c055bcd5ef7a5d83e9893bfe49) and 'theater'; read arka.am/en/news/economy/from-157-000-to-1-million-drams-the-salary-scale-in-armenia-/ (7 Oct 2026, quoting the Statistical Committee; files/m7/am_arka_salaryscale.html sha256 b85f6a5ff85772f33dc88c70f738f078c2228069274a92c9100dd1c02c06abf8); news.am search 403",
+     "result": "ARKA, 7 Oct 2026: 'In the arts, entertainment, and recreation sector, the average salary reached about 380,900 drams' (January-July 2026; national average about 312,200). An average for the whole sector from the Statistical Committee, not a minimum for a stage director, playwright or actor; no theatre pay agreement or rate in any result.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "e-gov.am /gov-decrees/ (the Government's register of its decisions): every monthly calendar page for January to October 2026 (161 list pages, 1,549 decision titles, saved under files/m7/am_egov/), titles searched for theatre (ԹԱՏՐ), stage (ԲԵՄԱԿԱՆ), art (ԱՐՎԵՍՏ), film, cinema and television; ARLIS (arlis.am, the legal register) has no query search without script (as R-5297 records)",
+     "result": "No decision on theatre, stage pay or a performers', directors' or playwrights' rate in 2026. Five hits: two on deferring conscription of people with achievements in culture and art, one on the Hayfilm studio's state shares, one merging a culture centre and a museum, and Decision 1122-N of 30 July 2026 (film funding shares; see notes). None sets a stage minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'am,escs)/' (32 captures, m7w/cc43_am_escs__.txt) and 'am,theatre)/' (0); archive.org availability API for escs.am (no snapshot)",
+     "result": "Every escs.am capture is robots.txt answered HTTP 403: the ministry's site refuses the crawler as it refuses this machine. No archived ministry or theatre page with stage pay.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u14.result.json",
+     "tried": "'Armenia Ministry of Education Science Culture Sport grant theatre performance competition 2026 escs.am'",
+     "result": "no ministry page; a 2022 creative-works grant (up to AMD 1 million) and festival funding in results; nothing read as a term",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "institution",
+     "tried": "escs.am and escs.am/am (Ministry of Education, Science, Culture and Sport); sundukyan.am (Sundukyan National Academic Theatre); theatre.am and www.armtheatre.am (theatre union guesses); ncca.am and filmfoundation.am",
+     "result": "escs.am: HTTP 403 Forbidden (a WAF page with a transaction id, files/m7/am_escs_am_.html sha256 see notes); sundukyan.am: the domain now serves a Russian-language gambling app page (1win), not the theatre (files/m7/am_sundukyan_am_.html); theatre.am, armtheatre.am, ncca.am, filmfoundation.am: no connection (curl 000). No theatre's or ministry's pay terms read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "arka.am site search 'theatre salaries' (files/m7/am_arka_search_sal.html sha256 bbcf769826c89af69934052217350a14441cb0c055bcd5ef7a5d83e9893bfe49) and 'theater'; read arka.am/en/news/economy/from-157-000-to-1-million-drams-the-salary-scale-in-armenia-/ (7 Oct 2026, quoting the Statistical Committee; files/m7/am_arka_salaryscale.html sha256 b85f6a5ff85772f33dc88c70f738f078c2228069274a92c9100dd1c02c06abf8); news.am search 403",
+     "result": "ARKA, 7 Oct 2026: 'In the arts, entertainment, and recreation sector, the average salary reached about 380,900 drams' (January-July 2026; national average about 312,200). An average for the whole sector from the Statistical Committee, not a minimum for a stage director, playwright or actor; no theatre pay agreement or rate in any result.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "e-gov.am /gov-decrees/ (the Government's register of its decisions): every monthly calendar page for January to October 2026 (161 list pages, 1,549 decision titles, saved under files/m7/am_egov/), titles searched for theatre (ԹԱՏՐ), stage (ԲԵՄԱԿԱՆ), art (ԱՐՎԵՍՏ), film, cinema and television; ARLIS (arlis.am, the legal register) has no query search without script (as R-5297 records)",
+     "result": "No decision on theatre, stage pay or a performers', directors' or playwrights' rate in 2026. Five hits: two on deferring conscription of people with achievements in culture and art, one on the Hayfilm studio's state shares, one merging a culture centre and a museum, and Decision 1122-N of 30 July 2026 (film funding shares; see notes). None sets a stage minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'am,escs)/' (32 captures, m7w/cc43_am_escs__.txt) and 'am,theatre)/' (0); archive.org availability API for escs.am (no snapshot)",
+     "result": "Every escs.am capture is robots.txt answered HTTP 403: the ministry's site refuses the crawler as it refuses this machine. No archived ministry or theatre page with stage pay.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u14.result.json",
+     "tried": "'Armenia Ministry of Education Science Culture Sport grant theatre performance competition 2026 escs.am'",
+     "result": "no ministry page; a 2022 creative-works grant (up to AMD 1 million) and festival funding in results; nothing read as a term",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "institution",
+     "tried": "escs.am and escs.am/am (Ministry of Education, Science, Culture and Sport); sundukyan.am (Sundukyan National Academic Theatre); theatre.am and www.armtheatre.am (theatre union guesses); ncca.am and filmfoundation.am",
+     "result": "escs.am: HTTP 403 Forbidden (a WAF page with a transaction id, files/m7/am_escs_am_.html sha256 see notes); sundukyan.am: the domain now serves a Russian-language gambling app page (1win), not the theatre (files/m7/am_sundukyan_am_.html); theatre.am, armtheatre.am, ncca.am, filmfoundation.am: no connection (curl 000). No theatre's or ministry's pay terms read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "arka.am site search 'theatre salaries' (files/m7/am_arka_search_sal.html sha256 bbcf769826c89af69934052217350a14441cb0c055bcd5ef7a5d83e9893bfe49) and 'theater'; read arka.am/en/news/economy/from-157-000-to-1-million-drams-the-salary-scale-in-armenia-/ (7 Oct 2026, quoting the Statistical Committee; files/m7/am_arka_salaryscale.html sha256 b85f6a5ff85772f33dc88c70f738f078c2228069274a92c9100dd1c02c06abf8); news.am search 403",
+     "result": "ARKA, 7 Oct 2026: 'In the arts, entertainment, and recreation sector, the average salary reached about 380,900 drams' (January-July 2026; national average about 312,200). An average for the whole sector from the Statistical Committee, not a minimum for a stage director, playwright or actor; no theatre pay agreement or rate in any result.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "e-gov.am /gov-decrees/ (the Government's register of its decisions): every monthly calendar page for January to October 2026 (161 list pages, 1,549 decision titles, saved under files/m7/am_egov/), titles searched for theatre (ԹԱՏՐ), stage (ԲԵՄԱԿԱՆ), art (ԱՐՎԵՍՏ), film, cinema and television; ARLIS (arlis.am, the legal register) has no query search without script (as R-5297 records)",
+     "result": "No decision on theatre, stage pay or a performers', directors' or playwrights' rate in 2026. Five hits: two on deferring conscription of people with achievements in culture and art, one on the Hayfilm studio's state shares, one merging a culture centre and a museum, and Decision 1122-N of 30 July 2026 (film funding shares; see notes). None sets a stage minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'am,escs)/' (32 captures, m7w/cc43_am_escs__.txt) and 'am,theatre)/' (0); archive.org availability API for escs.am (no snapshot)",
+     "result": "Every escs.am capture is robots.txt answered HTTP 403: the ministry's site refuses the crawler as it refuses this machine. No archived ministry or theatre page with stage pay.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u14.result.json",
+     "tried": "'Armenia Ministry of Education Science Culture Sport grant theatre performance competition 2026 escs.am'",
+     "result": "no ministry page; a 2022 creative-works grant (up to AMD 1 million) and festival funding in results; nothing read as a term",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Lead for the producer blocker R-9805 (series fund), met while scanning the decision register for stage items: Government Decision N 1122-N of 30 July 2026, annex 6 ('ՖԻԼՄԻ ԱՌԱՆՁԻՆ ԿԱՏԵԳՈՐԻԱՆԵՐԻ ՊԵՏԱԿԱՆ ՖԻՆԱՆՍԱՎՈՐՄԱՆ ՄԱՍՆԱԲԱԺԻՆՆԵՐԸ ԵՎ ՍԱՀՄԱՆԱՉԱՓԵՐԸ', under art. 7(1)(2) of the Law on Cinematography; e-gov.am/u_files/file/decrees/kar/GVDA-B89C-6C56-483B/1122.6.pdf, files/m7/am_dec1122_6.pdf sha256 49b689c243032d897f2bbc18bb4794f695edfbcbd788d9b350b02e67b957f567; main text 1122.pdf sha256 57ea7aafbfa5dd0739762fd20ff37e2af0aba1c6b4ac3f4d38159bfb6fbac93a), read whole: state shares and caps (AMD million) for feature films (share 65%; fiction development 3, production 60, post 20; documentary 3/35/15; animation 3/80/20; minimum participation fiction 20, documentary 15, animation 20) and short films (35%; fiction 20, documentary 15, animation 21 at AMD 3 million a minute, debut animation 12; minimum 14). Categories are films only: no series category, so a series stands outside the state film funding. In force the day after publication."
+ },
+ "BL": {
+  "producer": {
+   "blocker": "R-9835",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Légifrance (legifrance.gouv.fr) CGCT section on Saint-Barthélemy's powers (LO6214) and an article URL: HTTP 403 Cloudflare 'Just a moment...' challenge, not read; EUR-Lex HTML and PDF for Council decision 2010/718/EU: HTTP 202 AWS WAF challenge, not read; then the EU Publications Office's own copy (publications.europa.eu/resource/celex/32010D0718, served from the Cellar, French) read (files/m7/bl_cellar.html)",
+     "result": "Decision 2010/718/EU, art. 1: 'À compter du 1er janvier 2012, l'île de Saint-Barthélemy cesse d'être une région ultrapériphérique de l'Union pour accéder au statut de pays et territoire d'outre-mer'. So EU law (state aid rules, the AVMS directive's quotas, Creative Europe) does not apply as in France; French tax credits depend on French tax law reaching the island, which the CGCT text (not read: Légifrance refused) settles. No series or play incentive read in any official text.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "journaldesaintbarth.com (Le Journal de Saint-Barth, weekly): site search for 'cinéma' and 'théâtre' (returns the home page: search not working) and the Culture-Loisirs section, read (files/m7/bl_jsb_cult.html, the 15 culture items of October 2026); le97133.com search: connection reset (curl 35)",
+     "result": "The October 2026 culture items: a concert, the artists' salon laureates, carnival, a patois dictionary workshop, abolition commemorations; no film or series shoot, theatre production, fund or incentive. No press on a producer's series or play in Saint-Barthélemy.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'convention collective entreprises artistiques et culturelles IDCC 1285 metteur en scène salaire minimum 2026 avenant champ d'application outre-mer Saint-Barthélemy'",
+     "result": "Results: legisocial, Juritravail, Tissot (grids at 1 Aug 2026), Tripalio copies of IDCC 1285 salary agreements (2022-2024), fiche-paie.fr's list of IDCC 1285 texts, travail-industrie.com's 2026 guide. They show an IDCC 1285 salary agreement of 1 July 2026; none gives the territorial scope or Saint-Barthélemy.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "code.travail.gouv.fr/convention-collective/1285-entreprises-artistiques-et-culturelles (the Ministry of Labour's Code du travail numérique) read (files/m7/bl_cdtn_1285.html)",
+     "result": "'Convention collective nationale pour les entreprises artistiques et culturelles du 1er janvier 1984. Etendue par arrêté du 4 janvier 1994 JORF 26 janvier 1994.' The page sends the full text to Légifrance (KALICONT000005635964), which refuses this machine (Cloudflare). No territorial clause or director's minimum on the page; with Code du travail L2222-1 (read by u7) the extended national agreement reaches Saint-Barthélemy unless it says otherwise.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "fiche-paie.fr/convention-collective/entreprises-artistiques-et-culturelles-1285/textes (secondary, a reuse of Légifrance's KALI base, updated 16 Oct 2026) read (files/m7/bl_fp_1285.html sha256 7e7523958d61d60f798803e8c5160b52c076f030084d506a44c3364ca2f22228); travail-industrie.com's IDCC 1285 2026 page: HTTP 403 Cloudflare challenge (files/m7/bl_ti_1285.html), not read",
+     "result": "'Accord du 1er juillet 2026 relatif aux salaires pour l'année 2026 En vigueur · signé le 1er juillet 2026 · effet au 1er août 2026 · Étendu par arrêté du 7 septembre 2026 (JORF du 19 septembre 2026)'; before it, the accord of 2 May 2024 (effect 1 June 2024, extended 23 July 2024). So France's stage director's minimum under IDCC 1285 changed on 1 Aug 2026 and binds every employer from the extension; the grid itself was not read here (Légifrance refused).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'org,syndeac)/' (Syndeac, the employers' union of IDCC 1285; 228 captures, m7w/cc202643_org_syndeac__.txt): got /toutes-les-ressources/salaires-minimum-dans-la-grille-ccneac/ (17 Oct 2026, files/m7/bl_cc43_syndeac_salaires-minimum-dans-la-grille-ccneac.html sha256 866e5613cc791e759cc4fc2e7facb520d7c8a85f14a432e2ed7b7a9faaff2b28); /minima-conventionnels-et-defraiements/ (capture listed, the data host refused the fetch: 'fetch failed')",
+     "result": "The archived page is out of date (it calls the accord of 28 April 2023 the last applicable, with the SMIC at EUR 11.65): it names no director's figure and nothing on the overseas collectivities. The minima page was not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "u7.result.json",
+     "tried": "code.travail.gouv.fr, Code du travail L2222-1 (the overseas scope of national agreements)",
+     "result": "read",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 follows France (Code du travail L2222-1, read by u7). France's IDCC 1285 salary accord of 1 July 2026 (effect 1 Aug 2026) was extended by arrêté of 7 Sept 2026 (JORF 19 Sept 2026), per fiche-paie.fr's copy of KALI: if FR's held stage director's minimum comes from the 2024 accord, it is superseded and should be re-read from the 2026 accord (Légifrance refused this machine)."
+ },
+ "CL": {
+  "producer": {
+   "blocker": "R-9868",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "La Tercera (latercera.com/la-tercera-pm/noticia/crisis-y-accion-trabajadores-de-la-cultura-...) read (files/m7/cl_lt_crisis.html), and the CL stage web-search's press results (El Dínamo, El Ciudadano, Radio UChile)",
+     "result": "No press article on the IFI's series terms, a series producer's fee cap, independent series pickups, a theatre tax incentive or plays recouping. La Tercera (2020) quotes the sector: project funds' fees 'muy bajos'; the fund 'no subsidia el trabajo del artista'.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'cl,cntv)/' (CNTV, 1,200 captures, m7w/cc43_cl_cntv__.txt): got '?estudio=oferta-y-consumo-fondo-cntv-2021' (9 Oct 2026, files/m7/cl_cc43_cntv_oferta2021.html sha256 c89986064fe5e614ab94f11919a46e2b8617044c5524adaebaa7735e8549033a) and the report PDF it links (cntv.cl/wp-content/uploads/2022/06/Fondo-CNTV-Oferta-y-Consumo-2021-ok.pdf, files/m7/cl_cntv_oyc2021.pdf sha256 973d0e047946aaecacef697bc5de56f88880ae880c6d1df6a0be0847e7da6b81)",
+     "result": "How Fondo CNTV series fare on air (2021): 'El total de oferta del Fondo CNTV en el año 2021 fue de 182 horas, lo que equivale al 0,4% del total de horas de programación de la TV Abierta' (414 in 2020, 235 in 2019); 72.2% of the Fund's hours were series and miniseries and reportage; '3,3% del total de la oferta de series y miniseries son financiados por el CNTV'; reach 3.5%, about 285,000 people. A 2021 outcome measure, not a pickup count; no IFI rule or fee cap in the captures.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "BCN Ley Chile: the navegar page (a script app: 'Este proceso demora demasiado'); then its XML and JSON services, which answered: obtxml?opt=7&idLey=17336 (Ley 17.336 Propiedad Intelectual, files/m7/cl_ley_17336.xml sha256 bb63162bba3a541934b993dc5660ed238db780a94c7084dcdd14e1200e172993) and get_norma_json?idNorma=28933 (the 'Última Versión', in force from 2017-11-03, files/m7/cl_17336_latest.json sha256 965600f94186173c5df31b009530d043c4bfbbf6b25d7c04723e6ee3b486c4fa); its search service for the Reglamento, then get_norma_json?idNorma=1055543 (Decreto 277 de 2013, Reglamento de la Ley 17.336, files/m7/cl_dto277.json sha256 f258793a657a2a3d1f946521edcea12d0d0de9423a752ce0773c55afef3137d0); obtxml?opt=7&idLey=19889 (Ley 19.889 on artists' and entertainment workers' contracts, files/m7/cl_ley_19889.xml sha256 71a9d9fb712ce8a95de1a675dc69f6d57bcd77ce8413813066714fc5164cfa7c), read whole",
+     "result": "FOUND item 8: Ley 17.336 art. 61: 'Cuando la remuneración del autor o autores no hubiere sido determinada contractualmente en un porcentaje superior, les corresponderá en conjunto, el 10% del total del valor de las entradas de cada función, y el día del estreno el 15%, descontados los impuestos que graven las entradas.' Art. 56: in a contrato de representación the fee 'no podrá ser inferior a los porcentajes señalados en el artículo 61'. Art. 62: if the show is also broadcast, at least 5% of the broadcaster's advertising price (or 10% of what the producer receives). DS 277/2013 art. 2: 'La remuneración mínima ... serán los porcentajes señalados en los artículos 50, 53, 61 y 62 de la ley'. Item 9: Ley 19.889 (Código del Trabajo arts. 145-A to 145-L) names 'actores de teatro' and 'dramaturgos' among arts workers and sets contract, rest-day and payment rules; it sets no pay rate (rest days paid at no less than art. 32's rate).",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "latercera.com tag page 'sidarte' and the article /la-tercera-pm/noticia/crisis-y-accion-trabajadores-de-la-cultura-proponen-plan-de-emergencia-y-reactivacion/ (2020, quoting the culture workers' organisations SIDARTE, UNA, Red de Salas de Teatro) read (files/m7/cl_lt_crisis.html sha256 405ee6c37b15b7e13f2cc176f904bfb1edeb38aaae934cdbea6eec7bab6f3a56); radio.uchile.cl tag 'sidarte' (list, 2020-2023 items); monitoraraucano.uchile.cl article PDF: an 'Anubis' proof-of-work bot check, not got past; chileactores.org memoria 2024 (Chileactores, read: no theatre rate in its text)",
+     "result": "La Tercera: '85% no tiene contrato, y de ellos, el 79,4% no tiene un ingreso estable', and 'Los honorarios en los fondos son muy bajos'; no rate for an actor or a playwright. No press article states the 10% royalty or a stage actor's minimum.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'cl,atn)/' (ATN, the playwrights' and screen authors' collecting society; 36 captures, m7w/cc43_cl_atn__.txt): got /obten-la-autorizacion-para-tu-obra-dramatica/ (12 Oct 2026, files/m7/cl_cc43_atn_dram.html sha256 44ff50cf984228474cb0acc4bb6061194676ccf8fe599067f115d51905ddd46f), then the professional companies' request form it links (files/m7/cl_atn_form_prof.docx sha256 4690791ed36341a897818718728bba5618188612623e79d914b7bea5f7ddc5b5)",
+     "result": "A company asks ATN for authorisation by form (title, author, company, director, number of performances, ticket price, hall and seats, budget); a fee of 1 UF for foreign works handled with other societies. The page and the form state no percentage: the royalty floor is the law's (art. 61).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u19.result.json",
+     "tried": "1 search: 'tarifario sugerido honorarios dramaturgia dirección teatral Chile asociación dramaturgos sindicato 2025'",
+     "result": "No playwright or director rate card; leads only (TNCH Ciclo Germinar bases, Teatro a Mil documents)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u19.result.json",
+     "tried": "sidarte.cl/salarios-minimos-sugeridos/ re-read",
+     "result": "Theatre day and rehearsal rates (suggested); nothing for directors or playwrights",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "BCN Ley Chile: the navegar page (a script app: 'Este proceso demora demasiado'); then its XML and JSON services, which answered: obtxml?opt=7&idLey=17336 (Ley 17.336 Propiedad Intelectual, files/m7/cl_ley_17336.xml sha256 bb63162bba3a541934b993dc5660ed238db780a94c7084dcdd14e1200e172993) and get_norma_json?idNorma=28933 (the 'Última Versión', in force from 2017-11-03, files/m7/cl_17336_latest.json sha256 965600f94186173c5df31b009530d043c4bfbbf6b25d7c04723e6ee3b486c4fa); its search service for the Reglamento, then get_norma_json?idNorma=1055543 (Decreto 277 de 2013, Reglamento de la Ley 17.336, files/m7/cl_dto277.json sha256 f258793a657a2a3d1f946521edcea12d0d0de9423a752ce0773c55afef3137d0); obtxml?opt=7&idLey=19889 (Ley 19.889 on artists' and entertainment workers' contracts, files/m7/cl_ley_19889.xml sha256 71a9d9fb712ce8a95de1a675dc69f6d57bcd77ce8413813066714fc5164cfa7c), read whole",
+     "result": "FOUND item 8: Ley 17.336 art. 61: 'Cuando la remuneración del autor o autores no hubiere sido determinada contractualmente en un porcentaje superior, les corresponderá en conjunto, el 10% del total del valor de las entradas de cada función, y el día del estreno el 15%, descontados los impuestos que graven las entradas.' Art. 56: in a contrato de representación the fee 'no podrá ser inferior a los porcentajes señalados en el artículo 61'. Art. 62: if the show is also broadcast, at least 5% of the broadcaster's advertising price (or 10% of what the producer receives). DS 277/2013 art. 2: 'La remuneración mínima ... serán los porcentajes señalados en los artículos 50, 53, 61 y 62 de la ley'. Item 9: Ley 19.889 (Código del Trabajo arts. 145-A to 145-L) names 'actores de teatro' and 'dramaturgos' among arts workers and sets contract, rest-day and payment rules; it sets no pay rate (rest days paid at no less than art. 32's rate).",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "latercera.com tag page 'sidarte' and the article /la-tercera-pm/noticia/crisis-y-accion-trabajadores-de-la-cultura-proponen-plan-de-emergencia-y-reactivacion/ (2020, quoting the culture workers' organisations SIDARTE, UNA, Red de Salas de Teatro) read (files/m7/cl_lt_crisis.html sha256 405ee6c37b15b7e13f2cc176f904bfb1edeb38aaae934cdbea6eec7bab6f3a56); radio.uchile.cl tag 'sidarte' (list, 2020-2023 items); monitoraraucano.uchile.cl article PDF: an 'Anubis' proof-of-work bot check, not got past; chileactores.org memoria 2024 (Chileactores, read: no theatre rate in its text)",
+     "result": "La Tercera: '85% no tiene contrato, y de ellos, el 79,4% no tiene un ingreso estable', and 'Los honorarios en los fondos son muy bajos'; no rate for an actor or a playwright. No press article states the 10% royalty or a stage actor's minimum.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Chile actores de teatro tarifas mínimas sugeridas SIDARTE 2026 función ensayo dramaturgos derecho de autor 10% taquilla ATN'",
+     "result": "No SIDARTE 2026 schedule or press on stage pay. Results: SIDARTE's history (revistaschilenas.uchile.cl), El Dínamo 2014, El Ciudadano, Radio UChile tag pages, La Tercera tag page, Chileactores annual reports (audiovisual tariffs with broadcasters). Followed under trade-press.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'cl,sidarte)/' (130 captures): got /salarios-minimos-sugeridos/ (7 Oct 2026, files/m7/cl_cc43_sidarte_sal.html sha256 8c15c8e6a95adf0c02620fb8c84114dd83831a1243f993b54a574cb9998dd8b6)",
+     "result": "The archived page holds the rates u19 read live: 'Jornada Laboral Teatro 80,000', 'Jornada Laboral Teatro 130,000', 'Hora Ensayo Teatro 17,000', 'OBRAS DE TEATRO ONLINE 80,000' (suggested, CLP). Confirms u19's item 9 as of October 2026; still suggested, not binding.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u19.result.json",
+     "tried": "sidarte.cl/salarios-minimos-sugeridos/ re-read",
+     "result": "Theatre day and rehearsal rates (suggested); nothing for directors or playwrights",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "binding": true,
+     "kind": "statutory minimum royalty for the author(s) of a staged work, absent a higher contractual percentage",
+     "royaltyShareOfTicketsPerPerformance": 0.1,
+     "openingNight": 0.15,
+     "base": "total ticket value of each performance, less taxes on tickets",
+     "sharedAmongAuthors": true,
+     "ifAlsoBroadcastMin": {
+      "shareOfBroadcasterAdvertisingPrice": 0.05,
+      "orShareOfWhatProducerReceives": 0.1
+     },
+     "royaltyIsDepositForAuthor": "art. 63",
+     "lawInForceVersionSince": "2017-11-03",
+     "collectingSociety": "ATN (authorisation by form; no published percentage of its own)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://nuevo.leychile.cl/servicios/Navegar/get_norma_json?idNorma=28933",
+      "title": "Ley 17.336 Propiedad Intelectual (BCN Ley Chile, última versión desde 2017-11-03), arts. 56, 61, 62",
+      "read": "2026-11-04",
+      "said": "Artículo 61.- Cuando la remuneración del autor o autores no hubiere sido determinada contractualmente en un porcentaje superior, les corresponderá en conjunto, el 10% del total del valor de las entradas de cada función, y el día del estreno el 15%, descontados los impuestos que graven las entradas. Artículo 62.- Si el espectáculo fuere además radiodifundido o televisado corresponderá al autor percibir, como mínimo, un 5% del precio cobrado por la emisora por la publicidad realizada durante el programa o, si no la hubiere, un 10% de lo que reciba el empresario de la emisora por radiodifundir la representación.",
+      "file": "files/m7/cl_17336_latest.json",
+      "sha256": "965600f94186173c5df31b009530d043c4bfbbf6b25d7c04723e6ee3b486c4fa"
+     },
+     {
+      "kind": "primary",
+      "url": "https://nuevo.leychile.cl/servicios/Navegar/get_norma_json?idNorma=1055543",
+      "title": "Decreto 277 (2013), Reglamento Ley 17.336, art. 2",
+      "read": "2026-11-04",
+      "said": "Artículo 2º: La remuneración mínima que corresponderá percibir a los titulares de los derechos de autor por la autorización para el uso de obras protegidas, serán los porcentajes señalados en los artículos 50, 53, 61 y 62 de la ley, sin perjuicio de lo acordado contractualmente.",
+      "file": "files/m7/cl_dto277.json",
+      "sha256": "f258793a657a2a3d1f946521edcea12d0d0de9423a752ce0773c55afef3137d0"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Item 8 found in the law itself (Ley 17.336 art. 61, a binding floor): 10% of each performance's ticket value net of ticket taxes, 15% on opening night. BCN Ley Chile's navegar page is a script app, but its obtxml and get_norma_json services answer (u19 met a 401 on them). Item 9 stays SIDARTE's suggested rates (confirmed by the CC capture of 7 Oct 2026); Ley 19.889 sets no rate."
+ },
+ "EG": {
+  "producer": {
+   "blocker": "R-9902",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Egypt's legal sources: cc.gov.eg (Court of Cassation; its legislation section /legislations/official_journal read: the app returns component 'Public/Error/SubscriptionNotice', files/m7/eg_cc_oj.html); www.parliament.gov.eg, www.alamiria.com (the Amiri Press, the Official Gazette's printer), www.egypt.gov.eg, www.sis.gov.eg; the labour ministry (www.manpower.gov.eg redirects to www.labour.gov.eg; manpower.gov.eg 404); Common Crawl CC-MAIN-2026-43 'eg,gov,manpower)/' (17 captures: all 302 or 404)",
+     "result": "The Court of Cassation's legislation and Official Journal database requires a subscription (a SubscriptionNotice page, nothing read). Parliament, Amiri Press, egypt.gov.eg, SIS and labour.gov.eg: no connection (curl 000). No law, decree or collective agreement on film or series incentives, theatre pay or the syndicates' fee rules read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Egypt's legal sources: cc.gov.eg (Court of Cassation; its legislation section /legislations/official_journal read: the app returns component 'Public/Error/SubscriptionNotice', files/m7/eg_cc_oj.html); www.parliament.gov.eg, www.alamiria.com (the Amiri Press, the Official Gazette's printer), www.egypt.gov.eg, www.sis.gov.eg; the labour ministry (www.manpower.gov.eg redirects to www.labour.gov.eg; manpower.gov.eg 404); Common Crawl CC-MAIN-2026-43 'eg,gov,manpower)/' (17 captures: all 302 or 404)",
+     "result": "The Court of Cassation's legislation and Official Journal database requires a subscription (a SubscriptionNotice page, nothing read). Parliament, Amiri Press, egypt.gov.eg, SIS and labour.gov.eg: no connection (curl 000). No law, decree or collective agreement on film or series incentives, theatre pay or the syndicates' fee rules read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'البيت الفني للمسرح لائحة أجور الممثلين والمخرجين والمؤلفين المسرح المصري الحد الأدنى للأجر نقابة المهن التمثيلية 2025' (the state Theatre House's pay rules for actors, directors and writers; the Actors' Syndicate's minimum)",
+     "result": "Only Hollywood pay-rate spam pages and a SAG-AFTRA note; no Egyptian Theatre House, Actors' Syndicate or Ministry of Culture page or press. (u19's earlier Arabic search was refused unrun; this is the first made.)",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "gate.ahram.org.eg/News/5455476.aspx (Al-Ahram Gate on the state theatre paper Masrahna's 2025 review): HTTP 403 Cloudflare challenge (files/m7/eg_gate_5455476.html); almasryalyoum.com 403; youm7.com theatre section 404; then masrawy.com /arts and its 'مسرح و تليفزيون' section read (files/m7/eg_masrawy_tvth.html sha256 641c64c380b44c4c794cb0ce1a3932b0290dcce43688b66a812047f7305b920b; 24 items, 20 Aug to 29 Sep 2026)",
+     "result": "Masrawy's items: new series and plays (Medhat El-Adl's musical 'Halim' opening in March), festival programmes, Ruby's Abu Dhabi tickets; none on a director's, playwright's or actor's stage pay, the Theatre House's rates or the syndicate's minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u19.result.json",
+     "tried": "moc.gov.eg and www.moc.gov.eg (Ministry of Culture), egyptfilmcommission.com, cinemasyndicate.org, nmaeg.org, maspero.eg (National Media Authority), ertu.org",
+     "result": "Ministry, film commission, syndicate, nmaeg: no connection (curl 000); maspero.eg 504; ertu.org 522",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "u19.result.json",
+     "tried": "Wayback availability API for egyptfilmcommission.com and web.archive.org for moc.gov.eg; Common Crawl CC-MAIN-2026-39, -2026-30, -2025-51 for 'com,egyptfilmcommission)/'",
+     "result": "Wayback 429 then connection reset; Common Crawl: no records",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Egypt's legal sources: cc.gov.eg (Court of Cassation; its legislation section /legislations/official_journal read: the app returns component 'Public/Error/SubscriptionNotice', files/m7/eg_cc_oj.html); www.parliament.gov.eg, www.alamiria.com (the Amiri Press, the Official Gazette's printer), www.egypt.gov.eg, www.sis.gov.eg; the labour ministry (www.manpower.gov.eg redirects to www.labour.gov.eg; manpower.gov.eg 404); Common Crawl CC-MAIN-2026-43 'eg,gov,manpower)/' (17 captures: all 302 or 404)",
+     "result": "The Court of Cassation's legislation and Official Journal database requires a subscription (a SubscriptionNotice page, nothing read). Parliament, Amiri Press, egypt.gov.eg, SIS and labour.gov.eg: no connection (curl 000). No law, decree or collective agreement on film or series incentives, theatre pay or the syndicates' fee rules read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'البيت الفني للمسرح لائحة أجور الممثلين والمخرجين والمؤلفين المسرح المصري الحد الأدنى للأجر نقابة المهن التمثيلية 2025' (the state Theatre House's pay rules for actors, directors and writers; the Actors' Syndicate's minimum)",
+     "result": "Only Hollywood pay-rate spam pages and a SAG-AFTRA note; no Egyptian Theatre House, Actors' Syndicate or Ministry of Culture page or press. (u19's earlier Arabic search was refused unrun; this is the first made.)",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "gate.ahram.org.eg/News/5455476.aspx (Al-Ahram Gate on the state theatre paper Masrahna's 2025 review): HTTP 403 Cloudflare challenge (files/m7/eg_gate_5455476.html); almasryalyoum.com 403; youm7.com theatre section 404; then masrawy.com /arts and its 'مسرح و تليفزيون' section read (files/m7/eg_masrawy_tvth.html sha256 641c64c380b44c4c794cb0ce1a3932b0290dcce43688b66a812047f7305b920b; 24 items, 20 Aug to 29 Sep 2026)",
+     "result": "Masrawy's items: new series and plays (Medhat El-Adl's musical 'Halim' opening in March), festival programmes, Ruby's Abu Dhabi tickets; none on a director's, playwright's or actor's stage pay, the Theatre House's rates or the syndicate's minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u19.result.json",
+     "tried": "moc.gov.eg and www.moc.gov.eg (Ministry of Culture), egyptfilmcommission.com, cinemasyndicate.org, nmaeg.org, maspero.eg (National Media Authority), ertu.org",
+     "result": "Ministry, film commission, syndicate, nmaeg: no connection (curl 000); maspero.eg 504; ertu.org 522",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "u19.result.json",
+     "tried": "Wayback availability API for egyptfilmcommission.com and web.archive.org for moc.gov.eg; Common Crawl CC-MAIN-2026-39, -2026-30, -2025-51 for 'com,egyptfilmcommission)/'",
+     "result": "Wayback 429 then connection reset; Common Crawl: no records",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Egypt's legal sources: cc.gov.eg (Court of Cassation; its legislation section /legislations/official_journal read: the app returns component 'Public/Error/SubscriptionNotice', files/m7/eg_cc_oj.html); www.parliament.gov.eg, www.alamiria.com (the Amiri Press, the Official Gazette's printer), www.egypt.gov.eg, www.sis.gov.eg; the labour ministry (www.manpower.gov.eg redirects to www.labour.gov.eg; manpower.gov.eg 404); Common Crawl CC-MAIN-2026-43 'eg,gov,manpower)/' (17 captures: all 302 or 404)",
+     "result": "The Court of Cassation's legislation and Official Journal database requires a subscription (a SubscriptionNotice page, nothing read). Parliament, Amiri Press, egypt.gov.eg, SIS and labour.gov.eg: no connection (curl 000). No law, decree or collective agreement on film or series incentives, theatre pay or the syndicates' fee rules read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'البيت الفني للمسرح لائحة أجور الممثلين والمخرجين والمؤلفين المسرح المصري الحد الأدنى للأجر نقابة المهن التمثيلية 2025' (the state Theatre House's pay rules for actors, directors and writers; the Actors' Syndicate's minimum)",
+     "result": "Only Hollywood pay-rate spam pages and a SAG-AFTRA note; no Egyptian Theatre House, Actors' Syndicate or Ministry of Culture page or press. (u19's earlier Arabic search was refused unrun; this is the first made.)",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "gate.ahram.org.eg/News/5455476.aspx (Al-Ahram Gate on the state theatre paper Masrahna's 2025 review): HTTP 403 Cloudflare challenge (files/m7/eg_gate_5455476.html); almasryalyoum.com 403; youm7.com theatre section 404; then masrawy.com /arts and its 'مسرح و تليفزيون' section read (files/m7/eg_masrawy_tvth.html sha256 641c64c380b44c4c794cb0ce1a3932b0290dcce43688b66a812047f7305b920b; 24 items, 20 Aug to 29 Sep 2026)",
+     "result": "Masrawy's items: new series and plays (Medhat El-Adl's musical 'Halim' opening in March), festival programmes, Ruby's Abu Dhabi tickets; none on a director's, playwright's or actor's stage pay, the Theatre House's rates or the syndicate's minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u19.result.json",
+     "tried": "moc.gov.eg and www.moc.gov.eg (Ministry of Culture), egyptfilmcommission.com, cinemasyndicate.org, nmaeg.org, maspero.eg (National Media Authority), ertu.org",
+     "result": "Ministry, film commission, syndicate, nmaeg: no connection (curl 000); maspero.eg 504; ertu.org 522",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "u19.result.json",
+     "tried": "Wayback availability API for egyptfilmcommission.com and web.archive.org for moc.gov.eg; Common Crawl CC-MAIN-2026-39, -2026-30, -2025-51 for 'com,egyptfilmcommission)/'",
+     "result": "Wayback 429 then connection reset; Common Crawl: no records",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Egypt's official legal database (Court of Cassation) is behind a subscription; the Amiri Press, Parliament and the labour ministry gave no connection; the Ministry of Culture, Actors' Syndicate and Theatre House sites were unreachable for u19. Items 7-9 stay blocked on all five methods."
+ },
+ "GN": {
+  "producer": {
+   "blocker": "R-9934",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "bgdagn.net (Bureau Guinéen du Droit d'Auteur, the collecting body under the culture ministry): home and /les-types-de-droits/ (files/m7/gn_bgdagn.html sha256 030df82d3a5d8efe91933dccf998ce6d55445bab3b15ca8bfa45e0bb2cd0375b; files/m7/gn_bgda_types.html sha256 84a0d3f257965a2d5149e88ae2374dfc5c00a03266e3d1daac92bf30a3d92fb5); bgda.gov.gn, www.bgda.gov.gn, mcat.gov.gn, www.mcat.gov.gn, culture.gov.gn, travail.gov.gn, www.emploi.gov.gn; rtg.gn and www.rtg.gn (Radio Télévision Guinéenne); gouvernement.gov.gn home",
+     "result": "BGDA: an EPA under the Ministry of Culture, Tourism and Handicrafts (decrees 446 and 447 of 15 Sept 1980); it lists mechanical, public performance, communication and telephony rights, no tariff figures and no theatre rate. The .gov.gn culture, labour and BGDA guesses: no connection (curl 000). rtg.gn: HTTP 503. No fund, commissioning terms, fee cap or pay minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.gn (Secrétariat Général du Gouvernement, which publishes the Journal Officiel and texts): its keyword search (POST /document/document-by, 'culture', 'cinéma', 'audiovisuel', 'spectacle', 'artiste', \"droit d'auteur\", 'code du travail', 'salaire minimum', 'convention collective', and a control word 'Simandou') returned no result for any word, the control included, so it does not work; then every list page of Lois (8), Décrets (60), Arrêtés (8) and Ordonnances (2), 310 titles (files/m7/gn_sgg/, e.g. lois_p1.html, decret_p1.html), searched for culture, cinema, audiovisual, spectacle, artist, theatre, copyright, labour, wage, SMIG, collective agreement, media, broadcasting, fund; and oapi.int's copy of the BGDA's 'Règlement de perception des droits' (arrêté of 29 April 2011, files/m7/gn_oapi_arrete.pdf sha256 e8e7d21a43499a9afb94825be8b564ff7a2b1ae66125068396274fb317a2b647), read whole",
+     "result": "Titles: only appointments at the culture and labour ministries; no law, decree or order on cinema, audiovisual production, a fund, theatre, performers' pay or a minimum wage. The arrêté (secondary: OAPI's copy): art. 14 'La tarification des oeuvres dramatiques ... représentées sur scène par des troupes professionnelles est calculée proportionnellement aux recettes brutes réalisées par cette représentation. Le paiement de la redevance ainsi déterminée incombe à l'entrepreneur de spectacle.'; art. 4: the BGDA 'fixe un minimum forfaitaire de redevance'; amateur troupes pay a flat fee (art. 18). No percentage or amount is set in the text. A royalty basis for the playwright (item 8), not a minimum; nothing for a director or an actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "guineedirect.org/wp-content/uploads/2025/04/COMMUNIQUE-BGDA.pdf (the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 as published by Guinée Direct; files/m7/gn_bgda_communique.pdf sha256 71a4b6cda9219d5553657527fc9d04bf3cc441f4a1c435e428a17e640fa5fa4b), read whole",
+     "result": "It tells creators and users, 'Entrepreneurs de spectacle' and 'Radios et télévisions privées' among them, to declare works, seek authorisation, sign 'contrats généraux de représentation avant toute forme d'exploitation', pay royalties and file programme returns. No rate, minimum, fund or commissioning term.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl lists for 'gn,gov,onacig)/' (CC-MAIN-2026-43, 2025-51) and 'gn,gov,culture)/' (CC-MAIN-2026-43, -39, -30), 'gn,gov,mict)/', 'gn,rtg)/', 'gn,gov,jo)/' (CC-MAIN-2026-43): 0 captures each; 'gn,gov,sgg)/' CC-MAIN-2026-43: 270 captures, got /document/journal/1 (9 Oct 2026, files/m7/gn_cc43_sgg_journal.html sha256 17359430650eafc857e668dff4ea42cedfe6875a1633cbfccbb2d918f6f68e7a); archive.org availability API: no snapshot for onacig.gov.gn, culture.gov.gn, www.culture.gov.gn (bgdagn.net has one of 2026-06-16, web.archive.org itself resets)",
+     "result": "No archived copy of the film office's (ONACIG) or the culture ministry's site exists in any crawl tried. The archived Journal Officiel list shows the issues of January to April 2025 and the special electoral code (Sept 2025) only as downloads by month, no subject; nothing on the items.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), French: 'Guinée Conakry théâtre comédiens cachet rémunération artistes convention collective spectacle BGDA droits d'auteur dramaturge 2025'",
+     "result": "No Guinean performers' agreement, fee scale or stage director's or playwright's minimum. Leads followed: the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 (guineedirect.org), AllAfrica on the BGDA's 2023-2024 royalty payments, the BGDA's collection rules arrêté (copy on oapi.int), WIPO Lex's copy of the copyright law; the rest was French practice (Artcena, EAT charter), not Guinea's.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "bgdagn.net (Bureau Guinéen du Droit d'Auteur, the collecting body under the culture ministry): home and /les-types-de-droits/ (files/m7/gn_bgdagn.html sha256 030df82d3a5d8efe91933dccf998ce6d55445bab3b15ca8bfa45e0bb2cd0375b; files/m7/gn_bgda_types.html sha256 84a0d3f257965a2d5149e88ae2374dfc5c00a03266e3d1daac92bf30a3d92fb5); bgda.gov.gn, www.bgda.gov.gn, mcat.gov.gn, www.mcat.gov.gn, culture.gov.gn, travail.gov.gn, www.emploi.gov.gn; rtg.gn and www.rtg.gn (Radio Télévision Guinéenne); gouvernement.gov.gn home",
+     "result": "BGDA: an EPA under the Ministry of Culture, Tourism and Handicrafts (decrees 446 and 447 of 15 Sept 1980); it lists mechanical, public performance, communication and telephony rights, no tariff figures and no theatre rate. The .gov.gn culture, labour and BGDA guesses: no connection (curl 000). rtg.gn: HTTP 503. No fund, commissioning terms, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.gn (Secrétariat Général du Gouvernement, which publishes the Journal Officiel and texts): its keyword search (POST /document/document-by, 'culture', 'cinéma', 'audiovisuel', 'spectacle', 'artiste', \"droit d'auteur\", 'code du travail', 'salaire minimum', 'convention collective', and a control word 'Simandou') returned no result for any word, the control included, so it does not work; then every list page of Lois (8), Décrets (60), Arrêtés (8) and Ordonnances (2), 310 titles (files/m7/gn_sgg/, e.g. lois_p1.html, decret_p1.html), searched for culture, cinema, audiovisual, spectacle, artist, theatre, copyright, labour, wage, SMIG, collective agreement, media, broadcasting, fund; and oapi.int's copy of the BGDA's 'Règlement de perception des droits' (arrêté of 29 April 2011, files/m7/gn_oapi_arrete.pdf sha256 e8e7d21a43499a9afb94825be8b564ff7a2b1ae66125068396274fb317a2b647), read whole",
+     "result": "Titles: only appointments at the culture and labour ministries; no law, decree or order on cinema, audiovisual production, a fund, theatre, performers' pay or a minimum wage. The arrêté (secondary: OAPI's copy): art. 14 'La tarification des oeuvres dramatiques ... représentées sur scène par des troupes professionnelles est calculée proportionnellement aux recettes brutes réalisées par cette représentation. Le paiement de la redevance ainsi déterminée incombe à l'entrepreneur de spectacle.'; art. 4: the BGDA 'fixe un minimum forfaitaire de redevance'; amateur troupes pay a flat fee (art. 18). No percentage or amount is set in the text. A royalty basis for the playwright (item 8), not a minimum; nothing for a director or an actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "guineedirect.org/wp-content/uploads/2025/04/COMMUNIQUE-BGDA.pdf (the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 as published by Guinée Direct; files/m7/gn_bgda_communique.pdf sha256 71a4b6cda9219d5553657527fc9d04bf3cc441f4a1c435e428a17e640fa5fa4b), read whole",
+     "result": "It tells creators and users, 'Entrepreneurs de spectacle' and 'Radios et télévisions privées' among them, to declare works, seek authorisation, sign 'contrats généraux de représentation avant toute forme d'exploitation', pay royalties and file programme returns. No rate, minimum, fund or commissioning term.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl lists for 'gn,gov,onacig)/' (CC-MAIN-2026-43, 2025-51) and 'gn,gov,culture)/' (CC-MAIN-2026-43, -39, -30), 'gn,gov,mict)/', 'gn,rtg)/', 'gn,gov,jo)/' (CC-MAIN-2026-43): 0 captures each; 'gn,gov,sgg)/' CC-MAIN-2026-43: 270 captures, got /document/journal/1 (9 Oct 2026, files/m7/gn_cc43_sgg_journal.html sha256 17359430650eafc857e668dff4ea42cedfe6875a1633cbfccbb2d918f6f68e7a); archive.org availability API: no snapshot for onacig.gov.gn, culture.gov.gn, www.culture.gov.gn (bgdagn.net has one of 2026-06-16, web.archive.org itself resets)",
+     "result": "No archived copy of the film office's (ONACIG) or the culture ministry's site exists in any crawl tried. The archived Journal Officiel list shows the issues of January to April 2025 and the special electoral code (Sept 2025) only as downloads by month, no subject; nothing on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), French: 'Guinée Conakry théâtre comédiens cachet rémunération artistes convention collective spectacle BGDA droits d'auteur dramaturge 2025'",
+     "result": "No Guinean performers' agreement, fee scale or stage director's or playwright's minimum. Leads followed: the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 (guineedirect.org), AllAfrica on the BGDA's 2023-2024 royalty payments, the BGDA's collection rules arrêté (copy on oapi.int), WIPO Lex's copy of the copyright law; the rest was French practice (Artcena, EAT charter), not Guinea's.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "bgdagn.net (Bureau Guinéen du Droit d'Auteur, the collecting body under the culture ministry): home and /les-types-de-droits/ (files/m7/gn_bgdagn.html sha256 030df82d3a5d8efe91933dccf998ce6d55445bab3b15ca8bfa45e0bb2cd0375b; files/m7/gn_bgda_types.html sha256 84a0d3f257965a2d5149e88ae2374dfc5c00a03266e3d1daac92bf30a3d92fb5); bgda.gov.gn, www.bgda.gov.gn, mcat.gov.gn, www.mcat.gov.gn, culture.gov.gn, travail.gov.gn, www.emploi.gov.gn; rtg.gn and www.rtg.gn (Radio Télévision Guinéenne); gouvernement.gov.gn home",
+     "result": "BGDA: an EPA under the Ministry of Culture, Tourism and Handicrafts (decrees 446 and 447 of 15 Sept 1980); it lists mechanical, public performance, communication and telephony rights, no tariff figures and no theatre rate. The .gov.gn culture, labour and BGDA guesses: no connection (curl 000). rtg.gn: HTTP 503. No fund, commissioning terms, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.gn (Secrétariat Général du Gouvernement, which publishes the Journal Officiel and texts): its keyword search (POST /document/document-by, 'culture', 'cinéma', 'audiovisuel', 'spectacle', 'artiste', \"droit d'auteur\", 'code du travail', 'salaire minimum', 'convention collective', and a control word 'Simandou') returned no result for any word, the control included, so it does not work; then every list page of Lois (8), Décrets (60), Arrêtés (8) and Ordonnances (2), 310 titles (files/m7/gn_sgg/, e.g. lois_p1.html, decret_p1.html), searched for culture, cinema, audiovisual, spectacle, artist, theatre, copyright, labour, wage, SMIG, collective agreement, media, broadcasting, fund; and oapi.int's copy of the BGDA's 'Règlement de perception des droits' (arrêté of 29 April 2011, files/m7/gn_oapi_arrete.pdf sha256 e8e7d21a43499a9afb94825be8b564ff7a2b1ae66125068396274fb317a2b647), read whole",
+     "result": "Titles: only appointments at the culture and labour ministries; no law, decree or order on cinema, audiovisual production, a fund, theatre, performers' pay or a minimum wage. The arrêté (secondary: OAPI's copy): art. 14 'La tarification des oeuvres dramatiques ... représentées sur scène par des troupes professionnelles est calculée proportionnellement aux recettes brutes réalisées par cette représentation. Le paiement de la redevance ainsi déterminée incombe à l'entrepreneur de spectacle.'; art. 4: the BGDA 'fixe un minimum forfaitaire de redevance'; amateur troupes pay a flat fee (art. 18). No percentage or amount is set in the text. A royalty basis for the playwright (item 8), not a minimum; nothing for a director or an actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "guineedirect.org/wp-content/uploads/2025/04/COMMUNIQUE-BGDA.pdf (the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 as published by Guinée Direct; files/m7/gn_bgda_communique.pdf sha256 71a4b6cda9219d5553657527fc9d04bf3cc441f4a1c435e428a17e640fa5fa4b), read whole",
+     "result": "It tells creators and users, 'Entrepreneurs de spectacle' and 'Radios et télévisions privées' among them, to declare works, seek authorisation, sign 'contrats généraux de représentation avant toute forme d'exploitation', pay royalties and file programme returns. No rate, minimum, fund or commissioning term.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl lists for 'gn,gov,onacig)/' (CC-MAIN-2026-43, 2025-51) and 'gn,gov,culture)/' (CC-MAIN-2026-43, -39, -30), 'gn,gov,mict)/', 'gn,rtg)/', 'gn,gov,jo)/' (CC-MAIN-2026-43): 0 captures each; 'gn,gov,sgg)/' CC-MAIN-2026-43: 270 captures, got /document/journal/1 (9 Oct 2026, files/m7/gn_cc43_sgg_journal.html sha256 17359430650eafc857e668dff4ea42cedfe6875a1633cbfccbb2d918f6f68e7a); archive.org availability API: no snapshot for onacig.gov.gn, culture.gov.gn, www.culture.gov.gn (bgdagn.net has one of 2026-06-16, web.archive.org itself resets)",
+     "result": "No archived copy of the film office's (ONACIG) or the culture ministry's site exists in any crawl tried. The archived Journal Officiel list shows the issues of January to April 2025 and the special electoral code (Sept 2025) only as downloads by month, no subject; nothing on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), French: 'Guinée Conakry théâtre comédiens cachet rémunération artistes convention collective spectacle BGDA droits d'auteur dramaturge 2025'",
+     "result": "No Guinean performers' agreement, fee scale or stage director's or playwright's minimum. Leads followed: the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 (guineedirect.org), AllAfrica on the BGDA's 2023-2024 royalty payments, the BGDA's collection rules arrêté (copy on oapi.int), WIPO Lex's copy of the copyright law; the rest was French practice (Artcena, EAT charter), not Guinea's.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "bgdagn.net (Bureau Guinéen du Droit d'Auteur, the collecting body under the culture ministry): home and /les-types-de-droits/ (files/m7/gn_bgdagn.html sha256 030df82d3a5d8efe91933dccf998ce6d55445bab3b15ca8bfa45e0bb2cd0375b; files/m7/gn_bgda_types.html sha256 84a0d3f257965a2d5149e88ae2374dfc5c00a03266e3d1daac92bf30a3d92fb5); bgda.gov.gn, www.bgda.gov.gn, mcat.gov.gn, www.mcat.gov.gn, culture.gov.gn, travail.gov.gn, www.emploi.gov.gn; rtg.gn and www.rtg.gn (Radio Télévision Guinéenne); gouvernement.gov.gn home",
+     "result": "BGDA: an EPA under the Ministry of Culture, Tourism and Handicrafts (decrees 446 and 447 of 15 Sept 1980); it lists mechanical, public performance, communication and telephony rights, no tariff figures and no theatre rate. The .gov.gn culture, labour and BGDA guesses: no connection (curl 000). rtg.gn: HTTP 503. No fund, commissioning terms, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.gn (Secrétariat Général du Gouvernement, which publishes the Journal Officiel and texts): its keyword search (POST /document/document-by, 'culture', 'cinéma', 'audiovisuel', 'spectacle', 'artiste', \"droit d'auteur\", 'code du travail', 'salaire minimum', 'convention collective', and a control word 'Simandou') returned no result for any word, the control included, so it does not work; then every list page of Lois (8), Décrets (60), Arrêtés (8) and Ordonnances (2), 310 titles (files/m7/gn_sgg/, e.g. lois_p1.html, decret_p1.html), searched for culture, cinema, audiovisual, spectacle, artist, theatre, copyright, labour, wage, SMIG, collective agreement, media, broadcasting, fund; and oapi.int's copy of the BGDA's 'Règlement de perception des droits' (arrêté of 29 April 2011, files/m7/gn_oapi_arrete.pdf sha256 e8e7d21a43499a9afb94825be8b564ff7a2b1ae66125068396274fb317a2b647), read whole",
+     "result": "Titles: only appointments at the culture and labour ministries; no law, decree or order on cinema, audiovisual production, a fund, theatre, performers' pay or a minimum wage. The arrêté (secondary: OAPI's copy): art. 14 'La tarification des oeuvres dramatiques ... représentées sur scène par des troupes professionnelles est calculée proportionnellement aux recettes brutes réalisées par cette représentation. Le paiement de la redevance ainsi déterminée incombe à l'entrepreneur de spectacle.'; art. 4: the BGDA 'fixe un minimum forfaitaire de redevance'; amateur troupes pay a flat fee (art. 18). No percentage or amount is set in the text. A royalty basis for the playwright (item 8), not a minimum; nothing for a director or an actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "guineedirect.org/wp-content/uploads/2025/04/COMMUNIQUE-BGDA.pdf (the BGDA's communiqué N°002/SPMRP/DGA/BGDA/2025 as published by Guinée Direct; files/m7/gn_bgda_communique.pdf sha256 71a4b6cda9219d5553657527fc9d04bf3cc441f4a1c435e428a17e640fa5fa4b), read whole",
+     "result": "It tells creators and users, 'Entrepreneurs de spectacle' and 'Radios et télévisions privées' among them, to declare works, seek authorisation, sign 'contrats généraux de représentation avant toute forme d'exploitation', pay royalties and file programme returns. No rate, minimum, fund or commissioning term.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl lists for 'gn,gov,onacig)/' (CC-MAIN-2026-43, 2025-51) and 'gn,gov,culture)/' (CC-MAIN-2026-43, -39, -30), 'gn,gov,mict)/', 'gn,rtg)/', 'gn,gov,jo)/' (CC-MAIN-2026-43): 0 captures each; 'gn,gov,sgg)/' CC-MAIN-2026-43: 270 captures, got /document/journal/1 (9 Oct 2026, files/m7/gn_cc43_sgg_journal.html sha256 17359430650eafc857e668dff4ea42cedfe6875a1633cbfccbb2d918f6f68e7a); archive.org availability API: no snapshot for onacig.gov.gn, culture.gov.gn, www.culture.gov.gn (bgdagn.net has one of 2026-06-16, web.archive.org itself resets)",
+     "result": "No archived copy of the film office's (ONACIG) or the culture ministry's site exists in any crawl tried. The archived Journal Officiel list shows the issues of January to April 2025 and the special electoral code (Sept 2025) only as downloads by month, no subject; nothing on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "IO": {
+  "producer": {
+   "blocker": "R-9966",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "biot.gov.io (the BIOT Administration's site): home, /about/ and /governance/ read (saved files/m7/io_biot_gov_io_.html sha256 30d0e675..., io_biot_gov_io_about_.html ef95a035..., io_governance.html db95bf04...)",
+     "result": "About: 'There are ordinarily around 2000 people on Diego Garcia. They are mostly a mix of UK and US military personnel, BIOTA officials and civilian contractors responsible for the maintenance and operation of the military facility.' Governance: administered from the UK by a Commissioner, a BIOTA team of around 40. The site has no culture, arts, film, broadcasting or theatre section or body: no series, play, fund, incentive, director's, playwright's or actor's terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "biot.gov.io /governance/legislation/revised-ordinances/ (the Revised Ordinances index, read whole: Chapters A-H, saved files/m7/io_revord.html sha256 56c55809...); then read The Taxation Ordinance 1981 (G.2, law as at 1 Sept 2020, files/m7/io_The-Taxation-Ord-1981-G.2.pdf sha256 77880137...), The Employment Ordinance 1984 (G.5, files/m7/io_The-Employment-Ord-1984-G.5.pdf sha256 b63e789f...) and The Communications Ordinance 2018 (G.10, files/m7/io_The-Communications-Ord-2018-G.10.pdf sha256 32c70deb...)",
+     "result": "No ordinance on film, broadcasting content, theatre, culture or copyright in the index. Taxation Ordinance s.3: no law 'shall have effect so as to require or permit the imposition within the Territory of any income tax, corporation tax...' (so no tax to credit a production against). Employment Ordinance: health and safety, conciliation and arbitration in trade disputes, insurance, medical care, repatriation; 'employer means a person who employs ten or more employees'; no minimum wage or pay rate. Communications Ordinance: electronic communications licences only, the word 'broadcast' does not occur. Nothing sets a playwright's, actor's or producer's term.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'io,gov,biot)/' (40 captures, m7w/cc43_io_gov_biot__.txt); got the /sitemap/ capture of 2026-10-16 (files/m7/io_cc43_sitemap.html sha256 16ebbb20...). Wayback: archive.org availability API answered (closest 2026-10-18 snapshot of www.biot.gov.io/) but web.archive.org itself reset the connection (curl 35) and was not read",
+     "result": "The archived sitemap lists every section of the Administration's site (Science, Stamps and Coins, About, Governance with Legislation, Visiting, Environment): no culture, arts, broadcasting, film or theatre page exists to hold any of the items.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Chagos Archipelago treaty Mauritius entry into force British Indian Ocean Territory 2026' (to learn which state's law and bodies apply to the Territory today)",
+     "result": "Results: Wikipedia, Chatham House (Jan 2026), Anadolu (24 Jan 2026), Westminster Brief PQ archive, Mauritius Times: the UK-Mauritius treaty of May 2025 is signed but not in force (pending ratification); no source in the results names any film, broadcasting, theatre or arts body for the Territory. So BIOT law (the Administration's ordinances) still applies, read under official-register.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "aa.com.tr/en/world/uk-delays-debate-on-chagos-deal-after-trump-backlash-reports/3809359 (Anadolu, 24 Jan 2026) fetched and read (files/m7/io_aa.html sha256 4f2d7c1764ee2338407d5428598dce532b6d21d9f27d06ac06e4c6c688ac85c5); chathamhouse.org/2026/01/uk-ratification-chagos-archipelago-treaty-will-not-violate-international-law fetched (files/m7/io_chathamhouse.html)",
+     "result": "Anadolu read, quoting The Telegraph: 'The agreement has not yet entered into force as it is pending domestic ratification'; the archipelago hosts the Diego Garcia base. No press on any production, play, theatre or pay in the Territory. Chatham House: HTTP 403 Cloudflare 'Attention Required!' challenge, not read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "institution",
+     "tried": "biot.gov.io (the BIOT Administration's site): home, /about/ and /governance/ read (saved files/m7/io_biot_gov_io_.html sha256 30d0e675..., io_biot_gov_io_about_.html ef95a035..., io_governance.html db95bf04...)",
+     "result": "About: 'There are ordinarily around 2000 people on Diego Garcia. They are mostly a mix of UK and US military personnel, BIOTA officials and civilian contractors responsible for the maintenance and operation of the military facility.' Governance: administered from the UK by a Commissioner, a BIOTA team of around 40. The site has no culture, arts, film, broadcasting or theatre section or body: no series, play, fund, incentive, director's, playwright's or actor's terms.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "biot.gov.io /governance/legislation/revised-ordinances/ (the Revised Ordinances index, read whole: Chapters A-H, saved files/m7/io_revord.html sha256 56c55809...); then read The Taxation Ordinance 1981 (G.2, law as at 1 Sept 2020, files/m7/io_The-Taxation-Ord-1981-G.2.pdf sha256 77880137...), The Employment Ordinance 1984 (G.5, files/m7/io_The-Employment-Ord-1984-G.5.pdf sha256 b63e789f...) and The Communications Ordinance 2018 (G.10, files/m7/io_The-Communications-Ord-2018-G.10.pdf sha256 32c70deb...)",
+     "result": "No ordinance on film, broadcasting content, theatre, culture or copyright in the index. Taxation Ordinance s.3: no law 'shall have effect so as to require or permit the imposition within the Territory of any income tax, corporation tax...' (so no tax to credit a production against). Employment Ordinance: health and safety, conciliation and arbitration in trade disputes, insurance, medical care, repatriation; 'employer means a person who employs ten or more employees'; no minimum wage or pay rate. Communications Ordinance: electronic communications licences only, the word 'broadcast' does not occur. Nothing sets a playwright's, actor's or producer's term.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'io,gov,biot)/' (40 captures, m7w/cc43_io_gov_biot__.txt); got the /sitemap/ capture of 2026-10-16 (files/m7/io_cc43_sitemap.html sha256 16ebbb20...). Wayback: archive.org availability API answered (closest 2026-10-18 snapshot of www.biot.gov.io/) but web.archive.org itself reset the connection (curl 35) and was not read",
+     "result": "The archived sitemap lists every section of the Administration's site (Science, Stamps and Coins, About, Governance with Legislation, Visiting, Environment): no culture, arts, broadcasting, film or theatre page exists to hold any of the items.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Chagos Archipelago treaty Mauritius entry into force British Indian Ocean Territory 2026' (to learn which state's law and bodies apply to the Territory today)",
+     "result": "Results: Wikipedia, Chatham House (Jan 2026), Anadolu (24 Jan 2026), Westminster Brief PQ archive, Mauritius Times: the UK-Mauritius treaty of May 2025 is signed but not in force (pending ratification); no source in the results names any film, broadcasting, theatre or arts body for the Territory. So BIOT law (the Administration's ordinances) still applies, read under official-register.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "aa.com.tr/en/world/uk-delays-debate-on-chagos-deal-after-trump-backlash-reports/3809359 (Anadolu, 24 Jan 2026) fetched and read (files/m7/io_aa.html sha256 4f2d7c1764ee2338407d5428598dce532b6d21d9f27d06ac06e4c6c688ac85c5); chathamhouse.org/2026/01/uk-ratification-chagos-archipelago-treaty-will-not-violate-international-law fetched (files/m7/io_chathamhouse.html)",
+     "result": "Anadolu read, quoting The Telegraph: 'The agreement has not yet entered into force as it is pending domestic ratification'; the archipelago hosts the Diego Garcia base. No press on any production, play, theatre or pay in the Territory. Chatham House: HTTP 403 Cloudflare 'Attention Required!' challenge, not read.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "institution",
+     "tried": "biot.gov.io (the BIOT Administration's site): home, /about/ and /governance/ read (saved files/m7/io_biot_gov_io_.html sha256 30d0e675..., io_biot_gov_io_about_.html ef95a035..., io_governance.html db95bf04...)",
+     "result": "About: 'There are ordinarily around 2000 people on Diego Garcia. They are mostly a mix of UK and US military personnel, BIOTA officials and civilian contractors responsible for the maintenance and operation of the military facility.' Governance: administered from the UK by a Commissioner, a BIOTA team of around 40. The site has no culture, arts, film, broadcasting or theatre section or body: no series, play, fund, incentive, director's, playwright's or actor's terms.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "biot.gov.io /governance/legislation/revised-ordinances/ (the Revised Ordinances index, read whole: Chapters A-H, saved files/m7/io_revord.html sha256 56c55809...); then read The Taxation Ordinance 1981 (G.2, law as at 1 Sept 2020, files/m7/io_The-Taxation-Ord-1981-G.2.pdf sha256 77880137...), The Employment Ordinance 1984 (G.5, files/m7/io_The-Employment-Ord-1984-G.5.pdf sha256 b63e789f...) and The Communications Ordinance 2018 (G.10, files/m7/io_The-Communications-Ord-2018-G.10.pdf sha256 32c70deb...)",
+     "result": "No ordinance on film, broadcasting content, theatre, culture or copyright in the index. Taxation Ordinance s.3: no law 'shall have effect so as to require or permit the imposition within the Territory of any income tax, corporation tax...' (so no tax to credit a production against). Employment Ordinance: health and safety, conciliation and arbitration in trade disputes, insurance, medical care, repatriation; 'employer means a person who employs ten or more employees'; no minimum wage or pay rate. Communications Ordinance: electronic communications licences only, the word 'broadcast' does not occur. Nothing sets a playwright's, actor's or producer's term.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'io,gov,biot)/' (40 captures, m7w/cc43_io_gov_biot__.txt); got the /sitemap/ capture of 2026-10-16 (files/m7/io_cc43_sitemap.html sha256 16ebbb20...). Wayback: archive.org availability API answered (closest 2026-10-18 snapshot of www.biot.gov.io/) but web.archive.org itself reset the connection (curl 35) and was not read",
+     "result": "The archived sitemap lists every section of the Administration's site (Science, Stamps and Coins, About, Governance with Legislation, Visiting, Environment): no culture, arts, broadcasting, film or theatre page exists to hold any of the items.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Chagos Archipelago treaty Mauritius entry into force British Indian Ocean Territory 2026' (to learn which state's law and bodies apply to the Territory today)",
+     "result": "Results: Wikipedia, Chatham House (Jan 2026), Anadolu (24 Jan 2026), Westminster Brief PQ archive, Mauritius Times: the UK-Mauritius treaty of May 2025 is signed but not in force (pending ratification); no source in the results names any film, broadcasting, theatre or arts body for the Territory. So BIOT law (the Administration's ordinances) still applies, read under official-register.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "aa.com.tr/en/world/uk-delays-debate-on-chagos-deal-after-trump-backlash-reports/3809359 (Anadolu, 24 Jan 2026) fetched and read (files/m7/io_aa.html sha256 4f2d7c1764ee2338407d5428598dce532b6d21d9f27d06ac06e4c6c688ac85c5); chathamhouse.org/2026/01/uk-ratification-chagos-archipelago-treaty-will-not-violate-international-law fetched (files/m7/io_chathamhouse.html)",
+     "result": "Anadolu read, quoting The Telegraph: 'The agreement has not yet entered into force as it is pending domestic ratification'; the archipelago hosts the Diego Garcia base. No press on any production, play, theatre or pay in the Territory. Chatham House: HTTP 403 Cloudflare 'Attention Required!' challenge, not read.",
+     "date": "2026-11-04",
+     "items": [
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "BIOT has no resident population beyond about 2,000 military personnel, officials and contractors (biot.gov.io About), no tax (Taxation Ordinance 1981 s.3), no minimum pay (Employment Ordinance 1984), and no culture, film, broadcasting or theatre body or ordinance (Revised Ordinances index; the CC-MAIN-2026-43 sitemap). The UK-Mauritius treaty is not in force (Anadolu, 24 Jan 2026), so BIOT law applies today. Items 1-10 stand none-exists on all five methods; once the treaty enters into force Mauritius's law and bodies would apply and should be re-read."
+ },
+ "LA": {
+  "producer": {
+   "blocker": "R-9998",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 lists for 'la,gov,mict)/' (83 captures) and 'la,gov,laoofficialgazette)/' (2,963 captures, m7w/cc202643_la_gov_laoofficialgazette__.txt); got /regislation/15 (7 Oct 2026, files/m7/la_cc43_regislation_15.html sha256 781ae0c5be136fabfac4a6078f46c902484daa0a42dad9d219cd57d4fd79de5a) and the 'ຄໍາແນະນໍາກ່ຽວກັບການຈັດຕັ້ງປະຕິບັດ ກົດໝາຍວ່າດ້ວຍ ຮູບເງົາ' (Instruction on implementing the Law on Cinema) it links, uploads/documents/2c1c2870f40f9936a.pdf (not captured; fetched live, files/m7/la_cinema_instruction.pdf sha256 fe60077b14da217b40d776b9eb4a8b9639e0fad6bb874a555d19c6ab02b7c21b)",
+     "result": "The archive shows the ministry's cinema texts as of Oct 2026: the Law on Cinema and an implementing Instruction (3 pages, a scanned image without a text layer, not OCR'd: the Lao OCR timed out, see stage); no fund, incentive, series term or commissioning rule appears among the titles. The gazette's 2,963 captures are uploaded files named by number, not searchable by subject without fetching each.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), English and Lao: 'Laos performing arts decree artists remuneration National Lao Theatre troupe actors salary ສິລະປະການສະແດງ ຄ່າຕອບແທນ ນັກສິລະປິນ'",
+     "result": "No Lao pay scale, agreement or minimum for stage directors, writers or actors. Lao results: JCLao/Vientiane Times on the Law on Performing Arts (read under trade-press), a Paylab salary survey for 'Arts & Culture' in Laos (a private survey, not a source), Catherine Diamond in New Theatre Quarterly, a Thai journal article on Lao performance business; the rest was Vietnamese decrees, which do not apply.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "jclao.com/micat-publicises-law-on-performing-arts/ (12 Feb 2018, quoting Vientiane Times and the ministry's Department of Performing Arts) fetched and read (files/m7/la_jclao_17017.html sha256 9090375c7ba02b41cde1ad5cd0bcb7b5c467520729373c3f39668552ba6fb66d)",
+     "result": "The Law on Performing Arts 'has 10 parts and 74 articles' (General Terms, Performing Arts, Artist and Artist name, Activities of Artists and Performing Arts, Performing Arts Organisations, Prohibitions, Dispute Resolution, Management and Inspection, Policy for People with Outstanding Achievement and Terms for Violators, Final Provisions). It describes management and inspection; it names no fee, wage or minimum for artists.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "www.mict.gov.la (Ministry of Information, Culture and Tourism): /mass-organization, /organization-structure and every legislation list /regislation/1 to /25 (saved files/m7/la_mict/), titles read for performing arts, theatre, film, artists, pay; then downloaded the 'ດຳລັດ ວ່າດ້ວຍສິລະປະການສະແດງ' (Decree on Performing Arts) from /regislation/12, uploads/documents/d2720432fc21f2fe4d0543821d568a59.pdf (files/m7/la_decree_perfarts_s.pdf sha256 3c79ce5a409758449ceb3fb66b93b29e4b01785834189d905569c22349ad0cf2)",
+     "result": "The lists hold the Law on Cinema, the Law on Performing Arts, the Law on Mass Media, the Decree on Performing Arts, an Instruction on implementing the Law on Cinema, and the statutes of the National Arts College, the National Artists' Troupe, the National Theatre Troupe (ກອງລະຄອນແຫ່ງຊາດ) and the arts-culture department; no title on pay, fees or a minimum for artists. The decree is a scanned image (18 pages, no text layer); Lao OCR (tesseract, lao) was tried at 200 and 120 dpi and timed out on every page on this loaded machine, so the decree was NOT read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'la,gov,mict)/' (83 captures, m7w/cc43_la_gov_mict__.txt): got /regislation/12 (7 Oct 2026, files/m7/la_cc43_regislation_12.html sha256 6a24a459f5360e02be3386f888a6e8d21fb22967e4572599a0f04b5b96d6af6e) and /regislation/17 (files/m7/la_cc43_regislation_17.html sha256 c0680424f4680c8bbb9695d9d8ecb9619a77dde5e52bd42890a02941f1815a73)",
+     "result": "The archived lists match the live ones (the Decree on Performing Arts is listed on both); the decree PDF itself is not among the captures. No archived page with an artist's fee, a theatre troupe's pay or a playwright's terms.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "u1.result.json",
+     "tried": "www.laoofficialgazette.gov.la (laoofficialgazette.gov.la without www gave no answer): site search, then the culture and tourism ministry's list (agencies_id=18, pages 1-4); downloaded the Law on Cinema 76/NA and the Law on Performing Arts 16/NA and OCR'd all 48 pages in Lao",
+     "result": "Both laws read whole: state budget support named, no incentive, fund terms or pay minimum.",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), English and Lao: 'Laos performing arts decree artists remuneration National Lao Theatre troupe actors salary ສິລະປະການສະແດງ ຄ່າຕອບແທນ ນັກສິລະປິນ'",
+     "result": "No Lao pay scale, agreement or minimum for stage directors, writers or actors. Lao results: JCLao/Vientiane Times on the Law on Performing Arts (read under trade-press), a Paylab salary survey for 'Arts & Culture' in Laos (a private survey, not a source), Catherine Diamond in New Theatre Quarterly, a Thai journal article on Lao performance business; the rest was Vietnamese decrees, which do not apply.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "jclao.com/micat-publicises-law-on-performing-arts/ (12 Feb 2018, quoting Vientiane Times and the ministry's Department of Performing Arts) fetched and read (files/m7/la_jclao_17017.html sha256 9090375c7ba02b41cde1ad5cd0bcb7b5c467520729373c3f39668552ba6fb66d)",
+     "result": "The Law on Performing Arts 'has 10 parts and 74 articles' (General Terms, Performing Arts, Artist and Artist name, Activities of Artists and Performing Arts, Performing Arts Organisations, Prohibitions, Dispute Resolution, Management and Inspection, Policy for People with Outstanding Achievement and Terms for Violators, Final Provisions). It describes management and inspection; it names no fee, wage or minimum for artists.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "www.mict.gov.la (Ministry of Information, Culture and Tourism): /mass-organization, /organization-structure and every legislation list /regislation/1 to /25 (saved files/m7/la_mict/), titles read for performing arts, theatre, film, artists, pay; then downloaded the 'ດຳລັດ ວ່າດ້ວຍສິລະປະການສະແດງ' (Decree on Performing Arts) from /regislation/12, uploads/documents/d2720432fc21f2fe4d0543821d568a59.pdf (files/m7/la_decree_perfarts_s.pdf sha256 3c79ce5a409758449ceb3fb66b93b29e4b01785834189d905569c22349ad0cf2)",
+     "result": "The lists hold the Law on Cinema, the Law on Performing Arts, the Law on Mass Media, the Decree on Performing Arts, an Instruction on implementing the Law on Cinema, and the statutes of the National Arts College, the National Artists' Troupe, the National Theatre Troupe (ກອງລະຄອນແຫ່ງຊາດ) and the arts-culture department; no title on pay, fees or a minimum for artists. The decree is a scanned image (18 pages, no text layer); Lao OCR (tesseract, lao) was tried at 200 and 120 dpi and timed out on every page on this loaded machine, so the decree was NOT read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'la,gov,mict)/' (83 captures, m7w/cc43_la_gov_mict__.txt): got /regislation/12 (7 Oct 2026, files/m7/la_cc43_regislation_12.html sha256 6a24a459f5360e02be3386f888a6e8d21fb22967e4572599a0f04b5b96d6af6e) and /regislation/17 (files/m7/la_cc43_regislation_17.html sha256 c0680424f4680c8bbb9695d9d8ecb9619a77dde5e52bd42890a02941f1815a73)",
+     "result": "The archived lists match the live ones (the Decree on Performing Arts is listed on both); the decree PDF itself is not among the captures. No archived page with an artist's fee, a theatre troupe's pay or a playwright's terms.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "u1.result.json",
+     "tried": "www.laoofficialgazette.gov.la (laoofficialgazette.gov.la without www gave no answer): site search, then the culture and tourism ministry's list (agencies_id=18, pages 1-4); downloaded the Law on Cinema 76/NA and the Law on Performing Arts 16/NA and OCR'd all 48 pages in Lao",
+     "result": "Both laws read whole: state budget support named, no incentive, fund terms or pay minimum.",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), English and Lao: 'Laos performing arts decree artists remuneration National Lao Theatre troupe actors salary ສິລະປະການສະແດງ ຄ່າຕອບແທນ ນັກສິລະປິນ'",
+     "result": "No Lao pay scale, agreement or minimum for stage directors, writers or actors. Lao results: JCLao/Vientiane Times on the Law on Performing Arts (read under trade-press), a Paylab salary survey for 'Arts & Culture' in Laos (a private survey, not a source), Catherine Diamond in New Theatre Quarterly, a Thai journal article on Lao performance business; the rest was Vietnamese decrees, which do not apply.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "jclao.com/micat-publicises-law-on-performing-arts/ (12 Feb 2018, quoting Vientiane Times and the ministry's Department of Performing Arts) fetched and read (files/m7/la_jclao_17017.html sha256 9090375c7ba02b41cde1ad5cd0bcb7b5c467520729373c3f39668552ba6fb66d)",
+     "result": "The Law on Performing Arts 'has 10 parts and 74 articles' (General Terms, Performing Arts, Artist and Artist name, Activities of Artists and Performing Arts, Performing Arts Organisations, Prohibitions, Dispute Resolution, Management and Inspection, Policy for People with Outstanding Achievement and Terms for Violators, Final Provisions). It describes management and inspection; it names no fee, wage or minimum for artists.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "www.mict.gov.la (Ministry of Information, Culture and Tourism): /mass-organization, /organization-structure and every legislation list /regislation/1 to /25 (saved files/m7/la_mict/), titles read for performing arts, theatre, film, artists, pay; then downloaded the 'ດຳລັດ ວ່າດ້ວຍສິລະປະການສະແດງ' (Decree on Performing Arts) from /regislation/12, uploads/documents/d2720432fc21f2fe4d0543821d568a59.pdf (files/m7/la_decree_perfarts_s.pdf sha256 3c79ce5a409758449ceb3fb66b93b29e4b01785834189d905569c22349ad0cf2)",
+     "result": "The lists hold the Law on Cinema, the Law on Performing Arts, the Law on Mass Media, the Decree on Performing Arts, an Instruction on implementing the Law on Cinema, and the statutes of the National Arts College, the National Artists' Troupe, the National Theatre Troupe (ກອງລະຄອນແຫ່ງຊາດ) and the arts-culture department; no title on pay, fees or a minimum for artists. The decree is a scanned image (18 pages, no text layer); Lao OCR (tesseract, lao) was tried at 200 and 120 dpi and timed out on every page on this loaded machine, so the decree was NOT read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'la,gov,mict)/' (83 captures, m7w/cc43_la_gov_mict__.txt): got /regislation/12 (7 Oct 2026, files/m7/la_cc43_regislation_12.html sha256 6a24a459f5360e02be3386f888a6e8d21fb22967e4572599a0f04b5b96d6af6e) and /regislation/17 (files/m7/la_cc43_regislation_17.html sha256 c0680424f4680c8bbb9695d9d8ecb9619a77dde5e52bd42890a02941f1815a73)",
+     "result": "The archived lists match the live ones (the Decree on Performing Arts is listed on both); the decree PDF itself is not among the captures. No archived page with an artist's fee, a theatre troupe's pay or a playwright's terms.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "u1.result.json",
+     "tried": "www.laoofficialgazette.gov.la (laoofficialgazette.gov.la without www gave no answer): site search, then the culture and tourism ministry's list (agencies_id=18, pages 1-4); downloaded the Law on Cinema 76/NA and the Law on Performing Arts 16/NA and OCR'd all 48 pages in Lao",
+     "result": "Both laws read whole: state budget support named, no incentive, fund terms or pay minimum.",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Two Lao texts were found and saved but not read: the Decree on Performing Arts (18 scanned pages) and the Instruction on implementing the Law on Cinema (3 scanned pages). Lao OCR could not finish on this machine; a lead for the stage items and for whether a series counts as a film."
+ },
+ "MM": {
+  "stage": {
+   "7": [
+    {
+     "method": "trade-press",
+     "tried": "1 search (standard) to find press: 'Myanmar actors fee rate film video stage performers pay Myanmar Motion Picture Organization 2025 သရုပ်ဆောင် လုပ်အားခ' (results: Paylab salary surveys, a Burmese film blog, generic pay-rate spam); then irrawaddy.com site searches 'actors fee' and 'theatre' (files/m7/mm_45fe20.html sha256 bde462392d835bdb2130387a063ce5188d30a3e73e473314e5b3999d4dc4a83b; files/m7/mm_47856a.html sha256 66049fa26aa9367ab5f156ac96b7fab67d379c23aa016ab95312cfe3d0e00004); gnlm.com.mm (Global New Light of Myanmar, state paper) search: HTTP 403; yaechansin.blogspot.com/2023/10/cost-cutting-movie-marketing.html read (files/m7/mm_63d861.html sha256 93b8e971d4021901072b53d12f094da926b84bcf51432455b525387a7c35973b)",
+     "result": "Irrawaddy's results are political (the junta's 'theatre of absurdity'), none on stage pay. The 2023 blog (an English rendering of producers' remarks, no primary named) speaks of film budgets and lump sums for actors in lakhs, garbled in translation, and of no stage work: a lead at most for film, nothing for a stage director, playwright or actor. Paylab is a private salary survey, not a source.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "t8.result.json",
+     "tried": "Burmese: \"မြန်မာ ရုပ်ရှင်ဥပဒေ ရုပ်ရှင်ဖွံ့ဖြိုးရေး ရန်ပုံငွေ ပြန်ကြားရေးဝန်ကြီးဌာန ဇာတ်လမ်းတွဲ ထုတ်လုပ်ခွင့်\"",
+     "result": "No fund; censorship and licensing reports (RFA, Allen & Gledhill, BNI, Mizzima)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.moi.gov.mm/ (Ministry of Information); https://www.mrtv.gov.mm/",
+     "result": "MOI read in Burmese: film awards and a licence form for streaming films, no fund; MRTV reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.mlis.gov.mm/ (Myanmar Law Information System)",
+     "result": "Reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "t8.result.json",
+     "tried": "archive.org availability API mlis.gov.mm (2024-07-10 snapshot); Common Crawl CC-MAIN-2026-43 mm,gov,mlis)/",
+     "result": "No CC capture; Wayback fetch host resets (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "trade-press",
+     "tried": "1 search (standard) to find press: 'Myanmar actors fee rate film video stage performers pay Myanmar Motion Picture Organization 2025 သရုပ်ဆောင် လုပ်အားခ' (results: Paylab salary surveys, a Burmese film blog, generic pay-rate spam); then irrawaddy.com site searches 'actors fee' and 'theatre' (files/m7/mm_45fe20.html sha256 bde462392d835bdb2130387a063ce5188d30a3e73e473314e5b3999d4dc4a83b; files/m7/mm_47856a.html sha256 66049fa26aa9367ab5f156ac96b7fab67d379c23aa016ab95312cfe3d0e00004); gnlm.com.mm (Global New Light of Myanmar, state paper) search: HTTP 403; yaechansin.blogspot.com/2023/10/cost-cutting-movie-marketing.html read (files/m7/mm_63d861.html sha256 93b8e971d4021901072b53d12f094da926b84bcf51432455b525387a7c35973b)",
+     "result": "Irrawaddy's results are political (the junta's 'theatre of absurdity'), none on stage pay. The 2023 blog (an English rendering of producers' remarks, no primary named) speaks of film budgets and lump sums for actors in lakhs, garbled in translation, and of no stage work: a lead at most for film, nothing for a stage director, playwright or actor. Paylab is a private salary survey, not a source.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "t8.result.json",
+     "tried": "Burmese: \"မြန်မာ ရုပ်ရှင်ဥပဒေ ရုပ်ရှင်ဖွံ့ဖြိုးရေး ရန်ပုံငွေ ပြန်ကြားရေးဝန်ကြီးဌာန ဇာတ်လမ်းတွဲ ထုတ်လုပ်ခွင့်\"",
+     "result": "No fund; censorship and licensing reports (RFA, Allen & Gledhill, BNI, Mizzima)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.moi.gov.mm/ (Ministry of Information); https://www.mrtv.gov.mm/",
+     "result": "MOI read in Burmese: film awards and a licence form for streaming films, no fund; MRTV reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.mlis.gov.mm/ (Myanmar Law Information System)",
+     "result": "Reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "t8.result.json",
+     "tried": "archive.org availability API mlis.gov.mm (2024-07-10 snapshot); Common Crawl CC-MAIN-2026-43 mm,gov,mlis)/",
+     "result": "No CC capture; Wayback fetch host resets (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "trade-press",
+     "tried": "1 search (standard) to find press: 'Myanmar actors fee rate film video stage performers pay Myanmar Motion Picture Organization 2025 သရုပ်ဆောင် လုပ်အားခ' (results: Paylab salary surveys, a Burmese film blog, generic pay-rate spam); then irrawaddy.com site searches 'actors fee' and 'theatre' (files/m7/mm_45fe20.html sha256 bde462392d835bdb2130387a063ce5188d30a3e73e473314e5b3999d4dc4a83b; files/m7/mm_47856a.html sha256 66049fa26aa9367ab5f156ac96b7fab67d379c23aa016ab95312cfe3d0e00004); gnlm.com.mm (Global New Light of Myanmar, state paper) search: HTTP 403; yaechansin.blogspot.com/2023/10/cost-cutting-movie-marketing.html read (files/m7/mm_63d861.html sha256 93b8e971d4021901072b53d12f094da926b84bcf51432455b525387a7c35973b)",
+     "result": "Irrawaddy's results are political (the junta's 'theatre of absurdity'), none on stage pay. The 2023 blog (an English rendering of producers' remarks, no primary named) speaks of film budgets and lump sums for actors in lakhs, garbled in translation, and of no stage work: a lead at most for film, nothing for a stage director, playwright or actor. Paylab is a private salary survey, not a source.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "t8.result.json",
+     "tried": "Burmese: \"မြန်မာ ရုပ်ရှင်ဥပဒေ ရုပ်ရှင်ဖွံ့ဖြိုးရေး ရန်ပုံငွေ ပြန်ကြားရေးဝန်ကြီးဌာန ဇာတ်လမ်းတွဲ ထုတ်လုပ်ခွင့်\"",
+     "result": "No fund; censorship and licensing reports (RFA, Allen & Gledhill, BNI, Mizzima)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.moi.gov.mm/ (Ministry of Information); https://www.mrtv.gov.mm/",
+     "result": "MOI read in Burmese: film awards and a licence form for streaming films, no fund; MRTV reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "official-register",
+     "recordedIn": "t8.result.json",
+     "tried": "https://www.mlis.gov.mm/ (Myanmar Law Information System)",
+     "result": "Reset (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "t8.result.json",
+     "tried": "archive.org availability API mlis.gov.mm (2024-07-10 snapshot); Common Crawl CC-MAIN-2026-43 mm,gov,mlis)/",
+     "result": "No CC capture; Wayback fetch host resets (curl 35)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Only trade-press was missing (t8 recorded the other four methods on items 1-10). Stage items 7-9 remain blocked on all five methods."
+ },
+ "NL": {
+  "producer": {
+   "blocker": "R-10065",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'nl,filmfonds)/' (478 captures, m7w/cc43_nl_filmfonds__.txt); got /downloads/financieel-en-productioneel-protocol-stimuleringsmaatregel (6 Oct 2026, files/m7/nl_cc43_fpp_stim.bin sha256 a393f9ce2f359166913621050f94be23f46838350a345b5ca480acf9d74e8521) and /en/updates/netherlands-film-production-incentive-invests-14-5-million-in-13-new-productions-and-9-high-end-tv-series (files/m7/nl_cc43_upd_145.html sha256 ff868440baa97a7e9c7a98cdd066aab6e9840ed3018e79ecc0a371ca4cb417ee); then fetched the protocol PDF the capture lists as current, assets.filmfonds.nl/FINANCIEEL-EN-PRODUCTIONEEL-PROTOCOL-STIMULERINGSMAATREGEL-1-juli-2026.pdf (files/m7/nl_fpp_stim_2026-07.pdf sha256 4385f484fc6ec01dfa93ad014d5a33de1a65d7969abe221750b5fe1cf122f1cd)",
+     "result": "FOUND (fee cap for a series): the archived page lists protocol versions of 1 July 2026, 1 Feb 2026, 9 Oct 2025, 1 Jan 2025 and 2023. The 1 July 2026 protocol: 'Het protocol is van toepassing zowel op films als series. Waar in het protocol gesproken wordt over een filmproductie dient in het geval van een serie ook high end serie gelezen te worden.' and 'De begrotingspost producers fee bedraagt voor filmproducties maximaal 7,5%. De begrotingspost overhead bedraagt voor filmproducties maximaal 7,5 % tot een maximum van 350.000 euro per filmproductie.' The Dec 2022 update is old (round 4 of 2022: 22 productions, 7 drama series and 2 documentary series, EUR 14.5 million); no count of applications refused, no pickup count.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Auteursbond modelcontract theatertekst honorarium richtlijn toneelschrijver opdracht tarief 2026'",
+     "result": "Led to auteursbond.nl/sectie/theaterauteurs (the model contract), cultureelpersbureau.nl ?p=95930 (NAPK and Auteursbond's new model contract), Fonds Podiumkunsten's werkbijdrage theatertekst note, lawinsider copies of the contract, Eerste Kamer and Staatscourant documents. Followed under institution and trade-press.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "auteursbond.nl (the writers' union): /sectie/theaterauteurs, /kennisbank/modelcontract-schrijven-theatertekst/ and its PDF 'Modelcontract-schrijven-toneelwerk-NAPK-Auteursbond-versie-13-november-2024def.pdf' (files/m7/nl_ab_modelcontract_2024.pdf sha256 6d7d25d65d36ce08922c5e02c8bdd02d117c83c6e2f9b8dd4d42478e6ae53bcc), /kennisbank/tips-voor-de-theaterauteur/ (files/m7/nl_ab_tips.html sha256 9562be6e1bd6d7c7cab5d060e81a833081bb0ed33fc0a1f61abf8f00874d83de) and the PDF it links, 'Geindexeerde-redelijke-tarieven-2025-1.pdf' (files/m7/nl_ab_tarieven_2025.pdf sha256 36022cbbed04b070c7c5908ae25c395465c765619ce05d4bd6ad18e351793a04)",
+     "result": "FOUND. The model contract (NAPK and Auteursbond, 13 Nov 2024) leaves the fee blank ('[BEDRAG]'), pays it in sixths (three sixths on signing), includes the licence for a first period of at most fourteen months and forty performances, then '[PERCENTAGE] van de netto-recette per uitvoering'. The 2025 rates sheet (NAPK and Auteursbond, research of 2012 indexed to 2024 by CBS inflation) gives the reasonable and customary fee bands for writing a play, read verbatim (see found).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "wetten.overheid.nl/BWBR0001886/2026-01-01 (Auteurswet, in force 1 Jan 2026), art. 25c read (files/m7/nl_auteurswet.html sha256 06eaa4f6e03c95e05de3fdddb033d8ea9f0b327aa7fcdfa8b17a9dca17200f63)",
+     "result": "Art. 25c(1): 'De maker heeft recht op een in de overeenkomst te bepalen billijke vergoeding ... De vergoeding die tot stand komt na onderhandelingen tussen een vereniging van makers ... en een exploitant of een vereniging van exploitanten, wordt vermoed billijk te zijn.' So no statutory minimum figure; the law presumes fair the fee the Auteursbond (a makers' association) and the NAPK (an exploiters' association) negotiate, which is the rate sheet found under institution.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "cultureelpersbureau.nl/en/?p=95930 (Cultureel Persbureau, NAPK and Auteursbond's joint announcement) fetched and read (files/m7/nl_cpb_95930.html sha256 f56f80cbab821c95294f0fa678b907e3450f8b75b387e08855eb2254463647b7)",
+     "result": "'Het nieuwe modelcontract gaat per direct, heden 16 december 2024, in. Tegelijkertijd publiceren de NAPK en de Auteursbond gezamenlijk een geïndexeerd overzicht van een in het verleden verricht onderzoek naar gangbare en redelijke tarieven'; the author now gets half the fee on signing and shares in the box office ('percentage van de recette') after a first run of at most 40 performances. Confirms the primary's date and parties.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'nl,fairpacct)/' (289 captures, m7w/cc43_nl_fairpacct__.txt); got /ketentafel-Grootrecht/ (17 Oct 2026, files/m7/nl_cc43_groot1.html) and /nieuwe-stap-richting-fair-pay-in-grootrecht/ (6 Oct 2026, files/m7/nl_cc43_groot2.html), the page u11 found behind a bot check",
+     "result": "Ketentafel Grootrecht (from March 2025): works on a standard agreement for composition commissions under grootrecht and a guide for composers; no playwright's fee. The second capture holds only the bot check ('Please wait while your request is being verified...'), so it was not read. No fairPACCT rate tool for theatre writing among the 289 captures.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "binding": false,
+     "kind": "reasonable and customary fee bands for writing a play (NAPK and Auteursbond, research of 2012 indexed to 2024 by CBS inflation; version 2025), presumed fair under Auteurswet art. 25c(1) as negotiated by a makers and an exploiters association",
+     "currency": "EUR",
+     "smallAndMidHallUpTo400Seats": {
+      "about30min": [
+       5425,
+       10171
+      ],
+      "30to60min": [
+       8815,
+       13562
+      ],
+      "over60minFullEvening": [
+       12206,
+       21699
+      ]
+     },
+     "largeHallOver400Seats": {
+      "about30min": [
+       6781,
+       11528
+      ],
+      "30to60min": [
+       10171,
+       16952
+      ],
+      "over60minFullEvening": [
+       13562,
+       27124
+      ]
+     },
+     "adaptation": "reasonably derived from the fee for an original work",
+     "includesLicence": "first run of at most fourteen months and at most 40 performances",
+     "afterFirstRun": "a percentage of the net box office per performance, agreed in the contract (model contract art. 7(2), percentage left blank)",
+     "paidIn": "sixths: three on signing, the rest on first version, rehearsal version (and first performance in option B)",
+     "contractInForce": "2024-12-16"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://auteursbond.nl/wp-content/uploads/2026/09/Geindexeerde-redelijke-tarieven-2025-1.pdf",
+      "title": "Redelijke tarieven theaterauteurs, versie 2025 (NAPK and Auteursbond)",
+      "read": "2026-11-04",
+      "said": "Gebaseerd op onderzoek verricht in 2012 zijn de volgende honorariabandbreedtes (in 2024 geïndexeerd op basis van de inflatiecijfers zoals gepubliceerd door het CBS) voor het schrijven van een toneeltekst redelijk en gangbaar gebleken: Kleine en middenzaal (tot 400 zitplaatsen) Redelijk honorarium ligt tussen Toneelwerk rond 30 minuten 5.425 en 10.171 toneelwerk 30 – 60 minuten 8.815 en 13.562 toneelwerk > 60 minuten/avondvullend 12.206 en 21.699 Grote zaal (meer dan 400 zitplaatsen) toneelwerk rond 30 minuten 6.781 en 11.528 toneelwerk 30 – 60 minuten 10.171 en 16.952 toneelwerk > 60 minuten/avondvullend 13.562 en 27.124 Bewerking Wordt in redelijkheid afgeleid van het honorarium van een oorspronkelijke werk. In deze honoraria zijn tevens de licentievergoedingen begrepen voor de eerste opvoeringsperiode van maximaal veertien maanden met daarbinnen maximaal 40 uitvoeringen",
+      "file": "files/m7/nl_ab_tarieven_2025.pdf",
+      "sha256": "36022cbbed04b070c7c5908ae25c395465c765619ce05d4bd6ad18e351793a04"
+     },
+     {
+      "kind": "primary",
+      "url": "https://auteursbond.nl/wp-content/uploads/2025/01/Modelcontract-schrijven-toneelwerk-NAPK-Auteursbond-versie-13-november-2024def.pdf",
+      "title": "Modelcontract schrijven toneelwerk, NAPK-Auteursbond, versie 13 november 2024",
+      "read": "2026-11-04",
+      "said": "Artikel 7 - Licentievergoeding 1. In het in art. 4 lid 1 genoemde honorarium is ook de licentievergoeding voor de eerste opvoeringsperiode opgenomen. ... maximaal veertien maanden met daarbinnen maximaal veertig uitvoeringen. 2. ... heeft de Auteur recht op een aanvullende licentievergoeding. De aanvullende licentievergoeding betreft [PERCENTAGE] van de netto-recette per uitvoering.",
+      "file": "files/m7/nl_ab_modelcontract_2024.pdf",
+      "sha256": "6d7d25d65d36ce08922c5e02c8bdd02d117c83c6e2f9b8dd4d42478e6ae53bcc"
+     },
+     {
+      "kind": "primary",
+      "url": "https://wetten.overheid.nl/BWBR0001886/2026-01-01",
+      "title": "Auteurswet, art. 25c",
+      "read": "2026-11-04",
+      "said": "De maker heeft recht op een in de overeenkomst te bepalen billijke vergoeding voor de verlening van exploitatiebevoegdheid. De vergoeding die tot stand komt na onderhandelingen tussen een vereniging van makers die blijkens haar statuten de belangen behartigt van makers die zelfstandigen zonder personeel zijn, en een exploitant of een vereniging van exploitanten, wordt vermoed billijk te zijn.",
+      "file": "files/m7/nl_auteurswet.html",
+      "sha256": "06eaa4f6e03c95e05de3fdddb033d8ea9f0b327aa7fcdfa8b17a9dca17200f63"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://cultureelpersbureau.nl/en/?p=95930",
+      "title": "Cultureel Persbureau: NAPK and Auteursbond new model contract",
+      "read": "2026-11-04",
+      "said": "Het nieuwe modelcontract gaat per direct, heden 16 december 2024, in. Tegelijkertijd publiceren de NAPK en de Auteursbond gezamenlijk een geïndexeerd overzicht van een in het verleden verricht onderzoek naar gangbare en redelijke tarieven",
+      "file": "files/m7/nl_cpb_95930.html",
+      "sha256": "f56f80cbab821c95294f0fa678b907e3450f8b75b387e08855eb2254463647b7",
+      "quotes": "NAPK and Auteursbond (their joint announcement)"
+     }
+    ]
+   },
+   {
+    "item": 3,
+    "value": {
+     "scheme": "Netherlands Film Production Incentive (Stimuleringsmaatregel), films and high-end series",
+     "producersFeeMaxShare": 0.075,
+     "overheadMaxShare": 0.075,
+     "overheadMaxEUR": 350000,
+     "per": "production (a high-end series read for a film production)",
+     "basis": "budgeted production costs excluding foreign co-financing costs (art. 2.23)",
+     "minorityCoproducerFeePlusOverheadMax": 0.15,
+     "inForce": "2026-07-01"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://assets.filmfonds.nl/FINANCIEEL-EN-PRODUCTIONEEL-PROTOCOL-STIMULERINGSMAATREGEL-1-juli-2026.pdf",
+      "title": "Financieel & Productioneel Protocol Stimuleringsmaatregel van het Nederlands Filmfonds, 1 juli 2026",
+      "read": "2026-11-04",
+      "said": "Het protocol is van toepassing zowel op films als series. Waar in het protocol gesproken wordt over een filmproductie dient in het geval van een serie ook high end serie gelezen te worden. ... De begrotingspost producers fee bedraagt voor filmproducties maximaal 7,5%. De begrotingspost overhead bedraagt voor filmproducties maximaal 7,5 % tot een maximum van 350.000 euro per filmproductie. Bij minoritaire coproducties bedragen de posten producers fee en overhead voor de Nederlandse minoritaire coproducent maximaal 15% (speelfilms) en 17,5% (documentaires)",
+      "file": "files/m7/nl_fpp_stim_2026-07.pdf",
+      "sha256": "4385f484fc6ec01dfa93ad014d5a33de1a65d7969abe221750b5fe1cf122f1cd"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.filmfonds.nl/downloads/financieel-en-productioneel-protocol-stimuleringsmaatregel",
+      "title": "Filmfonds downloads page (Common Crawl CC-MAIN-2026-43 capture, 2026-10-06)",
+      "read": "2026-11-04",
+      "said": "Financieel en Productioneel Protocol Stimuleringsmaatregel 1 juli 2026 Financieel en Productioneel Protocol Stimuleringsmaatregel 1 februari 2026",
+      "file": "files/m7/nl_cc43_fpp_stim.bin",
+      "sha256": "a393f9ce2f359166913621050f94be23f46838350a345b5ca480acf9d74e8521"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Item 8 now stands on the NAPK and Auteursbond rate sheet (version 2025): fee bands, not a binding minimum, but presumed fair under Auteurswet art. 25c. The incentive's producer fee and overhead caps (7.5% each, overhead to EUR 350,000) apply to high-end series by the protocol's own words (1 July 2026); producer-NL.json held them for the Film Fund's own budgets only."
+ },
+ "PY": {
+  "producer": {
+   "blocker": "R-10098",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 list for 'py,gov,inap)/' (INAP, 68 captures; CC-MAIN-2026-43 held none, m7w/cc202639_py_gov_inap__.txt): got /inap-lanza-el-proa-py-2025-incentivo-de-reembolso-para-producciones-audiovisuales-internacionales-en-paraguay/ (5 Sept 2026 capture of INAP's notice of 30 Aug 2025, files/m7/py_cc39_proa.html sha256 38c20261673a31731fabe9e21cc4a82f46f49ccc2d279af65946abf2057584b8)",
+     "result": "FOUND (series incentive): 'Podrán postular largometrajes, series de ficción, documental y animación'; 'un reembolso de 18 % para Producciones Generales y de 20 % para Producciones de Alto Impacto (a partir de USD 1.000.000 de inversión)'; fund 'G. 2.800.000.000 (aproximadamente USD 385.000)' for fiscal 2025; window 1-30 Sept 2025 for shooting or post in Paraguay Sept-Nov 2025; foreign financing required (Línea Nacional with a Paraguayan co-producer, Línea Internacional for service productions). The bases were linked, not captured. producer-PY.json held no rebate: this supersedes it for 2025; a 2026 edition was not seen.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "bacn.gov.py (Biblioteca y Archivo Central del Congreso, the legal register): its search (buscar/buscar?s=1328 derecho de autor) returned only the latest laws, not the query; then Ley 213 Código del Trabajo (leyes-paraguayas/2608, read whole, files/m7/py_bacn_ct.html sha256 939489954790dd3dcebd9c4e80a61f1dce87161c7dde98c1f4484da06e166767), searched for artista, teatro, espectáculo",
+     "result": "The Labour Code has no chapter or rule for artists, theatre or entertainment workers: a stage actor or director is an ordinary employee under the general legal minimum wage (contracts above the minimum must be written, art. 43). Ley 1328/98 was not found in the register's static pages (read from APA's copy, under institution). No collective agreement for theatre found.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "lanacion.com.py tag 'teatro' (files/m7/py_tp_5a7061.html sha256 07d9811fbad817ea3cc07ce70df6e191e816a5164795ea192ffa202dc009b49a) and the article /espectaculo/2026/11/01/arpyo-y-sigilos-impulsan-plataforma-para-el-teatro-paraguayo-emergente/ read (files/m7/py_ln_arpyo.html sha256 364a9b98e550e58384be0c06a9a1f8307b9ea742dff3de20bb2d28186d179f23); abc.com.py tag 'teatro' (1.2 MB, no pay headline); ultimahora.com tag 'teatro' 404",
+     "result": "La Nación, 1 Nov 2026: the producer Arpyo and Casa Sigilos launch a platform for independent theatre for 2027 to 'dignificar la labor del sector artístico' with 'gestión financiera transparente'; no fee, rate or minimum for directors, playwrights or actors.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'py,gov,cultura)/' (Secretaría Nacional de Cultura, 391 captures, m7w/cc43_py_gov_cultura__.txt): got '?post_type=elencos' (the SNC's state artistic ensembles, 8 Oct 2026, files/m7/py_cc43_elencos.html sha256 50007a4299724972c94867d2f01dc22692dd9ca0aa8dda75f86ab4b5c58f7565); scanned the list for theatre, artists, fees, ensembles, contracts",
+     "result": "The archived 'Elencos Artísticos' page holds one 2016 entry and no pay or contract terms; the captures list funds calls (Fondos de Cultura 2020-2025), Iberescena results and procurement pages, no stage pay scale.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u12.result.json",
+     "tried": "1 search: \"Cepate Centro Paraguayo de Teatro tarifario honorarios actores director teatro dramaturgo función\"",
+     "result": "ABC Color 2025 on the Semana del Teatro fees (read); no tariff",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u12.result.json",
+     "tried": "paraguaytv.gov.py (home, /el-canal/, /preguntas-frecuentes/); mitic.gov.py; cepate.org.py; cepate.org; tvpublica.com.py",
+     "result": "Paraguay TV home and El Canal read; FAQ and MITIC: connection reset; the others did not resolve",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "institution",
+     "tried": "www.apa.org.py (Autores Paraguayos Asociados, the authors' society; member of CISAC): home, /tarifario/ (files/m7/py_apa_tarifario.html sha256 86557274d90e9347c70974645d3d3e17a4b6a93f7a1c293db96fa8ef202c9ec5) and its 'Reglamento de tarifas generales, actualización de tarifas, APA 2018' (wp-content/uploads/2025/01/Tarifario.pdf, 19 pages, files/m7/py_apa_tarifario.pdf sha256 c17b58084e27a85ce2aab6ae4e493c1d15f0e711efa340793f6e53c7b4e11339; page 15 checked against its image files/m7/py_tar_p-15.png); /ley-1328-98/ and the law's PDF it hosts (files/m7/py_ley1328.pdf sha256 364877e43d2601b8eebbc57b363845536b275e334e103b4362de9c3e61ce12b9); www.dinapi.gov.py home",
+     "result": "FOUND. APA tariff, 'Tarifas a eventos teatrales/ Ballet con cobro de entrada': 'Gran Derecho, obras de teatro', 'Estreno de obra de teatro' and 'Obras a punto': '10 % sobre el ingreso total en boletería', plus 3% on 'Contratos, cortesías, invitaciones, y/ o similares, que asume el organizador'; without ticketing in private places, 3% of 1 UDA per person admitted (1 UDA = the daily minimum wage, PYG 98,000 under Decree 7270/2022). Ley 1328/98 art. 108 (APA's copy): 'Cuando la remuneración del autor no haya sido fijada contractualmente, le corresponderá el equivalente al 10% (Diez por ciento) del valor de las entradas vendidas en cada representación o ejecución, y el 15% (Quince por ciento) de dicho monto en la función de estreno.'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "bacn.gov.py (Biblioteca y Archivo Central del Congreso, the legal register): its search (buscar/buscar?s=1328 derecho de autor) returned only the latest laws, not the query; then Ley 213 Código del Trabajo (leyes-paraguayas/2608, read whole, files/m7/py_bacn_ct.html sha256 939489954790dd3dcebd9c4e80a61f1dce87161c7dde98c1f4484da06e166767), searched for artista, teatro, espectáculo",
+     "result": "The Labour Code has no chapter or rule for artists, theatre or entertainment workers: a stage actor or director is an ordinary employee under the general legal minimum wage (contracts above the minimum must be written, art. 43). Ley 1328/98 was not found in the register's static pages (read from APA's copy, under institution). No collective agreement for theatre found.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "lanacion.com.py tag 'teatro' (files/m7/py_tp_5a7061.html sha256 07d9811fbad817ea3cc07ce70df6e191e816a5164795ea192ffa202dc009b49a) and the article /espectaculo/2026/11/01/arpyo-y-sigilos-impulsan-plataforma-para-el-teatro-paraguayo-emergente/ read (files/m7/py_ln_arpyo.html sha256 364a9b98e550e58384be0c06a9a1f8307b9ea742dff3de20bb2d28186d179f23); abc.com.py tag 'teatro' (1.2 MB, no pay headline); ultimahora.com tag 'teatro' 404",
+     "result": "La Nación, 1 Nov 2026: the producer Arpyo and Casa Sigilos launch a platform for independent theatre for 2027 to 'dignificar la labor del sector artístico' with 'gestión financiera transparente'; no fee, rate or minimum for directors, playwrights or actors.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u12.result.json",
+     "tried": "1 search: \"Autores Paraguayos Asociados APA tarifa obras teatrales derecho de autor porcentaje taquilla representación teatral\"",
+     "result": "APA disputes in the press; a DINAPI theatre guide (404 when fetched); foreign tariffs",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "archive",
+     "recordedIn": "u12.result.json",
+     "tried": "Wayback availability API and web.archive.org for the DINAPI guide; Common Crawl CC-MAIN-2026-39 (instructivo prefix), -2026-21 and -2025-51 (biblioteca prefix)",
+     "result": "Wayback 429 and connection reset; Common Crawl: no capture",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "bacn.gov.py (Biblioteca y Archivo Central del Congreso, the legal register): its search (buscar/buscar?s=1328 derecho de autor) returned only the latest laws, not the query; then Ley 213 Código del Trabajo (leyes-paraguayas/2608, read whole, files/m7/py_bacn_ct.html sha256 939489954790dd3dcebd9c4e80a61f1dce87161c7dde98c1f4484da06e166767), searched for artista, teatro, espectáculo",
+     "result": "The Labour Code has no chapter or rule for artists, theatre or entertainment workers: a stage actor or director is an ordinary employee under the general legal minimum wage (contracts above the minimum must be written, art. 43). Ley 1328/98 was not found in the register's static pages (read from APA's copy, under institution). No collective agreement for theatre found.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "lanacion.com.py tag 'teatro' (files/m7/py_tp_5a7061.html sha256 07d9811fbad817ea3cc07ce70df6e191e816a5164795ea192ffa202dc009b49a) and the article /espectaculo/2026/11/01/arpyo-y-sigilos-impulsan-plataforma-para-el-teatro-paraguayo-emergente/ read (files/m7/py_ln_arpyo.html sha256 364a9b98e550e58384be0c06a9a1f8307b9ea742dff3de20bb2d28186d179f23); abc.com.py tag 'teatro' (1.2 MB, no pay headline); ultimahora.com tag 'teatro' 404",
+     "result": "La Nación, 1 Nov 2026: the producer Arpyo and Casa Sigilos launch a platform for independent theatre for 2027 to 'dignificar la labor del sector artístico' with 'gestión financiera transparente'; no fee, rate or minimum for directors, playwrights or actors.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'py,gov,cultura)/' (Secretaría Nacional de Cultura, 391 captures, m7w/cc43_py_gov_cultura__.txt): got '?post_type=elencos' (the SNC's state artistic ensembles, 8 Oct 2026, files/m7/py_cc43_elencos.html sha256 50007a4299724972c94867d2f01dc22692dd9ca0aa8dda75f86ab4b5c58f7565); scanned the list for theatre, artists, fees, ensembles, contracts",
+     "result": "The archived 'Elencos Artísticos' page holds one 2016 entry and no pay or contract terms; the captures list funds calls (Fondos de Cultura 2020-2025), Iberescena results and procurement pages, no stage pay scale.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u12.result.json",
+     "tried": "1 search: \"Cepate Centro Paraguayo de Teatro tarifario honorarios actores director teatro dramaturgo función\"",
+     "result": "ABC Color 2025 on the Semana del Teatro fees (read); no tariff",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u12.result.json",
+     "tried": "paraguaytv.gov.py (home, /el-canal/, /preguntas-frecuentes/); mitic.gov.py; cepate.org.py; cepate.org; tvpublica.com.py",
+     "result": "Paraguay TV home and El Canal read; FAQ and MITIC: connection reset; the others did not resolve",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 1,
+    "value": {
+     "scheme": "PROA PY (Proyecto Audiovisual del Paraguay), INAP cash rebate, first call 2025",
+     "approvedBy": "Consejo Nacional del Audiovisual, Sesión Extraordinaria N° 04/2025 (29 Aug 2025)",
+     "seriesEligible": true,
+     "eligible": [
+      "largometrajes",
+      "series de ficción",
+      "documental",
+      "animación",
+      "others case by case"
+     ],
+     "rateGeneral": 0.18,
+     "rateHighImpact": 0.2,
+     "highImpactFromUSD": 1000000,
+     "needsForeignFinancing": true,
+     "lines": [
+      "Nacional: coproduction with a Paraguayan producer",
+      "Internacional: foreign production hiring local services"
+     ],
+     "fund2025PYG": 2800000000,
+     "window": "2025-09-01 to 2025-09-30, shoot or post Sept-Nov 2025",
+     "creditLine": "Con el apoyo del Proyecto Audiovisual del Paraguay (PROA PY)",
+     "edition2026": "not seen"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://inap.gov.py/inap-lanza-el-proa-py-2025-incentivo-de-reembolso-para-producciones-audiovisuales-internacionales-en-paraguay/",
+      "title": "INAP lanza el PROA PY 2025 (INAP notice, 30/08/2025; Common Crawl CC-MAIN-2026-39 capture of 2026-09-05)",
+      "read": "2026-11-04",
+      "said": "un mecanismo de incentivo que opera bajo la modalidad de cash rebate, ofreciendo un reembolso parcial a producciones audiovisuales que se realicen total o parcialmente en el territorio nacional con financiamiento extranjero ... Podrán postular largometrajes, series de ficción, documental y animación, así como otras producciones que serán evaluadas caso por caso por el INAP y aprobadas por el CNA. El mecanismo establece un reembolso de 18 % para Producciones Generales y de 20 % para Producciones de Alto Impacto (a partir de USD 1.000.000 de inversión) ... El fondo disponible para esta primera edición asciende a G. 2.800.000.000 (aproximadamente USD 385.000), monto destinado a cubrir las devoluciones correspondientes durante el ejercicio fiscal 2025.",
+      "file": "files/m7/py_cc39_proa.html",
+      "sha256": "38c20261673a31731fabe9e21cc4a82f46f49ccc2d279af65946abf2057584b8"
+     }
+    ]
+   },
+   {
+    "item": 8,
+    "value": {
+     "kind": "collecting society tariff for staging a play (what the producer pays the authors via APA) and the statutory default royalty",
+     "apaTariff": {
+      "theatreGrandRightsShareOfBoxOffice": 0.1,
+      "appliesTo": [
+       "Gran Derecho, obras de teatro",
+       "Estreno de obra de teatro",
+       "Obras a punto"
+      ],
+      "plusOnCompsAndContracts": 0.03,
+      "noTicketPrivateVenue": "3% of 1 UDA per person admitted (1 UDA = PYG 98,000, the daily minimum wage under Decree 7270/2022)",
+      "version": "Reglamento de tarifas generales, actualización 2018 (file uploaded 2025-01)"
+     },
+     "lawDefault": {
+      "shareOfTicketsSoldPerPerformance": 0.1,
+      "premiere": 0.15,
+      "when": "remuneration not fixed by contract (Ley 1328/98 art. 108)"
+     }
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.apa.org.py/wp-content/uploads/2025/01/Tarifario.pdf",
+      "title": "APA, Reglamento de tarifas generales, actualización de tarifas 2018, p. 15",
+      "read": "2026-11-04",
+      "said": "Tarifas a eventos teatrales/ Ballet con cobro de entrada ... Gran Derecho, obras de teatro. Estreno de obra de teatro ... Obras a punto ... 10 % sobre el ingreso total en boletería. ... Contratos, cortesías, invitaciones, y/ o similares, que asume el organizador ... 3%",
+      "file": "files/m7/py_apa_tarifario.pdf",
+      "sha256": "c17b58084e27a85ce2aab6ae4e493c1d15f0e711efa340793f6e53c7b4e11339"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.apa.org.py/wp-content/uploads/2025/05/Ley-1328-Derecho-de-Autor-y-Derechos-conexos.pdf",
+      "title": "Ley 1328/98 De Derecho de Autor y Derechos Conexos, art. 108 (APA copy)",
+      "read": "2026-11-04",
+      "said": "Artículo 108.- Cuando la remuneración del autor no haya sido fijada contractualmente, le corresponderá el equivalente al 10% (Diez por ciento) del valor de las entradas vendidas en cada representación o ejecución, y el 15% (Quince por ciento) de dicho monto en la función de estreno.",
+      "file": "files/m7/py_ley1328.pdf",
+      "sha256": "364877e43d2601b8eebbc57b363845536b275e334e103b4362de9c3e61ce12b9",
+      "quotes": "Ley 1328/98 (Paraguay), as published"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": ""
+ },
+ "SO": {
+  "producer": {
+   "blocker": "R-10134",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "moi.gov.so (Ministry of Information, Culture and Tourism): home, department.php?slug=culture, ?slug=theatre (National Theatre), ?slug=sntv, and the Somali news item of 3 Sep 2026 'Wasiirka Warfaafinta ... oo la kulmay qaar kamid ah shirkadaha iyo ururada Filmada' (files/m7/so_moi_gov_so_.html sha256 862fca80e5509dd3d36b61f9dc7aecade32a059f54ee6f6d27b8c31aa5e69247; so_moi_culture.html 0e3966f6f0ccaa5f001948fd14c81a2e7ff3f1c58fdd66f0dbc44fd767349b09; so_moi_theatre.html 1777c56664848a832e0bc086efa53517e66d682f0947335c8112e79c7cc137ed; so_moi_film.html 37036eebd61cbfdeee7d7a3e6d468f2353f1d60d7cbf7cc2ee22d46e85c29cbc); sntv.so home (Somali National Television, files/m7/so_sntv_so_.html sha256 5cd37c1191dcb7f739b846d5f3aeda7b9c2ad107ac63532af39e6c7f3b9ef17f; www.sntv.so 403)",
+     "result": "National Theatre department: 'organising and supporting theatrical performances, cultural events, and artistic endeavours' with no scheme, fund, terms or pay. The 3 Sep 2026 item: the director general explained film laws the ministry has prepared ('shuruucda laxiriirta Filmada oo ay diyaarisay wasaaradda': film system, laws, film policy, copyright and a film classification board, 'National Film Commission'), which will be consulted on with all concerned 'si loo ansixiyo loona dhaqan geliyo' (so that they are approved and put into effect): drafts, not in force; participants proposed reviving the former film agency. No fund, incentive, broadcaster commissioning terms, fee cap or pay minimum on any page; SNTV's home lists programme sections only.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.so /legislation-4/ (files/m7/so_leg_parliament_gov_so.html); ago.gov.so /legislations/ (Attorney General: files/m7/so_leg_ago_gov_so.html); molsa.gov.so /legislations/ (Ministry of Labour and Social Affairs: files/m7/so_leg_molsa_gov_so.html), and its Labour-Code-English-REVISED.pdf read for wages and agreements (files/m7/so_labour_code_en.pdf sha256 ca8ce6f4b3cd1c3510b3ba2813c287f9b9db910ff7b51de434523552b690c3c2); mol.gov.so no connection; moj.gov.so home has no law list",
+     "result": "Parliament page: a description of the legislative process, no list or text of laws. Attorney General: three PDFs (Judiciary laws 1962 and 1974, the 2012 Constitution). Ministry of Labour: five laws (the 1972 Labour Code Law 65 in Somali, civil service law 11/2006, foreigners' work, civil-service pensions) and the English Labour Code, which is the 'Draft Bill of the Somali Labour Law' approved by the Upper House on 25 Nov 2024 (Ref GAS/B-11/KF5/24/2024); its Art. 76: 'the minimum wages for any category of employees may be determined by the Minister' (no rate set). No law on film, broadcasting content, theatre, culture or a production incentive; no registered collective agreement for performers, directors or writers.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "en.wikipedia.org/wiki/National_Theatre_of_Somalia fetched and read (files/m7/so_wiki_nt.html sha256 0cc9a60c6f4eae37f0dd6bc3a70417049c7727d4bda5077f2f20145d87c0675f; secondary, citing VOA, Telegraph, Hiiraan, AllAfrica 2012-2013 with addresses)",
+     "result": "History only: opened 1967, destroyed in 1991, reopened 2012, reconstruction agreed with China in 2013; the theatre is owned by the Federal Government; companies were state bands. No current fund, pay, commissioning or production terms; the cited press is 2012-2013.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'so,gov,moi)/' (130 captures, m7w/cc43_so_gov_moi__.txt); got department.php?slug=culture (14 Oct 2026, files/m7/so_cc43_moi_culture.html sha256 3ebf1f76cbd0452ea36ec89cb509f1c035afb1720729a72a42ee3a7f77881053) and about.php (files/m7/so_cc43_moi_about.html sha256 18d2a4a2dbf5ddf3d9666f16a50d4ecb26f8a207fdb44b03c03fbf4b516b0a2f); scanned the capture list for any fund, grant, call, theatre or film-rules page; CC-MAIN-2026-43 'so,gov,mohe)/' 0 captures",
+     "result": "The archived Culture page says what the live one says; about.php gives the mandate ('develop, regulate, and promote the nation's information, media, cultural, and tourism sectors') and functions (media policy and regulation), no fund or scheme. No capture of any call for proposals, grant, film or theatre rule among the 130.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "institution",
+     "tried": "moi.gov.so (Ministry of Information, Culture and Tourism): home, department.php?slug=culture, ?slug=theatre (National Theatre), ?slug=sntv, and the Somali news item of 3 Sep 2026 'Wasiirka Warfaafinta ... oo la kulmay qaar kamid ah shirkadaha iyo ururada Filmada' (files/m7/so_moi_gov_so_.html sha256 862fca80e5509dd3d36b61f9dc7aecade32a059f54ee6f6d27b8c31aa5e69247; so_moi_culture.html 0e3966f6f0ccaa5f001948fd14c81a2e7ff3f1c58fdd66f0dbc44fd767349b09; so_moi_theatre.html 1777c56664848a832e0bc086efa53517e66d682f0947335c8112e79c7cc137ed; so_moi_film.html 37036eebd61cbfdeee7d7a3e6d468f2353f1d60d7cbf7cc2ee22d46e85c29cbc); sntv.so home (Somali National Television, files/m7/so_sntv_so_.html sha256 5cd37c1191dcb7f739b846d5f3aeda7b9c2ad107ac63532af39e6c7f3b9ef17f; www.sntv.so 403)",
+     "result": "National Theatre department: 'organising and supporting theatrical performances, cultural events, and artistic endeavours' with no scheme, fund, terms or pay. The 3 Sep 2026 item: the director general explained film laws the ministry has prepared ('shuruucda laxiriirta Filmada oo ay diyaarisay wasaaradda': film system, laws, film policy, copyright and a film classification board, 'National Film Commission'), which will be consulted on with all concerned 'si loo ansixiyo loona dhaqan geliyo' (so that they are approved and put into effect): drafts, not in force; participants proposed reviving the former film agency. No fund, incentive, broadcaster commissioning terms, fee cap or pay minimum on any page; SNTV's home lists programme sections only.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.so /legislation-4/ (files/m7/so_leg_parliament_gov_so.html); ago.gov.so /legislations/ (Attorney General: files/m7/so_leg_ago_gov_so.html); molsa.gov.so /legislations/ (Ministry of Labour and Social Affairs: files/m7/so_leg_molsa_gov_so.html), and its Labour-Code-English-REVISED.pdf read for wages and agreements (files/m7/so_labour_code_en.pdf sha256 ca8ce6f4b3cd1c3510b3ba2813c287f9b9db910ff7b51de434523552b690c3c2); mol.gov.so no connection; moj.gov.so home has no law list",
+     "result": "Parliament page: a description of the legislative process, no list or text of laws. Attorney General: three PDFs (Judiciary laws 1962 and 1974, the 2012 Constitution). Ministry of Labour: five laws (the 1972 Labour Code Law 65 in Somali, civil service law 11/2006, foreigners' work, civil-service pensions) and the English Labour Code, which is the 'Draft Bill of the Somali Labour Law' approved by the Upper House on 25 Nov 2024 (Ref GAS/B-11/KF5/24/2024); its Art. 76: 'the minimum wages for any category of employees may be determined by the Minister' (no rate set). No law on film, broadcasting content, theatre, culture or a production incentive; no registered collective agreement for performers, directors or writers.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "en.wikipedia.org/wiki/National_Theatre_of_Somalia fetched and read (files/m7/so_wiki_nt.html sha256 0cc9a60c6f4eae37f0dd6bc3a70417049c7727d4bda5077f2f20145d87c0675f; secondary, citing VOA, Telegraph, Hiiraan, AllAfrica 2012-2013 with addresses)",
+     "result": "History only: opened 1967, destroyed in 1991, reopened 2012, reconstruction agreed with China in 2013; the theatre is owned by the Federal Government; companies were state bands. No current fund, pay, commissioning or production terms; the cited press is 2012-2013.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'so,gov,moi)/' (130 captures, m7w/cc43_so_gov_moi__.txt); got department.php?slug=culture (14 Oct 2026, files/m7/so_cc43_moi_culture.html sha256 3ebf1f76cbd0452ea36ec89cb509f1c035afb1720729a72a42ee3a7f77881053) and about.php (files/m7/so_cc43_moi_about.html sha256 18d2a4a2dbf5ddf3d9666f16a50d4ecb26f8a207fdb44b03c03fbf4b516b0a2f); scanned the capture list for any fund, grant, call, theatre or film-rules page; CC-MAIN-2026-43 'so,gov,mohe)/' 0 captures",
+     "result": "The archived Culture page says what the live one says; about.php gives the mandate ('develop, regulate, and promote the nation's information, media, cultural, and tourism sectors') and functions (media policy and regulation), no fund or scheme. No capture of any call for proposals, grant, film or theatre rule among the 130.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u3.result.json",
+     "tried": "1 search (standard): 'Somali National Theatre Mogadishu 2026 play performance tickets Ministry of Information Culture theatre support'",
+     "result": "Wikipedia, VOA, Africanews, Reuters on the reopening and screenings (2016–2021); nothing in force",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "institution",
+     "tried": "moi.gov.so (Ministry of Information, Culture and Tourism): home, department.php?slug=culture, ?slug=theatre (National Theatre), ?slug=sntv, and the Somali news item of 3 Sep 2026 'Wasiirka Warfaafinta ... oo la kulmay qaar kamid ah shirkadaha iyo ururada Filmada' (files/m7/so_moi_gov_so_.html sha256 862fca80e5509dd3d36b61f9dc7aecade32a059f54ee6f6d27b8c31aa5e69247; so_moi_culture.html 0e3966f6f0ccaa5f001948fd14c81a2e7ff3f1c58fdd66f0dbc44fd767349b09; so_moi_theatre.html 1777c56664848a832e0bc086efa53517e66d682f0947335c8112e79c7cc137ed; so_moi_film.html 37036eebd61cbfdeee7d7a3e6d468f2353f1d60d7cbf7cc2ee22d46e85c29cbc); sntv.so home (Somali National Television, files/m7/so_sntv_so_.html sha256 5cd37c1191dcb7f739b846d5f3aeda7b9c2ad107ac63532af39e6c7f3b9ef17f; www.sntv.so 403)",
+     "result": "National Theatre department: 'organising and supporting theatrical performances, cultural events, and artistic endeavours' with no scheme, fund, terms or pay. The 3 Sep 2026 item: the director general explained film laws the ministry has prepared ('shuruucda laxiriirta Filmada oo ay diyaarisay wasaaradda': film system, laws, film policy, copyright and a film classification board, 'National Film Commission'), which will be consulted on with all concerned 'si loo ansixiyo loona dhaqan geliyo' (so that they are approved and put into effect): drafts, not in force; participants proposed reviving the former film agency. No fund, incentive, broadcaster commissioning terms, fee cap or pay minimum on any page; SNTV's home lists programme sections only.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.so /legislation-4/ (files/m7/so_leg_parliament_gov_so.html); ago.gov.so /legislations/ (Attorney General: files/m7/so_leg_ago_gov_so.html); molsa.gov.so /legislations/ (Ministry of Labour and Social Affairs: files/m7/so_leg_molsa_gov_so.html), and its Labour-Code-English-REVISED.pdf read for wages and agreements (files/m7/so_labour_code_en.pdf sha256 ca8ce6f4b3cd1c3510b3ba2813c287f9b9db910ff7b51de434523552b690c3c2); mol.gov.so no connection; moj.gov.so home has no law list",
+     "result": "Parliament page: a description of the legislative process, no list or text of laws. Attorney General: three PDFs (Judiciary laws 1962 and 1974, the 2012 Constitution). Ministry of Labour: five laws (the 1972 Labour Code Law 65 in Somali, civil service law 11/2006, foreigners' work, civil-service pensions) and the English Labour Code, which is the 'Draft Bill of the Somali Labour Law' approved by the Upper House on 25 Nov 2024 (Ref GAS/B-11/KF5/24/2024); its Art. 76: 'the minimum wages for any category of employees may be determined by the Minister' (no rate set). No law on film, broadcasting content, theatre, culture or a production incentive; no registered collective agreement for performers, directors or writers.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "en.wikipedia.org/wiki/National_Theatre_of_Somalia fetched and read (files/m7/so_wiki_nt.html sha256 0cc9a60c6f4eae37f0dd6bc3a70417049c7727d4bda5077f2f20145d87c0675f; secondary, citing VOA, Telegraph, Hiiraan, AllAfrica 2012-2013 with addresses)",
+     "result": "History only: opened 1967, destroyed in 1991, reopened 2012, reconstruction agreed with China in 2013; the theatre is owned by the Federal Government; companies were state bands. No current fund, pay, commissioning or production terms; the cited press is 2012-2013.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'so,gov,moi)/' (130 captures, m7w/cc43_so_gov_moi__.txt); got department.php?slug=culture (14 Oct 2026, files/m7/so_cc43_moi_culture.html sha256 3ebf1f76cbd0452ea36ec89cb509f1c035afb1720729a72a42ee3a7f77881053) and about.php (files/m7/so_cc43_moi_about.html sha256 18d2a4a2dbf5ddf3d9666f16a50d4ecb26f8a207fdb44b03c03fbf4b516b0a2f); scanned the capture list for any fund, grant, call, theatre or film-rules page; CC-MAIN-2026-43 'so,gov,mohe)/' 0 captures",
+     "result": "The archived Culture page says what the live one says; about.php gives the mandate ('develop, regulate, and promote the nation's information, media, cultural, and tourism sectors') and functions (media policy and regulation), no fund or scheme. No capture of any call for proposals, grant, film or theatre rule among the 130.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u3.result.json",
+     "tried": "1 search (standard): 'Somali National Theatre Mogadishu 2026 play performance tickets Ministry of Information Culture theatre support'",
+     "result": "Wikipedia, VOA, Africanews, Reuters on the reopening and screenings (2016–2021); nothing in force",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "institution",
+     "tried": "moi.gov.so (Ministry of Information, Culture and Tourism): home, department.php?slug=culture, ?slug=theatre (National Theatre), ?slug=sntv, and the Somali news item of 3 Sep 2026 'Wasiirka Warfaafinta ... oo la kulmay qaar kamid ah shirkadaha iyo ururada Filmada' (files/m7/so_moi_gov_so_.html sha256 862fca80e5509dd3d36b61f9dc7aecade32a059f54ee6f6d27b8c31aa5e69247; so_moi_culture.html 0e3966f6f0ccaa5f001948fd14c81a2e7ff3f1c58fdd66f0dbc44fd767349b09; so_moi_theatre.html 1777c56664848a832e0bc086efa53517e66d682f0947335c8112e79c7cc137ed; so_moi_film.html 37036eebd61cbfdeee7d7a3e6d468f2353f1d60d7cbf7cc2ee22d46e85c29cbc); sntv.so home (Somali National Television, files/m7/so_sntv_so_.html sha256 5cd37c1191dcb7f739b846d5f3aeda7b9c2ad107ac63532af39e6c7f3b9ef17f; www.sntv.so 403)",
+     "result": "National Theatre department: 'organising and supporting theatrical performances, cultural events, and artistic endeavours' with no scheme, fund, terms or pay. The 3 Sep 2026 item: the director general explained film laws the ministry has prepared ('shuruucda laxiriirta Filmada oo ay diyaarisay wasaaradda': film system, laws, film policy, copyright and a film classification board, 'National Film Commission'), which will be consulted on with all concerned 'si loo ansixiyo loona dhaqan geliyo' (so that they are approved and put into effect): drafts, not in force; participants proposed reviving the former film agency. No fund, incentive, broadcaster commissioning terms, fee cap or pay minimum on any page; SNTV's home lists programme sections only.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.so /legislation-4/ (files/m7/so_leg_parliament_gov_so.html); ago.gov.so /legislations/ (Attorney General: files/m7/so_leg_ago_gov_so.html); molsa.gov.so /legislations/ (Ministry of Labour and Social Affairs: files/m7/so_leg_molsa_gov_so.html), and its Labour-Code-English-REVISED.pdf read for wages and agreements (files/m7/so_labour_code_en.pdf sha256 ca8ce6f4b3cd1c3510b3ba2813c287f9b9db910ff7b51de434523552b690c3c2); mol.gov.so no connection; moj.gov.so home has no law list",
+     "result": "Parliament page: a description of the legislative process, no list or text of laws. Attorney General: three PDFs (Judiciary laws 1962 and 1974, the 2012 Constitution). Ministry of Labour: five laws (the 1972 Labour Code Law 65 in Somali, civil service law 11/2006, foreigners' work, civil-service pensions) and the English Labour Code, which is the 'Draft Bill of the Somali Labour Law' approved by the Upper House on 25 Nov 2024 (Ref GAS/B-11/KF5/24/2024); its Art. 76: 'the minimum wages for any category of employees may be determined by the Minister' (no rate set). No law on film, broadcasting content, theatre, culture or a production incentive; no registered collective agreement for performers, directors or writers.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "en.wikipedia.org/wiki/National_Theatre_of_Somalia fetched and read (files/m7/so_wiki_nt.html sha256 0cc9a60c6f4eae37f0dd6bc3a70417049c7727d4bda5077f2f20145d87c0675f; secondary, citing VOA, Telegraph, Hiiraan, AllAfrica 2012-2013 with addresses)",
+     "result": "History only: opened 1967, destroyed in 1991, reopened 2012, reconstruction agreed with China in 2013; the theatre is owned by the Federal Government; companies were state bands. No current fund, pay, commissioning or production terms; the cited press is 2012-2013.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 list for 'so,gov,moi)/' (130 captures, m7w/cc43_so_gov_moi__.txt); got department.php?slug=culture (14 Oct 2026, files/m7/so_cc43_moi_culture.html sha256 3ebf1f76cbd0452ea36ec89cb509f1c035afb1720729a72a42ee3a7f77881053) and about.php (files/m7/so_cc43_moi_about.html sha256 18d2a4a2dbf5ddf3d9666f16a50d4ecb26f8a207fdb44b03c03fbf4b516b0a2f); scanned the capture list for any fund, grant, call, theatre or film-rules page; CC-MAIN-2026-43 'so,gov,mohe)/' 0 captures",
+     "result": "The archived Culture page says what the live one says; about.php gives the mandate ('develop, regulate, and promote the nation's information, media, cultural, and tourism sectors') and functions (media policy and regulation), no fund or scheme. No capture of any call for proposals, grant, film or theatre rule among the 130.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "web-search",
+     "recordedIn": "u3.result.json",
+     "tried": "1 search (standard): 'Somali National Theatre Mogadishu 2026 play performance tickets Ministry of Information Culture theatre support'",
+     "result": "Wikipedia, VOA, Africanews, Reuters on the reopening and screenings (2016–2021); nothing in force",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "TT": {
+  "producer": {
+   "blocker": "R-10162",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "ttpanetwork.com (Trinidad and Tobago Performing Arts Network): /tag/theatre/ (files/m7/tt_184c0b.html), site searches 'rebate' and 'fee'; read /2026/04/11/pwt-launches-npf-2026-with-a-work-of-art-by-sashta-jebodh/ (files/m7/tt_npf2026.html sha256 bc6efe988743df7a8cfcd63b89092b0a5f6155775776ec45266f64cd5d3abc2f) and /2021/01/25/filmtt-and-eastern-credit-union-embark-on-an-unprecedented-partnership/ (FilmTT's release, files/m7/tt_filmtt_ecu.html sha256 83bc5ec60d43bd6ae248e6190fe5dd0f21e1e390b1944741e9d30dbc5f573836)",
+     "result": "Stage: Playwrights Workshop Trinbago's New Play Festival 2026 stages one new play at a time at the Trinidad Theatre Workshop (directed by PWT's artistic director); no fee, royalty or pay named. Producer: FilmTT's 2021 release on loans from Eastern Credit Union for 'film industry professionals' (equipment loans, commercial mortgages); no rebate terms for a series, no fund, fee cap or commissioning term; the 'rebate' search found nothing else.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Trinidad and Tobago theatre actors pay rates playwright royalties director fee local theatre production 2025 Newsday Guardian'",
+     "result": "No pay scale, union agreement or royalty rate. Results: ttpanetwork.com pages and tags (read under trade-press), Nation News (Barbados) 2025, a CDB/issuu study on copyright's contribution to T&T's economy, a 1994 CS Monitor piece (Trinidad Theatre Workshop's 30 paid actors, historical), NCC's 2015 royalties notice, theses on T&T theatre.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "cott.org.tt (COTT) home and /general-licensing/ (files/m7/tt_cott_lic.html); ndatt.org home (files/m7/tt_i_c7a27b.html); www.labour.gov.tt home (files/m7/tt_i_6b2884.html); www.mtca.gov.tt (522), www.pmcd.gov.tt, mcdca.gov.tt, www.molsed.gov.tt (no connection)",
+     "result": "COTT now calls itself the 'Copyright Music Organisation of Trinidad & Tobago' and licenses musical works only ('COTT is a clearing house for music users and creators'): no dramatic or playwright tariff. ndatt.org is the National Dance Association, not a drama body. The labour ministry's home shows no minimum wage or performers' order. No director's, playwright's or actor's stage minimum on any body's site.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "laws.gov.tt (the Digital Legislative Library of the Law Revision Commission, Ministry of Land and Legal Affairs: 'unofficial versions of the law ... 1838 to 2025') home (files/m7/tt_i_3e5ea3.html) and its /ttdll-web/revision/list (files/m7/tt_ttdll_list.html), and rgd.legalaffairs.gov.tt/laws2/",
+     "result": "The DLL's list and search are drawn by script (jQuery app): no law list in the page, so the Minimum Wages Act, Copyright Act or any performers' order could not be read; rgd.legalaffairs.gov.tt: no connection. Nothing read as a stage pay rule.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ttpanetwork.com (Trinidad and Tobago Performing Arts Network): /tag/theatre/ (files/m7/tt_184c0b.html), site searches 'rebate' and 'fee'; read /2026/04/11/pwt-launches-npf-2026-with-a-work-of-art-by-sashta-jebodh/ (files/m7/tt_npf2026.html sha256 bc6efe988743df7a8cfcd63b89092b0a5f6155775776ec45266f64cd5d3abc2f) and /2021/01/25/filmtt-and-eastern-credit-union-embark-on-an-unprecedented-partnership/ (FilmTT's release, files/m7/tt_filmtt_ecu.html sha256 83bc5ec60d43bd6ae248e6190fe5dd0f21e1e390b1944741e9d30dbc5f573836)",
+     "result": "Stage: Playwrights Workshop Trinbago's New Play Festival 2026 stages one new play at a time at the Trinidad Theatre Workshop (directed by PWT's artistic director); no fee, royalty or pay named. Producer: FilmTT's 2021 release on loans from Eastern Credit Union for 'film industry professionals' (equipment loans, commercial mortgages); no rebate terms for a series, no fund, fee cap or commissioning term; the 'rebate' search found nothing else.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 lists for 'tt,org,cott)/' (5 captures: all HTTP 406, among them /site/about-cott/our-organisation), 'tt,gov,labour)/' (robots.txt only) and 'tt,co,actt)/' (0); archive.org availability API: cott.org.tt has a 2026-07-20 snapshot (web.archive.org resets the connection from here), labour.gov.tt/minimum-wage none",
+     "result": "No archived page holds a stage pay term: COTT's captures were refused (406) to the crawler, the labour ministry's site was not crawled beyond robots.txt.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Trinidad and Tobago theatre actors pay rates playwright royalties director fee local theatre production 2025 Newsday Guardian'",
+     "result": "No pay scale, union agreement or royalty rate. Results: ttpanetwork.com pages and tags (read under trade-press), Nation News (Barbados) 2025, a CDB/issuu study on copyright's contribution to T&T's economy, a 1994 CS Monitor piece (Trinidad Theatre Workshop's 30 paid actors, historical), NCC's 2015 royalties notice, theses on T&T theatre.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "cott.org.tt (COTT) home and /general-licensing/ (files/m7/tt_cott_lic.html); ndatt.org home (files/m7/tt_i_c7a27b.html); www.labour.gov.tt home (files/m7/tt_i_6b2884.html); www.mtca.gov.tt (522), www.pmcd.gov.tt, mcdca.gov.tt, www.molsed.gov.tt (no connection)",
+     "result": "COTT now calls itself the 'Copyright Music Organisation of Trinidad & Tobago' and licenses musical works only ('COTT is a clearing house for music users and creators'): no dramatic or playwright tariff. ndatt.org is the National Dance Association, not a drama body. The labour ministry's home shows no minimum wage or performers' order. No director's, playwright's or actor's stage minimum on any body's site.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "laws.gov.tt (the Digital Legislative Library of the Law Revision Commission, Ministry of Land and Legal Affairs: 'unofficial versions of the law ... 1838 to 2025') home (files/m7/tt_i_3e5ea3.html) and its /ttdll-web/revision/list (files/m7/tt_ttdll_list.html), and rgd.legalaffairs.gov.tt/laws2/",
+     "result": "The DLL's list and search are drawn by script (jQuery app): no law list in the page, so the Minimum Wages Act, Copyright Act or any performers' order could not be read; rgd.legalaffairs.gov.tt: no connection. Nothing read as a stage pay rule.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ttpanetwork.com (Trinidad and Tobago Performing Arts Network): /tag/theatre/ (files/m7/tt_184c0b.html), site searches 'rebate' and 'fee'; read /2026/04/11/pwt-launches-npf-2026-with-a-work-of-art-by-sashta-jebodh/ (files/m7/tt_npf2026.html sha256 bc6efe988743df7a8cfcd63b89092b0a5f6155775776ec45266f64cd5d3abc2f) and /2021/01/25/filmtt-and-eastern-credit-union-embark-on-an-unprecedented-partnership/ (FilmTT's release, files/m7/tt_filmtt_ecu.html sha256 83bc5ec60d43bd6ae248e6190fe5dd0f21e1e390b1944741e9d30dbc5f573836)",
+     "result": "Stage: Playwrights Workshop Trinbago's New Play Festival 2026 stages one new play at a time at the Trinidad Theatre Workshop (directed by PWT's artistic director); no fee, royalty or pay named. Producer: FilmTT's 2021 release on loans from Eastern Credit Union for 'film industry professionals' (equipment loans, commercial mortgages); no rebate terms for a series, no fund, fee cap or commissioning term; the 'rebate' search found nothing else.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 lists for 'tt,org,cott)/' (5 captures: all HTTP 406, among them /site/about-cott/our-organisation), 'tt,gov,labour)/' (robots.txt only) and 'tt,co,actt)/' (0); archive.org availability API: cott.org.tt has a 2026-07-20 snapshot (web.archive.org resets the connection from here), labour.gov.tt/minimum-wage none",
+     "result": "No archived page holds a stage pay term: COTT's captures were refused (406) to the crawler, the labour ministry's site was not crawled beyond robots.txt.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Trinidad and Tobago theatre actors pay rates playwright royalties director fee local theatre production 2025 Newsday Guardian'",
+     "result": "No pay scale, union agreement or royalty rate. Results: ttpanetwork.com pages and tags (read under trade-press), Nation News (Barbados) 2025, a CDB/issuu study on copyright's contribution to T&T's economy, a 1994 CS Monitor piece (Trinidad Theatre Workshop's 30 paid actors, historical), NCC's 2015 royalties notice, theses on T&T theatre.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "cott.org.tt (COTT) home and /general-licensing/ (files/m7/tt_cott_lic.html); ndatt.org home (files/m7/tt_i_c7a27b.html); www.labour.gov.tt home (files/m7/tt_i_6b2884.html); www.mtca.gov.tt (522), www.pmcd.gov.tt, mcdca.gov.tt, www.molsed.gov.tt (no connection)",
+     "result": "COTT now calls itself the 'Copyright Music Organisation of Trinidad & Tobago' and licenses musical works only ('COTT is a clearing house for music users and creators'): no dramatic or playwright tariff. ndatt.org is the National Dance Association, not a drama body. The labour ministry's home shows no minimum wage or performers' order. No director's, playwright's or actor's stage minimum on any body's site.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "laws.gov.tt (the Digital Legislative Library of the Law Revision Commission, Ministry of Land and Legal Affairs: 'unofficial versions of the law ... 1838 to 2025') home (files/m7/tt_i_3e5ea3.html) and its /ttdll-web/revision/list (files/m7/tt_ttdll_list.html), and rgd.legalaffairs.gov.tt/laws2/",
+     "result": "The DLL's list and search are drawn by script (jQuery app): no law list in the page, so the Minimum Wages Act, Copyright Act or any performers' order could not be read; rgd.legalaffairs.gov.tt: no connection. Nothing read as a stage pay rule.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ttpanetwork.com (Trinidad and Tobago Performing Arts Network): /tag/theatre/ (files/m7/tt_184c0b.html), site searches 'rebate' and 'fee'; read /2026/04/11/pwt-launches-npf-2026-with-a-work-of-art-by-sashta-jebodh/ (files/m7/tt_npf2026.html sha256 bc6efe988743df7a8cfcd63b89092b0a5f6155775776ec45266f64cd5d3abc2f) and /2021/01/25/filmtt-and-eastern-credit-union-embark-on-an-unprecedented-partnership/ (FilmTT's release, files/m7/tt_filmtt_ecu.html sha256 83bc5ec60d43bd6ae248e6190fe5dd0f21e1e390b1944741e9d30dbc5f573836)",
+     "result": "Stage: Playwrights Workshop Trinbago's New Play Festival 2026 stages one new play at a time at the Trinidad Theatre Workshop (directed by PWT's artistic director); no fee, royalty or pay named. Producer: FilmTT's 2021 release on loans from Eastern Credit Union for 'film industry professionals' (equipment loans, commercial mortgages); no rebate terms for a series, no fund, fee cap or commissioning term; the 'rebate' search found nothing else.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 lists for 'tt,org,cott)/' (5 captures: all HTTP 406, among them /site/about-cott/our-organisation), 'tt,gov,labour)/' (robots.txt only) and 'tt,co,actt)/' (0); archive.org availability API: cott.org.tt has a 2026-07-20 snapshot (web.archive.org resets the connection from here), labour.gov.tt/minimum-wage none",
+     "result": "No archived page holds a stage pay term: COTT's captures were refused (406) to the crawler, the labour ministry's site was not crawled beyond robots.txt.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "YE": {
+  "producer": {
+   "blocker": "R-10194",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'اليمن وزارة الثقافة المسرح الوطني دعم إنتاج مسرحي مسلسلات يمنية تمويل أجور الممثلين نقابة الفنانين اليمنيين 2025' (Yemen culture ministry, national theatre, support for theatre production, Yemeni series, funding, actors' pay, the Yemeni artists' syndicate)",
+     "result": "No Yemeni ministry, syndicate or broadcaster page in the results. Yemen-related: Al Jazeera Net 20 Jan 2023 on Hamlet in Aden (read under trade-press), Goethe-Institut 'Cultural Networks Yemen' booklets (a German-funded programme; both PDF addresses 404 when fetched). The rest concerned Morocco, Egypt and the UAE. No fund, incentive, commissioning term, fee cap or pay minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ajnet.me/culture/2023/1/20/ (Al Jazeera Net, 'Hamlet in Aden revives hopes of theatre's return to Yemen', 20 Jan 2023, quoting AFP and the British Council) fetched and read (files/m7/ye_ajnet.html sha256 38ff24771cceacd7780c218ff7d77b44e67b0d5aaf08496048d17791569dec88); goethe.de cultural_networks_yemen_booklet_web_version1-v1.pdf and -v2.pdf (both 404)",
+     "result": "Al Jazeera: the Khaleej Aden troupe's Hamlet, directed by Amr Gamal, in partnership with the British Council, played ten sold-out performances; the assistant director says the space for artistic work is 'ضيقة للغاية' for lack of production resources for culture. It names no public fund, incentive, broadcaster commissioning, fee cap, or any pay for the director, writer or actors. A lead on how a play fares only (item 10), from 2023.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "State legal sources: www.yemen-nic.info and yemen-nic.info (National Information Center, which held the laws), www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs), www.parliament.gov.ye, www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour); then agoyemen.net (Public Prosecutor's office, its 'القوانين والإتفاقيات' library): home and lists ntopicsslist.php?id=1, 7, 27, 28, ntopicsslisttamem.php?id=11, book.php?actn=ListRecords&cid=6 (files/m7/ye_ago.html sha256 714ddad4838cd839dccca42442803dc4236a4e5d0437e6d29e05a8c24ab8cdc7; files/m7/ye_ago_ntopicsslist_php_id_1.html sha256 616d05982557f885315e2ed848c310fe2ace074aed35d1b3442fd77455c35c49)",
+     "result": "yemen-nic.info: connection reset (curl 35); mola, parliament, mosal, mosal-ye.com: no connection (curl 000). The prosecutor's library reached: it holds only laws on its own work (evidence, criminal procedure, military criminal procedure, arbitration, collection of public funds, right of access to information, state cases) and Supreme Court rulings; no labour, copyright, press, audiovisual, culture or tax law, no collective agreement or gazette issue.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: 'ye,gov,moic)/' (Ministry of Information, Culture and Tourism) in CC-MAIN-2026-43 and -39: 0 captures; archive.org availability API for moic.gov.ye: no snapshot; 'info,yemen-nic)/' (National Information Center) CC-MAIN-2026-43: 1,188 captures, of which the 59 distinct /db/laws_ye/detail.php pages were fetched and their titles read (m7w/ye_laws/, map.txt); the two on the items saved: Decree 205/2013 (files/m7/ye_cc43_law41.html sha256 d703bbf45e66a70b68a900df88fead48f32860ca470863257bdfbe859d3dddff) and the Press and Publications Law (files/m7/ye_cc43_law56.html sha256 6649c09dbf005e6de451d7b70fcacbbaadd32db4c158e19a55023e79eaec3fa2); the Wayback snapshot of yemen-nic.info (2026-10-17) listed by the availability API but web.archive.org reset the connection",
+     "result": "A state theatre and cinema body exists: Decree 205/2013 appoints the chair of 'المؤسسة العامة للمسرح والسينما', citing 'القرار الجمهوري رقم (53) لسنة 2008م بإنشاء المؤسسة العامة للمسرح والسينمـا'. The Press and Publications Law art. 91: films, video and 'any other artistic works' may be produced, shown or distributed only 'بترخيص كتابي مسبق من وزارة الثقافة' (a licence, not a fund). The other 57 captured texts (civil status, tenders, universities, appointments, oil agreements, budgets) touch no item. No fund, incentive, commissioning rule, fee cap, theatre grant or pay minimum in any capture.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'اليمن وزارة الثقافة المسرح الوطني دعم إنتاج مسرحي مسلسلات يمنية تمويل أجور الممثلين نقابة الفنانين اليمنيين 2025' (Yemen culture ministry, national theatre, support for theatre production, Yemeni series, funding, actors' pay, the Yemeni artists' syndicate)",
+     "result": "No Yemeni ministry, syndicate or broadcaster page in the results. Yemen-related: Al Jazeera Net 20 Jan 2023 on Hamlet in Aden (read under trade-press), Goethe-Institut 'Cultural Networks Yemen' booklets (a German-funded programme; both PDF addresses 404 when fetched). The rest concerned Morocco, Egypt and the UAE. No fund, incentive, commissioning term, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ajnet.me/culture/2023/1/20/ (Al Jazeera Net, 'Hamlet in Aden revives hopes of theatre's return to Yemen', 20 Jan 2023, quoting AFP and the British Council) fetched and read (files/m7/ye_ajnet.html sha256 38ff24771cceacd7780c218ff7d77b44e67b0d5aaf08496048d17791569dec88); goethe.de cultural_networks_yemen_booklet_web_version1-v1.pdf and -v2.pdf (both 404)",
+     "result": "Al Jazeera: the Khaleej Aden troupe's Hamlet, directed by Amr Gamal, in partnership with the British Council, played ten sold-out performances; the assistant director says the space for artistic work is 'ضيقة للغاية' for lack of production resources for culture. It names no public fund, incentive, broadcaster commissioning, fee cap, or any pay for the director, writer or actors. A lead on how a play fares only (item 10), from 2023.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "State legal sources: www.yemen-nic.info and yemen-nic.info (National Information Center, which held the laws), www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs), www.parliament.gov.ye, www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour); then agoyemen.net (Public Prosecutor's office, its 'القوانين والإتفاقيات' library): home and lists ntopicsslist.php?id=1, 7, 27, 28, ntopicsslisttamem.php?id=11, book.php?actn=ListRecords&cid=6 (files/m7/ye_ago.html sha256 714ddad4838cd839dccca42442803dc4236a4e5d0437e6d29e05a8c24ab8cdc7; files/m7/ye_ago_ntopicsslist_php_id_1.html sha256 616d05982557f885315e2ed848c310fe2ace074aed35d1b3442fd77455c35c49)",
+     "result": "yemen-nic.info: connection reset (curl 35); mola, parliament, mosal, mosal-ye.com: no connection (curl 000). The prosecutor's library reached: it holds only laws on its own work (evidence, criminal procedure, military criminal procedure, arbitration, collection of public funds, right of access to information, state cases) and Supreme Court rulings; no labour, copyright, press, audiovisual, culture or tax law, no collective agreement or gazette issue.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: 'ye,gov,moic)/' (Ministry of Information, Culture and Tourism) in CC-MAIN-2026-43 and -39: 0 captures; archive.org availability API for moic.gov.ye: no snapshot; 'info,yemen-nic)/' (National Information Center) CC-MAIN-2026-43: 1,188 captures, of which the 59 distinct /db/laws_ye/detail.php pages were fetched and their titles read (m7w/ye_laws/, map.txt); the two on the items saved: Decree 205/2013 (files/m7/ye_cc43_law41.html sha256 d703bbf45e66a70b68a900df88fead48f32860ca470863257bdfbe859d3dddff) and the Press and Publications Law (files/m7/ye_cc43_law56.html sha256 6649c09dbf005e6de451d7b70fcacbbaadd32db4c158e19a55023e79eaec3fa2); the Wayback snapshot of yemen-nic.info (2026-10-17) listed by the availability API but web.archive.org reset the connection",
+     "result": "A state theatre and cinema body exists: Decree 205/2013 appoints the chair of 'المؤسسة العامة للمسرح والسينما', citing 'القرار الجمهوري رقم (53) لسنة 2008م بإنشاء المؤسسة العامة للمسرح والسينمـا'. The Press and Publications Law art. 91: films, video and 'any other artistic works' may be produced, shown or distributed only 'بترخيص كتابي مسبق من وزارة الثقافة' (a licence, not a fund). The other 57 captured texts (civil status, tenders, universities, appointments, oil agreements, budgets) touch no item. No fund, incentive, commissioning rule, fee cap, theatre grant or pay minimum in any capture.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u6.result.json",
+     "tried": "moic.gov.ye; yemen.gov.ye; www.saba.ye/ar; www.sabanew.net",
+     "result": "502; connection reset; 403; sabanew.net reached (news agency home, no rules)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'اليمن وزارة الثقافة المسرح الوطني دعم إنتاج مسرحي مسلسلات يمنية تمويل أجور الممثلين نقابة الفنانين اليمنيين 2025' (Yemen culture ministry, national theatre, support for theatre production, Yemeni series, funding, actors' pay, the Yemeni artists' syndicate)",
+     "result": "No Yemeni ministry, syndicate or broadcaster page in the results. Yemen-related: Al Jazeera Net 20 Jan 2023 on Hamlet in Aden (read under trade-press), Goethe-Institut 'Cultural Networks Yemen' booklets (a German-funded programme; both PDF addresses 404 when fetched). The rest concerned Morocco, Egypt and the UAE. No fund, incentive, commissioning term, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ajnet.me/culture/2023/1/20/ (Al Jazeera Net, 'Hamlet in Aden revives hopes of theatre's return to Yemen', 20 Jan 2023, quoting AFP and the British Council) fetched and read (files/m7/ye_ajnet.html sha256 38ff24771cceacd7780c218ff7d77b44e67b0d5aaf08496048d17791569dec88); goethe.de cultural_networks_yemen_booklet_web_version1-v1.pdf and -v2.pdf (both 404)",
+     "result": "Al Jazeera: the Khaleej Aden troupe's Hamlet, directed by Amr Gamal, in partnership with the British Council, played ten sold-out performances; the assistant director says the space for artistic work is 'ضيقة للغاية' for lack of production resources for culture. It names no public fund, incentive, broadcaster commissioning, fee cap, or any pay for the director, writer or actors. A lead on how a play fares only (item 10), from 2023.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "State legal sources: www.yemen-nic.info and yemen-nic.info (National Information Center, which held the laws), www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs), www.parliament.gov.ye, www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour); then agoyemen.net (Public Prosecutor's office, its 'القوانين والإتفاقيات' library): home and lists ntopicsslist.php?id=1, 7, 27, 28, ntopicsslisttamem.php?id=11, book.php?actn=ListRecords&cid=6 (files/m7/ye_ago.html sha256 714ddad4838cd839dccca42442803dc4236a4e5d0437e6d29e05a8c24ab8cdc7; files/m7/ye_ago_ntopicsslist_php_id_1.html sha256 616d05982557f885315e2ed848c310fe2ace074aed35d1b3442fd77455c35c49)",
+     "result": "yemen-nic.info: connection reset (curl 35); mola, parliament, mosal, mosal-ye.com: no connection (curl 000). The prosecutor's library reached: it holds only laws on its own work (evidence, criminal procedure, military criminal procedure, arbitration, collection of public funds, right of access to information, state cases) and Supreme Court rulings; no labour, copyright, press, audiovisual, culture or tax law, no collective agreement or gazette issue.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: 'ye,gov,moic)/' (Ministry of Information, Culture and Tourism) in CC-MAIN-2026-43 and -39: 0 captures; archive.org availability API for moic.gov.ye: no snapshot; 'info,yemen-nic)/' (National Information Center) CC-MAIN-2026-43: 1,188 captures, of which the 59 distinct /db/laws_ye/detail.php pages were fetched and their titles read (m7w/ye_laws/, map.txt); the two on the items saved: Decree 205/2013 (files/m7/ye_cc43_law41.html sha256 d703bbf45e66a70b68a900df88fead48f32860ca470863257bdfbe859d3dddff) and the Press and Publications Law (files/m7/ye_cc43_law56.html sha256 6649c09dbf005e6de451d7b70fcacbbaadd32db4c158e19a55023e79eaec3fa2); the Wayback snapshot of yemen-nic.info (2026-10-17) listed by the availability API but web.archive.org reset the connection",
+     "result": "A state theatre and cinema body exists: Decree 205/2013 appoints the chair of 'المؤسسة العامة للمسرح والسينما', citing 'القرار الجمهوري رقم (53) لسنة 2008م بإنشاء المؤسسة العامة للمسرح والسينمـا'. The Press and Publications Law art. 91: films, video and 'any other artistic works' may be produced, shown or distributed only 'بترخيص كتابي مسبق من وزارة الثقافة' (a licence, not a fund). The other 57 captured texts (civil status, tenders, universities, appointments, oil agreements, budgets) touch no item. No fund, incentive, commissioning rule, fee cap, theatre grant or pay minimum in any capture.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u6.result.json",
+     "tried": "moic.gov.ye; yemen.gov.ye; www.saba.ye/ar; www.sabanew.net",
+     "result": "502; connection reset; 403; sabanew.net reached (news agency home, no rules)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard), Arabic: 'اليمن وزارة الثقافة المسرح الوطني دعم إنتاج مسرحي مسلسلات يمنية تمويل أجور الممثلين نقابة الفنانين اليمنيين 2025' (Yemen culture ministry, national theatre, support for theatre production, Yemeni series, funding, actors' pay, the Yemeni artists' syndicate)",
+     "result": "No Yemeni ministry, syndicate or broadcaster page in the results. Yemen-related: Al Jazeera Net 20 Jan 2023 on Hamlet in Aden (read under trade-press), Goethe-Institut 'Cultural Networks Yemen' booklets (a German-funded programme; both PDF addresses 404 when fetched). The rest concerned Morocco, Egypt and the UAE. No fund, incentive, commissioning term, fee cap or pay minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ajnet.me/culture/2023/1/20/ (Al Jazeera Net, 'Hamlet in Aden revives hopes of theatre's return to Yemen', 20 Jan 2023, quoting AFP and the British Council) fetched and read (files/m7/ye_ajnet.html sha256 38ff24771cceacd7780c218ff7d77b44e67b0d5aaf08496048d17791569dec88); goethe.de cultural_networks_yemen_booklet_web_version1-v1.pdf and -v2.pdf (both 404)",
+     "result": "Al Jazeera: the Khaleej Aden troupe's Hamlet, directed by Amr Gamal, in partnership with the British Council, played ten sold-out performances; the assistant director says the space for artistic work is 'ضيقة للغاية' for lack of production resources for culture. It names no public fund, incentive, broadcaster commissioning, fee cap, or any pay for the director, writer or actors. A lead on how a play fares only (item 10), from 2023.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "State legal sources: www.yemen-nic.info and yemen-nic.info (National Information Center, which held the laws), www.mola.gov.ye and mola.gov.ye (Ministry of Legal Affairs), www.parliament.gov.ye, www.mosal.gov.ye and mosal-ye.com (Ministry of Social Affairs and Labour); then agoyemen.net (Public Prosecutor's office, its 'القوانين والإتفاقيات' library): home and lists ntopicsslist.php?id=1, 7, 27, 28, ntopicsslisttamem.php?id=11, book.php?actn=ListRecords&cid=6 (files/m7/ye_ago.html sha256 714ddad4838cd839dccca42442803dc4236a4e5d0437e6d29e05a8c24ab8cdc7; files/m7/ye_ago_ntopicsslist_php_id_1.html sha256 616d05982557f885315e2ed848c310fe2ace074aed35d1b3442fd77455c35c49)",
+     "result": "yemen-nic.info: connection reset (curl 35); mola, parliament, mosal, mosal-ye.com: no connection (curl 000). The prosecutor's library reached: it holds only laws on its own work (evidence, criminal procedure, military criminal procedure, arbitration, collection of public funds, right of access to information, state cases) and Supreme Court rulings; no labour, copyright, press, audiovisual, culture or tax law, no collective agreement or gazette issue.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: 'ye,gov,moic)/' (Ministry of Information, Culture and Tourism) in CC-MAIN-2026-43 and -39: 0 captures; archive.org availability API for moic.gov.ye: no snapshot; 'info,yemen-nic)/' (National Information Center) CC-MAIN-2026-43: 1,188 captures, of which the 59 distinct /db/laws_ye/detail.php pages were fetched and their titles read (m7w/ye_laws/, map.txt); the two on the items saved: Decree 205/2013 (files/m7/ye_cc43_law41.html sha256 d703bbf45e66a70b68a900df88fead48f32860ca470863257bdfbe859d3dddff) and the Press and Publications Law (files/m7/ye_cc43_law56.html sha256 6649c09dbf005e6de451d7b70fcacbbaadd32db4c158e19a55023e79eaec3fa2); the Wayback snapshot of yemen-nic.info (2026-10-17) listed by the availability API but web.archive.org reset the connection",
+     "result": "A state theatre and cinema body exists: Decree 205/2013 appoints the chair of 'المؤسسة العامة للمسرح والسينما', citing 'القرار الجمهوري رقم (53) لسنة 2008م بإنشاء المؤسسة العامة للمسرح والسينمـا'. The Press and Publications Law art. 91: films, video and 'any other artistic works' may be produced, shown or distributed only 'بترخيص كتابي مسبق من وزارة الثقافة' (a licence, not a fund). The other 57 captured texts (civil status, tenders, universities, appointments, oil agreements, budgets) touch no item. No fund, incentive, commissioning rule, fee cap, theatre grant or pay minimum in any capture.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "recordedIn": "u6.result.json",
+     "tried": "moic.gov.ye; yemen.gov.ye; www.saba.ye/ar; www.sabanew.net",
+     "result": "502; connection reset; 403; sabanew.net reached (news agency home, no rules)",
+     "date": "2026-11-04",
+     "note": "recorded attempt already made; named, not repeated"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Yemen has a General Foundation for Theatre and Cinema (Decree 53/2008) under the culture ministry and a licensing rule for films (Press and Publications Law art. 91), read in Common Crawl's copies of the National Information Center's law pages; no live state legal site answered. Every item stays blocked on all five methods; the de facto split of authority (Sanaa and Aden) is not reflected in these texts."
+ }
+}

@@ -26,14 +26,14 @@ so any of them can be fetched and checked again.
   wave), `u1..u25.result.json` (the follow-up: only the items the first left untried, `u<n>.todo.json` naming them),
   `unreached.json` (what the first left untried), `m1..m20.todo.json` (the methods round's work: per country, the
   producer blocker's missing methods and the stage items 7, 8, 9 still to be tried by all five), `gaps.json` (the 235
-  producer blockers short of a method, by id). `m<n>.result.json` are added here when the round finishes.
+  producer blockers short of a method, by id). `m<n>.result.json` are the methods round's results as they stood at the last checkpoint; `tools/methods_left.py` lists what each still lacks.
 - `integration/`: the four role integrators' register patches (`producer`, `director`, `writer`, `actor`
   `.register-patch.json`, all already merged into the uncommitted tree), their catalog patches (merged), the
   integrators' notes (`producer.method-gaps.json`, `director.stage-attempts.json`, `actor.unrecorded-attempts.json`),
   `renames.json` (the R-NEW ids the merge numbered), and the uncommitted tree itself:
   `wip-tracked.patch` (every tracked file's change from 7268069) and `wip-untracked.tgz` (the 162 new files).
   Applied to 7268069 they rebuild the tree byte for byte (checked on a fresh clone, all 230 files).
-- `tools/`: `merge3.py` (merges a directory of `*.register-patch.json` and `*.register-delete.json` into the register,
+- `tools/`: `methods_left.py` (what the methods round still lacks, per group), `merge3.py` (merges a directory of `*.register-patch.json` and `*.register-delete.json` into the register,
   numbering `R-NEW-n` per group; run from the repository's root as `python3 -I <path>/merge3.py <dir>`), `cc.py` (Common
   Crawl's index and record reader, with backoff: `python3 -I cc.py list <crawl> '<surt-prefix>'`, then `cc.py get`),
   `ca-intermediates.pem` (issuers' intermediate certificates that complete chains some sites serve incomplete;

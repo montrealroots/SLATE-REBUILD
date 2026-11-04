@@ -297,7 +297,7 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-### Resume here (written 2026-11-04, before a session switch)
+### Resume here (written 2026-11-04, before a session switch; checkpointed as the methods round reports)
 
 The session of 2026-11-04 stopped with work that wasn't yet committed, because the gate was red on it. All of it is
 kept in `research/rounds/2026-11-04-layer4/` (its `README.md` says what each file is). Do these in order:
@@ -321,7 +321,7 @@ kept in `research/rounds/2026-11-04-layer4/` (its `README.md` says what each fil
    pending (no stage director's minimum and no blocker: AN AQ AR AS AU AZ BA BE BL BW CC CH CL CS CX GF GP GU HK HM JE
    LI LV MC ME MF MP MQ NF PA PH PM PR RE SK TH UM VI YT). The methods round closes both: twenty agents, one per
    `results/tvstage/m<n>.todo.json`, on the brief `briefs/16-methods-round.md`, each making every missing attempt for
-   real. If `results/tvstage/m<n>.result.json` are in the package, the round ran; else run it (the owner chose it,
+   real. The package holds each group's `results/tvstage/m<n>.result.json` as it stood at the last checkpoint (groups write as they go, so a group still running then is partial): run `python3 -I research/rounds/2026-11-04-layer4/tools/methods_left.py` to list, per group, the attempts still missing, and give only those to new agents on the same brief (or the whole todo where a group has no result file) (the owner chose it,
    2026-11-04: "Run the methods round (Recommended)"; at most ten web searches an agent, the session's allowance being
    200 in all). Then write the attempts into the register: append each `producer.attempts` to its blocker; for each
    stage item (7 director, 8 writer, 9 actor) append the attempts to that role's blocker

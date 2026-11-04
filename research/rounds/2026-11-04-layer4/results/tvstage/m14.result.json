@@ -1,0 +1,1159 @@
+{
+ "AU": {
+  "producer": {
+   "blocker": "R-9813",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "IF Magazine (if.com.au) site search 'drama report' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-if-search-dramareport.html, sha256 9baa57cc719c1b3c657df04c4ee84f2a686dcded0fd5bd4b2967d984c6700518); then the article it listed, 'Screen Australia data finds $5-15m films most reliant on gap finance, adult TV drama presales rare' (Jackie Keast, 10 July 2026, https://if.com.au/screen-australia-data-finds-5-15m-films-most-reliant-on-gap-finance-adult-tv-drama-presales-rare/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-if-gapfinance.html, sha256 906824fcfe1502d5eaeb4b0c6209e2657633aef8db6324e4d4e48b8341131f75), for the series' fund, its rate of yes and how often an independent series is picked up",
+     "result": "Premium (paywalled) article; the public part reads: 'A Screen Australia analysis of recent marketplace finance has found fewer than half of feature films with a sales agent attached secured an upfront minimum guarantee, while presales were virtually non-existent in adult TV drama. The agency's market and audience team has crunched the numbers on 197 projects – 119 feature films, 59 adult TV dramas and 19 children's TV dramas – submitted for narrative content production funding between January 2023 and Octo...' (cut off). It names Screen Australia's analysis but gives no address for it, and the rest is behind the subscription: a lead (59 adult TV dramas applied for production funding from January 2023), no rate of yes or pickup count read. Not got past the paywall.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch (standard) 'Australia theatre director minimum fee MEAA LPA agreement directors rates stage director pay'",
+     "result": "No Australian stage director's minimum: results were LPA's Casual Crew and 2017 PCA PDFs (performers and crew), a MEAA 2014 crew item, aussietheatre.com.au's 'Equity and LPA reach in-principle deal' (PCA), and UK Theatre/SOLT directors' rate sheets (UK only)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Fair Work Commission: the Live Performance Award's PDF https://www.fwc.gov.au/documents/modern_awards/pdf/ma000081.pdf, the enterprise-agreement finder https://www.fwc.gov.au/agreements-awards/enterprise-agreements/find-enterprise-agreement and document search https://www.fwc.gov.au/document-search?q=theatre%20director (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-fwc-*.html)",
+     "result": "Each answered 403 with an Azure WAF page (the PDF with a 'JS Challenge'); not got past, not read another way. The award as the FWO serves it was read earlier (t4: no stage director classified).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "https://www.aussietheatre.com.au/news/equity-lpa-reach (named by the search; saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-aussietheatre-equity-lpa.html)",
+     "result": "403, Cloudflare 'Just a moment...' challenge; not got past",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43: 'au,com,liveperformance)/workplace' (one capture, https://liveperformance.com.au/workplace-relations/, 2026-10-13, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-cc-lpa-wr.html, sha256 55acb00703bfe4ff5efa3f6953a87f99da3236a5078a7f0b63ef3854e17acd57), 'au,gov,fairwork,awards)/ma000081' (no capture), and 'au,com,awg)/contracts' (one capture, https://www.awg.com.au/contracts-and-rates/, 2026-10-06, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-cc-awg-contracts.html, sha256 c2e963cfae7a26e7816997dd06fd95d02030510a47abd1bbff7917771f57cf62). The live LPA agreements page https://liveperformance.com.au/workplace-relations/agreements/ answered 404.",
+     "result": "LPA's page names the awards for live performance (Live Performance Award 2020 and three others) and no director's agreement or rate. The AWG page (item 8) says 'To access the below contracts, rates and resources, please ensure your AWG membership is up to date and log in to the member portal', lists 'Theatre Industry Agreement 2016' ('negotiated with the Australian Major Performing Arts Group (AMPAG)') and 'Theatre Industry Agreement Minimum Rates 2025', with no link to a public file: the rates stay member-only.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "items": [
+      8
+     ],
+     "existing": "t4 web-search [8]: 'Australian Writers' Guild theatre playwright commission minimum fee rates 2026' (not repeated)"
+    },
+    {
+     "method": "institution",
+     "items": [
+      8
+     ],
+     "existing": "t4 institution [8]: awg.com.au/contracts-and-rates/ and canberrayouththeatre.com.au commissions (not repeated)"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      8
+     ],
+     "tried": "ACCC authorisations register searched for the Writers' Guild (https://www.accc.gov.au/public-registers/authorisations-and-notifications-registers/authorisations-register?search=writers%20guild); Federal Register of Legislation full-text search for 'playwright' (https://www.legislation.gov.au/search/text(%22playwright%22,nameAndText,contains), saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/au-legis-search.html)",
+     "result": "ACCC: 403 (refused). Legislation register: 200, but the results are drawn by script and its HTML holds none, so nothing read. The AWG-AMPAG Theatre Industry Agreement is a negotiated industry agreement (AWG's page), not a registered instrument, so no register holds its rates.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      8
+     ],
+     "tried": "ArtsHub site search 'playwright commission fee' (https://www.artshub.com.au/?s=playwright+commission+fee)",
+     "result": "403, Cloudflare challenge; not got past",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      8
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 capture of https://www.awg.com.au/contracts-and-rates/ (see item 7's archive attempt)",
+     "result": "'Theatre Industry Agreement Minimum Rates 2025' is listed behind the member portal; no figure in the capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Ten WebSearch calls in all for m14; AU used one (item 7). No fact found: the stage director's minimum stays without any Australian agreement, the playwright's rates member-only."
+ },
+ "BT": {
+  "producer": {
+   "blocker": "R-9846",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "National Assembly of Bhutan's Acts list https://www.nab.gov.bt/en/business/acts and https://nab.gov.bt/en/business/acts (for the ICM Act's film and media provisions, any fund or incentive); the Depository of Laws https://legislation.gov.bt/",
+     "result": "nab.gov.bt: TLS certificate does not match the host name (curl 60) on both names; verification not turned off, not read. legislation.gov.bt: connection reset (curl 35). Nothing read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "BBS news 'Theatre arts struggling to exist' (https://www.bbs.bt/theatre-arts-struggling-to-exist, served as https://www.bbs.bt/22395/, undated in its text; saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/bt-bbs-theatre-struggling.html, sha256 79142dbc3a12b54b43dbe534fa7fdea3cc781d58cabb44a9307316fd9ef99bc4), BBS 'RTA hosts first-ever musical theatre performance on Grease' (https://www.bbs.bt/185852/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/bt-bbs-grease.html, sha256 a7462682c33b53fe90b8097f50567b7685b4bf0f558c22462da67f08df6e9e8a) and Kuensel's site search ?s=theatre (https://kuenselonline.com/?s=theatre, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/bt-kuensel-theatre.html), for a play's fund and how a play fares (and a series' route)",
+     "result": "BBS: 'Theatre arts never gained a desired prominence in Bhutan. The little presence it had in the Bhutanese society is also waning'; the Director of the Department of Culture is quoted that 'the developing film industry has changed the taste of the audience' and that the department 'has planned artist exchange programme this year'. No fund, run count or box office. Grease (Royal Textile Academy, Thimphu): a one-off commemorative show, no terms. Kuensel's search returned the home page (query ignored). No series or play figure found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 'bt,gov,bicma)/' (not tried before: earlier rounds read -43, -30, -21, 2025-51); every post and page_id capture opened for its title (Procurement, Criteria for Bhutan National Film Awards 2026, CSFIA 2026, Academy Awards entry criteria, SIM-card notice, Reports, ICT Services, Telecommunication Market Profile, Registration of Books fees, Voice and SMS Rates; saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/bt-cc39-*.html); CC-MAIN-2026-43 'bt,gov,nab)/' for the Acts list and the ICM Act PDF (https://www.nab.gov.bt/en/business/acts/list and /assets/uploads/docs/acts/2018/ICMActofBhutan2018.pdf, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/bt-cc-nab-actslist.html and bt-cc-icmact.html, sha256 7f1aeda29c986f3057e1e074a60b0867e6d2a602ea0a5a7b1ffc50c73da54e66 each)",
+     "result": "BICMA: no film-production grant, series fund, incentive or broadcaster terms among the captures. NAB: both captures are the same 1.6 KB 'Call Center System' React template page, not the Acts list or the Act. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "WebSearch (standard) 'Bhutan theatre drama actors payment Royal Academy of Performing Arts playwright stage play Thimphu'",
+     "result": "No pay for a stage director, playwright or actor: results were BBS items on theatre waning (read, below), a national student drama festival, a Grease musical at the Royal Textile Academy, a review of The Road to Mecca at the Nehru-Wangchuck Cultural Centre, a drayang wiki page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Department of Culture and Dzongkha Development https://www.dcdd.gov.bt/ and the Royal Academy of Performing Arts https://www.rapa.gov.bt/",
+     "result": "dcdd.gov.bt: proxy CONNECT tunnel failed (502); rapa.gov.bt: connection reset (curl 35). Neither read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "National Assembly Acts list (nab.gov.bt) and the Depository of Laws (legislation.gov.bt) for a labour or wage rule reaching performers (see the producer's official-register attempt)",
+     "result": "nab.gov.bt TLS name mismatch, not read; legislation.gov.bt reset. No rule read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "BBS 'Theatre arts struggling to exist' and the Grease item; Kuensel search (see the producer's trade-press attempt)",
+     "result": "A theatre founder (Happy Valley Theatre) and the Director of Culture quoted on waning theatre; no fee, wage or royalty for director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 'bt,gov,dcdd)/', 'bt,gov,rapa)/' and 'bt,gov,moice)/' (filtered for wage, labour, employ, regulation, pdf); 'bt,gov,nab)/' (Acts list)",
+     "result": "dcdd and rapa: no captures. MoICE: many captures; the only PDF is a promotion notification, nothing on wages. NAB: Acts list capture is a call-centre template page. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7 (one attempt covers items 7, 8, 9)"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Every Bhutanese state site tried (nab, legislation, dcdd, rapa) refused or failed TLS today; BBS and Kuensel answer. No stage agreement, fund or pay figure exists in anything read."
+ },
+ "FK": {
+  "producer": {
+   "blocker": "R-9912",
+   "attempts": [
+    {
+     "method": "web-search",
+     "items": "series and play (all the blocker seeks) and stage 7, 8, 9",
+     "tried": "WebSearch (standard) 'Falkland Islands theatre drama group Stanley play performance arts funding television production'",
+     "result": "Results: the Falkland Islands Operatic and Dramatic Association (FIODA) in the National Archives' online collections and on FITV, a 2020 Uruguayan touring company (MercoPress), and the RSC's 'Falkland Sound' (a UK play about the islands). No fund, incentive, commission, broadcaster terms or pay for a series or a play.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Falkland Islands Statute Law Database, its own data service listing every instrument in force (https://www.legislation.gov.fk/getdata?ds=TTFL-FeedDataSource&collection=TTFL.toc&expression=DocStatus=%22inforce%22, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/fk-legis-toc.json, sha256 a97d47d11d7b373a47d362ade815beda6e96a146ffa4e5da65671fb171fb9288: 1,397 rows, 880 distinct instruments), every title filtered for film, theat(re), entertain, cinema, broadcast, media, art, cultur, tax, wage, grant, copyright, perform, lottery; then the Broadcasting Ordinance 2004 rendered in headless Chrome (https://www.legislation.gov.fk/view/html/inforce/current/fiord-2004-17, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/fk-broadcasting-2004.render.html, sha256 8d2d05a5f622d2dd602d831612f0bd43659789dcce43ffb68e22200d7cb8b8bb)",
+     "result": "No instrument on film, television production, theatre, the arts or a production fund or relief is in force; the hits are the Minimum Wage Ordinance 2013 and its amendments, the Taxes Ordinances, the Media Trust (Amendment) Ordinance 2021 and the Broadcasting Ordinance 2004, which reads 'AN ORDINANCE To provide for the issue of broadcasting licences' (commenced 14 July 2005) and whose sections are re-broadcasting licences, satellite reception licences, unauthorised decoders and related offences: no commissioning or production terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "FITV news 'Falkland Islands Drama Group Preview Their New Production' (https://fitv.co.fk/news-and-events/falkland-islands-drama-group-preview-their-new-production/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/fk-fitv-drama.html, sha256 434f89dff18f515044ef8680c2d24f99c0a1af797fb64a98ede02484ae587f14) and MercoPress 'Anglo Theatre from Uruguay performed in the Falkland Islands' (20 March 2020, https://en.mercopress.com/2020/03/20/anglo-theatre-from-uruguay-performed-in-the-falkland-islands, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/fk-merco-anglo.html, sha256 bc95d9b54cfcbcef193b4c6d829d2f215ba5c3c9f432150edbb5033337c08020; credited '(PN)', Penguin News)",
+     "result": "FITV: 'On Thursday the 2nd and Friday the 3rd of April, Falkland Islands Operatic and Dramatic Association will be performing their latest production in the Town Hall.' MercoPress: a touring company's children's show in Stanley Town Hall, 'organized by MLA Barry Elsby'. Neither names a fund, a fee or a series; the islands' theatre is an amateur association's.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'fk,co,fitv)/' (491 captures) and 'com,penguin-news)/' (1,487 captures) filtered for drama, theat(re), fioda, arts, film, grant, cultur; CC-MAIN-2026-39 'fk,gov,www)/' (0 captures)",
+     "result": "FITV: no drama, theatre or production-fund item among the matches (horticultural show, planning items). Penguin News: '£1m capital grant for museum's Lookout Gallery and Exhibition Hall' (2021, a building grant, not a production fund), a wildlife filmmaker's return (2025). Nothing on a series or a play.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "the producer's WebSearch (one call covering both)",
+     "result": "no pay for a director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Falkland Islands Government site search ?s=drama (https://www.gov.fk/?s=drama, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/fk-govfk-localorgs.html); the National Archives' (Jane Cameron National Archives, FIG) FIODA 2008 programme PDF named by the search (https://nationalarchives.gov.fk/jdownloads/Culture%20-%20Lifestyle/R-CUL-DRA-1-30.%20FIODA%20Presents%20Farmers%20Week%202008%20Variety%20Show.pdf)",
+     "result": "gov.fk: the search returns the latest news (a vape-bin notice), no drama or arts page; the archive PDF answered 404. No body sets stage pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "the Statute Law Database's list of every instrument in force (see the producer's attempt)",
+     "result": "No instrument on theatre, performers or authors' fees; the only pay floor is the Minimum Wage Ordinance 2013 (already found by the actor's research: GBP 9.66 an hour from 1 January 2026 for workers aged 16 or over).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "FITV and MercoPress items (see the producer's attempt)",
+     "result": "An amateur association (FIODA) and a visiting company; no fee.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 FITV and Penguin News captures (see the producer's attempt)",
+     "result": "nothing on stage pay",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "The islands' theatre is FIODA, an amateur association (FITV); no instrument in force touches film, television production or theatre (Statute Law Database list read whole by title). The minimum wage (GBP 9.66) is the only pay floor, already held."
+ },
+ "GW": {
+  "producer": {
+   "blocker": "R-9945",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Government portal https://www.gov.gw/, a culture ministry at https://www.cultura.gov.gw/, the public broadcaster at https://www.rtgb.gw/ (for a series' fund or commission and a play's fund)",
+     "result": "Each: proxy CONNECT tunnel failed (502); no site read. (The state television is now styled Televisão da Guiné-Bissau, TGB, per ANG below.)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Legis-PALOP+TL (https://www.legis-palop.org/, the PALOP states' official legal database, 'Base de Dados Jurídica Oficial', with Guinea-Bissau's legislation; saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-legispalop.html, sha256 e1189fa69f76b690c8c2f71ba19784c6446b56a780efee8c3f31a2b55731c86b): its search form posted for Guiné-Bissau, legislação, text 'teatro' (https://www.legis-palop.org/inner.jsp?fromHome=1); ILO NATLEX https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/home",
+     "result": "Legis-PALOP: the search answered 302 back to the home page: listings need a (free) registered account and full texts a subscription ('Registo [gratuito] Acesso a listagens'; 'Subscrição Acesso integral'); no account was made, nothing listed. The home page's latest Guinea-Bissau act is Lei 14/2026 (Lei de Base de Ordenamento Territorial e Urbano, 24/07/2026). NATLEX: 403. No law on a film or theatre incentive or fund read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "O Democrata (odemocratagb.com) site searches ?s=teatro and ?s=cinema (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-odemocrata.html, gw-odemocrata2.html); its interview with Sana Na N'hada (February 2021, https://www.odemocratagb.com/?p=28540, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-odemocrata-politicacinema.html, sha256 1af65ade5b417a1de1742ac9b2da509677bd71913e5b3bdb61b301c33386aad2)",
+     "result": "The filmmaker says financing must be sought abroad, 'já que a nível nacional é quase impossível', that 'um fundo deveria ser disponibilizado no Orçamento Geral de Estado para o setor do cinema', which he and Flora Gomes sought 'dos sucessivos governos, mas sem sucesso', and 'enquanto não houver uma verba destinada para o setor, não existirá cinema no país'. A practitioner's statement (2021) with no primary: a lead that no state screen fund existed then. Nothing on a series or a play's terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, every capture under the 'gw,' prefix (7,164 rows; saved list /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/../../m14w/cc-gw-all43.txt) filtered for teatr, cinema, cultur, artist, audiovis, filme, novela; opened: ANG 'Governo inicia desembolso mensal de fundos provenientes da Taxa Audiovisual destinados à imprensa pública' (https://ang.gw/governo-inicia-desembolso-mensal-de-fundos-provenientes-da-taxa-audiovisual-destinados-a-imprensa-publica/, captured 2026-10-07, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-cc-governo-inicia-desembolso-mensal-de-fund.html, sha256 ca521b9c4f13c4d03c07f185368ad85f9858e28b0cfb98ec3aafd93640682b2a), ANG 'Guiné-Bissau e Senegal assinam acordo no domínio cultural' (captured 2026-10-07, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-cc-guine-bissau-e-senegal-assinam-acordo-no.html, sha256 ae7afba692d037ffe8f81a6bd6d06f4954b982f354699c9efb7689a5a8c9f175), the National Assembly's Legislação page (https://anp.gw/index.php/legislacao/, captured 2026-10-14, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-cc-legislacao.html, sha256 385ef96f92e11d324c09e8be0523a457b3f5239857e9c61682b0aaf93206db19); gw,gov / gw,rtgb / gw,inc prefixes: no captures",
+     "result": "The audiovisual tax: 'o Governo já começou o desembolso mensal dos apoios financeiros provenientes da taxa audiovisual destinados aos diferentes órgãos de comunicação social do país' (news media, not production; no sum). The Senegal accords (signed by the foreign ministers during President Faye's visit): 'acordo de cooperação cultural, convenção de cooperação cinematográfico, programa executivo do acordo cultural e acordo de produção e de intercâmbio cinematográfico' (no terms in the item). ANP's Legislação page lists only electoral, citizenship, party and organic laws. No series or play incentive, fund or commission found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "existing": "u15 web-search [1-10]: 'Guiné-Bissau Ministério da Cultura teatro cinema apoio financeiro fundo cultural RTGB produção nacional 2026' (not repeated)"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "www.gov.gw, www.cultura.gov.gw (see the producer's institution attempt)",
+     "result": "502 each; no body that could set stage pay read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Legis-PALOP+TL search (Guiné-Bissau, legislação, 'teatro'); NATLEX (see the producer's attempt)",
+     "result": "Legis-PALOP listings need a registered account (none made); NATLEX 403. No labour or authors' rule read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "O Democrata searches ?s=teatro (results: 'teatro político-judicial' politics items; Flora Gomes's Prémio da Lusofonia 'na categoria de Teatro e Cinema', 19/10/2025; Abdulai Silá's fifth play published as a book) and ?s=cinema",
+     "result": "No fee, wage or royalty for a stage director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 'gw,' captures (see the producer's attempt); opened Nô Pintcha 'Empossamento do presidente da república de Guiné Cultural marcou a celebração do Dia Mundial de Teatro em Bissau' (2018-04-03, https://jornalnopintcha.gw/2018/04/03/empossamento-do-presidente-da-republica-de-guine-cultural-marcou-a-celebracao-do-dia-mundial-de-teatro-em-bissau/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/gw-cc-empossamento-do-presidente-da-republica-.html, sha256 115ca8b22e1c418568dc00c87d39dec1e1767f34b5ec34477a8ca8cc59358dfa)",
+     "result": "A World Theatre Day gathering of musicians, dance and theatre groups in Bissau (an actor's symbolic 'Guiné Cultural'); no pay. Nothing on stage pay among the captures.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7 (u15's search)"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7 (u15's search)"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "No Guinea-Bissau state site answers (502); Legis-PALOP+TL holds the country's laws but lists them only to a registered user (a free account; the lead may decide to register). A GW-Senegal cinema co-production accord was signed (ANG, October 2026), terms unread."
+ },
+ "CV": {
+  "producer": {
+   "blocker": "R-9878",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Inforpress: 'Mindelact: Aurora edition opens as inspiration for a culture of beacon and shelter – Minister of Culture' (Mindelo, 04 Nov [2025], https://inforpress.cv/en/mindelact-aurora-edition-opens-as-inspiration-for-a-culture-of-beacon-and-shelter-minister-of-culture, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-inforpress-mindelact.html, sha256 a00a518061d18156451e8297d4becf1aeb0b3271a62deb61d6183b10d73c1cc3); Inforpress site searches ?s=NuNaC (500) and /pt/?s=série televisiva (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-inforpress-search-pt.html: no matching item), /tag/nunac/feed/ (404); Expresso das Ilhas ?s=NuNaC (home page returned; no NuNaC item) and /pesquisa?q=NuNaC (404) - for a series' fund and its rate of yes, a broadcaster's commissions and a play's fund and outcomes",
+     "result": "The Mindelact item quotes the Minister of Culture (Augusto Veiga) on the festival's standing ('one of the largest theatre festivals on the African continent'); no fund, rate, commission or run figure. No press item on NuNaC or a series was found by the searches. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "WebSearch (standard) 'Cabo Verde teatro atores cachê encenador dramaturgo remuneração Mindelact companhias de teatro pagamento'",
+     "result": "No fee: results were Mindelact's Wikipedia page and festival pages, a UnB thesis on actor training in Mindelo, DN/Lusa on 'Março, Mês do Teatro' (groups 'são, aliás, os únicos responsáveis pelos seus espetáculos e produção'), Forbes África Lusófona items",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Governo de Cabo Verde site search ?s=teatro (https://www.governo.cv/?s=teatro, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-governo-teatro.html) and three releases opened: 'O espetáculo Kastrokriola é o resultado de um grande investimento no teatro nacional' (07.07.2021, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-gov-kastrokriola.html, sha256 7fdfad507215a9a9f5beaeec9a7339d40ea80483d94e1f044fbbc33bd8ec939d), 'MCIC financia Festival Internacional de Teatro – TEARTi em 700 mil escudos' (08.09.2023, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-gov-tearti.html, sha256 f40aa6475f3e8b4db21032742ad2e2263275f0fbcd02e04077dbad210691cfc8), 'MCIC financia a promoção do Teatro Comunitário' (11.10.2016, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-gov-teatrocomunitario.html); Mindelact's own site https://www.mindelact.org/ (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cv-mindelact.html) and the PDF the search named (_files/ugd/0679da_9addef...pdf: 404)",
+     "result": "Kastrokriola: the Ministry paid for 'bolsas de estudo, viagens, residências artísticas, financiamento de um dramaturgo cabo-verdiano para adaptar um grande texto' (no sum, no fee scale); TEARTi: a protocol with the Associação Teatral Fladu Fla 'no montante global de setecentos mil escudos cabo-verdianos (700.000$00)' for the festival (a festival grant, not pay); Mindelact's home page: no pay or support terms. No minimum for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Boletim Oficial https://boe.incv.cv/ and its search https://boe.incv.cv/Search?q=teatro",
+     "result": "Connection reset (curl 35) on both today; not read. (The actor's research already read Lei 73/X/2026, the arts professionals' statute, which sets no pay floor.)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Inforpress Mindelact item; Expresso das Ilhas and Inforpress searches (see the producer's attempt)",
+     "result": "No fee, wage or royalty reported.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 'org,mindelact)/' and 'cv,gov,cultura)/' (no captures), 'cv,inforpress)/' (711 captures, filtered for teatr, cach, ator, encena, dramat, serie, nunac: only a Juventude em Marcha tour item in Italy); CC-MAIN-2026-30 'cv,incv,boe)/' (597 captures: bulletin views by id) and its 20 'Bulletins/DownloadAct' captures, every one fetched and its text searched for teatr*, artista(s), espetácul*, cachê, audiovisual (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/cvboe/act1-20.pdf)",
+     "result": "None of the 20 acts (2025-2026 dispatches, a Constitutional Court ruling, Lei 66/X/2025, Resolução 71/2026 and others) mentions theatre, artists or the audiovisual; no stage pay rule in the captures.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "see": "stage.7"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Legis-PALOP+TL (legis-palop.org), the PALOP official legal database, also holds Cabo Verde's laws but lists them only to a registered user; not used (no account made). TEARTi's 700,000 CVE (2023) is a festival grant (item 6 material, not in this todo)."
+ },
+ "LT": {
+  "producer": {
+   "blocker": "R-10009",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (standard) 'LRT konkursas televizijos serialas nepriklausomi prodiuseriai finansavimas Kino centras serialų finansavimas teatro projektai Kultūros taryba'",
+     "result": "Led to LRT's own items on buying from independent producers (read below), the State Audit item on LRT purchases (its address answered 404 when fetched), LRT competition rules (radio plays, songs), and an LRT call for scripts for a future series (snippet only, not read). Nothing on LKC series rates of yes or Kultūros taryba theatre funding beyond what u23 holds.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "LRT.lt (the public broadcaster's newsroom, a press source) items found by LRT's own search API (https://www.lrt.lt/api/search?q=Kino%20centras%20serialas%20finansavimas, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/lt-lrt-api-serial.json): '13 metų brandintas serialas: vaikų turinio iššūkiai...' (2025-05-17, https://www.lrt.lt/naujienos/kultura/12/2557870/13-metu-brandintas-serialas-vaiku-turinio-issukiai-ir-kodel-teko-atsisakyti-telefono, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/lt-lrt-serialas-2025.html, sha256 ba76ecb1f3fdbed4f4ecaf2b1e9af8a0a41d9dc1e98bcde9a8fd28e11a49edb2); and the search result 'Nuo Auksinio proto iki Myliu Lietuvą: kodėl dalį laidų LRT įsigyja iš išorės' (https://www.lrt.lt/naujienos/tavo-lrt/15/2457339/..., saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/lt-lrt-isores.html, sha256 3d838e3c629ca1325aa936ea95fdfd0aceeda4bd59d64caf8baf663f5a507025; in LRT's 'Tavo LRT' section, so LRT speaking for itself)",
+     "result": "Series fund (animated series BFF, 26 episodes, 13 to LRT TV at the end of 2026): the producer says LKC 'specialiai animacijai pakeitė finansavimo taisykles ir įvedė tęstinį 3-ejų metų finansavimą dideliems projektams' and 'Lietuvos kino centro maksimalus finansavimas dideliam projektui yra 800 tūkstančių, nebent teiki didelio projekto finansavimui, tuomet maksimali suma yra pusantro milijono, bet tas pusantro milijono yra vieną kartą per trejus metus' (a producer's account, no address for the LKC rule; a lead; u23 read LKC's own rules). Route: '2024-aisiais LRT per programų konkursus įsigijo 64 televizijos, 11 radijo ir 12 portalo LRT.lt mediatekos projektų – visų jų ataskaitos yra viešos ir prieinamos puslapyje apie.lrt.lt'; 'Apie du trečdalius turinio sukuria LRT darbuotojai, likusią dalį – nepriklausomi prodiuseriai'; the information law 'bent 10 proc. televizijos laiko turi būti skirta nepriklausomų kūrėjų turiniui'; the open programme categories named are documentary, lifestyle, cooking, TV game (no scripted series among them). Consistent with u23's item 4; no count of scripted series picked up.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "existing": "u23 web-search [7, 9] (not repeated)"
+    },
+    {
+     "method": "institution",
+     "existing": "u23 institution [7, 8] latga.lt and [7, 8, 9, 10] teatrosajunga.lt etc. (not repeated)"
+    },
+    {
+     "method": "official-register",
+     "existing": "u23 official-register [4, 5, 7, 9] e-seimas.lrs.lt, e-tar.lt (403; not repeated)"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "LRT.lt items found by LRT's search API (https://www.lrt.lt/api/search?q=aktori%C5%B3%20atlyginimai%20teatre, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/lt-lrt-api-actors.json); read whole: '„Nepelnytai nuvertinti, pragyventi sunku“ – apie aktorių atlyginimus ir darbo sąlygas' (2024-10-06, https://www.lrt.lt/naujienos/kultura/12/2334355/nepelnytai-nuvertinti-pragyventi-sunku-apie-aktoriu-atlyginimus-ir-darbo-salygas, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/lt-lrt-actorpay-2024.html, sha256 3f6e6e1a7126c9b026a3413aa4c4a43cf5d19ba93b9fe81d1877ecdb333b2c72)",
+     "result": "No agreement sets a stage actor's or director's minimum. The Actors' Guild (LAG) chair: salaries of actors on employment contracts in state drama theatres depend on each theatre ('Kiekvienas jų pritaiko atlyginimų tvarką pagal savo poreikius'); freelancers' 'atlygį lemia susitarimas su teatrų direktoriais. Visas atlygis susideda iš už repeticijas sutartos sumos ir už suvaidintus spektaklius'; 'valstybiniai teatrai dažnai siūlo aktoriams nė minimalaus atlygio už mėnesį (minimalioji mėnesinė alga Lietuvoje šiuo metu 924 Eur bruto – LRT.lt) nesiekiančių variantų'; 'Čia Aktorių gildija sieks susitarimo su valstybinių teatrų asociacijomis ir Kultūros ministerija'; '2023 m. iš 39 vieno didžiausių valstybinių teatrų trupės aktorių 29 gavo atlyginimą, mažesnį nei vidutinis Lietuvos atlyginimas'. Ministry data quoted: culture workers' average pay 1,132.6 EUR (2020) to 1,653.2 EUR (2023) gross. A press source naming its primaries (Kultūros ministerija, Valstybės duomenų agentūra) without addresses: a lead that no sector minimum existed in October 2024. Nothing for a director's fee.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "existing": "u23 archive [5, 7, 9] web.archive.org and the Wayback API (not repeated)"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "existing": "u23 web-search [7, 9]"
+    },
+    {
+     "method": "institution",
+     "existing": "u23 institution [7, 8, 9, 10]"
+    },
+    {
+     "method": "official-register",
+     "existing": "u23 official-register [4, 5, 7, 9]"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7 (the LRT.lt article covers items 7 and 9)"
+    },
+    {
+     "method": "archive",
+     "existing": "u23 archive [5, 7, 9]"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Lead for item 9: LRT.lt (2024-10-06) reports no sector minimum for stage actors (pay set theatre by theatre; freelancers by agreement, rehearsal sum plus per performance), with the Actors' Guild seeking one. Lead for the series fund: a producer says LKC's large-project ceiling is EUR 800,000, or EUR 1.5m once every three years, with three-year continuing funding introduced for animation."
+ },
+ "MT": {
+  "producer": {
+   "blocker": "R-10041",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl for Arts Council Malta and Screen Malta, which refuse this client live: 'mt,gov,artscouncilmalta)/' in CC-MAIN-2026-43 (2 rows), -39 (1), -30 (1), -21 (1), all robots.txt (301/403); CC-MAIN-2025-51 (566 captures, list saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/../../m14w/cc-mt-CC-MAIN-2025-51-acm.txt) filtered for fund, scheme, screen, kultura, series, tv, theatre, support; opened six: 'applications-for-the-screen-support-scheme-are-now-open', 'deheb-il-karta-a-television-series-that-brings-the-past-to-life', 'funding-and-grants/project-support-scheme-2', 'funding-and-grants/malta-arts-fund', 'announcements/workshop-on-pitching-kulturatv', '200-impjegat-fis-settur-pubbliku...kondizzjonijiet' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-ccacm-*.html; e.g. screen support sha256 2f8cd62c26fe7e354cc4f1a2a938569fbfc9557b0a8b1b45e10cff8c632c66e3); 'com,screenmalta)/' CC-MAIN-2026-43 (robots.txt 403 only)",
+     "result": "Every opened Arts Council Malta capture is the site's bot-check page ('One moment, please...', a 5-second reload script, about 11.9 KB each), not the page: the crawler was challenged as this client is. Screen Malta: robots.txt refused (403), no page captured. No series incentive, fund or play fund terms read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "existing": "u8 web-search [5, 7, 8, 9, 10] (not repeated)"
+    },
+    {
+     "method": "institution",
+     "existing": "u8 institution [7, 9, 10] teatrumalta.org.mt Call for Actors PDF; meia.org.mt (not repeated). Also read today: https://teatrumalta.org.mt/calls/call-for-emerging-directors/?lang=en (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-tm-emerging-directors.html, sha256 29deb3206e5db7d042cde6c7af74f36421c2b75c416d926c830539f00110bafa): no fee stated"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Legislation Malta (legislation.mt) keyword search https://legislation.mt/Legislations?keyword=wage%20regulation%20order (for a wage regulation order reaching theatre work); https://legislation.mt/eli/cap/549/eng and its PDF (https://legislation.mt/getpdf/6656cb8e04192314148c5b6a, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-legis-cap549.pdf)",
+     "result": "The keyword search answered 'Web Content Not Found!' (an error page, 915 bytes). Cap. 549 opened is the Environment Protection Act, not an arts or labour law (a wrong chapter number tried); nothing on stage pay. No wage regulation order or agreement for theatre read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "Lovin Malta search ?s=Teatru Malta actors (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-lovinmalta.html) and its interview 'Maltese Directors And Actors Speak On Theatre's Future: We Need To Stop Acting Like Hobbyists' (2023-01-29, https://lovinmalta.com/lifestyle/interview/maltese-directors-and-actors-speak-on-theatres-future-we-need-to-stop-acting-like-hobbyists/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-lovin-hobbyists.html, sha256 981a955feb606fc17dad92cee94a4bf8496641bb8ace24e9361480f9248fd026); Times of Malta search https://timesofmalta.com/search?keywords=actors%20pay%20theatre (results drawn by script, none in HTML); MaltaToday search (403)",
+     "result": "An actor: 'If an actor had to divide their pay to let you know how much they got paid per hour for their work however, not only is it laughable, but worrying. We don't even come close to minimum wage'; 'Other aspects of the arts are paid as a job, with a proper contract with a fixed rate per hour. Musicians have it, many dance companies do as well, as do backstage and stagehands.' Practitioners' words (2023), no agreement or rate: a lead that no stage actor's or director's rate exists.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 'mt,org,teatrumalta)/' (324 captures) filtered for calls; opened: call-for-emerging-directors (fetch failed), call-studio-francis-ebejer-2 (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-cc-call-studio-francis-ebejer-2.html, sha256 a4656da671fa5b289a2e1e005d8df1216d86845a2c25f72095f4dcee17504f00), sejha-studio-francis-ebejer-3, call-teatru-malta-ensemble-members (sha256 fe576799d66b5d9a3d1bc06083e2afcd45bae930081f65b3a202f3fc430efa23), call-for-actors-gimgha-l-habs, sejha-ghall-atturi-produzzjoni-teatrali-muzikali-marzu-2025, the MADC L-Ewwel Att scriptwriting mentorship event",
+     "result": "The captures name each call's PDF (TM_SFE_Call-EN_WEB.pdf, ENG-Teatru-Malta-Ensemble-Call.pdf), read live (items 8 and 9 below). Actors' calls require 'a valid VAT number' (self-employed); no director's fee in any capture.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "existing": "u8 web-search [5, 7, 8, 9, 10]"
+    },
+    {
+     "method": "institution",
+     "items": [
+      8
+     ],
+     "tried": "Teatru Malta's Studio Francis Ebejer call (with Teatru Manoel, Spazju Kreattiv and Arts Council Malta), https://teatrumalta.org.mt/wp-content/uploads/2025/04/TM_SFE_Call-EN_WEB.pdf (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-tm-sfe-call-en.pdf, sha256 47941c940e3e7a43d5175a07b8ed4ef5d2d656bbdd87f1342abfa69ff6b1386d), read whole",
+     "result": "Found: a theatre script commission fee of EUR 3,500 excluding VAT (radio play EUR 1,500); see found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      8
+     ],
+     "tried": "Newsbook search ?s=Studio Francis Ebejer (https://newsbook.com.mt/en/?s=Studio+Francis+Ebejer, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-newsbook.html)",
+     "result": "One item (a new play by a two-time Francis Ebejer Award winner); no fee or royalty reported.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "existing": "u8 web-search [5, 7, 8, 9, 10]"
+    },
+    {
+     "method": "institution",
+     "existing": "u8 institution [7, 9, 10]. Also read today: Teatru Malta Ensemble call https://teatrumalta.org.mt/wp-content/uploads/2025/10/ENG-Teatru-Malta-Ensemble-Call.pdf (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-tm-ensemble-call.pdf, sha256 881b8eb3ec9f41b93c66dee2dbd764a64ec3162e960ad544d02c158fb14c3856): 'Contract: 12 months, starting January 2026', 'Hours: 40h/week (flexible; includes evenings/ weekends)', 'Remuneration: aligned with the current Teatru Malta Ensemble framework and PCO standards' (no figure)"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7 (Lovin Malta interview)"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "what": "commission fee for a new theatre script, Studio Francis Ebejer (Teatru Malta, Teatru Manoel, Spazju Kreattiv, with Arts Council Malta)",
+     "currency": "EUR",
+     "theatreScriptFee": 3500,
+     "radioPlayFee": 1500,
+     "vat": "excluded",
+     "covers": "up to 3 drafts before the final rehearsal draft, a final script, consultative availability during production",
+     "rights": "writer keeps creative rights; producers get exclusive production licensing up to one year post-premiere; first publication to the co-producers",
+     "scripts": 3,
+     "callDeadline": "2025-06-30",
+     "productions": "October 2026 (Teatru Manoel), March/April 2027 (Spazju Kreattiv), June/July 2027 (Teatru Malta)",
+     "isMinimum": false
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://teatrumalta.org.mt/wp-content/uploads/2025/04/TM_SFE_Call-EN_WEB.pdf",
+      "title": "Studio Francis Ebejer — Call (Teatru Malta)",
+      "read": "2026-11-04",
+      "said": "Selected playwrights will be remunerated with €3,500 (excluding VAT) for: — Up to 3 drafts preceding the final rehearsal draft. (The need, timeframe, and process of drafting will be agreed upon with the producer) — A final, polished script — Ongoing consultative availability during production. The scriptwriter will retain the creative rights of the script, with exclusive production licensing rights being given to the producers which will last up to one year post-premiere. [Radio:] The appointed Scriptwriter will receive a fee of €1,500 (excluding VAT) for: — A completed script—either standalone or episodic",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/mt-tm-sfe-call-en.pdf",
+      "sha256": "47941c940e3e7a43d5175a07b8ed4ef5d2d656bbdd87f1342abfa69ff6b1386d"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Item 8 is the national institutions' published commission fee for the 2025 call (three theatre scripts), not an agreed minimum; no playwrights' agreement exists in anything read. Item 9: Teatru Malta's salaried ensemble (12 months, 40 h a week) is paid 'aligned with ... PCO standards', figure unpublished. Arts Council Malta pages stay unread: live 403 and every Common Crawl capture is its bot-check page."
+ },
+ "JO": {
+  "producer": {
+   "blocker": "R-9979",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Legislation and Opinion Bureau (ديوان التشريع والرأي), the state's legislation database: https://www.lob.gov.jo/ (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-lob.html, sha256 3895b14b23da0eb1f329bd3ef961f986eb6380dc008618062c988d383b8f7873) and its legislation search https://www.lob.gov.jo/?v=1&lang=ar#!/LegislationSearch (for the Royal Film Commission's incentive regulation, a fund for series, and theatre support instruments)",
+     "result": "The home page answered 200 with only an F5 'TSPD' JavaScript challenge (no text); the search address reset the connection (curl 35). Not got past; nothing read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Ghad site search for 'موسم المسرح الأردني' (https://alghad.com/?s=..., saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-alghad-search.html: no matching item in the HTML), Ad-Dustour search (404), Jordan Times search (403 challenge), Petra search ('Website Temporarily Unavailable'), Ammon News search 'نقابة الفنانين أجور' (no relevant item); Al Jazeera 'فنانو الأردن يحتجون على التخدير الحكومي' (12 June 2012, https://www.ajnet.me/culture/2012/6/12/..., saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-aljazeera-2012.html, sha256 2875d9ebacb6d200551e78484b0b26bb4ae005e3b08a221ad3935354177cfb0f)",
+     "result": "Only the 2012 piece read: the artists' demands to the Royal Court and Prime Ministry included reviving 'الشركة الأردنية للإنتاج الفني', activating JRTV 'من خلال الإنتاج الإبداعي الفني', 'استصدار تشريعات لدعم وتشجيع وحفز المنتجين' and 'إنشاء فرقة وطنية للمسرح'. Old (2012) and a list of demands, not terms: no current series commission, fund or play figure found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl: CC-MAIN-2026-43 'jo,gov,lob)/' (5 rows; https://www.lob.gov.jo/index.html captured 2026-10-11, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-cc-3c4840.bin, sha256 02c2bcb0ddd6b08d3f9b56362094b482ce4b1dbe44c38b86e248d7762c8e2aa4), 'jo,film)/' (robots.txt 403 only), 'jo,gov,jrtv)/' (home page captured 2026-10-08, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-cc-088a4f.bin, sha256 fa999c8beb1d19ab5368258d687949e49eca11b1256bab1da3631feeef056801); CC-MAIN-2026-39 'jo,gov,culture)/' (190 captures, filtered for pdf, theatre (مسرح), drama, fund, guideline), its PDF /EBV4.0/Root_Storage/AR/moayyad/30720261.pdf (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-cc-d2003f.bin, sha256 4288deadc9f0ef775d41e3db6c1002d64fd96209a1fe2f87dc98d520260673b9)",
+     "result": "LOB capture: the Angular shell ('{{Language.DownloadingFile}}'), no legislation. film.jo: not captured (robots 403). JRTV home: script page, no commissioning terms. Ministry of Culture: theatre-festival archive and news pages and the PDF, which is the ministry's organisation chart. No series or play terms beyond what t7 and u17 hold.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "WebSearch (standard) 'نقابة الفنانين الأردنيين أجور الممثلين المسرح المخرج المسرحي الكاتب المسرحي الحد الأدنى للأجر مهرجان المسرح الأردني'",
+     "result": "No stage pay scale. Results: Al-Ahram on a Jerash Festival-Artists Syndicate cooperation agreement; Al Khaleej (April and July 2026) on the syndicate suing 15 Arab artists over unpaid dues and striking off 21 members; Al Jazeera (2012) on artists' protests; the summary also cited a tripartite committee raising the private-sector minimum wage from JOD 260 to 290 from January 2025 (snippet only, its source not opened)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [5, 6, 7, 8, 9] culture.gov.jo regulations, instructions and the Jordanian Theatre Season instructions (not repeated)"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Legislation and Opinion Bureau (lob.gov.jo) for the Jordan Artists Syndicate law and any wage instrument (see the producer's attempt)",
+     "result": "F5 JavaScript challenge and a reset; not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Al Khaleej item on the Artists Syndicate (2026-04-24, https://www.alkhaleej.ae/2026-04-24/.../نقابة-الفنانين-الأردنيين-تقاضي-15-فنانا-عربيا, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/jo-alkhaleej-syndicate.html); Al Ghad, Ammon, Jordan Times and Petra searches (see the producer's attempt)",
+     "result": "Al Khaleej: 403 (refused). The searches gave no item on a stage director's, playwright's or actor's fee.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39 'jo,gov,culture)/' and CC-MAIN-2026-43 'jo,gov,lob)/' (see the producer's attempt)",
+     "result": "No pay instrument or rate among the captures.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [5-9]"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [5-9]"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Lead (search summary only): Jordan's private-sector minimum wage JOD 290 a month from January 2025 for two years; not read from a primary here. The Legislation and Opinion Bureau answers only with an F5 challenge."
+ },
+ "PA": {
+  "producer": {
+   "blocker": "R-10075",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43: 'pa,gob,micultura)/' (0 captures), 'pa,gob,micultura,dicine)/' (570 captures, filtered for teatr, escen, convocatori, fondo, serie, produc, pdf), 'pa,gob,sertv)/' (2 rows) and 'pa,gob,mitradel)/' (2 rows); opened: Fondo Cine 'Convocatoria 2024' selected projects (https://dicine.micultura.gob.pa/ediciones/convocatoria-2024-2/, captured 2026-10-09, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/pa-cc-convocatoria-2024-2.html, sha256 bb4533c3d3cfa8502a9a76ba276cbaf8077379f92468fb46bc4bb475755d8beb), the 2024 call notice (https://dicine.micultura.gob.pa/noticias/convocatoria-concurso-nacional-fondo-cine-2024/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/pa-cc-convocatoria-concurso-nacional-fondo-cin.html, sha256 9aef504a2cfabf202fc2a90f042a75c8902b4d0deae43d85930084ce8976b1cf), the Fondo Cine 2024 edition page and 'Culmina Festival de Series de Panamá' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/pa-cc-culmina-festival-de-series-de-panama.html)",
+     "result": "Convocatoria 2024's selected projects: four tabs (Largometrajes, Documentales, Proyectos de Post Producción, Desarrollo de Proyectos) with three names each except one tab, 'No hay proyectos en esta categoría'; no series tab; no applicant counts, so no rate of yes. The 2024 call (23 December 2024): open to 'personas naturales o jurídicas de nacionalidad panameña que estén inscritas en el Registro Nacional de la Industria Cinematográfica y Audiovisual', entries 13 January to 12 February 2025. The series festival item is an awards ceremony (DiCine 'facilitó' support), not a fund. SERTV and MITRADEL: robots/home rows only. Nothing beyond t3/u24's findings.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "web-search",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "WebSearch (standard) 'Panamá actores de teatro pago mínimo tarifa dramaturgo derechos de autor obra teatral sindicato actores Panamá'",
+     "result": "No minimum: results were the Universidad de Panamá's literature contest (playwrights cede first-edition rights), a director paying authors' rights and raising ticket prices (Panamá América), La Prensa on Astep and MiCultura working tables, La Estrella (EFE) on theatre without state support (both read below), a Colombian bill",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "Gaceta Oficial https://www.gacetaoficial.gob.pa/ and its advanced search https://www.gacetaoficial.gob.pa/Busqueda-Avanzada; Ministerio de Trabajo's minimum-wage page https://www.mitradel.gob.pa/salario-minimo/",
+     "result": "Gaceta Oficial: an Incapsula JavaScript challenge (212 and 958 bytes), not got past; MITRADEL: 403. Nothing read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "La Prensa 'Asociación de teatristas y MiCultura establecen mesas de trabajo' (2021-02-12, https://www.prensa.com/sociedad/asociacion-de-teatristas-y-micultura-establecen-mesas-de-trabajo/, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/pa-prensa-astep.html, sha256 41d2051bb54170938d0c2fffeb033c647b5359bb0dee6a1bca250e23b705e72e); La Estrella de Panamá (EFE) 'El teatro vive su mejor momento pese a la falta de apoyo gubernamental' (2019-04-28, https://www.laestrella.com.pa/vida-y-cultura/cultura/vive-pese-mejor-teatro-momento-MMLE7178, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/pa-estrella-teatro.html, sha256 2d55fae70ffd583c3023258ae178f7d8cb37e27f1d5217734555759e602a10d5)",
+     "result": "La Prensa: MiCultura and the Asociación de Teatristas de Panamá (Astep) set up tables on 'el pago de los alquileres de locales y el impulso de las producciones'; the ministry's halls to be offered 'sin costos' at reopening, groups paying only insurance. La Estrella: theatre thrives 'a pesar de no contar con apoyo estatal', about 65 plays a year, driven by independent producers; an actor wants a day 'donde el actor, productor y personal técnico sea reconocido y respetado como un profesional, de tal manera que pueda vivir al 100 % de su trabajo'. No fee, wage or royalty for a playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 'pa,gob,micultura)/', '...dicine)/', 'pa,gob,mitradel)/' (see the producer's attempt)",
+     "result": "No stage pay page captured (micultura.gob.pa none; MITRADEL robots only).",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.8"
+    },
+    {
+     "method": "institution",
+     "existing": "u24 institution [7, 9] mitradel.gob.pa (403)"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.8"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.8"
+    },
+    {
+     "method": "archive",
+     "see": "stage.8"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 8's institution attempt stands in u24 (micultura.gob.pa posts API, [5, 6, 8]). Panama's Gaceta Oficial is behind an Incapsula challenge."
+ },
+ "SA": {
+  "producer": {
+   "blocker": "R-10112",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Bureau of Experts' laws database https://laws.boe.gov.sa/BoeLaws/Laws/ and its searches for 'صندوق التنمية الثقافية' and 'هيئة الأفلام' (connection reset, curl 35, each); then Umm Al-Qura, the official gazette (https://www.uqn.gov.sa/), searched (https://www.uqn.gov.sa/search?query=...) for 'هيئة الأفلام' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-q-film.html), 'صندوق التنمية الثقافية' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-q-cdf.html) and 'هيئة المسرح والفنون الأدائية' (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-q-theatre.html), and its search widget API (https://www.uqn.gov.sa/api/widget/52/json?query=..., saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-api-*.json); opened 'تنظيم هيئة الأفلام' (https://www.uqn.gov.sa/details?p=25118, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-25118-filmcomm.html, sha256 b108a52d0d2d21ed65727b631421b94f6696eb18ad4adba3fdfada7aa35b05c1) and 'الموافقة على تنظيمات الهيئات الثقافية' (https://www.uqn.gov.sa/details?p=25114, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-uqn-25114-orgs.html, sha256 8f9ada6cf624d79de8c894fa1503a30f23ed12a1b9e5c021401f7913791518ef)",
+     "result": "BOE: refused (reset). Umm Al-Qura: the film search listed 'لائحة التراخيص - هيئة الأفلام' (p=28574), 'الموافقة على لوائح التراخيص للهيئات الثقافية' (p=28572), 'تنظيم هيئة الأفلام' (p=25118) and the approval of the cultural commissions' organisations (Cabinet decision 'قرار رقم (1012) وتاريخ 27 /11/ 1445هـ', p=25114); the CDF and Theatre Commission searches listed nothing in the served page and the widget API returned an empty 'articles' list. The Film Commission's organisation defines the film sector as 'القطاع الذي يعنى بالأنشطة المتعلقة بالأفلام -بجميع صورها- وإنشائها وإنتاجها ... ويشمل ذلك كتابة السيناريو وابتكار الأفكار لإنتاج الأفلام والفيديوهات ونحوها' and empowers it to 'تقديم المنح والحوافز (المستردة وغير المستردة) بالتنسيق مع الوزارة من خلال المبادرات المعتمدة أو ميزانية الهيئة أو ميزانية الوزارة', its board 'الموافقة على تقديم المنح والحوافز (المستردة وغير المستردة)'. The power to grant incentives is in law; no rate, threshold, series rule, fee cap or count is set in it. Television series are not named.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "WebSearch (standard) 'هيئة المسرح والفنون الأدائية أجور الممثلين المسرحيين المخرج المسرحي الكاتب المسرحي مكافأة السعودية'",
+     "result": "No Saudi stage pay: Saudipedia pages on the Theater and Performing Arts Commission (founded 2020, under the Ministry of Culture), and US/UK union items",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [4-10] theater.moc.gov.sa, moc.gov.sa, engage.moc.gov.sa/tpa (502, reset, 403; not repeated)"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Umm Al-Qura gazette search for 'هيئة المسرح والفنون الأدائية' and its widget API; laws.boe.gov.sa (see the producer's attempt)",
+     "result": "No listed instrument on theatre pay; BOE reset. Nothing read that sets a director's, playwright's or actor's pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Okaz search 'أجور الممثلين المسرح' (https://www.okaz.com.sa/search?q=..., saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-okaz-search.html: no matching item in the HTML); Al Riyadh search (TLS: unable to get local issuer certificate; verification not turned off); Sabq search (403); Arab News search (served its home page)",
+     "result": "No press item on stage pay read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'sa,gov,moc,theater)/' in CC-MAIN-2026-30, -21 and 2025-51 (0 captures; -43 and -39 tried by u17); 'sa,gov,boe,laws)/' CC-MAIN-2026-43 (0); 'sa,gov,moc' CC-MAIN-2026-43 (all subdomains; filtered for theat, grant, support, program); opened 'ترخيص إنتاج في قطاع المسرح والفنون الأدائية' (https://www.moc.gov.sa/Modules/Pages/Services/Production-License-Work-in-Theatre-and-Performing-Arts, captured 2026-10-07, saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-cc-Production-License-Work-in-Theatre-and-P.html, sha256 8566932be2cdf6b67bcf5bd2b87b4d57d888271fa619708d34e21ec7e17773f6) and the Theatre Commission news list (saved /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m14/sa-cc-moc-ar---Theater-authority.html, sha256 9bb99d20e6ee15369bb9edf48b5d0f30319a68719592d124fae2059348558531)",
+     "result": "The licence page: a production licence 'مخصّصة لشركات الإنتاج العاملة في مجال المسرح والفنون الأدائية', applied for on the 'أبدع' platform, issued 'فوري' by the Theater and Performing Arts Commission (fee field empty in the capture); the news list: an MoU on a theatre troupe for people with disabilities. No pay terms.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [4-10]"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "see": "stage.7"
+    },
+    {
+     "method": "institution",
+     "existing": "u17 institution [4-10]"
+    },
+    {
+     "method": "official-register",
+     "see": "stage.7"
+    },
+    {
+     "method": "trade-press",
+     "see": "stage.7"
+    },
+    {
+     "method": "archive",
+     "see": "stage.7"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Umm Al-Qura (uqn.gov.sa) answers and carries the cultural commissions' organisations; its search serves results only for some queries (the rest load by script). The Film Commission may grant recoverable and non-recoverable incentives by law (organisation art. on powers); terms stay in the programme's own documents (film.sa, 403)."
+ }
+}

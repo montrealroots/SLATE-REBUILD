@@ -1,0 +1,1682 @@
+{
+ "AN": {
+  "stage": {
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Curaçao theater toneel acteur honorarium playwright schrijver vergoeding Fundashon theatre production Sint Maarten stage actor pay' (items 8, 9; the successor territories CW and SX)",
+     "result": "Curaçao Chronicle, NOS, DBNL and UoC library records on Curaçao theatre; no fee, honorarium or pay rule for playwrights or actors in Curaçao or Sint Maarten",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Curaçao government https://gobiernu.cw/ and /nl/ (files/m8/an-gobiernu.html, an-gobiernu2.html); Sint Maarten government https://www.sintmaartengov.org/ and its search for 'minimum wage' (files/m8/an-sxm-home.html, an-sxm-search.html); the Dutch Performing Arts Fund (Fonds Podiumkunsten), which funds theatre in the Caribbean part of the Kingdom: its schemes list, the multi-year production subsidy 2025-2028 page and 'Aanvragers op de ABCSSS eilanden' (files/m8/an-fpk-regs.html, an-fpk-mps.html, an-fpk-abc.html, sha256 fa5d57c4fb0829e88b8174fda6687945fbe94332c55828494029cdecb3f49538) (items 8, 9)",
+     "result": "gobiernu.cw: HTTP 429 rate-limited both times; sintmaartengov.org home read, its search renders by script (no results in the page). Fonds Podiumkunsten: 'Alle subsidieregelingen van Fonds Podiumkunsten zijn aan te vragen' for Aruba, Curaçao, Sint Maarten and the BES islands; the multi-year production subsidy requires an organisation that 'de Governance Code Cultuur, de Fair Practice Code en de Code Diversiteit en Inclusie toepast'; no playwright's or actor's fee is set on these pages.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Sint Maarten 'Laws and National Gazette' page https://www.sintmaartengov.org/Government/Pages/Laws-and-National-Gazette.aspx (files/m8/an-sxm-laws.html); Curaçao's government publications portal https://www.overheid.cw/ (items 8, 9)",
+     "result": "Sint Maarten page: body renders by script, no law listed in the HTML; overheid.cw: connection reset (curl 35). No text on a playwright's or actor's pay reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Curaçao Chronicle 'Historic funding boost: Over 2 million for local theater groups' https://www.curacaochronicle.com/post/local/historic-funding-boost-over-2-million-for-local-theater-groups (files/m8/an-cc-chron.html, sha256 fc4c3daecb06bb437d1eecc97875a27588c29f6c573f75f23a7997e8a13cbe85) (items 8, 9)",
+     "result": "read: 'The Dutch Performing Arts Fund has awarded a multi-year production subsidy to Curaçaoan theater groups for the first time. Teatro Bulabanda and Teatro KadaKen will receive over 2 million guilders for the period 2025-2028'; no pay terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'cw,gobiernu)' and 'org,sintmaartengov)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for gobiernu.cw (closest 20260921134521) and sintmaartengov.org (20261002122717), then those snapshots (items 8, 9)",
+     "result": "gobiernu.cw: only robots.txt answered 429 in every crawl. sintmaartengov.org: captures of policies and a few Official Publications PDFs (personenvennootschap, constitutional revision, education funding), Authenticate 401s; nothing on culture or pay. Wayback snapshots reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no actor's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gobiernu.cw, sintmaartengov.org and Fonds Podiumkunsten (as under 8)",
+     "result": "429, script-only search; FPK requires the Fair Practice Code, no rate on its pages",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Sint Maarten gazette page and overheid.cw (as under 8)",
+     "result": "no text reached (script; reset)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Curaçao Chronicle (as under 8)",
+     "result": "no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as under 8)",
+     "result": "nothing on pay",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "AN is the dissolved Netherlands Antilles; the attempts target its successors Curaçao and Sint Maarten (and BES under Dutch law, R-5301's partial). A statutory minimum wage in Curaçao or Sint Maarten would be a floor for an employed actor, as Bermuda's is, but neither government's site gave a law text today. Lead: the Dutch Performing Arts Fund funds Curaçao theatre (2025-2028) and requires the Fair Practice Code."
+ },
+ "BM": {
+  "producer": {
+   "blocker": "R-9837",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Bermuda Laws Online (Attorney-General's Chambers), its server-side search: https://www.bermudalaws.bm/search/film and /search/arts%20council (files/m8/bm-laws-s-film.html, bm-laws-s-arts.html), and the LawIndex page (files/m8/bm-laws-idx.html), for a film or television incentive, an Arts Council statute or a theatre tax relief",
+     "result": "Searches answered: 'film' returns the Copyright and Designs Act 2004, the America's Cup Act 2015, the Bermuda Archives Amendment Act 2015 and fee regulations; 'arts council' returns professions and educators' statutes; no film or television production incentive, no Arts Council grant statute, no theatre production relief among the results (first result page of each read).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'bm,culture)' (the Department of Culture's site, home of the Bermuda Arts Council) over CC-MAIN-2026-43, -39, -30, -21, 2025-51, and 'bm,gov)/departments/culture'; fetched the 2026-39 captures of https://culture.bm/arts/performing-arts/ (cc.py get; files/m8/bm-cc-culture-perf.html sha256 bce1024ae72144d63d0d13d4f6875570bb3ff3d86aab259b24935f1af19c2dda); Wayback availability for culture.bm Arts Council page (closest 20260915190441), gotobermuda.com/bta/filming-bermuda (429), www.gov.bm (20261022125857), then the snapshot fetch; also tried cc.py get of the 2026-39 capture of https://culture.bm/arts/film/",
+     "result": "Common Crawl: culture.bm captured in 2026-43 and 2026-39 (arts, film, performing-arts pages), only robots and PDFs in 2026-30, none in -21 or 2025-51; gov.bm/departments/culture none. The film capture's fetch failed (the data host refused after eight tries: 'fetch failed'). The performing-arts capture names BMDS's playwriting competition, Troika and Chewstick, no grant terms beyond what u16 read. Wayback: availability answered, snapshot fetches reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Bermuda theatre director playwright actor fee Bermuda Musical and Dramatic Society Daylesford professional stage pay Bermuda Entertainment Union' (items 7, 8, 9)",
+     "result": "Royal Gazette and bernews items, BMDS minutes and FAQ: no fee or rate for directors, playwrights or actors; nothing on the Entertainment Union's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "BMDS (the island's main theatre company, Daylesford Theatre) FAQ https://bmds.bm/faqs/ (files/m8/bm-bmds-faq.html, sha256 083f9364b2fed7a5063666500efe3c1d5d2d65428f7b573f207a87d245c07688); Department of Culture https://culture.bm/arts/performing-arts/ (files/m8/bm-culture-perf.html) (items 7, 8, 9)",
+     "result": "BMDS: 'BMDS is a 100% volunteer organization. Everyone (with the exception of the occasional professional director and sometimes live musicians) works on a volunteer basis.' and 'Apart from occasionally imported professional directors and musicians, BMDS employs no-one.' No director's rate. Department of Culture page: description only.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "bermudalaws.bm search 'minimum wage' (files/m8/bm-laws-s.html); read the Employment (Minimum Hourly Wage) Order 2023 (BR 21/2023, files/m8/bm-mw-order2023.pdf), the Amendment Order 2025 (BR 60/2025, files/m8/bm-mw-order2025.pdf), the Employment (Minimum Hourly Wage Entitlement) Act 2022 (files/m8/bm-mw-act2022.pdf) and the Employment (Wage Commission) Act 2019 s. 3 (files/m8/bm-wagecomm2019.pdf) (items 7, 9)",
+     "result": "found: a statutory minimum hourly wage of $17.13 from 1 September 2025 for every 'employee' (casual, part-time and temporary included; voluntary workers and under-18s excluded); no stage-specific rule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Royal Gazette 22 April 2024 'Famous for 15 Minutes' https://www.royalgazette.com/arts-entertainment/lifestyle/article/20240422/famous-for-15-minutes/ (files/m8/bm-rg-f15.html) (items 7, 8, 9)",
+     "result": "read: BMDS playwriting festival, 'Funds raised go towards the BMDS Charitable Trust', a Golden Inkwell award; no fee for directors, writers or actors",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl culture.bm captures (as under producer) and Wayback availability for bmds.bm/faqs/ (closest 20261016022614) then the snapshot (items 7, 8, 9)",
+     "result": "CC capture of culture.bm performing-arts read (no pay terms); Wayback snapshot reset (curl 35)",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no playwright's fee found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "BMDS FAQ and culture.bm performing-arts (as under 7)",
+     "result": "playwriting is a competition (Famous for Fifteen Minutes), no commission fee or royalty stated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "bermudalaws.bm searches 'film', 'arts council', 'minimum wage' (as above); the Copyright and Designs Act 2004 appears in the 'film' results",
+     "result": "no rule setting a playwright's fee, advance or royalty; the minimum wage reaches only employees",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Royal Gazette 2024-04-22 (as under 7)",
+     "result": "festival award only, no fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as under 7)",
+     "result": "nothing on a playwright's fee",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no actor's rate; BMDS volunteer basis",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u16's gov.bm Entertainment Policy PDF (404); also read today BMDS FAQ (as under 7)",
+     "result": "actors volunteer at BMDS",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the minimum-wage Orders and Acts (as under 7)",
+     "result": "found: $17.13 an hour from 1 September 2025 for an employed performer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Royal Gazette 2024-04-22 (as under 7)",
+     "result": "no actor's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "named, not repeated: u16's Wayback copy of the Entertainment Policy PDF (reset); also Common Crawl culture.bm today",
+     "result": "no actor's rate",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 9,
+    "alsoItems": [
+     7
+    ],
+    "value": {
+     "kind": "statutory minimum wage, not a stage agreement",
+     "currency": "BMD",
+     "minimumHourlyWage": 17.13,
+     "from": "2025-09-01",
+     "previous": {
+      "amount": 16.4,
+      "from": "2023-06-01"
+     },
+     "covers": "any 'employee' under the Employment (Wage Commission) Act 2019 s. 3, including a casual, part-time or temporary employee",
+     "excludes": [
+      "a person under 18",
+      "a voluntary worker",
+      "first-year registered apprentices",
+      "immediate family in a family business",
+      "grocery-packer casual workers"
+     ],
+     "stagePractice": "BMDS, the main theatre company, is volunteer-run; only an occasional professional director and live musicians are paid (no rate published)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.bermudalaws.bm/Laws/Annual%20Law/Statutory%20Instruments/2025/Employment%20(Minimum%20Hourly%20Wage)%20Amendment%20Order%202025",
+      "title": "Employment (Minimum Hourly Wage) Amendment Order 2025, BR 60/2025",
+      "read": "2026-11-04",
+      "said": "Paragraph 3(1) of the principal Order is amended by deleting “$16.40” and substituting “$17.13”. ... This Order shall come into operation on 1 September 2025.",
+      "file": "files/m8/bm-mw-order2025.pdf",
+      "sha256": "07fbec639e607e014fd39338d44385f186ddf85649bcb19109eb4b1b44567289"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.bermudalaws.bm/Laws/Annual%20Law/Statutory%20Instruments/2023/Employment%20(Minimum%20Hourly%20Wage)%20Order%202023",
+      "title": "Employment (Minimum Hourly Wage) Order 2023, BR 21/2023",
+      "read": "2026-11-04",
+      "said": "(1) Subject to paragraph 4, the minimum hourly wage to apply to an employee is $16.40. ... “employee” has the meaning given in section 3 of the Act",
+      "file": "files/m8/bm-mw-order2023.pdf",
+      "sha256": "a3f3ddf1fc7c81e216651297782d60d910d0970fad21c28566c26923d13066df"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.bermudalaws.bm/Laws/Consolidated%20Law/2019/Employment%20(Wage%20Commission)%20Act%202019",
+      "title": "Employment (Wage Commission) Act 2019 (consolidated), s. 3",
+      "read": "2026-11-04",
+      "said": "“employee” means— (a) a person who is employed wholly or mainly in Bermuda for remuneration under a contract of employment; (b) any other person who performs services wholly or mainly in Bermuda for another person for remuneration on such terms and conditions that his relationship with that person more closely resembles that of an employee than that of an independent contractor. (2) ... (a) includes ... (i) a casual worker; (ii) a part-time employee; (iii) a temporary employee ... (b) does not include ... (i) a person who is under the age of 18 years; ... (iii) a voluntary worker;",
+      "file": "files/m8/bm-wagecomm2019.pdf",
+      "sha256": "d62beca9fe6ff5aa838d3f7fc23bbb6a14d829aba5891adadb20e7b8358843a7"
+     },
+     {
+      "kind": "primary",
+      "url": "https://bmds.bm/faqs/",
+      "title": "Bermuda Musical & Dramatic Society: FAQs",
+      "read": "2026-11-04",
+      "said": "BMDS is a 100% volunteer organization. Everyone (with the exception of the occasional professional director and sometimes live musicians) works on a volunteer basis.",
+      "file": "files/m8/bm-bmds-faq.html",
+      "sha256": "083f9364b2fed7a5063666500efe3c1d5d2d65428f7b573f207a87d245c07688"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The minimum wage is a floor for an employed stage actor or director, not a stage rate; whether a performer engaged per show is an employee or an independent contractor is the s. 3(1)(b) test. Item 8 has no rule. All five methods now stand for 7 and 8; item 9's institution and archive are u16's, plus today's reads."
+ },
+ "CM": {
+  "producer": {
+   "blocker": "R-9869",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Cameroun théâtre metteur en scène comédiens cachet minimum convention collective artistes spectacle droits auteur dramatique série télévisée CRTV' (covers the series' route to the screen through CRTV and the play, with stage items 7, 8, 9)",
+     "result": "No Cameroonian source: every result was French, Belgian or Québécois (artcena.fr, syndeac.org, apasq.org, lawinsider); nothing on a Cameroonian fund, incentive, CRTV commissioning or theatre support.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "minac.cm (Ministère des Arts et de la Culture) home, https://www.minac.cm/ (files/m8/cm-minac.html); CRTV (public broadcaster) home https://www.crtv.cm/ (files/m8/cm-crtv.html) and its news site's own search (WordPress API) actu.crtv.cm/wp-json/wp/v2/posts?search=série and ?search=théâtre (files/m8/cm-actucrtv-s1.json, -s2.json), and the one culture-law item found, actu.crtv.cm 2024/04/20 'Festival panafricain des films : les jeunes cinématographes à l'étude de la Loi' (files/m8/cm-crtv-loi2024.html)",
+     "result": "minac.cm refused (HTTP 403). CRTV home read: news only, no commissioning call, tariff or production terms; its search for 'série' returned 21 news items, none on a series commission or production fund; 'théâtre' returned one unrelated item; the 2024 festival item names no law, fund or terms (workshops on 'les Lois et les règlements qui régissent le 7e art').",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Presidency of the Republic's register of acts (prc.cm, publisher of laws and decrees): Actes list https://www.prc.cm/fr/actualites/actes (files/m8/cm-prc.html); its site search for 'cinématographique', 'artiste', 'culturelle' (files/m8/cm-prc-s1..s3.html); downloaded and read whole Loi n° 2020/011 du 20 juillet 2020 régissant les associations artistiques et culturelles au Cameroun (files/m8/cm-loi2020-011.pdf, sha256 2f634c91e9c9dff10774e55bb3b9cd531e535527c9357ea7037697996fd90eb0, 14 pages, pdftotext)",
+     "result": "'cinématographique': 0 results (no cinema or audiovisual law or decree on the Presidency's register). 'artiste': Loi 2024/003 and Décret 2024/330 on accession to the Rome Convention (performers' neighbouring rights), no pay terms. Loi 2020/011 read whole: associations may 'recevoir des subventions des personnes morales de droit public' and the Minister may sign 'contrat[s] de partenariat' with federations and guilds (art. 35); agrément fees go to 'le Compte d'Affectation Spéciale pour le soutien de la politique culturelle' (art. 53); no fund amounts, no series or theatre production terms, no fee or pay rule.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cameroon Tribune (state daily, SOPECAM) site search form posted with 'théâtre' and with 'cachet comédiens' (https://www.cameroon-tribune.cm/research.html/fr.html/ct-online; files/m8/cm-ct-s-théâtre.html, cm-ct-s-cachet_comédiens.html)",
+     "result": "The search returned the same five unrelated articles for both terms (its search does not filter); no article on series funding, CRTV commissioning, theatre funding or stage pay reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for minac.cm (closest 20250622043312) and crtv.cm (20261025214955), then the snapshots https://web.archive.org/web/20250622043312/https://minac.cm/ and /web/20261025214955id_/https://crtv.cm/; Common Crawl cc.py list 'cm,minac)' and 'cm,crtv)/' over CC-MAIN-2026-43, -39, -30, -21, 2025-51",
+     "result": "Wayback: the availability API answered, every snapshot fetch was reset by the connection (curl 35). Common Crawl: minac.cm in 2026-43 holds only a 403 and robots.txt; in 2026-39 only a blank WordPress install ('hello-world', theme demo posts dated 2022/01/27, ?page_id= 404s), no ministry content; no minac.cm capture in 2026-30, -21, 2025-51. crtv.cm captures are the home page and old news redirects (308/404); no commissioning page.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch as the producer's (1 of 10), naming 'metteur en scène', 'cachet minimum', 'convention collective'",
+     "result": "no Cameroonian result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "minac.cm (403); actu.crtv.cm search 'théâtre' (one unrelated item)",
+     "result": "no stage director's term reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "prc.cm register searches and Loi n° 2020/011 read whole (as under producer)",
+     "result": "no pay rule for a stage director; the law governs artistic associations' registration and subsidies only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cameroon Tribune search 'théâtre', 'cachet comédiens'",
+     "result": "no article reached on stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback (minac.cm snapshot reset) and Common Crawl minac.cm over five crawls",
+     "result": "no ministry page archived; nothing on stage pay",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10), naming 'droits auteur dramatique'",
+     "result": "no Cameroonian result (no SOCADAP or ministry page among results)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "minac.cm (403); www.socadap.org (the authors' society for dramatic works, collective management under MINAC)",
+     "result": "minac.cm 403; socadap.org CONNECT 502 (no answer)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "prc.cm search 'artiste', 'culturelle'; Loi 2020/011 read whole",
+     "result": "no playwright's fee, advance or royalty rule; Loi 2020/011 only names 'organismes de gestion collective du droit d'auteur et des droits voisins' among excluded bodies",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cameroon Tribune search (as above)",
+     "result": "no article reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback and Common Crawl minac.cm (as above)",
+     "result": "nothing archived on authors' royalties",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10), naming 'comédiens cachet minimum'",
+     "result": "no Cameroonian result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "minac.cm (403); CRTV search 'théâtre'",
+     "result": "no stage actor's pay reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "prc.cm: Loi 2024/003 and Décret 2024/330 (Rome Convention accession) found by search 'artiste'; Loi 2020/011 read whole",
+     "result": "neighbouring rights accession only; no performer's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Cameroon Tribune search 'cachet comédiens'",
+     "result": "no article reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback and Common Crawl minac.cm (as above)",
+     "result": "nothing archived",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "All five methods made for the producer blocker and for items 7, 8, 9; nothing found. The Presidency's register holds no cinema or audiovisual law (search 'cinématographique': 0); the draft cinema law Cameroon Tribune reported on 2026-08-19 (already in the register) is not in force."
+ },
+ "EH": {
+  "producer": {
+   "blocker": "R-9903",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Laâyoune théâtre troupe subvention ministère culture Maroc soutien production théâtrale régions du Sud metteur en scène rémunération artiste loi 68-16' (the play's fund and outcome, with stage items 7, 8, 9)",
+     "result": "Leads: aujourdhui.ma and TelQuel articles on Morocco's theatre support (2013-2017), two mjcc.gov.ma cahiers des charges; one older item says Laâyoune troupes sell plays to the regional TV station in Laâyoune. Nothing on a series incentive for the territory.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Morocco's Bulletin officiel publisher, the Secrétariat Général du Gouvernement https://www.sgg.gov.ma/ and /BulletinOfficiel.aspx; the Ministry of Justice's legal portal https://adala.justice.gov.ma/ and its search for '68-16'",
+     "result": "All four reset by the connection (curl 35; the proxy logged 'ws_closed_mid_exchange' for adala.justice.gov.ma). No BO text reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc 'Soutien au théâtre: 155 projets subventionnés' (4 Sept 2016) https://aujourdhui.ma/culture/soutien-au-theatre-155-projets-subventionnes (files/m8/eh-aujourdhui-155.html, sha256 dc7e88bcc632e3e80ab1af5da06c949051a504279e7b187e1d1390b315d12d9b) and 'Comment l'Etat viendra en aide à la production théâtrale' (10 April 2015) https://aujourdhui.ma/culture/comment-letat-viendra-en-aide-a-la-production-theatrale-117737 (files/m8/eh-aujourdhui-117737.html)",
+     "result": "read: 2016, 155 of 360 theatre projects supported, budget MAD 15 million; production aid 'couvre 60% du coût global de production'; long residences in 12 theatres in 10 cities including Laayoune. 2015: a joint Culture-Finance decision 'publiée dans le dernier Bulletin officiel' capped production and touring at MAD 200,000. Both quote the ministry or the BO without an address and predate the 2026 arrêté: leads.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'ma,gov,mjcc)' (Ministry of Youth, Culture and Communication) and 'ma,minculture)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for mjcc.gov.ma (closest 20220810170156), minculture.gov.ma (20250425172132), sgg.gov.ma (20261019224336), ccm.ma (20261016021038), then snapshot fetches",
+     "result": "Common Crawl: every mjcc.gov.ma capture in 2026-43, -39, -30 and -21 is an HTTP 500 error page; 2025-51 holds 200 captures of Arabic news pages (none on theatre support terms listed); minculture.gov.ma: none. Wayback: snapshot fetches reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch as the producer's (1 of 10), naming 'metteur en scène rémunération artiste loi 68-16'",
+     "result": "nothing on a director's pay or on loi 68-16's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Youth, Culture and Communication (mjcc.gov.ma): WordPress search 'théâtre' (files/m8/eh-mjcc-s.json); the results notice of the 2026 first theatre-support session (files/m8/eh-mjcc-theatre2026.html) and its full results PDF https://mjcc.gov.ma/wp-content/uploads/2026/06/Soutien-theatre-1-2026.pdf (files/m8/eh-mjcc-theatre2026.pdf, sha256 4719f8a7e5540841060b6adabd503cca9694fd1e8db944886a3636580e45b727, 6 pages); the 2020 call's cahier des charges (files/m8/eh-mjcc-cdc2020.pdf) (items 7, 8, 9, and the producer's play fund)",
+     "result": "read: the commission assesses respect for 'المقتضيات القانونية والتنظيمية المرتبطة بحامل المشروع والمشاركين في تنفيذه، بما في ذلك حقوق المؤلف والحقوق المجاورة'; the 2020 cahier requires 'pièces justificatives des rémunérations des participants'; neither sets a director's, playwright's or actor's minimum. Found for the play's fund: troupes based in Laâyoune, Smara and Dakhla are funded (see found).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.ma (BO) and adala.justice.gov.ma (as under producer)",
+     "result": "reset; no text",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc 2015 and 2016 articles (as under producer)",
+     "result": "no stage pay; workshop aid named for 'l'écriture et la mise en scène théâtrales'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback for mjcc.gov.ma and minculture.gov.ma (as under producer)",
+     "result": "2026 captures are 500 errors; nothing on pay",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no playwright's fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mjcc.gov.ma 2026 results PDF and 2020 cahier (as under 7)",
+     "result": "residencies 'لإبداع النصوص المسرحية' are funded (18 projects in the 2026 first session), no commission fee or royalty minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.ma, adala.justice.gov.ma (as above)",
+     "result": "reset",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc (as above)",
+     "result": "no fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no actor's minimum; TelQuel 2017 reports troupes' delayed payments to their contract staff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mjcc.gov.ma 2026 results and 2020 cahier (as under 7)",
+     "result": "priority to projects employing many holders of the 'carte d'artiste' (2020); no pay minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "sgg.gov.ma, adala.justice.gov.ma (as above)",
+     "result": "reset",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Aujourd'hui le Maroc (as above)",
+     "result": "no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 6,
+    "for": "the producer's blocker R-9903 (a public fund for a theatre production), found by the stage institution attempt",
+    "value": {
+     "fund": "Morocco's support for cultural and artistic projects in theatre (Ministry of Youth, Culture and Communication), reaching the part of Western Sahara Morocco administers",
+     "basis": "décret n° 2.12.513 (13 May 2013); arrêté conjoint n° 378.26 (17 February 2026); the 2026 cahier des charges",
+     "session": "2026, first session, commission 30 April to 8 June 2026",
+     "accepted": 79,
+     "byCategory": {
+      "productionAndPromotion": 45,
+      "troupeResidencyInTheatres": 12,
+      "writingResidenciesResearchWorkshops": 18,
+      "festivals": 4
+     },
+     "productionTotalMAD": 8390000,
+     "productionPerformancesRequired": 6,
+     "territoryRecipients": [
+      {
+       "city": "Laâyoune",
+       "holder": "شركة لحلو للوساطة الثقافية",
+       "MAD": 300000,
+       "category": "production"
+      },
+      {
+       "city": "Laâyoune",
+       "holder": "طروبادور للثقافة والفنون الحية",
+       "MAD": 170000,
+       "category": "production"
+      },
+      {
+       "city": "Laâyoune",
+       "holder": "بروفا للفنون المشهدية",
+       "MAD": 160000,
+       "category": "production"
+      },
+      {
+       "city": "Smara",
+       "holder": "إسباس للثقافة والفنون",
+       "MAD": 180000,
+       "category": "production"
+      },
+      {
+       "centre": "Dar Attaqafa Al Wala, Dakhla",
+       "holder": "مادس للثقافة والفنون الدرامية",
+       "MAD": 500000,
+       "category": "residency"
+      },
+      {
+       "centre": "Centre culturel, Smara (region Laâyoune-Sakia El Hamra)",
+       "holder": "جمعية الحبشي للفنون السبعة",
+       "MAD": 500000,
+       "category": "residency"
+      }
+     ],
+     "rateOfYes": null,
+     "rateNote": "applications received are not published, so no rate of yes"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://mjcc.gov.ma/ar/%d9%86%d8%aa%d8%a7%d8%a6%d8%ac-%d8%af%d8%b9%d9%85-%d8%a7%d9%84%d9%85%d8%b4%d8%a7%d8%b1%d9%8a%d8%b9-%d8%a7%d9%84%d8%ab%d9%82%d8%a7%d9%81%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%81%d9%86%d9%8a%d8%a9-%d9%81-5/",
+      "title": "نتائج دعم المشاريع الثقافية والفنية في مجال المسرح برسم الدورة الأولى لسنة 2026 (10 June 2026)",
+      "read": "2026-11-04",
+      "said": "بناء على المرسوم رقم 2.12.513 الصادر في 2 رجب 1434 ( 13 ماي 2013 ) المتعلق بدعم المشاريع الثقافية والفنية، ووفقا لأحكام القرار المشترك ... رقم 378.26 الصادر في 28 من شعبان 1447 ( 17 فبراير 2026 ) ... أسفرت أشغال الدورة ا لأولى لسنة 2026 عن قبول 79 مشروعا ... إنتاج وترويج الأعمال المسرحية: 45 مشروعا؛ توطين الفرق المسرحية بالمسارح: 12 مشروعا؛ الإقامات الفنية لإبداع النصوص المسرحية والبحوث العلمية وورشات التكوين: 18 مشروعا؛ تنظيم المهرجانات والتظاهرات المسرحية المغربية بالمغرب: 4 مشاريع",
+      "file": "files/m8/eh-mjcc-theatre2026.html",
+      "sha256": "a59140339477e5b0814ea1969c9a8c95e44f5d0e2bf095a262735dc00d15f43b"
+     },
+     {
+      "kind": "primary",
+      "url": "https://mjcc.gov.ma/wp-content/uploads/2026/06/Soutien-theatre-1-2026.pdf",
+      "title": "النتائج الكاملة لدعم المشاريع الثقافية والفنية في مجال المسرح، برسم الدورة الأولى 2026",
+      "read": "2026-11-04",
+      "said": "300.000 6 العيون شركة لحلو للوساطة الثقافية 19 ... 180.000 6 السمارة إسباس للثقافة والفنون 24 ... 170.000 6 العيون طروبادورللثقافة والفنون الحية 25 ... 8.390.000 المجموع ... 500.000 دارالثقافة الوالء الداخلة جهة الداخلة وادي الذهب مادس للثقافة والفنون الدرامية ... 500.000 املركزالثقافي السمارة جهة العيون الساقية الحمراء جمعية الحبش ي للفنون السبعة (pdftotext; one Laâyoune row prints 'العبون' for العيون: 160.000 6 بروفا للفنون املشهدية)",
+      "file": "files/m8/eh-mjcc-theatre2026.pdf",
+      "sha256": "4719f8a7e5540841060b6adabd503cca9694fd1e8db944886a3636580e45b727"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The territory has no trade of its own; Morocco's ministry funds troupes based in Laâyoune, Smara and Dakhla (2026, found), so Morocco's stage rules are the ones in practice in the part it administers. No Moroccan stage pay minimum was reached (BO and legal portal reset). The found fund is Morocco's, recorded here because it names the territory's troupes; the producer blocker's institution method was not in this todo, so the find rides on the stage attempt."
+ },
+ "GP": {
+  "producer": {
+   "blocker": "R-9936",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Guadeloupe convention collective spectacle vivant metteur en scène auteur dramatique rémunération production série télévisée Guadeloupe La 1ère coproduction' (series route, play, and stage items 7, 8)",
+     "result": "Artcena, Assemblée nationale written questions, Légisocial, lawinsider; general French stage-director pay; nothing on Guadeloupe series co-production with La 1ère, a series fund's rate of yes, a fee cap or play outcomes.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Région Guadeloupe's register of administrative acts: https://www.regionguadeloupe.fr/recueil-des-actes-administratifs/ (404) and https://www.regionguadeloupe.fr/Publication-des-actes-administratifs (files/m8/gp-region-actes.html, sha256 ddb77430d21b1e13e0723b098231985af71bbc8ba2d4a84430217caa496578ba; TLS chain completed with the issuer's intermediate, verification on), its latest acts listed",
+     "result": "The page lists 12 recent deliberations and orders (commission permanente CP 26-xxx); the only cultural one is 'cp-26-621 cadre réglementaire relatif à la création, la diffusion et la transmission en arts visuels'; no act on audiovisual or theatre aid, fee caps or award counts among them.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "France-Antilles Guadeloupe site search (its own search form, 'terms'): 'théâtre subvention' and 'série télévisée tournage' (files/m8/gp-fa-s4.html, gp-fa-s5.html); also /recherche?q= and ?search= forms (gp-fa-s.html, gp-fa-s3.html)",
+     "result": "'Résultats de votre recherche \" théâtre subvention \" Aucun résultat'; the series search listed no article either; no press item reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'fr,gouv,culture)/regions/dac-guadeloupe' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; cc.py get of the 2026-39 capture of the DAC's '2 résidences, 12 candidatures, 800€ par mois et par artiste' (files/m8/gp-cc-dac-residences.html, sha256 340145e2cf3658e021f5e432409d5b06f9e277bb25cfc223378babfe8c518cdd); Wayback availability for culture.gouv.fr/regions/dac-guadeloupe (429)",
+     "result": "DAC Guadeloupe captured in 2026-43 and -39 (home, news), none in -30, -21, 2025-51. The capture read is a Paris residency (Cité internationale des arts), not series or theatre production aid. Wayback refused (429).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "French director-pay guidance only (Artcena); nothing Guadeloupe-specific",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "SACD 'Producteur de spectacles : régler des droits' https://www.sacd.fr/fr/producteur-de-spectacles-r%C3%A9gler-des-droits (files/m8/fr-sacd-prod.html, sha256 185da197795b81a788067cbe09eab920c924ac751886a7c5e7c4573f7a036279); Artcena 'Rémunération de la mise en scène' (files/m8/fr-artcena-mes.html) (items 7, 8)",
+     "result": "SACD: 'La mise en scène Le taux est négocié de gré à gré entre vous et le metteur en scène' (royalty, no minimum). Artcena: Cloudflare 'Just a moment...' challenge, not passed.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Bulletin officiel des conventions collectives 2018/35 (Ministère du Travail), CCNEAC IDCC 1285 avenant of 28 March 2018 on its scope: journal-officiel.gouv.fr copy (reset) and the signatory Syndeac's copy of the same BOCC PDF https://www.syndeac.org/wp-content/uploads/2019/04/boc_20180035_0000_0002.pdf (files/m8/fr-bocc-2018-35-syndeac.pdf); Légifrance Code du travail L. 2222-1 (403 Cloudflare); the Government's answer to written question n° 32791 (JO 26 April 2022, p. 2848) on the Assemblée nationale's site (files/m8/yt-an-qe32791.pdf) (item 7)",
+     "result": "found: the CCNEAC 'règlent sur le territoire national' the relations between artistic staff and public-sector live-performance companies; under L. 2222-1 national agreements apply in the DROM, Guadeloupe among them, unless they say otherwise. The director's minimum in Guadeloupe is therefore France's (t2 FR item 7).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "France-Antilles Guadeloupe search 'théâtre subvention' (as under producer) (items 7, 8)",
+     "result": "no result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl DAC Guadeloupe captures (as under producer) and Wayback availability for the SACD page (closest 20260917111132), then its snapshot (items 7, 8)",
+     "result": "nothing on stage pay in the DAC captures; Wayback snapshot reset (curl 35)",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10), naming 'auteur dramatique rémunération'",
+     "result": "no Guadeloupe-specific result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "SACD producer page (as under 7)",
+     "result": "found: minimum terms for performances 'en France en dehors de Paris', which takes in Guadeloupe",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "BOCC 2018/35 and the 2022 written answer (as under 7)",
+     "result": "they settle the agreements' reach, not authors' royalties (authors are not employees); no royalty rule in a register reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "France-Antilles search (as under producer)",
+     "result": "no result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback SACD page snapshot (reset) and Common Crawl DAC captures (as under 7)",
+     "result": "nothing read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": {
+     "follows": "France",
+     "rule": "national collective agreements apply in the DROM (Guadeloupe included) unless they state otherwise (Code du travail L. 2222-1, as the Labour Ministry states it)",
+     "agreements": [
+      "CCNEAC IDCC 1285 (public-sector live performance), scope 'sur le territoire national'"
+     ],
+     "director'sMinimum": "France's, as held in t2.result.json FR item 7 (no metteur en scène line in the CCNEAC grid; IDCC 3090's first-performance minimum for an artist directing; the royalty negotiated freely)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://questions.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE32791.pdf",
+      "title": "Question écrite n° 32791, réponse du ministère du Travail publiée au JO le 26 avril 2022, p. 2848",
+      "read": "2026-11-04",
+      "said": "Conformément aux dispositions de l'article L. 2222-1 du code du travail tel qu'issu de la loi n° 2016-1088 du 8 août 2016, dite « Loi Travail », les conventions et accords collectifs, dont le champ d'application est national, s'appliquent, sauf stipulation contraire, aux départements et régions d'outre-mer (DROM) et à Saint-Barthélemy, Saint-Martin et Saint-Pierre-et-Miquelon (Collectivités d'outre-mer), dans un délai de six mois à compter de leur date d'entrée en vigueur.",
+      "file": "files/m8/yt-an-qe32791.pdf",
+      "sha256": "e1e638b1b0470d816f42a55a4bc94bc55afc0f3af747c04bc5af6d8bde1570a9"
+     },
+     {
+      "kind": "secondary",
+      "quotes": "Bulletin officiel des conventions collectives, Ministère du Travail, CC 2018/35, brochure 3226 (NOR ASET1850834M)",
+      "url": "https://www.syndeac.org/wp-content/uploads/2019/04/boc_20180035_0000_0002.pdf",
+      "title": "CCNEAC IDCC 1285, avenant du 28 mars 2018 modifiant l'article I.1 « Champ d'application »",
+      "read": "2026-11-04",
+      "said": "La présente convention et ses annexes règlent sur le territoire national les rapports entre, d'une part, le personnel artistique, technique et administratif, à l'exception du personnel de l'État et du personnel de droit public des collectivités territoriales et, d'autre part, les entreprises du secteur public du spectacle vivant.",
+      "file": "files/m8/fr-bocc-2018-35-syndeac.pdf",
+      "sha256": "8dd39185931f3cd84c1b629f87cc689a5240434c42003eba05a154217e29ab10"
+     }
+    ]
+   },
+   {
+    "item": 8,
+    "value": {
+     "royaltyMinOutsideParis": 0.105,
+     "base": "box-office receipts or sale price excl. VAT, whichever favours the author",
+     "reducedRateAlternative": "2.10% of the collection base, or 1/5 of authors' rights at a reduced rate, or 1/5 of the guaranteed minimum",
+     "noReceipts": "a guaranteed minimum per performance (from the budget, the venue's financial capacity, or agreed with the author)",
+     "appliesBecause": "the SACD's terms are for performances 'en France en dehors de Paris'; Guadeloupe is a French department"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.sacd.fr/fr/producteur-de-spectacles-r%C3%A9gler-des-droits",
+      "title": "SACD: Producteur de spectacles, régler des droits",
+      "read": "2026-11-04",
+      "said": "Pour les représentations données en France en dehors de Paris Les conditions financières minimales sont les suivantes : 10,50% des recettes ou du prix de vente hors TVA selon la formule la plus favorable à l'auteur 2,10 % de l’assiette de perception ou 1/5 ième des droits d’auteur en cas de taux minoré ou 1/5 ième du minimum garanti En l'absence de recettes de billetterie et de prix de vente, la perception est basée sur un minimum garanti par représentation",
+      "file": "files/m8/fr-sacd-prod.html",
+      "sha256": "185da197795b81a788067cbe09eab920c924ac751886a7c5e7c4573f7a036279"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Item 7's find is the agreements' reach; the minimum itself is France's (t2 FR item 7, itself partial). Item 8's 'France outside Paris' is the SACD's wording; it names no overseas exception, read whole on that page."
+ },
+ "IQ": {
+  "producer": {
+   "blocker": "R-9968",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) in Arabic: 'شبكة الإعلام العراقي إنتاج مسلسل درامي شركة إنتاج عراقية تمويل الدراما العراقية دعم وزارة الثقافة السينما منحة'",
+     "result": "Leads only: TheTVDB, Al Jazeera (2022), Noon Post (2019), Al Arab, Erem News on Iraqi Ramadan drama: IMN produces series through its drama directorate or a drama-support committee; a 'صندوق دعم الدراما العراقية' founded in 2014. No fund terms, incentive, fee cap or commissioning terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Jazeera Net, 24 March 2022, 'الدراما العراقية.. هل يشهد رمضان 2022 أسوأ أعوام الإنتاج أم أفضلها؟' (files/m8/iq-aljazeera-2022.html, sha256 d2c11d418521e3fd23638beb1250affada52d7dd5659f32fc58df671cd7d0f17); Noon Post 11 May 2019 'الدراما العراقية في رمضان.. بين الترحيب والانتقاد وهموم الشارع' https://www.noonpost.com/27712/ (files/m8/iq-noonpost.html)",
+     "result": "Al Jazeera quotes the head of IMN's drama directorate (Wadih Nader): 'تخصيص 3 مليارات دينار عراقي (2.1 مليون دولار) ضمن موازنة عام 2022 لإنتاج 4 مسلسلات لشهر رمضان المقبل', blocked by the unpassed budget; production fell for six years for lack of allocations. Noon Post: a series 'من إنتاج صندوق دعم الدراما العراقية الذي تأسس عام 2014، بعد أن أوقفت شبكة الإعلام العراقي دعمها للإنتاج الدرامي'. Both quote people, no document address; 2019 and 2022, not current: leads on how a series reaches the screen (item 4), no terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'iq,gov,mocul)' (Ministry of Culture) and 'iq,hjc,iraqld)' (Iraqi Legal Database) over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for mocul.gov.iq (closest 20200512212105) and iraqld.hjc.iq (20220815002845), www.imn.iq/ar (429), then the snapshot fetch",
+     "result": "Common Crawl holds only robots.txt answered 403 for both hosts (2026-39, -21, 2025-51 for mocul; 2026-43, -39, -30 for iraqld); no page. Wayback: availability answered for two hosts (snapshots 2020 and 2022, older than any rule in force), snapshot fetches reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) in Arabic: 'العراق دائرة السينما والمسرح أجور الممثلين المسرحيين المخرج المسرحي مكافأة المؤلف المسرحي تعليمات' (items 7, 8, 9)",
+     "result": "no Iraqi result (US, Canadian, Australian and Polish actors' pay pages)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u6's mocul.gov.iq attempt (403 via the ministry's gateway) covered items 1-10",
+     "result": "(u6) refused",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Iraqi Legal Database of the Supreme Judicial Council https://iraqld.hjc.iq/ (files/m8/iq-iraqld.html); Ministry of Justice (publisher of Al-Waqa'i al-Iraqiya) https://moj.gov.iq/; Council of Representatives https://parliament.iq/ (files/m8/iq-parliament.html) (items 7, 8, 9)",
+     "result": "iraqld.hjc.iq: Cloudflare 'Sorry, you have been blocked' (403); moj.gov.iq: connection reset (curl 35); parliament.iq: 403. No legal text reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Iraqi News Agency (INA, state agency) site search for 'أجور المسرحيين' and 'المسرح الوطني أجور' (files/m8/iq-ina-s.html, iq-ina-s2.html); Al Jazeera 2022 and Noon Post 2019 read for any stage pay (items 7, 8, 9)",
+     "result": "INA: Cloudflare 'Just a moment...' challenge, not passed; the two articles read carry no stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback for mocul.gov.iq and iraqld.hjc.iq (as under producer) (items 7, 8, 9)",
+     "result": "no page archived (robots 403 only); Wayback reset",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no Iraqi result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u6's mocul.gov.iq (403)",
+     "result": "(u6)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "iraqld.hjc.iq, moj.gov.iq, parliament.iq (as under 7)",
+     "result": "blocked, reset, 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "INA search (challenge) and the two articles (as under 7)",
+     "result": "no playwright's fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as under 7)",
+     "result": "nothing archived",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no Iraqi result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u6's mocul.gov.iq (403)",
+     "result": "(u6)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "iraqld.hjc.iq, moj.gov.iq, parliament.iq (as under 7)",
+     "result": "blocked, reset, 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "INA search (challenge) and the two articles (as under 7)",
+     "result": "no actor's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as under 7)",
+     "result": "nothing archived",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Every Iraqi rule-holding host refused this environment today (ministry gateway 403, legal database and INA behind Cloudflare, Ministry of Justice reset, parliament 403), and Common Crawl holds none of their pages. The 2022 IMN allocation (IQD 3 billion for 4 Ramadan series) is a quoted lead, not a term."
+ },
+ "LB": {
+  "producer": {
+   "blocker": "R-10000",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Lebanon's Official Gazette (Presidency of the Council of Ministers) https://jo.pcm.gov.lb/ (files/m8/lb-jo.html); www.pcm.gov.lb; the Lebanese University's Centre for Legal Informatics database (legiliban.ul.edu.lb, which copies the gazette): legislation search 'نقابات الفنانين' and by number (law 56 of 2008), 'المهن الفنية' (files/m8/lb-legiliban-res.html, lb-legiliban-56.html, lb-legiliban-fan.html); Law 56 of 27/12/2008 'تنظيم المهن الفنية' (JO no. 59, 30/12/2008, pp. 6147-6153) read whole, its seven sections, articles 1-19 (files/m8/lb-law56-2008.html, lb-law56-s270041..270047.html, text lb-law56-articles.txt)",
+     "result": "jo.pcm.gov.lb: subscription-only (prepaid card, LBP 10,000,000 a year private sector), no text reached; pcm.gov.lb reset (curl 35). legiliban searches answered: no film, television or theatre production incentive or fund statute among results; Law 56/2008 read whole: unions for the artistic professions and a Unified Mutual Fund fed by 'رسم مالي نسبته 2% (اثنان بالمئة) من قيمة بطاقات الحفلات والنشاطات الفنية على انواعها' and 10% on foreign artists' contracts; no production incentive, no production fund, no tax relief for theatre.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Jarida (Kuwait) on Lebanon's Syndicate of Professional Artists, two articles found by the stage search: https://www.aljarida.com/articles/1531064424897706600 and /1537286138023548300 (files/m8/lb-aljarida1.html, lb-aljarida2.html)",
+     "result": "read (2018): resignations and the Ministry of Culture's intervention in the syndicate; nothing on series or play funding, incentives or outcomes.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'lb,gov,culture)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51 (captures of the Ministry of Culture's site in every crawl, including Ministry-Services/cinema in 2026-21 and Ministry-Services/88-Artists-Syndicates-and-Mutual-Fund in 2026-21 and 2025-51); cc.py get of the 2026-21 capture of http://culture.gov.lb/ar/Ministry-Services/88-Artists-Syndicates-and-Mutual-Fund (files/m8/lb-cc-artists-syndicates.html, sha256 cae6d04e479279e66de72446990d3d633044b78d833c941542c1ffc5db9e2031); Wayback availability for culture.gov.lb (closest 20211106124344) and teleliban.com.lb (20261019081726), then the snapshot fetch",
+     "result": "The capture read: eight registered artists' syndicates and the Mutual Fund's revenue (the 2% ticket levy, 10% on foreign artists' contracts, a ministry contribution); no production fund, incentive or play outcomes. Wayback snapshots reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'نقابة الفنانين المحترفين لبنان الحد الأدنى لأجر الممثل المسرحي المخرج المسرحي الكاتب المسرحي عقد' (items 7, 8, 9)",
+     "result": "Wikipedia's article on the Syndicate of Professional Artists in Lebanon and Al Jarida articles; no minimum fee, rate table or model contract",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named: u10's www.mic.gov.lb attempt (no answer) covered items 7-10; and made today: the Ministry of Culture's own page https://culture.gov.lb/ar/Ministry-Services/88-Artists-Syndicates-and-Mutual-Fund (files/m8/lb-culture-synd.html, sha256 61e29c3c028c0754f4b3f45c95c1312aaef5033cf65d2ff5cbd12879c1f69410)",
+     "result": "read: Law 56/2008 moved the artists' syndicates from the Ministry of Labour to the Ministry of Culture; eight syndicates registered; the Mutual Fund's benefits and levies; no minimum fee or pay for a stage director",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Law 56/2008 read whole on legiliban; Official Gazette site (as under producer) (items 7, 8, 9)",
+     "result": "no minimum pay for a director, playwright or actor in the law; gazette subscription-only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Jarida articles (as under producer) (items 7, 8, 9)",
+     "result": "the syndicate's sectors named ('التمثيل (الإخراج المسرحي والتلفزيوني والسينمائي والإذاعي)'), no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl capture of the Ministry's syndicates page (as under producer) (items 7, 8, 9)",
+     "result": "no pay minimum",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "writing for theatre named among the syndicate's sectors; no fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named: u10's www.mic.gov.lb attempt (no answer) covered items 7-10; and made today: the Ministry of Culture's own page https://culture.gov.lb/ar/Ministry-Services/88-Artists-Syndicates-and-Mutual-Fund (files/m8/lb-culture-synd.html, sha256 61e29c3c028c0754f4b3f45c95c1312aaef5033cf65d2ff5cbd12879c1f69410)",
+     "result": "read: Law 56/2008 moved the artists' syndicates from the Ministry of Labour to the Ministry of Culture; eight syndicates registered; the Mutual Fund's benefits and levies; no minimum fee or pay for a playwright",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Law 56/2008 read whole (as above)",
+     "result": "no playwright's fee or royalty",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Jarida (as above)",
+     "result": "no fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl syndicates page (as above)",
+     "result": "no fee",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "no actor's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named: u10's www.mic.gov.lb attempt (no answer) covered items 7-10; and made today: the Ministry of Culture's own page https://culture.gov.lb/ar/Ministry-Services/88-Artists-Syndicates-and-Mutual-Fund (files/m8/lb-culture-synd.html, sha256 61e29c3c028c0754f4b3f45c95c1312aaef5033cf65d2ff5cbd12879c1f69410)",
+     "result": "read: Law 56/2008 moved the artists' syndicates from the Ministry of Labour to the Ministry of Culture; eight syndicates registered; the Mutual Fund's benefits and levies; no minimum fee or pay for a stage actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Law 56/2008 read whole (as above)",
+     "result": "no performer's minimum; a 10% levy on foreign artists' contracts only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al Jarida (as above)",
+     "result": "no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl syndicates page (as above)",
+     "result": "no pay",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [
+   {
+    "method": "web-search",
+    "for": "producer R-10000",
+    "why": "this agent's 10 searches were spent; the one Lebanon search was on stage pay and did not touch the producer's items"
+   }
+  ],
+  "notes": "u10's institution attempt for items 7-9 was on a wrong ministry address (mic.gov.lb); today's archive read of culture.gov.lb's syndicates page is the ministry's own page. Law 56/2008 holds no pay rule; a pay minimum would have to be in a syndicate's own bylaws or a contract model, which nothing reached shows."
+ },
+ "MN": {
+  "producer": {
+   "blocker": "R-10033",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'mn,gov,filmmongolia)' (the Film Council and Cinema Support Fund's host), 'mn,artscouncil)' and 'mn,drama)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for artscouncil.mn (closest 20261011022116), legalinfo.mn (20231114082351) and mnb.mn (20261030105739), then those three snapshots",
+     "result": "filmmongolia.gov.mn: only robots.txt answered 500 in every crawl (no page). artscouncil.mn: captures in 2026-43, -39, -21 and 2025-51 (home, about, news, art-program pages), drama.mn in 2026-43 and -39 (home, about, performances, posts); by their addresses none is a fund rule, series term, fee or box-office page, and u25 read both sites' homes live. Wayback: all three snapshot fetches reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) in Mongolian: 'Монголын жүжигчдийн холбоо театрын найруулагч жүжгийн зохиолч цалин хөлс шагнал журам Улсын драмын эрдмийн театр' (items 7, 8, 9)",
+     "result": "ikon.mn and gogo.mn news: a 2025 national playwriting competition by the State Academic Drama Theatre, a 2024 city award of MNT 100 million to an opera's leads, honorary titles; no pay regulation for directors, playwrights or actors",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u25's artscouncil.mn and drama.mn home pages (items 6-10)",
+     "result": "(u25) no fees or pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Unified Legal Information System legalinfo.mn: home (files/m8/mn-legalinfo.html), its search for 'Соёлын тухай хууль' (files/m8/mn-legalinfo-s.html), the law category page /mn/law/26 (files/m8/mn-legalinfo-law26.html), its API index (files/m8/mn-legalinfo-api.html) and the site script; parliament.mn search (files/m8/mn-parl-s.html) (items 7, 8, 9)",
+     "result": "legalinfo.mn renders its search results and law lists by script: the search page carries no result, the category page lists categories only, the 'API' page is a constitutional-history page; parliament.mn search returned a 967-byte empty page. No law on culture-sector pay reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ikon.mn 20 August 2025 'УДЭТ: “Жүжгийн зохиолын улсын уралдаан”-д бүтээл хүлээн авч эхэллээ' https://ikon.mn/n/3h4z (files/m8/mn-ikon-3h4z.html, sha256 4d971c3bafc14a7320193bd1a5d430709cb93084ba1839f15536807f29ca3e1a) (items 7, 8, 9)",
+     "result": "read: the State Academic Drama Theatre's national playwriting competition with the Ministry and the Writers' Union; prizes per category 'Нэгдүгээр байр ... 20 000 000 төгрөг', second 12,000,000, third 8,000,000; winning plays enter the repertoire of UDET and local theatres. A prize, not a commission fee or a director's or actor's minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl artscouncil.mn and drama.mn listings, Wayback artscouncil.mn and legalinfo.mn snapshots (as under producer) (items 7, 8, 9)",
+     "result": "no pay or fee page archived by address; Wayback reset",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "the playwriting competition (lead), no commission minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u25's drama.mn and artscouncil.mn",
+     "result": "(u25)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legalinfo.mn and parliament.mn (as under 7)",
+     "result": "no law text reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ikon.mn/n/3h4z (as under 7)",
+     "result": "lead: competition prizes MNT 20m / 12m / 8m per category (2025), not a fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "as under 7",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "the same WebSearch (1 of 10)",
+     "result": "a one-off city award to opera leads (2024); no actor's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u25's drama.mn and artscouncil.mn",
+     "result": "(u25)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legalinfo.mn and parliament.mn (as under 7)",
+     "result": "no law text reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ikon.mn/n/3h4z (as under 7)",
+     "result": "no actor's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "as under 7",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Mongolia's national theatres are state bodies; their actors' and directors' pay would sit in civil-service or Ministry pay scales on legalinfo.mn, which renders only by script here. Lead for item 8: UDET's 2025 playwriting competition prizes (ikon.mn quoting UDET's call, no address)."
+ },
+ "NO": {
+  "producer": {
+   "blocker": "R-10067",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Rushprint (Norwegian film and TV trade magazine) site search 'NRK dramaserie bestilling' (files/m8/no-rush-nrk.html) and the commentary it led to, 'Norsk seriedrama – hva nå?' (September 2025) https://rushprint.no/2025/09/norsk-seriedrama-hva-na/ (files/m8/no-rush-seriedrama.html, sha256 3aa78a91ee3bca3afc84285dcd4b963b757e4ea89c553da5a5912d9576bf9180); scenekunst.no (stage trade press) home and search",
+     "result": "Rushprint read: 'Bransjen er i krise og det er liten aktivitet'; NRK Drama 'har et unikt mandat og pengene sine intakt. Ingen andre, bortsett fra kanskje Netflix , har noe å substansielt å komme med når det gjelder bestillinger, hevdes det i miljøet'; TV 2's management 'vil ikke bruke et øre mer på norsk drama enn det de er forpliktet til som kringkaster'. Unnamed sources, no count of commissions or pick-ups and no fee cap: a lead for item 4. scenekunst.no: TLS handshake failure (sslv3 alert), not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'no,spekter)/' (2026-43, -39), 'no,kulturdirektoratet)/fri-scenekunst' (2026-43, -39) and 'no,nfi)/tilskudd' (2026-43); Wayback availability for lovdata.no/dokument/SF/forskrift/2016-10-31-1264 (closest 20260731041322), nfi.no (20261017105951), nfi.no/tilskudd (20261023184544), kulturdirektoratet.no (20261021004740), then the lovdata snapshot",
+     "result": "Common Crawl: spekter.no captured in 2026-43 and -39 (about, conference, events and staff pages; none an agreement or rate page by address); kulturdirektoratet.no/fri-scenekunst: no capture; nfi.no/tilskudd in 2026-43: one capture, a 403 for a script-development scheme page. Wayback: availability answered for all four, the lovdata snapshot fetch reset (curl 35), so the regulation u5 could not read (405 Varnish) stays unread.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: t5's search 'Norsk Sceneinstruktørforening Spekter rammeavtale regissør minstehonorar 2026'",
+     "result": "(t5) only the 2019 SIK agreement",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: t5's nscf.no, sceneinstruktorer.no, creokultur.no attempts",
+     "result": "(t5) no current director rates",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Tariffnemnda (the state board that makes collective agreements generally applicable) https://www.tariffnemnda.no/ (files/m8/no-tariffnemnda.html, sha256 5d6abc52e7e6e18c7eaee0d58ab9df6ef4ee631a8adb59e0ab7553544f9f41f2), its list of sectors with generally applicable agreements; Arbeidstilsynet's page on allmenngjorte tariffavtaler (404 at the address tried)",
+     "result": "read: the sectors are Bilpleie, Byggfag, Elektrofagene, Fiskeindustribedrifter, Godstransport på vei, Jordbruks- og gartnerinæringen, Overnattings-, serverings- og cateringvirksomheter, Renhold, Skips- og verftsindustri, Turbil; no stage, theatre or culture agreement is generally applicable, so no state-set minimum reaches a stage director (the directors' terms rest on the Spekter framework agreement alone).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "scenekunst.no (home and search 'sceneinstruktør honorar'); Rushprint search 'sceneinstruktør' (files/m8/no-rush-sik.html)",
+     "result": "scenekunst.no: TLS handshake failure, not read; Rushprint: 10 hits, none on stage directors' fees (NFI, festivals, film news)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'no,sceneinstruktor' (five crawls), 'no,nscf)' (five crawls), 'no,creokultur)/' (2026-43, -39, -30); cc.py get of the 2026-43 capture of https://creokultur.no/hovedoppgjoret-2026/ (files/m8/no-cc-creo-ho2026.html, sha256 a9d40ade039df1dc4046b0818460cc92a8e026604e0927ac67e73f012347a3bb)",
+     "result": "sceneinstruktor*: no capture in any crawl; nscf.no: 2026-30 only, the host's default cPanel page ('defaultwebpage.cgi'), no association site; creokultur.no captured in all three; the 2026 main-settlement page read: general text on the 2026 hovedoppgjør, no stage-director rates.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 now stands on all five methods (t5's search and institution, today's register, press and archive). creokultur.no's pages state 'Automatisk nedlasting og datainnhenting er forbudt'; it was read here only as Common Crawl's archived copy."
+ },
+ "QA": {
+  "producer": {
+   "blocker": "R-10100",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Al Meezan, Qatar Legal Portal (Ministry of Justice) https://www.almeezan.qa/ and a law page URL /LawPage.aspx?id=8270 (files/m8/qa-almeezan.html, qa-almeezan-law.html); Ministry of Labour https://www.mol.gov.qa/ and /en/",
+     "result": "Al Meezan answers every address with the same 6 KB script shell ('Al Meezan - Qatar Legal Portal'), no law text in the page; mol.gov.qa reset (curl 35) twice. No incentive, fund or theatre-relief text reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'qa,gov,moc)' and 'qa,gov,moc)/' (Ministry of Culture), 'qa,almeezan)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for moc.gov.qa and almeezan.qa (both 429), mediacity.qa ('no snapshot') and dohafilm.com/funding-industry/funding/grants ('no snapshot'); and 'qa,org,qna)/' (Qatar News Agency)",
+     "result": "moc.gov.qa: only robots.txt answered 500 (2026-43, -39); almeezan.qa: robots 500 in every crawl and one 301 for LawView.aspx?LawID=26 (2026-39), no law page. Wayback: two refusals (429), two 'no snapshot'. qna.org.qa: only robots.txt answered 500 (2026-43, -39).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u8's Arabic search on the Ministry of Culture's theatre support (items 5-10)",
+     "result": "(u8) a QNA festival item; the rest Moroccan",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture https://www.moc.gov.qa/ (files/m8/qa-moc.html), its Theatre Affairs Center page (files/m8/qa-moc-theatre.html, sha256 0ccdb4d40c8178dca4a6a4e9976ef12fe9a79bcfe795efd5460198f77fe813c3) and the Doha Theatre Festival 38 event page (files/m8/qa-moc-dtf38.html); the Government Communications Office's labour-reform page and the Hukoomi portal (for any statutory wage floor) (items 7, 8, 9)",
+     "result": "Theatre Affairs Center read: 'بموجب القرار الوزاري رقم (59) لسنة 2016 م، تم تأسيس هيئة ثقافية تسمى “مركز شؤون المسرح”' to develop theatre talent; no pay, fee or royalty terms; the festival page is a title only. gco.gov.qa and hukoomi.gov.qa: 403.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Al Meezan and the Ministry of Labour (as under producer), for a stage pay rule or the statutory minimum wage (items 7, 8, 9)",
+     "result": "script shell; reset. No text.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Qatar News Agency site search for 'مركز شؤون المسرح' https://www.qna.org.qa/ar-QA/Search-Results?q=... (files/m8/qa-qna-s.html) (items 7, 8, 9)",
+     "result": "HTTP 404 (no search page at that address); no article reached on stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl moc.gov.qa and almeezan.qa (as under producer) (items 7, 8, 9)",
+     "result": "no page archived",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u8's Arabic search (items 5-10)",
+     "result": "(u8)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "moc.gov.qa Theatre Affairs Center and festival pages (as under 7)",
+     "result": "no playwright's fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Al Meezan, MoL (as above)",
+     "result": "no text",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "QNA search (as under 7)",
+     "result": "404",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u8's Arabic search (items 5-10)",
+     "result": "(u8)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "moc.gov.qa pages; gco.gov.qa, hukoomi.gov.qa (as under 7)",
+     "result": "no actor's pay; 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Al Meezan, MoL (as above)",
+     "result": "no text",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "QNA search (as under 7)",
+     "result": "404",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "A statutory minimum wage for employees, if Qatar's law holds one, would be a floor for an employed stage actor, as Bermuda's is; no text of any wage law was reached today (Al Meezan script-only, MoL reset, GCO and Hukoomi 403), so nothing is recorded and no figure is given."
+ },
+ "SR": {
+  "producer": {
+   "blocker": "R-10136",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "De Nationale Assemblée's legislation register https://www.dna.sr/ ('Wetgeving': Surinaamse wetten, wetten na 2005, ontwerpwetten) (files/m8/sr-dna.html, sr-dna-wet.html, sr-dna-na2005.html, sha256 37a9180da7a00cb2425c48f96054cd9b6a56f99e545b655c884a8dc8f2ef50d6), its list of laws enacted after 2005 read whole for a film, audiovisual, culture-fund or theatre act",
+     "result": "The list holds the Wet Auteursrecht 1913, the UNESCO intangible-heritage convention, the Wet Minimum Uurloon and Wet Minimumloon 2019, among others; no film or television incentive, no culture or theatre fund act, no tax relief for productions.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "de Ware Tijd (dwtonline.com) site search (WordPress API) for 'toneel' (files/m8/sr-dwt-s.json) and the article it led to, 'Queen of Disco belicht de mens achter Amerikaanse discolegende' (October 2026, files/m8/sr-dwt-qod.html); Starnieuws search for 'toneel subsidie' (files/m8/sr-starnieuws-s.html)",
+     "result": "dwtonline: a Surinamese-Dutch music-theatre run at Theater Thalia 'van 28 oktober tot en met 1 november', producer Sterre Nacca; no funding, fee or ticket figures. Starnieuws: the search URL returned the home page (no results page).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'sr,gov)/' and 'sr,dna)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51, and 'sr,gov)/algemeen-minimumuurloon' in 2026-43 and -39; Wayback availability for gov.sr, dna.sr and stvs.sr",
+     "result": "gov.sr captured in every crawl (news posts, tenders), dna.sr in 2026-43; none of the listed captures is a culture-fund, series or theatre-support page by address; the minimum-wage post is not captured. Wayback: 429 for all three.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u15's search (items 1-10)",
+     "result": "(u15) no Surinamese scheme",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named: u15's gov.sr Directorate of Culture pages (items 6-10); and made today: gov.sr's own search (WordPress API) for 'minimumuurloon' and 'toneel' (files/m8/sr-gov-s.json, sr-gov-s2.json) and the Ministry's notice 'Algemeen Minimumuurloon per 1 juli 2026 vastgesteld op SRD 61,25' (files/m8/sr-gov-mw2026.html) (items 7, 9)",
+     "result": "found: a general statutory minimum hourly wage of SRD 61.25 gross from 1 July 2026 for every sector; 'toneel' returned no culture-funding post",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "dna.sr: Wet Minimumloon 2019, S.B. 2019 no. 101, read in full (files/m8/sr-sb2019-101.pdf, sha256 2d22d83e4146a375f1bb4483b04fa8f798343f8cae263ef59fb4039650233c3c) (items 7, 8, 9)",
+     "result": "found: every employer must pay every employee at least the minimum set by ministerial order; persons working under a contract for single services (art. 1613 BW) count as employees; exceptions only for international organisations' and foreign diplomatic staff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dwtonline search 'toneel' and Starnieuws (as under producer) (items 7, 8, 9)",
+     "result": "no stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl gov.sr and dna.sr; Wayback (as under producer) (items 7, 8, 9)",
+     "result": "nothing on stage pay; Wayback 429",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u15's search",
+     "result": "(u15)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "named, not repeated: u15's Directorate of Culture pages",
+     "result": "(u15)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "dna.sr laws-after-2005 list and the Wet Minimumloon 2019 (as under 7); the list names the Wet Auteursrecht 1913",
+     "result": "no playwright's fee or royalty minimum; a commission under art. 1613 BW falls under the hourly minimum only as pay for hours worked",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dwtonline and Starnieuws (as above)",
+     "result": "a play's run named, no author's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u15's search",
+     "result": "(u15)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.sr minimum-wage notice (as under 7)",
+     "result": "found: SRD 61.25 an hour from 1 July 2026",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Wet Minimumloon 2019 (as under 7)",
+     "result": "found: covers employees and single-service contractors",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dwtonline and Starnieuws (as above)",
+     "result": "no actor's pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl and Wayback (as above)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 9,
+    "alsoItems": [
+     7
+    ],
+    "value": {
+     "kind": "statutory minimum wage, not a stage agreement",
+     "currency": "SRD",
+     "minimumHourlyWageGross": 61.25,
+     "from": "2026-07-01",
+     "instrument": "beschikking of 3 July 2026, no. 777/26, published in the Advertentieblad",
+     "covers": "every employee in every sector, and persons working under a contract for single services (art. 1613 Burgerlijk Wetboek), the commissioning party counting as employer",
+     "excludes": [
+      "staff of international organisations based in Suriname (unless local staff under the Civil Code)",
+      "diplomatic and consular staff of foreign powers"
+     ]
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://gov.sr/algemeen-minimumuurloon-per-1-juli-2026-vastgesteld-op-srd-6125/",
+      "title": "Algemeen Minimumuurloon per 1 juli 2026 vastgesteld op SRD 61,25 (Ministerie van Volksgezondheid, Welzijn en Arbeid, 22 July 2026)",
+      "read": "2026-11-04",
+      "said": "De Raad van Ministers heeft besloten het algemeen minimumuurloon met ingang van 1 juli 2026 vast te stellen op SRD 61,25 bruto per uur. ... Het algemeen minimumuurloon geldt voor alle sectoren. De beschikking van 3 juli 2026 , no. 777/26 , waarin het nieuwe algemeen minimumuurloon is vastgesteld, is inmiddels gepubliceerd in het Advertentieblad van de Republiek Suriname . ... Met ingang van 1 juli 2026 mag geen enkele werknemer in Suriname minder verdienen dan het vastgestelde algemene minimumuurloon van SRD 61,25 bruto per uur .",
+      "file": "files/m8/sr-gov-mw2026.html",
+      "sha256": "85cb44e13d35aa1646c8e1a05f0d63583d59c59a4399b72f6e5449b12e54a22e"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.dna.sr/media/vm2mao52/sb_2019___101.pdf",
+      "title": "Wet Minimumloon, S.B. 2019 no. 101 (6 September 2019), De Nationale Assemblée's copy",
+      "read": "2026-11-04",
+      "said": "h) werknemer: iedere natuurlijke persoon, die in dienst van een werkgever is; ... 2. Als werknemers worden mede beschouwd: a) personen die arbeid verrichten op basis van de overeenkomst tot het verrichten van enkele diensten als genoemd in artikel 1613 Burgerlijk Wetboek. In dit geval wordt de opdrachtgever aangemerIct als de werkgever; ... Artikel 2 1. De werkgever is gehouden om aan elke werknemer ten minste het minimumloon te betalen welke bij beschikking door de minister is bepaald. ... 5. Het minimumloon is niet van toepassing op: a. personen die in dienst zijn van in Suriname gevestigde vollcenrechtelijke organisaties ... b. diplomatiek en consulair personeel (pdftotext; OCR errors as printed)",
+      "file": "files/m8/sr-sb2019-101.pdf",
+      "sha256": "2d22d83e4146a375f1bb4483b04fa8f798343f8cae263ef59fb4039650233c3c"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The minimum hourly wage is a floor, not a stage rate; it reaches a stage actor or director paid per engagement because the 2019 Act counts single-service contractors as employees. No collective agreement, union rate or fund for the stage was found."
+ },
+ "TV": {
+  "producer": {
+   "blocker": "R-10163",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Tuvalu Legislation Online (Office of the Attorney-General): the index of all principal and subsidiary legislation https://tuvalu-legislation.tv/cms/component/legislation/?view=index_all&Itemid=683 (files/m8/tv-leg-index.html, sha256 9bc249a01b8714956218aea619b16c1b57bea8eaf884aeae3cc552a0cccf6ef8, 323 entries) read whole for film, broadcasting, culture and tax entries; the Tuvalu Cultural Council Act, CAP 30.10, 2008 and 2022 revised editions, read whole (files/m8/tv-cultcouncil-1.pdf, tv-cultcouncil-2.pdf, sha256 c212e0bbad9ecfd0589892ccbd4edd09c64cde6a3400eb3efb6284af04432157)",
+     "result": "The index holds 'Cinemas and Films' (1978-0009), the Public Broadcasting Act (2012-0016), the Copyright Act and the Tuvalu Cultural Council Act (1991-0016); no production incentive, film or theatre fund, or tax relief. The Cultural Council Act (2022 ed.) lets the Council 'receive and keep any money or property provided or donated by Parliament, any organization or any individual' and 'allocate or expend such money or property received and kept in such manner as it sees fit'; its funds are government grants, donations and its own earnings; no grant programme, ranges or eligibility.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'tv,gov)' and 'tv,tuvalu-legislation)' over CC-MAIN-2026-43, -39, -30, -21, 2025-51; Wayback availability for tuvalu.tv (closest 20261021155753) and tuvalu-legislation.tv (429), then the tuvalu.tv snapshot",
+     "result": "gov.tv: no capture in any crawl. tuvalu-legislation.tv: captures in 2026-43 (home, index, FAQ, search), -39, -30, -21 (statute PDFs, some 202 placeholders), none in 2025-51; the live index read above is the same site. Wayback: tuvalu.tv snapshot reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u12's search (items 1, 2, 4-10)",
+     "result": "(u12) nothing on theatre or pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Government of Tuvalu https://www.gov.tv/ and https://www.tuvalu.tv/ (files/m8/tv-tuvalutv.html) (items 7, 8, 9)",
+     "result": "gov.tv: CONNECT 502 (no answer); tuvalu.tv: the 13.8 KB portal shell, no culture, arts or wage page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tuvalu-legislation.tv index (as under producer) and the Labour and Employment Relations Act 2017, as enacted and in the 2022 revised edition CAP 40.28, read for wage rules (files/m8/tv-lera2017-1.pdf, tv-lera2017-2.pdf, sha256 ebeb8f082eb964c6adfc895a921918f92bdef1a14285fae600efd415448eb50a) (items 7, 8, 9)",
+     "result": "Part 11 sets up a Minimum Wage Board; s. 129: 'The Minister may, but is not obligated to, make an order, fixing the minimum wage rate for employees'; the index of in-force legislation (323 entries) lists no minimum wage order. No stage pay rule; no statutory wage floor in force in the index read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "RNZ (Radio New Zealand, Pacific desk) site search 'tuvalu minimum wage' and 'tuvalu drama theatre' (files/m8/tv-rnz-s.html, tv-rnz-s2.html) (items 7, 8, 9)",
+     "result": "the first returned items on Tuvaluans in New Zealand and a bulletin naming Tuvalu's seasonal work; the second nothing; no article on Tuvalu stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl gov.tv and tuvalu-legislation.tv; Wayback tuvalu.tv (as under producer) (items 7, 8, 9)",
+     "result": "nothing on stage pay",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u12's search",
+     "result": "(u12)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.tv, tuvalu.tv (as under 7)",
+     "result": "502; shell",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the legislation index (Copyright Act listed) and the Cultural Council Act (as above)",
+     "result": "no playwright's fee or royalty rule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "RNZ searches (as under 7)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "as under 7",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "named, not repeated: u12's search",
+     "result": "(u12)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.tv, tuvalu.tv (as under 7)",
+     "result": "502; shell",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Labour and Employment Relations Act 2017 and the index (as under 7)",
+     "result": "a minimum wage only if the Minister makes an order; none listed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "RNZ searches (as under 7)",
+     "result": "nothing",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "as under 7",
+     "result": "nothing",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Tuvalu's own law holds no film, series or theatre incentive or fund, and the Cultural Council's money is allocated at its discretion with no published scheme. The 2017 Labour Act's minimum wage is enabling only; no order appears in the index of in-force legislation (an absence for that index, not proof none was made). Items stay blocked."
+ },
+ "YT": {
+  "producer": {
+   "blocker": "R-10196",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "The Labour Ministry's answer to written question n° 32791 on which national collective agreements apply in Mayotte, published in the Journal officiel (Assemblée nationale questions) on 26 April 2022, p. 2848 (files/m8/yt-an-qe32791.pdf); Légifrance (Code du travail L. 2222-1, the CCNEAC KALI page): 403 Cloudflare",
+     "result": "read: 'dix-neuf conventions collectives de travail nationales sont applicables, de jure, à Mayotte', among them IDCC 1285 (entreprises artistiques et culturelles) and IDCC 2412 (production de films d'animation); 'aucun accord collectif au niveau local n'a été identifié'. It settles the agreements' reach, not a series fund, fee cap, commissioning or a play fund; nothing on those.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Mayotte Hebdo 'Flou artistique autour des arts de la scène' https://www.mayottehebdo.com/actualite/culture/flou-artistique-autour-des-arts-de-la-scene/ (files/m8/yt-mayottehebdo.html, sha256 c003b637ae3637842e2b3458d19546a01c024c9ecedd79cced5f3a95439ddd0e)",
+     "result": "read (spring 2020, during the lockdown): 'Les artistes et intermittents du spectacle ne peuvent, à Mayotte, prétendre au statut juridique spécifique pourtant de vigueur en métropole'; seventeen structures and about sixty permanent jobs counted by the Arts Confondus collective; the State 'nous a promis que les subventions seraient maintenues'. A lead on the stage economy; nothing on series, fee caps or play outcomes.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl cc.py list 'fr,gouv,culture)/regions/dac-mayotte' over CC-MAIN-2026-43, -39, -30; cc.py get of the 2026-43 capture of 'Aide au compagnonnage pour les compagnies de théâtre, marionnettes, cirque et arts de la rue – Dispositif 2022' (files/m8/yt-cc-dac-compagnonnage.html, sha256 8f3bf0d6f5763e022fb72f82fb83072854d75eac4c4acdf6eabc884fd964ff69); Wayback availability for culture.gouv.fr/regions/dac-mayotte (closest 20261016102210) then the snapshot",
+     "result": "DAC Mayotte captured in 2026-43, -39, -30 (home, creation pages, news: compagnonnage 2022, 'Aide individuelle à la création 2022', 'Aide à projet PARI'). The compagnonnage page: a season-long scheme for a 'jeune metteur en scène ou auteur' that 'ne peut être assimilé à une aide à la production'; no amounts. Wayback snapshot reset (curl 35).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch (1 of 10) 'Mayotte convention collective entreprises artistiques culturelles application Mayotte metteur en scène salaire minimum spectacle vivant code du travail Mayotte 2018'",
+     "result": "led to the Assemblée nationale written question 32791 and Mayotte Hebdo (both read, below), Artcena and BOCC copies",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "DAC Mayotte home https://www.culture.gouv.fr/regions/dac-mayotte (files/m8/yt-dac-home.html); SACD producers' page (files/m8/fr-sacd-prod.html); Artcena's page on directors' pay (Cloudflare challenge, not passed)",
+     "result": "DAC: aid listings only, no pay rule; SACD: 'La mise en scène Le taux est négocié de gré à gré'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the JO answer to question 32791 (as under producer) and the BOCC 2018/35 CCNEAC scope avenant (Syndeac's copy, files/m8/fr-bocc-2018-35-syndeac.pdf)",
+     "result": "found: the CCNEAC (IDCC 1285) applies de jure in Mayotte; the private-sector live-performance agreement (IDCC 3090) is not among the nineteen listed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Mayotte Hebdo (as under producer)",
+     "result": "lead: the intermittent status does not reach Mayotte; the national convention 'décidée avant que l'île ne bascule sous le régime de la départementalisation' (2020, before the 2022 answer)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl DAC Mayotte and Wayback (as under producer)",
+     "result": "compagnonnage page (no amounts); Wayback reset",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": {
+     "follows": "France, for the subsidised sector only",
+     "agreementsInForceInMayotte": [
+      "CCNEAC IDCC 1285 (de jure since 1 January 2018, under Code du travail L. 2222-1)"
+     ],
+     "notListed": [
+      "IDCC 3090 (private-sector live performance)"
+     ],
+     "localAgreements": "none identified",
+     "director'sMinimum": "France's CCNEAC terms, as t2.result.json FR item 7 holds them (no metteur en scène line in the CCNEAC grid); IDCC 3090's first-performance minimum is not shown to apply in Mayotte",
+     "intermittentStatus": "lead only: not available in Mayotte as of 2020 (Mayotte Hebdo)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://questions.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE32791.pdf",
+      "title": "Question écrite n° 32791 (M. Mansour Kamardine), réponse du ministère du Travail, de l'emploi et de l'insertion publiée au JO le 26 avril 2022, p. 2848",
+      "read": "2026-11-04",
+      "said": "Cette disposition est entrée en vigueur à Mayotte à compter du 1er janvier 2018. ... A ce jour, dix-neuf conventions collectives de travail nationales sont applicables, de jure, à Mayotte et recensées dans le tableau ci-dessous. Néanmoins, aucun accord collectif au niveau local n'a été identifié en vertu des articles susvisés. ... 1285 ARTISTIQUES CULTURELLES ENTREPRISES",
+      "file": "files/m8/yt-an-qe32791.pdf",
+      "sha256": "e1e638b1b0470d816f42a55a4bc94bc55afc0f3af747c04bc5af6d8bde1570a9"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The 2022 list is the Ministry's count at that date; an agreement extended later (or IDCC 3090 since) could apply too, and Légifrance (403) was not reachable to check. u14 recorded YT item 7 as 'follows France' with no attempt; it now has all five."
+ }
+}

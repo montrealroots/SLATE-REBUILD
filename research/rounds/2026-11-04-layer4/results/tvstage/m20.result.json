@@ -1,0 +1,1074 @@
+{
+ "BD": {
+  "producer": {
+   "blocker": "R-9823",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Laws of Bangladesh (bdlaws.minlaw.gov.bd, Legislative and Parliamentary Affairs Division) alphabetical index fetched whole over https (57 MB, UTF-16; saved l4t/files/m20/bd-bdlaws-index-full.html, sha256 327e91780239de62d1eceab3e438dc443c1f39ec6b8698c7ea7b4cb645398662) and its 1,633 act titles searched for television, broadcast, film, cinema, theatre, drama, artist, culture, Shilpakala (English and Bengali); then read the Bangladesh Television Authority Act 2001 (Act 55 of 2001, act-879: table of sections, and s.8 'কর্তৃপক্ষের কার্যাবলী' whole; saved bd-act-879.html sha256 cb401a517b761619aa0bda4752058219a982aad0fc4e88aaf494390cdec0073f, bd-act-879-s8.html sha256 682dfb178084bf410cf05945c84979d027b598e1b163adee972bd68556e02c3f) and the Bangladesh Shilpakala Academy (Amendment) Act 2026 (Act 71 of 2026, 10 April 2026, act-1704, table of sections; saved bd-act-1704.html sha256 77bf1b40273809b1cf3539aa87f888d5aa5df76894fdec8cd7add3cab524405a)",
+     "result": "Titles on the register touching the trade: Cinematograph Act 1918, Film Development Corporation Act 1957, Pakistan Television Corporation (Taking Over) Order 1972, Dramatic Performances (Repeal) Act 2001, Bangladesh Television Authority Act 2001, Bangladesh Betar Authority Act 2001, Bangladesh Shilpi Kalyan Trust Act 2001, Cable Television Network Operation Act 2006, Terrestrial broadcasting facility act 2009, Film Society (Registration) Act 2011, Film and Television Institute Act 2013, Film Artists Welfare Trust Act 2021, Film Certification Act 2023, Shilpakala Academy (Amendment) Act 2026. None is titled as a production incentive, a series or theatre fund, or a pay rule. BTV Authority Act s.8 lists the authority's functions (run BTV, raise programme standards, follow the national broadcasting policy, set the TV-set licence fee with government approval, broadcast national-day programmes); it sets no commissioning terms, tariff or independent-producer rule. The Shilpakala amendment's sections amend the 1989 Act's composition and governance clauses (ss.2,3,5,7,8,9,10,13); the 1989 Act itself (Act 22 of 1989) is not in the index as a separate entry. No stage director's, playwright's or stage actor's minimum on the register.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for btv.gov.bd (snapshot 2026-10-17), moca.gov.bd (2026-10-16), shilpakala.gov.bd (2026-01-06), then the btv and shilpakala snapshots fetched from web.archive.org; Common Crawl CC-MAIN-2026-43 'bd,gov,btv)/' (11 captures: news, static pages, sps-data) and CC-MAIN-2026-43, -39, -30 'bd,gov,shilpakala)/'",
+     "result": "web.archive.org reset the connection (curl 35) for both snapshots; not read. Common Crawl holds BTV pages (2026-10-10) and Shilpakala's home and one static page (CC-MAIN-2026-39, 2026-09-06/12); see the stage attempt for what Shilpakala's capture holds",
+     "date": "2026-11-04",
+     "items": [
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 captures of btv.gov.bd (2026-10-10) fetched by cc.py get and read: /pages/news/, static pages 6922db79… 'লাইসেন্স', 6922ddb3… 'কেবল টিভি নেটওয়ার্ক বিধিমালা ২০১০', 6922dea0… 'জনপ্রিয় অনুষ্ঠান', 6922dee6… GRS focal point, 6922df38… 'জাতীয় সম্প্রচার নীতিমালা (বিজ্ঞাপন)', 6922dfec… integrity strategy, 6922e0cf… 'তথ্য ও সম্প্রচার মন্ত্রণালয় ও বিটিভি', /views/sps-data (service simplification lists); saved l4t/files/m20/bd-cc-btv-*.html (sha256 of the 'জনপ্রিয় অনুষ্ঠান' page 84194de674884886a231cdf95d2adecd8e4f8b3fd01ec03d194d324f42d6cd1d)",
+     "result": "read: BTV's captured pages hold licence, cable rules, the advertising broadcast policy, a list of popular programmes (names only) and service lists; no package-programme or commissioning policy, tariff, producer fee cap or count of independent series taken",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Laws of Bangladesh (bdlaws.minlaw.gov.bd, Legislative and Parliamentary Affairs Division) alphabetical index fetched whole over https (57 MB, UTF-16; saved l4t/files/m20/bd-bdlaws-index-full.html, sha256 327e91780239de62d1eceab3e438dc443c1f39ec6b8698c7ea7b4cb645398662) and its 1,633 act titles searched for television, broadcast, film, cinema, theatre, drama, artist, culture, Shilpakala (English and Bengali); then read the Bangladesh Television Authority Act 2001 (Act 55 of 2001, act-879: table of sections, and s.8 'কর্তৃপক্ষের কার্যাবলী' whole; saved bd-act-879.html sha256 cb401a517b761619aa0bda4752058219a982aad0fc4e88aaf494390cdec0073f, bd-act-879-s8.html sha256 682dfb178084bf410cf05945c84979d027b598e1b163adee972bd68556e02c3f) and the Bangladesh Shilpakala Academy (Amendment) Act 2026 (Act 71 of 2026, 10 April 2026, act-1704, table of sections; saved bd-act-1704.html sha256 77bf1b40273809b1cf3539aa87f888d5aa5df76894fdec8cd7add3cab524405a)",
+     "result": "Titles on the register touching the trade: Cinematograph Act 1918, Film Development Corporation Act 1957, Pakistan Television Corporation (Taking Over) Order 1972, Dramatic Performances (Repeal) Act 2001, Bangladesh Television Authority Act 2001, Bangladesh Betar Authority Act 2001, Bangladesh Shilpi Kalyan Trust Act 2001, Cable Television Network Operation Act 2006, Terrestrial broadcasting facility act 2009, Film Society (Registration) Act 2011, Film and Television Institute Act 2013, Film Artists Welfare Trust Act 2021, Film Certification Act 2023, Shilpakala Academy (Amendment) Act 2026. None is titled as a production incentive, a series or theatre fund, or a pay rule. BTV Authority Act s.8 lists the authority's functions (run BTV, raise programme standards, follow the national broadcasting policy, set the TV-set licence fee with government approval, broadcast national-day programmes); it sets no commissioning terms, tariff or independent-producer rule. The Shilpakala amendment's sections amend the 1989 Act's composition and governance clauses (ss.2,3,5,7,8,9,10,13); the 1989 Act itself (Act 22 of 1989) is not in the index as a separate entry. No stage director's, playwright's or stage actor's minimum on the register.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Labour and Employment https://mole.gov.bd/ home fetched (200, saved l4t/files/m20/bd-mole.html, sha256 bbd808c791ce12cf996c1bef8a9220735e1042b7db86df59379de41d5cafc8b3) for its minimum-wage gazette notices; the Minimum Wage Board mwb.gov.bd (proxy CONNECT 502) and mwb.portal.gov.bd (http 503; https certificate chain not verifiable)",
+     "result": "The ministry's home lists sector minimum-wage gazettes (garments, 'সিনেমা হল' (cinema hall) sector workers, tea gardens); no theatre, stage or performing-artist sector among those listed; the Minimum Wage Board's own site was not reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback snapshot of shilpakala.gov.bd (2026-01-06) from web.archive.org (connection reset, not read); Common Crawl CC-MAIN-2026-39 captures of the Bangladesh Shilpakala Academy's site read: home (2026-09-06, saved l4t/files/m20/bd-cc-shilpakala-home.html sha256 fbc235f30c46a6e69018499772d3ba6f7c0ac6f02fa0dd37827c85910dbbcd1a) and static page 6922dc4d… (district academies; bd-cc-shilpakala-static.html sha256 b1f94b51d6659ed6bfa29fe2e9b9b6fa8ad3bc1e51c33baf633d1babfb1215eb); CC-MAIN-2026-43 and -30 hold no capture",
+     "result": "read: the Academy's menu lists its Act and regulations, policies, registered jatra troupes, hall-allocation policy, and a notice 'শিল্পী তালিকাভুক্তকরণ কার্যক্রম ২০২৬ আবেদন ফরম' (artist enlistment 2026 application form, 04-09-2026); no rate for a stage director, playwright or stage actor on the captured pages; the policy and enlistment pages themselves were not captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Bangladesh Shilpakala Academy https://shilpakala.gov.bd/ (the culture ministry's academy for theatre; its 'আইন ও বিধি' page) and the Bangladesh Group Theatre Federation (bgtf.org.bd, www.bgtf.org.bd), fetched with verification on, also with the issuer chain bundle; then the Ministry of Cultural Affairs https://moca.gov.bd/ and its policies list https://moca.gov.bd/pages/policies (200, saved l4t/files/m20/bd-moca-policies.html sha256 8c23738258c6928b52f2218e34cd0f8d169ae41fab8f33f215de6175122fe266) read whole; the listed 'যাত্রাশিল্প উন্নয়ন নীতিমালা ২০১২' (jatra development policy) PDF on objectstorage.ap-dcc-gazipur-1.oraclecloud15.com",
+     "result": "shilpakala.gov.bd: certificate chain not verifiable ('unable to get local issuer certificate'), not read; bgtf.org.bd: no connection; moca.gov.bd read: its ten policies are grant policies (cultural persons and institutions 2025, 2022, 2020), research grants, library policy and grants, the jatra development policy 2012 and the anniversaries policy; none is titled as a pay scale or minimum for a stage director, playwright or actor; the jatra policy PDF reset the connection (curl 35), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 of 10 (standard, Bengali): 'মঞ্চ নাটক নির্দেশক নাট্যকার অভিনেতা সম্মানী শিল্পকলা একাডেমি প্রযোজনা সম্মানী টাকা'",
+     "result": "no fee schedule, agreement or minimum; leads: Ittefaq item 645464 ('৫০ বছরে প্রথমবার', an actor's first stage honorarium paid from ticket income), Prothom Alo on the IDLC theatre festival, Daily Star Bangla node 137017 (interview), bdnews24 glitz f37e3609b7e0 (venue dispute)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Ittefaq https://www.ittefaq.com.bd/645464/… ('৫০ বছরে প্রথমবার') fetched (saved l4t/files/m20/bd-ittefaq-645464.html); Daily Star Bangla https://bangla.thedailystar.net/node/137017 (redirects to anandadhara/…-137017, 200, saved bd-dsb-137017.html sha256 47ee5535b7aad8c4bf7e208f65d933eeb4d4445533fe2469d59b9132118942ee) read",
+     "result": "Ittefaq: 403 Cloudflare 'Just a moment...' challenge, not got past, not read. Daily Star Bangla: an interview with the Aranyak theatre group's writer-director on a new production (its 62nd, written and directed by him) and Dhaka's theatre culture; it quotes no fee, agreement or rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Laws of Bangladesh (bdlaws.minlaw.gov.bd, Legislative and Parliamentary Affairs Division) alphabetical index fetched whole over https (57 MB, UTF-16; saved l4t/files/m20/bd-bdlaws-index-full.html, sha256 327e91780239de62d1eceab3e438dc443c1f39ec6b8698c7ea7b4cb645398662) and its 1,633 act titles searched for television, broadcast, film, cinema, theatre, drama, artist, culture, Shilpakala (English and Bengali); then read the Bangladesh Television Authority Act 2001 (Act 55 of 2001, act-879: table of sections, and s.8 'কর্তৃপক্ষের কার্যাবলী' whole; saved bd-act-879.html sha256 cb401a517b761619aa0bda4752058219a982aad0fc4e88aaf494390cdec0073f, bd-act-879-s8.html sha256 682dfb178084bf410cf05945c84979d027b598e1b163adee972bd68556e02c3f) and the Bangladesh Shilpakala Academy (Amendment) Act 2026 (Act 71 of 2026, 10 April 2026, act-1704, table of sections; saved bd-act-1704.html sha256 77bf1b40273809b1cf3539aa87f888d5aa5df76894fdec8cd7add3cab524405a)",
+     "result": "Titles on the register touching the trade: Cinematograph Act 1918, Film Development Corporation Act 1957, Pakistan Television Corporation (Taking Over) Order 1972, Dramatic Performances (Repeal) Act 2001, Bangladesh Television Authority Act 2001, Bangladesh Betar Authority Act 2001, Bangladesh Shilpi Kalyan Trust Act 2001, Cable Television Network Operation Act 2006, Terrestrial broadcasting facility act 2009, Film Society (Registration) Act 2011, Film and Television Institute Act 2013, Film Artists Welfare Trust Act 2021, Film Certification Act 2023, Shilpakala Academy (Amendment) Act 2026. None is titled as a production incentive, a series or theatre fund, or a pay rule. BTV Authority Act s.8 lists the authority's functions (run BTV, raise programme standards, follow the national broadcasting policy, set the TV-set licence fee with government approval, broadcast national-day programmes); it sets no commissioning terms, tariff or independent-producer rule. The Shilpakala amendment's sections amend the 1989 Act's composition and governance clauses (ss.2,3,5,7,8,9,10,13); the 1989 Act itself (Act 22 of 1989) is not in the index as a separate entry. No stage director's, playwright's or stage actor's minimum on the register.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Labour and Employment https://mole.gov.bd/ home fetched (200, saved l4t/files/m20/bd-mole.html, sha256 bbd808c791ce12cf996c1bef8a9220735e1042b7db86df59379de41d5cafc8b3) for its minimum-wage gazette notices; the Minimum Wage Board mwb.gov.bd (proxy CONNECT 502) and mwb.portal.gov.bd (http 503; https certificate chain not verifiable)",
+     "result": "The ministry's home lists sector minimum-wage gazettes (garments, 'সিনেমা হল' (cinema hall) sector workers, tea gardens); no theatre, stage or performing-artist sector among those listed; the Minimum Wage Board's own site was not reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback snapshot of shilpakala.gov.bd (2026-01-06) from web.archive.org (connection reset, not read); Common Crawl CC-MAIN-2026-39 captures of the Bangladesh Shilpakala Academy's site read: home (2026-09-06, saved l4t/files/m20/bd-cc-shilpakala-home.html sha256 fbc235f30c46a6e69018499772d3ba6f7c0ac6f02fa0dd37827c85910dbbcd1a) and static page 6922dc4d… (district academies; bd-cc-shilpakala-static.html sha256 b1f94b51d6659ed6bfa29fe2e9b9b6fa8ad3bc1e51c33baf633d1babfb1215eb); CC-MAIN-2026-43 and -30 hold no capture",
+     "result": "read: the Academy's menu lists its Act and regulations, policies, registered jatra troupes, hall-allocation policy, and a notice 'শিল্পী তালিকাভুক্তকরণ কার্যক্রম ২০২৬ আবেদন ফরম' (artist enlistment 2026 application form, 04-09-2026); no rate for a stage director, playwright or stage actor on the captured pages; the policy and enlistment pages themselves were not captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Bangladesh Shilpakala Academy https://shilpakala.gov.bd/ (the culture ministry's academy for theatre; its 'আইন ও বিধি' page) and the Bangladesh Group Theatre Federation (bgtf.org.bd, www.bgtf.org.bd), fetched with verification on, also with the issuer chain bundle; then the Ministry of Cultural Affairs https://moca.gov.bd/ and its policies list https://moca.gov.bd/pages/policies (200, saved l4t/files/m20/bd-moca-policies.html sha256 8c23738258c6928b52f2218e34cd0f8d169ae41fab8f33f215de6175122fe266) read whole; the listed 'যাত্রাশিল্প উন্নয়ন নীতিমালা ২০১২' (jatra development policy) PDF on objectstorage.ap-dcc-gazipur-1.oraclecloud15.com",
+     "result": "shilpakala.gov.bd: certificate chain not verifiable ('unable to get local issuer certificate'), not read; bgtf.org.bd: no connection; moca.gov.bd read: its ten policies are grant policies (cultural persons and institutions 2025, 2022, 2020), research grants, library policy and grants, the jatra development policy 2012 and the anniversaries policy; none is titled as a pay scale or minimum for a stage director, playwright or actor; the jatra policy PDF reset the connection (curl 35), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 of 10 (standard, Bengali): 'মঞ্চ নাটক নির্দেশক নাট্যকার অভিনেতা সম্মানী শিল্পকলা একাডেমি প্রযোজনা সম্মানী টাকা'",
+     "result": "no fee schedule, agreement or minimum; leads: Ittefaq item 645464 ('৫০ বছরে প্রথমবার', an actor's first stage honorarium paid from ticket income), Prothom Alo on the IDLC theatre festival, Daily Star Bangla node 137017 (interview), bdnews24 glitz f37e3609b7e0 (venue dispute)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Ittefaq https://www.ittefaq.com.bd/645464/… ('৫০ বছরে প্রথমবার') fetched (saved l4t/files/m20/bd-ittefaq-645464.html); Daily Star Bangla https://bangla.thedailystar.net/node/137017 (redirects to anandadhara/…-137017, 200, saved bd-dsb-137017.html sha256 47ee5535b7aad8c4bf7e208f65d933eeb4d4445533fe2469d59b9132118942ee) read",
+     "result": "Ittefaq: 403 Cloudflare 'Just a moment...' challenge, not got past, not read. Daily Star Bangla: an interview with the Aranyak theatre group's writer-director on a new production (its 62nd, written and directed by him) and Dhaka's theatre culture; it quotes no fee, agreement or rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Laws of Bangladesh (bdlaws.minlaw.gov.bd, Legislative and Parliamentary Affairs Division) alphabetical index fetched whole over https (57 MB, UTF-16; saved l4t/files/m20/bd-bdlaws-index-full.html, sha256 327e91780239de62d1eceab3e438dc443c1f39ec6b8698c7ea7b4cb645398662) and its 1,633 act titles searched for television, broadcast, film, cinema, theatre, drama, artist, culture, Shilpakala (English and Bengali); then read the Bangladesh Television Authority Act 2001 (Act 55 of 2001, act-879: table of sections, and s.8 'কর্তৃপক্ষের কার্যাবলী' whole; saved bd-act-879.html sha256 cb401a517b761619aa0bda4752058219a982aad0fc4e88aaf494390cdec0073f, bd-act-879-s8.html sha256 682dfb178084bf410cf05945c84979d027b598e1b163adee972bd68556e02c3f) and the Bangladesh Shilpakala Academy (Amendment) Act 2026 (Act 71 of 2026, 10 April 2026, act-1704, table of sections; saved bd-act-1704.html sha256 77bf1b40273809b1cf3539aa87f888d5aa5df76894fdec8cd7add3cab524405a)",
+     "result": "Titles on the register touching the trade: Cinematograph Act 1918, Film Development Corporation Act 1957, Pakistan Television Corporation (Taking Over) Order 1972, Dramatic Performances (Repeal) Act 2001, Bangladesh Television Authority Act 2001, Bangladesh Betar Authority Act 2001, Bangladesh Shilpi Kalyan Trust Act 2001, Cable Television Network Operation Act 2006, Terrestrial broadcasting facility act 2009, Film Society (Registration) Act 2011, Film and Television Institute Act 2013, Film Artists Welfare Trust Act 2021, Film Certification Act 2023, Shilpakala Academy (Amendment) Act 2026. None is titled as a production incentive, a series or theatre fund, or a pay rule. BTV Authority Act s.8 lists the authority's functions (run BTV, raise programme standards, follow the national broadcasting policy, set the TV-set licence fee with government approval, broadcast national-day programmes); it sets no commissioning terms, tariff or independent-producer rule. The Shilpakala amendment's sections amend the 1989 Act's composition and governance clauses (ss.2,3,5,7,8,9,10,13); the 1989 Act itself (Act 22 of 1989) is not in the index as a separate entry. No stage director's, playwright's or stage actor's minimum on the register.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Labour and Employment https://mole.gov.bd/ home fetched (200, saved l4t/files/m20/bd-mole.html, sha256 bbd808c791ce12cf996c1bef8a9220735e1042b7db86df59379de41d5cafc8b3) for its minimum-wage gazette notices; the Minimum Wage Board mwb.gov.bd (proxy CONNECT 502) and mwb.portal.gov.bd (http 503; https certificate chain not verifiable)",
+     "result": "The ministry's home lists sector minimum-wage gazettes (garments, 'সিনেমা হল' (cinema hall) sector workers, tea gardens); no theatre, stage or performing-artist sector among those listed; the Minimum Wage Board's own site was not reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback snapshot of shilpakala.gov.bd (2026-01-06) from web.archive.org (connection reset, not read); Common Crawl CC-MAIN-2026-39 captures of the Bangladesh Shilpakala Academy's site read: home (2026-09-06, saved l4t/files/m20/bd-cc-shilpakala-home.html sha256 fbc235f30c46a6e69018499772d3ba6f7c0ac6f02fa0dd37827c85910dbbcd1a) and static page 6922dc4d… (district academies; bd-cc-shilpakala-static.html sha256 b1f94b51d6659ed6bfa29fe2e9b9b6fa8ad3bc1e51c33baf633d1babfb1215eb); CC-MAIN-2026-43 and -30 hold no capture",
+     "result": "read: the Academy's menu lists its Act and regulations, policies, registered jatra troupes, hall-allocation policy, and a notice 'শিল্পী তালিকাভুক্তকরণ কার্যক্রম ২০২৬ আবেদন ফরম' (artist enlistment 2026 application form, 04-09-2026); no rate for a stage director, playwright or stage actor on the captured pages; the policy and enlistment pages themselves were not captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Bangladesh Shilpakala Academy https://shilpakala.gov.bd/ (the culture ministry's academy for theatre; its 'আইন ও বিধি' page) and the Bangladesh Group Theatre Federation (bgtf.org.bd, www.bgtf.org.bd), fetched with verification on, also with the issuer chain bundle; then the Ministry of Cultural Affairs https://moca.gov.bd/ and its policies list https://moca.gov.bd/pages/policies (200, saved l4t/files/m20/bd-moca-policies.html sha256 8c23738258c6928b52f2218e34cd0f8d169ae41fab8f33f215de6175122fe266) read whole; the listed 'যাত্রাশিল্প উন্নয়ন নীতিমালা ২০১২' (jatra development policy) PDF on objectstorage.ap-dcc-gazipur-1.oraclecloud15.com",
+     "result": "shilpakala.gov.bd: certificate chain not verifiable ('unable to get local issuer certificate'), not read; bgtf.org.bd: no connection; moca.gov.bd read: its ten policies are grant policies (cultural persons and institutions 2025, 2022, 2020), research grants, library policy and grants, the jatra development policy 2012 and the anniversaries policy; none is titled as a pay scale or minimum for a stage director, playwright or actor; the jatra policy PDF reset the connection (curl 35), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 of 10 (standard, Bengali): 'মঞ্চ নাটক নির্দেশক নাট্যকার অভিনেতা সম্মানী শিল্পকলা একাডেমি প্রযোজনা সম্মানী টাকা'",
+     "result": "no fee schedule, agreement or minimum; leads: Ittefaq item 645464 ('৫০ বছরে প্রথমবার', an actor's first stage honorarium paid from ticket income), Prothom Alo on the IDLC theatre festival, Daily Star Bangla node 137017 (interview), bdnews24 glitz f37e3609b7e0 (venue dispute)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Ittefaq https://www.ittefaq.com.bd/645464/… ('৫০ বছরে প্রথমবার') fetched (saved l4t/files/m20/bd-ittefaq-645464.html); Daily Star Bangla https://bangla.thedailystar.net/node/137017 (redirects to anandadhara/…-137017, 200, saved bd-dsb-137017.html sha256 47ee5535b7aad8c4bf7e208f65d933eeb4d4445533fe2469d59b9132118942ee) read",
+     "result": "Ittefaq: 403 Cloudflare 'Just a moment...' challenge, not got past, not read. Daily Star Bangla: an interview with the Aranyak theatre group's writer-director on a new production (its 62nd, written and directed by him) and Dhaka's theatre culture; it quotes no fee, agreement or rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "CC": {
+  "producer": {
+   "blocker": "R-9856",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Federal Register of Legislation (legislation.gov.au): Income Tax Assessment Act 1997, compilation of 1 October 2026, volume 10 (the dictionary, s.995-1) fetched (200, saved l4t/files/m20/cc-itaa97-v10.html, sha256 0688810c4d7053ee2eca6262c99e2b5b825e8d4032f57834dbe746cb8b802970) and its definition of Australia read; the 1936 Act's volume 1 (compilation of 1 October 2026, cc-itaa36-vol1.html sha256 51e8a41a63bce676f422b33773cec12a4389cf731951eee62f176fe1ec0da419) searched for Cocos, Christmas Island and external Territory (no match in volume 1)",
+     "result": "read: s.995-1 'Australia, when used in a geographical sense, includes each of the following: (a) Norfolk Island; (b) the Coral Sea Islands Territory; (c) the Territory of Ashmore and Cartier Islands; (d) the Territory of Christmas Island; (e) the Territory of Cocos (Keeling) Islands; (f) the Territory of Heard Island and the McDonald Islands.' So the 1997 Act's production incentive (the Producer, Location and PDV offsets, Division 376, which count expenditure 'in Australia') reaches spending in the Cocos (Keeling) Islands; a series' and a play's tax terms there are Australia's, which the AU research holds",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "stage.incentive"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Federal Register of Legislation: Fair Work Act 2009, compilation of 7 July 2026, volume 1 fetched (200, saved l4t/files/m20/cc-fwa-vol1.html, sha256 1439791db86fce8eb142913c63d06869eb398a436a2c60143aed331394b6a0b0), s.12 definition of Australia read",
+     "result": "read: 'Australia means the Commonwealth of Australia and, when used in a geographical sense, includes Norfolk Island, the Territory of Christmas Island and the Territory of Cocos (Keeling) Islands, but does not include any other external Territory.' Modern awards and enterprise agreements made under the Act therefore apply to theatre work on the Cocos (Keeling) Islands as in Australia; no instrument of the Islands' own",
+     "date": "2026-11-04",
+     "items": [
+      "series.feecap",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Creative Australia, 'Who can apply' https://creative.gov.au/investments-opportunities/application-process/who-can-apply fetched (200, saved l4t/files/m20/cc-creative-who.html, sha256 75378a56d5a234ce99337c4b2b06a63a2c4675f9f401653400861decdf39530d) and read; Screen Australia producer offset page https://www.screenaustralia.gov.au/funding-and-support/producer-offset fetched",
+     "result": "Creative Australia read: an individual or group 'must be a practising artist or creative worker and an Australian citizen or an Australian permanent resident'; an organisation 'must be registered under law'; no rule excludes the external territories, so an Islands resident or body applies to the federal arts funder as any Australian does. Screen Australia: 403 Cloudflare 'Just a moment...' challenge, not got past, not read",
+     "date": "2026-11-04",
+     "items": [
+      "stage.fund",
+      "series.fund"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for infrastructure.gov.au/…/indian-ocean-territories/governance (no snapshot; the live page refused: HTTP/2 INTERNAL_ERROR, then empty reply over HTTP/1.1); Common Crawl CC-MAIN-2026-43, -39 (no capture), -30 (22 captures: travel, bulletins, schemes; none on law) and -21 under 'au,gov,infrastructure)/territories-regions-cities/territories/indian-ocean-territories': the Department of Infrastructure's 'Indian Ocean Territories notifiable instruments and gazettes' page (capture 2026-05-17) fetched by cc.py get and read (saved l4t/files/m20/cc-cc-iot-gazettes.html, sha256 06ee028f0023190de4f34d2d49f6236c0cce43a3abc931021c5779aa7170782b)",
+     "result": "read: 'Gazette notices for the Indian Ocean Territories are published as Notifiable Instruments on the Federal Register of Legislation. Gazettes that are published by (or on behalf of) the Western Australian Government relating to the Indian Ocean Territories are available in the Western Australian Government Gazette.' The Islands' law is the Commonwealth's (and applied Western Australian law); the captured pages name no screen, theatre or performers' instrument of the Islands' own",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 of 10 (standard): 'Cocos (Keeling) Islands arts grant performance theatre Commonwealth laws apply Fair Work award Indian Ocean Territories'",
+     "result": "led to the WA Department of Creative Industries, Tourism and Sport's 'Indian Ocean Territories — Arts Activities in Regional Communities' program and its guidelines (read, institution attempt), an ArtsHub WA listing page, grants.gov.au entries and Wikipedia pages on the Islands' culture; nothing on a theatre pay agreement of the Islands' own",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "WA Department of Creative Industries, Tourism and Sport (cits.wa.gov.au), 'Indian Ocean Territories — Arts Activities in Regional Communities Guidelines' https://www.cits.wa.gov.au/funding/creative-industries-funding/indian-ocean-territories-arts-activities-in-regional-communities/indian-ocean-territories-arts-activities-in-regional-communities-guidelines fetched (200, saved l4t/files/m20/cc-wa-iot-guidelines.html, sha256 0c108be04f6e389f14041542dcc04554bf4380d0c5e5d3dcfb732544dfdefeea) and read whole",
+     "result": "FOUND a public fund for a theatre production (item 6, see found): 2026 program funded by the Australian Government (Department of Infrastructure…) and the WA Government; up to $60,000, at most 80% of project cost; applicant's ABN/ACNC postcode must be in the IOT; excludes film and television (including 'pilots for television series'), so no series fund. On pay it names no rate of its own: 'We support appropriate rates of pay … Refer to … Media, Entertainment and Arts Alliance, Australian Society of Authors, Australian Writers' Guild' (Australia's standards, items 7 and 8); no rate of yes published on the page",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "ArtsHub (artshub.com.au, the Australian arts trade press) WA listing https://www.artshub.com.au/location/wa/page/99/ (the search's lead for an Indian Ocean Territories item) fetched",
+     "result": "403 Cloudflare 'Just a moment...' challenge, not got past, not read; no press item quoting a primary on Islands theatre pay, series or theatre funding was read",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Federal Register of Legislation: Fair Work Act 2009, compilation of 7 July 2026, volume 1 fetched (200, saved l4t/files/m20/cc-fwa-vol1.html, sha256 1439791db86fce8eb142913c63d06869eb398a436a2c60143aed331394b6a0b0), s.12 definition of Australia read",
+     "result": "read: 'Australia means the Commonwealth of Australia and, when used in a geographical sense, includes Norfolk Island, the Territory of Christmas Island and the Territory of Cocos (Keeling) Islands, but does not include any other external Territory.' Modern awards and enterprise agreements made under the Act therefore apply to theatre work on the Cocos (Keeling) Islands as in Australia; no instrument of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Fair Work Ombudsman's consolidated Live Performance Award 2020 [MA000081] https://awards.fairwork.gov.au/MA000081.html fetched (200, saved l4t/files/m20/cc-ma000081.html, sha256 4539651e8de71b8765a78da285b2b3de14324624014f961104f0201bae725b68) and read (amendments to 1 July 2026); the Fair Work Commission's modern awards list (fwc.gov.au) answered 403",
+     "result": "read: cl. 4.1 'This industry award covers employers throughout Australia in the live performance industry and their employees in the classifications set out in this award'; 'Australia' includes the Cocos (Keeling) Islands (Fair Work Act s.12). The award's classifications hold no stage director (only a dance company's Deputy Rehearsal Director/Rehearsal Director allowance, $136.42 a week) and no playwright; so a director's and a playwright's minimum on the Islands is whatever Australia's research finds outside this award",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for infrastructure.gov.au/…/indian-ocean-territories/governance (no snapshot; the live page refused: HTTP/2 INTERNAL_ERROR, then empty reply over HTTP/1.1); Common Crawl CC-MAIN-2026-43, -39 (no capture), -30 (22 captures: travel, bulletins, schemes; none on law) and -21 under 'au,gov,infrastructure)/territories-regions-cities/territories/indian-ocean-territories': the Department of Infrastructure's 'Indian Ocean Territories notifiable instruments and gazettes' page (capture 2026-05-17) fetched by cc.py get and read (saved l4t/files/m20/cc-cc-iot-gazettes.html, sha256 06ee028f0023190de4f34d2d49f6236c0cce43a3abc931021c5779aa7170782b)",
+     "result": "read: 'Gazette notices for the Indian Ocean Territories are published as Notifiable Instruments on the Federal Register of Legislation. Gazettes that are published by (or on behalf of) the Western Australian Government relating to the Indian Ocean Territories are available in the Western Australian Government Gazette.' The Islands' law is the Commonwealth's (and applied Western Australian law); the captured pages name no screen, theatre or performers' instrument of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 of 10 (standard): 'Cocos (Keeling) Islands arts grant performance theatre Commonwealth laws apply Fair Work award Indian Ocean Territories'",
+     "result": "led to the WA Department of Creative Industries, Tourism and Sport's 'Indian Ocean Territories — Arts Activities in Regional Communities' program and its guidelines (read, institution attempt), an ArtsHub WA listing page, grants.gov.au entries and Wikipedia pages on the Islands' culture; nothing on a theatre pay agreement of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "WA Department of Creative Industries, Tourism and Sport (cits.wa.gov.au), 'Indian Ocean Territories — Arts Activities in Regional Communities Guidelines' https://www.cits.wa.gov.au/funding/creative-industries-funding/indian-ocean-territories-arts-activities-in-regional-communities/indian-ocean-territories-arts-activities-in-regional-communities-guidelines fetched (200, saved l4t/files/m20/cc-wa-iot-guidelines.html, sha256 0c108be04f6e389f14041542dcc04554bf4380d0c5e5d3dcfb732544dfdefeea) and read whole",
+     "result": "FOUND a public fund for a theatre production (item 6, see found): 2026 program funded by the Australian Government (Department of Infrastructure…) and the WA Government; up to $60,000, at most 80% of project cost; applicant's ABN/ACNC postcode must be in the IOT; excludes film and television (including 'pilots for television series'), so no series fund. On pay it names no rate of its own: 'We support appropriate rates of pay … Refer to … Media, Entertainment and Arts Alliance, Australian Society of Authors, Australian Writers' Guild' (Australia's standards, items 7 and 8); no rate of yes published on the page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ArtsHub (artshub.com.au, the Australian arts trade press) WA listing https://www.artshub.com.au/location/wa/page/99/ (the search's lead for an Indian Ocean Territories item) fetched",
+     "result": "403 Cloudflare 'Just a moment...' challenge, not got past, not read; no press item quoting a primary on Islands theatre pay, series or theatre funding was read",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Federal Register of Legislation: Fair Work Act 2009, compilation of 7 July 2026, volume 1 fetched (200, saved l4t/files/m20/cc-fwa-vol1.html, sha256 1439791db86fce8eb142913c63d06869eb398a436a2c60143aed331394b6a0b0), s.12 definition of Australia read",
+     "result": "read: 'Australia means the Commonwealth of Australia and, when used in a geographical sense, includes Norfolk Island, the Territory of Christmas Island and the Territory of Cocos (Keeling) Islands, but does not include any other external Territory.' Modern awards and enterprise agreements made under the Act therefore apply to theatre work on the Cocos (Keeling) Islands as in Australia; no instrument of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Fair Work Ombudsman's consolidated Live Performance Award 2020 [MA000081] https://awards.fairwork.gov.au/MA000081.html fetched (200, saved l4t/files/m20/cc-ma000081.html, sha256 4539651e8de71b8765a78da285b2b3de14324624014f961104f0201bae725b68) and read (amendments to 1 July 2026); the Fair Work Commission's modern awards list (fwc.gov.au) answered 403",
+     "result": "read: cl. 4.1 'This industry award covers employers throughout Australia in the live performance industry and their employees in the classifications set out in this award'; 'Australia' includes the Cocos (Keeling) Islands (Fair Work Act s.12). The award's classifications hold no stage director (only a dance company's Deputy Rehearsal Director/Rehearsal Director allowance, $136.42 a week) and no playwright; so a director's and a playwright's minimum on the Islands is whatever Australia's research finds outside this award",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for infrastructure.gov.au/…/indian-ocean-territories/governance (no snapshot; the live page refused: HTTP/2 INTERNAL_ERROR, then empty reply over HTTP/1.1); Common Crawl CC-MAIN-2026-43, -39 (no capture), -30 (22 captures: travel, bulletins, schemes; none on law) and -21 under 'au,gov,infrastructure)/territories-regions-cities/territories/indian-ocean-territories': the Department of Infrastructure's 'Indian Ocean Territories notifiable instruments and gazettes' page (capture 2026-05-17) fetched by cc.py get and read (saved l4t/files/m20/cc-cc-iot-gazettes.html, sha256 06ee028f0023190de4f34d2d49f6236c0cce43a3abc931021c5779aa7170782b)",
+     "result": "read: 'Gazette notices for the Indian Ocean Territories are published as Notifiable Instruments on the Federal Register of Legislation. Gazettes that are published by (or on behalf of) the Western Australian Government relating to the Indian Ocean Territories are available in the Western Australian Government Gazette.' The Islands' law is the Commonwealth's (and applied Western Australian law); the captured pages name no screen, theatre or performers' instrument of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 of 10 (standard): 'Cocos (Keeling) Islands arts grant performance theatre Commonwealth laws apply Fair Work award Indian Ocean Territories'",
+     "result": "led to the WA Department of Creative Industries, Tourism and Sport's 'Indian Ocean Territories — Arts Activities in Regional Communities' program and its guidelines (read, institution attempt), an ArtsHub WA listing page, grants.gov.au entries and Wikipedia pages on the Islands' culture; nothing on a theatre pay agreement of the Islands' own",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "WA Department of Creative Industries, Tourism and Sport (cits.wa.gov.au), 'Indian Ocean Territories — Arts Activities in Regional Communities Guidelines' https://www.cits.wa.gov.au/funding/creative-industries-funding/indian-ocean-territories-arts-activities-in-regional-communities/indian-ocean-territories-arts-activities-in-regional-communities-guidelines fetched (200, saved l4t/files/m20/cc-wa-iot-guidelines.html, sha256 0c108be04f6e389f14041542dcc04554bf4380d0c5e5d3dcfb732544dfdefeea) and read whole",
+     "result": "FOUND a public fund for a theatre production (item 6, see found): 2026 program funded by the Australian Government (Department of Infrastructure…) and the WA Government; up to $60,000, at most 80% of project cost; applicant's ABN/ACNC postcode must be in the IOT; excludes film and television (including 'pilots for television series'), so no series fund. On pay it names no rate of its own: 'We support appropriate rates of pay … Refer to … Media, Entertainment and Arts Alliance, Australian Society of Authors, Australian Writers' Guild' (Australia's standards, items 7 and 8); no rate of yes published on the page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ArtsHub (artshub.com.au, the Australian arts trade press) WA listing https://www.artshub.com.au/location/wa/page/99/ (the search's lead for an Indian Ocean Territories item) fetched",
+     "result": "403 Cloudflare 'Just a moment...' challenge, not got past, not read; no press item quoting a primary on Islands theatre pay, series or theatre funding was read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 6,
+    "value": {
+     "currency": "AUD",
+     "program": "Indian Ocean Territories — Arts Activities in Regional Communities 2026 (WA Department of Creative Industries, Tourism and Sport, supported by the Australian Government's Department of Infrastructure… and the WA Government)",
+     "grantMax": 60000,
+     "shareOfProjectCostMax": 0.8,
+     "otherIncomeMin": 0.2,
+     "whoMayApply": "IOT local governments; IOT organisations, groups and individuals whose ABN and/or ACNC register shows a postcode in the IOT",
+     "activitiesMustTakePlaceIn": "the Indian Ocean Territories",
+     "completeWithinMonths": 18,
+     "applicationsPerRound": 1,
+     "decisionWeeksAfterClose": 12,
+     "excludes": "film and television activities, including pilots for television series",
+     "rateOfYes": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.cits.wa.gov.au/funding/creative-industries-funding/indian-ocean-territories-arts-activities-in-regional-communities/indian-ocean-territories-arts-activities-in-regional-communities-guidelines",
+      "title": "Indian Ocean Territories — Arts Activities in Regional Communities Guidelines",
+      "read": "2026-11-04",
+      "said": "The Indian Ocean Territories Arts Activities in Regional Communities 2026 grant program provides funding for projects that support participation in, access to and creation of arts and culture in the Indian Ocean Territories of Christmas Island and Cocos Keeling Island. ... Who can apply? IOT local governments IOT organisations, groups and individuals* *The applicant's ABN and/or ACNC register must show the applicant's postcode is in the IOT ... How much can I apply for? Up to $60,000 You can request up to 80% of your total project cost. You must demonstrate at least 20% income from other sources (this can include in-kind income) or your application will be ineligible. ... Applicants will be notified of the outcome of their application approximately 12 weeks after the closing date. ... film and television activities such as: the development or production of narrative shorts or features, pilots for television series ...",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/cc-wa-iot-guidelines.html",
+      "sha256": "0c108be04f6e389f14041542dcc04554bf4380d0c5e5d3dcfb732544dfdefeea"
+     }
+    ],
+    "notes": "Not theatre-only: any arts and cultural project (workshops, festivals, new creative works, presentations), so a play qualifies as a 'creative work' or 'presentation'. The guidelines publish no count of applications or grants."
+   }
+  ],
+  "notSearched": [],
+  "notes": ""
+ },
+ "DJ": {
+  "producer": {
+   "blocker": "R-9889",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10 (standard, French): 'Djibouti IDAC théâtre troupe cachet comédiens metteur en scène rémunération convention collective artistes subvention série RTD production'",
+     "result": "nothing Djiboutian on stage pay, a theatre or series fund or RTD commissioning; leads: kormeeraha.com ?p=3716 (titled as a TV series), musicinafrica.net node 120708 (Djibouti's music industry), WIPO Lex dj005fr (a Djiboutian law PDF), africa-laws.org copy of the Code du travail; the rest French (Artcena) or salary aggregators",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Kormeeraha Magazine https://www.kormeeraha.com/?p=3716 (200, saved l4t/files/m20/dj-kormeeraha-3716.html sha256 df7a66fddb6cfc6f1819b658e68fcdfc91c6819b2e8f39aa67c64e293419298a) and Music in Africa 'Djibouti : une industrie musicale qui cherche encore ses marques' https://www.musicinafrica.net/node/120708 (200, saved dj-mia-120708.html sha256 bf911e3b21ae161be1d21b65c263cc03bbd74fe3c1a81e7c226465897488fd7d) read",
+     "result": "Kormeeraha: a 2022 political opinion piece that calls arrests 'a spectacle worthy of a television series', not a series; nothing on production. Music in Africa: 'En 2010, l'Etat a mis en place un petit fonds de développement qui a permis d'équiper les artistes en matériel et instruments de musique' (music only, no amount, no primary address); no theatre, director, playwright or actor pay, no series terms",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.dj (no snapshot); Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for 'dj,gouv,culture)/' (no capture in any), CC-MAIN-2026-43 and -39 for 'dj,idac)/' (none) and 'dj,rtd)/' (285 and 188 captures of the public broadcaster RTD); RTD's listing searched for appel, production, programme, tarif, grille, série, feuilleton, fiction; two Ministry items read from captures of 2026-10-11: 'La Ministre de la Jeunesse et de la Culture effectue une visite de prise de contact au Théâtre des salines et département de Cinématographie' (08/06/2026; saved l4t/files/m20/dj-cc-rtd-0fe59f.html, sha256 33ea0ead1ddec995cd16d7e73831f2bf780d7259e9d1fa94f8abd82466fafef4) and '… à l'Agence Nationale pour la Promotion de la Culture et Mémorial EEGA' (08/06/2026; dj-cc-rtd-agence.html, sha256 594264816ad1f9547cec427ce9b5fca0061eb343794fd9d63e45f6661c28f228)",
+     "result": "no commissioning terms, call for series, tariff or fund among RTD's captured pages; the Théâtre des Salines item carries a title and video only (no text); the ANPC item: the new Minister of Youth and Culture, Fardoussa Moussa Egueh, visited the 'Agence nationale pour la promotion de la culture (ANPC) … chargée notamment de la gestion de la Bibliothèque nationale et des Archives nationales'; no theatre fund, no pay, no series terms. The ministry now stands as 'Jeunesse et Culture' (a lead for the next institution attempt)",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10 (standard, French): 'Djibouti IDAC théâtre troupe cachet comédiens metteur en scène rémunération convention collective artistes subvention série RTD production'",
+     "result": "nothing Djiboutian on stage pay, a theatre or series fund or RTD commissioning; leads: kormeeraha.com ?p=3716 (titled as a TV series), musicinafrica.net node 120708 (Djibouti's music industry), WIPO Lex dj005fr (a Djiboutian law PDF), africa-laws.org copy of the Code du travail; the rest French (Artcena) or salary aggregators",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Kormeeraha Magazine https://www.kormeeraha.com/?p=3716 (200, saved l4t/files/m20/dj-kormeeraha-3716.html sha256 df7a66fddb6cfc6f1819b658e68fcdfc91c6819b2e8f39aa67c64e293419298a) and Music in Africa 'Djibouti : une industrie musicale qui cherche encore ses marques' https://www.musicinafrica.net/node/120708 (200, saved dj-mia-120708.html sha256 bf911e3b21ae161be1d21b65c263cc03bbd74fe3c1a81e7c226465897488fd7d) read",
+     "result": "Kormeeraha: a 2022 political opinion piece that calls arrests 'a spectacle worthy of a television series', not a series; nothing on production. Music in Africa: 'En 2010, l'Etat a mis en place un petit fonds de développement qui a permis d'équiper les artistes en matériel et instruments de musique' (music only, no amount, no primary address); no theatre, director, playwright or actor pay, no series terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.dj (no snapshot); Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for 'dj,gouv,culture)/' (no capture in any), CC-MAIN-2026-43 and -39 for 'dj,idac)/' (none) and 'dj,rtd)/' (285 and 188 captures of the public broadcaster RTD); RTD's listing searched for appel, production, programme, tarif, grille, série, feuilleton, fiction; two Ministry items read from captures of 2026-10-11: 'La Ministre de la Jeunesse et de la Culture effectue une visite de prise de contact au Théâtre des salines et département de Cinématographie' (08/06/2026; saved l4t/files/m20/dj-cc-rtd-0fe59f.html, sha256 33ea0ead1ddec995cd16d7e73831f2bf780d7259e9d1fa94f8abd82466fafef4) and '… à l'Agence Nationale pour la Promotion de la Culture et Mémorial EEGA' (08/06/2026; dj-cc-rtd-agence.html, sha256 594264816ad1f9547cec427ce9b5fca0061eb343794fd9d63e45f6661c28f228)",
+     "result": "no commissioning terms, call for series, tariff or fund among RTD's captured pages; the Théâtre des Salines item carries a title and video only (no text); the ANPC item: the new Minister of Youth and Culture, Fardoussa Moussa Egueh, visited the 'Agence nationale pour la promotion de la culture (ANPC) … chargée notamment de la gestion de la Bibliothèque nationale et des Archives nationales'; no theatre fund, no pay, no series terms. The ministry now stands as 'Jeunesse et Culture' (a lead for the next institution attempt)",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10 (standard, French): 'Djibouti IDAC théâtre troupe cachet comédiens metteur en scène rémunération convention collective artistes subvention série RTD production'",
+     "result": "nothing Djiboutian on stage pay, a theatre or series fund or RTD commissioning; leads: kormeeraha.com ?p=3716 (titled as a TV series), musicinafrica.net node 120708 (Djibouti's music industry), WIPO Lex dj005fr (a Djiboutian law PDF), africa-laws.org copy of the Code du travail; the rest French (Artcena) or salary aggregators",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Kormeeraha Magazine https://www.kormeeraha.com/?p=3716 (200, saved l4t/files/m20/dj-kormeeraha-3716.html sha256 df7a66fddb6cfc6f1819b658e68fcdfc91c6819b2e8f39aa67c64e293419298a) and Music in Africa 'Djibouti : une industrie musicale qui cherche encore ses marques' https://www.musicinafrica.net/node/120708 (200, saved dj-mia-120708.html sha256 bf911e3b21ae161be1d21b65c263cc03bbd74fe3c1a81e7c226465897488fd7d) read",
+     "result": "Kormeeraha: a 2022 political opinion piece that calls arrests 'a spectacle worthy of a television series', not a series; nothing on production. Music in Africa: 'En 2010, l'Etat a mis en place un petit fonds de développement qui a permis d'équiper les artistes en matériel et instruments de musique' (music only, no amount, no primary address); no theatre, director, playwright or actor pay, no series terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.dj (no snapshot); Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for 'dj,gouv,culture)/' (no capture in any), CC-MAIN-2026-43 and -39 for 'dj,idac)/' (none) and 'dj,rtd)/' (285 and 188 captures of the public broadcaster RTD); RTD's listing searched for appel, production, programme, tarif, grille, série, feuilleton, fiction; two Ministry items read from captures of 2026-10-11: 'La Ministre de la Jeunesse et de la Culture effectue une visite de prise de contact au Théâtre des salines et département de Cinématographie' (08/06/2026; saved l4t/files/m20/dj-cc-rtd-0fe59f.html, sha256 33ea0ead1ddec995cd16d7e73831f2bf780d7259e9d1fa94f8abd82466fafef4) and '… à l'Agence Nationale pour la Promotion de la Culture et Mémorial EEGA' (08/06/2026; dj-cc-rtd-agence.html, sha256 594264816ad1f9547cec427ce9b5fca0061eb343794fd9d63e45f6661c28f228)",
+     "result": "no commissioning terms, call for series, tariff or fund among RTD's captured pages; the Théâtre des Salines item carries a title and video only (no text); the ANPC item: the new Minister of Youth and Culture, Fardoussa Moussa Egueh, visited the 'Agence nationale pour la promotion de la culture (ANPC) … chargée notamment de la gestion de la Bibliothèque nationale et des Archives nationales'; no theatre fund, no pay, no series terms. The ministry now stands as 'Jeunesse et Culture' (a lead for the next institution attempt)",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10 (standard, French): 'Djibouti IDAC théâtre troupe cachet comédiens metteur en scène rémunération convention collective artistes subvention série RTD production'",
+     "result": "nothing Djiboutian on stage pay, a theatre or series fund or RTD commissioning; leads: kormeeraha.com ?p=3716 (titled as a TV series), musicinafrica.net node 120708 (Djibouti's music industry), WIPO Lex dj005fr (a Djiboutian law PDF), africa-laws.org copy of the Code du travail; the rest French (Artcena) or salary aggregators",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Kormeeraha Magazine https://www.kormeeraha.com/?p=3716 (200, saved l4t/files/m20/dj-kormeeraha-3716.html sha256 df7a66fddb6cfc6f1819b658e68fcdfc91c6819b2e8f39aa67c64e293419298a) and Music in Africa 'Djibouti : une industrie musicale qui cherche encore ses marques' https://www.musicinafrica.net/node/120708 (200, saved dj-mia-120708.html sha256 bf911e3b21ae161be1d21b65c263cc03bbd74fe3c1a81e7c226465897488fd7d) read",
+     "result": "Kormeeraha: a 2022 political opinion piece that calls arrests 'a spectacle worthy of a television series', not a series; nothing on production. Music in Africa: 'En 2010, l'Etat a mis en place un petit fonds de développement qui a permis d'équiper les artistes en matériel et instruments de musique' (music only, no amount, no primary address); no theatre, director, playwright or actor pay, no series terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.dj (no snapshot); Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for 'dj,gouv,culture)/' (no capture in any), CC-MAIN-2026-43 and -39 for 'dj,idac)/' (none) and 'dj,rtd)/' (285 and 188 captures of the public broadcaster RTD); RTD's listing searched for appel, production, programme, tarif, grille, série, feuilleton, fiction; two Ministry items read from captures of 2026-10-11: 'La Ministre de la Jeunesse et de la Culture effectue une visite de prise de contact au Théâtre des salines et département de Cinématographie' (08/06/2026; saved l4t/files/m20/dj-cc-rtd-0fe59f.html, sha256 33ea0ead1ddec995cd16d7e73831f2bf780d7259e9d1fa94f8abd82466fafef4) and '… à l'Agence Nationale pour la Promotion de la Culture et Mémorial EEGA' (08/06/2026; dj-cc-rtd-agence.html, sha256 594264816ad1f9547cec427ce9b5fca0061eb343794fd9d63e45f6661c28f228)",
+     "result": "no commissioning terms, call for series, tariff or fund among RTD's captured pages; the Théâtre des Salines item carries a title and video only (no text); the ANPC item: the new Minister of Youth and Culture, Fardoussa Moussa Egueh, visited the 'Agence nationale pour la promotion de la culture (ANPC) … chargée notamment de la gestion de la Bibliothèque nationale et des Archives nationales'; no theatre fund, no pay, no series terms. The ministry now stands as 'Jeunesse et Culture' (a lead for the next institution attempt)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "GE": {
+  "producer": {
+   "blocker": "R-9922",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'ge,gnfc)/' (74 captures of the Georgian National Film Center) filtered for series, grants and competition pages; the news item 'კონკურსების გამოცხადების თარიღები' (competition dates, posted 2025-08-04; capture 2026-10-06) fetched by cc.py get (first try refused by the data host, second read; saved l4t/files/m20/ge-cc-gnfc-dates.html, sha256 b9d09e00678b99ebcc6bbcda3a250d67de0a2c1097289d5bb529da2d0ab42d89); CC-MAIN-2026-43, -39, -30, -21 for 'ge,gov,mcs)/' (no capture) and Wayback availability for mcs.gov.ge (last snapshot 2023-06-14, older than the 2025 funding order, not used)",
+     "result": "read: the Film Center's September 2025 calls are four, all films: short fiction (total GEL 500,000), short animation (GEL 600,000), feature fiction (GEL 2,000,000), feature co-production (GEL 2,000,000); no series call announced, no producer-fee cap, no pick-up count",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Civil Georgia (civil.ge) site search 'film center' read (saved l4t/files/m20/ge-civil-search3.html) and the article 'Georgian Director Accuses National Film Center of Attempts to Obstruct Film's Premiere at Locarno' (20/08/2026) https://civil.ge/archives/748483 read (200, saved ge-civil-748483.html, sha256 9c8eb29cff9338e13b1a8c53d8d68e1cd59f86ff753b00bbffa51294cc1cef7f)",
+     "result": "read: the director says, quoting his 19 August Facebook post, that the Film Center 'withheld half of the funding' awarded in 2022 to a fiction feature and warned of a financial penalty if it was screened; about a film, not a series; nothing on series funding, a fee cap or theatre",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Legislative Herald of Georgia (matsne.gov.ge) title search for 'თეატრ' (336 documents, main versions: mostly ministerial orders approving state theatres' statutes) and for 'თეატრების შესახებ' (15: the Law 'პროფესიული თეატრების შესახებ' (On Professional Theatres) and its amendments, the repealed laws on state theatres and on Georgia's theatres); the Law On Professional Theatres, consolidated final version https://matsne.gov.ge/ka/document/view/1900035 (200, saved l4t/files/m20/ge-law-proftheatres-latest.html, sha256 5d7fa7a77a3a08f6d30e8cfc847dc163cdf8a50e1eeaf42bd6880311d314ea25; latest date in the text 18/12/2025) read",
+     "result": "read: the theatre's head 'საქართველოს კანონმდებლობით დადგენილი წესით განსაზღვრავს თეატრის საშტატო ნუსხას და საშტატო ერთეულების რაოდენობას, სახელფასო განაკვეთს და თეატრალური საქმიანობის წახალისების ფორმებს' (sets the staff list, the wage rates and forms of reward under Georgian law), concludes fixed-term labour contracts with members of the creative company and, where needed, with invited specialists (a guest director or writer); the Law sets no minimum fee, rate or royalty for a stage director, playwright or actor and names no collective agreement. No collective agreement for theatre was found on the register (Georgia publishes none there)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture of Georgia, new site https://www.culture.gov.ge/ (200, a script-only shell, saved l4t/files/m20/ge-culture-home.html) and its API https://culture.gov.ge/api/v1/pages?per_page=500 (200, all 8 pages, saved ge-culture-api-pages.json, sha256 13ef9a7722aae84d7985ecefda9608294bd32cb9a9a3087cc35c721232011465) read, page 6 'კულტურის ხელშეწყობისა და საერთაშორისო კულტურული ურთიერთობების მხარდაჭერის პროგრამა' whole",
+     "result": "read: the programme names 'ქართული თეატრისა და თეატრალური ხელოვნების განვითარების ხელშეწყობა' (support for Georgian theatre) as a priority and applies Minister's order №05/09 of 20 May 2025 (projects funded competitively or not); it sets no fee or minimum for a stage director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard, Georgian): 'თეატრის მსახიობების ხელფასი რეჟისორის ჰონორარი დრამატურგის ჰონორარი სახელმწიფო თეატრი ლარი'",
+     "result": "no figures; led to matsne.gov.ge statutes of state drama theatres (documents 93274, 93292, 93256, 93262, 93280: Gori, Ozurgeti, Chiatura, Kutaisi, Senaki), a 1950 National Library PDF on actors' training and the Georgian encyclopedia; the statutes set structure, not pay amounts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "InterPressNews site search https://www.interpressnews.ge/ka/search/?q=თეატრის მსახიობების ხელფასი (200, saved l4t/files/m20/ge-ipn-search.html: the page returns the latest news, not search results); Civil Georgia site searches 'theatre actors salaries' and 'theatre' read (saved ge-civil-search.html, ge-civil-search2.html)",
+     "result": "no article on stage pay: Civil Georgia's theatre items are on protests and cancellations (actors leaving the Vaso Abashidze Theatre, a Batumi play cancelled); no press item quoting a fee, wage scale or agreement for a director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21 for 'ge,gov,mcs)/' (the former culture-ministry domain the earlier institution attempt found refused: no capture in any) and CC-MAIN-2026-43 for 'ge,gov,culture)/' (6 captures; the home page of 2026-10-15 read: a script-only shell, saved l4t/files/m20/ge-cc-culture-home.html sha256 871c5a03f083ae4f3eb7eba5f96b78032a523da30b7a47ef5e6cb85c9d184328; the others two concert events and a strategy news item); Wayback availability for mcs.gov.ge (2023-06-14 only, before the 2025 order)",
+     "result": "no theatre pay page captured; nothing for a director's, playwright's or actor's minimum",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Legislative Herald of Georgia (matsne.gov.ge) title search for 'თეატრ' (336 documents, main versions: mostly ministerial orders approving state theatres' statutes) and for 'თეატრების შესახებ' (15: the Law 'პროფესიული თეატრების შესახებ' (On Professional Theatres) and its amendments, the repealed laws on state theatres and on Georgia's theatres); the Law On Professional Theatres, consolidated final version https://matsne.gov.ge/ka/document/view/1900035 (200, saved l4t/files/m20/ge-law-proftheatres-latest.html, sha256 5d7fa7a77a3a08f6d30e8cfc847dc163cdf8a50e1eeaf42bd6880311d314ea25; latest date in the text 18/12/2025) read",
+     "result": "read: the theatre's head 'საქართველოს კანონმდებლობით დადგენილი წესით განსაზღვრავს თეატრის საშტატო ნუსხას და საშტატო ერთეულების რაოდენობას, სახელფასო განაკვეთს და თეატრალური საქმიანობის წახალისების ფორმებს' (sets the staff list, the wage rates and forms of reward under Georgian law), concludes fixed-term labour contracts with members of the creative company and, where needed, with invited specialists (a guest director or writer); the Law sets no minimum fee, rate or royalty for a stage director, playwright or actor and names no collective agreement. No collective agreement for theatre was found on the register (Georgia publishes none there)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture of Georgia, new site https://www.culture.gov.ge/ (200, a script-only shell, saved l4t/files/m20/ge-culture-home.html) and its API https://culture.gov.ge/api/v1/pages?per_page=500 (200, all 8 pages, saved ge-culture-api-pages.json, sha256 13ef9a7722aae84d7985ecefda9608294bd32cb9a9a3087cc35c721232011465) read, page 6 'კულტურის ხელშეწყობისა და საერთაშორისო კულტურული ურთიერთობების მხარდაჭერის პროგრამა' whole",
+     "result": "read: the programme names 'ქართული თეატრისა და თეატრალური ხელოვნების განვითარების ხელშეწყობა' (support for Georgian theatre) as a priority and applies Minister's order №05/09 of 20 May 2025 (projects funded competitively or not); it sets no fee or minimum for a stage director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard, Georgian): 'თეატრის მსახიობების ხელფასი რეჟისორის ჰონორარი დრამატურგის ჰონორარი სახელმწიფო თეატრი ლარი'",
+     "result": "no figures; led to matsne.gov.ge statutes of state drama theatres (documents 93274, 93292, 93256, 93262, 93280: Gori, Ozurgeti, Chiatura, Kutaisi, Senaki), a 1950 National Library PDF on actors' training and the Georgian encyclopedia; the statutes set structure, not pay amounts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "InterPressNews site search https://www.interpressnews.ge/ka/search/?q=თეატრის მსახიობების ხელფასი (200, saved l4t/files/m20/ge-ipn-search.html: the page returns the latest news, not search results); Civil Georgia site searches 'theatre actors salaries' and 'theatre' read (saved ge-civil-search.html, ge-civil-search2.html)",
+     "result": "no article on stage pay: Civil Georgia's theatre items are on protests and cancellations (actors leaving the Vaso Abashidze Theatre, a Batumi play cancelled); no press item quoting a fee, wage scale or agreement for a director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21 for 'ge,gov,mcs)/' (the former culture-ministry domain the earlier institution attempt found refused: no capture in any) and CC-MAIN-2026-43 for 'ge,gov,culture)/' (6 captures; the home page of 2026-10-15 read: a script-only shell, saved l4t/files/m20/ge-cc-culture-home.html sha256 871c5a03f083ae4f3eb7eba5f96b78032a523da30b7a47ef5e6cb85c9d184328; the others two concert events and a strategy news item); Wayback availability for mcs.gov.ge (2023-06-14 only, before the 2025 order)",
+     "result": "no theatre pay page captured; nothing for a director's, playwright's or actor's minimum",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Legislative Herald of Georgia (matsne.gov.ge) title search for 'თეატრ' (336 documents, main versions: mostly ministerial orders approving state theatres' statutes) and for 'თეატრების შესახებ' (15: the Law 'პროფესიული თეატრების შესახებ' (On Professional Theatres) and its amendments, the repealed laws on state theatres and on Georgia's theatres); the Law On Professional Theatres, consolidated final version https://matsne.gov.ge/ka/document/view/1900035 (200, saved l4t/files/m20/ge-law-proftheatres-latest.html, sha256 5d7fa7a77a3a08f6d30e8cfc847dc163cdf8a50e1eeaf42bd6880311d314ea25; latest date in the text 18/12/2025) read",
+     "result": "read: the theatre's head 'საქართველოს კანონმდებლობით დადგენილი წესით განსაზღვრავს თეატრის საშტატო ნუსხას და საშტატო ერთეულების რაოდენობას, სახელფასო განაკვეთს და თეატრალური საქმიანობის წახალისების ფორმებს' (sets the staff list, the wage rates and forms of reward under Georgian law), concludes fixed-term labour contracts with members of the creative company and, where needed, with invited specialists (a guest director or writer); the Law sets no minimum fee, rate or royalty for a stage director, playwright or actor and names no collective agreement. No collective agreement for theatre was found on the register (Georgia publishes none there)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture of Georgia, new site https://www.culture.gov.ge/ (200, a script-only shell, saved l4t/files/m20/ge-culture-home.html) and its API https://culture.gov.ge/api/v1/pages?per_page=500 (200, all 8 pages, saved ge-culture-api-pages.json, sha256 13ef9a7722aae84d7985ecefda9608294bd32cb9a9a3087cc35c721232011465) read, page 6 'კულტურის ხელშეწყობისა და საერთაშორისო კულტურული ურთიერთობების მხარდაჭერის პროგრამა' whole",
+     "result": "read: the programme names 'ქართული თეატრისა და თეატრალური ხელოვნების განვითარების ხელშეწყობა' (support for Georgian theatre) as a priority and applies Minister's order №05/09 of 20 May 2025 (projects funded competitively or not); it sets no fee or minimum for a stage director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard, Georgian): 'თეატრის მსახიობების ხელფასი რეჟისორის ჰონორარი დრამატურგის ჰონორარი სახელმწიფო თეატრი ლარი'",
+     "result": "no figures; led to matsne.gov.ge statutes of state drama theatres (documents 93274, 93292, 93256, 93262, 93280: Gori, Ozurgeti, Chiatura, Kutaisi, Senaki), a 1950 National Library PDF on actors' training and the Georgian encyclopedia; the statutes set structure, not pay amounts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "InterPressNews site search https://www.interpressnews.ge/ka/search/?q=თეატრის მსახიობების ხელფასი (200, saved l4t/files/m20/ge-ipn-search.html: the page returns the latest news, not search results); Civil Georgia site searches 'theatre actors salaries' and 'theatre' read (saved ge-civil-search.html, ge-civil-search2.html)",
+     "result": "no article on stage pay: Civil Georgia's theatre items are on protests and cancellations (actors leaving the Vaso Abashidze Theatre, a Batumi play cancelled); no press item quoting a fee, wage scale or agreement for a director, playwright or actor",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21 for 'ge,gov,mcs)/' (the former culture-ministry domain the earlier institution attempt found refused: no capture in any) and CC-MAIN-2026-43 for 'ge,gov,culture)/' (6 captures; the home page of 2026-10-15 read: a script-only shell, saved l4t/files/m20/ge-cc-culture-home.html sha256 871c5a03f083ae4f3eb7eba5f96b78032a523da30b7a47ef5e6cb85c9d184328; the others two concert events and a strategy news item); Wayback availability for mcs.gov.ge (2023-06-14 only, before the 2025 order)",
+     "result": "no theatre pay page captured; nothing for a director's, playwright's or actor's minimum",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "HT": {
+  "producer": {
+   "blocker": "R-9955",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Le Moniteur, the official gazette (https://www.lemoniteur.gouv.ht/, https://lemoniteur.gouv.ht/), and the Ministry of Social Affairs and Labour (mast.gouv.ht, www.mast.gouv.ht): each a proxy CONNECT 502; ILO NATLEX search for Haiti and NORMLEX country profile: 403 Cloudflare block; WIPO Lex member profile for Haiti https://www.wipo.int/wipolex/en/members/profile/HT (200, saved l4t/files/m20/ht-wipolex-profile.html, sha256 17f38d403e915337f148bba07da4491e59e2aae3fa627b29d9f0dcffaf96dacf) read",
+     "result": "the gazette and the labour ministry did not answer; NATLEX blocked; WIPO Lex holds five Haitian texts: the Copyright Decree of 12 October 2005, the BHDA decree of the same day, the 1954 trademark law, the 1922 patent law and the Penal Code; none is a film, television or theatre incentive, fund or pay rule (the copyright decree's art. 37 representation contract, already read in the earlier round, sets no royalty minimum)",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10 (standard, French): 'Haïti théâtre comédiens cachet metteur en scène auteur dramatique rémunération Ministère de la Culture subvention troupe série télévisée production FOKAL'",
+     "result": "no rate, agreement or minimum for a stage director, playwright or actor; no state theatre or series fund; leads: FOKAL's grants and the Quatre Chemins festival (a private foundation), HaitiLibre news 36445 (FOKAL call for projects) and 36181 (the 'Kiskey'Art' call), AFD's 'Tanbou' culture-sector support press release, CS Monitor 2023 on theatre amid gang violence",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "HaitiLibre 'Haiti - Subsidies : Call for cultural and creative projects' (17/04/2022) https://www.haitilibre.com/en/news-36445-haiti-subsidies-call-for-cultural-and-creative-projects.html fetched (200, saved l4t/files/m20/ht-haitilibre-36445.html, sha256 9a716d321d2f53aab483fd944ca09c8129379e0edbfde2d932ed8a35dd6c0f1d) and read whole; it quotes FOKAL's call at https://fokal.org/index.php/artnculture-2022-appel",
+     "result": "read: 'Since 1995, the Knowledge and Freedom Foundation (FOKAL) has supported … cultural and artistic action in Haiti through … an annual call for projects … The maximum amount for projects is 15,000 US dollars'; 2022 call, private foundation (not a public fund), no theatre-specific range, no rate of yes, nothing on a director's, playwright's or actor's pay or on series. A lead only for item 6 (dated, private)",
+     "date": "2026-11-04",
+     "items": [
+      "stage.fund",
+      "series.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Le Moniteur, the official gazette (https://www.lemoniteur.gouv.ht/, https://lemoniteur.gouv.ht/), and the Ministry of Social Affairs and Labour (mast.gouv.ht, www.mast.gouv.ht): each a proxy CONNECT 502; ILO NATLEX search for Haiti and NORMLEX country profile: 403 Cloudflare block; WIPO Lex member profile for Haiti https://www.wipo.int/wipolex/en/members/profile/HT (200, saved l4t/files/m20/ht-wipolex-profile.html, sha256 17f38d403e915337f148bba07da4491e59e2aae3fa627b29d9f0dcffaf96dacf) read",
+     "result": "the gazette and the labour ministry did not answer; NATLEX blocked; WIPO Lex holds five Haitian texts: the Copyright Decree of 12 October 2005, the BHDA decree of the same day, the 1954 trademark law, the 1922 patent law and the Penal Code; none is a film, television or theatre incentive, fund or pay rule (the copyright decree's art. 37 representation contract, already read in the earlier round, sets no royalty minimum)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'ht,gouv,mcc)/' (culture ministry: no capture), 'ht,gouv,lemoniteur)/' (gazette: none), 'ht,tnh)/' (Théâtre National d'Haïti's domain: 37 captures, all spam job pages, 404: the domain no longer the theatre's) and 'ht,gouv,bhda)/' (19 captures of the copyright bureau, Oct 2026); BHDA pages read from the captures: 'Participation au festival 4 Chemins' (ht-cc-bhda-edf99e.html, sha256 1785840c48f9d75614a2530daa580b28d62447c0c0bd5c7bc16bc464f69243ac), 'Devenir membre' (ht-cc-bhda-f1031d.html, sha256 db511ba71ed57fc132ffcf71549877e86effbbed349900bdeed71b011e2eeb6b), 'Droit d'auteur' (ht-cc-bhda-fe9298.html, sha256 130c63cadd4c0cfedf9bf29d93eb9f0dba90216a1e9ab05bd2e7d15924f26e78); the earlier round's Wayback try (429) not repeated",
+     "result": "read: the BHDA registers works and manages members' rights (membership benefits: registration, rights management, training, free consultation) and took part in the 22nd Festival 4 Chemins; it publishes no tariff, royalty rate or fee for a playwright, director or actor on the captured pages; no culture-ministry or theatre page captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10 (standard, French): 'Haïti théâtre comédiens cachet metteur en scène auteur dramatique rémunération Ministère de la Culture subvention troupe série télévisée production FOKAL'",
+     "result": "no rate, agreement or minimum for a stage director, playwright or actor; no state theatre or series fund; leads: FOKAL's grants and the Quatre Chemins festival (a private foundation), HaitiLibre news 36445 (FOKAL call for projects) and 36181 (the 'Kiskey'Art' call), AFD's 'Tanbou' culture-sector support press release, CS Monitor 2023 on theatre amid gang violence",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "HaitiLibre 'Haiti - Subsidies : Call for cultural and creative projects' (17/04/2022) https://www.haitilibre.com/en/news-36445-haiti-subsidies-call-for-cultural-and-creative-projects.html fetched (200, saved l4t/files/m20/ht-haitilibre-36445.html, sha256 9a716d321d2f53aab483fd944ca09c8129379e0edbfde2d932ed8a35dd6c0f1d) and read whole; it quotes FOKAL's call at https://fokal.org/index.php/artnculture-2022-appel",
+     "result": "read: 'Since 1995, the Knowledge and Freedom Foundation (FOKAL) has supported … cultural and artistic action in Haiti through … an annual call for projects … The maximum amount for projects is 15,000 US dollars'; 2022 call, private foundation (not a public fund), no theatre-specific range, no rate of yes, nothing on a director's, playwright's or actor's pay or on series. A lead only for item 6 (dated, private)",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Le Moniteur, the official gazette (https://www.lemoniteur.gouv.ht/, https://lemoniteur.gouv.ht/), and the Ministry of Social Affairs and Labour (mast.gouv.ht, www.mast.gouv.ht): each a proxy CONNECT 502; ILO NATLEX search for Haiti and NORMLEX country profile: 403 Cloudflare block; WIPO Lex member profile for Haiti https://www.wipo.int/wipolex/en/members/profile/HT (200, saved l4t/files/m20/ht-wipolex-profile.html, sha256 17f38d403e915337f148bba07da4491e59e2aae3fa627b29d9f0dcffaf96dacf) read",
+     "result": "the gazette and the labour ministry did not answer; NATLEX blocked; WIPO Lex holds five Haitian texts: the Copyright Decree of 12 October 2005, the BHDA decree of the same day, the 1954 trademark law, the 1922 patent law and the Penal Code; none is a film, television or theatre incentive, fund or pay rule (the copyright decree's art. 37 representation contract, already read in the earlier round, sets no royalty minimum)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'ht,gouv,mcc)/' (culture ministry: no capture), 'ht,gouv,lemoniteur)/' (gazette: none), 'ht,tnh)/' (Théâtre National d'Haïti's domain: 37 captures, all spam job pages, 404: the domain no longer the theatre's) and 'ht,gouv,bhda)/' (19 captures of the copyright bureau, Oct 2026); BHDA pages read from the captures: 'Participation au festival 4 Chemins' (ht-cc-bhda-edf99e.html, sha256 1785840c48f9d75614a2530daa580b28d62447c0c0bd5c7bc16bc464f69243ac), 'Devenir membre' (ht-cc-bhda-f1031d.html, sha256 db511ba71ed57fc132ffcf71549877e86effbbed349900bdeed71b011e2eeb6b), 'Droit d'auteur' (ht-cc-bhda-fe9298.html, sha256 130c63cadd4c0cfedf9bf29d93eb9f0dba90216a1e9ab05bd2e7d15924f26e78); the earlier round's Wayback try (429) not repeated",
+     "result": "read: the BHDA registers works and manages members' rights (membership benefits: registration, rights management, training, free consultation) and took part in the 22nd Festival 4 Chemins; it publishes no tariff, royalty rate or fee for a playwright, director or actor on the captured pages; no culture-ministry or theatre page captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10 (standard, French): 'Haïti théâtre comédiens cachet metteur en scène auteur dramatique rémunération Ministère de la Culture subvention troupe série télévisée production FOKAL'",
+     "result": "no rate, agreement or minimum for a stage director, playwright or actor; no state theatre or series fund; leads: FOKAL's grants and the Quatre Chemins festival (a private foundation), HaitiLibre news 36445 (FOKAL call for projects) and 36181 (the 'Kiskey'Art' call), AFD's 'Tanbou' culture-sector support press release, CS Monitor 2023 on theatre amid gang violence",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "HaitiLibre 'Haiti - Subsidies : Call for cultural and creative projects' (17/04/2022) https://www.haitilibre.com/en/news-36445-haiti-subsidies-call-for-cultural-and-creative-projects.html fetched (200, saved l4t/files/m20/ht-haitilibre-36445.html, sha256 9a716d321d2f53aab483fd944ca09c8129379e0edbfde2d932ed8a35dd6c0f1d) and read whole; it quotes FOKAL's call at https://fokal.org/index.php/artnculture-2022-appel",
+     "result": "read: 'Since 1995, the Knowledge and Freedom Foundation (FOKAL) has supported … cultural and artistic action in Haiti through … an annual call for projects … The maximum amount for projects is 15,000 US dollars'; 2022 call, private foundation (not a public fund), no theatre-specific range, no rate of yes, nothing on a director's, playwright's or actor's pay or on series. A lead only for item 6 (dated, private)",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Le Moniteur, the official gazette (https://www.lemoniteur.gouv.ht/, https://lemoniteur.gouv.ht/), and the Ministry of Social Affairs and Labour (mast.gouv.ht, www.mast.gouv.ht): each a proxy CONNECT 502; ILO NATLEX search for Haiti and NORMLEX country profile: 403 Cloudflare block; WIPO Lex member profile for Haiti https://www.wipo.int/wipolex/en/members/profile/HT (200, saved l4t/files/m20/ht-wipolex-profile.html, sha256 17f38d403e915337f148bba07da4491e59e2aae3fa627b29d9f0dcffaf96dacf) read",
+     "result": "the gazette and the labour ministry did not answer; NATLEX blocked; WIPO Lex holds five Haitian texts: the Copyright Decree of 12 October 2005, the BHDA decree of the same day, the 1954 trademark law, the 1922 patent law and the Penal Code; none is a film, television or theatre incentive, fund or pay rule (the copyright decree's art. 37 representation contract, already read in the earlier round, sets no royalty minimum)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'ht,gouv,mcc)/' (culture ministry: no capture), 'ht,gouv,lemoniteur)/' (gazette: none), 'ht,tnh)/' (Théâtre National d'Haïti's domain: 37 captures, all spam job pages, 404: the domain no longer the theatre's) and 'ht,gouv,bhda)/' (19 captures of the copyright bureau, Oct 2026); BHDA pages read from the captures: 'Participation au festival 4 Chemins' (ht-cc-bhda-edf99e.html, sha256 1785840c48f9d75614a2530daa580b28d62447c0c0bd5c7bc16bc464f69243ac), 'Devenir membre' (ht-cc-bhda-f1031d.html, sha256 db511ba71ed57fc132ffcf71549877e86effbbed349900bdeed71b011e2eeb6b), 'Droit d'auteur' (ht-cc-bhda-fe9298.html, sha256 130c63cadd4c0cfedf9bf29d93eb9f0dba90216a1e9ab05bd2e7d15924f26e78); the earlier round's Wayback try (429) not repeated",
+     "result": "read: the BHDA registers works and manages members' rights (membership benefits: registration, rights management, training, free consultation) and took part in the 22nd Festival 4 Chemins; it publishes no tariff, royalty rate or fee for a playwright, director or actor on the captured pages; no culture-ministry or theatre page captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10 (standard, French): 'Haïti théâtre comédiens cachet metteur en scène auteur dramatique rémunération Ministère de la Culture subvention troupe série télévisée production FOKAL'",
+     "result": "no rate, agreement or minimum for a stage director, playwright or actor; no state theatre or series fund; leads: FOKAL's grants and the Quatre Chemins festival (a private foundation), HaitiLibre news 36445 (FOKAL call for projects) and 36181 (the 'Kiskey'Art' call), AFD's 'Tanbou' culture-sector support press release, CS Monitor 2023 on theatre amid gang violence",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "HaitiLibre 'Haiti - Subsidies : Call for cultural and creative projects' (17/04/2022) https://www.haitilibre.com/en/news-36445-haiti-subsidies-call-for-cultural-and-creative-projects.html fetched (200, saved l4t/files/m20/ht-haitilibre-36445.html, sha256 9a716d321d2f53aab483fd944ca09c8129379e0edbfde2d932ed8a35dd6c0f1d) and read whole; it quotes FOKAL's call at https://fokal.org/index.php/artnculture-2022-appel",
+     "result": "read: 'Since 1995, the Knowledge and Freedom Foundation (FOKAL) has supported … cultural and artistic action in Haiti through … an annual call for projects … The maximum amount for projects is 15,000 US dollars'; 2022 call, private foundation (not a public fund), no theatre-specific range, no rate of yes, nothing on a director's, playwright's or actor's pay or on series. A lead only for item 6 (dated, private)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "KM": {
+  "producer": {
+   "blocker": "R-9988",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "WIPO Lex member profile for the Comoros https://www.wipo.int/wipolex/en/members/profile/KM (200, saved l4t/files/m20/km-wipolex-profile.html, sha256 8ebf788da295c22704fb4826e799aea83c91ec2bf794b75423cf977fe4c3b57f; 11 texts: French-era IP laws, the 2015 Customs Code, the 1995 Public Health Code, the Constitution, the Penal Code) and its copy of the Loi du 11 mars 1957 sur la propriété littéraire et artistique, 'rendue applicable aux Comores par arrêté du 8 avril 1957' https://www.wipo.int/wipolex/en/legislation/details/8839 (200, saved km-wipolex-8839.html, sha256 f97d34054d82c560535d9ca6800c8003f7696c39047d1215397685224420e9ac) read (arts. 35, 43, 44); the National Assembly (www.assemblee.km) proxy CONNECT 502; the Presidency https://beit-salam.km/ (200; news, no texts register)",
+     "result": "read: no production incentive, fund, labour-code minimum or theatre pay text among the Comoros' texts on WIPO Lex. For a playwright (item 8): art. 35 'Elle doit comporter au profit de l'auteur la participation proportionnelle aux recettes provenant de la vente ou de l'exploitation' (a flat fee only in listed cases); art. 44 'Le contrat de représentation est conclu pour une durée limitée ou pour un nombre déterminé de communications au public … La validité des droits exclusifs accordés par un auteur dramatique ne peux excéder cinq années; l'interruption des représentations au cours de deux années consécutives y met fin de plein droit.' No rate or minimum. Nothing for a director or actor; nothing for a series or theatre fund",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.km (no snapshot) and gouvernement.km (latest 2019-07-09, older than the rules in force; not used); Common Crawl CC-MAIN-2026-43 and -39 for 'km,gouv,culture)/' and 'km,gouvernement)/' (no capture in either), -43 for 'km,gouv,mcia)/' (none) and 'km,ortc)/' (14 captures of 2026-10-09 listed: home, the international-cooperation department, two programme pages, and spam casino and diet posts placed on the broadcaster's site)",
+     "result": "no culture-ministry or government page captured in 2025-26; ORTC's captures hold no commissioning call, tariff or production terms (the live ORTC site, read today, carries template placeholder text on its 'À propos' and 'Services' pages); nothing for a series, a theatre fund or stage pay",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard, French): 'Comores théâtre troupe comédiens rémunération ministère de la Culture subvention festival théâtre Moroni série télévisée ORTC production'",
+     "result": "nothing on the Comoros: the results were Moroccan theatre subsidies (aujourdhui.ma, telquel, le360, medias24), French and Québec theatre journals; no Comorian troupe, fee, fund, series or ORTC production terms",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al-Watwan (the Comoros' daily, alwatwan.net): site search https://alwatwan.net/?s=théâtre (HTTP 500, empty), home page (timed out after 60 s); Common Crawl CC-MAIN-2026-43 and -39 for 'net,alwatwan)/' (robots.txt only, answered 403 to the crawler: no article captured)",
+     "result": "not read: no Comorian press item on theatre pay, a theatre fund or a series could be reached",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "WIPO Lex member profile for the Comoros https://www.wipo.int/wipolex/en/members/profile/KM (200, saved l4t/files/m20/km-wipolex-profile.html, sha256 8ebf788da295c22704fb4826e799aea83c91ec2bf794b75423cf977fe4c3b57f; 11 texts: French-era IP laws, the 2015 Customs Code, the 1995 Public Health Code, the Constitution, the Penal Code) and its copy of the Loi du 11 mars 1957 sur la propriété littéraire et artistique, 'rendue applicable aux Comores par arrêté du 8 avril 1957' https://www.wipo.int/wipolex/en/legislation/details/8839 (200, saved km-wipolex-8839.html, sha256 f97d34054d82c560535d9ca6800c8003f7696c39047d1215397685224420e9ac) read (arts. 35, 43, 44); the National Assembly (www.assemblee.km) proxy CONNECT 502; the Presidency https://beit-salam.km/ (200; news, no texts register)",
+     "result": "read: no production incentive, fund, labour-code minimum or theatre pay text among the Comoros' texts on WIPO Lex. For a playwright (item 8): art. 35 'Elle doit comporter au profit de l'auteur la participation proportionnelle aux recettes provenant de la vente ou de l'exploitation' (a flat fee only in listed cases); art. 44 'Le contrat de représentation est conclu pour une durée limitée ou pour un nombre déterminé de communications au public … La validité des droits exclusifs accordés par un auteur dramatique ne peux excéder cinq années; l'interruption des représentations au cours de deux années consécutives y met fin de plein droit.' No rate or minimum. Nothing for a director or actor; nothing for a series or theatre fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.km (no snapshot) and gouvernement.km (latest 2019-07-09, older than the rules in force; not used); Common Crawl CC-MAIN-2026-43 and -39 for 'km,gouv,culture)/' and 'km,gouvernement)/' (no capture in either), -43 for 'km,gouv,mcia)/' (none) and 'km,ortc)/' (14 captures of 2026-10-09 listed: home, the international-cooperation department, two programme pages, and spam casino and diet posts placed on the broadcaster's site)",
+     "result": "no culture-ministry or government page captured in 2025-26; ORTC's captures hold no commissioning call, tariff or production terms (the live ORTC site, read today, carries template placeholder text on its 'À propos' and 'Services' pages); nothing for a series, a theatre fund or stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard, French): 'Comores théâtre troupe comédiens rémunération ministère de la Culture subvention festival théâtre Moroni série télévisée ORTC production'",
+     "result": "nothing on the Comoros: the results were Moroccan theatre subsidies (aujourdhui.ma, telquel, le360, medias24), French and Québec theatre journals; no Comorian troupe, fee, fund, series or ORTC production terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al-Watwan (the Comoros' daily, alwatwan.net): site search https://alwatwan.net/?s=théâtre (HTTP 500, empty), home page (timed out after 60 s); Common Crawl CC-MAIN-2026-43 and -39 for 'net,alwatwan)/' (robots.txt only, answered 403 to the crawler: no article captured)",
+     "result": "not read: no Comorian press item on theatre pay, a theatre fund or a series could be reached",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "WIPO Lex member profile for the Comoros https://www.wipo.int/wipolex/en/members/profile/KM (200, saved l4t/files/m20/km-wipolex-profile.html, sha256 8ebf788da295c22704fb4826e799aea83c91ec2bf794b75423cf977fe4c3b57f; 11 texts: French-era IP laws, the 2015 Customs Code, the 1995 Public Health Code, the Constitution, the Penal Code) and its copy of the Loi du 11 mars 1957 sur la propriété littéraire et artistique, 'rendue applicable aux Comores par arrêté du 8 avril 1957' https://www.wipo.int/wipolex/en/legislation/details/8839 (200, saved km-wipolex-8839.html, sha256 f97d34054d82c560535d9ca6800c8003f7696c39047d1215397685224420e9ac) read (arts. 35, 43, 44); the National Assembly (www.assemblee.km) proxy CONNECT 502; the Presidency https://beit-salam.km/ (200; news, no texts register)",
+     "result": "read: no production incentive, fund, labour-code minimum or theatre pay text among the Comoros' texts on WIPO Lex. For a playwright (item 8): art. 35 'Elle doit comporter au profit de l'auteur la participation proportionnelle aux recettes provenant de la vente ou de l'exploitation' (a flat fee only in listed cases); art. 44 'Le contrat de représentation est conclu pour une durée limitée ou pour un nombre déterminé de communications au public … La validité des droits exclusifs accordés par un auteur dramatique ne peux excéder cinq années; l'interruption des représentations au cours de deux années consécutives y met fin de plein droit.' No rate or minimum. Nothing for a director or actor; nothing for a series or theatre fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.km (no snapshot) and gouvernement.km (latest 2019-07-09, older than the rules in force; not used); Common Crawl CC-MAIN-2026-43 and -39 for 'km,gouv,culture)/' and 'km,gouvernement)/' (no capture in either), -43 for 'km,gouv,mcia)/' (none) and 'km,ortc)/' (14 captures of 2026-10-09 listed: home, the international-cooperation department, two programme pages, and spam casino and diet posts placed on the broadcaster's site)",
+     "result": "no culture-ministry or government page captured in 2025-26; ORTC's captures hold no commissioning call, tariff or production terms (the live ORTC site, read today, carries template placeholder text on its 'À propos' and 'Services' pages); nothing for a series, a theatre fund or stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard, French): 'Comores théâtre troupe comédiens rémunération ministère de la Culture subvention festival théâtre Moroni série télévisée ORTC production'",
+     "result": "nothing on the Comoros: the results were Moroccan theatre subsidies (aujourdhui.ma, telquel, le360, medias24), French and Québec theatre journals; no Comorian troupe, fee, fund, series or ORTC production terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al-Watwan (the Comoros' daily, alwatwan.net): site search https://alwatwan.net/?s=théâtre (HTTP 500, empty), home page (timed out after 60 s); Common Crawl CC-MAIN-2026-43 and -39 for 'net,alwatwan)/' (robots.txt only, answered 403 to the crawler: no article captured)",
+     "result": "not read: no Comorian press item on theatre pay, a theatre fund or a series could be reached",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "WIPO Lex member profile for the Comoros https://www.wipo.int/wipolex/en/members/profile/KM (200, saved l4t/files/m20/km-wipolex-profile.html, sha256 8ebf788da295c22704fb4826e799aea83c91ec2bf794b75423cf977fe4c3b57f; 11 texts: French-era IP laws, the 2015 Customs Code, the 1995 Public Health Code, the Constitution, the Penal Code) and its copy of the Loi du 11 mars 1957 sur la propriété littéraire et artistique, 'rendue applicable aux Comores par arrêté du 8 avril 1957' https://www.wipo.int/wipolex/en/legislation/details/8839 (200, saved km-wipolex-8839.html, sha256 f97d34054d82c560535d9ca6800c8003f7696c39047d1215397685224420e9ac) read (arts. 35, 43, 44); the National Assembly (www.assemblee.km) proxy CONNECT 502; the Presidency https://beit-salam.km/ (200; news, no texts register)",
+     "result": "read: no production incentive, fund, labour-code minimum or theatre pay text among the Comoros' texts on WIPO Lex. For a playwright (item 8): art. 35 'Elle doit comporter au profit de l'auteur la participation proportionnelle aux recettes provenant de la vente ou de l'exploitation' (a flat fee only in listed cases); art. 44 'Le contrat de représentation est conclu pour une durée limitée ou pour un nombre déterminé de communications au public … La validité des droits exclusifs accordés par un auteur dramatique ne peux excéder cinq années; l'interruption des représentations au cours de deux années consécutives y met fin de plein droit.' No rate or minimum. Nothing for a director or actor; nothing for a series or theatre fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API for culture.gouv.km (no snapshot) and gouvernement.km (latest 2019-07-09, older than the rules in force; not used); Common Crawl CC-MAIN-2026-43 and -39 for 'km,gouv,culture)/' and 'km,gouvernement)/' (no capture in either), -43 for 'km,gouv,mcia)/' (none) and 'km,ortc)/' (14 captures of 2026-10-09 listed: home, the international-cooperation department, two programme pages, and spam casino and diet posts placed on the broadcaster's site)",
+     "result": "no culture-ministry or government page captured in 2025-26; ORTC's captures hold no commissioning call, tariff or production terms (the live ORTC site, read today, carries template placeholder text on its 'À propos' and 'Services' pages); nothing for a series, a theatre fund or stage pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard, French): 'Comores théâtre troupe comédiens rémunération ministère de la Culture subvention festival théâtre Moroni série télévisée ORTC production'",
+     "result": "nothing on the Comoros: the results were Moroccan theatre subsidies (aujourdhui.ma, telquel, le360, medias24), French and Québec theatre journals; no Comorian troupe, fee, fund, series or ORTC production terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Al-Watwan (the Comoros' daily, alwatwan.net): site search https://alwatwan.net/?s=théâtre (HTTP 500, empty), home page (timed out after 60 s); Common Crawl CC-MAIN-2026-43 and -39 for 'net,alwatwan)/' (robots.txt only, answered 403 to the crawler: no article captured)",
+     "result": "not read: no Comorian press item on theatre pay, a theatre fund or a series could be reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "law": "Loi du 11 mars 1957 sur la propriété littéraire et artistique (made applicable to the Comoros by arrêté of 8 April 1957)",
+     "royalty": "proportional share of receipts (art. 35); a lump sum only where proportional pay cannot be applied",
+     "minimum": null,
+     "contract": "limited term or a set number of performances (art. 44)",
+     "exclusivityMaxYears": 5,
+     "lapses": "two consecutive years without performances end it (art. 44)"
+    },
+    "verdict": "partial",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://www.wipo.int/wipolex/en/legislation/details/8839",
+      "title": "Law of March 11, 1957, on Literary and Artistic Property, Comoros (WIPO Lex)",
+      "read": "2026-11-04",
+      "said": "Loi du 11 mars 1957 [ NB - Loi du 11 mars 1957 sur la propriété littéraire et artistique, rendue applicable aux Comores par arrêté du 8 avril 1957 ] ... Art.35.- La cession par l'auteur de ses droits sur son œuvre peut être totale ou partielle. Elle doit comporter au profit de l'auteur la participation proportionnelle aux recettes provenant de la vente ou de l'exploitation. ... Art.44.- Le contrat de représentation est conclu pour une durée limitée ou pour un nombre déterminé de communications au public. ... La validité des droits exclusifs accordés par un auteur dramatique ne peux excéder cinq années ; l'interruption des représentations au cours de deux années consécutives y met fin de plein droit.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m20/km-wipolex-8839.html",
+      "sha256": "f97d34054d82c560535d9ca6800c8003f7696c39047d1215397685224420e9ac",
+      "quotes": "Loi du 11 mars 1957 sur la propriété littéraire et artistique, rendue applicable aux Comores par arrêté du 8 avril 1957"
+     }
+    ],
+    "notes": "Terms, not a minimum fee: the playwright's royalty is a proportional share whose rate the contract sets. Whether a later Comorian copyright law replaced the 1957 law was not settled: WIPO Lex lists no later one."
+   }
+  ],
+  "notSearched": [],
+  "notes": "ORTC (ortc.km) answered today (200; earlier round 429): its home, 'À propos de nous' and 'Services' pages were read (saved l4t/files/m20/km-x-https___ortc_km__.html sha256 589f050ec6c35476f11f6fe84eb75254069b9682d0087bca77dbf638d39db098, km-ortc-a-propos-de-nous.html sha256 5d3a22c1169ff946d84b5cf6f8d288a71c76c9cb26ad6404f9d0c37f4abc090d, km-ortc-services.html sha256 73ac3480bda389edc7a862a4e0a4efee1f31052d19dc046b660864306c9d91bd): theme placeholder text ('La peur ne guérit pas l'égoïsme…'), programme names, departments; no commissioning or production terms. Not recorded as an attempt because institution was not a missing method for the producer blocker. Item 8 partial: the 1957 French copyright law made applicable to the Comoros (see found)."
+ },
+ "MD": {
+  "producer": {
+   "blocker": "R-10020",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "TRM (Teleradio-Moldova news) 'Opt proiecte cinematografice vor fi finanţate de Centrul Naţional al Cinematografiei' (01 Feb. 2021, relaying Mesager) https://trm.md/ro/cultura/opt-proiecte-cinematografice-vor-fi-finantate-de-centrul-national-al-cinematografiei (200, saved l4t/files/m20/md-trm-8proiecte.html, sha256 d9f0117ac0757b3c5078bd979afff8373eca6a0d42e7c039838e504a817db1b7), one of the press items the CNC itself lists on https://cnc.md/editia-a-v-a-a-concursului-de-finantare-reflectata-in-mass-media/ (read, saved md-cnc-media.html sha256 66cceffdc9aa10f70cf5dd32d39c72b80686d567dfbb7913fc50f07b7d324d7d); IPN's item on the same list (ipn.md …_1079274) answered 403",
+     "result": "read: the CNC's 2021 session, quoting the acting director: 'Juriul a evaluat 24 de dosare … opt proiecte' and 'Fondul disponibil în cadrul acestei sesiuni de concurs a fost de cinci milioane 500 mii de lei'; the eight are feature fiction and documentaries, no series: a 2021 rate of yes for films (8 of 24), not for a series, and older than the 2026 regulation; nothing on a fee cap or TRM commissioning",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "State Register of Legal Acts legis.md search for 'convenția colectivă cultur' (403 Cloudflare 'Just a moment...', not got past); Monitorul Oficial https://monitorul.gov.md/ro/search searched for 'convenția colectivă cultură' (no results), 'convenția colectivă' (issue listings, saved l4t/files/m20/md-mo-s-*.html) and 'teatr' (saved, sha256 2f8d1e6022c5f428138e3da0e0deaa16e245612f237ff276fe53284c012055d3) and the listings read",
+     "result": "no branch collective agreement for culture or theatre found in the Official Monitor's search; the 'teatr' hits are honours decrees (Teatrul Național 'Vasile Alecsandri' Bălți, Teatrul 'Geneza Art'), art-school orders and a Court of Accounts audit of the use of budget money in 2022-2023 by public concert and theatre institutions founded by the Ministry of Culture (nr. 5, 19 February 2025; a lead, not read); no stage director's, playwright's or actor's minimum. Public theatres' staff pay under the public-sector unitary pay law was not reached (legis.md blocked)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30 for 'md,gov,mc)/' (the Ministry of Culture, whose live site reset the connection in the first round): one capture (2026-10-14), the executive programme of cultural cooperation with Poland; CC-MAIN-2026-43 'md,cnc)/' (46 captures, all film funding)",
+     "result": "no theatre pay, agreement or fee page captured for the ministry; the film centre's captures concern film and series funding only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10 (standard, Romanian): 'Moldova teatru salariu actor regizor clasa de salarizare Legea 270/2018 dramaturg onorariu convenția colectivă ramura cultură'",
+     "result": "no branch collective agreement for culture, no salary class for an actor, director or playwright, no playwright fee; leads: Law 270/2018 on the unitary pay system (Monitorul Oficial 441-447, art. 715, 30 Nov 2018) and Government Decision 1231/2018, amendment drafts on mf.gov.md and particip.gov.md (drafts: leads), legis.md downloadpdf/153622 (403 Cloudflare), Adevărul 2015 on theatre underfunding, a paylab.com salary survey (not a source)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Adevărul 'Subfinanţare cronică pentru teatrele din Republica Moldova' (published 2015-01-21) https://adevarul.ro/stiri-externe/republica-moldova/subfinantare-cronica-pentru-teatrele-din-republica-1594179.html (200, saved l4t/files/m20/md-adevarul-1594179.html, sha256 1f2617a43762b22eb88b83c9c2e53ed1391642303ebd6287712d7251a70314da) read",
+     "result": "read: 'Acesta porneşte de la 1.500 de lei pentru un actor la început de drum' and the director of Teatrul Republican 'Luceafărul': 'Un actor poate câştiga 3000 de lei cel mult'; a 2015 figure, before Law 270/2018 replaced public-sector pay, with no primary named: a lead, not the rule in force; nothing on a director's fee",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "State Register of Legal Acts legis.md search for 'convenția colectivă cultur' (403 Cloudflare 'Just a moment...', not got past); Monitorul Oficial https://monitorul.gov.md/ro/search searched for 'convenția colectivă cultură' (no results), 'convenția colectivă' (issue listings, saved l4t/files/m20/md-mo-s-*.html) and 'teatr' (saved, sha256 2f8d1e6022c5f428138e3da0e0deaa16e245612f237ff276fe53284c012055d3) and the listings read",
+     "result": "no branch collective agreement for culture or theatre found in the Official Monitor's search; the 'teatr' hits are honours decrees (Teatrul Național 'Vasile Alecsandri' Bălți, Teatrul 'Geneza Art'), art-school orders and a Court of Accounts audit of the use of budget money in 2022-2023 by public concert and theatre institutions founded by the Ministry of Culture (nr. 5, 19 February 2025; a lead, not read); no stage director's, playwright's or actor's minimum. Public theatres' staff pay under the public-sector unitary pay law was not reached (legis.md blocked)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30 for 'md,gov,mc)/' (the Ministry of Culture, whose live site reset the connection in the first round): one capture (2026-10-14), the executive programme of cultural cooperation with Poland; CC-MAIN-2026-43 'md,cnc)/' (46 captures, all film funding)",
+     "result": "no theatre pay, agreement or fee page captured for the ministry; the film centre's captures concern film and series funding only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10 (standard, Romanian): 'Moldova teatru salariu actor regizor clasa de salarizare Legea 270/2018 dramaturg onorariu convenția colectivă ramura cultură'",
+     "result": "no branch collective agreement for culture, no salary class for an actor, director or playwright, no playwright fee; leads: Law 270/2018 on the unitary pay system (Monitorul Oficial 441-447, art. 715, 30 Nov 2018) and Government Decision 1231/2018, amendment drafts on mf.gov.md and particip.gov.md (drafts: leads), legis.md downloadpdf/153622 (403 Cloudflare), Adevărul 2015 on theatre underfunding, a paylab.com salary survey (not a source)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Adevărul 2015 article on Moldovan theatre underfunding (as for items 7 and 9; saved l4t/files/m20/md-adevarul-1594179.html) read for a playwright's fee",
+     "result": "nothing on a playwright's commission, advance or royalty",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "State Register of Legal Acts legis.md search for 'convenția colectivă cultur' (403 Cloudflare 'Just a moment...', not got past); Monitorul Oficial https://monitorul.gov.md/ro/search searched for 'convenția colectivă cultură' (no results), 'convenția colectivă' (issue listings, saved l4t/files/m20/md-mo-s-*.html) and 'teatr' (saved, sha256 2f8d1e6022c5f428138e3da0e0deaa16e245612f237ff276fe53284c012055d3) and the listings read",
+     "result": "no branch collective agreement for culture or theatre found in the Official Monitor's search; the 'teatr' hits are honours decrees (Teatrul Național 'Vasile Alecsandri' Bălți, Teatrul 'Geneza Art'), art-school orders and a Court of Accounts audit of the use of budget money in 2022-2023 by public concert and theatre institutions founded by the Ministry of Culture (nr. 5, 19 February 2025; a lead, not read); no stage director's, playwright's or actor's minimum. Public theatres' staff pay under the public-sector unitary pay law was not reached (legis.md blocked)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30 for 'md,gov,mc)/' (the Ministry of Culture, whose live site reset the connection in the first round): one capture (2026-10-14), the executive programme of cultural cooperation with Poland; CC-MAIN-2026-43 'md,cnc)/' (46 captures, all film funding)",
+     "result": "no theatre pay, agreement or fee page captured for the ministry; the film centre's captures concern film and series funding only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10 (standard, Romanian): 'Moldova teatru salariu actor regizor clasa de salarizare Legea 270/2018 dramaturg onorariu convenția colectivă ramura cultură'",
+     "result": "no branch collective agreement for culture, no salary class for an actor, director or playwright, no playwright fee; leads: Law 270/2018 on the unitary pay system (Monitorul Oficial 441-447, art. 715, 30 Nov 2018) and Government Decision 1231/2018, amendment drafts on mf.gov.md and particip.gov.md (drafts: leads), legis.md downloadpdf/153622 (403 Cloudflare), Adevărul 2015 on theatre underfunding, a paylab.com salary survey (not a source)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Adevărul 'Subfinanţare cronică pentru teatrele din Republica Moldova' (published 2015-01-21) https://adevarul.ro/stiri-externe/republica-moldova/subfinantare-cronica-pentru-teatrele-din-republica-1594179.html (200, saved l4t/files/m20/md-adevarul-1594179.html, sha256 1f2617a43762b22eb88b83c9c2e53ed1391642303ebd6287712d7251a70314da) read",
+     "result": "read: 'Acesta porneşte de la 1.500 de lei pentru un actor la început de drum' and the director of Teatrul Republican 'Luceafărul': 'Un actor poate câştiga 3000 de lei cel mult'; a 2015 figure, before Law 270/2018 replaced public-sector pay, with no primary named: a lead, not the rule in force; nothing on a director's fee",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "MZ": {
+  "producer": {
+   "blocker": "R-10052",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
+     "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
+     "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
+     "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Imprensa Nacional (Boletim da República, www.imprensanac.gov.mz: connection reset) and the government portal (www.portaldogoverno.gov.mz: reset); the labour ministry under its domains www.mitss.gov.mz, www.mitrab.gov.mz, www.mtess.gov.mz, www.mtss.gov.mz and the culture ministry www.micultura.gov.mz, www.mctur.gov.mz (each a proxy CONNECT 502); WIPO Lex member profile for Mozambique https://www.wipo.int/wipolex/en/members/profile/MZ (200, saved l4t/files/m20/mz-wipolex-profile.html, sha256 4ac1b61315c57b7341118c75201e65b964f9a67a2b78299acf0968b58548e240) read, and its entry for Law 9/2022 on Copyright (details page read; the PDF mz028pt.pdf redirected to the details page, its S3 copy answered 403)",
+     "result": "the gazette, labour and culture ministries did not answer; WIPO Lex lists Mozambique's copyright law (Lei 9/2022, in force 90 days after 29 June 2022), the Industrial Property Code, the 1997 Cultural Policy resolution (Resolução 12/97), the 1988 cultural heritage law, the 1993 investment law: none is a production incentive, theatre fund or pay rule; the copyright law's text (a playwright's representation contract) was not read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "PL": {
+  "producer": {
+   "blocker": "R-10086",
+   "attempts": []
+  },
+  "stage": {
+   "7": [],
+   "8": [],
+   "9": []
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "SH": {
+  "producer": {
+   "blocker": "R-10122",
+   "attempts": []
+  },
+  "stage": {
+   "7": [],
+   "8": []
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "TJ": {
+  "producer": {
+   "blocker": "R-10152",
+   "attempts": []
+  },
+  "stage": {
+   "7": [],
+   "8": [],
+   "9": []
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "VG": {
+  "producer": {
+   "blocker": "R-10184",
+   "attempts": []
+  },
+  "stage": {
+   "7": [],
+   "8": []
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ }
+}

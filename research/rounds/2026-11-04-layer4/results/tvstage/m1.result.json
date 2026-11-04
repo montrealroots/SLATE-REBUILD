@@ -1,0 +1,748 @@
+{
+ "AD": {
+  "producer": {
+   "blocker": "R-9797",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Consell General (the parliament's legal copy of Andorra's laws): site search https://www.consellgeneral.ad/@@search?SearchableText=televisio and ?SearchableText=mecenatge; downloaded and read the Llei de la radiodifusió i televisió pública i de creació de la societat pública Ràdio i Televisió d'Andorra, SA (13 April 2000) https://www.consellgeneral.ad/fitxers/documents/lleis-1989-2002/llei-de-la-radiodifusio-i-televisio-publica-i-de-creacio-de-la-societat-publica-radio-i-televisio-dandorra-sa.pdf (files/m1/ad-rtva-llei2000.pdf, sha256 b3b0e1495c6c0a9f725b5c3e0e9fc62e71f15d78b3b0610ef84a6330ce1b620b) and Llei 20/2012 amending it (files/m1/ad-llei20-2012.pdf, sha256 b58e56646fa63f8fa2102834307727a6e09e701a938cb7a0cd2047937264b9c3), searched for independent production, commissioning, quotas and fees. The lleis-aprovades index redirected to a login (403). BOPA (www.bopa.ad) is a JavaScript application whose home page holds no text; its search was not used.",
+     "result": "Both laws read: the 2000 law's article 12 sets RTVA's object as producing, editing, importing and dubbing images and sound and running its own channels; neither law sets an independent-production quota, a commissioning procedure, a tariff or a producer-fee cap. The mecenatge search returned no law. Nothing for a series' route to screen, a theatre tax incentive or a fund's rate of yes.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Altaveu (altaveu.com) site search 'ajuts cinematografia'; read the articles 'La coproducció andorrana 11 entre les preseleccionades...' (3 Nov 2026, files/m1/ad-altaveu-11.html, sha256 dafca5e746662451bc7ddeae819358f388c50f166225b419b9bcf1334df7315e) and 'Un thriller coproduït entre Andorra i Catalunya s'emporta l'ajut a la cinematografia' (9 Jul 2025) https://www.altaveu.com/actualitat/cultura/thriller-coproduit-entre-andorra-catalunya-emporta-ajut-cinematografia_67962_102.html (files/m1/ad-altaveu-ajut2025.html, sha256 3fdae72c0d9f5368a3fcfb50d73b463bbb32454bcb589c9b0e0c99f608e59375). Diari d'Andorra's /cercador and Bondia's /search/node answered 404.",
+     "result": "The 2025 article reports the Govern's 2025 Ajut a la cinematografia: one award of EUR 125,000 to '11' (Contraban Produccions), approved by the Consell de Ministres, 'la més ben valorada per la comissió avaluadora, entre les tres que s'havien presentat al concurs i havien estat admeses' (1 of 3 admitted). It names the Government's decision as its source but gives no address for it; a govern.ad site search ('\"11\" Contraban cinematografia') did not surface the decision. A lead for the fund's rate of yes (a feature film, 2025), not a primary. Nothing on series, fee caps, a theatre incentive or play runs.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API for the govern.ad Ajuts a la cinematografia and Subvencions culturals pages and rtva.ad (snapshots of 11, 15 and 18 Oct 2026 listed); web.archive.org itself for the 20261011171123 snapshot, twice (plain and id_). Common Crawl: 'ad,govern)/' in CC-MAIN-2026-43, -21 and 2025-51, 'ad,govern)/ca/tematiques/ajuts-i-subvencions' in -43, -39 and -30; 'ad,rtva)/' in CC-MAIN-2026-43, -39, -30 (12,079 captures, most in -30, saved files/m1/cc-rtva-*.txt), filtered for series, fiction, coproduction, production, ajuts, theatre; read the capture of rtva.ad/noticies/cultura/coproduccio-andorrana-fred-crema-estrena-bcn (files/m1/ad-cc-rtva-coprod.html, sha256 b74f65e156d29ca141f160dc2498c4dd28a2359fd78f4d13d118b94c837a9da9). Also 'ad,rtva)/' in -21 and 2025-51, filtered the same way.",
+     "result": "web.archive.org reset the connection (curl 35) both times; no snapshot read. Common Crawl holds only govern.ad's robots.txt (HTTP 500) and one 2026-21 403 page, no culture-aid page. rtva.ad captures are news and programme pages; none is a commissioning, co-production or procurement page; the coproduction story (2022) is about a feature film's premiere and states no terms. Nothing found for what the blocker seeks.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 2,
+    "status": "lead (secondary with no address for its primary)",
+    "value": "Ajut a la cinematografia 2025: 3 proposals admitted, 1 awarded (EUR 125,000, the feature film '11'); the fund covers features and series",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://www.altaveu.com/actualitat/cultura/thriller-coproduit-entre-andorra-catalunya-emporta-ajut-cinematografia_67962_102.html",
+      "title": "Un thriller coproduït entre Andorra i Catalunya s’emporta l’ajut a la cinematografia (Altaveu, Gabriel Pérez, 09/07/2025)",
+      "read": "2026-11-04",
+      "said": "Govern ha concedit l’ajut a la cinematografia d’aquest 2025, valorat en 125.000 euros, a la pel·lícula ‘11’ ... L’adjudicació de l’ajuda ha estat aprovada aquest dimecres pel consell de ministres. ... la proposta ha estat la més ben valorada per la comissió avaluadora, entre les tres que s’havien presentat al concurs i havien estat admeses.",
+      "file": "files/m1/ad-altaveu-ajut2025.html",
+      "sha256": "3fdae72c0d9f5368a3fcfb50d73b463bbb32454bcb589c9b0e0c99f608e59375",
+      "quotes": "Govern d'Andorra, Consell de Ministres decision of Wednesday 9 July 2025 (no address given)"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "No web search was needed (web-search was already recorded). Fact: the RTVA laws hold no independent-production rule."
+ },
+ "DK": {
+  "producer": {
+   "blocker": "R-9891",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Filmmagasinet Ekko (ekkofilm.dk): its search /soeg/?q=public+service-puljen (no results) and ?q=public+service+puljen (49 article links, files/m1/dk-ekko-s3.html); read the one on the fund's awards, 'Streamingtjenester får mere støtte i Danmark' (Nicki Bruun, 18 Aug 2020) https://www.ekkofilm.dk/artikler/streamingtjenester-far-mere-stotte-i-danmark/ (files/m1/dk-ekko-streaming.html, sha256 9ae7186029ddd1537c2d0a101f4c3808ccd6667c3602cf941b34caaa36b2f141), which quotes MediaWatch and DFI's director Claus Ladegaard.",
+     "result": "2020 only: streaming services held nearly half of that year's Public Service Puljen grants (about a third in 2019), TV 2 the other eight places, DR may not apply (licence-funded); one letter of commitment of DKK 8 million (Elvira). It gives no application count, so no rate of yes, no terms in force today and no fee cap, and it names MediaWatch, not a DFI document with an address. Nothing on a theatre tax incentive, theatre fund ranges or play runs. Not a fact for the engine (old, and a count of awards without applications).",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Only trade-press was missing; the one attempt made is recorded."
+ },
+ "HU": {
+  "producer": {
+   "blocker": "R-9957",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "magyar.film.hu (the trade site Filmhu): its search /filmhu/kereses?q=NFI+sorozat+pályázat (files/m1/hu-mfh-kereses.html); read the interview 'Most ezzel tudom a szakmát legjobban szolgálni – Ugrin Julianna interjú' (interview of 14 July 2026, NFI temporary board) https://magyar.film.hu/filmhu/magazin/most-ezzel-tudom-a-szakmat-legjobban-szolgalni-ugrin-julianna-interju-filmintezet-igazgatosag-elnok.html (files/m1/hu-mfh-ugrin.html, sha256 bf723479066a14aed2d46e142c76ccd2c86e6d72d89d6974310c3c125e817ae2). telex.hu archive search answered 403; hvg.hu and szinhaz.org searches returned no relevant item.",
+     "result": "The NFI board member says the temporary board serves about three months 'és ebben az időszakban nem fog gyártási pályázatokat elbírálni az NFI' and 'újabb filmgyártási pályázatot egyelőre nem lehet majd beadni'; there are two decision committees, 'egy mozifilmes és egy tévés'. This agrees with what t2 read on nfi.hu (TV calls withdrawn from 24 July 2026). It gives no series fund terms, rate of yes, fee cap, MTVA commissioning terms or pickup count, and no theatre figures.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'hu,nfi)/' in CC-MAIN-2026-43, -39, -30 and 2025-51 (for the withdrawn TV calls and their terms; files/m1/cc-nfi-*.txt); archive.org availability API for nfi.hu/televizios-palyazatok/aktualis-palyazatok-1 and mtva.hu/tartalomertekesites; web.archive.org for the listed mtva.hu snapshot (20260713090735) and its CDX API.",
+     "result": "Common Crawl holds only nfi.hu's robots.txt (2025-51, 2026-30), nothing in -43 and -39: no call page or call document. The availability API lists no snapshot of the NFI TV-calls page and one of mtva.hu/tartalomertekesites; web.archive.org reset the connection (curl 35), CDX too. Nothing read for what the blocker seeks.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "szinhaz.hu search ?s=színészek fizetése (files/m1/hu-szhu-s.html; results up to 2019 only) and read 'A színészek béremeléséről tárgyal a Színházi Dolgozók Szakszervezete' (16 Dec 2015, MTI) https://szinhaz.hu/2015/12/16/a_szineszek_beremeleserol_targyal_a_szinhazi_dolgozok_szakszervezete (files/m1/hu-szhu-2015.html, sha256 f99601bbc894632a3486265b67b0a1695362e05ba17e57ec40d3dc7a46eba3c2); szinhaz.org search for 'kollektív szerződés' and 'színészek bére' (no pay article); telex.hu archive 403; hvg.hu search (no item).",
+     "result": "The 2015 article quotes the union's president: a beginning actor's gross about HUF 120-130 thousand a month, the national actors' average about HUF 195 thousand; pay barely risen since 2008; no sector agreement or minimum. Old (2015) and a union head's estimate, no document address: a lead at most, not the rule today. Nothing on a stage director's fee.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "Common Crawl 'hu,vigszinhaz)/' in CC-MAIN-2026-43, -39, -30, -21, 2025-51 (4,491 captures, files/m1/cc-vig-*.txt), for the directors' collective-agreement extract the institution attempt found 404; read the 2026-39 capture of /hu/szabalyzatok-szerzodeshez (files/m1/hu-cc-vig-szabalyzat.html, sha256 133f5dbc34e32b57a31e6a3b3d81e0aeafded233106224133f62bbc1bcbcf5a7), which links the two extracts; followed its links live to https://vigszinhaz.hu/media/documents/kollektiv_szerzodes_kivonat_rendezok_20241015_v01.pdf (files/m1/hu-vig-ksz-rendezok.pdf, sha256 cde280777ff24d9791f6b779649d43b421b61501604884331c164c6725d25bec) and .../kollektiv_szerzodes_kivonat_kulsos_eloadomuveszek_szamara_2024.10.15..pdf (files/m1/hu-vig-ksz-eloadomuv.pdf, sha256 20e30231dacaeefa46add50f757c0e304f837782f174e6984cdcbb3048f4a194), both read whole. Common Crawl 'hu,szinhazidolgozok)/' (the stage workers' union) in -43, -39, -30, 2025-51; archive.org availability API for szinhazidolgozok.hu.",
+     "result": "Both extracts (in force from the 2024/2025 season) are the Vígszínház's own collective agreement rules binding guest directors and guest performers: rehearsal scheduling, overtime counted in 'túlszolgálat' units (e.g. a role takeover 'nem lehet kevesebb, mint a 2 túlszolgálat'), fines (HUF 5,000-15,000 for lateness or a phone). Neither states a fee, a forint value of a túlszolgálat or a minimum for a director or actor. One theatre's agreement, not a sector one. The union's site: no capture in Common Crawl (one lookup of -43 failed, then empty), no Wayback snapshot listed.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Act LXXVI of 1999 on copyright (Szjt.), consolidated, net.jogtar.hu Hatályos Jogszabályok Gyűjteménye https://net.jogtar.hu/jogszabaly?docid=99900076.tv (files/m1/hu-szjt.html, sha256 97b6b8d7c1236af72819b4756ffed7887d71547d4abcb557b33d252873cde0f7), read for a playwright's minimum (stage works, performance licences, remuneration); njt.hu/jogszabaly/1999-76-00-00 (Nemzeti Jogszabálytár) tried first.",
+     "result": "njt.hu: empty reply (curl 52). The Act sets no amount: 16. § (4) 'a szerzőt a mű felhasználására adott engedély fejében díjazás illeti meg, amelynek – eltérő megállapodás hiányában – a felhasználáshoz kapcsolódó bevétellel kell arányban állnia'. Stage works are protected works (1. § (2) d) 'a színmű, a zenés színmű...'), and 27. § (1) keeps 'a színpadra szánt irodalmi művek' out of the collective licensing of broadcasts. So a playwright's fee is what the licence or commission agrees, by default in proportion to the takings; the Act sets no floor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "The same press searches as items 7 and 9 (szinhaz.hu, szinhaz.org, hvg.hu; telex.hu 403), read for any playwright fee or royalty.",
+     "result": "No article on a playwright's commission fee or royalty found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API for forwords.hu (Hofra's new name; snapshot 20260820192804 listed); web.archive.org for that snapshot.",
+     "result": "web.archive.org reset the connection (curl 35); not read. The live Hofra price list was already read (u3). Nothing new.",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "status": "rule, no amount",
+    "value": "No statutory minimum: the author's remuneration for a licence is, failing other agreement, proportional to the revenue from the use (Szjt. 16. § (4))",
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://net.jogtar.hu/jogszabaly?docid=99900076.tv",
+      "title": "1999. évi LXXVI. törvény a szerzői jogról (Hatályos Jogszabályok Gyűjteménye)",
+      "read": "2026-11-04",
+      "said": "(4) Ha e törvény másképp nem rendelkezik, a szerzőt a mű felhasználására adott engedély fejében díjazás illeti meg, amelynek – eltérő megállapodás hiányában – a felhasználáshoz kapcsolódó bevétellel kell arányban állnia.",
+      "file": "files/m1/hu-szjt.html",
+      "sha256": "97b6b8d7c1236af72819b4756ffed7887d71547d4abcb557b33d252873cde0f7",
+      "quotes": "Act LXXVI of 1999, 16. § (4) (njt.hu, the state's register, gave an empty reply)"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Item 9's attempts are the ones listed under item 7 (each covered items 7 and 9). The Vígszínház agreement extracts are reachable live again at new addresses (vigszinhaz.hu/media/documents/...), found through the Common Crawl copy of the rules page."
+ },
+ "BE": {
+  "producer": {
+   "blocker": "R-9825",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "The Media Leader Belgium (formerly Mediaspecs): mediaspecs.be search 'externe productie vrt' (its article links now 404 at be.themedialeader.com), then be.themedialeader.com search 'beheersovereenkomst VRT'; read 'Vertrouwen, vernieuwing en ambitie centraal in nieuwe beheersovereenkomst VRT' (23 Jul 2025) https://be.themedialeader.com/nl/vertrouwen-vernieuwing-en-ambitie-centraal-in-nieuwe-beheersovereenkomst-vrt/ (files/m1/be-tml-bho.html, sha256 a4e198faf20a3ae6bfa6827c35678fdfb82b7f8a834681343362480e0ad05bcc), which links the agreement on vrt.be.",
+     "result": "It quotes the new agreement's targets, among them 'Minimum 65% van de uitzendingen lineair in prime time moet bestaan uit Vlaamse (co)producties', and VRT 'kansen geven aan onafhankelijke productiehuizen'; no external-production share figure, commissioning procedure, tariff or count of independent series picked up. RTBF and the stage items: nothing.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'be,vrt)/nl/over-de-vrt' and 'be,vrt)/nl/over-ons' in CC-MAIN-2026-43, -39, -30 (622 captures, files/m1/cc-vrt*-*.txt) for the 'Externe producties' page that answers HTTP 500 live; read the 2026-43 capture (6 Oct 2026) of https://www.vrt.be/nl/over-ons/samenwerking (files/m1/be-cc-vrt-over-onssamenwerking.html, sha256 7fa8029570693aca12e71d234a2290578e899afc707bcce5345484b421a922c1); a fetch of the creative-partnerships capture failed.",
+     "result": "No capture of /samenwerking/externe-producties itself (only its Adobe Sign help subpage). The samenwerking page says: 'En natuurlijk zijn er de samenwerkingen met zo'n 100 externe productiehuizen en 200 facilitaire bedrijven/freelancers. VRT besteedt minimaal 18,25% met een groeipad naar 20% van haar totale inkomsten ... aan de externe productie', and that VRT works with Telenet and Proximus 'voor het produceren en uitzenden van Vlaamse fictiereeksen'. It cites the 2021-2025 agreement, superseded by 2026-2030 (20% from 2026, held by u19), so the 18.25% is not the rule today; about 100 external production houses is a count of partners, not of series picked up.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "1 search (standard): 'Cultuurloket richtbedragen honorarium toneelschrijver regisseur acteur podiumkunsten barema PC 304'",
+     "result": "No Cultuurloket fee guidance; led to the FPS Employment register copy of PC 304's agreement of 23 October 2012 on pay in French- and German-language dramatic arts in Wallonia and Brussels (read under official-register below) and to Dutch (Netherlands) sources not applicable.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      9,
+      8
+     ],
+     "tried": "Cultuurloket (Flemish support desk) kennisbank 'Hoe neem je als werkgever een werknemer aan' (files/m1/be-cl-aanneem.html) which sends PC 304 pay to the Sociaal Fonds Podiumkunsten; podiumkunsten.be 'minimumweddeschalen' https://www.podiumkunsten.be/verloning/baremas/minimumweddeschalen (files/m1/be-sfp-minimum.html, sha256 997390ea4feb7920fed02d39288b7a7433c9cd577d07a2650c9c11ec0c8d445b), 'podiumkunsten: loongroepen en barema's' https://www.podiumkunsten.be/verloning/baremas/podiumkunsten-loongroepen-en-baremas (files/m1/be-sfp-loongroepen.html, sha256 cc698fc367b206937ea6c6caf57d35dd58eeb6916ec971f2734cb75a77656b08), the function-description brochure (files/m1/be-sfp-functies.pdf, sha256 d97ae00985252a7c0161f5f48ae8892eb8a5ec81711ea186dffa92ff0675bc3d) and the scales from 1 Aug 2026 for contracts of 4 months or more (files/m1/be-sfp-barema-meer4.pdf, sha256 a85918aca2a9a84b138b6fe7184662db586aeb4a0a06d0787b224b501b333706) and under 4 months (files/m1/be-sfp-barema-minder4.pdf, sha256 59cf483499d7d42d13023a832b79cae08bee38d84934a2a0ec6ba429584544f9). oKo (overlegkunstenorganisaties.be, the employers): CONNECT 502 twice; www.oko.be is an unrelated schools body.",
+     "result": "Found the group t3 lacked: on the loongroepen page, wage group A (podiumkunsten) lists 'artiest - type 1 - vertolker' (acteur ...), 'auteur / componist', 'dramaturg' and 'regisseur / choreograaf / dirigent'. Group A minimum from 1 Aug 2026: EUR 3,211.86 a month (EUR 19.51 an hour) at 0-2 years for a contract of 4 months or more, rising to 4,945.09 at 19 years; EUR 3,346.69 a month (20.32 an hour) at 0-2 years under 4 months. CAO of 19 December 2016 (coordinated 138114). Flemish, Dutch-language organisations only (sub-sector 3040002).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "FPS Employment (werk.belgie.be) register copy of the PC 304 collective agreement of 23 October 2012 on pay in French- and German-language dramatic-arts companies in Wallonia and Brussels (registered 22/11/2012, no. 112182/CO/304) https://public-search.werk.belgie.be/website-download-service/joint-work-convention/304/304-2012-005054.pdf (files/m1/be-cct-304-2012-005054.pdf, sha256 0a25312b75eb0c8deec63d83d8e79226ac00d626ad8f26526b6c40016301e32f), read whole (bilingual). An addition to t3's salairesminimums.be attempt.",
+     "result": "Art. 4: group 1 'Artistes de spectacle' minimum gross monthly pay EUR 2,083.29 with under 12 years' experience after compulsory schooling, EUR 2,459.52 with 12 or more, at the index of 1 October 2012, indexed by the smoothed health index (art. 5); in force 1 July 2013 for an indefinite term (art. 16). Art. 15 committed the parties to a new classification agreement by 31 December 2014, so later agreements may replace it; today's indexed figures (salairesminimums.be sub-sector 3040001) were not read. A director is not named separately; whether a metteur en scène falls in group 1 is not stated.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Etcetera (e-tcetera.be) search 'barema'; Rekto:Verso search (rektoverso.be/zoeken).",
+     "result": "Etcetera: no article in the results; Rekto:Verso search answered 404. No article quoting a stage scale or playwright fee.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'be,overlegkunstenorganisaties)/' (oKo, 502 live) in CC-MAIN-2026-43 and -30; 'be,sacd)/' (no connection live) in CC-MAIN-2026-43, -39, -30, 2025-51; archive.org availability API for sacd.be/fr/auteurs; sacd.be retried live.",
+     "result": "oKo: no captures. SACD: only robots.txt answering 403 in every crawl; no snapshot listed by the availability API; live sacd.be reset the connection (curl 35). Nothing read.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "tried": "The PC 304 agreement of 23 October 2012 (above) and the Flemish CAO of 19 December 2016's group list (podiumkunsten.be), read for an author's pay.",
+     "result": "Flanders: an employed 'auteur / componist' is in group A (EUR 3,211.86 a month from 1 Aug 2026, 4 months or more). The 2012 French-Community agreement allows a contract for a defined work only 'pour du travail d'auteur artistique' (art. 2) and sets no author's rate. No commission fee, advance or royalty floor for a playwright paid by licence.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": "Flanders (PC 304, Dutch-language organisations): a stage director (regisseur) is in wage group A; minimum from 2026-08-01 EUR 3,211.86/month, EUR 19.51/hour (0-2 years, contract of 4 months or more), EUR 3,346.69/month, EUR 20.32/hour (under 4 months); seniority steps to EUR 4,945.09 at 19 years",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.podiumkunsten.be/verloning/baremas/podiumkunsten-loongroepen-en-baremas",
+      "title": "Sociaal Fonds Podiumkunsten: podiumkunsten: loongroepen en barema's",
+      "read": "2026-11-04",
+      "said": "loongroep A - podiumkunsten / artiest - type 1 - vertolker / bijvoorbeeld / zanger, muzikant , acteur , danser ... / auteur / componist / ... / dramaturg / ontwerper / programmator / regisseur / choreograaf / dirigent ... loongroep B - podiumkunsten / assistent van de regisseur / choreograaf / dirigent",
+      "file": "files/m1/be-sfp-loongroepen.html",
+      "sha256": "cc698fc367b206937ea6c6caf57d35dd58eeb6916ec971f2734cb75a77656b08"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.podiumkunsten.be/sites/default/files/2026-07/20260801_barema_PODIUMKUNSTEN_meerdan4.pdf.pdf",
+      "title": "BIJLAGE 1 CAO van 19 december 2016 - artikel 5, Minimum weddeschalen podiumkunsten, Arbeidsovereenkomst van 4 of meer dan 4 maanden, Toepassing vanaf 1/aug/26",
+      "read": "2026-11-04",
+      "said": "0 38.542,34 3.211,86 19,51 [A] ... 19 59.341,13 4.945,09 30,03",
+      "file": "files/m1/be-sfp-barema-meer4.pdf",
+      "sha256": "a85918aca2a9a84b138b6fe7184662db586aeb4a0a06d0787b224b501b333706"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.podiumkunsten.be/sites/default/files/2026-07/20260801_barema_PODIUMKUNSTEN_minderdan4.pdf.pdf",
+      "title": "BIJLAGE 2 CAO van 19 december 2016 - artikel 5, Arbeidsovereenkomst van minder dan 4 maanden, Toepassing vanaf 1/aug/26",
+      "read": "2026-11-04",
+      "said": "0 3.346,69 20,32 [A]",
+      "file": "files/m1/be-sfp-barema-minder4.pdf",
+      "sha256": "59cf483499d7d42d13023a832b79cae08bee38d84934a2a0ec6ba429584544f9"
+     }
+    ]
+   },
+   {
+    "item": 9,
+    "value": "Flanders: a stage actor (artiest - vertolker) is in wage group A, the same scale as item 7. French and German-language Wallonia-Brussels: 'Artistes de spectacle' EUR 2,083.29 (<12 years) / 2,459.52 (12+) gross a month at the index of 1 Oct 2012, indexed, CCT of 23 Oct 2012 in force from 2013-07-01 (today's indexed amount not read)",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.podiumkunsten.be/verloning/baremas/podiumkunsten-loongroepen-en-baremas",
+      "title": "as item 7",
+      "read": "2026-11-04",
+      "said": "loongroep A - podiumkunsten / artiest - type 1 - vertolker / bijvoorbeeld / zanger, muzikant , acteur ...",
+      "file": "files/m1/be-sfp-loongroepen.html",
+      "sha256": "cc698fc367b206937ea6c6caf57d35dd58eeb6916ec971f2734cb75a77656b08"
+     },
+     {
+      "kind": "primary",
+      "url": "https://public-search.werk.belgie.be/website-download-service/joint-work-convention/304/304-2012-005054.pdf",
+      "title": "CP 304, Convention collective de travail du 23 octobre 2012 fixant les conditions de rémunération dans le secteur des spectacles d'art dramatique d'expression scénique en Région wallonne et en Région de Bruxelles-Capitale (112182/CO/304)",
+      "read": "2026-11-04",
+      "said": "1. Artistes de spectacle a. ayant moins de 12 années d'expérience acquise après la fin de l'obligation scolaire 2.083,29 euros b. ayant 12 années et plus ... 2.459,52 euros ... (index 1/10/2012) ... entre en vigueur le 1er juillet 2013 pour une durée indéterminée.",
+      "file": "files/m1/be-cct-304-2012-005054.pdf",
+      "sha256": "0a25312b75eb0c8deec63d83d8e79226ac00d626ad8f26526b6c40016301e32f"
+     }
+    ]
+   },
+   {
+    "item": 8,
+    "value": "Flanders: a playwright employed by a PC 304 organisation is in wage group A ('auteur / componist'), the item 7 scale; no commission fee or royalty floor for a licensed play",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.podiumkunsten.be/verloning/baremas/podiumkunsten-loongroepen-en-baremas",
+      "title": "as item 7",
+      "read": "2026-11-04",
+      "said": "loongroep A - podiumkunsten ... auteur / componist / ...",
+      "file": "files/m1/be-sfp-loongroepen.html",
+      "sha256": "cc698fc367b206937ea6c6caf57d35dd58eeb6916ec971f2734cb75a77656b08"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Search 1 of 10. The Flemish classification settles t3's open question (group A for director, actor and author)."
+ },
+ "NA": {
+  "producer": {
+   "blocker": "R-10054",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Legal Assistance Centre's annotated copies of the Government Gazette texts (lac.org.na statutes index): Namibia Film Commission Act 6 of 2000 (GG 2322, as amended by Act 11 of 2001 and Act 16 of 2022) https://www.lac.org.na/laws/annoSTAT/Namibia%20Film%20Commission%20Act%206%20of%202000.pdf (files/m1/na-lac-fca.pdf, sha256 c4ab0e62a8f49e7be487b1e7852b6a641663b3140f3675321997195b7d3cabf8) and the National Arts Fund of Namibia Act 1 of 2005 (files/m1/na-lac-naf.pdf, sha256 1b00b36a308cb0fe73074a4c728454b53d1a05551a1b5daad51a1e1718c16ccd), read for a series' and a play's funding, an incentive and a tax relief. NamibLII's copies (namiblii.org/akn/na/act/2000/6) answered a Cloudflare challenge (403 'Just a moment...'), not passed; its search is script-only.",
+     "result": "Film Act s.14(3): the Film and Video Development Fund's moneys are used 'to establish a film industry in Namibia; to financially assist Namibia film producers; and to develop, produce and distribute Namibian film, video and television production projects'; s.16: assistance 'by way of donation or loan and on such conditions as it may determine'. So a series is within the fund by law; no amounts, rates, fee caps or incentive in the Act (s.18 exempts the Fund itself from tax). LAC's cover note says the Act 'is not yet in force' pending a Minister's notice, which sits oddly with the Commission's operation; not resolved here. Arts Fund Act s.6(1)(f), 13: grants to arts bodies and individuals on application, on conditions the Council sets; 'Arts' includes drama and theatre; no ranges, no theatre tax relief (s.22 exempts the Fund). No count of awards.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'na,nfc)/', 'org,artscouncilnam)/' and 'na,org,ntn)/' in CC-MAIN-2026-43, -30 and 2025-51 (one 2025-51 index block failed to fetch); read the captures of https://artscouncilnam.org/funding/ (2026-07-12, files/m1/na-cc-nacn-funding.html, sha256 2f49affbd64552eb1af854a162d85cf6031ef9704e1f6f80fa68f6a4d3e4f5ad), NACN newsletter 'Pulse' edition 7, July-August 2026 (2026-10-13, files/m1/na-cc-nacn-news7.pdf, sha256 4e9331a8da45dd1776d12b204e80b4e9ddab2a89c0a412bf4e732e541dc59caa) and https://nfc.na/funding/co-production (2026-10-13, files/m1/na-cc-nfc-coprod.html, sha256 9ad997d3cf9f8db31a2c9c230b474a5a89c9858f3e33856cd05979082ea98cbf); the capture of the 2026 grant application form failed to fetch.",
+     "result": "The NACN funding page (which answers 76 bytes live) describes grants for projects 'including visual arts, performing arts, literature' reviewed by an expert panel on merit, feasibility and alignment; no amounts or counts. The newsletter announces Cycle 3 (closing 9 October 2026, open to 'theatre, dance, and music productions') and congratulates Cycle 2 recipients without numbers. NFC's co-production page describes the N!xau ǂToma Film Fund (2017) for African filmmakers filming in Namibia, objectives only, no amounts. Nothing for a series incentive, a fee cap, a series' route to screen or play runs.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "1 search (standard): 'National Theatre of Namibia actors fee rate per performance director playwright payment minimum wage artists Namibia'",
+     "result": "No scale, agreement or minimum for stage actors, directors or playwrights; leads: NTN pages (production sheet, call-outs), a 2019 New Era column, Namibian reports on unpaid performances and venue hire.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "National Theatre of Namibia: home https://www.ntn.org.na/ (files/m1/na-ntn-home.html), 'Season call-outs' FAQ (files/m1/na-ntn-callouts.html, sha256 f976b8f9091a5a17be74800bc49c7714b6bb61fed87756ef0ea6f752cf26dd1d), the NTFA theatre Production Sheet PDF (files/m1/na-ntn-prodsheet.pdf, sha256 74ece52e82d6dd8ce769ecc4b7c1fc1ec08d77a1c310f9424ed1bb82284e5556) and the 'Theatre Practices and Business in Namibia Reader 2021' PDF (95 MB, files/m1/na-ntn-reader2021.pdf, sha256 f345dca26ad10aa6e873ad57b9cd81362d791542a5da76e99fb9be16d42ace92) searched in full text for fees, rates, royalties and minimums.",
+     "result": "The call-out FAQ: 'The National Theatre of Namibia (NTN) will feature as a producer for the selected works' and is open to co-productions; no pay terms. The production sheet is an awards entry form. The 2021 reader is practitioners' essays: one says 'charging N$5 000 for a performance' as an example of self-worth, another advises budgeting a producer's fee and 15% contingency; no scale, agreement or minimum. Nothing found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "Labour Act 11 of 2007 (as amended to 2023), LAC annotated copy https://www.lac.org.na/laws/annoSTAT/Labour%20Act%2011%20of%202007.pdf (files/m1/na-lac-labour.pdf, sha256 14f8be9cd4442b048083eff0eb3d71abb7c898aa52625444626ee2b0cb98c066), read for a minimum wage or an arts wage order. mol.gov.na (the labour ministry) failed TLS verification (curl 60); with the issuer chain completed it reset the connection, and www.mol.gov.na was refused at the proxy (502).",
+     "result": "The Act sets no wage figure: s.13 lets the Minister make a wage order 'determining remuneration and other conditions' for employers and employees described in the notice; no wage order for the arts (or a national minimum wage order) is reproduced or listed in the annotated text. No stage director's or actor's minimum found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "New Era (neweralive.na) 'Is acting a good career option in Namibia' (4 Oct 2019) https://neweralive.na/is-acting-a-good-career-option-in-namibia/ (files/m1/na-ne-acting.html, sha256 e491d34cb6dc83eca9eb8db5d0f65eb2ec71df5a03a18209a75f72d885eabf85).",
+     "result": "Actors interviewed say 'there's no regulator when it comes to actors' payment' and 'The industry needs to start being regulated so that actors can be paid fairly'; no rate, agreement or primary named. Consistent with no minimum, but a quotation, not a source of one.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'na,org,ntn)/' in CC-MAIN-2026-43, -30, 2025-51 (24 captures: home, blog posts, seasons 2017-20, the actors' training lab post) and 'org,artscouncilnam)/' (as under the producer archive attempt).",
+     "result": "NTN captures are programme and blog pages with no pay terms; ntn.org.na's robots.txt answered 403 in 2026-30. Nothing on a director's, playwright's or actor's pay.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "tried": "Copyright and Neighbouring Rights Protection Act 6 of 1994, LAC annotated copy https://www.lac.org.na/laws/annoSTAT/Copyright%20and%20Neighbouring%20Rights%20Protection%20Act%206%20of%201994.pdf (files/m1/na-lac-copyright.pdf, sha256 4bf3011b49b3c2b809482c5aab12626a9c3b08b805156a02538066454f5c79a2), searched for royalty, remuneration, minimum and tariff.",
+     "result": "No minimum fee or royalty for a dramatic work: royalties are set by licence or by a collecting society's licensing scheme ('tariff'), and the only 'prescribed royalties' concern recordings of musical works. A playwright's pay is contractual.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Search 2 of 10. Items 7-9 now rest on all five methods, none finding a minimum; the Labour Act's wage-order power is the only floor mechanism and no arts order was found."
+ },
+ "SI": {
+  "producer": {
+   "blocker": "R-10124",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Uradni list RS (the official gazette): issue 96/2005, PDF https://www.uradni-list.si/_pdf/2005/Ur/u2005096.pdf (files/m1/si-ul-u2005096.pdf, sha256 5c7604a7d4a8984f4b1e0bcd3717c4b938ae4f77a79f2e39704f54b6194ddc28), the Zakon o Radioteleviziji Slovenija (ZRTVS-1, doc. 4191), read for independent production. PISRS (pisrs.si, the legal information system with consolidated texts) is a script-only application: pregledPredpisa?id=ZAKO4506 returned an empty shell, not read.",
+     "result": "ZRTVS-1 art. 9(1) as enacted: 'RTV Slovenija vsako leto, v skladu s programsko produkcijskim načrtom iz 16. člena tega zakona, objavi razpis za odkup slovenskih avdiovizualnih del neodvisnih producentov, ki jih na svojih programih predvaja v skladu z zakonom, ki ureja področje medijev'; (2) the Programme Council sets the procedure, conditions and criteria. So a series reaches RTV through an annual public call; no share, tariff or count stated here, and later amendments (consolidated text) were not read. Nothing on a theatre tax incentive.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Mladina (mladina.si) search 'neodvisni producenti RTV' (files/m1/si-mladina-s2.html); dnevnik.si search (404), 24ur.com search (403), siol.net search (404).",
+     "result": "Mladina's results are commentary on the RTV licence fee and the RTV law referendum; none on the annual call's terms, SFC series results or theatre funding. Nothing found for what the blocker seeks.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'si,rtvslo)/razpis' and 'si,rtvslo)/o-rtv' in CC-MAIN-2026-43 and -30; 'si,rtvslo)/' in CC-MAIN-2026-43 filtered for razpis, neodvisn, producent, odkup.",
+     "result": "No capture of an RTV Slovenija call for independent producers or its terms in either crawl. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "1 search (standard): 'dramski igralec režiser plačni razred javni zavod gledališče 2026 kolektivna pogodba za kulturo dramatik avtorski honorar'",
+     "result": "Led to the Kolektivna pogodba za kulturne dejavnosti and its annexes (Uradni list 2024-01-3095; tax-fin-lex consolidated copies) and to a price list on zdus.si (both read below).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Uradni list RS 99/2024 (25 Nov 2024): the Aneks h Kolektivni pogodbi za kulturne dejavnosti v RS page https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2024-01-3095/aneks-h-kolektivni-pogodbi-za-kulturne-dejavnosti-v-republiki-sloveniji (files/m1/si-ul-2024-3095.html, sha256 c0baa0f184ae3291c757ab89bd68e946004110ecfad02430317d89f9826d1984) and the issue PDF with its tables https://www.uradni-list.si/_pdf/2024/Ur/u2024099.pdf (files/m1/si-ul-u2024099.pdf, sha256 8f9bb668a136c867326f9443e4f6dd4af35c5e39cf370615904a5c8803316413); Uradni list RS 95/2024 (8 Nov 2024) PDF with the Zakon o skupnih temeljih sistema plač v javnem sektorju (ZSTSPJS) and its Priloga 1 pay scale https://www.uradni-list.si/_pdf/2024/Ur/u2024095.pdf (files/m1/si-ul-u2024095.pdf, sha256 8706fe47472e9917501112dd50951935f9df79c61ac9686add1a4245b9b56bdf).",
+     "result": "The annex (in force 1 January 2025, entered in the register of collective agreements as no. 35/15) places, in Priloga 1 (columns: start grade, final grade): 'G017008 DRAMSKI IGRALEC VII/2 0 19 29', 'G017009 DRAMSKI, OPERNI, LUTKOVNI REŽISER VII/2 0 30 40', 'G017040 REŽISER VII/2 0 30 40', 'G017007 DRAMATURG VII/2 0 21 31', 'G017041 SCENARIST VII/2 0 22 32'. ZSTSPJS Priloga 1: grade 19 EUR 2134,68, grade 21 2264,68, grade 22 2332,62, grade 30 2954,90 a month. These bind employees of public culture institutes (public theatres); a guest director or a playwright on an author's contract is outside them.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Ministry of Public Administration (gov.si) 'Plačni sistem' page (files/m1/si-gov-placni.html) and its circular 'Uskladitev osnovnih plač in plačne lestvice s 1. aprilom 2026' (31 Mar 2026) (files/m1/si-gov-uskl2026.docx, sha256 03cedb4c32ba85cd48015b2311f13f7638692cbaa3bebbe584401d7ccbe38fff); Združenje dramskih umetnikov Slovenije (ZDUS): 'Strokovni cenik SPID' https://www.zdus.si/f/docs/zagovornistvo/Strokovni-cenik-SPID.pdf (files/m1/si-zdus-cenik.pdf, sha256 82c76d08a33c9cd8a8a5b3a03b37e32c571db8e243397c081d4c73c436c36f2c; first try reset, second read).",
+     "result": "The circular: from 1 April 2026 the pay grades' values and base pay rise 0.9% (2025 inflation 2.7% less 1.8%, ZSTSPJS art. 104); the minister publishes the adjusted scale in the gazette (PISRS ODRE3019, not readable here), and in the transition to 2027 a public employee's base pay is in most cases still not the grade's value but phased in. ZDUS's document is a Slovenian translation of the Croatian writers' guild (SPID) price list, 'izbrana poglavja': Croatia's guidance, not a Slovenian minimum; it says a play's fee is set by the author's contract.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Mladina search 'plače igralcev'; read 'Pred kulturnim praznikom: To je cilj, ki ga mislimo uveljavljati takoj in zdaj' (7 Feb 2023) https://www.mladina.si/222551/pred-kulturnim-praznikom-to-je-cilj-ki-ga-mislimo-uveljavljati-takoj-in-zdaj/ (files/m1/si-mladina-222551.html, sha256 765c5da21cefe99bf98f7477753dd4273e9bb529c7b1c37a4cd415d72f2c0c80).",
+     "result": "The culture unions (Glosa, Sviz, Zasuk) say many culture employees are just above or below the minimum wage, and Zasuk calls for 'kolektivni pogodbi za zunanje izvajalce' with a set hourly rate, i.e. no such floor exists for freelance (external) artists. 2023, before the 2025 pay reform; no figure.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'si,zdus)/' (the dramatic artists' association) in CC-MAIN-2026-43 and -30.",
+     "result": "10 captures: member pages, news, the association's fund page and robots.txt; no fee guidance or agreement. Nothing found.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7,
+     "note": "covers employed dramaturg/scenarist grades only; a playwright's commission has no gazetted floor in what was read"
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "seeItem": 7
+    },
+    {
+     "method": "official-register",
+     "seeItem": 7
+    },
+    {
+     "method": "institution",
+     "seeItem": 7
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 7
+    },
+    {
+     "method": "archive",
+     "seeItem": 7
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": "Employed stage director in a public culture institute (Režiser G017040; dramski, operni, lutkovni režiser G017009): pay grades 30 (start) to 40 (final); grade 30 = EUR 2954.90 a month on the ZSTSPJS scale in force from 2025-01-01; scale values +0.9% from 2026-04-01 (adjusted scale not read); phased in until 2027",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.uradni-list.si/_pdf/2024/Ur/u2024099.pdf",
+      "title": "Uradni list RS 99/2024, Aneks h Kolektivni pogodbi za kulturne dejavnosti v RS, Priloga 1 (plačna podskupina G1)",
+      "read": "2026-11-04",
+      "said": "20 G017009 DRAMSKI, OPERNI, LUTKOVNI REŽISER VII/2 0 30 40 ... 49 G017040 REŽISER VII/2 0 30 40 ... Ta aneks začne veljati 1. januarja 2025.",
+      "file": "files/m1/si-ul-u2024099.pdf",
+      "sha256": "8f9bb668a136c867326f9443e4f6dd4af35c5e39cf370615904a5c8803316413"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.uradni-list.si/_pdf/2024/Ur/u2024095.pdf",
+      "title": "Uradni list RS 95/2024, ZSTSPJS Priloga 1: Plačna lestvica",
+      "read": "2026-11-04",
+      "said": "19 2134,68 ... 30 2954,90 ... 40 3971,14",
+      "file": "files/m1/si-ul-u2024095.pdf",
+      "sha256": "8706fe47472e9917501112dd50951935f9df79c61ac9686add1a4245b9b56bdf"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.gov.si/assets/ministrstva/MNZJU/MJU/Nov-placni-sistem/Pojasnila/Uskladitev-osnovnih-plac-in-placne-lestvice-s-1.-aprilom-2026.docx",
+      "title": "MJU, Uskladitev osnovnih plač in plačne lestvice s 1. aprilom 2026 (31. 3. 2026)",
+      "read": "2026-11-04",
+      "said": "Ker se osnovne plače in vrednosti plačnih razredov v letu 2026 uskladijo za razliko med dejansko inflacijo v letu 2025 in vrednostjo 1,8 odstotka, uskladitev znaša 0,9 odstotka.",
+      "file": "files/m1/si-gov-uskl2026.docx",
+      "sha256": "03cedb4c32ba85cd48015b2311f13f7638692cbaa3bebbe584401d7ccbe38fff"
+     }
+    ]
+   },
+   {
+    "item": 9,
+    "value": "Employed actor in a public theatre (Dramski igralec G017008): grades 19 to 29; grade 19 = EUR 2134.68 a month (2025 scale), +0.9% from 2026-04-01, phased in; a 'priznani dramski igralec' (G017034) 31-41",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.uradni-list.si/_pdf/2024/Ur/u2024099.pdf",
+      "title": "as item 7",
+      "read": "2026-11-04",
+      "said": "19 G017008 DRAMSKI IGRALEC VII/2 0 19 29 ... 45 G017034 PRIZNANI DRAMSKI IGRALEC VII/2 0 31 41",
+      "file": "files/m1/si-ul-u2024099.pdf",
+      "sha256": "8f9bb668a136c867326f9443e4f6dd4af35c5e39cf370615904a5c8803316413"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.uradni-list.si/_pdf/2024/Ur/u2024095.pdf",
+      "title": "as item 7",
+      "read": "2026-11-04",
+      "said": "19 2134,68",
+      "file": "files/m1/si-ul-u2024095.pdf",
+      "sha256": "8706fe47472e9917501112dd50951935f9df79c61ac9686add1a4245b9b56bdf"
+     }
+    ]
+   },
+   {
+    "item": 4,
+    "value": "RTV Slovenija publishes an annual call to buy Slovenian audiovisual works of independent producers (ZRTVS-1 art. 9, as enacted 2005; amendments not read)",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.uradni-list.si/_pdf/2005/Ur/u2005096.pdf",
+      "title": "Uradni list RS 96/2005, Zakon o Radioteleviziji Slovenija (ZRTVS-1)",
+      "read": "2026-11-04",
+      "said": "(1) RTV Slovenija vsako leto, v skladu s programsko produkcijskim načrtom iz 16. člena tega zakona, objavi razpis za odkup slovenskih avdiovizualnih del neodvisnih producentov, ki jih na svojih programih predvaja v skladu z zakonom, ki ureja področje medijev.",
+      "file": "files/m1/si-ul-u2005096.pdf",
+      "sha256": "5c7604a7d4a8984f4b1e0bcd3717c4b938ae4f77a79f2e39704f54b6194ddc28"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "Search 3 of 10. Item 8 (playwright commission/royalty) stays without a floor: only employed dramaturgs (21-31) and scenarists (22-32) have grades."
+ },
+ "ME": {
+  "producer": {
+   "blocker": "R-10022",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Vijesti (vijesti.me) searches 'filmski centar serija', 'RTCG nezavisna produkcija', 'domaca serija RTCG snimanje' (files/m1/me-vij-*.html); CdM (cdm.me) search answered 403.",
+     "result": "Results were Film Centre festival news, RTCG council politics and foreign series news; no article on a series fund, RTCG's commissioning of independent series, the independent-quota compliance report, a theatre fund or play runs. Nothing found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl 'me,rtcg)/', 'me,fccg)/' and 'me,cnp)/' in CC-MAIN-2026-43 and -30 (files/m1/cc-me,*.txt); web.archive.org unreachable this session (connection reset on every request).",
+     "result": "rtcg.me: robots.txt only (34 captures). fccg.me: robots.txt and six 403 pages (2026-43), among them the 2023 script-development decision, not readable. cnp.me: every capture answered 406. Nothing read for what the blocker seeks.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Službeni list Crne Gore (sluzbenilist.me, the official gazette with its legal information system): search 'autorskom i srodnim pravima' (files/m1/me-sl-q-autor.html) found one law, Zakon o autorskom i srodnim pravima, Službeni list CG 37/2011, status 'Važeći' (https://www.sluzbenilist.me/propisi/335997); its pages are images, so pages 1-12 were fetched and OCR'd (srp_latn; files/m1/sl-335997/, OCR text sha256 cc49fd1db3141da222e7482850f49d8545f2a5b06034bb3d4b073927d5a77b22) before the OCR job was stopped at the session's background time limit (machine load about 40).",
+     "result": "Articles 1-49 read: the law says 'Za svako iskorišćavanje autorskog djela od strane drugog lica autoru pripada autorski honorar ... odnosno pravična naknada ..., ako ovim zakonom ili ugovorom nije drukčije određeno', with no amount for a stage work; the only figure in the pages read is the resale-right cap (EUR 12,500). The rest of the law (contracts, collective management) was not read, so no absence is claimed for it.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "Vijesti searches 'plate glumaca', 'glumci zarade pozorište', 'koeficijent glumci'; read 'Medenica: Crnogorsko pozorište nema vidljivost koju bi zasluživalo...' https://www.vijesti.me/tv/emisije/831727/medenica-crnogorsko-pozoriste-nema-vidljivost-koju-bi-zasluzivalo-na-osnovu-svoje-umjetnicke-vrijednosti (files/m1/me-vij-831727.html, sha256 3c19db092368338fa787a657c9a26efa91bfa09ca4854da1a0e793e5bf8fa7a1); CdM search 403.",
+     "result": "No article gives an actor's pay, the coefficient's euro value or a playwright's fee; the article read is on the theatre showcase. Nothing found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      8,
+      9
+     ],
+     "tried": "Common Crawl 'me,cnp)/' (Crnogorsko narodno pozorište, which posts the culture collective agreement) in CC-MAIN-2026-43 and -30.",
+     "result": "16 captures, all HTTP 406; nothing read.",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Službeni list Crne Gore search 'zaradama zaposlenih u javnom sektoru' (16 entries, files/m1/me-sl-propisi-q.html); read the latest amendment, Zakon o izmjenama i dopunama Zakona o zaradama zaposlenih u javnom sektoru, Službeni list CG 26/2026 (28 Feb 2026, in force 28 Feb, applied from 1 Mar 2026) https://www.sluzbenilist.me/propisi/391272, both page images OCR'd (files/m1/me-sl-391272-p1.jpg, -p2.jpg; page HTML sha256 7696dfb1699cd1bafa2787870768265b7337e3cc23a362363b38bad1c1c2ae34).",
+     "result": "The 2026 amendment deletes arts. 7-10 of the pay law and changes arts. 34, 41-44 (Parliament staff, regulators); it states no coefficient value. The page marks the act 'Nevažeći' (superseded). The euro value of a coefficient point (what turns the culture agreement's 6.50/8.80 into pay) was not found; the base law (propisi/334331) was not OCR'd.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "seeItem": 8
+    },
+    {
+     "method": "archive",
+     "seeItem": 8
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "No web search was needed. web.archive.org reset every connection this session, so archive attempts used Common Crawl."
+ }
+}

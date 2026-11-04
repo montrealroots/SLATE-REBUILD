@@ -1,0 +1,959 @@
+{
+ "BB": {
+  "producer": {
+   "blocker": "R-9822",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 index of 'bb,ncf)/' (254 records), filtered for fund, grant, incentive, film, theatre, television pages; fetched ncf.bb/duty-free-concessions/ (20261006113852, sha256 3d1cdf9af2cbaff256f4419bf055b6c3dc1bad27715e17920a564fa919db8914), /business-development-services/ (e9bb2529...0574e56), /business-development-faqs/ (ed3d7aa0...1ff2167) and the 2020 CCTAG FAQ notice (0e906d71...620eb4); saved files/m19/bb-ncf-cc43-*.html",
+     "result": "Read. The concessions page: duty-free 'tools of trade' under the Cultural Industries Development Act Part IV (General) or Part VIII (Audio-Visual Practitioners), approved by the Minister; the services page: CIDF 'grant funding for cultural and creative projects and practitioners', VAT and duty waivers. No series terms, no fund amounts, no rate of yes, no theatre-specific incentive, no count of runs; the CIDF page itself (/cultural-industries-development-fund/) is not in the -43 crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "businessbarbados.com/articles/in-focus-barbados-budding-film-sector (Business Barbados), fetched and read whole, saved files/m19/bb-busbarb-film.html sha256 9b7ef572b2df42cd87674497408cf0c7eabb4d433884f3038ba44f7ab2b4954e; also tried barbadostoday.bb site search and its WordPress API (504 both), nationnews.com search (403), loopnews.com search (curl 60, certificate expired: not read), gisbarbados.gov.bb search (403)",
+     "result": "Read: 'the Barbadian government is committed to advancing the sector through enhanced legislation and strategic support' and names the Barbados Film and Television Association, NCF and Invest Barbados; quotes no primary with an address; no series incentive terms, no fund rate of yes, no fee cap, no commissioning terms, no theatre incentive or fund, no count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 (standard): 'Barbados theatre actors director playwright fees paid per production rate stage play commission'",
+     "result": "No fee schedule, agreement or rate for Barbados; led to ArtsEtc 'truth about bajan theatre', Barbados Today on Mannequin Diaries (2024), a 2014 UWI Today item, NCF pages; the one figure in results (US$500-600 royalties) is from a US blog, not Barbados",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "artsetcbarbados.com/posts/truth-about-bajan-theatre (ArtsEtc, by Ayesha Gibson-Gill), saved files/m19/bb-artsetc-truth.html sha256 9bda70674070ed6fb7f5845ac7e8be71aeef1ee66715db3d369396bab1b18c89; barbadostoday.bb/2024/09/10/off-broadway-satire-mannequin-diaries-ends-run/, saved files/m19/bb-bt-mannequin.html sha256 6f122132699ac0e493a04b775df730aef3b2c5d32b7fccb6817e6c7930000df2",
+     "result": "Read: no rate for a director, playwright or actor. ArtsEtc: 'We don't expect to be full-time stage actors or playwrights on this rock without multiple side hustles, but our producers can't even afford the venue for more than one weekend ... some sponsors want to know whether you have to pay the actors'; it quotes no primary. Barbados Today: the run's close and the playwright's remarks; no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ncf.bb (National Cultural Foundation, which absorbed the BCIDA in 2019): /place/daphne-joseph-hackett-theatre/ (sha256 4216d31fc532afbe0703f3c4583ed6bd9d28eb63873c592f7ec5c7cae31044c7) and /category/arts-culture-theatre-arts/ (sha256 0f33b0ea2548c515718cf7b946b604dfdd14e9f0d58ed33532aabd7096702617), read; labour.gov.bb home (sha256 0215bed9...36ab19) scanned for minimum-wage or collective-agreement links",
+     "result": "Read: the venue page and the 16 theatre-arts posts (NIFCA items) give no fee, rate or minimum for directors, playwrights or actors; labour.gov.bb's home links only the wage-payment notice, no collective agreement or register",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Cultural Industries Development Act 2013 (Barbados Parliament copy, barbadosparliament.com PDF, sha256 59201cff723b0d9cc22d15ea70697d51cab74f641889b309a12ca5216f82da26), read whole as text (8,880 words) for remuneration, wage, fee, royalty; barbadosparliament-laws.com Statutes Online search ('/en/StatutesOnline/Search?searchText=minimum+wage', sha256 29578647...2c1830)",
+     "result": "The Act sets no pay floor for a director, playwright or performer: its only pay provision lets the Minister exempt 60 per cent of a foreign specialist's salary or fees from income tax (s. on approved cultural projects). The Statutes Online search is script-driven: the GET returned the empty search form, no results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'bb,ncf)/' (254 records): fetched ncf.bb/2017/03/31/writers-clinic-20172018/ (sha256 e533c332...c611f36), /2017/03/31/ncf-drama-in-schools/ (473d37d5...aa0c92), /place/daphne-joseph-hackett-theatre/ (332a3dbe...35475); searched the list for fee, rate, theatre, drama pages",
+     "result": "Read: no fee, stipend or rate on any of them; the crawl holds no NCF page on pay for stage work",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 (standard): 'Barbados theatre actors director playwright fees paid per production rate stage play commission'",
+     "result": "No fee schedule, agreement or rate for Barbados; led to ArtsEtc 'truth about bajan theatre', Barbados Today on Mannequin Diaries (2024), a 2014 UWI Today item, NCF pages; the one figure in results (US$500-600 royalties) is from a US blog, not Barbados",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "artsetcbarbados.com/posts/truth-about-bajan-theatre (ArtsEtc, by Ayesha Gibson-Gill), saved files/m19/bb-artsetc-truth.html sha256 9bda70674070ed6fb7f5845ac7e8be71aeef1ee66715db3d369396bab1b18c89; barbadostoday.bb/2024/09/10/off-broadway-satire-mannequin-diaries-ends-run/, saved files/m19/bb-bt-mannequin.html sha256 6f122132699ac0e493a04b775df730aef3b2c5d32b7fccb6817e6c7930000df2",
+     "result": "Read: no rate for a director, playwright or actor. ArtsEtc: 'We don't expect to be full-time stage actors or playwrights on this rock without multiple side hustles, but our producers can't even afford the venue for more than one weekend ... some sponsors want to know whether you have to pay the actors'; it quotes no primary. Barbados Today: the run's close and the playwright's remarks; no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ncf.bb (National Cultural Foundation, which absorbed the BCIDA in 2019): /place/daphne-joseph-hackett-theatre/ (sha256 4216d31fc532afbe0703f3c4583ed6bd9d28eb63873c592f7ec5c7cae31044c7) and /category/arts-culture-theatre-arts/ (sha256 0f33b0ea2548c515718cf7b946b604dfdd14e9f0d58ed33532aabd7096702617), read; labour.gov.bb home (sha256 0215bed9...36ab19) scanned for minimum-wage or collective-agreement links",
+     "result": "Read: the venue page and the 16 theatre-arts posts (NIFCA items) give no fee, rate or minimum for directors, playwrights or actors; labour.gov.bb's home links only the wage-payment notice, no collective agreement or register",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Cultural Industries Development Act 2013 (Barbados Parliament copy, barbadosparliament.com PDF, sha256 59201cff723b0d9cc22d15ea70697d51cab74f641889b309a12ca5216f82da26), read whole as text (8,880 words) for remuneration, wage, fee, royalty; barbadosparliament-laws.com Statutes Online search ('/en/StatutesOnline/Search?searchText=minimum+wage', sha256 29578647...2c1830)",
+     "result": "The Act sets no pay floor for a director, playwright or performer: its only pay provision lets the Minister exempt 60 per cent of a foreign specialist's salary or fees from income tax (s. on approved cultural projects). The Statutes Online search is script-driven: the GET returned the empty search form, no results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'bb,ncf)/' (254 records): fetched ncf.bb/2017/03/31/writers-clinic-20172018/ (sha256 e533c332...c611f36), /2017/03/31/ncf-drama-in-schools/ (473d37d5...aa0c92), /place/daphne-joseph-hackett-theatre/ (332a3dbe...35475); searched the list for fee, rate, theatre, drama pages",
+     "result": "Read: no fee, stipend or rate on any of them; the crawl holds no NCF page on pay for stage work",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 (standard): 'Barbados theatre actors director playwright fees paid per production rate stage play commission'",
+     "result": "No fee schedule, agreement or rate for Barbados; led to ArtsEtc 'truth about bajan theatre', Barbados Today on Mannequin Diaries (2024), a 2014 UWI Today item, NCF pages; the one figure in results (US$500-600 royalties) is from a US blog, not Barbados",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "artsetcbarbados.com/posts/truth-about-bajan-theatre (ArtsEtc, by Ayesha Gibson-Gill), saved files/m19/bb-artsetc-truth.html sha256 9bda70674070ed6fb7f5845ac7e8be71aeef1ee66715db3d369396bab1b18c89; barbadostoday.bb/2024/09/10/off-broadway-satire-mannequin-diaries-ends-run/, saved files/m19/bb-bt-mannequin.html sha256 6f122132699ac0e493a04b775df730aef3b2c5d32b7fccb6817e6c7930000df2",
+     "result": "Read: no rate for a director, playwright or actor. ArtsEtc: 'We don't expect to be full-time stage actors or playwrights on this rock without multiple side hustles, but our producers can't even afford the venue for more than one weekend ... some sponsors want to know whether you have to pay the actors'; it quotes no primary. Barbados Today: the run's close and the playwright's remarks; no pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ncf.bb (National Cultural Foundation, which absorbed the BCIDA in 2019): /place/daphne-joseph-hackett-theatre/ (sha256 4216d31fc532afbe0703f3c4583ed6bd9d28eb63873c592f7ec5c7cae31044c7) and /category/arts-culture-theatre-arts/ (sha256 0f33b0ea2548c515718cf7b946b604dfdd14e9f0d58ed33532aabd7096702617), read; labour.gov.bb home (sha256 0215bed9...36ab19) scanned for minimum-wage or collective-agreement links",
+     "result": "Read: the venue page and the 16 theatre-arts posts (NIFCA items) give no fee, rate or minimum for directors, playwrights or actors; labour.gov.bb's home links only the wage-payment notice, no collective agreement or register",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Cultural Industries Development Act 2013 (Barbados Parliament copy, barbadosparliament.com PDF, sha256 59201cff723b0d9cc22d15ea70697d51cab74f641889b309a12ca5216f82da26), read whole as text (8,880 words) for remuneration, wage, fee, royalty; barbadosparliament-laws.com Statutes Online search ('/en/StatutesOnline/Search?searchText=minimum+wage', sha256 29578647...2c1830)",
+     "result": "The Act sets no pay floor for a director, playwright or performer: its only pay provision lets the Minister exempt 60 per cent of a foreign specialist's salary or fees from income tax (s. on approved cultural projects). The Statutes Online search is script-driven: the GET returned the empty search form, no results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'bb,ncf)/' (254 records): fetched ncf.bb/2017/03/31/writers-clinic-20172018/ (sha256 e533c332...c611f36), /2017/03/31/ncf-drama-in-schools/ (473d37d5...aa0c92), /place/daphne-joseph-hackett-theatre/ (332a3dbe...35475); searched the list for fee, rate, theatre, drama pages",
+     "result": "Read: no fee, stipend or rate on any of them; the crawl holds no NCF page on pay for stage work",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Stage items 7, 8, 9: no agreement, tariff or published rate found by any of the five methods; theatre is amateur and part-time per the trade press read (ArtsEtc). Wayback: web.archive.org resets the connection from here (archive.org's availability API answers), so Common Crawl was the archive used."
+ },
+ "CA": {
+  "producer": {
+   "blocker": "R-9855",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 (standard): 'Canada Council for the Arts success rate applications funded theatre 2024-25 grants statistics'",
+     "result": "Led to the Council's research library: Explore and Create 2023-24 funding results, Arts Abroad 2024-25, Arts Across Canada 2024-25, Public Outreach 2023-24; the Explore and Create page was then fetched (institution, below)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "canadacouncil.ca/research/research-library/2024/06/explore-and-create-2023-24-funding-results (followed from the search), fetched and read, saved files/m19/ca-cc-eac-2324.html sha256 cd32ba8d8ad371bffb17730d2cb1a96167b2962cea4ef0c83f6a4802ff7e1666",
+     "result": "Found (stage fund, rate of yes): Table 4, by field of practice: 'Theatre 1,289 291 22.6% $39,922,980 $8,865,860' (applications assessed, successful, success rate, requested, awarded); all fields 13,349 assessed, 2,162 successful, 16.2%. Research and Creation and Concept to Realization components, 2023-24; no 2024-25 edition was found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -21 and 2025-51 for 'ca,canadacouncil)/' (to find a 2024-25 Explore and Create results page or the grant amounts); archive.org Wayback availability API for the 2023-24 results page and the Concept to Realization page; web.archive.org snapshot fetch; Common Crawl CC-MAIN-2026-43 'ca,cmf-fmc)/' (867 records), fetched cmf-fmc.ca/document/2025-2026-annual-report/ and /document/broadcaster-envelope-allocations-2026-2027 (saved files/m19/ca-cmf-cc43-*.html, sha256 087dc765...c8a5b and 6febbe1b...63772)",
+     "result": "canadacouncil.ca: the four crawls hold only robots.txt (4 to 7 records each), no page. Wayback availability: 429 Too Many Requests; web.archive.org: connection reset (curl 35). CMF: both captures are a bot-verification page ('One moment, please... Please wait while your request is being verified'), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "playbackonline.ca/2026/08/13/screen-coalition-asks-ottawa-to-maintain-streamer-contributions/ (Playback), saved files/m19/ca-playback-coalition.html sha256 0f1762aaca9b78df3bfdb48d4264f6f74fd42863c3b6aec8e18d7e7000b590f3; intermissionmagazine.ca/features/summerworks-hustle-culture/ (Intermission), saved files/m19/ca-interm-sw.html sha256 14fc5e54...697dc8; Playback and Intermission site searches for 'Canada Council success rate'",
+     "result": "Read. Playback: a coalition's open letter asks Ottawa to keep the CRTC's proposed 15% Canadian Programming Expenditure on foreign streamers; the government 'commit[ted] $600 million annually to the audiovisual sector' (a policy item, no commissioning terms or pick-up count; the letter is not linked as a primary with an address in the text read). Intermission: artists on pay and funding info sessions; no figure. No rate of yes, no theatre tax credit, no count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {},
+  "found": [
+   {
+    "item": 6,
+    "value": "Canada Council for the Arts, Explore and Create (Research and Creation; Concept to Realization), 2023-24, field of practice Theatre: 1,289 applications assessed, 291 successful, application success rate 22.6%, $39,922,980 requested, $8,865,860 awarded (all fields: 13,349 assessed, 2,162 successful, 16.2%)",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://canadacouncil.ca/research/research-library/2024/06/explore-and-create-2023-24-funding-results",
+      "title": "Explore and Create 2023-24 Funding Results",
+      "read": "2026-11-04",
+      "said": "Table 4: Application and Funding Statistics by Field of Practice ... Theatre 1,289 291 22.6% $39,922,980 $8,865,860 ... Total 13,349 2,162 16.2% $421,315,013 $68,012,580",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/ca-cc-eac-2324.html",
+      "sha256": "cd32ba8d8ad371bffb17730d2cb1a96167b2962cea4ef0c83f6a4802ff7e1666"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": ""
+ },
+ "DE": {
+  "producer": {
+   "blocker": "R-9888",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 (standard): 'Serienförderung 2025 Anträge eingereicht bewilligt Förderquote FFF Bayern Film- und Medienstiftung NRW Medienboard Serie'",
+     "result": "No 2025 application or approval counts for a Land's series fund; led to Medienboard's Merkblatt PRODUKTION SERIEN (25 Feb 2026), FFF Bayern's 2025 guidelines and deadlines, DFFF/GMPF 'Auf einen Blick 2025', and a 2013-14 Bavarian Landtag answer (film, too old)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "medienboard.de Merkblatt PRODUKTION SERIEN, 2026_02_25 PDF (followed from the search), read whole (1,555 words), saved files/m19/de-mbb-serien.pdf sha256 8576aced4c204f010b66a898f1006f64659d51edf1d6881d37d79ae0aa8e1a67",
+     "result": "Found series fund terms (Medienboard Berlin-Brandenburg): a conditionally repayable interest-free loan; fiction and non-fiction series for TV and online; fully financed commissions not funded; cumulated funding normally not over 30% of the German financing share; producer's own share normally 70% (per its Merkblatt Eigenanteil); overheads (Handlungskosten) up to 6%, financing costs up to 8%, profit up to 7.5% of production costs, no further producer fees; regional spend at least the loan. No rate of yes",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'de,buehnenverein)/' (237 records): fetched the 14.10.2025 press release 'Fonds fördert sieben herausragende Theaterproduktionen mit knapp einer Million Euro im Programm XZLLNZ' (saved files/m19/de-bv-cc43-*xzllnz*.html, sha256 48fb8b75d8c33deeac047d1abe66b03cef693e66c1066a22a36cf6a1598644d3); CC-MAIN-2026-43 and -30 'de,buehnenverlage)/'",
+     "result": "Read: the Fonds Darstellende Künste jury chose seven large new productions on 10 September 2025 under XZLLNZ (free scene with city and state theatres), almost one million euro in all; 'Die Antragslage macht dem Programm alle Ehre' but no application count, so no rate of yes. buehnenverlage.de: no records in either crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "nachtkritik.de search 'Fonds Darstellende Künste Anträge' and its item /meldungen/2-foerderrunde-des-hauptstadtkulturfonds-berlin (saved files/m19/de-nk-hkf.html sha256 5d96148d10d39deddf0a66bfae4127697307fdb9a198974c290f4c94fd571e3e)",
+     "result": "Read: 5 December 2018, quoting the Berlin Senate culture department's release: Hauptstadtkulturfonds, second round for 2019, about EUR 7.16 million for 92 projects of 325 applications (about EUR 23 million asked), all arts, not theatre alone; a 2018 count, not today's. No series rate of yes, no theatre tax incentive, no count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 (standard): 'Regelsammlung Bühnenverlage Bühnen Tantieme Autor Prozent Abendeinnahmen Mindestgage NV Bühne Regie 2026'",
+     "result": "No author's percentage; led to GDBA's TV-L adoption item, the VDB's 2025/26 accountability report on the Bundestag lobby register, the TV Gast (1 June 2025) PDF and the Bühnenverein's NV Bühne FAQ (25 Feb 2026) on buehnenverein.de, an AdS (Swiss) model contract",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "buehnenverein.de: Tarifvertrag Gast vom 1. Juni 2025 PDF (saved files/m19/de-tvgast.pdf sha256 80f7c2ac880bfd7864de4a7ec4ec4543e6947fc24b2195de48419717a2ade703, read whole) and 'Fragen und Antworten zum Tarifvertrag NV Bühne' of 25 February 2026 (files/m19/de-bv-faq-nv.pdf sha256 b138481e8c769ecdb5a648be003d19a73f4afc5fd3f713f2a3d9437b01112990); gdba.de /kuendigung-nv-buehne/ (sha256 b90223420dc98cdde4b547754167425b76b00611a80a6a93fed6c90a876f9150)",
+     "result": "Read. NV Bühne terminated by GDBA and BFFS to 30 June 2026; the Bühnenverein: 'Die Arbeitgeber können ab dem 1. Juli 2026 mit NV Bühne-Beschäftigten einzelvertraglich Regelungen vereinbaren, die vom Tarifvertrag abweichen'; GDBA: 'alle Regeln gelten nämlich automatisch weiter bis eine neue Vereinbarung getroffen worden ist'. TV Gast § 3: for solo guests (solo artists in the sense of § 1 Abs. 2 NV Bühne, employed for a number of performances) at least 10% of the § 58 NV Bühne entry gage per performance and 5% per rehearsal day (8% and 4% for smaller tasks); in force 1 June 2025, terminable at the earliest to 31 December 2026",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "gesetze-im-internet.de Tarifvertragsgesetz § 4 (saved files/m19/de-tvg4.html sha256 072a752cb41f69bacf2468aecbf9b6ef9e5748a937462860d80b45772646db11), read",
+     "result": "Read: § 4 Abs. 5 'Nach Ablauf des Tarifvertrags gelten seine Rechtsnormen weiter, bis sie durch eine andere Abmachung ersetzt werden.' So the NV Bühne minimum gage continues after 30 June 2026 for existing contracts until replaced; new contracts may deviate (Bühnenverein FAQ). No register of the NV Bühne's text itself was found (it is not declared generally binding)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "nachtkritik.de/meldungen/tarifverhandlungen-gewerkschaften-kuendigen-nv-buehne (19 December 2025, quoting the GDBA's website and the Bühnenverein's press release), saved files/m19/de-nk-kuend.html sha256 79e021d38354f7f14e6918dcaa2e13c2e75bd949e0aff2898f1b6172c978b4dc",
+     "result": "Read: GDBA and BFFS terminated the NV Bühne for the second time; with the May 2025 agreement 'trat der NV Bühne rückwirkend zum 1. Januar 2025 wieder vollumfänglich in Kraft'; 'Bis zum 30. Juni 2026 ist Zeit für eine Einigung'. No new gage figure",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'de,buehnenverein)/': fetched /de/theater-und-musikrecht (sha256 e0bf1fe5e8faa9614e8a154f36c9912253e3feb5a668a6aea78172f538b50b86) and /de/mustervertraege (691bb591...cc05b5); CC-MAIN-2026-43 and -30 'de,buehnenverlage)/'",
+     "result": "Read: the Bühnenverein's annual 'Normsammlung Theater- und Musikrecht' holds NV Bühne (Stand 30. April 2025), TV Gast (Stand 1. Juni 2025) and 'die mit dem Verband Deutscher Bühnen- und Medienverlage ... abgeschlossenen Vereinbarungen'; sold in print and online by r.v.decker, not on the site. Mustervertraege: members' area. buehnenverlage.de: no records in either crawl",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 (standard): 'Regelsammlung Bühnenverlage Bühnen Tantieme Autor Prozent Abendeinnahmen Mindestgage NV Bühne Regie 2026'",
+     "result": "No author's percentage; led to GDBA's TV-L adoption item, the VDB's 2025/26 accountability report on the Bundestag lobby register, the TV Gast (1 June 2025) PDF and the Bühnenverein's NV Bühne FAQ (25 Feb 2026) on buehnenverein.de, an AdS (Swiss) model contract",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'de,buehnenverein)/': fetched /de/theater-und-musikrecht (sha256 e0bf1fe5e8faa9614e8a154f36c9912253e3feb5a668a6aea78172f538b50b86) and /de/mustervertraege (691bb591...cc05b5); CC-MAIN-2026-43 and -30 'de,buehnenverlage)/'",
+     "result": "Read: the Bühnenverein's annual 'Normsammlung Theater- und Musikrecht' holds NV Bühne (Stand 30. April 2025), TV Gast (Stand 1. Juni 2025) and 'die mit dem Verband Deutscher Bühnen- und Medienverlage ... abgeschlossenen Vereinbarungen'; sold in print and online by r.v.decker, not on the site. Mustervertraege: members' area. buehnenverlage.de: no records in either crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Bundestag Lobbyregister: VDB 'Rechenschaftsbericht 2025/2026' PDF filed there (lobbyregister.bundestag.de/media/bb/54/804502/..., saved files/m19/de-vdb-lobby.pdf sha256 cd2b418e30959568e0db66f18db093dbc3cbb928a81561f294ef9463c41b6d78, read as text, 8,695 words); gesetze-im-internet.de UrhG § 32 (files/m19/de-urhg32.html sha256 cc9ec7861a208d645380629194490de3f9c86782cd1f1f863697929602d6dfaf)",
+     "result": "Read. VDB and Bühnenverein agreed increases of the RV Bühne rates ('Urheberabgabe, Garantien kleine- und mittlere Spielstätten, Musikmaterialmietvergütung'): season 2026/2027 by 5% (including 2027/2028), 2028/2029 by 2.5%; reference amount for non-classified private theatres EUR 110 for those seasons. The base rates of the RV Bühne are not in the report. UrhG § 32: the right to 'angemessene Vergütung', no figure",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "nachtkritik.de search 'Tantiemen Autoren Honorar' (files/m19/de-nk-s2.html sha256 fbd3df6f...69bacf2) and die-deutsche-buehne.de search 'Tantieme' (files/m19/de-ddb-s.html sha256 1d4fd3ea...6fd1fdd), result lists read",
+     "result": "Reviews and columns only; no article on a playwright's commission fee, advance or royalty rate. The AdS model performance contract with commentary found by the search is Swiss (Autorinnen und Autoren der Schweiz, 2001: 'üblich sind 15%' of gross receipts), not Germany's, so not used",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": "Change in force: GDBA and BFFS terminated the NV Bühne to 30 June 2026. Under TVG § 4 (5) its norms continue until replaced; from 1 July 2026 employers may agree deviating terms with new NV Bühne staff (Bühnenverein FAQ, 25 Feb 2026). TV Gast (in force 1 June 2025): solo guests (solo artists under § 1 (2) NV Bühne employed for set performances) at least 10% of the § 58 NV Bühne entry gage per performance and 5% per rehearsal day (8% / 4% for smaller tasks); whether a guest director falls in it as an employee is not stated (Protokollnotiz 2: guests may be self-employed)",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.buehnenverein.de/media/filer_public/be/69/be691158-d076-4c62-925f-27631b9cbee8/fragen_und_antworten_zum_tarifvertrag_nv_buehne.pdf",
+      "title": "Fragen und Antworten zum Tarifvertrag NV Bühne (25. Februar 2026)",
+      "read": "2026-11-04",
+      "said": "Mit dem 30. Juni 2026 endet die Friedenspflicht für die Gewerkschaften GDBA und BFFS. ... Die Arbeitgeber können ab dem 1. Juli 2026 mit NV Bühne-Beschäftigten einzelvertraglich Regelungen vereinbaren, die vom Tarifvertrag abweichen",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/de-bv-faq-nv.pdf",
+      "sha256": "b138481e8c769ecdb5a648be003d19a73f4afc5fd3f713f2a3d9437b01112990"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.gesetze-im-internet.de/tvg/__4.html",
+      "title": "TVG § 4",
+      "read": "2026-11-04",
+      "said": "(5) Nach Ablauf des Tarifvertrags gelten seine Rechtsnormen weiter, bis sie durch eine andere Abmachung ersetzt werden.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/de-tvg4.html",
+      "sha256": "072a752cb41f69bacf2468aecbf9b6ef9e5748a937462860d80b45772646db11"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.buehnenverein.de/media/filer_public/f7/38/f738ee0e-b09b-4f3e-b2cf-f53ad2911b40/tv_gast_fassung_1625.pdf",
+      "title": "Tarifvertrag Gast vom 1. Juni 2025",
+      "read": "2026-11-04",
+      "said": "(2) Für Sologäste beträgt die Mindestgage pro Aufführung 10 vom Hundert der Einstiegsgage nach § 58 Abs. 1 Unterabs. 1 Satz 2 NV Bühne. ... (3) Die Mindestgage je Probentag beträgt 5 vom Hundert der Einstiegsgage nach § 58 Abs. 1 Unterabs. 1 Satz 2 NV Bühne.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/de-tvgast.pdf",
+      "sha256": "80f7c2ac880bfd7864de4a7ec4ec4543e6947fc24b2195de48419717a2ade703"
+     }
+    ]
+   },
+   {
+    "item": 8,
+    "value": "Partial: RV Bühne (VDB with Deutscher Bühnenverein) author levy, guarantees for small and medium venues and music hire rise 5% for 2026/27 (incl. 2027/28) and 2.5% for 2028/29; reference amount for non-classified private theatres EUR 110 for those seasons. The base percentage is not published online (in the Bühnenverein Normsammlung, r.v.decker)",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.lobbyregister.bundestag.de/media/bb/54/804502/Rechenschaftsbericht-VDB-2025-2026_EUeR-2025-fuer-Lobbyregister.pdf",
+      "title": "VDB Rechenschaftsbericht des Vorstandes 2025/2026 (Lobbyregister)",
+      "read": "2026-11-04",
+      "said": "Die Verhandlungskommissionen von VDB und Deutschem Bühnenverein konnten sich auf die folgenden Anhebungen der Gebührensätze der RV Bühne (Urheberabgabe, Garantien kleine- und mittlere Spielstätten, Musikmaterialmietvergütung) für Spielzeiten 2026/27, 2027/28 und 2028/29 verständigen: Spielzeit 2026/2027 um 5% (einschließlich Spielzeit 2027/2028) Spielzeit 2028/2029 um 2,5% Darüber hinaus erhöht sich der Referenzbetrag für nicht eingruppierte Privattheater auf 110 Euro",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/de-vdb-lobby.pdf",
+      "sha256": "cd2b418e30959568e0db66f18db093dbc3cbb928a81561f294ef9463c41b6d78"
+     }
+    ]
+   },
+   {
+    "item": 2,
+    "value": "Medienboard Berlin-Brandenburg series production (Merkblatt 25 Feb 2026): conditionally repayable interest-free loan; cumulated public funding normally max 30% of the German financing share; producer own share normally 70%; recognised overheads up to 6%, financing costs up to 8%, profit up to 7.5% of production costs, no further producer fees; fully financed commissions normally not funded; at least the loan spent in Berlin-Brandenburg. No rate of yes",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.medienboard.de/fileadmin/user_upload/pdf/Richtlinien-Merkblaetter/2026_02_25_Merkblatt_PRODUKTION_SERIEN.pdf",
+      "title": "Merkblatt PRODUKTION SERIEN",
+      "read": "2026-11-04",
+      "said": "Die Förderung erfolgt in der Regel in Form eines bedingt rückzahlbaren, zinslosen Darlehens. ... Die kumulierte Förderung soll in der Regel nicht über 30 % des deutschen Finanzierungsanteils betragen. ... Es können Handlungskosten bis zu 6 % und Finanzierungskosten bis zu 8 % der Fertigungskosten sowie ein Gewinn bis zu 7,5 % als Herstellungskosten anerkannt werden.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/de-mbb-serien.pdf",
+      "sha256": "8576aced4c204f010b66a898f1006f64659d51edf1d6881d37d79ae0aa8e1a67"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": ""
+ },
+ "GD": {
+  "producer": {
+   "blocker": "R-9920",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "laws.gov.gd (Government of Grenada laws site) and /index.php; www.gov.gd/gazette; gazette.gov.gd; www.parliament.gd — sought the texts of S.R.&O. 11 of 2023 (Customs (Duties Exemptions) Order) and S.R.&O. 13 of 2023 (VAT Order) that GOCA cites, and any wage order, copyright or theatre rule",
+     "result": "Not read: laws.gov.gd answered with a JavaScript cookie challenge (document.cookie = \"humans_21909=1\"; reload), HTTP 409 on /index.php, 500 on the root (a bot check, not got past); gov.gd/gazette HTTP 500; gazette.gov.gd connection reset (curl 35); parliament.gd CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 (56 records) and -43 (35) for 'gd,gov,creativeaffairs)/' (Grenada Office of Creative Affairs); fetched /cci-business-development-fund/ (20260913235422, sha256 e80c116257ddd57ad6a892251c505647892d9a042408de45501ba449ff8b3e67), /program/cci-business-development-fund/ (097288f4...469c0), /concessions-for-creatives/ (20261018031351, a47331fc74000b0587113d8365bc1b71d6409ca70812f00db262ed1b226dd11b), /creative-industry/performing-arts/ (4dbea540...e6258c), /reports/ (2629bc28...5d3d5110); saved files/m19/gd-goca-cc-*.html",
+     "result": "Read. The CCI Business Development Fund (Grenada Development Bank): 'Over $2.7M Contributed to Creative Businesses Since the Program Launched'; loans up to $50,000, grants up to $25,000 for non-profit and community cultural initiatives including cultural events; matches what producer-GD.json already holds. Concessions: 100% CET and VAT on equipment and tools of trade under S.R.&O. 11 and 13 of 2023, film, television and performing arts included. No series terms, no fee cap, no rate of yes, no commissioning terms, no count of runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "nowgrenada.com/2026/11/100-grants-caribbean-culture-fund-hits-grantmaking-milestone/ (NOW Grenada, 4 Nov 2026, a CCF press release), saved files/m19/gd-now-ccf.html sha256 3611d8a58743f2fcb4c7cb0fed44f051d66d3b75a1f5e20c59fd17a15ba61bd4; nowgrenada.com search 'film fund' result list (files/m19/gd-www.nowgrenada.com-*.html)",
+     "result": "Read: the regional Caribbean Culture Fund's 100 grants across 28 countries and territories, Grenada among them; 'Performing arts was the largest category, with 18 grantees, followed by multimedia with 16 and film with 14'; no application count, no amounts, nothing Grenada's own; no series incentive, fee cap, commissioning terms or count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "laws.gov.gd (Government of Grenada laws site) and /index.php; www.gov.gd/gazette; gazette.gov.gd; www.parliament.gd — sought the texts of S.R.&O. 11 of 2023 (Customs (Duties Exemptions) Order) and S.R.&O. 13 of 2023 (VAT Order) that GOCA cites, and any wage order, copyright or theatre rule",
+     "result": "Not read: laws.gov.gd answered with a JavaScript cookie challenge (document.cookie = \"humans_21909=1\"; reload), HTTP 409 on /index.php, 500 on the root (a bot check, not got past); gov.gd/gazette HTTP 500; gazette.gov.gd connection reset (curl 35); parliament.gd CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Same Common Crawl captures of creativeaffairs.gov.gd (CC-MAIN-2026-39 and -43), read for pay: /creative-industry/performing-arts/ (lists 'Dancers Choreographers Playwrights Directors Act[ors]'), the fund and concessions pages",
+     "result": "No fee, rate or minimum for a director, playwright or actor on any captured page",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "laws.gov.gd (Government of Grenada laws site) and /index.php; www.gov.gd/gazette; gazette.gov.gd; www.parliament.gd — sought the texts of S.R.&O. 11 of 2023 (Customs (Duties Exemptions) Order) and S.R.&O. 13 of 2023 (VAT Order) that GOCA cites, and any wage order, copyright or theatre rule",
+     "result": "Not read: laws.gov.gd answered with a JavaScript cookie challenge (document.cookie = \"humans_21909=1\"; reload), HTTP 409 on /index.php, 500 on the root (a bot check, not got past); gov.gd/gazette HTTP 500; gazette.gov.gd connection reset (curl 35); parliament.gd CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Same Common Crawl captures of creativeaffairs.gov.gd (CC-MAIN-2026-39 and -43), read for pay: /creative-industry/performing-arts/ (lists 'Dancers Choreographers Playwrights Directors Act[ors]'), the fund and concessions pages",
+     "result": "No fee, rate or minimum for a director, playwright or actor on any captured page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same NOW Grenada items: the 'film fund' search list and the CCF article, read for a playwright's commission or royalty",
+     "result": "No fee, advance or royalty for a playwright",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "laws.gov.gd (Government of Grenada laws site) and /index.php; www.gov.gd/gazette; gazette.gov.gd; www.parliament.gd — sought the texts of S.R.&O. 11 of 2023 (Customs (Duties Exemptions) Order) and S.R.&O. 13 of 2023 (VAT Order) that GOCA cites, and any wage order, copyright or theatre rule",
+     "result": "Not read: laws.gov.gd answered with a JavaScript cookie challenge (document.cookie = \"humans_21909=1\"; reload), HTTP 409 on /index.php, 500 on the root (a bot check, not got past); gov.gd/gazette HTTP 500; gazette.gov.gd connection reset (curl 35); parliament.gd CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Same Common Crawl captures of creativeaffairs.gov.gd (CC-MAIN-2026-39 and -43), read for pay: /creative-industry/performing-arts/ (lists 'Dancers Choreographers Playwrights Directors Act[ors]'), the fund and concessions pages",
+     "result": "No fee, rate or minimum for a director, playwright or actor on any captured page",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Producer: the GOCA fund and concessions found by the archive attempt match producer-GD.json; nothing new. Grenada's legal database (laws.gov.gd) sits behind a cookie challenge from here."
+ },
+ "HR": {
+  "producer": {
+   "blocker": "R-9954",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 (3,952 records) and -39 (3,805) for 'hr,havc)/', filtered for serij, televizij, rezultat, odluk; fetched the news item 'objavljen-javni-poziv-za-proizvodnju-serijskih-televizijskih-djela-u-2026' (20260912205452, saved files/m19/hr-havc-cc39-serije2026.html sha256 8643d57094a3cb7c8aa0e44e46452955f36a294e0d2e1618b79178f1fe8078fa)",
+     "result": "Read: applications for the 2026 series-production call 'podnose se isključivo od 1. do 30. rujna 2026. godine', so no results had been published by the crawl dates; the crawls hold results PDFs for distribution and complementary activities (2016-2026) and none for series production. No rate of yes, no theatre incentive or fund, no count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "narodne-novine.nn.hr NN 22/2024-354, Uredba o nazivima radnih mjesta, uvjetima za raspored i koeficijentima za obračun plaće u javnim službama (HTML page and the 75-page official PDF, saved files/m19/hr-nn-22-2024-354.pdf sha256 2f3bb2402eba5ab77b967ea1be3071b4277c437cb2909c6544a213e3e12e8794), Article 14 (culture) read whole as text; zakon.hr consolidated page of the same Uredba (files/m19/hr-zakon-59779.html sha256 e9c5b175...81adca), updated to NN 119/26; found by WebSearch 5 (below)",
+     "result": "Read: Article 14 lists the culture system's management posts (14.1.1-14.1.8, e.g. 'Poslovni ravnatelj u Hrvatskom narodnom kazalištu u Zagrebu 3,78') and 'Ostala posebna radna mjesta u kulturi' 14.4.1-14.4.39 (archivists to 'Manipulant 1,38'); no actor, director or dramaturg post. The 2014 regime's theatre posts (a 2014 draft on min-kulture.gov.hr lists 'glumac – nacionalni prvak', 'redatelj I', 'dramaturg') are gone from it; theatres set them in their own systematization (below)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 (standard): 'Uredba o nazivima radnih mjesta uvjetima za raspored i koeficijentima za obračun plaće u javnim službama 2024 narodne novine glumac redatelj kazalište koeficijent'",
+     "result": "Led to NN 22/2024-354 (narodne-novine.nn.hr), zakon.hr's consolidated copy, union and faculty copies, and a 2014 ministry draft with theatre posts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "index.hr search 'plaće glumaca' (files/m19/hr-idx-s.html sha256 e681dcc3...790713), kulturpunkt.hr search 'honorari glumci kazalište' (404), tportal.hr search 'plaće glumaca kazalište' (404)",
+     "result": "index.hr's results are Hollywood pay items only; the other two searches returned 404. No Croatian theatre rate or agreement in the press reached",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "narodne-novine.nn.hr NN 22/2024-354, Uredba o nazivima radnih mjesta, uvjetima za raspored i koeficijentima za obračun plaće u javnim službama (HTML page and the 75-page official PDF, saved files/m19/hr-nn-22-2024-354.pdf sha256 2f3bb2402eba5ab77b967ea1be3071b4277c437cb2909c6544a213e3e12e8794), Article 14 (culture) read whole as text; zakon.hr consolidated page of the same Uredba (files/m19/hr-zakon-59779.html sha256 e9c5b175...81adca), updated to NN 119/26; found by WebSearch 5 (below)",
+     "result": "Read: Article 14 lists the culture system's management posts (14.1.1-14.1.8, e.g. 'Poslovni ravnatelj u Hrvatskom narodnom kazalištu u Zagrebu 3,78') and 'Ostala posebna radna mjesta u kulturi' 14.4.1-14.4.39 (archivists to 'Manipulant 1,38'); no actor, director or dramaturg post. The 2014 regime's theatre posts (a 2014 draft on min-kulture.gov.hr lists 'glumac – nacionalni prvak', 'redatelj I', 'dramaturg') are gone from it; theatres set them in their own systematization (below)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 (standard): 'Uredba o nazivima radnih mjesta uvjetima za raspored i koeficijentima za obračun plaće u javnim službama 2024 narodne novine glumac redatelj kazalište koeficijent'",
+     "result": "Led to NN 22/2024-354 (narodne-novine.nn.hr), zakon.hr's consolidated copy, union and faculty copies, and a 2014 ministry draft with theatre posts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "hnk.hr (Hrvatsko narodno kazalište u Zagrebu) /hr/o-nama/dokumenti/ and its 'pravilnik_i_sistematizacija.pdf' (86 pages, saved files/m19/hr-hnk-sist.pdf sha256 387092c91f1995dc248a220c7aa0a05c940477c1de6339493d1432d22c16f689, read as text, Drama section 3.1-3.2); hnk-zajc.hr pravo-na-pristup-informacijama page (no systematization linked)",
+     "result": "Found (actor, employed ensemble of HNK Zagreb): salary coefficients 'Glumac - nacionalni prvak 3.75' (5 posts), 'Glumac - prvak 3.3' (18), 'Glumac - velike i srednje uloge 2.9' (15), 'Glumac - srednje i male uloge 2.5' (2); 'Dramaturg 3.2' (2); 'Producent Drame 2.8'; a student's coefficient is 10% lower. No staff stage-director post in Drama and no playwright post. The money needs the public-service base (osnovica), not read today; the document is undated in its text",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "index.hr search 'plaće glumaca' (files/m19/hr-idx-s.html sha256 e681dcc3...790713), kulturpunkt.hr search 'honorari glumci kazalište' (404), tportal.hr search 'plaće glumaca kazalište' (404)",
+     "result": "index.hr's results are Hollywood pay items only; the other two searches returned 404. No Croatian theatre rate or agreement in the press reached",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Same NN 22/2024-354 Uredba, Article 14, read for a playwright or dramaturg post",
+     "result": "No playwright or dramaturg post; the national pay regulation sets no playwright's fee (a commission is a copyright contract, outside it)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "hnk.hr (Hrvatsko narodno kazalište u Zagrebu) /hr/o-nama/dokumenti/ and its 'pravilnik_i_sistematizacija.pdf' (86 pages, saved files/m19/hr-hnk-sist.pdf sha256 387092c91f1995dc248a220c7aa0a05c940477c1de6339493d1432d22c16f689, read as text, Drama section 3.1-3.2); hnk-zajc.hr pravo-na-pristup-informacijama page (no systematization linked)",
+     "result": "Found (actor, employed ensemble of HNK Zagreb): salary coefficients 'Glumac - nacionalni prvak 3.75' (5 posts), 'Glumac - prvak 3.3' (18), 'Glumac - velike i srednje uloge 2.9' (15), 'Glumac - srednje i male uloge 2.5' (2); 'Dramaturg 3.2' (2); 'Producent Drame 2.8'; a student's coefficient is 10% lower. No staff stage-director post in Drama and no playwright post. The money needs the public-service base (osnovica), not read today; the document is undated in its text",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "index.hr search 'plaće glumaca' (files/m19/hr-idx-s.html sha256 e681dcc3...790713), kulturpunkt.hr search 'honorari glumci kazalište' (404), tportal.hr search 'plaće glumaca kazalište' (404)",
+     "result": "index.hr's results are Hollywood pay items only; the other two searches returned 404. No Croatian theatre rate or agreement in the press reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 9,
+    "value": "Partial: HNK Zagreb (national theatre) employed actors are paid by its systematization's coefficients: national first actor 3.75, first actor 3.3, large and middle roles 2.9, middle and small roles 2.5 (dramaturg 3.2); amount = coefficient x the public-service base, which was not read. No staff director post; no playwright post",
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.hnk.hr/media/uploads/pravilnik_i_sistematizacija.pdf",
+      "title": "HNK u Zagrebu, Pravilnik i sistematizacija, Prilog I (Drama)",
+      "read": "2026-11-04",
+      "said": "Glumac - nacionalni prvak ... 3.75 5; Glumac - prvak ... 3.3 18; Glumac-velike i srednje uloge ... 2.9 15; Glumac-srednje i male uloge ... 2.5 2; Dramaturg 3.2 2",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m19/hr-hnk-sist.pdf",
+      "sha256": "387092c91f1995dc248a220c7aa0a05c940477c1de6339493d1432d22c16f689"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The HR item 9 'said' is assembled from the systematization table's columns as pdftotext -layout gives them (post name, its special condition 'statusa nacionalnog prvaka', coefficient, number of posts); the lead should check the page image (Drama, Prilog I) before landing it."
+ },
+ "KI": {
+  "producer": {
+   "blocker": "R-9987",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -30 for 'ki,gov,mict)/' (48 and 21 records), 'ki,gov,mhaca)/' (Ministry of Women, Youth, Sports and Social Affairs, culture's ministry: 0 records in both) and 'ki,gov,parliament)/' (31 and 20); fetched mict.gov.ki /publications?page=0,1,2 (sha256 1f69cf6f...2935d0, f35ebbf6...cce1d, c49fd2cb...cb657) and parliament.gov.ki /index.php/parliament-business/acts (f2b4c6ea...492542); saved files/m19/ki-*-cc*.html",
+     "result": "Read: MICT's captured pages are ICT, postal, cybersecurity and partner pages (the 2026 Cybersecurity Act PDF among them); its publication list pages carry no titles in their HTML; the parliament's acts page lists only year categories. No broadcasting or film fund, commissioning terms, culture grant, theatre company, or pay rate for a director, playwright or actor in any capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -30 for 'ki,gov,mict)/' (48 and 21 records), 'ki,gov,mhaca)/' (Ministry of Women, Youth, Sports and Social Affairs, culture's ministry: 0 records in both) and 'ki,gov,parliament)/' (31 and 20); fetched mict.gov.ki /publications?page=0,1,2 (sha256 1f69cf6f...2935d0, f35ebbf6...cce1d, c49fd2cb...cb657) and parliament.gov.ki /index.php/parliament-business/acts (f2b4c6ea...492542); saved files/m19/ki-*-cc*.html",
+     "result": "Read: MICT's captured pages are ICT, postal, cybersecurity and partner pages (the 2026 Cybersecurity Act PDF among them); its publication list pages carry no titles in their HTML; the parliament's acts page lists only year categories. No broadcasting or film fund, commissioning terms, culture grant, theatre company, or pay rate for a director, playwright or actor in any capture",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.ki (Maneaba ni Maungatabu) /index.php/parliament-business/acts live (saved files/m19/ki-parl-acts.html sha256 b96974bb5749ffd1a0896cde6b0ddacea92171317db43a09f28747cad63cf2f9) and its category URLs (/component/phocadownload/category/19, /20, /acts/acts-passed-2025, -2024, -2023); PacLII www.paclii.org/ki/legis/consol_act/ (the consolidated legislation), sought an employment or minimum-wage law, a copyright law, or any rule on performers' or authors' pay",
+     "result": "The acts page renders its lists as unprocessed plugin tags ('{phocadownload view=category|id=19|text=Acts passed 2025|target=s}'); every category URL tried answered 404; PacLII 403 (Cloudflare challenge, not got past). No act read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "rnz.co.nz search 'Kiribati theatre' (files/m19/ki-rnz-s.html sha256 3d7dc157...5048f) and its result /news/pacific/284773/artists-gear-up-for-festival-of-pacific-arts (21 Sep 2015, files/m19/ki-rnz-284773.html sha256 33fb4a0590585354b656ed4cbfdc9774da690a6555c8a84fc2ffad17d0439a23)",
+     "result": "Read: festival preparations, a Kiribati-language installation by a New Zealand sculptor; nothing on a Kiribati theatre company, drama production or any fee; the other results are news on fishing, honours and politics",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -30 for 'ki,gov,mict)/' (48 and 21 records), 'ki,gov,mhaca)/' (Ministry of Women, Youth, Sports and Social Affairs, culture's ministry: 0 records in both) and 'ki,gov,parliament)/' (31 and 20); fetched mict.gov.ki /publications?page=0,1,2 (sha256 1f69cf6f...2935d0, f35ebbf6...cce1d, c49fd2cb...cb657) and parliament.gov.ki /index.php/parliament-business/acts (f2b4c6ea...492542); saved files/m19/ki-*-cc*.html",
+     "result": "Read: MICT's captured pages are ICT, postal, cybersecurity and partner pages (the 2026 Cybersecurity Act PDF among them); its publication list pages carry no titles in their HTML; the parliament's acts page lists only year categories. No broadcasting or film fund, commissioning terms, culture grant, theatre company, or pay rate for a director, playwright or actor in any capture",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.ki (Maneaba ni Maungatabu) /index.php/parliament-business/acts live (saved files/m19/ki-parl-acts.html sha256 b96974bb5749ffd1a0896cde6b0ddacea92171317db43a09f28747cad63cf2f9) and its category URLs (/component/phocadownload/category/19, /20, /acts/acts-passed-2025, -2024, -2023); PacLII www.paclii.org/ki/legis/consol_act/ (the consolidated legislation), sought an employment or minimum-wage law, a copyright law, or any rule on performers' or authors' pay",
+     "result": "The acts page renders its lists as unprocessed plugin tags ('{phocadownload view=category|id=19|text=Acts passed 2025|target=s}'); every category URL tried answered 404; PacLII 403 (Cloudflare challenge, not got past). No act read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "rnz.co.nz search 'Kiribati theatre' (files/m19/ki-rnz-s.html sha256 3d7dc157...5048f) and its result /news/pacific/284773/artists-gear-up-for-festival-of-pacific-arts (21 Sep 2015, files/m19/ki-rnz-284773.html sha256 33fb4a0590585354b656ed4cbfdc9774da690a6555c8a84fc2ffad17d0439a23)",
+     "result": "Read: festival preparations, a Kiribati-language installation by a New Zealand sculptor; nothing on a Kiribati theatre company, drama production or any fee; the other results are news on fishing, honours and politics",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -30 for 'ki,gov,mict)/' (48 and 21 records), 'ki,gov,mhaca)/' (Ministry of Women, Youth, Sports and Social Affairs, culture's ministry: 0 records in both) and 'ki,gov,parliament)/' (31 and 20); fetched mict.gov.ki /publications?page=0,1,2 (sha256 1f69cf6f...2935d0, f35ebbf6...cce1d, c49fd2cb...cb657) and parliament.gov.ki /index.php/parliament-business/acts (f2b4c6ea...492542); saved files/m19/ki-*-cc*.html",
+     "result": "Read: MICT's captured pages are ICT, postal, cybersecurity and partner pages (the 2026 Cybersecurity Act PDF among them); its publication list pages carry no titles in their HTML; the parliament's acts page lists only year categories. No broadcasting or film fund, commissioning terms, culture grant, theatre company, or pay rate for a director, playwright or actor in any capture",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "parliament.gov.ki (Maneaba ni Maungatabu) /index.php/parliament-business/acts live (saved files/m19/ki-parl-acts.html sha256 b96974bb5749ffd1a0896cde6b0ddacea92171317db43a09f28747cad63cf2f9) and its category URLs (/component/phocadownload/category/19, /20, /acts/acts-passed-2025, -2024, -2023); PacLII www.paclii.org/ki/legis/consol_act/ (the consolidated legislation), sought an employment or minimum-wage law, a copyright law, or any rule on performers' or authors' pay",
+     "result": "The acts page renders its lists as unprocessed plugin tags ('{phocadownload view=category|id=19|text=Acts passed 2025|target=s}'); every category URL tried answered 404; PacLII 403 (Cloudflare challenge, not got past). No act read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "rnz.co.nz search 'Kiribati theatre' (files/m19/ki-rnz-s.html sha256 3d7dc157...5048f) and its result /news/pacific/284773/artists-gear-up-for-festival-of-pacific-arts (21 Sep 2015, files/m19/ki-rnz-284773.html sha256 33fb4a0590585354b656ed4cbfdc9774da690a6555c8a84fc2ffad17d0439a23)",
+     "result": "Read: festival preparations, a Kiribati-language installation by a New Zealand sculptor; nothing on a Kiribati theatre company, drama production or any fee; the other results are news on fishing, honours and politics",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Kiribati has no theatre company, broadcaster drama output or culture fund in any source reached; no new fact."
+ },
+ "MC": {
+  "producer": {
+   "blocker": "R-10018",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "journaldemonaco.gouv.mc (the official gazette): Ordonnance Souveraine n° 8.705 du 24 juin 2021 portant création et organisation du service public national télévisuel (JdM n° 8545, 2 July 2021), read whole, saved files/m19/mc-os-8705.html sha256 e374c111294ed5db9e6c672431f64c4099224e9cc3d2951575b79fc5b824ec85; gazette searches 'aide à la création' (files/m19/mc-jdm-s.html) and 'cahier des charges service public national télévisuel' (mc-jdm-s2.html sha256 1243e35c...8ae); legimonaco.mc home (search URL 404)",
+     "result": "Read: M.C.R. (TVMonaco) holds the public TV monopoly, state-owned (the State may not sell over 49%), 'chargée de concevoir et de programmer ... des émissions de télévision à caractère national'; its rules are set by 'Un cahier des charges approuvé par arrêté ministériel' (art. 11), which the gazette search did not return (it found only the 2023 amendment OS 9.882 and telecom concessions). No commissioning terms, quota, fund, fee cap or theatre incentive in the ordinance; 'aide à la création' found no cultural aid scheme",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "monaco-tribune.com: search 'TVMonaco' and its item /2023/03/tvmonaco-sera-lancee-le-1er-septembre-2023/ (saved files/m19/mc-trib-launch.html sha256 017511850324ba4453ac5c913a65ea8a39c0f8a95693c019956ac1a0d0ec4f98), read; monacohebdo.mc searches (CONNECT 502), monacomatin.mc search (500), lobservateurdemonaco.com (curl 60, certificate name mismatch: not read)",
+     "result": "Read: the channel 'sera financée par l'État monégasque', quoting the government's communiqué (no address given); no commissioning terms, budget for fiction, series fund, fee cap or count; nothing on theatre",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 (standard): 'Monaco artistes du spectacle salaire minimum convention collective théâtre metteur en scène auteur cachet Journal de Monaco'",
+     "result": "Nothing Monegasque: French sources (CCNEAC, SYNDEAC, Artcena on a director's pay, IDCC 3090) and a salary aggregator (paylab, no source); no Monaco agreement or tariff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "journaldemonaco.gouv.mc search 'artistes du spectacle' (files/m19/mc-jdm-s3.html sha256 4a147b6335014b2b916ab810487dfe401ada3eb66b9abb7effecae77326fb41d), result list read",
+     "result": "Found only union-status acts: Arrêté Ministériel n° 2024-3 du 11 janvier 2024 approving the amended statutes of the 'Syndicat des Artistes Musiciens et Professions du Spectacle', and a 1949 arrêté renaming the 'Syndicat des Artistes des Choeurs et du Cinéma'; no collective agreement, wage scale or authors' tariff published",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "tpgmonaco.mc (Théâtre Princesse Grace, the principality's theatre): home, /fr/espace-pro, /fr/2026-2027/programme (saved files/m19/mc-tpg-*.html; programme sha256 d0af7de8aa661b448619fc3b3339e5a3c5cefd0f9b17f46997963d0c7e9d8cb5); culture.mc (403 'Request Rejected'); gouv.mc labour-law page (403); theatreprincessegrace.mc (CONNECT 502)",
+     "result": "Read: the TPG presents touring productions (programme, technical sheets for visiting companies); no director's fee, rate or agreement. The culture directorate and the government's labour pages refused",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'mc,tpgmonaco)/' (119 records): URL list read (programmes 2023-2027, news, press reviews, gallery)",
+     "result": "No page on recruitment, pay or a director's terms in the crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same monaco-tribune.com search and article; monacohebdo.mc (502) and monacomatin.mc (500) searches",
+     "result": "No article on a stage director's pay in Monaco",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 (standard): 'Monaco artistes du spectacle salaire minimum convention collective théâtre metteur en scène auteur cachet Journal de Monaco'",
+     "result": "Nothing Monegasque: French sources (CCNEAC, SYNDEAC, Artcena on a director's pay, IDCC 3090) and a salary aggregator (paylab, no source); no Monaco agreement or tariff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "journaldemonaco.gouv.mc search 'artistes du spectacle' (files/m19/mc-jdm-s3.html sha256 4a147b6335014b2b916ab810487dfe401ada3eb66b9abb7effecae77326fb41d), result list read",
+     "result": "Found only union-status acts: Arrêté Ministériel n° 2024-3 du 11 janvier 2024 approving the amended statutes of the 'Syndicat des Artistes Musiciens et Professions du Spectacle', and a 1949 arrêté renaming the 'Syndicat des Artistes des Choeurs et du Cinéma'; no collective agreement, wage scale or authors' tariff published",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same monaco-tribune.com, monacohebdo.mc and monacomatin.mc attempts, read for a playwright's commission or royalty",
+     "result": "Nothing on a playwright's pay",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "MY": {
+  "producer": {
+   "blocker": "R-10050",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'my,com,cendana)/' (8 records), -30 (2) and 2025-51 (4); CC-MAIN-2026-43 'my,gov,finas)/' (418 records), fetched finas.gov.my/pengumuman (20261017001822, sha256 d6ba87f840b1a53778878d28f549911862b912215961aadd5cde651bfc4540f5) and the one captured announcement PDF (1ff481b0abe09c3e14dc02a15ca3d807fe20ccb2a868bf3fd142918d8cf1fedf); saved files/m19/my-finas-cc43-*",
+     "result": "CENDANA: every capture is a 404, including /opportunities/our-funding-programmes/performing-arts-presentation-funding-programme (the site's funding pages are gone). FINAS: /services/funding (already read live by the first wave), announcement lists and a catering quotation notice for the FFM35 awards; no DKK results, applicant counts, write-up, RTM terms or theatre fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "malaymail.com search 'theatre actors pay' and its item /news/life/2022/07/15/despite-covid-19-challenges-makers-of-afghan-malaysian-play-and-then-came-spring-soldier-on-to-make-it-a-reality/17605 (saved files/m19/my-mm-play.html sha256 ebcf63eb26660894f584c55f0d6b5ce706337600f4549e87321da610f122cc02); thestar.com.my and kakiseni.com searches (no relevant result)",
+     "result": "Read (2022): Instant Café Theatre 'kick-start[ed] their production thanks to a RM10,000 from the Boh Cameronian grant for new productions' (a private sponsor's grant; no primary address); no public theatre fund terms or rate of yes, no series fund, fee cap or commissioning terms",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'my,com,cendana)/' (8 records), -30 (2) and 2025-51 (4); CC-MAIN-2026-43 'my,gov,finas)/' (418 records), fetched finas.gov.my/pengumuman (20261017001822, sha256 d6ba87f840b1a53778878d28f549911862b912215961aadd5cde651bfc4540f5) and the one captured announcement PDF (1ff481b0abe09c3e14dc02a15ca3d807fe20ccb2a868bf3fd142918d8cf1fedf); saved files/m19/my-finas-cc43-*",
+     "result": "No rate card or fee for a director, playwright or actor in either site's captures (FINAS's rate-card pages captured are facility hire and all 404)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Industrial Court of Malaysia register of collective agreements (www.mp.gov.my/onlineservices/c_a.php, and its search servlet /eicpp/MainServlet?action=caSearch) for company ISTANA, MEASAT, TELEVISYEN, TEATER, DEWAN FILHARMONIK and union SENIMAN, ARTIS (results saved files/m19/my-mp-ca*.html); lom.agc.gov.my P.U.(A) list (script-loaded table, no rows in the HTML)",
+     "result": "Read: TELEVISYEN returns two agreements of Sistem Televisyen Malaysia Berhad with its staff and executive unions (MP2:1349/2/1 315/2022 and MP2:2447/2/1 097/2023), staff not performers; ISTANA, MEASAT, TEATER, SENIMAN, ARTIS: 'No record found'; 'DEWAN FILHARMONIK' returned -1. No collective agreement for stage directors, playwrights or actors is registered",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same Malay Mail article and searches (Malay Mail, The Star, Kakiseni), read for pay",
+     "result": "The article: the grant 'to pay our actors, costumes, sets'; no fee or rate for actors, directors or playwrights",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'my,com,cendana)/' (8 records), -30 (2) and 2025-51 (4); CC-MAIN-2026-43 'my,gov,finas)/' (418 records), fetched finas.gov.my/pengumuman (20261017001822, sha256 d6ba87f840b1a53778878d28f549911862b912215961aadd5cde651bfc4540f5) and the one captured announcement PDF (1ff481b0abe09c3e14dc02a15ca3d807fe20ccb2a868bf3fd142918d8cf1fedf); saved files/m19/my-finas-cc43-*",
+     "result": "No rate card or fee for a director, playwright or actor in either site's captures (FINAS's rate-card pages captured are facility hire and all 404)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Industrial Court of Malaysia register of collective agreements (www.mp.gov.my/onlineservices/c_a.php, and its search servlet /eicpp/MainServlet?action=caSearch) for company ISTANA, MEASAT, TELEVISYEN, TEATER, DEWAN FILHARMONIK and union SENIMAN, ARTIS (results saved files/m19/my-mp-ca*.html); lom.agc.gov.my P.U.(A) list (script-loaded table, no rows in the HTML)",
+     "result": "Read: TELEVISYEN returns two agreements of Sistem Televisyen Malaysia Berhad with its staff and executive unions (MP2:1349/2/1 315/2022 and MP2:2447/2/1 097/2023), staff not performers; ISTANA, MEASAT, TEATER, SENIMAN, ARTIS: 'No record found'; 'DEWAN FILHARMONIK' returned -1. No collective agreement for stage directors, playwrights or actors is registered",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same Malay Mail article and searches (Malay Mail, The Star, Kakiseni), read for pay",
+     "result": "The article: the grant 'to pay our actors, costumes, sets'; no fee or rate for actors, directors or playwrights",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'my,com,cendana)/' (8 records), -30 (2) and 2025-51 (4); CC-MAIN-2026-43 'my,gov,finas)/' (418 records), fetched finas.gov.my/pengumuman (20261017001822, sha256 d6ba87f840b1a53778878d28f549911862b912215961aadd5cde651bfc4540f5) and the one captured announcement PDF (1ff481b0abe09c3e14dc02a15ca3d807fe20ccb2a868bf3fd142918d8cf1fedf); saved files/m19/my-finas-cc43-*",
+     "result": "No rate card or fee for a director, playwright or actor in either site's captures (FINAS's rate-card pages captured are facility hire and all 404)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Industrial Court of Malaysia register of collective agreements (www.mp.gov.my/onlineservices/c_a.php, and its search servlet /eicpp/MainServlet?action=caSearch) for company ISTANA, MEASAT, TELEVISYEN, TEATER, DEWAN FILHARMONIK and union SENIMAN, ARTIS (results saved files/m19/my-mp-ca*.html); lom.agc.gov.my P.U.(A) list (script-loaded table, no rows in the HTML)",
+     "result": "Read: TELEVISYEN returns two agreements of Sistem Televisyen Malaysia Berhad with its staff and executive unions (MP2:1349/2/1 315/2022 and MP2:2447/2/1 097/2023), staff not performers; ISTANA, MEASAT, TEATER, SENIMAN, ARTIS: 'No record found'; 'DEWAN FILHARMONIK' returned -1. No collective agreement for stage directors, playwrights or actors is registered",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same Malay Mail article and searches (Malay Mail, The Star, Kakiseni), read for pay",
+     "result": "The article: the grant 'to pay our actors, costumes, sets'; no fee or rate for actors, directors or playwrights",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "PK": {
+  "producer": {
+   "blocker": "R-10084",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'pk,gov,pnca)/' (0), 'pk,com,ptv)/' (3), 'pk,gop,alhamra)/' (0); CC-MAIN-2026-30 for 'pk,gov,pnca)/' (0), 'pk,gov,moib)/' (2), 'pk,gop,alhamra)/' (0), 'pk,org,pnca)/' (12); fetched pnca.org.pk/publications/ (20260720223616, saved files/m19/pk-pnca-cc30-pub.html sha256 45351ba72e06df3e20691f69e6aaf790e664b1024c542a8f85aa38581b3bccd2)",
+     "result": "PTV: only robots.txt, captured as 403; MoIB: only robots.txt (500); PNCA (pnca.org.pk, titled 'Pakistan National Council of the Arts'): home, film, publications pages; the publications page describes the division, no figures; its '03_PNCA_Finance_&-Audit_Rules_2015.pdf' was captured as a 404. No drama procurement rates, fund rules, fee cap, theatre fund or honorarium schedule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "pakistancode.gov.pk (Ministry of Law and Justice, federal laws) search 'Finance Act 2018' and 'Motion Pictures' (saved files/m19/pk-pcode-*.html, sha256 f7734488...6733 and 178c7137...dfdff); punjabcode.punjab.gov.pk (Punjab laws: home and search 'dramatic performances')",
+     "result": "Pakistan Code returned its search shell with no result rows (results are script-loaded), so whether the 2018 policy's duty and sales-tax relief was enacted was not read; punjabcode.punjab.gov.pk reset the connection (curl 35) both times, so the Punjab Dramatic Performances law and any amendment were not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Same Dunya News/APP item, and the Express Tribune and Dawn items above (403, Cloudflare)",
+     "result": "Alhamra's state-backed commercial theatre revival (2026) is a production programme, not a fund with ranges or a rate of yes; nothing on a series incentive, PTV commissioning or a count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'pk,gov,pnca)/' (0), 'pk,com,ptv)/' (3), 'pk,gop,alhamra)/' (0); CC-MAIN-2026-30 for 'pk,gov,pnca)/' (0), 'pk,gov,moib)/' (2), 'pk,gop,alhamra)/' (0), 'pk,org,pnca)/' (12); fetched pnca.org.pk/publications/ (20260720223616, saved files/m19/pk-pnca-cc30-pub.html sha256 45351ba72e06df3e20691f69e6aaf790e664b1024c542a8f85aa38581b3bccd2)",
+     "result": "PTV: only robots.txt, captured as 403; MoIB: only robots.txt (500); PNCA (pnca.org.pk, titled 'Pakistan National Council of the Arts'): home, film, publications pages; the publications page describes the division, no figures; its '03_PNCA_Finance_&-Audit_Rules_2015.pdf' was captured as a 404. No drama procurement rates, fund rules, fee cap, theatre fund or honorarium schedule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "pakistancode.gov.pk (Ministry of Law and Justice, federal laws) search 'Finance Act 2018' and 'Motion Pictures' (saved files/m19/pk-pcode-*.html, sha256 f7734488...6733 and 178c7137...dfdff); punjabcode.punjab.gov.pk (Punjab laws: home and search 'dramatic performances')",
+     "result": "Pakistan Code returned its search shell with no result rows (results are script-loaded), so whether the 2018 policy's duty and sales-tax relief was enacted was not read; punjabcode.punjab.gov.pk reset the connection (curl 35) both times, so the Punjab Dramatic Performances law and any amendment were not read. No pay rule for a stage director, playwright or actor was reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 (standard): 'Pakistan theatre actors paid per show honorarium rates Punjab Arts Council Alhamra PNCA playwright director fee notification'",
+     "result": "No official rate or notification; press and Wikipedia anecdotes (Rs5,000 for minor roles to Rs1 million per performance for stars, on a Wikipedia summary), a proposed Drama Act amendment for an artists' endowment fund, Alhamra's 2026 theatre revival; leads to Express Tribune, Dawn and Dunya News items",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dunyanews.tv/amp/english/952599.php 'Alhamra plans to revive quality commercial theatre in Punjab' (APP, quoting an Alhamra press release; saved files/m19/pk-dunyanews.tv-*.html sha256 40a513bf4615a5669f6b6bb6b85f2d9218135adb7d6770e5df155a669197c3fc), read; tribune.com.pk/story/2609048 and /2518655, dawn.com/news/1822214 and images.dawn.com/news/1195604 (each 403, Cloudflare 'Just a moment...', not got past); en.dailypakistan.com.pk/?p=208446 (read, a comedian's fee in India, not relevant)",
+     "result": "Dunya/APP: Alhamra, under the Punjab Information and Culture Department, invited 'actors, comedians, scriptwriters, directors and technical production professionals' to a production team, applications by June 30, 2026; no pay or fee stated. No rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'pk,gov,pnca)/' (0), 'pk,com,ptv)/' (3), 'pk,gop,alhamra)/' (0); CC-MAIN-2026-30 for 'pk,gov,pnca)/' (0), 'pk,gov,moib)/' (2), 'pk,gop,alhamra)/' (0), 'pk,org,pnca)/' (12); fetched pnca.org.pk/publications/ (20260720223616, saved files/m19/pk-pnca-cc30-pub.html sha256 45351ba72e06df3e20691f69e6aaf790e664b1024c542a8f85aa38581b3bccd2)",
+     "result": "PTV: only robots.txt, captured as 403; MoIB: only robots.txt (500); PNCA (pnca.org.pk, titled 'Pakistan National Council of the Arts'): home, film, publications pages; the publications page describes the division, no figures; its '03_PNCA_Finance_&-Audit_Rules_2015.pdf' was captured as a 404. No drama procurement rates, fund rules, fee cap, theatre fund or honorarium schedule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "pakistancode.gov.pk (Ministry of Law and Justice, federal laws) search 'Finance Act 2018' and 'Motion Pictures' (saved files/m19/pk-pcode-*.html, sha256 f7734488...6733 and 178c7137...dfdff); punjabcode.punjab.gov.pk (Punjab laws: home and search 'dramatic performances')",
+     "result": "Pakistan Code returned its search shell with no result rows (results are script-loaded), so whether the 2018 policy's duty and sales-tax relief was enacted was not read; punjabcode.punjab.gov.pk reset the connection (curl 35) both times, so the Punjab Dramatic Performances law and any amendment were not read. No pay rule for a stage director, playwright or actor was reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 (standard): 'Pakistan theatre actors paid per show honorarium rates Punjab Arts Council Alhamra PNCA playwright director fee notification'",
+     "result": "No official rate or notification; press and Wikipedia anecdotes (Rs5,000 for minor roles to Rs1 million per performance for stars, on a Wikipedia summary), a proposed Drama Act amendment for an artists' endowment fund, Alhamra's 2026 theatre revival; leads to Express Tribune, Dawn and Dunya News items",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dunyanews.tv/amp/english/952599.php 'Alhamra plans to revive quality commercial theatre in Punjab' (APP, quoting an Alhamra press release; saved files/m19/pk-dunyanews.tv-*.html sha256 40a513bf4615a5669f6b6bb6b85f2d9218135adb7d6770e5df155a669197c3fc), read; tribune.com.pk/story/2609048 and /2518655, dawn.com/news/1822214 and images.dawn.com/news/1195604 (each 403, Cloudflare 'Just a moment...', not got past); en.dailypakistan.com.pk/?p=208446 (read, a comedian's fee in India, not relevant)",
+     "result": "Dunya/APP: Alhamra, under the Punjab Information and Culture Department, invited 'actors, comedians, scriptwriters, directors and technical production professionals' to a production team, applications by June 30, 2026; no pay or fee stated. No rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for 'pk,gov,pnca)/' (0), 'pk,com,ptv)/' (3), 'pk,gop,alhamra)/' (0); CC-MAIN-2026-30 for 'pk,gov,pnca)/' (0), 'pk,gov,moib)/' (2), 'pk,gop,alhamra)/' (0), 'pk,org,pnca)/' (12); fetched pnca.org.pk/publications/ (20260720223616, saved files/m19/pk-pnca-cc30-pub.html sha256 45351ba72e06df3e20691f69e6aaf790e664b1024c542a8f85aa38581b3bccd2)",
+     "result": "PTV: only robots.txt, captured as 403; MoIB: only robots.txt (500); PNCA (pnca.org.pk, titled 'Pakistan National Council of the Arts'): home, film, publications pages; the publications page describes the division, no figures; its '03_PNCA_Finance_&-Audit_Rules_2015.pdf' was captured as a 404. No drama procurement rates, fund rules, fee cap, theatre fund or honorarium schedule",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "pakistancode.gov.pk (Ministry of Law and Justice, federal laws) search 'Finance Act 2018' and 'Motion Pictures' (saved files/m19/pk-pcode-*.html, sha256 f7734488...6733 and 178c7137...dfdff); punjabcode.punjab.gov.pk (Punjab laws: home and search 'dramatic performances')",
+     "result": "Pakistan Code returned its search shell with no result rows (results are script-loaded), so whether the 2018 policy's duty and sales-tax relief was enacted was not read; punjabcode.punjab.gov.pk reset the connection (curl 35) both times, so the Punjab Dramatic Performances law and any amendment were not read. No pay rule for a stage director, playwright or actor was reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 (standard): 'Pakistan theatre actors paid per show honorarium rates Punjab Arts Council Alhamra PNCA playwright director fee notification'",
+     "result": "No official rate or notification; press and Wikipedia anecdotes (Rs5,000 for minor roles to Rs1 million per performance for stars, on a Wikipedia summary), a proposed Drama Act amendment for an artists' endowment fund, Alhamra's 2026 theatre revival; leads to Express Tribune, Dawn and Dunya News items",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "dunyanews.tv/amp/english/952599.php 'Alhamra plans to revive quality commercial theatre in Punjab' (APP, quoting an Alhamra press release; saved files/m19/pk-dunyanews.tv-*.html sha256 40a513bf4615a5669f6b6bb6b85f2d9218135adb7d6770e5df155a669197c3fc), read; tribune.com.pk/story/2609048 and /2518655, dawn.com/news/1822214 and images.dawn.com/news/1195604 (each 403, Cloudflare 'Just a moment...', not got past); en.dailypakistan.com.pk/?p=208446 (read, a comedian's fee in India, not relevant)",
+     "result": "Dunya/APP: Alhamra, under the Punjab Information and Culture Department, invited 'actors, comedians, scriptwriters, directors and technical production professionals' to a production team, applications by June 30, 2026; no pay or fee stated. No rate for a director, playwright or actor",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "SG": {
+  "producer": {
+   "blocker": "R-10121",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "sso.agc.gov.sg (Singapore Statutes Online) content searches 'film production' and 'performer' in Acts in force; www.iac.gov.sg (Industrial Arbitration Court, which certifies collective agreements); www.mom.gov.sg/employment-practices/collective-agreement, sought any production or theatre tax incentive in statute",
+     "result": "SSO timed out twice (curl 28, 60 s, no bytes); IAC 403; the MOM page 404. No statute, incentive text or registered agreement read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'sg,gov,imda)/' (1,082 records) and 'sg,gov,nac)/' (131): fetched imda.gov.sg press release 'made-with-singapore-content-forging-ahead-with-new-funding-opportunities-and-global-partnerships' (20261008043651, sha256 0e7bac8709c8ac0902bfe2d347b68561c6a8c210ca0348f047272a3c7de7d72c), nac.gov.sg P&P grant overview (211f7cd2...a8966) and how-and-when-to-apply (def72394...5176), the theatre art-form page (304baf5e...c55dc) and the manpower-sentiments survey page (4d1fe606...91ee22); saved files/m19/sg-*cc43*.html",
+     "result": "Read: IMDA's release (its date is not in the captured text; it speaks of initiatives 'in 2021', so late 2020): '78 new commissions under the S$8 million Public Service Content (PSC) Fund and six new feature-length projects awarded under the Southeast Asia Co-Production Grant'; no number of proposals, so no rate of yes, and no tariff or fee cap. IMDA's captured grant pages are digital and SME grants; no media-fund scheme page. NAC pages give no theatre fund rate of yes beyond what was known",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "straitstimes.com search 'Public Service Content fund Mediacorp' (script-rendered, no results in the HTML; sha256 e3f77b83...395965); todayonline.com search (403); artsequator.com searches 'fees singapore theatre' and 'artist fees' (result lists read, sha256 e675e1e2...0f84c and f210ea05...05fb3fe4)",
+     "result": "No article read on Mediacorp's commissioning terms, PSC fund rate of yes, fee caps or theatre funding; ArtsEquator's results were listings and features, none on fees",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "sso.agc.gov.sg (Singapore Statutes Online) content searches 'film production' and 'performer' in Acts in force; www.iac.gov.sg (Industrial Arbitration Court, which certifies collective agreements); www.mom.gov.sg/employment-practices/collective-agreement, sought a registered collective agreement or statutory rate for stage directors, playwrights or actors",
+     "result": "SSO timed out twice (curl 28, 60 s, no bytes); IAC 403; the MOM page 404. No statute, incentive text or registered agreement read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'sg,gov,imda)/' (1,082 records) and 'sg,gov,nac)/' (131): fetched imda.gov.sg press release 'made-with-singapore-content-forging-ahead-with-new-funding-opportunities-and-global-partnerships' (20261008043651, sha256 0e7bac8709c8ac0902bfe2d347b68561c6a8c210ca0348f047272a3c7de7d72c), nac.gov.sg P&P grant overview (211f7cd2...a8966) and how-and-when-to-apply (def72394...5176), the theatre art-form page (304baf5e...c55dc) and the manpower-sentiments survey page (4d1fe606...91ee22); saved files/m19/sg-*cc43*.html",
+     "result": "No fee, rate or minimum for a director, playwright or actor in any capture; NAC's menu lists a toolkit for 'Arts Self-Employed Persons (SEPs) and Freelancers' and the Arts and Culture Employment Study (2016), neither captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "nac.gov.sg live: home (200, sha256 f1cd3934a2094195b7b9baa1f8ef02075146a6e8ebf8a2672adba585eb59461b), /singapore-arts-scene/art-forms/performing-arts/theatre, /support/funding-and-schemes/presentation-and-participation-grant/overview, /arts-fund/overview, /resources/toolkits-and-guides/arts-self-employed-persons-(seps)-and-freelancers, /resources/research/arts-and-culture-employment-study",
+     "result": "Every deep page answered 404 (the same 379,382-byte not-found page, sha256 804f7943...4ddc541e): the site was restructured since the October crawl. No fee guidance read",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "sso.agc.gov.sg (Singapore Statutes Online) content searches 'film production' and 'performer' in Acts in force; www.iac.gov.sg (Industrial Arbitration Court, which certifies collective agreements); www.mom.gov.sg/employment-practices/collective-agreement, sought a registered collective agreement or statutory rate for stage directors, playwrights or actors",
+     "result": "SSO timed out twice (curl 28, 60 s, no bytes); IAC 403; the MOM page 404. No statute, incentive text or registered agreement read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'sg,gov,imda)/' (1,082 records) and 'sg,gov,nac)/' (131): fetched imda.gov.sg press release 'made-with-singapore-content-forging-ahead-with-new-funding-opportunities-and-global-partnerships' (20261008043651, sha256 0e7bac8709c8ac0902bfe2d347b68561c6a8c210ca0348f047272a3c7de7d72c), nac.gov.sg P&P grant overview (211f7cd2...a8966) and how-and-when-to-apply (def72394...5176), the theatre art-form page (304baf5e...c55dc) and the manpower-sentiments survey page (4d1fe606...91ee22); saved files/m19/sg-*cc43*.html",
+     "result": "No fee, rate or minimum for a director, playwright or actor in any capture; NAC's menu lists a toolkit for 'Arts Self-Employed Persons (SEPs) and Freelancers' and the Arts and Culture Employment Study (2016), neither captured",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "sso.agc.gov.sg (Singapore Statutes Online) content searches 'film production' and 'performer' in Acts in force; www.iac.gov.sg (Industrial Arbitration Court, which certifies collective agreements); www.mom.gov.sg/employment-practices/collective-agreement, sought a registered collective agreement or statutory rate for stage directors, playwrights or actors",
+     "result": "SSO timed out twice (curl 28, 60 s, no bytes); IAC 403; the MOM page 404. No statute, incentive text or registered agreement read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 'sg,gov,imda)/' (1,082 records) and 'sg,gov,nac)/' (131): fetched imda.gov.sg press release 'made-with-singapore-content-forging-ahead-with-new-funding-opportunities-and-global-partnerships' (20261008043651, sha256 0e7bac8709c8ac0902bfe2d347b68561c6a8c210ca0348f047272a3c7de7d72c), nac.gov.sg P&P grant overview (211f7cd2...a8966) and how-and-when-to-apply (def72394...5176), the theatre art-form page (304baf5e...c55dc) and the manpower-sentiments survey page (4d1fe606...91ee22); saved files/m19/sg-*cc43*.html",
+     "result": "No fee, rate or minimum for a director, playwright or actor in any capture; NAC's menu lists a toolkit for 'Arts Self-Employed Persons (SEPs) and Freelancers' and the Arts and Culture Employment Study (2016), neither captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "nac.gov.sg live: home (200, sha256 f1cd3934a2094195b7b9baa1f8ef02075146a6e8ebf8a2672adba585eb59461b), /singapore-arts-scene/art-forms/performing-arts/theatre, /support/funding-and-schemes/presentation-and-participation-grant/overview, /arts-fund/overview, /resources/toolkits-and-guides/arts-self-employed-persons-(seps)-and-freelancers, /resources/research/arts-and-culture-employment-study",
+     "result": "Every deep page answered 404 (the same 379,382-byte not-found page, sha256 804f7943...4ddc541e): the site was restructured since the October crawl. No fee guidance read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "NAC's live site returned 404 for every deep page on 2026-11-04 (restructured); Common Crawl CC-MAIN-2026-43 holds the October pages."
+ },
+ "TH": {
+  "producer": {
+   "blocker": "R-10151",
+   "attempts": []
+  },
+  "stage": {},
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ },
+ "VE": {
+  "producer": {
+   "blocker": "R-10183",
+   "attempts": []
+  },
+  "stage": {},
+  "found": [],
+  "notSearched": [],
+  "notes": ""
+ }
+}

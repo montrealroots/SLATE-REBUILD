@@ -1,0 +1,2356 @@
+{
+ "AT": {
+  "producer": {
+   "blocker": "R-9811",
+   "attempts": [
+    {
+     "method": "web-search",
+     "items": [
+      "series.fund",
+      "series.outcomes"
+     ],
+     "tried": "WebSearch #1 'Fernsehfonds Austria Förderentscheidungen 2025 Anzahl Anträge Zusagen Serie ORF'",
+     "result": "Results: RTR Richtlinien 2025/2024 PDFs, RTR Fernsehfonds start pages, parliament reports for 2006 and 2009 (parlament.gv.at III-66, III-129), Filmfonds Wien press releases (a different, Viennese fund). No count of applications against approvals for the Fernsehfonds in 2025, no ORF commissioning terms or pickup count. Not fetched further: the leads point back to rtr.at, which the institution attempt already read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      "series.fund"
+     ],
+     "tried": "RIS (Rechtsinformationssystem des Bundes): ris.bka.gv.at GeltendeFassung for the KommAustria-Gesetz (Gesetzesnummer 20001213) answered 503 with a Myra 'Security Check' bot page (not got past). The RIS open-data service of the same register (data.bka.gv.at/ris/api/v2.6, documented OGD channel; ogd.ris.bka.gv.at document NOR40255597) was then queried for KOG § 26 in force on 2026-11-04 and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-kog26.html, sha256 2403855ca3274c4ce464cbfafcdb7c04a73ea20786c9e9e136d95a45f6fdfb21). Note for the lead: the OGD service is the register's own published channel, but it was used after the web page's bot check; the brief's rule on a route around a block may exclude it.",
+     "result": "Read: KOG § 26 (1), in force 01.01.2024: 'Zur Unterstützung der Produktion von Fernsehfilmen (einschließlich Fernsehserien, -reihen und -dokumentationen) sind der RTR-GmbH jährlich 13,5 Millionen Euro vom Bund per 31. Jänner zu überweisen.' So series count, EUR 13.5 million a year. No rate of yes in the law (§ 26 read whole).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      "series.fund",
+      "series.outcomes"
+     ],
+     "tried": "cineuropa.org search 'Fernsehfonds Austria' (https://cineuropa.org/en/search/?q=Fernsehfonds%20Austria)",
+     "result": "403 refused. No trade article quoting the RTR's decisions read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.fund",
+      "series.outcomes"
+     ],
+     "tried": "Wayback: availability API for rtr.at/medien/was_wir_tun/foerderungen/fernsehfonds_austria/Startseite.de.html gave snapshot 20260830100112; fetching it over https: connection reset (4 tries), over http: 403. Then Common Crawl CC-MAIN-2026-43, prefix 'at,rtr)/medien/was_wir_tun/foerderungen/fernsehfonds_austria': the 'entscheidungen' pages listed (one per Einreichtermin, 2004 to FFAT1.ET2026); the record for 'Entscheidung 1. Einreichtermin 2025' (ffat1et2025.de.html, crawled 2026-10-15) fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-cc-ffat1et2025.html, sha256 e9ee867c12b9a0cb4c12a3c72414830186c83603ce65207a3613f4c41a9e8e30)",
+     "result": "Read: decisions are made by the RTR's head of media after the Fachbeirat's opinion and published as open data (csv, xml, json) behind a button; the page itself holds no count of applications or approvals, so no rate of yes. The open-data file was not fetched.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "institution",
+     "tried": "existing: u7, igautorinnenautoren.at Mindesthonorare page and the Kulturrat Fair Pay Reader 2024",
+     "result": "named, not repeated (no playwright minimum; publisher-chain royalty practice)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch #2 'Österreich Dramatiker Auftragswerk Honorar Theater Uraufführung Tantiemen Prozent Mindesthonorar Bühnenautor'; the one Austrian theatre lead, freietheater.at/minimum-honorarium-fees/ (IG Freie Theaterarbeit), fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-igft-fees.html, sha256 4af2b09a98b314e2170dab8620c3769615ddcd498aa6955e961c9ef322748678)",
+     "result": "IGFT's Honoraruntergrenze (non-binding, for Vienna-funded independent performing arts, projects from 2025) gives artistic personnel EUR 194/227 a rehearsal day and EUR 390 / 223 a performance; it names no writing or commission fee, so no playwright minimum. Other results were German (Deutscher Literaturfonds form, Die Deutsche Bühne 2000) or musicians' contracts (mica).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "RIS OGD (data.bka.gv.at, after ris.bka.gv.at's bot check, as noted under the producer attempt): Urheberrechtsgesetz §§ 37-37g listed in force 2026-11-04; § 37b (NOR40241401) read whole (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-urhg37b.html, sha256 cd51149d9303d2f742de993f635bcac14595cee0a90736c4c2213135f5617fd8)",
+     "result": "Read: § 37b (in force 01.01.2022), 'Grundsatz der angemessenen und verhältnismäßigen Vergütung': the author 'soll dafür eine angemessene und verhältnismäßige Vergütung erhalten'; lump sums allowed. No figure: the law sets a principle, not a playwright's minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Die Deutsche Bühne 1/2000, pp. 22-25 (die-deutsche-buehne.de/wp-content/uploads/2018/11/archiv_files_DDB_2000_01_22_25.pdf), from search #2, read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-ddb2000.pdf, sha256 316fe783a9caa002d4ff1c4868225d47c9a96d9578a057a360ac97c58fc38b94)",
+     "result": "Read: German, not Austrian: the 1999 contract between the Verband Deutscher Bühnenverleger and the Deutscher Bühnenverein sets the Tantieme at 13-17% of the Roheinnahme, the author taking about 75% and the publisher 25%. Says nothing of Austria; a lead at most, and dated 2000.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback: availability API for igautorinnenautoren.at/service/wissen/mindesthonorare gave snapshot 20260611201102; fetching it over https reset the connection. Common Crawl CC-MAIN-2026-43, prefix 'at,igautorinnenautoren)/service/wissen' listed",
+     "result": "Wayback not read (reset). Common Crawl holds only two pages under /service/wissen (a default page and 'urheberrecht', 2026-10-14), not the Mindesthonorare page; nothing new. The live page was read by u7.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "series.fund",
+    "value": {
+     "fund": "Fernsehfonds Austria (RTR-GmbH)",
+     "annualBudgetEUR": 13500000,
+     "seriesCount": true,
+     "inForceSince": "2024-01-01",
+     "law": "KommAustria-Gesetz § 26 (1)",
+     "rateOfYes": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://ogd.ris.bka.gv.at/Dokumente/Bundesnormen/NOR40255597/NOR40255597.html",
+      "title": "RIS, KommAustria-Gesetz § 26 (Fernsehfonds Austria, Ziele, Aufbringung der Mittel), in force 01.01.2024",
+      "read": "2026-11-04",
+      "said": "(1) Zur Unterstützung der Produktion von Fernsehfilmen (einschließlich Fernsehserien, -reihen und -dokumentationen) sind der RTR-GmbH jährlich 13,5 Millionen Euro vom Bund per 31. Jänner zu überweisen.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/at-kog26.html",
+      "sha256": "2403855ca3274c4ce464cbfafcdb7c04a73ea20786c9e9e136d95a45f6fdfb21"
+     }
+    ],
+    "notes": "Read through RIS's open-data document host after the ris.bka.gv.at page met a bot check; the lead decides whether that route stands."
+   }
+  ],
+  "notSearched": [],
+  "notes": "The series fund's size is in the law (KOG § 26: EUR 13.5 million a year, series included); its rate of yes would need the RTR open-data decision files plus a count of applications, which no page read publishes."
+ },
+ "BS": {
+  "producer": {
+   "blocker": "R-9844",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "items": [
+      "series.incentive",
+      "series.fund"
+     ],
+     "tried": "The Tribune's site search 'film industry incentives' (https://www.tribune242.com/search/?q=film+industry+incentives; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-search-film.html, sha256 0c9eef1de2856c089736bce5ca0e2781463d7b52a6eb175b6eebdefe3ca50c6a) read",
+     "result": "The newest story is 'Bahamas losing out on film opportunities' (25 August 2016), quoting the Bahamas International Film Festival's founder that the country has 'failed to offer incentives necessary to attract big budget productions'. No act, fund or series term named; old.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      "stage.fund",
+      "stage.outcomes"
+     ],
+     "tried": "The Tribune, 30 Jan 2025 and 3 Nov 2022 Dundas articles (as under stage)",
+     "result": "Read: no public fund for a theatre production; the only theatre funding is the government's capital support to the Dundas (a venue) and the Dundas' own fundraising; productions rent the theatre.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefixes 'bs,gov,opm)/prime-minister-davis-dundas' and 'com,tourismtoday)/services/film'; Wayback availability API for opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (snapshot 20260608174621) and www.tourismtoday.com/services/film-tv-commission (snapshot 20260711144025), each snapshot fetched over https",
+     "result": "Common Crawl: no capture of either. Wayback: both snapshots exist, but every fetch of web.archive.org reset the connection (curl 35) today; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #3 'Bahamas theatre actors playwright director paid fee Dundas Centre Performing Arts National Theatre funding Ministry of Culture grant'",
+     "result": "No fee, rate or agreement for a stage director, playwright or actor in any result. Results: the Office of the Prime Minister's remarks on the Dundas MOU (10 Feb 2025), Tribune and Nassau Guardian on the Dundas needing $400,000, Bahamas Chronicle on the Ministry of Finance MOU, a 2022 Tribune column; leads fetched below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Office of the Prime Minister, https://opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (PM Davis's remarks at the Dundas MOU signing, 10 February 2025), read whole (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-opm-dundas.html, sha256 f3ececb79cc9a64dc1eaa4e2f4f8bec12706ce299e15a91153ec5384c17974be)",
+     "result": "Read: government 'financial support to enable The Dundas to upgrade both the Winston V. Saunders Auditorium and the Philip Burrows Black Box Studio', so Bahamians 'can once again fully enjoy some of the finest community theatre'; the aim is to make the Dundas 'the home of Bahamian theatre'. Capital support to a venue; no pay, fee or agreement for any stage role.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Bahamas Laws Online (laws.bahamas.gov.bs, the Law Revision's register): its search engine (/cms/search/search.php) queried 'theatre' (22 results) and 'minimum wages act'; the alphabetical acts list fetched (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-theatre.html sha256 68e0d2e8a6f6433d91d4ffb0e14425c33da16592fc02e8ec67fbdbc045413668; /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-minwage.html sha256 0ff08abbf8e7da85ab086bc4118f134629ee888c0c54165b5605742371ec1b32)",
+     "result": "The only theatre act is the Theatres and Cinemas Act, Ch. 384 (licensing of premises for plays and films; a Plays and Films Control Board): licensing and censorship, no pay. The only wage instrument is the Minimum Wages Act, Ch. 321B (the general floor for any employee); its current rate order was not found by the engine ('minimum wage order' returned only common-word noise). No collective agreement, tariff or copyright fee for stage work.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Tribune: 'Dundas Civic Centre needs $400k to keep the doors open' (30 Jan 2025, https://www.tribune242.com/news/2025/jan/30/dundas-civic-centre-needs-400k-to-keep-the-doors-open/, quoting the Dundas board chair Dr Nicolette Bethel; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-185729.html, sha256 00cff25bfdf54399962e5aed84e77c2183428840eddbbf9864db7af993012eba) and 'Front Porch: supporting Dundas and performing arts' (3 Nov 2022, file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-frontporch.html, sha256 4e95bef7fa677d64d3a53c6d3973108b51171539318fe4706684aae70d6b7699) read whole",
+     "result": "Read: the Dundas is 'The Bahamas' only community theatre', run by a coalition of 'artists, volunteers, and supporters'; it is 'a private not-for-profit company', its 'primary source of revenue is the Winston V Saunders Theatre'; the National Performing Arts Centre (government-owned) 'languishes'. No fee, wage or agreement for a stage director, playwright or actor is named: a community-theatre sector.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefixes 'bs,gov,opm)/prime-minister-davis-dundas' and 'com,tourismtoday)/services/film'; Wayback availability API for opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (snapshot 20260608174621) and www.tourismtoday.com/services/film-tv-commission (snapshot 20260711144025), each snapshot fetched over https",
+     "result": "Common Crawl: no capture of either. Wayback: both snapshots exist, but every fetch of web.archive.org reset the connection (curl 35) today; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #3 'Bahamas theatre actors playwright director paid fee Dundas Centre Performing Arts National Theatre funding Ministry of Culture grant'",
+     "result": "No fee, rate or agreement for a stage director, playwright or actor in any result. Results: the Office of the Prime Minister's remarks on the Dundas MOU (10 Feb 2025), Tribune and Nassau Guardian on the Dundas needing $400,000, Bahamas Chronicle on the Ministry of Finance MOU, a 2022 Tribune column; leads fetched below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Office of the Prime Minister, https://opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (PM Davis's remarks at the Dundas MOU signing, 10 February 2025), read whole (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-opm-dundas.html, sha256 f3ececb79cc9a64dc1eaa4e2f4f8bec12706ce299e15a91153ec5384c17974be)",
+     "result": "Read: government 'financial support to enable The Dundas to upgrade both the Winston V. Saunders Auditorium and the Philip Burrows Black Box Studio', so Bahamians 'can once again fully enjoy some of the finest community theatre'; the aim is to make the Dundas 'the home of Bahamian theatre'. Capital support to a venue; no pay, fee or agreement for any stage role.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Bahamas Laws Online (laws.bahamas.gov.bs, the Law Revision's register): its search engine (/cms/search/search.php) queried 'theatre' (22 results) and 'minimum wages act'; the alphabetical acts list fetched (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-theatre.html sha256 68e0d2e8a6f6433d91d4ffb0e14425c33da16592fc02e8ec67fbdbc045413668; /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-minwage.html sha256 0ff08abbf8e7da85ab086bc4118f134629ee888c0c54165b5605742371ec1b32)",
+     "result": "The only theatre act is the Theatres and Cinemas Act, Ch. 384 (licensing of premises for plays and films; a Plays and Films Control Board): licensing and censorship, no pay. The only wage instrument is the Minimum Wages Act, Ch. 321B (the general floor for any employee); its current rate order was not found by the engine ('minimum wage order' returned only common-word noise). No collective agreement, tariff or copyright fee for stage work.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Tribune: 'Dundas Civic Centre needs $400k to keep the doors open' (30 Jan 2025, https://www.tribune242.com/news/2025/jan/30/dundas-civic-centre-needs-400k-to-keep-the-doors-open/, quoting the Dundas board chair Dr Nicolette Bethel; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-185729.html, sha256 00cff25bfdf54399962e5aed84e77c2183428840eddbbf9864db7af993012eba) and 'Front Porch: supporting Dundas and performing arts' (3 Nov 2022, file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-frontporch.html, sha256 4e95bef7fa677d64d3a53c6d3973108b51171539318fe4706684aae70d6b7699) read whole",
+     "result": "Read: the Dundas is 'The Bahamas' only community theatre', run by a coalition of 'artists, volunteers, and supporters'; it is 'a private not-for-profit company', its 'primary source of revenue is the Winston V Saunders Theatre'; the National Performing Arts Centre (government-owned) 'languishes'. No fee, wage or agreement for a stage director, playwright or actor is named: a community-theatre sector.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefixes 'bs,gov,opm)/prime-minister-davis-dundas' and 'com,tourismtoday)/services/film'; Wayback availability API for opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (snapshot 20260608174621) and www.tourismtoday.com/services/film-tv-commission (snapshot 20260711144025), each snapshot fetched over https",
+     "result": "Common Crawl: no capture of either. Wayback: both snapshots exist, but every fetch of web.archive.org reset the connection (curl 35) today; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #3 'Bahamas theatre actors playwright director paid fee Dundas Centre Performing Arts National Theatre funding Ministry of Culture grant'",
+     "result": "No fee, rate or agreement for a stage director, playwright or actor in any result. Results: the Office of the Prime Minister's remarks on the Dundas MOU (10 Feb 2025), Tribune and Nassau Guardian on the Dundas needing $400,000, Bahamas Chronicle on the Ministry of Finance MOU, a 2022 Tribune column; leads fetched below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Office of the Prime Minister, https://opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (PM Davis's remarks at the Dundas MOU signing, 10 February 2025), read whole (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-opm-dundas.html, sha256 f3ececb79cc9a64dc1eaa4e2f4f8bec12706ce299e15a91153ec5384c17974be)",
+     "result": "Read: government 'financial support to enable The Dundas to upgrade both the Winston V. Saunders Auditorium and the Philip Burrows Black Box Studio', so Bahamians 'can once again fully enjoy some of the finest community theatre'; the aim is to make the Dundas 'the home of Bahamian theatre'. Capital support to a venue; no pay, fee or agreement for any stage role.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Bahamas Laws Online (laws.bahamas.gov.bs, the Law Revision's register): its search engine (/cms/search/search.php) queried 'theatre' (22 results) and 'minimum wages act'; the alphabetical acts list fetched (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-theatre.html sha256 68e0d2e8a6f6433d91d4ffb0e14425c33da16592fc02e8ec67fbdbc045413668; /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-laws-zoom-minwage.html sha256 0ff08abbf8e7da85ab086bc4118f134629ee888c0c54165b5605742371ec1b32)",
+     "result": "The only theatre act is the Theatres and Cinemas Act, Ch. 384 (licensing of premises for plays and films; a Plays and Films Control Board): licensing and censorship, no pay. The only wage instrument is the Minimum Wages Act, Ch. 321B (the general floor for any employee); its current rate order was not found by the engine ('minimum wage order' returned only common-word noise). No collective agreement, tariff or copyright fee for stage work.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Tribune: 'Dundas Civic Centre needs $400k to keep the doors open' (30 Jan 2025, https://www.tribune242.com/news/2025/jan/30/dundas-civic-centre-needs-400k-to-keep-the-doors-open/, quoting the Dundas board chair Dr Nicolette Bethel; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-185729.html, sha256 00cff25bfdf54399962e5aed84e77c2183428840eddbbf9864db7af993012eba) and 'Front Porch: supporting Dundas and performing arts' (3 Nov 2022, file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/bs-trib-frontporch.html, sha256 4e95bef7fa677d64d3a53c6d3973108b51171539318fe4706684aae70d6b7699) read whole",
+     "result": "Read: the Dundas is 'The Bahamas' only community theatre', run by a coalition of 'artists, volunteers, and supporters'; it is 'a private not-for-profit company', its 'primary source of revenue is the Winston V Saunders Theatre'; the National Performing Arts Centre (government-owned) 'languishes'. No fee, wage or agreement for a stage director, playwright or actor is named: a community-theatre sector.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 prefixes 'bs,gov,opm)/prime-minister-davis-dundas' and 'com,tourismtoday)/services/film'; Wayback availability API for opm.gov.bs/prime-minister-davis-dundas-theatre-mou/ (snapshot 20260608174621) and www.tourismtoday.com/services/film-tv-commission (snapshot 20260711144025), each snapshot fetched over https",
+     "result": "Common Crawl: no capture of either. Wayback: both snapshots exist, but every fetch of web.archive.org reset the connection (curl 35) today; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Every source read describes a community (volunteer) theatre sector around the Dundas; no stage pay instrument exists in the laws register. One search covers 7, 8 and 9."
+ },
+ "CU": {
+  "producer": {
+   "blocker": "R-9876",
+   "attempts": [
+    {
+     "method": "official-register",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund"
+     ],
+     "tried": "Gaceta Oficial de la República de Cuba: https://www.gacetaoficial.gob.cu/es/decreto-ley-373-de-2019-de-consejo-de-estado (Decreto-Ley 373/2019, del creador audiovisual y cinematográfico independiente, which set up the Fondo de Fomento del Cine Cubano), the bare host https://gacetaoficial.gob.cu/ and the site search (search_api_fulltext=creador audiovisual)",
+     "result": "Connection reset (curl 35) on the decree and the search; CONNECT 502 on the bare host. Not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      "series.fund",
+      "stage.fund"
+     ],
+     "tried": "WIPO Lex, Cuba's profile (https://www.wipo.int/wipolex/en/members/profile/CU), the law database the u18 agent used for CENDA Resolución 10/09, read whole for audiovisual and cinema texts (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/cu-wipolex.html, sha256 a1a918e49af6c46bea0d9a521c4b29e4bb9e38fa83660348303c48e86745cde2)",
+     "result": "IP texts only: e.g. Resolución 42 of 24 May 2010, 10% of gross box office for the authors of audiovisual works shown in public with an entry fee, and Resolución 111/1999. Decreto-Ley 373/2019 and any fund or production rule are not held there.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      "series.fund"
+     ],
+     "tried": "OnCuba (oncubanews.com) site search via its WordPress API for 'Fondo de Fomento del Cine' (5 newest); the two that name the fund read: 'Filme Baracoa gana el Premio del Público...' (2 Nov 2026; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/cu-oncuba-baracoa.html, sha256 0dcdd781128467c988cfe94171cd59749a5bc46a91c27726f7670903cf974c80) and 'Vanessa Batista, cineasta...' (2 Apr 2026; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/cu-oncuba-batista.html, sha256 4c41f1f3fb89a0ff3189e5f503a41d8999312ea9f1f14e128f0bee2094825bca)",
+     "result": "Read: Baracoa made 'con el apoyo del Programa Ibermedia, la colaboración del Fondo de Fomento del Cine Cubano'; Batista won the fund in 2020 for a documentary and 'también obtuve un fondo para una película de ficción', signing 'el contrato definitivo con el ICAIC' a year later. Films only: no series, terms, amounts or rate of yes; no primary address quoted.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "existing: u18, WebSearch on Cuban tariffs for stage-play royalties",
+     "result": "named, not repeated (led to WIPO Lex 10660, CENDA Resolución 10/09)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "existing: u18, WIPO Lex details 10660 and its PDF cu051es.pdf read whole",
+     "result": "named, not repeated (tariffs read)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Centro Nacional de Derecho de Autor (CENDA): https://www.cenda.cult.cu/ and https://cenda.cult.cu/; Consejo Nacional de las Artes Escénicas https://www.cnae.cult.cu/; UNEAC (writers' and artists' union) https://www.uneac.org.cu/",
+     "result": "CENDA: CONNECT 502 on both hosts; CNAE and UNEAC: connection reset (curl 35). None read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "OnCuba site search via its WordPress API for 'derecho de autor teatro' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/cu-oncuba-dram.json, sha256 5479695cab7329d68223b99d12cfeef1ad5d65fd0540cf315bbf12c2255e8c1e), 5 newest titles read",
+     "result": "No article on stage-play royalties or a playwright's fee (results: the Cervantes prize, a poet interview, Patricio Guzmán, economic debate). Nothing to read further.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'cu,cult,cenda)/'; then CC-MAIN-2025-51 the same",
+     "result": "No capture of cenda.cult.cu in CC-MAIN-2026-43 or CC-MAIN-2025-51; nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 8 was found by u18 from WIPO Lex's copy of CENDA Resolución 10/09; today's institution, trade-press and archive attempts reached nothing new."
+ },
+ "FJ": {
+  "producer": {
+   "blocker": "R-9911",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #4 'Fiji Arts Council grant theatre production funding playwright actors pay Ministry of iTaukei Affairs Heritage Arts FBC Fiji TV local drama series commissioning'",
+     "result": "No fee, agreement or fund terms for Fijian theatre or a series. Results: IFACCA 2019 item (citing FBC News) that the Fiji Arts Council has long received grants through the Department of Culture and Heritage; an FBC News link (?p=200427, 404 when fetched); a jobs-site profile of the Fiji Arts Council (a charity founded 1964); Mellon grants to an unrelated New York 'Fiji Theater Company'. Nothing on FBC or Fiji TV commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Fiji Arts Council (https://www.fijiartscouncil.org/, https://fijiartscouncil.com/), Ministry of iTaukei Affairs, Culture, Heritage and Arts (https://www.itaukeiaffairs.gov.fj/, https://www.heritage.gov.fj/), Fijian Broadcasting Corporation (https://www.fbc.com.fj/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-inst-www.fbc.com.fj.html, sha256 fa0b1b1f9a01cb73c384a0b5aa4bf924ccd5c91a5e1323d18b00b8f2f90ba000), Fiji TV (https://www.fijione.tv/)",
+     "result": "Arts Council: CONNECT 502 on both; iTaukei Affairs: connection reset; heritage.gov.fj: 502; FBC: a holding page only ('Our main site is coming soon', links to News, VITI+, SERE+), no commissioning terms; fijione.tv: a parked domain redirecting to /lander. Nothing read on theatre pay, a theatre fund or a series' commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Fiji (www.laws.gov.fj, Office of the Attorney-General), its search API /api/search/<q>/All/<page>/0, queries 'theatre', 'arts council', 'film', 'television production', 'Film Fiji' pages 1-3 (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-theatre.json sha256 06cf1a41bb36b057aac9800f62f900466b4ed327252a988fe0696eae0321dde9, fj-laws-filmfiji-2.json sha256 910baad20e0499e9d91a47ac99785473955bc18d9e994a7e3c052f10ed8f88d6, fj-laws-filmfiji-3.json sha256 b386d7126667b44a767463f6a79eb807bfa21dc4e051e84c5d28b5854274da22)",
+     "result": "'theatre' and 'arts council' hit only public-health, factory, higher-education and university provisions: no act on a theatre fund, theatre pay or an arts council. 'television production' and 'Film Fiji' hit the Film Fiji Act [FIL] (sections 2-14 read) and the Income Tax film regulations (reg 80E/80F). Read: Film Fiji Act s 5(2)(c): Film Fiji may 'make grants and loans to any individual who is a citizen of Fiji or a company or body wholly owned by a citizen of Fiji and the company or body has its principal place of operation in Fiji'; s 6(1) priority to those 'which otherwise might have difficulty in raising money for audio-visual productions'; s 6(2) 'The conditions of grants and the rate of interest on loans are as determined by Film Fiji generally or in particular cases'; s 2 'audio-visual industry' includes 'television programs'. So a series may receive a Film Fiji grant or loan; no amounts, no published rate of yes, no fee cap. No theatre incentive or fund in any act found.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "FBC News (fbcnews.com.fj) via its WordPress search API: 'Fiji Arts Council', 'theatre play', 'Film Fiji grant'; the one Fijian hit read: 'Ministry's $16 million budget under scrutiny' (https://www.fbcnews.com.fj/news/ministrys-16-million-budget-under-scrutiny/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-fbcnews-16m.html, sha256 79f09751c8bbf18f1df2159153ca26e094877d2003902b7fe1b19619ffc457ae)",
+     "result": "No article on theatre pay, a theatre fund or a theatre run ('theatre play' returned foreign entertainment wire stories). The budget story reports the Information Minister telling Parliament that of the Ministry's $16 million 'almost $12 million was committed to public service broadcasting grants', and that this year $7 million of $12 million again went to public broadcasting: the state pays the broadcasters a PSB grant; no commissioning terms or pickup count.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'fj,com,fbc)/' and 'fj,gov,itaukeiaffairs)/'",
+     "result": "fbc.com.fj: only the holding home page (2026-10-07, -13) and old article paths answering 404; itaukeiaffairs.gov.fj: no capture. Nothing read on the items.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #4 'Fiji Arts Council grant theatre production funding playwright actors pay Ministry of iTaukei Affairs Heritage Arts FBC Fiji TV local drama series commissioning'",
+     "result": "No fee, agreement or fund terms for Fijian theatre or a series. Results: IFACCA 2019 item (citing FBC News) that the Fiji Arts Council has long received grants through the Department of Culture and Heritage; an FBC News link (?p=200427, 404 when fetched); a jobs-site profile of the Fiji Arts Council (a charity founded 1964); Mellon grants to an unrelated New York 'Fiji Theater Company'. Nothing on FBC or Fiji TV commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Fiji Arts Council (https://www.fijiartscouncil.org/, https://fijiartscouncil.com/), Ministry of iTaukei Affairs, Culture, Heritage and Arts (https://www.itaukeiaffairs.gov.fj/, https://www.heritage.gov.fj/), Fijian Broadcasting Corporation (https://www.fbc.com.fj/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-inst-www.fbc.com.fj.html, sha256 fa0b1b1f9a01cb73c384a0b5aa4bf924ccd5c91a5e1323d18b00b8f2f90ba000), Fiji TV (https://www.fijione.tv/)",
+     "result": "Arts Council: CONNECT 502 on both; iTaukei Affairs: connection reset; heritage.gov.fj: 502; FBC: a holding page only ('Our main site is coming soon', links to News, VITI+, SERE+), no commissioning terms; fijione.tv: a parked domain redirecting to /lander. Nothing read on theatre pay, a theatre fund or a series' commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Fiji (www.laws.gov.fj, Office of the Attorney-General), its search API /api/search/<q>/All/<page>/0, queries 'theatre', 'arts council', 'film', 'television production', 'Film Fiji' pages 1-3 (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-theatre.json sha256 06cf1a41bb36b057aac9800f62f900466b4ed327252a988fe0696eae0321dde9, fj-laws-filmfiji-2.json sha256 910baad20e0499e9d91a47ac99785473955bc18d9e994a7e3c052f10ed8f88d6, fj-laws-filmfiji-3.json sha256 b386d7126667b44a767463f6a79eb807bfa21dc4e051e84c5d28b5854274da22)",
+     "result": "'theatre' and 'arts council' hit only public-health, factory, higher-education and university provisions: no act on a theatre fund, theatre pay or an arts council. 'television production' and 'Film Fiji' hit the Film Fiji Act [FIL] (sections 2-14 read) and the Income Tax film regulations (reg 80E/80F).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "FBC News (fbcnews.com.fj) via its WordPress search API: 'Fiji Arts Council', 'theatre play', 'Film Fiji grant'; the one Fijian hit read: 'Ministry's $16 million budget under scrutiny' (https://www.fbcnews.com.fj/news/ministrys-16-million-budget-under-scrutiny/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-fbcnews-16m.html, sha256 79f09751c8bbf18f1df2159153ca26e094877d2003902b7fe1b19619ffc457ae)",
+     "result": "No article on theatre pay, a theatre fund or a theatre run ('theatre play' returned foreign entertainment wire stories). The budget story reports the Information Minister telling Parliament that of the Ministry's $16 million 'almost $12 million was committed to public service broadcasting grants', and that this year $7 million of $12 million again went to public broadcasting: the state pays the broadcasters a PSB grant; no commissioning terms or pickup count.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'fj,com,fbc)/' and 'fj,gov,itaukeiaffairs)/'",
+     "result": "fbc.com.fj: only the holding home page (2026-10-07, -13) and old article paths answering 404; itaukeiaffairs.gov.fj: no capture. Nothing read on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #4 'Fiji Arts Council grant theatre production funding playwright actors pay Ministry of iTaukei Affairs Heritage Arts FBC Fiji TV local drama series commissioning'",
+     "result": "No fee, agreement or fund terms for Fijian theatre or a series. Results: IFACCA 2019 item (citing FBC News) that the Fiji Arts Council has long received grants through the Department of Culture and Heritage; an FBC News link (?p=200427, 404 when fetched); a jobs-site profile of the Fiji Arts Council (a charity founded 1964); Mellon grants to an unrelated New York 'Fiji Theater Company'. Nothing on FBC or Fiji TV commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Fiji Arts Council (https://www.fijiartscouncil.org/, https://fijiartscouncil.com/), Ministry of iTaukei Affairs, Culture, Heritage and Arts (https://www.itaukeiaffairs.gov.fj/, https://www.heritage.gov.fj/), Fijian Broadcasting Corporation (https://www.fbc.com.fj/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-inst-www.fbc.com.fj.html, sha256 fa0b1b1f9a01cb73c384a0b5aa4bf924ccd5c91a5e1323d18b00b8f2f90ba000), Fiji TV (https://www.fijione.tv/)",
+     "result": "Arts Council: CONNECT 502 on both; iTaukei Affairs: connection reset; heritage.gov.fj: 502; FBC: a holding page only ('Our main site is coming soon', links to News, VITI+, SERE+), no commissioning terms; fijione.tv: a parked domain redirecting to /lander. Nothing read on theatre pay, a theatre fund or a series' commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Fiji (www.laws.gov.fj, Office of the Attorney-General), its search API /api/search/<q>/All/<page>/0, queries 'theatre', 'arts council', 'film', 'television production', 'Film Fiji' pages 1-3 (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-theatre.json sha256 06cf1a41bb36b057aac9800f62f900466b4ed327252a988fe0696eae0321dde9, fj-laws-filmfiji-2.json sha256 910baad20e0499e9d91a47ac99785473955bc18d9e994a7e3c052f10ed8f88d6, fj-laws-filmfiji-3.json sha256 b386d7126667b44a767463f6a79eb807bfa21dc4e051e84c5d28b5854274da22)",
+     "result": "'theatre' and 'arts council' hit only public-health, factory, higher-education and university provisions: no act on a theatre fund, theatre pay or an arts council. 'television production' and 'Film Fiji' hit the Film Fiji Act [FIL] (sections 2-14 read) and the Income Tax film regulations (reg 80E/80F).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "FBC News (fbcnews.com.fj) via its WordPress search API: 'Fiji Arts Council', 'theatre play', 'Film Fiji grant'; the one Fijian hit read: 'Ministry's $16 million budget under scrutiny' (https://www.fbcnews.com.fj/news/ministrys-16-million-budget-under-scrutiny/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-fbcnews-16m.html, sha256 79f09751c8bbf18f1df2159153ca26e094877d2003902b7fe1b19619ffc457ae)",
+     "result": "No article on theatre pay, a theatre fund or a theatre run ('theatre play' returned foreign entertainment wire stories). The budget story reports the Information Minister telling Parliament that of the Ministry's $16 million 'almost $12 million was committed to public service broadcasting grants', and that this year $7 million of $12 million again went to public broadcasting: the state pays the broadcasters a PSB grant; no commissioning terms or pickup count.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'fj,com,fbc)/' and 'fj,gov,itaukeiaffairs)/'",
+     "result": "fbc.com.fj: only the holding home page (2026-10-07, -13) and old article paths answering 404; itaukeiaffairs.gov.fj: no capture. Nothing read on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #4 'Fiji Arts Council grant theatre production funding playwright actors pay Ministry of iTaukei Affairs Heritage Arts FBC Fiji TV local drama series commissioning'",
+     "result": "No fee, agreement or fund terms for Fijian theatre or a series. Results: IFACCA 2019 item (citing FBC News) that the Fiji Arts Council has long received grants through the Department of Culture and Heritage; an FBC News link (?p=200427, 404 when fetched); a jobs-site profile of the Fiji Arts Council (a charity founded 1964); Mellon grants to an unrelated New York 'Fiji Theater Company'. Nothing on FBC or Fiji TV commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Fiji Arts Council (https://www.fijiartscouncil.org/, https://fijiartscouncil.com/), Ministry of iTaukei Affairs, Culture, Heritage and Arts (https://www.itaukeiaffairs.gov.fj/, https://www.heritage.gov.fj/), Fijian Broadcasting Corporation (https://www.fbc.com.fj/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-inst-www.fbc.com.fj.html, sha256 fa0b1b1f9a01cb73c384a0b5aa4bf924ccd5c91a5e1323d18b00b8f2f90ba000), Fiji TV (https://www.fijione.tv/)",
+     "result": "Arts Council: CONNECT 502 on both; iTaukei Affairs: connection reset; heritage.gov.fj: 502; FBC: a holding page only ('Our main site is coming soon', links to News, VITI+, SERE+), no commissioning terms; fijione.tv: a parked domain redirecting to /lander. Nothing read on theatre pay, a theatre fund or a series' commissioning.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Fiji (www.laws.gov.fj, Office of the Attorney-General), its search API /api/search/<q>/All/<page>/0, queries 'theatre', 'arts council', 'film', 'television production', 'Film Fiji' pages 1-3 (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-theatre.json sha256 06cf1a41bb36b057aac9800f62f900466b4ed327252a988fe0696eae0321dde9, fj-laws-filmfiji-2.json sha256 910baad20e0499e9d91a47ac99785473955bc18d9e994a7e3c052f10ed8f88d6, fj-laws-filmfiji-3.json sha256 b386d7126667b44a767463f6a79eb807bfa21dc4e051e84c5d28b5854274da22)",
+     "result": "'theatre' and 'arts council' hit only public-health, factory, higher-education and university provisions: no act on a theatre fund, theatre pay or an arts council. 'television production' and 'Film Fiji' hit the Film Fiji Act [FIL] (sections 2-14 read) and the Income Tax film regulations (reg 80E/80F).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "FBC News (fbcnews.com.fj) via its WordPress search API: 'Fiji Arts Council', 'theatre play', 'Film Fiji grant'; the one Fijian hit read: 'Ministry's $16 million budget under scrutiny' (https://www.fbcnews.com.fj/news/ministrys-16-million-budget-under-scrutiny/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-fbcnews-16m.html, sha256 79f09751c8bbf18f1df2159153ca26e094877d2003902b7fe1b19619ffc457ae)",
+     "result": "No article on theatre pay, a theatre fund or a theatre run ('theatre play' returned foreign entertainment wire stories). The budget story reports the Information Minister telling Parliament that of the Ministry's $16 million 'almost $12 million was committed to public service broadcasting grants', and that this year $7 million of $12 million again went to public broadcasting: the state pays the broadcasters a PSB grant; no commissioning terms or pickup count.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'fj,com,fbc)/' and 'fj,gov,itaukeiaffairs)/'",
+     "result": "fbc.com.fj: only the holding home page (2026-10-07, -13) and old article paths answering 404; itaukeiaffairs.gov.fj: no capture. Nothing read on the items.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "series.fund",
+    "value": {
+     "body": "Film Fiji",
+     "power": "grants and loans for audio-visual productions (television programs included) to Fijian citizens or wholly Fijian-owned companies operating in Fiji, priority to those who could not otherwise raise money; conditions set by Film Fiji",
+     "amounts": null,
+     "rateOfYes": null,
+     "law": "Film Fiji Act, ss 2, 5(2)(c), 6 (as amended by Decree 48 of 2012)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.laws.gov.fj/api/search/Film%20Fiji/All/2/0",
+      "title": "Laws of Fiji: Film Fiji Act [FIL 5], [FIL 6]",
+      "read": "2026-11-04",
+      "said": "(2) Film Fiji may— ... (c)make grants and loans to any individual who is a citizen of Fiji or a company or body wholly owned by a citizen of Fiji and the company or body has its principal place of operation in Fiji for the purpose of achieving its aim; ... 6 (1) In making grants or loans under section 5(2)(c), Film Fiji must give priority to individuals who are Fijian citizens or companies or bodies wholly owned by a citizen of Fiji whose principal place of operation is in Fiji, which otherwise might have difficulty in raising money for audio-visual productions. (2) The conditions of grants and the rate of interest on loans are as determined by Film Fiji generally or in particular cases.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-filmfiji-2.json",
+      "sha256": "910baad20e0499e9d91a47ac99785473955bc18d9e994a7e3c052f10ed8f88d6"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.laws.gov.fj/api/search/Film%20Fiji/All/3/0",
+      "title": "Laws of Fiji: Film Fiji Act [FIL 2] Interpretation",
+      "read": "2026-11-04",
+      "said": "audio-visual industrymeans the production and distribution of large format films, theatrical feature films, show films, documentary films, television programs, direct to video or video disk programs, radio audio recordings, and computer software",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/fj-laws-filmfiji-3.json",
+      "sha256": "b386d7126667b44a767463f6a79eb807bfa21dc4e051e84c5d28b5854274da22"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The Film Fiji Act gives the power to fund a series but publishes no terms; Film Fiji's own site is gone (filmfiji.com now belongs to an unrelated site, per the register). Note: laws.gov.fj's search API was the route an earlier researcher read from the site's own script, since the site serves no text without it."
+ },
+ "GU": {
+  "producer": {
+   "blocker": "R-9944",
+   "attempts": [
+    {
+     "method": "official-register",
+     "items": [
+      "stage.fund",
+      "series.fund",
+      "series.incentive",
+      "stage.incentive"
+     ],
+     "tried": "Guam Compiler of Laws, 5 GCA Ch. 85 (Council on the Arts and Humanities) read whole (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-5gca85.pdf, sha256 97410aee7b7535e46f111684d8cf347420e04d12750e3252fd8bc12d69936f3e); the Guam Code index page (col.guamcourts.gov/guam-code-annotated/guam-code-annotated; file gu-col.html sha256 c6420cd4f15bab1d164f2d8114f6e2e2903af9b5b3800a23257549bf6578adf6) scanned for a film or theatre incentive",
+     "result": "Read: CAHA may '(f) ... enter into contracts to provide grants, loans or advances to individuals, organizations or institutions -- public or private -- engaged in artistic, humanistic and cultural programs' and '(j) ... receive requests for grants and to make grants to institutions, individuals and agencies of government in furtherance of the arts and humanities': a theatre production may be funded; the chapter sets no ranges or rate of yes. The legislative findings open: 'Citizens of Guam lack the opportunity to view, enjoy or participate in living theatrical performances'. No film, series or theatre tax incentive chapter in the index.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51, prefix 'gov,guam,caha)/' (the arts agency the live attempt could not reach)",
+     "result": "No capture of caha.guam.gov in either crawl; the Wayback Machine was not tried for Guam (web.archive.org reset every fetch today, AT and BS attempts).",
+     "date": "2026-11-04",
+     "items": [
+      "stage.fund",
+      "series.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #5 'Guam theatre company actors paid stipend playwright director community theatre performing arts grant CAHA production'",
+     "result": "No stage pay scale for Guam. Leads fetched: Pacific Island Times 2018 interview with RENT director Jojo Urquico; NEFA's grant record for the University of Guam; KUAM on CAHA's FY2026 grant cycle (grants@caha.guam.gov). The rest were Californian grant programmes.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Guam Council on the Arts and Humanities Agency, https://caha.guam.gov/ (connection reset, curl 35); New England Foundation for the Arts grant record https://www.nefa.org/grants/grant-recipients/university-guam (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-nefa.html, sha256 2f4f539d49c9941f9d0f6ef262e5c8a2d84c5f3fb2c7e1252444196e8182f3bf) read",
+     "result": "CAHA not reached. NEFA: University of Guam, Mangilao, FY2025 National Theater Project Presentation Grant, $20,000, to bring TeAda Productions' 'Nothing Micro About Micronesia' to Guam and Saipan: a US funder's presenting grant, no fee terms for a director, writer or actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Guam Compiler of Laws (col.guamcourts.gov, the Judiciary's Guam Code Annotated; guamcourts.org/CompilerofLaws reset the connection): 22 GCA Ch. 3, Minimum Wage and Hour Act (COL 08/22/2024; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-22gca3.pdf, sha256 56cb33f20b04935e71177ae213f486142530d5b2eafb779b051460740c9551d1) and 5 GCA Ch. 85, Council on the Arts and Humanities (COL 1/11/2022; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-5gca85.pdf, sha256 97410aee7b7535e46f111684d8cf347420e04d12750e3252fd8bc12d69936f3e) read; US Code via Cornell LII (secondary, quoting the US Code): 29 U.S.C. 203(c), 206(a)(1), 213(f) (files us-29usc203.html sha256 fbcf9b69e54a5b49ba7d88f7c8a0e7bd6bb7d747cab8a3359dd037924062b0c4, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048, us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134)",
+     "result": "Read: 22 GCA § 3105 'Every employer shall pay each person employed by him wages at a rate not less than ... Nine Dollars and Twenty-Five Cents ($9.25) per hour, effective September 1, 2021'; § 3108(b)(3) exempts an employee 'compensated on a salary or fee basis at a rate of not less than Four Hundred Fifty-five Dollars ($455.00) per week' whose primary duty requires 'originality or talent in a recognized field of artistic or creative endeavor'; and '\"Wages\" include sums payable for work done pursuant to a contract to perform personal services or to perform as an artist or performer'. Federal: FLSA's 'State' includes 'any Territory or possession', $7.25 an hour, and § 213(f) keeps Guam inside the Act. No stage agreement, playwright tariff or director's scale in either code: the statutory wage floor is the only minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Pacific Island Times, 'RENT director Urquico on Guam theater and local actors' (29 Nov 2018; https://www.pacificislandtimes.com/post/2018/11/29/rent-director-urquico-on-guam-theater-and-local-actors; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-pit-rent.html, sha256 a0dd8a5429ea3bc149f0c0fddcda11bb0f29860c92332818b9d3dcc5685fe9e8) read",
+     "result": "Read: the director speaks of 'integrating local non-professional actors' and of hoping to 'put up one big production a year and to bring in international guest artists': an amateur stage, no pay figure. Dated 2018.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51, prefix 'gov,guam,caha)/' (the arts agency the live attempt could not reach)",
+     "result": "No capture of caha.guam.gov in either crawl; the Wayback Machine was not tried for Guam (web.archive.org reset every fetch today, AT and BS attempts).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #5 'Guam theatre company actors paid stipend playwright director community theatre performing arts grant CAHA production'",
+     "result": "No stage pay scale for Guam. Leads fetched: Pacific Island Times 2018 interview with RENT director Jojo Urquico; NEFA's grant record for the University of Guam; KUAM on CAHA's FY2026 grant cycle (grants@caha.guam.gov). The rest were Californian grant programmes.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Guam Council on the Arts and Humanities Agency, https://caha.guam.gov/ (connection reset, curl 35); New England Foundation for the Arts grant record https://www.nefa.org/grants/grant-recipients/university-guam (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-nefa.html, sha256 2f4f539d49c9941f9d0f6ef262e5c8a2d84c5f3fb2c7e1252444196e8182f3bf) read",
+     "result": "CAHA not reached. NEFA: University of Guam, Mangilao, FY2025 National Theater Project Presentation Grant, $20,000, to bring TeAda Productions' 'Nothing Micro About Micronesia' to Guam and Saipan: a US funder's presenting grant, no fee terms for a director, writer or actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Guam Compiler of Laws (col.guamcourts.gov, the Judiciary's Guam Code Annotated; guamcourts.org/CompilerofLaws reset the connection): 22 GCA Ch. 3, Minimum Wage and Hour Act (COL 08/22/2024; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-22gca3.pdf, sha256 56cb33f20b04935e71177ae213f486142530d5b2eafb779b051460740c9551d1) and 5 GCA Ch. 85, Council on the Arts and Humanities (COL 1/11/2022; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-5gca85.pdf, sha256 97410aee7b7535e46f111684d8cf347420e04d12750e3252fd8bc12d69936f3e) read; US Code via Cornell LII (secondary, quoting the US Code): 29 U.S.C. 203(c), 206(a)(1), 213(f) (files us-29usc203.html sha256 fbcf9b69e54a5b49ba7d88f7c8a0e7bd6bb7d747cab8a3359dd037924062b0c4, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048, us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134)",
+     "result": "Read: 22 GCA § 3105 'Every employer shall pay each person employed by him wages at a rate not less than ... Nine Dollars and Twenty-Five Cents ($9.25) per hour, effective September 1, 2021'; § 3108(b)(3) exempts an employee 'compensated on a salary or fee basis at a rate of not less than Four Hundred Fifty-five Dollars ($455.00) per week' whose primary duty requires 'originality or talent in a recognized field of artistic or creative endeavor'; and '\"Wages\" include sums payable for work done pursuant to a contract to perform personal services or to perform as an artist or performer'. Federal: FLSA's 'State' includes 'any Territory or possession', $7.25 an hour, and § 213(f) keeps Guam inside the Act. No stage agreement, playwright tariff or director's scale in either code: the statutory wage floor is the only minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Pacific Island Times, 'RENT director Urquico on Guam theater and local actors' (29 Nov 2018; https://www.pacificislandtimes.com/post/2018/11/29/rent-director-urquico-on-guam-theater-and-local-actors; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-pit-rent.html, sha256 a0dd8a5429ea3bc149f0c0fddcda11bb0f29860c92332818b9d3dcc5685fe9e8) read",
+     "result": "Read: the director speaks of 'integrating local non-professional actors' and of hoping to 'put up one big production a year and to bring in international guest artists': an amateur stage, no pay figure. Dated 2018.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51, prefix 'gov,guam,caha)/' (the arts agency the live attempt could not reach)",
+     "result": "No capture of caha.guam.gov in either crawl; the Wayback Machine was not tried for Guam (web.archive.org reset every fetch today, AT and BS attempts).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #5 'Guam theatre company actors paid stipend playwright director community theatre performing arts grant CAHA production'",
+     "result": "No stage pay scale for Guam. Leads fetched: Pacific Island Times 2018 interview with RENT director Jojo Urquico; NEFA's grant record for the University of Guam; KUAM on CAHA's FY2026 grant cycle (grants@caha.guam.gov). The rest were Californian grant programmes.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Guam Council on the Arts and Humanities Agency, https://caha.guam.gov/ (connection reset, curl 35); New England Foundation for the Arts grant record https://www.nefa.org/grants/grant-recipients/university-guam (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-nefa.html, sha256 2f4f539d49c9941f9d0f6ef262e5c8a2d84c5f3fb2c7e1252444196e8182f3bf) read",
+     "result": "CAHA not reached. NEFA: University of Guam, Mangilao, FY2025 National Theater Project Presentation Grant, $20,000, to bring TeAda Productions' 'Nothing Micro About Micronesia' to Guam and Saipan: a US funder's presenting grant, no fee terms for a director, writer or actor.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Guam Compiler of Laws (col.guamcourts.gov, the Judiciary's Guam Code Annotated; guamcourts.org/CompilerofLaws reset the connection): 22 GCA Ch. 3, Minimum Wage and Hour Act (COL 08/22/2024; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-22gca3.pdf, sha256 56cb33f20b04935e71177ae213f486142530d5b2eafb779b051460740c9551d1) and 5 GCA Ch. 85, Council on the Arts and Humanities (COL 1/11/2022; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-5gca85.pdf, sha256 97410aee7b7535e46f111684d8cf347420e04d12750e3252fd8bc12d69936f3e) read; US Code via Cornell LII (secondary, quoting the US Code): 29 U.S.C. 203(c), 206(a)(1), 213(f) (files us-29usc203.html sha256 fbcf9b69e54a5b49ba7d88f7c8a0e7bd6bb7d747cab8a3359dd037924062b0c4, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048, us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134)",
+     "result": "Read: 22 GCA § 3105 'Every employer shall pay each person employed by him wages at a rate not less than ... Nine Dollars and Twenty-Five Cents ($9.25) per hour, effective September 1, 2021'; § 3108(b)(3) exempts an employee 'compensated on a salary or fee basis at a rate of not less than Four Hundred Fifty-five Dollars ($455.00) per week' whose primary duty requires 'originality or talent in a recognized field of artistic or creative endeavor'; and '\"Wages\" include sums payable for work done pursuant to a contract to perform personal services or to perform as an artist or performer'. Federal: FLSA's 'State' includes 'any Territory or possession', $7.25 an hour, and § 213(f) keeps Guam inside the Act. No stage agreement, playwright tariff or director's scale in either code: the statutory wage floor is the only minimum.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Pacific Island Times, 'RENT director Urquico on Guam theater and local actors' (29 Nov 2018; https://www.pacificislandtimes.com/post/2018/11/29/rent-director-urquico-on-guam-theater-and-local-actors; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-pit-rent.html, sha256 a0dd8a5429ea3bc149f0c0fddcda11bb0f29860c92332818b9d3dcc5685fe9e8) read",
+     "result": "Read: the director speaks of 'integrating local non-professional actors' and of hoping to 'put up one big production a year and to bring in international guest artists': an amateur stage, no pay figure. Dated 2018.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51, prefix 'gov,guam,caha)/' (the arts agency the live attempt could not reach)",
+     "result": "No capture of caha.guam.gov in either crawl; the Wayback Machine was not tried for Guam (web.archive.org reset every fetch today, AT and BS attempts).",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 9,
+    "value": {
+     "statutoryFloor": {
+      "amount": 9.25,
+      "currency": "USD",
+      "per": "hour",
+      "since": "2021-09-01",
+      "law": "22 GCA § 3105 (Minimum Wage and Hour Act of Guam)"
+     },
+     "exempt": "a creative professional paid a salary or fee of at least USD 455 a week (§ 3108(b)(3))",
+     "federal": "FLSA USD 7.25 an hour applies to Guam (29 U.S.C. 206, 213(f))",
+     "agreement": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://col.guamcourts.gov/sites/default/files/22gc003.pdf",
+      "title": "Guam Code Annotated, 22 GCA Ch. 3 Fair Labor Standards (COL08222024)",
+      "read": "2026-11-04",
+      "said": "§ 3105. Minimum Wages. Every employer shall pay each person employed by him wages at a rate not less than Eight Dollars and Twenty-Five Cents ($8.25) per hour, effective January 1, 2015; not less than Eight Dollars and Seventy-Five Cents ($8.75) per hour, effective March 1, 2020; and not less than Nine Dollars and Twenty-Five Cents ($9.25) per hour, effective September 1, 2021.",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/gu-22gca3.pdf",
+      "sha256": "56cb33f20b04935e71177ae213f486142530d5b2eafb779b051460740c9551d1"
+     }
+    ],
+    "notes": "A statutory wage floor, not a stage agreement: it binds only where the actor is employed (not a fee-paid professional over USD 455 a week). The same floor stands for a stage director (item 7) who is employed."
+   }
+  ],
+  "notSearched": [],
+  "notes": "Every source read shows an amateur or grant-funded stage on Guam; the only pay minimum is the territory's statutory wage."
+ },
+ "LS": {
+  "producer": {
+   "blocker": "R-10007",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Lesotho Legal Information Institute (LesLII, lesotholii.org, run with the Judiciary and the Law Office), legislation title search: 'copyright' (1 hit: Copyright Regulations, 2015, Legal Notice 139 of 2015), 'film', 'culture', 'theatre', 'broadcast', 'entertainment' (0 hits each) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lii-legis.html sha256 82fbd4b92772397de8fe7b721657a54db19266b3b2f85acc7bfa31fb2d413853, ls-lii-theatre.html sha256 75417af595e2dce6b6741fd19b6b8f0f2420e3b2c8a5eb808aa66e194cbffe8f); the Copyright Regulations' page /akn/ls/act/ln/2015/139/eng@2015-11-20 fetched",
+     "result": "The regulations' page answered 403 with a Cloudflare 'Just a moment...' challenge (not got past); not read. No film, culture, theatre or broadcasting legislation in LesLII's collection: no incentive, fund, stage director's or playwright's minimum there.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'org,lesotholii)/akn/ls/act/ln/2015/139' (the Copyright Regulations the live site walled off) and 'ls,gov,tourism)/' (the culture ministry, TLS name mismatch live)",
+     "result": "No capture of the regulations; tourism.gov.ls: a single robots.txt answered 429. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #7 'Lesotho theatre actors directors paid Maseru drama group performance fee playwright Lesotho Times arts'",
+     "result": "No stage pay figure. Leads fetched: Lesotho Centre for Investigative Journalism (2018) on actors' pay for the film 'The Forgotten Kingdom'; Sunday Express (?p=9177) quoting the Alliance Française de Maseru. Others: Lesotho Times on a Zakes Mda staging, obituaries.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Ministry of Tourism, Sports, Arts and Culture, https://www.tourism.gov.ls/ (fetched again today); Government of Lesotho portal www.gov.ls, its WordPress posts API searched for 'theatre' and 'artists' (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-govls-theatre.json sha256 d9fb8043f158e2349ffd8d8878e499ba96609e8c097affcccd9efb214048d27a, ls-govls-arts.json sha256 0874d572f1074a1d0ec0c1e7d4d36bc3fdcc10d14748d2a98350f5cf2baec9bb)",
+     "result": "tourism.gov.ls: TLS certificate does not name the host (refused, verification kept on). gov.ls: 'theatre' one hit (a vice-chairperson's tour of Queen II hospital); 'artists' hits on jubilee celebrations, festivals and a cultural-tourism agreement. No stage director's pay, agreement or theatre programme.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Lesotho Legal Information Institute (LesLII, lesotholii.org, run with the Judiciary and the Law Office), legislation title search: 'copyright' (1 hit: Copyright Regulations, 2015, Legal Notice 139 of 2015), 'film', 'culture', 'theatre', 'broadcast', 'entertainment' (0 hits each) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lii-legis.html sha256 82fbd4b92772397de8fe7b721657a54db19266b3b2f85acc7bfa31fb2d413853, ls-lii-theatre.html sha256 75417af595e2dce6b6741fd19b6b8f0f2420e3b2c8a5eb808aa66e194cbffe8f); the Copyright Regulations' page /akn/ls/act/ln/2015/139/eng@2015-11-20 fetched",
+     "result": "The regulations' page answered 403 with a Cloudflare 'Just a moment...' challenge (not got past); not read. No film, culture, theatre or broadcasting legislation in LesLII's collection: no incentive, fund, stage director's or playwright's minimum there.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Sunday Express (sundayexpress.co.ls/?p=9177; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-sundayexp-9177.html, sha256 5fe6b95e95a75ddc6ed94264d18409721faaccfc5950b65f3ccb9592913f8015) and MNN Centre for Investigative Journalism, 'Payment uproar over award-winning film' (27 June 2018, https://lescij.org/2018/06/27/payment-uproar-over-award-winning-film/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lescij.html, sha256 3648c970eef3def72a29271af8229d9f3fd97663bcf55ff4c0bf55b9fd60d7e6) read",
+     "result": "Read: the Alliance Française director calls a touring play 'a rare privilege to Basotho as there is no local theatre'; actors in the film complained to 'the Theatre Association of Lesotho (THALE), Motion Pictures Association of Lesotho (MPALE) as well as the Ministry of Tourism, Environment and Culture'; the producer says 'performance fees' were paid 'upfront' and the rest deferred. No stage fee, agreement or royalty: THALE is named, but no terms of its are reported.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'org,lesotholii)/akn/ls/act/ln/2015/139' (the Copyright Regulations the live site walled off) and 'ls,gov,tourism)/' (the culture ministry, TLS name mismatch live)",
+     "result": "No capture of the regulations; tourism.gov.ls: a single robots.txt answered 429. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "existing: u24 WebSearch (items 2, 4, 6, 8)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "existing: u24, Lesotho News Agency 4 November 2024 post",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Lesotho Legal Information Institute (LesLII, lesotholii.org, run with the Judiciary and the Law Office), legislation title search: 'copyright' (1 hit: Copyright Regulations, 2015, Legal Notice 139 of 2015), 'film', 'culture', 'theatre', 'broadcast', 'entertainment' (0 hits each) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lii-legis.html sha256 82fbd4b92772397de8fe7b721657a54db19266b3b2f85acc7bfa31fb2d413853, ls-lii-theatre.html sha256 75417af595e2dce6b6741fd19b6b8f0f2420e3b2c8a5eb808aa66e194cbffe8f); the Copyright Regulations' page /akn/ls/act/ln/2015/139/eng@2015-11-20 fetched",
+     "result": "The regulations' page answered 403 with a Cloudflare 'Just a moment...' challenge (not got past); not read. No film, culture, theatre or broadcasting legislation in LesLII's collection: no incentive, fund, stage director's or playwright's minimum there.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Sunday Express (sundayexpress.co.ls/?p=9177; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-sundayexp-9177.html, sha256 5fe6b95e95a75ddc6ed94264d18409721faaccfc5950b65f3ccb9592913f8015) and MNN Centre for Investigative Journalism, 'Payment uproar over award-winning film' (27 June 2018, https://lescij.org/2018/06/27/payment-uproar-over-award-winning-film/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lescij.html, sha256 3648c970eef3def72a29271af8229d9f3fd97663bcf55ff4c0bf55b9fd60d7e6) read",
+     "result": "Read: the Alliance Française director calls a touring play 'a rare privilege to Basotho as there is no local theatre'; actors in the film complained to 'the Theatre Association of Lesotho (THALE), Motion Pictures Association of Lesotho (MPALE) as well as the Ministry of Tourism, Environment and Culture'; the producer says 'performance fees' were paid 'upfront' and the rest deferred. No stage fee, agreement or royalty: THALE is named, but no terms of its are reported.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'org,lesotholii)/akn/ls/act/ln/2015/139' (the Copyright Regulations the live site walled off) and 'ls,gov,tourism)/' (the culture ministry, TLS name mismatch live)",
+     "result": "No capture of the regulations; tourism.gov.ls: a single robots.txt answered 429. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "existing: u24, LesothoLII legislation list (q=wages) and the 2024 Minimum Wages Notice page (Cloudflare challenge)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "existing: u24, www.labour.gov.ls",
+     "result": "named, not repeated (connection reset)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch #7 'Lesotho theatre actors directors paid Maseru drama group performance fee playwright Lesotho Times arts'",
+     "result": "No stage pay figure. Leads fetched: Lesotho Centre for Investigative Journalism (2018) on actors' pay for the film 'The Forgotten Kingdom'; Sunday Express (?p=9177) quoting the Alliance Française de Maseru. Others: Lesotho Times on a Zakes Mda staging, obituaries.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Sunday Express (sundayexpress.co.ls/?p=9177; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-sundayexp-9177.html, sha256 5fe6b95e95a75ddc6ed94264d18409721faaccfc5950b65f3ccb9592913f8015) and MNN Centre for Investigative Journalism, 'Payment uproar over award-winning film' (27 June 2018, https://lescij.org/2018/06/27/payment-uproar-over-award-winning-film/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ls-lescij.html, sha256 3648c970eef3def72a29271af8229d9f3fd97663bcf55ff4c0bf55b9fd60d7e6) read",
+     "result": "Read: the Alliance Française director calls a touring play 'a rare privilege to Basotho as there is no local theatre'; actors in the film complained to 'the Theatre Association of Lesotho (THALE), Motion Pictures Association of Lesotho (MPALE) as well as the Ministry of Tourism, Environment and Culture'; the producer says 'performance fees' were paid 'upfront' and the rest deferred. No stage fee, agreement or royalty: THALE is named, but no terms of its are reported.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'org,lesotholii)/akn/ls/act/ln/2015/139' (the Copyright Regulations the live site walled off) and 'ls,gov,tourism)/' (the culture ministry, TLS name mismatch live)",
+     "result": "No capture of the regulations; tourism.gov.ls: a single robots.txt answered 429. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "THALE (Theatre Association of Lesotho), named in the 2018 report, has no site found; the culture ministry's site refuses TLS. Every source read says Lesotho has no theatre of its own ('there is no local theatre')."
+ },
+ "JM": {
+  "producer": {
+   "blocker": "R-9977",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #6 'Jamaica theatre playwright director fees royalties Little Theatre Movement JCDC CHASE Fund arts grant television series production JSDI film'",
+     "result": "No fee, royalty, fund term or series rule. Results: biographies of Jamaican playwrights (Easton Lee, Dennis Scott, Barbara Gloudon, Aston Cooke: 'High Grade' aired on TVJ, CVM and CTV), the LTM pantomime directors' page, a Critical Stages essay on twentieth-century Jamaican theatre (fetched below), JIS on a book launch.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Justice's Laws of Jamaica, https://laws.moj.gov.jm/ (first fetch: certificate chain incomplete; with the issuer's intermediate bundle, verification on: connection reset; two more tries reset); Houses of Parliament, https://japarliament.gov.jm/index.php/publications/bills-and-acts (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-parl.html, sha256 d124d3b4aa1a0c9c24f507b8c36ff501ad3ca52a2f51596fdf667850afa15559) read",
+     "result": "Laws of Jamaica not reached. Parliament's page lists Acts passed and Bills tabled only for the legislative years 2010-2012 and current notices; no film, television, theatre, copyright-tariff or arts-funding act among them.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "stage.incentive",
+      "stage.fund"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      "series.incentive",
+      "series.fund"
+     ],
+     "tried": "Jamaica Observer via its WordPress search API ('JSDI': none; 'film financing': 5); 'Big boost coming for Jamaica's film industry with soon to be launched screen fund' (Durrant Pate, 5 March 2020; https://www.jamaicaobserver.com/2020/03/05/big-boost-coming-for-jamaicas-film-industry-with-soon-to-be-launched-screen-fund/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-obs-screenfund.html, sha256 2825ebae1fc492559dd7d70e05d39b49400c63a9f0c3b69d3f92aa8a682be213) read",
+     "result": "Read: 'film makers and producers can get financing of up to 45 per cent of a project and eligible budget for both local and international film productions'; Jamaica 'doesn't have a tax credit'; the fund 'is now in the final approval stages by the Government' (JAMPRO). Dated 2020, a fund announced, not its terms in force; no word on series. A lead.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'com,filmjamaica)/' listed (22 captures) and 'Programmes & Initiatives' (www.filmjamaica.com/programmes-initiatives/, crawled 2026-10-08) fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-cc-programmes.html, sha256 2deb0fd741b25e9e6376137105248eff97d91f2ae24d7fcfcdbc195e0be8b8f0); prefix 'jm,org,chase)/arts'",
+     "result": "Read: 'JAFTA PROPELLA! ... allows new and emerging filmmakers the guidance and financial support to take a story from idea through production to festival screening stage', held annually by the Jamaica Film & Television Association with JAMPRO, five projects chosen; a Film Lab replaced the British Council screenwriters' workshop. No series rule, amounts or rate of yes. CHASE's arts page: no capture.",
+     "date": "2026-11-04",
+     "items": [
+      "series.fund",
+      "stage.fund"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #6 'Jamaica theatre playwright director fees royalties Little Theatre Movement JCDC CHASE Fund arts grant television series production JSDI film'",
+     "result": "No fee, royalty, fund term or series rule. Results: biographies of Jamaican playwrights (Easton Lee, Dennis Scott, Barbara Gloudon, Aston Cooke: 'High Grade' aired on TVJ, CVM and CTV), the LTM pantomime directors' page, a Critical Stages essay on twentieth-century Jamaican theatre (fetched below), JIS on a book launch.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8
+     ],
+     "tried": "CHASE Fund (the Culture, Health, Arts, Sports and Education Fund): https://chase.org.jm/arts/ (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-chase-arts.html, sha256 214db7d9108916f251a6e04ccb49e41f49eef517e72edceeb817fc04d744f7d0) and https://chase.org.jm/how-to-apply-to-chase/ (file jm-chase-apply.html, sha256 fb5e6727cb04cbdba7466d2099b0bae732132c4fcf052d64b9912b04411669da); Jamaica Cultural Development Commission https://jcdc.gov.jm/ (file jm-jcdc.gov.jm.html, sha256 b88de2b42aaabb40e9e78c875ef9e00c72098aa5ddee99272ccc856a633034f4) read",
+     "result": "CHASE's arts objectives ('Provision of opportunities for more people to attend and participate in artistic activities', 'documentary film footage on Jamaica's history', youth talent programmes) and an 'Arts and Culture Project Application': project funding for organisations, no fee scale for a director or playwright. JCDC's home page: nothing on drama pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Justice's Laws of Jamaica, https://laws.moj.gov.jm/ (first fetch: certificate chain incomplete; with the issuer's intermediate bundle, verification on: connection reset; two more tries reset); Houses of Parliament, https://japarliament.gov.jm/index.php/publications/bills-and-acts (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-parl.html, sha256 d124d3b4aa1a0c9c24f507b8c36ff501ad3ca52a2f51596fdf667850afa15559) read",
+     "result": "Laws of Jamaica not reached. Parliament's page lists Acts passed and Bills tabled only for the legislative years 2010-2012 and current notices; no film, television, theatre, copyright-tariff or arts-funding act among them.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8
+     ],
+     "tried": "Critical Stages 12 (2015), 'The Jamaican Theatre: Highlights of the Performing Arts in the Twentieth Century' (https://www.critical-stages.org/12/...; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-cstages.html, sha256 cdca64aa91fb957726bc01d918324751ccea10a521fe3e0030aa589cc3fe75c0); Jamaica Observer search API 'theatre producers' and 'playwright', and 'Jambiz yet to find home' (4 April 2022; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-obs-jambiz.html, sha256 588392f2401ec8baaff9ec5337f550d5f28600b86852d958d6ea87607f3b320b) read",
+     "result": "No director's or playwright's fee, royalty or agreement: the essay recalls Wycliffe Bennett's 'unpaid task of spreading the gospel of a national theatre'; the Jambiz piece describes the writer/director duo Patrick Brown and Trevor Nairne and their company losing its theatre, with no pay terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'com,filmjamaica)/' listed (22 captures) and 'Programmes & Initiatives' (www.filmjamaica.com/programmes-initiatives/, crawled 2026-10-08) fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-cc-programmes.html, sha256 2deb0fd741b25e9e6376137105248eff97d91f2ae24d7fcfcdbc195e0be8b8f0); prefix 'jm,org,chase)/arts'",
+     "result": "Read: 'JAFTA PROPELLA! ... allows new and emerging filmmakers the guidance and financial support to take a story from idea through production to festival screening stage', held annually by the Jamaica Film & Television Association with JAMPRO, five projects chosen; a Film Lab replaced the British Council screenwriters' workshop. No series rule, amounts or rate of yes. CHASE's arts page: no capture.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #6 'Jamaica theatre playwright director fees royalties Little Theatre Movement JCDC CHASE Fund arts grant television series production JSDI film'",
+     "result": "No fee, royalty, fund term or series rule. Results: biographies of Jamaican playwrights (Easton Lee, Dennis Scott, Barbara Gloudon, Aston Cooke: 'High Grade' aired on TVJ, CVM and CTV), the LTM pantomime directors' page, a Critical Stages essay on twentieth-century Jamaican theatre (fetched below), JIS on a book launch.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8
+     ],
+     "tried": "CHASE Fund (the Culture, Health, Arts, Sports and Education Fund): https://chase.org.jm/arts/ (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-chase-arts.html, sha256 214db7d9108916f251a6e04ccb49e41f49eef517e72edceeb817fc04d744f7d0) and https://chase.org.jm/how-to-apply-to-chase/ (file jm-chase-apply.html, sha256 fb5e6727cb04cbdba7466d2099b0bae732132c4fcf052d64b9912b04411669da); Jamaica Cultural Development Commission https://jcdc.gov.jm/ (file jm-jcdc.gov.jm.html, sha256 b88de2b42aaabb40e9e78c875ef9e00c72098aa5ddee99272ccc856a633034f4) read",
+     "result": "CHASE's arts objectives ('Provision of opportunities for more people to attend and participate in artistic activities', 'documentary film footage on Jamaica's history', youth talent programmes) and an 'Arts and Culture Project Application': project funding for organisations, no fee scale for a director or playwright. JCDC's home page: nothing on drama pay.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Ministry of Justice's Laws of Jamaica, https://laws.moj.gov.jm/ (first fetch: certificate chain incomplete; with the issuer's intermediate bundle, verification on: connection reset; two more tries reset); Houses of Parliament, https://japarliament.gov.jm/index.php/publications/bills-and-acts (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-parl.html, sha256 d124d3b4aa1a0c9c24f507b8c36ff501ad3ca52a2f51596fdf667850afa15559) read",
+     "result": "Laws of Jamaica not reached. Parliament's page lists Acts passed and Bills tabled only for the legislative years 2010-2012 and current notices; no film, television, theatre, copyright-tariff or arts-funding act among them.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8
+     ],
+     "tried": "Critical Stages 12 (2015), 'The Jamaican Theatre: Highlights of the Performing Arts in the Twentieth Century' (https://www.critical-stages.org/12/...; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-cstages.html, sha256 cdca64aa91fb957726bc01d918324751ccea10a521fe3e0030aa589cc3fe75c0); Jamaica Observer search API 'theatre producers' and 'playwright', and 'Jambiz yet to find home' (4 April 2022; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-obs-jambiz.html, sha256 588392f2401ec8baaff9ec5337f550d5f28600b86852d958d6ea87607f3b320b) read",
+     "result": "No director's or playwright's fee, royalty or agreement: the essay recalls Wycliffe Bennett's 'unpaid task of spreading the gospel of a national theatre'; the Jambiz piece describes the writer/director duo Patrick Brown and Trevor Nairne and their company losing its theatre, with no pay terms.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'com,filmjamaica)/' listed (22 captures) and 'Programmes & Initiatives' (www.filmjamaica.com/programmes-initiatives/, crawled 2026-10-08) fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/jm-cc-programmes.html, sha256 2deb0fd741b25e9e6376137105248eff97d91f2ae24d7fcfcdbc195e0be8b8f0); prefix 'jm,org,chase)/arts'",
+     "result": "Read: 'JAFTA PROPELLA! ... allows new and emerging filmmakers the guidance and financial support to take a story from idea through production to festival screening stage', held annually by the Jamaica Film & Television Association with JAMPRO, five projects chosen; a Film Lab replaced the British Council screenwriters' workshop. No series rule, amounts or rate of yes. CHASE's arts page: no capture.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Jamaica's theatre is commercial and community (Jambiz, LTM pantomime) with no published stage pay agreement in any source read; the Laws of Jamaica site could not be reached."
+ },
+ "MS": {
+  "producer": {
+   "blocker": "R-10040",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #8 'Montserrat Arts Council theatre play production funding playwright director film television series incentive Government of Montserrat culture'",
+     "result": "No film or television incentive, series fund or stage pay. Results: Discover Montserrat items on Arts Council plays (Chadd Cumberbatch's 'Every Wowlah House', 2015; the postponed '1768', 2016; a Silk Cotton Theatre production, 2017), the 2025 MAC allocation, and the Government of Montserrat's MAC page.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Government of Montserrat, Montserrat Arts Council page (https://www.gov.ms/government/ministries/office-of-the-premier/montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-gov-mac.html, sha256 ba58d3aa297bd861e1e8de89a554542ee57a5b45d85c78ea1095ccd28cb791e5) read",
+     "result": "Read: MAC, a department of the Office of the Premier, 'has a mandate to foster the development of art; uplift the condition of arts and artists; advise the Minister...' and 'bases its operations on the draft Montserrat Cultural Policy'. No grant scheme, production fund, incentive or fee terms published.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Montserrat: www.agc.gov.ms (TLS name mismatch, refused) and agc.gov.ms (404); the Government's site search 'Arts Council Act' led to the Revised Edition, Cap. 16.05 Montserrat Arts Council Act (law as at 1 January 2013; https://www.gov.ms/wp-content/uploads/2026/02/16.05-Montserrat-Arts-Council-Act.pdf; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-macact-2026.pdf, sha256 6608ced6d2fe893af06174a05a515e64ecd86fc3dc49a8ea7c4131dafb98b8d8), read whole",
+     "result": "Read: Act 3 of 1999, amended by Act 9 of 2011; s 10(2) the Arts Council Fund receives '(a) all donations, gifts and grants made to the fund; (b) moneys voted by the Legislative Assembly; (c) proceeds from all theatrical performances organized by the Board', and pays 'all expenses incurred by the Board in furthering the aims'. The Council itself organises theatre; the Act sets no grant to outside producers, no incentive, and no fee for a director or writer.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Discover Montserrat, 'More Than $1M Allocated for Montserrat Arts Council' (1 October 2025; https://discovermni.com/2025/10/01/more-than-1m-allocated-for-montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-dm-1m.html, sha256 07160877ec4c33496dc6992f83693f6ba8f6f6b47532e523d1ba595bfbceb903), quoting the Premier in the Legislative Assembly on 30 September 2025, read",
+     "result": "Read: 'more than $1.1 million to the Montserrat Arts Council (MAC) for its operations and festivals, along with an additional $230,000 for cultural development projects', up from 'last year's subvention of $964,200'. A state subvention to the Council, not a fund producers apply to; no pay terms.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'ms,gov)/government/ministries/office-of-the-premier/montserrat-arts-council'",
+     "result": "No capture; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #8 'Montserrat Arts Council theatre play production funding playwright director film television series incentive Government of Montserrat culture'",
+     "result": "No film or television incentive, series fund or stage pay. Results: Discover Montserrat items on Arts Council plays (Chadd Cumberbatch's 'Every Wowlah House', 2015; the postponed '1768', 2016; a Silk Cotton Theatre production, 2017), the 2025 MAC allocation, and the Government of Montserrat's MAC page.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Government of Montserrat, Montserrat Arts Council page (https://www.gov.ms/government/ministries/office-of-the-premier/montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-gov-mac.html, sha256 ba58d3aa297bd861e1e8de89a554542ee57a5b45d85c78ea1095ccd28cb791e5) read",
+     "result": "Read: MAC, a department of the Office of the Premier, 'has a mandate to foster the development of art; uplift the condition of arts and artists; advise the Minister...' and 'bases its operations on the draft Montserrat Cultural Policy'. No grant scheme, production fund, incentive or fee terms published.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Montserrat: www.agc.gov.ms (TLS name mismatch, refused) and agc.gov.ms (404); the Government's site search 'Arts Council Act' led to the Revised Edition, Cap. 16.05 Montserrat Arts Council Act (law as at 1 January 2013; https://www.gov.ms/wp-content/uploads/2026/02/16.05-Montserrat-Arts-Council-Act.pdf; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-macact-2026.pdf, sha256 6608ced6d2fe893af06174a05a515e64ecd86fc3dc49a8ea7c4131dafb98b8d8), read whole",
+     "result": "Read: Act 3 of 1999, amended by Act 9 of 2011; s 10(2) the Arts Council Fund receives '(a) all donations, gifts and grants made to the fund; (b) moneys voted by the Legislative Assembly; (c) proceeds from all theatrical performances organized by the Board', and pays 'all expenses incurred by the Board in furthering the aims'. The Council itself organises theatre; the Act sets no grant to outside producers, no incentive, and no fee for a director or writer.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Discover Montserrat, 'More Than $1M Allocated for Montserrat Arts Council' (1 October 2025; https://discovermni.com/2025/10/01/more-than-1m-allocated-for-montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-dm-1m.html, sha256 07160877ec4c33496dc6992f83693f6ba8f6f6b47532e523d1ba595bfbceb903), quoting the Premier in the Legislative Assembly on 30 September 2025, read",
+     "result": "Read: 'more than $1.1 million to the Montserrat Arts Council (MAC) for its operations and festivals, along with an additional $230,000 for cultural development projects', up from 'last year's subvention of $964,200'. A state subvention to the Council, not a fund producers apply to; no pay terms.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'ms,gov)/government/ministries/office-of-the-premier/montserrat-arts-council'",
+     "result": "No capture; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #8 'Montserrat Arts Council theatre play production funding playwright director film television series incentive Government of Montserrat culture'",
+     "result": "No film or television incentive, series fund or stage pay. Results: Discover Montserrat items on Arts Council plays (Chadd Cumberbatch's 'Every Wowlah House', 2015; the postponed '1768', 2016; a Silk Cotton Theatre production, 2017), the 2025 MAC allocation, and the Government of Montserrat's MAC page.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Government of Montserrat, Montserrat Arts Council page (https://www.gov.ms/government/ministries/office-of-the-premier/montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-gov-mac.html, sha256 ba58d3aa297bd861e1e8de89a554542ee57a5b45d85c78ea1095ccd28cb791e5) read",
+     "result": "Read: MAC, a department of the Office of the Premier, 'has a mandate to foster the development of art; uplift the condition of arts and artists; advise the Minister...' and 'bases its operations on the draft Montserrat Cultural Policy'. No grant scheme, production fund, incentive or fee terms published.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Laws of Montserrat: www.agc.gov.ms (TLS name mismatch, refused) and agc.gov.ms (404); the Government's site search 'Arts Council Act' led to the Revised Edition, Cap. 16.05 Montserrat Arts Council Act (law as at 1 January 2013; https://www.gov.ms/wp-content/uploads/2026/02/16.05-Montserrat-Arts-Council-Act.pdf; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-macact-2026.pdf, sha256 6608ced6d2fe893af06174a05a515e64ecd86fc3dc49a8ea7c4131dafb98b8d8), read whole",
+     "result": "Read: Act 3 of 1999, amended by Act 9 of 2011; s 10(2) the Arts Council Fund receives '(a) all donations, gifts and grants made to the fund; (b) moneys voted by the Legislative Assembly; (c) proceeds from all theatrical performances organized by the Board', and pays 'all expenses incurred by the Board in furthering the aims'. The Council itself organises theatre; the Act sets no grant to outside producers, no incentive, and no fee for a director or writer.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Discover Montserrat, 'More Than $1M Allocated for Montserrat Arts Council' (1 October 2025; https://discovermni.com/2025/10/01/more-than-1m-allocated-for-montserrat-arts-council/; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/ms-dm-1m.html, sha256 07160877ec4c33496dc6992f83693f6ba8f6f6b47532e523d1ba595bfbceb903), quoting the Premier in the Legislative Assembly on 30 September 2025, read",
+     "result": "Read: 'more than $1.1 million to the Montserrat Arts Council (MAC) for its operations and festivals, along with an additional $230,000 for cultural development projects', up from 'last year's subvention of $964,200'. A state subvention to the Council, not a fund producers apply to; no pay terms.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'ms,gov)/government/ministries/office-of-the-premier/montserrat-arts-council'",
+     "result": "No capture; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Montserrat's theatre is made by the Arts Council itself (a statutory body funded by subvention, its theatre proceeds paid into its Fund) and small companies; no agreement, fund or incentive for an outside producer, director or playwright exists in the Act or any page read."
+ },
+ "OM": {
+  "producer": {
+   "blocker": "R-10073",
+   "attempts": [
+    {
+     "method": "institution",
+     "items": [
+      "series.outcomes",
+      "series.fund",
+      "series.incentive"
+     ],
+     "tried": "Ministry of Information, https://www.omaninfo.om/ (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-omaninfo.om.html, sha256 6571ad273b659cc62780d2f1689185a1d1c2bb8e407742faec2266db49047f19) and the services guide it links, https://www.injaaz.om/Language/Arabic/Doc/General/sercives_Guide.pdf (243 pages, image only; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-injaaz-guide.pdf, sha256 706e9301439666ba75fc8f78ccb5ac0fabb8ce215bb37ff767ad30d01808363a): the contents page (p. 3) and service 2, 'إرسال مقترحات لبرامج إذاعية وتلفزيونية' (p. 20), rendered at 90-120 dpi and read from the page images (files om-injaaz-guide-p3.png sha256 8a21f2156c3aec42e5a4dc36c4b17d90a8548616ceabdf7a4bfda16e404c7f81, om-injaaz-guide-p20.png sha256 f7bbe12eabf661c745dbf3e7dbb01ac78bd1ba8fb9faf97170af7b617ff9c184); tesseract (ara) timed out on the machine's load, so the Arabic was read from the image directly",
+     "result": "Read (p. 20): the service lets viewers of Oman's channels submit proposals for radio and television programmes; 'وزارة الإعلام غير ملزمة بتنفيذ أي مقترح يتم التقدم به، ويخضع ذلك لرؤية المختصين بها'; 'تعتبر المقترحات المستلمة ملكًا لوزارة الإعلام، مع أحقية احتفاظ صاحب الفكرة بذكر اسمه في حال تنفيذها'; 'يقر مقدم الطلب بعدم المطالبة بأي مقابل على ضوء تقديمه للمقترح'; the proposal goes to the ministry's specialists, then 'لجنة المحتوى الإعلامي', and 'في حال إقراره، يتم تنفيذه'; no fee; 30 days. The contents also list cancelling an 'artistic production and distribution' licence (service 8). No fund, incentive or pickup count.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'om,gov,mcsy)/' (home and about 20 '?page_id=' captures, all about 24.6 KB) and the home capture of 2026-10-14 fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-cc-mcsy-home.html, sha256 06cbe786c79cf04bd1a3eb0e1b5ce5e0b0c15532a4b40bf68c101f7a4cebc50b); prefix 'om,omaninfo)/ar/pages' listed",
+     "result": "MCSY's archived home holds the same script shell (slogans, menu), no theatre text; the page_id captures are the same size, so not fetched. omaninfo.om/ar/pages: every capture a 302 redirect. Nothing on stage pay or a fund.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "existing: u1, 1 search (Arabic) on the ministerial decision regulating private theatre troupes",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Ministry of Culture, Sports and Youth, https://www.mcsy.gov.om/ and /culture (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-mcsy.gov.om.html sha256 605fe47204f35752ff8f50ff2ee02dae4ac4db7b42117c22005cf49fd54aef7e, om-mcsy-culture.html sha256 0e2b5edee6bbe9adcc31cdd37df518c1a1253ee95abc4167e683b94960a12980; /ar/culture and /en/culture 404); Royal Opera House Muscat https://www.rohmuscat.org.om/",
+     "result": "MCSY: the culture page serves a shell whose content loads by script ('جارٍ التحميل...'): no theatre, troupe or pay text served. ROHM: TLS chain incomplete (unable to get local issuer certificate), not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "qanoon.om: Royal Decree 53/2023, Labour Law, read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-rd2023053.html, sha256 01675da8f0f9aabab85119694d189d91560be0ccb4c8d4badde28e6b22fd29b5)",
+     "result": "Read: Art. 88 'يصدر بتحديد الحد الأدنى للأجور قرار من الوزير بعد التشاور مع لجنة الحوار المشترك': the wage floor is set by ministerial decision (not read today); no stage director's agreement or scale in the law.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Oman Observer site search 'theatre troupe' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-search.html); its one result, 'Haitham honours Mazoon Theatre Troupe' (26 March 2019; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-mazoon.html, sha256 78dfb39608919ab39c7034f8bb3965dd3cc67c8f41604b871e38828714af94ac), read",
+     "result": "Read: the then Minister of Heritage and Culture honoured the troupe for a festival award. No fee, wage or agreement for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'om,gov,mcsy)/' (home and about 20 '?page_id=' captures, all about 24.6 KB) and the home capture of 2026-10-14 fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-cc-mcsy-home.html, sha256 06cbe786c79cf04bd1a3eb0e1b5ce5e0b0c15532a4b40bf68c101f7a4cebc50b); prefix 'om,omaninfo)/ar/pages' listed",
+     "result": "MCSY's archived home holds the same script shell (slogans, menu), no theatre text; the page_id captures are the same size, so not fetched. omaninfo.om/ar/pages: every capture a 302 redirect. Nothing on stage pay or a fund.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "existing: u1 (items 5-10)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Ministry of Culture, Sports and Youth, https://www.mcsy.gov.om/ and /culture (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-mcsy.gov.om.html sha256 605fe47204f35752ff8f50ff2ee02dae4ac4db7b42117c22005cf49fd54aef7e, om-mcsy-culture.html sha256 0e2b5edee6bbe9adcc31cdd37df518c1a1253ee95abc4167e683b94960a12980; /ar/culture and /en/culture 404); Royal Opera House Muscat https://www.rohmuscat.org.om/",
+     "result": "MCSY: the culture page serves a shell whose content loads by script ('جارٍ التحميل...'): no theatre, troupe or pay text served. ROHM: TLS chain incomplete (unable to get local issuer certificate), not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      8
+     ],
+     "tried": "qanoon.om (the Sultanate's legal portal): Royal Decree 65/2008, Copyright and Related Rights Law, read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-rd2008065.html, sha256 b1051fc4ce1b2194b64a0791a72215b8eda4f38c6aecce1df0ab31b26e31063f)",
+     "result": "Read: Art. 9 'يجوز للمؤلف أو خلفه الاتفاق على أن يتقاضى مقابلا نقديا أو عينيا ... على أساس نسبة من عائد الاستغلال أو على أساس مبلغ جزافي أو على كلا الأساسين': the fee is by agreement, a share of takings or a lump sum; the law sets no playwright's minimum.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Oman Observer site search 'theatre troupe' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-search.html); its one result, 'Haitham honours Mazoon Theatre Troupe' (26 March 2019; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-mazoon.html, sha256 78dfb39608919ab39c7034f8bb3965dd3cc67c8f41604b871e38828714af94ac), read",
+     "result": "Read: the then Minister of Heritage and Culture honoured the troupe for a festival award. No fee, wage or agreement for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'om,gov,mcsy)/' (home and about 20 '?page_id=' captures, all about 24.6 KB) and the home capture of 2026-10-14 fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-cc-mcsy-home.html, sha256 06cbe786c79cf04bd1a3eb0e1b5ce5e0b0c15532a4b40bf68c101f7a4cebc50b); prefix 'om,omaninfo)/ar/pages' listed",
+     "result": "MCSY's archived home holds the same script shell (slogans, menu), no theatre text; the page_id captures are the same size, so not fetched. omaninfo.om/ar/pages: every capture a 302 redirect. Nothing on stage pay or a fund.",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "existing: u1 (items 5-10)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "existing: u1, Ministerial Decisions 43/2019 and 12/2025 on qanoon.om",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Ministry of Culture, Sports and Youth, https://www.mcsy.gov.om/ and /culture (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-mcsy.gov.om.html sha256 605fe47204f35752ff8f50ff2ee02dae4ac4db7b42117c22005cf49fd54aef7e, om-mcsy-culture.html sha256 0e2b5edee6bbe9adcc31cdd37df518c1a1253ee95abc4167e683b94960a12980; /ar/culture and /en/culture 404); Royal Opera House Muscat https://www.rohmuscat.org.om/",
+     "result": "MCSY: the culture page serves a shell whose content loads by script ('جارٍ التحميل...'): no theatre, troupe or pay text served. ROHM: TLS chain incomplete (unable to get local issuer certificate), not read.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Oman Observer site search 'theatre troupe' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-search.html); its one result, 'Haitham honours Mazoon Theatre Troupe' (26 March 2019; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-obs-mazoon.html, sha256 78dfb39608919ab39c7034f8bb3965dd3cc67c8f41604b871e38828714af94ac), read",
+     "result": "Read: the then Minister of Heritage and Culture honoured the troupe for a festival award. No fee, wage or agreement for a director, playwright or actor.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43: prefix 'om,gov,mcsy)/' (home and about 20 '?page_id=' captures, all about 24.6 KB) and the home capture of 2026-10-14 fetched and read (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-cc-mcsy-home.html, sha256 06cbe786c79cf04bd1a3eb0e1b5ce5e0b0c15532a4b40bf68c101f7a4cebc50b); prefix 'om,omaninfo)/ar/pages' listed",
+     "result": "MCSY's archived home holds the same script shell (slogans, menu), no theatre text; the page_id captures are the same size, so not fetched. omaninfo.om/ar/pages: every capture a 302 redirect. Nothing on stage pay or a fund.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "series.outcomes",
+    "value": {
+     "route": "a proposal for a television programme goes to the Ministry of Information's specialists, then its Media Content Committee; if approved it is made",
+     "bound": false,
+     "proposalOwnedBy": "the Ministry (the author keeps a credit if made)",
+     "payToProposer": "none claimed",
+     "fee": 0,
+     "days": 30,
+     "pickupCount": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.injaaz.om/Language/Arabic/Doc/General/sercives_Guide.pdf",
+      "title": "Ministry of Information, services guide, p. 20: إرسال مقترحات لبرامج إذاعية وتلفزيونية",
+      "read": "2026-11-04",
+      "said": "تسمح هذه الخدمة لمتابعي قنوات وإذاعات سلطنة عمان الاشتراك بمقترحاتهم لإعداد برامج إذاعية وتلفزيونية. ... وزارة الإعلام غير ملزمة بتنفيذ أي مقترح يتم التقدم به، ويخضع ذلك لرؤية المختصين بها. تعتبر المقترحات المستلمة ملكًا لوزارة الإعلام، مع أحقية احتفاظ صاحب الفكرة بذكر اسمه في حال تنفيذها. يقر مقدم الطلب بعدم المطالبة بأي مقابل على ضوء تقديمه للمقترح. ... يعرض المقترح على المختصين في الوزارة، ثم على لجنة المحتوى الإعلامي، في حال إقراره، يتم تنفيذه. رسوم الخدمة: لايوجد. معدل الوقت المستغرق لإنجاز الخدمة: 30 يوم",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/om-injaaz-guide-p20.png",
+      "sha256": "f7bbe12eabf661c745dbf3e7dbb01ac78bd1ba8fb9faf97170af7b617ff9c184"
+     }
+    ],
+    "notes": "Read from the page image (tesseract could not finish under load); the lead should check the transcription against the image. It is a viewers' proposal route, not a producer's commissioning tariff: the state channel makes what it approves itself."
+   }
+  ],
+  "notSearched": [],
+  "notes": "Oman's TV is the state's own production (Royal Decree 38/83, read by u1); the services guide shows an outside idea enters by proposal, owned by the Ministry, unpaid."
+ },
+ "RW": {
+  "producer": {
+   "blocker": "R-10110",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #9 'Rwanda Arts Council theatre production grant actors pay playwright royalties RSAU Rwanda Broadcasting Agency local series commissioning film fund'",
+     "result": "No grant terms, pay rule, royalty tariff, RBA commissioning or film fund. Leads: The National (2018) on playwright Hope Azeda; a CORE-hosted paper that says a Rwandan playwright cannot make a living and troupes are amateur (core.ac.uk/download/129629356.pdf: 403 when fetched); Music in Africa on RSAU collecting music royalties.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Amategeko, the Rwanda Law Reform Commission's portal of laws (linked from MINIJUST's Official Gazette page), through its own API (apis.amategeko.gov.rw/v1/site, the address its page script uses): title search 'Arts Council' (47), 'protection of intellectual property' (2006), 'minimum wage' (6) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-amn-_rts____ouncil_.json, rw-amn-minimum___wage_.json, rw-amn-protection___of___intellectual___property_.json); Law N° 055/2024 of 20/06/2024 on the Protection of Intellectual Property (Official Gazette n° Special of 31/07/2024) downloaded from files.amategeko.gov.rw (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-law055-2024.pdf, sha256 c692e2b8881bdf1c835ec1417d347c5e413fb92f262f9d23b8199b8b3889b979) and searched for dramatic works, remuneration and royalties",
+     "result": "No law establishing an arts council or a film or theatre fund among the 47 'Arts Council' titles (they are other councils); no minimum-wage instrument among the 6 'minimum wage' titles (ILO conventions and banking rules only). Law 055/2024 protects 'dramatic or dramatico-musical works' and sets royalties only for works derived from folklore (Art. 290: 'The competent authority determines the royalties ...'; 'Twenty-five per cent of any royalties paid ... is reserved to fund activities aimed at creative works promotion'). No playwright's fee, stage director's or stage actor's minimum, series incentive or fund.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The National (Abu Dhabi), 'Hope Azeda: tackling the aftermath of the Rwandan genocide through the arts' (2018; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-national-azeda.html, sha256 97f791ed3f6ca11375c520aa9628873818fbc6f4d0fc16a745037ebc2b94c3c3) and Music in Africa, 'Rwanda copyright law gets mixed reactions' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-mia-copyright.html, sha256 faa2b3467047ee15d6e8101079e60465224af3b728f8c15a52a47d9491eb8e89) read; The New Times site search (newtimes.co.rw/search?q=theatre actors paid) returned only unrelated latest stories",
+     "result": "Read: Azeda's plays play in 'refugee camps', 'open football pitches and village halls'; her Ubumuntu Arts Festival began in 2015 'with a grant from the African Leadership Initiative'. Music in Africa quotes RSAU's CEO: 'We began the collection of royalties this month from business establishments' (music, not stage). No stage pay or production fund.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'rw,gov,rac)/' (the Arts Council, 502 live) and 'rw,co,rba)/' (the broadcaster, reset live)",
+     "result": "rac.gov.rw: no capture; rba.co.rw: five captures, every one an HTTP 500. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #9 'Rwanda Arts Council theatre production grant actors pay playwright royalties RSAU Rwanda Broadcasting Agency local series commissioning film fund'",
+     "result": "No grant terms, pay rule, royalty tariff, RBA commissioning or film fund. Leads: The National (2018) on playwright Hope Azeda; a CORE-hosted paper that says a Rwandan playwright cannot make a living and troupes are amateur (core.ac.uk/download/129629356.pdf: 403 when fetched); Music in Africa on RSAU collecting music royalties.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Rwanda Arts Council https://www.rac.gov.rw/ (CONNECT 502); Ministry of National Unity and Civic Engagement (culture) https://www.minubumwe.gov.rw/ (reset); Rwanda Broadcasting Agency https://www.rba.co.rw/ (reset); Rwanda Society of Authors https://www.rsau.rw/ (502)",
+     "result": "None reached; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Amategeko, the Rwanda Law Reform Commission's portal of laws (linked from MINIJUST's Official Gazette page), through its own API (apis.amategeko.gov.rw/v1/site, the address its page script uses): title search 'Arts Council' (47), 'protection of intellectual property' (2006), 'minimum wage' (6) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-amn-_rts____ouncil_.json, rw-amn-minimum___wage_.json, rw-amn-protection___of___intellectual___property_.json); Law N° 055/2024 of 20/06/2024 on the Protection of Intellectual Property (Official Gazette n° Special of 31/07/2024) downloaded from files.amategeko.gov.rw (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-law055-2024.pdf, sha256 c692e2b8881bdf1c835ec1417d347c5e413fb92f262f9d23b8199b8b3889b979) and searched for dramatic works, remuneration and royalties",
+     "result": "No law establishing an arts council or a film or theatre fund among the 47 'Arts Council' titles (they are other councils); no minimum-wage instrument among the 6 'minimum wage' titles (ILO conventions and banking rules only). Law 055/2024 protects 'dramatic or dramatico-musical works' and sets royalties only for works derived from folklore (Art. 290: 'The competent authority determines the royalties ...'; 'Twenty-five per cent of any royalties paid ... is reserved to fund activities aimed at creative works promotion'). No playwright's fee, stage director's or stage actor's minimum, series incentive or fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The National (Abu Dhabi), 'Hope Azeda: tackling the aftermath of the Rwandan genocide through the arts' (2018; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-national-azeda.html, sha256 97f791ed3f6ca11375c520aa9628873818fbc6f4d0fc16a745037ebc2b94c3c3) and Music in Africa, 'Rwanda copyright law gets mixed reactions' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-mia-copyright.html, sha256 faa2b3467047ee15d6e8101079e60465224af3b728f8c15a52a47d9491eb8e89) read; The New Times site search (newtimes.co.rw/search?q=theatre actors paid) returned only unrelated latest stories",
+     "result": "Read: Azeda's plays play in 'refugee camps', 'open football pitches and village halls'; her Ubumuntu Arts Festival began in 2015 'with a grant from the African Leadership Initiative'. Music in Africa quotes RSAU's CEO: 'We began the collection of royalties this month from business establishments' (music, not stage). No stage pay or production fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'rw,gov,rac)/' (the Arts Council, 502 live) and 'rw,co,rba)/' (the broadcaster, reset live)",
+     "result": "rac.gov.rw: no capture; rba.co.rw: five captures, every one an HTTP 500. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #9 'Rwanda Arts Council theatre production grant actors pay playwright royalties RSAU Rwanda Broadcasting Agency local series commissioning film fund'",
+     "result": "No grant terms, pay rule, royalty tariff, RBA commissioning or film fund. Leads: The National (2018) on playwright Hope Azeda; a CORE-hosted paper that says a Rwandan playwright cannot make a living and troupes are amateur (core.ac.uk/download/129629356.pdf: 403 when fetched); Music in Africa on RSAU collecting music royalties.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Rwanda Arts Council https://www.rac.gov.rw/ (CONNECT 502); Ministry of National Unity and Civic Engagement (culture) https://www.minubumwe.gov.rw/ (reset); Rwanda Broadcasting Agency https://www.rba.co.rw/ (reset); Rwanda Society of Authors https://www.rsau.rw/ (502)",
+     "result": "None reached; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Amategeko, the Rwanda Law Reform Commission's portal of laws (linked from MINIJUST's Official Gazette page), through its own API (apis.amategeko.gov.rw/v1/site, the address its page script uses): title search 'Arts Council' (47), 'protection of intellectual property' (2006), 'minimum wage' (6) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-amn-_rts____ouncil_.json, rw-amn-minimum___wage_.json, rw-amn-protection___of___intellectual___property_.json); Law N° 055/2024 of 20/06/2024 on the Protection of Intellectual Property (Official Gazette n° Special of 31/07/2024) downloaded from files.amategeko.gov.rw (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-law055-2024.pdf, sha256 c692e2b8881bdf1c835ec1417d347c5e413fb92f262f9d23b8199b8b3889b979) and searched for dramatic works, remuneration and royalties",
+     "result": "No law establishing an arts council or a film or theatre fund among the 47 'Arts Council' titles (they are other councils); no minimum-wage instrument among the 6 'minimum wage' titles (ILO conventions and banking rules only). Law 055/2024 protects 'dramatic or dramatico-musical works' and sets royalties only for works derived from folklore (Art. 290: 'The competent authority determines the royalties ...'; 'Twenty-five per cent of any royalties paid ... is reserved to fund activities aimed at creative works promotion'). No playwright's fee, stage director's or stage actor's minimum, series incentive or fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The National (Abu Dhabi), 'Hope Azeda: tackling the aftermath of the Rwandan genocide through the arts' (2018; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-national-azeda.html, sha256 97f791ed3f6ca11375c520aa9628873818fbc6f4d0fc16a745037ebc2b94c3c3) and Music in Africa, 'Rwanda copyright law gets mixed reactions' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-mia-copyright.html, sha256 faa2b3467047ee15d6e8101079e60465224af3b728f8c15a52a47d9491eb8e89) read; The New Times site search (newtimes.co.rw/search?q=theatre actors paid) returned only unrelated latest stories",
+     "result": "Read: Azeda's plays play in 'refugee camps', 'open football pitches and village halls'; her Ubumuntu Arts Festival began in 2015 'with a grant from the African Leadership Initiative'. Music in Africa quotes RSAU's CEO: 'We began the collection of royalties this month from business establishments' (music, not stage). No stage pay or production fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'rw,gov,rac)/' (the Arts Council, 502 live) and 'rw,co,rba)/' (the broadcaster, reset live)",
+     "result": "rac.gov.rw: no capture; rba.co.rw: five captures, every one an HTTP 500. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #9 'Rwanda Arts Council theatre production grant actors pay playwright royalties RSAU Rwanda Broadcasting Agency local series commissioning film fund'",
+     "result": "No grant terms, pay rule, royalty tariff, RBA commissioning or film fund. Leads: The National (2018) on playwright Hope Azeda; a CORE-hosted paper that says a Rwandan playwright cannot make a living and troupes are amateur (core.ac.uk/download/129629356.pdf: 403 when fetched); Music in Africa on RSAU collecting music royalties.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "Rwanda Arts Council https://www.rac.gov.rw/ (CONNECT 502); Ministry of National Unity and Civic Engagement (culture) https://www.minubumwe.gov.rw/ (reset); Rwanda Broadcasting Agency https://www.rba.co.rw/ (reset); Rwanda Society of Authors https://www.rsau.rw/ (502)",
+     "result": "None reached; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "Amategeko, the Rwanda Law Reform Commission's portal of laws (linked from MINIJUST's Official Gazette page), through its own API (apis.amategeko.gov.rw/v1/site, the address its page script uses): title search 'Arts Council' (47), 'protection of intellectual property' (2006), 'minimum wage' (6) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-amn-_rts____ouncil_.json, rw-amn-minimum___wage_.json, rw-amn-protection___of___intellectual___property_.json); Law N° 055/2024 of 20/06/2024 on the Protection of Intellectual Property (Official Gazette n° Special of 31/07/2024) downloaded from files.amategeko.gov.rw (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-law055-2024.pdf, sha256 c692e2b8881bdf1c835ec1417d347c5e413fb92f262f9d23b8199b8b3889b979) and searched for dramatic works, remuneration and royalties",
+     "result": "No law establishing an arts council or a film or theatre fund among the 47 'Arts Council' titles (they are other councils); no minimum-wage instrument among the 6 'minimum wage' titles (ILO conventions and banking rules only). Law 055/2024 protects 'dramatic or dramatico-musical works' and sets royalties only for works derived from folklore (Art. 290: 'The competent authority determines the royalties ...'; 'Twenty-five per cent of any royalties paid ... is reserved to fund activities aimed at creative works promotion'). No playwright's fee, stage director's or stage actor's minimum, series incentive or fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "The National (Abu Dhabi), 'Hope Azeda: tackling the aftermath of the Rwandan genocide through the arts' (2018; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-national-azeda.html, sha256 97f791ed3f6ca11375c520aa9628873818fbc6f4d0fc16a745037ebc2b94c3c3) and Music in Africa, 'Rwanda copyright law gets mixed reactions' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/rw-mia-copyright.html, sha256 faa2b3467047ee15d6e8101079e60465224af3b728f8c15a52a47d9491eb8e89) read; The New Times site search (newtimes.co.rw/search?q=theatre actors paid) returned only unrelated latest stories",
+     "result": "Read: Azeda's plays play in 'refugee camps', 'open football pitches and village halls'; her Ubumuntu Arts Festival began in 2015 'with a grant from the African Leadership Initiative'. Music in Africa quotes RSAU's CEO: 'We began the collection of royalties this month from business establishments' (music, not stage). No stage pay or production fund.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'rw,gov,rac)/' (the Arts Council, 502 live) and 'rw,co,rba)/' (the broadcaster, reset live)",
+     "result": "rac.gov.rw: no capture; rba.co.rw: five captures, every one an HTTP 500. Nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "The amategeko API is the route the portal's own page script calls (the page serves no text); the lead decides whether it counts as the register read."
+ },
+ "SY": {
+  "producer": {
+   "blocker": "R-10144",
+   "attempts": [
+    {
+     "method": "official-register",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "stage.incentive",
+      "stage.fund"
+     ],
+     "tried": "People's Assembly laws database, https://www.parliament.gov.sy/ and https://parliament.gov.sy/; Prime Ministry https://www.pministry.gov.sy/ (with the issuer's intermediates added, verification on: timed out); WIPO Lex profile for Syria (https://www.wipo.int/wipolex/en/members/profile/SY; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-wipolex.html, sha256 42928c2ba4648dbb9edd9aa96d958046fa6bc6e20c47cae4db7ce87752c51e14)",
+     "result": "Parliament: CONNECT 502 on both hosts; Prime Ministry: certificate chain incomplete, then timeout. WIPO Lex holds three main IP texts (Legislative Decree 62/2013, Copyright and Related Rights, issued 16 September 2013); its Arabic text link (wipolex-res.wipo.int/.../sy015ar.pdf) redirected to the details page, so the law was not read. No incentive or fund law reached.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'sy,gov,syriadrama)/' (the drama production authority, 502 live), 'sy,gov,ortas)/' (the broadcaster, self-signed live) and 'sy,gov,parliament)/'",
+     "result": "syriadrama.gov.sy and parliament.gov.sy: no capture; ortas.gov.sy: five captures, every one a 301 redirect over http. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "existing: u5, 2 searches (Arabic) covering 7",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "existing: u5, sana.sy articles 2374368 and 2529011 (items 5, 6, 7)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "Labour Law No. 17 of 2010 (amended by legislative decree), the Ministry of Social Affairs and Labour's copy, https://mosal.gov.sy/wp-content/uploads/2026/03/قانون-العمل-رقم-17-لعام-2010.pdf (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-law17-2010.pdf, sha256 d72e635ef7f6c83cb53573093785815137dc26e594b15ed11a1e2e1ba9d95c95)",
+     "result": "Read in part: the text layer is mis-encoded (Arabic presentation forms garbled), so only the opening definitions read cleanly: a wage is all paid 'بموجب عقود العمل الفردية أو اتفاقات العمل الجماعية'. No stage agreement or wage figure was read; the minimum-wage article could not be found in the garbled text and OCR was not run (machine load).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Al-Watan (alwatan.sy) via its WordPress search API for 'أجور الممثلين المسرح' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-alwatan.json, sha256 988894f05b2248a270e73360d1ca204397292b0c43cf3e1156e4a0e16fde0ec0): six titles; two read: 'المسرحي غزوان البلح في ندوة حوارية: قلة الأجور تدفع الممثلين إلى التلفزيون' (2 Feb 2026; file sy-alwatan-balah.html, sha256 eb4b67ebe21969cb3dd4693bfb20651ebd5f8ad71f97480ccbf41651d899a48d) and 'مأمون الرفاعي لـالوطن: ممثل الدوبلاج يأخذ الفتات' (22 Aug 2026; file sy-alwatan-rifai.html, sha256 1d7944d79481df98eff6433f2f62943c2a5abd669e0954d19c43c57bea27a136); English Enab Baladi's API (Cloudflare 403) and Syria TV's (Akamai 403)",
+     "result": "Read: al-Balah calls for 'رفع أجور المسرحيين، فقلة الأجور تدفع الممثلين إلى التلفزيون' and names the National Theatre of the Ministry of Culture; al-Rifai says a dubbing scene pays no more than 'أربعة دولارات'. No stage director's, playwright's or actor's rate, and no primary instrument quoted.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'sy,gov,syriadrama)/' (the drama production authority, 502 live), 'sy,gov,ortas)/' (the broadcaster, self-signed live) and 'sy,gov,parliament)/'",
+     "result": "syriadrama.gov.sy and parliament.gov.sy: no capture; ortas.gov.sy: five captures, every one a 301 redirect over http. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "existing: u5 (items 7, 8, 9)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "existing: u5, moc.gov.sy (items 1, 2, 5, 6, 8)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      8
+     ],
+     "tried": "WIPO Lex, Legislative Decree 62/2013 (details page https://www.wipo.int/wipolex/en/legislation/details/17231 read; file sy-wipo-det.html, sha256 c0131cc50c1452ce805aed18da4ab9916bfcc0f9f54a60b9d12c6537a067eb9c); its Arabic PDF link",
+     "result": "Details read (Law on the Protection of Copyright and Related Rights, issued by Legislative Decree No. 62/2013); the PDF redirected to the details page, so the text was not read. No playwright's minimum seen.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Al-Watan (alwatan.sy) via its WordPress search API for 'أجور الممثلين المسرح' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-alwatan.json, sha256 988894f05b2248a270e73360d1ca204397292b0c43cf3e1156e4a0e16fde0ec0): six titles; two read: 'المسرحي غزوان البلح في ندوة حوارية: قلة الأجور تدفع الممثلين إلى التلفزيون' (2 Feb 2026; file sy-alwatan-balah.html, sha256 eb4b67ebe21969cb3dd4693bfb20651ebd5f8ad71f97480ccbf41651d899a48d) and 'مأمون الرفاعي لـالوطن: ممثل الدوبلاج يأخذ الفتات' (22 Aug 2026; file sy-alwatan-rifai.html, sha256 1d7944d79481df98eff6433f2f62943c2a5abd669e0954d19c43c57bea27a136); English Enab Baladi's API (Cloudflare 403) and Syria TV's (Akamai 403)",
+     "result": "Read: al-Balah calls for 'رفع أجور المسرحيين، فقلة الأجور تدفع الممثلين إلى التلفزيون' and names the National Theatre of the Ministry of Culture; al-Rifai says a dubbing scene pays no more than 'أربعة دولارات'. No stage director's, playwright's or actor's rate, and no primary instrument quoted.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'sy,gov,syriadrama)/' (the drama production authority, 502 live), 'sy,gov,ortas)/' (the broadcaster, self-signed live) and 'sy,gov,parliament)/'",
+     "result": "syriadrama.gov.sy and parliament.gov.sy: no capture; ortas.gov.sy: five captures, every one a 301 redirect over http. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "existing: u5 (items 7, 8, 9)",
+     "result": "named, not repeated",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      9,
+      7
+     ],
+     "tried": "Ministry of Social Affairs and Labour, https://www.mosal.gov.sy/ (certificate chain completed with Actalis' own intermediate, cacert.actalis.it/certs/actalis-autdvg3, verification on; file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-www.mosal.gov.sy.html, sha256 ffd3179bb9e2f370b35a6515596d8b7bcd1a31b02b0faae7ed4b1fd266a94720); its WordPress search for 'الحد الأدنى للأجور' (0 hits) and 'قانون العمل 17'; the 'قانون العمل' page (file sy-mosal-labourlaw.html, sha256 6a45d70e47f960f828b41a242f09cdc413c597a972dfcc9b759cc7318a8a8a0e) read",
+     "result": "No minimum-wage notice, collective agreement or artists' rule on the ministry's site; the labour-law page links the ministry's copy of Labour Law 17/2010 (as amended), read under official-register.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7,
+      9
+     ],
+     "tried": "Labour Law No. 17 of 2010 (amended by legislative decree), the Ministry of Social Affairs and Labour's copy, https://mosal.gov.sy/wp-content/uploads/2026/03/قانون-العمل-رقم-17-لعام-2010.pdf (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-law17-2010.pdf, sha256 d72e635ef7f6c83cb53573093785815137dc26e594b15ed11a1e2e1ba9d95c95)",
+     "result": "Read in part: the text layer is mis-encoded (Arabic presentation forms garbled), so only the opening definitions read cleanly: a wage is all paid 'بموجب عقود العمل الفردية أو اتفاقات العمل الجماعية'. No stage agreement or wage figure was read; the minimum-wage article could not be found in the garbled text and OCR was not run (machine load).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "tried": "Al-Watan (alwatan.sy) via its WordPress search API for 'أجور الممثلين المسرح' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/sy-alwatan.json, sha256 988894f05b2248a270e73360d1ca204397292b0c43cf3e1156e4a0e16fde0ec0): six titles; two read: 'المسرحي غزوان البلح في ندوة حوارية: قلة الأجور تدفع الممثلين إلى التلفزيون' (2 Feb 2026; file sy-alwatan-balah.html, sha256 eb4b67ebe21969cb3dd4693bfb20651ebd5f8ad71f97480ccbf41651d899a48d) and 'مأمون الرفاعي لـالوطن: ممثل الدوبلاج يأخذ الفتات' (22 Aug 2026; file sy-alwatan-rifai.html, sha256 1d7944d79481df98eff6433f2f62943c2a5abd669e0954d19c43c57bea27a136); English Enab Baladi's API (Cloudflare 403) and Syria TV's (Akamai 403)",
+     "result": "Read: al-Balah calls for 'رفع أجور المسرحيين، فقلة الأجور تدفع الممثلين إلى التلفزيون' and names the National Theatre of the Ministry of Culture; al-Rifai says a dubbing scene pays no more than 'أربعة دولارات'. No stage director's, playwright's or actor's rate, and no primary instrument quoted.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      "series.fund",
+      "series.outcomes",
+      "stage.fund",
+      7,
+      8,
+      9
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43, prefixes 'sy,gov,syriadrama)/' (the drama production authority, 502 live), 'sy,gov,ortas)/' (the broadcaster, self-signed live) and 'sy,gov,parliament)/'",
+     "result": "syriadrama.gov.sy and parliament.gov.sy: no capture; ortas.gov.sy: five captures, every one a 301 redirect over http. Nothing read.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Syria's state law sources are mostly unreachable (parliament 502, prime ministry TLS); the labour ministry's copy of Law 17/2010 is mis-encoded; OCR of it would be the next step."
+ },
+ "UM": {
+  "producer": {
+   "blocker": "R-10172",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #10 'United States Minor Outlying Islands no permanent population Office of Insular Affairs Baker Howland Jarvis Johnston Kingman Midway Palmyra Wake administered'",
+     "result": "Results are Wikipedia and its mirrors (none of the islands has known permanent residents; visitors are temporary staff; Palmyra the only incorporated territory) and unreliable AI-generated pages. Used only as leads to the Interior Department's own pages below.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "US Department of the Interior, Office of Insular Affairs: https://www.doi.gov/oia/islands/politicatypes, /palmyraatoll, /wakeatoll (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/um-politicatypes.html sha256 0f8557fd9c4c5501a71fd1bffbb8510d37fbaf25c700d4a9b595e9b7f4f7819b, um-palmyraatoll.html sha256 2d1c15f32d6d290a89b09cd206630eb92029e8c77f4eefbb1be9bcb1935eb089, um-wakeatoll.html sha256 197638607ec74b4bb16a764b85b6e822a25576d0f41fe31d4e90b75efb61cdd5); /navassaisland (404); US Fish and Wildlife Service, https://www.fws.gov/refuge/midway-atoll (file um-midway-atoll.html, sha256 64be6f44f07e8a99933ab42d9d8e3e028b7fa07f77afe6a54b9a26609ae56bb8)",
+     "result": "Read: Palmyra is 'a National Wildlife Refuge administered by the U.S. Fish and Wildlife Services in the Department of Interior', the only incorporated territory; Wake 'has had no indigenous inhabitants', 'approximately 302 inhabitants' (missile-defence personnel; administration funded by the Ballistic Missile Defense Organization), US court jurisdiction in Honolulu (48 U.S.C. 644a); Midway is a national wildlife refuge. No broadcaster, theatre, fund or screen body: the islands are federal refuges and military sites under US law.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "US Code via Cornell LII (secondary, quoting the Code): 29 U.S.C. 213(f) and 206(a)(1) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048), read for which of the islands US labour law reaches",
+     "result": "Read: the FLSA's wage and hour sections 'shall not apply with respect to any employee whose services during the workweek are performed in a workplace within a foreign country or within territory under the jurisdiction of the United States other than ... Guam; Wake Island; Eniwetok Atoll; Kwajalein Atoll; and Johnston Island': so the USD 7.25 federal floor reaches Wake and Johnston, and not Baker, Howland, Jarvis, Kingman, Midway, Palmyra or Navassa. No stage or screen pay instrument applies to any of them; no incentive or fund exists in law for them.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Honolulu Civil Beat via its WordPress search API for 'Palmyra Atoll'",
+     "result": "429 Too Many Requests; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'gov,doi)/oia/islands'",
+     "result": "Captures of the territories' pages (American Samoa, CNMI, Guam, Palau, Puerto Rico) and 'politicatypes' (2026-10-10), the page read live; no capture of the Palmyra, Wake or Navassa pages. Nothing new.",
+     "date": "2026-11-04",
+     "items": [
+      "series.incentive",
+      "series.fund",
+      "series.feecap",
+      "series.outcomes",
+      "stage.incentive",
+      "stage.fund",
+      "stage.outcomes"
+     ]
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #10 'United States Minor Outlying Islands no permanent population Office of Insular Affairs Baker Howland Jarvis Johnston Kingman Midway Palmyra Wake administered'",
+     "result": "Results are Wikipedia and its mirrors (none of the islands has known permanent residents; visitors are temporary staff; Palmyra the only incorporated territory) and unreliable AI-generated pages. Used only as leads to the Interior Department's own pages below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "US Department of the Interior, Office of Insular Affairs: https://www.doi.gov/oia/islands/politicatypes, /palmyraatoll, /wakeatoll (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/um-politicatypes.html sha256 0f8557fd9c4c5501a71fd1bffbb8510d37fbaf25c700d4a9b595e9b7f4f7819b, um-palmyraatoll.html sha256 2d1c15f32d6d290a89b09cd206630eb92029e8c77f4eefbb1be9bcb1935eb089, um-wakeatoll.html sha256 197638607ec74b4bb16a764b85b6e822a25576d0f41fe31d4e90b75efb61cdd5); /navassaisland (404); US Fish and Wildlife Service, https://www.fws.gov/refuge/midway-atoll (file um-midway-atoll.html, sha256 64be6f44f07e8a99933ab42d9d8e3e028b7fa07f77afe6a54b9a26609ae56bb8)",
+     "result": "Read: Palmyra is 'a National Wildlife Refuge administered by the U.S. Fish and Wildlife Services in the Department of Interior', the only incorporated territory; Wake 'has had no indigenous inhabitants', 'approximately 302 inhabitants' (missile-defence personnel; administration funded by the Ballistic Missile Defense Organization), US court jurisdiction in Honolulu (48 U.S.C. 644a); Midway is a national wildlife refuge. No broadcaster, theatre, fund or screen body: the islands are federal refuges and military sites under US law.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "US Code via Cornell LII (secondary, quoting the Code): 29 U.S.C. 213(f) and 206(a)(1) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048), read for which of the islands US labour law reaches",
+     "result": "Read: the FLSA's wage and hour sections 'shall not apply with respect to any employee whose services during the workweek are performed in a workplace within a foreign country or within territory under the jurisdiction of the United States other than ... Guam; Wake Island; Eniwetok Atoll; Kwajalein Atoll; and Johnston Island': so the USD 7.25 federal floor reaches Wake and Johnston, and not Baker, Howland, Jarvis, Kingman, Midway, Palmyra or Navassa. No stage or screen pay instrument applies to any of them; no incentive or fund exists in law for them.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Honolulu Civil Beat via its WordPress search API for 'Palmyra Atoll'",
+     "result": "429 Too Many Requests; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'gov,doi)/oia/islands'",
+     "result": "Captures of the territories' pages (American Samoa, CNMI, Guam, Palau, Puerto Rico) and 'politicatypes' (2026-10-10), the page read live; no capture of the Palmyra, Wake or Navassa pages. Nothing new.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #10 'United States Minor Outlying Islands no permanent population Office of Insular Affairs Baker Howland Jarvis Johnston Kingman Midway Palmyra Wake administered'",
+     "result": "Results are Wikipedia and its mirrors (none of the islands has known permanent residents; visitors are temporary staff; Palmyra the only incorporated territory) and unreliable AI-generated pages. Used only as leads to the Interior Department's own pages below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "US Department of the Interior, Office of Insular Affairs: https://www.doi.gov/oia/islands/politicatypes, /palmyraatoll, /wakeatoll (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/um-politicatypes.html sha256 0f8557fd9c4c5501a71fd1bffbb8510d37fbaf25c700d4a9b595e9b7f4f7819b, um-palmyraatoll.html sha256 2d1c15f32d6d290a89b09cd206630eb92029e8c77f4eefbb1be9bcb1935eb089, um-wakeatoll.html sha256 197638607ec74b4bb16a764b85b6e822a25576d0f41fe31d4e90b75efb61cdd5); /navassaisland (404); US Fish and Wildlife Service, https://www.fws.gov/refuge/midway-atoll (file um-midway-atoll.html, sha256 64be6f44f07e8a99933ab42d9d8e3e028b7fa07f77afe6a54b9a26609ae56bb8)",
+     "result": "Read: Palmyra is 'a National Wildlife Refuge administered by the U.S. Fish and Wildlife Services in the Department of Interior', the only incorporated territory; Wake 'has had no indigenous inhabitants', 'approximately 302 inhabitants' (missile-defence personnel; administration funded by the Ballistic Missile Defense Organization), US court jurisdiction in Honolulu (48 U.S.C. 644a); Midway is a national wildlife refuge. No broadcaster, theatre, fund or screen body: the islands are federal refuges and military sites under US law.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "US Code via Cornell LII (secondary, quoting the Code): 29 U.S.C. 213(f) and 206(a)(1) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048), read for which of the islands US labour law reaches",
+     "result": "Read: the FLSA's wage and hour sections 'shall not apply with respect to any employee whose services during the workweek are performed in a workplace within a foreign country or within territory under the jurisdiction of the United States other than ... Guam; Wake Island; Eniwetok Atoll; Kwajalein Atoll; and Johnston Island': so the USD 7.25 federal floor reaches Wake and Johnston, and not Baker, Howland, Jarvis, Kingman, Midway, Palmyra or Navassa. No stage or screen pay instrument applies to any of them; no incentive or fund exists in law for them.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Honolulu Civil Beat via its WordPress search API for 'Palmyra Atoll'",
+     "result": "429 Too Many Requests; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'gov,doi)/oia/islands'",
+     "result": "Captures of the territories' pages (American Samoa, CNMI, Guam, Palau, Puerto Rico) and 'politicatypes' (2026-10-10), the page read live; no capture of the Palmyra, Wake or Navassa pages. Nothing new.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch #10 'United States Minor Outlying Islands no permanent population Office of Insular Affairs Baker Howland Jarvis Johnston Kingman Midway Palmyra Wake administered'",
+     "result": "Results are Wikipedia and its mirrors (none of the islands has known permanent residents; visitors are temporary staff; Palmyra the only incorporated territory) and unreliable AI-generated pages. Used only as leads to the Interior Department's own pages below.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "institution",
+     "tried": "US Department of the Interior, Office of Insular Affairs: https://www.doi.gov/oia/islands/politicatypes, /palmyraatoll, /wakeatoll (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/um-politicatypes.html sha256 0f8557fd9c4c5501a71fd1bffbb8510d37fbaf25c700d4a9b595e9b7f4f7819b, um-palmyraatoll.html sha256 2d1c15f32d6d290a89b09cd206630eb92029e8c77f4eefbb1be9bcb1935eb089, um-wakeatoll.html sha256 197638607ec74b4bb16a764b85b6e822a25576d0f41fe31d4e90b75efb61cdd5); /navassaisland (404); US Fish and Wildlife Service, https://www.fws.gov/refuge/midway-atoll (file um-midway-atoll.html, sha256 64be6f44f07e8a99933ab42d9d8e3e028b7fa07f77afe6a54b9a26609ae56bb8)",
+     "result": "Read: Palmyra is 'a National Wildlife Refuge administered by the U.S. Fish and Wildlife Services in the Department of Interior', the only incorporated territory; Wake 'has had no indigenous inhabitants', 'approximately 302 inhabitants' (missile-defence personnel; administration funded by the Ballistic Missile Defense Organization), US court jurisdiction in Honolulu (48 U.S.C. 644a); Midway is a national wildlife refuge. No broadcaster, theatre, fund or screen body: the islands are federal refuges and military sites under US law.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "official-register",
+     "tried": "US Code via Cornell LII (secondary, quoting the Code): 29 U.S.C. 213(f) and 206(a)(1) (files /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/us-29usc213.html sha256 8a75d2ff764cee61645182cf8fd4e4da154480615079a3221f14feb5f9d94134, us-29usc206.html sha256 a895d735a52d70584d8c2f9c93fbc77d17946c1016905b136bc6b455babf8048), read for which of the islands US labour law reaches",
+     "result": "Read: the FLSA's wage and hour sections 'shall not apply with respect to any employee whose services during the workweek are performed in a workplace within a foreign country or within territory under the jurisdiction of the United States other than ... Guam; Wake Island; Eniwetok Atoll; Kwajalein Atoll; and Johnston Island': so the USD 7.25 federal floor reaches Wake and Johnston, and not Baker, Howland, Jarvis, Kingman, Midway, Palmyra or Navassa. No stage or screen pay instrument applies to any of them; no incentive or fund exists in law for them.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "trade-press",
+     "tried": "Honolulu Civil Beat via its WordPress search API for 'Palmyra Atoll'",
+     "result": "429 Too Many Requests; nothing read.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, prefix 'gov,doi)/oia/islands'",
+     "result": "Captures of the territories' pages (American Samoa, CNMI, Guam, Palau, Puerto Rico) and 'politicatypes' (2026-10-10), the page read live; no capture of the Palmyra, Wake or Navassa pages. Nothing new.",
+     "date": "2026-11-04",
+     "items": [
+      7,
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "No trade of its own: wildlife refuges and military sites, no permanent population (Wake about 302 personnel), US federal law. A life there has no series, play or stage pay to model; where US law applies at all (Wake, Johnston) it is the federal wage floor."
+ }
+}

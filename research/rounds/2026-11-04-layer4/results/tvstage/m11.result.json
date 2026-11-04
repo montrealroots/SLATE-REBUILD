@@ -1,0 +1,1789 @@
+{
+ "AR": {
+  "producer": {
+   "blocker": "R-9808",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Boletín Oficial de la República Argentina, https://www.boletinoficial.gob.ar/ (curl)",
+     "result": "connection reset (curl 35); not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "InfoLEG (the Ministry of Justice's legal database): Ley 24.800 Ley Nacional del Teatro, servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/42762/norma.htm, read whole (saved l4t/files/m11/ar-infoleg-24800.html, sha256 b0b6b65f48c1035172eccaefc7a0f6249c40192e741031e9a5dbd3c77e9bce08) for a tax measure (impuesto, exención, desgravación, deducción, crédito fiscal)",
+     "result": "the law as enacted holds no tax incentive for a theatre producer: the Instituto Nacional del Teatro is funded by budget, 8% of the broadcasting levy and other resources (arts. 19-21); no word on a fund's rate of yes or on runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "InfoLEG: Ley 25.037 (B.O. 4 Dec 1998), anexos/90000-94999/90540/norma.htm (saved l4t/files/m11/ar-infoleg-25037.html, sha256 5397b8dbcbf791316c249343961b4494948d5c737348a9d5d561ed3aff2b5449) and its links page (verVinculos id=90540); with AADET's Word copy of Decreto-Ley 1251/58 (aadet.org.ar/app/uploads/2021/07/51-DecretoLey-12511958-...doc, saved l4t/files/m11/ar-aadet-dl1251.doc, sha256 31dfff1b9afea9646129c4c35c4c810fd4b64da73c650ad738ee3bce5a26b015), led there by AADET's Marco Normativo page",
+     "result": "found in part (a theatre tax exemption): Ley 25.037 says the exemption of art. 9 of Decreto-Ley 1251/58 'de todo impuesto nacional y municipal en jurisdicción de la Capital Federal, al espectáculo teatral' has always covered 'los actores, autores, directores, promotores y técnicos especializados'; AADET's copy gives art. 9 as substituted: exempt are theatre shows 'cuando se trate de obras en idioma nacional de autores argentinos o extranjeros con no menos de cinco años de residencia en el país', and the Fondo Nacional de las Artes may refund provincial ticket taxes where it sponsors the show. Whether art. 9 survives later national tax laws was not read (InfoLEG links only Ley 24.800 and the 1998 veto to Ley 25.037)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Boletín Oficial de la Ciudad de Buenos Aires: home and its buscador (boletinoficial.buenosaires.gob.ar/buscador?texto=ley+6026+participacion+cultural) for the City's Participación Cultural/Mecenazgo law",
+     "result": "the search is a form driven by script; no result list in the HTML; the law's text not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "buenosaires.gob.ar Mecenazgo pages: 'Sumate como patrocinador' and '¿Cómo participo?' (saved l4t/files/m11/ar-mec-sponsor.html sha256 b3afbb3d7b525a92da97a9113a3ad76977640504d58ed79d729304515b22ef26, l4t/files/m11/ar-mec-part.html sha256 0bde30855963cdd5e99a487ed64a380e064f96c548fdaaca5374b1135645561e); the Reglamento General 2026 PDF (buenosaires.gob.ar: 404 after redirect to gcaba_historico; static.buenosaires.gob.ar: connection reset)",
+     "result": "read: the City's Participación Cultural/Mecenazgo lets Ingresos Brutos taxpayers put part of the tax into cultural projects, Teatro among 14 disciplines (see found); the 2026 regulation not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for ar,gob,inteatro)/ (cc.py list)",
+     "result": "8 records, all 403 crawl diagnostics or robots.txt (actas/775, a dance-theatre contest regulation PDF, catalogos, transparencia-activa); no page body; CC-MAIN-2026-39 queued, see next",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for inteatro.gob.ar/convocatorias and incaa.gob.ar/series",
+     "result": "429 Too Many Requests; no snapshot listed or read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 of 10 (standard): 'directores teatrales Argentina honorarios dirección teatro independiente Instituto Nacional del Teatro subsidios 2026 proyectos aprobados cantidad' (covers item 7 and the blocker's stage fund and outcomes)",
+     "result": "results: INT Líneas 2026 pages on argentina.gob.ar, CABA Resolución 4482/MCGC/26 (Proteatro), Sitio Andino and La Voz de San Justo on INT subsidies; no count of applications or grants, no director's fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Boletín Oficial de la Ciudad de Buenos Aires, normativaba/norma/869863: Resolución 4482/MCGC/26 (published 7 Aug 2026), read (saved l4t/files/m11/ar-caba-res4482.html, sha256 2c82e29fdf95213459826c42aad9eec4acabfb18b62bfeed6e641c7b3b1bdf6d)",
+     "result": "read: Proteatro (Ley 156, Régimen de Concertación para la Actividad Teatral No Oficial) called subsidy applications for 'Grupos de Teatro Eventuales' and 'Proyectos Especiales' from 28 Jul to 10 Aug 2026, governed by Resolución 1515/MCGC/26 (not read); no amounts, no count of applications or grants",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "sitioandino.com.ar 'El Instituto Nacional del Teatro y beneficios para artistas' (25 Oct 2022, quoting Télam and the INT) and lavozdesanjusto.com.ar 'Inscriben a los interesados para las nuevas líneas de subsidios del INT' (7 Jul 2017, quoting INT director Marcelo Allasino), fetched and read (saved l4t/files/m11/ar-sitioandino-int.html sha256 3f45f67fce511ed860f2ea574be9b578407d2b39095a4bb54005ad55be46125f; l4t/files/m11/ar-lvsj-int.html sha256 92f802a7c69091d8e7f350f12f92a80a05a0705bd6a9e7c5a56e9d0e201ded95)",
+     "result": "both out of date (2022, 2017): the INT's standing lines (production of a work, independent groups) and 2017 infrastructure ceilings of ARS 500,000, 1,000,000 and 5,000,000; no rate of yes, no series figures, no count of runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 for ar,gob,inteatro)/ (cc.py list)",
+     "result": "4 records, robots.txt only; no page of the INT's lines, selections or counts",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for ar,org,aadet)/ (49 captures listed); read the capture of https://aadet.org.ar/marco-normativo/ (7 Oct 2026; saved l4t/files/m11/ar-cc-aadet-marco-normativo.html, sha256 d7e350c273e0e86531615e3c2578f84f49fd0cbd97aa7dcb0ede1a9b89c80928)",
+     "result": "the employers' normative page lists theatre laws (Decreto-Ley 1251/58, Ley 24.800 and Decreto 991/97, Ley 25.037, Ley 156/99 CABA, Ley 27.203 Ley del Actor and its rules) and an empty 'Convenios y Acuerdos Sectoriales' heading; no stage director's agreement or fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 2 of 10 (standard), as under producer: 'directores teatrales Argentina honorarios dirección teatro independiente ...'",
+     "result": "no director's fee, guild or agreement in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "derechoenzapatillas.com (4 Dec 2025) and the Sitio Andino and La Voz de San Justo INT articles, read whole for a director's pay",
+     "result": "none: the press read names directors only among those Ley 25.037 exempts and among subsidy applicants; no stage director's fee or agreement",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-21, capture of https://argentores.org.ar/aranceles/ (21 May 2026, 200; saved l4t/files/m11/ar-cc-argentores-aranceles.html, sha256 ad8d77211ec508877df7adb2cdafaffba5d8f66f8b5f80bab5a553c441f05101), read for the stage tariffs",
+     "result": "found: Argentores' stage minimums for free and pay-what-you-want performances from 1 March 2026 and its commissions (see found); for a paid performance the author's share is 'el porcentaje declarado originalmente por la obra', no figure",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 captures of aadet.org.ar/vuelve-el-concurso-contar/ (3 Mar 2026) and /contar-2026-obras-seleccionadas-del-concurso/ (16 Jul 2026) (saved l4t/files/m11/ar-cc-aadet-vuelve-el-concurso-contar.html sha256 102e727b9b515b6067c8f6a34f949795ac5e9db711966f11bbf7332b61faaba5; l4t/files/m11/ar-cc-aadet-contar-2026-obras-seleccionadas-del-concurso.html sha256 a7d78f55f681355b2f25910ad4999aacd7cc14e6e8e073d6d6e30897f155e34e)",
+     "result": "the commercial theatre's playwriting contest: 254 plays received in 2026, 4 selected (each author gets 'un premio económico', amount not on the pages; the bases PDF not read); of 2025's four, 'Casual' was taken up by 8 member producers for the 2026 season. No commission fee or advance",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "InfoLEG search 'argentores' (126 norms) and Decreto 208/2025 (reglamenta Ley 20.115), anexos/410000-414999/410769/norma.htm, read (saved l4t/files/m11/ar-infoleg-410769-norma.html, sha256 e93a41dea09cd407c5d8009b6dd23fe52437b98bbc45f1f06cce00cc6eff8a00); Decreto 207/2025 page saved (l4t/files/m11/ar-infoleg-410768-norma.html)",
+     "result": "read: from 20 March 2025 Argentores collects 'en función de los acuerdos que los creadores ... convengan libremente' with whoever exploits the work; outside such agreements tariffs follow arts. 8-10 of Decreto 138/2025; Argentores' administration share 'en ningún caso podrá exceder el TREINTA POR CIENTO (30 %)'; payment within two months. No statutory playwright's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 1 of 10 (standard): 'Argentores porcentaje derecho de autor obra teatral recaudación boletería teatro comercial 10% 12%'",
+     "result": "results: AADET's 2020 tariff report, Boletín Oficial notice 322760 of 4 Jun 2025, Derecho en Zapatillas on the 2025 cap on live-show tariffs, press on the 2025 decrees; led to the trade-press and official-register reads below; no percentage for a paid performance in the results themselves",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "derechoenzapatillas.com 'Límite máximo de los aranceles de derechos de autor para los espectáculos en vivo' (4 Dec 2025), fetched and read (saved l4t/files/m11/ar-dez-topes.html, sha256 6e1aef4b89b66346cc3147844548647b0bd27c4f6557888da96901f0a5d26df8); it reproduces Resolución 1.136/2025 of the Ministerio de Justicia (B.O. 1 Dec 2025, SAIJ id RSRSCGV700113620251128)",
+     "result": "found (secondary): for live theatre, dance and concerts the collecting societies' tariffs together may not exceed 10% of ticket sales; for a text play the dramaturgy is the principal use and principal uses take at least 80% of that cap (see found)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Boletín Oficial PDF https://www.boletinoficial.gob.ar/pdf/aviso/primera/322760/20250604 (from the search); InfoLEG searches for Resolución 1136/2025 by number (tipoNorma resolución and 'otras', 2025) and by text ('espectaculos escenicos en vivo aranceles')",
+     "result": "Boletín Oficial: connection reset; InfoLEG returned only Disposición 1136/2025 of the labour directorate (an unrelated agreement) and an unfiltered list: the Justice resolution's text not read on a state register",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "collector": "Argentores (Consejo de Teatro)",
+     "from": "2026-03-01",
+     "currency": "ARS",
+     "freePerformanceMinimum": {
+      "under50": 40500,
+      "50to100": 81000,
+      "100to300": 202500,
+      "over300": "by analogy with the venue"
+     },
+     "passTheHatMinimum": {
+      "under50": 20250,
+      "50to100": 40500,
+      "100to300": 81000,
+      "over300": "the work's declared percentage of takings"
+     },
+     "outdoorFree": 81000,
+     "over300SeatsCachetMinimumPerPerformance": 283500,
+     "valuesAreMinimums": true,
+     "paidPerformance": "the percentage declared for the work, applied to takings (no figure on the page)",
+     "commission": {
+      "CABAandGBAover100seats": 0.16,
+      "upTo100seats": 0.13
+     },
+     "law": "Decreto 208/2025: the fee is agreed freely by author and user; Argentores' administration at most 30%"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://argentores.org.ar/aranceles/",
+      "title": "Aranceles (Argentores), Common Crawl CC-MAIN-2026-21 capture of 2026-05-21",
+      "read": "2026-11-04",
+      "said": "Informamos actualización de los siguientes aranceles de obras teatrales, gratuitas y/o a la gorra, que rigen a partir del 1 de marzo de 2026: ARANCELES PARA FUNCIONES GRATUITAS: Para salas de MENOS DE CINCUENTA espectadores: $ 40.500.- MÁS DE CINCUENTA Y MENOS DE CIEN: $ 81.000.- MÁS DE CIEN Y MENOS DE TRESCIENTOS: $ 202.500.- MÁS DE TRESCIENTOS: Por analogía con el espacio teatral en el que se realiza. ARANCELES PARA FUNCIONES A LA GORRA: Obras que se realicen en salas/teatros/espacios con MENOS DE CINCUENTA espectadores: $ 20.250.- MÁS DE CINCUENTA Y MENOS DE CIEN: $ 40.500.- MÁS DE CIEN Y MENOS DE TRESCIENTOS: $ 81.000.- MÁS DE TRESCIENTOS: Se aplica arancel de acuerdo a la declaración de la obra, sobre la recaudación. FUNCIONES GRATUITAS AL AIRE LIBRE (Plazas, parques, calles) : $ 81.000.- ... para presentaciones que se realicen en espacios para más de 300 espectadores, se puede recaudar por derechos de autor, el porcentaje declarado originalmente por la obra aplicado al cachet que cobraría la compañía, asegurando un mínimo por función de $ 283.500.- Todos estos valores detallados funcionarán como un mínimo, pudiendo el autor solicitar un importe mayor al determinado. NUEVAS COMISIONES La Comisión para teatros de Capital Federal y Gran Buenos Aires en sala de más de 100 butacas es ahora del 16% (11% de Comisión Administrativa + 5% de Comisión destinada al Consejo de Previsión Social). La Comisión para teatros de Capital Federal, Gran Buenos Aires e Interior del país en salas de hasta 100 butacas se mantiene en el 13% (11% de Comisión Administrativa + 2% de Comisión destinada al Consejo de Previsión Social).",
+      "file": "l4t/files/m11/ar-cc-argentores-aranceles.html",
+      "sha256": "ad8d77211ec508877df7adb2cdafaffba5d8f66f8b5f80bab5a553c441f05101"
+     },
+     {
+      "kind": "primary",
+      "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/410000-414999/410769/norma.htm",
+      "title": "Decreto 208/2025, Reglamentación de la Ley N° 20.115 (InfoLEG)",
+      "read": "2026-11-04",
+      "said": "ARTÍCULO 1°.- La percepción de los derechos económicos de autor en favor de la SOCIEDAD GENERAL DE AUTORES DE LA ARGENTINA (ARGENTORES) DE PROTECCIÓN RECÍPROCA prevista en el artículo 1º de la Ley N° 20.115 se realizará en función de los acuerdos que los creadores nacionales y extranjeros de las obras allí enumeradas convengan libremente con otros particulares ... ARTÍCULO 4°.- ... el porcentaje destinado a gastos de administración, que en ningún caso podrá exceder el TREINTA POR CIENTO (30 %) de lo recaudado.",
+      "file": "l4t/files/m11/ar-infoleg-410769-norma.html",
+      "sha256": "e93a41dea09cd407c5d8009b6dd23fe52437b98bbc45f1f06cce00cc6eff8a00"
+     }
+    ],
+    "notes": "The Argentores page is a crawl capture of 21 May 2026 (the live site answers 403 to this environment); a later change before today would not show. The paid-performance percentage is per work, declared by the author, and not given."
+   },
+   {
+    "item": 5,
+    "value": {
+     "scheme": "Participación Cultural / Mecenazgo (City of Buenos Aires, Ministry of Culture), 2026 call (closed)",
+     "form": "sponsors who pay the City's Ingresos Brutos put part of it into selected cultural projects, as a payment on account of the tax",
+     "sponsorMaxShareOfLastYearsTax": {
+      "large": 0.1,
+      "small": 0.2
+     },
+     "creditedShare": {
+      "projectsByIndividualsOrSocialInclusion": 1.0,
+      "projectsByLegalPersons": "within an annual limit stated as 'del 80% como mínimo'"
+     },
+     "disciplinesIncludeTheatre": true,
+     "applicants": "individuals and non-profit legal persons domiciled in the City, or a project carried out in the City",
+     "projectMaxARS": {
+      "individual": 25000000,
+      "legalPerson": 60000000
+     },
+     "perApplicant": "up to 3 projects, at most 2 selected",
+     "notASubsidy": true,
+     "national": "Ley 25.037 (1998) reads Decreto-Ley 1251/58 art. 9 (exemption of theatre shows by national-language works of Argentine authors from national and municipal tax in the Capital) as covering actors, authors, directors, promoters and technicians; whether in force today not read"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/cultura/impulso-cultural/mecenazgo/sumate-como-patrocinador",
+      "title": "Sumate como patrocinador (Mecenazgo, GCBA)",
+      "read": "2026-11-04",
+      "said": "Quienes tributan el impuesto sobre los Ingresos Brutos pueden destinar parte del pago para financiar proyectos culturales. ... Régimen General: podrán aportar grandes contribuyentes hasta el 10 % del monto determinado el año anterior y pequeños contribuyentes hasta el 20% del monto determinado el año anterior. ... Los aportes efectuados a proyectos culturales presentados por personas humanas y a cualquier proyecto cultural de inclusión social podrán ser imputados por los patrocinadores por el cien por ciento (100%) como un pago a cuenta del Impuesto sobre los Ingresos Brutos. Los aportes efectuados a proyectos culturales presentados por personas jurídicas podrán ser imputados por los patrocinadores como un pago a cuenta del Impuesto sobre los Ingresos Brutos correspondiente al ejercicio de su efectivización, siempre que no excedan el límite anual establecido del 80% como mínimo.",
+      "file": "l4t/files/m11/ar-mec-sponsor.html",
+      "sha256": "b3afbb3d7b525a92da97a9113a3ad76977640504d58ed79d729304515b22ef26"
+     },
+     {
+      "kind": "primary",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/cultura/impulso-cultural/mecenazgo/como-participo",
+      "title": "¿Cómo participo? (Mecenazgo, GCBA)",
+      "read": "2026-11-04",
+      "said": "Pueden presentarse personas humanas y personas jurídicas sin fines de lucro ... Deberán tener domicilio legal en la Ciudad Autónoma de Buenos Aires o, en caso de no poseer domicilio en CABA, el proyecto debe desarrollarse sin excepción dentro de la Ciudad. ... 14 disciplinas artísticas/culturales: Danza; Artes visuales; Artes audiovisuales y arte digital; Teatro; ... se pueden presentar hasta 3 (tres) proyectos, pero sólo dos podrán ser seleccionados. Monto máximo para personas humanas: $25.000.000 (pesos veinticinco millones) Monto máximo para personas jurídicas: $60.000.000 (pesos sesenta millones)",
+      "file": "l4t/files/m11/ar-mec-part.html",
+      "sha256": "0bde30855963cdd5e99a487ed64a380e064f96c548fdaaca5374b1135645561e"
+     },
+     {
+      "kind": "primary",
+      "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/90000-94999/90540/norma.htm",
+      "title": "Ley 25.037 (InfoLEG)",
+      "read": "2026-11-04",
+      "said": "ARTICULO 1º- A los fines de la interpretación del alcance de lo dispuesto en el artículo 9° del Decreto Ley 1251/58 ... referido a la eximición de todo impuesto nacional y municipal en jurisdicción de la Capital Federal, al espectáculo teatral, entiéndese que en todo momento han estado comprendidos en la referida exención: los actores, autores, directores, promotores y técnicos especializados.",
+      "file": "l4t/files/m11/ar-infoleg-25037.html",
+      "sha256": "5397b8dbcbf791316c249343961b4494948d5c737348a9d5d561ed3aff2b5449"
+     }
+    ],
+    "notes": "A sponsor's credit (City), not a producer's own credit; the 2026 regulation (whose PDF did not load) and the City law were not read. The 1958 exemption is a lead for whether it stands today."
+   },
+   {
+    "item": 8,
+    "value": {
+     "capOnAllCollectingSocietiesLiveShows": 0.1,
+     "base": "ticket sales ('ingresos por la venta de entradas')",
+     "textPlayPrincipalUse": "dramaturgy",
+     "principalUsesShareOfCapAtLeast": 0.8,
+     "accessoryUsesShareOfCapAtMost": 0.2,
+     "rule": "Resolución 1136/2025, Ministerio de Justicia (issued 28 Nov 2025, B.O. 1 Dec 2025), under Decreto 138/2025 arts. 10 and 16"
+    },
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://www.derechoenzapatillas.com/2025/limite-maximo-de-los-aranceles-de-derechos-de-autor-para-los-espectaculos-en-vivo/",
+      "title": "Límite máximo de los aranceles de derechos de autor para los espectáculos en vivo (Derecho en Zapatillas, 4 Dec 2025)",
+      "read": "2026-11-04",
+      "said": "Resolución 1.136/2025 Ministerio de Justicia Emitida el 28 de Noviembre de 2025 Boletín Oficial, 1 de Diciembre de 2025 Vigente, de alcance general Id SAIJ: RSRSCGV700113620251128 ... ARTÍCULO 1°.- En los casos de espectáculos escénicos en vivo, sean de carácter teatral, danza, conciertos o recitales de música, y de espectáculos multidisciplinarios, la sumatoria de los aranceles recaudados por las sociedades de gestión colectiva en concepto de derechos de autor y derechos conexos, no podrá exceder el DIEZ POR CIENTO (10 %) de los ingresos por la venta de entradas. ... b. obras teatrales de texto. I. utilización principal: dramaturgia. ... ARTÍCULO 9°.- ... a. las utilizaciones principales recibirán en conjunto como mínimo el OCHENTA POR CIENTO (80 %) del tope máximo integral ...",
+      "file": "l4t/files/m11/ar-dez-topes.html",
+      "sha256": "6e1aef4b89b66346cc3147844548647b0bd27c4f6557888da96901f0a5d26df8",
+      "quotes": "Resolución 1136/2025 del Ministerio de Justicia, Boletín Oficial 1 Dec 2025 (SAIJ RSRSCGV700113620251128)"
+     }
+    ],
+    "notes": "A ceiling on what the societies may collect, read from a secondary; with Argentores' own page (a per-work declared percentage) it bounds the playwright's box-office royalty at 10% of ticket sales (dramaturgy at least 8% of takings where the cap binds). The primary was not read (Boletín Oficial resets; InfoLEG search did not return it)."
+   }
+  ],
+  "notes": "Item 7 (stage director) stays blocked: AADET's agreements and normative page name none; no press or search found a fee. Item 8 found in part: Argentores' stage minimums for free and pass-the-hat performances (from 1 Mar 2026) and the 10% cap on all collecting societies' tariffs for live shows (Res. 1136/2025, secondary). Producer: the City's Mecenazgo is a sponsor's tax credit open to theatre; Ley 25.037 and Decreto-Ley 1251/58 art. 9 are a lead on a theatre tax exemption in the Capital. No rate of yes, fee cap or pickup count found.",
+  "stageExistingAttempts": {
+   "8": {
+    "institution": [
+     "t1.result.json: argentores.org.ar"
+    ]
+   },
+   "7": {
+    "institution": [
+     "u3.result.json: aadet.org.ar home, Gremiales, CCT 307/73 (.doc), Rankings de Espectáculos and the week 26-10 to 01-11-26 theatre sheet, Informes Sectoriales, Brochure 2026 PDF;"
+    ],
+    "web-search": [
+     "u3.result.json: 1 search (standard): 'director teatral honorario mínimo Argentina convenio \"directores de teatro\" asociación arancel 2026'"
+    ],
+    "official-register": [
+     "u3.result.json: boletinoficial.gob.ar detalleAviso/primera/346277/20260824 and 344531/20260720"
+    ]
+   }
+  }
+ },
+ "BQ": {
+  "producer": {
+   "blocker": "R-9841",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10 (standard): 'Bonaire Saba Statia theater toneelvoorstelling Fonds Podiumkunsten subsidie toegekend Caribisch Nederland 2026 acteurs' (covers the blocker's stage fund and outcomes, and items 7, 8, 9)",
+     "result": "results: Staatscourant notices of the Fonds Podiumkunsten (stcrt-2026-1392, -10776 music hubs, -12180), a Cultureel Persbureau post, Daily Herald and Saba News on a monuments pilot; no theatre grant, run or pay figure for the BES islands",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "cultureelpersbureau.nl post 101140 (8 Apr 2026, 'Pilot subsidy scheme for monumental residences in the Caribbean Netherlands'), fetched through its WordPress API and read (saved l4t/files/m11/bq-cpb-101140.json, sha256 56363fb828e99a9884a00f241ff1b60d9686f13f15993906bff36f4928a13014)",
+     "result": "about a heritage subsidy for houses (US$1.1m, RCE); nothing on series, theatre funds, rates of yes or runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for nl,fondspodiumkunsten)/ (1,791 captures), filtered for Caribisch, ABC, Bonaire, eiland and productiesubsidie; read the captures of the ABCSSS launch of rijkscultuurfondsen.org (8 Oct 2026), '32 projecten ontvangen productiesubsidie' (15 Jul 2021), '16 toekenningen productiesubsidie (ronde 4)' (4 Dec 2019) and 'Evaluatie productie- en compositiesubsidies' (2014) (saved l4t/files/m11/bq-cc-fpk-abc.html sha256 98125686cc110994faa37fb05ee696f79277952da0d86e7faf3b351c75af80bb; l4t/files/m11/bq-cc-fpk-32.html sha256 46e07ebd612289db5f474049c9a612eda72c9fcbde4420987777874af80abab5; l4t/files/m11/bq-cc-fpk-16r4.html sha256 505ab15335db1fe42c6bb11c882339c77bf12754eb7d20f890b3224036398367; l4t/files/m11/bq-cc-fpk-eval.html sha256 fbdc3e65aa4f91217aaf4c1c1a3178bb101f19bb903f568a9076451ac1884c7e)",
+     "result": "the captures hold titles and images only (award counts in the headline: 32 in 2021, 16 in round 4 of 2019; no application counts); the ABCSSS page says the national culture funds serve makers in the Caribbean Netherlands; nothing on series or runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for fondspodiumkunsten.nl/nl/regelingen/",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10, as under producer",
+     "result": "no stage director's, playwright's or stage actor's minimum for the BES islands in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Cultureel Persbureau post (8 Apr 2026), read whole",
+     "result": "no stage pay; no BES theatre press item quoting a primary was found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Kunstenbond (the union): the Cao Toneel en Dans 2025-2026 PDF, https://kunstenbond.nl/download/5211/ (105 pp., saved l4t/files/m11/bq-cao-td-2025-2026.pdf, sha256 9b1c01c86df678afd1b00387f285f413635eaa94c52027b2df4e566fa7a56b81), read for art. 1.2 (werkingssfeer), art. 3.3 (zzp minimum), the function grid (bijlage 2A) and the pay table (bijlage 1A, p. 42, an image: OCR tesseract nld, values checked by the 3.5% step between the 2025 and 2026 tables)",
+     "result": "found for the European Netherlands, not shown to reach BES: the agreement covers 'medewerkers in loondienst bij alle professionele toneel- en dansgezelschappen in Nederland' (Kunstenbond's page), runs 1 Jan 2025 to 31 Dec 2026; Regisseur I is scale VII, Regisseur II XI, Acteur I VI, Acteur II X; from 1 Jan 2026 step 0 is EUR 3,077 a month (VI), 3,272 (VII), 4,780 (X), 5,083 (XI) for 40 hours; a freelancer's fee is at least 1/143 of the function's monthly salary per hour plus at least 50% (art. 3.3). No clause names Bonaire, Sint Eustatius or Saba",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for nl,kunstenbond)/ (284 captures); read https://kunstenbond.nl/cao/cao-toneel-en-dans/ (16 Oct 2026) and '7% loonsverhoging in nieuwe cao Toneel en Dans' (9 Jan 2025) (saved l4t/files/m11/bq-cc-kb-cao-td.html sha256 0561ac966dc926ea986eb28412db257711e78530420bec674195e697a337ff13; l4t/files/m11/bq-cc-kb-7pct.html sha256 482bd45f46792af032191ff89fd2db065d2cc2faa9518d0badc2d8e73bcb5eee)",
+     "result": "read: 'Deze cao geldt voor medewerkers in loondienst bij alle professionele toneel- en dansgezelschappen in Nederland. In deze staan ook bindende minimumtarieven voor zzp’ers opgenomen'; 3.5% in 2025 and 3.5% in 2026; negotiations on the next agreement started. Nothing on the Caribbean Netherlands",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "repository.overheid.nl SRU: 'Toneel en Dans' AND 'algemeen verbindend' (47 records); Staatscourant 2025, 6402 (AVV of the Cao Toneel en Dans, 14 Mar 2025) read (saved l4t/files/m11/bq-stcrt-2025-6402.html, sha256 ed600523af2b2fccb214957aead0aa5445835dece57557977c119f938c49fc2c); Wet collectieve arbeidsovereenkomst BES (BWBR0028172) on wetten.overheid.nl, read (saved l4t/files/m11/bq-wetcaobes.html, sha256 f6fdac99d0a9d936e4d0eb371b0af4a6815ea3186084c58de15eb20a871cb487)",
+     "result": "the AVV declares the agreement's provisions generally binding to 31 Dec 2026 (dictum II) under the European Netherlands' Wet AVV; it names no Caribbean Netherlands. The BES islands have their own CAO law (geldend van 10-10-2010 t/m heden); no BES declaration for theatre found. So no rule carries the Dutch theatre minimums to BES",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10, as under producer",
+     "result": "no stage director's, playwright's or stage actor's minimum for the BES islands in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Cultureel Persbureau post (8 Apr 2026), read whole",
+     "result": "no stage pay; no BES theatre press item quoting a primary was found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "repository.overheid.nl SRU: 'theatertekst' AND 'Fonds Podiumkunsten' (22 records); read Staatscourant 2025, 40773 (Besluit verhoging subsidieplafond Deelregeling theaterteksten) and 2017, 21695 (Deelregeling theaterteksten) (saved l4t/files/m11/bq-stcrt-2025-40773.html sha256 c1d371b3b7a62e467dff8f184d2bfb0abcf48e13792239a2fb07f3d202af6875; l4t/files/m11/bq-stcrt-2017-21695.html sha256 edafed9c5ea43b0955081db52b0eda52f67be89ac821d20515e162f53c58731d)",
+     "result": "read: the 2025 ceiling for the werkbijdrage theatertekst rose by EUR 75,000 to EUR 350,000 from 5 Nov 2025 (a legacy); the 2017 regulation gives a grant 'op basis van de omvang van de werkzaamheden', at most once in two years; no commission fee, advance or royalty minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for nl,fondspodiumkunsten)/ (1,791 captures) filtered for theatertekst and ABCSSS pages; the ABCSSS launch page read (as under producer)",
+     "result": "no capture of a playwright's fee; the funds' reach to the islands confirmed, no new figure",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 of 10, as under producer",
+     "result": "no stage director's, playwright's or stage actor's minimum for the BES islands in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Cultureel Persbureau post (8 Apr 2026), read whole",
+     "result": "no stage pay; no BES theatre press item quoting a primary was found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Kunstenbond (the union): the Cao Toneel en Dans 2025-2026 PDF, https://kunstenbond.nl/download/5211/ (105 pp., saved l4t/files/m11/bq-cao-td-2025-2026.pdf, sha256 9b1c01c86df678afd1b00387f285f413635eaa94c52027b2df4e566fa7a56b81), read for art. 1.2 (werkingssfeer), art. 3.3 (zzp minimum), the function grid (bijlage 2A) and the pay table (bijlage 1A, p. 42, an image: OCR tesseract nld, values checked by the 3.5% step between the 2025 and 2026 tables)",
+     "result": "found for the European Netherlands, not shown to reach BES: the agreement covers 'medewerkers in loondienst bij alle professionele toneel- en dansgezelschappen in Nederland' (Kunstenbond's page), runs 1 Jan 2025 to 31 Dec 2026; Regisseur I is scale VII, Regisseur II XI, Acteur I VI, Acteur II X; from 1 Jan 2026 step 0 is EUR 3,077 a month (VI), 3,272 (VII), 4,780 (X), 5,083 (XI) for 40 hours; a freelancer's fee is at least 1/143 of the function's monthly salary per hour plus at least 50% (art. 3.3). No clause names Bonaire, Sint Eustatius or Saba",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for nl,kunstenbond)/ (284 captures); read https://kunstenbond.nl/cao/cao-toneel-en-dans/ (16 Oct 2026) and '7% loonsverhoging in nieuwe cao Toneel en Dans' (9 Jan 2025) (saved l4t/files/m11/bq-cc-kb-cao-td.html sha256 0561ac966dc926ea986eb28412db257711e78530420bec674195e697a337ff13; l4t/files/m11/bq-cc-kb-7pct.html sha256 482bd45f46792af032191ff89fd2db065d2cc2faa9518d0badc2d8e73bcb5eee)",
+     "result": "read: 'Deze cao geldt voor medewerkers in loondienst bij alle professionele toneel- en dansgezelschappen in Nederland. In deze staan ook bindende minimumtarieven voor zzp’ers opgenomen'; 3.5% in 2025 and 3.5% in 2026; negotiations on the next agreement started. Nothing on the Caribbean Netherlands",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "repository.overheid.nl SRU: 'Toneel en Dans' AND 'algemeen verbindend' (47 records); Staatscourant 2025, 6402 (AVV of the Cao Toneel en Dans, 14 Mar 2025) read (saved l4t/files/m11/bq-stcrt-2025-6402.html, sha256 ed600523af2b2fccb214957aead0aa5445835dece57557977c119f938c49fc2c); Wet collectieve arbeidsovereenkomst BES (BWBR0028172) on wetten.overheid.nl, read (saved l4t/files/m11/bq-wetcaobes.html, sha256 f6fdac99d0a9d936e4d0eb371b0af4a6815ea3186084c58de15eb20a871cb487)",
+     "result": "the AVV declares the agreement's provisions generally binding to 31 Dec 2026 (dictum II) under the European Netherlands' Wet AVV; it names no Caribbean Netherlands. The BES islands have their own CAO law (geldend van 10-10-2010 t/m heden); no BES declaration for theatre found. So no rule carries the Dutch theatre minimums to BES",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "7,9 (lead: the European Netherlands' agreement; its reach to BES is not stated)",
+    "value": {
+     "agreement": "Cao Toneel en Dans 2025-2026 (Kunstenbond, NAPK), AVV to 2026-12-31 (Stcrt. 2025, 6402)",
+     "scope": "employees of all professional theatre and dance companies 'in Nederland'",
+     "monthlyEUR2026Step0_40h": {
+      "acteurI_VI": 3077,
+      "regisseurI_VII": 3272,
+      "acteurII_X": 4780,
+      "regisseurII_XI": 5083
+     },
+     "monthlyEUR2026Max": {
+      "VI": 4767,
+      "VII": 5024,
+      "X": 6429,
+      "XI": 7162
+     },
+     "freelanceFloor": "hourly 1/143 of the function's gross monthly salary, plus at least 50%",
+     "reachesBES": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://kunstenbond.nl/download/5211/",
+      "title": "Cao Toneel en Dans 2025-2026 v1 (Kunstenbond), bijlage 1A p. 42 (OCR) and art. 3.3",
+      "read": "2026-11-04",
+      "said": "Per 01-01-2026 inclusief 3,5% - Bedragen in euro's ... 0 ... 3077 |3272 |3670 |4035 |4780 | 5083 | 6165 [columns VI to XII] ... Artikel 3.3 Minimum honorering zzp’er ... een ondergrens kent die gebaseerd is op een uurtarief van 1/143 van het bij de functie horende bruto maandsalaris, verhoogd met ten minste 50%.",
+      "file": "l4t/files/m11/bq-cao-td-2025-2026.pdf",
+      "sha256": "9b1c01c86df678afd1b00387f285f413635eaa94c52027b2df4e566fa7a56b81"
+     },
+     {
+      "kind": "primary",
+      "url": "https://zoek.officielebekendmakingen.nl/stcrt-2025-6402.html",
+      "title": "Staatscourant 2025, 6402: AVV Cao Toneel en Dans",
+      "read": "2026-11-04",
+      "said": "Dictum II De in dictum I opgenomen bepalingen zijn algemeen verbindend verklaard tot en met 31 december 2026.",
+      "file": "l4t/files/m11/bq-stcrt-2025-6402.html",
+      "sha256": "ed600523af2b2fccb214957aead0aa5445835dece57557977c119f938c49fc2c"
+     }
+    ],
+    "notes": "OCR of an image table; the 2026 row equals the 2025 row times 1.035 at the columns checked (VI 2973 to 3077, III 2445 to 2531). The BES islands have their own Wet CAO BES; neither the agreement nor its AVV names them, so this is the European Netherlands' minimum and a lead for BES, not BES's rule."
+   }
+  ],
+  "notes": "Every method now tried for items 7, 8, 9 and for the producer blocker's missing three. The Dutch theatre agreement (Cao Toneel en Dans, AVV to end 2026) is recorded as the European Netherlands' minimum with its reach to BES unstated (the islands have their own Wet CAO BES). Item 8: the Fonds Podiumkunsten playwright grant's 2025 ceiling rose to EUR 350,000 (Stcrt. 2025, 40773); no commission minimum.",
+  "stageExistingAttempts": {
+   "8": {
+    "institution": [
+     "u24.result.json: fondspodiumkunsten.nl: Alle regelingen (3 pages), Aanvragers op de ABCSSS eilanden, Productiesubsidie, Werkbijdrage theatertekst"
+    ]
+   }
+  }
+ },
+ "CR": {
+  "producer": {
+   "blocker": "R-9875",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2026-30 for cr,go,centrodecine)/ and CC-MAIN-2026-43 for cr,go,mcj)/ (cc.py list)",
+     "result": "centrodecine: 9 records in -43, all 403 crawl diagnostics (incl. bases_8va_convocatoria_fauno.pdf) plus robots.txt; 3 robots.txt records in -30; mcj.go.cr: robots.txt only. No page body for the series fund, the PROARTES call or a theatre incentive",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for mcj.go.cr and centrodecine.go.cr/el-fauno",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard): 'Costa Rica Compañía Nacional de Teatro 2026 convocatoria pago actores director escénico dramaturgo honorarios montaje'",
+     "result": "results: Teatro Nacional de Costa Rica's call bases (Teatro al Mediodía 2026, Vargas Calvo 2026, the 2025 staging contest for the dramaturgy prize's winner, the 2025 dramaturgy contest), Delfino.cr on the CNT's directors' contest (2024) and the 2026 season; led to the reads below",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Teatro Nacional de Costa Rica repository: bases of the 2025 staging contest for the winner of the XX Concurso Nacional de Dramaturgia Inédita (37 pp., saved l4t/files/m11/cr-tn-puesta2025.pdf sha256 1701f5918eb15e3c16e4fe03518f28ee6ca871e6756e9e50a8103173f15cf543; its p. 28 table image extracted, saved l4t/files/m11/cr-tn-puesta2025-p28-table.png sha256 7c9b91be98316e3b1cc128ab75289ed3868cf7684dd748750a9ab90ba25873a6, read by eye), the 2025 dramaturgy contest bases (saved l4t/files/m11/cr-tn-dramat2025.pdf sha256 976992b7efcd5492b7d80fb837c60c61af28f35aa1e1f41b3dc8b1ca7f85666c) and Teatro al Mediodía 2026 bases (saved l4t/files/m11/cr-tn-mediodia2026.pdf sha256 a8ca62308b4fabcc6e792832b784bb91c0666136096d6d3cfacbf01ee40d4507; no amounts)",
+     "result": "found: the national theatre's reference table of artists' pay (sin IVA): artistic direction CRC 3,000,000 a staging (1,800,000 a remount), assistant direction 800,000, dramaturgy 4,000,000; actors by category, e.g. a lead at 70,000 to 25,000 and a rehearsal at 15,000 to 7,000; the dramaturgy prize is four base salaries of 'Oficinista 1' plus 10% of the box office (see found). A state theatre's reference, not an agreement",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "MTSS (labour ministry) minimum-wage list: lista_salarios_2026.pdf (404), lista_salarios_2025.pdf (200, read; saved l4t/files/m11/cr-mtss-lista2025.pdf, sha256 1abb6041107deef52a2cc1d39fcc4f9f06a9454279612bc07143c6eea42073d9), the salary page (404), searched for teatro, actor, artista, escénico, director, escritor, dramaturgo, músico, bailarín",
+     "result": "no stage occupation in the statutory list (nearest: 'Animador de eventos' TOC ¢13.767,45 a day, 'Locutor de televisión' TES ¢24.805,47); the 2026 list not reachable at its address",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "delfino.cr 'La Compañía Nacional de Teatro convoca a concurso público para personas directoras escénicas' (21 Feb 2024), fetched and read (saved l4t/files/m11/cr-delfino-cnt-dir.html, sha256 9b1be4905d8175a9ff7865fd324f5f0d9bcaf35c67419eae7d202dd0a357425c), quoting the MCJ and the CNT's artistic director",
+     "result": "read: the CNT's staging contest for directors had historically about CRC 45 million for one winning project; the 2024 edition had CRC 30 million for the winner. A project fund, not a director's fee",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for cr,go,teatronacional)/ (59 records) and cr,go,teatromelico)/ (6); read the capture of the Teatro Nacional's 'Bases del Concurso Público XXI Concurso Nacional de Dramaturgia Inédita 2026' page (13 Oct 2026; saved l4t/files/m11/cr-cc-tn-dramat2026.html, sha256 7b297a0418aba5664b02824b9caa3eb95f80e71b77959e7c635bd230ac852f7c) and the Teatro Popular Melico Salazar home (5 Oct 2026; saved l4t/files/m11/cr-cc-melico.html, sha256 28ebd81a346aef1fbaf84685283da69f276c1b0ec072eb43ceab87bbe693f70f)",
+     "result": "the 2026 dramaturgy page states the contest's aim and its Decreto Ejecutivo No. 40716-MCJ, and links the bases (no amounts in the page); the Melico Salazar capture is a hosting default redirect (cgi-sys/defaultwebpage.cgi), no content. No director's or actor's rate in the captures",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard): 'Costa Rica Compañía Nacional de Teatro 2026 convocatoria pago actores director escénico dramaturgo honorarios montaje'",
+     "result": "results: Teatro Nacional de Costa Rica's call bases (Teatro al Mediodía 2026, Vargas Calvo 2026, the 2025 staging contest for the dramaturgy prize's winner, the 2025 dramaturgy contest), Delfino.cr on the CNT's directors' contest (2024) and the 2026 season; led to the reads below",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Teatro Nacional de Costa Rica repository: bases of the 2025 staging contest for the winner of the XX Concurso Nacional de Dramaturgia Inédita (37 pp., saved l4t/files/m11/cr-tn-puesta2025.pdf sha256 1701f5918eb15e3c16e4fe03518f28ee6ca871e6756e9e50a8103173f15cf543; its p. 28 table image extracted, saved l4t/files/m11/cr-tn-puesta2025-p28-table.png sha256 7c9b91be98316e3b1cc128ab75289ed3868cf7684dd748750a9ab90ba25873a6, read by eye), the 2025 dramaturgy contest bases (saved l4t/files/m11/cr-tn-dramat2025.pdf sha256 976992b7efcd5492b7d80fb837c60c61af28f35aa1e1f41b3dc8b1ca7f85666c) and Teatro al Mediodía 2026 bases (saved l4t/files/m11/cr-tn-mediodia2026.pdf sha256 a8ca62308b4fabcc6e792832b784bb91c0666136096d6d3cfacbf01ee40d4507; no amounts)",
+     "result": "found: the national theatre's reference table of artists' pay (sin IVA): artistic direction CRC 3,000,000 a staging (1,800,000 a remount), assistant direction 800,000, dramaturgy 4,000,000; actors by category, e.g. a lead at 70,000 to 25,000 and a rehearsal at 15,000 to 7,000; the dramaturgy prize is four base salaries of 'Oficinista 1' plus 10% of the box office (see found). A state theatre's reference, not an agreement",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "MTSS (labour ministry) minimum-wage list: lista_salarios_2026.pdf (404), lista_salarios_2025.pdf (200, read; saved l4t/files/m11/cr-mtss-lista2025.pdf, sha256 1abb6041107deef52a2cc1d39fcc4f9f06a9454279612bc07143c6eea42073d9), the salary page (404), searched for teatro, actor, artista, escénico, director, escritor, dramaturgo, músico, bailarín",
+     "result": "no stage occupation in the statutory list (nearest: 'Animador de eventos' TOC ¢13.767,45 a day, 'Locutor de televisión' TES ¢24.805,47); the 2026 list not reachable at its address",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Delfino.cr article (21 Feb 2024), read whole for actors' and playwrights' pay",
+     "result": "none: only the contest's project fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for cr,go,teatronacional)/ (59 records) and cr,go,teatromelico)/ (6); read the capture of the Teatro Nacional's 'Bases del Concurso Público XXI Concurso Nacional de Dramaturgia Inédita 2026' page (13 Oct 2026; saved l4t/files/m11/cr-cc-tn-dramat2026.html, sha256 7b297a0418aba5664b02824b9caa3eb95f80e71b77959e7c635bd230ac852f7c) and the Teatro Popular Melico Salazar home (5 Oct 2026; saved l4t/files/m11/cr-cc-melico.html, sha256 28ebd81a346aef1fbaf84685283da69f276c1b0ec072eb43ceab87bbe693f70f)",
+     "result": "the 2026 dramaturgy page states the contest's aim and its Decreto Ejecutivo No. 40716-MCJ, and links the bases (no amounts in the page); the Melico Salazar capture is a hosting default redirect (cgi-sys/defaultwebpage.cgi), no content. No director's or actor's rate in the captures",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 of 10 (standard): 'Costa Rica Compañía Nacional de Teatro 2026 convocatoria pago actores director escénico dramaturgo honorarios montaje'",
+     "result": "results: Teatro Nacional de Costa Rica's call bases (Teatro al Mediodía 2026, Vargas Calvo 2026, the 2025 staging contest for the dramaturgy prize's winner, the 2025 dramaturgy contest), Delfino.cr on the CNT's directors' contest (2024) and the 2026 season; led to the reads below",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Teatro Nacional de Costa Rica repository: bases of the 2025 staging contest for the winner of the XX Concurso Nacional de Dramaturgia Inédita (37 pp., saved l4t/files/m11/cr-tn-puesta2025.pdf sha256 1701f5918eb15e3c16e4fe03518f28ee6ca871e6756e9e50a8103173f15cf543; its p. 28 table image extracted, saved l4t/files/m11/cr-tn-puesta2025-p28-table.png sha256 7c9b91be98316e3b1cc128ab75289ed3868cf7684dd748750a9ab90ba25873a6, read by eye), the 2025 dramaturgy contest bases (saved l4t/files/m11/cr-tn-dramat2025.pdf sha256 976992b7efcd5492b7d80fb837c60c61af28f35aa1e1f41b3dc8b1ca7f85666c) and Teatro al Mediodía 2026 bases (saved l4t/files/m11/cr-tn-mediodia2026.pdf sha256 a8ca62308b4fabcc6e792832b784bb91c0666136096d6d3cfacbf01ee40d4507; no amounts)",
+     "result": "found: the national theatre's reference table of artists' pay (sin IVA): artistic direction CRC 3,000,000 a staging (1,800,000 a remount), assistant direction 800,000, dramaturgy 4,000,000; actors by category, e.g. a lead at 70,000 to 25,000 and a rehearsal at 15,000 to 7,000; the dramaturgy prize is four base salaries of 'Oficinista 1' plus 10% of the box office (see found). A state theatre's reference, not an agreement",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "MTSS (labour ministry) minimum-wage list: lista_salarios_2026.pdf (404), lista_salarios_2025.pdf (200, read; saved l4t/files/m11/cr-mtss-lista2025.pdf, sha256 1abb6041107deef52a2cc1d39fcc4f9f06a9454279612bc07143c6eea42073d9), the salary page (404), searched for teatro, actor, artista, escénico, director, escritor, dramaturgo, músico, bailarín",
+     "result": "no stage occupation in the statutory list (nearest: 'Animador de eventos' TOC ¢13.767,45 a day, 'Locutor de televisión' TES ¢24.805,47); the 2026 list not reachable at its address",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Delfino.cr article (21 Feb 2024), read whole for actors' and playwrights' pay",
+     "result": "none: only the contest's project fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for cr,go,teatronacional)/ (59 records) and cr,go,teatromelico)/ (6); read the capture of the Teatro Nacional's 'Bases del Concurso Público XXI Concurso Nacional de Dramaturgia Inédita 2026' page (13 Oct 2026; saved l4t/files/m11/cr-cc-tn-dramat2026.html, sha256 7b297a0418aba5664b02824b9caa3eb95f80e71b77959e7c635bd230ac852f7c) and the Teatro Popular Melico Salazar home (5 Oct 2026; saved l4t/files/m11/cr-cc-melico.html, sha256 28ebd81a346aef1fbaf84685283da69f276c1b0ec072eb43ceab87bbe693f70f)",
+     "result": "the 2026 dramaturgy page states the contest's aim and its Decreto Ejecutivo No. 40716-MCJ, and links the bases (no amounts in the page); the Melico Salazar capture is a hosting default redirect (cgi-sys/defaultwebpage.cgi), no content. No director's or actor's rate in the captures",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "7,8,9",
+    "value": {
+     "source": "Teatro Nacional de Costa Rica, 'Tabla de referencia TNCR – pago artistas (sin IVA)', in the bases of the 2025 staging contest (Teatro Vargas Calvo, 12 performances)",
+     "currency": "CRC",
+     "creative": {
+      "artisticDirection": {
+       "staging": 3000000,
+       "remount": 1800000
+      },
+      "assistantDirection": {
+       "staging": 800000,
+       "remount": 480000
+      },
+      "dramaturgy": 4000000,
+      "literaryAdvice": 700000
+     },
+     "actors": {
+      "columns": [
+       "Emeritazgo",
+       "Primera figura",
+       "Carácter",
+       "Titular",
+       "Aspirante",
+       "Figuración"
+      ],
+      "lead": [
+       70000,
+       65000,
+       47000,
+       40000,
+       30000,
+       25000
+      ],
+      "supporting": [
+       65000,
+       60000,
+       42000,
+       35000,
+       25000,
+       25000
+      ],
+      "rehearsal": [
+       15000,
+       12000,
+       11000,
+       10000,
+       9000,
+       7000
+      ]
+     },
+     "unit": "not stated in the table (the bases say the budget of up to CRC 20,000,000 'cubrirá todo menos los pagos de las funciones y algunos ensayos al elenco')",
+     "playwrightPrize": "four monthly base salaries of 'Oficinista 1' (national budget) as the assignment of staging and publication rights for three years, plus 10% of the box office where the play is staged (2025 dramaturgy contest)"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://teatronacional.go.cr/repositorio/detail/29-4702_basesconvotaroria_puestaescena_obraganadora20251.pdf",
+      "title": "Bases del Concurso Puesta en Escena de la Obra Ganadora del XX Concurso Nacional de Dramaturgia Inédita (TNCR, 2025), p. 28 table",
+      "read": "2026-11-04",
+      "said": "7.- Tabla de referencia TNCR – pago artistas (sin IVA) [image] Categoría de actores | Emeritazgo | Primera figura | Carácter | Titular | Aspirante | Figuración; Protagonista 70.000,00 65.000,00 47.000,00 40.000,00 30.000,00 25.000,00; Reparto 65.000,00 60.000,00 42.000,00 35.000,00 25.000,00 25.000,00; Ensayo 15.000,00 12.000,00 11.000,00 10.000,00 9.000,00 7.000,00 ... Equipo creativo | Montaje | Re-montaje; Dirección artística 3.000.000,00 1.800.000,00; Asistencia de dirección 800.000,00 480.000,00 ... Dramaturgia 4.000.000,00 ... F. El presupuesto asignado por el Teatro Nacional será de un monto de hasta ₡ 20 000 000, 00 (veinticinco millones de colones) IVAI. Ese monto cubrirá todo menos los pagos de las funciones y algunos ensayos al elenco",
+      "file": "l4t/files/m11/cr-tn-puesta2025-p28-table.png",
+      "sha256": "7c9b91be98316e3b1cc128ab75289ed3868cf7684dd748750a9ab90ba25873a6"
+     },
+     {
+      "kind": "primary",
+      "url": "https://www.teatronacional.go.cr/repositorio/detail/29-8865_basesconvotaroria_concursonacionaldramaturgiainedita_2025.pdf",
+      "title": "Bases, Concurso Nacional de Dramaturgia Inédita 2025 (TNCR)",
+      "read": "2026-11-04",
+      "said": "a) La dotación económica de un monto equivalente a cuatro salarios base mensual del \"Oficinista 1\" correspondiente al salario compuesto que aparece en la relación de puestos de la Ley de Presupuesto Ordinario de la República vigente. Esta dotación económica corresponderá a la cesión patrimonial de derechos de autor para la puesta en escena y publicación de la obra en forma exclusiva por la Editorial Costa Rica por el espacio de tres años ... Recibirá además el 10% de lo recaudado por taquilla donde se presente la obra.",
+      "file": "l4t/files/m11/cr-tn-dramat2025.pdf",
+      "sha256": "976992b7efcd5492b7d80fb837c60c61af28f35aa1e1f41b3dc8b1ca7f85666c"
+     }
+    ],
+    "notes": "A state theatre's own reference rates for one 2025 production, not a collective agreement or a market minimum; the table names no unit (per performance is implied for actors by the bases, not stated). The bases' 'hasta ₡ 20 000 000, 00 (veinticinco millones de colones)' contradicts itself in figures and words. The 2026 calls read state no rates."
+   }
+  ],
+  "notes": "Items 7, 8, 9: no agreement or statutory minimum exists in what was read (the MTSS wage list names no stage occupation); the Teatro Nacional's own reference table (2025) gives what the state theatre pays a director (CRC 3,000,000 a staging), a dramaturgy (CRC 4,000,000) and actors by category, and the dramaturgy prize (four base salaries of Oficinista 1 plus 10% of the box office). Producer: archive was the only missing method; Common Crawl holds only 403s for the film centre.",
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "t1.result.json: mcj.go.cr home (no fund link), mcj.go.cr/proartes (404), mcj.go.cr/fondos-concursables (404), proartes.mcj.go.cr (CONNECT 502), teatromelico.go.cr (TLS name mis"
+    ]
+   },
+   "8": {
+    "institution": [
+     "t1.result.json: mcj.go.cr home (no fund link), mcj.go.cr/proartes (404), mcj.go.cr/fondos-concursables (404), proartes.mcj.go.cr (CONNECT 502), teatromelico.go.cr (TLS name mis"
+    ]
+   },
+   "9": {
+    "institution": [
+     "t1.result.json: mcj.go.cr home (no fund link), mcj.go.cr/proartes (404), mcj.go.cr/fondos-concursables (404), proartes.mcj.go.cr (CONNECT 502), teatromelico.go.cr (TLS name mis"
+    ]
+   }
+  }
+ },
+ "ET": {
+  "producer": {
+   "blocker": "R-9907",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for et,ebc)/ (460 captures, the broadcaster's news pages by id), et,gov,moct)/ and et,gov,mocs)/ (none), et,gov,moc)/ (none), et,gov,ethiopianfilm)/ (none); EBC home capture of 6 Oct 2026 read (saved l4t/files/m11/et-cc-ebc-home.html, sha256 c5a3b0d51785061803781f06973d2432ad8afeeb68fb0ed925ba678a63428285)",
+     "result": "no capture of the culture ministry or a film body; EBC's captures are news items, no commissioning terms, tariffs or fund; nothing on a theatre incentive, fund or runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for moct.gov.et and ebc.et",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "institution",
+     "tried": "www.nationaltheatre.gov.et and www.mocs.gov.et (curl, 2026-11-04): proxy 502 on both; mols.gov.et live: connection reset; www.ebc.et live home read (saved l4t/files/m11/et-ebc-live.html, sha256 81fffae86df1c1bed8f95ab4d8cff5e3a9d582981bf52c1a637b02fb96721cc4)",
+     "result": "no stage director's term on any page reached; the theatre and ministry did not answer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "mols.gov.et 'New Labour proclamation' page (live: connection reset; not in Common Crawl -43) and the labour ministry's law category and ministry-proclamation pages from Common Crawl (14 and 11 Oct 2026; saved l4t/files/m11/et-cc-mols-law.html sha256 3726a0c7246ed1bc7f3710bdaee4ec562e4f8e0d4c23fa6ea027d696f6a74dc4, l4t/files/m11/et-cc-mols-procl.html sha256 26b7d7091cbc1110c99a3ed41b47e6914d39e3599a87482f1ee6659f82058c28); hopr.gov.et (parliament): connection reset",
+     "result": "the ministry lists its laws (overseas employment, the new labour proclamation, directives) with no wage order; the proclamation's text not read; no register entry for a director's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for et,gov,mols)/ (319 captures), filtered for proclamation, law, wage, pdf; read the two pages above",
+     "result": "no wage-board order or director's rate captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "capitalethiopia.com 'Ethiopian National Theatre embraces digital era, announces ticket price hike and nationwide training program' (24 Aug 2025, quoting the theatre's press release and Director General Bareke Tadesse), fetched and read today for a director's pay (saved l4t/files/m11/et-capital-nt.html, sha256 7e180e81e3be12d28cb8f79e18c94e374058cabc9b493e5bfe0c94204205702e)",
+     "result": "no director's fee or agreement: the article gives the ticket rise from 80 to 200 birr (with the Ministry of Culture and Sports), online ticketing and a training programme for young artists",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "institution",
+     "tried": "Ethiopian Intellectual Property Authority, eipa.gov.et: home, Copyright, COM (collective management) and 'Proclamation, Regulation & Directive' pages read (saved l4t/files/m11/et-eipa.html sha256 e3d46be068a690541b40af9e02c52207f832b88800a766cbddd09b712462c777; l4t/files/m11/et-eipa-cms.html sha256 d9cf1e8fd0e5d6bc25b216d9d263bab3bb13e7570dd18a6c46ca12f6f635e8da; l4t/files/m11/et-eipa-procl.html sha256 cc6acde0b74c08125975702bb62c60b0680b4439d153e5598f5ac7407dc5c5a4)",
+     "result": "read: commercial users must pay royalty to 'the relevant collective management society', and the Office 'is working on the formation of Collective Management Society'; no tariff or playwright's fee published",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Copyright and Neighbouring Rights Protection (Amendment) Proclamation No. 872/2014, the IP Authority's copy of the Negarit Gazeta text (saved l4t/files/m11/et-procl-872-2014.pdf, sha256 1f827811b839d02b78f865b602562a941316704227001913e3aed01bd89c9c16), read (English column)",
+     "result": "read: a collective management society is to 'prepare and submit to the Office royalty scheme and implement same upon approval'; its deductions 'may not exceed thirty per cent of the total collected amount of royalty'. No minimum fee, advance or royalty rate for a playwright",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "notes": "Item 9's five methods are on record already (u24: institution mols.gov.et reset; web-search; trade-press Reporter 520 and Capital read; archive Wayback reset and Common Crawl none; official-register lawethiopia.com home). Item 7: the theatre and culture ministry did not answer (502); no director's rate anywhere. Item 8: the copyright law leaves the royalty to a collective society's scheme approved by the Office, which the Authority says it is still forming; no scheme found.",
+  "stageExistingAttempts": {
+   "9": {
+    "institution": [
+     "u24.result.json: Ministry of Labour and Skills, www.mols.gov.et"
+    ],
+    "web-search": [
+     "u24.result.json: WebSearch \"Ethiopia National Theatre Hager Fikir play producers ticket revenue share playwright payment Addis Ababa theatre\""
+    ],
+    "trade-press": [
+     "u24.result.json: The Reporter /51040/ and /50700/ (520); Capital, 24 August 2025 (read)"
+    ],
+    "archive": [
+     "u24.result.json: Wayback (snapshots of 7 June and 16 May 2026 listed by the availability API) and Common Crawl CC-MAIN-2026-43, -39, -30 for com,thereporterethiopia)/51040"
+    ],
+    "official-register": [
+     "u24.result.json: lawethiopia.com (home only)"
+    ]
+   },
+   "7": {
+    "web-search": [
+     "u24.result.json: WebSearch \"Ethiopia National Theatre Hager Fikir play producers ticket revenue share playwright payment Addis Ababa theatre\""
+    ]
+   },
+   "8": {
+    "web-search": [
+     "u24.result.json: WebSearch \"Ethiopia National Theatre Hager Fikir play producers ticket revenue share playwright payment Addis Ababa theatre\""
+    ],
+    "trade-press": [
+     "u24.result.json: The Reporter /51040/ and /50700/ (520); Capital, 24 August 2025 (read)"
+    ],
+    "archive": [
+     "u24.result.json: Wayback (snapshots of 7 June and 16 May 2026 listed by the availability API) and Common Crawl CC-MAIN-2026-43, -39, -30 for com,thereporterethiopia)/51040"
+    ]
+   }
+  }
+ },
+ "GS": {
+  "producer": {
+   "blocker": "R-9940",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10 (standard): 'South Georgia South Sandwich Islands film documentary production permit government GSGSSI filming fees television crew' (covers the blocker's series and play items and stage items 8, 9)",
+     "result": "results: the government's visitor booklet, the Entry Control Ordinance fee notice, Gazettes, MercoPress on the visitor's guide film (2020) and permit fees, a 2011 filming report; no incentive, fund, broadcaster, theatre or performer's term",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.gs 'About SGSSI' and 'Media Visits' (curl, read whole; saved l4t/files/m11/gs-about.html sha256 106b77857c024b0f22a43690ecfdda9a0d512ecb6c1e0950eb22a41c15942bc8, l4t/files/m11/gs-media.html sha256 a78b77cf1018283c3161feffab000d75f3b9514d87fc0e4b1140c79ebe5e728e)",
+     "result": "read: 'There are no permanent residents in the Territory but the British Antarctic Survey (BAS) operates two bases on South Georgia' (eight BAS staff and two government officers at King Edward Point, four at Bird Island); 'If you are planning a professional media visit to the Territory, please contact us at admin@gov.gs'. No broadcaster, fund, incentive or theatre",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "laws.gov.gs (SGSSI Laws) WordPress search API for 'film' (2 pages), 'theatre' (0) and 'copyright' (3); Secondary Legislation and UK Direct Legislation pages read (saved l4t/files/m11/gs-secleg.html sha256 b1986558c7a967b27289a937701e2a2e19b33da481d687c4c8ce402c77b1b9d3; l4t/files/m11/gs-ukdirect.html sha256 66268a506fffdd5c73ba0b82a821b176f039fbd33788fee775153312f1aedb87); the Entry Control Ordinance 2022 fee notice (22 Jul 2025, saved l4t/files/m11/gs-feenotice.pdf sha256 a6ede6c25cffc1b8960512ee19a9b6fc1d8b24bdd8a318b2c5406602142e5249)",
+     "result": "no incentive, fund or theatre law: 'film' appears only in a 1947 notice 'regarding duty on Films' and the Application of Enactments list; a 1912 proclamation put the Copyright Act 1911 in force and the Copyright (Falkland Islands) Order 1963 is listed; from 1 Aug 2025 a visitor permit application costs £200 and a work permit £0",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "MercoPress, 31 Aug 2020, 'South Georgia announces the launching of a Visitor's Guide film narrated by Sir David Attenborough', quoting GSGSSI (saved l4t/files/m11/gs-merco-film.html, sha256 e8026bee63c1cd377abac77087dede4fb2589cc3c4a211af0a70c9b8626d9c1d)",
+     "result": "read: the government commissioned Silverback Films for a visitor's guide film; no incentive, fund, broadcaster or series market",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 for gs,gov)/ (280 captures), filtered for film, media, theatre, arts, culture, grant, fund, museum, tax",
+     "result": "only the Darwin Plus (environment) funding rounds, the museum and its stamps, a 404 'short film celebrating 40 years since liberation' and the NBAP media statement; no screen or stage fund, incentive or term",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10, as under producer",
+     "result": "no playwright's or stage actor's term; no theatre in the territory in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "the same gov.gs pages (About SGSSI, Media Visits), read for a theatre, playwright or performer",
+     "result": "none: no resident population and no stage; professional media visits are arranged with the government by email",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the laws.gov.gs searches and pages above ('theatre': 0 results; 'copyright': the 1912 proclamation and the 1963 Order)",
+     "result": "no stage pay rule, theatre licensing or playwright's term in the territory's laws",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same MercoPress article, read whole",
+     "result": "no stage or performer item",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "the same CC-MAIN-2026-39 gs,gov)/ listing",
+     "result": "no stage capture",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 5 of 10, as under producer",
+     "result": "no playwright's or stage actor's term; no theatre in the territory in the results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "the same gov.gs pages (About SGSSI, Media Visits), read for a theatre, playwright or performer",
+     "result": "none: no resident population and no stage; professional media visits are arranged with the government by email",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the laws.gov.gs searches and pages above ('theatre': 0 results; 'copyright': the 1912 proclamation and the 1963 Order)",
+     "result": "no stage pay rule, theatre licensing or playwright's term in the territory's laws",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same MercoPress article, read whole",
+     "result": "no stage or performer item",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "the same CC-MAIN-2026-39 gs,gov)/ listing",
+     "result": "no stage capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "notes": "No trade of its own: no permanent residents (gov.gs), British Antarctic Survey bases and government officers only; filming is by arrangement with the government and an entry permit (work permit application fee nil from 1 Aug 2025). Every method is now on record for the producer blocker and for items 8 and 9."
+ },
+ "IT": {
+  "producer": {
+   "blocker": "R-9973",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Normattiva, D.L. 31 maggio 2014, n. 83, art. 1 (Art-Bonus), urn:nir:stato:decreto.legge:2014-05-31;83~art1, 'Testo in vigore dal: 19-5-2020', read (saved l4t/files/m11/it-normattiva-artbonus.html, sha256 4c8eda9c42c0b57135ed4172b10eacfe89c3e8d024420a3fb07660a3a6849345); gazzettaufficiale.it home reached (saved l4t/files/m11/it-gu-home.html)",
+     "result": "found (a theatre tax incentive, on the donor's side): a 65% tax credit on cash gifts supporting, among others, 'dei teatri nazionali, dei teatri di rilevante interesse culturale, dei festival, delle imprese e dei centri di produzione teatrale e di danza'; for individuals and non-commercial bodies within 15% of taxable income, for businesses within 5 per mille of annual revenue (see found)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for it,gov,cultura,spettacolo)/ (557 captures; spettacolodalvivo.cultura.gov.it held none in -43 or -39); read the capture of https://spettacolo.cultura.gov.it/attivita-teatro/ (9 Oct 2026; saved l4t/files/m11/it-cc-attivita-teatro.html, sha256 bb2e3d34af198d90d1f3f7ffde34b16bae294e211cb099b2cdda38fe0b260f42)",
+     "result": "read: the DG Spettacolo's theatre page lists 'FNSV TRIENNIO 2025-2027 / Anno 2026 – Assegnazione contributi AMBITO TEATRO' (the 2026 assignment decree and the Commissione Consultiva per il Teatro minutes of 7-8 and 27-28 May 2026), the 2026 'Teatro Urbano, Sociale e di Strada' assignment (D.D.G. 28 aprile 2026, rep. n. 292) and the 2025 accounts approval (D.D.G. 27 marzo 2026, rep. n. 131); the decrees' lists (counts, amounts) were not opened",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for spettacolodalvivo.cultura.gov.it",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Ateatro (ateatro.it), 'I Progetti Speciali Teatro 2026 guardano al futuro! Anzi, al futurismo' (7 Feb 2026, updated 15 May 2026), found through its WordPress API search 'FNSV' and Common Crawl's it,ateatro)/ listing (3,084 captures), fetched and read (saved l4t/files/m11/it-ateatro-ps.html, sha256 762b1d138e838a8c5f44d6629af88cd7b4615b20d8f2b6389c61f9113218396e); it quotes the D.D.G. 5 febbraio 2026, rep. n. 28",
+     "result": "found (secondary, naming its primary): the Ministry's 2026 Theatre 'Progetti Speciali' (FNSV) funded 49 applicants out of 369 applications assessed, EUR 1,200,000 in all (a yes rate of about 13%); 17 of them already draw FNSV funding, 7 had a Progetti Speciali grant in 2025; by region Lazio 15, Campania 9, Sicily 7",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 capture of spettacolo.cultura.gov.it/fnsv-triennio-2025-2027-anno-2026-assegnazione-contributi-ambito-teatro/ (11 Oct 2026), cc.py get",
+     "result": "the data host failed the record fetch after eight backed-off tries ('fetch failed'); not read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "5 and 6",
+    "value": {
+     "stageIncentive": {
+      "name": "Art-Bonus (D.L. 31 maggio 2014, n. 83, art. 1; text in force from 19 May 2020)",
+      "rate": 0.65,
+      "base": "cash gifts",
+      "beneficiariesInclude": [
+       "teatri nazionali",
+       "teatri di rilevante interesse culturale",
+       "festival",
+       "imprese e centri di produzione teatrale e di danza",
+       "circuiti di distribuzione"
+      ],
+      "limit": {
+       "individualsAndNonCommercial": "15% of taxable income",
+       "businesses": "5 per mille of annual revenue"
+      }
+     },
+     "stageFund2026ProgettiSpeciali": {
+      "decree": "D.D.G. 5 febbraio 2026, rep. n. 28",
+      "funded": 49,
+      "assessed": 369,
+      "rateOfYes": 0.133,
+      "totalEUR": 1200000
+     }
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2014-05-31;83~art1",
+      "title": "D.L. 31 maggio 2014, n. 83, art. 1 (Normattiva)",
+      "read": "2026-11-04",
+      "said": "Per le erogazioni liberali in denaro ... per il sostegno ... delle fondazioni lirico-sinfoniche e dei teatri di tradizione, delle istituzioni concertistico-orchestrali, dei teatri nazionali, dei teatri di rilevante interesse culturale, dei festival, delle imprese e dei centri di produzione teatrale e di danza, nonché dei circuiti di distribuzione ... spetta un credito d'imposta, nella misura del 65 per cento delle erogazioni effettuate ... 2. Il credito d'imposta spettante ai sensi del comma 1 è riconosciuto alle persone fisiche e agli enti non commerciali nei limiti del 15 per cento del reddito imponibile, ai soggetti titolari di reddito d'impresa nei limiti del 5 per mille dei ricavi annui.",
+      "file": "l4t/files/m11/it-normattiva-artbonus.html",
+      "sha256": "4c8eda9c42c0b57135ed4172b10eacfe89c3e8d024420a3fb07660a3a6849345"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.ateatro.it/2026/02/07/i-progetti-speciali-teatro-2026-guardano-al-futuro-anzi-al-futurismo/",
+      "title": "I Progetti Speciali Teatro 2026 guardano al futuro! (Ateatro, 7 Feb 2026)",
+      "read": "2026-11-04",
+      "said": "E’ stato pubblicato il D.D.G. 5 febbraio 2026, rep. n. 28 , di assegnazione dei contributi relativi ai Progetti Speciali dell’ambito Teatro per l’anno 2026 . Sono 49 i soggetti finanziati su 369 domande valutate, per un totale di 1.200.000 euro. Tra i finanziati, 17 soggetti percepiscono già un contributo a valere sul Fondo Nazionale Spettacolo dal Vivo, mentre in 7 si erano già aggiudicati un finanziamento per Progetti Speciali nel 2025.",
+      "file": "l4t/files/m11/it-ateatro-ps.html",
+      "sha256": "762b1d138e838a8c5f44d6629af88cd7b4615b20d8f2b6389c61f9113218396e",
+      "quotes": "D.D.G. 5 febbraio 2026, rep. n. 28 (Direzione generale Spettacolo)"
+     }
+    ],
+    "notes": "Art-Bonus is a donor's credit, not the producer's own; it reaches private theatre production companies and centres as recipients. The Progetti Speciali line is one FNSV line, not the triennial programme funding; the decree itself (DG Spettacolo) was not read (the site's 502 and the crawl fetch failure)."
+   }
+  ],
+  "notes": "Producer blocker's missing three made: Normattiva (Art-Bonus, a 65% donor's credit reaching theatre production companies), Common Crawl (DG Spettacolo's theatre page lists the 2026 FNSV theatre assignment and minutes), Ateatro (2026 Progetti Speciali Teatro: 49 of 369 funded, EUR 1.2m, quoting D.D.G. 28/2026)."
+ },
+ "LK": {
+  "producer": {
+   "blocker": "R-10005",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Daily FT, 'Stage left, stage right: Sri Lankan theatre at crossroads for growth' (30 Jan 2025), interviews with actress Thusitha Jayasundera and dramatist Dr Kanchuka Dharmasiri, fetched and read (saved l4t/files/m11/lk-ft-stage.html, sha256 b54c319c269477c516536442d6013e2867875995951175088d2b12697d61c8da)",
+     "result": "read: 'Due to the scarcity of funding and support for theatre, artists find themselves unable to sustain their productions'; 'State funding needs to be allocated for arts development in all 3 languages'. No series fund, fee cap, pickup count, theatre incentive or fund terms, and no primary quoted with an address",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard): 'Sri Lanka stage drama actors payment per show director teledrama producers Tower Hall State Drama Festival award money 2026' (also leads for item 8 and the producer blocker)",
+     "result": "results: Parliament papers (Tower Hall annual reports, 2011 and a 2026 business document), Daily FT, Sunday Times and Island theatre features, the ITI Sri Lanka report 2014-16; no stage director's or actor's minimum; the search summary's Tower Hall allowance figure (Rs 7,500 a month, 2022) is a snippet, not read, so not used",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Daily FT interview (30 Jan 2025), read whole for pay",
+     "result": "no rate: 'If there is a box office and tickets cost money – actors simply must be paid a salary. ... An actor’s union would create a sense of stability and protect their working environment' (opinion; it implies no actors' union, but a press interview quoting no primary is a lead only)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for lk,towerhall)/ (44 captures), lk,gov,nfc)/ (37) and lk,rupavahini)/ (172); CC-MAIN-2026-39 for lk,gov,cultural)/ and lk,gov,artscouncil)/ (none); read the capture of http://www.towerhall.lk/en/download (17 Oct 2026; saved l4t/files/m11/lk-cc-th-download.html, sha256 648c0f91e8e1cd57cf5068805e2efbb848d97e1dba71ddc13a99ec469b31e0cb)",
+     "result": "the Tower Hall Theatre Foundation's downloads page (in Sinhala) holds a tender for an air-conditioned bus and a pilgrimage for 'artists receiving the foundation's monthly subsistence allowance' (45 people); no director's, playwright's or actor's rate; the Arts Council and the culture ministry have no capture",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 6 of 10 (standard): 'Sri Lanka stage drama actors payment per show director teledrama producers Tower Hall State Drama Festival award money 2026' (also leads for item 8 and the producer blocker)",
+     "result": "results: Parliament papers (Tower Hall annual reports, 2011 and a 2026 business document), Daily FT, Sunday Times and Island theatre features, the ITI Sri Lanka report 2014-16; no stage director's or actor's minimum; the search summary's Tower Hall allowance figure (Rs 7,500 a month, 2022) is a snippet, not read, so not used",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "the same Daily FT interview (30 Jan 2025), read whole for pay",
+     "result": "no rate: 'If there is a box office and tickets cost money – actors simply must be paid a salary. ... An actor’s union would create a sense of stability and protect their working environment' (opinion; it implies no actors' union, but a press interview quoting no primary is a lead only)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for lk,towerhall)/ (44 captures), lk,gov,nfc)/ (37) and lk,rupavahini)/ (172); CC-MAIN-2026-39 for lk,gov,cultural)/ and lk,gov,artscouncil)/ (none); read the capture of http://www.towerhall.lk/en/download (17 Oct 2026; saved l4t/files/m11/lk-cc-th-download.html, sha256 648c0f91e8e1cd57cf5068805e2efbb848d97e1dba71ddc13a99ec469b31e0cb)",
+     "result": "the Tower Hall Theatre Foundation's downloads page (in Sinhala) holds a tender for an air-conditioned bus and a pilgrimage for 'artists receiving the foundation's monthly subsistence allowance' (45 people); no director's, playwright's or actor's rate; the Arts Council and the culture ministry have no capture",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "trade-press",
+     "tried": "the same Daily FT interview (30 Jan 2025), read whole for pay",
+     "result": "no rate: 'If there is a box office and tickets cost money – actors simply must be paid a salary. ... An actor’s union would create a sense of stability and protect their working environment' (opinion; it implies no actors' union, but a press interview quoting no primary is a lead only)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for lk,towerhall)/ (44 captures), lk,gov,nfc)/ (37) and lk,rupavahini)/ (172); CC-MAIN-2026-39 for lk,gov,cultural)/ and lk,gov,artscouncil)/ (none); read the capture of http://www.towerhall.lk/en/download (17 Oct 2026; saved l4t/files/m11/lk-cc-th-download.html, sha256 648c0f91e8e1cd57cf5068805e2efbb848d97e1dba71ddc13a99ec469b31e0cb)",
+     "result": "the Tower Hall Theatre Foundation's downloads page (in Sinhala) holds a tender for an air-conditioned bus and a pilgrimage for 'artists receiving the foundation's monthly subsistence allowance' (45 people); no director's, playwright's or actor's rate; the Arts Council and the culture ministry have no capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "t8.result.json: nfc.gov.lk home; rupavahini.lk home; towerhall.lk (home, bookings, download); www.cultural.gov.lk; artscouncil.gov.lk"
+    ],
+    "official-register": [
+     "t8.result.json: documents.gov.lk (Department of Government Printing, gazettes) over https"
+    ]
+   },
+   "8": {
+    "institution": [
+     "t8.result.json: nfc.gov.lk home; rupavahini.lk home; towerhall.lk (home, bookings, download); www.cultural.gov.lk; artscouncil.gov.lk"
+    ],
+    "official-register": [
+     "t8.result.json: documents.gov.lk (Department of Government Printing, gazettes) over https"
+    ],
+    "web-search": [
+     "t8.result.json: \"රාජ්‍ය නාට්‍ය උළෙල 2026 කලා මණ්ඩලය නාට්‍ය නිෂ්පාදන ප්‍රදාන රුපියල්\" (Sinhala)"
+    ]
+   },
+   "9": {
+    "institution": [
+     "t8.result.json: nfc.gov.lk home; rupavahini.lk home; towerhall.lk (home, bookings, download); www.cultural.gov.lk; artscouncil.gov.lk"
+    ],
+    "official-register": [
+     "t8.result.json: documents.gov.lk (Department of Government Printing, gazettes) over https"
+    ]
+   }
+  }
+ },
+ "MQ": {
+  "producer": {
+   "blocker": "R-10038",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Collectivité Territoriale de Martinique, 'Actes Administratifs' as its site search returns them: '?s=audiovisuel' and '?s=convention CNC' (pages 1-3; page 4 on: 404) (saved l4t/files/m11/mq-ctm-search.html sha256 7f225bd033f1fb395501dae64efc17444938d89865e4355d02754d527929fdc7; l4t/files/m11/mq-ctm-cnc-p1.html sha256 c3989397b53a1aa2f6d90c45d19680d318def1fba444d58b9b679e9c661aa320; -p2 sha256 9e889b1ba06b5544bfcf5383483262324fa9deab6d30523b8d4007ec015042b0; -p3 sha256 b51a2eeb06b71a0b6e491a2721bc652de8bf38e13d58cfdf2e341d3854fff831); the 'recueil-des-actes-administratifs' address: 404; Légifrance: 403",
+     "result": "found in part (the fund's yes and no): the executive council's acts of one sitting, AD 23-518-1 to -23 (2023), are each a grant ('Portant octroi d’une subvention') or a refusal ('Portant rejet d’une demande de subvention') under the CNC/ÉTAT/CTM convention: 12 grants and 11 refusals among writing, development and production requests, one grant a series ('Un air de glissant', La maison garage); AD 23-1086-1 amended the fund's regulation. A count made from the list of titles (a lead under the brief), for 2023 only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for mq,collectivitedemartinique)/ (40 records) and fr,gouv,culture)/regions/dac-martinique (207); read the DAC capture 'concours d'écriture théâtre ETC Caraïbe' (14 Oct 2026; saved l4t/files/m11/mq-cc-etc.html, sha256 309f6c680725288ccf0691d77bf4d69fd4aef91bbefeaba834a31c09d436fbc4)",
+     "result": "the CTM captures are the home page, spam searches and 404s (the aid pages are gone); the DAC captures hold theatre news: ETC Caraïbe's 10th playwriting contest (2021, with Beaumarchais/SACD, open to residents of the Caribbean), the FEAC exchange fund; no series pickup count, theatre incentive, fund ranges or runs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for collectivitedemartinique.mq",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "next.ink 'Spectacle vivant : la SACD demande le soutien de l’État et propose de le gérer' (2020, quoting SACD's director general Pascal Rogard), fetched and read (saved l4t/files/m11/mq-nextink-sacd.html, sha256 0fa3bd3922689403aca804adc29ed59edd7fd7bf4aa5a772e2bc80d368252838); ARTCENA's 'fil vie pro' item on SACD's collections: 403 (Cloudflare 'Just a moment...', not got past)",
+     "result": "national and dated (France 2020: over EUR 7 million of unpaid performance royalties, over EUR 6 million lost for March-April); nothing on Martinique's series or plays",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 10 of 10 (standard): 'Martinique compagnies de théâtre rémunération metteur en scène auteur SACD convention collective spectacle vivant outre-mer'",
+     "result": "results: ARTCENA's legal guide on directors' pay (403 when fetched), the EAT/EGEET authors' pay charter, a SACD-linked municipal contract, the DAC Martinique vade-mecum, next.ink; national rules only, none naming Martinique",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Code du travail numérique (labour ministry): its IDCC API (api/idcc?q=1285) and the page of the Convention collective nationale des entreprises artistiques et culturelles (IDCC 1285, 'Etendue par arrêté du 4 janvier 1994 JORF 26 janvier 1994'), read (saved l4t/files/m11/mq-cdtn-1285.html sha256 3e0920675945de6062b3f76b1f970a7297d4e34c4f54ad007fdf833420050458; l4t/files/m11/mq-cdtn-search.json sha256 bef600100d40506cb2a328ae6ce5fa870332cd3eb99141bef1e05f8f0b696849); Légifrance's text of the agreement: 403",
+     "result": "the ministry's page gives the national agreement and its extension (covering 22,827 employees) and sends to Légifrance for the text; the metteur en scène's minimum and any overseas clause not read (Légifrance refused)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "SYNDEAC salary grids (syndeac.org/ressources/grilles-des-salaires-et-indemnites): connection reset; ARTCENA 'Rémunération de la mise en scène': 403 Cloudflare challenge, not got past; DAC Martinique 'Vade-mecum création et industries culturelles' PDF (14 pp., April 2020; saved l4t/files/m11/mq-dac-vademecum.pdf, sha256 0b841a590f998779cdef998e9b9611f98f3f0fbcac111cb07bdc2a3c31ae8b0f) read",
+     "result": "the vade-mecum is the 2020 Covid guidance (part-time unemployment, SACD solidarity fund up to EUR 500k); no director's minimum",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "next.ink (2020) on SACD, read whole (as under producer)",
+     "result": "no director's or playwright's rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for fr,sacd)/ (873 records), filtered for outre-mer, Martinique, barème, tarif, rémunération, minimum; read 'Auteur-Producteur de spectacle vivant' (13 Oct 2026; saved l4t/files/m11/mq-cc-sacd-auteurprod.html, sha256 154357c2e98bbdeb74dea26a8fa59d4ad80691861df4447c3b916749ebd96fa5); CC-MAIN-2026-43 and -39 for fr,syndeac)/: none",
+     "result": "no SACD capture of a theatre royalty scale or an overseas clause; the page lists SACD's schemes (metteurs en scène among its authors); no SYNDEAC grid captured",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 10 of 10 (standard): 'Martinique compagnies de théâtre rémunération metteur en scène auteur SACD convention collective spectacle vivant outre-mer'",
+     "result": "results: ARTCENA's legal guide on directors' pay (403 when fetched), the EAT/EGEET authors' pay charter, a SACD-linked municipal contract, the DAC Martinique vade-mecum, next.ink; national rules only, none naming Martinique",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "next.ink (2020) on SACD, read whole (as under producer)",
+     "result": "no director's or playwright's rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for fr,sacd)/ (873 records), filtered for outre-mer, Martinique, barème, tarif, rémunération, minimum; read 'Auteur-Producteur de spectacle vivant' (13 Oct 2026; saved l4t/files/m11/mq-cc-sacd-auteurprod.html, sha256 154357c2e98bbdeb74dea26a8fa59d4ad80691861df4447c3b916749ebd96fa5); CC-MAIN-2026-43 and -39 for fr,syndeac)/: none",
+     "result": "no SACD capture of a theatre royalty scale or an overseas clause; the page lists SACD's schemes (metteurs en scène among its authors); no SYNDEAC grid captured",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "Écrivaines et Écrivains Associés du Théâtre (EAT), 'La charte des rémunérations des autrices et auteurs dramatiques, Saison 2024' (saved l4t/files/m11/mq-eat-charte2024.pdf, sha256 018ad15fbffc355161111967b85aa0063ce62e703eccd0d209854a7881eb441e), read",
+     "result": "found (France, recommended): commission minimums in authors' rights, e.g. a long play (31 min to 1h30) EUR 4,620 gross, a very short one EUR 1,155; private theatres' 'prime d’inédit' EUR 4,400 (1,000 seats), 2,200 (500), 550 (100) 'a minima' (see found); no Martinique clause",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Légifrance, Code de la propriété intellectuelle art. L132-18 (contrat de représentation), https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006279023 (curl; saved l4t/files/m11/mq-legi-cpi-l132-18.html, sha256 ac4a354f8279412662e274395bd74c6a3c1d6866987cae7d5d91f5d8fc3d080a)",
+     "result": "403 with a Cloudflare 'Just a moment...' challenge; not got past, not read another way. (The SACD's general conditions are a society's own, not gazetted.)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 8,
+    "value": {
+     "scope": "France (national authors' association; no territorial limit stated; whether it binds in Martinique: it binds no one, it is a recommendation)",
+     "season": 2024,
+     "commissionMinimumsEURgross": {
+      "veryShort15min": 1155,
+      "veryShortSmallStructures": {
+       "subsidyUnder100k": 577.5,
+       "under250k": 840,
+       "over250k": 1050
+      },
+      "medium15to30min": 2310,
+      "long31minTo1h30": 4620,
+      "over1h30": [
+       5197.5,
+       8085
+      ]
+     },
+     "privateTheatrePrimeInedit": {
+      "1000seats": 4400,
+      "500seats": 2200,
+      "100seats": 550,
+      "note": "tarifs a minima"
+     },
+     "form": "paid in authors' rights; a prime d'inédit is not an advance on performance royalties"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.eatheatre.fr/wp-content/uploads/2024/01/Charte_Remunerations_2024.pdf",
+      "title": "La charte des rémunérations des autrices et auteurs dramatiques, Saison 2024 (EGEET, diffused by Écrivaines et Écrivains Associés du Théâtre)",
+      "read": "2026-11-04",
+      "said": "Chaque commande de texte doit faire l’objet d’une rémunération en prime d’inédit, c’est-à-dire d’une somme en droits d’auteur qui n’est pas une avance sur les droits futurs des représentations. ... Dans le théâtre privé ... Pour un théâtre de 1000 places : 4400€. Pour un théâtre de 500 places : 2200€. Pour un théâtre de 100 places : 550€. Ce sont des tarifs a minima. ... Commande d’un texte dramatique : Ce sont des tarifs minima recommandés, payés en droits d’auteur. ... 1. Pièce très courte (15 mn) : 1155€ brut. ... Subvention en dessous de 100000€ : 577,5€ brut. Subvention en dessous de 250000€ : 840€ brut. Subvention au-delà de 250000€ : 1050€ brut. 2. Pièce moyenne (de 15 à 30 mn) : 2310€ brut. 3. Pièce longue (de 31 mn à 1h30) : 4620€ brut. 4. Au-delà d’une heure trente : 5197,5€ à 8085€ brut.",
+      "file": "l4t/files/m11/mq-eat-charte2024.pdf",
+      "sha256": "018ad15fbffc355161111967b85aa0063ce62e703eccd0d209854a7881eb441e"
+     }
+    ],
+    "notes": "The authors' own recommended minimums for France, season 2024 (a newer season's charter not found); not an agreement, and nothing says how they are applied in Martinique. The SACD's royalty minimums are in t2 (FR item 8)."
+   }
+  ],
+  "notes": "Producer: the CTM publishes each fund decision as an administrative act; one 2023 sitting (AD 23-518) holds 12 grants and 11 refusals (count made from the titles). Items 7 and 8: every method now tried; the national rules (IDCC 1285 extended in 1994; the EAT charter's recommended commission minimums) are France's, and no text read says how they apply in Martinique beyond the Labour Code's reach of national agreements (art. L2222-1, already on record). Légifrance and ARTCENA refused (403 challenge)."
+ },
+ "NU": {
+  "producer": {
+   "blocker": "R-10070",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10 (standard): 'Niue theatre drama performance arts culture fund grant Broadcasting Corporation of Niue television production local content' (covers the blocker's series and play items and stage items 7, 8, 9)",
+     "result": "results: New Zealand funders only (Creative New Zealand Pacific arts rounds 2024-25, NZ On Air's Pacific Regional Media Fund with BCN as partner, a 2004 Pacific Arts Committee round, Boosted crowdfunding for 'The Fakas Go To Niue'), and BCN's own news on a touring play; no Niuean incentive, fund, commissioning terms or count",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10, as under producer",
+     "result": "no stage director's, playwright's or actor's minimum; theatre on Niue appears only as a touring New Zealand production",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Broadcasting Corporation of Niue news (tvniue.com), 'Niue finally meets the Fakas' (8 Jan 2019, by Esther Pavihi), fetched and read (saved l4t/files/m11/nu-tvniue-fakas.html, sha256 cbfc2f7a34fafa6d04a45f2b989fce3f8f8079fd83ae9c97a3e35e594b55c501)",
+     "result": "read: a touring New Zealand comedy-drama ('written and directed by Maree Webster and produced by Leki Jackson Bourke', cast and crew of 18) played two nights at Hakupu Tuatea and Taoga Niue, supported by the Chamber of Commerce, the NZ High Commission and Taoga Niue; no pay, agreement or local company",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10, as under producer",
+     "result": "no stage director's, playwright's or actor's minimum; theatre on Niue appears only as a touring New Zealand production",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Broadcasting Corporation of Niue news (tvniue.com), 'Niue finally meets the Fakas' (8 Jan 2019, by Esther Pavihi), fetched and read (saved l4t/files/m11/nu-tvniue-fakas.html, sha256 cbfc2f7a34fafa6d04a45f2b989fce3f8f8079fd83ae9c97a3e35e594b55c501)",
+     "result": "read: a touring New Zealand comedy-drama ('written and directed by Maree Webster and produced by Leki Jackson Bourke', cast and crew of 18) played two nights at Hakupu Tuatea and Taoga Niue, supported by the Chamber of Commerce, the NZ High Commission and Taoga Niue; no pay, agreement or local company",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 7 of 10, as under producer",
+     "result": "no stage director's, playwright's or actor's minimum; theatre on Niue appears only as a touring New Zealand production",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Broadcasting Corporation of Niue news (tvniue.com), 'Niue finally meets the Fakas' (8 Jan 2019, by Esther Pavihi), fetched and read (saved l4t/files/m11/nu-tvniue-fakas.html, sha256 cbfc2f7a34fafa6d04a45f2b989fce3f8f8079fd83ae9c97a3e35e594b55c501)",
+     "result": "read: a touring New Zealand comedy-drama ('written and directed by Maree Webster and produced by Leki Jackson Bourke', cast and crew of 18) played two nights at Hakupu Tuatea and Taoga Niue, supported by the Chamber of Commerce, the NZ High Commission and Taoga Niue; no pay, agreement or local company",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "notes": "Producer blocker's missing web-search now made; items 7, 8, 9 now have web-search and trade-press (their institution, official-register and archive attempts stand from t8). Niue's stage is visiting New Zealand work; no Niuean pay term found.",
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "t8.result.json: https://www.gov.nu/ (Government of Niue) and https://www.bcn.nu/ (Broadcasting Corporation of Niue)"
+    ],
+    "official-register": [
+     "t8.result.json: https://www.paclii.org/countries/nu.html (Niue legislation) over https and http"
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API for gov.nu (snapshot 2026-11-02 exists), web.archive.org fetch; Common Crawl CC-MAIN-2026-43 nu,gov)/"
+    ]
+   },
+   "8": {
+    "institution": [
+     "t8.result.json: https://www.gov.nu/ (Government of Niue) and https://www.bcn.nu/ (Broadcasting Corporation of Niue)"
+    ],
+    "official-register": [
+     "t8.result.json: https://www.paclii.org/countries/nu.html (Niue legislation) over https and http"
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API for gov.nu (snapshot 2026-11-02 exists), web.archive.org fetch; Common Crawl CC-MAIN-2026-43 nu,gov)/"
+    ]
+   },
+   "9": {
+    "institution": [
+     "t8.result.json: https://www.gov.nu/ (Government of Niue) and https://www.bcn.nu/ (Broadcasting Corporation of Niue)"
+    ],
+    "official-register": [
+     "t8.result.json: https://www.paclii.org/countries/nu.html (Niue legislation) over https and http"
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API for gov.nu (snapshot 2026-11-02 exists), web.archive.org fetch; Common Crawl CC-MAIN-2026-43 nu,gov)/"
+    ]
+   }
+  }
+ },
+ "RS": {
+  "producer": {
+   "blocker": "R-10106",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 9 of 10 (standard): 'RTS javni konkurs nezavisna produkcija 2026 serija otkup uslovi cena po epizodi Filmski centar Srbije konkurs serije rezultati broj prijava'",
+     "result": "results: N1 (Pištaljka's analysis of RTS's 2026 financial plan), Vreme and 021.rs on RTS, RTS's 2020 public bid for European independent productions (a .doc); no 2026 call terms, no Film Centre series results or application counts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "N1 info, 'Pištaljka: RTS plaća skoro 15 miliona evra spoljnim produkcijama za serije' (26 Feb 2026), quoting RTS's financial plan for 2026, fetched and read (saved l4t/files/m11/rs-n1-pistaljka.html, sha256 6d727b8d0297fd13c10aed2208bd5708ac429daf27059aef85ab9074bdd2fc29)",
+     "result": "found in part (how a series reaches the screen): 'Gotovo 99 odsto budžeta ... RTS ... namenjenog proizvodnji serijskog programa otići će u ruke spoljnih produkcija'; of EUR 15 million, under EUR 200,000 is for own production (including buying scripts); more than EUR 14.8 million goes to outside firms, which Pištaljka says get it 'netransparentno i bez konkurencije'; e.g. a little over EUR 2 million for 16 episodes of 'Advokatice' and a little over EUR 3 million for two seasons of 'Radio Mileva'. A secondary naming RTS's financial plan; the plan itself not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "pravno-informacioni-sistem.rs (the state's legal information system): home answers but is a script-only application ('pis-vue doesn't work properly without JavaScript'); paragraf.rs guessed address for the 2026 audiovisual incentive regulation: 404",
+     "result": "no gazette text read for the incentive, a fund or a theatre measure",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for rs,gov,kultura)/ (460 captures) and rs,rts)/ (34,694 captures, filtered for konkurs); read the capture of the ministry's latest call page in the crawl, kultura.gov.rs/konkurs/30/6a193edf38916 (14 Oct 2026; saved l4t/files/m11/rs-cc-konkurs-6a19.html, sha256 68f39bfd5c5b3dc0dae92e709671a4c03af59d8f4ba6be175414fbdb97519804)",
+     "result": "the call pages' captures hold the menu and title only (the body loads by script), as the live pages do; no call terms, award counts or RTS commissioning terms read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org Wayback availability API for kultura.gov.rs/konkursi and rts.rs/page/rts/sr/konkursi.html",
+     "result": "429 Too Many Requests",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "paragraf.rs copy of the Zakon o autorskom i srodnim pravima (Sl. glasnik RS 104/2009 ... 66/2019), read (saved l4t/files/m11/rs-paragraf-zasp.html, sha256 b42cb97f94d38f1afe6d6f51ffac7454f5e76af6c9c7b758a580ed42635960a9); the state's system (script-only) not readable",
+     "result": "read (a law database's copy, secondary): live performance of a dramatic work is public communication; a collecting society's tariff (art. 169) sets the fee 'po pravilu u procentualnom iznosu od prihoda koji korisnik ostvaruje', with minimum amounts, compared with other European tariffs by GDP; no tariff figure in the law",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 8 of 10 (standard): 'Autorska agencija za Srbiju pozorište autorski honorar dramski pisac procenat od prodatih ulaznica tarifa 2026'",
+     "result": "results: Croatian writers' recommended tariffs 2026, a Slovenian regulation, Slovak and Czech tariffs, a Bosnian society's rules, Vreme on a Novi Sad theatre's unpaid fees, UDUS's Ludus no. 217; no Serbian playwright's tariff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Vreme, 'Novosadsko pozorište: platićemo vam kad se smirite' (June 2022), fetched and read (saved l4t/files/m11/rs-vreme-nsp.html, sha256 22c355349385eaac8292203315fbefb0703869a265b51a1d8706251bd8836db9)",
+     "result": "read: the creative team (director Jovana Tomić, dramaturg Dimitrije Kokanov and others) of a Novi Sad co-production sued for agreed fees; they say the contracts set 'fiksni iznosi', not a share of ticket sales, and authors' fees are paid from the state budget; no amounts besides the 14% owed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "UDUS (Udruženje dramskih umetnika Srbije), Ludus no. 217 (April 2026, 20 pp., saved l4t/files/m11/rs-ludus217.pdf, sha256 40371ff3ab31cc30b7ba63df336fbf4cdc080ce21d4d0b801ee0c7764963b748), text searched for honorar, minimal, kolektivni, koeficijent, dinara",
+     "result": "no rate; a report says the Šabac theatre's actors had their coefficients and 'iznos minimalca' changed without consulting the unions (a lead that pay is coefficient-based)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for rs,gov,kultura)/ (filtered for pozorište, kolektivni, konkurs, ugovor, autor) and rs,org,aas)/ (247 captures: the Academy of Architecture, not an authors' body); the konkurs capture read as above",
+     "result": "no capture of the culture agreement's coefficients, a director's or actor's rate or a playwright's tariff",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "JAA – Autorska agencija za Srbiju (autorskaagencija.com): home and 'Pribavljanje licenci za korišćenje autorskih dela' read (saved l4t/files/m11/rs-autorskaagencija.html sha256 e4d8062e94d377338726ae33ff3df2e7e4e3a558f5b2783c8c60141acfcca44f; l4t/files/m11/rs-jaa-licence.html sha256 112e1c16989ae8e3cf30b05a5056f2efc05742ccad1e3c38bfd98991d3e1e2fa); www.aas.rs: proxy 502",
+     "result": "the agency negotiates licences and author contracts for theatres and others ('ugovorenu naknadu'), more than ten thousand authors; it publishes no theatre tariff or playwright minimum",
+     "date": "2026-11-04"
+    }
+   ],
+   "7": [
+    {
+     "method": "trade-press",
+     "tried": "Vreme, 'Novosadsko pozorište: platićemo vam kad se smirite' (June 2022), fetched and read (saved l4t/files/m11/rs-vreme-nsp.html, sha256 22c355349385eaac8292203315fbefb0703869a265b51a1d8706251bd8836db9)",
+     "result": "read: the creative team (director Jovana Tomić, dramaturg Dimitrije Kokanov and others) of a Novi Sad co-production sued for agreed fees; they say the contracts set 'fiksni iznosi', not a share of ticket sales, and authors' fees are paid from the state budget; no amounts besides the 14% owed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "UDUS (Udruženje dramskih umetnika Srbije), Ludus no. 217 (April 2026, 20 pp., saved l4t/files/m11/rs-ludus217.pdf, sha256 40371ff3ab31cc30b7ba63df336fbf4cdc080ce21d4d0b801ee0c7764963b748), text searched for honorar, minimal, kolektivni, koeficijent, dinara",
+     "result": "no rate; a report says the Šabac theatre's actors had their coefficients and 'iznos minimalca' changed without consulting the unions (a lead that pay is coefficient-based)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for rs,gov,kultura)/ (filtered for pozorište, kolektivni, konkurs, ugovor, autor) and rs,org,aas)/ (247 captures: the Academy of Architecture, not an authors' body); the konkurs capture read as above",
+     "result": "no capture of the culture agreement's coefficients, a director's or actor's rate or a playwright's tariff",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "trade-press",
+     "tried": "Vreme, 'Novosadsko pozorište: platićemo vam kad se smirite' (June 2022), fetched and read (saved l4t/files/m11/rs-vreme-nsp.html, sha256 22c355349385eaac8292203315fbefb0703869a265b51a1d8706251bd8836db9)",
+     "result": "read: the creative team (director Jovana Tomić, dramaturg Dimitrije Kokanov and others) of a Novi Sad co-production sued for agreed fees; they say the contracts set 'fiksni iznosi', not a share of ticket sales, and authors' fees are paid from the state budget; no amounts besides the 14% owed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "UDUS (Udruženje dramskih umetnika Srbije), Ludus no. 217 (April 2026, 20 pp., saved l4t/files/m11/rs-ludus217.pdf, sha256 40371ff3ab31cc30b7ba63df336fbf4cdc080ce21d4d0b801ee0c7764963b748), text searched for honorar, minimal, kolektivni, koeficijent, dinara",
+     "result": "no rate; a report says the Šabac theatre's actors had their coefficients and 'iznos minimalca' changed without consulting the unions (a lead that pay is coefficient-based)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for rs,gov,kultura)/ (filtered for pozorište, kolektivni, konkurs, ugovor, autor) and rs,org,aas)/ (247 captures: the Academy of Architecture, not an authors' body); the konkurs capture read as above",
+     "result": "no capture of the culture agreement's coefficients, a director's or actor's rate or a playwright's tariff",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "notes": "Producer: RTS spends about EUR 14.8 million of a EUR 15 million series budget on outside producers in 2026, per Pištaljka on N1 quoting RTS's financial plan (secondary); no open-call terms or pickup count. Item 8: Serbian copyright law makes collecting-society tariffs a percentage of the user's revenue with minimums; JAA licenses plays by agreement; no playwright's figure. Items 7 and 9 stand on the culture agreement's base times coefficient (u7); the coefficients stay unread (the state's legal system is script-only).",
+  "found": [
+   {
+    "item": 4,
+    "value": {
+     "broadcaster": "RTS",
+     "year": 2026,
+     "seriesBudgetEUR": 15000000,
+     "toOutsideProducersEUR": 14800000,
+     "outsideShare": 0.99,
+     "ownProductionEUR": "under 200,000 (incl. buying scripts)",
+     "examples": {
+      "Advokatice": {
+       "episodes": 16,
+       "EUR": "a little over 2,000,000"
+      },
+      "Radio Mileva seasons 12-13": {
+       "EUR": "a little over 3,000,000"
+      }
+     },
+     "openCall": "Pištaljka says the money goes 'netransparentno i bez konkurencije' to the same firms",
+     "pickupRate": null
+    },
+    "sources": [
+     {
+      "kind": "secondary",
+      "url": "https://n1info.rs/vesti/pistaljka-rts-placa-skoro-15-miliona-evra-spoljnim-produkcijama-za-serije/",
+      "title": "Pištaljka: RTS plaća skoro 15 miliona evra spoljnim produkcijama za serije (N1, 26 Feb 2026)",
+      "read": "2026-11-04",
+      "said": "Gotovo 99 odsto budžeta Radio-televizije Srbije (RTS) namenjenog proizvodnji serijskog programa otići će u ruke spoljnih produkcija, piše u finansijskom planu medijskog javnog servisa za ovu godinu. Od 15 miliona evra, tek nepunih 200.000 evra namenjeno je za sopstvenu proizvodnju u koju spadaju vanredne emisije i otkup scenarija. ... Većina firmi za koje je ove godine RTS opredelio ukupno više od 14,8 miliona evra su iste kojima rukovodstvo javnog servisa godinama netransparentno i bez konkurencije dodeljuje novac građana ... RTS izdvaja nešto više od dva miliona evra na 16 epizoda serije „Advokatice”",
+      "file": "l4t/files/m11/rs-n1-pistaljka.html",
+      "sha256": "6d727b8d0297fd13c10aed2208bd5708ac429daf27059aef85ab9074bdd2fc29",
+      "quotes": "RTS finansijski plan i plan poslovanja za 2026 (not linked by address in the article)"
+     }
+    ],
+    "notes": "A secondary whose primary (RTS's 2026 financial plan) has no address in the article: strictly a lead until the plan is read."
+   }
+  ],
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "u7.result.json: kultura.gov.rs/tekst/45/kolektivni-ugovor.php and the agreement docx it links (one reset, then read)"
+    ],
+    "web-search": [
+     "u7.result.json: 1 search (Serbian): Uredba o koeficijentima … glumac reditelj koeficijent kultura"
+    ],
+    "official-register": [
+     "u7.result.json: paragraf.rs guessed address of the Uredba (404); pravno-informacioni-sistem.rs ELI address of Sl. glasnik 44/2001 (a script-only app, no text)"
+    ]
+   },
+   "9": {
+    "institution": [
+     "u7.result.json: kultura.gov.rs/tekst/45/kolektivni-ugovor.php and the agreement docx it links (one reset, then read)"
+    ],
+    "web-search": [
+     "u7.result.json: 1 search (Serbian): Uredba o koeficijentima … glumac reditelj koeficijent kultura"
+    ],
+    "official-register": [
+     "u7.result.json: paragraf.rs guessed address of the Uredba (404); pravno-informacioni-sistem.rs ELI address of Sl. glasnik 44/2001 (a script-only app, no text)"
+    ]
+   }
+  }
+ },
+ "SV": {
+  "producer": {
+   "blocker": "R-10140",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for sv,gob,cultura)/ (7 records), sv,gob,mtps)/ (288) and sv,gob,asamblea)/ (236); archive.org Wayback availability API for cultura.gob.sv",
+     "result": "cultura.gob.sv: 403 crawl diagnostics only (incl. /ley-de-cultura/) and robots.txt; Wayback: 429 Too Many Requests; no capture of a FONCCA call, a series fund or a broadcaster's terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "the Decreto 663 read above, for the blocker's theatre tax incentive",
+     "result": "an income-tax exemption for artists' own earnings (to US$15,000 a year), not a producer's or a play's incentive; the Ley de Cultura's donor deduction (u24) stays the only production-side measure found",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "tried": "Asamblea Legislativa: decrees by year, 2026 and 2025 lists (issuer's chain completed, verification on; saved l4t/files/m11/sv-asamblea-2026.html, l4t/files/m11/sv-asamblea-2025.html), the record of Decreto 663 (view/7029; saved l4t/files/m11/sv-dec663.html, sha256 97b9a8ebd932b2ae89926b08e280e32f3a5a4c9972a7f522634bf49df3988b42) and its text (saved l4t/files/m11/sv-dec663.pdf, sha256 2348b3f4f94ddb08444c695c81b8bf4d73c81ecb455b2fc2e113f56bd395fa1f), read",
+     "result": "found (a tax rule on artists' pay, not a minimum): Decreto Legislativo 663 of 23 Sep 2026 (D.O. 178, Tomo 452, 25 Sep 2026, in force on publication) exempts Salvadoran artists from income tax for five years on artistic services and sales of works, up to US$15,000 a year for natural persons and US$25,000 for legal persons; those who hire them withhold no income tax but must report what they paid; it repeals Decreto 154 of 2021. No stage director's, playwright's or actor's minimum in the 2025-26 decree lists",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for sv,gob,mtps)/ (288), filtered for salario, mínimo, decreto, tarifa, ley; and sv,gob,asamblea)/ (decree lists 2024-26 captured)",
+     "result": "the labour ministry's captures hold news (e.g. 25 Apr 2025 'US$408.80 sería nuevo salario mínimo') and its service page for registering collective agreements; no agreement or minimum for stage work",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Diario El Mundo site search (diario.elmundo.sv/?s= and /busqueda?q= for 'artistas impuesto sobre la renta' / 'artistas exoneración renta'; its WordPress API: 404) and La Prensa Gráfica search (403)",
+     "result": "no press article reached; the searches returned no result list in the HTML or refused",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "official-register",
+     "tried": "Asamblea Legislativa: decrees by year, 2026 and 2025 lists (issuer's chain completed, verification on; saved l4t/files/m11/sv-asamblea-2026.html, l4t/files/m11/sv-asamblea-2025.html), the record of Decreto 663 (view/7029; saved l4t/files/m11/sv-dec663.html, sha256 97b9a8ebd932b2ae89926b08e280e32f3a5a4c9972a7f522634bf49df3988b42) and its text (saved l4t/files/m11/sv-dec663.pdf, sha256 2348b3f4f94ddb08444c695c81b8bf4d73c81ecb455b2fc2e113f56bd395fa1f), read",
+     "result": "found (a tax rule on artists' pay, not a minimum): Decreto Legislativo 663 of 23 Sep 2026 (D.O. 178, Tomo 452, 25 Sep 2026, in force on publication) exempts Salvadoran artists from income tax for five years on artistic services and sales of works, up to US$15,000 a year for natural persons and US$25,000 for legal persons; those who hire them withhold no income tax but must report what they paid; it repeals Decreto 154 of 2021. No stage director's, playwright's or actor's minimum in the 2025-26 decree lists",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for sv,gob,mtps)/ (288), filtered for salario, mínimo, decreto, tarifa, ley; and sv,gob,asamblea)/ (decree lists 2024-26 captured)",
+     "result": "the labour ministry's captures hold news (e.g. 25 Apr 2025 'US$408.80 sería nuevo salario mínimo') and its service page for registering collective agreements; no agreement or minimum for stage work",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Diario El Mundo site search (diario.elmundo.sv/?s= and /busqueda?q= for 'artistas impuesto sobre la renta' / 'artistas exoneración renta'; its WordPress API: 404) and La Prensa Gráfica search (403)",
+     "result": "no press article reached; the searches returned no result list in the HTML or refused",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "official-register",
+     "tried": "Asamblea Legislativa: decrees by year, 2026 and 2025 lists (issuer's chain completed, verification on; saved l4t/files/m11/sv-asamblea-2026.html, l4t/files/m11/sv-asamblea-2025.html), the record of Decreto 663 (view/7029; saved l4t/files/m11/sv-dec663.html, sha256 97b9a8ebd932b2ae89926b08e280e32f3a5a4c9972a7f522634bf49df3988b42) and its text (saved l4t/files/m11/sv-dec663.pdf, sha256 2348b3f4f94ddb08444c695c81b8bf4d73c81ecb455b2fc2e113f56bd395fa1f), read",
+     "result": "found (a tax rule on artists' pay, not a minimum): Decreto Legislativo 663 of 23 Sep 2026 (D.O. 178, Tomo 452, 25 Sep 2026, in force on publication) exempts Salvadoran artists from income tax for five years on artistic services and sales of works, up to US$15,000 a year for natural persons and US$25,000 for legal persons; those who hire them withhold no income tax but must report what they paid; it repeals Decreto 154 of 2021. No stage director's, playwright's or actor's minimum in the 2025-26 decree lists",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for sv,gob,mtps)/ (288), filtered for salario, mínimo, decreto, tarifa, ley; and sv,gob,asamblea)/ (decree lists 2024-26 captured)",
+     "result": "the labour ministry's captures hold news (e.g. 25 Apr 2025 'US$408.80 sería nuevo salario mínimo') and its service page for registering collective agreements; no agreement or minimum for stage work",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Diario El Mundo site search (diario.elmundo.sv/?s= and /busqueda?q= for 'artistas impuesto sobre la renta' / 'artistas exoneración renta'; its WordPress API: 404) and La Prensa Gráfica search (403)",
+     "result": "no press article reached; the searches returned no result list in the HTML or refused",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": "7,8,9 (tax on the artist's pay)",
+    "value": {
+     "law": "Decreto Legislativo 663 (Disposición transitoria para la exoneración del impuesto sobre la renta a favor de los artistas salvadoreños)",
+     "issued": "2026-09-23",
+     "published": "2026-09-25 (D.O. 178, Tomo 452)",
+     "years": 5,
+     "exemptUpToUSDPerYear": {
+      "naturalPerson": 15000,
+      "legalPerson": 25000
+     },
+     "covers": "artistic services and/or sales of works of art by Salvadoran artists",
+     "withholding": "none by the hirer, who reports amounts paid",
+     "repeals": "Decreto Legislativo 154 of 2021"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.asamblea.gob.sv/sites/default/files/documents/decretos/4C64B9A5-6594-4025-A888-378077446BCB.pdf",
+      "title": "Decreto No. 663 (Asamblea Legislativa de El Salvador)",
+      "read": "2026-11-04",
+      "said": "Art. 1. Declárase por un período de cinco años, exentos del pago del impuesto sobre la renta, que puedan causar los servicios artísticos y/o la venta de obras de arte que realicen los artistas salvadoreños en sus diferentes especialidades de conformidad a lo siguiente: PARA PERSONAS NATURALES Desde $0.01 ... Hasta $15,000.00 PARA PERSONAS JURÍDICAS Desde $0.01 ... Hasta $25,000.00 ... los sujetos que contraten dichos servicios o adquieran dichas obras, no deberán practicar retención alguna en concepto de Impuesto Sobre la Renta ... Art. 2. Derógase el Decreto Legislativo No. 154, de fecha 14 de septiembre de 2021 ... Art. 3. El presente decreto entrará en vigencia a partir del día de su publicación en el Diario Oficial. ... D. O. N° 178 Tomo N° 452 Fecha: 25 de septiembre de 2026",
+      "file": "l4t/files/m11/sv-dec663.pdf",
+      "sha256": "2348b3f4f94ddb08444c695c81b8bf4d73c81ecb455b2fc2e113f56bd395fa1f"
+     }
+    ],
+    "notes": "Not a pay minimum: it changes what an artist keeps of a fee. Whether 'hasta $15,000' caps the exempt income or the bracket is as the table states; the decree does not define 'artista' beyond 'en sus diferentes especialidades'."
+   }
+  ],
+  "notes": "Items 7, 8, 9 now have official-register, trade-press and archive attempts (institution and web-search stood from u24). No stage agreement or minimum; the Assembly's Decreto 663 (Sept 2026) exempts artists' fees from income tax up to US$15,000 a year for five years. Press searches on Salvadoran dailies returned nothing readable.",
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "u24.result.json: cultura.gob.sv: home, Marco Institucional, the Ley de Cultura download (30 pp., whole text searched), the site search (returned the home page) and its WordPress",
+     "u24.result.json: mtps.gob.sv: home and posts API search \"salario mínimo\"; the 27 May 2025 post"
+    ],
+    "web-search": [
+     "u24.result.json: WebSearch \"El Salvador FONCCA Fondo Nacional Concursable para la Cultura convocatoria teatro montos\""
+    ]
+   },
+   "8": {
+    "institution": [
+     "u24.result.json: cultura.gob.sv: home, Marco Institucional, the Ley de Cultura download (30 pp., whole text searched), the site search (returned the home page) and its WordPress"
+    ],
+    "web-search": [
+     "u24.result.json: WebSearch \"El Salvador FONCCA Fondo Nacional Concursable para la Cultura convocatoria teatro montos\""
+    ]
+   },
+   "9": {
+    "institution": [
+     "u24.result.json: cultura.gob.sv: home, Marco Institucional, the Ley de Cultura download (30 pp., whole text searched), the site search (returned the home page) and its WordPress",
+     "u24.result.json: mtps.gob.sv: home and posts API search \"salario mínimo\"; the 27 May 2025 post"
+    ],
+    "web-search": [
+     "u24.result.json: WebSearch \"El Salvador Teatro Nacional San Salvador temporada teatro obra boletos precio funciones compañías teatro salvadoreñas pago actores\""
+    ]
+   }
+  }
+ },
+ "UA": {
+  "producer": {
+   "blocker": "R-10169",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "Detector Media, 'Бережна: Поновлене фінансування проєктів УКФ, Держкіно поновить пітчинги, коли вдасться закрити борг' (3 Nov 2026, by Natalia Dankova, quoting Culture Minister Tetiana Berezhna and Derzhkino head Andrii Osipov), fetched and read (saved l4t/files/m11/ua-dm-berezhna.html, sha256 6a39d3903588bfb4d80f6e8985bea03c8c8e04a5b662c588c847863db71f08f9)",
+     "result": "found in part (secondary, quoting the minister's statement, no document address): the State Film Agency's debt to earlier pitching winners was about UAH 800 million when the minister took office; Derzhkino will resume pitchings only once that is cleared; UAH 300 million is budgeted for film support next year, part of it to pay those debts; no new pitching in 2026 (Osipov, Dec 2025); the minister says the Ukrainian Cultural Foundation's project funding will be restored in full. So no state series fund is open; no rate of yes",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for ua,in,ucf)/ (749 captures), ua,gov,mcsc)/ (49) and ua,gov,mincult)/ (24); read the UCF lot capture ucf.in.ua/en/m_lots/69d656b5949dd072ff00af15 (8 Oct 2026; saved l4t/files/m11/ua-cc-ucf-lot69d6.html, sha256 546df95c729b8da97e971b62c6e859ee4c63688636d712fa580cc70bd2511a46)",
+     "result": "the ministry's captures are all 403 crawl diagnostics (incl. a July 2026 FPO standard PDF and a September 2026 recommendations PDF); the UCF lot read is a front-line regional lot co-funded with the Zaporizhzhia administration: total UAH 8 million, grants UAH 400,000 to 800,000, sectors including audiovisual and 'перформативне та сценічне мистецтво'; no series terms, theatre incentive or count of runs",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stage": {
+   "7": [
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture of Ukraine, mincult.gov.ua: home (live, 200; saved l4t/files/m11/ua-mincult.html, sha256 c816f3aaf71c3ae7d1f7d0d621754c58a2c15cc9d35d84e02bfac34e236b0f91), its WordPress API (401 'REST API restricted to authenticated users') and site search 'оплата праці театр' (saved l4t/files/m11/ua-mc-s1.html, sha256 b6d9166d59f9b3b92677acc0f928ad2c072059d47b663974c5d97d79dc19609a); National Union of Theatre Figures, nstdu.org.ua: proxy 502",
+     "result": "the search returns news and theatres' vacancy contests (e.g. 3 Nov 2026 notices), no pay scheme for directors or actors; the theatre union did not answer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Detector Media (3 Nov 2026) read whole for theatre pay, and its home page's lead items (saved l4t/files/m11/ua-detector.html)",
+     "result": "no stage director's or actor's rate; the article concerns film and cultural-fund financing",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "institution",
+     "tried": "Ministry of Culture of Ukraine, mincult.gov.ua: home (live, 200; saved l4t/files/m11/ua-mincult.html, sha256 c816f3aaf71c3ae7d1f7d0d621754c58a2c15cc9d35d84e02bfac34e236b0f91), its WordPress API (401 'REST API restricted to authenticated users') and site search 'оплата праці театр' (saved l4t/files/m11/ua-mc-s1.html, sha256 b6d9166d59f9b3b92677acc0f928ad2c072059d47b663974c5d97d79dc19609a); National Union of Theatre Figures, nstdu.org.ua: proxy 502",
+     "result": "the search returns news and theatres' vacancy contests (e.g. 3 Nov 2026 notices), no pay scheme for directors or actors; the theatre union did not answer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Detector Media (3 Nov 2026) read whole for theatre pay, and its home page's lead items (saved l4t/files/m11/ua-detector.html)",
+     "result": "no stage director's or actor's rate; the article concerns film and cultural-fund financing",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "institution",
+     "tried": "mincult.gov.ua search (as for 7, 9) and the Ukrainian Agency for Copyright and Related Rights, uacrr.org (429 Too Many Requests)",
+     "result": "no playwright's fee, commission or royalty published",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "zakon.rada.gov.ua/laws/show/2811-20 (Law of Ukraine 'On Copyright and Related Rights', 2022)",
+     "result": "connection reset by peer (curl 35); not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Detector Media (3 Nov 2026), read whole",
+     "result": "nothing on playwrights' pay",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 for ua,gov,mincult)/, ua,gov,mcsc)/ (403s only), ua,org,ukrainianauthors)/ and ua,org,nstu)/ (none), ua,in,ucf)/ (the lot above lists literature among its sectors)",
+     "result": "no capture of a playwright's minimum or a society's theatre tariff",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "notSearched": [
+   "item 8 web-search: not made; this agent's ten WebSearch calls were spent on AR (2), BQ, CR, GS, LK, NU, RS (2) and MQ, where no search was on record; Ukraine's item 8 has its other four methods made today"
+  ],
+  "notes": "Producer: Derzhkino's pitchings are suspended until about UAH 800 million owed to earlier winners is paid (minister, 3 Nov 2026, via Detector Media); UCF lots (e.g. UAH 400,000-800,000, performing arts eligible) are the open route. Items 7 and 9 now have institution and trade-press; no pay scheme read (the 2005 order 745 and Resolution 951 stay leads from u8). Item 8: four methods made, no figure; web-search not made (budget spent).",
+  "stageExistingAttempts": {
+   "7": {
+    "official-register": [
+     "u8.result.json: zakon.rada.gov.ua/laws/show/z0860-08"
+    ],
+    "archive": [
+     "u8.result.json: Common Crawl CC-MAIN-2026-39 and -43 for ua,gov,rada,zakon)/laws/show/z1285-05 (order 745); buhgalter.com.ua copy of order 745 (403); prokadry.com.ua on Cabinet"
+    ],
+    "web-search": [
+     "u8.result.json: 1 search: \"наказ Мінкультури схеми посадових окладів працівників театрів артист драми режисер-постановник 2026 тарифний розряд\""
+    ]
+   },
+   "9": {
+    "official-register": [
+     "u8.result.json: zakon.rada.gov.ua/laws/show/z0860-08"
+    ],
+    "archive": [
+     "u8.result.json: Common Crawl CC-MAIN-2026-39 and -43 for ua,gov,rada,zakon)/laws/show/z1285-05 (order 745); buhgalter.com.ua copy of order 745 (403); prokadry.com.ua on Cabinet"
+    ],
+    "web-search": [
+     "u8.result.json: 1 search: \"наказ Мінкультури схеми посадових окладів працівників театрів артист драми режисер-постановник 2026 тарифний розряд\""
+    ]
+   }
+  }
+ },
+ "ZW": {
+  "notes": "Only trade-press was missing for items 7, 8, 9; now made: no Zimbabwean stage pay found in NewsDay or Nehanda Radio; The Herald and The Chronicle refuse (Cloudflare). A lead for a play's fate: a Reps Theatre musical drew nearly 1,200 over four performances (NewsDay, 21 Jul 2026).",
+  "stage": {
+   "7": [
+    {
+     "method": "trade-press",
+     "tried": "NewsDay (newsday.co.zw) WordPress API searches 'theatre actors' and 'theatre production artists pay' (saved l4t/files/m11/zw-newsday-wp.json sha256 501ea83bd47f6d795ce8d649c4c5ebd2b1efe24d6675e90085b88eb9af055e45; l4t/files/m11/zw-newsday-wp2.json sha256 5ac2c5ab06c5503aeb955d33151e5409aaf0f09ea7fe57265c37e80b1571d55f), and the two theatre items read through it: 'The Princess and the Frog leaves Harare spellbound' (21 Jul 2026; l4t/files/m11/zw-nd-frog.json sha256 0125f517332e60fdbda1785d496bdc6b8440e6642c80782b13e7f73fc9f0b887) and 'Walking Dead actor Gurira inspires African playwrights with Zim workshops' (14 Dec 2024; l4t/files/m11/zw-nd-gurira.json sha256 a3f5e8ee200b46254b48e376c2ea1739b5d5bbe0dc44585b7cfde6c66c48e434), the article pages themselves 429 at news-days.com; Nehanda Radio API search 'theatre actors paid' (l4t/files/m11/zw-nehanda-wp.json); The Herald and The Chronicle APIs: Cloudflare 403 ('Attention Required!'), not got past",
+     "result": "no pay, agreement or rate: the Reps Theatre musical by M&M Dance Factory drew 'nearly 1 200 people during its four-day run' with about 50 performers; Almasi African Playwrights (Danai Gurira's organisation, 11 days at Reps) develops writers' work with directors and actors; Nehanda Radio's hits are unrelated or old profiles",
+     "date": "2026-11-04"
+    }
+   ],
+   "8": [
+    {
+     "method": "trade-press",
+     "tried": "NewsDay (newsday.co.zw) WordPress API searches 'theatre actors' and 'theatre production artists pay' (saved l4t/files/m11/zw-newsday-wp.json sha256 501ea83bd47f6d795ce8d649c4c5ebd2b1efe24d6675e90085b88eb9af055e45; l4t/files/m11/zw-newsday-wp2.json sha256 5ac2c5ab06c5503aeb955d33151e5409aaf0f09ea7fe57265c37e80b1571d55f), and the two theatre items read through it: 'The Princess and the Frog leaves Harare spellbound' (21 Jul 2026; l4t/files/m11/zw-nd-frog.json sha256 0125f517332e60fdbda1785d496bdc6b8440e6642c80782b13e7f73fc9f0b887) and 'Walking Dead actor Gurira inspires African playwrights with Zim workshops' (14 Dec 2024; l4t/files/m11/zw-nd-gurira.json sha256 a3f5e8ee200b46254b48e376c2ea1739b5d5bbe0dc44585b7cfde6c66c48e434), the article pages themselves 429 at news-days.com; Nehanda Radio API search 'theatre actors paid' (l4t/files/m11/zw-nehanda-wp.json); The Herald and The Chronicle APIs: Cloudflare 403 ('Attention Required!'), not got past",
+     "result": "no pay, agreement or rate: the Reps Theatre musical by M&M Dance Factory drew 'nearly 1 200 people during its four-day run' with about 50 performers; Almasi African Playwrights (Danai Gurira's organisation, 11 days at Reps) develops writers' work with directors and actors; Nehanda Radio's hits are unrelated or old profiles",
+     "date": "2026-11-04"
+    }
+   ],
+   "9": [
+    {
+     "method": "trade-press",
+     "tried": "NewsDay (newsday.co.zw) WordPress API searches 'theatre actors' and 'theatre production artists pay' (saved l4t/files/m11/zw-newsday-wp.json sha256 501ea83bd47f6d795ce8d649c4c5ebd2b1efe24d6675e90085b88eb9af055e45; l4t/files/m11/zw-newsday-wp2.json sha256 5ac2c5ab06c5503aeb955d33151e5409aaf0f09ea7fe57265c37e80b1571d55f), and the two theatre items read through it: 'The Princess and the Frog leaves Harare spellbound' (21 Jul 2026; l4t/files/m11/zw-nd-frog.json sha256 0125f517332e60fdbda1785d496bdc6b8440e6642c80782b13e7f73fc9f0b887) and 'Walking Dead actor Gurira inspires African playwrights with Zim workshops' (14 Dec 2024; l4t/files/m11/zw-nd-gurira.json sha256 a3f5e8ee200b46254b48e376c2ea1739b5d5bbe0dc44585b7cfde6c66c48e434), the article pages themselves 429 at news-days.com; Nehanda Radio API search 'theatre actors paid' (l4t/files/m11/zw-nehanda-wp.json); The Herald and The Chronicle APIs: Cloudflare 403 ('Attention Required!'), not got past",
+     "result": "no pay, agreement or rate: the Reps Theatre musical by M&M Dance Factory drew 'nearly 1 200 people during its four-day run' with about 50 performers; Almasi African Playwrights (Danai Gurira's organisation, 11 days at Reps) develops writers' work with directors and actors; Nehanda Radio's hits are unrelated or old profiles",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "stageExistingAttempts": {
+   "7": {
+    "institution": [
+     "t8.result.json: https://natcazim.co.zw/ (National Arts Council); https://www.zbc.co.zw/; https://www.culturefund.org.zw/"
+    ],
+    "official-register": [
+     "t8.result.json: https://zimlii.org/ and https://www.veritaszim.net/ home pages"
+    ],
+    "web-search": [
+     "t8.result.json: \"Zimbabwe 2026 film fund OR creative industries fund OR National Arts Council grant theatre production television drama ZBC commissioning\""
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API natcazim.co.zw (no snapshot); Common Crawl CC-MAIN-2026-43 zw,co,natcazim)/"
+    ]
+   },
+   "8": {
+    "institution": [
+     "t8.result.json: https://natcazim.co.zw/ (National Arts Council); https://www.zbc.co.zw/; https://www.culturefund.org.zw/"
+    ],
+    "official-register": [
+     "t8.result.json: https://zimlii.org/ and https://www.veritaszim.net/ home pages"
+    ],
+    "web-search": [
+     "t8.result.json: \"Zimbabwe 2026 film fund OR creative industries fund OR National Arts Council grant theatre production television drama ZBC commissioning\""
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API natcazim.co.zw (no snapshot); Common Crawl CC-MAIN-2026-43 zw,co,natcazim)/"
+    ]
+   },
+   "9": {
+    "institution": [
+     "t8.result.json: https://natcazim.co.zw/ (National Arts Council); https://www.zbc.co.zw/; https://www.culturefund.org.zw/"
+    ],
+    "official-register": [
+     "t8.result.json: https://zimlii.org/ and https://www.veritaszim.net/ home pages"
+    ],
+    "web-search": [
+     "t8.result.json: \"Zimbabwe 2026 film fund OR creative industries fund OR National Arts Council grant theatre production television drama ZBC commissioning\""
+    ],
+    "archive": [
+     "t8.result.json: archive.org availability API natcazim.co.zw (no snapshot); Common Crawl CC-MAIN-2026-43 zw,co,natcazim)/"
+    ]
+   }
+  }
+ }
+}
