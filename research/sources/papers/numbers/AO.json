@@ -1,0 +1,31 @@
+{
+ "country": "AO",
+ "name": "Número do Bilhete de Identidade (Número Único do Cidadão)",
+ "issuer": "Angola's civil identification service (the law names it only as the service competent to issue the Bilhete de Identidade)",
+ "format": {
+  "length": 14,
+  "pattern": "^[0-9]{9}[A-Z0-9]{4}[0-9]$"
+ },
+ "when": "application",
+ "who": [
+  "citizens"
+ ],
+ "needed": [
+  "tax"
+ ],
+ "note": "Lei n.º 3/21, de 25 de Janeiro (Diário da República, I Série, n.º 16, 25 January 2021, amending Lei n.º 4/09, the legal regime of civil identification and the national citizen's Bilhete de Identidade), read 2026-11-03 in the copies Lex.AO and Angolex keep: art. 9 gives each Bilhete de Identidade a document number of fourteen characters, two alphanumeric, two for the card's version and one control digit, preceded by the sequential number (nine characters, by subtraction), and makes it, for legal purposes, the citizen's Número Único do Cidadão. The law doesn't say the sequential number's and the version's characters are digits: the pattern reads the sequential number as digits (a number) and takes a letter or a digit in the version's two; the control digit is a digit, its rule isn't given, so `check` is left out. Art. 3 applies the law to Angolan citizens 'sem qualquer limitação de idade', and art. 19 has the card applied for (by the citizen, or for a minor by the legal representative), so it is read as given on application, with no youngest age. Decreto Presidencial n.º 245/21, art. 5 (Angolex's copy, read the same day): a national's NIF is the Bilhete de Identidade's number, so `needed` is tax. The law names no fee or time.",
+ "sources": [
+  {
+   "url": "https://lex.ao/docs/assembleia-nacional/2021/lei-n-o-3-21-de-25-de-janeiro/",
+   "title": "Lei n.º 3/21, de 25 de Janeiro (Diário da República, I Série, n.º 16, 25 January 2021), amending Lei n.º 4/09 on civil identification and the national citizen's Bilhete de Identidade, as kept by Lex.AO",
+   "read": "2026-11-03",
+   "said": "Artigo 3.º (Âmbito) A presente Lei aplica-se aos actos de identificação civil e de emissão do Bilhete de Identidade dos cidadãos angolanos, sem qualquer limitação de idade. ... Artigo 9.º (Número do Bilhete de Identidade de Cidadão Nacional) A cada Bilhete de Identidade de Cidadão Nacional é atribuído um número de documento, constituído por catorze caracteres, sendo dois alfanuméricos, dois correspondentes à versão do Bilhete de Identidade e um dígito de controlo, antecedidos pelo número sequencial. O número do Bilhete de Identidade referido no número anterior funciona, para efeitos legais, como Número Único do Cidadão (NUC). ... Artigo 19.º ... Excepcionalmente, podem igualmente solicitar o Bilhete de Identidade de Cidadão Nacional o representante legal, quem tenha o menor ao seu cargo ou o responsável pela instituição que tenha o menor sob os seus cuidados."
+  },
+  {
+   "url": "https://angolex.com/paginas/decreto-presidencial/regime-juridico-do-numero-de-identificacao-fiscal.html",
+   "title": "Decreto Presidencial n.º 245/21 (Regime Jurídico do Número de Identificação Fiscal), as kept by Angolex",
+   "read": "2026-11-03",
+   "said": "Artigo 5.º Composição do NIF 1. O NIF dos cidadãos nacionais corresponde ao seu número do Bilhete de Identidade. 2. O NIF dos cidadãos estrangeiros, com ou sem residência no território nacional, é composto por uma numeração sequencial atribuída pela AGT."
+  }
+ ]
+}

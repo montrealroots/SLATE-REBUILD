@@ -1,0 +1,59 @@
+{
+ "country": "CO",
+ "document": "Cédula de ciudadanía digital",
+ "office": "the Registraduría Nacional del Estado Civil",
+ "currency": "COP",
+ "routes": [
+  {
+   "id": "office",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "in person at a Registraduría office"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a duplicate (after a loss, damage or a correction), delivered with the digital cédula's activation"
+  }
+ ],
+ "cards": [
+  {
+   "for": "from 18",
+   "from": 18,
+   "validYears": 10,
+   "pay": {
+    "office": "0",
+    "lost": "76100"
+   }
+  }
+ ],
+ "note": "Ley 1163 de 2007 (art. 5, read on the Cancillería's legal compilation, 2026-11-03) exempts the first cédula from any charge; the Registraduría's Resolución 1500 de 2026 (Diario Oficial 53.395, in force from 1 March 2026, same compilation) prices a duplicate of the digital (polycarbonate) cédula at COP 76,100, held as the replacement route, and of the yellow one at 67,350 (not modelled: the digital one is the one issued). The ten-year term of the digital cédula still stands on El País (Cali) quoting the Registraduría; neither text read states it, nor the age (18, held from El País). The Registraduría's own site is behind a challenge. The time isn't stated; the minors' identity card isn't modelled.",
+ "sources": [
+  {
+   "url": "https://www.elpais.com.co/servicios/registraduria-confirmo-el-precio-de-la-cedula-digital-en-2026-nuevas-tarifas-en-sus-servicios-2052.html",
+   "title": "El País (Colombia), Registraduría confirmó el precio de la cédula digital en 2026",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.registraduria.gov.co/",
+   "said": "el duplicado o rectificación de la cédula de ciudadanía en policarbonato y su versión digital, que el año pasado costaba $72.450, queda ahora en $76.100 pesos colombianos. ... la Registraduría aclaró que la expedición de la cédula por primera vez sigue siendo gratuita para los jóvenes que cumplen 18 años y realizan el trámite igualmente por primera vez ... “tiene una vigencia de diez (10) años."
+  },
+  {
+   "url": "https://cancilleria.gov.co/normograma/compilacion/docs/ley_1163_2007.htm",
+   "title": "Compilación jurídica de la Cancillería de Colombia: Ley 1163 de 2007 (tasas de la Registraduría Nacional del Estado Civil), artículo 5",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "ARTÍCULO 5o. EXENCIONES AL COBRO. De conformidad con las disposiciones vigentes, la Registraduría Nacional del Estado Civil exonerará del cobro para obtener el documento de identidad, en los siguientes casos: a) Expedición de la Cédula de Ciudadanía y Tarjeta de Identidad por primera vez;"
+  },
+  {
+   "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_registraduria_1500_2026.htm",
+   "title": "Compilación jurídica de la Cancillería: Resolución 1500 de 2026 (febrero 11) de la Registraduría Nacional del Estado Civil, Diario Oficial No. 53.395",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "La cédula de ciudadanía de seguridad personalizada en policarbonato (por duplicado, rectificación, pérdida, deterioro o corrección de datos por voluntad de su titular) se entregará con la activación de la cédula de ciudadanía digital. Su valor será de setenta y seis mil cien pesos colombianos (76.100 COP). ... el valor de la expedición física del duplicado o rectificación de la cédula de ciudadanía ... la suma de sesenta y siete mil trescientos cincuenta pesos colombianos (67.350 COP). PARÁGRAFO. En los consulados ... (67,55 USD)."
+  }
+ ]
+}

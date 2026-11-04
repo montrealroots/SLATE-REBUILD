@@ -1,0 +1,125 @@
+{
+ "topic": "ages.FJ",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Start the age readers once the ledger lands\", the age rules reaching young writers, producers and directors as well as performers; \"It should cover across every country\"; \"Again I want depth covering every basis for every feature leaving NO STONE UNTURNED\"): what age changes for screen work in Fiji: the age of majority, the working age, how a minor's contract binds and what of the pay is set aside, a child performer's permit and hours, the unions', the funds' and the company law's ages. Research, retry and web-search subagents (workbench/briefs/BRIEF-ages-roles.md, BRIEF-ages-world.md, BRIEF-ages-search.md), every quote checked by the lead against its saved page. Read again 2026-11-03 at the source, the Laws of Fiji as the Office of the Solicitor-General consolidates them (laws.gov.fj, through the site's own API): the Employment Relations Act's ss. 4, 92, 93, 95 and 97 and the Companies Act's s. 93; the DOL report (403 this time), the Fiji Times and Expanship are no longer cited.",
+ "figures": [
+  {
+   "item": "minimumWorkAge",
+   "finding": "Fiji's Employment Relations Act 2007 sets the minimum age for employment at fifteen (s. 92) and lets children of thirteen to fifteen do light work, or work where family or communal or religious group members are employed, that does not harm their health or development or their attendance at school (s. 93); it sets no separate cap for light work, but no child (under eighteen, s. 4) may work more than 8 hours a day, with 30 minutes' paid rest in every 4 continuous hours (s. 97), and hazardous work is barred to children by ministerial order (s. 95). The DOL report first read held the light-work hours uncapped (lightWorkHoursCap null), which overlooked s. 97's cap on every child's day.",
+   "value": {
+    "general": 15,
+    "lightWorkFrom": 13,
+    "childHoursCapPerDay": 8,
+    "hazardousFrom": 18
+   },
+   "applies": "Fiji, the Act as consolidated on laws.gov.fj to 12 August 2026 (a reported amendment raising the age from 15 to 16 isn't in it).",
+   "sources": [
+    {
+     "src": 0,
+     "said": "The age of 15 years is the minimum age for employment of children."
+    },
+    {
+     "src": 0,
+     "said": "Subsection (1) does not apply to a child of 13 to 15 years of age engaged in employment or light work or in a workplace in which members of the same family or of communal or religious group are employed"
+    },
+    {
+     "src": 0,
+     "said": "child means a person who is under the age of 18 years"
+    },
+    {
+     "src": 0,
+     "said": "A child must— (a) not be employed or permitted to be employed for more than 8 hours in a day; and (b) be given at least 30 minutes paid rest for every continuous 4 hours worked."
+    }
+   ]
+  },
+  {
+   "item": "companies",
+   "finding": "Under Fiji's Companies Act 2015, s. 93(1), only a natural person of at least eighteen may be a director or secretary of a company, so a minor may hold shares in a producer's company but direct it only from eighteen.",
+   "value": {
+    "directorFrom": 18,
+    "naturalPerson": true
+   },
+   "applies": "Fiji, the Act as consolidated on laws.gov.fj to 12 August 2026.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Only a natural person who is at least 18 years of age may be appointed as a director or secretary of a company."
+    }
+   ]
+  }
+ ],
+ "country": "FJ",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.laws.gov.fj/api/retrieve_html/LOF.CAP92.ERAFJ07.S92",
+   "title": "Employment Relations Act 2007, ss. 4, 92, 93, 95, 97 (Laws of Fiji, Office of the Solicitor-General, laws.gov.fj; consolidated to 12 August 2026; read through the site's own API, retrieve_html/LOF.CAP92.ERAFJ07.S<n>)",
+   "read": "2026-11-03",
+   "said": "[EMP 92] Minimum age for employment The age of 15 years is the minimum age for employment of children. [EMP 93] Employment of children under 15 years (1) A child under the age of 15 years must not be employed in any capacity other than in accordance with subsection (2) ... (2) Subsection (1) does not apply to a child of 13 to 15 years of age engaged in employment or light work or in a workplace in which members of the same family or of communal or religious group are employed provided that— (a) the employment is not likely to be harmful to the health or development of the child; and (b) the employment is not such as to prejudice the child’s attendance at school ... [s. 4] child means a person who is under the age of 18 years ... [EMP 95] (2) The Minister may ... by order in the Gazette, declare any employment or workplace to be a prohibited or restricted employment or workplace for the purposes of this Part on the ground that it is injurious to health or is hazardous ... [EMP 97] (1) A child must— (a) not be employed or permitted to be employed for more than 8 hours in a day; and (b) be given at least 30 minutes paid rest for every continuous 4 hours worked."
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.laws.gov.fj/api/retrieve_html/LOF.CAP247.COAFJ15.S93",
+   "title": "Companies Act 2015, s. 93 (Laws of Fiji, laws.gov.fj; consolidated to 12 August 2026)",
+   "read": "2026-11-03",
+   "said": "[COM 93] Who can be a director (1) Only a natural person who is at least 18 years of age may be appointed as a director or secretary of a company."
+  }
+ ],
+ "blockers": [
+  {
+   "item": "majority",
+   "sought": "Fiji's age of majority (Age of Majority Act, Cap. 55).",
+   "tried": {
+    "institution": "laws.gov.fj is a script application (Angular): its HTML and main bundle carry no law text or API path found, and /Acts answered 404 (2026-11-01); the Ministry of Employment's site did not connect (layer 3)",
+    "official-register": "PacLII answered 403 behind Cloudflare and its AustLII mirror did not connect (layer 3; PacLII 403 again 2026-11-01)",
+    "web-search": "Run 2026-11-01 (no finding): 'Fiji Age of Majority Act Cap 55 age of majority eighteen': 19 results, all other countries' Age of Majority Acts (Tanzania, Dominica, Trinidad, Kenya, Seychelles, Bermuda) but worldlawdigest.com (18, no statute named, not a primary); PacLII's Fiji index answered a Cloudflare block to this client (\"Sorry, you have been blocked\"), not read another way; '\"Age of Majority Act\" Fiji \"21 years\" OR \"eighteen years\" full age Fiji laws': 17 results: worldlawdigest (18, no statute), fijivillage on the marriage age raised to 18 and parental consent under 21 removed, flrc.gov.fj on a proposal to raise the voting age to 21; no text of the Age of Majority Act",
+    "trade-press": "None quoting a rule could be found without search (search limit reached); none among the pages read.",
+    "archive": "archive.org availability API rate-limited this client (429) on 2026-11-01; web.archive.org snapshot fetches answered 403 or reset the same day."
+   }
+  },
+  {
+   "item": "childPerformers",
+   "sought": "Any Fijian permit or rule for child performers, or a source that the Employment Relations Act's child provisions reach performing work.",
+   "tried": {
+    "institution": "laws.gov.fj is a script application (Angular): its HTML and main bundle carry no law text or API path found, and /Acts answered 404 (2026-11-01); the Ministry of Employment's site did not connect (layer 3)",
+    "official-register": "PacLII answered 403 behind Cloudflare and its AustLII mirror did not connect (layer 3; PacLII 403 again 2026-11-01)",
+    "web-search": "Run 2026-11-01 (no finding): 'Film Fiji audio visual incentive child actors minors filming rules permit': 18 results: Investment Fiji and Film Fiji incentive pages, Film Fiji annual reports, the Fiji Embassy's incentive sheet (\"junior artist hire\" as a cost); no permit, hours or chaperone rule for child performers",
+    "trade-press": "None quoting a rule could be found without search (search limit reached); none among the pages read.",
+    "archive": "archive.org availability API rate-limited this client (429) on 2026-11-01; web.archive.org snapshot fetches answered 403 or reset the same day."
+   }
+  },
+  {
+   "item": "minorsContracts",
+   "sought": "How a Fijian minor's contract binds and any set-aside of earnings.",
+   "tried": {
+    "institution": "laws.gov.fj is a script application (Angular): its HTML and main bundle carry no law text or API path found, and /Acts answered 404 (2026-11-01); the Ministry of Employment's site did not connect (layer 3)",
+    "official-register": "PacLII answered 403 behind Cloudflare and its AustLII mirror did not connect (layer 3; PacLII 403 again 2026-11-01)",
+    "web-search": "Run 2026-11-01 (no finding): 'Fiji minor contract capacity infants law minors contracts Fiji Law Reform': 16 results: a Fiji High Court guardianship case (PacLII mirror), New Zealand's Minors' Contracts Act 1969, Irish and South Australian law reform reports; nothing on Fiji's rule",
+    "trade-press": "None quoting a rule could be found without search (search limit reached); none among the pages read.",
+    "archive": "archive.org availability API rate-limited this client (429) on 2026-11-01; web.archive.org snapshot fetches answered 403 or reset the same day."
+   }
+  },
+  {
+   "item": "unions",
+   "sought": "Members' age rules of any Fijian performers' body.",
+   "tried": {
+    "institution": "laws.gov.fj is a script application (Angular): its HTML and main bundle carry no law text or API path found, and /Acts answered 404 (2026-11-01); the Ministry of Employment's site did not connect (layer 3)",
+    "official-register": "PacLII answered 403 behind Cloudflare and its AustLII mirror did not connect (layer 3; PacLII 403 again 2026-11-01)",
+    "web-search": "Run 2026-11-01 (no finding): 'Fiji actors association performers union film crew guild membership': 17 results: Wikipedia on Fiji's trade unions (FTUC, no performers' union), FIA, a Jamaica Gleaner piece (Jamaica's first actors' guild, Aug 2026); no Fijian performers' body",
+    "trade-press": "None quoting a rule could be found without search (search limit reached); none among the pages read.",
+    "archive": "archive.org availability API rate-limited this client (429) on 2026-11-01; web.archive.org snapshot fetches answered 403 or reset the same day."
+   }
+  },
+  {
+   "item": "funds",
+   "sought": "The applicant age or capacity rule of Film Fiji's rebate or any local fund.",
+   "tried": {
+    "institution": "laws.gov.fj is a script application (Angular): its HTML and main bundle carry no law text or API path found, and /Acts answered 404 (2026-11-01); the Ministry of Employment's site did not connect (layer 3)",
+    "official-register": "PacLII answered 403 behind Cloudflare and its AustLII mirror did not connect (layer 3; PacLII 403 again 2026-11-01)",
+    "web-search": "Run 2026-11-01 (no finding): 'Film Fiji tax rebate eligibility applicant production company requirements local filmmakers grant': 19 results: FRCS's film-making guide, Investment Fiji's F1/F2 incentives (rebate 20%, applicant a locally registered production company), the Fiji Embassy sheet, laws.gov.fj (a section page, 404 to this client); no applicant age or capacity rule and no local grant",
+    "trade-press": "None quoting a rule could be found without search (search limit reached); none among the pages read.",
+    "archive": "archive.org availability API rate-limited this client (429) on 2026-11-01; web.archive.org snapshot fetches answered 403 or reset the same day."
+   }
+  }
+ ]
+}

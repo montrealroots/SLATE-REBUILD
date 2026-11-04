@@ -1,0 +1,102 @@
+{
+ "country": "SV",
+ "document": "Documento Único de Identidad (DUI)",
+ "office": "the Registro Nacional de las Personas Naturales (RNPN), at its DUIcentros",
+ "currency": "USD",
+ "routes": [
+  {
+   "id": "duicentro",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "in person at a DUIcentro in El Salvador"
+  },
+  {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a renewal in person at a DUIcentro in El Salvador"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a replacement in person at a DUIcentro in El Salvador"
+  },
+  {
+   "id": "abroad",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "label": "at an RNPN office abroad"
+  },
+  {
+   "id": "renew-abroad",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a renewal at an RNPN office abroad"
+  },
+  {
+   "id": "lost-abroad",
+   "where": "abroad",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a replacement at an RNPN office abroad"
+  }
+ ],
+ "cards": [
+  {
+   "for": "anyone",
+   "validYears": null,
+   "pay": {
+    "duicentro": "0",
+    "renew": "10.31",
+    "lost": "10.31",
+    "abroad": "35",
+    "renew-abroad": "35",
+    "lost-abroad": "35"
+   }
+  }
+ ],
+ "note": "The RNPN's own page on the DUI at home (read 2026-11-03): a first issue in the country is free; a renewal, a replacement or a change is paid by a bank receipt of USD 10.31, held as the renewal and replacement routes at home (a change isn't modelled). Abroad every procedure costs USD 35, a first issue included (Diario El Mundo's list of the RNPN's requirements, 13 September 2024); the RNPN's page for the DUI abroad (dui.sv/exterior) answered a Cloudflare block, so the 35 still stands on the press. A first issue must be in person, El Diario de Hoy reports, for the fingerprints. The DUI's term, the age it's issued from and the time aren't modelled.",
+ "sources": [
+  {
+   "url": "https://diario.elmundo.sv/politica/estos-son-los-43-lugares-para-tramitar-el-dui-en-el-salvador-y-en-el-extranjero",
+   "title": "Diario El Mundo (El Salvador), Estos son los 43 lugares para tramitar el DUI en El Salvador y en el extranjero",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.rnpn.gob.sv/",
+   "said": "Para emitir el DUI en el exterior, los connacionales deben pagar $35 mientras que en el territorio nacional tiene un costo de $10.31 ... Los salvadoreños pueden realizar cuatro trámites con el DUI: renovarlo, reponerlo, actualizarlos y emitirlo por primera vez, este último es gratuito."
+  },
+  {
+   "url": "https://www.elsalvador.com/noticias/nacional/dui-digital-el-salvador/1284664/2026/",
+   "title": "El Diario de Hoy, DUI digital en El Salvador (2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.rnpn.gob.sv/",
+   "said": "Entre los casos que continúan requiriendo la presencia del ciudadano se encuentran la emisión del DUI por primera vez, debido a la captura de información biométrica adicional, como las huellas dactilares."
+  },
+  {
+   "url": "https://diario.elmundo.sv/politica/cuales-son-los-requisitos-para-tramitar-el-dui-en-el-exterior",
+   "title": "Diario El Mundo (El Salvador), ¿Cuáles son los requisitos para tramitar el DUI en el exterior? (13 September 2024)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.rnpn.gob.sv/",
+   "said": "Cada trámite tiene un costo de $35 para los connacionales en el extranjero. En el territorio nacional tiene un precio de $10.31. ... Emisiones por primera vez: Pago de $35. Partida de nacimiento original."
+  },
+  {
+   "url": "https://www.rnpn.gob.sv/servicios/servicio-de-dui-a-domicilio/",
+   "title": "Registro Nacional de las Personas Naturales (RNPN), Servicio de DUI a domicilio",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "El trámite por primera vez, gratis en el país, es indispensable la partida de nacimiento reciente, para la renovación, reposición y modificación se debe anexar el recibo cancelado previamente en el banco por $10.31. ... PRIMERA VEZ ● Emisión de DUI por primera vez GRATIS ... RENOVACIÓN ● Recibo de pago en banco por $10.31. REPOSICIÓN ● Recibo de pago en banco por $10.31."
+  }
+ ]
+}

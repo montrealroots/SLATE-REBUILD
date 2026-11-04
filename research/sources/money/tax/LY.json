@@ -1,0 +1,218 @@
+{
+ "topic": "tax.LY",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Libya: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved; no primary was reached. Sought again 2026-11-03 (Wave 2, second pass): The Tax Department's copy of Law No. 10 of 2010 bears out the 1% of every worker's gross income, public or private, and the self-employed's, paid to the Social Solidarity Fund (art. 3(1)), the fund PwC calls the Social Unity Fund. The file the first pass saved as the Income Tax Law No. 7 of 2010 was this law; the Income Tax Law is listed on the same page but its link serves no file. The scale, social security, withholding and the rest still rest on PwC, Deloitte and the Libyan Legal Hub's copy.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "Libyan and foreign nationals alike pay tax only on Libyan-source income: employment income is taxed at 5% on annual taxable earnings up to LYD 12,000 and 10% above, after social security, the 1% solidarity contribution and a personal exemption of LYD 1,800 (single) or 2,400 (married), plus LYD 300 a child; professional or commercial income is taxed at 15%.",
+   "value": {
+    "currency": "LYD",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 12000,
+      "rate": 0.05
+     },
+     {
+      "from": 12000,
+      "to": null,
+      "rate": 0.1
+     }
+    ],
+    "allowance": {
+     "single": 1800,
+     "married": 2400,
+     "perChild": 300
+    },
+    "commercialIncome": 0.15,
+    "handicrafts": 0.1,
+    "basis": "Libyan source"
+   },
+   "applies": "Individuals working in Libya",
+   "sources": [
+    {
+     "src": 0,
+     "said": "Gross salary Tax rate (%) Per year (LYD*) Per month (LYD) 12,000 1,000 5 Over 12,000 Over 1,000 10"
+    },
+    {
+     "src": 1,
+     "said": "Income earned from commercial activities is subject to a 15% rate and income from handicrafts is taxed at 10%. Payroll tax is imposed at 5% on annual taxable earnings up to LYD 12,000 and at 10% on annual taxable earnings exceeding LYD 12,000. … An annual allowance of LYD 1,800 (for a single individual) or LYD 2,400 (for a married or widowed adult) may be deducted from taxable income. In addition, an annual allowance of LYD 300 is provided for each minor child."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Everyone working in Libya, expatriates included, pays social security of 5.125% of gross income; the employer pays 14.350% (15.375% for a foreign branch), with 1.025% from the treasury for Libyan entities; a further 1% of monthly gross salary goes to the Social Unity Fund.",
+   "value": {
+    "employee": 0.05125,
+    "employer": {
+     "libyanEntity": 0.1435,
+     "foreignBranch": 0.15375
+    },
+    "treasury": 0.01025,
+    "socialUnityFund": 0.01,
+    "due": "within ten days after month end"
+   },
+   "applies": "All persons working in Libya",
+   "sources": [
+    {
+     "src": 2,
+     "said": "Gross income Foreign branch (%) Libyan entity (%) Employee’s contribution 5.125 5.125 Employer’s contribution 15.375 14.350 Contribution from public treasury - 1.025 Total 20.50 20.50 … Social security is withheld by the employer and payable monthly, within ten days after the month end. … 1% of the monthly gross salary of all individuals exercising employment in Libya is collected by the Tax Department as a contribution to the Social Unity Fund."
+    },
+    {
+     "src": 7,
+     "said": "تتكون إيرادات صندوق التضامن الاجتماعي :- 1- اشتراك بنسبة 1% يستقطع من إجمالي دخول العاملين كافة سواء في الجهات العامة أو الخاصة ، وكذلك من دخول العاملين لحساب أنفسهم ."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer withholds tax on employment income at the employee's rate and remits it within 60 days of the month end (plus 15 days' grace).",
+   "value": {
+    "due": "60 days after month end + 15 days grace"
+   },
+   "applies": "Employees",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Tax on employment income is withheld and remitted by the employer at the individual’s applicable rate. The employer is responsible for monthly filing and the due date is 60 days following the end of the month (plus a 15-day grace period)."
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "Residence does not decide liability: a foreign performer working in Libya pays the same tax on Libyan-source income; Libyan law has no withholding taxes, foreign contracts being assessed on deemed profit at registration.",
+   "value": {
+    "rate": "same as residents",
+    "withholding": null
+   },
+   "applies": "Non-Libyan nationals working in Libya",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Residence is not a key factor in determining tax liability in Libya, which is typically based on the source of income (particularly for non-Libyan nationals)."
+    },
+    {
+     "src": 3,
+     "said": "Libyan law has no withholding taxes (WHTs)."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "There is no VAT in Libya.",
+   "value": {
+    "rate": 0
+   },
+   "applies": "Supplies in Libya",
+   "sources": [
+    {
+     "src": 4,
+     "said": "There is no VAT in Libya."
+    }
+   ]
+  },
+  {
+   "item": "year",
+   "finding": "The tax year is the calendar year; payroll is self-assessed monthly through the employer.",
+   "value": {
+    "start": "01-01",
+    "end": "12-31"
+   },
+   "applies": "Individuals",
+   "sources": [
+    {
+     "src": 5,
+     "said": "The tax year is a calendar year. Tax returns The submission of the monthly declared payroll is effectively a self-assessment process."
+    }
+   ]
+  },
+  {
+   "item": "authors",
+   "finding": "Income from writing books and from preparing studies and research in culture and science is exempt from income tax (Law No. 7 of 2010, art. 33); other income of an independent profession is taxed at 15% a year (arts. 53 and 54).",
+   "value": {
+    "exempt": "income from writing books and preparing cultural or scientific studies and research",
+    "professionsRate": 0.15
+   },
+   "applies": "Individuals, Law No. 7 of 2010 as in force (amended by Law No. 2 of 2017 and Law No. 1 of 2025, each in art. 25 only, as the portal lists them). The exemption names books, studies and research, not a script; the game applies neither it nor the professions' 15% (the business tax is already untold), and tells the player the author's relief isn't kept.",
+   "sources": [
+    {
+     "src": 6,
+     "said": "الدخل الناتج عن تأليف الكتب وإعداد الدراسات والبحوث في مجال الثقافة والبحث العلمي."
+    },
+    {
+     "src": 6,
+     "said": "مادة 54 يكون سعر الضريبة سنوياً 15%"
+    }
+   ]
+  }
+ ],
+ "country": "LY",
+ "sources": [
+  {
+   "url": "https://taxsummaries.pwc.com/libya/individual/taxes-on-personal-income",
+   "title": "Libya - Individual - Taxes on personal income (PwC, reviewed 31 May 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "Gross salary Tax rate (%) Per year (LYD*) Per month (LYD) 12,000 1,000 5 Over 12,000 Over 1,000 10"
+  },
+  {
+   "url": "https://www.deloitte.com/content/dam/assets-shared/docs/services/tax/2026/dttl-tax-libyahighlights-2026.pdf",
+   "title": "Libya Highlights 2026 (Deloitte)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "Income earned from commercial activities is subject to a 15% rate and income from handicrafts is taxed at 10%. Payroll tax is imposed at 5% on annual taxable earnings up to LYD 12,000 and at 10% on annual taxable earnings exceeding LYD 12,000. … An annual allowance of LYD 1,800 (for a single individual) or LYD 2,400 (for a married or widowed adult) may be deducted from taxable income. In addition, an annual allowance of LYD 300 is provided for each minor child. … Tax on employment income is withheld and remitted by the employer at the individual’s applicable rate. The employer is responsible for monthly filing and the due date is 60 days following the end of the month (plus a 15-day grace period). … Residence is not a key factor in determining tax liability in Libya, which is typically based on the source of income (particularly for non-Libyan nationals)."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/libya/individual/other-taxes",
+   "title": "Libya - Individual - Other taxes (PwC, reviewed 31 May 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "Gross income Foreign branch (%) Libyan entity (%) Employee’s contribution 5.125 5.125 Employer’s contribution 15.375 14.350 Contribution from public treasury - 1.025 Total 20.50 20.50 … Social security is withheld by the employer and payable monthly, within ten days after the month end. … 1% of the monthly gross salary of all individuals exercising employment in Libya is collected by the Tax Department as a contribution to the Social Unity Fund."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/libya/corporate/withholding-taxes",
+   "title": "Libya - Corporate - Withholding taxes (PwC, reviewed 31 May 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "Libyan law has no withholding taxes (WHTs)."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/libya/corporate/other-taxes",
+   "title": "Libya - Corporate - Other taxes (PwC, reviewed 31 May 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "There is no VAT in Libya."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/libya/individual/tax-administration",
+   "title": "Libya - Individual - Tax administration (PwC, reviewed 31 May 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://tax.gov.ly/",
+   "said": "The tax year is a calendar year. Tax returns The submission of the monthly declared payroll is effectively a self-assessment process."
+  },
+  {
+   "url": "https://lawsociety.ly/?p=249",
+   "title": "قانون رقم 7 لسنة 2010 م بشأن ضرائب الدخل (Law No. 7 of 2010 on Income Taxes), full text on the Libyan Legal Hub Foundation's legislation portal, marked in force, citing the Official Gazette (Legislation Code 2010, issue 4, year 10)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "said": "مادة 33 يعفى من الضريبة … الدخل الناتج عن تأليف الكتب وإعداد الدراسات والبحوث في مجال الثقافة والبحث العلمي. … الفصل الرابع: الضريبة على دخل المهن الحرة مادة 53 تفرض الضريبة على دخول المهن الحرة التي يمارسها الممول بصفة مستقلة والتي يكون العنصر الأساسي فيها العمل. مادة 54 يكون سعر الضريبة سنوياً 15%",
+   "quotes": "https://tax.gov.ly/Law1.aspx"
+  },
+  {
+   "kind": "primary",
+   "url": "https://tax.gov.ly/Law1.aspx",
+   "title": "مصلحة الضرائب ليبيا (the Tax Department of Libya): قانون رقم 10 لسنة 1430 ميلادية بتعديل بعض أحكام القانون رقم (20) لسنة 1428 ميلادية بشأن صندوق الرعاية الاجتماعية (Law No. 10 of 2010 on the Social Solidarity Fund), the file its legislation page serves by postback; 3 page images, read by Arabic OCR and checked against the page image",
+   "read": "2026-11-03",
+   "said": "((مادة (3) تتكون إيرادات صندوق التضامن الاجتماعي :- 1- اشتراك بنسبة 1% يستقطع من إجمالي دخول العاملين كافة سواء في الجهات العامة أو الخاصة ، وكذلك من دخول العاملين لحساب أنفسهم ."
+  }
+ ],
+ "blockers": []
+}

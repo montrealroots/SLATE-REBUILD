@@ -1,6 +1,6 @@
 # Handoff
 
-Layer in progress: 3
+Layer in progress: 4
 
 Where the rebuild stands, kept current at every checkpoint so an interrupted session resumes rather than restarts.
 Read `CLAUDE.md` first.
@@ -20,9 +20,145 @@ Read `CLAUDE.md` first.
   The owner merged it (`3ccce87`) and the branch restarted from `main` there.
 - Layer 2 (the world) is proven: all six of SLATE's world engines, at the owner's word ("Every single one of them"),
   its research read again at every source and every blocker tried again; the full gate green in a fresh clone at
-  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). Layer 3 (the person's papers and money) is in
-  progress and has not started; nothing in it comes over until the owner picks it. Layers 4 to 7 have not started (6 is
-  dropped); the gate refuses code in a layer until every layer under it is proven.
+  `e3c205c47ce3`, recorded in `registry/layers.json` (2026-11-03). The owner merged it (`dd4e83a`) and the branch
+  restarted from `main` there.
+- Layer 3 (the person's papers and money) is proven: all nineteen of SLATE's layer 3 engines, at the owner's word
+  ("Every single one of them"), its research taken through three waves and four web-search rounds (below); the full
+  gate green on GitHub Actions in a fresh clone at `e8b573910dad`, recorded in `registry/layers.json` (2026-11-04).
+  The owner pulls and merges it. Layers 4 to 7 have not started (6 is dropped).
+
+What layer 3 holds, ported from SLATE (`montrealroots/SLATE` at `acf1874`), changed where a ruling or the sources say:
+
+- The papers (`src/papers`: passports, ids, citizenship, visits, ages, work, numbers, residence, licence) and the money
+  (`src/money`: banks, accounts, ledger, cards, credit, rates, means, formats, units, tax), with their compilers,
+  research sources (`research/sources/papers`, `research/sources/money`, and `research/sources/person/ages`, which the
+  ages engine reads), coverage matrices, catalog lines, the `money.account` decider and sixteen effects. Work permits
+  (`papers.permits`) are layer 4's and did not come.
+- Ids: layer 2's four new entries had taken R-4236 to R-4239, which SLATE's register already gives to two licences, a
+  card and an island's cards; ours moved to R-9680 to R-9683, above SLATE's highest (R-9679), and every new id since
+  starts above them (R-9684 to R-9723 so far).
+- Player text the catalog-text check stopped and that was reworded: "licence" (British) to "license"; "you are taxed"
+  to "you're taxed"; "{country} offers" (read as a count) to "{country} has no bank that offers a credit card".
+- Five consumer anchors in accounts and tax named layer 4's commands (`acting.perform`, `directing.prep`,
+  `script.pitch`, `producing.shoot`, `youth.release`); they come back with layer 4.
+- Research wave 1 (2026-11-03, nine agents, five integrating, the lead holding the register and checking figures at
+  their sources): every one of layer 3's 783 blockers re-attacked. Found, and their rows now researched: passports of
+  Sierra Leone, Tuvalu, Turks and Caicos, Eswatini; work routes of Kuwait, Tuvalu, Eswatini; residence of South Korea,
+  Costa Rica, Ecuador, Tuvalu; account numbers of Cape Verde; national numbers of Angola, Kosovo, Fiji; cards of the
+  Isle of Man, Belize, Tanzania; credit records of Nigeria, Svalbard, San Marino; banks of Gabon, Somalia, São Tomé (the
+  banks engine now holds a fee by average-balance band); nine licences (Marshall Islands, Tonga, Tuvalu, Bhutan, Cook
+  Islands, Isle of Man, Jersey, Latvia, Turks and Caicos); ages of eight countries and the Bahamas, Belarus, Jersey,
+  Kyrgyzstan; tax of Azerbaijan, Canada, Grenada, Georgia, Russia. Many more were found in part and stay blocked on
+  what is missing. Held figures found out of date and fixed: North Macedonia's July 2026 contribution split, Grenada's
+  insurable ceiling (5,200), Canada's provinces' and six US states' ages, SWIFT's IBAN Registry (release 103 changed
+  BR, CZ, JO, PL, PT and ST; the 105 IBAN facts now stand on SWIFT's own registry, found, not secondary). Recorded for
+  2027: Belgium's tax-free base, Angola's new personal income tax, Mongolia's bands. Rulings applied: a check algorithm
+  stands only where a primary states it (Benin's, Côte d'Ivoire's, Senegal's, Algeria's and Mozambique's keys were
+  worked out from real numbers only, so their checks stay blocked); a law not in force is not the rule (Samoa's credit
+  register Act); a government's page about another country is a lead, not a source, unless it names the primary.
+- The web-search pass, round 1 (2026-11-03, the same session once its search allowance answered again): nine agents,
+  each held to 20 searches (about 176 in all), searched about 170 of the blockers wave 1 couldn't, and five integrated
+  what they found. Found, and their rows now researched: Algeria's BNA card, Saint-Pierre and Miquelon's national
+  number, the Marshall Islands' residence routes, the Maldives' licence, the ages of Belize, Israel, Jordan, Nicaragua,
+  Suriname (21 until 1 May 2025, 18 since), Tunisia, Nepal, Seychelles, El Salvador, Tajikistan and Venezuela, and the
+  tax of Chile, Liberia, Morocco (and Western Sahara with it), Peru and the Philippines. Some forty more were found in
+  part and stay blocked on what is missing. Fixed on the way: Algeria's banks note gave BNA's packs as from 200 dinars
+  a month, where BNA's conditions of November 2025 give 100; a comment held that Christmas Island's licences are
+  Western Australia's, where Western Australia issues none there.
+- The web-search pass, round 2 (2026-11-03, evening): nine agents again held to 20 searches each (about 178), and five
+  integrators. Found, rows researched: the bank accounts of Mauritania (Bankily) and Yemen (Shamil Bank); the work
+  routes of Kiribati and Cuba (Cuba's under Ley 173 and Decretos 136 and 137, in force from 1 November 2026, read in the
+  Gaceta Oficial; Cuba's residence entry now stands on the same Gaceta, not a secondary); the ages of Brunei, Mali,
+  Malawi and Sint Maarten; the tax of Micronesia, Jordan, Eswatini and Tonga. About fifty more found in part and
+  recorded. An agent's misreading caught at integration: Cambodia's salary-tax scan is Sub-Decree No. 09, not 196, and
+  its first band starts at KHR 1,300,000; it wasn't used.
+- The web-search pass, round 3 (2026-11-03, night): nine agents held to 20 searches each, five integrators. Found, rows
+  researched: Ghana's and Nunavut's licences (and so Canada's row), Kosrae's and Yap's; Papua New Guinea's TIN; South
+  Georgia's tax number (none is issued: the Ordinance, its Regulations and its Guide read whole); Turkmenistan's
+  Vnesheconombank cards; Jersey's tax (no relief for authors: the whole Income Tax Law read); the ages of the Comoros,
+  Yemen (majority 15, Civil Law art. 50), Angola and Cuba. About fifty more found in part. Held back by the lead:
+  Chuuk's licence, read only in the 2001 draft Chuuk State Code, which its own index says is not yet enacted, so it
+  stays blocked (papers.licence.blocked.FM.03), the draft a lead. Rulings this round: a value taken from WebFetch is a
+  model's summary, so it is read verbatim before use; a fact resting on a primary read whole and found silent stands;
+  a length seen on real numbers or a form's grid is a lead.
+- The web-search pass, round 4 (2026-11-03, late night): seven agents held to 20 searches each, four integrators, and
+  every layer 3 blocker now has a web search dated 2026-11-03. Found, rows researched: Saint Helena's cards (none: the
+  Bank of St Helena, its own About Us page says the only banking facility on the island, issues no credit card, by its
+  tariff of 1 April 2026); the tax of Bermuda, the Caribbean Netherlands, Luxembourg and Puerto Rico (no rule for
+  authors: each law read whole) and Libya (Law 7/2010 art. 33 exempts writing books, a secondary copy naming the
+  Gazette); the ages of the Central African Republic (majority 18), Tanzania (work from 14, s. 77 of the Law of the
+  Child Act) and Chad (majority 21). An error found and fixed: Laos' Law No. 88/NA (Official Gazette, published
+  19 June 2026; art. 38(4.4), read by the lead on the page image) taxes a resident performer's income above the minimum
+  wage at 5%, not the 10% the engine held, and copyright at 5%; non-resident artists stay at 10% (art. 48). Its start
+  is recorded both ways (art. 74's 1 September 2025 on its conditions; 1 July 2026 by law firms): either puts 5% in
+  force today. North Korea's working age: the engine keeps 16; Korean press reports a 2024 revision raised it to 17,
+  recorded as a lead with no text found.
+- An error found and fixed in this session's own tools: the Common Crawl lookup script read CloudFront's error pages as
+  an empty index, so some archive attempts recorded "no captures" where the crawl holds captures. The lead fixed the
+  script to fail loudly, re-ran all 301 such lookups (184 attempts), and found 17 attempts wrong; each now says so in
+  the past tense and is followed by its re-run, whose captures two agents opened (robots.txt files, bot-check pages and
+  redirects, and pages without the fact: no fact changed). PacLII's and the BPK's robots.txt bar Common Crawl's
+  crawler, so the Wayback Machine is the only archive route for them.
+- Wave 2, first pass (2026-11-03, night): eleven agents (15 searches each) sought the primary behind each of layer 3's
+  737 facts held at second hand; seven integrators, one per engine. The primary was reached for every figure of 149
+  entries, for some of 158, and for none of 430. 120 entries now stand on primaries alone (citizenship 47, visits 21,
+  work, banks and numbers 20, ages and licence 10, tax and credit 9, residence and passports 7, ids 6); every
+  secondary source that answered was re-read and dated 2026-11-03. Errors found and fixed (the primary read by the
+  integrator, the lead re-reading Mauritania's and Nigeria's): Mauritania's working age 16, not 14 (Loi 2024-48, art.
+  153); Dominica's naturalisation 7 years, not 8, Ghana's 6, Mauritius' 6, Tanzania's 8; Kosovo's Law 10/L-023 (Gazette,
+  6 May 2026) ends birthright for permanent residents' children; Costa Rica's and Bahrain's birthright conditional;
+  Nepal's descent from either parent; Panama's renunciation; Montenegro's decree 158/2026 (from 1 November 2026: Belarus,
+  Russia, Saudi Arabia and Turkey need a visa) and about forty other countries' visa lists; Latvia's permit fee EUR 160,
+  not 100; Bulgaria's single permit three years, not one; Libya's credit register (the Central Bank's 2023 regulation:
+  negative records kept 10 years), where the engine held none; Vietnam's first VND 20 million of each royalty untaxed
+  (Law 109/2025); Gabon's capped allowance; Argentina's first DNI free; Moldova's, Mongolia's and Turkey's card fees;
+  Czechia's birth number now checked (divisible by eleven, s. 13; the numbers engine's check mutation-tested 78 of 78).
+  Greece's Z.3 route for actors (Migration Code art. 70) was added to residence. Held back by the lead: Fiji's birthright
+  (the immigration ministry says unconditional, GLOBALCIT none, the Act unread, so none stays) and Kyrgyzstan's credit
+  keep (the National Bank's rules of January 2025 say five years, but predate the 2026 law the press reports at two, so
+  two stays).
+- Wave 2, second pass (2026-11-03, late night): ten agents re-sought the primary for the 431 facts the first pass
+  didn't reach, by other routes (embassies' and consulates' pages, the French state's open-data copy of its legal
+  database, gazette mirrors, Common Crawl, OCR in 68 languages); seven integrators. 69 more entries now stand on
+  primaries alone. Errors found and fixed: Fiji's birthright is unconditional (Citizenship of Fiji Act 2009, s. 6, read
+  on laws.gov.fj by the agent and re-read by the lead; the first pass's hold, made only because the Act hadn't been
+  read, was reversed); Oman's naturalisation 15 years, not 20 (Royal Decree 17/2025), Senegal's 10, not 5; Bhutan's
+  descent needs both parents (held as either parent, the form having no such value, the note saying so); Mauritania's
+  and Yemen's descent through the father; Laos lets performers work from 12 (Ministerial Agreement 4677 of 2023,
+  gazetted 10 July 2026); Nepal's child band runs to 18; Guinea's and the Maldives' first identity card free;
+  Morocco's child card ends before 12, and every minor's passport costs 500 DH; Burundi's passport 300,000 BIF;
+  Rwanda's negative credit kept 5 years, not 7 (Law 73/2018); about twenty visa lists (Cambodia, Belarus, Namibia,
+  Sierra Leone, Libya, Tunisia among them). Zimbabwe's age of majority stands on ZimLII's copy of the Act, now cited
+  as secondary.
+- Leads for Wave 3 or a later pass: residence fees found in other engines' sources (Morocco's card at 100 DH a year,
+  Viet Nam's, Costa Rica's US$30, South Sudan's cards); Angola's citizenship tests (language, civics), which its law
+  states and the form holds but weren't brought in; laws reported but unread (Cuba's Ley 172/2024, Kuwait's 2024 and
+  2026 amendments, Lesotho's 2018 dual-citizenship gazette, Belarus' Instruction 291 of June 2026, Nicaragua's Ley
+  987, Mali's biometric card of 2023, Tonga's 2020 revised Act); Guyana's list (Germany left out, set to need a visa)
+  and the United States' visa waiver list (Romania) to confirm; a second reader for the Dhivehi (Maldives) and Khmer
+  (Cambodia) texts.
+- Wave 3 (2026-11-03, night): every source of layer 3's 3,258 found facts read before that day was read again. A
+  script fetched all 5,522 addresses and checked each quoted fragment verbatim: 5,220 sources matched and were re-dated
+  by the lead (the 12 addresses cited twice in one entry with mixed results were left to the agents); nine agents, one
+  per engine, read the 1,668 that didn't match by hand (pages drawn by script, PDF columns, scans by OCR, moved pages),
+  and two release agents re-read the World Inequality Database (its bulk file of 30 October 2026: all 2,588 quoted rows
+  unchanged, the series still ending at 2024) and the Treasury's and central banks' exchange rates (latest record date
+  still 2026-09-30). 3,143 of the 3,258 now have every source read on 2026-11-03; the other 180 sources answered with a
+  bot check, a failed connection or an expired certificate (none was got past), keep their earlier dates, and their
+  files say what was tried; such a fact stays found on its earlier read, as it isn't contradicted. Changes from the
+  sources as they stand: Saudi Arabia's AlJazira card rate 2.9% a month (was 2.20%); Belarus' card rates (the
+  refinancing rate fell); Uruguay's OCA rate 55% from 1 November 2026 (was 61%); Argentina's Banco Nación card fees
+  from the bank's own schedule (11,447.81 a month and 203,534.10 a year, the central bank's register still showing the
+  older); OP's account fee in Finland rising to 2.60 euros from 2027; Singapore's identity card registered at school
+  ready in a month; Mauritania's lost 64-page passport 12,000 MRU; Ireland's passport terms (10 years for an adult, 5
+  for a child, from the Department's fees page); British Columbia's full licence from 20, not 21 (ICBC's learner
+  stage now one year; re-read by the lead); Western Australia's exchange list gaining 14 countries from 31 October
+  2026; Uruguay's UR for October 2026; South Sudan's pound from 30 October 2026; Denmark's 2027 tax scale, dated
+  2027-01-01 (its municipal rate is the 23.39% Copenhagen's own budget annex assumed, the adopted rate unread). WID's
+  codes were written wrongly in the notes (ahwealj992 for ahweal992j) and are corrected.
+- The register: 4,933 entries, 3,562 found, 592 secondary, 779 blocked (layer 3: 3,258 found, 550 secondary, 686
+  blocked).
+
 
 What layer 2 holds, ported from SLATE's world (`montrealroots/SLATE` at `acf1874`), changed where a ruling or today's
 sources say:
@@ -154,14 +290,26 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-1. The owner pulls and merges layer 2, and answers the questions below if they wish.
-2. The owner picks what comes over in layer 3, the person's papers and money: from SLATE, the papers (`passports`,
-   `ids`, `citizenship`, `visits`, `ages`, `work`, `numbers`, `residence`, `licence`) and the money (`banks`,
-   `accounts`, `ledger`, `cards`, `credit`, `rates`, `means`, `formats`, `units`, `tax`). Its research is read again at
-   every source and every blocker tried again, as layer 2's was.
+1. The owner pulls and merges layer 3 (the branch is `claude/quirky-gauss-gnub7q`, proven at `e8b573910dad`); the
+   branch then restarts from `main`.
+2. The owner picks what comes over in layer 4 (the person: SLATE's own layer 4 engines, one at a time or all of
+   them), and the work goes on as it did for layers 1 to 3: bring each engine over, read every source again, try every
+   blocker again, then prove the layer.
+3. Left from layer 3, each the owner's call: a fifth web-search round on its 686 blockers; a third pass on its 550
+   facts held at second hand; the four statistics offices the national-accounts search didn't reach (Gabon,
+   Equatorial Guinea, Guinea-Bissau, Eritrea); the 180 sources that answered only with a bot check or a failed
+   connection on 2026-11-03; the sweep for newer editions of dated fee schedules. Each register entry records what
+   was tried.
 
 ## Verification evidence
 
+- Layer 3's proof: `npm run gate:full` green in a fresh clone of the branch at `e8b573910dad` on GitHub Actions (run
+  41751636700, job 126317853090), after `npx -y npm@11.6.2 ci`: every check green; 1,699 of 1,699 tests, every place
+  of the map through all thirty-one engines among them; the register's 4,933 entries clean; audit 0 advisories;
+  mutation 100.00% (19,724 of 19,724 mutants killed, static mutants included); 14,555 s. The run before it, 41721795427
+  at `69f3993`, scored 99.99%: one mutant survived in `tools/money/means/coverage.ts` (an empty array a stray key could
+  replace unseen, the national-accounts change having been mutation-tested on its compiler alone); `e8b5739` killed it,
+  53 of 53 in that file. The commit after the proof changed `registry/layers.json`, `HANDOFF.md` and the generated `matrix/LAYERS.md` alone.
 - Layer 2's proof: `npm run gate:full` green in a fresh clone of the branch at `e3c205c47ce3` on GitHub Actions (run
   41547356832), after `npx -y npm@11.6.2 ci`: every check green; 1,369 of 1,369 tests, every place of the map through
   all six engines among them; audit 0 advisories; mutation 100.00% (9,815 of 9,815 mutants killed, static mutants
@@ -182,6 +330,24 @@ SLATE proved at a 100% mutation score:
 
 ## Assumptions
 
+- The family means' income (the owner, 2026-11-03, after WID's own ratio proved unavailable: "National-accounts
+  ratio"): WID's post-tax national income bands (adiinc992j) are scaled by each country's ratio of households'
+  disposable income to national income from its official national accounts (the UN Statistics Division's tables or
+  the statistics office's own); where none is published, the unscaled figure is kept and the player is told it
+  includes public spending. Done for 83 countries on 2026-11-03 (74 from the UN Statistics Division's, Eurostat's,
+  the OECD's and Statistics Norway's tables, 9 more from the statistics offices' own: Georgia, Thailand, Taiwan,
+  Tunisia, Togo, Saudi Arabia, Singapore, the Philippines, Tajikistan) (ratios from 0.296, Qatar, to 0.952, Guatemala; the
+  latest year from 2019 on, an older ratio recorded but not held; a net derived as gross less fixed-capital use
+  stands, labelled; gross or households-with-NPISH stands where nothing narrower is published for that year); the
+  other 132 keep the unscaled figure and the player's line (means.income-public) says it includes public spending.
+  The other 132 were searched in their own statistics offices and central banks that night and publish no household
+  disposable income account from 2019 on, or didn't answer (each file says which); Gabon's, Equatorial Guinea's,
+  Guinea-Bissau's and Eritrea's offices weren't reached by that search and are left to a later pass.
+
+- Slovakia's citizenship keeps the simple form (the owner, 2026-11-03: "Keep the simple form for Slovakia"): loss on
+  taking another citizenship is held as no, though Act 40/1993 s. 9(16) takes it unless the person had five years'
+  residence in the other state; the exception isn't modelled.
+
 - Node 22.23.4 is pinned, the version this session runs and tests on, not SLATE's 22.22.0; both satisfy the engines
   range SLATE set (`>=22.13.0 <23`).
 - The place axis holds 171,654, SLATE's count from the GeoNames release of 2026-10-26, until layer 2's gazetteer reads
@@ -193,6 +359,10 @@ SLATE proved at a 100% mutation score:
 
 ## Blockers and open issues
 
+- This session's web-search allowance (200 searches, shared by every agent) is spent; it is why layer 3's research
+  continues in a new session. Hosts that refuse this environment, recorded in the entries as each attempt's result:
+  web.archive.org (Common Crawl's data.commoncrawl.org stood in), Légifrance, swift.com, the Bureau of Meteorology, and
+  sites behind bot checks; none was forced.
 - The full gate now takes about 2 h 40 min (9,815 mutants), longer than a session's background command may run, so
   layers are proven on CI from here; CI's job may run 340 minutes. CI also logs an error that the step summary
   (1,661k) is over GitHub's 1,024k; it fails nothing.

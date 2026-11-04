@@ -1,0 +1,292 @@
+{
+ "topic": "tax.MZ",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Mozambique: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved; no primary was reached.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "A resident's income is taxed on an annual scale of 10% to MZN 42,000, 15% to 168,000, 20% to 504,000, 25% to 1,512,000 and 32% above (applied to the whole income less a deduction per band); a municipal tax is also withheld (MZN 510 in Maputo for 2024).",
+   "value": {
+    "currency": "MZN",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 42000,
+      "rate": 0.1
+     },
+     {
+      "from": 42000,
+      "to": 168000,
+      "rate": 0.15
+     },
+     {
+      "from": 168000,
+      "to": 504000,
+      "rate": 0.2
+     },
+     {
+      "from": 504000,
+      "to": 1512000,
+      "rate": 0.25
+     },
+     {
+      "from": 1512000,
+      "to": null,
+      "rate": 0.32
+     }
+    ],
+    "municipal": "set by municipality"
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "0 42,000 10 42,000 168,000 15 2,100 168,000 504,000 20 10,500 504,000 1,512,000 25 37,500 1,512,000 32 141,540"
+    }
+   ]
+  },
+  {
+   "item": "year",
+   "finding": "The tax year is the calendar year; returns are filed January to April of the following year and any balance paid by the end of May (employment) or June.",
+   "value": {
+    "start": "01-01",
+    "end": "12-31",
+    "returnWindow": [
+     "01-01",
+     "04-30"
+    ]
+   },
+   "applies": "Individuals.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "The tax year is the calendar year."
+    },
+    {
+     "src": 1,
+     "said": "Individual tax returns must be submitted from January to April of the year following the tax year."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Social security is 3% from the employee and 4% from the employer on monthly pay; foreign employees covered at home may be exempted.",
+   "value": {
+    "employee": 0.03,
+    "employer": 0.04
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The employer contributes an amount equal to 4% of monthly salary, and the employee contributes 3% of monthly salary."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "Employers withhold income tax monthly at the legal rates (0% to 32%) and pay it by the 20th of the following month.",
+   "value": {
+    "remitBy": "20th of the following month"
+   },
+   "applies": "Employees.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Employers withhold earned income tax on a monthly basis for work carried out in Mozambique at the WHT rates approved by law, which currently vary from 0% to 32%."
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident's earned income is withheld by the payer at a definitive flat 20% in most cases.",
+   "value": {
+    "rate": 0.2,
+    "final": true
+   },
+   "applies": "Non-residents.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "For non-Mozambican residents, the earned income tax is withheld and remitted by the employer or other payer at a definitive flat rate of 20% (in the majority of the income received)."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "VAT is 16%.",
+   "value": {
+    "standard": 0.16
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The standard rate is 16%."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "From 1 January 2026 VAT's exemption and simplified regimes are gone, so a freelancer charges VAT from the first metical; a small taxpayer (turnover to MT 4,000,000) may opt instead for ISPC, at 12% on services or 15% on liberal professions, in place of VAT and IRPS.",
+   "value": {
+    "from": "2026-01-01",
+    "smallRegimes": "revoked (Lei 10/2025, arts. 3 and 53)",
+    "threshold": null,
+    "ispc": {
+     "optional": true,
+     "turnoverMax": 4000000,
+     "services": 0.12,
+     "liberalProfessions": 0.15
+    }
+   },
+   "applies": "A freelancer's fees; whether an actor's or a writer's fee is a 'service' or a 'liberal profession' under ISPC the law's examples don't say",
+   "sources": [
+    {
+     "src": 3,
+     "said": "Lei n.º 10/2025, Artigo 53 (Disposições transitórias): \"Os sujeitos passivos que estejam integrados nos regimes de Isenção e Regime de tributação simplificada passam a cumprir as obrigações materiais e formais nos termos da presente Lei.\" Artigo 3 (Revogação): \"É revogado o número 8 do artigo 21 e as Subsecções I e II da Secção IV do Código do Imposto sobre o Valor Acrescentado\". Artigo 5: \"A presente Lei entra em vigor a 1 de Janeiro de 2026.\" Lei n.º 9/2025 (ISPC), art. 2(2)-(3): \"... cujo volume de negócios anual seja igual ou inferior a 4.000.000,00MT. 3. A tributação dos sujeitos passivos no Imposto Simplificado para Pequenos Contribuintes é de carácter optativo.\" Art. 8(1): \"b) à taxa de 12%, ... prestação de serviços, tais como, canalização, carpintaria ...; c) à taxa de 15%, ... profissões liberais, tais como, advogados, economistas, geólogos, engenheiros, contabilistas\"; (3): \"consideram-se profissões liberais as actividades exercidas com base em formação técnica ou científica especializada, regulamentada, ou não, por uma ordem profissional, incluindo os consultores.\""
+    }
+   ]
+  },
+  {
+   "item": "residents",
+   "finding": "The IRPS Code's own scale (art. 54) taxes annual taxable income at 10% to MZN 42,000, 15% to 168,000, 20% to 504,000, 25% to 1,512,000 and 32% above, the whole income at its top rate less the table's sum, which comes to the same as band by band; from the tax so reckoned a resident deducts MZN 1,800 a year for himself and MZN 600 to 1,800 for one to four or more dependants, never below nothing (art. 60 as Lei 20/2013 wrote it, from 1 January 2014).",
+   "value": {
+    "currency": "MZN",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 42000,
+      "rate": 0.1
+     },
+     {
+      "from": 42000,
+      "to": 168000,
+      "rate": 0.15
+     },
+     {
+      "from": 168000,
+      "to": 504000,
+      "rate": 0.2
+     },
+     {
+      "from": 504000,
+      "to": 1512000,
+      "rate": 0.25
+     },
+     {
+      "from": 1512000,
+      "to": null,
+      "rate": 0.32
+     }
+    ],
+    "taxCredits": {
+     "perTaxpayer": 1800,
+     "dependants": {
+      "1": 600,
+      "2": 900,
+      "3": 1200,
+      "4+": 1800
+     },
+     "offTheTax": true
+    }
+   },
+   "applies": "The Code as enacted (Lei 33/2007) and as Lei 20/2013 amended art. 60, read 2026-11-03 in the Boletim's scans (art. 60 checked against the page image); Lei 11/2025 (from 2026) amends neither article (PwC's list), but acts from 2014 to 2024 weren't checked. PwC's 2026 table prints the same scale.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "Até 42.000 10% -; De 42.001 a 168.000 15% 2.100; De 168.001 a 504.000 20% 10.500; De 504.001 a 1.512.000 25% 35.700; Além de 1.512.000 32% 141.540"
+    },
+    {
+     "src": 5,
+     "said": "À colecta do IRPS devida por contribuintes residentes em território moçambicano e até ao seu montante são deduzidos anualmente: a) 1.800,00MT por cada sujeito passivo"
+    }
+   ]
+  }
+ ],
+ "country": "MZ",
+ "sources": [
+  {
+   "url": "https://taxsummaries.pwc.com/mozambique/individual/taxes-on-personal-income",
+   "title": "PwC Worldwide Tax Summaries: Mozambique, Individual - Taxes on personal income (reviewed 11 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.at.gov.mz/",
+   "said": "0 42,000 10 42,000 168,000 15 2,100 168,000 504,000 20 10,500 504,000 1,512,000 25 37,500 1,512,000 32 141,540 … For non-Mozambican residents, the earned income tax is withheld and remitted by the employer or other payer at a definitive flat rate of 20% (in the majority of the income received)."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/mozambique/individual/tax-administration",
+   "title": "PwC Worldwide Tax Summaries: Mozambique, Individual - Tax administration (reviewed 11 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.at.gov.mz/",
+   "said": "The tax year is the calendar year. … Individual tax returns must be submitted from January to April of the year following the tax year. … Employers withhold earned income tax on a monthly basis for work carried out in Mozambique at the WHT rates approved by law, which currently vary from 0% to 32%."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/mozambique/individual/other-taxes",
+   "title": "PwC Worldwide Tax Summaries: Mozambique, Individual - Other taxes (reviewed 11 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.at.gov.mz/",
+   "said": "The employer contributes an amount equal to 4% of monthly salary, and the employee contributes 3% of monthly salary. … The standard rate is 16%."
+  },
+  {
+   "url": "https://www.at.gov.mz/api/webdav?path=%2FLEGISLA%C3%87%C3%83O%2FLEGISLA%C3%87%C3%83O%20FISCAL%2FLEI%2FBR_248_I_SERIE_SUPLEMENTO_2025.pdf",
+   "title": "Boletim da República, I Série n.º 248, Suplemento, 29 de Dezembro de 2025 (Leis n.º 7/2025 a 12/2025), on the Autoridade Tributária's Legislação Fiscal page",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Lei n.º 10/2025, Artigo 53 (Disposições transitórias): \"Os sujeitos passivos que estejam integrados nos regimes de Isenção e Regime de tributação simplificada passam a cumprir as obrigações materiais e formais nos termos da presente Lei.\" Artigo 3 (Revogação): \"É revogado o número 8 do artigo 21 e as Subsecções I e II da Secção IV do Código do Imposto sobre o Valor Acrescentado\". Artigo 5: \"A presente Lei entra em vigor a 1 de Janeiro de 2026.\" Lei n.º 9/2025 (ISPC), art. 2(2)-(3): \"... cujo volume de negócios anual seja igual ou inferior a 4.000.000,00MT. 3. A tributação dos sujeitos passivos no Imposto Simplificado para Pequenos Contribuintes é de carácter optativo.\" Art. 8(1): \"b) à taxa de 12%, ... prestação de serviços, tais como, canalização, carpintaria ...; c) à taxa de 15%, ... profissões liberais, tais como, advogados, economistas, geólogos, engenheiros, contabilistas\"; (3): \"consideram-se profissões liberais as actividades exercidas com base em formação técnica ou científica especializada, regulamentada, ou não, por uma ordem profissional, incluindo os consultores.\""
+  },
+  {
+   "url": "https://www.dlapiperafrica.com/export/sites/africa/mozambique/insights/legislation-series/tax/downloads/Lei_33_2007.pdf_2063068952.pdf",
+   "title": "Boletim da República, I Série, 31 de Dezembro de 2007: Lei n.º 33/2007, Código do IRPS (scan hosted by DLA Piper Africa)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "said": "ARTIGO 54 (Taxas gerais) 1. As taxas do imposto são as constantes da tabela seguinte: Rendimentos Colectáveis Anuais em Meticais / Taxas / Parcela a abater: Até 42.000 10% -; De 42.001 a 168.000 15% 2.100; De 168.001 a 504.000 20% 10.500; De 504.001 a 1.512.000 25% 35.700; Além de 1.512.000 32% 141.540",
+   "quotes": "https://www.at.gov.mz/"
+  },
+  {
+   "url": "https://www.dlapiperafrica.com/export/sites/africa/mozambique/insights/legislation-series/tax/downloads/Lei-n_20.2013.pdf_2063068952.pdf",
+   "title": "Boletim da República, I Série, n.º 76, 2.º Suplemento, 23 de Setembro de 2013: Lei n.º 20/2013, altering the IRPS Code (scan hosted by DLA Piper Africa)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "said": "Artigo 60 (Deduções relativas à situação pessoal e familiar) 1. À colecta do IRPS devida por contribuintes residentes em território moçambicano e até ao seu montante são deduzidos anualmente: a) 1.800,00MT por cada sujeito passivo; b) 600.00MT quando exista um dependente; 900,00MT quando existam dois dependentes; 1.200,00MT quando existam três dependentes e 1.800,00MT quando existam quatro ou mais dependentes, desde que não sejam sujeitos passivos deste imposto.",
+   "quotes": "https://www.at.gov.mz/"
+  }
+ ],
+ "blockers": [
+  {
+   "item": "residents",
+   "sought": "Whether any act from 2014 to 2025 amended the IRPS Code's scale (art. 54) or its personal credits (art. 60): both were read in the Code's own text on 2026-11-03, and Lei 11/2025 leaves them as they were",
+   "tried": {
+    "institution": "at.gov.mz resets the connection from this environment (2026-11-01) || 2026-11-01 retry: at.gov.mz: https does not answer (curl 000), http returns 503; inss.gov.mz does not answer; mef.gov.mz returns HTTP 403 (not read another way).",
+    "official-register": "Código do IRPS not read || 2026-11-01 retry: portaldogoverno.gov.mz answers (HTTP 200) but its home page links no tax code, legislation or IRPS page; the Boletim da República is not on a reachable host.",
+    "web-search": "not run separately || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
+    "trade-press": "PwC Mozambique used || 2026-11-01 retry: No Deloitte Mozambique 2026 Highlights (HTTP 404); PwC Mozambique kept.",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2026-06-05 snapshot of at.gov.mz; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
+   }
+  },
+  {
+   "item": "scheme",
+   "sought": "Whether a screen worker's fee falls under ISPC's 12% (services) or 15% (liberal professions) (Lei 9/2025, art. 8); VAT's small regimes were found revoked from 2026 (Lei 10/2025)",
+   "tried": {
+    "institution": "at.gov.mz resets the connection from this environment (2026-11-01) || 2026-11-01 retry: at.gov.mz: https does not answer (curl 000), http returns 503; inss.gov.mz does not answer; mef.gov.mz returns HTTP 403 (not read another way).",
+    "official-register": "Código do IRPS not read || 2026-11-01 retry: portaldogoverno.gov.mz answers (HTTP 200) but its home page links no tax code, legislation or IRPS page; the Boletim da República is not on a reachable host.",
+    "web-search": "not run separately || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
+    "trade-press": "PwC Mozambique used || 2026-11-01 retry: No Deloitte Mozambique 2026 Highlights (HTTP 404); PwC Mozambique kept.",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2026-06-05 snapshot of at.gov.mz; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
+   }
+  },
+  {
+   "item": "authors",
+   "sought": "Any special treatment of authors' fees",
+   "tried": {
+    "institution": "at.gov.mz resets the connection from this environment (2026-11-01) || 2026-11-01 retry: at.gov.mz: https does not answer (curl 000), http returns 503; inss.gov.mz does not answer; mef.gov.mz returns HTTP 403 (not read another way).",
+    "official-register": "Código do IRPS not read || 2026-11-01 retry: portaldogoverno.gov.mz answers (HTTP 200) but its home page links no tax code, legislation or IRPS page; the Boletim da República is not on a reachable host.",
+    "web-search": "not run separately || 2026-11-01 retry: WebSearch refused by the tool on 2026-11-01: the turn's shared 200-search limit was reached before this query; no other search route used.",
+    "trade-press": "PwC Mozambique used || 2026-11-01 retry: No Deloitte Mozambique 2026 Highlights (HTTP 404); PwC Mozambique kept.",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org/wayback/available lists a 2026-06-05 snapshot of at.gov.mz; web.archive.org itself resets https and returns 403 on http from this environment (2026-11-01), so none was read."
+   }
+  }
+ ]
+}

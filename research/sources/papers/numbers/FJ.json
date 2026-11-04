@@ -1,0 +1,31 @@
+{
+ "country": "FJ",
+ "name": "Taxpayer Identification Number (TIN)",
+ "issuer": "the Fiji Revenue and Customs Service",
+ "format": {
+  "length": 10,
+  "min": 9,
+  "pattern": "^[0-9]{9,10}$"
+ },
+ "when": "application",
+ "who": [
+  "anyone"
+ ],
+ "fee": "0",
+ "within": {
+  "n": 3,
+  "unit": "day"
+ },
+ "needed": [
+  "tax"
+ ],
+ "note": "The Fiji Revenue and Customs Service's own Taxation FAQs ('TIN Enquiries', the page last updated 21 April 2026), read 2026-11-03: the TIN is a unique 9- or 10-digit number the FRCS issues to identify all categories of tax and duty payers (read as anyone who applies), compulsory for all Fiji citizens; it is applied for online through TPOS (1 to 3 days) or at an FRCS office (instantly, where all requirements are met), so the longest is 3 days; there is no charge. No check digit is stated. The Joint ID Card the FRCS and FNPF issue (the FAQ recommends it from 18) carries the TIN.",
+ "sources": [
+  {
+   "url": "https://frcs.org.fj/faqs/tpos-faqs/",
+   "title": "Fiji Revenue and Customs Service, Taxation FAQs (TPOS FAQs), 'TIN Enquiries'",
+   "read": "2026-11-03",
+   "said": "What is a TIN? The Taxpayer Identification Number (TIN) is a unique 9- or 10-digit number issued by FRCS to identify all categories of tax and duty payers. ... Who is required to have a TIN? It is compulsory for all Fiji citizens to have a TIN. Where can I get my TIN? Apply online through TPOS or visit any FRCS Revenue and Customs office ... Provided all requirements are met, you can receive a TIN instantly in person, or 1-3 days if applying online. Is there a fee for issuing a TIN? No, there is no charge for issuing a TIN. ... We recommend getting a Joint ID Card if you are over 18 – it replaces the need for a TIN letter."
+  }
+ ]
+}

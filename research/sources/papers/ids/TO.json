@@ -1,0 +1,46 @@
+{
+ "country": "TO",
+ "document": "National identity card",
+ "office": "the National Identity Card Office",
+ "currency": "TOP",
+ "routes": [
+  {
+   "id": "nico",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "in person at the National Identity Card Office"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "in person at the National Identity Card Office, replacing a card lost, mislaid, amended or destroyed"
+  }
+ ],
+ "cards": [
+  {
+   "for": "residents, 14 and over",
+   "from": 14,
+   "validYears": 5,
+   "pay": {
+    "nico": "0",
+    "lost": "50"
+   }
+  }
+ ],
+ "note": "The National Identity Card Act 2010 (Act No. 36 of 2010, as enacted, on the Attorney General's Office's site; read 2026-11-03): every resident of Tonga, a person of 14 or more (s 8), must have a card (s 7(1)), applying in person at a National Identity Card Office (s 7(2)(b)); it is valid five years from issue (s 9(3)); Schedule 2 makes the first and later issues free and a card lost, mislaid, amended or destroyed $50.00, held as the replacement route. Until then the fee, the term and the age were null, the Act's schedule unread. The 2020 revised edition wasn't reached, so a change since 2010 isn't excluded; the time isn't set (the Act gives only when to apply: within three months of becoming resident, and within ten days of an expiry or a loss).",
+ "must": 14,
+ "from": 14,
+ "sources": [
+  {
+   "url": "https://ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/2010/2010-0036/NationalIdentityCardAct2010_1.pdf",
+   "title": "Attorney General's Office, Tonga: National Identity Card Act 2010 (Act No. 36 of 2010), as enacted",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "7 (1) It shall be mandatory that every person who is resident in Tonga, as defined in section 8, shall have a national identity card. (2) Every such resident of Tonga shall apply for a national identity card by – ... (b) applying in person at a National Identity Card Office; ... 8 For the purposes of this Act, a person is resident in Tonga if he is 14 years of age or more, and – ... 9 (3) A national identity card shall be valid for 5 years from the date it is issued. (4) The fees payable for the issue of a national identity card are specified in Schedule 2. ... SCHEDULE 2 FEES FOR IDENTITY CARDS Item Service Fee 1 For the first and subsequent issues of a national identity card FREE (meaning expired card) 2 For the issue of a national identity card that has been lost, $50.00 mislaid, amended or destroyed"
+  }
+ ]
+}

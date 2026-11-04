@@ -1,0 +1,25 @@
+{
+ "country": "CZ",
+ "name": "rodné číslo",
+ "issuer": "the Ministry of the Interior (ministerstvo vnitra)",
+ "format": {
+  "length": 10,
+  "pattern": "[0-9]{10}",
+  "check": "cz-rodne-cislo"
+ },
+ "when": "birth",
+ "who": [
+  "citizens",
+  "residents"
+ ],
+ "note": "Read the Population Register Act (zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech) in its text in force from 2025-01-01 in e-Sbírka, the official Collection of Laws, through its own interface, 2026-11-03 (until then in Zákony pro lidi's reproduction, since e-Sbírka's application served no text to this session on 2026-10-30): § 13, the ministry determines the rodné číslo, a ten-digit number divisible by eleven without remainder: two digits of the year of birth, two of the month (plus 50 for women) and two of the day, and a four-digit ending distinguishing people born the same day; where a day's numbers run out, a supplementary series adds 20 to the month for men and 70 for women, still ten digits divisible by eleven (§ 13(5)); numbers given to those born before 1954-01-01 have nine digits and aren't divisible by eleven, which the form (one length) doesn't hold. The divisibility by eleven is held from 2026-11-03 as the check cz-rodne-cislo; it was left out until then, when the code had no id for it. § 16: the issuing place gives it at birth or adoption, to a citizen who had none, and to foreigners with a residence permit or international protection, or who ask for one. No fee, time or required purposes are read.",
+ "sources": [
+  {
+   "url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F133%2F2025-01-01/fragmenty?cisloStranky=0",
+   "title": "e-Sbírka (the official Collection of Laws), Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech, current text in force from 2025-01-01 (staleUrl /sb/2000/133/2025-01-01, typZneni AKTUALNI), §§ 13 and 16, read through e-Sbírka's own REST API",
+   "read": "2026-11-03",
+   "said": "§ 13 ... (2) Rodné číslo určuje ministerstvo. (3) Rodné číslo je desetimístné číslo, které je dělitelné jedenácti beze zbytku. První dvojčíslí vyjadřuje poslední dvě číslice roku narození, druhé dvojčíslí vyjadřuje měsíc narození, u žen zvýšené o 50, třetí dvojčíslí vyjadřuje den narození. Čtyřmístná koncovka je rozlišujícím znakem fyzických osob narozených v tomtéž kalendářním dnu. (4) Rodná čísla přidělená fyzickým osobám narozeným před 1. lednem 1954 mají stejnou strukturu ..., jsou však devítimístná s třímístnou koncovkou a nesplňují podmínku dělitelnosti jedenácti. (5) V případě, že jsou výdejovými místy rodných čísel ... vyčerpána veškerá určená rodná čísla, určí ministerstvo pro tento den novou, dodatečnou sestavu rodných čísel, pro niž platí, že rodné číslo je desetimístné číslo, které je dělitelné jedenácti beze zbytku. ... druhé dvojčíslí vyjadřuje měsíc narození, u mužů zvýšené o 20, u žen zvýšené o 70 ... § 16 Přidělení rodného čísla: Rodné číslo přidělí výdejové místo a) fyzické osobě při narození nebo osvojení nezletilé fyzické osoby, b) občanu, který dosud rodné číslo neměl, c) cizinci s povolením k pobytu na území České republiky, d) cizinci, kterému byla na území České republiky udělena mezinárodní ochrana formou azylu nebo doplňkové ochrany, e) cizinci, který o přidělení rodného čísla požádal ...",
+   "kind": "primary"
+  }
+ ]
+}

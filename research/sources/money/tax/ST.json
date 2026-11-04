@@ -1,0 +1,118 @@
+{
+ "topic": "tax.ST",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Sao Tome and Principe: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "social",
+   "finding": "An employee pays 4% and the employer 6% of gross pay, with no ceiling stated (DL 19/2022 arts. 101 and 102); the rates took effect on 1 January 2023.",
+   "value": {
+    "currency": "STN",
+    "employee": 0.04,
+    "employer": 0.06,
+    "base": "gross pay, before any deduction",
+    "ceiling": null
+   },
+   "applies": "Employees, from 1 January 2023 (art. 143(4)), INSS's consolidated text as amended to DL 7/2023, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "A taxa de contribuição dos trabalhadores e demais pessoas singulares abrangidas é de 4% e a taxa de contribuição das entidades empregadoras é de 6%."
+    },
+    {
+     "src": 0,
+     "said": "sendo considerado sempre o valor ilíquido e livre de quaisquer descontos"
+    }
+   ]
+  }
+ ],
+ "country": "ST",
+ "sources": [
+  {
+   "url": "https://inss.gov.st/assets/Leis/Lei_n_19_2022.pdf",
+   "title": "INSS São Tomé e Príncipe: Regulamentação da Protecção Social Obrigatória (REPSO), Decreto-Lei n.º 19/2022 (DR n.º 53 de 15/07/2022), texto consolidado with DL 25/2022 and DL 7/2023",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Artigo 101.º Taxas de contribuição … 3. A taxa de contribuição dos trabalhadores e demais pessoas singulares abrangidas é de 4% e a taxa de contribuição das entidades empregadoras é de 6%. Artigo 102.º Base de incidência das contribuições 1. As contribuições para a segurança social incidem sobre a remuneração pecuniária ou em espécie, que o trabalhador tem o direito de receber periódica ou eventualmente da entidade empregadora como contrapartida pelo trabalho prestado, sendo considerado sempre o valor ilíquido e livre de quaisquer descontos. … Artigo 131.º Determinação do montante das contribuições 1. O montante mensal das contribuições é determinado pela aplicação da taxa de 10% ou 14%, respectivamente, no caso de esquema obrigatório ou alargado, a uma remuneração convencional escolhida pelo trabalhador. … Artigo 143.º … 4. A taxa contributiva fixada neste Diploma entra em vigor no dia 1 de Janeiro do ano seguinte ao da sua publicação."
+  }
+ ],
+ "blockers": [
+  {
+   "item": "residents",
+   "sought": "Personal income tax brackets, allowance and regional layer for 2026",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "year",
+   "sought": "Tax year and return due date",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "social",
+   "sought": "The self-employed's contributions: 10% (the compulsory scheme) or 14% (the extended one) on a conventional monthly pay the worker chooses of 1, 3, 5, 7 or 10 or more UCSS (DL 19/2022 art. 131, read 2026-11-03), and the UCSS's amount, which the ministers set by joint order and which wasn't read; an employee's 4% is found",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "withholding",
+   "sought": "Withholding from pay and from a freelancer's fee",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "nonResident",
+   "sought": "Tax and withholding on a non-resident performer's, writer's or director's fee, and whether final",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "authors",
+   "sought": "Special treatment of authors' royalties",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  },
+  {
+   "item": "vat",
+   "sought": "VAT/GST rate and registration threshold",
+   "tried": {
+    "institution": "financas.gov.st returns HTTP 403; gov.st and inss.st unreachable (2026-11-01) || retry 2026-11-01: financas.gov.st and www.financas.gov.st: HTTP 403 again (not read another way); dgi.st, dgi.gov.st, inss.gov.st, gov.st, anp.st, parlamento.st: no connection through the proxy 2026-11-01",
+    "official-register": "Diário da República de São Tomé e Príncipe not reached || retry 2026-11-01: legis-palop.org (Legis-PALOP+TL, official legal database incl. São Tomé e Príncipe) reached: its texts open only after an \"Entrar\" sign-in; a document link (?load=101239) returns the home page; tribunalconstitucional.st answers but is the court's site, not a register of laws",
+    "web-search": "not run: the session's shared web-search budget was used up on 2026-11-01 before this country || retry 2026-11-01: refused by the search tool on 2026-11-01: the turn's shared limit of 200 searches was reached (the lead reported search working again, but the shared limit was spent before this country); not worked around",
+    "trade-press": "no firm summary (PwC, Deloitte 2026) exists for this country (Deloitte URL returns 404) || retry 2026-11-01: no PwC or Deloitte 2026 summary exists for this country (as before)",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01) || retry 2026-11-01: web.archive.org: connection reset again 2026-11-01"
+   }
+  }
+ ]
+}

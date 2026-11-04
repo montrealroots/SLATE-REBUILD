@@ -1,0 +1,57 @@
+{
+ "country": "TW",
+ "currency": "TWD",
+ "year": 2024,
+ "wealth": {
+  "p0p20": "-403467",
+  "p0p40": "343340.1",
+  "p0p60": "1248235.3",
+  "p0p90": "3859608.6",
+  "p0p99": "6631229",
+  "p99p100": "253278128.9"
+ },
+ "income": {
+  "p0p20": "155151",
+  "p0p40": "271436.5",
+  "p0p60": "426037.7",
+  "p0p90": "752545.5",
+  "p0p99": "1025773.4",
+  "p99p100": "21050750.4"
+ },
+ "cash": {
+  "year": 2024,
+  "currency": "TWD",
+  "sector": "S.14+S.15",
+  "basis": "net",
+  "derived": false,
+  "disposable": {
+   "code": "B.6n",
+   "value": "14297323"
+  },
+  "national": {
+   "code": "B.5n",
+   "value": "22315720"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Taiwan, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in TWD of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), searched again on 2026-11-03 in the statistics office's own accounts: DGBAS's National Accounts Yearbook 2024, Table 3 (t3-3.xlsx), 2024: the national disposable income of households and private non-profit institutions serving them (S.14+S.15, nothing narrower published), 14,297,323, and national income at market prices 22,315,720, in millions of NT dollars, both net (Table 1 gave GNI 26,708,991 beside the same national income), as published, a ratio of about 0.641 (`cash`). The households' figure was their share of national income, 15,312,669, less their net current transfers, 1,015,346. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
+ "sources": [
+  {
+   "url": "https://wid.world/bulk_download/wid_all_data.zip",
+   "title": "World Inequality Database, bulk download (WID_data_TW.csv and WID_metadata_TW.csv), wid.world, files of 30 October 2026",
+   "read": "2026-11-03",
+   "said": "TW;ahweal992j;p0p20;2024;-403467;992;j;0 ... TW;ahweal992j;p0p40;2024;343340.1;992;j;0 ... TW;ahweal992j;p0p60;2024;1248235.3;992;j;0 ... TW;ahweal992j;p0p90;2024;3859608.6;992;j;0 ... TW;ahweal992j;p0p99;2024;6631229;992;j;0 ... TW;ahweal992j;p99p100;2024;253278128.9;992;j;0 ... TW;adiinc992j;p0p20;2024;155151;992;j;2 ... TW;adiinc992j;p0p40;2024;271436.5;992;j;2 ... TW;adiinc992j;p0p60;2024;426037.7;992;j;2 ... TW;adiinc992j;p0p90;2024;752545.5;992;j;2 ... TW;adiinc992j;p0p99;2024;1025773.4;992;j;2 ... TW;adiinc992j;p99p100;2024;21050750.4;992;j;2"
+  },
+  {
+   "url": "https://wid.world/bulk_download/wid_all_data.zip",
+   "title": "World Inequality Database, bulk download, WID_metadata_TW.csv (variables ahweal992j and adiinc992j)",
+   "read": "2026-11-03",
+   "said": "TW;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;TWD; ... TW;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11025/235627/t3-3.xlsx",
+   "title": "DGBAS, National Accounts Yearbook in 2024 (國民所得統計年報 113年), Table 3. Distribution of National Income and Disposal Income by Sector, at current prices; cross-checked with Table 1 (t1.xlsx), listed at https://www.stat.gov.tw/News_Content.aspx?n=2676&s=235627",
+   "read": "2026-11-03",
+   "said": "Table 3 (Unit: Million NT$), 2024: 按市價計算之國民所得 National Income at Market Prices 22315720; 國民可支配所得 National Disposable Income 22164187; 一、家庭及民間非營利機構 A. Households and Private Nonprofit Institutions Serving Households 14297323. Table 1, 113 年 2024: GDP 25737088; GNI 26708991; National Income 22315720"
+  }
+ ]
+}

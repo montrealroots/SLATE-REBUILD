@@ -1,0 +1,52 @@
+{
+ "country": "TR",
+ "document": "Türkiye Cumhuriyeti kimlik kartı",
+ "office": "a provincial or district civil registration directorate (nüfus müdürlüğü)",
+ "currency": "TRY",
+ "routes": [
+  {
+   "id": "nufus",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "a first card, at a civil registration directorate"
+  },
+  {
+   "id": "nufus-change",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a card issued for a change, at a civil registration directorate"
+  },
+  {
+   "id": "nufus-lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a card issued after a loss, at a civil registration directorate"
+  }
+ ],
+ "cards": [
+  {
+   "for": "anyone",
+   "validYears": null,
+   "pay": {
+    "nufus": null,
+    "nufus-change": "220",
+    "nufus-lost": "440"
+   }
+  }
+ ],
+ "note": "The Treasury's General Communiqué no. 97 on valuable papers (Official Gazette no. 33117, 24 December 2025, in force from 1 January 2026, read 2026-11-03), item 6 of its table: a card issued for a birth registered outside the legal notification period costs 220 lira, one issued for a change 220, one issued after a loss 440. A first card for a birth registered in time isn't in the table, so its fee is null and the player is told; the change is held as the renewal and the loss as the replacement. A late-registered birth's card isn't modelled, and the card's term isn't in the table, so it's null. Capital's report (read 2026-10-28) gave the same fees; until the Gazette was read the game charged 220 for any first card.",
+ "sources": [
+  {
+   "url": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251224-6.htm",
+   "title": "Resmî Gazete Sayı 33117 (24 Aralık 2025), Muhasebat Genel Müdürlüğü Genel Tebliği (Sıra No: 97) Değerli Kağıtlar; its table at https://www.resmigazete.gov.tr/eskiler/2025/12/20251224-6_dosyalar/image001.jpg",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "6 - (Değişik: 14/1/2016-6661/3 md.) a) Kanuni bildirim süresi dışında doğum nedeniyle düzenlenen Türkiye Cumhuriyeti kimlik kartı 220,00 b) Değiştirme nedeniyle düzenlenen Türkiye Cumhuriyeti kimlik kartı 220,00 c) Kayıp nedeniyle düzenlenen Türkiye Cumhuriyeti kimlik kartı 440,00 ... Yürürlük MADDE 5- (1) Bu Tebliğ 1/1/2026 tarihinde yürürlüğe girer."
+  }
+ ]
+}

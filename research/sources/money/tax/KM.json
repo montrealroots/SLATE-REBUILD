@@ -1,0 +1,194 @@
+{
+ "topic": "tax.KM",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Comoros: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "The Comoros tax salaries (the 2026 budget carries revenue lines for the tax on salaries of state agents, public establishments and companies) and define fiscal domicile by a permanent home or centre of economic interests; the rates were not found.",
+   "value": {
+    "currency": "KMF",
+    "salaryTax": "exists, rates not read",
+    "fiscalDomicile": [
+     "permanent home in the Comoros",
+     "centre of economic interests"
+    ]
+   },
+   "applies": "Individuals domiciled in the Comoros",
+   "sources": [
+    {
+     "src": 0,
+     "said": "7113 Taxe sur les salaires des sociétés … Au sens du présent Code, une personne physique est considérée comme domicile fiscal aux Comores lorsqu'elle remplit l'une des conditions … 1. Elle dispose aux Comores d'un foyer permanent d'habitation 2. Elle y a le centre de ses intérêts économiques."
+    }
+   ]
+  },
+  {
+   "item": "residents",
+   "finding": "The income tax is one progressive scale: 5% on the part of income from KMF 150,001 to 500,000, 10% to 1,000,000, 15% to 1,500,000, 20% to 2,500,000, 25% to 3,500,000 and 30% above; the return is due by 31 March, and a taxpayer with only salaries taxed at source files none. Art. 97 doesn't say whether the scale is on a month's pay or a year's income.",
+   "value": {
+    "currency": "KMF",
+    "scale": [
+     {
+      "from": 150000,
+      "to": 500000,
+      "rate": 0.05
+     },
+     {
+      "from": 500000,
+      "to": 1000000,
+      "rate": 0.1
+     },
+     {
+      "from": 1000000,
+      "to": 1500000,
+      "rate": 0.15
+     },
+     {
+      "from": 1500000,
+      "to": 2500000,
+      "rate": 0.2
+     },
+     {
+      "from": 2500000,
+      "to": 3500000,
+      "rate": 0.25
+     },
+     {
+      "from": 3500000,
+      "to": null,
+      "rate": 0.3
+     }
+    ],
+    "period": "not stated",
+    "returnDue": "03-31",
+    "salariedOnlyFileNone": true
+   },
+   "applies": "The CGI 2023 edition, read 2026-11-03; the finance laws for 2024 to 2026 were not read.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Art.97.- L'impôt sur le revenu est calculé par l'application d'un barème unique progressif comportant les taux suivants : 5 % sur la fraction du revenu compris entre 150.001 et 500.000 KMF ; … 30 % sur la fraction du revenu compris entre 3.500.000 KMF et plus."
+    },
+    {
+     "src": 1,
+     "said": "Art.100.- Tout contribuable susceptible d'être assujetti à l'impôt sur le revenu est tenu de souscrire au plus tard le 31 mars de chaque année"
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer withholds the tax on salaries at each payment and pays a month's withholding by the 15th of the next month; the rates it withholds at are not stated apart from the scale.",
+   "value": {
+    "byEmployer": true,
+    "remitBy": "15th of the following month"
+   },
+   "applies": "CGI 2023 arts. 60, 104-105, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Art.105.- Les retenues effectuées au titre des paiements afférents à un mois déterminé doivent être reversées au plus tard le 15 du mois suivant"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "The consumption tax is 10% (5% on restaurants, banking and fixed telephones; 3% on water, electricity and inter-island transport); the threshold was not found.",
+   "value": {
+    "standard": 0.1,
+    "threshold": null
+   },
+   "applies": "CGI 2023 art. 152, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Art.152.- Le taux de la taxe sur la consommation est fixé à 10 %."
+    }
+   ]
+  }
+ ],
+ "country": "KM",
+ "sources": [
+  {
+   "url": "https://finances.gouv.km/wp-content/uploads/2026/01/Decret-N%C2%B026-003PR-du-16-jan-2026-portant-Prom-Loi-25-020AU-portant-Loi-de-Finan.pdf",
+   "title": "Décret N°26-003/PR du 16 janvier 2026 portant promulgation de la Loi N°25-020/AU portant Loi de Finances 2026 (Ministère des Finances, Comores)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "7113 Taxe sur les salaires des sociétés … Au sens du présent Code, une personne physique est considérée comme domicile fiscal aux Comores lorsqu'elle remplit l'une des conditions … 1. Elle dispose aux Comores d'un foyer permanent d'habitation 2. Elle y a le centre de ses intérêts économiques."
+  },
+  {
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/comores-cgi-2023.pdf",
+   "title": "Union des Comores, Code général des impôts 2023 (compiled by the Direction générale des impôts with Droit-Afrique; hosted by the Ministère de la Justice)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Art.97.- L'impôt sur le revenu est calculé par l'application d'un barème unique progressif comportant les taux suivants : 5 % sur la fraction du revenu compris entre 150.001 et 500.000 KMF ; 10 % sur la fraction du revenu compris entre 500.001 et 1.000.000 KMF ; 15 % sur la fraction du revenu compris entre 1.000.001 et 1.500.000 KMF ; 20 % sur la fraction du revenu compris entre 1.500.001 et 2.500.000 KMF ; 25 % sur la fraction du revenu compris entre 2.500.001 et 3.500.000 KMF ; 30 % sur la fraction du revenu compris entre 3.500.000 KMF et plus. … Art.100.- Tout contribuable susceptible d'être assujetti à l'impôt sur le revenu est tenu de souscrire au plus tard le 31 mars de chaque année … Toutefois, les contribuables ne jouissant que des traitements, salaires … sont dispensés de l'obligation déclarative … dès lors que l'impôt a été retenu à la source. … Art.105.- Les retenues effectuées au titre des paiements afférents à un mois déterminé doivent être reversées au plus tard le 15 du mois suivant … Art.152.- Le taux de la taxe sur la consommation est fixé à 10 %."
+  }
+ ],
+ "blockers": [
+  {
+   "item": "residents",
+   "sought": "Whether the income tax scale of CGI art. 97 (read 2026-11-03 in the 2023 edition) is on a month's pay or a year's income and holds for 2026, its allowances, and the tax year",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  },
+  {
+   "item": "social",
+   "sought": "Social contributions (Caisse de prévoyance sociale) on pay, employee and employer",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  },
+  {
+   "item": "withholding",
+   "sought": "Withholding on fees, and the rates an employer withholds from salaries (monthly withholding, remitted by the 15th, was read on 2026-11-03)",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  },
+  {
+   "item": "nonResident",
+   "sought": "Withholding on non-resident performers",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  },
+  {
+   "item": "vat",
+   "sought": "The consumption tax threshold for a freelancer (the 10% rate was read in CGI art. 152 on 2026-11-03)",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  },
+  {
+   "item": "authors",
+   "sought": "Treatment of authors' fees",
+   "tried": {
+    "institution": "2026-11-01: agid.km (tax administration): proxy 502; finances.gouv.km read: Loi de Finances 2026 and budget reports only || 2026-11-01 retry: agid.km and dgi.km give no answer from this environment (curl 000, 2026-11-01); finances.gouv.km Loi de Finances 2026 (saved earlier) has no scale",
+    "official-register": "2026-11-01: Loi de Finances 2026 read (saved KM-lf2026.pdf): amends the Code général des impôts but carries no income tax scale; the Code itself not found on finances.gouv.km || 2026-11-01 retry: the Code général des impôts des Comores not found on a reachable government site",
+    "web-search": "2026-11-01: refused: the session web-search budget was used up || 2026-11-01 retry: WebSearch refused by the tool: this turn's shared limit of 200 searches was used up by the agents (2026-11-01)",
+    "trade-press": "2026-11-01: no PwC (taxsummaries 404) or Deloitte highlights (2025, 2026: 404) for this country || 2026-11-01 retry: no PwC or Deloitte summary exists for the Comoros (checked in the first pass)",
+    "archive": "2026-11-01: web.archive.org unreachable through the proxy this session || 2026-11-01 retry: web.archive.org resets the connection from this environment (2026-11-01)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "country": "MV",
+ "document": "National Identity Card",
+ "office": "the Department of National Registration (DNR)",
+ "currency": "MVR",
+ "routes": [
+  {
+   "id": "dnr",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "applied for through the DNR's portal or office"
+  },
+  {
+   "id": "renew",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "renewal": true,
+   "label": "a new card on renewal, through the DNR, at the fee its regulation sets"
+  },
+  {
+   "id": "lost",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "replacement": true,
+   "label": "a new card after a loss, theft or damage, through the DNR, at the fee its regulation sets"
+  }
+ ],
+ "cards": [
+  {
+   "for": "under 10",
+   "under": 10,
+   "validYears": null,
+   "pay": {
+    "dnr": "0",
+    "renew": null,
+    "lost": null
+   }
+  },
+  {
+   "for": "10 to 40",
+   "from": 10,
+   "under": 40,
+   "validYears": 5,
+   "pay": {
+    "dnr": "0",
+    "renew": null,
+    "lost": null
+   }
+  },
+  {
+   "for": "40 and over",
+   "from": 40,
+   "validYears": 10,
+   "pay": {
+    "dnr": "0",
+    "renew": null,
+    "lost": null
+   }
+  }
+ ],
+ "note": "Law 23/2022 (Gazette vol. 51 no. 326, art. 24, read 2026-11-03 from the text layer and the page image) bars any fee for a first card; a new card in the cases of art. 25(a) (lost or stolen, changed particulars, damaged or worn, or renewal as the regulation requires) may carry a reasonable fee set by regulation, which wasn't found, so the renewal and the replacement are null. The DNR's procedure (in force from 11 November 2022) issues cards to children under 10 too, at a term it doesn't state. Until then the fee was null for every card and none was issued under 10. The terms (five years from 10 to 40, ten from 40) still stand on the State Minister's words to Parliament as Edition.mv reported them; a permanent card from 65 was being prepared (not modelled). 40 itself is kept with the older. The time isn't stated.",
+ "sources": [
+  {
+   "url": "https://edition.mv/news/33166",
+   "title": "Edition.mv, on the DNR's plan for permanent identity cards from 65",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.dnr.gov.mv/",
+   "said": "responded that the validity of identity cards for persons aged between 10 and 40 is five years, while those older receive a card with 10 year validity."
+  },
+  {
+   "url": "https://storage.googleapis.com/gazette.gov.mv/docs/gazette/6875.pdf",
+   "title": "Dhivehi Sarukaaruge Gazette, vol. 51 no. 326: Law 23/2022 (Act on the registration of births and deaths, the birth certificate and the card showing Maldivian citizenship), article 24, p. 23 (listed at https://gazette.gov.mv/gazette/6622)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "24. އަގަކާ ނުލައި ކާޑު ހައްދައިދިނުން — ފުރަތަމަ ފަހަރަށް ދިވެހިރައްޔިތެއްކަން އަންގައިދޭ ކާޑު ... އަގެއް ނަގައިގެން ނުވާނެއެވެ. އެހެންނަމަވެސް، މި ޤާނޫނުގެ 25 ވަނަ މާއްދާގެ (ހ) ގައި ބަޔާންކުރާ ޙާލަތްތަކުގައި އަލުން ކާޑު ހެއްދުމަށް މި ޤާނޫނުގެ ދަށުން ހަދާ ގަވާއިދުގައި ބަޔާންކުރާ އެކަށީގެންވާ ފީއެއް ނެގުމަށް މި ޤާނޫނު ހުރަހެއްނާޅައެވެ. (Article 24, 'Issuing the card without charge': no fee is to be charged for a card the first time; this Act does not bar a reasonable fee, set in the regulation under it, for a new card in the cases of article 25(a), its renewals.) [Thaana text reassembled from the PDF's text layer, whose fragments are out of order, and checked against the page image]"
+  },
+  {
+   "url": "https://www.dnr.gov.mv/download/Card%20Usool_1737375573.pdf",
+   "title": "Department of National Registration, ދިވެހިރައްޔިތެއްކަން އަންގައިދޭ ކާޑު ހެދުމުގެ އުޞޫލު (procedure for issuing the card showing Maldivian citizenship), in force from 11 November 2022",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "10 އަހަރުން ދަށުގެ ކުދިން ކާޑު ހެއްދުން ... މި އުޞޫލަށް އަމަލުކުރަން ފަށާނީ 11 ނޮވެމަބަރ 2022 އިން ފެށިގެންނެވެ. (a section on making cards for children under 10; the procedure applies from 11 November 2022)"
+  }
+ ]
+}

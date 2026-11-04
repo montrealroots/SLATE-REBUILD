@@ -1,0 +1,217 @@
+{
+ "topic": "tax.SZ",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Eswatini: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "Eswatini taxes residents and non-residents alike on Eswatini-source income: 20% to SZL 100,000, 25% to SZL 150,000, 30% to SZL 200,000 and 33% above, less a rebate of SZL 8,200 a year (SZL 10,900 over 60), so no tax falls below SZL 41,000.",
+   "value": {
+    "currency": "SZL",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 100000,
+      "rate": 0.2
+     },
+     {
+      "from": 100000,
+      "to": 150000,
+      "rate": 0.25
+     },
+     {
+      "from": 150000,
+      "to": 200000,
+      "rate": 0.3
+     },
+     {
+      "from": 200000,
+      "to": null,
+      "rate": 0.33
+     }
+    ],
+    "rebate": 8200,
+    "rebateOver60": 10900,
+    "taxFreeBelow": 41000
+   },
+   "applies": "As the Eswatini Revenue Service states its rates and thresholds, read 2026-11-03, in the tax year from 1 July 2026 (its page is undated: the Service's current statement).",
+   "sources": [
+    {
+     "src": 0,
+     "said": "0 100,000 SZL 0 plus 20% of taxable income in excess of SZL 0 100,000 150,000 SZL 20,000 plus 25% of taxable income in excess of SZL 100,000 150,000 200,000 SZL 32,500 plus 30% of taxable income in excess of SZL 150,000 200,000 and above SZL 47,500 plus 33% of taxable income in excess of SZL 200,000"
+    },
+    {
+     "src": 0,
+     "said": "A rebate of SZL 8,200 (SZL 10,900 for those over age 60) per annum is applied to the annualized tax calculated. In essence, no tax is payable below an annual taxable salary of SZL 41,000 per annum ."
+    },
+    {
+     "src": 4,
+     "said": "E0 E100 000 0 + 20% of the excess of E0 E100 000 E150 000 E20 000 + 25% of the excess of E100 000 E150 000 E200 000 E32 500 + 30% of the excess of E150 000 E200 000 E47 500 + 33% of the excess of E200 000 … Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year The rates are applicable on the amount exceeding E41 000"
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Eswatini has no social security contributions; employed persons pay a graded (poll) tax of SZL 18 a year.",
+   "value": {
+    "currency": "SZL",
+    "employee": 0,
+    "employer": 0,
+    "gradedTaxAnnual": 18
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "There are no social security contributions in Eswatini. There is, however, a graded tax (poll tax) of SZL 1.50 per month for all employed persons payable in advance in full on 1 July (i.e. SZL 18.00)."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "Employees are taxed through PAYE; payments for services by contractors or professionals in Eswatini bear 15% withholding.",
+   "value": {
+    "PAYE": true,
+    "professionals": 0.15
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "Individuals in paid employment are subject to the pay-as-you-earn (PAYE) system."
+    },
+    {
+     "src": 3,
+     "said": "Contractors or professionals WHT is payable at the rate of 15% on services provided by contractors or professionals in Eswatini"
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A public entertainer not ordinarily resident in Eswatini bears 15% withholding on income earned there, deducted by the payer and paid within 15 days; royalties bear 15%.",
+   "value": {
+    "entertainers": 0.15,
+    "royalties": 0.15,
+    "final": null
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "Entertainers and sportsmen WHT is payable at the rate of 15% on income earned in Eswatini by entertainers and sportsmen. This tax relates only to public entertainers and sportsmen not ordinarily resident in Eswatini. The payer is required to deduct the tax and pay it within 15 days."
+    },
+    {
+     "src": 3,
+     "said": "WHT for royalties and management fees is payable at the rate of 15%."
+    },
+    {
+     "src": 4,
+     "said": "Withholding tax payments to entertainers E 15% On or before the 15th day of the following month from the date withheld"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "VAT is 15%; registration is compulsory once a business's annual taxable turnover exceeds E900,000.",
+   "value": {
+    "currency": "SZL",
+    "rate": 0.15,
+    "threshold": 900000
+   },
+   "applies": "Read 2026-11-03 from the Eswatini Revenue Service's VAT pages.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "VAT is charged at the standard rate of 15%."
+    },
+    {
+     "src": 6,
+     "said": "it is levied on most goods and services at the rate of 15%"
+    },
+    {
+     "src": 5,
+     "said": "VAT registration is compulsory for businesses whose annual taxable turnover exceeds E900 000."
+    }
+   ]
+  },
+  {
+   "item": "year",
+   "finding": "The tax year runs 1 July to 30 June; returns are due within 120 days of 30 June.",
+   "value": {
+    "start": "07-01",
+    "due": {
+     "on": "10-28",
+     "after": 0
+    }
+   },
+   "applies": "120 days after 30 June is 28 October.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The tax year runs from 1 July to 30 June."
+    },
+    {
+     "src": 2,
+     "said": "are required to file returns within 120 days of 30 June."
+    }
+   ]
+  }
+ ],
+ "country": "SZ",
+ "sources": [
+  {
+   "url": "https://taxsummaries.pwc.com/eswatini/individual/taxes-on-personal-income",
+   "title": "Eswatini: individual/taxes-on-personal-income (PwC Worldwide Tax Summaries, reviewed 30 March 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.ers.org.sz/",
+   "said": "0 100,000 SZL 0 plus 20% of taxable income in excess of SZL 0 100,000 150,000 SZL 20,000 plus 25% of taxable income in excess of SZL 100,000 150,000 200,000 SZL 32,500 plus 30% of taxable income in excess of SZL 150,000 200,000 and above SZL 47,500 plus 33% of taxable income in excess of SZL 200,000 … A rebate of SZL 8,200 (SZL 10,900 for those over age 60) per annum is applied to the annualized tax calculated. In essence, no tax is payable below an annual taxable salary of SZL 41,000 per annum ."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/eswatini/individual/other-taxes",
+   "title": "Eswatini: individual/other-taxes (PwC Worldwide Tax Summaries, reviewed 30 March 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.ers.org.sz/",
+   "said": "There are no social security contributions in Eswatini. There is, however, a graded tax (poll tax) of SZL 1.50 per month for all employed persons payable in advance in full on 1 July (i.e. SZL 18.00). … VAT is charged at the standard rate of 15%."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/eswatini/individual/tax-administration",
+   "title": "Eswatini: individual/tax-administration (PwC Worldwide Tax Summaries, reviewed 30 March 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.ers.org.sz/",
+   "said": "Individuals in paid employment are subject to the pay-as-you-earn (PAYE) system. … The tax year runs from 1 July to 30 June. … are required to file returns within 120 days of 30 June."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/eswatini/corporate/withholding-taxes",
+   "title": "Eswatini: corporate/withholding-taxes (PwC Worldwide Tax Summaries, reviewed 30 March 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.ers.org.sz/",
+   "said": "Contractors or professionals WHT is payable at the rate of 15% on services provided by contractors or professionals in Eswatini … Entertainers and sportsmen WHT is payable at the rate of 15% on income earned in Eswatini by entertainers and sportsmen. This tax relates only to public entertainers and sportsmen not ordinarily resident in Eswatini. The payer is required to deduct the tax and pay it within 15 days. … WHT for royalties and management fees is payable at the rate of 15%."
+  },
+  {
+   "url": "https://www.ers.org.sz/IncomeTax/RatesandThres",
+   "title": "Eswatini Revenue Service, Rates and Thresholds",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Rates of normal TAX for individual Taxable Income Rates Exceeds Does not exceed E0 E100 000 0 + 20% of the excess of E0 E100 000 E150 000 E20 000 + 25% of the excess of E100 000 E150 000 E200 000 E32 500 + 30% of the excess of E150 000 E200 000 E47 500 + 33% of the excess of E200 000 When applying the above rates, the following should be taken into account: Tax payable by a natural person will be reduced by a tax rebate amount not exceeding E8 200 per tax year The rates are applicable on the amount exceeding E41 000 … Withholding tax payments to entertainers E 15% On or before the 15th day of the following month from the date withheld"
+  },
+  {
+   "url": "https://www.ers.org.sz/Registration",
+   "title": "Eswatini Revenue Service, VAT Registration",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "VAT registration is compulsory for businesses whose annual taxable turnover exceeds E900 000. Any business with reasonable expectations to reach this amount should also apply to register."
+  },
+  {
+   "url": "https://www.ers.org.sz/VAT/Eswatini",
+   "title": "Eswatini Revenue Service, Eswatini VAT",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "It was introduced on 1 April 2012 to replace Sales Tax. Like Sales Tax, it is an indirect tax and it is levied on most goods and services at the rate of 15%."
+  }
+ ],
+ "blockers": []
+}

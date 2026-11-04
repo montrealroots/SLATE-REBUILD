@@ -1,0 +1,31 @@
+{
+ "country": "KG",
+ "name": "персональный идентификационный номер (ПИН), the personal identification number",
+ "issuer": "the territorial subdivisions of the population-registration body's subordinate institution, and Kyrgyzstan's missions abroad, in the civil-status information system (AIS ZAGS)",
+ "format": {
+  "length": 14,
+  "pattern": "^\\d{9}[0145]\\d{4}$"
+ },
+ "when": "registration",
+ "who": [
+  "citizens",
+  "anyone"
+ ],
+ "note": "The Order on assigning and changing the personal identification number (approved by Cabinet of Ministers Resolution No. 207 of 17 April 2025, as amended to Resolution No. 598 of 22 September 2025, in force from 1 July 2025), read 2026-11-03 in the Ministry of Justice's legal database: the PIN is an individual number assigned once, for life, to citizens, foreign citizens and stateless persons, unchanged except where the law provides (art. 2(4)); it has 14 digits, П ЧЧММГГГГ Р ННН К (art. 3): П the sex, for citizens (1 a woman, 2 a man); eight digits of the date of birth; Р the registration sign (0 or 1 for numbers given earlier by the social-insurance or tax body, 4 for foreign citizens and stateless persons, 5 for numbers the authorised state body gives); three of sequence; and К a check digit 'formed by a special calculation algorithm', which isn't published, so no check is held. It is assigned by the territorial subdivisions and Kyrgyzstan's missions abroad in the AIS ZAGS, on registering a child's birth or on the application of anyone who has none (art. 4), so `when` is registration and `who` citizens and anyone. The pattern holds the 14 digits and the registration sign; the first digit is defined only for citizens since Resolution 598 (the Order's first edition gave the sex as 1 or 2 for everyone), and numbers given earlier are kept for life, so it isn't held. Resolution 598's preamble speaks of the clash of 'the first digits' of the PIN and the tax number, and two Kyrgyz papers read the foreigners' 4 as the first digit; the operative text places it in Р, the tenth, and the file held it in the first until 2026-11-03. The President's amendments of April 2026 to the law on personified accounting weren't read. No fee, time or age is stated; `needed` is left out.",
+ "sources": [
+  {
+   "url": "https://cbd.minjust.gov.kg/230025751/edition/38548/ru",
+   "title": "Ministry of Justice, Centralised Legal Database: Порядок присвоения и изменения персонального идентификационного номера (к постановлению Кабинета Министров КР от 17 апреля 2025 года № 207), edition of 22.09.2025 (read through the database's own GetEdition?editionId=38548&lang=ru)",
+   "read": "2026-11-03",
+   "said": "4) персональный идентификационный номер - индивидуальный номер, присваиваемый территориальными подразделениями и загранучреждениями Кыргызской Республики гражданам Кыргызской Республики, иностранным гражданам и лицам без гражданства один раз и сохраняющийся за этими лицами в течение всей их жизни без изменения, за исключением случаев, предусмотренных законодательством ... 3. Структура персонального идентификационного номера представляет собой 14-значный номер ПЧММГГГГРНННК, где: П – пол (для граждан Кыргызской Республики: 1 – женщина, 2 – мужчина); ЧЧММГГГГ - дата рождения (число, месяц, год); Р - признак регистрации: 0 - ... ранее присвоенных уполномоченным органом в сфере социального страхования; 1 - ... ранее присвоенных уполномоченным органом в сфере налогообложения; 4 – отличительный признак персональных идентификационных номеров, присвоенных иностранным гражданам и лицам без гражданства; 5 - отличительный признак персональных идентификационных номеров, присвоенных уполномоченным государственным органом; ННН - порядковый номер; К - контрольная цифра, сформированная с применением специального алгоритма вычисления. ... 4. Персональный идентификационный номер присваивается территориальными подразделениями и загранучреждениями Кыргызской Республики в автоматизированной информационной системе \"Запись актов гражданского состояния\" (далее - АИС \"ЗАГС\"): - при регистрации рождения ребенка ... - при отсутствии персонального идентификационного номера у гражданина Кыргызской Республики, иностранного гражданина, лица без гражданства на основании поданного ... заявления",
+   "kind": "primary"
+  },
+  {
+   "url": "https://cbd.minjust.gov.kg/230032617/edition/38541/ru",
+   "title": "Ministry of Justice, Centralised Legal Database: Постановление Кабинета Министров КР от 22 сентября 2025 года № 598 (published in Erkin-Too, 26 September 2025, No. 73)",
+   "read": "2026-11-03",
+   "said": "устранения нормативной и технической коллизий, возникших в связи с использованием идентичных значений первых разрядов в структуре персонального идентификационного номера (ПИН) и идентификационного налогового номера (ИНН) ... – абзац второй пункта 3 изложить в следующей редакции: «П – пол (для граждан Кыргызской Республики: 1 – женщина, 2 – мужчина);»; – дополнить абзацем седьмым следующего содержания: «4 – отличительный признак персональных идентификационных номеров, присвоенных иностранным гражданам и лицам без гражданства;». ... вступает в силу с 1 июля 2025 года.",
+   "kind": "primary"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "country": "SL",
+ "document": "National identity card",
+ "office": "the National Civil Registration Authority (NCRA)",
+ "currency": "SLE",
+ "routes": [
+  {
+   "id": "ncra",
+   "where": "home",
+   "speed": "standard",
+   "within": null,
+   "label": "applied for at an NCRA office or designated location, paid at its bank or mobile-money desk, and collected there"
+  }
+ ],
+ "cards": [
+  {
+   "for": "12 and over",
+   "from": 12,
+   "validYears": null,
+   "pay": {
+    "ncra": "140"
+   }
+  }
+ ],
+ "note": "The National Civil Registration Authority's own page on the eID cards (2 March 2023, read 2026-11-03): an applicant must first be registered and given a NIN; the national identity card is for Sierra Leoneans of 12 and over and costs NLe 140.00; a separate card for children under 12 is 'to be produced in due course' (its application fee, NLe 5.00, isn't modelled); the ECOWAS eID card, on demand, costs NLe 240.00 (not modelled). An SMS tells the applicant to collect the card within 72 hours at the office where it was processed: a deadline for collection, not the time to make it, which isn't stated. No later NCRA fee page was found, so the 2023 price is held. Until then the fee and the age were null, from DUBAWA's report that the card became mandatory at the end of 2024 (a lead, not held). The card's term isn't on any NCRA page read.",
+ "from": 12,
+ "sources": [
+  {
+   "url": "https://ncra.gov.sl/information-about-the-securitised-and-multipurpose-e-identity-cards-in-sierra-leone/",
+   "title": "National Civil Registration Authority, Information about the Securitised and Multipurpose e-Identity Cards in Sierra Leone (2 March 2023)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Eligibility for the eID CARD All Applicants must have registered with NCRA and assigned a NIN before applying for an eID Card. Categories of the Biometric (eID) Cards National Identity Cards for Sierra Leoneans only aged 12 and above. ... Costs of Securitised and Multipurpose eID Cards Categories of Biometric eID Cards Cost Price in New Leones (NLe) National Identity Cards for Sierra Leoneans only aged 12 and above 140.00 ... ID Card for children under 12 years – Application Fee 5.00 ... Step 6. You will receive another SMS/text Message notifying you to collect your eID Card within 72 hours at the same location where your ID was processed."
+  }
+ ]
+}

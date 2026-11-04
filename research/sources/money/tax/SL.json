@@ -1,0 +1,217 @@
+{
+ "topic": "tax.SL",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Sierra Leone: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "nonResident",
+   "finding": "From 1 January 2026 the Finance Act 2026 raised the withholding on management or professional fees paid to non-residents from 15% to 20%, and on payments to non-resident contractors from 10% to 20%; rents and royalties paid to a non-resident bear 15%, and a non-resident's employment income 25% (the Finance Act 2024's table).",
+   "value": {
+    "rate": 0.2,
+    "previous": 0.15,
+    "contractors": 0.2,
+    "base": "gross amount payable",
+    "threshold": null,
+    "final": null,
+    "from": "2026-01-01",
+    "royalties": 0.15,
+    "employment": 0.25
+   },
+   "applies": "From 1 January 2026; the Finance Acts 2024 and 2026 read 2026-11-03 on the NRA's own pages.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "Withholding tax on payments to non-resident contractors increases from 10% to 20% . Withholding tax on management or professional fees paid to non-residents increases from 15% to 20% . Payments covered under this provision are not treated as employment income. The payer is required to withhold tax at source on the gross amount payable before making payment to the non-resident. Reference: Second Schedule to the Income Tax Act 2000."
+    },
+    {
+     "src": 4,
+     "said": "(d) repealing the 15% rate corresponding to the 'Management/professional fees 'item under the 'type of payment' column of that part and replacing it with 20%."
+    },
+    {
+     "src": 3,
+     "said": "Employment income (section 116) 25% … Rents and royalties (section 120) 15%"
+    }
+   ]
+  },
+  {
+   "item": "year",
+   "finding": "The Finance Act 2026, gazetted on 7 January 2026, applies to payroll from 1 January 2026 and leaves personal income tax brackets and NASSIT rates unchanged from 2025.",
+   "value": {
+    "start": "01-01",
+    "end": "12-31",
+    "bracketsUnchangedFrom": 2025
+   },
+   "applies": "2026",
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Finance Act 2026, published in the Government Gazette Extraordinary Vol. CLXVII No.3 on 7 January 2026, introduces amendments to the Income Tax Act affecting payroll from 1 January 2026. Personal Income Tax brackets and Social Security (NASSIT) contribution rates remain unchanged from 2025."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "NASSIT takes 15% of an employee's earnings each month: the employer deducts 5% from pay and adds 10% of its own, paying the total within fifteen days after the month ends; a self-employed or voluntary member pays the full 15% of declared income; membership is mandatory for formal-sector employees and voluntary for the self-employed.",
+   "value": {
+    "employee": 0.05,
+    "employer": 0.1,
+    "selfEmployed": 0.15,
+    "selfEmployedBase": "declared income",
+    "selfEmployedMembership": "voluntary",
+    "dueDays": 15,
+    "ceiling": "none stated"
+   },
+   "applies": "2026 (PaySpace's note on the Finance Act 2026 says NASSIT rates are unchanged); no earnings ceiling is stated on NASSIT's pages.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Employers should deduct 5% from the earnings of an employee at the end of every month, as that employee’s Social Security contribution; The employer should then add 10% of the employee’s earnings as that employer's contribution on behalf of the employee; The total 15% contribution should be paid to NASSIT within fifteen days after the end of the month. … A self-employed/voluntary contributor pays the full 15% on his/her declared income."
+    },
+    {
+     "src": 2,
+     "said": "The scheme covers all formal sector employers and employees on a mandatory basis. It provides voluntary membership for the self employed."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "A payer withholds 15% from management or professional fees and from royalties paid to a resident, and 5% from payments to resident contractors; an employer files the monthly PAYE return and pays the tax by the 15th of the next month.",
+   "value": {
+    "professionalFees": 0.15,
+    "royalties": 0.15,
+    "contractors": 0.05,
+    "payeDue": "15th of the following month"
+   },
+   "applies": "Residents; the Finance Act 2024's table (the Finance Act 2026 changed only its rent rate), and the NRA's 2022 guide for the PAYE date, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "Rates of tax to be withheld from payments made to residents … Payments to contractors (section 117) 5% … Management/professional fees 15% … Royalties (section 120) 15%"
+    },
+    {
+     "src": 5,
+     "said": "The employer is required to file a monthly PAYE return … on or before the 15th of the month following the payment of staff emoluments."
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "GST is 15% on every taxable supply that is not zero-rated; a supplier must register once its taxable supplies pass the threshold the Finance Act 2024 sets at Le500,000.",
+   "value": {
+    "threshold": 500000,
+    "thresholdAsWritten": "Le500,000",
+    "rate": 0.15
+   },
+   "applies": "The rate as the NRA's consolidation of the GST Act states it (to 2016), read 2026-11-03; the Finance Acts 2021 and 2025 amend other sections of the GST Act, not the rate. The Finance Act 2025 writes amounts in new leones (NLe); whether the 2024 Act's Le500,000 is in new leones isn't settled, so VAT isn't charged.",
+   "sources": [
+    {
+     "src": 3,
+     "said": "deleting the registration threshold amount of \"Lel00,000,000\" and inserting the following new registration threshold amount of \"Le500,000\""
+    },
+    {
+     "src": 6,
+     "said": "(b) in any other case, 15 per cent."
+    },
+    {
+     "src": 7,
+     "said": "12. Section 19 of the Goods and Services Tax Act, 2009 is amended by- (a) repealing and replacing subsection (9)"
+    }
+   ]
+  }
+ ],
+ "country": "SL",
+ "sources": [
+  {
+   "url": "https://support.payspace.com/portal/en/kb/articles/sierra-leone-2026-finance-act",
+   "title": "PaySpace: Sierra Leone | 2026 Finance Act",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://webtestcms.nra.gov.sl/uploads/The_Finance_Act_2026_121df05d9b.pdf",
+   "said": "Withholding tax on payments to non-resident contractors increases from 10% to 20% . Withholding tax on management or professional fees paid to non-residents increases from 15% to 20% . Payments covered under this provision are not treated as employment income. The payer is required to withhold tax at source on the gross amount payable before making payment to the non-resident. Reference: Second Schedule to the Income Tax Act 2000. … The Finance Act 2026, published in the Government Gazette Extraordinary Vol. CLXVII No.3 on 7 January 2026, introduces amendments to the Income Tax Act affecting payroll from 1 January 2026. Personal Income Tax brackets and Social Security (NASSIT) contribution rates remain unchanged from 2025."
+  },
+  {
+   "url": "https://nassit.org.sl/our-services/contributions",
+   "title": "Contributions (National Social Security and Insurance Trust, Sierra Leone)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Employers should deduct 5% from the earnings of an employee at the end of every month, as that employee’s Social Security contribution; The employer should then add 10% of the employee’s earnings as that employer's contribution on behalf of the employee; The total 15% contribution should be paid to NASSIT within fifteen days after the end of the month. … A self-employed/voluntary contributor pays the full 15% on his/her declared income."
+  },
+  {
+   "url": "https://nassit.org.sl/faqs",
+   "title": "FAQs (National Social Security and Insurance Trust, Sierra Leone)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The scheme covers all formal sector employers and employees on a mandatory basis. It provides voluntary membership for the self employed."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/The_Finance_Act_2024_0d6d83e684.pdf",
+   "title": "The Finance Act, 2024 (Sierra Leone), National Revenue Authority, ss. 11-13",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "PART IV (Sections 117,118,119,120 and 121) Rates of tax to be withheld from payments made to residents Type of payment Rate Payments to contractors (section 117) 5% Dividends (section 118) 15% Interests (section 119) 15% Management/professional fees 15% Rents 10% Royalties (section 120) 15% … PART II … Rates of tax to be withheld from payments made to non-residents: Employment income (section 116) 25% Payments to contractors (sectionl 17) 10% … Management/professional fees 15% Rents and royalties (section 120) 15% … 13. Section 15 of the Goods and Services Tax Act 2009 is amended under subsection (2) by deleting the registration threshold amount of \"Lel00,000,000\" and inserting the following new registration threshold amount of \"Le500,000\""
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/The_Finance_Act_2026_121df05d9b.pdf",
+   "title": "The Finance Act, 2026 (Sierra Leone), National Revenue Authority, ss. 13-14",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(b) Part IV by repealing the 10% rate corresponding to the 'rent' item under the 'type of payment' column of that part and replacing it with 15%. 14. The Second Schedule to the Income Tax Act 2000 is amended in Part II as follows- (a) repealing the 10% rate corresponding to 'payments to contractors (section 117)' item … and replacing it with 20%; … (d) repealing the 15% rate corresponding to the 'Management/professional fees 'item under the 'type of payment' column of that part and replacing it with 20%."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/2022_NRA_TAX_GUIDE_83dc12b316.pdf",
+   "title": "National Revenue Authority, 2022 Tax Guide",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The employer is required to file a monthly PAYE return … on or before the 15th of the month following the payment of staff emoluments."
+  },
+  {
+   "url": "http://webtestcms.nra.gov.sl/uploads/Compilation_GST_Act_2009_Consolidated_to_include_amendments_and_repeals_up_to_2016_7ce053284a.pdf",
+   "title": "National Revenue Authority: The Goods and Services Tax Act, 2009, consolidated to include amendments and repeals up to 2016",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "(3) The rate of GST applicable to a taxable supply or import is– (a) if the supply or import is zero-rated under the First Schedule, zero per cent; (b) in any other case, 15 per cent."
+  },
+  {
+   "url": "https://mof.gov.sl/wp-content/uploads/2025/01/The-Finance-Act-2025.pdf",
+   "title": "The Finance Act, 2025 (Sierra Leone Gazette supplement, Vol. CLXVI, No. 3, 16 January 2025), Ministry of Finance",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "12. Section 19 of the Goods and Services Tax Act, 2009 is amended by- (a) repealing and replacing subsection (9) with the following new subsection (9) …"
+  }
+ ],
+ "blockers": [
+  {
+   "item": "residents",
+   "sought": "The personal income tax bands (Income Tax Act 2000, First Schedule, as last amended) in new leones (the NRA's 2022 guide prints the 2021 bands in old leones; the redenomination's ratio was not read from a primary)",
+   "tried": {
+    "institution": "nra.gov.sl did not answer this environment; its CMS PDF host fails TLS verification (not bypassed) || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for residents; nassit.org.sl read (social now recorded).",
+    "official-register": "Finance Act 2026 PDF unreachable (TLS); Sierra Leone Gazette not online || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
+    "web-search": "searched Finance Act 2026 PAYE bands: only payroll vendors and calculators (unverified, not used) || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('NRA Sierra Leone Finance Act 2026 residents').",
+    "trade-press": "PaySpace says brackets unchanged but does not state them || 2026-11-01 retry: taxsummaries.pwc.com/sierra-leone returns 404 (checked 2026-11-01); PaySpace note already saved.",
+    "archive": "web.archive.org unreachable from this environment || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
+   }
+  },
+  {
+   "item": "vat",
+   "sought": "Whether the GST registration threshold the Finance Act 2024 writes as Le500,000 is in new leones (the Finance Act 2025 writes NLe; the GST rate, 15%, was read on 2026-11-03 in the NRA's consolidation of the GST Act)",
+   "tried": {
+    "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for vat; nassit.org.sl read (social now recorded).",
+    "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
+    "web-search": "not run || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('NRA Sierra Leone Finance Act 2026 vat').",
+    "trade-press": "not found || 2026-11-01 retry: taxsummaries.pwc.com/sierra-leone returns 404 (checked 2026-11-01); PaySpace note already saved.",
+    "archive": "web.archive.org unreachable from this environment || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
+   }
+  },
+  {
+   "item": "authors",
+   "sought": "Treatment of royalties beyond the 15% withheld from a resident's and a non-resident's (read in the Finance Act 2024 on 2026-11-03): whether it is final, and any relief",
+   "tried": {
+    "institution": "nra.gov.sl unreachable || 2026-11-01 retry: nra.gov.sl and www.nra.gov.sl again refused by the egress proxy (curl 000); mof.gov.sl answers but was not searched for authors; nassit.org.sl read (social now recorded).",
+    "official-register": "not reached || 2026-11-01 retry: SierraLII (sierralii.gov.sl/legislation) holds the Finance Acts 2021, 2022 and 2024 (saved as SL-sierralii-finance-act-*.pdf); 2022 and 2024 are image scans whose OCR could not finish under the machine's load this turn, and 2021 states amounts in old leones before the 2022-2024 redenomination; the Income Tax Act 2000, the Goods and Services Tax Act 2009 and the Finance Acts 2025/2026 are not on SierraLII.",
+    "web-search": "not run || 2026-11-01 retry: refused: the session's web-search limit (200 calls per turn, shared) was reached before this query ('NRA Sierra Leone Finance Act 2026 authors').",
+    "trade-press": "not found || 2026-11-01 retry: taxsummaries.pwc.com/sierra-leone returns 404 (checked 2026-11-01); PaySpace note already saved.",
+    "archive": "web.archive.org unreachable from this environment || 2026-11-01 retry: web.archive.org connection reset through the proxy (curl 000)."
+   }
+  }
+ ]
+}

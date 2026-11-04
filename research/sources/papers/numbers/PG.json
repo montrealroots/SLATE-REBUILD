@@ -1,0 +1,37 @@
+{
+ "country": "PG",
+ "name": "Taxpayer Identification Number (TIN)",
+ "issuer": "the Internal Revenue Commission",
+ "format": {
+  "length": 9,
+  "pattern": "^\\d{9}$"
+ },
+ "when": "application",
+ "who": [
+  "anyone"
+ ],
+ "needed": [
+  "tax"
+ ],
+ "note": "The Internal Revenue Commission's own files on static.irc.gov.pg (its file host; irc.gov.pg itself answers 403 to this research), read 2026-11-03 and checked against fresh downloads the same day: its Taxpayer Guide to the Dividend Withholding Tax forms (D1) says the TIN is 'a nine-digit number that the IRC issues', replacing Tax File Numbers, one TIN covering all of a taxpayer's obligations (Salary & Wages Tax, Dividend Withholding Tax), and that one not yet issued a TIN asks the nearest IRC office for one; its Small Business Tax return's notes say 'Your TIN should consist of 9 digits' and that it must be used in all communication with the IRC. An individual registers on form TIN4I (2021, under the Income Tax Act 1959 as amended), which asks whether the applicant is a salary or wage earner: read as given on application, to anyone with a tax obligation. No check rule, fee or time is stated, so none is written.",
+ "sources": [
+  {
+   "url": "https://static.irc.gov.pg/2021/December/Skax2r-media-2014-TPG-D1-Dividend-Withholding-Tax-Forms-Taxpayer-Guide-2.pdf",
+   "title": "Internal Revenue Commission, Taxpayer Guide: Dividend Withholding Tax Forms (D1)",
+   "read": "2026-11-03",
+   "said": "The TIN is the Taxpayer Identification Number – a nine-digit number that the IRC issues. TINs are replacing Tax File Numbers (TFNs) in the PNG tax system. One TIN will cover all of your tax obligations – Salary & Wages Tax, Dividend Withholding Tax, etc. If you have not yet been issued a TIN, please contact your nearest IRC office to have one issued."
+  },
+  {
+   "url": "https://static.irc.gov.pg/2021/December/m6qBmm-media-IRC-SBT-Quarterly-Return.pdf",
+   "title": "Internal Revenue Commission, Small Business Tax Return and its completion notes",
+   "read": "2026-11-03",
+   "said": "TIN - Write your TIN in the space provided. Your TIN should consist of 9 digits. Your TIN must be used in all communication with the IRC"
+  },
+  {
+   "url": "https://static.irc.gov.pg/2021/December/E6wskE-media-IRC-TIN4I-Registration.pdf",
+   "title": "Internal Revenue Commission, TIN4I: Small Business Tax Taxpayer Identification Number (TIN) Registration (effective 21 May 2021)",
+   "read": "2026-11-03",
+   "said": "TAXPAYER IDENTIFICATION NUMBER (TIN) REGISTRATION IRC TIN4I - 2021 INCOME TAX ACT 1959 AS AMENDED EFFECTIVE : 21st May 2021 ... 7. Are you a salary wage earner? Yes No"
+  }
+ ]
+}

@@ -1006,7 +1006,7 @@ export function parseClimat(json: string): SourceStation[] {
 }
 
 /**
- * Météo-France's daily climatological base for Saint-Martin (R-4238), each station's days of 1991 to 2020 as
+ * Météo-France's daily climatological base for Saint-Martin (R-9682), each station's days of 1991 to 2020 as
  * "date;precipitation;code;minimum;code;maximum;code": a day counts where its quality code is 0 (protected: validated
  * for good) or 1 (validated), not 2 (doubtful, under checking) or 9 (filtered: through the first checks only), each
  * parameter averaged as NOAA's daily records are (averaged).
@@ -1029,7 +1029,7 @@ export function parseMeteoFranceDaily(json: string): SourceStation[] {
 }
 
 /**
- * The Statistics Department of Montserrat's tables from John A. Osborne Airport (R-4239): a row for each year's "MAX"
+ * The Statistics Department of Montserrat's tables from John A. Osborne Airport (R-9683): a row for each year's "MAX"
  * and "MIN" average temperature and its "Rainfall (mm)", a column a month under "JAN" to "DEC" ("-" where none), the
  * year on the first of its rows; the rain days, of no stated threshold, aren't read. Each averaged over its years
  * (averaged); the station's place and height are NOAA's station history's (its line for TRPG), the tables giving none.

@@ -1,0 +1,201 @@
+{
+ "topic": "tax.FM",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Micronesia: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "The national government levies a wage and salary tax and a gross revenue tax on business, half of each shared with the states: wages and salaries bear 6% on the first $11,000 a year and 10% above (FSM Code tit. 54 § 121), withheld by the employer as paid and remitted quarterly; an employee earning under $5,000 a year may claim a $1,000 deduction by refund (§ 122); a business's gross revenue, a freelancer's fees and royalties included, bears $80 on the first $10,000 a year and 3% above, none at $2,000 or less (§§ 112(5), 141), paid quarterly.",
+   "value": {
+    "currency": "USD",
+    "wageAndSalaryTax": "rates read 2026-11-03 (figure 4)",
+    "grossReceiptsTax": "rates read 2026-11-03 (figure 4)",
+    "stateShare": 0.5
+   },
+   "applies": "Wage earners and businesses; the rates as the FSM Code (2014 codification, these sections last amended by PL 5-84) states them, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "the State Governments will maintain its eighty percent (80%)of the fuel tax collected and its original fifty percent (50%)of the wage and salary tax, gross receipts tax, and import duties other than the fuel tax."
+    },
+    {
+     "src": 1,
+     "said": "the proposed transition from the Gross Revenue Tax to a Net Profits Tax. The introduction of a Value Added Tax and a proposed increase to the wage and salary tax threshold were also discussed."
+    },
+    {
+     "src": 5,
+     "said": "121 . Tax on wages and salaries . There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "There is no VAT in force: its introduction was still under discussion by the national tax reform task force in November 2025.",
+   "value": {
+    "rate": 0,
+    "status": "proposed, not enacted (as of 2025-11-26)"
+   },
+   "applies": "Supplies in the FSM",
+   "sources": [
+    {
+     "src": 1,
+     "said": "The introduction of a Value Added Tax and a proposed increase to the wage and salary tax threshold were also discussed."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Social Security tax is 7.5% of taxable wages from the worker and 7.5% from the employer (15% combined), on wages up to $7,000 a quarter; a self-employed person with no employees and over $10,000 of gross revenue reports quarterly wages for himself of 5% of the year's gross revenue and pays the 15% on them (with employees, twice the highest-paid employee's wages).",
+   "value": {
+    "currency": "USD",
+    "employee": 0.075,
+    "employer": 0.075,
+    "combined": 0.15,
+    "quarterlyWageBase": 7000,
+    "selfEmployed": {
+     "grossRevenueOver": 10000,
+     "deemedQuarterlyWages": "5% of annual gross revenue",
+     "withEmployees": "twice the highest-paid employee's wages",
+     "rate": 0.15
+    }
+   },
+   "applies": "From 1 January 2013 (the statutory rise from 7% to 7.5% each); the quarterly base as FSMSSA states it (\"currently\").",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The statutory SS tax rate increase would increase the employee’s share of contributions from 7% to 7.5% of taxable wages and would also increase the employer’s matching contribution by the same rate, for a total of 2% increase in the combined SS tax rate (15%)."
+    },
+    {
+     "src": 2,
+     "said": "Currently the maximum quarterly taxable wage base is $7,000."
+    },
+    {
+     "src": 3,
+     "said": "If gross revenues exceed $10,000, then these self-employed persons must report gross wages for themselves for each calendar quarter equal to 5% of the business’ gross revenues for the calendar year."
+    },
+    {
+     "src": 3,
+     "said": "Quarterly Social Security Tax Due = $800 x 15% = $120.00"
+    },
+    {
+     "src": 3,
+     "said": "Self-employed persons with employees must report gross wages for themselves equal to twice the wages of the highest paid employee reported by them for that quarter."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer deducts the Wage & Salaries Tax from an employee's pay and remits it to the Customs and Tax Administration; a contractor who is in business (controls the work, risks own money) registers instead for the Gross Revenue Tax and files its returns.",
+   "value": {
+    "employerDeducts": true,
+    "freelancer": "Gross Revenue Tax, own returns",
+    "rates": null
+   },
+   "applies": "FSM national taxes; the rates (Title 54) are not read, see the residents blocker.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "The contractor permits the Department or Agency (employer) to deduct the Wage & Salaries Tax (W&ST) from their payments for services from the commencement of this contract, and pay the amounts deducted to the Customs and Tax Administration (CTA) to be credited against the W&ST payable by the contractor."
+    },
+    {
+     "src": 4,
+     "said": "If the contractor is in business (and therefore should pay the Gross Revenue Tax):"
+    }
+   ]
+  },
+  {
+   "item": "residents",
+   "finding": "Wages and salaries bear 6% on the first $11,000 a year and 10% above, withheld by the employer as paid and remitted with a quarterly return by 30 April, 31 July, 31 October and 31 January; an employee earning under $5,000 a year claims a $1,000 deduction by refund. A business's gross revenue (a freelancer's fees and royalties included) bears $80 a year on its first $10,000 and 3% above, none at $2,000 or less, paid with quarterly returns on the same dates. Wages for work done partly outside the FSM are presumed earned there, and an employee of an employer with no place of business or agent in the FSM files and pays the tax himself.",
+   "value": {
+    "currency": "USD",
+    "wageTax": [
+     {
+      "from": 0,
+      "to": 11000,
+      "rate": 0.06
+     },
+     {
+      "from": 11000,
+      "to": null,
+      "rate": 0.1
+     }
+    ],
+    "lowEarnerDeduction": {
+     "amount": 1000,
+     "whenAnnualWagesUnder": 5000,
+     "claimedBy": "refund (§§ 122-123)"
+    },
+    "grossRevenueTax": {
+     "flatOnFirst10000": 80,
+     "rateAbove10000": 0.03,
+     "exemptAtOrBelow": 2000
+    },
+    "returns": "quarterly, by 30 April, 31 July, 31 October and 31 January (§§ 132, 143); no annual return for an employee",
+    "nonResident": "wages for work in and out of the FSM presumed FSM-sourced (§ 124); an employee of an employer with no FSM place of business or agent files and pays himself (§ 137); a non-employee's fees and royalties are a business's gross revenue (§ 112(5)); whether the wage tax withheld is final is not stated",
+    "final": null,
+    "authors": "royalties and fees are a business's gross revenue (§ 112(5)); no separate rule"
+   },
+   "applies": "Read 2026-11-03 from the FSM Code as the Legal Information System of the FSM holds it (its home page names the FSM Supreme Court as the project's local executing agency); a public law changing these sections after the codification would show only if the site carries it. The gross revenue tax's flat $80 on the first $10,000 is not one the engine can apply, so a freelancer's business tax is told as not modeled.",
+   "sources": [
+    {
+     "src": 5,
+     "said": "There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee"
+    },
+    {
+     "src": 5,
+     "said": "(3) Businesses which earn gross revenues of not more than $2,000 per year are exempt from taxation under this section."
+    },
+    {
+     "src": 5,
+     "said": "Gross revenue means the gross receipts, cash or accrued, of the taxpayer received as compensation for personal services not in the form of salaries or wages … including interest, rentals, royalties, fees, or other emoluments however designated"
+    }
+   ]
+  }
+ ],
+ "country": "FM",
+ "sources": [
+  {
+   "url": "https://www.cfsm.gov.fm/congressional-measures-readjust-national-tax-structures/",
+   "title": "Congressional Measures Readjust National Tax Structures (Congress of the FSM)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "the State Governments will maintain its eighty percent (80%)of the fuel tax collected and its original fifty percent (50%)of the wage and salary tax, gross receipts tax, and import duties other than the fuel tax."
+  },
+  {
+   "url": "https://gov.fm/fsm-national-tax-reform-task-force-conducts-stakeholder-consultation-in-kosrae/",
+   "title": "FSM National Tax Reform Task Force Conducts Stakeholder Consultation in Kosrae (FSM Government, 26 November 2025)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "the proposed transition from the Gross Revenue Tax to a Net Profits Tax. The introduction of a Value Added Tax and a proposed increase to the wage and salary tax threshold were also discussed."
+  },
+  {
+   "url": "https://www.fsmssa.fm/f-a-q/",
+   "title": "FSM Social Security Administration, F.A.Q.",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The statutory SS tax rate increase would increase the employee’s share of contributions from 7% to 7.5% of taxable wages and would also increase the employer’s matching contribution by the same rate, for a total of 2% increase in the combined SS tax rate (15%). … Currently the maximum quarterly taxable wage base is $7,000."
+  },
+  {
+   "url": "https://www.fsmssa.fm/employers/",
+   "title": "FSM Social Security Administration, Employers",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "If gross revenues exceed $10,000, then these self-employed persons must report gross wages for themselves for each calendar quarter equal to 5% of the business’ gross revenues for the calendar year. … Quarterly Social Security Tax Due = $800 x 15% = $120.00 … Self-employed persons with employees must report gross wages for themselves equal to twice the wages of the highest paid employee reported by them for that quarter."
+  },
+  {
+   "url": "https://dofa.gov.fm/wp-content/uploads/2025/07/Guideline-on-Tax-Clause-for-Contractors-1.pdf",
+   "title": "FSM Department of Finance and Administration, Guideline for Tax Clause to Insert in Contractors Contract (on FSM Code Title 54)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The contractor permits the Department or Agency (employer) to deduct the Wage & Salaries Tax (W&ST) from their payments for services from the commencement of this contract, and pay the amounts deducted to the Customs and Tax Administration (CTA) to be credited against the W&ST payable by the contractor. … If the contractor is in business (and therefore should pay the Gross Revenue Tax):"
+  },
+  {
+   "url": "http://www.fsmlaw.org/fsm/code/title54/T54_Ch01.htm",
+   "title": "FSM Code, Title 54, Chapter 1: Taxation of Wages, Salaries, and Gross Revenues (Legal Information System of the Federated States of Micronesia, the FSM Supreme Court its local executing agency)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "121 . Tax on wages and salaries . There shall be assessed, levied, collected, and paid a tax of six percent upon the first $11,000 and ten percent upon the amount over the first $11,000 of all wages and salaries received by every employee, as defined, except as provided in section 122 of this chapter. … 122 . (1) Every employee, as defined, except those whose gross annual wages and salaries are $5,000 or more, shall be allowed a deduction of $1,000 per year … (2) The deduction shall be claimed by the employee filing for a refund … 124 . Source of wages . If an employee is credited or paid salaries or wages derived from, or attributable to, personal services performed or rendered both within and without the Federated States of Micronesia, then the whole of the salaries or wages shall be presumed to have been earned within the Federated States of Micronesia. … 132 . (1) The employer shall, on or before the last day of the month following the close of each quarter, to wit, on or before April 30, July 31, October 31, and January 31, pay the tax withheld … 137 . (1) Any individual who is paid or credited wages or salaries from an employer who does not have a place of business in the Federated States of Micronesia and does not have an agent within the Federated States of Micronesia … shall file a return with and pay the tax due … 141 . (1) There shall be assessed, levied, collected, and paid a tax of $80 per year upon that portion of the amount of gross revenues earned by every business subject to the provisions of this chapter which does not exceed $10,000 per year. (2) … a tax of three percent per year upon that portion … which is in excess of $10,000 per year. (3) Businesses which earn gross revenues of not more than $2,000 per year are exempt from taxation under this section. … 112 (5) Gross revenue means the gross receipts … received as compensation for personal services not in the form of salaries or wages … including interest, rentals, royalties, fees, or other emoluments however designated"
+  }
+ ],
+ "blockers": []
+}

@@ -1,0 +1,92 @@
+import { describe, expect, it } from 'vitest';
+import { money } from '../../../src/core/money/money.ts';
+import { t } from '../../../src/core/text/text.ts';
+import { COUNTRY_CODES } from '../../../src/world/gazetteer/gazetteer.ts';
+import data from '../../../src/papers/ids/ids.json';
+import { aboutIds, FEE_UNKNOWN_LINE, idDocument, idIssuer, idOfferGaps, idOffers, keepsIds, mustHoldId, NONE_LINE, TIME_UNKNOWN_LINE, UNKEPT_LINE, VALIDITY_UNKNOWN_LINE, type IdOffer } from '../../../src/papers/ids/ids.ts';
+
+/** An offer as the player meets it, in a few words: the route, the fee in minor units, the validity, whether it never expires. */
+const brief = (offers: IdOffer[] | undefined) => offers?.map((o) => [o.route.id, o.fee === null ? null : o.fee.minor, o.validYears, o.permanent]);
+
+describe('the identity documents', () => {
+  it("are each country's own, by age and route", () => {
+    expect(COUNTRY_CODES.filter(keepsIds)).toEqual(Object.keys(data).sort());
+    expect(keepsIds('DE')).toBe(true);
+    expect(keepsIds('LY')).toBe(false);
+    expect([idOffers('LY', 30), idDocument('LY'), idIssuer('LY')]).toEqual([undefined, undefined, undefined]);
+    // Germany: ten years from 24, six under; at home or at a mission abroad, which costs more.
+    expect(idDocument('DE')).toBe('Personalausweis');
+    const de = idOffers('DE', 30);
+    expect(de?.[0]).toStrictEqual({ route: { id: 'home', where: 'home', speed: 'standard', within: null }, fee: money('EUR', 4600), validYears: 10 });
+    expect(brief(de)).toEqual([['home', 4600, 10, undefined], ['abroad', 8900, 10, undefined]]);
+    expect(brief(idOffers('DE', 24))).toEqual([['home', 4600, 10, undefined], ['abroad', 8900, 10, undefined]]);
+    expect(brief(idOffers('DE', 23))).toEqual([['home', 2760, 6, undefined], ['abroad', 7060, 6, undefined]]);
+    expect(brief(idOffers('DE', 0))).toEqual([['home', 2760, 6, undefined], ['abroad', 7060, 6, undefined]]);
+    // France: free at any age, at home or abroad, ten years; Guyane's people hold France's.
+    expect(idDocument('FR')).toBe("carte nationale d'identité");
+    expect(brief(idOffers('FR', 5))).toEqual([['home', 0, 10, undefined], ['abroad', 0, 10, undefined]]);
+    expect(idOffers('GF', 40)).toStrictEqual(idOffers('FR', 40));
+    expect(idDocument('GF')).toBe("carte nationale d'identité");
+    // Slovenia: from 70 the card never expires; priority costs the decision tax twice, and a mission charges its own.
+    expect(brief(idOffers('SI', 70))).toEqual([['unit', 3055, null, true], ['priority', 3965, null, true], ['mission', 7600, null, true]]);
+    expect(idOffers('SI', 70)?.[0]?.permanent).toBe(true);
+    expect(brief(idOffers('SI', 69))?.[0]).toEqual(['unit', 3055, 10, undefined]);
+    expect(brief(idOffers('SI', 11))?.[0]).toEqual(['unit', 2520, 5, undefined]);
+    // Morocco (decree 2.20.521, art. 1): a child's card runs at most seven years and never past the day before 12, held
+    // in whole years by the age applied at; ten years from 12; held from 16 (law 04.20, art. 2).
+    expect([4, 5, 6, 9, 11, 12].map((a) => brief(idOffers('MA', a))?.[0])).toEqual([['office', 5000, 7, undefined], ['office', 5000, 7, undefined], ['office', 5000, 6, undefined], ['office', 5000, 3, undefined], ['office', 5000, 1, undefined], ['office', 7500, 10, undefined]]);
+    expect([mustHoldId('MA', 15), mustHoldId('MA', 16), mustHoldId('TO', 13), mustHoldId('TO', 14), mustHoldId('YE', 16)]).toEqual([false, true, false, true, true]);
+    // Tonga (National Identity Card Act 2010): from 14, five years, free, and $50 for a lost card.
+    expect([idOffers('TO', 13), brief(idOffers('TO', 14)), brief(idOffers('TO', 30, 'replacement'))]).toEqual([[], [['nico', 0, 5, undefined]], [['lost', 5000, 5, undefined]]]);
+    // Spain: from 70 the term is a date the office sets, which the game doesn't know.
+    expect(brief(idOffers('ES', 70))).toEqual([['police', 1200, null, undefined]]);
+    // The United Kingdom and the United States issue none; Guam's people are the United States', so hold none.
+    expect([idDocument('GB'), idDocument('US'), idDocument('GU')]).toEqual(['none', 'none', 'none']);
+    expect([idOffers('GB', 30), idOffers('US', 30), idOffers('GU', 30)]).toEqual([[], [], []]);
+    expect([idIssuer('GU'), idIssuer('US'), idIssuer('DE'), idIssuer('GF')]).toEqual(['US', 'US', 'DE', 'FR']);
+  });
+
+  it('price a first card apart from its renewal and its replacement, where the office does', () => {
+    // Moldova (the Agency's own tariff, read 2026-11-03): a first card is free in the longest term, 20 working days; a
+    // renewal pays 290 lei there; faster terms pay the same whichever it is; held from 14.
+    expect(brief(idOffers('MD', 30))?.slice(0, 2)).toEqual([['twenty-days', 0, 10, undefined], ['ten-days', 51000, 10, undefined]]);
+    expect(brief(idOffers('MD', 30, 'renewal'))?.slice(0, 2)).toEqual([['renew-twenty-days', 29000, 10, undefined], ['renew-ten-days', 51000, 10, undefined]]);
+    expect(brief(idOffers('MD', 70, 'replacement'))?.[0]).toEqual(['lost-twenty-days', 29000, null, true]);
+    expect(idOffers('MD', 30)?.[2]?.route.within).toEqual({ n: 5, unit: 'working day' });
+    expect([mustHoldId('MD', 13), mustHoldId('MD', 14), mustHoldId('MR', 15), mustHoldId('MR', 16)]).toEqual([false, true, false, true]);
+    // Argentina: a first DNI is free; an update or a new copy costs ARS 10,000, express 26,000 within four working days.
+    expect(brief(idOffers('AR', 5))).toEqual([['first', 0, null, undefined]]);
+    expect(brief(idOffers('AR', 14, 'renewal'))?.slice(0, 2)).toEqual([['regular', 1000000, null, undefined], ['express', 2600000, null, undefined]]);
+    expect(idOffers('AR', 14, 'renewal')?.[1]?.route.within).toEqual({ n: 4, unit: 'working day' });
+    // Turkey: the Gazette's tariff prices a change and a loss, not a first card for a birth registered in time.
+    expect([idOffers('TR', 30), idOffers('TR', 30, 'renewal'), idOffers('TR', 30, 'replacement')].map(brief)).toEqual([[['nufus', null, null, undefined]], [['nufus-change', 22000, null, undefined]], [['nufus-lost', 44000, null, undefined]]]);
+    // Belarus: under 14 the standard card is free, and faster issue costs one or two base units more.
+    expect(brief(idOffers('BY', 10))?.slice(0, 3)).toEqual([['standard', 0, 5, undefined], ['accelerated', 4500, 5, undefined], ['urgent', 9000, 5, undefined]]);
+    // Mongolia: 18,300 tögrög at 16 and again at 25, in 5 working days in the capital; 33,300 to reissue.
+    expect(brief(idOffers('MN', 25))?.[0]).toEqual(['capital', 1830000, null, undefined]);
+    expect(brief(idOffers('MN', 30, 'replacement'))?.[2]).toEqual(['mission-lost', 3330000, null, undefined]);
+    // Guinea: the decree of 2 February 2025 makes a first card free from 16; at 15 it's the old GNF 15,000, and a renewal
+    // from 16 is priced at an amount not stated.
+    expect([brief(idOffers('GN', 15)), brief(idOffers('GN', 16)), brief(idOffers('GN', 30, 'renewal'))]).toEqual([[['office', 15000, 5, undefined]], [['office', 0, 5, undefined]], [['renew', null, 5, undefined]]]);
+    // São Tomé (the DGRN's page): a first card STN 135 in 15 days or 202.50 in 3; a renewal 125 or 185; free at 18.
+    expect([brief(idOffers('ST', 30)), brief(idOffers('ST', 18))?.[0], brief(idOffers('ST', 30, 'renewal'))]).toEqual([[['registos', 13500, null, undefined], ['urgent', 20250, null, undefined]], ['registos', 0, null, undefined], [['renew', 12500, null, undefined], ['renew-urgent', 18500, null, undefined]]]);
+    // Djibouti (the Population Branch, as the IRB read it): DJF 2,700 for a first card and 2,000 to renew it.
+    expect([brief(idOffers('DJ', 18)), brief(idOffers('DJ', 30, 'renewal'))]).toEqual([[['population', 2700, 10, undefined]], [['renew', 2000, 10, undefined]]]);
+  });
+
+  it("tell the player what the game doesn't know", () => {
+    expect([UNKEPT_LINE, NONE_LINE, FEE_UNKNOWN_LINE, VALIDITY_UNKNOWN_LINE, TIME_UNKNOWN_LINE]).toEqual(['ids.unkept', 'ids.none', 'ids.fee-unknown', 'ids.validity-unknown', 'ids.time-unknown']);
+    expect(aboutIds('LY')).toBe(t(UNKEPT_LINE, { country: 'Libya' }));
+    expect(aboutIds('LY')).toBe("Whether Libya issues an identity card, and what one costs, aren't known to this game yet.");
+    expect(aboutIds('GB')).toBe('United Kingdom issues no national identity card.');
+    expect(aboutIds('GU')).toBe(t(NONE_LINE, { country: 'Guam' }));
+    expect([aboutIds('DE'), aboutIds('FR'), aboutIds('GF')]).toEqual([undefined, undefined, undefined]);
+    const home = idOffers('DE', 30)?.[0] as IdOffer;
+    expect(idOfferGaps(home)).toEqual([t(TIME_UNKNOWN_LINE)]);
+    expect(idOfferGaps({ ...home, route: { ...home.route, within: { n: 3, unit: 'week' } } })).toEqual([]);
+    expect(idOfferGaps({ ...home, fee: null, validYears: null })).toEqual([t(FEE_UNKNOWN_LINE), t(VALIDITY_UNKNOWN_LINE), t(TIME_UNKNOWN_LINE)]);
+    // A card that never expires has no validity to tell; one whose term isn't known does.
+    expect(idOfferGaps(idOffers('MK', 66)?.[1] as IdOffer)).toEqual([t(FEE_UNKNOWN_LINE)]);
+    expect(idOfferGaps(idOffers('ES', 70)?.[0] as IdOffer)).toEqual([t(VALIDITY_UNKNOWN_LINE), t(TIME_UNKNOWN_LINE)]);
+  });
+});

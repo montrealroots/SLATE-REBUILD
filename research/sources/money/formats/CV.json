@@ -1,0 +1,50 @@
+{
+ "country": "CV",
+ "national": {
+  "name": "Número De Identificação Bancária",
+  "parts": [
+   {
+    "name": "Código Da Instituição",
+    "length": 4,
+    "kind": "n"
+   },
+   {
+    "name": "Código Do Balcão",
+    "length": 4,
+    "kind": "n"
+   },
+   {
+    "name": "Número Da Conta",
+    "length": 11,
+    "kind": "n"
+   },
+   {
+    "name": "Dígitos De Controlo",
+    "length": 2,
+    "kind": "n"
+   }
+  ],
+  "bank": [
+   1,
+   4
+  ],
+  "checks": [
+   {
+    "over": [
+     1,
+     19
+    ],
+    "mod97": true
+   }
+  ]
+ },
+ "note": "The Banco de Cabo Verde's own page on transfers (Sistema de Pagamentos, Perguntas Frequentes: Transferências), read 2026-11-03: the NIB, the number that identifies an account held in Cabo Verde and is used in national transfers, is 21 digits, the institution's code (4, set by the BCV for each authorised institution), the branch's (4, set by the institution), the account number (11) and two control digits 'calculados de acordo com o Mód. 97/10 da ISO' (ISO/IEC 7064's MOD 97-10, the check number.ts calls mod97, as Angola's NBA has it), worked over the nineteen digits before them. The IBAN is CV, two check digits (64, worked by ISO 7064's MOD 97) and the NIB, 25 characters; Cabo Verde isn't in SWIFT's IBAN Registry (Release 103, September 2026), so the national form is given. The page gives no worked NIB, so no example is held; its two rules agree: a NIB its control digits make one mod 97 gives every IBAN the check digits 64, the figure the page states.",
+ "sources": [
+  {
+   "url": "https://www.bcv.cv/pt/SistemadePagamentos/Perguntas/Transfer%C3%AAncias/Paginas/Transfer%C3%AAncias.aspx",
+   "title": "Banco de Cabo Verde, Sistema de Pagamentos, Perguntas Frequentes: Transferências",
+   "read": "2026-11-03",
+   "said": "O NIB (Número de Identificação Bancária) é um elemento de informação normalizado que permite identificar contas domiciliadas em Cabo Verde. O NIB apenas pode ser utilizado em transferências nacionais. É composto por 21 dígitos e a sua estrutura distribui-se da seguinte forma: • Cód. Instituição – 4 dígitos, código definido pelo BCV para cada instituição autorizada; • Cód. Balcão – 4 dígitos, código definido pela instituição, segundo critérios de organização interna; • Número da Conta – 11 dígitos, número de conta em sentido estrito, porque definido de acordo com princípios próprios da instituição; • Dígitos de Controlo – 2 dígitos, algarismos que permitem verificar a coerência dos restantes elementos de informação do NIB, calculados de acordo com o Mód. 97/10 da ISO. ... Para Cabo Verde, o IBAN é composto por 25 caracteres: • Código do país: 2 letras (CV – ISSO 3166) • Dígitos de controlo: 2 dígitos (64 – calculados com base no MOD 97 (ISO 7064); • NIB: 21 dígitos."
+  }
+ ]
+}

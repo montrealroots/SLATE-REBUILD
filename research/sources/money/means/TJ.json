@@ -1,0 +1,57 @@
+{
+ "country": "TJ",
+ "currency": "TJS",
+ "year": 2024,
+ "wealth": {
+  "p0p20": "-3790.7",
+  "p0p40": "3797.4",
+  "p0p60": "13159.3",
+  "p0p90": "39594",
+  "p0p99": "65943.40000000001",
+  "p99p100": "2051922.3"
+ },
+ "income": {
+  "p0p20": "3495",
+  "p0p40": "7592.3",
+  "p0p60": "11169.3",
+  "p0p90": "18943.2",
+  "p0p99": "25312.9",
+  "p99p100": "417686.4"
+ },
+ "cash": {
+  "year": 2024,
+  "currency": "TJS",
+  "sector": "S.14",
+  "basis": "gross",
+  "derived": false,
+  "disposable": {
+   "code": "B.6g",
+   "value": "140260.6"
+  },
+  "national": {
+   "code": "B.5g",
+   "value": "203738.8"
+  }
+ },
+ "note": "The World Inequality Database (WID.world, bulk download of 15 October 2026, read again in that of 30 October 2026), Tajikistan, 2024: average net personal wealth (ahweal992j) and average post-tax national income (adiinc992j) per adult over 20, resources split equally within couples, in TJS of that year, for the bottom 20, 40, 60, 90 and 99 percent and the top 1 percent; each family's band is read from them. Read 2026-10-30. Read again 2026-11-03 from the bulk download of 30 October 2026 (its country files dated 30 October 2026): every row quoted here, its year and its currency label stood as before, and no later year was given. Until 2026-11-03 this note and its sources wrote the variable codes with their age and population parts swapped (ahwealj992 for ahweal992j and adiincj992 for adiinc992j), codes no file of the database holds (its README: type, concept, age group, population, as in sptinc992j), and called adiinc992j post-tax disposable income, which its metadata names post-tax national income ([Post-tax national income]=[Post-tax disposable income]+[Public spending]). The national accounts (the owner's ruling of 2026-11-03: each band's income scaled by households' disposable income over national income), searched again on 2026-11-03 in the statistics office's own accounts: TajStat's Национальные счета Республики Таджикистан 2025, the integrated accounts for 2024 and Table 1.4, 2024: the gross disposable income (B.6g) of households alone (S.14; the non-profit institutions sat with government), 140,260.6, and gross national income (B.5g) 203,738.8, in millions of somoni, a ratio of about 0.688 (`cash`). Gross over gross: consumption of fixed capital was given for the whole economy only (19,353.6). The households' figure held to its own account (primary incomes 130,909.8 plus current transfers received 20,215.9, less those paid 7,376.3 and social contributions 3,488.8); the economy's total disposable income in the same accounts (212,815.3) didn't equal GNI plus net current transfers from Table 1.4 (222,322.8), an inconsistency of the source's own. Until 2026-11-03 each band's income was the database's post-tax national income as it stood, public spending included.",
+ "sources": [
+  {
+   "url": "https://wid.world/bulk_download/wid_all_data.zip",
+   "title": "World Inequality Database, bulk download (WID_data_TJ.csv and WID_metadata_TJ.csv), wid.world, files of 30 October 2026",
+   "read": "2026-11-03",
+   "said": "TJ;ahweal992j;p0p20;2024;-3790.7;992;j;0 ... TJ;ahweal992j;p0p40;2024;3797.4;992;j;0 ... TJ;ahweal992j;p0p60;2024;13159.3;992;j;0 ... TJ;ahweal992j;p0p90;2024;39594;992;j;0 ... TJ;ahweal992j;p0p99;2024;65943.40000000001;992;j;0 ... TJ;ahweal992j;p99p100;2024;2051922.3;992;j;0 ... TJ;adiinc992j;p0p20;2024;3495;992;j;1 ... TJ;adiinc992j;p0p40;2024;7592.3;992;j;1 ... TJ;adiinc992j;p0p60;2024;11169.3;992;j;1 ... TJ;adiinc992j;p0p90;2024;18943.2;992;j;1 ... TJ;adiinc992j;p0p99;2024;25312.9;992;j;1 ... TJ;adiinc992j;p99p100;2024;417686.4;992;j;1"
+  },
+  {
+   "url": "https://wid.world/bulk_download/wid_all_data.zip",
+   "title": "World Inequality Database, bulk download, WID_metadata_TJ.csv (variables ahweal992j and adiinc992j)",
+   "read": "2026-11-03",
+   "said": "TJ;ahweal992j;992;j; ... equal-split adults ... ;The population is comprised of individuals over age 20.;TJS; ... TJ;adiinc992j;992;j;"
+  },
+  {
+   "url": "https://www.stat.tj/wp-content/uploads/2026/02/sns-sbor-2025g.pdf",
+   "title": "Agency on Statistics under the President of the Republic of Tajikistan, Национальные счета Республики Таджикистан (System of National Accounts) 2025, Интегрированные счета за 2024 год (pp. 178-183 of the PDF) and Table 1.4 Взаимосвязи между основными показателями системы национальных счетов",
+   "read": "2026-11-03",
+   "said": "Интегрированные счета, 2024 год, млн. сомони, Использование, columns Всего по экономике / Нефинансовые и финансовые предприятия / Домашние хозяйства / Государство и НКО: Сальдо первичных доходов (ВНД) 203738,8 | 50301,5 | 130909,8 | 22527,5; Валовой располагаемый доход 212815,3 | 37833,5 | 140260,6 | 34721,2. Table 1.4, 2024: Валовой национальный доход 203738,8; Потребление основного капитала 19353,6; Чистый национальный доход 184385,2"
+  }
+ ]
+}

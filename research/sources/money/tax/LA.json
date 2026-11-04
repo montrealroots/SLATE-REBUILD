@@ -1,0 +1,271 @@
+{
+ "topic": "tax.LA",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Laos: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page. Re-read 2026-11-03 (Wave 2): every source that answered still says what is quoted, and its date is moved; no primary was reached.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "Salaries are taxed monthly at 0% to LAK 2,500,000, 5% to 5,000,000, 10% to 15,000,000, 15% to 25,000,000, 20% to 65,000,000 and 25% above (Law No. 88/NA art. 38(1)), the bands to move with the minimum wage the Government sets; PwC annualises the scale at 0% to 30 million up to 25% above 780 million. Sole traders and independent contractors pay profit tax on business income instead.",
+   "value": {
+    "currency": "LAK",
+    "monthly": [
+     {
+      "from": 0,
+      "to": 2500000,
+      "rate": 0
+     },
+     {
+      "from": 2500000,
+      "to": 5000000,
+      "rate": 0.05
+     },
+     {
+      "from": 5000000,
+      "to": 15000000,
+      "rate": 0.1
+     },
+     {
+      "from": 15000000,
+      "to": 25000000,
+      "rate": 0.15
+     },
+     {
+      "from": 25000000,
+      "to": 65000000,
+      "rate": 0.2
+     },
+     {
+      "from": 65000000,
+      "to": null,
+      "rate": 0.25
+     }
+    ],
+    "brackets": [
+     {
+      "from": 0,
+      "to": 30000000,
+      "rate": 0
+     },
+     {
+      "from": 30000000,
+      "to": 60000000,
+      "rate": 0.05
+     },
+     {
+      "from": 60000000,
+      "to": 180000000,
+      "rate": 0.1
+     },
+     {
+      "from": 180000000,
+      "to": 300000000,
+      "rate": 0.15
+     },
+     {
+      "from": 300000000,
+      "to": 780000000,
+      "rate": 0.2
+     },
+     {
+      "from": 780000000,
+      "to": null,
+      "rate": 0.25
+     }
+    ]
+   },
+   "applies": "Lao and foreign individuals, 2026: the law's own monthly table, read 2026-11-03 in the Official Gazette's scan, is the one the PwC summary gave, and the game counts it over twelve months.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "All sole traders and independent contractors are subject to profit tax (PT) on their business income derived in Lao PDR."
+    },
+    {
+     "src": 0,
+     "said": "0 2,500,000 2,500,000 0 0 0 2,500,000 5,000,000 2,500,000 5 125,000 125,000 5,000,000 15,000,000 10,000,000 10 1,000,000 1,125,000 15,000,000 25,000,000 10,000,000 15 1,500,000 2,625,000 25,000,000 65,000,000 40,000,000 20 8,000,000 10,625,000 65,000,000 and above - 25"
+    },
+    {
+     "src": 0,
+     "said": "780,000,000 and above - 25"
+    },
+    {
+     "src": 4,
+     "said": "ແຕ່ 2,500,000 ລົງມາ 0%; ເກີນ 2,500,000 ຫາ 5,000,000 5%; ເກີນ 5,000,000 ຫາ 15,000,000 10%; ເກີນ 15,000,000 ຫາ 25,000,000 15%; ເກີນ 25,000,000 ຫາ 65,000,000 20%; ເກີນ 65,000,000 25%"
+    }
+   ]
+  },
+  {
+   "item": "year",
+   "finding": "PIT is computed monthly; employees now file an annual return by 31 March of the following year.",
+   "value": {
+    "period": "monthly",
+    "annualReturnDue": "03-31"
+   },
+   "applies": "Employees.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Employees are now required to obtain a Tax Identification Number (TIN) and file annual PIT returns by 31 March of the following year."
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "Social security is 5.5% from the employee and 6% from the employer on gross pay, on a base capped at LAK 4.5 million a month; expatriates working over 12 months must register.",
+   "value": {
+    "currency": "LAK",
+    "employee": 0.055,
+    "employer": 0.06,
+    "baseCap": 4500000
+   },
+   "applies": "2026.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "6% of the gross remuneration must be contributed by the employer. 5.5% of the gross remuneration must be contributed by the employee."
+    },
+    {
+     "src": 2,
+     "said": "the total base amount to be calculated is capped at LAK 4.5 million."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer withholds salary tax monthly and pays it by the 20th of the next month (art. 39). Sports and performing-arts income above the minimum wage the Government sets bears 5% of the whole of it (art. 38(4.4)), and income from intellectual property such as copyright 5% (art. 38(4.3)); commissions, consultancy and other service fees bear 10% (art. 38(5.6)).",
+   "value": {
+    "remitBy": "20th of the following month",
+    "artists": 0.05,
+    "artistsAbove": "the minimum wage the Government sets",
+    "copyright": 0.05,
+    "serviceFees": 0.1
+   },
+   "applies": "Law No. 88/NA (25 June 2025), which replaced Law No. 67/NA of 2019, read 2026-11-03. Art. 74 puts it in force from 1 September 2025 once the President's promulgating decree is issued and it is published in the Official Gazette; the Gazette published it on 19 June 2026, and law firms report 1 July 2026; no Tax Department notice settles which. Either way it is in force for 2026, and the game's withholding isn't dated, so it withholds 5% from a performer's fee all year. The 10% the PwC summary gave was the 2019 law's. The minimum wage under which a performer's fee bears none isn't read, so the game withholds from every fee.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Employers must withhold the PIT payable from their employees' salaries each month and submit the PIT declaration and payment before the 20th (previously 15th) day of the following month."
+    },
+    {
+     "src": 4,
+     "said": "4.4 ການເຄື່ອນໄຫວກິລາ-ກາຍຍະກຳ, ສິລະປະການສະແດງ ເກີນຄ່າແຮງງານຂັ້ນຕ່ຳ ທີ່ລັດຖະບານກຳນົດ"
+    },
+    {
+     "src": 4,
+     "said": "4.3 ຊັບສິນທາງປັນຍາ ເຊັ່ນ ລິຂະສິດ, ສິດທິບັດ, ເຄື່ອງໝາຍການຄ້າ ຫຼື ສິດອື່ນ ຂອງ ບຸກຄົນ ຫຼື ນິຕິບຸກຄົນ"
+    },
+    {
+     "src": 4,
+     "said": "5.6 ລາຍໄດ້ຈາກ ຄ່ານາຍໜ້າ, ຄ່າທີ່ປຶກສາ ແລະ ຄ່າບໍລິການອື່ນ"
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A non-resident's pay as an artist, an athlete or a committee member bears 10% of the whole (Law No. 88/NA art. 48(2.1)), copyright fees 5% (art. 48(3.2)), and salaries the residents' scale (art. 48(1)); the payer withholds it. Whether it is final isn't stated.",
+   "value": {
+    "artists": 0.1,
+    "copyright": 0.05,
+    "salary": "same scale as residents"
+   },
+   "applies": "Non-residents, Law No. 88/NA, read 2026-11-03.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "Expatriates who work in Lao PDR and obtain remuneration in Lao PDR are obligated to pay PIT, regardless of the period of their employment and stay in Lao PDR."
+    },
+    {
+     "src": 3,
+     "said": "WHT is applied to various types of payments made to domestic and foreign recipients."
+    },
+    {
+     "src": 4,
+     "said": "2.1 ຄ່າຕອບແທນແກ່ ຄະນະກຳມະການ, ສິລະປິນ, ນັກກິລາ-ກາຍຍະກຳ ແລະ ຜູ້ອື່ນ"
+    },
+    {
+     "src": 4,
+     "said": "3.2 ຄ່າລິຂະສິດ, ສິດທິບັດ, ເຄື່ອງໝາຍການຄ້າ"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "VAT is 10%; the law sets no turnover threshold: a person registered as an enterprise, with a taxpayer number and a business licence, must enter VAT (Law No. 60/NA art. 33), and micro-enterprises' entry is left to a separate regulation, not found.",
+   "value": {
+    "standard": 0.1
+   },
+   "applies": "2026 (Law No. 60/NA, in force 1 January 2025).",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The standard VAT rate is 10%."
+    },
+    {
+     "src": 5,
+     "said": "ສຳລັບ ການເຂົ້າໃນລະບົບ ອມພ ຂອງຈຸລະວິສາຫະກິດ ໄດ້ກຳນົດໄວ້ໃນລະບຽບການຕ່າງຫາກ."
+    }
+   ]
+  }
+ ],
+ "country": "LA",
+ "sources": [
+  {
+   "url": "https://taxsummaries.pwc.com/lao-pdr/individual/taxes-on-personal-income",
+   "title": "PwC Worldwide Tax Summaries: Lao PDR, Individual - Taxes on personal income (reviewed 7 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.tax.gov.la/",
+   "said": "All sole traders and independent contractors are subject to profit tax (PT) on their business income derived in Lao PDR. … 0 2,500,000 2,500,000 0 0 0 2,500,000 5,000,000 2,500,000 5 125,000 125,000 5,000,000 15,000,000 10,000,000 10 1,000,000 1,125,000 15,000,000 25,000,000 10,000,000 15 1,500,000 2,625,000 25,000,000 65,000,000 40,000,000 20 8,000,000 10,625,000 65,000,000 and above - 25 … 780,000,000 and above - 25 … Expatriates who work in Lao PDR and obtain remuneration in Lao PDR are obligated to pay PIT, regardless of the period of their employment and stay in Lao PDR."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/lao-pdr/individual/tax-administration",
+   "title": "PwC Worldwide Tax Summaries: Lao PDR, Individual - Tax administration (reviewed 7 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.tax.gov.la/",
+   "said": "Employees are now required to obtain a Tax Identification Number (TIN) and file annual PIT returns by 31 March of the following year. … Employers must withhold the PIT payable from their employees' salaries each month and submit the PIT declaration and payment before the 20th (previously 15th) day of the following month."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/lao-pdr/individual/other-taxes",
+   "title": "PwC Worldwide Tax Summaries: Lao PDR, Individual - Other taxes (reviewed 7 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.tax.gov.la/",
+   "said": "6% of the gross remuneration must be contributed by the employer. 5.5% of the gross remuneration must be contributed by the employee. … the total base amount to be calculated is capped at LAK 4.5 million. … The standard VAT rate is 10%."
+  },
+  {
+   "url": "https://taxsummaries.pwc.com/lao-pdr/corporate/withholding-taxes",
+   "title": "PwC Worldwide Tax Summaries: Lao PDR, Corporate - Withholding taxes (reviewed 7 August 2026)",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.tax.gov.la/",
+   "said": "Income to the committee, artists, athletes-gymnasts, and others 10 … WHT is applied to various types of payments made to domestic and foreign recipients."
+  },
+  {
+   "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/88-25-6-2025_0001.pdf",
+   "title": "Law on Income Tax (amended) No. 88/NA of 25 June 2025, Lao Official Gazette (Ministry of Justice), entry 2597, published in the Gazette on 19-06-2026 (scan, read against the page images)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "ມາດຕາ 38 (ປັບປຸງ) ອັດຕາອາກອນລາຍໄດ້ … 1. ອັດຕາທະວີຄູນ ແຕ່ ສູນສ່ວນຮ້ອຍ (0%) ຫາ ຊາວຫ້າສ່ວນຮ້ອຍ (25%) … ແຕ່ 2,500,000 ລົງມາ 0%; ເກີນ 2,500,000 ຫາ 5,000,000 5%; ເກີນ 5,000,000 ຫາ 15,000,000 10%; ເກີນ 15,000,000 ຫາ 25,000,000 15%; ເກີນ 25,000,000 ຫາ 65,000,000 20%; ເກີນ 65,000,000 25% … 4. ອັດຕາ ຫ້າສ່ວນຮ້ອຍ (5%) ຂອງລາຍໄດ້ທັງໝົດ ສຳລັບ: … 4.3 ຊັບສິນທາງປັນຍາ ເຊັ່ນ ລິຂະສິດ, ສິດທິບັດ, ເຄື່ອງໝາຍການຄ້າ ຫຼື ສິດອື່ນ ຂອງ ບຸກຄົນ ຫຼື ນິຕິບຸກຄົນ; 4.4 ການເຄື່ອນໄຫວກິລາ-ກາຍຍະກຳ, ສິລະປະການສະແດງ ເກີນຄ່າແຮງງານຂັ້ນຕ່ຳ ທີ່ລັດຖະບານກຳນົດ; … 5. ອັດຕາ ສິບສ່ວນຮ້ອຍ (10%) ຂອງລາຍໄດ້ທັງໝົດ ສຳລັບ: … 5.6 ລາຍໄດ້ຈາກ ຄ່ານາຍໜ້າ, ຄ່າທີ່ປຶກສາ ແລະ ຄ່າບໍລິການອື່ນ; … ມາດຕາ 39 … ບໍ່ໃຫ້ກາຍ ວັນທີ 20 ຂອງເດືອນຖັດໄປ … ມາດຕາ 48 (ປັບປຸງ) … 2. ອັດຕາ ສິບສ່ວນຮ້ອຍ (10%) ຂອງລາຍໄດ້ທັງໝົດ ສຳລັບ: 2.1 ຄ່າຕອບແທນແກ່ ຄະນະກຳມະການ, ສິລະປິນ, ນັກກິລາ-ກາຍຍະກຳ ແລະ ຜູ້ອື່ນ; … 3. ອັດຕາ ຫ້າສ່ວນຮ້ອຍ (5%) ຂອງລາຍໄດ້ທັງໝົດ ສຳລັບ: … 3.2 ຄ່າລິຂະສິດ, ສິດທິບັດ, ເຄື່ອງໝາຍການຄ້າ; … ມາດຕາ 50 … ບໍ່ໃຫ້ກາຍວັນທີ 31 ມີນາ ຂອງປີຖັດໄປ … ມາດຕາ 74 (ປັບປຸງ) ຜົນສັກສິດ ກົດໝາຍສະບັບນີ້ ມີຜົນສັກສິດ ນັບແຕ່ວັນທີ 1 ກັນຍາ 2025 ພາຍຫຼັງ ປະທານປະເທດ ແຫ່ງ ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ ອອກລັດຖະດຳລັດ ປະກາດໃຊ້ ແລະ ໄດ້ລົງຈົດໝາຍເຫດທາງລັດຖະການ ເປັນຕົ້ນໄປ. [Art. 38: 1, the monthly scale (LAK) 0% to 2.5 million, 5% to 5 million, 10% to 15 million, 15% to 25 million, 20% to 65 million, 25% above; 4, 5% of total income on 4.3 intellectual property such as copyright, patents, trademarks or other rights, and on 4.4 sports and performing-arts activity above the minimum wage the Government sets; 5, 10% on 5.6 commissions, consultancy and other service fees. Art. 39: salary tax remitted by the 20th of the next month. Art. 48 (non-residents): 10% of total income on 2.1 pay to committee members, artists, athletes and others; 5% on 3.2 copyright, patent and trademark fees. Art. 50: the yearly return by 31 March of the next year. Art. 74: in force from 1 September 2025, after the President promulgates it by decree and it is published in the Official Gazette.]"
+  },
+  {
+   "url": "https://laoofficialgazette.gov.la/kcfinder/upload/files/%2060.28.6.2024.pdf",
+   "title": "Law on Value Added Tax (amended) No. 60/NA of 28 June 2024, Lao Official Gazette, entry 2345, published 11-03-2025 (scan, read against the page images)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "ມາດຕາ 33 (ປັບປຸງ) ການເຂົ້າໃນລະບົບອາກອນມູນຄ່າເພີ່ມ ບຸກຄົນ, ນິຕິບຸກຄົນ ຫຼື ການຈັດຕັ້ງ ທີ່ໄດ້ຂຶ້ນທະບຽນວິສາຫະກິດ ພ້ອມທັງໄດ້ຮັບເລກປະຈຳຕົວຜູ້ເສຍອາກອນ ແລະ ໄດ້ຮັບອະນຸຍາດດຳເນີນທຸລະກິດ ຈາກຂະແໜງການທີ່ກ່ຽວຂ້ອງ ຕ້ອງໄດ້ເຂົ້າໃນລະບົບ ອມພ. ສຳລັບ ການເຂົ້າໃນລະບົບ ອມພ ຂອງຈຸລະວິສາຫະກິດ ໄດ້ກຳນົດໄວ້ໃນລະບຽບການຕ່າງຫາກ. [Art. 33: a person, legal person or organisation registered as an enterprise, with a taxpayer number and a business licence, must enter the VAT system; micro-enterprises' entry is set by a separate regulation.]"
+  }
+ ],
+ "blockers": [
+  {
+   "item": "vat",
+   "sought": "Micro-enterprises' entry into VAT, which VAT Law No. 60/NA (in force 1 January 2025) art. 33 leaves to a separate regulation, not found: the law sets no turnover threshold, and a person registered as an enterprise with a taxpayer number and a licence must enter VAT (read 2026-11-03)",
+   "tried": {
+    "institution": "tax.gov.la is unreachable from this environment (proxy CONNECT 502, 2026-11-01) || 2026-11-01 retry: tax.gov.la still fails (connection, curl 000); mof.gov.la (www) answers but holds no PIT table on its home page",
+    "official-register": "Tax Law (2019, amended) not read || 2026-11-01 retry: laoofficialgazette.gov.la searched ('ອາກອນລາຍໄດ້', 'Income Tax', 'ອາກອນມູນຄ່າເພີ່ມ'): the Law on Income Tax entry (display id 1581) links a one-page scanned PDF with no text layer; no Lao OCR is installed here (tesseract has eng and nor only), so it could not be read",
+    "web-search": "not run separately || 2026-11-01 retry: not run: the tool refused searches this turn, the shared limit of 200 having been reached (2026-11-01)",
+    "trade-press": "PwC Lao PDR used || 2026-11-01 retry: PwC Lao PDR already held; no other summary read",
+    "archive": "web.archive.org resets the connection from this environment (2026-11-01). || 2026-11-01 retry: archive.org availability API answers, but web.archive.org is refused from this environment (http 'Blocked by egress policy', https connection fails), not read (2026-11-01)"
+   }
+  }
+ ]
+}

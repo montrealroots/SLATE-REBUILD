@@ -1,0 +1,201 @@
+{
+ "topic": "tax.TO",
+ "read": "2026-11-01",
+ "note": "Read 2026-11-01 at the owner's word (\"Build those first 3 starting with ledger first\"; of the 21 countries read first: \"It should cover across every country\"; \"Retry the blocked tax facts once all countries land\"): the tax on a screen worker's pay in Tonga: a resident's income tax, social contributions, what is withheld at source, a non-resident artiste's withholding, an author's treatment, VAT and the tax year. Research and retry subagents (workbench/briefs/BRIEF-tax.md, BRIEF-tax-retry.md), every quote checked by the lead against its saved page.",
+ "figures": [
+  {
+   "item": "residents",
+   "finding": "An individual or sole trader pays nothing on the first TOP 12,000 a year of gross income, 10% to 30,000, 15% to 50,000, 20% to 70,000 and 25% above, the Ministry of Revenue and Customs's \"New Tax Rate\" from July 2021, with no deductions for an employee; no later table is printed.",
+   "value": {
+    "currency": "TOP",
+    "brackets": [
+     {
+      "from": 0,
+      "to": 12000,
+      "rate": 0
+     },
+     {
+      "from": 12000,
+      "to": 30000,
+      "rate": 0.1
+     },
+     {
+      "from": 30000,
+      "to": 50000,
+      "rate": 0.15
+     },
+     {
+      "from": 50000,
+      "to": 70000,
+      "rate": 0.2
+     },
+     {
+      "from": 70000,
+      "to": null,
+      "rate": 0.25
+     }
+    ],
+    "since": "2021-07-01",
+    "regionalLayer": null
+   },
+   "applies": "From 1 July 2021; read 2026-11-03 on the Ministry's own page, which prints no later table.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "The tax-free income level will be raised from the first $10,000 to the first $12,000 pa'anga earned in the new financial year, with further adjustments in tax thresholds easing higher income tax levels."
+    },
+    {
+     "src": 0,
+     "said": "The current 10% income tax will be applied on income between $12,000 and $30,000 per annum. For earnings between $30,001 and $50,000, the rate will be reduced from 20% to 15%. Earnings between $50,0001 and $70,000 are subject to a $20% tax rate. Earnings over $70,001 are subject to a 25% tax rate."
+    },
+    {
+     "src": 0,
+     "said": "Income tax cuts for individuals and sole traders from July 1 means all income taxpayers in Tonga will pay less."
+    },
+    {
+     "src": 1,
+     "said": "New Tax Rate - July 2021 Gross Income Tax Rate $0 - $12,000 Nil $12,001 - $30,000 10% $30,001- $50,000 15% $50,001-$70,000 20% $70,001 and over 25% No Deduction Allowed Employees have no allowable deductions."
+    }
+   ]
+  },
+  {
+   "item": "withholding",
+   "finding": "The employer withholds PAYE from an employee's gross pay at the tax rates of the table and pays it with a monthly return within 28 days after the month; the year's reconciliation is due on 31 August, and an individual in business files a return by 31 October.",
+   "value": {
+    "paye": "by the table on gross employment income",
+    "remit": "within 28 days after the end of each month",
+    "reconciliation": "08-31",
+    "soleTraderReturn": "10-31"
+   },
+   "applies": "Read 2026-11-03.",
+   "sources": [
+    {
+     "src": 1,
+     "said": "Your employer is obliged under the law to withhold tax (PAYE ) if any, by applying the tax rates in the table below"
+    },
+    {
+     "src": 5,
+     "said": "Monthly Withholding Tax Return/PAYE – Form 7 … Within 28 days after end of each month"
+    }
+   ]
+  },
+  {
+   "item": "nonResident",
+   "finding": "A payer withholds 10% of the gross from a non-resident's fee for independent services (a visiting performer's, director's or producer's), and 15% from a royalty; the non-resident's liability is satisfied to the extent the tax is withheld, and the payer pays it within 28 days after the month.",
+   "value": {
+    "independentServices": 0.1,
+    "royalties": 0.15,
+    "base": "gross",
+    "final": "yes: the non-resident's liability is satisfied to the extent the tax is withheld",
+    "remit": "within 28 days after the end of the month"
+   },
+   "applies": "Payments to non-residents; read 2026-11-03.",
+   "sources": [
+    {
+     "src": 2,
+     "said": "The income tax imposed shall be 10% of the gross amount paid to a non-resident person rendering independent services."
+    },
+    {
+     "src": 2,
+     "said": "a non-resident person’s liability for tax is satisfied to the extent that the tax payable is withheld by the payer from the amount paid to the non-resident person. The income tax imposed shall be: 5% of the gross amount of the insurance premium 15% of the gross amount of the interest, royalty, dividend, or technical services fee"
+    }
+   ]
+  },
+  {
+   "item": "social",
+   "finding": "A private-sector employee pays 5% of gross pay to the National Retirement Benefits Fund, deducted by the employer, and the employer at least 7.5% (of gross on the Fund's home page, of basic salary on its services page), monthly.",
+   "value": {
+    "currency": "TOP",
+    "employee": 0.05,
+    "employer": 0.075,
+    "base": "gross (home page); basic salary (services page)"
+   },
+   "applies": "Members of the Fund (the private sector, from 1 July 2012); read 2026-11-03.",
+   "sources": [
+    {
+     "src": 6,
+     "said": "Member Contribution Account (MC, 5% of gross) – mandated contribution deducted from members weekly/fortnightly/monthly or annual salary … Employer Contribution Account (EC, 7.5% of gross)"
+    },
+    {
+     "src": 6,
+     "said": "Employees must contribute 5% of his Montly Salary Employer must contribute minimum 7.5% based on employee basic salary"
+    }
+   ]
+  },
+  {
+   "item": "vat",
+   "finding": "Consumption tax is 15% on most goods and services (since 1 April 2005); registration is compulsory once taxable supplies reach TOP 100,000 in twelve months.",
+   "value": {
+    "currency": "TOP",
+    "rate": 0.15,
+    "threshold": 100000,
+    "since": "2005-04-01"
+   },
+   "applies": "Read 2026-11-03. The Ministry registers at TOP 100,000 or more; the game charges it above TOP 100,000.",
+   "sources": [
+    {
+     "src": 4,
+     "said": "at the rate of 15% with effect from 1st April 2005"
+    },
+    {
+     "src": 3,
+     "said": "expects the total value of the taxable supplies of goods and/or services to be $100,000 or more in the next 12 months"
+    }
+   ]
+  }
+ ],
+ "country": "TO",
+ "sources": [
+  {
+   "url": "https://matangitonga.to/print/26625",
+   "title": "Income tax cuts for individuals and sole traders from July 1 (Matangi Tonga, 13 May 2021), quoting the Ministry of Revenue and Customs",
+   "read": "2026-11-03",
+   "kind": "secondary",
+   "quotes": "https://www.revenue.gov.to",
+   "said": "The tax-free income level will be raised from the first $10,000 to the first $12,000 pa'anga earned in the new financial year, with further adjustments in tax thresholds easing higher income tax levels. … The current 10% income tax will be applied on income between $12,000 and $30,000 per annum. For earnings between $30,001 and $50,000, the rate will be reduced from 20% to 15%. Earnings between $50,0001 and $70,000 are subject to a $20% tax rate. Earnings over $70,001 are subject to a 25% tax rate. … Income tax cuts for individuals and sole traders from July 1 means all income taxpayers in Tonga will pay less."
+  },
+  {
+   "url": "https://www.revenue.gov.to/individual-employee",
+   "title": "Ministry of Revenue and Customs (Tonga), Individual Employee",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Your employer is obliged under the law to withhold tax (PAYE ) if any, by applying the tax rates in the table below … New Tax Rate - July 2021 Gross Income Tax Rate $0 - $12,000 Nil $12,001 - $30,000 10% $30,001- $50,000 15% $50,001-$70,000 20% $70,001 and over 25% No Deduction Allowed Employees have no allowable deductions."
+  },
+  {
+   "url": "https://www.revenue.gov.to/non-residents-and-visitors",
+   "title": "Ministry of Revenue and Customs (Tonga), Non Residents and Visitors",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "The income tax imposed shall be 10% of the gross amount paid to a non-resident person rendering independent services. … Thus, a non-resident person’s liability for tax is satisfied to the extent that the tax payable is withheld by the payer from the amount paid to the non-resident person. The income tax imposed shall be: 5% of the gross amount of the insurance premium 15% of the gross amount of the interest, royalty, dividend, or technical services fee, rent, natural resource payment, management fees"
+  },
+  {
+   "url": "https://www.revenue.gov.to/consumption-tax-registration",
+   "title": "Ministry of Revenue and Customs (Tonga), CT Registration",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Any person who carries on a taxable activity who expects the total value of the taxable supplies of goods and/or services to be $100,000 or more in the next 12 months; Any person who carries on a taxable activity and the total value of the taxable supplies of goods and/or services in the past 12 months (or some lesser period) is $100,000 or more"
+  },
+  {
+   "url": "https://www.revenue.gov.to/consumption-tax-overview",
+   "title": "Ministry of Revenue and Customs (Tonga), Consumption Tax Overview",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Consumption Tax (CT) is a tax on spending levied on the supply of most goods and services in Tonga at the rate of 15% with effect from 1st April 2005."
+  },
+  {
+   "url": "https://www.revenue.gov.to/tax-due-Dates-and-extensions",
+   "title": "Ministry of Revenue and Customs (Tonga), Tax Due Dates and Extensions",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Non Resident Withholding Tax return – Form 6 Monthly Withholding Tax Return/PAYE – Form 7 Consumption Tax return (CT) Within 28 days after end of each month … PAYE Reconciliation and Employee Statement – Form 8 and Form 4 31 st of August … Income Tax return for Individual with business (Sole Trader) – Form 10 … 31 st of October"
+  },
+  {
+   "url": "https://www.nrbf.to",
+   "title": "National Retirement Benefits Fund (Tonga), home page and Our Services (services.php)",
+   "read": "2026-11-03",
+   "kind": "primary",
+   "said": "Member Contribution Account (MC, 5% of gross) – mandated contribution deducted from members weekly/fortnightly/monthly or annual salary … Employer Contribution Account (EC, 7.5% of gross) – mandated contribution for the member from the employer. (services.php:) Employees must contribute 5% of his Montly Salary Employer must contribute minimum 7.5% based on employee basic salary This conribution must done on Montly basis"
+  }
+ ],
+ "blockers": []
+}
