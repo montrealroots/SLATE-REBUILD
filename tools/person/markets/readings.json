@@ -102,7 +102,39 @@
  "BE": {
   "market": 4, "zone": "Europe/Brussels", "language": {"code": "nl", "fig": 3},
   "agreements": {
-   "be-screen": {"media": ["film", "television"], "none": {"fig": 1}}
+   "be-screen": {"media": ["film", "television"], "none": {"fig": 1}},
+   "be-flemish-stage": {"media": ["stage"], "currency": "EUR", "minimums": [
+    {"medium": "stage", "per": "month", "when": {"years": [0, 2], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "0"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "3"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 6], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "5"]},
+    {"medium": "stage", "per": "month", "when": {"years": [7, 8], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "7"]},
+    {"medium": "stage", "per": "month", "when": {"years": [9, 10], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "9"]},
+    {"medium": "stage", "per": "month", "when": {"years": [11, 12], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "11"]},
+    {"medium": "stage", "per": "month", "when": {"years": [13, 14], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "13"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 16], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "15"]},
+    {"medium": "stage", "per": "month", "when": {"years": [17, 18], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "17"]},
+    {"medium": "stage", "per": "month", "when": {"years": [19, 20], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "19"]},
+    {"medium": "stage", "per": "month", "when": {"years": [21, 22], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "21"]},
+    {"medium": "stage", "per": "month", "when": {"years": [23, 24], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "23"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 26], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "25"]},
+    {"medium": "stage", "per": "month", "when": {"years": [27, 28], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "27"]},
+    {"medium": "stage", "per": "month", "when": {"years": [29, null], "length": [4, null]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contract4MonthsOrMore", "29"]},
+    {"medium": "stage", "per": "month", "when": {"years": [0, 2], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "0"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "3"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 6], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "5"]},
+    {"medium": "stage", "per": "month", "when": {"years": [7, 8], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "7"]},
+    {"medium": "stage", "per": "month", "when": {"years": [9, 10], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "9"]},
+    {"medium": "stage", "per": "month", "when": {"years": [11, 12], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "11"]},
+    {"medium": "stage", "per": "month", "when": {"years": [13, 14], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "13"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 16], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "15"]},
+    {"medium": "stage", "per": "month", "when": {"years": [17, 18], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "17"]},
+    {"medium": "stage", "per": "month", "when": {"years": [19, 20], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "19"]},
+    {"medium": "stage", "per": "month", "when": {"years": [21, 22], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "21"]},
+    {"medium": "stage", "per": "month", "when": {"years": [23, 24], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "23"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 26], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "25"]},
+    {"medium": "stage", "per": "month", "when": {"years": [27, 28], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "27"]},
+    {"medium": "stage", "per": "month", "when": {"years": [29, null], "length": [1, 3]}, "from": "2026-08-01", "fig": 5, "path": ["monthlyByYears", "contractUnder4Months", "29"]}
+   ]}
   }
  },
  "BG": {
@@ -169,6 +201,67 @@
  },
  "BY": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "BZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
+ "CA": {
+  "market": null, "zone": "America/Toronto", "language": {"code": "en", "fig": null},
+  "agreements": {
+   "ca-cta-a": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "A", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "A", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "A", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "A", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "A", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "A", "2026-06-22"]}
+   ]},
+   "ca-cta-b": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "B", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "B", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "B", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "B", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "B", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "B", "2026-06-22"]}
+   ]},
+   "ca-cta-c": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "C", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "C", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "C", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "C", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "C", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "C", "2026-06-22"]}
+   ]},
+   "ca-cta-d": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "D", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "D", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "D", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "D", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "D", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "D", "2026-06-22"]}
+   ]},
+   "ca-cta-e": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "E", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "E", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "E", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "E", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "E", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "E", "2026-06-22"]}
+   ]},
+   "ca-cta-f": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "F", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "F", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "F", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "F", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "F", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "F", "2026-06-22"]}
+   ]},
+   "ca-cta-g": {"media": ["stage"], "currency": "CAD", "minimums": [
+    {"medium": "stage", "per": "week", "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "G", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2024-06-24", "fig": 0, "path": ["actorPointOfOrigin", "G", "2024-06-24"]},
+    {"medium": "stage", "per": "week", "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "G", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2025-06-23", "fig": 0, "path": ["actorPointOfOrigin", "G", "2025-06-23"]},
+    {"medium": "stage", "per": "week", "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "G", "2026-06-22"]},
+    {"medium": "stage", "per": "week", "rehearsal": true, "with": ["week"], "from": "2026-06-22", "fig": 0, "path": ["actorPointOfOrigin", "G", "2026-06-22"]}
+   ]}
+  }
+ },
  "CC": {
   "market": null, "zone": "Indian/Cocos", "language": {"code": "en", "fig": null}, "follows": {"fig": 0, "market": "AU"}
  },
@@ -209,8 +302,42 @@
  "CX": {
   "market": null, "zone": "Indian/Christmas", "language": {"code": "en", "fig": null}, "follows": {"fig": 0, "market": "AU"}
  },
- "CY": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
- "CZ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language, the market's city and the union"},
+ "CY": {
+  "market": null, "zone": "Asia/Nicosia", "language": {"code": "el", "fig": 0},
+  "agreements": {
+   "cy-thoc": {"media": ["stage"], "currency": "EUR", "minimums": [
+    {"medium": "stage", "per": "month", "when": {"years": [0, 1], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "0-1"]},
+    {"medium": "stage", "per": "month", "when": {"years": [2, 3], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "2-3"]},
+    {"medium": "stage", "per": "month", "when": {"years": [4, 5], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "4-5"]},
+    {"medium": "stage", "per": "month", "when": {"years": [6, 7], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "6-7"]},
+    {"medium": "stage", "per": "month", "when": {"years": [8, 9], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "8-9"]},
+    {"medium": "stage", "per": "month", "when": {"years": [10, 11], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "10-11"]},
+    {"medium": "stage", "per": "month", "when": {"years": [12, 13], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "12-13"]},
+    {"medium": "stage", "per": "month", "when": {"years": [14, 15], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "14-15"]},
+    {"medium": "stage", "per": "month", "when": {"years": [16, 17], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "16-17"]},
+    {"medium": "stage", "per": "month", "when": {"years": [18, 19], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "18-19"]},
+    {"medium": "stage", "per": "month", "when": {"years": [20, 21], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "20-21"]},
+    {"medium": "stage", "per": "month", "when": {"years": [22, 23], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "22-23"]},
+    {"medium": "stage", "per": "month", "when": {"years": [24, 25], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "24-25"]},
+    {"medium": "stage", "per": "month", "when": {"years": [26, 28], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "26-28"]},
+    {"medium": "stage", "per": "month", "when": {"years": [29, 31], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "29-31"]},
+    {"medium": "stage", "per": "month", "when": {"years": [32, 34], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "32-34"]},
+    {"medium": "stage", "per": "month", "when": {"years": [35, 37], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", "35-37"]},
+    {"medium": "stage", "per": "month", "when": {"years": [38, null], "length": [3, null]}, "from": "2026-01-01", "fig": 1, "path": ["basicByCompletedYears", ">38"]}
+   ]}
+  }
+ },
+ "CZ": {
+  "market": 1, "zone": "Europe/Prague", "language": {"code": "cs", "fig": 2},
+  "agreements": {
+   "cz-public-theatre": {"media": ["stage"], "currency": "CZK", "minimums": [
+    {"medium": "stage", "role": "roles", "per": "month", "from": "2026-04-01", "fig": 3, "path": ["lowestStepByClass", "10"]},
+    {"medium": "stage", "role": "lead-or-demanding", "per": "month", "from": "2026-04-01", "fig": 3, "path": ["lowestStepByClass", "11"]},
+    {"medium": "stage", "role": "most-demanding", "per": "month", "from": "2026-04-01", "fig": 3, "path": ["lowestStepByClass", "12"]},
+    {"medium": "stage", "role": "highest-level", "per": "month", "from": "2026-04-01", "fig": 3, "path": ["lowestStepByClass", "13"]}
+   ]}
+  }
+ },
  "DE": {
   "market": 7, "zone": "Europe/Berlin", "language": {"code": "de", "fig": 6},
   "agreements": {
@@ -395,7 +522,20 @@
  "FJ": {"unread": "the research gives the tax deduction for hiring local artists, not a minimum"},
  "FK": {"unread": "its research gives no minimum, nor that none sets the pay: only the market's city"},
  "FM": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
- "FO": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
+ "FO": {
+  "market": 0, "zone": "Atlantic/Faroe", "language": {"code": "fo", "fig": 1},
+  "agreements": {
+   "fo-national-theatre": {"media": ["stage"], "currency": "DKK", "minimums": [
+    {"medium": "stage", "per": "month", "when": {"years": [0, 0]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "1"]},
+    {"medium": "stage", "per": "month", "when": {"years": [1, 1]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "2"]},
+    {"medium": "stage", "per": "month", "when": {"years": [2, 2]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "3"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 3]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "4"]},
+    {"medium": "stage", "per": "month", "when": {"years": [4, 4]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "5"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 5]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "6"]},
+    {"medium": "stage", "per": "month", "when": {"years": [6, null]}, "from": "2024-10-01", "fig": 2, "path": ["monthly", "7"]}
+   ]}
+  }
+ },
  "FR": {
   "market": 10, "zone": "Europe/Paris", "language": {"code": "fr", "fig": 9},
   "agreements": {
@@ -524,7 +664,51 @@
  "IO": {"unread": "the territory has no film work; work there would be engaged from the United Kingdom, which isn't modeled"},
  "IQ": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "IR": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
- "IS": {"unread": "RÚV's drama agreement pays by the hour of a half or a full day, a term no part is paid by"},
+ "IS": {
+  "market": null, "zone": "Atlantic/Reykjavik", "language": {"code": "is", "fig": 3},
+  "agreements": {
+   "is-national-theatre": {"media": ["stage"], "currency": "ISK", "minimums": [
+    {"medium": "stage", "per": "month", "when": {"years": [0, 0], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "start", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [1, 2], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after1", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after3", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 9], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after5", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [10, 14], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after10", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 19], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after15", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [20, 24], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after20", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 39], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after25", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [40, null], "length": [2, null]}, "from": "2024-04-01", "fig": 4, "path": ["monthly", "after40", "2024-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [0, 0], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "start", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [1, 2], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after1", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after3", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 9], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after5", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [10, 14], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after10", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 19], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after15", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [20, 24], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after20", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 39], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after25", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [40, null], "length": [2, null]}, "from": "2025-04-01", "fig": 4, "path": ["monthly", "after40", "2025-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [0, 0], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "start", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [1, 2], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after1", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after3", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 9], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after5", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [10, 14], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after10", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 19], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after15", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [20, 24], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after20", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 29], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after25", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [30, 39], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after30", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [40, null], "length": [2, null]}, "from": "2026-04-01", "fig": 4, "path": ["monthly", "after40", "2026-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [0, 0], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "start", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [1, 2], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after1", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [3, 4], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after3", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [5, 9], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after5", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [10, 14], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after10", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [15, 19], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after15", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [20, 24], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after20", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [25, 29], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after25", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [30, 39], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after30", "2027-04-01"]},
+    {"medium": "stage", "per": "month", "when": {"years": [40, null], "length": [2, null]}, "from": "2027-04-01", "fig": 4, "path": ["monthly", "after40", "2027-04-01"]}
+   ]}
+  }
+ },
  "IT": {
   "market": 7, "zone": "Europe/Rome", "language": {"code": "it", "fig": 6},
   "agreements": {
@@ -604,7 +788,16 @@
  "LK": {"unread": "its research gives no minimum, nor that none sets the pay: only the language, the market's city and the union"},
  "LS": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
  "LT": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
- "LU": {"unread": "the research gives the state's benefit for an intermittent performer between engagements, not a minimum"},
+ "LU": {
+  "market": null, "zone": "Europe/Luxembourg", "language": {"code": "lb", "fig": 1},
+  "agreements": {
+   "lu-stage": {"media": ["stage"], "currency": "EUR", "minimums": [
+    {"medium": "stage", "per": "performance", "when": {"length": [1, 3]}, "from": "2026-06-01", "fig": 2, "path": ["performance", "isolated1to3aWeek"]},
+    {"medium": "stage", "per": "performance", "when": {"length": [4, null]}, "from": "2026-06-01", "fig": 2, "path": ["performance", "series4plusAWeek60minPlus"]},
+    {"medium": "stage", "per": "day", "rehearsal": true, "with": ["performance"], "from": "2026-06-01", "fig": 2, "path": ["rehearsal", "day"]}
+   ]}
+  }
+ },
  "LV": {"unread": "its research gives no minimum, nor that none sets the pay: only the language, the market's city and the union"},
  "LY": {"unread": "its research gives no minimum, nor that none sets the pay: only the language and the market's city"},
  "MA": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},
@@ -972,7 +1165,8 @@
  "VA": {
   "market": null, "zone": "Europe/Vatican", "language": {"code": "it", "fig": null},
   "agreements": {
-   "va-screen": {"media": ["film", "television"], "none": {"fig": 0}}
+   "va-screen": {"media": ["film", "television"], "none": {"fig": 0}},
+   "va-stage": {"media": ["stage"], "none": {"fig": 0}}
   }
  },
  "VC": {"unread": "its research gives no minimum, nor that none sets the pay: only the language"},

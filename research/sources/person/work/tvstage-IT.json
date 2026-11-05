@@ -1,0 +1,177 @@
+{
+ "topic": "markets.IT.series-and-stage",
+ "read": "2026-11-04",
+ "country": "IT",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://cinema.cultura.gov.it/cosa-facciamo/sostegni-economici/linee-di-sostegno/contributi-selettivi/selettivi-produzione/",
+   "title": "MiC-DGCA: Contributi selettivi, Produzione (2026)",
+   "read": "2026-11-04",
+   "said": "PRODOTTI ELEGGIBILI Lungometraggi, opere seriali o non seriali a carattere narrativo o documentaristico … RIPARTO RISORSE 2026: € 32.700.000 opere cinematografiche di lungometraggio di giovani autori: €7.800.000; opere cinematografiche di lungometraggio prime e seconde: €7.500.000; documentari cinematografici, televisivi o web di particolare qualità artistica …: €4.000.000; cortometraggi cinematografici, televisivi o web: €900.000 di euro; opere d’animazione cinematografiche, televisive o web di particolare qualità artistica …: €5.000.000; film di particolare qualità artistica e film su personaggi e avvenimenti dell’identità culturale italiana:€7.500.000.",
+   "file": "it-sel.html",
+   "sha256": "c846246e5ae156c5518551104e7a0c97a62c97db6857e0343a7ea25d995c318d"
+  },
+  {
+   "kind": "primary",
+   "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/10/20260618_Consolidato_TC-art.-15_Modifica-2026_rev-19-ottobre.pdf",
+   "title": "MiC-DGCA consolidated tax-credit decree, art. 3",
+   "read": "2026-11-04",
+   "said": "c. non sono eleggibili il compenso per la produzione (“producer fee”) e le spese generali dell’impresa; ciascuna delle due voci è imputabile nel costo complessivo di produzione nella misura massima del 7,5 per cento del medesimo costo;",
+   "file": "it-tc.pdf",
+   "sha256": "ad5b625c871c9610e53965bd3afc640ca291c3c1947f34bc0c833201ae226773"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The 2026 split has no line for a live-action fiction series; regional film commissions' funds were not read. A selectively funded series is also eligible for the credit (art. 16(3)).",
+   "verdict": "partial",
+   "value": {
+    "nationalLiveActionFictionSeries": null,
+    "tvLines2026EUR": {
+     "documentaries": 4000000,
+     "shorts": 900000,
+     "animation": 5000000
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "PRODOTTI ELEGGIBILI Lungometraggi, opere seriali o non seriali a carattere narrativo o documentaristico … RIPARTO RISORSE 2026: € 32.700.000 opere cinematografiche di lungometraggio di giovani autori: €7.800.000; opere cinematografiche di lungometraggio prime e seconde: €7.500.000; documentari cinematografici, televisivi o web di particolare qualità artistica …: €4.000.000; cortometraggi cinematografici, televisivi o web: €900.000 di euro; opere d’animazione cinematografiche, televisive o web di particolare qualità artistica …: €5.000.000; film di particolare qualità artistica e film su personaggi e avvenimenti dell’identità culturale italiana:€7.500.000."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "As producer-IT.json holds for a film.",
+   "verdict": "found",
+   "value": {
+    "producerFeeMax": 0.075,
+    "overheadsMax": 0.075,
+    "eligible": false,
+    "appliesTo": "every audiovisual work, series included"
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "c. non sono eleggibili il compenso per la produzione (“producer fee”) e le spese generali dell’impresa; ciascuna delle due voci è imputabile nel costo complessivo di produzione nella misura massima del 7,5 per cento del medesimo costo;"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "A series gets the credit only once a national broadcaster or qualifying SVOD has signed; no count of independent series picked up was found.",
+   "verdict": "partial",
+   "value": {
+    "creditNeedsCommission": true,
+    "broadcasterAtLeastShareOfCost": 0.2,
+    "pickupRate": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "b. ha sottoscritto un accordo con un’emittente televisiva di ambito nazionale per la diffusione al pubblico italiano dell’opera … riconosca un corrispettivo pari ad almeno il 20 per cento del costo complessivo dell’opera"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cinema.cultura.gov.it consolidated tax-credit decree PDF (rev. 19 Oct 2026), Capo III arts 16-17 and art 3",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cinema.cultura.gov.it selettivi-produzione page (2026 split)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The 2026 split has no line for a live-action fiction series; regional film commissions' funds were not read. A selectively funded series is also eligible for the credit (art. 16(3))."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cinema.cultura.gov.it consolidated tax-credit decree PDF (rev. 19 Oct 2026), Capo III arts 16-17 and art 3",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "A series gets the credit only once a national broadcaster or qualifying SVOD has signed; no count of independent series picked up was found."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: credito d'imposta produzione spettacoli teatrali 2026 decreto Ministero della Cultura spettacolo dal vivo",
+     "result": "only cinema/audiovisual credit results",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "spettacolodalvivo.cultura.gov.it home",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "spettacolodalvivo.cultura.gov.it home",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'SIAE Rapporto 2025 spettacolo attività teatrale numero spettacoli spesa al botteghino pdf'",
+     "result": "led to SIAE's own statistics pages",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "siae.it home (JS shell), sitemap.xml, Annuario statistico dello spettacolo page, Pubblicazioni statistiche page; Rapporto SIAE 2025 xlsx",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

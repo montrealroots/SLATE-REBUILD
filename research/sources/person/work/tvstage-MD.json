@@ -1,0 +1,140 @@
+{
+ "topic": "markets.MD.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MD",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://filminmoldova.md/en/cash-rebate-2/",
+   "title": "Film in Moldova (National Center of Cinematography): Cash Rebate",
+   "read": "2026-11-04",
+   "said": "Are registered in the Republic of Moldova. … Have a collaboration contract with a foreign producer. … Have a minimum 3 years of production experience. … 25% - of the total eligible expenses incurred on the territory of the Republic of Moldova … + 5% - conditioned by a thematic promotion, within the film, of the geographical area, locality or the entire Republic of Moldova. … TV series (one episode) 15 000 euro … Cartoon series 100 000 euro",
+   "file": "md-rebate.html",
+   "sha256": "f9e808c31cc6f7986ade52c4c8682511befd4a979902fe447dd5c90f0e42bb41"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Only for a production with a foreign partner: a purely Moldovan series doesn't qualify. No cap is stated on the page.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.25,
+    "promotionBonus": 0.05,
+    "counted": "eligible expenses in Moldova",
+    "minSpendEUR": {
+     "tvSeriesPerEpisode": 15000,
+     "cartoonSeries": 100000
+    },
+    "cap": null,
+    "needs": "a Moldovan-registered producer with 3 years' experience, a cooperation contract with a foreign producer, the cultural test; filed 25 working days before production",
+    "productionPeriodYearsMax": 3
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Are registered in the Republic of Moldova. … Have a collaboration contract with a foreign producer. … Have a minimum 3 years of production experience. … 25% - of the total eligible expenses incurred on the territory of the Republic of Moldova … + 5% - conditioned by a thematic promotion, within the film, of the geographical area, locality or the entire Republic of Moldova. … TV series (one episode) 15 000 euro … Cartoon series 100 000 euro"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cnc.md home, regulament-finantare-2, rezultatele-concursului-2026, lista-dosare-concurs-2026 and its PDF, rezultate-finale-2026 and its totalizator PDF (page 2 checked as an image)",
+     "result": "read; series category found, none funded in 2026",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legis.md getResults?doc_id=145411 (the CNC financing regulation)",
+     "result": "403 Cloudflare 'Just a moment...' (not got past)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for md,legis)/cautare/getresults?doc_id=145411",
+     "result": "no capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cnc.md home, regulament-finantare-2, rezultatele-concursului-2026, lista-dosare-concurs-2026 and its PDF, rezultate-finale-2026 and its totalizator PDF (page 2 checked as an image)",
+     "result": "read; series category found, none funded in 2026",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legis.md getResults?doc_id=145411 (the CNC financing regulation)",
+     "result": "403 Cloudflare 'Just a moment...' (not got past)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for md,legis)/cautare/getresults?doc_id=145411",
+     "result": "no capture",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Teleradio-Moldova concurs producători independenți achiziție seriale filme 2026 cotă producție independentă Codul serviciilor media audiovizuale'",
+     "result": "TRM leadership news (director-general resigned May 2026), a Council of Europe documentary-department item, a logos-pres.md lead on Parliament ratifying the Council of Europe co-production convention (series in international co-production to count as national production); no TRM commissioning call or independent quota found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "trm.md/ro/ and statistica.gov.md culture page",
+     "result": "trm.md/ro/ answered 'Page not found'; the BNS page listed no theatre table",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "mc.gov.md, mc.gov.md/ro, www.mc.gov.md",
+     "result": "connection reset (curl 35) each time",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "trm.md/ro/ and statistica.gov.md culture page",
+     "result": "trm.md/ro/ answered 'Page not found'; the BNS page listed no theatre table",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

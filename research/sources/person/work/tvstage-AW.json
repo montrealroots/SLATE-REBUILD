@@ -1,0 +1,153 @@
+{
+ "topic": "markets.AW.series-and-stage",
+ "read": "2026-11-04",
+ "country": "AW",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.gobierno.aw/en/union-of-aruban-cultural-organizations-unoca-celebrates-its-40th-anniversary",
+   "title": "Government of Aruba, \"Union of Aruban Cultural Organizations (UNOCA) Celebrates Its 40th Anniversary\" (25-06-2026)",
+   "read": "2026-11-04",
+   "said": "For four decades, UNOCA has played an important role in promoting and developing culture in Aruba. Through its dedication and commitment, the organization has contributed significantly to strengthening the cultural sector and has provided support to numerous artists, organizations, and cultural initiatives across the island.",
+   "file": "aw-gobierno-unoca.html",
+   "sha256": "a33b343e06e9310b97739032c04f793f301bb19f87000a1983631c43ecbc127d"
+  }
+ ],
+ "figures": [
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not reached; the Dutch film incentive is not shown to reach Aruba (BQ's regulation reads Nederland as the Netherlands and the BES islands only). The government names UNOCA as the body that has supported artists, organisations and cultural initiatives for forty years; its rules, ranges and rate of yes were not reached (unoca.aw 403; Wayback reset; no Common Crawl capture in CC-MAIN-2026-39).",
+   "verdict": "partial",
+   "value": {
+    "fund": "UNOCA (Union di Organisacionnan Cultural Arubano), with the Government of Aruba and its Ministry of Culture as partner",
+    "terms": null,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "For four decades, UNOCA has played an important role in promoting and developing culture in Aruba. Through its dedication and commitment, the organization has contributed significantly to strengthening the cultural sector and has provided support to numerous artists, organizations, and cultural initiatives across the island."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gobierno.aw: UNOCA page read; /en/search?keyword=film|subsidio|teatro (script-rendered, no results in the HTML); sitemap.xml pages (return a 404 page)",
+     "result": "UNOCA page read; no film, broadcast or theatre terms reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "unoca.aw and www.unoca.aw",
+     "result": "refused (HTTP 403)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API (capture 2026-10-17 of unoca.aw exists); four fetches of web.archive.org (with and without id_)",
+     "result": "connection reset by peer each time; not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 for aw,unoca)",
+     "result": "no captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"UNOCA Aruba subsidio proyecto cultural teatro reglamento aplicacion\"",
+     "result": "pointed to the government's UNOCA page (read) and a CARE Aruba Fund guideline on pbccaribbean.com, which now redirects to an unrelated gambling site (not read, file deleted)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gobierno.aw: UNOCA page read; /en/search?keyword=film|subsidio|teatro (script-rendered, no results in the HTML); sitemap.xml pages (return a 404 page)",
+     "result": "UNOCA page read; no film, broadcast or theatre terms reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gobierno.aw: UNOCA page read; /en/search?keyword=film|subsidio|teatro (script-rendered, no results in the HTML); sitemap.xml pages (return a 404 page)",
+     "result": "UNOCA page read; no film, broadcast or theatre terms reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "unoca.aw and www.unoca.aw",
+     "result": "refused (HTTP 403)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API (capture 2026-10-17 of unoca.aw exists); four fetches of web.archive.org (with and without id_)",
+     "result": "connection reset by peer each time; not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 for aw,unoca)",
+     "result": "no captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"UNOCA Aruba subsidio proyecto cultural teatro reglamento aplicacion\"",
+     "result": "pointed to the government's UNOCA page (read) and a CARE Aruba Fund guideline on pbccaribbean.com, which now redirects to an unrelated gambling site (not read, file deleted)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gobierno.aw: UNOCA page read; /en/search?keyword=film|subsidio|teatro (script-rendered, no results in the HTML); sitemap.xml pages (return a 404 page)",
+     "result": "UNOCA page read; no film, broadcast or theatre terms reached",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not reached; the Dutch film incentive is not shown to reach Aruba (BQ's regulation reads Nederland as the Netherlands and the BES islands only). The government names UNOCA as the body that has supported artists, organisations and cultural initiatives for forty years; its rules, ranges and rate of yes were not reached (unoca.aw 403; Wayback reset; no Common Crawl capture in CC-MAIN-2026-39)."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

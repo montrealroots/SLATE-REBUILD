@@ -46,5 +46,17 @@
    "said": "Nazirlər Kabinetinin 2025-ci il … 4 nömrəli Qərarı ilə … 2.1. Filmlərin ədəbi ssenariləri üçün müəlliflik hüquqlarına görə ödənilən müəllif qonorarının minimum məbləği filmin növündən və ssenarinin orijinallığından asılı olaraq aşağıdakı kimi müəyyən edilir: (min manatla) … Tammetrajlı bədii film 10,0 4,8 … 1,2 0,6 Tammetrajlı cizgi filmi 4,0 2,0 Tammetrajlı sənədli film 4,0 3,0 … 4.1. Dövlət sifarişi ilə film istehsalı üçün filmin müəlliflərinə ödənilən müəllif qonorarlarının məbləğinin bu Qaydalarla müəyyən edilmiş həddən aşağı səviyyədə müəyyənləşdirilməsinə yol verilmir."
   }
  ],
- "blockers": []
+ "blockers": [
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Azerbaijan (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: WebSearch \"Azərbaycan dövlət teatrları tamaşa müəllif qonorarı minimum məbləği Nazirlər Kabinetinin qərarı rejissor dramaturq\" (led to nk.gov.az PDFs and the WIPO copy of the Theatre Law) | WebSearch for the exact title of Decision 52 annex 4 (no copy of its text found)",
+    "institution": "2026-11-04: Ministry of Culture's own legislation index: admin.culture.gov.az/api/legislations/categories and /legislations/detail/2, /5, /6, /8, /9 (the JSON behind culture.gov.az/az/senedler, which is a script-only page); saved l4t/files/m17/az-api-leg-{2,5,6,8,9}.json (sha256 7b3efaf9…, 3feb2815…, ba2762af…, 3c3ad388…, 3d17f05a…) (read: the ministry lists the Theatre Law (e-qanun 12133), the Cinematography Law (3297), Cabinet decisions (national status for two theatres, NGO cultural-event funding rules, e-qanun 28285), the 'leading theatres' list (57067) and regulations; no author-fee rule (Decision 52 of 2006, annex 4) and no pay scale for theatre actors or directors is among them)",
+    "official-register": "2026-11-04: nk.gov.az PDFs old/f1a587…pdf (amendment naming Decision 52 and its annex 4), old/256e597…pdf (national status for a Nakhchivan theatre), 67810fde3bb84.pdf (Decision 38 amendment on film fees) (read) | e-qanun.az (the state legal register) API: api.e-qanun.az/framework/12133 answered (Theatre Law card, in force); its search endpoint api.e-qanun.az/getDetailSearch tried with name=qonorar / teatr / 'müəllif qonorarı' and code=52 to reach Cabinet Decision 52 of 16.02.2006 annex 4 (searches returned {\"data\":[],\"totalCount\":0} or HTTP 400/500 (the parameters the site's script sends could not be reproduced); Decision 52's text not reached. (Item 8 already had an official-register attempt in u15; this one is additional.))",
+    "trade-press": "2026-11-04: Azerbaijani press, by each outlet's own search and an article the search named: report.az/search/?query=teatr aktyorların maaşı, azertag.az/axtaris?search=teatr maaş, apa.az/search?q=teatr aktyor maaş, report.az/daxili-siyaset/bas-nazir-qerar-imzalayibgjg/ (the 2022 pay-decision item the web search returned) (report.az and azertag.az answered 403 (both the searches and the article); apa.az redirected the search to its home page; no article read on series funding, theatre funds, pay or fees)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43 and -39 for 'az,gov,culture)/' (the Ministry of Culture: 57 captures including /az/senedler, the documents page) and for 'az,gov,acra)/en/news' (11 captures) (every culture.gov.az capture is the 1 KB script shell with no text; every acra.gov.az capture a 404; no author-fee rule or theatre pay scale in any capture)"
+   }
+  }
+ ]
 }

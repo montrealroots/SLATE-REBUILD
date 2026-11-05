@@ -1,0 +1,281 @@
+{
+ "topic": "markets.LU.series-and-stage",
+ "read": "2026-11-04",
+ "country": "LU",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://gouvernement.lu/fr/actualites/toutes_actualites/communiques/2026/07-juillet/28-filmfund-3-session.html",
+   "title": "Gouvernement du Luxembourg: Film Fund, troisième session 2026 (communiqué, July 2026)",
+   "read": "2026-11-04",
+   "said": "26 projets ont été soutenus en Aides Financières Sélectives (AFS) à l'écriture et/ou développement et à la production, dont 10 longs-métrages live, 2 longs-métrages d'animation, 3 longs-métrages documentaire, 4 séries live, 1 série animation, 3 courts-métrages live, 1 court-métrage animation et 2 projets XR. … Séries live FIRST DAY … AFS allouée: 40 000 € NOTHING EVER HAPPENS … AFS allouée: 35 000 € TROUBLEMAKER … AFS allouée: 60 000 € … Serie de fiction FAGNES Genre: Policier, Drame, Thriller … Coproduction entre le Luxembourg et la Belgique AFS allouée selon les dépenses investies dans l'économie du secteur audiovisuel luxembourgeois: 1 500 000 € pour un budget global de 4 490 000 € Pourcentage de l'AFS: 33.41% Début de tournage: janvier 2027",
+   "file": "lu-gov-ff.html",
+   "sha256": "68ae892b6a49a987a712d894776aa2d087eccfdbce6cd93e568f570a172dec84"
+  },
+  {
+   "kind": "primary",
+   "url": "https://filmfund.lu/financement/ffl-rtl/",
+   "title": "Film Fund Luxembourg — Partenariat avec RTL Lëtzebuerg (Common Crawl CC-MAIN-2026-39 copy, fetched 2026-09-09)",
+   "read": "2026-11-04",
+   "said": "Appel pour une série fiction Description Afin de renforcer leur partenariat et d’encourager le développement de projets diffusés sur la chaîne de télévision nationale, Film Fund Luxembourg et RTL lancent deux appels à projets communs. … Le délai d’envoi des demandes est fixé au 6 janvier 2025! Bénéficiaires Toutes les sociétés de production, réalisateurs, scénaristes et autres professionnels du secteur audiovisuel au Luxembourg. Critères La série fiction doit être d’une durée entre 26 à 56 minutes par épisode. La langue principale doit être le luxembourgeois (sous-titres en français et anglais en option). Décisions Les décisions d’attribution sont prises par une commission commune FFL-RTL.",
+   "file": "lu-ffl-rtl-cc202639.html",
+   "sha256": "35059510f6705dbbf0802d8210ec64d416104d74758e33f7af8ec14ca15a0c7c"
+  },
+  {
+   "kind": "primary",
+   "url": "https://download.data.public.lu/resources/theatre-du-centaure-convention/20260129-152743/66-centaure-15-avenant-28012026.pdf",
+   "title": "15e Avenant à la Convention entre l’État du Grand-Duché de Luxembourg et l’asbl « Théâtre du Centaure » (28 January 2026; data.public.lu, Ministry of Culture)",
+   "read": "2026-11-04",
+   "said": "Pour tenir compte de la progression des frais de fonctionnement et des frais de programmation artistique et culturelle de l'association, les parties conviennent que l’article 3 alinéa 2 de la convention conclue le 30 janvier 2015 entre parties est modifié comme suit : « Sur base du budget prévisionnel définitif, élaboré par l'association conformément à l’article 5, l’État s'engage à accorder à l'association une participation financière d’un montant de 340.000.- € à partir de l’exercice 2026. »",
+   "file": "lu-centaure-avenant-2026.pdf",
+   "sha256": "5e4911fa9e6380d9a92cdbcd314b32c07190c406938c1beb3f88ba6bc0c5e5e5"
+  },
+  {
+   "kind": "primary",
+   "url": "https://kep.public.lu/dam-assets/mises-en-oeuvre/2-gouvernance/14-202601-redfinir-la-politique-de-conventionnement-pluriannuel.pdf",
+   "title": "Kulturentwécklungsplang: Redéfinir la politique de conventionnement pluriannuel (version 6, last modified 30.01.2026)",
+   "read": "2026-11-04",
+   "said": "2019 : La commission des conventions a réévalué les conventions du secteur des arts de la scène (théâtre et danse, centres culturels régionaux) et des fédérations et associations professionnelles. … 14 septembre 2018 : Le ministère de la Culture a publié toutes ses conventions et avenants y relatifs sur la plate-forme de données luxembourgeoise data.public.lu.",
+   "file": "lu-kep-conventionnement-202601.pdf",
+   "sha256": "fd9b5a38701584ffde6daee7273888d0ef30c116328782fc5dd49c5d117ac306"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The Fund publishes awards, not applications, so no rate of yes; its own site failed TLS verification (missing intermediate; the bundle didn't complete it).",
+   "verdict": "found",
+   "value": {
+    "currency": "EUR",
+    "scheme": "Aide financière sélective (AFS), Film Fund Luxembourg",
+    "basis": "spend invested in Luxembourg's audiovisual economy",
+    "july2026": {
+     "liveSeriesSupported": 4,
+     "animatedSeries": 1,
+     "writingDevelopmentLiveSeriesEUR": [
+      40000,
+      35000,
+      60000
+     ],
+     "productionExample": {
+      "title": "FAGNES",
+      "awardEUR": 1500000,
+      "budgetEUR": 4490000,
+      "share": 0.3341,
+      "copro": "LU-BE"
+     }
+    },
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "26 projets ont été soutenus en Aides Financières Sélectives (AFS) à l'écriture et/ou développement et à la production, dont 10 longs-métrages live, 2 longs-métrages d'animation, 3 longs-métrages documentaire, 4 séries live, 1 série animation, 3 courts-métrages live, 1 court-métrage animation et 2 projets XR. … Séries live FIRST DAY … AFS allouée: 40 000 € NOTHING EVER HAPPENS … AFS allouée: 35 000 € TROUBLEMAKER … AFS allouée: 60 000 € … Serie de fiction FAGNES Genre: Policier, Drame, Thriller … Coproduction entre le Luxembourg et la Belgique AFS allouée selon les dépenses investies dans l'économie du secteur audiovisuel luxembourgeois: 1 500 000 € pour un budget global de 4 490 000 € Pourcentage de l'AFS: 33.41% Début de tournage: janvier 2027"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "RTL Lëtzebuerg's commissioning terms not reached. No commissioning tariff or count of series RTL picks up was found; the FFL-RTL convention and the 2024 call PDF sit on filmfund.lu, which refuses TLS (unable to get local issuer certificate) even with the research5 bundle; the Common Crawl copy of the call page names no amounts.",
+   "verdict": "partial",
+   "value": {
+    "publicServiceBroadcaster": "RTL (CLT-UFA) under a State convention, 2024-2030",
+    "stateFundingCapEURPerYear": 15000000,
+    "stateFundingTotalEUR": 97561251,
+    "basis": "ex post coverage of part of the public-service deficit",
+    "obligation": "a daily mainly Luxembourgish TV programme including Luxembourg audiovisual and film creation; a separate convention with the Film Fund sets the synergy",
+    "jointCall": {
+     "by": "Film Fund Luxembourg and RTL",
+     "stage": "development",
+     "fictionSeriesEpisodeMinutes": [
+      26,
+      56
+     ],
+     "language": "Luxembourgish",
+     "eligible": "production companies, directors, writers and other audiovisual professionals in Luxembourg",
+     "deadline": "2025-01-06",
+     "decision": "joint FFL-RTL commission"
+    }
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Appel pour une série fiction Description Afin de renforcer leur partenariat et d’encourager le développement de projets diffusés sur la chaîne de télévision nationale, Film Fund Luxembourg et RTL lancent deux appels à projets communs. … Le délai d’envoi des demandes est fixé au 6 janvier 2025! Bénéficiaires Toutes les sociétés de production, réalisateurs, scénaristes et autres professionnels du secteur audiovisuel au Luxembourg. Critères La série fiction doit être d’une durée entre 26 à 56 minutes par épisode. La langue principale doit être le luxembourgeois (sous-titres en français et anglais en option). Décisions Les décisions d’attribution sont prises par une commission commune FFL-RTL."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Ministry of Culture and Kultur | lx not reached in this run. The Ministry's conventions are the main state money for theatre; eligibility is an asbl under convention. Kultur | lx's aid pages beyond the list (the touring aid itself, /fr/aides/) returned a verification challenge (403), not got past. A per-production fund with ranges and a rate of yes was not found; the City of Luxembourg has its own creation-aid rules for private stage ensembles (seen as a search result, not read).",
+   "verdict": "partial",
+   "value": {
+    "currency": "EUR",
+    "mechanism": "Ministry of Culture multi-year conventions with theatres and companies (operating and programming support, not per production), all published on data.public.lu",
+    "example": {
+     "theatre": "Théâtre du Centaure asbl",
+     "annualFromFiscal2026": 340000
+    },
+    "touring": "Kultur | lx aid for touring and circulation of productions, for Luxembourg professionals",
+    "perProductionCall": null,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "Pour tenir compte de la progression des frais de fonctionnement et des frais de programmation artistique et culturelle de l'association, les parties conviennent que l’article 3 alinéa 2 de la convention conclue le 30 janvier 2015 entre parties est modifié comme suit : « Sur base du budget prévisionnel définitif, élaboré par l'association conformément à l’article 5, l’État s'engage à accorder à l'association une participation financière d’un montant de 340.000.- € à partir de l’exercice 2026. »"
+    },
+    {
+     "src": 3,
+     "said": "2019 : La commission des conventions a réévalué les conventions du secteur des arts de la scène (théâtre et danse, centres culturels régionaux) et des fédérations et associations professionnelles. … 14 septembre 2018 : Le ministère de la Culture a publié toutes ses conventions et avenants y relatifs sur la plate-forme de données luxembourgeoise data.public.lu."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": []
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.filmfund.lu with system CA, then with research5 bundle.pem added",
+     "result": "TLS: unable to get local issuer certificate (refused, not bypassed)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gouvernement.lu communiqué on the Film Fund's third 2026 session",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The Fund publishes awards, not applications, so no rate of yes; its own site failed TLS verification (missing intermediate; the bundle didn't complete it)."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.filmfund.lu with system CA, then with research5 bundle.pem added",
+     "result": "TLS: unable to get local issuer certificate (refused, not bypassed)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"convention État CLT-UFA RTL mission de service public télévision Luxembourg 2024-2030 montant fictions séries\"",
+     "result": "led to the data.public.lu dataset and the Chamber's bill 7914 (read)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "data.public.lu API for the RTL convention dataset; convention-2024-30-signe.pdf (19 pages, scanned); OCR begun at 200 dpi",
+     "result": "OCR stopped before the first page finished (machine load); the same convention text read instead in the Chamber dossier 7914 (text PDF)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "wdocs-pub.chd.lu 7914_Dossier_Complet.pdf",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "filmfund.lu/wp-content/uploads/2024/07/FFL-RTLAppelsaprojets2024FR.pdf",
+     "result": "TLS: unable to get local issuer certificate (refused, not bypassed)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API and web.archive.org CDX for filmfund.lu",
+     "result": "429 Too Many Requests; connection reset",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30 index for lu,filmfund)/; record filmfund.lu/financement/ffl-rtl/",
+     "result": "read (CC-MAIN-2026-39)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "RTL Lëtzebuerg's commissioning terms not reached. No commissioning tariff or count of series RTL picks up was found; the FFL-RTL convention and the 2024 call PDF sit on filmfund.lu, which refuses TLS (unable to get local issuer certificate) even with the research5 bundle; the Common Crawl copy of the call page names no amounts."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "mcult.gouvernement.lu/fr/aides-et-soutiens.html",
+     "result": "404",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "www.kulturlx.lu/fr/aides/ and /support/aide-a-la-tournee-et-a-la-circulation-des-productions/",
+     "result": "403 verification challenge (not bypassed)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "www.kulturlx.lu home and /soutiens/",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "guichet.public.lu culture sector page",
+     "result": "read: no theatre aid listed",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"Luxembourg ministère de la Culture aide à la création théâtre compagnies conventionnées montant appel Theaterfederatioun 2026\"",
+     "result": "led to data.public.lu conventions and the KEP sheet (read)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "data.public.lu: Théâtre du Centaure 15th amendment (2026); kep.public.lu conventionnement sheet",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Ministry of Culture and Kultur | lx not reached in this run. The Ministry's conventions are the main state money for theatre; eligibility is an asbl under convention. Kultur | lx's aid pages beyond the list (the touring aid itself, /fr/aides/) returned a verification challenge (403), not got past. A per-production fund with ranges and a rate of yes was not found; the City of Luxembourg has its own creation-aid rules for private stage ensembles (seen as a search result, not read)."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

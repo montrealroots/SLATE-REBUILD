@@ -1,0 +1,419 @@
+{
+ "BA": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "held": "u19.result.json, 2026-11-04 (not repeated)"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "held": "u19.result.json, 2026-11-04 (SN KS 10/23 and 12/24); superseded by the gazette text read below under institution (SN KS 36/2026, the gazette pages as posted by SARTR)"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "JU Sarajevski ratni teatar SARTR, 'Propisi i drugi akti' https://sartr.ba/propisi-i-drugi-akti/ (saved files/d4/ba-sartr-propisi-live.html, sha256 91dc46312776a2ff8ac0b0f35f7215e5f469f716065eaf8e629b366dd81be951, fetched by the earlier d4 run on 2026-11-04 22:59 UTC); from it, read 2026-11-05: https://sartr.ba/wp-content/uploads/2026/10/Kolektivni-ugovor.pdf (HTTP 200, 34 pages, files/d4/ba-sartr-ku-202610.pdf, sha256 1a416ee4c182422378b58e39c9e5d319895f30ebb71f49add35a29acae2e69ed; pdftotext, the coefficient table checked on the page-8 image) and https://sartr.ba/wp-content/uploads/2023/01/7.pdf, 'Pravilnik o angažovanju spoljnih saradnika' of 21.11.2022 (HTTP 200, files/d4/ba-sartr-spoljni.pdf, sha256 bd00024c21217b9e3e59626c24c7658543cfbfc0c05c445c9c8ce31517249dce, scanned; OCR tesseract, files/d4/ba-spoljni.ocr.txt)",
+     "result": "Found: a new Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo, Službene novine KS broj 36, 10. 9. 2026, signed 3 September 2026, which repeals SN KS 10/23 and 12/24 (art. 186(3)): Redatelj I in pay class IV, coefficient 6,29; Redatelj II in class IX, 5,36; the base is still agreed between the union and the government outside the text (art. 54(8)-(10)). The theatre's rule on guest artists sets no fee floor: the fee 'zavisi od vrste i značaja pozorišne manifestacije ... te umjetničkog kvaliteta' (art. 10) and the contract 'predstavlja poslovnu tajnu' (art. 11(2)).",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "Paragraf Lex BA, 'Sindikati KS traže pregovore o osnovici za obračun plaće u 2026. godini' (13.11.2025), https://www.paragraf.ba/dnevne-vijesti/13112025/13112025-vijest4.html (files/d4/ba-paragraf-13112025.html, sha256 85ae87c5bbb71119cd13d70cc122e0cc51a97e6172e8c557295bcb9c94c28163, fetched by the earlier d4 run on 2026-11-04 23:00 UTC, read 2026-11-05)",
+     "result": "A secondary quoting the statement of the Samostalni sindikat državnih službenika i namještenika ... u Federaciji BiH and the Koordinacija sindikata KS (no address for the statement): 'u Kantonu Sarajevo trenutna osnovica iznosi 400 KM uz bod 1,1' (November 2025), the unions asking 20% for 2026. A lead for the 2025 base (it agrees with the 400 KM u19 inferred); the 2026 base not stated.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39, cc.py list 'ba,sartr)/propisi' then the record of https://sartr.ba/propisi-i-drugi-akti/ (files/d4/ba-cc39-sartr-propisi.html, sha256 6c684accf9dd7f08216b12297544b5c0b93ff914e921c26b3bf921d268a9307c, got by the earlier d4 run 2026-11-04 22:59 UTC; listing re-run this session)",
+     "result": "1 record: https://sartr.ba/propisi-i-drugi-akti/, HTTP 200, 2026-09-13 (CC-MAIN-20260913103209-20260913133209-00107). The September copy lists the culture agreement of 10/23 and 12/24 (2025/03 PDF) and the 2024 amendment, not yet the October 2026 PDF: the new agreement was posted after the crawl",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": {
+     "basis": "Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo, SN KS 36/2026 (10.9.2026), signed 3.9.2026, in force on signature, applied from 1.7.2026 and its art. 57 coefficients from 1.1.2026, for two years; repeals SN KS 10/23 and 12/24",
+     "scope": "employees of Sarajevo Canton's cantonal public culture institutions (salaried, not a guest fee)",
+     "coefficients": {
+      "redateljI": 6.29,
+      "redateljII": 5.36
+     },
+     "pay": "coefficient x the base (osnovica) agreed between the union and the canton government (art. 54(8)); 2025 base 400 KM per the unions (secondary, Paragraf, 13.11.2025)",
+     "seniorityUpliftPerYear": 0.006,
+     "seniorityUpliftMax": 0.24,
+     "floor": "70% of the Federation's average net wage of the last three months (art. 55(1))",
+     "perProductionFee": null,
+     "guestFee": "no floor: SARTR's Pravilnik o angažovanju spoljnih saradnika (21.11.2022) art. 10-11"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://sartr.ba/wp-content/uploads/2026/10/Kolektivni-ugovor.pdf",
+      "title": "Službene novine Kantona Sarajevo, broj 36, 10. 9. 2026: Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo (gazette pages, copy posted by JU SARTR)",
+      "read": "2026-11-05",
+      "said": "Član 57 table: '4. IV Umjetnički direktor / Direktor tehnike / Koncertni majstor / Koreograf / Redatelj I / Dirigent I 6,29'; '9. IX Solista opere III / Solista baleta III / Glumac III / Redatelj II 5,36'. Član 56: 'osnovna plaća uvećava se za svaku godinu penzijskog staža za 0,6%, s tim da ukupno povećanje ne može biti veće od 24%.' Član 54(8): 'Osnovica za plaće utvrđuje se sporazumno između Sindikata i Vlade Kantona Sarajevo.' Član 186: '(1) Ovaj kolektivni ugovor stupa na snagu danom potpisivanja ... primjenjuje se od 01.07.2026. godine izuzev predviđenih novih finansijskih obaveza iz člana 57. ... koje će se primjenjivati od 01.01.2026. godine. ... (3) Stupanjem na snagu ovog kolektivnog ugovora prestaje da važi Kolektivni ugovor za djelatnost kulture u Kantonu Sarajevo (¨Službene novine Kantona Sarajevo¨, br. 10/23 i 12/24).' Signed 'Broj 07-03-393/26 ... 03. septembra 2026. godine'.",
+      "file": "files/d4/ba-sartr-ku-202610.pdf",
+      "sha256": "1a416ee4c182422378b58e39c9e5d319895f30ebb71f49add35a29acae2e69ed"
+     },
+     {
+      "kind": "primary",
+      "url": "https://sartr.ba/wp-content/uploads/2023/01/7.pdf",
+      "title": "JU SARTR: Pravilnik o angažovanju spoljnih saradnika (Upravni odbor, 21.11.2022)",
+      "read": "2026-11-05",
+      "said": "Član 10: 'Visina naknade za angažman spoljnih saradnika zavisi od vrste i značaja pozorišne manifestacije, programa, odnosno nastupa i vrste autorskog djela koje se izvodi, od broja potrebnih proba ... te umjetničkog kvaliteta i mogućnosti spoljnih saradnika ...'; Član 11(2): 'Spoljni saradnici za svoj angažman sklapaju autorski ugovor sa Teatrom koji predstavlja poslovnu tajnu'",
+      "file": "files/d4/ba-sartr-spoljni.pdf (OCR files/d4/ba-spoljni.ocr.txt)",
+      "sha256": "bd00024c21217b9e3e59626c24c7658543cfbfc0c05c445c9c8ce31517249dce"
+     },
+     {
+      "kind": "secondary",
+      "url": "https://www.paragraf.ba/dnevne-vijesti/13112025/13112025-vijest4.html",
+      "title": "Paragraf Lex BA: Sindikati KS traže pregovore o osnovici za obračun plaće u 2026. godini (13.11.2025)",
+      "read": "2026-11-05",
+      "said": "u Kantonu Sarajevo trenutna osnovica iznosi 400 KM uz bod 1,1",
+      "file": "files/d4/ba-paragraf-13112025.html",
+      "sha256": "85ae87c5bbb71119cd13d70cc122e0cc51a97e6172e8c557295bcb9c94c28163",
+      "quotes": "a statement of the Samostalni sindikat državnih službenika i namještenika u Federaciji BiH and the Koordinacija sindikata Kantona Sarajevo (no address given): a lead for the base"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The agreement u19 read (10/23, 12/24) is repealed by SN KS 36/2026: the register's BA director figures (6.1 and 5.2) are superseded by 6.29 and 5.36, and the seniority cap rose from 20% to 24%. The 2026 base was not found in any text read; 400 KM is the unions' 2025 figure. Salaried scale only; a guest director's fee is set case by case and kept confidential at SARTR."
+ },
+ "CS": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 1 of 8 (standard): 'Уредба о коефицијентима за обрачун и исплату плата запослених у установама културе редитељ коефицијент 2026 Службени гласник', looking for what governs a stage director's pay on the former state union's territory today",
+     "result": "Every result was a successor state's: Serbia's coefficient decree reported by Vreme, the National Theatre in Belgrade's information booklet (fetched, under institution), Serbian municipal acts; nothing of Serbia and Montenegro, which ended on 3 June 2006",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Serbia's Ministry of Culture 'Закони и уредбе' https://kultura.gov.rs/tekst/43/zakoni-i-uredbe.php (files/d4/cs-kultura-zakoni-live.html, sha256 159a4b79400b4ac219dda254ee77c0a6f48777e0d1d10c4b02a19f539f192f05, fetched by the earlier d4 run 2026-11-04 23:08 UTC, read 2026-11-05); Narodno pozorište u Beogradu, Информатор о раду (April 2026) https://narodnopozoriste.rs/media/documents/system/0/articles/april2026.pdf (HTTP 200, files/d4/cs-np-informator-202604.pdf, sha256 e4fc8d9bd401cf99265055b765b2022d8e0ca47f44a623b5cdecf6a79bd58e8a)",
+     "result": "Both are the Republic of Serbia's bodies, none the state union's. The ministry's page lists culture laws and decrees but not the pay-coefficient decree. The National Theatre's booklet, 'Подаци о исплаћеним платама': 'РЕДИТЕЉ ДРАМЕ 4 27.30', 'РЕДИТЕЉ ОПЕРЕ 1 27.30' (basic coefficient, Serbia's salaried director: RS's fact, not CS's)",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Serbia's state legal database https://pravno-informacioni-sistem.rs/ (www redirects there; HTTP 200, sha256 33447cbad948536acd93c88255c1e21e64432af9e10f754d76da3df700dbf76b, saved files/d4/cs-pis-home.html); Službeni glasnik https://www.slglasnik.com/ (curl 60: the server's certificate chain incomplete; not read)",
+     "result": "PIS is a JavaScript-only shell ('pis-vue doesn't work properly without JavaScript enabled'), nothing read; Službeni glasnik not reached. Montenegro's gazette is read under ME. No register of Serbia and Montenegro exists to read: the state ended in 2006",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "Vreme, 'Sindikati: Macut i Selaković su potpisali uravnilovku za zaposlene u kulturi' (16 January 2026), https://vreme.com/kultura/sindikati-macut-i-selakovic-su-potpisali-uravnilovku-za-zaposlene-u-kulturi/ (files/d4/cs-vreme-uravnilovka.html, sha256 90b7ef6fb5bdaf73cf6d8c9c1b7b6a83f60a7de447086a3f91faf2b378f468c0, fetched by the earlier d4 run 2026-11-04 23:00 UTC, read 2026-11-05)",
+     "result": "'Premijer Đuro Macut i ministar kulture Nikola Selaković krajem prošle godine potpisali su Uredbu o koeficijentima koja određuje plate u delatnosti kulture': the instrument is the Serbian government's; no number, gazette or director coefficient given",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39, cc.py list 'rs,gov,kultura)/tekst' (107 records, this session); the record of https://kultura.gov.rs/tekst/43/zakoni-i-uredbe.php of 2026-09-06 (files/d4/cs-cc39-kultura-zakoni.html, sha256 e53b030b81f1626216017b3dddbf1d949da4dc0ffc97c62fb41daf11a1589f69, got by the earlier d4 run)",
+     "result": "The September 2026 copy of Serbia's ministry page: the same list, no pay decree, no state-union body",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Serbia and Montenegro ended on 3 June 2006 (director-CS.json): a stage director's minimum on its territory is Serbia's (RS) or Montenegro's (ME). Leads for RS, not CS: the National Theatre in Belgrade pays a drama director basic coefficient 27.30 (its April 2026 information booklet); Serbia's culture pay-coefficient decree was amended late 2025 (Vreme, 16.1.2026), its text not read. Montenegro's figure is under ME."
+ },
+ "ES": {
+  "stage": {
+   "blocker": "R-5179",
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "held": "R-5179, 2026-11-04 ('Asociación de Directores de Escena de España tarifas mínimas ...')"
+    },
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 5 of 8 (standard): 'directores de escena honorarios sin convenio colectivo precariedad ADE dirección escénica caché mínimo teatro público España'",
+     "result": "No fee table or directors' agreement: academic papers, a Comunidad de Madrid contract with ADE, a Red Española de Teatros paper, the eldiario.es article read under trade-press",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Asociación de Directores de Escena de España (ADE), https://adeteatro.com/documentos/codigo-deontologico-del-director-de-escena/ (sha256 752947d3c006351042342cb7dc1c6ec477885883f986a92a4779f9302fd05a85), /documentos/funciones-del-director-de-escena/ (sha256 f5e75269b0a4d8adddd4143ab1d16c036b7b96bf8b59b4140d0d87cfb95cd8da), /la-asociacion/socios/ (sha256 de7968ec9e29081342d2c98d81247ca9eacc8cd5cdd5c678c92e303d162da11a), and its WordPress search https://adeteatro.com/wp-json/wp/v2/search?search=honorarios (sha256 544e88d34ce0b87b27a8a75504d877c59655d5be91ea34918bd3ec7531fa059e); all fetched by the earlier d4 run 2026-11-04 23:02-23:03 UTC, saved files/d4/es-ade-*, read 2026-11-05",
+     "result": "Not found: the code of ethics and the functions page set no fee, rate or contract terms (no 'honorari', 'retribu', 'tarifa' or 'remunera' in either); the site search for 'honorarios' returns only 'Socios', 'Nuevo Socio', an Elementor template and one production page",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "BOCM núm. 133, 6 June 2015, the Sector Actores y Actrices de Madrid agreement (code 28005805011991), https://www.bocm.es/boletin/CM_Orden_BOCM/2015/06/06/BOCM-20150606-4.PDF (re-fetched 2026-11-05, HTTP 200, sha256 015ae44c6413ddceee160806392c33a506d1396ffa4a5050084b4ed98bdd7870, files/d4/es-bocm-20150606-4.pdf); DOGC núm. 9760, 29.9.2026, Resolución EMT/3377/2026, IV Convenio colectivo del sector de actores y actrices de teatro de Cataluña (code 79002205012004), https://dogc.gencat.cat/es/document-del-dogc/?documentId=1055355 (CVE-DOGC-B-26264047-2026; the PDF fetched by the earlier d4 run, files/d4/es-dogc-1055355.pdf, sha256 0b52a6628b24e2d12c9660eac0a3b6568c03e92f319196d3c22818ec4e37568d; the document page re-fetched 2026-11-05, JavaScript-rendered); BOE search (files/d4/es-boe-q.html: 'Los valores de búsqueda enviados son incorrectos')",
+     "result": "Not found: both regional stage agreements cover actors only. Catalonia art. 2: 'Este Convenio colectivo afecta a todos los actores y actrices, y a todas las empresas ... que lleven a cabo una actividad teatral'; the director appears only as the person whose 'indicaciones' the actor follows. Madrid's likewise names the 'director de escena' only in the actor's duties. No agreement for stage directors in BOE, BOCM or DOGC",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "eldiario.es, 'Actores y empresarios firman \"un convenio de resistencia\" ante el IVA y los recortes' (28 November 2014), https://www.eldiario.es/cultura/teatro/convenio-resistencia-empresarios-teatrales-madrid_1_4490427.html (HTTP 200, files/d4/es-eldiario-4490427.html, sha256 c7df2c4ff93510dd09b89fd3cb5017129ea0c27d235bc55ec006672940e235a2); Artezblai search 'honorarios directores de escena' https://www.artezblai.com/search/honorarios%20directores%20de%20escena/ (files/d4/es-artez-q.html, sha256 83ecc1206e1bff77c177caf72b77867386d53363303f6ef9f9047da16371ca1a, earlier d4 run)",
+     "result": "Not found: the eldiario article is on the Madrid actors' agreement (Unión de Actores, APTEM, ARTEMAD; 'la retribución diaria está en 72,94 euros para los actores de reparto'), nothing on directors; Artezblai's results were festival calls (2008-2016), none on a directors' fee",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39, cc.py list 'com,adeteatro)/documentos' (6 records, this session): codigo-deontologico (2026-09-12), funciones (2026-09-14), bases-para-un-proyecto-de-ley-de-teatro, 44-propuestas, por-la-residencia-teatral, manifiesto IA; the codigo record got by the earlier d4 run (files/d4/es-cc39-ade-codigo.html, sha256 bc2d86d5ec6e666747364548f66a28df57472baba58d38302ae7a7318f283096)",
+     "result": "Not found: the archived ADE documents are its positions; none is a fee table",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Spain's stage agreements (Madrid 2015, Catalonia 2026) cover actors only; ADE publishes no fee scale. A stage director's minimum stays blocked for Spain on all five methods. The Catalan IV agreement (DOGC 29.9.2026) is new and may matter for item 9 (stage actor)."
+ },
+ "IT": {
+  "stage": {
+   "blocker": "R-5184",
+   "7": [
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "held": "R-5184, 2026-11-04 (FISTEL-CISL copy of the 2018 theatre CCNL: regista absent)"
+    },
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 2 of 8 (standard): 'regista teatrale compenso minimo contratto collettivo scritturati teatri regia prosa rinnovo 2026'",
+     "result": "No directors' minimum: copies of the scritturati CCNL (Metastasio, Centro Teatrale Bresciano), the UILCOM/FISTEL comunicato of 27 May 2026 on its renewal, fiscoetasse notes, a 2018 union press release",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "CNEL national archive of collective agreements: page 'Contratti nazionali di settore vigenti o ultrattivi' (files/d4/it-cnel-vigenti.html, sha256 c07ccdeaeee8bbeec8497fa72935c77ec277bb7de6238f8467d502c09d22bb89) and its spreadsheet https://www.cnel.it/media/docs/default-source/archivio-contratti---cartelle-excel/ccnl-di-settore-vigenti-e-ultrattivi.xlsx?sfvrsn=eb19a03c_14 (files/d4/it-cnel-vigenti.xlsx, sha256 74859be767991aa57b7a9e8c10d4bc87e2a400c1fe73c704b8fb6166612d7335), fetched by the earlier d4 run 2026-11-04 22:58 UTC, read 2026-11-05; the deposited text of G321 as posted by the Centro Teatrale Bresciano https://www.centroteatralebresciano.it/upload/doc/ccnl_scritturati.pdf (re-fetched 2026-11-05, sha256 cfcfa3b4f019cb6a3774e7ad1812df6ced2fa720bcf717c2f7718afd103955a9) and by Teatro Metastasio https://www.metastasio.it/media/trasparenza/CCNL%20AGIS%20-%20ARTISTI%20E%20TECNICI.pdf (1997/2004 text, sha256 b4847886667d7725bc024b8e92a5352584dc0f680cd64ff6b612b34bea7850be)",
+     "result": "Not found: the only national theatre agreements in force or ultra-active are G310 (impiegati e tecnici) and G321 ('CCNL per il personale artistico, tecnico e amministrativo scritturato dai Teatri Nazionali ...', last agreement deposited expiring 2021-03-31); no directors' CCNL. G321's 2018 tables rate 'Direttore di scena; Aiuto Regista' (56,17 / 57,85 / 59,92 a day plus 13,48-14,38) and no regista",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "FISCOeTASSE, 'CCNL Teatri: firmati i rinnovi' (2 May 2018), https://www.fiscoetasse.com/rassegna-stampa/25056-ccnl-teatri-firmati-i-rinnovi-.html (files/d4/it-fet-25056.html, sha256 3e8bf0f298589c8a294cdef52e5a45a7b55304daf9542797cd4ca1f26bc7c055, earlier d4 run); SLC-FISTEL-UILCOM 'Comunicato unitario rinnovo CCNL Teatri di Prosa' (27 May 2026), https://www.uilcom.it/wp-content/uploads/2026/05/20260527-Comunicato-unitario-incontro-rinnovo-CCNL-Teatri-di-Prosa.pdf (301 to uilfpc.it, re-fetched 2026-11-05, sha256 9bf92dc8bf75f0a15e7d1f52f9bd117f0bea3b6ebf24ca3743c547f0dc4f5aff, files/d4/it-uilcom-202605.pdf)",
+     "result": "Not found: the 2018 note reports the renewal of the two theatre CCNLs; the 2026 comunicato reports Federvivo/AGIS offering 'per gli scritturati un aumento del 20% sulla diaria e del 15% sulla paga giornaliera' over three years, rejected, talks resumed 30 June; neither names a director's rate",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39, cc.py list 'it,fistelcisl)/listing-item' (310 records, this session): the record of https://www.fistelcisl.it/listing-item/comunicato-unitario-incontro-rinnovo-ccnl-teatri-di-prosa/ of 2026-09-05 (files/d4/it-cc39-fistel-prosa.html, sha256 68be2995f20a9b546b38bdbaa70590dbbbac17a7ac2d1686a619f26a6c805432, earlier d4 run)",
+     "result": "Not found: the archived FISTEL page carries the same 25 May 2026 meeting text; no director's minimum, no newer agreement",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Italy's theatre CCNLs rate the assistant director and stage manager, not the director; the scritturati CCNL is being renegotiated (May 2026). A stage director's minimum stays blocked for Italy on all five methods."
+ },
+ "ME": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "held": "u13.result.json, 2026-11-04"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "held": "u13.result.json, 2026-11-04 (cnp.me copy of SL CG 64/16)"
+    },
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 4 of 8 (standard): 'Granski kolektivni ugovor za oblast kulture izmjene 2023 koeficijenti režiser glumac Crnogorsko narodno pozorište zarade sindikat kulture'",
+     "result": "Led to the 2023 amendment (SL CG 35/23, named in CNP's papers), RFE/RL and Novosti on the artists' protest (read under trade-press)",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Službeni list Crne Gore register: search https://www.sluzbenilist.me/propisi?q=granski+kolektivni+ugovor+za+oblast+kulture (files/d4/me-sl-q-kultura.html, sha256 90470d8af94f81d1ea9552e47c2aabd4a2071b3182a6cef394ca5a079e1a9d68), entries /propisi/337853 (64/2016) and /propisi/336134, its text https://www.sluzbenilist.me/propisi/336134/download (HTTP 200, files/d4/me-sl-336134.pdf, sha256 5f5cb5930154f110459159ed89b2e604d812a302250e0fa12d07f5ffcdb092a0, first fetched by the earlier d4 run, re-fetched 2026-11-05 with the same hash; metadata page files/d4/me-sl-336134-meta.html)",
+     "result": "Found: 'Granski kolektivni ugovor o izmjenama Granskog kolektivnog ugovora za oblast kulture', Službeni list CG 35/2023, published and in force 27.03.2023, status 'Važeći'; the search lists no later culture amendment",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "Radio Slobodna Evropa, 18 April 2023, https://www.slobodnaevropa.org/a/umjetnost-protest-kultura/32369115.html (HTTP 200, files/d4/me-rfe-32369115.html, sha256 baf2f94502954cb8fd3247284dbe5afe72181e6c37a35e6072fa4cf6cc67f8dc); Novosti, 'Nedostojna povišica od 20 evra' https://www.novosti.rs/crna-gora/vesti/1228738/nedostojna-povisica-20-evra-nezadovoljni-umetnici-juce-pred-vladom-crne-gore (HTTP 200, files/d4/me-novosti-1228738.html, sha256 a0857994022dcef9b100c9d0538428800d064fc357d84ea19b66b95da634bf37); Vijesti search 'granski kolektivni ugovor kultura' (files/d4/me-vijesti-q.html, earlier d4 run)",
+     "result": "RFE: the agreement 'od kojeg najmanje koristi očekuje upravo kreatore umjetnosti u Crnoj Gori - glumce, režisere'; artists asked for 'obećano uvećanje od 25 odsto'. Novosti: artists 'dobijaju povećanje od svega 20 evra'. Neither gives the coefficient's euro value. Vijesti's results: no culture-agreement article after 2023",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39: cc.py list 'me,cnp)/' (3 records, all HTTP 406), 'me,sluzbenilist)/propisi/336134' and '/337853' (0 records); Wayback availability API for the cnp.me agreement PDF (snapshot 20220121021934 listed) and for sluzbenilist.me/propisi/336134 (none); the snapshot fetched from web.archive.org: connection reset (curl 35)",
+     "result": "Not read: no archived copy reachable; the live gazette text above stands",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": {
+     "basis": "Granski kolektivni ugovor o izmjenama Granskog kolektivnog ugovora za oblast kulture, Sl. list CG 35/2023 (in force 27.03.2023), amending art. 16 of SL CG 64/16",
+     "scope": "employees of public culture institutions (salaried; not a guest director's fee)",
+     "role": "Režiser (group V d, with glumac, dramaturg, scenograf ...)",
+     "coefficient": {
+      "levelVI_180credits": 8.0,
+      "levelVII1_240credits": 9.1
+     },
+     "coefficient2016": {
+      "levelVI_180credits": 6.5,
+      "levelVII1_240credits": 8.8
+     },
+     "pay": "coefficient x the obračunska vrijednost koeficijenta (not read)",
+     "guestDirectorFee": null
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://www.sluzbenilist.me/propisi/336134/download",
+      "title": "Službeni list Crne Gore 35/2023, reg. 524: Granski kolektivni ugovor o izmjenama Granskog kolektivnog ugovora za oblast kulture",
+      "read": "2026-11-05",
+      "said": "'d režiser, glumac, orkestarski muzičar, operski pjevač, slikar, vajar, koreograf, scenograf, dramaturg, kostimograf, pozorišni kompozitor, pisac, asistent dirigenta, dirigent, producent ... Šesti nivo (VI), 180 kredita CSPK-a 8,00 / Sedmi nivo Podnivo jedan (VII1), 240 kredita CSPK-a 9,1'; 'Ovaj ugovor stupa na snagu danom objavljivanja u „Službenom listu Crne Gore”. Ovaj ugovor zaključen je 17. marta 2023. godine'; register page: 'Status: Važeći ... Datum objavljivanja: 27.03.2023. Datum stupanja na snagu: 27.03.2023.'",
+      "file": "files/d4/me-sl-336134.pdf",
+      "sha256": "5f5cb5930154f110459159ed89b2e604d812a302250e0fa12d07f5ffcdb092a0"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The register's ME director figures (6.5 and 8.8, SL CG 64/16, from u13) are superseded by the 2023 amendment: 8.00 and 9.1. Whether the agreement still governs after the public-sector pay law's 2026 amendment, and the coefficient's euro value, were not read."
+ },
+ "TH": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "held": "u25.result.json, 2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 3 of 8 (standard): 'ค่าตอบแทนผู้กำกับละครเวที อัตรา ค่าจ้าง ผู้กำกับการแสดง ละครเวที ไทย ต่อเรื่อง'",
+     "result": "No director's fee or scale: Manager Online business pieces (one read under trade-press), Thai journal articles on production managers, the 2017 SWU thesis on commercial theatre",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Fine Arts Department, Office of Performing Arts (สำนักการสังคีต): laws page https://finearts.go.th/performing/categorie/dept-laws-and-regulations (files/d4/th-performing-laws-live.html), entry https://finearts.go.th/performing/view/60641 and its PDF 'ระเบียบกรมศิลปากร ว่าด้วยการจัดบรรเลงดุริยางค์และการแสดงนาฏศิลป์ พ.ศ.2568' https://finearts.go.th/storage/contents/2025/10/file/VMqCs7sraBdMSnY7056PaZEDix60d9Z0pn3IFMfg.pdf (re-fetched 2026-11-05, HTTP 200, sha256 e391d412265a4b553c8b080330e2d503d9fc5893b11eab9c3fa3ed14ac723bf4, files/d4/th-fad-reg2568-performance.pdf; scanned, OCR tesseract tha, files/d4/th-fad-reg2568-performance.ocr.txt); the revolving-fund regulation (view/6929, files/d4/th-fad-revolving-fund.pdf); rkc.or.th: Cloudflare bot check (files/d4/th-rkc-home.html), not got past",
+     "result": "Not found for a director: the 2568 (2025) regulation's schedule pays per performance: 'ผู้แสดงและเจ้าหน้าที่ ... รอบละ คนละ ๓๐๐ บาท'; 'บุคคลภายนอก ... ไม่เกินรอบละ คนละ ๕๐๐ บาท'; 'ศิลปินแห่งชาติ ... ศิลปินรับเชิญที่มีชื่อเสียง ... ไม่เกินรอบละ คนละ ๓,๐๐๐ บาท'; troupes 'ไม่เกินรอบละ ๒๐,๐๐๐ บาท'. Performers and staff only; no rate for staging or directing a play",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Royal Thai Government Gazette https://ratchakitcha.soc.go.th/ (HTTP 403); Department of Labour Protection and Welfare, labour relations (collective agreements) https://relation.labour.go.th/ (curl 35, connection reset); Wage Committee https://www.wage.mol.go.th/ (proxy CONNECT 502); Ministry of Labour https://www.mol.go.th/ (HTTP 200, 962 bytes, a redirect stub)",
+     "result": "Not reached: no register of collective agreements or gazette text read; nothing found",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "Manager Online (mgronline.com), https://mgronline.com/daily/detail/9510000089333 (HTTP 200, files/d4/th-mgr-9510000089333.html, sha256 2113002b54c3847e9f32f4579b0c2ecd85c0e17a4acfc6fe63235c428f231572); Daily News https://www.dailynews.co.th/news/4874401/ (files/d4/th-dailynews-4874401.html, sha256 3b95433dcde877aaaf41f8d7fdc482a2c75ad1f191a77b66a833ecdf7818c770, earlier d4 run); Amarin TV https://www.amarintv.com/news/social/142443 (files/d4/th-amarin-142443.html, sha256 2233cab062cc0c1f08c7fa42a178883cfd02f36e75bbe39b9fb5716dcdf22f3a, earlier d4 run)",
+     "result": "Not found: Manager Online is Scenario/Exact's ticket tiers (500-3,000 baht) and revenue, no fees; Daily News reports Wage Committee notice No. 14 (400 baht a day for listed sectors and places, from 1 July), a general employee floor, not a stage rate; Amarin is a Thai theatre showcase in the US. No source on a stage director's pay",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-39, cc.py list 'th,go,finearts)/performing' (121 records, this session): the record of https://finearts.go.th/performing/categorie/dept-laws-and-regulations of 2026-09-06 (files/d4/th-cc39-performing-laws.html, sha256 346fd15a91863a08535e9c8d5c78b2b93dae067cbc30d3be19fe174d8d1929a9, earlier d4 run)",
+     "result": "Not found: the September 2026 copy lists the same 2568 regulations; nothing on directors' pay",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Thailand has no stage directors' agreement or scale in any text read; the Fine Arts Department pays performers and staff per performance (300 baht; outsiders up to 500; noted guest artists up to 3,000). The labour registers were unreachable (403, reset, 502)."
+ }
+}

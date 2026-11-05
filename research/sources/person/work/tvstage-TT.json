@@ -1,0 +1,170 @@
+{
+ "topic": "markets.TT.series-and-stage",
+ "read": "2026-11-04",
+ "country": "TT",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://filmtt.co.tt/rebate/rebate-guide/",
+   "title": "FilmTT: Rebate Guide (Common Crawl CC-MAIN-2026-43 capture of 11 October 2026; the live site returned 503 'Site Currently Unavailable')",
+   "read": "2026-11-04",
+   "said": "The Production Expenditure Rebate Programme is the primary production incentive for T&T and international productions; qualification for the rebate is based on specific criteria. … 12.5% cash back on qualifying expenses for budgets US$100,000 – US$499,999, plus 20% cash back for hiring local labour … 35% cash back on qualifying expenses for budgets US$1,000,000 – $8,000,000, plus 20% cash back for hiring local labour … A flat 35% cash back on qualifying expenses for budgets US$15,000 – US$8,000,000, plus 20% for hiring local labour",
+   "file": "tt-rebate-guide-cc.html",
+   "sha256": "bee2ec09fe89e7156ce4063d96716bde7974e8621065b3c7ccd8ef333472ea10"
+  },
+  {
+   "kind": "primary",
+   "url": "https://tradeind.gov.tt/film-rebate/",
+   "title": "Ministry of Trade and Industry: Film rebate (10 October 2018)",
+   "read": "2026-11-04",
+   "said": "this programme currently provides a cash rebate to local and foreign film producers for production expenditure incurred while filming in Trinidad and Tobago.",
+   "file": "tt-rebate.html",
+   "sha256": "43b89426410800c99628e22a7d7196597cfca7809949b890eacf5331ca62699a"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The detailed rebate guide document was not found in the capture; whether a series counts is unknown.",
+   "verdict": "partial",
+   "value": "As producer-TT.json; neither page says whether a television series qualifies or sets a per-episode threshold.",
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Production Expenditure Rebate Programme is the primary production incentive for T&T and international productions; qualification for the rebate is based on specific criteria. … 12.5% cash back on qualifying expenses for budgets US$100,000 – US$499,999, plus 20% cash back for hiring local labour … 35% cash back on qualifying expenses for budgets US$1,000,000 – $8,000,000, plus 20% cash back for hiring local labour … A flat 35% cash back on qualifying expenses for budgets US$15,000 – US$8,000,000, plus 20% for hiring local labour"
+    },
+    {
+     "src": 1,
+     "said": "this programme currently provides a cash rebate to local and foreign film producers for production expenditure incurred while filming in Trinidad and Tobago."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.filmtt.co.tt/ and tradeind.gov.tt/film-rebate/",
+     "result": "FilmTT 503 'Site Currently Unavailable'; ministry 2018 release read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback CDX filmtt.co.tt*; Common Crawl CC-MAIN-2026-39, -43, -30 for tt,co,filmtt)/",
+     "result": "Wayback reset (curl 35); CC-MAIN-2026-43 held /rebate/rebate-guide/ (read)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "UNESCO policy monitoring platform page on the programme",
+     "result": "No series term",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The detailed rebate guide document was not found in the capture; whether a series counts is unknown."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.filmtt.co.tt/ and tradeind.gov.tt/film-rebate/",
+     "result": "FilmTT 503 'Site Currently Unavailable'; ministry 2018 release read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback CDX filmtt.co.tt*; Common Crawl CC-MAIN-2026-39, -43, -30 for tt,co,filmtt)/",
+     "result": "Wayback reset (curl 35); CC-MAIN-2026-43 held /rebate/rebate-guide/ (read)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.ttt.live, creativett.co.tt, www.creativett.co.tt, www.filmtt.co.tt, www.culture.gov.tt, mcdca.gov.tt, www.mtcd.gov.tt, www.tourism.gov.tt, www.pmcd.gov.tt, www.cott.org.tt",
+     "result": "TTT and COTT read (nothing on the items); CreativeTT and FilmTT 503; the ministry hosts gave proxy CONNECT 502.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.ttt.live, creativett.co.tt, www.creativett.co.tt, www.filmtt.co.tt, www.culture.gov.tt, mcdca.gov.tt, www.mtcd.gov.tt, www.tourism.gov.tt, www.pmcd.gov.tt, www.cott.org.tt",
+     "result": "TTT and COTT read (nothing on the items); CreativeTT and FilmTT 503; the ministry hosts gave proxy CONNECT 502.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tatt.org.tt home and /stakeholder/broadcasting/",
+     "result": "No local-content quota or commissioning terms on either page.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: Trinidad and Tobago Ministry of Culture and the Arts grant funding guidelines theatre production application",
+     "result": "Named the Culture and Creative Arts Fund (CCAF) on mtca.gov.tt and a 2020 Cultural Relief Grant (closed); trade items (ttpanetwork, Guardian, Newsday) on the 2020 relief grant.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.ttt.live, creativett.co.tt, www.creativett.co.tt, www.filmtt.co.tt, www.culture.gov.tt, mcdca.gov.tt, www.mtcd.gov.tt, www.tourism.gov.tt, www.pmcd.gov.tt, www.cott.org.tt",
+     "result": "TTT and COTT read (nothing on the items); CreativeTT and FilmTT 503; the ministry hosts gave proxy CONNECT 502.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Trinidad and Tobago Ministry of Culture and the Arts grant funding guidelines theatre production application",
+     "result": "Named the Culture and Creative Arts Fund (CCAF) on mtca.gov.tt and a 2020 Cultural Relief Grant (closed); trade items (ttpanetwork, Guardian, Newsday) on the 2020 relief grant.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "https://mtca.gov.tt/?p=385 and the 2023 PLAY grants release PDF",
+     "result": "The page is now the Ministry of Transport and Civil Aviation's home; the PDF 404.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API and CDX for mtca.gov.tt; Common Crawl CC-MAIN-2025-51 list for tt,gov,mtca)/",
+     "result": "Wayback: 429 then blocked by egress policy; Common Crawl: 76 captures listed (u1tools/cc-mtca-2551.txt), no CCAF guidelines page among them.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

@@ -16,6 +16,17 @@
     "trade-press": "none found || retry 2026-11-01: allAfrica and Images francophones on FONSICA; no rate",
     "archive": "not tried: no institution URL to look up || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://culture.gouv.tg/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Togo (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: 1 search: Togo loi statut de l'artiste rémunération comédien cachet minimum BUTODRA barème théâtre représentation (Loi 2016-012 on WageIndicator, IFACCA BUTODRA item; no rate)",
+    "institution": "2026-11-04: BUTODRA (butodra.tg, the copyright office): home, 'Art de la scène', 'Utilisateur artistique', 'Utilisateur littéraire', the Direction du Fonds de Promotion Culturelle page, site search ?s=tarif; culture.gouv.tg and www.culture.gouv.tg (BUTODRA: organisers of shows pay as occasional users or subscribers under a 'contrat général de représentation', associations get 'tarifs de groupe ou collectifs négociés et fixés dans une convention générale'; no tariff, percentage or fee is published; its cultural-promotion fund is fed by levies on its collections and the receipts of the ministry's halls. No director's or actor's minimum. Ministry of Culture: no response (curl 000).)",
+    "official-register": "2026-11-04: Journal officiel de la République togolaise (new.jo.gouv.tg), through the site's own search API (odoo.jo.gouv.tg/api/journal-officiel/search, scope=publications): 'artiste' (10 hits, all read), 'cinématograph', 'théâtre', 'FoNSICA', 'culture', 'Fonds National de Promotion Culturelle', 'rémunération', 'audiovisuel', 'spectacle', 'BUTODRA', 'droits d'auteur'; the record of Décret n° 2022-064/PR (publications/slug/..., sha256 5a9e2d65...8036) (Found in the register: Loi n° 2016-012 du 20 juin 2016 portant statut de l'artiste, and no later decree on artists' pay (the 'artiste' query's ten hits include no decree under its art. 46; 'rémunération' returns only Décret 2021-031 on public-administration payments); Décret n° 2022-064/PR du 11 mai 2022 portant organisation et fonctionnement du FNPC (JO 67e année n° 25 bis, 24 June 2022, p. 33); Arrêté interministériel n° 001/24/MCT/MEF du 3 avril 2024 approving the FNPC's 2024 budget; Arrêté (7 Sep 2020) portant cahier des charges et obligations générales des sociétés de production audiovisuelle; a 1964 decision granting a subvention to the 'Groupement du Théâtre et du Folklore Togolais'. 'FoNSICA': no hit. The decree's PDF download (publications/17080/pdf/download) was refused by this session's permission check, so the FNPC decree's terms were not read.)",
+    "trade-press": "2026-11-04: WageIndicator copy of Loi 2016-012, read whole (art. 46 defers minimums to a decree; no tax measure)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43 and -39 for tg,gouv,culture)/ (0 records), CC-MAIN-2026-43 for tg,fnpc)/ (0) and tg,butodra)/ (112, filtered for tarif, barème, scène, théâtre, dramatique) (No capture of the ministry or the FNPC; BUTODRA: one 'art de la scène' category page (news list). No fund terms, tariff or fee.)"
+   }
   }
  ]
 }

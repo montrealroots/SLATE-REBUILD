@@ -72,6 +72,17 @@
     "trade-press": "none || retry 2026-11-01: none quoting a VAF or CCA cap",
     "archive": "not tried || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://scenaristengilde.be/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Belgium (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: 1 search (standard): 'Cultuurloket richtbedragen honorarium toneelschrijver regisseur acteur podiumkunsten barema PC 304' (No Cultuurloket fee guidance; led to the FPS Employment register copy of PC 304's agreement of 23 October 2012 on pay in French- and German-language dramatic arts in Wallonia and Brussels (read under official-register below) and to Dutch (Netherlands) sources not applicable.)",
+    "institution": "2026-11-04: federation-wallonie-bruxelles.be, culture.be, arts-scene.be, sacd.be, rtbf.be (FWB and culture.be returned 8 KB shells; sacd.be no connection; arts-scene.be and rtbf.be answered but were not searched further)",
+    "official-register": "2026-11-04: The PC 304 agreement of 23 October 2012 (above) and the Flemish CAO of 19 December 2016's group list (podiumkunsten.be), read for an author's pay. (Flanders: an employed 'auteur / componist' is in group A (EUR 3,211.86 a month from 1 Aug 2026, 4 months or more). The 2012 French-Community agreement allows a contract for a defined work only 'pour du travail d'auteur artistique' (art. 2) and sets no author's rate. No commission fee, advance or royalty floor for a playwright paid by licence.)",
+    "trade-press": "2026-11-04: Etcetera (e-tcetera.be) search 'barema'; Rekto:Verso search (rektoverso.be/zoeken). (Etcetera: no article in the results; Rekto:Verso search answered 404. No article quoting a stage scale or playwright fee.)",
+    "archive": "2026-11-04: Common Crawl 'be,overlegkunstenorganisaties)/' (oKo, 502 live) in CC-MAIN-2026-43 and -30; 'be,sacd)/' (no connection live) in CC-MAIN-2026-43, -39, -30, 2025-51; archive.org availability API for sacd.be/fr/auteurs; sacd.be retried live. (oKo: no captures. SACD: only robots.txt answering 403 in every crawl; no snapshot listed by the availability API; live sacd.be reset the connection (curl 35). Nothing read.)"
+   }
   }
  ]
 }

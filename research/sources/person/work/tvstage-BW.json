@@ -1,0 +1,247 @@
+{
+ "topic": "markets.BW.series-and-stage",
+ "read": "2026-11-04",
+ "country": "BW",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://dailynews.gov.bw/news-detail/90583",
+   "title": "Ministry aims to transform country into sport and culture hub (Daily News, Botswana Press Agency, 17 Mar 2026: the Minister of Sport and Arts presenting the 2026/27 budget)",
+   "read": "2026-11-04",
+   "said": "Upon its enactment, he said government would establish the National Film Commission to foster a local filming culture.",
+   "file": "bw-dn-90583.html",
+   "sha256": "8b9d90ad671c01474292b69d3fbaa5297b6a3efb35ab1f5836e29f4954f83872"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. Botswana has no production incentive for film or television in force: the minister’s 2026/27 budget speech puts the Cinematography Act before Parliament and a film commission only after it passes (producer-BW.json holds the same). Absence stands on the minister’s statement, not on a text of the law read whole.",
+   "verdict": "none-exists",
+   "value": {
+    "incentive": null,
+    "pending": "Cinematography Act to be presented to Parliament; a National Film Commission only upon enactment"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Upon its enactment, he said government would establish the National Film Commission to foster a local filming culture."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. No series fund; the state commissions and buys directly (items 4).",
+   "verdict": "none-exists",
+   "value": {
+    "fund": null,
+    "directCommissioning": {
+     "films": 8,
+     "totalBWP": 2900000
+    },
+    "planned": "NAC creative industry fund (producer-BW.json, announced 2026-10-22)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Upon its enactment, he said government would establish the National Film Commission to foster a local filming culture."
+    },
+    {
+     "src": 0,
+     "said": "He further said the ministry planned to expand NowTV by relaunching it on the Digital Terrestrial Transmission (DTT) and satellite platforms through local and regional carriers. The minister said P23 million had been earmarked for acquisition of content from 34 producers."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. The state channel buys content from local producers: P23m for 34 producers in 2026/27 (about P676,000 each on average, arithmetic, not stated). No tariff per episode or hour, and no count of independent series picked up, was found.",
+   "verdict": "partial",
+   "value": {
+    "currency": "BWP",
+    "year": "2026/27",
+    "contentAcquisitionBudget": 23000000,
+    "producers": 34,
+    "channel": "NowTV (state), relaunch on DTT and satellite",
+    "averagePerProducer": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "He further said the ministry planned to expand NowTV by relaunching it on the Digital Terrestrial Transmission (DTT) and satellite platforms through local and regional carriers. The minister said P23 million had been earmarked for acquisition of content from 34 producers."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. Rate of yes is 33/575 (5.7%) from a secondary with no primary address; the minister gives only funded count (57, P4m). No per-project range published; the NACB site and the gov.bw grant page were not reached (expired TLS certificate). Theatre share not stated.",
+   "verdict": "partial",
+   "value": {
+    "fund": "National Arts Council of Botswana (NACB) Arts and Culture Grant (all arts; theatre among the categories per the search lead)",
+    "currency": "BWP",
+    "2025/26": {
+     "funded": 57,
+     "totalBWP": 4000000,
+     "implemented": 35,
+     "ongoing": 22
+    },
+    "lastOpenCall(secondary)": {
+     "applications": 575,
+     "requestedBWP": 112000000,
+     "allocatedBWP": 4000000,
+     "funded": 33,
+     "rateOfYes": 0.057
+    },
+    "eligible": "artists, individuals, trusts, societies, associations and companies in the arts and culture sector across the country (2023-24 call)",
+    "status": "2025-26 grant not disbursed and the May call postponed (Dec 2025 report)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Minister Kelebeng said 57 applicants were funded at a total amount of P4 million out of which 35 have been successfully implemented and 22 were still on-going."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dailynews.gov.bw/news-detail/90583 (BOPA, the government news agency) read: the 2026/27 budget speech",
+     "result": "read: Cinematography Act pending; P23m content acquisition from 34 producers for NowTV; 57 NACB grant recipients, P4m",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. Botswana has no production incentive for film or television in force: the minister’s 2026/27 budget speech puts the Cinematography Act before Parliament and a film commission only after it passes (producer-BW.json holds the same). Absence stands on the minister’s statement, not on a text of the law read whole."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dailynews.gov.bw/news-detail/90583 (BOPA, the government news agency) read: the 2026/27 budget speech",
+     "result": "read: Cinematography Act pending; P23m content acquisition from 34 producers for NowTV; 57 NACB grant recipients, P4m",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Botswana National Arts Council funding theatre production grant BTV commissioning local drama series producers\"",
+     "result": "led to Business Weekly (3 articles, read), Mmegi, gov.bw grant page; nothing on BTV commissioning",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. No series fund; the state commissions and buys directly (items 4)."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.btv.gov.bw (Botswana Television)",
+     "result": "HTTP 503",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dailynews.gov.bw/news-detail/90583 (BOPA, the government news agency) read: the 2026/27 budget speech",
+     "result": "read: Cinematography Act pending; P23m content acquisition from 34 producers for NowTV; 57 NACB grant recipients, P4m",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "www.btv.gov.bw (Botswana Television)",
+     "result": "HTTP 503",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Botswana National Arts Council funding theatre production grant BTV commissioning local drama series producers\"",
+     "result": "led to Business Weekly (3 articles, read), Mmegi, gov.bw grant page; nothing on BTV commissioning",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. The state channel buys content from local producers: P23m for 34 producers in 2026/27 (about P676,000 each on average, arithmetic, not stated). No tariff per episode or hour, and no count of independent series picked up, was found."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dailynews.gov.bw/news-detail/90583 (BOPA, the government news agency) read: the 2026/27 budget speech",
+     "result": "read: Cinematography Act pending; P23m content acquisition from 34 producers for NowTV; 57 NACB grant recipients, P4m",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.bw/grants/arts-and-culture-grant and www.gov.bw/… ; nacb.org.bw, www.nacb.org.bw, nacb.co.bw",
+     "result": "gov.bw: TLS name mismatch; www.gov.bw: certificate expired (verification kept on, not read); NACB hosts: no connection",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, -21, 2025-51 for bw,gov)/grants",
+     "result": "only -21 holds a gov.bw grants page (womens-economic-empowerment-programme); no arts-and-culture-grant capture",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Botswana National Arts Council funding theatre production grant BTV commissioning local drama series producers\"",
+     "result": "led to Business Weekly (3 articles, read), Mmegi, gov.bw grant page; nothing on BTV commissioning",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "businessweekly.co.bw: three NACB articles read",
+     "result": "575 applications / P112m / 33 funded; 2025-26 grant not disbursed; 2023 eligibility",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "Botswana has no film fund; the Ministry of Sport and Arts commissions films and earmarked P23 million for 2026/27 to buy content (producer-BW.json), the nearest thing to item 4. Not attempted today. Rate of yes is 33/575 (5.7%) from a secondary with no primary address; the minister gives only funded count (57, P4m). No per-project range published; the NACB site and the gov.bw grant page were not reached (expired TLS certificate). Theatre share not stated."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "trade-press",
+     "tried": "businessweekly.co.bw: three NACB articles read",
+     "result": "575 applications / P112m / 33 funded; 2025-26 grant not disbursed; 2023 eligibility",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

@@ -13,7 +13,8 @@
    "aboutMarket (a country's or an agreement's unknowns, compiled or not; a follower's with its followed country's)",
    "coverage: all 252 countries (axis country), the kept three on R-4614",
    "compile: unread readings, blockers-only countries, followers, the zone without a city, undated rates",
-   "agreement-age"
+   "agreement-age",
+   "stage (a country no agreement of which covers the stage tells the player what a part on stage is paid)"
   ]
  },
  "rows": [
@@ -123,6 +124,15 @@
    "tests": [
     "tests/person/acting/markets.test.ts::a market's part, played > engages no one younger than its agreement's text covers: the Hebrew Theatre's none under 18",
     "tests/tools/markets.test.ts::the markets compile > holds the age an agreement covers actors from, where its own words in a primary source write it"
+   ]
+  },
+  {
+   "key": "stage (a country no agreement of which covers the stage tells the player what a part on stage is paid)",
+   "status": "proven",
+   "tests": [
+    "tests/person/acting/markets.test.ts::a market's part > tells the player what of a market isn't known",
+    "tests/tools/markets.test.ts::the markets compile > reads each market as the register cites it, and refuses a file or a reading without the other",
+    "tests/tools/markets.test.ts::the markets compile > reads a country cited only by its blockers from them, one that says why it isn't read without a market, and a follower after the rest"
    ]
   }
  ]

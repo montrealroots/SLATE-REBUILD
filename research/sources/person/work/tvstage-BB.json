@@ -1,0 +1,197 @@
+{
+ "topic": "markets.BB.series-and-stage",
+ "read": "2026-11-04",
+ "country": "BB",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.barbadosparliament.com/htmlarea/uploaded/File/Cultural%20Industries%20Development%20Act%202013%20(3)%20%20(Amenended%20Copy).pdf",
+   "title": "Barbados Parliament: Cultural Industries Development Act, 2013 (amended copy)",
+   "read": "2026-11-04",
+   "said": "“approved producer of audio-visual content” or “approved producer ” means a film production company incorporated under the Companies Act, … (c) media - broadcast media including television, radio and cable, digital media including software and computer services, film and video, … (3) Where an approved producer referred to in subsection (1) has in an income year incurred expenditure for the purpose of the production and acquisition in respect of local films, then in calculating the assessable income of the approved producer for an income year, there shall be a write-off of 100 per cent.",
+   "file": "bb-cida.pdf",
+   "sha256": "59201cff723b0d9cc22d15ea70697d51cab74f641889b309a12ca5216f82da26"
+  },
+  {
+   "kind": "primary",
+   "url": "https://ncf.bb/cultural-industries-development-fund/",
+   "title": "National Cultural Foundation: Cultural Industries Development Fund",
+   "read": "2026-11-04",
+   "said": "The Cultural Industries Development Fund is open to all citizens of Barbados and companies registered in Barbados whose principal shareholder or partner is a citizen of the island. … Creative entrepreneurs are limited to one grant disbursement within a 12-month period and one disbursement per cultural project. … Project Execution funding is provided to creative entrepreneurs seeking assistance to complete a cultural or creative project that provides opportunities to market, promote and showcase the cultural product or service or to generate revenue through the sale of artistic or creative work. (Up to $30,000)",
+   "file": "bb-ncf-cidf.html",
+   "sha256": "72b0afe2d492291f0977079155b910605c7c8f28bbfb98df5061e1be5fcbe378"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Part VII speaks of 'audio-visual content' and 'local films'; television is a cultural industry under s.2, but the Act names no series terms. A tax deduction, not a credit: what it is worth depends on the producer's income and rate, which the game would need from Barbados's income tax.",
+   "verdict": "partial",
+   "value": {
+    "cashRebate": null,
+    "localFilmWriteOff": 1.0,
+    "trainingDeduction": 1.5,
+    "marketingDeduction": 1.5,
+    "seriesNamed": false
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "“approved producer of audio-visual content” or “approved producer ” means a film production company incorporated under the Companies Act, … (c) media - broadcast media including television, radio and cable, digital media including software and computer services, film and video, … (3) Where an approved producer referred to in subsection (1) has in an income year incurred expenditure for the purpose of the production and acquisition in respect of local films, then in calculating the assessable income of the approved producer for an income year, there shall be a write-off of 100 per cent."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Any cultural project, so a series or a play; no rate of yes published.",
+   "verdict": "partial",
+   "value": {
+    "fund": "NCF Cultural Industries Development Fund",
+    "currency": "BBD",
+    "grants": {
+     "technicalAssistanceMost": 5000,
+     "productDevelopmentMost": 30000,
+     "projectExecutionMost": 30000
+    },
+    "eligible": "Barbadian citizens, and companies whose principal shareholder or partner is a citizen; registered on barbadosartists.bb",
+    "onePerYear": true,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "The Cultural Industries Development Fund is open to all citizens of Barbados and companies registered in Barbados whose principal shareholder or partner is a citizen of the island. … Creative entrepreneurs are limited to one grant disbursement within a 12-month period and one disbursement per cultural project. … Project Execution funding is provided to creative entrepreneurs seeking assistance to complete a cultural or creative project that provides opportunities to market, promote and showcase the cultural product or service or to generate revenue through the sale of artistic or creative work. (Up to $30,000)"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "incentive",
+   "finding": "Deductions against income, not a credit on cost; the investor deduction ran five years from commencement (proclaimed 2015 per producer-BB.json), so it may have lapsed.",
+   "verdict": "found",
+   "value": {
+    "law": "Cultural Industries Development Act 2013",
+    "artisticWorkAllowance": {
+     "rate": 1.5,
+     "capBBD": 250000,
+     "workByResident": true
+    },
+    "marketingDeduction": 1.5,
+    "investorDeduction": "100% of the investment, first five years from commencement",
+    "appliesTo": "approved cultural projects, the performing arts included"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "(a) arts and culture - the performing arts, visual arts, literary arts, … Where in an income year a cultural entrepreneur, cultural practitioner or a governmental entity incurs expenditure in respect of an artistic work, however defined, there shall be allowed as a deduction, in ascertaining the chargeable profit derived from the cultural activities of the cultural entrepreneur, cultural practitioner or the governmental entity for that year of income, an allowance equal to 150 per cent of the actual expenditure up to a maximum of $250 000. … (2) The deduction referred to in subsection (1) may only be claimed in respect of the initial acquisition of the work and where the work is done by a resident of Barbados. … there shall be deducted an amount equal to 150 per cent of the expenditure incurred. … Where an investor makes an investment in a cultural practitioner or approved cultural project, in calculating the assessable income of the investor there shall be deducted an amount equal to 100 per cent from their assessable income for the first five years from the commencement of this Act."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Barbados Parliament copy of the Cultural Industries Development Act 2013",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "'Barbados film and television incentive legislation 2026 series rebate CBC local content commissioning'",
+     "result": "Barbados Today 2023 and 2025 items on pledged incentives; IFACCA summary and CBC item read; no enacted law, no commissioning terms",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Part VII speaks of 'audio-visual content' and 'local films'; television is a cultural industry under s.2, but the Act names no series terms. A tax deduction, not a credit: what it is worth depends on the producer's income and rate, which the game would need from Barbados's income tax."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ncf.bb Cultural Industries Development Fund page",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Any cultural project, so a series or a play; no rate of yes published."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "'Barbados film and television incentive legislation 2026 series rebate CBC local content commissioning'",
+     "result": "Barbados Today 2023 and 2025 items on pledged incentives; IFACCA summary and CBC item read; no enacted law, no commissioning terms",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "'Barbados film and television incentive legislation 2026 series rebate CBC local content commissioning'",
+     "result": "Barbados Today 2023 and 2025 items on pledged incentives; IFACCA summary and CBC item read; no enacted law, no commissioning terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "cbc.bb/news/local-news/initiatives-taking-shape-in-local-film-industry/ (the public broadcaster's own site)",
+     "result": "read: no commissioning terms",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Barbados Parliament copy of the Cultural Industries Development Act 2013",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Deductions against income, not a credit on cost; the investor deduction ran five years from commencement (proclaimed 2015 per producer-BB.json), so it may have lapsed."
+   }
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ncf.bb Cultural Industries Development Fund page",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

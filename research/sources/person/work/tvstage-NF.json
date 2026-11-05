@@ -1,0 +1,268 @@
+{
+ "topic": "markets.NF.series-and-stage",
+ "read": "2026-11-04",
+ "country": "NF",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://api.prod.legislation.gov.au/v1/documents(titleid='C2004A05138',start=2026-10-01T00:00:00,retrospectivestart=2026-10-01T00:00:00,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=7,format='Word')",
+   "title": "Income Tax Assessment Act 1997 (Cth), compilation in force from 1 October 2026, volume 7, Division 376 (Federal Register of Legislation)",
+   "read": "2026-11-04",
+   "said": "The amount of the producer offset is: … (a)if the *film is a *feature film that was produced for commercial exhibition to the public in cinemas—40%; or … (b)otherwise—30%; … (ii)each episode of the series is at least one half of a commercial hour in duration, except where the film is predominantly made using cell, stop motion, digital or other animation, in which case each episode is at least one quarter of a commercial hour in duration; and … A *film where the application for the certificate is for a series and not for a season of that series, and the series is not a *documentary … $1 million … $500,000 … duration of film in hours means the total length of the *film, measured in hours.",
+   "file": "nf-itaa-v7.docx",
+   "sha256": "381a26aad7b3cf0cfd3f75590932070014f74ecd5111c3b1119409ffd9487d2c"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.legislation.gov.au/C2004A05138/2026-10-01/2026-10-01/text/original/epub/OEBPS/document_7/document_7.html",
+   "title": "ITAA 1997 Div 376 (as item 1)",
+   "read": "2026-11-04",
+   "said": "(ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film",
+   "file": "au-itaa7.html",
+   "sha256": "dcb0dbff3ed19a8ce6e67a1564ac5b02a77fb57ac0ea599b7221673e493cd685"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.screenaustralia.gov.au/wp-content/uploads/2026/04/Guidelines-Narrative-Content-Production.pdf",
+   "title": "Screen Australia: Narrative Content Production Funding Guidelines",
+   "read": "2026-11-04",
+   "said": "television projects must have a contingency of 8% of below-the-line",
+   "file": "au-ncp.pdf",
+   "sha256": "bc708213452315d59bf5650a9fcc2f0697c0c7b5a64ba84db1b22defa1bfc3ac"
+  },
+  {
+   "kind": "primary",
+   "url": "https://creative.gov.au/investments-opportunities/arts-projects-individuals-and-groups",
+   "title": "Creative Australia: Arts Projects for Individuals and Groups",
+   "read": "2026-11-04",
+   "said": "Funding of between $10,000 and $50,000 for a range of activities and projects, both national and international, across all arts practices. … Applications close: Tuesday 1 September 2026 … You must be an Australian citizen or an Australian permanent resident, and a practicing artist or arts professional. … How competitive are your grants rounds? As a national arts funding body, all our grant rounds are competitive. Success rates are usually between 10% and 15%.",
+   "file": "au-ca-apig.html",
+   "sha256": "5eb6eb564c32a03fb3f85685f5bac12f44fd88a1d41dae37d8f3533395484200"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "A series on Norfolk Island is Australia's: the producer offset, 30% for a series (40% only for a cinema feature). The 'significant Australian content' test (s 376-65) also applies; not quoted here. These are Australia's series terms and belong with AU's research too.",
+   "verdict": "found",
+   "value": {
+    "law": "ITAA 1997 Division 376 (producer offset), s 376-60, s 376-65",
+    "rate": 0.3,
+    "counted": "qualifying Australian production expenditure (QAPE)",
+    "seriesThreshold": {
+     "totalQAPE_AUD": 1000000,
+     "perHourQAPE_AUD": 500000
+    },
+    "documentarySeries": {
+     "totalQAPE_AUD": 500000,
+     "perHourQAPE_AUD": 250000
+    },
+    "episodeAtLeast": "half a commercial hour (a quarter for animation)",
+    "dramaSeasonAlt": {
+     "totalQAPE_AUD": 35000000
+    },
+    "whereNorfolkIsland": "in Australia for the Act (s 960-505, held in producer-NF.json)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The amount of the producer offset is: … (a)if the *film is a *feature film that was produced for commercial exhibition to the public in cinemas—40%; or … (b)otherwise—30%; … (ii)each episode of the series is at least one half of a commercial hour in duration, except where the film is predominantly made using cell, stop motion, digital or other animation, in which case each episode is at least one quarter of a commercial hour in duration; and … A *film where the application for the certificate is for a series and not for a season of that series, and the series is not a *documentary … $1 million … $500,000 … duration of film in hours means the total length of the *film, measured in hours."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "AU's. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. producer-AU.json already holds that the Terms of Trade (2017) set no producer-fee percentage; the 2025 guidelines name none either (read whole for 'fee' and 'overhead').",
+   "verdict": "partial",
+   "value": {
+    "follows": "AU",
+    "au": {
+     "cap": null,
+     "offsetCountsAboveTheLineUpTo": 0.2,
+     "tvContingencyOfBTL": 0.08
+    }
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "(ii) remuneration provided to the principal director, producers and principal cast associated with the film; to the extent that such expenditure comprises greater than 20% of the company’s * total film expenditure on the film"
+    },
+    {
+     "src": 2,
+     "said": "television projects must have a contingency of 8% of below-the-line"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "AU's. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. No count of how often an independent Australian series is picked up was found; the Drama Report HTML is challenge-blocked.",
+   "verdict": "partial",
+   "value": {
+    "follows": "AU",
+    "au": {
+     "fundedSeriesNeeds": "a local commissioning platform and a rest-of-world distributor",
+     "minLicenceFeePerHourAUD": 550000,
+     "childrensPerHalfHourAUD": {
+      "one": 125000,
+      "combinedOrExclusive": 144000
+     },
+     "licenceYears": 3,
+     "from": "2026-07-01",
+     "secondary": {
+      "avodForFTA": 14000,
+      "ftaForSVOD": 50000
+     },
+     "pickupRate": null
+    }
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "For episodic or feature length projects for which Television (including SVOD or BVOD) is the first and primary window, applicants must: o have a local commissioning platform secured on terms acceptable to Screen Australia, including meeting the following minimum licence fee requirements*, … a confirmed minimum licence fee of $550,000 per broadcast hour allocated toward the initial licence period (3 years) against the primary right … for Children’s content, a confirmed minimum of: • $125,000 per broadcast half hour for one commissioning platform with limited exclusivity holdbacks; or • $144,000 for (i) combination of commissioning platforms; or (ii) one commissioning platform with full exclusivity … o have secured a ROW Distributor with a letter of offer (LOO) … the first funding decision within the updated minimum licence fee requirements being in force from 1 July 2026"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "incentive",
+   "finding": "AU's; none found. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. Division 376 covers films only. No federal theatre offset was found; the whole ITAA 1997 was not searched beyond this volume, so absence is not proved.",
+   "verdict": "partial",
+   "value": {
+    "follows": "AU",
+    "au": {
+     "theatreOffset": null
+    }
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "(a) a refundable tax offset for Australian expenditure in making an Australian film (the producer offset); … (b) … (the location offset); and (c) a refundable tax offset for Australian expenditure on post, digital and visual effects production for any film (the PDV offset)."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "AU's (Creative Australia) not read. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. Across all art forms; Theatre is one panel. Arts Projects for Organisations not read.",
+   "verdict": "found",
+   "value": {
+    "follows": "AU",
+    "au": {
+     "currency": "AUD",
+     "leastAUD": 10000,
+     "mostAUD": 50000,
+     "who": "Australian citizen or permanent resident, practising artist or arts professional (individuals and groups)",
+     "rounds": [
+      "2026-09-01",
+      "2027-03-02"
+     ],
+     "rateOfYes": {
+      "low": 0.1,
+      "high": 0.15,
+      "basis": "all rounds, 'usually'"
+     }
+    }
+   },
+   "sources": [
+    {
+     "src": 3,
+     "said": "Funding of between $10,000 and $50,000 for a range of activities and projects, both national and international, across all arts practices. … Applications close: Tuesday 1 September 2026 … You must be an Australian citizen or an Australian permanent resident, and a practicing artist or arts professional. … How competitive are your grants rounds? As a national arts funding body, all our grant rounds are competitive. Success rates are usually between 10% and 15%."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "AU's. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. producer-AU.json already holds that the Terms of Trade (2017) set no producer-fee percentage; the 2025 guidelines name none either (read whole for 'fee' and 'overhead')."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "AU's. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. No count of how often an independent Australian series is picked up was found; the Drama Report HTML is challenge-blocked."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "AU's; none found. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. Division 376 covers films only. No federal theatre offset was found; the whole ITAA 1997 was not searched beyond this volume, so absence is not proved."
+   }
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 4,
+    "what": "AU's (Creative Australia) not read. Norfolk Island follows Australia: Commonwealth Acts and NSW laws are in force there (Norfolk Island Act 1979 ss 15, 18A, read in research/sources/person/markets/producer-NF.json), and the ITAA 1997 takes Australia to include Norfolk Island (s 960-505, same file). This item is Australia's, as the first wave recorded it in t4.result.json (AU); its sources were read there on 2026-11-04 and are not re-fetched here. Across all art forms; Theatre is one panel. Arts Projects for Organisations not read."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Read the first wave's AU object (t4.result.json) and producer-NF.json, which holds that Commonwealth Acts and NSW laws are in force on Norfolk Island and that NIRC's three grant programmes fund no film.",
+     "result": "No search spent: each item is Australia's, carried over with AU's sources and verdicts. Not checked separately: whether Creative Australia's or Screen Australia's eligibility text names Norfolk Island; both take an Australian citizen or permanent resident (AU item 6), which a Norfolk Islander is.",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

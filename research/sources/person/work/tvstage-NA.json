@@ -1,0 +1,126 @@
+{
+ "topic": "markets.NA.series-and-stage",
+ "read": "2026-11-04",
+ "country": "NA",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://nfc.na/funding-criteria",
+   "title": "Namibia Film Commission: Funding Criteria",
+   "read": "2026-11-04",
+   "said": "The NFC gives priority to project funding in the areas of feature films, drama, documentary, and animation. Projects can be series or one-off programs but must be designed for theatrical release, television transmission or on streaming platforms. … Applicants are expected to be Namibian residents primarily working in the drama, animation, and documentary production sector. … Full-time practitioners employed by television networks or training institutions are not eligible to apply.",
+   "file": "na-funding.html",
+   "sha256": "62705bcf48e6a01392108c6731d861993842ad240fcbf172be730f5602bbf048"
+  },
+  {
+   "kind": "primary",
+   "url": "https://nfc.na/funding/funding-opportunities",
+   "title": "Namibia Film Commission: Funding Opportunities",
+   "read": "2026-11-04",
+   "said": "Financial assistance to Film producers to develop, produce and distribute Namibian content. Applications for this year closed on 10 August 2026 .",
+   "file": "na-opps.html",
+   "sha256": "3c6d85a7c93414d2f88a9478a093dbf70a0e1695d3defdfde5f26870b42e1d48"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "No amounts or award counts are published on these pages; Namibia has no production rebate (producer-NA.json).",
+   "verdict": "partial",
+   "value": {
+    "fund": "Namibia Film Commission Film and Video Fund",
+    "seriesEligible": true,
+    "applicant": "Namibian residents",
+    "annualCallClosed": "2026-08-10",
+    "amounts": null,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The NFC gives priority to project funding in the areas of feature films, drama, documentary, and animation. Projects can be series or one-off programs but must be designed for theatrical release, television transmission or on streaming platforms. … Applicants are expected to be Namibian residents primarily working in the drama, animation, and documentary production sector. … Full-time practitioners employed by television networks or training institutions are not eligible to apply."
+    },
+    {
+     "src": 1,
+     "said": "Financial assistance to Film producers to develop, produce and distribute Namibian content. Applications for this year closed on 10 August 2026 ."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nfc.na funding, funding-criteria and funding-opportunities pages",
+     "result": "series eligible for the NFC fund; no amounts",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nfc.na funding, funding-criteria and funding-opportunities pages",
+     "result": "series eligible for the NFC fund; no amounts",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "No amounts or award counts are published on these pages; Namibia has no production rebate (producer-NA.json)."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'National Arts Council of Namibia funding grant theatre production maximum amount application nacn'",
+     "result": "NACN documents and press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "artscouncilnam.org home, grants page, 2024 application form PDF, 2024 cycle-1 press release PDF",
+     "result": "home and press release: 76-byte empty page; grants page and form: 404",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "namibian.com.na 5 Oct 2026 article",
+     "result": "allocation and disciplines",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

@@ -224,7 +224,8 @@ describe('the markets', () => {
       // incentive the research says there's none of pays nothing; a market's currency is its country's unless its terms are in another.
       AE: { currency: 'USD', fund: null, aid: [], credit: ['0- 0-:0.35 most 10000000'], fees: [], release: null, unknown: '' },
       AM: { currency: 'AMD', fund: null, aid: [], credit: ['0- 0-:0.25'], fees: [], release: null, unknown: 'fund' },
-      AR: { currency: 'ARS', fund: null, aid: [], credit: ['0- 0-:0.2 most 75000000'], fees: [], release: null, unknown: 'fund' },
+      // Buenos Aires City's 2026 programme replaced its 2022 terms (20%, ARS 75m) on 2026-11-04; it takes a project with 45% international financing.
+      AR: { currency: 'ARS', fund: null, aid: [], credit: ['300000000- 0-:0.25 most 440000000 abroad'], fees: [], release: null, unknown: 'fund' },
       AS: { currency: 'USD', fund: null, aid: [], credit: [], fees: [], release: null, unknown: '' },
       // Azerbaijan's rebate: 25% from USD 200,000 spent, at most USD 1m, in manat at the day's rate.
       AZ: { currency: 'AZN', fund: null, aid: [], credit: ['200000- 0-:0.25 most 1000000 in USD abroad'], fees: [], release: null, unknown: 'outcomes' },
@@ -483,7 +484,7 @@ describe("a market's project", () => {
 
     // Beyond the twenty: each incentive at its rate, its threshold's edge, its tiers' edges and its cap, in the market's currency.
     const credits: [string, string, string][] = [
-      ['AE', '1000000', '350000'], ['AE', '100000000', '10000000'], ['AM', '1000000', '250000'], ['AR', '100000000', '20000000'], ['AR', '1000000000', '75000000'],
+      ['AE', '1000000', '350000'], ['AE', '100000000', '10000000'], ['AM', '1000000', '250000'], ['AR', '299999999.99', '0'], ['AR', '300000000', '75000000'], ['AR', '2000000000', '440000000'],
       ['AT', '1000000', '300000'], ['AT', '20000000', '5000000'], ['BG', '1000000', '250000'], ['BG', '40000000', '5000000'],
       ['CH', '1199999.99', '0'], ['CH', '1200000', '240000'], ['CH', '10000000', '600000'], ['CL', '1000000', '300000'], ['CO', '3151628999.99', '0'], ['CO', '3151629000', '1103070150'],
       ['DO', '499999.99', '0'], ['DO', '500000', '125000'], ['EE', '999999.99', '0'], ['EE', '1000000', '400000'], ['FJ', '249999.99', '0'], ['FJ', '250000', '50000'], ['FJ', '30000000', '4000000'],
@@ -612,19 +613,18 @@ describe("a market's project", () => {
   it('refuses an incentive paid only to productions from abroad to a film the life makes at home, and says why', () => {
     const from = (cc: CountryCode, l = made()): Life<Producing> => ({ ...l, slices: { ...l.slices, identity: identity({ citizenship: [cc] }) } });
     // The ten whose research's own words pay their incentive to a production from abroad (or a co-production with a foreign partner).
-    expect(Object.keys(MARKETS).filter((cc) => MARKETS[cc]?.foreignOnly)).toEqual(['AZ', 'CO', 'EE', 'GL', 'LV', 'ME', 'MN', 'PA', 'PH', 'TW']);
+    expect(Object.keys(MARKETS).filter((cc) => MARKETS[cc]?.foreignOnly)).toEqual(['AR', 'AZ', 'CO', 'EE', 'GL', 'LV', 'ME', 'MN', 'PA', 'PH', 'TW']);
     // Colombia's CINA, 35% of a foreign production's spend: an American's film there takes it, a Colombian's at home doesn't.
     const [abroad, home] = [project(planned('CO', '4000000000')), project(planned('CO', '4000000000', from('CO')))];
     expect([abroad.plan?.credit, home.plan?.credit]).toEqual([of('COP', '1400000000'), of('COP', '0')]);
     expect([raised(abroad), raised(home)]).toEqual([140_000_000_000, 0]);
-    // Germany's is paid to a German's film at home; a series beyond the UK has no credit known, refused or not.
+    // Germany's is paid to a German's film at home; a series' limit is its own (abroad.test.ts): Colombia's CINA limits a series too.
     expect(project(planned('DE', '2000000', from('DE'))).plan?.credit).toEqual(of('EUR', '600000'));
-    const series = (l: Life<Producing>) => dispatch(l, optionMaterial, { format: 'series', episode: 'hour', episodes: 6, roles: ['producer'], account: ACCOUNT, days: 1, genre: GENRE, market: 'CO' });
-    expect(project(dispatch(series(from('CO')), planProject, { project: 1, budget: '4000000000' })).plan?.credit).toBeNull();
-    const told = t(ABROAD_LINE, { country: 'Colombia' });
-    expect(told).toBe("Colombia's production incentive is paid only to productions from abroad, so a film your company makes there, at home, doesn't get it.");
+    const told = t(ABROAD_LINE, { country: 'Colombia', work: 'film' });
+    expect(told).toBe("Colombia's incentive for a film is paid only to productions from abroad, so a film your company makes there, at home, doesn't get it.");
     expect(aboutCredit(from('CO').slices, home)).toBe(told);
-    expect([aboutCredit(made().slices, abroad), aboutCredit(from('CO').slices, { format: 'series', market: 'CO' as const }), aboutCredit(from('DE').slices, { format: 'film', market: 'DE' })]).toEqual([undefined, undefined, undefined]);
+    expect(aboutCredit(from('CO').slices, { format: 'series', market: 'CO' as const })).toBe(t(ABROAD_LINE, { country: 'Colombia', work: 'series' }));
+    expect([aboutCredit(made().slices, abroad), aboutCredit(from('DE').slices, { format: 'film', market: 'DE' }), aboutCredit(from('DE').slices, { format: 'series', market: 'DE' })]).toEqual([undefined, undefined, undefined]);
     expect([creditRefused(from('CO').slices, 'CO'), creditRefused(made().slices, 'CO'), creditRefused(from('GB').slices, 'GB'), creditRefused(from('DE').slices, 'DE')]).toEqual([true, false, false, false]);
     falsifyAny({ feature: 'producing.plan', claim: 'bites', says: "a COP 4bn film in Colombia is credited the CINA's COP 1.4bn where an American makes it, and nothing where a Colombian's company makes it at home", base: 'US', twin: 'CO', outcome: (cc: CountryCode) => project(planned('CO', '4000000000', from(cc))).plan?.credit });
   });

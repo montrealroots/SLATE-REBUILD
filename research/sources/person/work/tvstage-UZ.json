@@ -1,0 +1,302 @@
+{
+ "topic": "markets.UZ.series-and-stage",
+ "read": "2026-11-04",
+ "country": "UZ",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://gov.uz/en/uzbektourism/news/view/190882",
+   "title": "Tourism Committee of Uzbekistan (gov.uz): New milestone in tourism promotion: Uzbekistan launches rebate program to attract international film productions (2026-07-10)",
+   "read": "2026-11-04",
+   "said": "The Cabinet of Ministers of the Republic of Uzbekistan has adopted Resolution No. 372 of July 8, 2026, “On Supporting the Broad Implementation of a System to Enhance the Tourism Attractiveness of the Republic of Uzbekistan Through Film.” … 10% for expenditures of up to UZS 3 billion; … 15% for expenditures ranging from UZS 3 billion to UZS 5 billion; … 20% for expenditures ranging from UZS 5 billion to UZS 10 billion; … 25% for expenditures exceeding UZS 10 billion. … The maximum reimbursement available for a single film project will be UZS 4 billion. … UZS 5 billion has been allocated from the 2026 State Budget to finance reimbursements for foreign film productions.",
+   "file": "uz-govuz-rebate.html",
+   "sha256": "1f4140efe0edd2a76c8aef21382f648b5099899cd2954703279901fa4756a19f"
+  },
+  {
+   "kind": "primary",
+   "url": "https://lex.uz/ru/docs/5374440",
+   "title": "Lex.uz: Decree PF-6202 of 07.04.2021 (edition of 19.11.2025), para. 6",
+   "read": "2026-11-04",
+   "said": "фильм ижодкорлари ва техник кўрсатувчи ходимларнинг гонорари (иш ҳақи) фуқаролик-ҳуқуқий шартнома асосида эркин белгиланади;",
+   "file": "uz-lex-5374440-ru.html",
+   "sha256": "fd73176b4c223740dfb95cef4ccc20fc8558f5c6a0b41a814fcf129ed46d0ec4"
+  },
+  {
+   "kind": "primary",
+   "url": "https://lex.uz/ru/docs/8244005",
+   "title": "Lex.uz: Decree PF-103 of 02.06.2026, para. 23",
+   "read": "2026-11-04",
+   "said": "23. Белгилансинки, 2026 йил 1 июлдан бошлаб Давлат бюджети маблағлари ҳисобидан: … (б) давлат ва нодавлат театрларга ўзи фаолият юритаётган жойда саҳналаштирилган спектакль учун сотилган ҳар бир чиптага қўшимча 10 минг сўм, бошқа ҳудудга чиққан ҳолда намойиш этилган тақдирда, 20 минг сўм миқдорида субсидия берилади.",
+   "file": "uz-lex-8244005.html",
+   "sha256": "ed1136ecfb200eaa9867b06e7f8120ddb576e22276328a048f80ec66410d7384"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The notice speaks of 'films' and 'film projects'; whether a series qualifies needs the resolution's text (lex.uz searches for it returned nothing). Whether the rates step by bracket or apply to the whole spend isn't said. Foreign companies only.",
+   "verdict": "partial",
+   "value": {
+    "from": "2026-07-08",
+    "instrument": "Cabinet of Ministers Resolution No. 372",
+    "for": "foreign film companies shooting in Uzbekistan",
+    "rateBySpendUZS": [
+     {
+      "upTo": 3000000000,
+      "rate": 0.1
+     },
+     {
+      "from": 3000000000,
+      "upTo": 5000000000,
+      "rate": 0.15
+     },
+     {
+      "from": 5000000000,
+      "upTo": 10000000000,
+      "rate": 0.2
+     },
+     {
+      "from": 10000000000,
+      "rate": 0.25
+     }
+    ],
+    "capPerProjectUZS": 4000000000,
+    "pool2026UZS": 5000000000,
+    "seriesNamed": false
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Cabinet of Ministers of the Republic of Uzbekistan has adopted Resolution No. 372 of July 8, 2026, “On Supporting the Broad Implementation of a System to Enhance the Tourism Attractiveness of the Republic of Uzbekistan Through Film.” … 10% for expenditures of up to UZS 3 billion; … 15% for expenditures ranging from UZS 3 billion to UZS 5 billion; … 20% for expenditures ranging from UZS 5 billion to UZS 10 billion; … 25% for expenditures exceeding UZS 10 billion. … The maximum reimbursement available for a single film project will be UZS 4 billion. … UZS 5 billion has been allocated from the 2026 State Budget to finance reimbursements for foreign film productions."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Not found. No cap is set; the decree leaves fees free and audits the budget instead. Para. 6 is written for state-order films; whether it binds a channel's subsidised series is not stated.",
+   "verdict": "partial",
+   "value": {
+    "feeCap": null,
+    "fees": "set freely by civil-law contract",
+    "stateOrderBudget": "audited by an approved audit firm, then assessed by the Agency's expert council",
+    "stateOrderFilmRevenueShare": {
+     "productionCompany": 0.1,
+     "creativeWorkers": 0.15,
+     "period": "first year of release"
+    },
+    "appliesTo": "films made on the Agency's state order (para. 6 speaks of films)"
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "фильм ижодкорлари ва техник кўрсатувчи ходимларнинг гонорари (иш ҳақи) фуқаролик-ҳуқуқий шартнома асосида эркин белгиланади;"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "Not found. No commissioning tariff of the public broadcaster (MTRK) and no pickup count were found. Lead only: a search summary of podrobno.uz said the Agency's series orders went to private channels too (not fetched; search budget spent).",
+   "verdict": "partial",
+   "value": {
+    "route": "a nationwide channel puts the series to the Agency and carries at least half its budget; the subsidised series airs on that channel",
+    "pickupRate": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "субсидия олиш учун талабгор телеканал сериал ижодий лойиҳасини Агентликка тақдим этади;"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not found. The grant order itself (the Ministry's procedure, PQ-150 annex: 'Маданият ва санъат соҳасида грант ажратиш тартибини тасдиқлаш') and madaniyatgrant.uz (connection reset) were not read, so grant ranges, base rules and the rate of yes are not known. The ticket subsidy is a per-ticket top-up any theatre earns: an engine can read it as box-office income.",
+   "verdict": "partial",
+   "value": {
+    "grants": {
+     "from": "2026-08-01",
+     "covers": "theatre projects among culture projects of non-state and private actors",
+     "platform": "madaniyatgrant.uz",
+     "ranges": null,
+     "rateOfYes": null
+    },
+    "stateOrderNonStateTheatres": {
+     "extraFromJuly2026UZS": 20000000000
+    },
+    "ticketSubsidy": {
+     "from": "2026-07-01",
+     "perTicketAtHomeUZS": 10000,
+     "perTicketOnTourUZS": 20000,
+     "for": "state and non-state theatres, per ticket sold for a performance"
+    }
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "23. Белгилансинки, 2026 йил 1 июлдан бошлаб Давлат бюджети маблағлари ҳисобидан: … (б) давлат ва нодавлат театрларга ўзи фаолият юритаётган жойда саҳналаштирилган спектакль учун сотилган ҳар бир чиптага қўшимча 10 минг сўм, бошқа ҳудудга чиққан ҳолда намойиш этилган тақдирда, 20 минг сўм миқдорида субсидия берилади."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: Uzbekistan film rebate lex.uz 25% foreign film production series cash rebate decree Cinematography Agency",
+     "result": "led to the Tourism Committee's gov.uz notice and press (daryo.uz, spot.uz, norma.uz)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gov.uz/en/uzbektourism/news/view/190882",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'кино туризм 372' and 'ребейт'",
+     "result": "no results returned",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The notice speaks of 'films' and 'film projects'; whether a series qualifies needs the resolution's text (lex.uz searches for it returned nothing). Whether the rates step by bracket or apply to the whole spend isn't said. Foreign companies only."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Узбекистан постановление государственный заказ производство телесериалов финансирование Агентство кинематографии lex.uz'",
+     "result": "led to UzA's decree text and PF-6202 on lex.uz",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "uza.uz (state news agency) posts 255697 (decree text) and 255829 (series subsidy note)",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'ПФ-6202', then /ru/docs/5374440 (current edition 19.11.2025)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Узбекистан постановление государственный заказ производство телесериалов финансирование Агентство кинематографии lex.uz'",
+     "result": "led to UzA's decree text and PF-6202 on lex.uz",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "uza.uz (state news agency) posts 255697 (decree text) and 255829 (series subsidy note)",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'ПФ-6202', then /ru/docs/5374440 (current edition 19.11.2025)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not found. No cap is set; the decree leaves fees free and audits the budget instead. Para. 6 is written for state-order films; whether it binds a channel's subsidised series is not stated."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Узбекистан постановление государственный заказ производство телесериалов финансирование Агентство кинематографии lex.uz'",
+     "result": "led to UzA's decree text and PF-6202 on lex.uz",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "uza.uz (state news agency) posts 255697 (decree text) and 255829 (series subsidy note)",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'ПФ-6202', then /ru/docs/5374440 (current edition 19.11.2025)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Not found. No commissioning tariff of the public broadcaster (MTRK) and no pickup count were found. Lead only: a search summary of podrobno.uz said the Agency's series orders went to private channels too (not fetched; search budget spent)."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'театр санъатини'; read PF-103 of 02.06.2026 (8244005) and PQ-150 of 21.04.2026 (8156378)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'театр санъатини'; read PF-103 of 02.06.2026 (8244005) and PQ-150 of 21.04.2026 (8156378)",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "madaniyatgrant.uz",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "Not found. The grant order itself (the Ministry's procedure, PQ-150 annex: 'Маданият ва санъат соҳасида грант ажратиш тартибини тасдиқлаш') and madaniyatgrant.uz (connection reset) were not read, so grant ranges, base rules and the rate of yes are not known. The ticket subsidy is a per-ticket top-up any theatre earns: an engine can read it as box-office income."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "lex.uz search 'театр санъатини'; read PF-103 of 02.06.2026 (8244005) and PQ-150 of 21.04.2026 (8156378)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

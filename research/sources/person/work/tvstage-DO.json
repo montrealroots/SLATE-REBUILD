@@ -1,0 +1,242 @@
+{
+ "topic": "markets.DO.series-and-stage",
+ "read": "2026-11-04",
+ "country": "DO",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://dgcine.gob.do/descargar/2445/marco-legal/19277/ley-no-108-10-para-el-fomento-de-la-actividad-cinematografica-en-la-republica-dominicana.pdf",
+   "title": "DGCINE: Ley No. 108-10 para el Fomento de la Actividad Cinematográfica (text as amended by Ley 82-13), from its Marco Legal page",
+   "read": "2026-11-04",
+   "said": "Párrafo III.-En adición a las obras cinematográficas, podrán acogerse a los incentivos fiscales de la presente ley las siguientes obras audiovisuales: películas para televisión, series y miniseries de televisión para distribución nacional o internacional, documentales, telenovelas y videos musicales. Estas obras audiovisuales deberán contar con una calificación previa de la DGCINE … Artículo 39. Crédito Fiscal Transferible (Modificado por la Ley No. 82-13 de fecha 27 de junio de 2013 …). Podrán optar por beneficiarse de un crédito fiscal equivalente a un veinticinco (25%) de todos los gastos realizados en la República Dominicana, las personas naturales o jurídicas que produzcan obras cinematográficas y audiovisuales dominicanas o extranjeras en el territorio dominicano. … Párrafo II.- El crédito fiscal podrá ser solicitado respecto a presupuestos ejecutados parcial o totalmente, siempre y cuando el monto de los gastos realizados al momento de la solicitud sea igual o mayor a la suma de quinientos mil dólares (US$500,000.00).",
+   "file": "do-ley108.pdf",
+   "sha256": "ea01978d1ceb8b3d223896e074af807dcb812b063dce57f86cf359b9707b2b9f"
+  },
+  {
+   "kind": "primary",
+   "url": "https://dgcine.gob.do/descargar/2445/marco-legal/19278/decreto-no-370-11-que-establece-el-reglamento-de-aplicacion-de-la-ley-no-108-10-para-el-fomento-de-la-actividad-cinematografica-en-la-republica-dominicana.pdf",
+   "title": "Decreto No. 370-11, Reglamento de Aplicación de la Ley No. 108-10 (G. O. No. 10623, 28 June 2011), DGCINE's Marco Legal copy",
+   "read": "2026-11-04",
+   "said": "Artículo 168.- Gastos Excluidos. Quedan excluidos de la aplicación del Artículo 39 de la Ley No. 108-10 los siguientes gastos: a) La proporción de los gastos por concepto de honorarios del productor que exceda el 6% del presupuesto total de la producción de la obra. b) La proporción de los gastos de desarrollo que exceda el 3% del presupuesto total de la producción de la obra. c) Cargos financieros y gastos por concepto de fianzas o garantías de fiel cumplimiento. d) Costos relacionados al mercadeo y distribución de la obra.",
+   "file": "do-reglamento-370-11.pdf",
+   "sha256": "b9fcfc7a9311fee5b95088f556b0f4ec515dcd885f314c89b92beeb20f24463a"
+  },
+  {
+   "kind": "primary",
+   "url": "https://certv.gob.do/servicios/",
+   "title": "CERTV (Corporación Estatal de Radio y Televisión), Servicios: Arrendamiento Espacio de Televisión",
+   "read": "2026-11-04",
+   "said": "Venta de tiempo en Televisión para la producción y transmisión de programas o transmisión de eventos … Empresas e Instituciones del sector público y privado. … El programa o evento a transmitir debe estar a acorde a los lineamientos que dicta al ley 134-03 … Sujeto a disponibilidad de horario y a la aprobación del Comité de Televisión de CERTV. … Remitir propuesta conceptual y económica al Departamento Comercial … Costo a concertar … Canal de Prestación Canal 4RD",
+   "file": "do-certv-servicios.html",
+   "sha256": "965d3db2c4e29418a2a667557ce00ef9f3af05a4cb5957f3eca18d7cb91fffeb"
+  },
+  {
+   "kind": "primary",
+   "url": "https://presidencia.gob.do/noticias/ministerio-de-cultura-abre-convocatoria-para-el-viii-festival-nacional-de-teatro",
+   "title": "Presidencia, 'Ministerio de Cultura abre convocatoria para el VIII Festival Nacional de Teatro', 29 May 2024",
+   "read": "2026-11-04",
+   "said": "Las compañías seleccionadas recibirán un aporte económico de entre RD 150,000 y RD 250,000 para dos presentaciones. … Este evento bianual …",
+   "file": "do-presid-fenate2024.html",
+   "sha256": "96d19cd92fd48930b145207a57e73dc3b392da89ebf5990f2857fdc2bbb2dbb3"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The DGCINE PDF may predate later amendments; producer-DO.json's figure agrees.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.25,
+    "base": "all spending in the Dominican Republic",
+    "minSpendUSD": 500000,
+    "series": "TV series and miniseries, telenovelas, with DGCINE's prior qualification",
+    "transferable": true,
+    "law": "Ley 108-10 art. 39 as amended by Ley 82-13"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Párrafo III.-En adición a las obras cinematográficas, podrán acogerse a los incentivos fiscales de la presente ley las siguientes obras audiovisuales: películas para televisión, series y miniseries de televisión para distribución nacional o internacional, documentales, telenovelas y videos musicales. Estas obras audiovisuales deberán contar con una calificación previa de la DGCINE … Artículo 39. Crédito Fiscal Transferible (Modificado por la Ley No. 82-13 de fecha 27 de junio de 2013 …). Podrán optar por beneficiarse de un crédito fiscal equivalente a un veinticinco (25%) de todos los gastos realizados en la República Dominicana, las personas naturales o jurídicas que produzcan obras cinematográficas y audiovisuales dominicanas o extranjeras en el territorio dominicano. … Párrafo II.- El crédito fiscal podrá ser solicitado respecto a presupuestos ejecutados parcial o totalmente, siempre y cuando el monto de los gastos realizados al momento de la solicitud sea igual o mayor a la suma de quinientos mil dólares (US$500,000.00)."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. The cap limits what the credit counts, not what a producer may be paid. The reglamento names no general-overhead line, and FONPROCINE's bases were not read for a fee cap (FONPROCINE funds films, not series). No broadcaster cap was found: CERTV buys no series (item 4).",
+   "verdict": "partial",
+   "value": {
+    "scheme": "Crédito Fiscal Transferible (Ley 108-10 art. 39), the 25% credit a series qualifies for",
+    "producerFeeCountedAtMostShareOfBudget": 0.06,
+    "developmentCountedAtMostShareOfBudget": 0.03,
+    "excludedAltogether": [
+     "financing charges and completion/performance bonds",
+     "marketing and distribution"
+    ],
+    "law": "Decreto 370-11 art. 168",
+    "overheadCap": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Artículo 168.- Gastos Excluidos. Quedan excluidos de la aplicación del Artículo 39 de la Ley No. 108-10 los siguientes gastos: a) La proporción de los gastos por concepto de honorarios del productor que exceda el 6% del presupuesto total de la producción de la obra. b) La proporción de los gastos de desarrollo que exceda el 3% del presupuesto total de la producción de la obra. c) Cargos financieros y gastos por concepto de fianzas o garantías de fiel cumplimiento. d) Costos relacionados al mercadeo y distribución de la obra."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. The public broadcaster's published route has the producer paying for airtime, not a commission. Private channels and platforms publish no terms; DGCINE's statistics page renders its figures in scripts (no count read). No count of independent series picked up was found.",
+   "verdict": "partial",
+   "value": {
+    "publicBroadcaster": "CERTV (Canal 4RD, Ley 134-03)",
+    "route": "time-buying: an independent producer leases airtime, subject to schedule availability and CERTV's Comité de Televisión",
+    "producerPays": true,
+    "price": "a concertar (not published)",
+    "commissioningTariff": null,
+    "pickupRate": null
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "Venta de tiempo en Televisión para la producción y transmisión de programas o transmisión de eventos … Empresas e Instituciones del sector público y privado. … El programa o evento a transmitir debe estar a acorde a los lineamientos que dicta al ley 134-03 … Sujeto a disponibilidad de horario y a la aprobación del Comité de Televisión de CERTV. … Remitir propuesta conceptual y económica al Departamento Comercial … Costo a concertar … Canal de Prestación Canal 4RD"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. A festival fee scaled by cast, not an open production grant. No count of applications or selections was found, so no rate of yes.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Festival Nacional de Teatro (FENATE), Ministerio de Cultura, biennial",
+    "2026": {
+     "newProjects": "production sponsorship or subsidy, subject to the festival's budget, amount by format (2-3, 4-7, 8+ actors), no figure published",
+     "callOpen": "2026-02-16 to 2026-03-27",
+     "festival": "2026-10-22 to 2026-11-01"
+    },
+    "2024": {
+     "perCompanyDOP": [
+      150000,
+      250000
+     ],
+     "covers": "two performances",
+     "scaledBy": "number of actors"
+    },
+    "eligible": "Dominican professional groups with 5+ years' continuous stage work in the country; foreigners naturalised or resident 5+ years",
+    "yesRate": null
+   },
+   "sources": [
+    {
+     "src": 3,
+     "said": "Las compañías seleccionadas recibirán un aporte económico de entre RD 150,000 y RD 250,000 para dos presentaciones. … Este evento bianual …"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dgcine.gob.do (now answering, 200; it refused this environment on 2026-11-01): home, /fonprocine/, /estadisticas/, /preguntas-frecuentes/, /sobre-nosotros/descargas/, /sobre-nosotros/marco-legal/; Decreto 370-11 PDF and Ley 108-10 PDF read whole by grep; circulars 2025-001/002/003 downloaded (scanned images; OCR did not finish on the loaded machine and was stopped, so they were not read)",
+     "result": "Decreto 370-11 art. 168: producer's fee counted to 6% of budget, development to 3%. FAQ: the CFT covers 'Largometrajes, Documentales, Series y Miniseries de TV, Videos Musicales y Cortometrajes'. Statistics are script-rendered; no series count.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. The cap limits what the credit counts, not what a producer may be paid. The reglamento names no general-overhead line, and FONPROCINE's bases were not read for a fee cap (FONPROCINE funds films, not series). No broadcaster cap was found: CERTV buys no series (item 4)."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dgcine.gob.do (now answering, 200; it refused this environment on 2026-11-01): home, /fonprocine/, /estadisticas/, /preguntas-frecuentes/, /sobre-nosotros/descargas/, /sobre-nosotros/marco-legal/; Decreto 370-11 PDF and Ley 108-10 PDF read whole by grep; circulars 2025-001/002/003 downloaded (scanned images; OCR did not finish on the loaded machine and was stopped, so they were not read)",
+     "result": "Decreto 370-11 art. 168: producer's fee counted to 6% of budget, development to 3%. FAQ: the CFT covers 'Largometrajes, Documentales, Series y Miniseries de TV, Videos Musicales y Cortometrajes'. Statistics are script-rendered; no series count.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "certv.gob.do home and /servicios/ (CERTV, the state broadcaster)",
+     "result": "Only time-buying (arrendamiento) for independent programmes, cost 'a concertar'; no commissioning terms, no count.",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. The public broadcaster's published route has the producer paying for airtime, not a commission. Private channels and platforms publish no terms; DGCINE's statistics page renders its figures in scripts (no count read). No count of independent series picked up was found."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dgcine.gob.do home and Marco Legal page; Ley 108-10 PDF read",
+     "result": "read; the law's incentives name no stage work",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Ministerio de Cultura República Dominicana convocatoria fondos concursables teatro producción montaje 2026 bases'",
+     "result": "Led to the FENATE 2026 and 2024 bases at cultura.gob.do and the Presidencia's 2024 release (read); the rest Chilean.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "cultura.gob.do: FENATE 2026 bases (Resolución 005-2026) and FENATE 2024 bases (Resolución 13-2024), PDFs read",
+     "result": "2024: RD$150,000-250,000 per company for two performances by cast size; 2026: subsidy for new projects by format, no figure; eligibility read. Authors' rights left to the producer.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "presidencia.gob.do release of 29 May 2024 on FENATE 2024",
+     "result": "Confirms the 2024 range and that the festival is biennial.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "elnuevodiario.com.do: 'cultura anuncia fondo 20 millones pesos estímulo creación artística' and 'ministro de cultura aumenta salarios a los artistas'",
+     "result": "Both refused this environment (429 Too Many Requests).",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "Not researched today: this run's budget went to the larger trades first; the earlier markets research (research/sources/person/markets/*-DO.json) holds what is known. A festival fee scaled by cast, not an open production grant. No count of applications or selections was found, so no rate of yes."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dgcine.gob.do (now answering, 200; it refused this environment on 2026-11-01): home, /fonprocine/, /estadisticas/, /preguntas-frecuentes/, /sobre-nosotros/descargas/, /sobre-nosotros/marco-legal/; Decreto 370-11 PDF and Ley 108-10 PDF read whole by grep; circulars 2025-001/002/003 downloaded (scanned images; OCR did not finish on the loaded machine and was stopped, so they were not read)",
+     "result": "Decreto 370-11 art. 168: producer's fee counted to 6% of budget, development to 3%. FAQ: the CFT covers 'Largometrajes, Documentales, Series y Miniseries de TV, Videos Musicales y Cortometrajes'. Statistics are script-rendered; no series count.",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

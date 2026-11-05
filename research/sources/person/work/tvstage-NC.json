@@ -1,0 +1,269 @@
+{
+ "topic": "markets.NC.series-and-stage",
+ "read": "2026-11-04",
+ "country": "NC",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://gouv.nc/sites/default/files/atoms/files/reglement_interieur_-_fonds_de_soutien_a_la_production_audiovisuelle_et_cinematographique.pdf",
+   "title": "Gouvernement de la Nouvelle-Calédonie: Règlement intérieur du comité de gestion du fonds de soutien à la production audiovisuelle",
+   "read": "2026-11-04",
+   "said": "Sous réserve de validation par arrêté du gouvernement … Fiction : o série de fiction (animation et prise de vue réelle) … 3. 1/ Etre assuré de l’engagement chiffré (numéraire et industrie) d’un diffuseur d’au moins 20% du budget total du projet pour les projets de fiction, 25% pour les projets de documentaires et 40% pour les magazines … 6. Une société de production ne peut présenter plus de quatre projets par commission. … Fiction / clip : Les aides publiques locales ne peuvent excéder 80 % des dépenses prévues sur le territoire calédonien. … Pour les projets bénéficiant des aides CNC, les aides publiques ne peuvent excéder 50% du budget total du projet.",
+   "file": "nc-reglement.pdf",
+   "sha256": "a4033134202fc447e5487a9eb633f54106648ecd03ce727e4736f809009a43a7"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.province-sud.nc/aap/art-culture/creation-en-arts-vivant/",
+   "title": "Province Sud: Création en arts vivant (appel à projets)",
+   "read": "2026-11-04",
+   "said": "La province Sud lance un appel à projets visant à dynamiser la création et la diffusion artistique sur son territoire. (Détails du cahier des charges à retrouver dans l’onglet “Textes réglementaires et références”). Ce dispositif vise à soutenir la création artistique dans le domaine des arts vivants, à l’exclusion de la musique … Il vise également à soutenir les compagnies professionnelles dans leur développement et leur ancrage territorial.",
+   "file": "nc-ps-creation-arts-vivants.html",
+   "sha256": "a5f6d629b33559cd91c76c4c40a6c26ae845aefe2e1b229a599906b377305077"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.province-sud.nc/culture-art-sport-associations/aides-a-la-creation-artistique-et-audiovisuelle/aap-art-culture/",
+   "title": "Province Sud: Appels à projets art et culture",
+   "read": "2026-11-04",
+   "said": "La diffusion en arts vivants … Projets artistiques pour la saison culturelle 2026 du Château Hagen : Spectacles, projections audiovisuelles et ateliers arts vivants … Appel à projets terminé depuis le vendredi 31 octobre 2025",
+   "file": "nc-ps-aap.html",
+   "sha256": "96948112a7e9c82e647056d22b5b4ea4968b958d0e879eaf22d8d16833427f8f"
+  },
+  {
+   "kind": "primary",
+   "url": "https://gouv.nc/sites/default/files/atoms/files/2022.05.04_cp_subventions_culture.pdf",
+   "title": "Gouvernement de la Nouvelle-Calédonie, communiqué 4 May 2022: subventions culture",
+   "read": "2026-11-04",
+   "said": "citoyenneté (DCCFC), 30,6 millions de francs ont été attribués à 19 associations … 300 000 francs à Cirque de rue uni en Nouvelle-Calédonie (CRUNC) … Trois millions de francs au Chapitô de Nouvelle-Calédonie … (danse, théâtre, conte, marionnette, cirque)",
+   "file": "nc-gouv-cp-subv-2022.pdf",
+   "sha256": "846dde39e16c11ed7e1a808e4465e941a69d1a325188950b64ba1a1bdf027e5d"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The text says it awaits validation by government order. producer-NC.json holds 2020 grants (56.16 million XPF, 30 projects) but no applications count, so no rate of yes.",
+   "verdict": "found",
+   "value": {
+    "fund": "Fonds de soutien à la production audiovisuelle et cinématographique",
+    "eligible": "fiction series (animation and live action)",
+    "broadcasterCommitmentMin": 0.2,
+    "localAidMaxOfLocalSpend": 0.8,
+    "withCNCMaxOfBudget": 0.5,
+    "projectsPerSessionMax": 4,
+    "applicant": "local production company (APE 59.11)",
+    "selective": true
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Sous réserve de validation par arrêté du gouvernement … Fiction : o série de fiction (animation et prise de vue réelle) … 3. 1/ Etre assuré de l’engagement chiffré (numéraire et industrie) d’un diffuseur d’au moins 20% du budget total du projet pour les projets de fiction, 25% pour les projets de documentaires et 40% pour les magazines … 6. Une société de production ne peut présenter plus de quatre projets par commission. … Fiction / clip : Les aides publiques locales ne peuvent excéder 80 % des dépenses prévues sur le territoire calédonien. … Pour les projets bénéficiant des aides CNC, les aides publiques ne peuvent excéder 50% du budget total du projet."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "NC.json: no extended collective agreement for film, television or the performing arts; only the guaranteed minimum wage. Theatre funds not reached. The fund's rules set no cap on fee or overheads (only public-aid ceilings: 80% of local spend, 50% of budget with CNC aid). Broadcasters' (NC la 1ère, Caledonia) terms not read.",
+   "verdict": "partial",
+   "value": {
+    "territorialFund": {
+     "producerFeeCap": null,
+     "overheadCap": null,
+     "basis": "rules read whole; silent"
+    },
+    "broadcasterCaps": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Les aides publiques locales ne peuvent excéder 80 % des dépenses prévues sur le territoire … Pour les projets bénéficiant des aides CNC, les aides publiques ne peuvent excéder 50% du budget … Un devis prévisionnel détaillé indiquant la répartition entre les dépenses locales et les dépenses extérieures"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "A series is funded only with a broadcaster already committed for 20% of its budget; no pick-up count.",
+   "verdict": "partial",
+   "value": {
+    "broadcasterCommitmentMin": 0.2
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Sous réserve de validation par arrêté du gouvernement … Fiction : o série de fiction (animation et prise de vue réelle) … 3. 1/ Etre assuré de l’engagement chiffré (numéraire et industrie) d’un diffuseur d’au moins 20% du budget total du projet pour les projets de fiction, 25% pour les projets de documentaires et 40% pour les magazines … 6. Une société de production ne peut présenter plus de quatre projets par commission. … Fiction / clip : Les aides publiques locales ne peuvent excéder 80 % des dépenses prévues sur le territoire calédonien. … Pour les projets bénéficiant des aides CNC, les aides publiques ne peuvent excéder 50% du budget total du projet."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "NC.json: no extended collective agreement for film, television or the performing arts; only the guaranteed minimum wage. Theatre funds not reached. The Province Sud call's cahier des charges sits in its Démarches app (catweb), whose script was refused to this environment (bot check), so ranges, eligibility and rate of yes were not read. The 2022 government grants are an old example, not the rule in force.",
+   "verdict": "partial",
+   "value": {
+    "provinceSud": {
+     "call": "Création en arts vivant (all live arts except music)",
+     "for": "professional companies, rooted in the province",
+     "terms": null,
+     "rateOfYes": null
+    },
+    "otherProvinceSudCalls": [
+     "La diffusion en arts vivants",
+     "Château Hagen cultural season (shows)"
+    ],
+    "territoryGovernment2022": {
+     "body": "DCCFC",
+     "totalXPF": 30600000,
+     "associations": 19,
+     "examplesXPF": {
+      "CRUNC street circus": 300000,
+      "Chapitô (itinerant theatre, dance, circus)": 3000000
+     }
+    }
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "La province Sud lance un appel à projets visant à dynamiser la création et la diffusion artistique sur son territoire. (Détails du cahier des charges à retrouver dans l’onglet “Textes réglementaires et références”). Ce dispositif vise à soutenir la création artistique dans le domaine des arts vivants, à l’exclusion de la musique … Il vise également à soutenir les compagnies professionnelles dans leur développement et leur ancrage territorial."
+    },
+    {
+     "src": 2,
+     "said": "La diffusion en arts vivants … Projets artistiques pour la saison culturelle 2026 du Château Hagen : Spectacles, projections audiovisuelles et ateliers arts vivants … Appel à projets terminé depuis le vendredi 31 octobre 2025"
+    },
+    {
+     "src": 3,
+     "said": "citoyenneté (DCCFC), 30,6 millions de francs ont été attribués à 19 associations … 300 000 francs à Cirque de rue uni en Nouvelle-Calédonie (CRUNC) … Trois millions de francs au Chapitô de Nouvelle-Calédonie … (danse, théâtre, conte, marionnette, cirque)"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": []
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gouv.nc règlement intérieur PDF",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The text says it awaits validation by government order. producer-NC.json holds 2020 grants (56.16 million XPF, 30 projects) but no applications count, so no rate of yes."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gouv.nc fund règlement intérieur PDF, re-read whole for fee and overhead caps",
+     "result": "silent on producer fee and overheads",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "NC.json: no extended collective agreement for film, television or the performing arts; only the guaranteed minimum wage. Theatre funds not reached. The fund's rules set no cap on fee or overheads (only public-aid ceilings: 80% of local spend, 50% of budget with CNC aid). Broadcasters' (NC la 1ère, Caledonia) terms not read."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gouv.nc règlement intérieur PDF",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "A series is funded only with a broadcaster already committed for 20% of its budget; no pick-up count."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 (standard): \"Nouvelle-Calédonie aide à la création spectacle vivant théâtre subvention province Sud règlement délibération montant\"",
+     "result": "Province Sud aid pages, its 2021 bureau decisions, LNC articles 2018-2025, a 2022 government release; no current scale",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 (standard): \"Nouvelle-Calédonie aide à la création spectacle vivant théâtre subvention province Sud règlement délibération montant\"",
+     "result": "Province Sud aid pages, its 2021 bureau decisions, LNC articles 2018-2025, a 2022 government release; no current scale",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "province-sud.nc: aides à la création artistique et audiovisuelle; appels à projets art et culture; Création en arts vivant",
+     "result": "read; terms said to be in the catweb Démarches app",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "province-sud.nc/catweb/app/demarches/aide-a-la-creation-en-arts-vivants-hors-musique (Angular app) and its main script",
+     "result": "the page is an empty app shell; the script returned an HTML bot-check page; not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gouv.nc communiqué 2022.05.04 subventions culture",
+     "result": "read: 30.6m F to 19 associations (2022)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "lnc.nc \"Une trentaine de projets reçoivent une aide à la création\"",
+     "result": "2018 article on Province Sud aid; no theatre terms or run counts",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "NC.json: no extended collective agreement for film, television or the performing arts; only the guaranteed minimum wage. Theatre funds not reached. The Province Sud call's cahier des charges sits in its Démarches app (catweb), whose script was refused to this environment (bot check), so ranges, eligibility and rate of yes were not read. The 2022 government grants are an old example, not the rule in force."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 3 (standard): \"Nouvelle-Calédonie aide à la création spectacle vivant théâtre subvention province Sud règlement délibération montant\"",
+     "result": "Province Sud aid pages, its 2021 bureau decisions, LNC articles 2018-2025, a 2022 government release; no current scale",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "lnc.nc \"Une trentaine de projets reçoivent une aide à la création\"",
+     "result": "2018 article on Province Sud aid; no theatre terms or run counts",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

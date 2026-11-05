@@ -1,0 +1,236 @@
+{
+ "topic": "markets.MX.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MX",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5780237",
+   "title": "DOF (SIDOF), 16 February 2026: Decreto por el que se otorga un estímulo fiscal a la producción cinematográfica y audiovisual",
+   "read": "2026-11-04",
+   "said": "V. Que el proyecto o proceso de producción cinematográfica o audiovisual cuente con al menos el 70% de proveeduría nacional. … Proyecto de producción de largometraje narrativo o de animación y por capítulo de serie narrativa o de animación Al menos 40 millones de pesos Proyecto de producción de largometraje documental o serie documental Al menos 20 millones de pesos … El estímulo fiscal consiste en un crédito fiscal de hasta el 30% del costo total del proyecto o proceso de producción cinematográfica o audiovisual, realizado en territorio nacional, sin que en ningún caso exceda de 40 millones de pesos por producción y por sujeto beneficiado. … se entiende por proyecto de producción audiovisual al conjunto de actividades … incluyendo, entre otras, largometrajes, series, miniseries … sin que en ningún caso los gastos indirectos excedan del 30% … El monto total del estímulo fiscal que se autorice … será anualmente de hasta 400 millones de pesos, distribuidos a partir de la entrada en vigor del presente decreto y hasta el 30 de septiembre de 2030.",
+   "file": "mx-decreto-2026.html",
+   "sha256": "1eb6353338d14d1f69144a8baae9184fb6bd2536f9b6abfa6c53ff0b2bbf751a"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.imcine.gob.mx/focine",
+   "title": "IMCINE: FOCINE (Programa Presupuestario Fomento al Cine Mexicano) 2026",
+   "read": "2026-11-04",
+   "said": "FOCINE PRODUCCIÓN 2026 Cerrada … en la Vertiente de Apoyo a la Producción, para procesos de producción y postproducción, en cualquiera de sus 9 modalidades: I. Apoyo al cine experimental II. Producción de largometrajes de ficción III. Producción de largometrajes documentales IV. Preproducción y producción de cine de animación V. Producción de cine para las infancias VI. Producción de óperas primas de escuelas de cine o audiovisual VII. Producción de cortometrajes VIII. Postproducción IX. Producción de largometrajes en los estados",
+   "file": "mx-imcine-focine.html",
+   "sha256": "42fb9c0ea838384737421e2034107c2497b012bb3e1ce3fef14417d24b6ccb79"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.imcine.gob.mx/media/2026/1/lineamientosdeoperacionfocine2026-file_69586621327c6.pdf",
+   "title": "IMCINE: Lineamientos de operación FOCINE 2026",
+   "read": "2026-11-04",
+   "said": "IV. Preproducción y producción de cine de animación. … VIII. Animatic: Serie de imágenes tomadas del storyboard, que logran un primer",
+   "file": "mx-focine-lineamientos-2026.pdf",
+   "sha256": "fcd320546fbf943a6f7df1236604df50420428f1d53c8774a708ed741c1d2e46"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+   "title": "Cámara de Diputados: Ley del Impuesto sobre la Renta (Última Reforma DOF 01-04-2024), art. 190 (EFIARTES)",
+   "read": "2026-11-04",
+   "said": "Artículo 190. Se otorga un estímulo fiscal a los contribuyentes del impuesto sobre la renta, consistente en aplicar un crédito fiscal equivalente al monto que, en el ejercicio fiscal de que se trate, aporten a proyectos de inversión en la producción teatral nacional … En ningún caso el estímulo podrá exceder del 10% del impuesto sobre la renta causado en el ejercicio inmediato anterior al de su aplicación. … las inversiones en territorio nacional, destinadas específicamente al montaje de obras dramáticas … II. El monto total del estímulo fiscal a distribuir entre los aspirantes del beneficio no excederá de 200 millones de pesos por cada ejercicio fiscal ni de 2 millones de pesos por cada contribuyente y proyecto de inversión en la producción teatral nacional … El Comité podrá autorizar un monto de hasta 10 millones de pesos a proyectos … que … requieran un monto de inversión mayor a 6 millones de pesos. … III. El Comité Interinstitucional … publicará a más tardar el último día de febrero de cada ejercicio fiscal, el monto del estímulo fiscal distribuido durante el ejercicio anterior, así como los contribuyentes beneficiados y los proyectos",
+   "file": "mx-lisr.pdf",
+   "sha256": "803c2875c09c751c1966b8eb4dca99f460b237da4ef67ee04b4fa325d8c2f786"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The minimum spend for a narrative series is per episode (capítulo). EFICINE (art. 189 LISR) is for features only.",
+   "verdict": "found",
+   "value": {
+    "from": "2026-02-16",
+    "until": "2030-09-30",
+    "rate": 0.3,
+    "of": "total cost spent in Mexico",
+    "capMXNPerProduction": 40000000,
+    "minSpendMXN": {
+     "perEpisodeNarrativeOrAnimatedSeries": 40000000,
+     "documentarySeries": 20000000
+    },
+    "mexicanSuppliersAtLeast": 0.7,
+    "indirectMaxShareOfCredit": 0.3,
+    "annualCapMXN": 400000000,
+    "transferable": true
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "V. Que el proyecto o proceso de producción cinematográfica o audiovisual cuente con al menos el 70% de proveeduría nacional. … Proyecto de producción de largometraje narrativo o de animación y por capítulo de serie narrativa o de animación Al menos 40 millones de pesos Proyecto de producción de largometraje documental o serie documental Al menos 20 millones de pesos … El estímulo fiscal consiste en un crédito fiscal de hasta el 30% del costo total del proyecto o proceso de producción cinematográfica o audiovisual, realizado en territorio nacional, sin que en ningún caso exceda de 40 millones de pesos por producción y por sujeto beneficiado. … se entiende por proyecto de producción audiovisual al conjunto de actividades … incluyendo, entre otras, largometrajes, series, miniseries … sin que en ningún caso los gastos indirectos excedan del 30% … El monto total del estímulo fiscal que se autorice … será anualmente de hasta 400 millones de pesos, distribuidos a partir de la entrada en vigor del presente decreto y hasta el 30 de septiembre de 2030."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "IMCINE's FOCINE held in producer-MX.json funds features; no series fund read. This absence covers the federal film fund only. FOCINE's nine 2026 modalities are all cinema. Its 2026 guidelines (13,150 lines, extracted whole) use 'serie' only in definitions (animatic, exhibition circuit), never for a television series. Canal 22, Canal Once and state funds were not shown to have a series fund, so a wider absence is not proven.",
+   "verdict": "none-exists",
+   "value": {
+    "fund": "FOCINE 2026 (IMCINE)",
+    "modalities": [
+     "experimental",
+     "fiction feature",
+     "documentary feature",
+     "animation",
+     "children's cinema",
+     "film-school first features",
+     "short",
+     "post-production",
+     "features in the states"
+    ],
+    "seriesModality": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "FOCINE PRODUCCIÓN 2026 Cerrada … en la Vertiente de Apoyo a la Producción, para procesos de producción y postproducción, en cualquiera de sus 9 modalidades: I. Apoyo al cine experimental II. Producción de largometrajes de ficción III. Producción de largometrajes documentales IV. Preproducción y producción de cine de animación V. Producción de cine para las infancias VI. Producción de óperas primas de escuelas de cine o audiovisual VII. Producción de cortometrajes VIII. Postproducción IX. Producción de largometrajes en los estados"
+    },
+    {
+     "src": 2,
+     "said": "IV. Preproducción y producción de cine de animación. … VIII. Animatic: Serie de imágenes tomadas del storyboard, que logran un primer"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Indirect costs are capped at 30% of the credit; no producer-fee cap read for a series.",
+   "verdict": "partial",
+   "value": {
+    "indirectCostsMaxShareOfCredit": 0.3,
+    "producerFeeCap": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "siempre que los bienes enajenados o servicios prestados por dichos proveedores sean considerados gastos elegibles directos o indirectos … sin que en ningún caso los gastos indirectos excedan del 30%"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "incentive",
+   "finding": "Like EFICINE, it brings an investor's tax money into the play; the producer receives the investor's contribution.",
+   "verdict": "found",
+   "value": {
+    "scheme": "EFIARTES (art. 190 LISR)",
+    "form": "income-tax credit equal to a taxpayer's contribution to a national theatre production",
+    "creditCapShareOfPriorYearTax": 0.1,
+    "annualTotalMXN": 200000000,
+    "perTaxpayerAndProjectMXN": 2000000,
+    "largeProjectMXN": {
+     "most": 10000000,
+     "ifInvestmentOverMXN": 6000000
+    },
+    "carryForwardYears": 10,
+    "since": "paragraphs reformed DOF 2019-12-09"
+   },
+   "sources": [
+    {
+     "src": 3,
+     "said": "Artículo 190. Se otorga un estímulo fiscal a los contribuyentes del impuesto sobre la renta, consistente en aplicar un crédito fiscal equivalente al monto que, en el ejercicio fiscal de que se trate, aporten a proyectos de inversión en la producción teatral nacional … En ningún caso el estímulo podrá exceder del 10% del impuesto sobre la renta causado en el ejercicio inmediato anterior al de su aplicación. … las inversiones en territorio nacional, destinadas específicamente al montaje de obras dramáticas … II. El monto total del estímulo fiscal a distribuir entre los aspirantes del beneficio no excederá de 200 millones de pesos por cada ejercicio fiscal ni de 2 millones de pesos por cada contribuyente y proyecto de inversión en la producción teatral nacional … El Comité podrá autorizar un monto de hasta 10 millones de pesos a proyectos … que … requieran un monto de inversión mayor a 6 millones de pesos. … III. El Comité Interinstitucional … publicará a más tardar el último día de febrero de cada ejercicio fiscal, el monto del estímulo fiscal distribuido durante el ejercicio anterior, así como los contribuyentes beneficiados y los proyectos"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "imcine.gob.mx home, /focine, /apoyos; FOCINE Lineamientos de operación 2026 PDF extracted whole",
+     "result": "read: no series modality",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "IMCINE's FOCINE held in producer-MX.json funds features; no series fund read. This absence covers the federal film fund only. FOCINE's nine 2026 modalities are all cinema. Its 2026 guidelines (13,150 lines, extracted whole) use 'serie' only in definitions (animatic, exhibition circuit), never for a television series. Canal 22, Canal Once and state funds were not shown to have a series fund, so a wider absence is not proven."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "SIDOF (DOF) document 5780237, the 16 February 2026 decree, read whole",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Indirect costs are capped at 30% of the credit; no producer-fee cap read for a series."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "canal22.org.mx and canalonce.mx homes",
+     "result": "read: no producers' call or commissioning terms linked",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Canal 22 OR Canal Once convocatoria productores independientes series coproducción 2026 lineamientos",
+     "result": "no current call",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Cámara de Diputados LISR PDF (última reforma DOF 01-04-2024), arts. 189-190",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "Like EFICINE, it brings an investor's tax money into the play; the producer receives the investor's contribution."
+   }
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "inba.gob.mx 2026 CN-ArtesEscenicasEnEspaciosIndependientes.pdf (twice), cultura.cdmx.gob.mx CONVOCATORIA CIUDAD ESCENA-2026.pdf, foncaenlinea.cultura.gob.mx",
+     "result": "connection reset (INBA, CDMX); timeout (FONCA)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "2 searches: México en Escena convocatoria 2026 … SACPC; convocatoria 2026 México en Escena OR Creadores Escénicos … bases pdf",
+     "result": "no 2026 México en Escena bases; INBA, state and municipal calls; Creadores Escénicos 2026 closed 15 April (press)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "topic": "markets.TZ.series-and-stage",
+ "read": "2026-11-04",
+ "country": "TZ",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.filmboard.go.tz/uploads/publications/sw-1595400697-GN-%20NO%20488%20KANUNI%20ZA%20FILAMU%20NA%20MICHEZO%20YA%20KUIGIZA,%202020.pdf",
+   "title": "Kanuni za Filamu na Michezo ya Kuigiza, 2020 (GN No. 488 of 2020, under the Films and Stage Plays Act, Cap. 230), the Tanzania Film Board's copy of the Gazette supplement",
+   "read": "2026-11-04",
+   "said": "2. Kanuni hizi zitatumika Tanzania Bara.",
+   "file": "TZ-GN488.pdf",
+   "sha256": "2d846bf46bcd668674d4d8745d403bfab3098bce93cb27c5b99b1efc5eeb92e7"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Tanzania: producer-TZ.json holds the Film Board's permit fees and practitioner licensing (no rebate published). Not reached today for series funding or stage. No incentive: the Regulations (read whole) impose a production permit per episode on a series and a per-minute classification fee; they grant no rebate or relief. The producer-TZ.json permit figures (TZS 50,000 a film for a first to fifth film) are the same schedule's item 1(i). Whether the Finance Acts give any relief was not read. The Regulations, read whole (70 pages), apply to mainland Tanzania only (reg. 2); Zanzibar is not covered by them and was not researched.",
+   "verdict": "partial",
+   "value": {
+    "incentive": null,
+    "seriesPermit": {
+     "perEpisodeTZS": 50000,
+     "perEpisodeForeignUSD": {
+      "regular": 1000,
+      "urgent": 3000
+     },
+     "covers": "each episode of a tamthiliya (TV drama serial) and each short film under 40 minutes",
+     "permitLife": {
+      "local": "6 months",
+      "foreign": "3 months"
+     }
+    },
+    "seriesClassification": {
+     "perMinuteTZS": 500,
+     "perHourForeignUSD": 40
+    },
+    "from": "GN 488 of 2020",
+    "area": "mainland Tanzania"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "2. Kanuni hizi zitatumika Tanzania Bara."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "GN No. 488 of 2020, Kanuni za Filamu na Michezo ya Kuigiza (the Board's gazette copy, https://www.filmboard.go.tz/uploads/publications/sw-1595400697-GN-%20NO%20488%20KANUNI%20ZA%20FILAMU%20NA%20MICHEZO%20YA%20KUIGIZA,%202020.pdf), fetched again (first try reset, second 200) and read whole for series (tamthiliya, episode), stage plays (mchezo wa kuigiza) and pay",
+     "result": "Found the per-episode series permit, the series and play classification fees and the registration fees for stage acting, directing and writing; no incentive and no pay",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Tanzania: producer-TZ.json holds the Film Board's permit fees and practitioner licensing (no rebate published). Not reached today for series funding or stage. No incentive: the Regulations (read whole) impose a production permit per episode on a series and a per-minute classification fee; they grant no rebate or relief. The producer-TZ.json permit figures (TZS 50,000 a film for a first to fifth film) are the same schedule's item 1(i). Whether the Finance Acts give any relief was not read. The Regulations, read whole (70 pages), apply to mainland Tanzania only (reg. 2); Zanzibar is not covered by them and was not researched."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "BASATA home page (www.basata.go.tz); Tanzania Culture and Arts Fund (www.tcaf.go.tz)",
+     "result": "BASATA read: a regulator and register, no grant named on the home page; tcaf.go.tz: CONNECT tunnel failed (502)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39 and 2025-51 for prefix tz,go,tcaf)",
+     "result": "No captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"Mfuko wa Utamaduni na Sanaa Tanzania mikopo wasanii filamu sanaa za maonyesho masharti mwongozo\"",
+     "result": "Leads only: a CMI review of Norwegian support to the fund, a NEPAD policy brief, The Citizen on a private grant (read)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "TBC (www.tbc.go.tz): home page, Nyaraka (documents) page and the documents list its script loads (/api/index.php?action=docs)",
+     "result": "Home has news only; the documents list is empty ({\"umma\":[],\"nyaraka\":[]})",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "GN No. 488 of 2020, Kanuni za Filamu na Michezo ya Kuigiza (the Board's gazette copy, https://www.filmboard.go.tz/uploads/publications/sw-1595400697-GN-%20NO%20488%20KANUNI%20ZA%20FILAMU%20NA%20MICHEZO%20YA%20KUIGIZA,%202020.pdf), fetched again (first try reset, second 200) and read whole for series (tamthiliya, episode), stage plays (mchezo wa kuigiza) and pay",
+     "result": "Found the per-episode series permit, the series and play classification fees and the registration fees for stage acting, directing and writing; no incentive and no pay",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "BASATA home page (www.basata.go.tz); Tanzania Culture and Arts Fund (www.tcaf.go.tz)",
+     "result": "BASATA read: a regulator and register, no grant named on the home page; tcaf.go.tz: CONNECT tunnel failed (502)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39 and 2025-51 for prefix tz,go,tcaf)",
+     "result": "No captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"Mfuko wa Utamaduni na Sanaa Tanzania mikopo wasanii filamu sanaa za maonyesho masharti mwongozo\"",
+     "result": "Leads only: a CMI review of Norwegian support to the fund, a NEPAD policy brief, The Citizen on a private grant (read)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "The Citizen, Nine Tanzanian art groups awarded grants",
+     "result": "Read: Feel Free Grant 2026, Sh188.4 million, administered by Nafasi Art Space (private)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

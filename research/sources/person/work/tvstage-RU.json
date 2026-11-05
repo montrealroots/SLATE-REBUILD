@@ -1,0 +1,249 @@
+{
+ "topic": "markets.RU.series-and-stage",
+ "read": "2026-11-04",
+ "country": "RU",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai/about",
+   "title": "PFKI: О фонде, Результаты работы Фонда",
+   "read": "2026-11-04",
+   "said": "123 176 заявок поступило на грантовую поддержку от заявителей по итогам 18 конкурсов ... 11 777 проектов получили поддержку ПФКИ с 2021 года ... 50,12 млрд. рублей — общая утвержденная сумма грантов для победителей конкурсов",
+   "file": "ru-pfki-about.html",
+   "sha256": "de74ba973500507df9b935a991306d908e8dcb511b3cfcd1b5b9159dad1bce24"
+  },
+  {
+   "kind": "primary",
+   "url": "https://xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai/grants",
+   "title": "PFKI: Гранты (contest 27-2 timetable)",
+   "read": "2026-11-04",
+   "said": "27 октября 2026 старт приёма заявок 7 декабря 2026 окончание приёма заявок 30 апреля 2027 объявление победителей 1 июня 2027 начало реализации проектов 31 декабря 2028 срок завершения проектов",
+   "file": "ru-pfki-grants.html",
+   "sha256": "6b680fed18dc1770e250488b1c2838e3ce7cae6f0375be11ee9fa669d54dd0d7"
+  }
+ ],
+ "figures": [
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not reached today. Must be a Russian (non-foreign) legal person or entrepreneur; no regional-base rule beyond that. The rate of yes is the fund's whole record, not theatre's; a theatre-only count was not found. The regulation states request bands for scoring, not a ceiling.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Presidential Fund for Cultural Initiatives (grants of the President of the RF)",
+    "covers": "theatre productions among culture projects (also films and series, per the regulation's art. 45)",
+    "eligible": [
+     "non-profit organisations except state institutions, state corporations and companies, parties",
+     "commercial organisations",
+     "individual entrepreneurs"
+    ],
+    "excluded": [
+     "foreign legal entities",
+     "foreign agents",
+     "companies over 50% owned from offshore zones"
+    ],
+    "requestBandsRUB": [
+     700000,
+     7000000,
+     20000000
+    ],
+    "maxGrantRUB": null,
+    "ownContributionScored": true,
+    "round": {
+     "id": "27-2",
+     "opens": "2026-10-27",
+     "closes": "2026-12-07",
+     "results": "2027-04-30",
+     "projectsEnd": "2028-12-31"
+    },
+    "rateOfYesAllDirections_derived": 0.0956,
+    "basis": "11,777 supported / 123,176 applications over 18 contests since 2021 (all culture directions, not theatre alone)",
+    "totalGrantsRUB": 50120000000
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "123 176 заявок поступило на грантовую поддержку от заявителей по итогам 18 конкурсов ... 11 777 проектов получили поддержку ПФКИ с 2021 года ... 50,12 млрд. рублей — общая утвержденная сумма грантов для победителей конкурсов"
+    },
+    {
+     "src": 1,
+     "said": "27 октября 2026 старт приёма заявок 7 декабря 2026 окончание приёма заявок 30 апреля 2027 объявление победителей 1 июня 2027 начало реализации проектов 31 декабря 2028 срок завершения проектов"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fond-kino.ru home and /documents/official/ (all 2026 orders listed)",
+     "result": "read: film selections and cinema-equipment programmes only; no series programme or incentive",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "law database (secondary copy): consultant.ru Tax Code Part Two (ed. 04.08.2026) table of contents, then Article 149",
+     "result": "read: art. 149(2)(20) theatre ticket VAT exemption",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Институт развития интернета конкурс 2026 сериалы условия финансирования доля софинансирования положение о конкурсе'",
+     "result": "news only (fomag, vedomosti); no contest regulation",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ири.рф (xn--h1aax.xn--p1ai) home",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51 for xn--h1aax.xn--p1ai/ (contests pages); CC-MAIN-2025-51, -2026-21, -30, -39 for /contests/konkurs-natsionalnogo-kontenta-2026",
+     "result": "2026-43 captures all status 447; 2025-51 /contest/national-content/ is a 'Страница не найдена' page; /contests/ list read (names a 2026 national-content contest page) but that page is in no crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "фондкультурныхинициатив.рф home, /grants, /about, /documents, and the 27-2 contest regulation PDF",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fond-kino.ru home page read",
+     "result": "film selections only; no series programme linked",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fond-kino.ru home and /documents/official/ (all 2026 orders listed)",
+     "result": "read: film selections and cinema-equipment programmes only; no series programme or incentive",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Институт развития интернета конкурс 2026 сериалы условия финансирования доля софинансирования положение о конкурсе'",
+     "result": "news only (fomag, vedomosti); no contest regulation",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ири.рф (xn--h1aax.xn--p1ai) home",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51 for xn--h1aax.xn--p1ai/ (contests pages); CC-MAIN-2025-51, -2026-21, -30, -39 for /contests/konkurs-natsionalnogo-kontenta-2026",
+     "result": "2026-43 captures all status 447; 2025-51 /contest/national-content/ is a 'Страница не найдена' page; /contests/ list read (names a 2026 national-content contest page) but that page is in no crawl",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "фондкультурныхинициатив.рф home, /grants, /about, /documents, and the 27-2 contest regulation PDF",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fond-kino.ru home and /documents/official/ (all 2026 orders listed)",
+     "result": "read: film selections and cinema-equipment programmes only; no series programme or incentive",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: 'Институт развития интернета конкурс 2026 сериалы условия финансирования доля софинансирования положение о конкурсе'",
+     "result": "news only (fomag, vedomosti); no contest regulation",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ири.рф (xn--h1aax.xn--p1ai) home",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "fomag.ru news on IRI 2026 national-content winners",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and CC-MAIN-2025-51 for xn--h1aax.xn--p1ai/ (contests pages); CC-MAIN-2025-51, -2026-21, -30, -39 for /contests/konkurs-natsionalnogo-kontenta-2026",
+     "result": "2026-43 captures all status 447; 2025-51 /contest/national-content/ is a 'Страница не найдена' page; /contests/ list read (names a 2026 national-content contest page) but that page is in no crawl",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "pravo.gov.ru (official legal portal)",
+     "result": "no answer (connection failed)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "law database (secondary copy): consultant.ru Tax Code Part Two (ed. 04.08.2026) table of contents, then Article 149",
+     "result": "read: art. 149(2)(20) theatre ticket VAT exemption",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "фондкультурныхинициатив.рф home, /grants, /about, /documents, and the 27-2 contest regulation PDF",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not reached today. Must be a Russian (non-foreign) legal person or entrepreneur; no regional-base rule beyond that. The rate of yes is the fund's whole record, not theatre's; a theatre-only count was not found. The regulation states request bands for scoring, not a ceiling."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gov.ru (Ministry of Culture)",
+     "result": "connection reset by peer",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

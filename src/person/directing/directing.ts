@@ -22,8 +22,10 @@ import compiled from './markets.json' with { type: 'json' };
  * cut, then a feature goes to festivals on what the production comes out as, a festival's choice counting toward how
  * financiers take the life's next production (src/person/producing). A play's direction was refused until 2026-11-04,
  * when the UK's stage directors' minimums were read: a UK play at a subsidised or a West End theatre, or for an ITC
- * company (from later that day), is directed as a play (below); elsewhere, and at a commercial theatre, a play is
- * directed by someone hired. The debut's chance of leading to a
+ * company (from later that day), is directed as a play (below); at a commercial theatre it is directed by someone
+ * hired. Until the research of later that day on a stage director's minimum in every market, a play anywhere else was
+ * directed by someone hired too; since, a play is directed under a market's stage agreement where its research holds
+ * one (below). The debut's chance of leading to a
  * second feature (Follows's 25.3%, 45% where it found an audience, moved by a family in the business) was removed on
  * 2026-11-04: the next production rests on what the life can finance (the lead's reading), so no one else's yes is
  * drawn. The direction's parts come from the director's broad attributes, each read through its researched components and their
@@ -76,6 +78,17 @@ import compiled from './markets.json' with { type: 'json' };
  * follows the DGA's terms (the Basic Agreement's own scope reaches the United States' territories and dependencies),
  * set as the US's are.
  *
+ * A play outside the UK (from 2026-11-04) is directed under one of its market's agreements that covers a play, the US's
+ * among them (the SDC's, in src/person/directing/markets.json beside the rest; the DGA's screen terms stay the engine's
+ * own): prepped in the days its contract gives, staged in its rehearsal weeks (five days each), never cut, and paid the
+ * agreement's minimum for the production (a guest director's fee, a theatre's category's) or its monthly salary over the
+ * prep and rehearsal days (a staff director's, a month of the actor's 21 days). A minimum the agreement sets as a
+ * multiple (Finland's guest director at so many months of the lowest monthly pay, Kyrgyzstan's salary as a coefficient
+ * of the base rate) is that multiple of the amount, both as the research reads them. Where no agreement of the market
+ * covers a play, the stage director's minimum isn't known, and the play's direction is refused, the player told
+ * (aboutMarket). A US territory's play is refused: whether the SDC's agreements reach it wasn't read. The run past the
+ * rehearsal isn't the director's work, as in the UK; a royalty on the box office isn't paid, the game keeping none.
+ *
  * The model's own figures (the spreads, how far a short schedule or a short cut carries, what the set takes from a
  * director's plan, a festival's pool and steepness, what a festival's selection says of an audience, the shares of the
  * pitch) are the game's until the owner balances them (person.directing.model).
@@ -85,6 +98,8 @@ import compiled from './markets.json' with { type: 'json' };
 export const MODEL_LINE: LineId = 'directing.model';
 
 export type Form = 'feature' | 'hour' | 'half-hour' | 'play';
+/** The market whose stage directors' terms the engine keeps by the theatre (STAGE_FEES, ITC_DIRECTOR), not its compiled agreements. */
+export const STAGE_KEPT = 'GB';
 
 /** The parts of a film and the broad attributes each comes from. */
 export const PARTS = {
@@ -322,7 +337,7 @@ function dgaTerms(a: JobArgs): Terms {
 }
 
 /** What a market's research couldn't find, by the item its blockers name. */
-export type Unknown = 'agreement' | 'fees' | 'periods' | 'union' | 'language' | 'none' | 'terms';
+export type Unknown = 'agreement' | 'fees' | 'periods' | 'union' | 'language' | 'none' | 'terms' | 'stage';
 type Range = readonly [number, number | null];
 type Tier = 'budget' | 'years' | 'minutes' | 'days' | 'year';
 type When = Readonly<Partial<Record<Tier, Range>>>;
@@ -337,6 +352,8 @@ export interface Fee {
   readonly floor: string | null;
   readonly first: string | null;
   readonly steps: readonly (readonly [string, string])[];
+  /** The stated multiple of each step's amount the fee is, where it is one. */
+  readonly times?: string;
 }
 export interface MarketAgreement {
   readonly country: string;
@@ -404,7 +421,7 @@ export function feePays(a: MarketAgreement, f: Fee, job: Job, date: string): Mon
     // Stryker disable next-line EqualityOperator: a share equal to its floor is the floor.
     return compare(share, floor) < 0 ? floor : share;
   }
-  const rate = fromMajor(currency, v);
+  const rate = f.times === undefined ? fromMajor(currency, v) : multiply(fromMajor(currency, v), f.times);
   let pays: Money;
   if (f.per === 'job') pays = rate;
   else if (f.per === 'minute') pays = multiply(rate, String(within(job.minutes, f.band)));
@@ -437,8 +454,9 @@ export function marketFee(a: MarketAgreement, form: Form, job: Job, date: string
 function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   const cc = String(a.country);
   if (!Object.hasOwn(MARKETS, cc)) throw new Error(`there's no market ${cc}`);
-  const covering = (MARKETS[cc] as Market).agreements.filter((id) => (AGREEMENTS[id] as MarketAgreement).forms.includes(a.form));
-  if (covering.length === 0) throw new Error(`no agreement the game knows covers a ${a.form} in ${cc}`);
+  // The DGA's terms, which a US territory's market names, are the engine's own and cover no play.
+  const covering = (MARKETS[cc] as Market).agreements.filter((id) => Object.hasOwn(AGREEMENTS, id) && (AGREEMENTS[id] as MarketAgreement).forms.includes(a.form));
+  if (covering.length === 0) throw new Error(a.form === 'play' ? (aboutMarket(cc, 'play') as string) : `no agreement the game knows covers a ${a.form} in ${cc}`);
   const id = a.agreement ?? (covering.length === 1 ? covering[0] : undefined);
   if (id === undefined) throw new Error(`a ${a.form} in ${cc} names its agreement: ${covering.join(', ')}`);
   if (!covering.includes(id)) throw new Error(`${id} doesn't cover a ${a.form} in ${cc}`);
@@ -461,7 +479,9 @@ function marketTerms(a: JobArgs, s: DirectingSlice, now: number): Terms {
   if (shoot > (both ?? Infinity)) throw new Error(`${id} guarantees a ${a.form} ${both} days of prep and shoot, fewer than its shoot`);
   // A prep guaranteed apart from the shoot is its own; one guaranteed with it is what the shoot leaves (the compile allows one of the two to a form).
   const prepDays = contract('prep', guaranteed('prep') ?? (both === undefined ? undefined : both - shoot));
-  const cutDays = contract('cut', guaranteed('cut'));
+  // A play isn't cut: the run is played without its director.
+  if (a.form === 'play' && a.cut !== undefined) throw new Error("a play isn't cut");
+  const cutDays = a.form === 'play' ? 0 : contract('cut', guaranteed('cut'));
   // @slate:consumer directing.prep
   const job: Job = { ...tier, days: { prep: prepDays, shoot, cut: cutDays }, first: s.films.length === 0 };
   return { country: cc, agreement: id, budget, minutes, prepDays, shootDays: shoot, cutDays, fee: marketFee(ag, a.form, job, dateOf(now)) };
@@ -487,8 +507,8 @@ export function subsidisedFee(fee: Money, weeks: number): Money {
  * The schedule and the pay of a UK play: the prep its contract gives, its staging the rehearsal's days (whole weeks of
  * five, as its plan names them), no cut; its fee by the theatre's grade and the rehearsal's weeks (a subsidised
  * theatre's, UK Theatre's), seats (the West End's, SOLT's) or the play's running time and the rehearsal's weeks (an ITC
- * company's), on the day prep starts. The producer refuses a play the life directs anywhere else
- * (src/person/producing), so a play here has its stage.
+ * company's), on the day prep starts. A UK play names its theatre (src/person/producing), so a play here has its
+ * stage; a play elsewhere is a market's (marketTerms).
  */
 function stageTerms(a: JobArgs, now: number): Terms {
   if (a.cut !== undefined) throw new Error("a play isn't cut");
@@ -504,9 +524,9 @@ function stageTerms(a: JobArgs, now: number): Terms {
   return { ...job, agreement: 'solt-equity', minutes: null, fee: fromMajor('GBP', stepAt(steps, dateOf(now))) };
 }
 
-/** The schedule and the pay of a job: the DGA's in the US and where a market follows it, a UK play's its theatre's, a market's agreement's abroad. */
+/** The schedule and the pay of a job: the DGA's in the US and where a market follows it, a UK play's its theatre's, a market's agreement's abroad (a play's in the US too). */
 export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
-  if (a.form === 'play') return stageTerms(a, now);
+  if (a.form === 'play') return a.country === STAGE_KEPT ? stageTerms(a, now) : marketTerms(a, s, now);
   return a.country === 'US' || (Object.hasOwn(MARKETS, a.country) && (MARKETS[a.country] as Market).agreements[0] === DGA) ? dgaTerms(a) : marketTerms(a, s, now);
 }
 
@@ -515,13 +535,17 @@ export function terms(a: JobArgs, s: DirectingSlice, now: number): Terms {
  * the shooting days the plan schedules, at least one), a play's its rehearsal weeks' days as the plan names them, the
  * feature's otherwise; and how many such jobs the production is. Until 2026-11-04 an episode's job carried the whole
  * series' budget, so an agreement's tier by an episode's budget (the DGC's, Quebec's, Netflix's in Germany) read the
- * series' instead.
+ * series' instead. A play beyond the UK staged under one of the director's own stage agreements (the producer names
+ * it, from the cast's: Canada's CTA by the company's category, A to G, since 2026-11-04) is directed under the same.
  */
 export function jobOf(p: Project & { plan: Pick<Plan, 'scheduled' | 'weeks'> }, a: Pick<PrepArgs, 'agreement' | 'prep' | 'cut'>): { job: JobArgs; times: number } {
   const times = p.series?.episodes ?? 1;
+  // A play staged under an agreement the director's terms share by its id is directed under it: Canada's CTA, one company category read by director and cast.
+  const keyed = stageAgreements(p.market).find((id) => id === (p as { readonly staged?: string }).staged);
+  if (keyed !== undefined && a.agreement !== undefined && a.agreement !== keyed) throw new Error(`a play staged under ${keyed} is directed under it`);
   // @slate:consumer producing.plan
   const shoot = p.plan.weeks === null ? Math.max(1, Math.round(p.plan.scheduled / times)) : p.plan.weeks.rehearsal * WEEK_DAYS;
-  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: Math.floor(budgetMajor(p) / times), shoot, minutes: p.minutes, agreement: a.agreement, prep: a.prep, cut: a.cut }, times };
+  return { job: { form: directedAs(p), country: p.market, stage: p.stage, budget: Math.floor(budgetMajor(p) / times), shoot, minutes: p.minutes, agreement: a.agreement ?? keyed, prep: a.prep, cut: a.cut }, times };
 }
 
 /** A job's engagement, for the permit it may need: the country it is made in and the days it works there. */
@@ -538,11 +562,21 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
   language: 'the language the work is made in',
   none: 'whether anything sets the pay where no agreement does',
   terms: "whether any agreement, guild's rate or law sets a director's terms",
+  stage: "a stage director's minimum",
 };
 
-/** What the player is told of a market where its research couldn't find all of it: "a, b and c"; nothing where it is known whole, or in the US. */
-export function aboutMarket(country: string): string | undefined {
-  const missing = (Object.hasOwn(MARKETS, country) ? (MARKETS[country] as Market).unknown : []).map((u) => MISSING[u]);
+/** The agreements a play may be directed under in a market: none where its research holds none (the UK's are its theatres', kept by the engine). */
+export function stageAgreements(country: string): readonly string[] {
+  return Object.entries(AGREEMENTS).filter(([, a]) => a.country === country && a.forms.includes('play')).map(([id]) => id);
+}
+
+/**
+ * What the player is told of a market where its research couldn't find all of it: "a, b and c"; nothing where it is
+ * known whole, or in the US. Beside a play, only whether its stage director's minimum is known; beside a film or an
+ * episode, all but that.
+ */
+export function aboutMarket(country: string, form?: Form): string | undefined {
+  const missing = (Object.hasOwn(MARKETS, country) ? (MARKETS[country] as Market).unknown : []).filter((u) => (u === 'stage') === (form === 'play')).map((u) => MISSING[u]);
   if (missing.length === 0) return undefined;
   const list = missing.length > 1 ? `${missing.slice(0, -1).join(', ')} and ${missing.at(-1) as string}` : (missing[0] as string);
   return t(UNKEPT_LINE, { country: countryName(country as CountryCode), missing: list });

@@ -1,0 +1,231 @@
+{
+ "topic": "markets.FR.series-and-stage",
+ "read": "2026-11-04",
+ "country": "FR",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.cnc.fr/professionnels/aides-et-financements/audiovisuel/production/credit-dimpot-audiovisuel_778316",
+   "title": "CNC: Crédit d'impôt audiovisuel",
+   "read": "2026-11-04",
+   "said": "Fiction Durée supérieure ou égale à 45 minutes ; Conditions de coût : coût global de production supérieur ou égal à 5 000 € par minute produite … Taux de crédit d’impôt fixé à 25% (décret 2016-52 du 27 janvier 2016 - article 77 de la loi n° 2014-1655) ; Plafonds déductibles : Suite à la parution du décret n° 2016-1191 du 31 août 2016, les plafonds pour les œuvres audiovisuelles de fiction ont été modifiés. La somme des crédits d'impôt calculés au titre d'une même œuvre audiovisuelle de fiction ne peut excéder : 1 250 € par minute produite et livrée lorsque le coût de production est inférieur à 10 000 € par minute produite et livrée 1 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 10 000 € et inférieur à 15 000 € par minute produite et livrée 2 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 15 000 € et inférieur à 20 000 € par minute produite et livrée 3 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 20 000 € et inférieur à 25 000 € par minute produite et livrée 4 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 25 000 € et inférieur à 30 000 € par minute produite et livrée 5 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 30 000 € et inférieur à 35 000 € par minute produite et livrée 7 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 35 000 € et inférieur à 40 000 € par minute produite et livrée 10 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 40 000 € par minute produite et livrée",
+   "file": "fr-cia.html",
+   "sha256": "b58580e536d24e2a118a3d8a983f291ea99354094ee7d4531e9a04f4b4e1bd0a"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.cnc.fr/professionnels/aides-et-financements/audiovisuel/production/fiction-aide-selective-a-la-production_191452",
+   "title": "CNC: Fiction – aide sélective à la production (Fonds de soutien audiovisuel)",
+   "read": "2026-11-04",
+   "said": "Les entreprises (ou associations) ne disposant pas d’un compte automatique, pour être éligibles : … doivent être indépendantes de tout éditeur de services de télévision … Les œuvres doivent faire l’objet d’un apport initial sous forme de préachat des droits de diffusion complété éventuellement d’un apport en coproduction , explicitée par un contrat : D’un ou plusieurs diffuseurs français … Le financement des œuvres doit contenir une part française correspondant au moins à 30% de leur coût définitif et faire l’objet de dépenses de production en France pour au moins 50% de cette part française. … L’ensemble des aides accordées par le Fonds de soutien audiovisuel ne peut excéder 40% du coût définitif de l’œuvre (ou de la part française en cas de coproduction internationale). Le montant total des aides accordées par l’Etat, l’un de ses établissements et les collectivités locales ne peut dépasser 50% du coût définitif de l’œuvre",
+   "file": "fr-fsasel.html",
+   "sha256": "54e96bcebb7d9384f3687cbc3d299d6ee4a80b419d98b35747cbe70afbfebdaa"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.cnc.fr/professionnels/aides-et-financements/audiovisuel/production/fiction-compte-automatique-aide-a-la-production_191460",
+   "title": "CNC: Fiction – compte automatique, aide à la production",
+   "read": "2026-11-04",
+   "said": "Les œuvres bénéficiant d'un apport d'un ou de diffuseurs français au moins égal à 25% de la part française du financement, et composé d'une part de numéraire supérieure à 12 000 € de l'heure. Les œuvres dont le financement en numéraire par un diffuseur est inférieur à 12 000 € de l'heure mais bénéficiant d'un avis favorable de la commission sélective du FSA. … En fiction, le producteur obtiendra l'ouverture d'un compte automatique s'il atteint au moins le seuil suivant : 200 000 €.",
+   "file": "fr-fsaauto.html",
+   "sha256": "de41f5e8025fc4fc5d41bb89dc8fa4aee25c76a55186d2253c99d4bd2f71734d"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The 25% rate and the caps were already in producer-FR.json (read 2026-11-01); re-read today with the series' eligibility: 45 minutes, EUR 5,000/min, and a prior FSA aid, which itself needs a broadcaster's pre-purchase (item 2), so a French series without a broadcaster gets no credit.",
+   "verdict": "found",
+   "value": {
+    "costPerMinuteBandsFromEUR": [
+     5000,
+     10000,
+     15000,
+     20000,
+     25000,
+     30000,
+     35000,
+     40000
+    ],
+    "scheme": "crédit d'impôt audiovisuel (CGI art. 220 sexies)",
+    "rate": 0.25,
+    "fictionMinMinutes": 45,
+    "fictionMinCostPerMinuteEUR": 5000,
+    "childrensFictionMinCostPerMinuteEUR": 3000,
+    "animationMinMinutes": 24,
+    "animationMinCostPerMinuteEUR": 3000,
+    "requires": "a CNC Fonds de soutien audiovisuel production aid (prior authorisation) first; mainly in French; made mainly in France",
+    "creditCapPerMinuteEUR": {
+     "cost<10000": 1250,
+     "10000-15000": 1500,
+     "15000-20000": 2000,
+     "20000-25000": 3000,
+     "25000-30000": 4000,
+     "30000-35000": 5000,
+     "35000-40000": 7500,
+     ">=40000": 10000
+    },
+    "animationCreditCapPerMinuteEUR": 6000,
+    "rateSince": "décret 2016-52 (27 Jan 2016)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Fiction Durée supérieure ou égale à 45 minutes ; Conditions de coût : coût global de production supérieur ou égal à 5 000 € par minute produite … Taux de crédit d’impôt fixé à 25% (décret 2016-52 du 27 janvier 2016 - article 77 de la loi n° 2014-1655) ; Plafonds déductibles : Suite à la parution du décret n° 2016-1191 du 31 août 2016, les plafonds pour les œuvres audiovisuelles de fiction ont été modifiés. La somme des crédits d'impôt calculés au titre d'une même œuvre audiovisuelle de fiction ne peut excéder : 1 250 € par minute produite et livrée lorsque le coût de production est inférieur à 10 000 € par minute produite et livrée 1 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 10 000 € et inférieur à 15 000 € par minute produite et livrée 2 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 15 000 € et inférieur à 20 000 € par minute produite et livrée 3 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 20 000 € et inférieur à 25 000 € par minute produite et livrée 4 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 25 000 € et inférieur à 30 000 € par minute produite et livrée 5 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 30 000 € et inférieur à 35 000 € par minute produite et livrée 7 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 35 000 € et inférieur à 40 000 € par minute produite et livrée 10 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 40 000 € par minute produite et livrée"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The selective commission's results are published per sitting (titles and sums) but no count of applications, so no rate of yes.",
+   "verdict": "partial",
+   "value": {
+    "fund": "CNC Fonds de soutien audiovisuel (FSA), automatic account and selective aid",
+    "needsBroadcaster": "an initial pre-purchase of broadcast rights by a French broadcaster or SVOD service (selective); automatic: broadcaster contribution >= 25% of the French share and > EUR 12,000 cash per hour",
+    "frenchShareMin": 0.3,
+    "spendInFranceOfFrenchShareMin": 0.5,
+    "fsaCapShareOfCost": 0.4,
+    "publicAidCapShareOfCost": 0.5,
+    "automaticAccountThresholdEUR": 200000,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les entreprises (ou associations) ne disposant pas d’un compte automatique, pour être éligibles : … doivent être indépendantes de tout éditeur de services de télévision … Les œuvres doivent faire l’objet d’un apport initial sous forme de préachat des droits de diffusion complété éventuellement d’un apport en coproduction , explicitée par un contrat : D’un ou plusieurs diffuseurs français … Le financement des œuvres doit contenir une part française correspondant au moins à 30% de leur coût définitif et faire l’objet de dépenses de production en France pour au moins 50% de cette part française. … L’ensemble des aides accordées par le Fonds de soutien audiovisuel ne peut excéder 40% du coût définitif de l’œuvre (ou de la part française en cas de coproduction internationale). Le montant total des aides accordées par l’Etat, l’un de ses établissements et les collectivités locales ne peut dépasser 50% du coût définitif de l’œuvre"
+    },
+    {
+     "src": 2,
+     "said": "Les œuvres bénéficiant d'un apport d'un ou de diffuseurs français au moins égal à 25% de la part française du financement, et composé d'une part de numéraire supérieure à 12 000 € de l'heure. Les œuvres dont le financement en numéraire par un diffuseur est inférieur à 12 000 € de l'heure mais bénéficiant d'un avis favorable de la commission sélective du FSA. … En fiction, le producteur obtiendra l'ouverture d'un compte automatique s'il atteint au moins le seuil suivant : 200 000 €."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "No count of series financed without a broadcaster that later find one; aided fiction has a broadcaster by rule.",
+   "verdict": "partial",
+   "value": {
+    "route": "broadcaster/SVOD pre-purchase before production (a condition of FSA aid and so of the tax credit)",
+    "aidedFictionHours2025": 1135,
+    "aidedFictionBudgetEUR2025": 1160200000,
+    "costPerHourEUR2025": 1022400,
+    "financeShares2025": {
+     "frenchProducers": 0.223,
+     "broadcasters": 0.603,
+     "CNC": 0.084,
+     "otherFrench": 0.053,
+     "foreign": 0.037
+    },
+    "pickup": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les entreprises (ou associations) ne disposant pas d’un compte automatique, pour être éligibles : … doivent être indépendantes de tout éditeur de services de télévision … Les œuvres doivent faire l’objet d’un apport initial sous forme de préachat des droits de diffusion complété éventuellement d’un apport en coproduction , explicitée par un contrat : D’un ou plusieurs diffuseurs français … Le financement des œuvres doit contenir une part française correspondant au moins à 30% de leur coût définitif et faire l’objet de dépenses de production en France pour au moins 50% de cette part française. … L’ensemble des aides accordées par le Fonds de soutien audiovisuel ne peut excéder 40% du coût définitif de l’œuvre (ou de la part française en cas de coproduction internationale). Le montant total des aides accordées par l’Etat, l’un de ses établissements et les collectivités locales ne peut dépasser 50% du coût définitif de l’œuvre"
+    },
+    {
+     "src": 2,
+     "said": "Les œuvres bénéficiant d'un apport d'un ou de diffuseurs français au moins égal à 25% de la part française du financement, et composé d'une part de numéraire supérieure à 12 000 € de l'heure. Les œuvres dont le financement en numéraire par un diffuseur est inférieur à 12 000 € de l'heure mais bénéficiant d'un avis favorable de la commission sélective du FSA. … En fiction, le producteur obtiendra l'ouverture d'un compte automatique s'il atteint au moins le seuil suivant : 200 000 €."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cnc.fr: crédit d'impôt audiovisuel (old id _190810 404; _778316 read), audiovisual production index, fiction selective and automatic FSA pages, Bilan 2025 chiffres clés PDF",
+     "result": "read; no producer-fee cap and no rate of yes on the pages read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "The selective commission's results are published per sitting (titles and sums) but no count of applications, so no rate of yes."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cnc.fr: crédit d'impôt audiovisuel (old id _190810 404; _778316 read), audiovisual production index, fiction selective and automatic FSA pages, Bilan 2025 chiffres clés PDF",
+     "result": "read; no producer-fee cap and no rate of yes on the pages read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "cnc.fr: crédit d'impôt audiovisuel (old id _190810 404; _778316 read), audiovisual production index, fiction selective and automatic FSA pages, Bilan 2025 chiffres clés PDF",
+     "result": "read; no producer-fee cap and no rate of yes on the pages read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "No count of series financed without a broadcaster that later find one; aided fiction has a broadcaster by rule."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "legifrance.gouv.fr CGI article (LEGIARTI000049981467); bofip.impots.gouv.fr 5975-PGP and 7276-PGP",
+     "result": "Légifrance 403; BOFiP pages not the CISV text (one 'page introuvable')",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): \"crédit d'impôt spectacle vivant théâtre article 220 quindecies taux 2026 BOFiP\"",
+     "result": "led to the DGFiP 2079-SV-FC-SD 2026 form, read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "impots.gouv.fr 2079-SV-FC-SD (2026) PDF; culture.gouv.fr CISV page",
+     "result": "form read; culture.gouv.fr address 404",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "astp.asso.fr home, les-aides-financieres, qui-sommes-nous, reforme-des-aides page and its PDFs (aides remboursables, critères d'éligibilité)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "astp.asso.fr home, les-aides-financieres, qui-sommes-nous, reforme-des-aides page and its PDFs (aides remboursables, critères d'éligibilité)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

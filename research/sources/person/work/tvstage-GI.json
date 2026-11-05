@@ -1,0 +1,187 @@
+{
+ "topic": "markets.GI.series-and-stage",
+ "read": "2026-11-04",
+ "country": "GI",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.gbc.gi/corporation",
+   "title": "GBC: The Corporation",
+   "read": "2026-11-04",
+   "said": "We are Gibraltar’s public service broadcaster. At GBC we deliver local content across TV, Radio and Online for the people of Gibraltar. GBC is an independent, publicly funded corporation which was formed in December 1963 when Radio Gibraltar (1958) and Gibraltar TV (1962) merged to create GBC.",
+   "file": "gi-gbc-corp.html",
+   "sha256": "5ebf176c171921040c857f54281341f828e913b66a065bae796b67361e22f4ba"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.culture.gi/news/applications-for-cultural-and-book-grants-2027-2028/",
+   "title": "Gibraltar Cultural Services: Applications for Cultural and Book Grants 2027/2028 (01-Oct-2026)",
+   "read": "2026-11-04",
+   "said": "The Cultural Grants Committee invites applications for financial assistance from locally registered Cultural Organisations and/or individuals’ resident in Gibraltar or Red ID Card holders, for the financial year 1st April 2027 to 31st March 2028. Applications for financial assistance can be received for: · Participation at official international competitions and events. · Cultural development and education. · Purchase of equipment for cultural use. · Publication of books which are culturally significant to Gibraltar. All outline bids for financial assistance must include evidence of events or projects and estimated costs including quotes that will be sought by the cultural organisation. Applications from registered cultural entities must be accompanied with a copy of the last audited accounts available. … Closing date for applications is Friday 30th October 2026.",
+   "file": "gi-grants-2027.html",
+   "sha256": "db5a4cde2348c804766d3e09fc2167f36f5818edb384901f59b1969fc354c098"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "As item 1. GBC exists and is publicly funded. Its site publishes no commissioning terms (the corporation page and the programme index were read). The programme index has no drama category. That describes the current catalogue only, not a rule.",
+   "verdict": "partial",
+   "value": {
+    "publicBroadcaster": "GBC (Gibraltar Broadcasting Corporation), publicly funded, formed 1963",
+    "commissioningTerms": null,
+    "programmeCategories": [
+     "community",
+     "cooking",
+     "documentary",
+     "history",
+     "music-arts",
+     "news-current-affairs",
+     "nostalgia",
+     "sport"
+    ],
+    "scriptedDramaCategory": false
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "We are Gibraltar’s public service broadcaster. At GBC we deliver local content across TV, Radio and Online for the people of Gibraltar. GBC is an independent, publicly funded corporation which was formed in December 1963 when Radio Gibraltar (1958) and Gibraltar TV (1962) merged to create GBC."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "As item 1. No amounts or success rate are published. Whether staging a local play counts as 'cultural development' is not stated. The application form (culture.gi/forms) is not inline on the page. Earlier notice (2020-09-08) read: same committee.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Cultural Grants (Cultural Grants Committee, Gibraltar Cultural Services, Ministry of Equality, Employment, Culture and Tourism)",
+    "eligible": "locally registered Cultural Organisations and/or individuals resident in Gibraltar or Red ID Card holders",
+    "heads": [
+     "participation at official international competitions and events",
+     "cultural development and education",
+     "purchase of equipment for cultural use",
+     "publication of culturally significant books"
+    ],
+    "year": "2027-04-01 to 2028-03-31",
+    "closing": "2026-10-30",
+    "ranges": null,
+    "rateOfYes": null,
+    "requires": "evidence of events or projects, estimated costs with quotes; registered entities send last audited accounts"
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "The Cultural Grants Committee invites applications for financial assistance from locally registered Cultural Organisations and/or individuals’ resident in Gibraltar or Red ID Card holders, for the financial year 1st April 2027 to 31st March 2028. Applications for financial assistance can be received for: · Participation at official international competitions and events. · Cultural development and education. · Purchase of equipment for cultural use. · Publication of books which are culturally significant to Gibraltar. All outline bids for financial assistance must include evidence of events or projects and estimated costs including quotes that will be sought by the cultural organisation. Applications from registered cultural entities must be accompanied with a copy of the last audited accounts available. … Closing date for applications is Friday 30th October 2026."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gibraltar.gov.gi/culture",
+     "result": "read: EU funding pages only, no film or theatre fund",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Gibraltar film production incentive tax relief television Gibraltar Film Commission theatre production grant",
+     "result": "nothing on Gibraltar (Spain, Cyprus, UK and Malta results only)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gi home; WordPress search API (wp-json/wp/v2/search) for funding, grant, bursary, theatre, sponsorship; the Cultural and Book Grants 2027/2028 notice; the 2020 official notice; Cultural Grants Application Form A page",
+     "result": "read: Cultural Grants terms (no amounts); the form is not inline",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gibraltar.gov.gi/culture",
+     "result": "read: EU funding pages only, no film or theatre fund",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gbc.gi home, /corporation, /tv/programmes",
+     "result": "read: public service broadcaster, no commissioning terms, no drama category",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "As item 1. GBC exists and is publicly funded. Its site publishes no commissioning terms (the corporation page and the programme index were read). The programme index has no drama category. That describes the current catalogue only, not a rule."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: Gibraltar film production incentive tax relief television Gibraltar Film Commission theatre production grant",
+     "result": "nothing on Gibraltar (Spain, Cyprus, UK and Malta results only)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gi home; WordPress search API (wp-json/wp/v2/search) for funding, grant, bursary, theatre, sponsorship; the Cultural and Book Grants 2027/2028 notice; the 2020 official notice; Cultural Grants Application Form A page",
+     "result": "read: Cultural Grants terms (no amounts); the form is not inline",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Gibraltar film production incentive tax relief television Gibraltar Film Commission theatre production grant",
+     "result": "nothing on Gibraltar (Spain, Cyprus, UK and Malta results only)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "As item 1. No amounts or success rate are published. Whether staging a local play counts as 'cultural development' is not stated. The application form (culture.gi/forms) is not inline on the page. Earlier notice (2020-09-08) read: same committee."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gi home; WordPress search API (wp-json/wp/v2/search) for funding, grant, bursary, theatre, sponsorship; the Cultural and Book Grants 2027/2028 notice; the 2020 official notice; Cultural Grants Application Form A page",
+     "result": "read: Cultural Grants terms (no amounts); the form is not inline",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

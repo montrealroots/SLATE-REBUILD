@@ -1,0 +1,207 @@
+{
+ "topic": "markets.KE.series-and-stage",
+ "read": "2026-11-04",
+ "country": "KE",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://kfcb.go.ke/index.php/licensing-film-agents-and-filmmakers",
+   "title": "Kenya Film Classification Board: Licensing film agents and filmmakers",
+   "read": "2026-11-04",
+   "said": "Therefore, no film shall be made in Kenya without a filming licence from us. … Documentary, TVC/ Advertisement, Music Video, Corporate Video, Infomercial, Travelogue, short film, Testimonial, TV Series Episode, Webisode etc. … 5,000.00 … Full-length feature film, TV Series Per Season and Web Series Per Season … 15,000.00 … Filming fees per day … 1,000.00",
+   "file": "ke-kfcb-lic.html",
+   "sha256": "7ac18cfaa395b611134efb167b1ea9250f385df14221300d1cb38b1706528a37"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.kenyaculturalcentre.go.ke/?p=11526",
+   "title": "County Theatre Fiesta 2025 sparks artistic growth in Kiambu and Nyeri (Kenya Cultural Centre)",
+   "read": "2026-11-04",
+   "said": "These performances demonstrated the remarkable progress and bold storytelling of the participants, earning standing ovations and valuable feedback from trainers and fellow artists. The closing ceremony presided over by Mr. Kevin Kimani Kahuro, Manager of Programs and Business Development, celebrated the exceptional presentations and reaffirmed the Centre's commitment to nurturing the arts",
+   "file": "ke-kcc-fiesta.html",
+   "sha256": "96f551b7e2864dac54cc759878d6d367b07fcd992528fc360ffb92973fc392a9"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "No incentive found (the Kenya Film Commission's funding page carries no content in its served HTML). What a series must pay is the KFCB filming licence under Cap 222: per episode or per season, plus per filming day.",
+   "verdict": "partial",
+   "value": {
+    "incentive": null,
+    "licenceKES": {
+     "perEpisode": 5000,
+     "perSeason": 15000,
+     "perFilmingDay": 1000
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Therefore, no film shall be made in Kenya without a filming licence from us. … Documentary, TVC/ Advertisement, Music Video, Corporate Video, Infomercial, Travelogue, short film, Testimonial, TV Series Episode, Webisode etc. … 5,000.00 … Full-length feature film, TV Series Per Season and Web Series Per Season … 15,000.00 … Filming fees per day … 1,000.00"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not found. No Kenyan public fund for a theatre production with published terms was found. The Kenya Cultural Centre (a state corporation) runs the County Theatre Fiesta and the national theatre, but its page read sets no grant; a web search reported the Sports, Arts and Social Development Fund behind the Fiesta (a lead: not read). Hii Stage closed with its 2024 round; no newer call was found.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Hii Stage (HEVA Fund with Alliance Française Nairobi; French Embassy money, Creation Africa)",
+    "public": "a foreign government's, not Kenya's",
+    "maxEUR": 15000,
+    "condition": "original work with African themes, shown in at least 3 CASiK venues",
+    "eligible": "Kenyan artists, collectives and organisations",
+    "selected": 11,
+    "applications": null,
+    "active": "2023-2024 (projects March-August 2024)",
+    "kenyanPublicFund": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "These performances demonstrated the remarkable progress and bold storytelling of the participants, earning standing ovations and valuable feedback from trainers and fellow artists. The closing ceremony presided over by Mr. Kevin Kimani Kahuro, Manager of Programs and Business Development, celebrated the exceptional presentations and reaffirmed the Centre's commitment to nurturing the arts"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kfcb.go.ke licensing page",
+     "result": "read: series licence fees",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "kenyafilmcommission.go.ke home and /industry-development/funding/ (twice)",
+     "result": "first reset (curl 35); second served navigation only",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "No incentive found (the Kenya Film Commission's funding page carries no content in its served HTML). What a series must pay is the KFCB filming licence under Cap 222: per episode or per season, plus per filming day."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kenyafilmcommission.go.ke home and /industry-development/funding/ (twice)",
+     "result": "first reset (curl 35); second served navigation only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kenyafilm.go.ke",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "kbc.co.ke home",
+     "result": "answered; tenders link only, no commissioning terms",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kfcb.go.ke licensing page",
+     "result": "read: series licence fees",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kenyafilm.go.ke",
+     "result": "CONNECT 502",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "kfcb.go.ke home (after one reset)",
+     "result": "answered; links to acts and licensing only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kfcb.go.ke home (after one reset)",
+     "result": "answered; links to acts and licensing only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Kenya theatre stage play actors minimum pay rate card guild; Kenya Cultural Centre theatre production fund grant 2026",
+     "result": "leads: KAG 2023 screen rate card press, Hii Stage, KCC newsletters, County Theatre Fiesta",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "kenyaculturalcentre.go.ke/?p=11526",
+     "result": "read; no grant terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "new-heva-fund.squarespace.com/hii-stage",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not found. No Kenyan public fund for a theatre production with published terms was found. The Kenya Cultural Centre (a state corporation) runs the County Theatre Fiesta and the national theatre, but its page read sets no grant; a web search reported the Sports, Arts and Social Development Fund behind the Fiesta (a lead: not read). Hii Stage closed with its 2024 round; no newer call was found."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: Kenya theatre stage play actors minimum pay rate card guild; Kenya Cultural Centre theatre production fund grant 2026",
+     "result": "leads: KAG 2023 screen rate card press, Hii Stage, KCC newsletters, County Theatre Fiesta",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "kenyaculturalcentre.go.ke/?p=11526",
+     "result": "read; no grant terms",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

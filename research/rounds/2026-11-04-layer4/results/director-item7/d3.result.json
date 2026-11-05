@@ -1,0 +1,293 @@
+{
+ "AZ": {
+  "stage": {
+   "7": [
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Ministry of Culture site culture.gov.az: /az/senedler served live as a JavaScript shell only (files/d3/AZ-culture-senedler-live.html, sha256 b8d98e7946d16f9331279844c3bb93d5cc4a3398382c1a1aee95a96bf792c0bf; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05); its bundle (AZ-culture-index.js, sha256 aeb72e2559ca8cdd657882f289a436bdea749e97ac90947c56dc741504384bcc) names the API admin.culture.gov.az/api; read https://admin.culture.gov.az/api/legislations/categories (AZ-api-legcat.json, sha256 5e9050c6007d80f6f46aa6b8b4e092814928a846c7c30a429478ac7d80ba2711) and https://admin.culture.gov.az/api/legislations/detail/5, the ministry's list of Cabinet decisions (AZ-api-leg5.json, sha256 3feb2815132f35e5267458aace677aebb2b0c78730b8af46364c5ea0e8e2029e; first try connection reset, second 200)",
+     "result": "Read: the ministry lists six Cabinet decisions (its collegium, NGO culture-event funding Qayda, the Niyazi orchestra, an amendment to Decision 95 of 2011, 'milli' status for the Youth Spectators' and Ganja drama theatres, a construction LLC); Decision 52 of 16 Feb 2006 on minimum author fees is not among them; no fee for a stage director.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "institution",
+     "items": [
+      7
+     ],
+     "tried": "Cabinet of Ministers site nk.gov.az press-service explanation 'Müəllif qonorarlarının və digər haqların ödənilməsi ilə bağlı yeni qaydalar təsdiq edilib', https://nk.gov.az/az/xeberler/matbuat-xidmatinin-bulletenlari/muellif-qonorarlarinin-ve-diger-haqlarin-odenilmes-3270 (files/d3/AZ-nk-izah-3270.html, sha256 6f88ece5508268b4609dd49679fdf84ae58877aa371a44f94d7260e65e8178b3; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05)",
+     "result": "Read: it concerns annex 10 of Decision 38 of 2 May 1997, minimum author fees and 'quruluş haqları' for creators of state-commissioned films; nothing for theatre or a stage director.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "report.az (Report news agency) article 'В одном из театров Азербайджана назначен новый главный режиссер', https://report.az/ru/iskusstvo/v-odnom-iz2 (found by WebSearch 6)",
+     "result": "403 with a 'Just a moment...' bot check (files/d3/AZ-report-chiefdirector.html, sha256 bb70549960c89d1e16ad54abe301d6eef88f06f2724456207f702d77eafc4c0a), not got past; not read.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 8 (standard) for Azerbaijani press on theatre directors' fees: 'teatr rejissorlarının qonorarı maaşı az aktyor rejissor əməkhaqqı teatrlarda müsahibə'; WebSearch 3 (Azerbaijani): 'teatr rejissoru quruluş haqqı minimum məbləğ tamaşa qonorar Nazirlər Kabineti 52 nömrəli qərar'; WebSearch 6 (Russian): 'Азербайджан театр режиссер-постановщик гонорар минимальный размер постановление Кабинета министров ...'",
+     "result": "No Azerbaijani press item on a stage director's fee: search 8 returned UK, US, Polish and Uzbek items only; search 3 returned only the nk.gov.az PDFs and WIPO Theatre Law copy already held (u15); search 6 returned spinform.ru copies, the report.az appointment item (bot check) and presidential minimum-wage orders (250 manat from 1 Sep 2019, superseded). Not found.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 for culture.gov.az (42 captures listed, d3w/az_gov_culture__.txt) and e-qanun.az (d3w/az_e_qanun__.txt: home-page captures and a 404 for /alpidata/code/data/0/c_c_8.htm); fetched the capture of https://culture.gov.az/az/senedler (files/d3/AZ-cc-senedler.html, sha256 3ec74f557524b08542733dfc32fc651a80054d676aff249974868b4efd8016a6). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "The captured documents page is the same empty JavaScript shell (no list in the HTML); e-qanun.az has no capture of Decision 52's text. Not found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "(extra to the held official-register attempts) base.spinform.ru (СоюзПравоИнформ, a private CIS law database, secondary) show_doc.fwx?rgn=14296 (files/d3/AZ-spinform-14296.html, sha256 ca2b342037116a8d93e3a9f7be0f3e4622f4e23f99b760e0066f70a632854ce1). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "Read its table of contents only (full text paid): Decision 52 of 16 Feb 2006, 'Действует', amended by Decisions 539 of 18.12.2018 and 423 of 26.10.2020; annexes: minimum author fees for drama, music and stage works commissioned or first performed (I. Драматические произведения ...), for fine art, and 'Минимальный размер вознаграждения, выплачиваемого творческому составу и исполнителям за юбилейные и государственные мероприятия, а также за концертные программы специального назначения'. The headings name author fees and state-event creative staff, not a stage director's staging fee for a play; the figures were not reached.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 stays a blocker. Decision 52 (in force, as amended 2018 and 2020) sets minimum author fees for commissioned drama works and pay for creative staff of state events; by its headings it sets no staging fee for a director of a repertory play, and its figures were not reached (e-qanun.az, the state's database, is a JavaScript application; spinform is paywalled). Theatre creative staff are employees on labour contracts (Theatre Law art. 20, held)."
+ },
+ "CL": {
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Biblioteca del Congreso Nacional, LeyChile XML of Norma 207436, DFL 1 of 2002, Código del Trabajo, version of 2026-07-23, 'no derogado' (files/d3/CL-leychile-207436.xml, sha256 a3a7c39941d110cb14a60f7700ee1560f1b256dd078db3f52b25f33cb712d90a; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05); read Libro I, Título II, Capítulo IV 'Del contrato de los trabajadores de artes y espectáculos' (arts. 145-A to 145-L)",
+     "result": "Read: art. 145-A defines arts and entertainment workers ('actores de teatro ... directores y ejecutantes musicales; escenógrafos ... autores, dramaturgos ...'); the chapter regulates fixed-term contracts, hours, rest (pay for accumulated rest days 'no podrá ser inferior a la prevista en el artículo 32'), and pay periods (145-G) but sets no minimum remuneration or rate for a stage director; the only floor is the general ingreso mínimo mensual. Absence stands for the Código's chapter only.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "T13, 'La mitad de los artistas gana menos del sueldo mínimo', 31 May 2025, https://www.t13.cl/noticia/nacional/la-mitad-artistas-gana-menos-del-sueldo-minimo-segun-estudio-chileactores-31-5-2025 (files/d3/CL-t13.html, sha256 4719ebcc33e9fef75c8fc0669c37100a363ad740c126b4a2ec9cc7f2368db063; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05)",
+     "result": "Read: quotes Chileactores (president Esperanza Silva): 'La mitad de nuestros artistas gana menos de $400.000 al mes'; 74% work 'bajo el régimen de honorarios', 4% on indefinite contracts. Actors only; no director rate.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 for sidarte.cl (d3w/cl_sidarte__.txt); capture 20261007070139 of https://sidarte.cl/salarios-minimos-sugeridos/ (files/d3/CL-cc-salarios.html, sha256 8c15c8e6a95adf0c02620fb8c84114dd83831a1243f993b54a574cb9998dd8b6). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "Read: SIDARTE's suggested minimums are for actors ('Jornada Laboral Teatro 80,000' / '130,000', 'Hora Ensayo Teatro 17,000', radioteatro, online plays); no direction rate. Not found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 stays a blocker: no agreement, scale or law sets a Chilean stage director's minimum; the Labour Code's arts chapter sets none and the actors' union's suggested rates cover actors only."
+ },
+ "EE": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 1 (standard): 'lavastaja leping miinimumtasu teater 2026 Eesti Lavastajate Liit EETEAL'",
+     "result": "Led to eldliit.ee/lepingud/leping_eeteal_eldl_2024 (the agreement already read, u2) and eldliit.ee/lepingud/palgaprotsendi-arvutamise-skeem-kodulehele-2026, the 2026 'practical helper' whose file the earlier pass could not reach; fetched it (second try; first: connection reset): https://eldliit.ee/lepingud/palgaprotsendi-arvutamise-skeem-kodulehele-2026, a PDF (LibreOffice, created 9 Apr 2026), files/d3/EE-eldl-palgaprotsent-2026.html, sha256 310b37177587b177724cc2e58d768bf924b11b75b873a9c69ebab6d6849d34ae. Found: the union's own euro figures for the minimum multiples (see found).",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "found": [
+   {
+    "item": 7,
+    "value": {
+     "source": "ELDL 2026 helper",
+     "guestDirectorMinimumGrossEUR2026": {
+      "multiple4.5": 7740,
+      "multiple3.6": 6192,
+      "multiple2.5": 4300
+     },
+     "netEUR": {
+      "multiple4.5": 5973.86,
+      "multiple3.6": 4809.89,
+      "multiple2.5": 3387.26
+     },
+     "employerCostEUR": {
+      "multiple4.5": 10356.12,
+      "multiple3.6": 8284.9,
+      "multiple2.5": 5753.4
+     },
+     "royaltyAdvice": "split 75% work / 25% rights; precedents of 2% or 3% of ticket income as a component; proposed minimums with a percentage (3.75x + 3% for large theatres; 1.75x + 4% or 2x + 3% private) were not accepted into the framework agreement"
+    },
+    "sources": [
+     {
+      "kind": "primary",
+      "url": "https://eldliit.ee/lepingud/palgaprotsendi-arvutamise-skeem-kodulehele-2026",
+      "title": "palgaprotsendi arvutamise skeem kodulehele 2026 (Eesti Lavastajate ja Dramaturgide Liit)",
+      "read": "2026-11-05",
+      "file": "/tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/d3/EE-eldl-palgaprotsent-2026.html",
+      "sha256": "310b37177587b177724cc2e58d768bf924b11b75b873a9c69ebab6d6849d34ae",
+      "said": "1. MIDA TÄHENDAB PRAKTIKAS: Bruto töötasuna / Neto (kätte) / Arvega (palgafond) — 4,5 kordne min.määr 7740 5973.86 10356.12; 3,6 kordne min.määr 6192 4809.89 8284.90; 2,5 kordne min.määr 4300 3387.26 5753.40 ... liidu juhatuses arutades oleme jõudnud variandini 75/25 ... aga ka Eestis on teada pretsedente, kus see on näiteks 2% või 3% piletitulust ... Kahjuks ei toetanud teatrijuhid küll protsendivariantide raamlepingusse panemist"
+     }
+    ]
+   }
+  ],
+  "notSearched": [],
+  "notes": "The helper confirms from the union itself the euro amounts u2 derived (multiples of the agreement x EUR 1,720): 7,740, 6,192 and 4,300 gross. It gives no euro figure for the 3.0 small-scale multiple (5,160 by the same arithmetic). The percentage is advice, not a term of the agreement."
+ },
+ "IE": {
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Workplace Relations Commission, Employment Regulation Orders page, https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/employment-regulation-orders/ (files/d3/IE-wrc-ero.html, sha256 0f94b2cc0f7665558e808bc08fbbb1a04b61caa05e5dabd61b5c067b80989368; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05; the page's address taken from its navigation, the URL fetched was not logged by the earlier run)",
+     "result": "Read: 'The ERO fixes minimum rates of pay and conditions of employment for workers in specified business sectors'; the EROs listed are Contract Cleaning, Security Industry and Early Learning and Childcare only; no order for theatre or stage directors. (Held: Competition (Amendment) Act 2017 Schedule 4 does not name directors.)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "The Irish Times, 'Abbey Theatre commits to reviewing pay rates for workers', 2 May 2019, https://www.irishtimes.com/culture/stage/abbey-theatre-commits-to-reviewing-pay-rates-for-workers-1.3878825 (files/d3/IE-irishtimes-abbey-pay.html, sha256 7f51a2c7667efce95d8324a28cda18c2f6d97e2b94d368781eec46a2fffe05a8), and the Abbey's report appendix 'Timeline of agreed actions' (files/d3/IE-abbey-timeline.pdf, sha256 918d3deb77c6ec9b5da852c896879032ec2c9924f6a038472e3f3fe81864d079, created 12 Dec 2019; its address was not logged). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "Read: the Abbey 'said it would review pay rates' for directors; the timeline: '3.2 In line with other disciplines, the fee rates for directors will be reviewed as part of an overall review of all pay rates at the Theatre. Any amendments will be implemented in 2020.' (status Complete). No rate published; one theatre's own scale, not a sector minimum. A third try, The Stage, returned HTTP 429 (IE-thestage-poll.html).",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for irishequity.ie (127 and 164 captures; d3w/ie_eq43.txt, d3w/ie_irishequity__39.txt), theatreforum.ie (no captures), theatreforumireland.com (64 captures, d3w/ie_com_theatreforumireland__.txt) and artscouncil.ie (20 records, d3w/ie_ie_artscouncil__.txt). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "No Irish Equity page for a theatre or directors' agreement among the captures (only the SPI film agreement news and event posts); theatreforum.ie not captured; theatreforumireland.com now serves betting news (the domain changed hands); artscouncil.ie captures are 403. Not found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 stays a blocker: no ERO, registered agreement or union agreement sets an Irish stage director's minimum; the Abbey reviewed its own directors' fee rates for 2020 without publishing them."
+ },
+ "LV": {
+  "stage": {
+   "7": [
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "likumi.lv (the official publisher Latvijas Vēstnesis' database): Darba likums, https://likumi.lv/ta/id/26019-darba-likums (files/d3/LV-likumi-26019.html, sha256 3f61f5dd642f1999f3702712525b24d3435c1561be3726c0a935906a11a2b470), art. 18 read; plus WebSearch 5 (standard) 'ģenerālvienošanās nozarē vispārsaistoša Latvijas Vēstnesis ...'. Earlier d3 (2026-11-04) tried likumi.lv's search form (LV-likumi-search*.html: the form only, no hits shown) and an id guess (LV-likumi-50282.html, 404, this run).",
+     "result": "Read: art. 18(2)-(4): a sector agreement (ģenerālvienošanās) binds its parties' members, and binds a whole sector only where its signatories employ over 50% of its workers or turnover (as amended 27.07.2017, in force 16.08.2017). The search named generally binding agreements only in construction (in force 3 Nov 2019) and railways; no theatre or performing-arts agreement was found. No law sets a stage director's fee.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "LSM (public broadcaster's news), 'Liepiņš: Honorāri operā ārzemniekiem samazināsies', https://www.lsm.lv/raksts/kultura/kulturtelpa/liepins-honorari-opera-arzemniekiem-samazinasies.a70368/ (files/d3/LV-lsm-a70368.html, sha256 c9eccf80d075b854de153cfae2b0bb720df5646c15233d0515cecca32b62f67b; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05)",
+     "result": "Read (published about 12 years 11 months ago, 2013): 'Latvijas Nacionālajā operā ... daži pašmāju režisori aizvadītajā sezonā saņēmuši pat sešas reizes mazāku honorāru nekā labāk atalgotie ārzemju kolēģi'; fees are per project ('katrs projekts, režisors un solists jāvērtē atsevišķi'). No minimum; opera, out of date.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "LSM, '06.10.2023 Kultūršoks: vietējie režisori zaudē skatuves par labu ārzemniekiem', https://www.lsm.lv/raksts/kultura/teatris-un-deja/06.10.2023-kultursoks-vietejie-rezisori-zaude-skatuves-par-labu-arzemniekiem.a526822/ (found by WebSearch 4 (standard) 'teātra režisora honorārs iestudējums atlīdzība minimālā Latvija ...'); and Latvijas Vēstnesis, 'Perifērijas teātru šarms un pārējie bet', 8 Sep 2005, https://www.vestnesis.lv/ta/id/116078 (LV-vestnesis-116078.html, sha256 d9345b85eca1be05c48a07c8ecb0aa2fb128a57d70ad554bce470ba8dcb8a86c)",
+     "result": "LSM 2023: 403 with a 'Just a moment...' bot check (LV-lsm-a526822.html, sha256 91ab6feff83360a08ada449e3a3f0992dd0c374b014df000aa45096fcd255478), not got past. Vēstnesis 2005: read; on regional theatres' directors, no fee figure. Not found.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl CC-MAIN-2026-43 for ltds.lv (Latvijas Teātra darbinieku savienība; 414 records, d3w/lv_ltds__.txt); capture 20261015174724 of https://ltds.lv/lv/par-ltds/sociala-darbiba/ (files/d3/LV-cc-ltds-sociala.html, sha256 2659356f8883c73984f8b3063284f6b005431149220480789b657ddcd2449f0c); likumi.lv id-prefix listings (d3w/likumi29-31.txt). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "Read: the union's social page (veterans' support, the RAMPA fund); no rate card, agreement or fee guidance among the union's captured pages. Not found.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 stays a blocker: no sector agreement covers Latvian theatre (generally binding agreements exist only in construction and railways); directors' fees are negotiated per production."
+ },
+ "SK": {
+  "stage": {
+   "7": [
+    {
+     "method": "web-search",
+     "items": [
+      7
+     ],
+     "tried": "WebSearch 2 (standard): 'honorár réžia divadlo minimálny kolektívna zmluva divadelný režisér Slovensko'; WebSearch 7 (standard): 'honoráre režisérov slovenské divadlá výška honorára inscenácia réžia divadelný ústav'",
+     "result": "No minimum or collective rate for directors: results were individual theatre contracts in the Central Register of Contracts (crz.gov.sk), an SND collective-agreement news item (the SND agreement excludes people working under agreements outside employment), Act 384/1997, and the ministry's KULT 12-01 theatre statistics (totals of author and guest fees). Leads only.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "official-register",
+     "items": [
+      7
+     ],
+     "tried": "Centrálny register zmlúv (crz.gov.sk, the state's register of public contracts): SND contracts https://www.crz.gov.sk//data/att/177906_dokument1.pdf (SK-crz-177906.pdf, sha256 91a969b94ffde201cf7bcca5b2e6a2dd955db5569a03fc0447bf0a658f2bbe9a, this run), .../3765543_dokument1.pdf and .../3229981_dokument1.pdf (sha256 49c7f1e5…9a14 and 16984b86…f6, earlier d3, re-read)",
+     "result": "Read: 177906, 'Zmluva o umeleckom hosťovaní režiséra' under the Copyright Act 618/2003, an SND opera guest director: 'odmenu 6.000,- EUR', of which 2,000 for preparation and 4,000 for the staging (undated template, names blanked); 3765543 (2018) pays director Andriy Zholdak travel of 277 Euro for a concept meeting; 3229981 (2017) an assistant set designer 1,100 EUR. Individually negotiated fees; no minimum or scale.",
+     "date": "2026-11-05"
+    },
+    {
+     "method": "trade-press",
+     "items": [
+      7
+     ],
+     "tried": "TASR (teraz.sk), interview with director Martin Kákoš, https://www.teraz.sk/kultura/martin-kakos-rozhovor/50131-clanok.html (files/d3/SK-teraz-kakos.html, sha256 84a9e3ab08dac1f63c27a1bdfc239a5a22ce038e2b4b85f2b1f6d4f062438020; made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05)",
+     "result": "Read: speaks of his first fees ('Prvé divadelné honoráre prišli, keď som bol ešte študent') with no figure or minimum. Not found.",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "items": [
+      7
+     ],
+     "tried": "Common Crawl for lita.sk: CC-MAIN-2026-43 (no captures, d3w/sk_lita__.txt), -39 (robots.txt only, d3w/sk_lita__39.txt), -30 and 2025-51 (robots.txt answered 403). made by the earlier d3 run (stopped unfinished) on 2026-11-04, its saved file re-read and checked by this run on 2026-11-05",
+     "result": "No captured LITA page; the tariff (held, u13) was read live. Not found in the archive.",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  "found": [],
+  "notSearched": [],
+  "notes": "Item 7 stays a blocker: no collective agreement or law sets a Slovak stage director's minimum fee; the LITA tariff (held) sets a 4-6% royalty for LITA-represented directors; theatres negotiate fees per contract (SND opera guest director EUR 6,000 in one register contract)."
+ },
+ "_meta": {
+  "searchesUsed": 8,
+  "searchLog": [
+   "1 EE",
+   "2 SK",
+   "3 AZ (Azerbaijani)",
+   "4 LV",
+   "5 LV general agreements",
+   "6 AZ (Russian)",
+   "7 SK",
+   "8 AZ (Azerbaijani press)"
+  ],
+  "note": "Attempts dated 2026-11-04 were made by the earlier d3 run (stopped unfinished, no result file); their saved files were re-read and checked by this run on 2026-11-05. Its own web searches, if any, are not counted here."
+ }
+}

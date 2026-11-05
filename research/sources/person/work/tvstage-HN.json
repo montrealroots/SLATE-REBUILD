@@ -1,0 +1,255 @@
+{
+ "topic": "markets.HN.series-and-stage",
+ "read": "2026-11-04",
+ "country": "HN",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://tsc.gob.hn/web/leyes/Decreto-3-2019.pdf",
+   "title": "Decreto No. 3-2019, Art. 15",
+   "read": "2026-11-04",
+   "said": "Los aportes del Fondo para el Desarrollo Cinematográfico (FONDECI) no pueden ser utilizados para gastos de salarios.",
+   "file": "hn-decreto-3-2019.pdf",
+   "sha256": "688d23fda09197b655825bb2682addac00b7c6271b8ac93a3e77efb4cbf52786"
+  },
+  {
+   "kind": "primary",
+   "url": "https://ccetegucigalpa.org/wp-content/uploads/2024/05/CONVOCATORIA-ESCENARIOS-COMPARTIDOS.pdf",
+   "title": "Centro Cultural de España en Tegucigalpa (CCET, Spain's AECID network): Convocatoria abierta 'Escenarios compartidos', deadline 2 June 2024",
+   "read": "2026-11-04",
+   "said": "Podrán participar compañías de artes escénicas, tanto profesionales como amateurs, residentes en Honduras … En esta convocatoria se prevé seleccionar un máximo de 5 proyectos escénicos … Cada propuesta deberá tener una duración mínima de 50 minutos y un máximo de 70 minutos. … El aporte del CCET a las propuestas teatrales seleccionadas será para temas de producción + el estreno de la obra, por un valor entre $1000.00 y $1,200.00. Se negociará cada propuesta individualmente y el presupuesto aprobado puede suponer el pago de caché, ayudas a la producción y distribución de la obra en Honduras",
+   "file": "hn-cce-escenarios.pdf",
+   "sha256": "da8bfc20ce9387c87cbe0d7b4c72d0afca840e237a6a019bab5190221682c1e9"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Not researched today; producer-HN.json: the Ley de Cinematografía (2019) created FONDECI (training, promotion, specific projects); only press sources, no series or theatre terms. No percentage cap is set; FONDECI money may not pay salaries (a producer's fee included, on the text's plain words), only production, shooting, equipment and post costs.",
+   "verdict": "partial",
+   "value": {
+    "fondeciMayNotPaySalaries": true,
+    "producerFeeCap": null,
+    "overheadCap": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Los aportes del Fondo para el Desarrollo Cinematográfico (FONDECI) no pueden ser utilizados para gastos de salarios."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not researched today; producer-HN.json: the Ley de Cinematografía (2019) created FONDECI (training, promotion, specific projects); only press sources, no series or theatre terms. No Honduran state fund for theatre was found (SECAPPH's site is under construction). The only public call found is a foreign state's cultural centre, for 2024, tied to Spanish plays; a lead on the scale of support, not a Honduran rule.",
+   "verdict": "partial",
+   "value": {
+    "honduranPublicFund": null,
+    "foreignPublicCall": {
+     "body": "Centro Cultural de España en Tegucigalpa",
+     "year": 2024,
+     "rangeUSD": [
+      1000,
+      1200
+     ],
+     "maxProjects": 5,
+     "applicant": "companies resident in Honduras, professional or amateur",
+     "condition": "a contemporary Spanish play, 50–70 minutes"
+    }
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Podrán participar compañías de artes escénicas, tanto profesionales como amateurs, residentes en Honduras … En esta convocatoria se prevé seleccionar un máximo de 5 proyectos escénicos … Cada propuesta deberá tener una duración mínima de 50 minutos y un máximo de 70 minutos. … El aporte del CCET a las propuestas teatrales seleccionadas será para temas de producción + el estreno de la obra, por un valor entre $1000.00 y $1,200.00. Se negociará cada propuesta individualmente y el presupuesto aprobado puede suponer el pago de caché, ayudas a la producción y distribución de la obra en Honduras"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\"Ley de Cinematografía\" Honduras decreto La Gaceta texto PDF FONDECI incentivos fiscales producción audiovisual\"",
+     "result": "named Decreto 3-2019 (La Gaceta 35,117) on portalunico.iaip.gob.hn and the TSC library",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "portalunico.iaip.gob.hn/ver_archivo/NjQzNjU1 (the decree) and OTk1NjYy (the regulation, La Gaceta 35,502)",
+     "result": "refused: Cloudflare challenge ('Just a moment'), 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30 for the two portalunico files",
+     "result": "no records",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tsc.gob.hn biblioteca, leyes, entry 883 'Ley de Cinematografía de Honduras', its PDF web/leyes/Decreto-3-2019.pdf (13 pages)",
+     "result": "read whole",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\"Ley de Cinematografía\" Honduras decreto La Gaceta texto PDF FONDECI incentivos fiscales producción audiovisual\"",
+     "result": "named Decreto 3-2019 (La Gaceta 35,117) on portalunico.iaip.gob.hn and the TSC library",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "portalunico.iaip.gob.hn/ver_archivo/NjQzNjU1 (the decree) and OTk1NjYy (the regulation, La Gaceta 35,502)",
+     "result": "refused: Cloudflare challenge ('Just a moment'), 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30 for the two portalunico files",
+     "result": "no records",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tsc.gob.hn biblioteca, leyes, entry 883 'Ley de Cinematografía de Honduras', its PDF web/leyes/Decreto-3-2019.pdf (13 pages)",
+     "result": "read whole",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\"Ley de Cinematografía\" Honduras decreto La Gaceta texto PDF FONDECI incentivos fiscales producción audiovisual\"",
+     "result": "named Decreto 3-2019 (La Gaceta 35,117) on portalunico.iaip.gob.hn and the TSC library",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "portalunico.iaip.gob.hn/ver_archivo/NjQzNjU1 (the decree) and OTk1NjYy (the regulation, La Gaceta 35,502)",
+     "result": "refused: Cloudflare challenge ('Just a moment'), 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30 for the two portalunico files",
+     "result": "no records",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tsc.gob.hn biblioteca, leyes, entry 883 'Ley de Cinematografía de Honduras', its PDF web/leyes/Decreto-3-2019.pdf (13 pages)",
+     "result": "read whole",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not researched today; producer-HN.json: the Ley de Cinematografía (2019) created FONDECI (training, promotion, specific projects); only press sources, no series or theatre terms. No percentage cap is set; FONDECI money may not pay salaries (a producer's fee included, on the text's plain words), only production, shooting, equipment and post costs."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\"Ley de Cinematografía\" Honduras decreto La Gaceta texto PDF FONDECI incentivos fiscales producción audiovisual\"",
+     "result": "named Decreto 3-2019 (La Gaceta 35,117) on portalunico.iaip.gob.hn and the TSC library",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tsc.gob.hn biblioteca, leyes, entry 883 'Ley de Cinematografía de Honduras', its PDF web/leyes/Decreto-3-2019.pdf (13 pages)",
+     "result": "read whole",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "secapph.gob.hn, www.secapph.gob.hn, cultura.gob.hn, www.sct.gob.hn, dgc.gob.hn, ihcine.gob.hn",
+     "result": "secapph.gob.hn: 'Sitio en construcción'; the rest 502 or Cloudflare 522",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\"Ley de Cinematografía\" Honduras decreto La Gaceta texto PDF FONDECI incentivos fiscales producción audiovisual\"",
+     "result": "named Decreto 3-2019 (La Gaceta 35,117) on portalunico.iaip.gob.hn and the TSC library",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "tsc.gob.hn biblioteca, leyes, entry 883 'Ley de Cinematografía de Honduras', its PDF web/leyes/Decreto-3-2019.pdf (13 pages)",
+     "result": "read whole",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "secapph.gob.hn, www.secapph.gob.hn, cultura.gob.hn, www.sct.gob.hn, dgc.gob.hn, ihcine.gob.hn",
+     "result": "secapph.gob.hn: 'Sitio en construcción'; the rest 502 or Cloudflare 522",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"Honduras convocatoria fondo apoyo producción teatral Secretaría de Cultura Artes y Patrimonio 2025 teatro grupos montos\"",
+     "result": "no SECAPPH call; the CCET 'Escenarios compartidos' 2024 call",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "ccetegucigalpa.org CONVOCATORIA-ESCENARIOS-COMPARTIDOS.pdf",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not researched today; producer-HN.json: the Ley de Cinematografía (2019) created FONDECI (training, promotion, specific projects); only press sources, no series or theatre terms. No Honduran state fund for theatre was found (SECAPPH's site is under construction). The only public call found is a foreign state's cultural centre, for 2024, tied to Spanish plays; a lead on the scale of support, not a Honduran rule."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "secapph.gob.hn, www.secapph.gob.hn, cultura.gob.hn, www.sct.gob.hn, dgc.gob.hn, ihcine.gob.hn",
+     "result": "secapph.gob.hn: 'Sitio en construcción'; the rest 502 or Cloudflare 522",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"Honduras convocatoria fondo apoyo producción teatral Secretaría de Cultura Artes y Patrimonio 2025 teatro grupos montos\"",
+     "result": "no SECAPPH call; the CCET 'Escenarios compartidos' 2024 call",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

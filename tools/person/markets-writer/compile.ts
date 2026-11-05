@@ -19,16 +19,20 @@ import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/mone
  *
  * An agreement gives its country, the languages its scripts are written in (each one a person can be made to speak:
  * identity's languages; read from the writer's research or the country's own, the actor's, where they name it; none
- * where its figures aren't known), the forms it sets terms for (a feature, a pilot, an episode, a short), and either:
+ * where its figures aren't known), the forms it sets terms for (a feature, a pilot, an episode, a short, a play: a play's
+ * agreements came in on 2026-11-04 from the research of a play in every market, l4t), and either:
  * - none, where the research says no agreement sets a writer's pay (it is left to negotiation);
  * - unknown, where the research couldn't find whether an agreement sets it, or its figures (the blockers say so), which
  *   the engine refuses and tells;
  * - its minimums: each for the forms it names, for a kind of script where it sets one by kind (fiction, documentary,
- *   animation), by the tier it sets (the production's budget, the script's running time, the budget an hour of it),
- *   from the date it applies, in the agreement's currency, paid by the script, the minute, the hour or each day the
- *   script was written (a wage floor the research's source says reaches the writer); a share of the budget where the
- *   agreement sets its floor so, under a ceiling an hour. A tier the research leaves to negotiation (a budget under the
- *   agreement's floor) is read as such, never given a figure.
+ *   animation), by the tier it sets (the production's budget, the script's running time, the budget an hour of it; a
+ *   play's theatre's grade, its run's performances, the writer's plays premiered before), from the date it applies, in
+ *   the agreement's currency, paid by the script, the minute, the hour, each day the script was written (a wage floor
+ *   the research's source says reaches the writer) or each performance; a share of the budget where the agreement sets
+ *   its floor so, under a ceiling an hour; so many of its amount where the agreement counts it so (Denmark's salary
+ *   months, Norway's short play at a share of a full one's). A tier the research leaves to negotiation (a budget under
+ *   the agreement's floor) is read as such, never given a figure. A play's minimum that is a share of the takings alone
+ *   (France's SACD, Slovakia's LITA ...) is none: the game keeps no box office, as the UK's royalties aren't modelled.
  * What of a minimum waits for the first day of photography and an agreement's option's terms (a share of the script's
  * minimum for a year, or negotiated) were compiled until 2026-11-04, when they went from the compile, its readings and
  * markets.json: the owner's "Remove spec sales too" left a script paid whole on the first day of photography by the
@@ -53,15 +57,19 @@ export const COUNTRY_FACT = 'person.markets.';
 /** The agreement the screenwriter's engine keeps itself (R-4241, the WGA's MBA); a market's may not take its id. */
 export const KEPT = ['wga'] as const;
 
-export const FORMS = ['feature', 'pilot', 'episode', 'short'] as const;
-/** What a minimum is paid by: the script, each minute of it, each hour of it, each day it was written. */
-export const PERS = ['script', 'minute', 'hour', 'day'] as const;
+/** A play joined the screen's forms on 2026-11-04, when the research of a play in every market found its writers' terms in some. */
+export const FORMS = ['feature', 'pilot', 'episode', 'short', 'play'] as const;
+/** What a minimum is paid by: the script, each minute of it, each hour of it, each day it was written, each performance of a play. */
+export const PERS = ['script', 'minute', 'hour', 'day', 'performance'] as const;
 /** The kinds of script a minimum can be set for, where an agreement sets one by kind. */
 export const KINDS = ['fiction', 'documentary', 'animation'] as const;
-/** What a minimum's tier turns on: the production's budget, the script's minutes, the budget an hour of it. */
-export const TIERS = ['budget', 'minutes', 'hourly'] as const;
-/** What a market's research can leave unknown, as its blockers name it. */
-export const ITEMS = ['agreement', 'fees', 'language', 'union', 'terms', 'none', 'follows'] as const;
+/**
+ * What a minimum's tier turns on: the production's budget, the script's minutes, the budget an hour of it; and a play's:
+ * its theatre's grade (the category an agreement numbers it by), its run's performances, the writer's plays premiered before.
+ */
+export const TIERS = ['budget', 'minutes', 'hourly', 'grade', 'performances', 'premieres'] as const;
+/** What a market's research can leave unknown, as its blockers name it: a play's minimum since 2026-11-04. */
+export const ITEMS = ['agreement', 'fees', 'language', 'union', 'terms', 'none', 'follows', 'play'] as const;
 /** What the research's blockers name that the game no longer reads: an option's terms, since 2026-11-04. */
 export const UNREAD = ['option'] as const;
 /** The blockers that leave an agreement's figures unknown: its fees, whether there is one, whether anything sets the terms, whether another market's reach it. */
@@ -88,6 +96,8 @@ export interface Fee {
   share: string | null;
   /** The most the minimum asks, by the same unit as the amount. */
   cap: string | null;
+  /** How many of the amount the minimum is, where the agreement sets it so (salary months, a short play's share of a full one's). */
+  times: string | null;
 }
 
 export interface Agreement {
@@ -199,7 +209,7 @@ const dateIn = (r: Research, f: Figure, from: unknown): string => {
 /** One minimum, read from the research at its place; or a tier its research leaves to negotiation. */
 export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, forms: readonly Form[]): Fee {
   const m = record(reading, 'a minimum');
-  only(m, ['forms', 'kind', 'when', 'per', 'from', 'dated', 'fig', 'path', 'negotiated', 'share', 'cap'], 'a minimum');
+  only(m, ['forms', 'kind', 'when', 'per', 'from', 'dated', 'fig', 'path', 'negotiated', 'share', 'cap', 'times'], 'a minimum');
   const own = formsOf(m['forms'], forms, "a minimum's forms");
   if (m['kind'] !== undefined && !KINDS.includes(m['kind'] as Kind)) throw new Error(`a minimum is set for ${String(m['kind'])}, a kind the game doesn't read`);
   const kind = (m['kind'] ?? null) as Kind | null;
@@ -212,7 +222,7 @@ export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, for
     const f = figureOf(r, record(m['negotiated'], 'negotiated')['fig'], null);
     if (!/negotia|exempt/i.test(JSON.stringify(f))) throw new Error(`${r.country}'s figure doesn't leave the tier to negotiation`);
     const from = dateIn(r, m['dated'] === undefined ? f : figureOf(r, m['dated'], null), m['from']);
-    return { forms: own, kind, when, per: null, from, amount: null, share: null, cap: null };
+    return { forms: own, kind, when, per: null, from, amount: null, share: null, cap: null, times: null };
   }
   const figure = figureOf(r, m['fig'], ['fees', 'agreement', 'rates']);
   if (!PERS.includes(m['per'] as Per)) throw new Error(`a minimum is paid by ${String(m['per'])}, which the game doesn't read`);
@@ -224,7 +234,8 @@ export function feeOf(r: Research, reading: unknown, currency: CurrencyCode, for
   const share = sh === null ? null : shareOf(numberAt(r, figure, sh['path']), sh['unit']);
   const cap = m['cap'] === undefined ? null : numberAt(r, figure, record(m['cap'], 'a cap')['path']);
   if (cap !== null && !(cap > amount)) throw new Error(`${r.country}'s ceiling is under its floor`);
-  return { forms: own, kind, when, per: m['per'] as Per, from, amount: String(amount), share, cap: cap === null ? null : String(cap) };
+  const times = m['times'] === undefined ? null : String(numberAt(r, figure, record(m['times'], 'a multiple')['path']));
+  return { forms: own, kind, when, per: m['per'] as Per, from, amount: String(amount), share, cap: cap === null ? null : String(cap), times };
 }
 
 /** Whether an agreement's minimums are one to a script: where two share a form and a date, they are apart by a tier. */

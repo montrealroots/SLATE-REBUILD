@@ -43,7 +43,8 @@
    "language": "nl",
    "zone": "Europe/Brussels",
    "agreements": [
-    "be-screen"
+    "be-screen",
+    "be-flemish-stage"
    ]
   },
   "BG": {
@@ -76,6 +77,19 @@
     "bw-screen"
    ]
   },
+  "CA": {
+   "language": "en",
+   "zone": "America/Toronto",
+   "agreements": [
+    "ca-cta-a",
+    "ca-cta-b",
+    "ca-cta-c",
+    "ca-cta-d",
+    "ca-cta-e",
+    "ca-cta-f",
+    "ca-cta-g"
+   ]
+  },
   "CL": {
    "language": "es",
    "zone": "America/Santiago",
@@ -95,6 +109,20 @@
    "zone": "America/Havana",
    "agreements": [
     "cu-stage"
+   ]
+  },
+  "CY": {
+   "language": "el",
+   "zone": "Asia/Nicosia",
+   "agreements": [
+    "cy-thoc"
+   ]
+  },
+  "CZ": {
+   "language": "cs",
+   "zone": "Europe/Prague",
+   "agreements": [
+    "cz-public-theatre"
    ]
   },
   "DE": {
@@ -147,6 +175,13 @@
     "fi-stage",
     "fi-guest",
     "fi-screen"
+   ]
+  },
+  "FO": {
+   "language": "fo",
+   "zone": "Atlantic/Faroe",
+   "agreements": [
+    "fo-national-theatre"
    ]
   },
   "FR": {
@@ -202,6 +237,13 @@
     "in-screen"
    ]
   },
+  "IS": {
+   "language": "is",
+   "zone": "Atlantic/Reykjavik",
+   "agreements": [
+    "is-national-theatre"
+   ]
+  },
   "IT": {
    "language": "it",
    "zone": "Europe/Rome",
@@ -238,6 +280,13 @@
    "zone": "Europe/Vaduz",
    "agreements": [
     "li-film"
+   ]
+  },
+  "LU": {
+   "language": "lb",
+   "zone": "Europe/Luxembourg",
+   "agreements": [
+    "lu-stage"
    ]
   },
   "MS": {
@@ -353,7 +402,8 @@
    "language": "it",
    "zone": "Europe/Vatican",
    "agreements": [
-    "va-screen"
+    "va-screen",
+    "va-stage"
    ]
   },
   "VG": {
@@ -1164,6 +1214,586 @@
    "none": true,
    "minimums": []
   },
+  "be-flemish-stage": {
+   "country": "BE",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       2
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3211.86"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3406.39"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       6
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3600.92"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       7,
+       8
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3795.45"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       9,
+       10
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3989.98"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       11,
+       12
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4182.27"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       13,
+       14
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4372.97"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       16
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4563.68"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       17,
+       18
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4754.39"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       19,
+       20
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4945.09"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       21,
+       22
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5135.8"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       23,
+       24
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5326.51"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       26
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5517.21"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       27,
+       28
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5707.92"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       29,
+       null
+      ],
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5898.63"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       2
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3346.69"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3549.37"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       6
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3752.06"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       7,
+       8
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "3954.76"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       9,
+       10
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4155.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       11,
+       12
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4354.46"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       13,
+       14
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4553.17"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       16
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4751.88"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       17,
+       18
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "4950.59"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       19,
+       20
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5149.31"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       21,
+       22
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5348.02"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       23,
+       24
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5546.73"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       26
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5745.44"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       27,
+       28
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "5944.15"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       29,
+       null
+      ],
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-08-01",
+     "amount": "6142.87"
+    }
+   ]
+  },
   "bg-foreign-film": {
    "country": "BG",
    "currency": "EUR",
@@ -1425,6 +2055,538 @@
    "none": true,
    "minimums": []
   },
+  "ca-cta-a": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1255.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1255.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1293"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1293"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1332"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1332"
+    }
+   ]
+  },
+  "ca-cta-b": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1208.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1208.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1244.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1244.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1282"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1282"
+    }
+   ]
+  },
+  "ca-cta-c": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1143"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1143"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1177.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1177.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1213"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1213"
+    }
+   ]
+  },
+  "ca-cta-d": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1049"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "1049"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1080.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "1080.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1113"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1113"
+    }
+   ]
+  },
+  "ca-cta-e": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "966"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "966"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "995"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "995"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1025"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "1025"
+    }
+   ]
+  },
+  "ca-cta-f": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "867"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "867"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "893.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "893.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "920.25"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "920.25"
+    }
+   ]
+  },
+  "ca-cta-g": {
+   "country": "CA",
+   "currency": "CAD",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "730.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2024-06-24",
+     "amount": "730.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "752.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2025-06-23",
+     "amount": "752.75"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "775.5"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "week",
+     "rehearsal": true,
+     "with": [
+      "week"
+     ],
+     "when": {},
+     "from": "2026-06-22",
+     "amount": "775.5"
+    }
+   ]
+  },
   "cl-screen": {
    "country": "CL",
    "currency": null,
@@ -1483,6 +2645,408 @@
      "when": {},
      "from": "2026-07-01",
      "amount": "4985"
+    }
+   ]
+  },
+  "cy-thoc": {
+   "country": "CY",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       1
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1490"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       2,
+       3
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1555"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       4,
+       5
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1620"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       6,
+       7
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1685"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       8,
+       9
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1750"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       11
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "1920"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       12,
+       13
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2005"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       14,
+       15
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2090"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       16,
+       17
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2175"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       18,
+       19
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2340"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       20,
+       21
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2440"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       22,
+       23
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2540"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       24,
+       25
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2640"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       26,
+       28
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "2935"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       29,
+       31
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "3075"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       32,
+       34
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "3215"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       35,
+       37
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "3355"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       38,
+       null
+      ],
+      "length": [
+       3,
+       null
+      ]
+     },
+     "from": "2026-01-01",
+     "amount": "3495"
+    }
+   ]
+  },
+  "cz-public-theatre": {
+   "country": "CZ",
+   "currency": "CZK",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": "roles",
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-04-01",
+     "amount": "27030"
+    },
+    {
+     "medium": "stage",
+     "role": "lead-or-demanding",
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-04-01",
+     "amount": "29090"
+    },
+    {
+     "medium": "stage",
+     "role": "most-demanding",
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-04-01",
+     "amount": "31230"
+    },
+    {
+     "medium": "stage",
+     "role": "highest-level",
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {},
+     "from": "2026-04-01",
+     "amount": "33590"
     }
    ]
   },
@@ -3078,6 +4642,121 @@
    "none": true,
    "minimums": []
   },
+  "fo-national-theatre": {
+   "country": "FO",
+   "currency": "DKK",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       0
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "31350.51"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       1,
+       1
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "32402.29"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       2,
+       2
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "33454.06"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       3
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "34505.84"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       4,
+       4
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "35557.62"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       5
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "36609.4"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       6,
+       null
+      ]
+     },
+     "from": "2024-10-01",
+     "amount": "37661.16"
+    }
+   ]
+  },
   "fr-film": {
    "country": "FR",
    "currency": "EUR",
@@ -3892,6 +5571,738 @@
    "none": true,
    "minimums": []
   },
+  "is-national-theatre": {
+   "country": "IS",
+   "currency": "ISK",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       0
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "629215"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       1,
+       2
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "655239"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "665920"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       9
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "682568"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       14
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "728608"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       19
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "745956"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       20,
+       24
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "758215"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       39
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "796125"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       40,
+       null
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2024-04-01",
+     "amount": "1137042"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       0
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "653559"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       1,
+       2
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "679583"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "690000"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       9
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "707250"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       14
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "754716"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       19
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "772685"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       20,
+       24
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "784752"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       39
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "823990"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       40,
+       null
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2025-04-01",
+     "amount": "1176838"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       0
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "678519"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       1,
+       2
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "704677"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "714951"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       9
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "732825"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       14
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "781759"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       19
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "800372"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       20,
+       24
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "812218"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       29
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "852829"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       30,
+       39
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "895471"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       40,
+       null
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2026-04-01",
+     "amount": "1218028"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       0,
+       0
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "704601"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       1,
+       2
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "730778"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       3,
+       4
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "740804"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       5,
+       9
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "759325"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       10,
+       14
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "809771"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       15,
+       19
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "829051"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       20,
+       24
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "840646"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       25,
+       29
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "882678"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       30,
+       39
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "926812"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "month",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "years": [
+       40,
+       null
+      ],
+      "length": [
+       2,
+       null
+      ]
+     },
+     "from": "2027-04-01",
+     "amount": "1260659"
+    }
+   ]
+  },
   "it-screen": {
    "country": "IT",
    "currency": "EUR",
@@ -4323,6 +6734,58 @@
    ],
    "none": true,
    "minimums": []
+  },
+  "lu-stage": {
+   "country": "LU",
+   "currency": "EUR",
+   "media": [
+    "stage"
+   ],
+   "none": false,
+   "minimums": [
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       1,
+       3
+      ]
+     },
+     "from": "2026-06-01",
+     "amount": "376.9"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "performance",
+     "rehearsal": false,
+     "with": null,
+     "when": {
+      "length": [
+       4,
+       null
+      ]
+     },
+     "from": "2026-06-01",
+     "amount": "323.06"
+    },
+    {
+     "medium": "stage",
+     "role": null,
+     "per": "day",
+     "rehearsal": true,
+     "with": [
+      "performance"
+     ],
+     "when": {},
+     "from": "2026-06-01",
+     "amount": "236.92"
+    }
+   ]
   },
   "ms-all": {
    "country": "MS",
@@ -7043,6 +9506,15 @@
    "media": [
     "film",
     "television"
+   ],
+   "none": true,
+   "minimums": []
+  },
+  "va-stage": {
+   "country": "VA",
+   "currency": null,
+   "media": [
+    "stage"
    ],
    "none": true,
    "minimums": []
@@ -12340,14 +14812,17 @@
   "AD": [],
   "AE": [
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "AF": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "AG": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "AI": [
    "none",
@@ -12355,21 +14830,28 @@
   ],
   "AL": [
    "union",
-   "rates"
+   "rates",
+   "stage"
   ],
   "AM": [
-   "none"
+   "none",
+   "stage"
   ],
   "AN": [
-   "successors"
+   "successors",
+   "stage"
   ],
   "AO": [
-   "rates"
+   "rates",
+   "stage"
   ],
-  "AQ": [],
+  "AQ": [
+   "stage"
+  ],
   "AR": [],
   "AS": [
-   "union"
+   "union",
+   "stage"
   ],
   "AT": [
    "market"
@@ -12382,146 +14864,181 @@
   "AW": [
    "none",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "AX": [],
   "AZ": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "BA": [
    "rates",
-   "language"
+   "language",
+   "stage"
   ],
   "BB": [
    "rates",
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "BD": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "BE": [],
   "BF": [
    "rates",
-   "language"
+   "language",
+   "stage"
   ],
   "BG": [
-   "market"
+   "market",
+   "stage"
   ],
   "BH": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "BI": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "BJ": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "BL": [],
   "BM": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "BN": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "BO": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "BQ": [
    "market",
-   "terms"
+   "terms",
+   "stage"
   ],
   "BR": [
    "rates"
   ],
   "BS": [
    "none",
-   "language"
+   "language",
+   "stage"
   ],
   "BT": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "BV": [
-   "none"
+   "none",
+   "stage"
   ],
   "BW": [
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "BY": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "BZ": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
+  "CA": [],
   "CC": [],
   "CD": [
    "union",
-   "none"
+   "none",
+   "stage"
   ],
   "CF": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "CG": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "CH": [
-   "market"
+   "market",
+   "stage"
   ],
   "CI": [
    "rates",
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "CK": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "CL": [
    "language",
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "CM": [
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
   "CN": [
    "union",
    "agreements",
-   "rates"
+   "rates",
+   "stage"
   ],
   "CO": [
    "rates"
   ],
   "CR": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
-  "CS": [],
+  "CS": [
+   "stage"
+  ],
   "CU": [
    "rates",
    "union",
    "market"
   ],
   "CV": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "CW": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "CX": [],
   "CY": [
@@ -12534,58 +15051,70 @@
   "DE": [],
   "DJ": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "DK": [],
   "DM": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "DO": [
    "rates",
-   "union"
+   "union",
+   "stage"
   ],
   "DZ": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "EC": [
    "agreements",
    "rates"
   ],
   "EE": [
-   "market"
+   "market",
+   "stage"
   ],
   "EG": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "EH": [
    "rates",
    "none",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "ER": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "ES": [],
   "ET": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "FI": [
    "language"
   ],
   "FJ": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "FK": [
    "terms",
-   "language"
+   "language",
+   "stage"
   ],
   "FM": [
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
   "FO": [
    "rates"
@@ -12594,14 +15123,17 @@
    "agreements"
   ],
   "GA": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "GD": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "GE": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "GF": [
    "market"
@@ -12609,33 +15141,39 @@
   "GG": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "GH": [
    "terms",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "GI": [
    "none"
   ],
   "GL": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "GM": [
    "none",
-   "market"
+   "market",
+   "stage"
   ],
   "GN": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "GP": [],
   "GQ": [
    "rates",
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "GR": [
    "rates",
@@ -12643,46 +15181,59 @@
    "market"
   ],
   "GS": [
-   "language"
+   "language",
+   "stage"
   ],
   "GT": [
    "rates",
    "language",
-   "none"
+   "none",
+   "stage"
   ],
   "GU": [
    "none",
-   "language"
+   "language",
+   "stage"
   ],
   "GW": [
    "rates",
-   "language"
+   "language",
+   "stage"
   ],
   "GY": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "HK": [
-   "language"
+   "language",
+   "stage"
   ],
-  "HM": [],
+  "HM": [
+   "stage"
+  ],
   "HN": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "HR": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "HT": [
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
   "HU": [
    "market",
-   "none"
+   "none",
+   "stage"
   ],
   "ID": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "IE": [
    "rates",
@@ -12691,21 +15242,27 @@
   "IL": [],
   "IM": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "IN": [
    "none",
    "union",
    "agreements",
-   "language"
+   "language",
+   "stage"
   ],
-  "IO": [],
+  "IO": [
+   "stage"
+  ],
   "IQ": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "IR": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "IS": [
    "market"
@@ -12714,7 +15271,8 @@
   "JE": [
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "JM": [
    "language",
@@ -12723,7 +15281,8 @@
   "JO": [
    "rates",
    "market",
-   "union"
+   "union",
+   "stage"
   ],
   "JP": [
    "rates",
@@ -12733,134 +15292,168 @@
    "union",
    "market",
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
   "KG": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "KH": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "KI": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "KM": [
    "rates",
    "language",
-   "none"
+   "none",
+   "stage"
   ],
   "KN": [
    "none",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "KP": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "KR": [
    "rates",
-   "union"
+   "union",
+   "stage"
   ],
   "KW": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "KY": [
-   "none"
+   "none",
+   "stage"
   ],
   "KZ": [
    "rates",
-   "union"
+   "union",
+   "stage"
   ],
   "LA": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "LB": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "LC": [
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
-  "LI": [],
+  "LI": [
+   "stage"
+  ],
   "LK": [
    "union",
-   "rates"
+   "rates",
+   "stage"
   ],
   "LR": [
    "rates",
    "market",
-   "union"
+   "union",
+   "stage"
   ],
   "LS": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "LT": [
    "rates",
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "LU": [
    "agreements",
    "market"
   ],
   "LV": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "LY": [
    "rates",
    "market",
-   "none"
+   "none",
+   "stage"
   ],
   "MA": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "MC": [
    "market"
   ],
   "MD": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "ME": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "MF": [],
   "MG": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "MH": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "MK": [
    "rates",
-   "language"
+   "language",
+   "stage"
   ],
   "ML": [
    "union",
-   "none"
+   "none",
+   "stage"
   ],
   "MM": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "MN": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "MO": [
-   "market"
+   "market",
+   "stage"
   ],
   "MP": [
-   "union"
+   "union",
+   "stage"
   ],
   "MQ": [],
   "MR": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "MS": [
    "none"
@@ -12868,19 +15461,23 @@
   "MT": [
    "union",
    "market",
-   "none"
+   "none",
+   "stage"
   ],
   "MU": [
    "union",
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "MV": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "MW": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "MX": [
    "rates",
@@ -12889,20 +15486,24 @@
   "MY": [
    "union",
    "market",
-   "none"
+   "none",
+   "stage"
   ],
   "MZ": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "NA": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "NC": [
    "market"
   ],
   "NE": [
    "union",
-   "rates"
+   "rates",
+   "stage"
   ],
   "NF": [
    "language",
@@ -12910,58 +15511,72 @@
   ],
   "NG": [
    "union",
-   "none"
+   "none",
+   "stage"
   ],
   "NI": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "NL": [],
   "NO": [],
   "NP": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "NR": [
    "rates",
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "NU": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "NZ": [
    "agreements"
   ],
   "OM": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "PA": [
    "rates",
-   "language"
+   "language",
+   "stage"
   ],
-  "PE": [],
+  "PE": [
+   "stage"
+  ],
   "PF": [
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "PG": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "PH": [
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "PK": [
    "rates",
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "PL": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "PM": [
    "market"
@@ -12971,62 +15586,76 @@
   ],
   "PR": [
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "PS": [
    "union",
    "market",
-   "rates"
+   "rates",
+   "stage"
   ],
   "PT": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "PW": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "PY": [
    "union",
    "market",
-   "rates"
+   "rates",
+   "stage"
   ],
   "QA": [
-   "agreements"
+   "agreements",
+   "stage"
   ],
   "RE": [
    "market"
   ],
   "RO": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "RS": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "RU": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "RW": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "SA": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "SB": [
    "rates",
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "SC": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "SD": [
    "terms",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "SE": [
    "rates"
@@ -13034,182 +15663,228 @@
   "SG": [
    "rates",
    "language",
-   "none"
+   "none",
+   "stage"
   ],
   "SH": [
    "none",
    "language"
   ],
   "SI": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "SJ": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "SK": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "SL": [
    "rates",
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "SM": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "SN": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "SO": [
    "rates",
-   "none"
+   "none",
+   "stage"
   ],
   "SR": [
    "none",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "SS": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "ST": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "SV": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "SX": [
-   "union"
+   "union",
+   "stage"
   ],
   "SY": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "SZ": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "TC": [
-   "none"
+   "none",
+   "stage"
   ],
   "TD": [
    "union",
-   "rates"
+   "rates",
+   "stage"
   ],
   "TF": [
    "terms",
-   "language"
+   "language",
+   "stage"
   ],
   "TG": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "TH": [
-   "market"
+   "market",
+   "stage"
   ],
   "TJ": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "TK": [
    "language",
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "TL": [
    "terms",
-   "market"
+   "market",
+   "stage"
   ],
   "TM": [
    "rates",
    "language",
-   "none"
+   "none",
+   "stage"
   ],
   "TN": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "TO": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "TR": [
-   "market"
+   "market",
+   "stage"
   ],
   "TT": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "TV": [
    "rates",
    "union",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "TW": [
    "agreements",
    "language",
-   "market"
+   "market",
+   "stage"
   ],
   "TZ": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "UA": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "UG": [
    "union",
-   "none"
+   "none",
+   "stage"
   ],
-  "UM": [],
+  "UM": [
+   "stage"
+  ],
   "UY": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "UZ": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "VA": [],
   "VC": [
    "agreements",
-   "market"
+   "market",
+   "stage"
   ],
   "VE": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "VG": [
    "none"
   ],
   "VI": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "VN": [
    "union",
    "market",
-   "none"
+   "none",
+   "stage"
   ],
   "VU": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ],
   "WF": [
    "none",
-   "market"
+   "market",
+   "stage"
   ],
   "WS": [
    "union",
-   "market"
+   "market",
+   "stage"
   ],
   "XK": [
-   "rates"
+   "rates",
+   "stage"
   ],
   "YE": [
-   "terms"
+   "terms",
+   "stage"
   ],
   "YT": [],
   "ZA": [
@@ -13218,11 +15893,13 @@
   "ZM": [
    "union",
    "none",
-   "market"
+   "market",
+   "stage"
   ],
   "ZW": [
    "rates",
-   "market"
+   "market",
+   "stage"
   ]
  }
 }

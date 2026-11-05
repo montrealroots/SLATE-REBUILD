@@ -91,10 +91,49 @@ export interface Market {
   zone: string | null;
   /** Whether its incentive is paid only to a production from abroad, as its research's own words limit it. */
   foreignOnly: boolean;
+  /** What a series and a play made there can draw on. */
+  series: Terms;
+  stage: Terms;
 }
 export type Markets = Record<string, Market>;
 
+/** The formats a market's research reads apart from a film: a series and a play. */
+export const PARTS = ['series', 'stage'] as const;
+export type Part = (typeof PARTS)[number];
+/** What a series' or a play's research seeks (its blockers name it `<part>.<item>`): its incentive, its fund, a series' fee cap, and how it fares. */
+export const PART_ITEMS: Readonly<Record<Part, readonly PartItem[]>> = { series: ['incentive', 'fund', 'feecap', 'outcomes'], stage: ['incentive', 'fund', 'outcomes'] };
+export type PartItem = 'incentive' | 'fund' | 'feecap' | 'outcomes';
+/** What a series' incentive may set its terms by: each episode, each hour, each minute. */
+export const UNITS = ['episode', 'hour', 'minute'] as const;
+export type Unit = (typeof UNITS)[number];
+/**
+ * An incentive for a series or a play: its tiers, by the budget (or, where it sets its terms `per` episode, hour or minute,
+ * by the budget of each, its most each one's); nothing below its `least` budget or under its least episodes or
+ * minutes an episode; at most its `most` in all.
+ */
+export interface Credit {
+  tiers: Tier[];
+  per: Unit | null;
+  least: number | null;
+  most: number | null;
+  episodes: number | null;
+  minutes: number | null;
+  /** The currency its tiers, least and most are set in, where it isn't the market's. */
+  currency?: CurrencyCode;
+}
+/** What a series or a play can draw on in a market, as a film's are, and what its research couldn't find. */
+export interface Terms {
+  fund: Fund | null;
+  aid: Tier[];
+  credit: Credit | null;
+  foreignOnly: boolean;
+  fees: Tier[][];
+  unknown: PartItem[];
+}
+
 interface Figure {
+  /** A series' or a play's figure's part: which of the two it is of. */
+  part?: string;
   item: string;
   value: unknown;
   /** What each of its sources (by its place in the file's) said of it. */
@@ -106,11 +145,12 @@ export interface Research {
   blockers: { item: string }[];
   sources?: { kind: string }[];
 }
-/** The figures a reading may point into: the market's own, and the calibration's. */
+/** The figures a reading may point into: the market's own, and the calibration's; a series' or a play's reading, its film's (`in: "film"`) too. */
 export interface Sources {
   country: string;
   own: Research;
   calibration: Research;
+  film?: Research;
 }
 interface Register {
   entries: { fact: string; value?: { file?: string; sha256?: string }; attempts?: { result: string }[] }[];
@@ -125,12 +165,13 @@ const only = (m: Record<string, unknown>, keys: readonly string[], what: string)
   for (const k of Object.keys(m)) if (!keys.includes(k)) throw new Error(`${what} names ${k}, which the game doesn't read`);
 };
 
-/** The figure a reading points at: the market's own, or (`in: "calibration"`) the calibration's. */
+/** The figure a reading points at: the market's own, or (`in: "calibration"`) the calibration's, or (`in: "film"`, a series' or a play's reading) its film's. */
 export function figureOf(s: Sources, at: Record<string, unknown>): Figure {
-  const calibrated = at['in'] === 'calibration';
-  if (at['in'] !== undefined && !calibrated) throw new Error(`a figure is the market's own or the calibration's, not ${String(at['in'])}'s`);
-  const f = typeof at['fig'] === 'number' ? (calibrated ? s.calibration : s.own).figures[at['fig']] : undefined;
-  if (f === undefined) throw new Error(`${s.country} has no ${calibrated ? 'calibration ' : ''}figure ${String(at['fig'])}`);
+  const where = at['in'] ?? 'own';
+  const from = where === 'own' ? s.own : where === 'calibration' ? s.calibration : where === 'film' ? s.film : undefined;
+  if (from === undefined) throw new Error(`a figure is the market's own or the calibration's, not ${String(at['in'])}'s`);
+  const f = typeof at['fig'] === 'number' ? from.figures[at['fig']] : undefined;
+  if (f === undefined) throw new Error(`${s.country} has no ${where === 'own' ? '' : `${String(where)} `}figure ${String(at['fig'])}`);
   return f;
 }
 
@@ -416,9 +457,9 @@ export function zoneIn(root: string, cc: string, zones: ReadonlySet<string>): st
 }
 
 /** A market, as its reading reads its research. */
-export function marketOf(s: Sources, reading: unknown): Omit<Market, 'zone'> {
+export function marketOf(s: Sources, reading: unknown): Omit<Market, 'zone' | Part> {
   const m = record(reading, `the reading of ${s.country}`);
-  only(m, ['currency', 'fund', 'aid', 'credit', 'foreignOnly', 'fees', 'release'], `the reading of ${s.country}`);
+  only(m, ['currency', 'fund', 'aid', 'credit', 'foreignOnly', 'fees', 'release', ...PARTS], `the reading of ${s.country}`);
   const own = (countries as Record<string, { currency: string }>)[s.country]?.currency;
   const currency = String(m['currency'] ?? own);
   if (!isCurrency(currency)) throw new Error(`${s.country} pays in ${currency}, which isn't a currency`);
@@ -453,6 +494,98 @@ export function readResearch(root: string, register: Register, cc: string): { re
   return { research, blocked: blocker !== undefined };
 }
 
+/** Where a series' and a play's research is kept beside the UK's (tvstage-<CC>.json), and the suffix of its register facts. */
+export const TVSTAGE = 'research/sources/person/work';
+export const TV = '.tvstage';
+
+/** The items a series' or a play's blockers name for a part (`<part>.<item>`), each once, in the research's order; refused for one it doesn't seek. */
+export function partUnknownOf(blockers: readonly { item: string }[], part: Part): PartItem[] {
+  const out: PartItem[] = [];
+  for (const { item } of blockers) {
+    const [p, i, ...rest] = item.split('.');
+    if (rest.length > 0 || !PARTS.includes(p as Part) || !PART_ITEMS[p as Part].includes(i as PartItem)) throw new Error(`a blocker names ${item}, which isn't a fact a series' or a play's research seeks`);
+    if (p === part && !out.includes(i as PartItem)) out.push(i as PartItem);
+  }
+  return out;
+}
+
+/** A count a reading gives (episodes, minutes): a whole number at a place in its figure, or written in the reading and standing in it. */
+export function countOf(r: Reading, v: unknown, what: string): number {
+  const fig = figureFor(r, what);
+  const n = Array.isArray(v) ? at(fig.value, v as (string | number)[]) : v;
+  if (!Number.isSafeInteger(n) || (n as number) < 1) throw new Error(`${r.s.country}'s ${what} isn't a count`);
+  if (!Array.isArray(v) && !stands(fig, n as number, 0, false)) throw new Error(`${r.s.country}'s ${what} ${String(n)} doesn't stand in its figure`);
+  return n as number;
+}
+
+const CREDIT_KEYS = ['fig', 'in', 'tiers', 'per', 'least', 'most', 'episodes', 'minutes'];
+
+/**
+ * A series' or a play's incentive: tiers as a film's (or none, `{none}`), or (`{tiers, ...}`) tiers with the terms a
+ * series' sets: its tiers by the budget of each episode, hour or minute (`per`), its least budget and most in all (each
+ * an amount standing in its figure, in its tiers' currency), its least episodes and minutes an episode (a series' alone);
+ * null where it isn't given.
+ */
+export function partCreditOf(s: Sources, currency: CurrencyCode, reading: unknown, part: Part): Credit | null {
+  if (reading === undefined) return null;
+  const plain = { per: null, least: null, most: null, episodes: null, minutes: null };
+  if (Array.isArray(reading) || Object.hasOwn(Object(reading), 'none')) return { tiers: creditOf(s, currency, reading) as Tier[], ...plain };
+  const c = record(reading, `${s.country}'s ${part} incentive`);
+  only(c, CREDIT_KEYS, `${s.country}'s ${part} incentive`);
+  if (!Array.isArray(c['tiers'])) throw new Error(`${s.country}'s ${part} incentive has its tiers`);
+  const tiers = creditOf(s, currency, c['tiers']) as Tier[];
+  const per = (c['per'] ?? null) as Unit | null;
+  if (per !== null && !UNITS.includes(per)) throw new Error(`${s.country}'s ${part} incentive is set by the episode, the hour or the minute, not ${String(per)}`);
+  if (part === 'stage' && [c['per'], c['episodes'], c['minutes']].some((x) => x !== undefined)) throw new Error(`a play has no episodes`);
+  const set = tiers[0]?.currency;
+  const r: Reading = { s, currency: set ?? currency, fig: c['fig'] === undefined ? null : figureOf(s, c) };
+  const amountAt = (k: string) => (c[k] === undefined ? null : valueOf(r, c[k], 'amount', k));
+  const countAt = (k: string) => (c[k] === undefined ? null : countOf(r, c[k], k));
+  const out: Credit = { tiers, per, least: amountAt('least'), most: amountAt('most'), episodes: countAt('episodes'), minutes: countAt('minutes'), ...(set === undefined ? {} : { currency: set }) };
+  if (tiers.length === 0 && Object.values(out).some((x) => x !== null && !Array.isArray(x))) throw new Error(`${s.country}'s ${part} incentive pays nothing, so it sets no terms`);
+  return out;
+}
+
+const TERMS_KEYS = ['fund', 'aid', 'credit', 'foreignOnly', 'fees'];
+
+/**
+ * A series' or a play's terms in a market, read as a film's are from its own research (tvstage-<CC>.json; its film's
+ * with `in: "film"`), each item it seeks read or blocked, never both, never neither; how it fares is always blocked, the
+ * game's own reading standing in. A play's research seeks no fee cap.
+ */
+export function termsOf(s: Sources, currency: CurrencyCode, reading: unknown, part: Part): Terms {
+  const r = reading === undefined ? {} : record(reading, `the reading of ${s.country}'s ${part}`);
+  only(r, TERMS_KEYS, `the reading of ${s.country}'s ${part}`);
+  if (part === 'stage' && r['fees'] !== undefined) throw new Error("a play's research seeks no fee cap");
+  const aid = r['aid'] === undefined ? [] : tiersOf(s, currency, r['aid'], 'aid');
+  const fund = fundOf(s, currency, r['fund'] ?? null, aid);
+  if (fund === null && aid.length > 0) throw new Error(`${s.country}'s cap on public aid holds no fund`);
+  const credit = partCreditOf(s, currency, r['credit'], part);
+  const fees = r['fees'] ?? [];
+  if (!Array.isArray(fees)) throw new Error(`${s.country}'s fees are a list`);
+  const limit = r['foreignOnly'];
+  if ((Object(limit) as Record<string, unknown>)['in'] !== undefined) throw new Error(`${s.country}'s ${part} limit is read in its own research`);
+  if (limit !== undefined && figureOf(s, record(limit, `${s.country}'s limit`)).part !== part) throw new Error(`${s.country}'s figure ${String((limit as Record<string, unknown>)['fig'])} isn't its ${part}'s`);
+  const unknown = partUnknownOf(s.own.blockers, part);
+  const read: Record<PartItem, boolean> = { incentive: credit !== null, fund: fund !== null, feecap: r['fees'] !== undefined, outcomes: false };
+  for (const item of PART_ITEMS[part]) if (read[item] === unknown.includes(item)) throw new Error(`${s.country}'s ${part} ${item} is ${read[item] ? 'read and blocked both' : 'neither read nor blocked'}`);
+  return { fund, aid, credit, foreignOnly: foreignOnlyOf(s, limit, credit?.tiers ?? null), fees: fees.map((f) => tiersOf(s, currency, f, 'fee')), unknown };
+}
+
+/** A market's series' and play's research, as the register cites it (person.markets.producer.<CC>.tvstage); where it found nothing, every item its blockers' (person.markets.producer.blocked.<CC>.tvstage). */
+export function readTvstage(root: string, register: Register, cc: string): Research {
+  const blocker = register.entries.some((e) => e.fact === `${BLOCKED}${cc}${TV}`);
+  if (!register.entries.some((e) => e.fact === `${FACT}${cc}${TV}`)) {
+    if (!blocker) throw new Error(`the register holds no research of ${cc}'s series and plays`);
+    return { country: cc, figures: [], blockers: PARTS.flatMap((p) => PART_ITEMS[p].map((i) => ({ item: `${p}.${i}` }))) };
+  }
+  const file = `${TVSTAGE}/tvstage-${cc}.json`;
+  const research = cited(root, register, `${FACT}${cc}${TV}`, file);
+  if (research.country !== cc) throw new Error(`${file} is ${research.country}'s`);
+  if (blocker !== research.blockers.length > 0) throw new Error(blocker ? `the register holds ${cc}'s series' and plays' blockers, which its research doesn't` : `${cc}'s series' and plays' research has blockers the register doesn't hold`);
+  return research;
+}
+
 /** Every market the research holds, read as the readings say; a file without a reading, or a reading without a file, is refused. */
 export function readMarkets(root: string): Markets {
   const read = (path: string) => JSON.parse(readFileSync(join(root, path), 'utf8')) as unknown;
@@ -475,7 +608,9 @@ export function readMarkets(root: string): Markets {
     }
     const market = marketOf({ country: cc, own: research, calibration }, readings[cc]);
     if (blocked !== market.unknown.length > 0) throw new Error(blocked ? `the register holds ${cc}'s blockers, which its research doesn't` : `${cc}'s research has blockers the register doesn't hold`);
-    out[cc] = { ...market, zone: zoneIn(root, cc, zones) };
+    const parts = { country: cc, own: readTvstage(root, register, cc), calibration, film: research };
+    const reading = readings[cc] as Record<string, unknown>;
+    out[cc] = { ...market, series: termsOf(parts, market.currency, reading['series'], 'series'), stage: termsOf(parts, market.currency, reading['stage'], 'stage'), zone: zoneIn(root, cc, zones) };
   }
   return out;
 }

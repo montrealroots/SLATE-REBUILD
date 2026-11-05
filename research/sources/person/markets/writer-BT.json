@@ -16,6 +16,17 @@
     "trade-press": "none found || retry 2026-11-01: none quoting the ToR",
     "archive": "not tried: no institution URL to look up || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://bicma.gov.bt/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Bhutan (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: WebSearch (standard) 'Bhutan theatre drama actors payment Royal Academy of Performing Arts playwright stage play Thimphu' (No pay for a stage director, playwright or actor: results were BBS items on theatre waning (read, below), a national student drama festival, a Grease musical at the Royal Textile Academy, a review of The Road to Mecca at the Nehru-Wangchuck Cultural Centre, a drayang wiki page)",
+    "institution": "2026-11-04: Department of Culture and Dzongkha Development https://www.dcdd.gov.bt/ and the Royal Academy of Performing Arts https://www.rapa.gov.bt/ (dcdd.gov.bt: proxy CONNECT tunnel failed (502); rapa.gov.bt: connection reset (curl 35). Neither read.)",
+    "official-register": "2026-11-04: National Assembly Acts list (nab.gov.bt) and the Depository of Laws (legislation.gov.bt) for a labour or wage rule reaching performers (see the producer's official-register attempt) (nab.gov.bt TLS name mismatch, not read; legislation.gov.bt reset. No rule read.)",
+    "trade-press": "2026-11-04: BBS 'Theatre arts struggling to exist' and the Grease item; Kuensel search (see the producer's trade-press attempt) (A theatre founder (Happy Valley Theatre) and the Director of Culture quoted on waning theatre; no fee, wage or royalty for director, playwright or actor.)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43 'bt,gov,dcdd)/', 'bt,gov,rapa)/' and 'bt,gov,moice)/' (filtered for wage, labour, employ, regulation, pdf); 'bt,gov,nab)/' (Acts list) (dcdd and rapa: no captures. MoICE: many captures; the only PDF is a promotion notification, nothing on wages. NAB: Acts list capture is a call-centre template page. Nothing found.)"
+   }
   }
  ]
 }

@@ -1,0 +1,139 @@
+{
+ "topic": "markets.PH.series-and-stage",
+ "read": "2026-11-04",
+ "country": "PH",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://fdcp.ph/news/fpi2026-c2-call",
+   "title": "FDCP: Film Philippines Incentives 2026 Cycle 2 Now Open for Applications",
+   "read": "2026-11-04",
+   "said": "The FPO supports international film and audiovisual projects through two key incentives, the Film Location Incentive Program (FLIP) and the International Co-Production Fund (ICOF). FLIP provides a 20% cash rebate of up to ₱25 million ($424,000) for eligible international projects in partnership with Filipino audiovisual service providers, while projects that prominently showcase Filipino culture and creativity may also qualify for a 5% cultural bonus, increasing total rebate to ₱30 million ($508,000).",
+   "file": "ph-fpi2026.html",
+   "sha256": "4f8c1f066c9cebed593a914ea54464db9edf8172df719664b5c927967ca70c22"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Whether a series qualifies, and on what threshold, is in the FLIP guidelines, not on the pages read (the FLIP page renders its text by script).",
+   "verdict": "partial",
+   "value": {
+    "rate": 0.2,
+    "capPHP": 25000000,
+    "culturalBonus": 0.05,
+    "capWithBonusPHP": 30000000,
+    "eligible": "international audiovisual projects with a Philippine service company"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The FPO supports international film and audiovisual projects through two key incentives, the Film Location Incentive Program (FLIP) and the International Co-Production Fund (ICOF). FLIP provides a 20% cash rebate of up to ₱25 million ($424,000) for eligible international projects in partnership with Filipino audiovisual service providers, while projects that prominently showcase Filipino culture and creativity may also qualify for a 5% cultural bonus, increasing total rebate to ₱30 million ($508,000)."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fdcp.ph FLIP page and FPI 2026 cycle 2 news",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"FDCP Film Location Incentive Program guidelines pdf eligible projects television series episodes minimum qualified Philippine spend\"",
+     "result": "no guidelines PDF; leads only (a blog citing PHP 24 million for a TV/VOD series of 8+ episodes, EP's map PHP 3 million an episode), not read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Whether a series qualifies, and on what threshold, is in the FLIP guidelines, not on the pages read (the FLIP page renders its text by script)."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fdcp.ph: home, FLIP page, issuances page, and its JSON:API (/jsonapi, /jsonapi/node/program and /jsonapi/node/program_subpage, all 43 program subpages, searched for series, episode, television and theatre)",
+     "result": "no series fund; film funds only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fdcp.ph: home, FLIP page, issuances page, and its JSON:API (/jsonapi, /jsonapi/node/program and /jsonapi/node/program_subpage, all 43 program subpages, searched for series, episode, television and theatre)",
+     "result": "no series fund; film funds only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ptvnews.ph and www.ptni.gov.ph",
+     "result": "ptvnews: news only; ptni.gov.ph: connection reset",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ncca.gov.ph/grants/ and /ncca-competitive-grants-program/",
+     "result": "CONNECT tunnel failed (502) both times",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 'NCCA competitive grants program 2026 guidelines theater production grant amount maximum eligibility Philippines'",
+     "result": "press on the 2027 call (philstar.com, thepost.ph, read): accreditation required, no amounts; a listing names a Dramatic Arts grant (item 6, not in this todo)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Lawphil copies of RA 11904 and RA 11996 read whole",
+     "result": "RA 11904 s. 15 incentive route; RA 11996 coverage movie and TV only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ncca.gov.ph/grants",
+     "result": "CONNECT tunnel failed, 502",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

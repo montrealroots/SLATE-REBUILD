@@ -11,12 +11,15 @@ import { at, dated, figureOf, range, type Range, type Research } from '../market
  * read, and the game's reading of them (tools/person/markets-director/readings.json): the agreements a film or an
  * episode is directed under there, and where in the research each figure stands.
  *
- * An agreement gives the forms it covers (a feature, an hour or a half-hour episode), its currency, its minimum fees
- * and the periods it guarantees. A fee is paid by the job, as a share of the budget, by the minute of the film, or by
+ * An agreement gives the forms it covers (a feature, an hour or a half-hour episode, a play on stage), its currency,
+ * its minimum fees and the periods it guarantees. A fee is paid by the job, as a share of the budget, by the minute of the film, or by
  * the day, half-day, week, month or hour of the engagement's prep, shoot or cut; it holds in a tier (the budget, the
  * director's years, the film's minutes, the engagement's days, the year the job starts in, where an agreement's tiers
  * move each year) and may pay only some units of its count (the 61st minute
- * on); its amounts step by date. A period is the prep and shoot together, the cut, or the prep alone, in days. Every amount, share,
+ * on); its amounts step by date, and may be a stated multiple of them (a guest director's minimum as so many months of
+ * the lowest monthly pay, a salary as a coefficient of a base rate), the multiple read from the research as the amount
+ * is and the product left to the engine, the research holding the numbers the text states and never their product. A
+ * period is the prep and shoot together, the cut, or the prep alone, in days. Every amount, share,
  * date and tier edge is read from the research or checked to stand in it, never written here alone. An agreement whose
  * research says none sets the pay (`none`) leaves it to negotiation; one whose terms the research couldn't find
  * (`unknown`, a blocker standing for it) has none the game can pay. Neither has fees.
@@ -25,6 +28,15 @@ import { at, dated, figureOf, range, type Range, type Research } from '../market
  * player. A territory whose research says a director's work there follows its sovereign's terms takes the sovereign's
  * market as compiled; one that follows the US's takes the DGA's, which the engine keeps itself (`dga`), the market's
  * agreements naming it alone.
+ *
+ * A play was added to the forms on 2026-11-04, with the research of that day on a stage director's minimum in every
+ * market. A market none of whose agreements covers a play has the stage director's minimum unknown (`stage`), told to the
+ * player beside a play there, save the UK, whose stage terms the engine keeps by the theatre (src/person/directing:
+ * STAGE_FEES, ITC_DIRECTOR). Until that day every agreement covered a screen form alone, and a play outside the UK
+ * wasn't directed by the life at all. From the methods round of the same day, what was tried for a stage director's
+ * minimum stands in the market's blocker in the register (an attempt's result "not found: stage"), so a blocker may name
+ * the stage, and may stand in the register for it alone beside research that holds no blocker of its own; until then the
+ * stage was nobody's blocker, and a market without a play stood unblocked.
  */
 export const SOURCES = 'research/sources/person/markets';
 export const PREFIX = 'director-';
@@ -37,7 +49,9 @@ export const BLOCKED = 'person.markets.director.blocked.';
 /** The agreement the director's engine keeps itself (R-4613); a market's may not take its id. */
 export const KEPT = 'dga';
 
-export const FORMS = ['feature', 'hour', 'half-hour'] as const;
+export const FORMS = ['feature', 'hour', 'half-hour', 'play'] as const;
+/** The market whose stage director's terms the engine keeps by the theatre, not compiled here. */
+export const STAGE_KEPT = 'GB';
 export const PERS = ['job', 'share', 'minute', 'day', 'half-day', 'week', 'month', 'hour'] as const;
 /** The pays whose units are counted whole, so a fee may pay only some of them. */
 export const BANDED = ['minute', 'day', 'half-day'] as const;
@@ -49,6 +63,8 @@ export const EDGED = ['budget', 'minutes', 'year'] as const;
 export const PERIODS = ['prep-shoot', 'cut', 'prep'] as const;
 /** What a market's research can leave unknown, as its blockers name it; the items that leave an agreement's terms unknown. */
 export const ITEMS = ['agreement', 'fees', 'periods', 'union', 'language', 'none', 'terms'] as const;
+/** What a market leaves unknown where none of its agreements covers a play: the stage director's minimum. */
+export const STAGE = 'stage';
 export const UNKNOWING = ['agreement', 'fees', 'union', 'none', 'terms'] as const;
 /** The figures a fee may stand in: a market's fees, its agreement, its periods, or a statutory floor of a director's pay (rates). */
 export const PRICED = ['fees', 'agreement', 'periods', 'rates'] as const;
@@ -62,6 +78,7 @@ export type Per = (typeof PERS)[number];
 export type Phase = (typeof PHASES)[number];
 export type Tier = (typeof TIERS)[number];
 export type Item = (typeof ITEMS)[number];
+export type Unknown = Item | typeof STAGE;
 
 export interface Fee {
   form: Form;
@@ -76,6 +93,8 @@ export interface Fee {
   /** What it is cut to on a director's first job. */
   first: string | null;
   steps: [string, string][];
+  /** The stated multiple of each step's amount that the fee is, where it is one. */
+  times?: string;
 }
 
 export interface Period {
@@ -103,7 +122,7 @@ export interface Agreement {
 
 export interface Market {
   agreements: string[];
-  unknown: Item[];
+  unknown: Unknown[];
 }
 
 export interface Markets {
@@ -183,7 +202,7 @@ const texts = (e: Evidence, fig: number): string => JSON.stringify([e.research.f
 /** One fee, read from the research at its places. */
 export function feeOf(e: Evidence, reading: unknown): Fee {
   const f = record(reading, 'a fee');
-  only(f, ['form', 'per', 'phases', 'when', 'band', 'floor', 'first', 'fig', 'steps'], 'a fee');
+  only(f, ['form', 'per', 'phases', 'when', 'band', 'floor', 'first', 'fig', 'steps', 'times'], 'a fee');
   const figure = figureOf(e.research, f['fig'], PRICED);
   const fig = f['fig'] as number;
   const text = texts(e, fig);
@@ -214,10 +233,16 @@ export function feeOf(e: Evidence, reading: unknown): Fee {
     return [from, amountAt(step['path'])];
   });
   for (const [i, [from]] of steps.entries()) if (i > 0 && !(from > (steps[i - 1] as [string, string])[0])) throw new Error("a fee's steps run by date");
+  let times: string | undefined;
+  if (f['times'] !== undefined) {
+    const x = at(figure.value, f['times'] as (string | number)[]);
+    if (per === 'share' || typeof x !== 'number' || !(x > 0)) throw new Error(`${e.research.country}'s figure ${fig} has no multiple of a ${per === 'share' ? 'share' : 'fee'} at ${(f['times'] as unknown[]).join('.')}`);
+    times = String(x);
+  }
   const when = tiersOf(f['when'], numbers(text));
   // The engine asks a job's budget and running time where a tier turns on them, so a share's and a minute's pay name theirs.
   if ((per === 'share' && when.budget === undefined) || (per === 'minute' && when.minutes === undefined)) throw new Error(`a fee by the ${per} holds in a tier of the ${per === 'share' ? 'budget' : 'minutes'}`);
-  return { form: f['form'] as Form, per, phases: phases as Phase[], when, band, floor, first, steps };
+  return { form: f['form'] as Form, per, phases: phases as Phase[], when, band, floor, first, steps, ...(times === undefined ? {} : { times }) };
 }
 
 /** One period, read from the research at its place. */
@@ -236,7 +261,7 @@ export function agreementOf(id: string, r: Research, reading: unknown): Agreemen
   const a = record(reading, `the reading of ${id}`);
   only(a, ['forms', 'none', 'unknown', 'currency', 'fig', 'month', 'short', 'fees', 'periods'], `the reading of ${id}`);
   const forms = a['forms'];
-  if (!Array.isArray(forms) || forms.length === 0 || !forms.every((x) => FORMS.includes(x as Form)) || new Set(forms).size !== forms.length) throw new Error(`${id} covers features, hours or half-hours`);
+  if (!Array.isArray(forms) || forms.length === 0 || !forms.every((x) => FORMS.includes(x as Form)) || new Set(forms).size !== forms.length) throw new Error(`${id} covers features, hours, half-hours or plays`);
   const bare = { country: r.country, forms: forms as Form[], currency: null, month: null, short: null, fees: [], periods: [] };
   if (a['none'] !== undefined) {
     const none = record(a['none'], 'none');
@@ -270,12 +295,18 @@ export function agreementOf(id: string, r: Research, reading: unknown): Agreemen
   return { country: r.country, forms: forms as Form[], currency, none: false, month, short, fees, periods };
 }
 
-/** The items a file's blockers name, each once, in the research's order. */
-export function unknownOf(blockers: readonly { item: string }[]): Item[] {
-  const out: Item[] = [];
+/**
+ * What a market leaves unknown: its blockers' items, and the stage director's minimum where none of its agreements covers
+ * a play, once, last; a blocker's stage stands only where no agreement covers a play.
+ */
+export const staged = (unknown: readonly Unknown[], agreements: Readonly<Record<string, Agreement>>): Unknown[] => [...unknown.filter((u) => u !== STAGE), ...(Object.values(agreements).some((a) => a.forms.includes('play')) ? [] : ([STAGE] as const))];
+
+/** The items a file's blockers name, each once, in the research's order: the facts the research seeks, or the stage director's minimum. */
+export function unknownOf(blockers: readonly { item: string }[]): Unknown[] {
+  const out: Unknown[] = [];
   for (const { item } of blockers) {
-    if (!ITEMS.includes(item as Item)) throw new Error(`a blocker names ${item}, which isn't a fact the research seeks`);
-    if (!out.includes(item as Item)) out.push(item as Item);
+    if (!ITEMS.includes(item as Item) && item !== STAGE) throw new Error(`a blocker names ${item}, which isn't a fact the research seeks`);
+    if (!out.includes(item as Unknown)) out.push(item as Unknown);
   }
   return out;
 }
@@ -302,18 +333,19 @@ export function marketOf(r: Research, reading: unknown, done: Markets = { market
     const share = f['uplift'] === undefined ? undefined : at(value, f['uplift'] as (string | number)[]);
     if (share !== undefined && !(typeof share === 'number' && share > 0 && share < 1)) throw new Error(`${r.country}'s figure ${String(f['fig'])} raises the minimum by no share`);
     // The US's terms are the DGA's, which the engine keeps: the market names it, with no agreement of its own.
-    if (cc === 'US' && share === undefined) return { market: { agreements: [KEPT], unknown }, agreements };
+    if (cc === 'US' && share === undefined) return { market: { agreements: [KEPT], unknown: staged(unknown, {}) }, agreements };
     // Only a market read on its own is followed: one that follows another isn't in `done`.
     if (!Object.hasOwn(done.markets, cc)) throw new Error(`${cc} isn't a market to follow`);
     const followed = done.markets[cc] as Market;
     for (const id of followed.agreements) agreements[`${r.country.toLowerCase()}-${id}`] = { ...(done.agreements[id] as Agreement), country: r.country, ...(share === undefined ? {} : { uplift: String(share) }) };
-    for (const u of followed.unknown) if (!unknown.includes(u)) unknown.push(u);
-    return { market: { agreements: Object.keys(agreements), unknown }, agreements };
+    const all: Unknown[] = [...unknown];
+    for (const u of followed.unknown) if (!all.includes(u)) all.push(u);
+    return { market: { agreements: Object.keys(agreements), unknown: all }, agreements };
   }
   only(m, ['agreements'], `the reading of ${r.country}`);
   for (const [id, a] of Object.entries(record(m['agreements'], 'the agreements'))) agreements[id] = agreementOf(id, r, a);
   if (Object.keys(agreements).length === 0) throw new Error(`${r.country} has no agreements`);
-  return { market: { agreements: Object.keys(agreements), unknown }, agreements };
+  return { market: { agreements: Object.keys(agreements), unknown: r.country === STAGE_KEPT ? unknown : staged(unknown, agreements) }, agreements };
 }
 
 /** What a blocker in the register couldn't find, as each of its attempts names it ("not found: fees, terms"), each once. */
@@ -364,7 +396,8 @@ export function readMarkets(root: string): Markets {
   for (const cc of [...files.filter((c) => !follows(c)), ...files.filter(follows)]) {
     const { research, blocked } = readResearch(root, register, cc);
     const { market, agreements } = marketOf(research, readings[cc], own, names);
-    if (blocked !== research.blockers.length > 0) throw new Error(blocked ? `the register holds ${cc}'s blockers, which its research doesn't` : `${cc}'s research has blockers the register doesn't hold`);
+    // The register may hold a blocker beside research that holds none where it stands for the stage director's minimum alone.
+    if (blocked ? research.blockers.length === 0 && !market.unknown.includes(STAGE) : research.blockers.length > 0) throw new Error(blocked ? `the register holds ${cc}'s blockers, which its research doesn't` : `${cc}'s research has blockers the register doesn't hold`);
     for (const id of Object.keys(agreements)) if (id === KEPT || Object.hasOwn(out.agreements, id)) throw new Error(`${id} is another agreement's id`);
     if (!follows(cc)) own.markets[cc] = market;
     out.markets[cc] = market;

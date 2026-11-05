@@ -1,0 +1,204 @@
+{
+ "topic": "markets.SK.series-and-stage",
+ "read": "2026-11-04",
+ "country": "SK",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.filmcommission.sk/cash-rebate",
+   "title": "Slovak Film Commission: Cash Rebate",
+   "read": "2026-11-04",
+   "said": "A 33% cash rebate on expenses spent on film or TV production in the Slovak Republic. … €300,000 ($300,000) for television series of max. 26 episodes spent in the Slovak Republic over a period of 3 years, after project registration. … There is no budget limit on eligible costs; no requirement to guarantee theatrical or non-theatrical distribution in Slovak Republic. … Project must pass the cultural test – maximum points 48, minimum 24 points.",
+   "file": "sk-fc.html",
+   "sha256": "085b0f74f1004b7bf10b8c38715d14054f64e5433129642a16c1cb3510d4cebb"
+  },
+  {
+   "kind": "primary",
+   "url": "https://static.slov-lex.sk/static/SK/ZZ/2024/157/vyhlasene_znenie.html",
+   "title": "Zákon č. 157/2024 Z. z. o Slovenskej televízii a rozhlase (Slov-Lex, vyhlásené znenie)",
+   "read": "2026-11-04",
+   "said": "6. minimálneho podielu vysielacieho času vyhradeného pre nezávislú produkciu 36 ) na jednotlivých televíznych programových službách, 7. minimálneho podielu výroby a vysielania audiovizuálnych diel vyrobených nezávislými producentmi 37 ) so sídlom v Slovenskej republike alebo v spolupráci Slovenskej televízie a rozhlasu s týmito subjektmi,",
+   "file": "sk_157_2024.html",
+   "sha256": "0792603d2c1e7cb32b4b9a4d2065ec4d69e43cbf89adc248ba6250dbb8d25eb5"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.fpu.sk/sk/podporovane-oblasti/divadlo/",
+   "title": "Fond na podporu umenia: Podporované oblasti – Divadlo",
+   "read": "2026-11-04",
+   "said": "Podprogram 8.1 Divadlo je zameraný na podporu tvorby a prezentácie detských a mládežníckych divadiel.",
+   "file": "fpu-div.html",
+   "sha256": "e6a13c9fea98b3a39cb18001d3d1468f9747a91e6f119f211b548b1795279518"
+  },
+  {
+   "kind": "primary",
+   "url": "https://podpora.fpu.sk/statistiky/program",
+   "title": "Fond na podporu umenia: Zoznam projektov – vyhľadávanie, export",
+   "read": "2026-11-04",
+   "said": "Počet projektov: 55531",
+   "file": "fpu-stat.html",
+   "sha256": "e809e239464264ea6506d1c933ad36c278350a870f275ee6db35352f34b1f2c0"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "producer-SK.json holds the law (Act 516/2008 as amended, 33% in § 22a(6)); the series threshold is the film commission's statement.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.33,
+    "minSlovakSpendSeriesEUR": 300000,
+    "seriesMaxEpisodes": 26,
+    "spendWindowYears": 3,
+    "budgetLimit": null,
+    "foreignCrewUntaxed": {
+     "rate": 0.14,
+     "maxShareOfEligible": 0.1
+    },
+    "culturalTest": {
+     "max": 48,
+     "min": 24
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "A 33% cash rebate on expenses spent on film or TV production in the Slovak Republic. … €300,000 ($300,000) for television series of max. 26 episodes spent in the Slovak Republic over a period of 3 years, after project registration. … There is no budget limit on eligible costs; no requirement to guarantee theatrical or non-theatrical distribution in Slovak Republic. … Project must pass the cultural test – maximum points 48, minimum 24 points."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "STVR commissioning terms not read. The STVR act leaves the percentages to the contract with the state (zmluva so štátom), not read. No count of independent series picked up was found; STVR's 'Projekty' page lists only EU-funded projects.",
+   "verdict": "partial",
+   "value": {
+    "publicBroadcaster": "Slovenská televízia a rozhlas (STVR), Act 157/2024",
+    "independentQuota": "a minimum share of airtime for independent production and of works by Slovak independent producers, fixed in the state's contract with STVR (figure not read)",
+    "fundRoute": "AVF priority for TV/VOD series: first seasons of up to 13 episodes (26 animated), with a signed co-operation agreement or letter of commitment from a broadcaster or VOD service not older than 12 months",
+    "fundMaxPerWorkEUR": 1200000,
+    "pickup": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "6. minimálneho podielu vysielacieho času vyhradeného pre nezávislú produkciu 36 ) na jednotlivých televíznych programových službách, 7. minimálneho podielu výroby a vysielania audiovizuálnych diel vyrobených nezávislými producentmi 37 ) so sídlom v Slovenskej republike alebo v spolupráci Slovenskej televízie a rozhlasu s týmito subjektmi,"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "The theatre subprogramme page (fpu.sk/sk/podprogramy/divadlo/) returned only its menu (rendered by script); ranges, eligibility and a rate of yes were not read. The project register (55,531 projects, requested and awarded sums, exportable to XLS) would give a rate of yes by subprogramme; not exported this run.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Fond na podporu umenia (Slovak Arts Council), theatre programme"
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "Podprogram 8.1 Divadlo je zameraný na podporu tvorby a prezentácie detských a mládežníckych divadiel."
+    },
+    {
+     "src": 3,
+     "said": "Počet projektov: 55531"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "avf.sk: home, vyzvy2026.aspx, support.aspx, aboutus/interalregulations.aspx; downloaded Štruktúra podpornej činnosti 2026 (versions 11.12.2025 and 25.06.2026), Zásady poskytovania VP AVF 4/2018 and its Annex 1",
+     "result": "read; overhead cap 7% and legal/accounting 5% of grant (Zásady 7.9); TV-series priority needs a broadcaster or VOD letter of commitment (Štruktúra 3.3.5); no producer-fee cap found by searching both texts for honorár/réžia/nepriame",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "avf.sk: home, vyzvy2026.aspx, support.aspx, aboutus/interalregulations.aspx; downloaded Štruktúra podpornej činnosti 2026 (versions 11.12.2025 and 25.06.2026), Zásady poskytovania VP AVF 4/2018 and its Annex 1",
+     "result": "read; overhead cap 7% and legal/accounting 5% of grant (Zásady 7.9); TV-series priority needs a broadcaster or VOD letter of commitment (Štruktúra 3.3.5); no producer-fee cap found by searching both texts for honorár/réžia/nepriame",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "stvr.sk home and /televizia/clanky/159943/projekty",
+     "result": "read; the Projekty page lists EU-funded projects only; no call for independent producers or tariff found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "Slov-Lex static text of Act 157/2024 on STVR, searched for nezávisl and %",
+     "result": "read; the independent-production shares are left to the contract with the state",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "STVR commissioning terms not read. The STVR act leaves the percentages to the contract with the state (zmluva so štátom), not read. No count of independent series picked up was found; STVR's 'Projekty' page lists only EU-funded projects."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'štatistika divadiel Slovensko 2025 predstavenia návštevníci tržby Národné osvetové centrum KULT divadlá'",
+     "result": "led to the Ministry of Culture's KULT 12-01 summaries; no theatre tax incentive surfaced",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "fpu.sk home, theatre area page, theatre subprogramme page, podpora.fpu.sk/statistiky/program",
+     "result": "Programme named; subprogramme detail not rendered; register reached, not exported",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "The theatre subprogramme page (fpu.sk/sk/podprogramy/divadlo/) returned only its menu (rendered by script); ranges, eligibility and a rate of yes were not read. The project register (55,531 projects, requested and awarded sums, exportable to XLS) would give a rate of yes by subprogramme; not exported this run."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'štatistika divadiel Slovensko 2025 predstavenia návštevníci tržby Národné osvetové centrum KULT divadlá'",
+     "result": "led to the Ministry of Culture's KULT 12-01 summaries; no theatre tax incentive surfaced",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "culture.gov.sk statistika-kultury and the 2024 results page; the KULT12-01 2024 summary PDF (first a 404 at the /wp-content/ address the search gave, an empty reply once, then read at /storage/2025/11/); theatre.sk 'Divadlo v číslach' PDF opened (introduction only, undated)",
+     "result": "read; 2024 totals found; no 2025 summary was looked for on the site",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

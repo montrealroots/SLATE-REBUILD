@@ -1,0 +1,281 @@
+{
+ "topic": "markets.FI.series-and-stage",
+ "read": "2026-11-04",
+ "country": "FI",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.businessfinland.fi/en/services/funding/funding-services/cash-rebate",
+   "title": "Business Finland: Cash rebate (AV production incentive)",
+   "read": "2026-11-04",
+   "said": "The production incentive in Finland is a maximum of 25% cash rebate for production costs. ... The budget for the audiovisual production incentive for 2026 is 10 million euros. ... AV-production incentive is available for Feature films Documentary films Serial fiction Animation productions However, please note: The AV production incentive cannot be granted to commercials or promotional products, document series, non-scripted series e.g. reality shows or talk shows ... Eligible costs incurred in Finland can be a maximum of 80% of the total production budget ... At least 25 % of funding for the overall production budget must come from outside Finland ... A distribution agreement for at least one platform or one territory.",
+   "file": "fi-bf-rebate.html",
+   "sha256": "5f427d894ccde15e202db852cc34503ec3c62ff8b22d2e11254dc6c103d50b05"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.businessfinland.fi/contentassets/3c786e5d08804051ad130ca18b2a83e9/av-budjettirajat_2025.png",
+   "title": "Business Finland: minimum requirements table (image on the cash-rebate page, under 'Minimum requirements for funding in 2026'), read from the image",
+   "read": "2026-11-04",
+   "said": "TOTAL BUDGET OF PRODUCTION MINIMUM ... EXPENDITURE IN FINLAND ... TV DRAMA AND ANIMATION 11 500 € / minute 500 000 €",
+   "file": "fi-bf-limits.png",
+   "sha256": "d59dfa04e26d3efdeb73fbe37240269a9945c3821ea1a82706410d82bb4144c2"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.ses.fi/en/funding/support-guides/production-support/",
+   "title": "Finnish Film Foundation: Production support guide",
+   "read": "2026-11-04",
+   "said": "The production support is aimed at the production of films based on an artistic plan. The film may be a feature-length or short fiction, documentary, animation or children's film, documentary or animated series, or a combination thereof. ... • development support for drama series (episodes 22 minutes and over) ... • production support: documentary films and series, short films, animated series ... development and production support cannot be granted to a television or streaming company",
+   "file": "fi-ses-prod.html",
+   "sha256": "7f41e2e63ac23415dd2be274e393b85a4bcec794c9c9589213e059a1b89c4b4d"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/07-av-cash-rebate/kaannos_vnasetus_maksuhyvityksesta_audiovisuaalisiin_tuotantoihin_1203_2023_en.pdf",
+   "title": "Government Decree 1203/2023 on the payment of compensation for audiovisual productions for 2024–2026 (Business Finland's English translation)",
+   "read": "2026-11-04",
+   "said": "An agreement that guarantees distribution must be drawn up for any production eligible for cash rebate.",
+   "file": "fi-decree-1203-2023-en.pdf",
+   "sha256": "2fcb7d739cc361130a3e9ed11672e4ccf9e63d8c4d171c3be65da4ffee39686d"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.tinfo.fi/documents/ett_2024_web.pdf",
+   "title": "TINFO, Esittävän taiteen tilastot 2024: 'Tulot toimijatyypeittäin 2024' (PDF p. 53) and 'Esityskerrat ja myydyt liput toimijoiden omissa esityksissä 2022-2024' (PDF p. 87)",
+   "read": "2026-11-04",
+   "said": "Puheteatterit yhteensä (54) Drama theatres total 55 394 783 24 14 570 896 6 80 674 420 35 71 054 461 31 10 725 246 5 232 419 806 28,80 … Ryhmät ja pienteatterit (21) Groups and small theatres 8 436 066 33 … 22,43 … Yhteensä (71) - Total 9 637 11 340 10 758 -582 -5 1 644 786 2 046 626 2 103 061 56 435 3 171 180 195",
+   "file": "FI-ett2024.pdf",
+   "sha256": "1a56110dc17a189d8bf3916752d79fbc5c3e0c45e3abc2d0a89dc3b06aa6cbc5"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.tinfo.fi/fi/Teatteritilastot",
+   "title": "TINFO: Teatteritilastot",
+   "read": "2026-11-04",
+   "said": "Viimeisin ilmestynyt Esittävän taiteen tilastot - teatterin, tanssin ja sirkuksen vuosi 2024 . Esittävän taiteen tilasto - teatterin, tanssin ja sirkuksen vuosi 2025 julkaistaan lokakuussa 2026.",
+   "file": "FI-tinfo-tilastot.html",
+   "sha256": "b6941d87e79f88916077bead34b8bac7e17ca94cfbab99c5bcd8b68e0456dd3d"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Finland's incentive for a series",
+   "verdict": "found",
+   "value": {
+    "rate": 0.25,
+    "minBudgetPerMinuteEUR": 11500,
+    "minSpendInFinlandEUR": 500000,
+    "eligibleMaxShareOfBudget": 0.8,
+    "foreignPrivateMinShare": 0.25,
+    "publicMaxShareOfFinnishCosts": 0.5,
+    "needs": "a distribution agreement for at least one platform or territory",
+    "budget2026EUR": 10000000,
+    "excluded": [
+     "document series",
+     "reality and talk shows"
+    ]
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The production incentive in Finland is a maximum of 25% cash rebate for production costs. ... The budget for the audiovisual production incentive for 2026 is 10 million euros. ... AV-production incentive is available for Feature films Documentary films Serial fiction Animation productions However, please note: The AV production incentive cannot be granted to commercials or promotional products, document series, non-scripted series e.g. reality shows or talk shows ... Eligible costs incurred in Finland can be a maximum of 80% of the total production budget ... At least 25 % of funding for the overall production budget must come from outside Finland ... A distribution agreement for at least one platform or one territory."
+    },
+    {
+     "src": 1,
+     "said": "TOTAL BUDGET OF PRODUCTION MINIMUM ... EXPENDITURE IN FINLAND ... TV DRAMA AND ANIMATION 11 500 € / minute 500 000 €"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The Foundation's guide, read whole, funds a drama series' development only; production support goes to documentary and animated series.",
+   "verdict": "none-exists",
+   "value": {
+    "liveActionDramaSeriesProduction": false,
+    "dramaSeriesDevelopment": true,
+    "seriesProductionFor": [
+     "documentary series",
+     "animated series"
+    ],
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "The production support is aimed at the production of films based on an artistic plan. The film may be a feature-length or short fiction, documentary, animation or children's film, documentary or animated series, or a combination thereof. ... • development support for drama series (episodes 22 minutes and over) ... • production support: documentary films and series, short films, animated series ... development and production support cannot be granted to a television or streaming company"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "The flat rate also covers travel and royalties, so it caps the fee and overheads only from above. The Foundation's 5% overheads cap (held) is for its films.",
+   "verdict": "found",
+   "value": {
+    "producerFeeAndOverheadsInFlatRate": true,
+    "flatRateMaxShareOfSalariesAndPurchases": 0.2,
+    "appliesTo": "the rebate's eligible costs"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Other costs (flat rate) max. 20% of the total sum of salaries and purchases. These costs do not need to be included in the project accounting nor itemized in the report. Other eligible costs may include, for example travel-related costs ... copyright royalties (Teosto) producer's fee overhead costs, such as administrative services (financial and legal matters)"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "Yle's commissioning terms not read.",
+   "verdict": "partial",
+   "value": {
+    "route": "a distribution agreement before the rebate",
+    "pickup": null
+   },
+   "sources": [
+    {
+     "src": 3,
+     "said": "An agreement that guarantees distribution must be drawn up for any production eligible for cash rebate."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "outcomes",
+   "finding": "Not reached. The engine could take box office per performance as tickets per performance times income per ticket; that product is the engine's arithmetic, not a stated figure. No count of runs that recoup or extend exists in the book (subsidised repertory theatres do not report recoupment). The 2025 volume was due October 2026 and the page still named 2024 as latest on 2026-11-04.",
+   "verdict": "partial",
+   "value": {
+    "year": 2024,
+    "scope": "the 71 companies in TINFO's statistics (state-subsidised theatres, the National Theatre, the National Opera and Ballet)",
+    "ownProductionPerformances": 10758,
+    "ownProductionTicketsSold": 2103061,
+    "ticketsSoldPerPerformance": 195,
+    "ticketAndPerformanceIncomePerTicketEUR": {
+     "dramaTheatres": 28.8,
+     "bigAndMediumTheatres": 30.02,
+     "groupsAndSmallTheatres": 22.43
+    },
+    "dramaTheatresTicketIncomeShare": 0.24,
+    "recoupCount": null,
+    "extensionCount": null
+   },
+   "sources": [
+    {
+     "src": 4,
+     "said": "Puheteatterit yhteensä (54) Drama theatres total 55 394 783 24 14 570 896 6 80 674 420 35 71 054 461 31 10 725 246 5 232 419 806 28,80 … Ryhmät ja pienteatterit (21) Groups and small theatres 8 436 066 33 … 22,43 … Yhteensä (71) - Total 9 637 11 340 10 758 -582 -5 1 644 786 2 046 626 2 103 061 56 435 3 171 180 195"
+    },
+    {
+     "src": 5,
+     "said": "Viimeisin ilmestynyt Esittävän taiteen tilastot - teatterin, tanssin ja sirkuksen vuosi 2024 . Esittävän taiteen tilasto - teatterin, tanssin ja sirkuksen vuosi 2025 julkaistaan lokakuussa 2026."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ses.fi/tuet/tuotantotuki (404); ses.fi/en production support guide read whole",
+     "result": "no drama-series production support",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "The Foundation's guide, read whole, funds a drama series' development only; production support goes to documentary and animated series."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "businessfinland.fi cash-rebate page, its minimums image, and its English copy of Decree 1203/2023",
+     "result": "series terms read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "The flat rate also covers travel and royalties, so it caps the fee and overheads only from above. The Foundation's 5% overheads cap (held) is for its films."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "businessfinland.fi cash-rebate page, its minimums image, and its English copy of Decree 1203/2023",
+     "result": "series terms read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "Yle's commissioning terms not read."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "taike.fi/fi/avustukset-ja-apurahat and taike.fi/fi/tilastot",
+     "result": "403, Cloudflare 'Just a moment...' challenge; not got past",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "tinfo.fi/fi/Teatteritilastot, then its linked PDF tinfo.fi/documents/ett_2024_web.pdf (fetched over https), read by pdftotext with the tables checked by heading",
+     "result": "read: Taike grant totals and table; income per ticket, tickets per performance",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "taike.fi/fi/avustukset-ja-apurahat and taike.fi/fi/tilastot",
+     "result": "403, Cloudflare 'Just a moment...' challenge; not got past",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39, prefix fi,taike",
+     "result": "only robots.txt captures (7 lines)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "tinfo.fi/fi/Teatteritilastot, then its linked PDF tinfo.fi/documents/ett_2024_web.pdf (fetched over https), read by pdftotext with the tables checked by heading",
+     "result": "read: Taike grant totals and table; income per ticket, tickets per performance",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 4,
+    "what": "Not reached. The engine could take box office per performance as tickets per performance times income per ticket; that product is the engine's arithmetic, not a stated figure. No count of runs that recoup or extend exists in the book (subsidised repertory theatres do not report recoupment). The 2025 volume was due October 2026 and the page still named 2024 as latest on 2026-11-04."
+   }
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "topic": "markets.MK.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MK",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://filmagency.gov.mk/pravo-na-povrat-na-sredstva/",
+   "title": "Агенција за филм на Република Северна Македонија: Право на поврат на средства",
+   "read": "2026-11-04",
+   "said": "Филмски продуцент кој во Република Северна Македонија вложил средства за реализација на игран или документарен или анимиран или ТВ филм или ТВ серија ( во натамошниот текст: филмски, односно телевизиски проект) може да се стекне со право на поврат на вложените средства, во износ од 20% од бруто трошоците направени во Република Северна Македонија за реализација на филмски односно телевизиски проект. … Дневна драма (сапуница) Ситуациска комедија ТВ шоу и други ТВ програми … потребно е да не биде помал од 100.000 евра во денарска противредност",
+   "file": "mk-rebate.html",
+   "sha256": "5e50177c53f03094bced6ec4898a82a6d0ec594d781358a8ca0387750e451aaf"
+  },
+  {
+   "kind": "primary",
+   "url": "https://filmagency.gov.mk/konkursi/%d0%9a%d0%9e%d0%9d%d0%9a%d0%a3%d0%a0%d0%a1-%d0%97%d0%90-%d0%a4%d0%98%d0%9d%d0%90%d0%9d%d0%98%d0%a1%d0%a0%d0%90%d0%8a%d0%95-%d0%9d%d0%90-%d0%9f%d0%a0%d0%9e%d0%95%d0%9a%d0%a2%d0%98-%d0%97%d0%90-%d0%9f/",
+   "title": "Агенција за филм: Конкурс за финансирање на проекти за производство на долгометражен и краткометражен игран, документарен и анимиран филм за 2026 година",
+   "read": "2026-11-04",
+   "said": "1. Конкурсот се распишува за финансирање на проекти за производство на: – долгометражен игран филм чие времетраење е минимум 70 минути; – долгометражен документарен филм чие времетраење е минимум 60 минути; – долгометражен анимиран филм чие времетраење е минимум 70 минути; – краткометражен игран, документарен и краткометражен анимиран филм чие времетраење е максимум 20 минути.",
+   "file": "mk-call2026.html",
+   "sha256": "f4c3642c918136d209adb5290720b7a88f45eb1b913fb7155ca8128e3fd0cf93"
+  },
+  {
+   "kind": "primary",
+   "url": "https://filmagency.gov.mk/tekovni-konkursi/",
+   "title": "Агенција за филм: Тековни конкурси",
+   "read": "2026-11-04",
+   "said": "КОНКУРС ЗА ФИНАНИСРАЊЕ НА ПРОЕКТИ ЗА ПРОИЗВОДСТВО НА ДОЛГОМЕТРАЖЕН И КРАТКОМЕТРАЖЕН ИГРАН, ДОКУМЕНТАРЕН И АНИМИРАН ФИЛМ за 2025 година",
+   "file": "mk-konkursi.html",
+   "sha256": "a93dcd4e442563ea46d86f10e65f5290aa7c10992de7328d2cd8cdd55e2a5a4e"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "No per-episode threshold or cap is stated on the page; the minimum spend is per project. The 100,000 must come from sources other than the state budget.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.2,
+    "of": "gross costs incurred in North Macedonia",
+    "counts": [
+     "feature",
+     "documentary",
+     "animation",
+     "TV film",
+     "TV series"
+    ],
+    "excluded": [
+     "commercials",
+     "daily drama (soap)",
+     "sitcom",
+     "TV shows and other TV programmes"
+    ],
+    "minSpendEUR": 100000,
+    "minSpendFrom": "not from the state budget",
+    "law": "Law on Film Activity (Official Gazette 82/13 … 275/19)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Филмски продуцент кој во Република Северна Македонија вложил средства за реализација на игран или документарен или анимиран или ТВ филм или ТВ серија ( во натамошниот текст: филмски, односно телевизиски проект) може да се стекне со право на поврат на вложените средства, во износ од 20% од бруто трошоците направени во Република Северна Македонија за реализација на филмски односно телевизиски проект. … Дневна драма (сапуница) Ситуациска комедија ТВ шоу и други ТВ програми … потребно е да не биде помал од 100.000 евра во денарска противредност"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "The Film Agency's production calls (2024-2026, read on its current-calls page) cover features and shorts only; a series is reached only by the 20% rebate (item 1). The caps listed are the first tier of the 2026 call (domestic film); MRT's commissioning was not read.",
+   "verdict": "none-exists",
+   "value": {
+    "seriesFund": null,
+    "filmCallCapsMKD2026": {
+     "featureFiction": 62000000,
+     "featureDoc": 10000000,
+     "featureAnimation": 62000000,
+     "shortFiction": 5000000
+    },
+    "deadlines2026": [
+     "2026-03-09",
+     "2026-08-04"
+    ]
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "1. Конкурсот се распишува за финансирање на проекти за производство на: – долгометражен игран филм чие времетраење е минимум 70 минути; – долгометражен документарен филм чие времетраење е минимум 60 минути; – долгометражен анимиран филм чие времетраење е минимум 70 минути; – краткометражен игран, документарен и краткометражен анимиран филм чие времетраење е максимум 20 минути."
+    },
+    {
+     "src": 2,
+     "said": "КОНКУРС ЗА ФИНАНИСРАЊЕ НА ПРОЕКТИ ЗА ПРОИЗВОДСТВО НА ДОЛГОМЕТРАЖЕН И КРАТКОМЕТРАЖЕН ИГРАН, ДОКУМЕНТАРЕН И АНИМИРАН ФИЛМ за 2025 година"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (Macedonian): 'Агенција за филм конкурс 2026 финансирање игран филм ТВ серија максимален износ filmagency.gov.mk'",
+     "result": "no relevant result",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "filmagency.gov.mk home, current calls page and the 2026 production call",
+     "result": "calls are for films only",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "The Film Agency's production calls (2024-2026, read on its current-calls page) cover features and shorts only; a series is reached only by the 20% rebate (item 1). The caps listed are the first tier of the 2026 call (domestic film); MRT's commissioning was not read."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

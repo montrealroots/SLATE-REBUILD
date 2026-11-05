@@ -1,0 +1,269 @@
+{
+ "topic": "markets.DK.series-and-stage",
+ "read": "2026-11-04",
+ "country": "DK",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://slks.dk/fileadmin/user_upload/SLKS/Omraader/Medier/Produktionsrabatordningen/The_Live_Action_Scheme/Guidelines_for_applying_for_support_under_the_Live_Action_Scheme.pdf",
+   "title": "Agency for Culture and Palaces: Guidelines for applying for support under the Live Action Scheme (August 2026)",
+   "read": "2026-11-04",
+   "said": "The Live Action Scheme: a scheme for feature films, fiction series, documentary films and documentary series with an annual budget of DKK 100 million. … 2. Fiction series must have: • a total budget of DKK 150,000 per minute and a total budget of at least DKK 15 million per season of the fiction series, • and eligible costs of at least DKK 3 million. … A fiction series means a series with a fictional, interconnected narrative, divided into a number of related episodes, with either self-contained or continuous storylines. Several related episodes are referred to as a season. … The scheme is structured as a rebate scheme under which 25 per cent of the eligible expenditure incurred in Denmark for the production may be reimbursed … Please also note that a maximum grant of DKK 20 million may be awarded",
+   "file": "dk-las.pdf",
+   "sha256": "ac06610da3f4dba1a8ffa7c7454a45a54ab2a64172dab342222531e2bdb23dbe"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.retsinformation.dk/api/pdf/244399",
+   "title": "BEK nr 829 af 24/06/2024 (Gældende): Bekendtgørelse om tilskud til produktion af dansksprogede public service lyd- og billedprogrammer (Public Service-Puljen), Retsinformation print of 4 Nov 2026",
+   "read": "2026-11-04",
+   "said": "§ 2. Public Service-Puljens samlede midler allokeres som udgangspunkt med 50 pct. til drama, 40 pct. til dokumentarprogrammer og kulturprogrammer samt 10 pct. til lydprogrammer. Stk. 2. Mindst 30 pct. … til programmer for børn og unge. … § 4 … Stk. 2. Tilskud kan ydes til uafhængige producenter, der er etableret i EU/EFTA. … Det er en forudsætning for at yde tilskud til en uafhængig producent, at der er indgået aftale om distribution af det tilskudsmodtagende program med en tv-station, streamingtjeneste eller udbyder af lydprogrammer. … § 6. Der kan ikke ydes tilskud til 1) programmer produceret til DR, de regionale TV 2-virksomheder … 2) programmer, der afbrydes af reklamer … § 7 … 1) Tilskud til programmet skal anvendes i Danmark. Dog således at der ikke stilles krav, om at mere end 50 pct. af produktionsbudgettet skal anvendes i Danmark. … 3) Det førstegangspubliceres senest 24 måneder efter … 6) Programmet er tilgængeligt i minimum 24 måneder efter førstegangsudsendelse. … § 10. Tilskuddet fordeles ved 2-4 årlige ansøgningsrunder. … § 14. Tilskud til produktion af programmer kan udgøre op til 50 pct. af de samlede produktionsomkostninger",
+   "file": "dk-bek829.pdf",
+   "sha256": "e710d7270fdec2f313d0b084bbfb189e31b56f755a21764d19e2d1d009c37fd8"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.kunst.dk/for-ansoegere/soeg-tilskud/scenekunst-for-boern-unge-og-voksne",
+   "title": "Statens Kunstfond: Scenekunst for børn, unge og voksne (projekttilskud)",
+   "read": "2026-11-04",
+   "said": "Mindre teatre, scenekunstgrupper, uafhængige scenekunstnere og aktører kan søge om tilskud til scenekunstneriske formål … Puljen har én årlig frist … Der kan ikke ydes støtte til projekter, som udelukkende gennemføres af de store institutionsteatre. … Det er Statens Kunstfonds Projektstøtteudvalg for Scenekunst, der vurderer de indkomne ansøgninger. … Udvalget forbeholder sig retten til at imødekomme ansøgningen med et mindre beløb end ansøgt",
+   "file": "dk-kunst-scene.html",
+   "sha256": "09628fdd0f3c504e1c45539fceaf0dbd37a4dd59deea3d8ef7738613b343a044"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Already in producer-DK.json (2026-11-01); re-read today. The 25% foreign-finance condition there holds for series too (guidelines p. 1021ff).",
+   "verdict": "found",
+   "value": {
+    "scheme": "Danish Production Incentive Scheme, Live Action Scheme",
+    "inForce": "2026-01-01",
+    "rate": 0.25,
+    "capDKKPerProduction": 20000000,
+    "fictionSeries": {
+     "minBudgetPerMinuteDKK": 150000,
+     "minBudgetPerSeasonDKK": 15000000,
+     "minEligibleCostsDKK": 3000000
+    },
+    "annualPotDKK": 100000000,
+    "producerFeeAsBudgetPercentEligible": false
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Live Action Scheme: a scheme for feature films, fiction series, documentary films and documentary series with an annual budget of DKK 100 million. … 2. Fiction series must have: • a total budget of DKK 150,000 per minute and a total budget of at least DKK 15 million per season of the fiction series, • and eligible costs of at least DKK 3 million. … A fiction series means a series with a fictional, interconnected narrative, divided into a number of related episodes, with either self-contained or continuous storylines. Several related episodes are referred to as a season. … The scheme is structured as a rebate scheme under which 25 per cent of the eligible expenditure incurred in Denmark for the production may be reimbursed … Please also note that a maximum grant of DKK 20 million may be awarded"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "DFI's terms PDF (Vilkår af 5. september 2024) and pages answered 403; Common Crawl holds no copy. No rate of yes or annual pot read.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Public Service-Puljen (DFI)",
+    "law": "BEK 829 of 24 June 2024",
+    "dramaShare": 0.5,
+    "childrenShareMin": 0.3,
+    "maxShareOfCost": 0.5,
+    "needsDistributionDeal": "a TV station or streamer (not DR or the regional TV 2s); no advert breaks",
+    "roundsPerYear": "2-4",
+    "firstPublishWithinMonths": 24,
+    "rateOfYes": null,
+    "budgetDKK": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "§ 2. Public Service-Puljens samlede midler allokeres som udgangspunkt med 50 pct. til drama, 40 pct. til dokumentarprogrammer og kulturprogrammer samt 10 pct. til lydprogrammer. Stk. 2. Mindst 30 pct. … til programmer for børn og unge. … § 4 … Stk. 2. Tilskud kan ydes til uafhængige producenter, der er etableret i EU/EFTA. … Det er en forudsætning for at yde tilskud til en uafhængig producent, at der er indgået aftale om distribution af det tilskudsmodtagende program med en tv-station, streamingtjeneste eller udbyder af lydprogrammer. … § 6. Der kan ikke ydes tilskud til 1) programmer produceret til DR, de regionale TV 2-virksomheder … 2) programmer, der afbrydes af reklamer … § 7 … 1) Tilskud til programmet skal anvendes i Danmark. Dog således at der ikke stilles krav, om at mere end 50 pct. af produktionsbudgettet skal anvendes i Danmark. … 3) Det førstegangspubliceres senest 24 måneder efter … 6) Programmet er tilgængeligt i minimum 24 måneder efter førstegangsudsendelse. … § 10. Tilskuddet fordeles ved 2-4 årlige ansøgningsrunder. … § 14. Tilskud til produktion af programmer kan udgøre op til 50 pct. af de samlede produktionsomkostninger"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "The incentive does not count a percentage fee or overheads as eligible spend; no cap a funder sets on the fee itself was read (DFI PSP terms 403).",
+   "verdict": "partial",
+   "value": {
+    "cap": null,
+    "incentiveExcludes": "producer's fees set as a general percentage of the budget, and overheads"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Live Action Scheme: a scheme for feature films, fiction series, documentary films and documentary series with an annual budget of DKK 100 million. … 2. Fiction series must have: • a total budget of DKK 150,000 per minute and a total budget of at least DKK 15 million per season of the fiction series, • and eligible costs of at least DKK 3 million. … A fiction series means a series with a fictional, interconnected narrative, divided into a number of related episodes, with either self-contained or continuous storylines. Several related episodes are referred to as a season. … The scheme is structured as a rebate scheme under which 25 per cent of the eligible expenditure incurred in Denmark for the production may be reimbursed … Please also note that a maximum grant of DKK 20 million may be awarded"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "No count of independent series picked up.",
+   "verdict": "partial",
+   "value": {
+    "route": "a distribution agreement with a TV station or streamer before public-service-fund support; DR commissions directly (its programmes cannot get the fund)",
+    "pickup": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "§ 2. Public Service-Puljens samlede midler allokeres som udgangspunkt med 50 pct. til drama, 40 pct. til dokumentarprogrammer og kulturprogrammer samt 10 pct. til lydprogrammer. Stk. 2. Mindst 30 pct. … til programmer for børn og unge. … § 4 … Stk. 2. Tilskud kan ydes til uafhængige producenter, der er etableret i EU/EFTA. … Det er en forudsætning for at yde tilskud til en uafhængig producent, at der er indgået aftale om distribution af det tilskudsmodtagende program med en tv-station, streamingtjeneste eller udbyder af lydprogrammer. … § 6. Der kan ikke ydes tilskud til 1) programmer produceret til DR, de regionale TV 2-virksomheder … 2) programmer, der afbrydes af reklamer … § 7 … 1) Tilskud til programmet skal anvendes i Danmark. Dog således at der ikke stilles krav, om at mere end 50 pct. af produktionsbudgettet skal anvendes i Danmark. … 3) Det førstegangspubliceres senest 24 måneder efter … 6) Programmet er tilgængeligt i minimum 24 måneder efter førstegangsudsendelse. … § 10. Tilskuddet fordeles ved 2-4 årlige ansøgningsrunder. … § 14. Tilskud til produktion af programmer kan udgøre op til 50 pct. af de samlede produktionsomkostninger"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "The page publishes no range and no rate of yes; where an applicant must be based isn't stated on it.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Statens Kunstfond, Projektstøtteudvalget for Scenekunst",
+    "applicants": "smaller theatres, companies, independent artists (not the big institution theatres alone)",
+    "deadlinesPerYear": 1,
+    "range": null,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "Mindre teatre, scenekunstgrupper, uafhængige scenekunstnere og aktører kan søge om tilskud til scenekunstneriske formål … Puljen har én årlig frist … Der kan ikke ydes støtte til projekter, som udelukkende gennemføres af de store institutionsteatre. … Det er Statens Kunstfonds Projektstøtteudvalg for Scenekunst, der vurderer de indkomne ansøgninger. … Udvalget forbeholder sig retten til at imødekomme ansøgningen med et mindre beløb end ansøgt"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dfi.dk/stoette/public-service-puljen; DFI 'Vilkår for støtte til Public Service Puljen af 5. september 2024' PDF",
+     "result": "both 403 'Request forbidden by administrative rules'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): \"Public Service-puljen tv-drama tilskud slks.dk vilkår producenthonorar 2026\"",
+     "result": "led to BEK 829 on Retsinformation and the DFI vilkår PDF (403)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "retsinformation.dk BEK nr 829 af 24/06/2024 PDF",
+     "result": "read, 'Gældende'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, 2025-51 for dk,dfi)/sites/default/files/docs/2024-09; CC-MAIN-2026-43 dk,dfi)/stoette and /docs/2026; Wayback availability API",
+     "result": "no capture of the PSP terms; Wayback answered 429",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "DFI's terms PDF (Vilkår af 5. september 2024) and pages answered 403; Common Crawl holds no copy. No rate of yes or annual pot read."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "slks.dk Live Action Scheme guidelines PDF (August 2026)",
+     "result": "read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "dfi.dk/stoette/public-service-puljen; DFI 'Vilkår for støtte til Public Service Puljen af 5. september 2024' PDF",
+     "result": "both 403 'Request forbidden by administrative rules'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): \"Public Service-puljen tv-drama tilskud slks.dk vilkår producenthonorar 2026\"",
+     "result": "led to BEK 829 on Retsinformation and the DFI vilkår PDF (403)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43, -39, -30, 2025-51 for dk,dfi)/sites/default/files/docs/2024-09; CC-MAIN-2026-43 dk,dfi)/stoette and /docs/2026; Wayback availability API",
+     "result": "no capture of the PSP terms; Wayback answered 429",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "The incentive does not count a percentage fee or overheads as eligible spend; no cap a funder sets on the fee itself was read (DFI PSP terms 403)."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "retsinformation.dk BEK nr 829 af 24/06/2024 PDF",
+     "result": "read, 'Gældende'",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "No count of independent series picked up."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search (standard): 'Danmark skattefradrag teaterproduktion scenekunst skatteincitament producent ordning'",
+     "result": "no theatre tax relief; results were subsidies (Statens Kunstfond, the refund scheme) and the film/TV rebate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "virk.dk Slots- og Kulturstyrelsen self-service page for the Refusionsudvalget",
+     "result": "read; a 50% municipal refund on approved performances, page marked for season 2017",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "kunst.dk home, søg-tilskud index, scenekunst-for-børn-unge-og-voksne; kunst.dk/for-ansoegere/scenekunst (404)",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 4,
+    "what": "The page publishes no range and no rate of yes; where an applicant must be based isn't stated on it."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "Statistics Denmark StatBank API: table list (POST /v1/tables), tableinfo for SCENE08A, SCENE01A, SCENE01B; data in CSV",
+     "result": "read; 2024/2025 productions, performances, audience and state-supported theatres' finances",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

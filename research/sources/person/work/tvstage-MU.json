@@ -1,0 +1,162 @@
+{
+ "topic": "markets.MU.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MU",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://edbmauritius.org/wp-content/uploads/2022/10/Guideline-Online-Application-FRS.pdf",
+   "title": "EDB Mauritius: Guideline, Online Application, Film Rebate Scheme",
+   "read": "2026-11-04",
+   "said": "film makers benefit of 30% rebate on all the qualifying expenditures incurred in Mauritius … Minimum QPE (USD) Eligible for 30% rebate Foreign Production Local Production Feature film (including animation) 100,000 50,000 Television drama series or single drama 20,000 (per episode) 20,000",
+   "file": "mu-frs.pdf",
+   "sha256": "3c1dad5b2e99b0a7a709804adf1dc5923d5e65dea311088ce27db0af9a54d5ef"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The guideline was uploaded October 2022; no later change was found in producer-MU.json.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.3,
+    "rateHighEnd": 0.4,
+    "minQPEPerEpisodeUSD": {
+     "30%": {
+      "foreign": 20000,
+      "local": 20000
+     },
+     "40%": 150000
+    },
+    "eligible": [
+     "Television serial",
+     "Television single dramas",
+     "Factual television programmes"
+    ],
+    "localAndForeign": true,
+    "approval": "Film Rebate Committee recommends, EDB CEO approves"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "film makers benefit of 30% rebate on all the qualifying expenditures incurred in Mauritius … Minimum QPE (USD) Eligible for 30% rebate Foreign Production Local Production Feature film (including animation) 100,000 50,000 Television drama series or single drama 20,000 (per episode) 20,000"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Not found. Neither the EDB guideline nor the NAF guidelines caps a producer's fee or overheads; the guideline lists production service company fees as qualifying. No MBC commissioning terms were reachable.",
+   "verdict": "partial",
+   "value": {
+    "filmRebateScheme": {
+     "producerFeeCap": null,
+     "productionServiceCompanyFeesQualify": true,
+     "overheadsExcluded": "for digital animation projects only"
+    },
+    "nafProductionGrant": {
+     "maxShareOfBudget": 0.75,
+     "ceilingMUR": 800000,
+     "producerFeeCap": null
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "List of Qualifying Production Expenditures ... • Production service company fees • Professional services (such as insurance and accounting services) • Remuneration for cast and crew ... The following expenditures are excluded and not considered as QPE for Digital Animation Projects • Purchase of depreciating asset ... • Overhead expenses such as rental of office space, utilities bill and telecommunication cost • Administrative salaries • Marketing and distribution cost."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "the EDB Film Rebate Scheme guideline (first wave's saved PDF) re-read for fee caps and categories",
+     "result": "no producer fee or overhead cap; overheads excluded for animation",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mfdc.mu (Mauritius Film Development Corporation)",
+     "result": "CONNECT tunnel failed (502)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not found. Neither the EDB guideline nor the NAF guidelines caps a producer's fee or overheads; the guideline lists production service company fees as qualifying. No MBC commissioning terms were reachable."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: MBC Mauritius Broadcasting Corporation call for proposals local productions independent producers series tele-serie",
+     "result": "led to MBC supplier registration pages (2022-23, 2025-26)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mbc.intnet.mu; www.mbcradio.tv home and node/65090; mbcradio.tv 2022-23 registration page (redirected to www.mbc.mu); www.mbc.mu/procurement",
+     "result": "TLS name mismatch; 503 under maintenance; mbc.mu procurement: cafeteria tenders only",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "the EDB Film Rebate Scheme guideline (first wave's saved PDF) re-read for fee caps and categories",
+     "result": "no producer fee or overhead cap; overheads excluded for animation",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.govmu.org WP REST: pages searched for theatre, scheme, grant, drama; pages 5436 (Assistances Provided), 5119 (National Arts Fund), 1492 (Serge Constantin Theatre); posts searched for National Arts Fund, theatre, drama festival; posts 5854, 7701, 8052; media search for guidelines and arts fund; the NAF 8th call guidelines PDF",
+     "result": "read: NAF schemes, ceilings and eligibility; travel grants; drama festival; no rate of yes, no fee rates",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mfdc.mu (Mauritius Film Development Corporation)",
+     "result": "CONNECT tunnel failed (502)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.govmu.org WP REST: pages searched for theatre, scheme, grant, drama; pages 5436 (Assistances Provided), 5119 (National Arts Fund), 1492 (Serge Constantin Theatre); posts searched for National Arts Fund, theatre, drama festival; posts 5854, 7701, 8052; media search for guidelines and arts fund; the NAF 8th call guidelines PDF",
+     "result": "read: NAF schemes, ceilings and eligibility; travel grants; drama festival; no rate of yes, no fee rates",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

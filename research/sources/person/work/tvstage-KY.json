@@ -1,0 +1,138 @@
+{
+ "topic": "markets.KY.series-and-stage",
+ "read": "2026-11-04",
+ "country": "KY",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.visitcaymanislands.com/getContentAsset/a9fcd533-3b29-4795-89ee-f941580a1d1b/f9dbbdd9-8793-4fce-ba74-0d705ef7a7d9/Cayman-Islands-Film-Rebate-Programme-Guidelines-2025.pdf?language=en",
+   "title": "Cayman Islands Film Commission: Film Rebate Programme Guidelines 2025",
+   "read": "2026-11-04",
+   "said": "2.7. The following production categories are eligible: • Feature films (including films made for television); • Documentaries; • Scripted television series; • Unscripted (reality) television series and game shows; • Video games. … 2.10. Minimum CIQPE thresholds: • CI$250,000 across all eligible production categories. … 2.11. The Rebate is calculated as a minimum of 15% of CIQPE. 2.12. There is an uplift (additional rebate) worth 10% of CIQPE incurred on unscripted productions … 2.13. … 5% … explicitly and visibly set in the Cayman Islands. 2.14. … 5% … portray the Cayman Islands in a positive light … 2.15. … 5% … at least $1.5M in CIQPE and submit a plan for training Caymanians … 2.16. … 5% … on Cayman Brac or Little Cayman. 2.17. … 10% of CIQPE incurred on Cayman Islands resident Qualifying Local Vendors and Qualifying Local Labour … 2.18. … the maximum Rebate for any individual CIQPE is capped at 35%.",
+   "file": "ky-guide.pdf",
+   "sha256": "98d22b4e4b6856fc199c1091779e1b892ee6d0e095ed062d4227c55d2dc06bcd"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The minimum spend is per production, not per episode.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.15,
+    "maxRate": 0.35,
+    "counts": "scripted television series (and unscripted series)",
+    "minSpendKYD": 250000,
+    "perEpisodeThreshold": null,
+    "uplifts": {
+     "unscripted": 0.1,
+     "setInCayman": 0.05,
+     "positivePortrayal": 0.05,
+     "training(CIQPE>=1.5m)": 0.05,
+     "sisterIslands": 0.05,
+     "localVendorsAndLabour": 0.1
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "2.7. The following production categories are eligible: • Feature films (including films made for television); • Documentaries; • Scripted television series; • Unscripted (reality) television series and game shows; • Video games. … 2.10. Minimum CIQPE thresholds: • CI$250,000 across all eligible production categories. … 2.11. The Rebate is calculated as a minimum of 15% of CIQPE. 2.12. There is an uplift (additional rebate) worth 10% of CIQPE incurred on unscripted productions … 2.13. … 5% … explicitly and visibly set in the Cayman Islands. 2.14. … 5% … portray the Cayman Islands in a positive light … 2.15. … 5% … at least $1.5M in CIQPE and submit a plan for training Caymanians … 2.16. … 5% … on Cayman Brac or Little Cayman. 2.17. … 10% of CIQPE incurred on Cayman Islands resident Qualifying Local Vendors and Qualifying Local Labour … 2.18. … the maximum Rebate for any individual CIQPE is capped at 35%."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "artscayman.org (CNCF) home page, then /supporting-our-creatives/grants-for-the-arts/, /annual-reports/, /venues/harquail-theatre/, /grants",
+     "result": "home 200 (links read); every other page 429 Too Many Requests, three tries",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30, prefix org,artscayman)/",
+     "result": "no grants or annual-report captures (only a 301/404 for /harquail-theatre/); Wayback answered 429 / connection reset this session",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "visitcaymanislands.com CIFC Rebate Programme Guidelines 2025 PDF, re-downloaded and read whole (13 pages)",
+     "result": "200; ss. 2.7, 4.9, 4.10, 4.17 quoted; no stage category",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.cigtv.ky; gov.ky/cigtv",
+     "result": "CONNECT 502; 404",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "visitcaymanislands.com CIFC Rebate Programme Guidelines 2025 PDF, re-downloaded and read whole (13 pages)",
+     "result": "200; ss. 2.7, 4.9, 4.10, 4.17 quoted; no stage category",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "artscayman.org (CNCF) home page, then /supporting-our-creatives/grants-for-the-arts/, /annual-reports/, /venues/harquail-theatre/, /grants",
+     "result": "home 200 (links read); every other page 429 Too Many Requests, three tries",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -30, prefix org,artscayman)/",
+     "result": "no grants or annual-report captures (only a 301/404 for /harquail-theatre/); Wayback answered 429 / connection reset this session",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "artscayman.org (CNCF) home page, then /supporting-our-creatives/grants-for-the-arts/, /annual-reports/, /venues/harquail-theatre/, /grants",
+     "result": "home 200 (links read); every other page 429 Too Many Requests, three tries",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "cds.ky home and /About",
+     "result": "200: volunteer community theatre, 130-seat Prospect Playhouse, four to six shows a year",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

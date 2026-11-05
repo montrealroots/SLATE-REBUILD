@@ -90,6 +90,32 @@ import compiled from './markets.json' with { type: 'json' };
  * part, and Uruguay's table went unpaid. And an agreement whose own text covers actors from an age engages no one
  * younger (the Hebrew Theatre's, none under 18, its clause 1.2); until 2026-11-04 nothing held that apart, and a minor was
  * engaged under it.
+ *
+ * A play beyond the UK is engaged under one of its market's agreements on stage. The research of 2026-11-04 (a series and
+ * a play in every market) found the stage actor's minimum in three markets that had none, each read at its source by the
+ * integrator: Iceland's National Theatre (the actors' association's institution agreement, 2024 to 2028: a month's salary
+ * by years in the work, an engagement of two months at least, the fee for each performance beside it not paid, the plan
+ * counting no performances); Czechia's public theatres (the pay regulation's lowest step of the actor's class, 10 to 13,
+ * by the part, the least § 6 lets an artist's employer pay); and Canada's Canadian Theatre Agreement (a week's fee by the
+ * company's category, A to G, each an agreement of its own as the play names its company's; rehearsal weeks at the
+ * week's fee, as its pro-rated rehearsal schedule counts them; A+ and the Shaw Festival's rows reached by no calculation
+ * the booklet gives). The Vatican's research, that no actors' agreement sets a production's pay, now covers a play's part
+ * as it did a film's. The methods round of the same day found four more, each read at its source by the actor's
+ * integrator: Belgium's Flemish performing arts (joint committee 304's pay group A, a month's minimum by years of
+ * seniority from 1 August 2026, a contract of four months or more on one scale and a shorter one on another; the
+ * French-speaking companies' 2012 scale stays unread, today's indexed figure not found); the Faroe Islands' national
+ * theatre (Tjóðpallur's agreement with the actors' union, its 2024 table by step, a step a year, group 1's steps the floor,
+ * its last table kept past a raise the register doesn't yet list); Cyprus's state theatre (THOC's agreement with the
+ * actors' unions to 2028, a basic month's salary by completed years of experience, contracts of three months at least);
+ * and Luxembourg's negotiated sector minima (the Theater Federatioun's with ASPRO, from 1 June 2026, for self-employed
+ * performers: a rehearsal day beside each performance, a run of one to three performances paid as isolated ones and a
+ * longer run as a series, the game's reading, since the plan counts no performances a week and no running time, so the
+ * shorter shows' series rates aren't read). Germany's NV Bühne, which de-stage reads, was terminated by the GDBA and the
+ * BFFS to 30 June 2026; its norms carry on until replaced (the Collective Agreements Act, § 4(5)) for every engagement
+ * whose contract refers to it, which a part engaged under de-stage is, so its minimums stand; from 1 July 2026 a theatre
+ * may agree other terms with staff it engages, which the game doesn't model. Where no agreement a country is engaged
+ * under covers the stage, the player is told a part on stage isn't paid on terms the game knows (stage); until 2026-11-04
+ * a country with screen terms alone told nothing of it.
  */
 
 /** The line that tells the player these figures are the game's own (person.acting.model). */
@@ -97,11 +123,12 @@ export const MODEL_LINE: LineId = 'acting.model';
 
 /** The agreements the markets engage parts under, as markets.json compiles them (a test holds the two lists one). */
 export const MARKET_AGREEMENTS = [
-  'ad-artists', 'ai-all', 'ar-film', 'ar-tv', 'ar-stage', 'at-screen', 'at-stage', 'au-screen', 'au-stage', 'be-screen', 'bg-foreign-film', 'bn-screen', 'br-rj-tv', 'br-sp-screen', 'br-rj-stage', 'bw-screen',
-  'cl-screen', 'co-all', 'cu-stage', 'de-screen', 'de-stage', 'de-guest', 'dk-film', 'dk-tv', 'dk-soejle-a', 'dk-copenhagen-stage', 'ec-sectoral', 'ee-film', 'ee-tv-private', 'ee-err', 'es-screen', 'es-madrid-stage', 'fi-stage', 'fi-guest',
-  'fi-screen', 'fr-film', 'fr-tv', 'fr-subsidised-stage', 'fr-private-stage', 'gi-all', 'gr-private-stage', 'hk-film', 'ie-stage', 'il-screen', 'il-hebrew-theatre', 'in-screen', 'it-screen', 'it-stage', 'jm-all',
-  'jp-nhk', 'jp-live', 'kr-kbs', 'kr-mbc-sbs', 'li-film', 'ms-all', 'mx-televisa', 'mx-azteca', 'mx-other', 'nc-all', 'ng-screen', 'nl-stage', 'nl-screen', 'no-film', 'no-tv', 'no-nrk', 'no-stage',
-  'nz-screen', 'nz-court', 'nz-atc', 'ph-screen', 'pn-all', 'se-screen', 'se-stage', 'se-private-stage', 'se-free-stage', 'sh-all', 'th-screen', 'tr-screen', 'uy-screen', 'va-screen', 'vg-all', 'za-all',
+  'ad-artists', 'ai-all', 'ar-film', 'ar-tv', 'ar-stage', 'at-screen', 'at-stage', 'au-screen', 'au-stage', 'be-screen', 'be-flemish-stage', 'bg-foreign-film', 'bn-screen', 'br-rj-tv', 'br-sp-screen', 'br-rj-stage', 'bw-screen',
+  'ca-cta-a', 'ca-cta-b', 'ca-cta-c', 'ca-cta-d', 'ca-cta-e', 'ca-cta-f', 'ca-cta-g',
+  'cl-screen', 'co-all', 'cu-stage', 'cy-thoc', 'cz-public-theatre', 'de-screen', 'de-stage', 'de-guest', 'dk-film', 'dk-tv', 'dk-soejle-a', 'dk-copenhagen-stage', 'ec-sectoral', 'ee-film', 'ee-tv-private', 'ee-err', 'es-screen', 'es-madrid-stage', 'fi-stage', 'fi-guest',
+  'fi-screen', 'fo-national-theatre', 'fr-film', 'fr-tv', 'fr-subsidised-stage', 'fr-private-stage', 'gi-all', 'gr-private-stage', 'hk-film', 'ie-stage', 'il-screen', 'il-hebrew-theatre', 'in-screen', 'is-national-theatre', 'it-screen', 'it-stage', 'jm-all',
+  'jp-nhk', 'jp-live', 'kr-kbs', 'kr-mbc-sbs', 'li-film', 'lu-stage', 'ms-all', 'mx-televisa', 'mx-azteca', 'mx-other', 'nc-all', 'ng-screen', 'nl-stage', 'nl-screen', 'no-film', 'no-tv', 'no-nrk', 'no-stage',
+  'nz-screen', 'nz-court', 'nz-atc', 'ph-screen', 'pn-all', 'se-screen', 'se-stage', 'se-private-stage', 'se-free-stage', 'sh-all', 'th-screen', 'tr-screen', 'uy-screen', 'va-screen', 'va-stage', 'vg-all', 'za-all',
   'ax-fi-stage', 'ax-fi-guest', 'ax-fi-screen', 'bl-fr-film', 'bl-fr-tv', 'bl-fr-subsidised-stage', 'bl-fr-private-stage', 'cc-au-screen', 'cc-au-stage', 'cx-au-screen', 'cx-au-stage', 'gf-fr-film',
   'gf-fr-tv', 'gf-fr-subsidised-stage', 'gf-fr-private-stage', 'gp-fr-film', 'gp-fr-tv', 'gp-fr-subsidised-stage', 'gp-fr-private-stage', 'mc-fr-film', 'mc-fr-tv', 'mc-fr-subsidised-stage',
   'mc-fr-private-stage', 'mf-fr-film', 'mf-fr-tv', 'mf-fr-subsidised-stage', 'mf-fr-private-stage', 'mq-fr-film', 'mq-fr-tv', 'mq-fr-subsidised-stage', 'mq-fr-private-stage', 'nf-au-screen', 'nf-au-stage', 'pm-fr-film', 'pm-fr-tv', 'pm-fr-subsidised-stage',
@@ -263,7 +290,7 @@ export interface MarketAgreement {
   readonly age?: number;
 }
 /** What a market's research couldn't find, by the item its blockers name. */
-export type Unknown = 'agreements' | 'rates' | 'none' | 'union' | 'language' | 'market' | 'terms' | 'successors';
+export type Unknown = 'agreements' | 'rates' | 'none' | 'union' | 'language' | 'market' | 'terms' | 'successors' | 'stage';
 export interface Market {
   readonly language: string;
   readonly zone: string;
@@ -666,6 +693,7 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
   market: 'where most of the work is',
   terms: 'what terms a part is engaged on',
   successors: 'the terms of the places that succeeded it',
+  stage: 'what a part on stage is paid',
 };
 
 /**

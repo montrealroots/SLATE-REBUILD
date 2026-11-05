@@ -31,7 +31,9 @@ import { fromMajor, isCurrency, type CurrencyCode } from '../../../src/core/mone
  * read has a reading saying why, and no market.
  *
  * Every country the research holds, compiled or not, gives what its research couldn't find (its blockers' items, or,
- * where the register cites only its blockers, the items they name), which the engine tells the player.
+ * where the register cites only its blockers, the items they name), which the engine tells the player; and where no
+ * agreement it is engaged under covers the stage, what a part on stage is paid (`stage`), so a play there is told why
+ * its part has no terms. Until 2026-11-04 a country with screen terms alone told the player nothing of the stage.
  */
 export const SOURCES = 'research/sources/person/markets';
 export const READINGS = 'tools/person/markets/readings.json';
@@ -51,7 +53,7 @@ export const TERMS = ['day', 'week', 'month', 'year', 'session', 'performance', 
 /** What a minimum's tier turns on: the part's budget, lines, seats, an episode's minutes, its length; the actor's years; the unit of the engagement it pays. */
 export const TIERS = ['budget', 'lines', 'seats', 'minutes', 'length', 'years', 'nth'] as const;
 /** What a market's research can leave unknown, as its blockers name it. */
-export const ITEMS = ['agreements', 'rates', 'none', 'union', 'language', 'market', 'terms', 'successors'] as const;
+export const ITEMS = ['agreements', 'rates', 'none', 'union', 'language', 'market', 'terms', 'successors', 'stage'] as const;
 
 export type Medium = (typeof MEDIA)[number];
 export type Term = (typeof TERMS)[number];
@@ -404,6 +406,11 @@ export function readMarkets(root: string): Markets {
     for (const id of market.agreements) if ((KEPT as readonly string[]).includes(id) || Object.hasOwn(out.agreements, id)) throw new Error(`${id} is another agreement's id`);
     out.markets[cc] = market;
     Object.assign(out.agreements, agreements);
+  }
+  // What a part on stage is paid isn't known where no agreement the country is engaged under covers the stage (its own or a followed country's).
+  for (const [cc, unknown] of Object.entries(out.unknown)) {
+    const staged = (out.markets[cc]?.agreements ?? []).some((id) => (out.agreements[id] as Agreement).media.includes('stage'));
+    if (!staged && !unknown.includes('stage')) unknown.push('stage');
   }
   return out;
 }

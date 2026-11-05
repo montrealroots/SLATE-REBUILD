@@ -6,7 +6,8 @@ export { COUNTRIES };
 
 /**
  * The markets' coverage matrix (coverage/markets-countries.json), a row for every country and territory of the map:
- * the US, the UK and Canada on the minimums the engine keeps itself (R-4614, person.work.actor.calibration); every
+ * the US, the UK and Canada on the minimums the engine keeps itself (R-4614, person.work.actor.calibration), and on
+ * their own research where the markets hold it (Canada's stage, from 2026-11-04); every
  * other one whose research the register cites (person.markets.<code>) with nothing blocked is researched, compiled or
  * read as saying why not; one with blockers (person.markets.blocked.<code>) is blocked, citing them and its research,
  * the player told what isn't known; one with neither is pending.
@@ -38,8 +39,9 @@ export type Row = { key: string; status: 'researched' | 'blocked'; register: str
 export function marketsCoverage(countries: readonly string[], facts: ReadonlyMap<string, string>): Row[] {
   return countries.map((key): Row => {
     const kept = facts.get(KEPT_FACT);
-    if ((KEPT_COUNTRIES as readonly string[]).includes(key) && kept !== undefined) return { key, status: 'researched', register: [kept], tests: KEPT_TESTS };
     const [own, blocker] = [facts.get(`${FACT}${key}`), facts.get(`${BLOCKED}${key}`)];
+    // A kept country's own research (Canada's stage, from 2026-11-04) is cited beside the kept minimums, its tests beside theirs.
+    if ((KEPT_COUNTRIES as readonly string[]).includes(key) && kept !== undefined) return own === undefined ? { key, status: 'researched', register: [kept], tests: KEPT_TESTS } : { key, status: 'researched', register: [kept, own], tests: [...KEPT_TESTS, ...TESTS] };
     if (blocker !== undefined) return { key, status: 'blocked', register: [blocker, own].filter((id): id is string => id !== undefined), tests: [...TESTS, TOLD] };
     return own === undefined ? { key, status: 'pending' } : { key, status: 'researched', register: [own], tests: TESTS };
   });

@@ -1,0 +1,157 @@
+{
+ "topic": "markets.PT.series-and-stage",
+ "read": "2026-11-04",
+ "country": "PT",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://portugalfilmcommission.com/en/incentive-to-film-recording-and-production/",
+   "title": "Portugal Film Commission (ICA): Cash Rebate",
+   "read": "2026-11-04",
+   "said": "Applies to Cinema, Audiovisual and VOD Productions: Domestic, foreign (executive/services) and/or official and de facto co-productions; … Support rate of 25 %, which may be increased to 30 %, on the eligible expenditure. … Support of up to 1,500,000 €; 2024 financing: up to 14,000,000 €; … The effective rate applicable to eligible expenditure may not exceed 30%. … Audiovisual works for television production Television films Standalone television documentaries TV animated specials TV series 500.000 € 200.000 € 500.000 € 500.000 €",
+   "file": "pt-cashrebate.html",
+   "sha256": "9dc57aa697eaadf4e26316af37396d43f5f64193fc4d2a45b87c53cd7aaa549e"
+  },
+  {
+   "kind": "primary",
+   "url": "https://portugalfilmcommission.com/en/cash-refund/",
+   "title": "Portugal Film Commission (ICA): Pic Portugal – Cash Refund Incentive",
+   "read": "2026-11-04",
+   "said": "Minimum 2,500,000 € of eligible expenditure 30% reimbursement of the first 2,000,000 € and up to 25 % of the surplus Allocation on a first come, first served basis Minimum score required on the Cultural Test Single payment in the year following Final Recognition Support up to: 6,000,000 € for cinematographic and audiovisual works / 3,000,000 € per episode. Annual budget: 20,000,000 €",
+   "file": "pt-refund.html",
+   "sha256": "d7adc36e064eeb14bfa882f2ef20e6be3d27f482797ba6ed4917df228023cd76"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The two schemes cannot be combined for one production. 2025 Cash Refund admitted six projects (list PDF, pt-refund-list.pdf) — a count of admissions, not of applications.",
+   "verdict": "found",
+   "value": {
+    "cashRebate": {
+     "rate": 0.25,
+     "rateMax": 0.3,
+     "rateLowDensityOrAutonomousRegions": 0.4,
+     "minSpendTVSeriesEUR": 500000,
+     "capEURPerProject": 1500000,
+     "pot2024EUR": 14000000,
+     "law": "Portaria 124-A/2024/1"
+    },
+    "cashRefund": {
+     "minSpendEUR": 2500000,
+     "rateFirst2mEUR": 0.3,
+     "rateAboveMax": 0.25,
+     "capEURPerWork": 6000000,
+     "capEURPerEpisode": 3000000,
+     "annualBudgetEUR": 20000000,
+     "law": "Portaria 124-B/2024/1; Lei 55/2012 art. 17-A"
+    },
+    "notCombinable": true
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Applies to Cinema, Audiovisual and VOD Productions: Domestic, foreign (executive/services) and/or official and de facto co-productions; … Support rate of 25 %, which may be increased to 30 %, on the eligible expenditure. … Support of up to 1,500,000 €; 2024 financing: up to 14,000,000 €; … The effective rate applicable to eligible expenditure may not exceed 30%. … Audiovisual works for television production Television films Standalone television documentaries TV animated specials TV series 500.000 € 200.000 € 500.000 € 500.000 €"
+    },
+    {
+     "src": 1,
+     "said": "Minimum 2,500,000 € of eligible expenditure 30% reimbursement of the first 2,000,000 € and up to 25 % of the surplus Allocation on a first come, first served basis Minimum score required on the Cultural Test Single payment in the year following Final Recognition Support up to: 6,000,000 € for cinematographic and audiovisual works / 3,000,000 € per episode. Annual budget: 20,000,000 €"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "The table is flattened on the page; read as two columns (no-filming: 5% per item / 20% overall; other productions: 10% / 35%), the same table appears on the Cash Refund page. A cap on what counts toward the incentive, not on what may be paid; no overhead cap stated.",
+   "verdict": "partial",
+   "value": {
+    "producerFeeCountedMax": "10% of eligible expenditure (5% where no filming)",
+    "aboveTheLineCountedMax": "35% (20% where no filming)",
+    "overheads": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "“Above the line” expenditure Production activities which do not include filming Other productions Producers and producing companies, including executive producers Directors Screenwriters, authors of adaptations and authors of dialogues Other authors, such as authors of preexisting works and musical composers Main actors Limit by item: 5% Overall limit: 20% Limit by item: 10% Overall limit: 35%"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "portugalfilmcommission.com Cash Rebate page, Cash Refund page, its 2025 opening news and the 2025 admitted-projects list PDF; ica-ip.pt/en/incentives-and-coproduction/",
+     "result": "found 1, partial 3; the ICA English page still describes the 2020 rebate (stale, not used)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "The table is flattened on the page; read as two columns (no-filming: 5% per item / 20% overall; other productions: 10% / 35%), the same table appears on the Cash Refund page. A cap on what counts toward the incentive, not on what may be paid; no overhead cap stated."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "portugalfilmcommission.com Cash Rebate page, Cash Refund page, its 2025 opening news and the 2025 admitted-projects list PDF; ica-ip.pt/en/incentives-and-coproduction/",
+     "result": "found 1, partial 3; the ICA English page still describes the 2020 rebate (stale, not used)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dgartes.gov.pt/pt/apoios",
+     "result": "404",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: 'DGARTES Programa de Apoio a Projetos 2026 teatro criação montante máximo aviso de abertura'",
+     "result": "trade-press leads, read below",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "dgartes.gov.pt home and /pt/atividades/apoio_as_artes",
+     "result": "programme types only; no amounts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "noticiasaominuto.com (Lusa) 31 Jan 2025; rtp.pt 4 Sep 2025 and 26 Jan 2026",
+     "result": "counts and pots, quoting DGArtes",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

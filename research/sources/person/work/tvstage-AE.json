@@ -1,0 +1,162 @@
+{
+ "topic": "markets.AE.series-and-stage",
+ "read": "2026-11-04",
+ "country": "AE",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://rebate.film.gov.ae/storage/pdf/rebate-overview-en.pdf",
+   "title": "New ADFC Cashback Rebate Overview (Abu Dhabi Film Commission)",
+   "read": "2026-11-01",
+   "said": "The base rate of the scheme has increased from 30% to 35%. In addition, there is now the potential for eligible productions to claim up to 50% rebate on qualifying spend in Abu Dhabi … Abu Dhabi Qualifying Production Expenditure (ADQPE) focuses entirely on below-the-line expenditure … 85 points and above = 15% uplift (50% total rebate) … NEW REBATE CAPS FROM 1 JANUARY 2025 … Feature Films: US$10m (US$500,000 for post-production only projects) … Television Programme or Series: US$2m (US$300,000 for post-production only projects) … Productions which employ a UAE National in one or more specific above-the-line cast and crew roles (Writer, Director, Stunt Coordinator, Stunt Performer or Lead Cast): 20 points"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Abu Dhabi's cashback rebate is 35% of qualifying below-the-line spend in the emirate (ADQPE) from 1 January 2025, rising by points to as much as 50%; caps are US$10 million for a feature film or high-end drama series and US$2 million for other TV programmes.",
+   "verdict": "found",
+   "value": {
+    "scheme": "Abu Dhabi Film Commission (Creative Media Authority) cashback rebate",
+    "rate": 0.35,
+    "maxRate": 0.5,
+    "base": "Abu Dhabi Qualifying Production Expenditure (below-the-line spend in the Emirate of Abu Dhabi)",
+    "uplifts": [
+     {
+      "points": "10-14",
+      "rate": 0.375
+     },
+     {
+      "points": "15-39",
+      "rate": 0.4
+     },
+     {
+      "points": "40-69",
+      "rate": 0.425
+     },
+     {
+      "points": "70-84",
+      "rate": 0.45
+     },
+     {
+      "points": "85+",
+      "rate": 0.5
+     }
+    ],
+    "capsUSD": {
+     "featureFilm": 10000000,
+     "imax": 10000000,
+     "highEndTVDrama": 10000000,
+     "tvProgrammeOrSeries": 2000000,
+     "shortForm": 500000,
+     "entertainmentShows": 2000000,
+     "postOnlyFeature": 500000
+    },
+    "from": "2025-01-01",
+    "points": {
+     "UAE national as writer, director, stunt coordinator, stunt performer or lead cast": 20,
+     "featuring Abu Dhabi": 20,
+     "full post-production in Abu Dhabi": 10,
+     "feature: per main-unit shooting day": "1, max 60"
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The base rate of the scheme has increased from 30% to 35%. In addition, there is now the potential for eligible productions to claim up to 50% rebate on qualifying spend in Abu Dhabi … Abu Dhabi Qualifying Production Expenditure (ADQPE) focuses entirely on below-the-line expenditure … 85 points and above = 15% uplift (50% total rebate) … NEW REBATE CAPS FROM 1 JANUARY 2025 … Feature Films: US$10m (US$500,000 for post-production only projects) … Television Programme or Series: US$2m (US$300,000 for post-production only projects) … Productions which employ a UAE National in one or more specific above-the-line cast and crew roles (Writer, Director, Stunt Coordinator, Stunt Performer or Lead Cast): 20 points"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"Dubai Culture OR \\\"Department of Culture and Tourism Abu Dhabi\\\" grant theatre production funding call 2026 eligibility amount\"",
+     "result": "Dubai Culture's Resilience Portfolio, Art Jameel RPP, a fundsforngos listing (UAE 'creativity and production grant', up to AED 100,000), a 2022 federal theatre initiative",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"\\\"National Grant Programme for Culture and Creativity\\\" fifth edition 2026 theatre categories AED Ministry of Culture\"",
+     "result": "WAM and Gulf News items on the 5th cycle; beta.government.ae page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mc.gov.ae, moc.gov.ae, dubaiculture.gov.ae, dubaiculture.ae/en, dct.gov.ae, mohre.gov.ae; wam.ae/en/article/bzlhqfz… and …/bne3u2n… (4th cycle recipients); beta.government.ae/en/about-the-uae/culture/national-grant-program-for-culture-and-creativity",
+     "result": "Ministry, Dubai Culture, DCT: no connection (curl 000); mohre reset (35); WAM: 14 kB script shell, no text; beta.government.ae: TLS name mismatch (curl 60), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "gulfnews.com 5th-cycle article and Resilience Portfolio article; fundsforngos.org listing",
+     "result": "Both Gulf News read; fundsforngos 403 (curl and WebFetch)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"Dubai Culture OR \\\"Department of Culture and Tourism Abu Dhabi\\\" grant theatre production funding call 2026 eligibility amount\"",
+     "result": "Dubai Culture's Resilience Portfolio, Art Jameel RPP, a fundsforngos listing (UAE 'creativity and production grant', up to AED 100,000), a 2022 federal theatre initiative",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"\\\"National Grant Programme for Culture and Creativity\\\" fifth edition 2026 theatre categories AED Ministry of Culture\"",
+     "result": "WAM and Gulf News items on the 5th cycle; beta.government.ae page",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mc.gov.ae, moc.gov.ae, dubaiculture.gov.ae, dubaiculture.ae/en, dct.gov.ae, mohre.gov.ae; wam.ae/en/article/bzlhqfz… and …/bne3u2n… (4th cycle recipients); beta.government.ae/en/about-the-uae/culture/national-grant-program-for-culture-and-creativity",
+     "result": "Ministry, Dubai Culture, DCT: no connection (curl 000); mohre reset (35); WAM: 14 kB script shell, no text; beta.government.ae: TLS name mismatch (curl 60), not read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "gulfnews.com 5th-cycle article and Resilience Portfolio article; fundsforngos.org listing",
+     "result": "Both Gulf News read; fundsforngos 403 (curl and WebFetch)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"\\\"National Grant Programme for Culture and Creativity\\\" fifth edition 2026 theatre categories AED Ministry of Culture\"",
+     "result": "WAM and Gulf News items on the 5th cycle; beta.government.ae page",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

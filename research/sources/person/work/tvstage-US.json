@@ -1,0 +1,185 @@
+{
+ "topic": "markets.US.series-and-stage",
+ "read": "2026-11-04",
+ "country": "US",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://film.ca.gov/wp-content/uploads/2025/08/4.0-Program-Guidelines-1.pdf",
+   "title": "California Film Commission: California Film and Television Tax Credit Program 4.0, Program Guidelines (January 1, 2026)",
+   "read": "2026-11-04",
+   "said": "1. 35% Refundable Tax Credit a. Non-independent productions that are Feature films, Animation films, New TV series, Recurring TV series, Pilots, Limited series … b. The 35% tax credit applies up to a maximum of $120 million of qualified expenditures, which serves as an effective cap on the tax credit amount of $42 million, excluding uplifts. … Television series, licensed for any distribution outlet, must have a minimum production budget of $1 million per episode. Each episode must have at least 20 minutes of running time, excluding commercials. a. A Television series season consists of no fewer than six (6) episodes",
+   "file": "us-ca-guidelines.pdf",
+   "sha256": "60df75f7ed2b1ba56d053c8f4ddca63b1ecc586d77dca953aad26cb41b510310"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.broadwayleague.com/press/press-releases/broadways-20252026-season-wraps-with-146-million-attendances-and-grosses-of-191-billion/",
+   "title": "The Broadway League: Broadway's 2025-2026 Season Wraps with 14.6 Million Attendances and Grosses of $1.91 Billion",
+   "read": "2026-11-04",
+   "said": "The season included 74 productions, 35 of which opened in this season, that collectively ran a total of 1,703 playing weeks and 13,416 performances . Audiences filled 90.8% of available seats. Compared to last season, the 2025-2026 season was up 1.0% in gross to $1,910,903,835 and down 0.6% in attendance reaching 14,577,322.",
+   "file": "us-league-2526.html",
+   "sha256": "71ab3c74266732e38b18194ebfbcd6e3b10c655f6fdecf9c7e466d7706f37bd8"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "A state credit, not national: the engine would need the life's series to be made in California. Producers', writers', directors' and actors' wages are excluded (held already in producer-US.json).",
+   "verdict": "found",
+   "value": {
+    "scope": "state (California); no federal incentive (producer-US.json: IRC s.181 ended for productions commencing after 2025-12-31)",
+    "program": "California Film and Television Tax Credit Program 4.0",
+    "from": "2025-07-01",
+    "to": "2030-06-30",
+    "guidelinesDated": "2026-01-01",
+    "rate": 0.35,
+    "relocatingSeriesRate": 0.4,
+    "qualifiedSpendCapUSD": 120000000,
+    "creditCapUSD": 42000000,
+    "relocatingCreditCapUSD": 48000000,
+    "perEpisodeBudgetMinUSD": 1000000,
+    "episodeMinMinutes": 20,
+    "seasonEpisodes": [
+     6,
+     30
+    ],
+    "limitedSeries": {
+     "episodesMin": 2,
+     "episodeOverMinutes": 40,
+     "perEpisodeBudgetMinUSD": 1000000
+    },
+    "tvAllocationUSD": 300000000,
+    "relocatingAllocationUSD": 112500000,
+    "uplifts": {
+     "vfx": 0.05,
+     "outOfZone": 0.05,
+     "localHireLabor": 0.1
+    },
+    "californiaShareMin": 0.75
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "1. 35% Refundable Tax Credit a. Non-independent productions that are Feature films, Animation films, New TV series, Recurring TV series, Pilots, Limited series … b. The 35% tax credit applies up to a maximum of $120 million of qualified expenditures, which serves as an effective cap on the tax credit amount of $42 million, excluding uplifts. … Television series, licensed for any distribution outlet, must have a minimum production budget of $1 million per episode. Each episode must have at least 20 minutes of running time, excluding commercials. a. A Television series season consists of no fewer than six (6) episodes"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "outcomes",
+   "finding": "Gross per performance is the League's gross divided by its performance count (arithmetic, not a stated figure). No count of shows that recouped was found; the League publishes none.",
+   "verdict": "partial",
+   "value": {
+    "season": "2025-26",
+    "from": "2025-05-26",
+    "to": "2026-05-24",
+    "productions": 74,
+    "opened": 35,
+    "playingWeeks": 1703,
+    "performances": 13416,
+    "grossUSD": 1910903835,
+    "attendance": 14577322,
+    "capacity": 0.908,
+    "grossPerPerformanceUSD_derived": 142435
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "The season included 74 productions, 35 of which opened in this season, that collectively ran a total of 1,703 playing weeks and 13,416 performances . Audiences filled 90.8% of available seats. Compared to last season, the 2025-2026 season was up 1.0% in gross to $1,910,903,835 and down 0.6% in attendance reaching 14,577,322."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "film.ca.gov 4.0 Program Guidelines PDF (https)",
+     "result": "read; series terms found",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "itvs.org/funding/open-call/ (redirected to /funds/open-call/)",
+     "result": "read: nonfiction co-production up to $400,000",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch 'FX Research scripted original series count 2025 total number of scripted series US'",
+     "result": "press on FX counts for 2021-2023, Luminate and Ampere 2025 trends; no FX 2025 count, no pick-up rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "advanced-television.com 2026-02-09 Ampere article",
+     "result": "read: commissions +3% (first-run +7%) in North America, 2025",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "uscode.house.gov 26 USC 181 (prelim)",
+     "result": "404 at the address tried",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "tax.ny.gov musical and theatrical production credit page",
+     "result": "404",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "arts.gov grants-for-arts-projects/theater",
+     "result": "410 Gone",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"Broadway League season statistics 2025-2026 gross attendance playing weeks new productions\"",
+     "result": "led to the League release (read)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Gross per performance is the League's gross divided by its performance count (arithmetic, not a stated figure). No count of shows that recouped was found; the League publishes none."
+   }
+  }
+ ]
+}

@@ -21,6 +21,15 @@ import {
   meet,
   ofIn,
   numbersIn,
+  countOf,
+  partCreditOf,
+  partUnknownOf,
+  PART_ITEMS,
+  PARTS,
+  readTvstage,
+  termsOf,
+  TVSTAGE,
+  UNITS,
   OUTPUT,
   PLACES,
   rangeOf,
@@ -32,6 +41,7 @@ import {
   serialize,
   SOURCES,
   stands,
+  TV,
   tierOf,
   tiersOf,
   unknownOf,
@@ -73,6 +83,10 @@ const BARE = { s: S, currency: 'EUR' as const, fig: null };
 /** A clock that keeps two zones, one by a link. */
 const CLOCK = { zones: { 'Europe/Paris': [] }, links: { 'Europe/Monaco': 'Europe/Paris' } };
 const tier = (over: Record<string, unknown>) => tierOf(S, 'EUR', { fig: 0, budget: [0, null], ...over });
+/** A market's series and play where their research found nothing (person.markets.producer.blocked.<CC>.tvstage alone): every item unknown. */
+const NOTHING = (unknown: string[]) => ({ fund: null, aid: [], credit: null, foreignOnly: false, fees: [], unknown });
+const BARE_PARTS = { series: NOTHING(['incentive', 'fund', 'feecap', 'outcomes']), stage: NOTHING(['incentive', 'fund', 'outcomes']) };
+const tv = (cc: string) => ({ fact: `${BLOCKED}${cc}${TV}` });
 const T = (over: Partial<Tier> = {}): Tier => ({ budget: [0, null], bands: [{ from: 0, to: null, rate: 0.4 }], base: 1, net: false, most: null, sum: null, ...over });
 
 describe("the producer's markets compile", () => {
@@ -397,12 +411,12 @@ describe("the producer's markets compile", () => {
     put(`${SOURCES}/xproducer-ZZ.json`, 'not a market');
     const cite = (cc: string, text: string) => ({ fact: `${FACT}${cc}`, value: { file: `${SOURCES}/producer-${cc}.json`, sha256: sha(text) } });
     const calibrated = { fact: CALIBRATED, value: { file: CALIBRATION, sha256: sha(cal) } };
-    const all = [calibrated, cite('AA', aa), cite('BB', bb), { fact: `${BLOCKED}BB` }];
+    const all = [calibrated, cite('AA', aa), cite('BB', bb), { fact: `${BLOCKED}BB` }, tv('AA'), tv('BB')];
     put('research/register.json', { entries: all });
     put(READINGS, { AA: reading, BB: { currency: 'EUR' } });
     const out = readMarkets(root);
     expect(Object.keys(out)).toEqual(['AA', 'BB']);
-    expect(out['AA']).toEqual({ currency: 'CAD', fund: { rate: 0.111, tiers: [T({ bands: [{ from: 0, to: null, rate: 0.49 }], most: 500_000 })] }, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: [], zone: null });
+    expect(out['AA']).toEqual({ currency: 'CAD', fund: { rate: 0.111, tiers: [T({ bands: [{ from: 0, to: null, rate: 0.49 }], most: 500_000 })] }, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: [], ...BARE_PARTS, zone: null });
     expect(out['BB']?.unknown).toEqual(['fund']);
     expect(serialize(out)).toBe(`${JSON.stringify(out, null, 1)}\n`);
     expect(cited(root, { entries: all as never }, CALIBRATED, CALIBRATION)).toEqual(CAL);
@@ -458,13 +472,13 @@ describe("the producer's markets compile", () => {
     put(`${SOURCES}/producer-BB.json`, 'not read');
     const tried = (item: string) => ({ method: 'institution', result: `not found: ${item}` });
     const blocked = { fact: `${BLOCKED}BB`, attempts: [tried('fund'), tried('none'), tried('fund')] };
-    const entries = [{ fact: CALIBRATED, value: { file: CALIBRATION, sha256: sha(cal) } }, { fact: `${FACT}AA`, value: { file: `${SOURCES}/producer-AA.json`, sha256: sha(aa) } }, blocked];
+    const entries = [{ fact: CALIBRATED, value: { file: CALIBRATION, sha256: sha(cal) } }, { fact: `${FACT}AA`, value: { file: `${SOURCES}/producer-AA.json`, sha256: sha(aa) } }, blocked, tv('BB')];
     put('research/register.json', { entries });
     put(READINGS, { AA: null, BB: {} });
     expect(readResearch(root, { entries } as never, 'BB')).toEqual({ research: { country: 'BB', figures: [], blockers: [{ item: 'fund' }, { item: 'none' }, { item: 'fund' }] }, blocked: true });
     // Barbados: its country's currency.
     put(`${PLACES}/BB.tsv`, '1\tBridgetown\t\tBB.08\t13.1\t-59.6\tEurope/Monaco\t98511\t\n');
-    expect(readMarkets(root)).toEqual({ BB: { currency: 'BBD', fund: null, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: ['fund', 'none'], zone: 'Europe/Monaco' } });
+    expect(readMarkets(root)).toEqual({ BB: { currency: 'BBD', fund: null, aid: [], credit: null, foreignOnly: false, fees: [], release: null, unknown: ['fund', 'none'], ...BARE_PARTS, zone: 'Europe/Monaco' } });
     // Its blockers are all it holds: a reading can point at no figure of it.
     put(READINGS, { AA: null, BB: { credit: [{ fig: 0, budget: [0, null], share: ['share'] }] } });
     expect(() => readMarkets(root)).toThrow('BB has no figure 0');
@@ -496,7 +510,7 @@ describe("the producer's markets compile", () => {
     put(CALIBRATION, cal);
     put(ZONES, CLOCK);
     const set = (files: Record<string, { item: string }[]>, blocked: string[]) => {
-      const entries: unknown[] = [{ fact: CALIBRATED, value: { file: CALIBRATION, sha256: sha(cal) } }, ...blocked.map((cc) => ({ fact: `${BLOCKED}${cc}` }))];
+      const entries: unknown[] = [{ fact: CALIBRATED, value: { file: CALIBRATION, sha256: sha(cal) } }, ...blocked.map((cc) => ({ fact: `${BLOCKED}${cc}` })), ...Object.keys(files).map(tv)];
       for (const [cc, blockers] of Object.entries(files)) {
         const text = JSON.stringify({ ...OWN, country: cc, blockers });
         put(`${SOURCES}/producer-${cc}.json`, text);
@@ -543,6 +557,100 @@ describe("the producer's markets compile", () => {
   });
 });
 
+describe("a series' and a play's research", () => {
+  const FIG = { part: 'series', item: 'incentive', value: { rate: 0.25, perEpisodeEUR: 100000, capEUR: 2000000, episodes: 4, minutes: 40, one: 1, none: false, text: 'x' }, finding: 'EUR 1m in all, 5 episodes', sources: [{ src: 0, said: 'for foreign productions alone' }] };
+  const STAGE = { part: 'stage', item: 'fund', value: { applied: 10, funded: 3, most: 50000 }, finding: 'EUR' };
+  const TVR = { country: 'XX', figures: [FIG, STAGE], blockers: [{ item: 'series.fund' }, { item: 'series.feecap' }, { item: 'series.outcomes' }, { item: 'stage.incentive' }, { item: 'stage.outcomes' }, { item: 'series.fund' }], sources: [{ kind: 'primary' }] } as unknown as Research;
+  const P: Sources = { country: 'XX', own: TVR, calibration: CAL, film: OWN };
+  const credit = { fig: 0, per: 'episode', tiers: [{ fig: 0, budget: [100000, null], share: ['rate'] }], most: ['capEUR'], least: 1000000, episodes: ['episodes'], minutes: 40 };
+
+  it('names what it seeks, each part its items', () => {
+    expect([PARTS, PART_ITEMS, UNITS, TVSTAGE, TV]).toEqual([['series', 'stage'], { series: ['incentive', 'fund', 'feecap', 'outcomes'], stage: ['incentive', 'fund', 'outcomes'] }, ['episode', 'hour', 'minute'], 'research/sources/person/work', '.tvstage']);
+    expect([partUnknownOf(TVR.blockers, 'series'), partUnknownOf(TVR.blockers, 'stage')]).toEqual([['fund', 'feecap', 'outcomes'], ['incentive', 'outcomes']]);
+    for (const item of ['series.pay', 'stage.feecap', 'fund', 'series.fund.rate', 'film.fund']) expect(() => partUnknownOf([{ item }], 'series')).toThrow(`a blocker names ${item}, which isn't a fact a series' or a play's research seeks`);
+  });
+
+  it("reads a film's figure for a series where its reading says so", () => {
+    expect(figureOf(P, { fig: 1, in: 'film' })).toBe(OWN.figures[1]);
+    expect(() => figureOf(S, { fig: 1, in: 'film' })).toThrow("a figure is the market's own or the calibration's, not film's");
+    expect(() => figureOf(P, { fig: 9, in: 'film' })).toThrow('XX has no film figure 9');
+    expect(() => figureOf(P, { fig: 0, in: 'register' })).toThrow("a figure is the market's own or the calibration's, not register's");
+  });
+
+  it('reads a count at its place or standing in its figure', () => {
+    const r = { s: P, currency: 'EUR' as const, fig: FIG as never };
+    expect([countOf(r, ['episodes'], 'episodes'), countOf(r, 5, 'episodes'), countOf(r, 40, 'minutes'), countOf(r, ['one'], 'episodes')]).toEqual([4, 5, 40, 1]);
+    expect(() => countOf(r, 6, 'episodes')).toThrow("XX's episodes 6 doesn't stand in its figure");
+    for (const v of [['rate'], ['text'], 0, 2.5]) expect(() => countOf(r, v, 'episodes')).toThrow("XX's episodes isn't a count");
+    expect(() => countOf({ ...r, fig: null }, 4, 'episodes')).toThrow("XX's episodes names no figure");
+  });
+
+  it('reads an incentive as a film\'s tiers, none, or tiers with the terms a series sets', () => {
+    expect(partCreditOf(P, 'EUR', undefined, 'series')).toBeNull();
+    const bare = { per: null, least: null, most: null, episodes: null, minutes: null };
+    expect(partCreditOf(P, 'EUR', [{ fig: 0, budget: [0, null], share: ['rate'] }], 'stage')).toEqual({ tiers: [T({ bands: [{ from: 0, to: null, rate: 0.25 }] })], ...bare });
+    expect(partCreditOf(P, 'EUR', { none: { fig: 0, path: ['none'] } }, 'series')).toEqual({ tiers: [], ...bare });
+    expect(partCreditOf(P, 'EUR', credit, 'series')).toEqual({ tiers: [T({ budget: [100000, null], bands: [{ from: 0, to: null, rate: 0.25 }] })], per: 'episode', least: 1000000, most: 2000000, episodes: 4, minutes: 40 });
+    expect(partCreditOf(P, 'EUR', { tiers: [{ fig: 0, currency: 'USD', budget: [0, null], share: ['rate'] }] }, 'series')).toEqual({ tiers: [T({ bands: [{ from: 0, to: null, rate: 0.25 }], currency: 'USD' })], ...bare, currency: 'USD' });
+    expect(() => partCreditOf(P, 'EUR', { ...credit, cap: 1 }, 'series')).toThrow("XX's series incentive names cap, which the game doesn't read");
+    expect(() => partCreditOf(P, 'EUR', { per: 'episode' }, 'series')).toThrow("XX's series incentive has its tiers");
+    expect(() => partCreditOf(P, 'EUR', { ...credit, per: 'season' }, 'series')).toThrow("XX's series incentive is set by the episode, the hour or the minute, not season");
+    for (const k of ['per', 'episodes', 'minutes']) expect(() => partCreditOf(P, 'EUR', { tiers: credit.tiers, fig: 0, [k]: (credit as Record<string, unknown>)[k] }, 'stage')).toThrow('a play has no episodes');
+    expect(() => partCreditOf(P, 'EUR', { tiers: [], fig: 0, least: 1000000 }, 'series')).toThrow("XX's series incentive pays nothing, so it sets no terms");
+    expect(partCreditOf(P, 'EUR', { tiers: [] }, 'series')).toEqual({ tiers: [], ...bare });
+    expect(() => partCreditOf(P, 'EUR', { tiers: credit.tiers, least: 1000000 }, 'series')).toThrow("XX's least names no figure");
+    expect(() => partCreditOf(P, 'EUR', 'x', 'series')).toThrow("XX's series incentive is not an object");
+    // A play's tiers alone; a least in a figure that names the currency, and read in the film's.
+    expect(partCreditOf(P, 'EUR', { tiers: credit.tiers }, 'stage')?.tiers).toHaveLength(1);
+    expect(() => partCreditOf(P, 'USD', { fig: 0, tiers: [{ fig: 0, budget: [0, null], share: ['rate'] }], least: ['perEpisodeEUR'] }, 'series')).toThrow("XX's least stands in a figure that doesn't name USD");
+    expect(partCreditOf(P, 'CAD', { fig: 1, in: 'film', tiers: [{ fig: 0, budget: [0, null], share: ['rate'] }], least: ['most'] }, 'series')?.least).toBe(20);
+  });
+
+  it('reads the terms of a part, each item read or blocked, never both, never neither', () => {
+    const series = { credit, fees: [[{ fig: 0, budget: [0, null], share: ['rate'] }]], foreignOnly: { fig: 0, said: 'for foreign productions' } };
+    expect(() => termsOf(P, 'EUR', series, 'series')).toThrow('XX\'s series feecap is read and blocked both');
+    const read = { credit, foreignOnly: { fig: 0, said: 'for foreign productions' } };
+    expect(termsOf(P, 'EUR', read, 'series')).toEqual({ fund: null, aid: [], credit: partCreditOf(P, 'EUR', credit, 'series'), foreignOnly: true, fees: [], unknown: ['fund', 'feecap', 'outcomes'] });
+    expect(() => termsOf(P, 'EUR', {}, 'series')).toThrow("XX's series incentive is neither read nor blocked");
+    const fund = { fund: { rate: { fig: 1, of: [['funded'], ['applied']] }, tiers: [{ fig: 1, budget: [0, null], most: ['most'] }] } };
+    expect(termsOf(P, 'EUR', fund, 'stage')).toEqual({ fund: { rate: 0.3, tiers: [T({ bands: [], most: 50000 })] }, aid: [], credit: null, foreignOnly: false, fees: [], unknown: ['incentive', 'outcomes'] });
+    expect(() => termsOf(P, 'EUR', { ...fund, fees: [] }, 'stage')).toThrow("a play's research seeks no fee cap");
+    expect(() => termsOf(P, 'EUR', { ...fund, aid: [{ fig: 0, budget: [0, null], share: ['rate'] }], fund: undefined }, 'stage')).toThrow("XX's cap on public aid holds no fund");
+    expect(() => termsOf(P, 'EUR', { ...fund, release: [] }, 'stage')).toThrow("the reading of XX's stage names release, which the game doesn't read");
+    expect(() => termsOf(P, 'EUR', { ...read, fees: {} }, 'series')).toThrow("XX's fees are a list");
+    expect(() => termsOf(P, 'EUR', { ...read, foreignOnly: { fig: 0, in: 'film', said: 'x' } }, 'series')).toThrow("XX's series limit is read in its own research");
+    expect(() => termsOf(P, 'EUR', { ...fund, credit: [{ fig: 0, budget: [0, null], share: ['rate'] }], foreignOnly: { fig: 0, said: 'x' } }, 'stage')).toThrow("XX's figure 0 isn't its stage's");
+    expect(() => termsOf(P, 'EUR', { credit, foreignOnly: { fig: 1, said: 'x' } }, 'series')).toThrow("XX's figure 1 isn't its series's");
+    expect(() => termsOf({ ...P, own: { ...TVR, blockers: [...TVR.blockers, { item: 'stage.fund' }] } }, 'EUR', fund, 'stage')).toThrow("XX's stage fund is read and blocked both");
+    expect(() => termsOf({ ...P, own: { ...TVR, blockers: TVR.blockers.filter((b) => b.item !== 'stage.outcomes') } }, 'EUR', fund, 'stage')).toThrow("XX's stage outcomes is neither read nor blocked");
+    expect(() => termsOf(P, 'EUR', [], 'series')).toThrow("the reading of XX's series is not an object");
+    expect(() => termsOf(P, 'EUR', { ...fund, aid: {} }, 'stage')).toThrow("XX's aid is a list of tiers");
+    expect(() => termsOf(P, 'EUR', { credit, foreignOnly: 'x' }, 'series')).toThrow("XX's limit is not an object");
+    expect(() => termsOf({ ...P, own: { ...TVR, blockers: TVR.blockers.filter((b) => b.item !== 'series.feecap') } }, 'EUR', { ...read, fees: [{}] }, 'series')).toThrow("XX's fee is a list of tiers");
+  });
+
+  it("reads a market's research of them as the register cites it, every item unknown where it found nothing", () => {
+    const root = mkdtempSync(join(tmpdir(), 'markets-producer-tv-'));
+    const file = `${TVSTAGE}/tvstage-AA.json`;
+    const text = JSON.stringify({ ...TVR, country: 'AA' });
+    mkdirSync(join(root, TVSTAGE), { recursive: true });
+    writeFileSync(join(root, file), text);
+    const sha = createHash('sha256').update(text).digest('hex');
+    const found = { fact: `${FACT}AA${TV}`, value: { file, sha256: sha } };
+    expect(readTvstage(root, { entries: [found, tv('AA')] }, 'AA')).toEqual(JSON.parse(text));
+    expect(() => readTvstage(root, { entries: [found] }, 'AA')).toThrow("AA's series' and plays' research has blockers the register doesn't hold");
+    expect(readTvstage(root, { entries: [tv('BB')] }, 'BB')).toEqual({ country: 'BB', figures: [], blockers: ['series.incentive', 'series.fund', 'series.feecap', 'series.outcomes', 'stage.incentive', 'stage.fund', 'stage.outcomes'].map((item) => ({ item })) });
+    expect(() => readTvstage(root, { entries: [] }, 'BB')).toThrow("the register holds no research of BB's series and plays");
+    const none = JSON.stringify({ ...TVR, country: 'CC', blockers: [] });
+    writeFileSync(join(root, `${TVSTAGE}/tvstage-CC.json`), none);
+    const cc = { fact: `${FACT}CC${TV}`, value: { file: `${TVSTAGE}/tvstage-CC.json`, sha256: createHash('sha256').update(none).digest('hex') } };
+    expect(readTvstage(root, { entries: [cc] }, 'CC').blockers).toEqual([]);
+    expect(() => readTvstage(root, { entries: [cc, tv('CC')] }, 'CC')).toThrow("the register holds CC's series' and plays' blockers, which its research doesn't");
+    writeFileSync(join(root, `${TVSTAGE}/tvstage-DD.json`), text);
+    expect(() => readTvstage(root, { entries: [{ fact: `${FACT}DD${TV}`, value: { file: `${TVSTAGE}/tvstage-DD.json`, sha256: sha } }] }, 'DD')).toThrow(`${TVSTAGE}/tvstage-DD.json is AA's`);
+  });
+});
+
 describe("the producer's markets coverage", () => {
   it('is blocked where the register holds a blocker, researched where it cites the research alone, pending where neither', () => {
     const facts = new Map([
@@ -561,7 +669,15 @@ describe("the producer's markets coverage", () => {
       { key: 'GB', status: 'researched', register: ['R-5'], tests: TESTS },
     ]);
     expect(marketsCoverage(['GB'], new Map([['person.markets.producer.GB', 'R-6']]))).toEqual([{ key: 'GB', status: 'pending' }]);
-    expect(TESTS).toEqual(["tests/person/producing/markets.test.ts::the markets > are each country's own, every term as the research gives it", "tests/person/producing/markets.test.ts::a market's project > is planned, funded and released on its market's terms"]);
+    expect(TESTS).toEqual(["tests/person/producing/markets.test.ts::the markets > are each country's own, every term as the research gives it", "tests/person/producing/markets.test.ts::a market's project > is planned, funded and released on its market's terms", "tests/person/producing/abroad.test.ts::a series' and a play's terms beyond the UK > are each market's own, every term as its research gives it, and what it couldn't find"]);
+    // A series' and a play's research is cited beside the film's, and its blockers make a row blocked.
+    const tvFacts = new Map([...facts, ['person.markets.producer.AA.tvstage', 'R-7'], ['person.markets.producer.blocked.AA.tvstage', 'R-8'], ['person.markets.producer.DD.tvstage', 'R-9'], ['person.markets.producer.EE', 'R-10'], ['person.markets.producer.EE.tvstage', 'R-11']]);
+    expect(marketsCoverage(['AA', 'BB', 'DD', 'EE'], tvFacts)).toEqual([
+      { key: 'AA', status: 'blocked', register: ['R-1', 'R-8', 'R-7'], tests: [...TESTS, TOLD] },
+      { key: 'BB', status: 'blocked', register: ['R-3', 'R-2'], tests: [...TESTS, TOLD] },
+      { key: 'DD', status: 'pending' },
+      { key: 'EE', status: 'researched', register: ['R-10', 'R-11'], tests: TESTS },
+    ]);
     expect(TOLD).toBe("tests/person/producing/markets.test.ts::a market's project > tells the player what of a market isn't known");
     expect(serializeCoverage(rows.slice(0, 2))).toBe(`${JSON.stringify({ engine: 'person.producing', axis: 'country', rows: rows.slice(0, 2) }, null, 1)}\n`);
   });

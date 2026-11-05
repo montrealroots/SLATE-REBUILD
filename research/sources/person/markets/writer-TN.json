@@ -16,6 +16,17 @@
     "trade-press": "None. || retry 2026-11-01: WMC 2023 and 2025 (used), La Presse 2025 (same text)",
     "archive": "web.archive.org: connection reset through the proxy on 2026-11-01; no snapshot read. || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://cnci.tn/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Tunisia (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: 1 search: \"Tunisie convention collective sectorielle production cinématographique audiovisuelle théâtre artistes comédiens salaires minimum cachet\" (French agreements only; nothing Tunisian)",
+    "institution": "2026-11-04: www.culture.gov.tn; www.otdav.tn and otdav.tn; www.social.gov.tn (also with the issuer bundle); cnci.tn; www.tunisiatv.tn; www.ett.tn; idaraty.tn (culture.gov.tn and OTDAV: connection reset; social.gov.tn: TLS 'unable to get local issuer certificate'; cnci.tn: home read, nothing on series or stage; tunisiatv.tn: news home; ett.tn: certificate name mismatch; idaraty.tn: 403)",
+    "official-register": "2026-11-04: items 7, 8, 9: www.iort.gov.tn (Imprimerie Officielle, the JORT) over https; www.legislation.tn (the state's legal portal); legislation-securite.tn search 'artiste' (a law database run by DCAF, tn-ls-s.html, sha256 47b2bec0d152dd3a0abcf353ab3a79e4fc9cea246a66559a5b6532eadb56f4da) (iort.gov.tn: https connection reset (http answered a 159-byte page, not counted); legislation.tn: connection reset; legislation-securite.tn search read: the only hit for 'artiste' is Loi n° 94-36 du 24 février 1994 on literary and artistic property. No collective agreement, decree or arrêté setting a director's, playwright's or actor's minimum.)",
+    "trade-press": "2026-11-04: items 7, 8, 9: kapitalis.com WordPress search API for 'statut de l'artiste', 'cachet comédiens', 'droits des artistes décret', 'subvention théâtre' (tn-kap-*.json) (read: result lists only (artists' obituaries and projects, 2020 Tfanen grants to 10 private cultural enterprises, a 2019 Kef theatre colloquium, unrelated politics); no article on a pay scale, the artist's status decree or a fee minimum.)",
+    "archive": "2026-11-04: items 7, 8, 9: Common Crawl CC-MAIN-2026-39 'tn,gov,social)': cc.py get of www.social.gov.tn/ar/conventions (tn-cc-conv-20260904142354.html, sha256 8b8012a7da7302eec24b6fd78aa6b90762c16170e91ca55d9924acdf86264388) and /en/conventions (sha256 3488ab20f2bfa957c3d13e4881934942086185bf7e3fc18397bc8634ece54c34); 'tn,gov,culture)' (as under producer) (the Ministry of Social Affairs' 'conventions' page (live: TLS failure) read from the crawl: it lists ILO conventions Tunisia ratified (No. 12, 13, 17, 18 ...), not sector collective agreements; no performing-arts agreement captured.)"
+   }
   }
  ]
 }

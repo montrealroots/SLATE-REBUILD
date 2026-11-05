@@ -1,0 +1,148 @@
+{
+ "topic": "markets.KZ.series-and-stage",
+ "read": "2026-11-04",
+ "country": "KZ",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://stat.gov.kz/ru/industries/social-statistics/stat-culture/publications/341122/",
+   "title": "Бюро национальной статистики: Культура в Республике Казахстан (2025г.)",
+   "read": "2026-11-04",
+   "said": "больше всего мероприятий проведено ... театрами (17,7 тыс. единиц) ... посещаемость театров – на 2,5% ... на 6% увеличилось число мероприятий, проводимых театрами",
+   "file": "kz-stat-pub-341122.html",
+   "sha256": "11365c36b01836e852214920443cea5282b59ff3a5696ddf68af130a83487385"
+  }
+ ],
+ "figures": [
+  {
+   "part": "stage",
+   "item": "outcomes",
+   "finding": "Kazakhstan: not reached for stage. Attendance, not takings; the table's further columns (new productions, repertoire) could not be aligned to their headings with certainty and are not used.",
+   "verdict": "partial",
+   "value": {
+    "year": 2025,
+    "theatres": 85,
+    "stateOwned": 60,
+    "private": 25,
+    "drama": 47,
+    "events": 17653,
+    "eventsAtOwnVenue": 15706,
+    "spectators": 3152204,
+    "spectatorsAtOwnVenue": 2693144,
+    "spectatorsPerEvent": "about 179, computed here from the two totals",
+    "attendanceChangeVs2024": 0.025,
+    "boxOffice": null,
+    "recoupOrExtended": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "больше всего мероприятий проведено ... театрами (17,7 тыс. единиц) ... посещаемость театров – на 2,5% ... на 6% увеличилось число мероприятий, проводимых театрами"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/Z1900000212 (Law on Cinematography 2019), and its application script for a text API",
+     "result": "the page is a script-only application; no law text in the HTML; no public text endpoint found in its main script",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/Z1900000212 (Law on Cinematography 2019), and its application script for a text API",
+     "result": "the page is a script-only application; no law text in the HTML; no public text endpoint found in its main script",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/P1500001193 (script-only page); its application script read for a text API; /api/documents/P1500001193 and /api/documents/Z1900000212",
+     "result": "page has no text; the API answers 'document not found' to these codes and 401 (credentials required) to search and list",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "law database zakon.uchet.kz copy of the Law on Cinematography (updated to 12.07.2026), grep for series, estimate, producer fee",
+     "result": "read: series is a film; state share caps; state information order clause",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/P1500001193 (script-only page); its application script read for a text API; /api/documents/P1500001193 and /api/documents/Z1900000212",
+     "result": "page has no text; the API answers 'document not found' to these codes and 401 (credentials required) to search and list",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "law database zakon.uchet.kz copy of the Law on Cinematography (updated to 12.07.2026), grep for series, estimate, producer fee",
+     "result": "read: series is a film; state share caps; state information order clause",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/P1500001193 (script-only page); its application script read for a text API; /api/documents/P1500001193 and /api/documents/Z1900000212",
+     "result": "page has no text; the API answers 'document not found' to these codes and 401 (credentials required) to search and list",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "adilet.zan.kz/rus/docs/P1500001193 (script-only page); its application script read for a text API; /api/documents/P1500001193 and /api/documents/Z1900000212",
+     "result": "page has no text; the API answers 'document not found' to these codes and 401 (credentials required) to search and list",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "stat.gov.kz culture statistics page, publication 341122 (Culture 2025) and its 'Деятельность театров и цирков' xlsx, the network xlsx and two chart files",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Kazakhstan: not reached for stage. Attendance, not takings; the table's further columns (new productions, repertoire) could not be aligned to their headings with certainty and are not used."
+   }
+  }
+ ]
+}

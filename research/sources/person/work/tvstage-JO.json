@@ -1,0 +1,255 @@
+{
+ "topic": "markets.JO.series-and-stage",
+ "read": "2026-11-04",
+ "country": "JO",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.film.jo/cash-rebate",
+   "title": "The Royal Film Commission – Jordan: Cash Rebate",
+   "read": "2026-11-04",
+   "said": "Rebate starting from 25% up to 45% … Cash back up to USD 5.25M per project. Available for: Feature Films, Series, Commercials, Documentaries, TV Shows. and Music Videos. Production Eligible Spend (USD) Rebate % 250,000 - 1,000,000 25% 1,000,000 - 10,000,000 30% 10,000,000+ 35%-45%* *Additional percentage above 35% is based on a test for cultural relevance. For Jordanian Films and Series (only) spending above $500K are eligible for 30%",
+   "file": "jo-rebate.html",
+   "sha256": "ceb7b873173abaa571fbba9bd5dc2880e6897b770f71170dae824ac9aba0b03c"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.film.jo/sites/default/files/2026-05/Cash_Rebate_Standards_Bulletin_EN_01.pdf",
+   "title": "Standards for Cash Rebate for Production Projects … in the Hashemite Kingdom of Jordan, with Annex 1 (Audit and Financial Guidelines) and Explanatory Circular No. (1/2026), Royal Film Commission – Jordan",
+   "read": "2026-11-04",
+   "said": "Production Service Company fees are capped at 15% of the final Jordan Spend (actual), or up to a maximum of JOD 100,000, whichever amount is lower.",
+   "file": "jo-rebate-bulletin.pdf",
+   "sha256": "7759e4613c446f09b85db653e9a83cb9addbb8f401b4489921c47e034b3ce42c"
+  },
+  {
+   "kind": "primary",
+   "url": "https://culture.gov.jo/AR/ListDetails/التعليمات/15/45",
+   "title": "تعليمات الموسم المسرحي الأردني (Jordanian Theatre Season Instructions, Ministry of Culture, issued under art. 4(n) of the Culture Care Law No. 36 of 2006; page updated 14/10/2026)",
+   "read": "2026-11-04",
+   "said": "يكون السقف الأعلى لعدد العروض التي سيتم شراؤها للمسرحية الواحدة والمتقدمة للموسم (12) عرضا والحد الأدنى (0) عرض بناء على المستوى الفني للمسرحية والذي تقدره اللجنة المنظمة",
+   "file": "jo-season.html",
+   "sha256": "e1f52f270de1dc034ce5b52a72ad8f28000ae83f4979543b88c5c265d6c32a7e"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Spend thresholds are per project, not per episode.",
+   "verdict": "found",
+   "value": {
+    "bands": [
+     [
+      250000,
+      1000000,
+      0.25
+     ],
+     [
+      1000000,
+      10000000,
+      0.3
+     ],
+     [
+      10000000,
+      null,
+      "0.35-0.45"
+     ]
+    ],
+    "jordanianSeriesOver500kUSD": 0.3,
+    "capUSD": 5250000,
+    "postProductionMaxShare": 0.15,
+    "advance": "10%, capped at USD 100,000 against a bank guarantee"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Rebate starting from 25% up to 45% … Cash back up to USD 5.25M per project. Available for: Feature Films, Series, Commercials, Documentaries, TV Shows. and Music Videos. Production Eligible Spend (USD) Rebate % 250,000 - 1,000,000 25% 1,000,000 - 10,000,000 30% 10,000,000+ 35%-45%* *Additional percentage above 35% is based on a test for cultural relevance. For Jordanian Films and Series (only) spending above $500K are eligible for 30%"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "Not reached today. The Jordan Film Fund page (film.jo) was fetched; its text served no series terms. The rebate caps the local service company’s fee and excludes overheads; it states no cap on the producer’s own fee. The Jordan Film Fund guidelines (features) cap Jordanian overheads at 10% (narrative) or 15% (documentary) of the requested amount, but the fund names no series category. Also read (item 1, first wave’s): the Standards say Jordanian series need 350,000 JOD eligible spend for 30%, and daily TV programmes are excluded.",
+   "verdict": "partial",
+   "value": {
+    "scheme": "RFC cash rebate (series count: TV Shows include Scripted Series, Explanatory Circular 1/2026)",
+    "productionServiceCompanyFeeCap": {
+     "shareOfFinalJordanSpend": 0.15,
+     "maxJOD": 100000,
+     "rule": "lower of the two"
+    },
+    "generalOverheads": "ineligible",
+    "foreignCastCrewFees": "ineligible",
+    "producerFeeCap": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Production Service Company fees are capped at 15% of the final Jordan Spend (actual), or up to a maximum of JOD 100,000, whichever amount is lower."
+    },
+    {
+     "src": 1,
+     "said": "2.6. General business overheads (expenditure not directly related to the Production. The expenses related to the operation of a Company and what in accounting practice would be classified as administrative expenses in audited financial statements)."
+    },
+    {
+     "src": 1,
+     "said": "2.1. Salaries, payments, additional benefits, fees, allowances, Per Diems, and all remunerations paid to foreign cast and crew."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not reached today. The Jordan Film Fund page (film.jo) was fetched; its text served no series terms. The state buys up to 12 performances of a finished play at up to JOD 1,500 each (so at most JOD 18,000 a play for professionals, arithmetic). How many plays apply and are taken is not published here.",
+   "verdict": "found",
+   "value": {
+    "scheme": "Ministry of Culture, Jordanian Theatre Season (purchase of performances)",
+    "currency": "JOD",
+    "performancesBought": {
+     "min": 0,
+     "max": 12,
+     "setBy": "organizing committee on artistic level"
+    },
+    "maxPerPerformance": {
+     "professionalOrChildren": 1500,
+     "youngDirectors": 500
+    },
+    "youngDirectorAgeMax": 36,
+    "eligibility": "Jordanian directors only; work finished and ready, not shown before; applied for in the director’s, a registered troupe’s or a production manager’s name; cast and crew Artists Syndicate members or permit holders",
+    "grading": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "rateOfYes": null,
+    "inForceFrom": "on approval; replaced the 2021 season instructions (minister’s decision 84/2021)"
+   },
+   "sources": [
+    {
+     "src": 2,
+     "said": "يكون السقف الأعلى لعدد العروض التي سيتم شراؤها للمسرحية الواحدة والمتقدمة للموسم (12) عرضا والحد الأدنى (0) عرض بناء على المستوى الفني للمسرحية والذي تقدره اللجنة المنظمة"
+    },
+    {
+     "src": 2,
+     "said": "السقف الأعلى للدعم المقدم للعرض الواحد من كل مسرحية للمخرجين الكبار \"المحترفين\" أو المسرحيات المقدمة للطفل (1500) دينار والحد الأدنى تحدده اللجنة المنظمة بما تراه مناسباً."
+    },
+    {
+     "src": 2,
+     "said": "السقف الأعلى للدعم المقدم للعرض الواحد من كل مسرحية للمخرجين الشباب (500) دينار والحد الأدنى تحدد اللجنة المنظمة بما تراه مناسباً."
+    },
+    {
+     "src": 2,
+     "said": "تقتصر المشاركة فقط على المخرجين الأردنيين."
+    },
+    {
+     "src": 2,
+     "said": "أن يكون العمل المسرحي المقدم منجزاً وجاهزاً للعرض ولم يسبق عرضه."
+    },
+    {
+     "src": 2,
+     "said": "يشترط للمشاركة في الأعمال المسرحية أن يكون عضواً عاملاً في نقابة الفنانين الأردنيين أو حاصلاً على تصريح ممارسة المهنة وفقا لقانون نقابة الفنانين الأردنيين."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "film.jo cash-rebate and the-jordan-film-fund pages",
+     "result": "rebate read; fund page text names no series terms",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Spend thresholds are per project, not per episode."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "film.jo cash-rebate and the-jordan-film-fund pages",
+     "result": "rebate read; fund page text names no series terms",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "film.jo cash-rebate page, its Standards PDF (27 pp. + Explanatory Circular 1/2026) and the Jordan Film Fund production guidelines PDF",
+     "result": "service company fee cap 15%/JOD 100,000; overheads ineligible; JFF overheads ≤10%/15% (features)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not reached today. The Jordan Film Fund page (film.jo) was fetched; its text served no series terms. The rebate caps the local service company’s fee and excludes overheads; it states no cap on the producer’s own fee. The Jordan Film Fund guidelines (features) cap Jordanian overheads at 10% (narrative) or 15% (documentary) of the requested amount, but the fund names no series category. Also read (item 1, first wave’s): the Standards say Jordanian series need 350,000 JOD eligible spend for 30%, and daily TV programmes are excluded."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "jrtv.gov.jo",
+     "result": "connection reset",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"التلفزيون الأردني شراء المسلسلات الدرامية الأردنية سعر الحلقة المنتجين 2026\"",
+     "result": "nothing on JRTV terms (Moroccan SNRT/2M calls, a 2022 Al Jazeera piece)",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gov.jo: home, الانظمة (regulations), التعليمات (instructions), دليل الخدمات, البرنامج الوطني للفنون, and the Jordanian Theatre Season Instructions and Tamkeen instructions read",
+     "result": "season instructions read whole: purchase of up to 12 performances, JOD 1,500/500 caps; no fee minimums; no tax measure",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "culture.gov.jo: home, الانظمة (regulations), التعليمات (instructions), دليل الخدمات, البرنامج الوطني للفنون, and the Jordanian Theatre Season Instructions and Tamkeen instructions read",
+     "result": "season instructions read whole: purchase of up to 12 performances, JOD 1,500/500 caps; no fee minimums; no tax measure",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Not reached today. The Jordan Film Fund page (film.jo) was fetched; its text served no series terms. The state buys up to 12 performances of a finished play at up to JOD 1,500 each (so at most JOD 18,000 a play for professionals, arithmetic). How many plays apply and are taken is not published here."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

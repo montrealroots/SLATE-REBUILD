@@ -1,0 +1,101 @@
+{
+ "topic": "markets.AX.series-and-stage",
+ "read": "2026-11-04",
+ "country": "AX",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.regeringen.ax/sites/default/files/attachments/protocol/nr09_2024-enskild-U3.pdf",
+   "title": "Ålands landskapsregering, protokoll nr 9 (16.4.2024): Riktlinjer för handläggning och beviljande av produktionsstöd till utomåländska filmproduktioner",
+   "read": "2026-11-04",
+   "said": "Landskapsregeringens övergripande målsättning är att stöda filmkonsten samt att öka antalet inspelningar av långfilm, dokumentärer och TV-produktioner på Åland … Stöd kan beviljas i form av toppfinansiering då minst 65 % av de totala filmproduktionskostnaderna är säkrade på annat håll. Stöd kan beviljas som en toppfinansiering på högst 10 - 12,5 % av stödberättigande kostnader.",
+   "file": "ax-prot09.pdf",
+   "sha256": "2e0c7948de4d689e36dd484a203e651d3cc8947c78eb18fee0963037fe09c959"
+  },
+  {
+   "kind": "primary",
+   "url": "https://visitaland.com/en/film-in-aland/incentives-financial-support/",
+   "title": "Åland Film Commission (Visit Åland): Incentives & Financial Support",
+   "read": "2026-11-04",
+   "said": "Eligible formats include: feature films, documentaries and tv-series. … Larger film productions that are shot in Åland can also combine the regional support with the national production incentive operated by Business Finland. The national incentive provides up to a 25% cash rebate on eligible costs.",
+   "file": "ax-visit.html",
+   "sha256": "6618b3adbf1daf9e20d265e1cd1eaf16988f83bb3342287af84687261d09badc"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Finland's rebate terms for a series belong to FI's research. Items 3-10: Åland has no trade bodies of its own for these; labour law is Finland's (Autonomy Act §27, director-AX.json), and the actor's stage agreements follow Finland's (markets.json ax-fi-stage). Åland's own culture grants for theatre were not read.",
+   "verdict": "found",
+   "value": {
+    "grant": "Åland production grant for productions from outside Åland",
+    "seriesEligible": true,
+    "topUpMax": "10-12.5% of eligible costs",
+    "securedElsewhereMin": 0.65,
+    "base": "approved local spend excl. VAT, alcohol, tobacco",
+    "combinable": "Finland's Business Finland rebate (up to 25%)",
+    "law": "Landskapslag (1988:50); GBER arts 53-54"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Landskapsregeringens övergripande målsättning är att stöda filmkonsten samt att öka antalet inspelningar av långfilm, dokumentärer och TV-produktioner på Åland … Stöd kan beviljas i form av toppfinansiering då minst 65 % av de totala filmproduktionskostnaderna är säkrade på annat håll. Stöd kan beviljas som en toppfinansiering på högst 10 - 12,5 % av stödberättigande kostnader."
+    },
+    {
+     "src": 1,
+     "said": "Eligible formats include: feature films, documentaries and tv-series. … Larger film productions that are shot in Åland can also combine the regional support with the national production incentive operated by Business Finland. The national incentive provides up to a 25% cash rebate on eligible costs."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "regeringen.ax protocol nr 9/2024 guidelines PDF; visitaland.com film incentives page",
+     "result": "found",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Finland's rebate terms for a series belong to FI's research. Items 3-10: Åland has no trade bodies of its own for these; labour law is Finland's (Autonomy Act §27, director-AX.json), and the actor's stage agreements follow Finland's (markets.json ax-fi-stage). Åland's own culture grants for theatre were not read."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

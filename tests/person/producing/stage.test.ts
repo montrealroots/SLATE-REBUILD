@@ -93,6 +93,8 @@ const SUBSIDISED = { theatre: 'subsidised', grade: 2, touring: false };
 const COMMERCIAL = { theatre: 'commercial', seats: 600, touring: false };
 const WEST_END = { theatre: 'west-end', seats: 900, touring: false };
 const ITC_COMPANY = { theatre: 'itc', touring: true, minutes: 90 };
+/** A play made in France, staged under the private theatres' agreement (no theatre of the UK's named). */
+const FR_PLAY = { theatre: undefined, grade: undefined, touring: undefined, market: 'FR', staged: 'fr-private-stage' };
 /** A British actress, at home in the UK, who grew up in California. */
 const british = () => identity({ citizenship: ['GB'] });
 /** A British actress who grew up, and so lives, in a region of the UK ('' for none named). */
@@ -130,7 +132,7 @@ describe("a UK play's theatre", () => {
     expect(project(opt('stage')).stage).toEqual({ theatre: 'subsidised', grade: 2, seats: null, touring: false });
     expect(project(opt('stage', { ...COMMERCIAL, touring: true })).stage).toEqual({ theatre: 'commercial', grade: null, seats: 600, touring: true });
     expect(project(opt('stage', WEST_END)).stage).toEqual({ theatre: 'west-end', grade: null, seats: 900, touring: false });
-    expect(project(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'US' })).stage).toBeNull();
+    expect([project(opt('stage', FR_PLAY)).stage, project(opt('stage', FR_PLAY)).staged]).toEqual([null, 'fr-private-stage']);
     expect([project(opt('film')).stage, project(opt('series', { episode: 'hour', episodes: 1 })).stage]).toEqual([null, null]);
   });
 
@@ -161,12 +163,12 @@ describe("a UK play's theatre", () => {
     expect(project(opt('stage', WEST_END, ['director', 'producer'])).roles).toEqual(['director', 'producer']);
     expect(project(opt('stage', ITC_COMPANY, ['director'])).roles).toEqual(['director']);
     expect(() => opt('stage', COMMERCIAL, ['director'])).toThrow("a commercial theatre director's minimum turns on a run's length and level that the published rates don't define, so a play there is directed by someone hired");
-    expect(() => opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }, ['director'])).toThrow("a stage director's terms in France aren't known to this game, so a play there is directed by someone hired");
+    expect(() => opt('stage', FR_PLAY, ['director'])).toThrow("a stage director's terms in France aren't known to this game, so a play there is directed by someone hired");
     for (const theatre of [COMMERCIAL, SUBSIDISED, WEST_END, ITC_COMPANY]) expect(project(opt('stage', theatre, ['actor'])).roles).toEqual(['actor']);
     // One play the life acts in and directs.
     for (const theatre of [SUBSIDISED, WEST_END, ITC_COMPANY]) expect(project(opt('stage', theatre, ['actor', 'director'])).roles).toEqual(['actor', 'director']);
     // A play abroad is acted under the market's agreements.
-    expect(project(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }, ['actor'])).roles).toEqual(['actor']);
+    expect(project(opt('stage', FR_PLAY, ['actor'])).roles).toEqual(['actor']);
   });
 });
 
@@ -251,8 +253,9 @@ describe('a UK series', () => {
     const planned = project(plan(opt('series', { episode: 'hour', episodes: 2 }), '2000000')).plan;
     expect([planned?.fee, planned?.credit]).toEqual([null, gbp('544000')]);
     // Beyond the UK a series' credit isn't known.
-    const fr = project(plan(opt('series', { episode: 'hour', episodes: 2, market: 'FR' }), '2000000')).plan;
-    expect([fr?.fee, fr?.credit]).toEqual([null, null]);
+    // Beyond it, its market's research (tests/person/producing/abroad.test.ts); none where that research doesn't say.
+    const af = project(plan(opt('series', { episode: 'hour', episodes: 2, market: 'AF' }), '2000000')).plan;
+    expect([af?.fee, af?.credit]).toEqual([null, null]);
   });
 
   it('producing.option: a series of more episodes needs more core costs for its credit', () => {
@@ -266,7 +269,7 @@ describe('a UK series', () => {
     expect(apply('GB.SCT')).toThrow("Screen Scotland funds series made in Scotland, but it doesn't publish how often it says yes, so its fund isn't modeled in this game");
     expect(apply('GB.WLS')).toThrow("Creative Wales funds series made in Wales, but it doesn't publish how often it says yes, so its fund isn't modeled in this game");
     expect(apply('GB.NIR')).toThrow("Northern Ireland Screen funds series made in Northern Ireland, but it doesn't publish how often it says yes, so its fund isn't modeled in this game");
-    expect(() => dispatch(plan(opt('series', { episode: 'hour', episodes: 2, market: 'FR' }), '2000000'), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a series isn't known to this game");
+    expect(() => dispatch(plan(opt('series', { episode: 'hour', episodes: 2, market: 'FR' }), '2000000'), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a producer's series isn't known to this game");
   });
 
   it("is offered to broadcasters once shot, picked up at the game's 30% as the series and its campaign sell it", () => {
@@ -281,7 +284,8 @@ describe('a UK series', () => {
     });
     expect(picked).toContain(true);
     expect(picked).toContain(false);
-    expect(() => dispatch(shot(plan(opt('series', { episode: 'hour', episodes: 2, market: 'FR' }), '2000000')), releaseFilm, { project: 1 })).toThrow("how a series made in France fares once it's made isn't known to this game");
+    // Beyond the UK too, at the same game's own chance, no market's research having counted it (abroad.test.ts holds it).
+    expect(project(dispatch(shot(plan(opt('series', { episode: 'hour', episodes: 2, market: 'FR' }), '2000000')), releaseFilm, { project: 1 })).release?.doubled).toBeNull();
   });
 
   it('producing.option: a series finds its audience at its own rate, a film at the BFI’s', () => {
@@ -317,8 +321,8 @@ describe('a UK series', () => {
     expect(aboutMarket('GB', 'stage', 'GB.ENG')).toBe(t(UNKEPT_LINE, { country: 'England', missing: "how often a play earns back its cost, the playwright's minimum in the West End and where Arts Council England's project grants take an applicant from" }));
     expect(aboutMarket('GB', 'stage', 'GB.SCT')).toBe(aboutMarket('GB', 'stage')?.replace('United Kingdom', 'Scotland'));
     expect(aboutMarket('GB', 'stage', 'GB.NIR')).toBe(t(UNKEPT_LINE, { country: 'Northern Ireland', missing: "how often a play earns back its cost, the playwright's minimum in the West End and how often the Arts Council of Northern Ireland says yes to a play" }));
-    // A market's own unknowns, and nothing of the UK's, beyond it.
-    expect(aboutMarket('AU', 'series')).toBe(aboutMarket('AU'));
+    // A market's own unknowns of a series, and nothing of the UK's, beyond it (abroad.test.ts holds them).
+    expect(aboutMarket('AU', 'series')).not.toContain('West End');
   });
 });
 
@@ -337,7 +341,7 @@ describe('a UK play', () => {
     expect(stageCredit(true, gbp('300000'), '2025-04-01')).toEqual(gbp('108000'));
     const planned = project(plan(opt('stage'), '300000', [3, 6])).plan;
     expect([planned?.fee, planned?.credit, planned?.needed]).toEqual([null, gbp('96000'), 45]);
-    expect(project(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', [3, 6])).plan?.credit).toBeNull();
+    expect(project(plan(opt('stage', FR_PLAY), '300000', [3, 6])).plan?.credit).toBeNull();
   });
 
   it('producing.option: a play that tours claims more of its costs', () => {
@@ -368,7 +372,7 @@ describe('a UK play', () => {
     // The BFI's ten months left on an option is the BFI's own: a play's option with five left still applies.
     const late = edit(plan(opt('stage'), '300000', [3, 6]), (p) => (p.expires = addMonths('Europe/London', T0, 5)));
     expect(project(dispatch(late, applyToFunder, { project: 1 })).applied).toBe(true);
-    expect(() => dispatch(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }), '300000', [3, 6]), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a play isn't known to this game");
+    expect(() => dispatch(plan(opt('stage', FR_PLAY), '300000', [3, 6]), applyToFunder, { project: 1 })).toThrow("what a public fund in France gives a producer's play isn't known to this game");
   });
 
   it('producing.plan: a bigger play asks Arts Council England for more', () => {
@@ -436,8 +440,8 @@ describe('a UK play', () => {
     });
     expect(recouped).toContain(true);
     expect(recouped).toContain(false);
-    const fr = opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' });
-    expect(() => dispatch(shot(plan(fr, '300000', [3, 6])), releaseFilm, { project: 1 })).toThrow("how a play made in France fares once it's made isn't known to this game");
+    // Beyond the UK too, at the same game's own chance (abroad.test.ts holds it).
+    expect(project(dispatch(shot(plan(opt('stage', FR_PLAY), '300000', [3, 6])), releaseFilm, { project: 1 })).release?.doubled).toBeNull();
   });
 });
 
@@ -446,7 +450,7 @@ describe("the life's own play", () => {
   const writer = (who = identity()) => dispatch(life({ screenwriter: 70, producer: 60 }, who), writeScript, { form: 'play', genre: 'drama', days: 120 });
   const develop = (extra: Record<string, unknown> = {}, l = writer()) => dispatch(l, developScript, named({ script: 1, format: 'stage', roles: ['writer', 'producer'], market: 'GB', ...playArgs('stage', extra), ...extra }));
 
-  it("is written for a UK subsidised or commercial theatre or an ITC company, paid under UK Theatre's or the ITC's, and refused for the West End and elsewhere", () => {
+  it("is written for a UK subsidised or commercial theatre or an ITC company, paid under UK Theatre's or the ITC's, and refused for the West End and in a market with no writers' agreement for a play", () => {
     expect(PLAY_WRITING).toEqual({ subsidised: ['uk-theatre-wggb', 'itc-wggb'], commercial: ['itc-wggb'], 'west-end': [], itc: ['itc-wggb'] });
     expect(project(develop(ITC_COMPANY)).writing).toBe('itc-wggb');
     expect(() => develop()).toThrow("a play made in GB names its writers' agreement: uk-theatre-wggb, itc-wggb");
@@ -455,7 +459,8 @@ describe("the life's own play", () => {
     expect(project(develop(COMMERCIAL)).writing).toBe('itc-wggb');
     expect(() => develop({ ...COMMERCIAL, agreement: 'uk-theatre-wggb' })).toThrow("a play made in GB isn't paid under uk-theatre-wggb");
     expect(() => develop(WEST_END)).toThrow("no writers' agreement for the West End is known to this game, so a West End play is someone else's material");
-    expect(() => develop({ theatre: undefined, grade: undefined, touring: undefined, market: 'US' })).toThrow("a play's writers' minimum in United States isn't known to this game, so a play there is someone else's material");
+    // Beyond the UK, its market's writers' agreements for a play (abroad.test.ts), refused where it has none.
+    expect(() => develop({ theatre: undefined, grade: undefined, touring: undefined, market: 'DE', staged: 'de-stage' })).toThrow("no writers' agreement for a play in Germany is known to this game, so a play there is someone else's material");
     expect(() => develop({ agreement: 'uk-theatre-wggb' }, writer(identity({ languages: [{ lang: 'fr', level: 'C2' }] })))).toThrow("a script under uk-theatre-wggb is written in en, which the writer doesn't write well enough");
     expect(() => dispatch(writer(), developScript, { script: 1, format: 'film', roles: ['writer'], market: 'GB' })).toThrow('a film is made from a feature or short, not a play');
   });
@@ -629,7 +634,7 @@ describe('a UK play the life acts in', () => {
     expect(() => dispatch(opt('stage', COMMERCIAL, ['producer', 'actor'], life({ producer: 60, actor: 60 })), castPart, ARGS)).toThrow('project 1 has no budget');
     // A play abroad engages its part in its agreement's own units, as the part names them.
     const french = identity({ citizenship: ['FR'], languages: [{ lang: 'fr', level: 'C2' }] });
-    const abroad = dispatch(plan(opt('stage', { theatre: undefined, grade: undefined, touring: undefined, market: 'FR' }, ['producer', 'actor'], life({ producer: 60, actor: 60 }, french)), '300000', [2, 4]), castPart, { ...ARGS, agreement: 'fr-private-stage', term: 'performance', length: 10, rehearsal: 0 });
+    const abroad = dispatch(plan(opt('stage', FR_PLAY, ['producer', 'actor'], life({ producer: 60, actor: 60 }, french)), '300000', [2, 4]), castPart, { ...ARGS, agreement: 'fr-private-stage', term: 'performance', length: 10, rehearsal: 0 });
     expect(castOf(abroad.slices.acting, 1).part).toMatchObject({ term: 'performance', length: 10, rehearsal: 0 });
   });
 

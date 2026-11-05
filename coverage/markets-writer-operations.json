@@ -9,7 +9,8 @@
    "writingFor (a market that follows another's terms)",
    "minimumOf (by kind; by the day written)",
    "aboutCountry (writing.unkept, a country with no writers' agreement)",
-   "the all-countries universe"
+   "the all-countries universe",
+   "minimumOf (a play: by its running time, its theatre's grade, its run's performances, the writer's first premiere; none where the minimum is a share of the takings alone)"
   ]
  },
  "rows": [
@@ -86,6 +87,28 @@
    "tests": [
     "tests/person/work/markets.test.ts::the markets > cover every country on the map: the WGA the US, each other one its research",
     "tests/tools/markets-writer.test.ts::the screenwriter's markets compile > compiles every country the research holds, the engine reading each"
+   ]
+  },
+  {
+   "key": "minimumOf (a play: by its running time, its theatre's grade, its run's performances, the writer's first premiere; none where the minimum is a share of the takings alone)",
+   "status": "researched",
+   "register": [
+    "R-5159",
+    "R-5171",
+    "R-10202",
+    "R-5157",
+    "R-5161",
+    "R-6249",
+    "R-10203",
+    "R-6408",
+    "R-5165",
+    "R-10204",
+    "R-5261"
+   ],
+   "tests": [
+    "tests/person/work/markets.test.ts::a script a production pays for in a market > is paid for a play its market's playwrights' minimum: by its running time, its theatre's grade, its run, the writer's first premiere",
+    "tests/person/work/markets.test.ts::a script a production pays for in a market > pays one play differently by its market: the same ninety-minute play under each market's terms",
+    "tests/tools/markets-writer.test.ts::the screenwriter's markets compile > reads a minimum at its place in the research, its date and currency standing in the figure"
    ]
   }
  ]

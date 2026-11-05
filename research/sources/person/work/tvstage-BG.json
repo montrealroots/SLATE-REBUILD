@@ -1,0 +1,224 @@
+{
+ "topic": "markets.BG.series-and-stage",
+ "read": "2026-11-04",
+ "country": "BG",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.nfc.bg/wp-content/uploads/2022/03/Guidelines-rebate-eng.pdf",
+   "title": "Bulgarian National Film Center: Guidelines, rebate on costs (English)",
+   "read": "2026-11-04",
+   "said": "Rebate on costs incurred in film production, including series, takes place under a state aid scheme and is governed by the Film Industry Act ... - A film intended for TV broadcasting or streaming on platforms, running time: over 70 min., or a series where the running time of each episode shall be no less than 40 min.; ... Ineligible ... - Talk shows, reality shows ... - Daytime drama TV show, sitcom series categories; ... - Up to 25 per cent of the total amount of the eligible costs incurred in the production of a work in the required format relating to goods and services provided within the Republic of Bulgaria ... - The eligible costs, on the basis of which the amount is calculated, shall not exceed 80 per cent of the overall production budget; ... - The amount of rebate per project shall not exceed BGN2,000,000.",
+   "file": "bg-nfc-rebate-en.pdf",
+   "sha256": "0f72c4ad632358347e3fdb1633869c0bd362c80377d70a1d8aaac28f5e6359de"
+  },
+  {
+   "kind": "primary",
+   "url": "https://programs.ncf.bg/web/files/sessions/330/terms_document/syzdavane-i-razprostranenie-golemi-proekti-2025-uslovija.pdf",
+   "title": "Национален фонд „Култура“: Създаване и разпространение – големи проекти 2025, conditions (Theatre strand)",
+   "read": "2026-11-04",
+   "said": "Общ размер на финансирането на програмата: 2 714 313 лв 1. Минимален размер на финансиране на един проект: 30 000 лв.. 2. Максимален размер на финансиране на един проект: 60 000 лв. … Националният фонд „Култура“ финансира до 80% от бюджета на проекта … Кандидатите следва да осигурят собствен финансов принос минимум 20% … Авансовото плащане по програмата е в размер на 70 % … Направления … „Театър“. … Допустими ◌ Частни културни организации по смисъла на чл. 10, ал. 1 от ЗЗРК; ◌ Организации, регистрирани по Закона за народните читалища; ◌ Български културни организации, които са разпоредителите с държавни или общински бюджетни средства само за финансиране на проекти, които не са част от основната дейност на организацията. … × физически лица;",
+   "file": "bg-ncf-golemi25.pdf",
+   "sha256": "5e6bc2a766e9ee5489e37f24c49cabc3d721da627fbea3db8bea644b23b4aadb"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The English guideline (2022) still says BGN 2 million; the EUR 5 million cap is held from the CMS note, not yet read in the amended regulation.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.25,
+    "seriesEpisodeMinMinutes": 40,
+    "eligibleMaxShareOfBudget": 0.8,
+    "capEUR": 5000000,
+    "excluded": [
+     "daytime drama",
+     "sitcom series",
+     "talk and reality shows"
+    ],
+    "culturalTest": true
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Rebate on costs incurred in film production, including series, takes place under a state aid scheme and is governed by the Film Industry Act ... - A film intended for TV broadcasting or streaming on platforms, running time: over 70 min., or a series where the running time of each episode shall be no less than 40 min.; ... Ineligible ... - Talk shows, reality shows ... - Daytime drama TV show, sitcom series categories; ... - Up to 25 per cent of the total amount of the eligible costs incurred in the production of a work in the required format relating to goods and services provided within the Republic of Bulgaria ... - The eligible costs, on the basis of which the amount is calculated, shall not exceed 80 per cent of the overall production budget; ... - The amount of rebate per project shall not exceed BGN2,000,000."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "No commissioning terms or pickup count.",
+   "verdict": "partial",
+   "value": {
+    "pickup": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Eligible shall be film projects that, as follows: - Meet the cultural criteria, including the cultural test; - Made entirely or partly in the Republic of Bulgaria; - Are intended for public release and/or broadcasting;"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Ministry of Culture and National Culture Fund programmes not reached. The 2026 conditions sit in NCF's new application system (konkursi.ncf.bg, a script-rendered app; its API answered 500) and were not read; the 2025 conditions are the latest read. Applications are counted across all six art forms, not theatre alone, and awards for 2026 aren't published yet, so the rate of yes is not known. The Ministry of Culture's own theatre programmes (mc.government.bg) timed out.",
+   "verdict": "found",
+   "value": {
+    "fund": "Национален фонд „Култура“ (National Culture Fund), Theatre strand of the creation programmes",
+    "currency": "BGN (2025 conditions)",
+    "large": {
+     "programmeTotal": 2714313,
+     "min": 30000,
+     "max": 60000,
+     "fundShareAtMost": 0.8,
+     "ownContributionAtLeast": 0.2,
+     "advance": 0.7,
+     "monthsToDeliver": 12,
+     "eligible": "private cultural organisations (ЗЗРК art. 10(1)), chitalishta, state or municipal cultural bodies for projects outside their core work; not individuals"
+    },
+    "small": {
+     "programmeTotal": 1838728,
+     "max": 30000,
+     "upTo20000": "up to 100% funded, no own share",
+     "over20000": "up to 80%",
+     "eligible": "also self-insured individuals registered in a free cultural profession"
+    },
+    "applications2026": {
+     "large": 531,
+     "small": 789,
+     "allProgrammes": 2310
+    },
+    "aidRegime": "de minimis (Regulation (EU) 2023/2831)"
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Общ размер на финансирането на програмата: 2 714 313 лв 1. Минимален размер на финансиране на един проект: 30 000 лв.. 2. Максимален размер на финансиране на един проект: 60 000 лв. … Националният фонд „Култура“ финансира до 80% от бюджета на проекта … Кандидатите следва да осигурят собствен финансов принос минимум 20% … Авансовото плащане по програмата е в размер на 70 % … Направления … „Театър“. … Допустими ◌ Частни културни организации по смисъла на чл. 10, ал. 1 от ЗЗРК; ◌ Организации, регистрирани по Закона за народните читалища; ◌ Български културни организации, които са разпоредителите с държавни или общински бюджетни средства само за финансиране на проекти, които не са част от основната дейност на организацията. … × физически лица;"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nfc.bg: Financing > Series and Co-production > Series pages; WP REST search of pages and posts for 'сериал'; Нормативни актове page; the Film Industry Act and its regulation PDFs read for series",
+     "result": "series aid scheme, its caps and sessions found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "nfc.bg Заповеди page: orders No. 260/2026 and No. 49/2026 on series financing (scanned PDFs, read from page images rendered at 200 dpi)",
+     "result": "awards read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nfc.bg: Financing > Series and Co-production > Series pages; WP REST search of pages and posts for 'сериал'; Нормативни актове page; the Film Industry Act and its regulation PDFs read for series",
+     "result": "series aid scheme, its caps and sessions found",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nfc.bg English rebate guidelines PDF",
+     "result": "series eligible, 25%",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "nfc.bg: Financing > Series and Co-production > Series pages; WP REST search of pages and posts for 'сериал'; Нормативни актове page; the Film Industry Act and its regulation PDFs read for series",
+     "result": "series aid scheme, its caps and sessions found",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.bg Radio and Television Act page",
+     "result": "403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "bnt.bg home page",
+     "result": "programme listings only; no commissioning terms",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "No commissioning terms or pickup count."
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "mc.government.bg (Ministry of Culture)",
+     "result": "timed out after 60 s",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "lex.bg Radio and Television Act page",
+     "result": "403",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ncf.bg home, 'Кандидатствай по програма', news items 749 and 752 (with the Applicants26.png table), programs.ncf.bg 2025 archive and the Theatre-strand conditions PDFs of the large and small creation programmes 2025; konkursi.ncf.bg (new system) and its /api/competitions endpoint",
+     "result": "2025 conditions and 2026 application counts read; the new system's API answered 500",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mc.government.bg (Ministry of Culture)",
+     "result": "timed out after 60 s",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Ministry of Culture and National Culture Fund programmes not reached. The 2026 conditions sit in NCF's new application system (konkursi.ncf.bg, a script-rendered app; its API answered 500) and were not read; the 2025 conditions are the latest read. Applications are counted across all six art forms, not theatre alone, and awards for 2026 aren't published yet, so the rate of yes is not known. The Ministry of Culture's own theatre programmes (mc.government.bg) timed out."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "nsi.bg theatre statistics page",
+     "result": "redirected to a general statistics index; no theatre table read",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

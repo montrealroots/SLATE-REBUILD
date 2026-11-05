@@ -1,0 +1,244 @@
+{
+ "topic": "markets.MA.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MA",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.ccm.ma/foreign_production/pe/doc/guide_fr.pdf",
+   "title": "CCM: Guide officiel du tournage et du Cash Rebate au Maroc",
+   "read": "2026-11-04",
+   "said": "distinguant ceux éligibles au Cash Rebate (30 % des dépenses éligible engagées sur le territoire marocain) … Productions éligibles Long métrage Long métrage docufiction Téléfilm Série de fiction télévisuelle / Téléfeuilleton",
+   "file": "ma-guide.pdf",
+   "sha256": "2750694a980343c0636bb341ea0ca11e526a01b049a2cffb2a19e4d8cb54f835"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.ccm.ma/soutien-a-la-production1",
+   "title": "Soutien à la production des œuvres cinématographiques (Centre Cinématographique Marocain)",
+   "read": "2026-11-04",
+   "said": "Depuis, l'aide à la production cinématographique nationale est accordée sous les formes suivantes. Avance sur recettes aux films de long et de court métrage avant et après production présentés par les sociétés de production de films marocaines. Contribution financière à l'écriture et à la réécriture de scénarios de films de long et de court métrage. Une prime à la qualité aux films de long et de court métrage ayant bénéficié d'une avance sur recettes avant production.",
+   "file": "ma-ccm-soutien-prod.html",
+   "sha256": "4834e8d9418d0ee7fdd4017378e87021df771c2d67a552001d163fbcea0b9440"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.ccm.ma/soutiens-au-cinema",
+   "title": "Soutiens au cinéma (CCM)",
+   "read": "2026-11-04",
+   "said": "Ainsi, depuis cette date, et annuellement, 60 millions de dirhams sont alloués à la production, 7 millions de dirhams à la numérisation des salles de cinéma et 27,5 millions à l'organisation de festivals et manifestations cinématographiques. Enfin, en janvier 2015, 15 millions de dirhams supplémentaires sont alloués à la production de films documentaires sur la culture sahraouie et hassanie.",
+   "file": "ma-ccm-soutiens.html",
+   "sha256": "77f8ed7afa3f5252a26bcb9b8e735f9508be70206db52efe795e66519c1d704e"
+  },
+  {
+   "kind": "primary",
+   "url": "https://maroc.ma/fr/actualites/tournees-theatrales-nationales-lancement-des-candidatures-pour-beneficier-des-subventions-au-titre-de",
+   "title": "Tournées théâtrales nationales: lancement des candidatures … 2e session de 2025 (Maroc.ma, the government portal)",
+   "read": "2026-11-04",
+   "said": "Le ministère de la Jeunesse, de la Culture et de la Communication - Département de la Culture - a annoncé le lancement d'un appel à candidatures pour bénéficier des subventions relatives aux tournées théâtrales nationales, au titre de la deuxième session de 2025. … Les candidatures doivent être déposées, obligatoirement et exclusivement, par voie électronique jusqu'au 27 juin courant, via la plateforme \"https://daam.minculture.gov.ma\"",
+   "file": "ma-maroc-tournees2025.html",
+   "sha256": "691eac68754a0ee296b93673ac24a6ae59261aa544390a26c89841acede694a3"
+  },
+  {
+   "kind": "primary",
+   "url": "https://mjcc.gov.ma/wp-content/uploads/2022/02/CahierdeschargesFrArts20201.pdf",
+   "title": "Appel à projets pour les filières artistiques, Cahier des charges 2020 (Ministère de la Culture, de la Jeunesse et des Sports, Département de la Culture)",
+   "read": "2026-11-04",
+   "said": "✓ Être de nationalité marocaine, ou étranger résident au Maroc et disposant d'une carte de séjour ; … Montants du soutien par projet 1ere tranche 2eme tranche Tournée théâtrale nationale Plafonné à 200 000 DH … 50% 50% … 11. Objectifs spécifiques « Théâtre » : ✓ Stimuler la promotion et la distribution à grande échelle des œuvres théâtrales ayant connu du succès ;",
+   "file": "ma-mjcc-cdcarts2020.pdf",
+   "sha256": "44093cd96225a63325e46207f82ccf63d57d0bacda80cb22c24df35873ad2f18"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "For foreign productions. No minimum spend per episode in the guide; the cahier des charges was not read.",
+   "verdict": "found",
+   "value": {
+    "rate": 0.3,
+    "eligible": [
+     "série de fiction télévisuelle",
+     "télé-feuilleton",
+     "téléfilm",
+     "web fiction"
+    ],
+    "excluded": [
+     "série d'animation",
+     "émission TV",
+     "télé-réalité"
+    ],
+    "deposit": 0.05,
+    "startWithinMonths": 6,
+    "finishWithinMonths": 12,
+    "paidWithinDays": 180,
+    "rule": "Arrêté conjoint n°2948-17 (19 janvier 2018)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "distinguant ceux éligibles au Cash Rebate (30 % des dépenses éligible engagées sur le territoire marocain) … Productions éligibles Long métrage Long métrage docufiction Téléfilm Série de fiction télévisuelle / Téléfeuilleton"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Not reached today. producer-MA.json holds the national fund (avance sur recettes) for features. The CCM's national fund, as its own page describes it whole, aids feature and short films (and documentaries on Sahrawi-Hassani culture); a series is not among its works. No other public series fund found.",
+   "verdict": "partial",
+   "value": {
+    "ccmFund": {
+     "forms": [
+      "avance sur recettes before and after production",
+      "writing and rewriting contribution",
+      "quality prize"
+     ],
+     "works": "feature and short films only",
+     "annualProductionMAD": 60000000,
+     "sahrawiDocumentariesMAD": 15000000
+    },
+    "seriesFund": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Depuis, l'aide à la production cinématographique nationale est accordée sous les formes suivantes. Avance sur recettes aux films de long et de court métrage avant et après production présentés par les sociétés de production de films marocaines. Contribution financière à l'écriture et à la réécriture de scénarios de films de long et de court métrage. Une prime à la qualité aux films de long et de court métrage ayant bénéficié d'une avance sur recettes avant production."
+    },
+    {
+     "src": 2,
+     "said": "Ainsi, depuis cette date, et annuellement, 60 millions de dirhams sont alloués à la production, 7 millions de dirhams à la numérisation des salles de cinéma et 27,5 millions à l'organisation de festivals et manifestations cinématographiques. Enfin, en janvier 2015, 15 millions de dirhams supplémentaires sont alloués à la production de films documentaires sur la culture sahraouie et hassanie."
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not reached today. producer-MA.json holds the national fund (avance sur recettes) for features. The only ceiling read is the 2020 Covid programme's (MAD 200,000 a tour); the 2025 cahier des charges sits on daam.minculture.gov.ma, which refused (connection reset). Production support beside tours exists by search snippet (2025 call), not read.",
+   "verdict": "partial",
+   "value": {
+    "body": "Ministère de la Jeunesse, de la Culture et de la Communication, Département de la Culture",
+    "scheme": "soutien aux projets culturels et artistiques, théâtre",
+    "sessions": "two a year (2023, 2025)",
+    "2023and2025": "national theatre tours (2023: tours only)",
+    "platform": "daam.minculture.gov.ma",
+    "tourCapMAD2020": 200000,
+    "tranches": [
+     0.5,
+     0.5
+    ],
+    "eligibility": "Moroccan nationals or foreign residents holding a residence card",
+    "applicants": "troupes, associations, companies, agencies, cooperatives with theatre as their main activity",
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 3,
+     "said": "Le ministère de la Jeunesse, de la Culture et de la Communication - Département de la Culture - a annoncé le lancement d'un appel à candidatures pour bénéficier des subventions relatives aux tournées théâtrales nationales, au titre de la deuxième session de 2025. … Les candidatures doivent être déposées, obligatoirement et exclusivement, par voie électronique jusqu'au 27 juin courant, via la plateforme \"https://daam.minculture.gov.ma\""
+    },
+    {
+     "src": 4,
+     "said": "✓ Être de nationalité marocaine, ou étranger résident au Maroc et disposant d'une carte de séjour ; … Montants du soutien par projet 1ere tranche 2eme tranche Tournée théâtrale nationale Plafonné à 200 000 DH … 50% 50% … 11. Objectifs spécifiques « Théâtre » : ✓ Stimuler la promotion et la distribution à grande échelle des œuvres théâtrales ayant connu du succès ;"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ccm.ma home, soutien-a-la-production1, soutiens-au-cinema",
+     "result": "Read: film-only fund",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not reached today. producer-MA.json holds the national fund (avance sur recettes) for features. The CCM's national fund, as its own page describes it whole, aids feature and short films (and documentaries on Sahrawi-Hassani culture); a series is not among its works. No other public series fund found."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 'SNRT appel à projets production fiction série télévisée producteurs exécutifs règlement dépôt projets Al Aoula 2026' (8 of 15)",
+     "result": "Only a 2019 SNRT documentary/fiction call in press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "snrt.ma/fr; ao.snrt.ma (script app; its bundle shows only admin offer APIs, not probed further)",
+     "result": "No commissioning terms reached",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 'SNRT appel à projets production fiction série télévisée producteurs exécutifs règlement dépôt projets Al Aoula 2026' (8 of 15)",
+     "result": "Only a 2019 SNRT documentary/fiction call in press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "snrt.ma/fr; ao.snrt.ma (script app; its bundle shows only admin offer APIs, not probed further)",
+     "result": "No commissioning terms reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "aujourdhui.ma 2019 article",
+     "result": "Read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 'Ministère de la Culture Maroc appel à projets soutien théâtre production diffusion tournée montant maximum arrêté résultats nombre projets retenus' (7 of 15)",
+     "result": "Led to mjcc.gov.ma cahiers, maroc.ma, Hespress, le360",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "mjcc.gov.ma: 2022 consolidated cahier (404), 2020 cahier des charges arts (read), homepage; daam.minculture.gov.ma (reset); maroc.ma 2025 tours release (read)",
+     "result": "2020 ceilings read; 2025 rules not reached",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "Hespress FR 2023; le360 2020; snrtnews.com 2025 (403)",
+     "result": "Read the first two",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "Not reached today. producer-MA.json holds the national fund (avance sur recettes) for features. The only ceiling read is the 2020 Covid programme's (MAD 200,000 a tour); the 2025 cahier des charges sits on daam.minculture.gov.ma, which refused (connection reset). Production support beside tours exists by search snippet (2025 call), not read."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

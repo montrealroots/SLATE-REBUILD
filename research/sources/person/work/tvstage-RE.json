@@ -1,0 +1,176 @@
+{
+ "topic": "markets.RE.series-and-stage",
+ "read": "2026-11-04",
+ "country": "RE",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.cnc.fr/professionnels/aides-et-financements/audiovisuel/production/credit-dimpot-audiovisuel_778316",
+   "title": "CNC: Crédit d'impôt audiovisuel",
+   "read": "2026-11-04",
+   "said": "Fiction Durée supérieure ou égale à 45 minutes ; Conditions de coût : coût global de production supérieur ou égal à 5 000 € par minute produite … Taux de crédit d’impôt fixé à 25% (décret 2016-52 du 27 janvier 2016 - article 77 de la loi n° 2014-1655) ; Plafonds déductibles : Suite à la parution du décret n° 2016-1191 du 31 août 2016, les plafonds pour les œuvres audiovisuelles de fiction ont été modifiés. La somme des crédits d'impôt calculés au titre d'une même œuvre audiovisuelle de fiction ne peut excéder : 1 250 € par minute produite et livrée lorsque le coût de production est inférieur à 10 000 € par minute produite et livrée 1 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 10 000 € et inférieur à 15 000 € par minute produite et livrée 2 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 15 000 € et inférieur à 20 000 € par minute produite et livrée 3 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 20 000 € et inférieur à 25 000 € par minute produite et livrée 4 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 25 000 € et inférieur à 30 000 € par minute produite et livrée 5 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 30 000 € et inférieur à 35 000 € par minute produite et livrée 7 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 35 000 € et inférieur à 40 000 € par minute produite et livrée 10 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 40 000 € par minute produite et livrée",
+   "file": "fr-cia.html",
+   "sha256": "b58580e536d24e2a118a3d8a983f291ea99354094ee7d4531e9a04f4b4e1bd0a"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.culture.gouv.fr/regions/dac-de-la-reunion/aides-et-demarches-specifiques-dac-de-la-reunion/spectacle-vivant",
+   "title": "DAC de La Réunion (Ministère de la Culture): Spectacle vivant, aides déconcentrées",
+   "read": "2026-11-04",
+   "said": "Les équipes artistiques relevant du spectacle vivant peuvent être accompagnées par le ministère de la Culture / DAC Réunion dans le cadre du dispositif des aides déconcentrées au spectacle vivant (ADSV). Chaque année environ 1300 équipes toutes disciplines confondues sont ainsi soutenues au niveau national, dont une trentaine à La Réunion. … Le dispositif des aides déconcentrées au spectacle vivant propose deux types d’aide : L’aide au projet, annuelle L’aide au conventionnement, pluriannuelle Ces aides sont attribuées après instruction de la recevabilité de la demande, avis d’une commission consultative composée de personnalités qualifiées dans les domaines du spectacle vivant, et décision de la DAC Réunion. … Textes en vigueur Le décret n°2015-641 du 8 juin 2015 relatif à l’attribution des aides déconcentrées au spectacle vivant",
+   "file": "re-dac-sv.html",
+   "sha256": "740a03f2aa153c3627acdd8a76af1f8be8479eba512270b9cf8dfd8f2d773185"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Follows FR's terms: the Constitution, art. 73: statutes apply as of right in the overseas departments (producer-RE.json). The 25% rate and the caps were already in producer-FR.json (read 2026-11-01); re-read today with the series' eligibility: 45 minutes, EUR 5,000/min, and a prior FSA aid, which itself needs a broadcaster's pre-purchase (item 2), so a French series without a broadcaster gets no credit.",
+   "verdict": "found",
+   "value": {
+    "follows": "FR",
+    "why": "the Constitution, art. 73: statutes apply as of right in the overseas departments (producer-RE.json)",
+    "fr": {
+     "costPerMinuteBandsFromEUR": [
+      5000,
+      10000,
+      15000,
+      20000,
+      25000,
+      30000,
+      35000,
+      40000
+     ],
+     "scheme": "crédit d'impôt audiovisuel (CGI art. 220 sexies)",
+     "rate": 0.25,
+     "fictionMinMinutes": 45,
+     "fictionMinCostPerMinuteEUR": 5000,
+     "childrensFictionMinCostPerMinuteEUR": 3000,
+     "animationMinMinutes": 24,
+     "animationMinCostPerMinuteEUR": 3000,
+     "requires": "a CNC Fonds de soutien audiovisuel production aid (prior authorisation) first; mainly in French; made mainly in France",
+     "creditCapPerMinuteEUR": {
+      "cost<10000": 1250,
+      "10000-15000": 1500,
+      "15000-20000": 2000,
+      "20000-25000": 3000,
+      "25000-30000": 4000,
+      "30000-35000": 5000,
+      "35000-40000": 7500,
+      ">=40000": 10000
+     },
+     "animationCreditCapPerMinuteEUR": 6000,
+     "rateSince": "décret 2016-52 (27 Jan 2016)"
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Fiction Durée supérieure ou égale à 45 minutes ; Conditions de coût : coût global de production supérieur ou égal à 5 000 € par minute produite … Taux de crédit d’impôt fixé à 25% (décret 2016-52 du 27 janvier 2016 - article 77 de la loi n° 2014-1655) ; Plafonds déductibles : Suite à la parution du décret n° 2016-1191 du 31 août 2016, les plafonds pour les œuvres audiovisuelles de fiction ont été modifiés. La somme des crédits d'impôt calculés au titre d'une même œuvre audiovisuelle de fiction ne peut excéder : 1 250 € par minute produite et livrée lorsque le coût de production est inférieur à 10 000 € par minute produite et livrée 1 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 10 000 € et inférieur à 15 000 € par minute produite et livrée 2 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 15 000 € et inférieur à 20 000 € par minute produite et livrée 3 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 20 000 € et inférieur à 25 000 € par minute produite et livrée 4 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 25 000 € et inférieur à 30 000 € par minute produite et livrée 5 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 30 000 € et inférieur à 35 000 € par minute produite et livrée 7 500 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 35 000 € et inférieur à 40 000 € par minute produite et livrée 10 000 € par minute produite et livrée lorsque le coût de production est supérieur ou égal à 40 000 € par minute produite et livrée"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not attempted today: the group's searches and time went to the larger markets. The figures are the 2021 list, the latest the DAC publishes on that page. The 9 theatre project grants sum to 105,000 € (counted from the list). The number of applications is not published, so there is no rate of yes. The eligibility text (arrêté 2015) was not read today.",
+   "verdict": "partial",
+   "value": {
+    "fund": "ADSV (aides déconcentrées au spectacle vivant), DAC de La Réunion",
+    "rules": "décret n°2015-641 du 8 juin 2015; arrêté du 22 décembre 2015; circulaire n°2016/003 du 4 mai 2016",
+    "types": {
+     "aideAuProjet": "annual",
+     "conventionnement": "multi-year"
+    },
+    "decidedBy": "DAC Réunion after a consultative commission",
+    "teamsSupportedPerYear": {
+     "national": 1300,
+     "reunion": "about 30"
+    },
+    "theatre2021EUR": {
+     "aideAuProjet": {
+      "min": 4000,
+      "max": 22000,
+      "count": 9,
+      "typical": 10000
+     },
+     "conventionnement": {
+      "min": 50000,
+      "max": 80000
+     }
+    },
+    "rateOfYes": null,
+    "regionReunion": "Région Réunion's cadre d'intervention for theatre creation and the Guétali 2025-26 call (not read: 404 on the live site, Wayback reset, not in Common Crawl 2026-39)"
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les équipes artistiques relevant du spectacle vivant peuvent être accompagnées par le ministère de la Culture / DAC Réunion dans le cadre du dispositif des aides déconcentrées au spectacle vivant (ADSV). Chaque année environ 1300 équipes toutes disciplines confondues sont ainsi soutenues au niveau national, dont une trentaine à La Réunion. … Le dispositif des aides déconcentrées au spectacle vivant propose deux types d’aide : L’aide au projet, annuelle L’aide au conventionnement, pluriannuelle Ces aides sont attribuées après instruction de la recevabilité de la demande, avis d’une commission consultative composée de personnalités qualifiées dans les domaines du spectacle vivant, et décision de la DAC Réunion. … Textes en vigueur Le décret n°2015-641 du 8 juin 2015 relatif à l’attribution des aides déconcentrées au spectacle vivant"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "regionreunion.com/aides-services/ (403); regionreunion.com/IMG/pdf/cadres_intervention_theatre_danse_spectacle_vivant(_v2).pdf and aap2025spectaclesvivants-guetali25-26vf.pdf (404); culture.gouv.fr Regions/DAC-La-Reunion (404) then DAC Réunion spectacle vivant page; ADSV 2021 list PDF",
+     "result": "read: DAC page and 2021 list; Région documents refused or gone",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Wayback availability API: cadre v2 snapshot 2022-01-07 found; fetch of the id_ capture",
+     "result": "connection reset",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 'com,regionreunion)/img/pdf/' (cc.py list)",
+     "result": "no capture of the theatre cadre or Guétali PDFs",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: Région Réunion aide à la création spectacle vivant compagnies théâtre cadre d'intervention montant 2026",
+     "result": "Région PDFs (now 404), DAC Réunion pages",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not attempted today: the group's searches and time went to the larger markets. The figures are the 2021 list, the latest the DAC publishes on that page. The 9 theatre project grants sum to 105,000 € (counted from the list). The number of applications is not published, so there is no rate of yes. The eligibility text (arrêté 2015) was not read today."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

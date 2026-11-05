@@ -62,14 +62,14 @@ const NAMES = { fr: 'French', en: 'English', ca: 'Catalan' };
 /** The country's own research (the actor's), where a market's languages are read from. */
 const COUNTRY: Research = { country: 'XX', figures: [{ item: 'language', value: { primary: 'ca', also: ['English'] } }, { item: 'market', value: { city: 'fr' } }], blockers: [] };
 const fee = (m: Record<string, unknown> = {}) => feeOf(RESEARCH, { forms: ['feature'], per: 'script', from: '2026-01-01', fig: 0, path: ['b'], ...m }, 'EUR', ['feature', 'episode']);
-const f = (over: Partial<Fee> = {}): Fee => ({ forms: ['feature'], kind: null, when: {}, per: 'script', from: '2026-01-01', amount: '1', share: null, cap: null, ...over });
+const f = (over: Partial<Fee> = {}): Fee => ({ forms: ['feature'], kind: null, when: {}, per: 'script', from: '2026-01-01', amount: '1', share: null, cap: null, times: null, ...over });
 const agreement = (a: Record<string, unknown>, country: Research | null = null) => agreementOf('xx-film', RESEARCH, { forms: ['feature'], language: { code: 'fr', fig: null }, ...a }, NAMES, country);
 
 describe("the screenwriter's markets compile", () => {
   it('reads a figure, a place in it, a number, a share and a tier', () => {
     expect([SOURCES, READINGS, OUTPUT, LANGUAGES, PREFIX, FACT, BLOCKED, COUNTRY_FACT]).toEqual(['research/sources/person/markets', 'tools/person/markets-writer/readings.json', 'src/person/work/markets.json', 'src/person/identity/languages.json', 'writer-', 'person.markets.writer.', 'person.markets.writer.blocked.', 'person.markets.']);
-    expect([KEPT, FORMS, PERS, TIERS, KINDS]).toEqual([['wga'], ['feature', 'pilot', 'episode', 'short'], ['script', 'minute', 'hour', 'day'], ['budget', 'minutes', 'hourly'], ['fiction', 'documentary', 'animation']]);
-    expect([ITEMS, UNKNOWING, UNREAD]).toEqual([['agreement', 'fees', 'language', 'union', 'terms', 'none', 'follows'], ['agreement', 'fees', 'terms', 'none', 'follows'], ['option']]);
+    expect([KEPT, FORMS, PERS, TIERS, KINDS]).toEqual([['wga'], ['feature', 'pilot', 'episode', 'short', 'play'], ['script', 'minute', 'hour', 'day', 'performance'], ['budget', 'minutes', 'hourly', 'grade', 'performances', 'premieres'], ['fiction', 'documentary', 'animation']]);
+    expect([ITEMS, UNKNOWING, UNREAD]).toEqual([['agreement', 'fees', 'language', 'union', 'terms', 'none', 'follows', 'play'], ['agreement', 'fees', 'terms', 'none', 'follows'], ['option']]);
     expect(figureOf(RESEARCH, 1, ['none'])).toBe(RESEARCH.figures[1]);
     expect(figureOf(RESEARCH, 2, null)).toBe(RESEARCH.figures[2]);
     expect(() => figureOf(RESEARCH, 1, ['fees', 'agreement'])).toThrow("XX's figure 1 isn't one of its fees or agreement");
@@ -168,6 +168,13 @@ describe("the screenwriter's markets compile", () => {
     expect(fee({ cap: { path: ['b'] }, path: ['a'] }).cap).toBe('200');
     expect(() => fee({ share: 1 })).toThrow('a share is not an object');
     expect(() => fee({ cap: 1 })).toThrow('a cap is not an object');
+    // So many of the amount, where the agreement counts it so (Denmark's salary months, Norway's short play's share).
+    expect(fee({ times: { path: ['nested', 'n'] } })).toEqual(f({ amount: '200', times: '3' }));
+    expect(fee({ times: { path: ['a'] } }).times).toBe('100.5');
+    expect(() => fee({ times: { path: ['zero'] } })).toThrow("XX's figure has no figure at zero");
+    expect(() => fee({ times: 3 })).toThrow('a multiple is not an object');
+    // A play's tiers and its pay by the performance (2026-11-04).
+    expect(fee({ when: { grade: [1, 1], performances: [7, null], premieres: [0, 0] }, per: 'performance' })).toEqual(f({ when: { grade: [1, 1], performances: [7, null], premieres: [0, 0] }, per: 'performance', amount: '200' }));
     // A tier left to negotiation, as the research's figure says.
     const negotiated = f({ per: null, amount: null, from: '2024-01-01', when: { budget: [0, 9] } });
     expect(fee({ negotiated: { fig: 4 }, from: '2024-01-01', when: { budget: [0, 9] } })).toEqual(negotiated);
@@ -212,7 +219,8 @@ describe("the screenwriter's markets compile", () => {
     expect(() => agreement({ currency: 'EUR', fees: [] })).toThrow('xx-film sets no minimum for a feature');
     expect(() => agreement({ currency: 'EUR' })).toThrow('xx-film sets no minimums');
     expect(() => agreement({ currency: 'EUROS', fees: [earlier] })).toThrow("xx-film pays in EUROS, which isn't a currency");
-    expect(() => agreement({ forms: ['film'] })).toThrow("xx-film's forms is for feature, pilot, episode, short");
+    expect(() => agreement({ forms: ['film'] })).toThrow("xx-film's forms is for feature, pilot, episode, short, play");
+    expect(agreement({ forms: ['play'], none: { fig: 1 } }).forms).toEqual(['play']);
     expect(() => agreement({ market: 1 })).toThrow("xx-film names market, which the game doesn't read");
     expect(() => agreementOf('xx', RESEARCH, [], NAMES)).toThrow('the reading of xx is not an object');
     // The languages: each one a person speaks, standing in the research's figure, or the country's own, where it names one.
@@ -235,6 +243,8 @@ describe("the screenwriter's markets compile", () => {
     expect(unknownOf([{ item: 'fees' }, { item: 'union' }, { item: 'fees' }])).toEqual(['fees', 'union']);
     // An option's terms are a blocker the research keeps and the game no longer reads.
     expect(unknownOf([{ item: 'option' }, { item: 'fees' }, { item: 'option' }])).toEqual(['fees']);
+    // A play's minimum, a blocker since 2026-11-04 (Vietnam's).
+    expect(unknownOf([{ item: 'fees' }, { item: 'play' }])).toEqual(['fees', 'play']);
     expect(() => unknownOf([{ item: 'rates' }])).toThrow("a blocker names rates, which isn't a fact the research seeks");
     const read = marketOf(RESEARCH, { agreements: { 'xx-a': { forms: ['feature'], language: { code: 'fr', fig: null }, unknown: true }, 'xx-b': { forms: ['short'], language: { code: 'en', fig: null }, none: { fig: 1 } } } }, NAMES);
     expect(read.market).toEqual({ agreements: ['xx-a', 'xx-b'], unknown: ['fees', 'union'] });

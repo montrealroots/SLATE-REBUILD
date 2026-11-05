@@ -35,6 +35,18 @@ import { partScore, PARTS, scriptOf, spread, type Form, type Script, type Script
  *   agreement sets the pay, left to negotiation; refused, and told, where the research couldn't find whether an
  *   agreement sets it, or its figures. The script is paid for whole that day: what an agreement holds back until
  *   photography is due with the rest. The writer must write one of the agreement's languages (identity's languages).
+ * - What the production pays for a play (from 2026-11-04): in the UK its theatre's agreement (PLAYS); in a market whose
+ *   research of that day found its playwrights' terms, the market's agreement for a play, compiled with its screen ones:
+ *   an up-front minimum by the play's running time, its theatre's grade, its run's performances or whether it is the
+ *   writer's first premiere, where the agreement sets one (Denmark's TIO theatres, Norway's Spekter theatres, Iceland's
+ *   National Theatre and Reykjavík City Theatre, Canada's PACT theatres, Andorra's artists' statute); none where the
+ *   minimum is a share of the takings alone (France's SACD, Slovakia's LITA, Lithuania's LATGA, Uruguay's AGADU, Italy's
+ *   SIAE, the Czech DILIA's terms set by contract; and from the methods round of the same day Chile's, Colombia's and
+ *   Greece's copyright laws, Latvia's AKKA/LAA, Madagascar's collection decree and Paraguay's APA), the game keeping no
+ *   box office as it doesn't for the UK's royalties; none where nothing sets it (Pitcairn, New Caledonia, Vatican City,
+ *   whose research names no law or agreement on stage work); and no agreement where the research didn't find the terms,
+ *   which the production refuses and tells. Each is paid
+ *   whole when the play is staged, as a UK play's is.
  *
  * The writer works alone (the owner, 2026-11-01: "just get rid of all the team stuff because I will be a solo writer"):
  * no writers' room, staffing or ladder of titles.
@@ -42,7 +54,7 @@ import { partScore, PARTS, scriptOf, spread, type Form, type Script, type Script
  * What the trade doesn't publish (how likely a contact is made in a day) is the game's own until the owner balances it (person.career.model).
  */
 
-/** The forms written for the screen, which the screen's agreements pay; a play is paid under a theatre's (PLAYS). */
+/** The forms written for the screen, which the WGA's FEES pay; a UK play is paid under a theatre's (PLAYS), a play elsewhere under its market's agreement. */
 export type Screen = Exclude<Form, 'play'>;
 
 /**
@@ -100,18 +112,19 @@ export const CAREER_START: CareerSlice = { contacts: 0, documents: {} };
 export const KEPT = 'wga';
 
 /** A market's minimum as compiled (tools/person/markets-writer/compile.ts). */
-type Tier = 'budget' | 'minutes' | 'hourly';
+type Tier = 'budget' | 'minutes' | 'hourly' | 'grade' | 'performances' | 'premieres';
 /** The kinds of script an agreement can set its minimums by. */
 export type Kind = 'fiction' | 'documentary' | 'animation';
 export interface Fee {
   readonly forms: readonly Form[];
   readonly kind: Kind | null;
   readonly when: Readonly<Partial<Record<Tier, readonly [number, number | null]>>>;
-  readonly per: 'script' | 'minute' | 'hour' | 'day' | null;
+  readonly per: 'script' | 'minute' | 'hour' | 'day' | 'performance' | null;
   readonly from: string;
   readonly amount: string | null;
   readonly share: string | null;
   readonly cap: string | null;
+  readonly times: string | null;
 }
 export interface MarketAgreement {
   readonly country: CountryCode;
@@ -124,7 +137,7 @@ export interface MarketAgreement {
   readonly fees: readonly Fee[];
 }
 /** What a market's research couldn't find, by the item its blockers name. */
-export type Unknown = 'agreement' | 'fees' | 'language' | 'union' | 'terms' | 'none' | 'follows';
+export type Unknown = 'agreement' | 'fees' | 'language' | 'union' | 'terms' | 'none' | 'follows' | 'play';
 export interface Market {
   readonly agreements: readonly string[];
   readonly unknown: readonly Unknown[];
@@ -167,18 +180,20 @@ export const MISSING: Readonly<Record<Unknown, string>> = {
   terms: "whether any agreement, guild rate or law sets a script's terms",
   none: 'whether any fund, guild or agreement serves a writer there',
   follows: "whether the agreements of the country whose law it follows reach a script written for a production there",
+  play: "what a play's script is paid",
 };
 
 /**
- * What the player is told of a country's market where its research couldn't find all of it: "a" or "a and b" (no
- * writer's market leaves more than two items untold, a test holds); nothing where it is known whole, or there's no
+ * What the player is told of a country's market where its research couldn't find all of it: "a", "a and b" or "a, b and
+ * c" (no writer's market left more than two items untold until the methods round of 2026-11-04 added a play's minimum
+ * where its research couldn't find it, which left three in some); nothing where it is known whole, or there's no
  * research of it.
  */
 export function aboutCountry(country: string): string | undefined {
   if (!Object.hasOwn(MARKETS, country)) return undefined;
   const missing = (MARKETS[country] as Market).unknown.map((u) => MISSING[u]);
   if (missing.length === 0) return undefined;
-  return t(UNKEPT_LINE, { country: countryName(country as CountryCode), missing: missing.join(' and ') });
+  return t(UNKEPT_LINE, { country: countryName(country as CountryCode), missing: new Intl.ListFormat('en-GB').format(missing) });
 }
 
 /** What the player is told of an agreement's market where its research couldn't find all of it; nothing for the WGA's. */
@@ -187,17 +202,33 @@ export function aboutMarket(agreement: string): string | undefined {
   return a === null ? undefined : aboutCountry(a.country);
 }
 
-/** What a production names of itself that a minimum can turn on: the writers' agreement, its budget (major units) and running time. */
+/**
+ * What a production names of itself that a minimum can turn on: the writers' agreement, its budget (major units) and
+ * running time; and a play's, where its agreement turns on them: its theatre's grade as the agreement numbers it (Norway's
+ * category), its run's performances (Canada's guarantee), and the writer's plays premiered before it (Iceland's first
+ * work). A production that doesn't name one is refused where its minimum turns on it.
+ */
 export interface Terms {
   agreement: string;
   budget: number | null;
   minutes: number | null;
+  grade?: number | null;
+  performances?: number | null;
+  premieres?: number | null;
 }
 /** What of the script itself a minimum can turn on: its genre (for its kind) and the days written into it. */
 export type Work = Pick<Script, 'genre' | 'days'>;
 
-/** What a tier turns on, for the production: its budget, the script's minutes, the budget an hour of it; refused where the production doesn't say. */
+/** What a play names of itself that a tier turns on, as the player is told it's missing. */
+const NAMED = { grade: "its theatre's grade", performances: "its run's performances", premieres: "the writer's plays premiered before" } as const;
+
+/** What a tier turns on, for the production: its budget, the script's minutes, the budget an hour of it, or what a play names; refused where the production doesn't say. */
 function tierOf(k: Tier, o: Terms, form: Form): number {
+  if (k === 'grade' || k === 'performances' || k === 'premieres') {
+    const v = o[k] ?? null;
+    if (v === null) throw new Error(`a ${form} under ${o.agreement} names ${NAMED[k]}`);
+    return v;
+  }
   if (k !== 'minutes' && o.budget === null) throw new Error(`a ${form} under ${o.agreement} names its production's budget`);
   if (k !== 'budget' && o.minutes === null) throw new Error(`a ${form} under ${o.agreement} names its running time`);
   const [budget, minutes] = [o.budget as number, o.minutes as number];
@@ -215,10 +246,11 @@ function holds(f: Fee, o: Terms, form: Form): boolean {
 /** An amount an hour, for so many minutes: rounded half to even to a minor unit. */
 const forMinutes = (m: Money, minutes: number): Money => money(m.currency, Number(roundHalfEven(BigInt(m.minor) * BigInt(minutes), 60n)));
 
-/** A minimum's amount for the production: by the script, each day written, the minute or the hour; at least its share of the budget, at most its ceiling. */
+/** A minimum's amount for the production: by the script (so many of it, where the agreement counts it so), each day written, each performance, the minute or the hour; at least its share of the budget, at most its ceiling. */
 function amountOf(currency: CurrencyCode, f: Fee, o: Terms, form: Form, work: Work | null): Money {
   const base = fromMajor(currency, f.amount as string);
-  if (f.per === 'script') return base;
+  if (f.per === 'script') return f.times === null ? base : multiply(base, f.times);
+  if (f.per === 'performance') return multiply(base, String(tierOf('performances', o, form)));
   if (f.per === 'day') {
     if (work === null) throw new Error(`a ${form} under ${o.agreement} is paid by the days it was written`);
     return multiply(base, String(work.days));
@@ -241,13 +273,19 @@ function amountOf(currency: CurrencyCode, f: Fee, o: Terms, form: Form, work: Wo
 
 /**
  * The minimum a production pays for a script of a form under an agreement on a date: the WGA's for the form; a
- * market's for the form, kind and tier, the latest begun by then; none where it is left to negotiation. Refused where
- * the agreement sets no terms for the form, the kind or the tier, the production doesn't say what its tier turns on, the
+ * market's for the form, kind and tier, the latest begun by then; none where it is left to negotiation, or (a play) where
+ * the minimum is a share of the takings alone, which the game doesn't keep. Refused where the agreement sets no terms for
+ * the form (the WGA's none for a play), the kind or the tier, the production doesn't say what its tier turns on, the
  * script isn't named where a minimum turns on it, no minimum is known by the date, or its figures aren't known (told).
+ * A UK play is paid under its theatre's agreement (PLAYS, playMinimum), which a market's research of 2026-11-04 doesn't
+ * hold: the UK's was researched apart (tvstage-GB.json).
  */
-export function minimumOf(o: Terms, form: Screen, date: string, work: Work | null = null): Money | null {
+export function minimumOf(o: Terms, form: Form, date: string, work: Work | null = null): Money | null {
   const a = marketOf(o.agreement);
-  if (a === null) return FEES[form];
+  if (a === null) {
+    if (form === 'play') throw new Error(`${o.agreement} sets no terms for a play`);
+    return FEES[form];
+  }
   if (a.unknown) throw new Error(aboutMarket(o.agreement) as string);
   if (!a.forms.includes(form)) throw new Error(`${o.agreement} sets no terms for a ${form}`);
   if (a.none) return null;

@@ -113,7 +113,7 @@ describe('a production', () => {
     expect(go({ roles: ['producer', 'grip'] })).toThrow("there's no role grip");
     expect(go({ roles: ['producer', 'producer'] })).toThrow('a role is held once');
     expect(go({ roles: ['producer', 'writer'] })).toThrow("optioned material is someone else's writing, so the life doesn't hold the writer's role");
-    expect(go({ format: 'stage', roles: ['director'] })).toThrow("a stage director's terms in United States aren't known to this game, so a play there is directed by someone hired");
+    expect(go({ format: 'stage', roles: ['director'], market: 'FR', staged: 'fr-private-stage' })).toThrow("a stage director's terms in France aren't known to this game, so a play there is directed by someone hired");
     expect(go({ format: 'series' })).toThrow("a series' episodes are an hour or a half-hour (undefined)");
     expect(go({ format: 'series', episode: 'minute', episodes: 3 })).toThrow("a series' episodes are an hour or a half-hour (minute)");
     expect(go({ format: 'series', episode: 'hour' })).toThrow('the episodes is a whole number of at least 1 (undefined)');
@@ -122,7 +122,7 @@ describe('a production', () => {
     expect(go({ format: 'stage', episodes: 2 })).toThrow('a stage has no episodes');
     expect(go({ minutes: 0 })).toThrow('the running time is a whole number of at least 1 (0)');
     expect(project(go({ format: 'series', episode: 'half-hour', episodes: 6, minutes: 22, roles: ['actor', 'producer'] })())).toMatchObject({ format: 'series', series: { form: 'half-hour', episodes: 6 }, minutes: 22, roles: ['actor', 'producer'], script: null, writing: null, costs: [] });
-    expect(project(go({ format: 'stage', roles: ['actor'] })())).toMatchObject({ format: 'stage', series: null, minutes: null, stage: null, roles: ['actor'] });
+    expect(project(go({ format: 'stage', roles: ['actor'], market: 'FR', staged: 'fr-private-stage' })())).toMatchObject({ format: 'stage', series: null, minutes: null, stage: null, staged: 'fr-private-stage', roles: ['actor'] });
     expect(project(go({ roles: ['director'] })()).roles).toEqual(['director']);
   });
 

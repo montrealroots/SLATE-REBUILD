@@ -56,6 +56,17 @@
     "trade-press": "None. || retry 2026-11-01: none",
     "archive": "web.archive.org: connection reset through the proxy on 2026-11-01 (three attempts; archive.org's availability API answers, the snapshots do not load); no snapshot read. || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://sainthelena.gov.sh/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Saint Helena (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: WebSearch 10 of 10 (standard), the same single query for both territories: 'British Virgin Islands or St Helena theatre drama production arts grant culture department funding playwright director actors paid' (nothing on St Helena: no result named the island; the results concerned the US Virgin Islands, the Cayman Islands and UK lottery grants)",
+    "institution": "2026-11-04: sainthelena.gov.sh/wp-json/wp/v2/search for 'theatre', 'drama', 'arts grant', 'broadcasting' (20 results each) (theatre: hospital operating theatre items; drama: none relevant; arts grant: none; broadcasting: a 2012 TV broadcasting licence document, the Communications Bill 2025, spectrum fees: no commissioning, fund or agreement)",
+    "official-register": "2026-11-04: St Helena Government, 'Alphabetical List, St Helena' of the Laws of St Helena https://www.sainthelena.gov.sh/st-helena/government/legislation/laws-of-st-helena/alphabetical-list-st-helena/ (200, saved l4t/files/m20/sh-laws-alpha.html, sha256 2b844129beba3e05a29eccee782f3cf4193d2da1f2ee132de867ce70fba7b26f) read whole (152 ordinances and orders), searched for film, cinema, broadcasting, television, theatre, entertainment, arts, culture, copyright, incentive, employment, wage, tax; and the government site's search API for 'minimum wage', 'employment rights ordinance', 'copyright', 'income tax ordinance' (saved l4t/files/m20/sh-s-*.json) (read: the list holds no film, broadcasting, theatre, arts or copyright ordinance and no production incentive; the only labour and tax laws are the Employment Rights Ordinance 2010 (its 2017 amendment and the 2021 Labour Regulating Authority guidelines), the Income Tax Ordinance 2012, the Services Tax Ordinance 2011 and the Property Tax Ordinance 2019. A stage director's or playwright's pay rests on contract above the statutory minimum wage (the government's notices: 'Minimum Wage to Increase from 01 July 2026'); no series or theatre fund in law)",
+    "trade-press": "2026-11-04: South Atlantic Media Services (sams.sh, the island's broadcaster and newspaper, the Sentinel) site searches 'theatre' (200, saved l4t/files/m20/sh-tp-*.html, sha256 e7e1810bbe5196d79ef31dd863710b0d64c756f7064e31c9a8aa8bd68e282733: one unrelated 2023 flight item) and 'drama' (403 'Blocked: Security by CleanTalk', not got past) (no press item on theatre on St Helena, a series, a fund or anyone's pay was reached)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43 'sh,gov,sainthelena)/' (38 captures, Oct 2026: news items, ExCo and LegCo meetings, robots.txt) filtered for arts, culture, theatre, drama, grant, fund, film, broadcasting, heritage (no capture of any arts, theatre, film or broadcasting page; nothing on a series, a theatre fund or a director's or playwright's pay)"
+   }
   }
  ]
 }

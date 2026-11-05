@@ -45,6 +45,17 @@
     "trade-press": "none read (no search available) || retry 2026-11-01: Diario de Cuba and OnCuba on the 2026 filmmakers’ dispute; no rate card quoted",
     "archive": "web.archive.org returned 429 / connection reset this session || retry 2026-11-01: archive.org availability API answered 429 Too Many Requests and web.archive.org/web/2025/https://icaic.cu/ reset the connection (curl 35), 2026-11-01; no snapshot read"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Cuba (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: WebSearch 'Cuba resolución tarifas derecho de autor representación obras teatrales dramaturgo porcentaje taquilla' (led to WIPO Lex details 10660 (CENDA Resolución 10/09))",
+    "institution": "2026-11-04: Centro Nacional de Derecho de Autor (CENDA): https://www.cenda.cult.cu/ and https://cenda.cult.cu/; Consejo Nacional de las Artes Escénicas https://www.cnae.cult.cu/; UNEAC (writers' and artists' union) https://www.uneac.org.cu/ (CENDA: CONNECT 502 on both hosts; CNAE and UNEAC: connection reset (curl 35). None read.)",
+    "official-register": "2026-11-04: WIPO Lex details page 10660 and its signed PDF link (cu051es.pdf) fetched and read whole (the tariffs read; an S3 copy of the same file answered 403)",
+    "trade-press": "2026-11-04: OnCuba site search via its WordPress API for 'derecho de autor teatro' (file /tmp/claude-0/-home-user/03f7067b-6e1c-5cca-95b5-33cc49c92f8f/scratchpad/l4t/files/m13/cu-oncuba-dram.json, sha256 5479695cab7329d68223b99d12cfeef1ad5d65fd0540cf315bbf12c2255e8c1e), 5 newest titles read (No article on stage-play royalties or a playwright's fee (results: the Cervantes prize, a poet interview, Patricio Guzmán, economic debate). Nothing to read further.)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43, prefix 'cu,cult,cenda)/'; then CC-MAIN-2025-51 the same (No capture of cenda.cult.cu in CC-MAIN-2026-43 or CC-MAIN-2025-51; nothing read.)"
+   }
   }
  ]
 }

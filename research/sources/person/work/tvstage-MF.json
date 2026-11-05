@@ -1,0 +1,235 @@
+{
+ "topic": "markets.MF.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MF",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.com-saint-martin.fr/thematiques/impots-et-fiscalite/fiscalite-pour-les-particuliers/residence-fiscale-a-saint-martin---la-regle-des-5-ans",
+   "title": "Collectivité de Saint-Martin: Résidence fiscale à Saint-Martin - La règle des 5 ans",
+   "read": "2026-11-04",
+   "said": "Saint-Martin dispose d'une fiscalité propre, distincte de celle de la métropole et des DOM. Pour bénéficier du régime fiscal saint-martinois, il ne suffit pas d'y résider : des règles spécifiques de domiciliation fiscale s'appliquent, notamment la règle dite « des cinq ans » pour les personnes venant de l'hexagone ou d'un département d'outre mer (DOM).",
+   "file": "mf-com-5ans.html",
+   "sha256": "7de5870af1c6cf695cbcd45702ad815c3dad7a6461030ba3b5c20a4f19ad0292"
+  },
+  {
+   "kind": "primary",
+   "url": "https://comsaintmartin.cdn.prismic.io/comsaintmartin/aFVSe3fc4bHWikkR_Re%CC%81glement_Fondsd%27aidesterritoriala%CC%80lafilie%CC%80reaudiovisuelleetcinema.pdf",
+   "title": "Collectivité de Saint-Martin: Règlement du Fonds d'aides territorial à la filière audiovisuelle et cinéma, 4. Aide sélective à la production d'œuvres audiovisuelles",
+   "read": "2026-11-04",
+   "said": "Les sociétés constituées sous forme commerciale dont l’objet principal est la production et établie en France, dans l’Union européenne ou dans l’Espace économique européen, si elle dispose d’un établissement stable en France, au moment du versement de l’aide … Les projets disposant déjà d’un accord de diffusion (service de télévision ou service de médias audiovisuels à la demande). La Collectivité de Saint-Martin attribue une aide selon les modalités suivantes: 50% des dépenses éligibles, plafonnée à 120 000€ ; - Série de courte durée (inférieure ou égale à 26 minutes) : 60 % des dépenses éligibles, plafonnée à 40 000 € ; - Série de longue durée (52’ minutes ou plus) : 60 % des dépenses éligibles, plafonnée à 120 000 €. … Le montant total des aides publiques ne peut excéder 50% du coût définitif de l’œuvre … Le seuil d’intensité peut s’élever à 60 % pour les œuvres difficiles ou à petit budget … une œuvre à petit budget est celle dont le budget total est inférieur ou égal à cent mille euros (100 000 €) par heure. … Les dépenses éligibles pour cette aide sont les suivantes : - Salaires et charges des techniciens, - Frais de location, - Frais de déplacements … - Lieux de tournage, - Coûts liés à l’achat et la fabrication de décors, - Frais de post-production",
+   "file": "mf-reglement.pdf",
+   "sha256": "791bac04e695f60e6c85c6f5a28d05acf8e9bf1ecec40e02fb23115bf6cd5012"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Saint-Martin has its own tax competence; whether the French audiovisual tax credit (CGI) reaches a Saint-Martin producer was not read. The territorial fund below is a grant, not a tax incentive. Saint-Martin taxes on its own code, distinct from metropolitan France and the DOMs; the Collectivité's business-tax page names only an investment aid, no audiovisual credit. Whether the French CGI credits (art. 220 sexies, 220 quaterdecies) reach a Saint-Martin-domiciled producer or Saint-Martin spend was not found: Legifrance refused (Cloudflare challenge) and BOFiP's only copy reached was the 2014 version, out of publication since 2016. The territorial fund (first wave, item 2) is the support that is held.",
+   "verdict": "partial",
+   "value": {
+    "ownTaxSystem": true,
+    "localSeriesIncentive": null,
+    "frenchCreditsReachLocalProducer": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Saint-Martin dispose d'une fiscalité propre, distincte de celle de la métropole et des DOM. Pour bénéficier du régime fiscal saint-martinois, il ne suffit pas d'y résider : des règles spécifiques de domiciliation fiscale s'appliquent, notamment la règle dite « des cinq ans » pour les personnes venant de l'hexagone ou d'un département d'outre mer (DOM)."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "producer-MF.json holds the fund's 2025 money and selection; series terms re-read whole today.",
+   "verdict": "found",
+   "value": {
+    "fund": "Fonds territorial (Collectivité de Saint-Martin, with the CNC)",
+    "shortSeriesUpTo26min": {
+     "rate": 0.6,
+     "capEUR": 40000
+    },
+    "longSeries52minPlus": {
+     "rate": 0.6,
+     "capEUR": 120000
+    },
+    "otherTVWork": {
+     "rate": 0.5,
+     "capEUR": 120000
+    },
+    "broadcastDealRequired": true,
+    "publicAidMax": 0.5,
+    "publicAidMaxDifficultOrLowBudget": 0.6,
+    "lowBudgetPerHourEUR": 100000,
+    "regime": "de minimis",
+    "rate": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les sociétés constituées sous forme commerciale dont l’objet principal est la production et établie en France, dans l’Union européenne ou dans l’Espace économique européen, si elle dispose d’un établissement stable en France, au moment du versement de l’aide … Les projets disposant déjà d’un accord de diffusion (service de télévision ou service de médias audiovisuels à la demande). La Collectivité de Saint-Martin attribue une aide selon les modalités suivantes: 50% des dépenses éligibles, plafonnée à 120 000€ ; - Série de courte durée (inférieure ou égale à 26 minutes) : 60 % des dépenses éligibles, plafonnée à 40 000 € ; - Série de longue durée (52’ minutes ou plus) : 60 % des dépenses éligibles, plafonnée à 120 000 €. … Le montant total des aides publiques ne peut excéder 50% du coût définitif de l’œuvre … Le seuil d’intensité peut s’élever à 60 % pour les œuvres difficiles ou à petit budget … une œuvre à petit budget est celle dont le budget total est inférieur ou égal à cent mille euros (100 000 €) par heure. … Les dépenses éligibles pour cette aide sont les suivantes : - Salaires et charges des techniciens, - Frais de location, - Frais de déplacements … - Lieux de tournage, - Coûts liés à l’achat et la fabrication de décors, - Frais de post-production"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "feecap",
+   "finding": "The fund's eligible list (read whole) names no producer fee or overheads: neither is aided, so no cap is needed.",
+   "verdict": "partial",
+   "value": {
+    "producerFeeEligible": false,
+    "overheadsEligible": false
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les dépenses éligibles pour cette aide sont les suivantes : - Salaires et charges des techniciens, - Frais de location, - Frais de déplacements (billet d’avion, coûts de transport et frais d’hébergement...) liés au tournage du projet, - Lieux de tournage, - Coûts liés à l’achat et la fabrication de décors, - Frais de post-production à des sociétés prestataires"
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "outcomes",
+   "finding": "How a series reaches the screen",
+   "verdict": "partial",
+   "value": {
+    "broadcastDealBeforeAid": true,
+    "pickupRate": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "Les projets disposant déjà d’un accord de diffusion (service de télévision ou service de médias audiovisuels à la demande)."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 (standard): \"Saint-Martin collectivité code général des impôts crédit d'impôt production audiovisuelle cinéma 220 sexies applicable Saint-Martin\"",
+     "result": "general material on art. 220 sexies only; nothing on Saint-Martin",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "bofip.impots.gouv.fr/export/pdf/13364 (BOI-IS-RICI-10-30-10)",
+     "result": "the 2014 version (out of publication 02/03/2016); \"réalisées principalement sur le territoire français\", nothing on Saint-Martin; not the rule in force",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legifrance.gouv.fr CGCT art. LO 6314-3 (Saint-Martin tax competence)",
+     "result": "403 Cloudflare challenge; refused",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "com-saint-martin.fr: search, Impôts et fiscalité, Développement des affaires et fiscalité, La règle des 5 ans",
+     "result": "own tax system confirmed; no audiovisual or theatre incentive named",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Saint-Martin has its own tax competence; whether the French audiovisual tax credit (CGI) reaches a Saint-Martin producer was not read. The territorial fund below is a grant, not a tax incentive. Saint-Martin taxes on its own code, distinct from metropolitan France and the DOMs; the Collectivité's business-tax page names only an investment aid, no audiovisual credit. Whether the French CGI credits (art. 220 sexies, 220 quaterdecies) reach a Saint-Martin-domiciled producer or Saint-Martin spend was not found: Legifrance refused (Cloudflare challenge) and BOFiP's only copy reached was the 2014 version, out of publication since 2016. The territorial fund (first wave, item 2) is the support that is held."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Collectivité de Saint-Martin's fund rules (PDF on its CDN), read whole",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "producer-MF.json holds the fund's 2025 money and selection; series terms re-read whole today."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Collectivité de Saint-Martin's fund rules (PDF on its CDN), read whole",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 2,
+    "what": "The fund's eligible list (read whole) names no producer fee or overheads: neither is aided, so no cap is needed."
+   }
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Collectivité de Saint-Martin's fund rules (PDF on its CDN), read whole",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 3,
+    "what": "How a series reaches the screen"
+   }
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "WebSearch 4 (standard): \"Saint-Martin collectivité code général des impôts crédit d'impôt production audiovisuelle cinéma 220 sexies applicable Saint-Martin\"",
+     "result": "general material on art. 220 sexies only; nothing on Saint-Martin",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "legifrance.gouv.fr CGCT art. LO 6314-3 (Saint-Martin tax competence)",
+     "result": "403 Cloudflare challenge; refused",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "com-saint-martin.fr: search, Impôts et fiscalité, Développement des affaires et fiscalité, La règle des 5 ans",
+     "result": "own tax system confirmed; no audiovisual or theatre incentive named",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "Collectivité de Saint-Martin's fund rules (PDF on its CDN), read whole",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

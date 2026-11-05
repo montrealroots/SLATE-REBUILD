@@ -1,0 +1,158 @@
+{
+ "topic": "markets.PK.series-and-stage",
+ "read": "2026-11-04",
+ "country": "PK",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://pid.gov.pk/site/press_detail/23466",
+   "title": "Press Information Department, PR No.138, Islamabad, September 19, 2023 (read with the issuer's RapidSSL intermediate added, verification on)",
+   "read": "2026-11-04",
+   "said": "Film and Drama Finance Fund was established on August 5, 2023 after the Rules for the Fund were notified. A seed money of Rs. 1 billion was initially allocated as Technical Supplementary Grant to establishthe said Fund. A Fund Management Committee comprising ex-officio members and members of film Fraternity was later notified by the Ministry to manage the Fund. The participants of the meeting appreciated Ministry's efforts for the inclusion of the Fund in the Thirteenth Schedule of the Income Tax Ordinance, 2001 that will enable the contributors to the fund, tax exemptions in similar manner as those granted to companies in the ambit of Corporate Social Responsibility (CSR).",
+   "file": "pk-pid",
+   "sha256": "9a4a7b189a48e9b05c5d26d31af3f28fe214441bed61c55d8af77d41c8c92454"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "Not searched this run. No production rebate exists in what was read; the 2018 policy names 'drama' throughout and proposes equipment duty and sales-tax relief and a fund offering loan mark-up subsidies. Whether the customs and sales-tax proposals were enacted in the Finance Act 2018 was not read (the PID release reports only the fund). The fund's 2023 rules were not found.",
+   "verdict": "partial",
+   "value": {
+    "productionRebate": null,
+    "policy2018Proposals": {
+     "customsDutyExemptionOnEquipmentYears": 10,
+     "salesTaxOnEquipment": 0,
+     "financeFund": "mark-up subsidy on bank loans for approved film and drama projects"
+    },
+    "inForce": {
+     "fundEstablished": "2023-08-05",
+     "seedPKR": 1000000000,
+     "fundInThirteenthScheduleITO2001": "contributors get CSR-like tax exemptions (per the PID release)"
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Film and Drama Finance Fund was established on August 5, 2023 after the Rules for the Fund were notified. A seed money of Rs. 1 billion was initially allocated as Technical Supplementary Grant to establishthe said Fund. A Fund Management Committee comprising ex-officio members and members of film Fraternity was later notified by the Ministry to manage the Fund. The participants of the meeting appreciated Ministry's efforts for the inclusion of the Fund in the Thirteenth Schedule of the Income Tax Ordinance, 2001 that will enable the contributors to the fund, tax exemptions in similar manner as those granted to companies in the ambit of Corporate Social Responsibility (CSR)."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "pid.gov.pk/site/press_detail/23466 with the RapidSSL TLS RSA CA G1 intermediate fetched from cacerts.rapidssl.com (the issuer's AIA), verification on",
+     "result": "read (the first wave's curl 60 resolved)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "moib.gov.pk home page and /downloads/Film-Policy-Document.pdf",
+     "result": "read; fiscal chapter on film and drama",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not searched this run. No production rebate exists in what was read; the 2018 policy names 'drama' throughout and proposes equipment duty and sales-tax relief and a fund offering loan mark-up subsidies. Whether the customs and sales-tax proposals were enacted in the Finance Act 2018 was not read (the PID release reports only the fund). The fund's 2023 rules were not found."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://pid.gov.pk/site/press_detail/23466 with the system CA and with the proxy CA plus the issuer bundle",
+     "result": "curl 60 unable to get local issuer certificate; not read",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "pid.gov.pk/site/press_detail/23466 with the RapidSSL TLS RSA CA G1 intermediate fetched from cacerts.rapidssl.com (the issuer's AIA), verification on",
+     "result": "read (the first wave's curl 60 resolved)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "moib.gov.pk home page and /downloads/Film-Policy-Document.pdf",
+     "result": "read; fiscal chapter on film and drama",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://ptv.com.pk/ and https://www.ptv.com.pk/",
+     "result": "refused: Cloudflare 'Attention Required', 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"PTV policy procurement of drama serials from independent producers rate per episode commissioning notification\"",
+     "result": "old Dawn reports only; no primary",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "moib.gov.pk home page and /downloads/Film-Policy-Document.pdf",
+     "result": "read; fiscal chapter on film and drama",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "pnca.org.pk, pnca.gov.pk, www.pnca.gov.pk, alhamra.gop.pk, pac.punjab.gov.pk, ica.punjab.gov.pk",
+     "result": "pnca.org.pk read (a private repository, nothing on funding); the rest connection reset or 502",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "pnca.org.pk, pnca.gov.pk, www.pnca.gov.pk, alhamra.gop.pk, pac.punjab.gov.pk, ica.punjab.gov.pk",
+     "result": "pnca.org.pk read (a private repository, nothing on funding); the rest connection reset or 502",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "pnca.org.pk, pnca.gov.pk, www.pnca.gov.pk, alhamra.gop.pk, pac.punjab.gov.pk, ica.punjab.gov.pk",
+     "result": "pnca.org.pk read (a private repository, nothing on funding); the rest connection reset or 502",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

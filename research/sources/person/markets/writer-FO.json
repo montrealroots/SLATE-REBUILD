@@ -16,6 +16,17 @@
     "trade-press": "None. | Retry 2026-11-01: none",
     "archive": "web.archive.org: connection reset through the proxy on 2026-11-01 (three attempts; archive.org's availability API answers, the snapshots do not load); no snapshot read. | Retry 2026-11-01: web.archive.org reset 2026-11-01"
    }
+  },
+  {
+   "item": "play",
+   "sought": "What a play's writer is paid in Faroe Islands (the playwright's minimum: a commission fee, an advance, a royalty).",
+   "tried": {
+    "web-search": "2026-11-04: WebSearch 4 of 10 (the same search as the producer blocker's) (No Leikarafelag agreement, stage director's or playwright's rate surfaced directly; the results named Fíggjarmálaráðið as the party to public-sector union agreements, which led to its register.)",
+    "institution": "2026-11-04: leikarafelag.fo; rit.fo home and /kunning/avtalur/; rithovundafelag.fo; listafolk.fo; leikhus.fo; felagid.fo; mal.fo; mmr.fo (Leikarafelag: private site; rit.fo: agreements list read; the rest 502 or no pay terms)",
+    "official-register": "2026-11-04: Fíggjarmálaráðið (the Faroese Ministry of Finance), Lønardeildin: 'Galdandi sáttmálar' register (fmr.fo/fo/loenardeildin/sattmalar/galdandi-sattmalar; files/m16/fo-sattmalar.html, its list of 30 unions read); its documents API (POST /api/documentsmodule/search, union id 28908 'Leikarafelag Føroya'; files/m16/fo-leik-api.json, sha256 eee223eb…, 14 documents listed); downloaded the current ('Galdandi') pay table 'Lønartalvan hjá Leikarafelagnum pr. 1. oktober 2024' (files/m16/fo-leik-cur1.pdf, sha256 035240e5…) and the current agreement 'Avtala millum Tjóðpall Føroya og Leikarafelag Føroya' of 30 April 2009 (5-page image PDF, OCR isl+dan checked against the page images; files/m16/fo-leik-avtala2009.pdf, sha256 fd6fbc63…) (Item 9 found: the agreement covers 'sjónleikarar og leikhússtarvsfólk sum starvast á Tjóðpalli Føroya' (§ 1); the pay table of 1 Oct 2024 runs from 31.350,51 (step 1) to 39.764,71 (step 9) a month, hourly 206,70-262,18, pension 15% on top, monthly hours 151,67. The 30 unions in the register include no stage directors' and no playwrights' union, and the Tjóðpallur agreement names no director's or author's fee: items 7 and 8 stand on nothing in the register.)",
+    "trade-press": "2026-11-04: Kringvarp Føroya news search 'Leikarafelag' (files/m16/fo-kvfs.html); in.fo /leita and /news-search; portal.fo search 'leikarar løn' (files/m16/fo-portal-s.html); nordlysid.fo search 'Leikarafelag' (KVF's search lists 'Leikarafelag Føroya kærdi stjórasetanina á Tjóðpallinum til umboðsmannin' and a 2014 board member's comment on an appointment: disputes over the theatre director's hiring, no pay. in.fo: 404; portal.fo: results drawn by script, none in the page served; nordlysid.fo: 403. No press figure for a stage director's, playwright's or actor's pay.)",
+    "archive": "2026-11-04: Common Crawl CC-MAIN-2026-43 and 2025-51 for 'fo,leikarafelag)/', 'fo,rit)/' and 'fo,tjodpallur)/'; got leikarafelag.fo (2025-12-15; files/m16/fo-cc-leikarafelag.html, sha256 d2e5ee7f…) and rit.fo/category/sattmalar/ (2025-12-12; files/m16/fo-cc-rit-sattmalar.html, sha256 7de660c8…) (leikarafelag.fo's capture says only 'This site is private'. rit.fo's agreements category holds one post, 'Rithøvundafelagið og Nám gjørt nýggjan sáttmála' (6 Mar 2024), a publishing agreement, no stage commission or royalty. tjodpallur.fo captures (-43) are season and play pages and the law page, which u23 read live.)"
+   }
   }
  ]
 }

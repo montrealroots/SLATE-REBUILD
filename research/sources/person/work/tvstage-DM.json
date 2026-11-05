@@ -1,0 +1,137 @@
+{
+ "topic": "markets.DM.series-and-stage",
+ "read": "2026-11-04",
+ "country": "DM",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://legacy.discoverdominica.com/en/film-trade",
+   "title": "Discover Dominica Authority (legacy site): Film Trade",
+   "read": "2026-11-04",
+   "said": "The Dominica Film Office can offer the following services: … assistance with obtaining a film license, work permit exemptions, visa waivers, … duty free exemption on all capital and other goods used for filming … The Film Office provides assistance in obtaining a waiver of import duties and taxes on equipment and supplies to be used in production. … FILMS AND TELEVISION PROGRAMS SHOT IN DOMINICA … The Orchid House by BBC Channel 4 (1991)",
+   "file": "DM-filmtrade.html",
+   "sha256": "269dd0626ef98dc83a0dc197b5371993c8f8fd3c5df19ebea42b584532f4b402"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "producer-DM.json (Discover Dominica Authority film-trade page): the Film Office names no cash rebate, tax credit or film fund; whether its waivers apply to a series was not read. A legacy page (undated); whether the current Discover Dominica site keeps it was not checked. producer-DM.json already holds it as the film terms.",
+   "verdict": "partial",
+   "value": {
+    "incentive": "no rebate or credit; the Film Office helps obtain duty-free import of goods used in filming and work-permit waivers",
+    "appliesToSeries": "not stated; the page lists television programmes among works shot there",
+    "rate": null,
+    "cap": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "The Dominica Film Office can offer the following services: … assistance with obtaining a film license, work permit exemptions, visa waivers, … duty free exemption on all capital and other goods used for filming … The Film Office provides assistance in obtaining a waiver of import duties and taxes on equipment and supplies to be used in production. … FILMS AND TELEVISION PROGRAMS SHOT IN DOMINICA … The Orchid House by BBC Channel 4 (1991)"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "legacy.discoverdominica.com/en/film-trade, re-read",
+     "result": "duty and work-permit waivers; TV programmes listed among works shot",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "producer-DM.json (Discover Dominica Authority film-trade page): the Film Office names no cash rebate, tax credit or film fund; whether its waivers apply to a series was not read. A legacy page (undated); whether the current Discover Dominica site keeps it was not checked. producer-DM.json already holds it as the film terms."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Dominica Cultural Division theatre production grant artists funding playwright Roseau drama\"",
+     "result": "Division of Culture pages, IFACCA 2026 on the DCEDA, DOMFESTA history; no grant scheme or rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "divisionofculture.gov.dm: home, /performing-and-visual-arts, /performing-and-visual-arts/drama/, its Growing Stages and New Dimension Theatre pages, /cultural-institutions-and-groups/national-cultural-council and /dominica-festivals-committee (the search's older paths /culture2/… and /performing-and-visual-arts2/… answered 404)",
+     "result": "read: no grant scheme, rates or agreements",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "ifacca.org news of 6 August 2026 (citing Dominica News Online)",
+     "result": "read: DCEDA announced",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "dbsradio.com; dbcradio.com",
+     "result": "connection reset; unrelated site",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Dominica Cultural Division theatre production grant artists funding playwright Roseau drama\"",
+     "result": "Division of Culture pages, IFACCA 2026 on the DCEDA, DOMFESTA history; no grant scheme or rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "divisionofculture.gov.dm: home, /performing-and-visual-arts, /performing-and-visual-arts/drama/, its Growing Stages and New Dimension Theatre pages, /cultural-institutions-and-groups/national-cultural-council and /dominica-festivals-committee (the search's older paths /culture2/… and /performing-and-visual-arts2/… answered 404)",
+     "result": "read: no grant scheme, rates or agreements",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Dominica Cultural Division theatre production grant artists funding playwright Roseau drama\"",
+     "result": "Division of Culture pages, IFACCA 2026 on the DCEDA, DOMFESTA history; no grant scheme or rate",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "divisionofculture.gov.dm: home, /performing-and-visual-arts, /performing-and-visual-arts/drama/, its Growing Stages and New Dimension Theatre pages, /cultural-institutions-and-groups/national-cultural-council and /dominica-festivals-committee (the search's older paths /culture2/… and /performing-and-visual-arts2/… answered 404)",
+     "result": "read: no grant scheme, rates or agreements",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

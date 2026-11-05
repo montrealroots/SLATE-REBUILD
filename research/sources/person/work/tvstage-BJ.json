@@ -1,0 +1,285 @@
+{
+ "topic": "markets.BJ.series-and-stage",
+ "read": "2026-11-04",
+ "country": "BJ",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.gouv.bj/article/3005/resultats-appel-projets-fonds-developpement-arts-culture-fdac-/",
+   "title": "Gouvernement du Bénin: Résultats de l'appel à projets du FDAC (28 February 2025)",
+   "read": "2026-11-04",
+   "said": "L'ADAC Bénin a le plaisir d'annoncer les résultats du 1ᵉʳ appel à projets du Fonds de Développement des Arts et de la Culture (FDAC), lancé du 14 octobre au 2 novembre 2024. … 39 projets ont été provisoirement sélectionnés pour un financement, répartis comme suit : … - Théâtre : 5 projets … - Cinéma et audiovisuel : 9 projets",
+   "file": "bj-fdac.html",
+   "sha256": "0c22789b6822ea8d4fe8a2932ea737b29c22653d3de622e7495a03ab558eb9dd"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.francophonie.org/sites/default/files/2026-03/AAP_ecritures_et_coproductions_2026.pdf",
+   "title": "OIF: Appel à projets « Écritures et (co)productions » 2026",
+   "read": "2026-11-04",
+   "said": "Être une entité2 légalement enregistrée dans l’un des 90 États et gouvernements membres de l’OIF ; … Le montant indicatif global mis à disposition au titre du présent appel à projets s’élève à 130 000 euros. … Les subventions accordées devront être comprises entre 7 000 et 20 000 euros par projet. … La subvention demandée à l’OIF ne devra pas dépasser 70 % du coût total du projet. … • Date limite de soumission : 2 avril 2026 … Bénin",
+   "file": "oif-aap-2026.pdf",
+   "sha256": "26565905267775f1b738683cc3a88e667a7f7a04633c177b019c90919f053e7e"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Whether a series counts within 'cinéma et audiovisuel' is not stated; per-project ranges not read (linktr.ee/adacbenin not followed).",
+   "verdict": "partial",
+   "value": {
+    "fund": "Fonds de Développement des Arts et de la Culture (FDAC), run by ADAC",
+    "call1": "2024-10-14 to 2024-11-02",
+    "applications": 763,
+    "retained": 42,
+    "totalXOF": 823075945,
+    "rateOfYes": 0.055,
+    "cinemaAudiovisualProvisional": 9
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "L'ADAC Bénin a le plaisir d'annoncer les résultats du 1ᵉʳ appel à projets du Fonds de Développement des Arts et de la Culture (FDAC), lancé du 14 octobre au 2 novembre 2024. … 39 projets ont été provisoirement sélectionnés pour un financement, répartis comme suit : … - Théâtre : 5 projets … - Cinéma et audiovisuel : 9 projets"
+    }
+   ]
+  },
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Rate of yes is for all fields together (42/763, derived).",
+   "verdict": "partial",
+   "value": {
+    "FDAC": {
+     "theatreProvisional": 5,
+     "applicationsAllFields": 763,
+     "retainedAllFields": 42
+    },
+    "OIF2026": {
+     "fund": "OIF 'Écritures et (co)productions' 2026 (regional, francophone), live-performance strand among others",
+     "totalEUR": 130000,
+     "perProjectEUR": {
+      "min": 7000,
+      "max": 20000
+     },
+     "maxShareOfCost": 0.7,
+     "applicant": "legally registered entity in an OIF state or government, three years in the cultural sector",
+     "deadline": "2026-04-02 (closed)"
+    }
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "L'ADAC Bénin a le plaisir d'annoncer les résultats du 1ᵉʳ appel à projets du Fonds de Développement des Arts et de la Culture (FDAC), lancé du 14 octobre au 2 novembre 2024. … 39 projets ont été provisoirement sélectionnés pour un financement, répartis comme suit : … - Théâtre : 5 projets … - Cinéma et audiovisuel : 9 projets"
+    },
+    {
+     "src": 1,
+     "said": "Être une entité2 légalement enregistrée dans l’un des 90 États et gouvernements membres de l’OIF ; … Le montant indicatif global mis à disposition au titre du présent appel à projets s’élève à 130 000 euros. … Les subventions accordées devront être comprises entre 7 000 et 20 000 euros par projet. … La subvention demandée à l’OIF ne devra pas dépasser 70 % du coût total du projet. … • Date limite de soumission : 2 avril 2026 … Bénin"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"Bénin Fonds des Arts et de la Culture FAC appel à projets 2026 cinéma série théâtre montant subvention\"",
+     "result": "FDAC results and press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "lanouvelletribune.info October 2025",
+     "result": "Read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Whether a series counts within 'cinéma et audiovisuel' is not stated; per-project ranges not read (linktr.ee/adacbenin not followed)."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "\"Bénin Fonds des Arts et de la Culture FAC appel à projets 2026 cinéma série théâtre montant subvention\"",
+     "result": "FDAC results and press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "lanouvelletribune.info October 2025",
+     "result": "Read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Rate of yes is for all fields together (42/763, derived)."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "https://www.fac.bj/; https://ortb.bj/; https://tourisme.gouv.bj/ (culture ministry); gouv.bj FDAC results page",
+     "result": "fac.bj returned 75 bytes (no content); ORTB and ministry CONNECT 502; gouv.bj results read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "official-register",
+     "tried": "https://sgg.gouv.bj/ and https://legis.cdij.bj/ home pages",
+     "result": "Reached; no search run within them for a cinema code or FDAC decree",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "archive.org availability API ortb.bj (2026-10-14) and tourisme.gouv.bj (2026-06-05); Common Crawl CC-MAIN-2026-43 bj,ortb)/ and bj,gouv,tourisme)/",
+     "result": "ORTB: 14 captures, programme pages only, no commissioning terms; no ministry capture; Wayback fetch host resets",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

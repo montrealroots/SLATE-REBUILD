@@ -297,53 +297,39 @@ SLATE proved at a 100% mutation score:
 
 ## Next step
 
-### Resume here (written 2026-11-04, before a session switch; checkpointed as the methods round reports)
+### Resume here (updated 2026-11-05)
 
-The session of 2026-11-04 stopped with work that wasn't yet committed, because the gate was red on it. All of it is
-kept in `research/rounds/2026-11-04-layer4/` (its `README.md` says what each file is). Do these in order:
+The series-and-play integration that the session of 2026-11-04 left uncommitted is **committed** (the commit after
+`4b0619a`): don't apply `research/rounds/2026-11-04-layer4/integration/wip-*`, which is kept only as the record of
+that state. In it, from the research of 2026-11-04 (`research/rounds/2026-11-04-layer4/`, its README says what each
+file is):
+- A series and a play in every market, wired by four role integrators: a series' incentive in 49 markets, its fund in
+  5, its fee cap in 14 (the Netherlands' 15% added), a play's credit in 1 and fund in 4; a play directed in CA, US, FI,
+  AX, KG, AT, NL, CU, AD, BE (PC 304) and EE (the directors' union's 2026 guest minimums, EUR 7,740 / 6,192 / 4,300,
+  held from 1 January 2026: the document names the year, not the day, so the day is the game's reading); written in DK,
+  NO, IS, CA, AD and, by a share of takings alone, FR, SK, LT, UY, IT, CZ, CL, CO, GR, LV, MG, PY (BL, GF, MF, PM, YT
+  through France); a stage part in IS, CZ, CA (by theatre company category), BE, FO, CY, LU and VA; the pick-up and
+  recoup chances the game's own, told.
+- Every producer blocker and every stage blocker on all five methods (the methods round m1-m20 and its director
+  follow-up d1-d4); what was found in part (one institution's posts, prizes, guidance, wage floors not applying to
+  the role, expired agreements) is in each blocker's `foundInPart`.
+- Gate green (fast): 2,217 of 2,217 tests, 7,514 register entries (4,467 found, 681 secondary, 2,350 blocked, 16 game),
+  41 engines, no row pending.
 
-1. Look before working (CLAUDE.md's rules 2 and 3): `git status -sb`, `git log --oneline -5`, `git stash list`,
-   `git worktree list`; `npm ci`. If a later commit than this one already says it holds the series-and-play integration,
-   skip to step 4.
-2. Restore the uncommitted integration onto this commit, as the package's README says (`git apply --binary` its
-   `wip-tracked.patch`, then `tar xzf` its `wip-untracked.tgz`). It holds: a series and a play in every market, wired by
-   four role integrators from the research of 2026-11-04 (first wave t1-t8, follow-up u1-u25: 217 country-items found,
-   510 in part, 94 found not to exist, 1,386 blocked), their register patches merged (565 entries patched, about 400
-   new, ids R-9793 to R-10204), their catalog lines merged, the four role compiles rebuilt. In it: a series' incentive
-   in 49 markets, a series' fund in 5, its fee cap in 13, a play's credit in 1 and fund in 4; a play directed in CA, US,
-   FI, AX, KG, AT, NL, CU, AD (NC, PN, GS, IO, VA holding that nothing sets it); a play written in DK, NO, IS, CA, AD and,
-   by royalty alone, FR, SK, LT, UY, IT, CZ, with BL, GF, MF, PM, YT through France; a stage part in IS, CZ, CA (by
-   theatre company category, `ca-cta-a`..`ca-cta-g`) and VA; the pick-up and recoup chances the game's own, told; and the
-   errors the integrators fixed (Argentina's Buenos Aires rebate in place of the 2022 figures, Malta's EUR 5M cap,
-   Ghana's GH¢20m split between the Film Fund and a Creative Arts Fund, refused searches dropped as attempts).
-3. Run `npm run gate`. It is red on two things only: 235 producer blockers (`person.markets.producer.blocked.<CC>.tvstage`,
-   listed in the package's `results/tvstage/gaps.json`) stand on fewer than the five methods, and 39 director rows are
-   pending (no stage director's minimum and no blocker: AN AQ AR AS AU AZ BA BE BL BW CC CH CL CS CX GF GP GU HK HM JE
-   LI LV MC ME MF MP MQ NF PA PH PM PR RE SK TH UM VI YT). The methods round closes both: twenty agents, one per
-   `results/tvstage/m<n>.todo.json`, on the brief `briefs/16-methods-round.md`, each making every missing attempt for
-   real. The package holds each group's `results/tvstage/m<n>.result.json` as it stood at the last checkpoint (groups write as they go, so a group still running then is partial): run `python3 -I research/rounds/2026-11-04-layer4/tools/methods_left.py` to list, per group, the attempts still missing, and give only those to new agents on the same brief (or the whole todo where a group has no result file) (the owner chose it,
-   2026-11-04: "Run the methods round (Recommended)"; at most ten web searches an agent, the session's allowance being
-   200 in all). The round finished on 2026-11-04 (all twenty groups; three web searches never ran: Lebanon's producer blocker, Ukraine's and Tajikistan's playwright items). Its merge was handed to four role integrators on the brief `briefs/17-methods-merge.md` (each writing register patches to its scratch `outm/`; if their patches aren't in the package, run that brief again). Then write the attempts into the register: append each `producer.attempts` to its blocker; for each
-   stage item (7 director, 8 writer, 9 actor) append the attempts to that role's blocker
-   (`person.markets.director.blocked.<CC>`, `person.markets.writer.blocked.<CC>`, `person.markets.blocked.<CC>`),
-   extending its `sought` to name the stage pay, or create the blocker where the todo names none (the director's 39);
-   whatever an attempt found goes to its role's research file and engine as the integrators did. Rebuild the four role
-   compiles (`npx tsx tools/person/markets{,-director,-producer,-writer}/build.ts`), then `npm run gate:write` and
-   `npm run gate`, and commit and push when green.
-4. Then the rest of this section below, in order: what the integrators found and the engines can't read yet, the older
-   "not tried" attempts, the web-search rounds on what stays blocked (the items the follow-up agents name under
-   `notSearched` or "no web search" first: the session's search allowance ran out midway), and proving layer 4 on CI.
-
-Found on 2026-11-04 and not yet in any engine, for step 4: Germany's NV Bühne went out of force for the GDBA and BFFS
-on 30 June 2026 (the Bühnenverein's own page), which the actor's `de-stage` and the director's German terms still
-read; the US has no stage terms for an actor (Actors' Equity's are held only at second hand, and the US isn't in the
-actor's markets compile, so the player isn't told); Kyrgyzstan's and Belgium's stage pay are near compilable (the
-table's columns; Flemish-subsidised employers only); Estonia's culture-worker minimum (EUR 1,720) rests on press with no
-start date; Vietnam's Decree 287/2026 stage table was never reached; Uzbekistan's rebate (PF-6202 para. 9) names
-series, not yet wired; Lebanon's Ministry of Culture funds films, its terms not found; the items only the first
-wave's agents marked found from what the repository already held, not read again.
-
-State when the session stopped (2026-11-04, at the owner's word, the weekly limit at 99%): the methods round's merge is done and **already inside** the package's `wip-tracked.patch` (the four role integrators' patches, kept in `integration/methods-merge/`, merged as 937 entries; all 235 producer blockers and every stage blocker stand on the five methods; Belgium's stage director and actor (PC 304), the Faroes', Cyprus' and Luxembourg's stage actors, the Netherlands' series fee cap and six playwrights' royalty laws wired in). The gate is red on one thing only: 25 director rows pending (AN AQ AZ BA BW CH CL CS CX DK EE ES HK HM IE IT JE LI LV ME NZ PA SK TH ZA), their item-7 attempts short of methods because the methods round's todo left them out; seven of their blockers read as uncited until then. Four agents worked them on the methods brief (todos in `results/director-item7/`): **d1 and d2 finished** (`d1.result.json`: AN BW CX HK JE NZ ZA; `d2.result.json`: AQ CH DK HM LI PA; every missing method made; nothing found beyond NZ's and ZA's partials and CH's guide, for `foundInPart`); **d3 and d4 were stopped unfinished** (d3: AZ CL EE IE LV SK; d4: BA CS ES IT ME TH): run them again on their todos. Then append every attempt to each country's director blocker (`person.markets.director.blocked.<CC>`, extending its `sought` to the stage minimum; create it where none exists, `notModeled` `directing.unkept`), copying in whole any earlier attempt a result names instead of repeating; rebuild `tools/person/markets-director/build.ts`; `npm run gate:write` and `npm run gate`; commit and push. (`tests/tools/prices.test.ts` times out in its cleanup hook when the machine is loaded; run the gate again when the load falls, never raise the timeout.) So: step 2 applies the patch, step 3 goes straight to this, step 4 follows.
+Next, in order: the queue below (what the integrators found and the engines can't read yet; the older "not tried"
+attempts; the web-search rounds on what stays blocked, the items the agents list under `notSearched` first: Ukraine's
+and Tajikistan's playwright items never had a search; then prove layer 4 on CI with `npm run gate:full` and record it
+in `registry/layers.json`; the owner merges, then picks layer 5). Found and not yet in any engine, beyond the queue:
+Germany's NV Bühne ended for the GDBA and BFFS on 30 June 2026 (rules carry on under TVG § 4(5) for existing staff;
+`de-stage` and the director's German terms keep their minimums meanwhile); the US has no actor stage terms (Actors'
+Equity's only at second hand, and no US actor market file to tell the player); Kyrgyzstan's Resolution 604 of
+8 September 2026 may replace the culture pay scale (Resolution 290) the director reads, unconfirmed (the register's
+site sent empty replies); Montenegro's director coefficients 8.00 and 9.1 (SL CG 35/2023) and Sarajevo Canton's
+(SN KS 36/2026) wait on their base salaries; Mexico's count of how far plays run (Teatro UNAM, 2021-22, secondary).
+`tests/tools/prices.test.ts` times out in its cleanup hook when the machine is loaded: run the gate again when the
+load falls, never raise the timeout. The development tools: see `.claude/rules/dev-tools.md`; the repo's Graphify
+SessionStart hook runs in `$CLAUDE_PROJECT_DIR`, which a cloud session may set to the parent directory, so refresh
+the graph by hand (`GRAPHIFY_BACKEND=none graphify update .` in the repository) when it is stale.
 
 ### After that
 

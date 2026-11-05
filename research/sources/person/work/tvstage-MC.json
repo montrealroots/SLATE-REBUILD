@@ -1,0 +1,167 @@
+{
+ "topic": "markets.MC.series-and-stage",
+ "read": "2026-11-04",
+ "country": "MC",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://culture.mc/acteurs-de-la-culture/les-acteurs-professionnels-de-la-culture/services-culturels-du-gouvernement-princier/direction-des-affaires-culturelles",
+   "title": "culture.mc: Direction des Affaires Culturelles (Common Crawl CC-MAIN-2026-39 copy, captured 2026-09-11; culture.mc refused, 403)",
+   "read": "2026-11-04",
+   "said": "Ses missions : Soutenir les actions des grandes institutions culturelles* qui contribuent au rayonnement international de la Principauté en les accompagnant tant du point de vue administratif que financier … Soutenir la création des artistes et associations culturelles de la Principauté à travers la gestion de dispositifs de soutien et de mise en valeur de leurs activités : forum des artistes de Monaco, aide au projet culturel, aide de la SOGEDA, soutien à l'installation des artistes professionnels indépendants Offrir une programmation culturelle complémentaire à celle des grandes institutions, comme la saison de théâtre du Fort Antoine",
+   "file": "mc-dac-home",
+   "sha256": "09ab3002c59c9a06d3337a5a3ed0c10e63badc248252c17b3a66dd7291a25691"
+  }
+ ],
+ "figures": [
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not searched; the Direction des Affaires Culturelles (culture.mc) is the lead. The schemes are named but their terms (amounts, conditions, how often they say yes) were not found: no page for 'aide au projet culturel' was in the crawl of culture.mc, and gouv.mc refused the DAC's 2022 activity report (403).",
+   "verdict": "partial",
+   "value": {
+    "body": "Direction des Affaires Culturelles",
+    "schemes": [
+     "aide au projet culturel",
+     "aide de la SOGEDA",
+     "soutien à l'installation des artistes professionnels indépendants",
+     "forum des artistes de Monaco"
+    ],
+    "applicant": "the principality's artists and cultural associations",
+    "range": null,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Ses missions : Soutenir les actions des grandes institutions culturelles* qui contribuent au rayonnement international de la Principauté en les accompagnant tant du point de vue administratif que financier … Soutenir la création des artistes et associations culturelles de la Principauté à travers la gestion de dispositifs de soutien et de mise en valeur de leurs activités : forum des artistes de Monaco, aide au projet culturel, aide de la SOGEDA, soutien à l'installation des artistes professionnels indépendants Offrir une programmation culturelle complémentaire à celle des grandes institutions, comme la saison de théâtre du Fort Antoine"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"Monaco aide à la production cinéma audiovisuel série fonds Gouvernement Princier Direction des Affaires Culturelles 2025 tournage\"",
+     "result": "no production fund named; DAC 2022 activity report on gouv.mc; TVMonaco press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "https://culture.mc/",
+     "result": "refused: 403 'Request Rejected'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -43 index of 'mc,culture)/' (731 records in -39), filtered for support pages; fetched the DAC page and its 'soutenir les jeunes artistes' news",
+     "result": "DAC page read (item 6); no page for a scheme's terms or any audiovisual fund in the crawl",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"Monaco aide à la production cinéma audiovisuel série fonds Gouvernement Princier Direction des Affaires Culturelles 2025 tournage\"",
+     "result": "no production fund named; DAC 2022 activity report on gouv.mc; TVMonaco press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "gouv.mc: Rapport d'activité DAC 2022 PDF",
+     "result": "refused: 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "https://culture.mc/",
+     "result": "refused: 403 'Request Rejected'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -43 index of 'mc,culture)/' (731 records in -39), filtered for support pages; fetched the DAC page and its 'soutenir les jeunes artistes' news",
+     "result": "DAC page read (item 6); no page for a scheme's terms or any audiovisual fund in the crawl",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "web-search",
+     "tried": "\"Monaco aide à la production cinéma audiovisuel série fonds Gouvernement Princier Direction des Affaires Culturelles 2025 tournage\"",
+     "result": "no production fund named; DAC 2022 activity report on gouv.mc; TVMonaco press",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "https://www.tvmonaco.com/",
+     "result": "read; a streaming storefront, no commissioning page",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "gouv.mc: Rapport d'activité DAC 2022 PDF",
+     "result": "refused: 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "https://culture.mc/",
+     "result": "refused: 403 'Request Rejected'",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -43 index of 'mc,culture)/' (731 records in -39), filtered for support pages; fetched the DAC page and its 'soutenir les jeunes artistes' news",
+     "result": "DAC page read (item 6); no page for a scheme's terms or any audiovisual fund in the crawl",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not searched; the Direction des Affaires Culturelles (culture.mc) is the lead. The schemes are named but their terms (amounts, conditions, how often they say yes) were not found: no page for 'aide au projet culturel' was in the crawl of culture.mc, and gouv.mc refused the DAC's 2022 activity report (403)."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-39 and -43 index of 'mc,culture)/' (731 records in -39), filtered for support pages; fetched the DAC page and its 'soutenir les jeunes artistes' news",
+     "result": "DAC page read (item 6); no page for a scheme's terms or any audiovisual fund in the crawl",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

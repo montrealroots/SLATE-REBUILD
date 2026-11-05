@@ -1,0 +1,242 @@
+{
+ "topic": "markets.SA.series-and-stage",
+ "read": "2026-11-04",
+ "country": "SA",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://film.sa/incentive-programs/",
+   "title": "Saudi Film Commission (film.sa): Incentive Program (Common Crawl CC-MAIN-2026-39 copy, captured 2026-09-12)",
+   "read": "2026-11-04",
+   "said": "Financial Support: A rebate program offering up to 60% of production expenses. … The Incentive Program is available to local and international production companies (with a local entity or Saudi partner). … What Is the Minimum Eligible Expenditure? Feature Films: SAR 750,000 in eligible expenses (approximately $200,000 per project). Feature Documentaries: SAR 187,000 … Feature Animation Films: SAR 187,000 … the minimum number of filming days required to qualify for the financial rebate incentive is 5 days with the main production unit. … Above-the-Line (ATL) Team: Producer fees (including script rights costs). Director fees (including screenplay rights).",
+   "file": "sa-cc-incentive.html",
+   "sha256": "2beeba3492b88a39b8961fcdd896984590eb31c1744a85e657d54387ee5ea0f4"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.prnewswire.com/ae/ar/news-releases/---------------301774492.html",
+   "title": "الصندوق الثقافي يطلق أحدث برامجه … في قطاع الأفلام (Cultural Development Fund release via PR Newswire, 16 Mar 2023)",
+   "read": "2026-11-04",
+   "said": "وأشار الأستاذ محمد بن دايل، الرئيس التنفيذي للصندوق الثقافي خلال الإعلان عن البرنامج، بتفعيل البرنامج لمسارين تمويليين وهما \" الإقراض \" و\"الاستثمار\"",
+   "file": "sa-prn.html",
+   "sha256": "90f465e5ace76124604cb94123413eaeafedeece41a7ad8aa0d229be31f269ba"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "incentive",
+   "finding": "The page names minimums for features only and is silent on series; its full terms PDF was not in the copy. film.sa answered 403 live.",
+   "verdict": "partial",
+   "value": {
+    "rateMax": 0.6,
+    "minimums": {
+     "featureSAR": 750000,
+     "featureDocumentarySAR": 187000,
+     "featureAnimationSAR": 187000
+    },
+    "filmingDaysMin": 5,
+    "producerFeesEligible": true
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Financial Support: A rebate program offering up to 60% of production expenses. … The Incentive Program is available to local and international production companies (with a local entity or Saudi partner). … What Is the Minimum Eligible Expenditure? Feature Films: SAR 750,000 in eligible expenses (approximately $200,000 per project). Feature Documentaries: SAR 187,000 … Feature Animation Films: SAR 187,000 … the minimum number of filming days required to qualify for the financial rebate incentive is 5 days with the main production unit. … Above-the-Line (ATL) Team: Producer fees (including script rights costs). Director fees (including screenplay rights)."
+    }
+   ]
+  },
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Not reached today. It is finance (loans and equity), not a grant. The 25%/USD 1m/30% terms are from Okaz (2024) with no address for the CDF text; cdf.gov.sa answered 405 to this client and to Common Crawl. No count of applications or approvals found.",
+   "verdict": "partial",
+   "value": {
+    "fund": "Cultural Development Fund, Film Sector Financing Program (IGNITE)",
+    "currency": "SAR",
+    "budget": 879000000,
+    "contentShare": 0.7,
+    "infrastructureShare": 0.3,
+    "tracks": [
+     "lending (launched 2023-03-16, with Lendo and Sukuk Capital)",
+     "investment (SAR 300m, launched 2023-05-17)"
+    ],
+    "covers": "feature films and series: development, production, distribution",
+    "internationalApplicants": {
+     "localisationMin": 0.25,
+     "minBudgetUSD": 1000000,
+     "companyCoversMinShare": 0.3,
+     "saudiRegistrationOrLocalPartner": true
+    },
+    "grant": false,
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 1,
+     "said": "وأشار الأستاذ محمد بن دايل، الرئيس التنفيذي للصندوق الثقافي خلال الإعلان عن البرنامج، بتفعيل البرنامج لمسارين تمويليين وهما \" الإقراض \" و\"الاستثمار\""
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "film.sa/incentive-programs (live)",
+     "result": "403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "WebSearch \"Saudi Film Commission cash rebate guidelines eligible TV series episodes minimum spend\"",
+     "result": "no primary for series terms",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 sa,film)/incentive",
+     "result": "-43 none; -39 read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "The page names minimums for features only and is silent on series; its full terms PDF was not in the copy. film.sa answered 403 live."
+   }
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.cdf.gov.sa (Cultural Development Fund)",
+     "result": "HTTP 405 (refused)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for sa,gov,cdf)/ and sa,gov,moc,theater)/",
+     "result": "cdf.gov.sa captures are all 405 (crawldiagnostics); no theater.moc.gov.sa captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"صندوق التنمية الثقافية برنامج تمويل قطاع الأفلام المسلسلات الإنتاج المسرحي شروط التمويل نسبة\"",
+     "result": "Saudipedia, Okaz, PR Newswire (CDF release), Al Eqtisadiah read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "okaz.com.sa, aleqt.com, arabnews.com, english.aawsat.com, prnewswire.com read",
+     "result": "as items 2 and 6",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 1,
+    "what": "Not reached today. It is finance (loans and equity), not a grant. The 25%/USD 1m/30% terms are from Okaz (2024) with no address for the CDF text; cdf.gov.sa answered 405 to this client and to Common Crawl. No count of applications or approvals found."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.cdf.gov.sa (Cultural Development Fund)",
+     "result": "HTTP 405 (refused)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for sa,gov,cdf)/ and sa,gov,moc,theater)/",
+     "result": "cdf.gov.sa captures are all 405 (crawldiagnostics); no theater.moc.gov.sa captures",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "theater.moc.gov.sa; www.moc.gov.sa; engage.moc.gov.sa/tpa/ (Sitar terms)",
+     "result": "CONNECT 502; connection reset; 403",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "theater.moc.gov.sa; www.moc.gov.sa; engage.moc.gov.sa/tpa/ (Sitar terms)",
+     "result": "CONNECT 502; connection reset; 403",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "www.cdf.gov.sa (Cultural Development Fund)",
+     "result": "HTTP 405 (refused)",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "theater.moc.gov.sa; www.moc.gov.sa; engage.moc.gov.sa/tpa/ (Sitar terms)",
+     "result": "CONNECT 502; connection reset; 403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "archive",
+     "tried": "Common Crawl CC-MAIN-2026-43 and -39 for sa,gov,cdf)/ and sa,gov,moc,theater)/",
+     "result": "cdf.gov.sa captures are all 405 (crawldiagnostics); no theater.moc.gov.sa captures",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"Theater and Performing Arts Commission Saudi grant program theatre production support SAR eligibility\"",
+     "result": "Sitar programme in Arab News and Asharq Al-Awsat (read); no amounts",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "web-search",
+     "tried": "1 search: \"صندوق التنمية الثقافية برنامج تمويل قطاع الأفلام المسلسلات الإنتاج المسرحي شروط التمويل نسبة\"",
+     "result": "Saudipedia, Okaz, PR Newswire (CDF release), Al Eqtisadiah read",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "trade-press",
+     "tried": "okaz.com.sa, aleqt.com, arabnews.com, english.aawsat.com, prnewswire.com read",
+     "result": "as items 2 and 6",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "theater.moc.gov.sa; www.moc.gov.sa; engage.moc.gov.sa/tpa/ (Sitar terms)",
+     "result": "CONNECT 502; connection reset; 403",
+     "date": "2026-11-04"
+    }
+   ]
+  }
+ ]
+}

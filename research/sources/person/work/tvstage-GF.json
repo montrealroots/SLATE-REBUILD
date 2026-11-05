@@ -1,0 +1,90 @@
+{
+ "topic": "markets.GF.series-and-stage",
+ "read": "2026-11-04",
+ "country": "GF",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.ctguyane.fr/www/wp-content/uploads/2018/02/Fonds-territorial-de-soutien-CTG.pdf",
+   "title": "Collectivité Territoriale de Guyane: Fonds territorial de soutien à la création cinématographique et audiovisuelle (Cayenne, 17 octobre 2017)",
+   "read": "2026-11-04",
+   "said": "Série de fiction télévisée : à partir de 2 x 52' ou 4 x 26' ou 6 x 13’ 130 000 € … Série d’œuvres audiovisuelles : 2, 3, 4 x 52' ou 5 x 52' 30 000 € … Le montant total des aides publiques ne peut excéder 50% du coût total de l’œuvre ou 60% pour les œuvres difficiles … Territorialisation des dépenses (60% du montant de l’aide au développement, 100% du montant de l’aide à la production de documentaire, 160% du montant de l’aide à la production de fiction)",
+   "file": "gf-fonds.pdf",
+   "sha256": "c00698f293e075371a1548cd818bc2fb4cdbada85dad4437fb37e775eace2fcf"
+  }
+ ],
+ "figures": [
+  {
+   "part": "series",
+   "item": "fund",
+   "finding": "Dated 17 October 2017; no later version was found on the CTG's site in this pass. No rate of yes published. France's audiovisual tax credit applies in French Guiana (producer-GF.json).",
+   "verdict": "found",
+   "value": {
+    "fund": "Fonds territorial (CTG, with CNC and the State)",
+    "productionCapTVFictionSeriesEUR": 130000,
+    "seriesMin": "2x52', 4x26' or 6x13'",
+    "developmentCapSeriesEUR": 30000,
+    "writingCapSeriesEUR": 8000,
+    "publicAidMaxShare": 0.5,
+    "difficultWorks": 0.6,
+    "localSpendRequired": "160% of a fiction production grant",
+    "rateOfYes": null
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "Série de fiction télévisée : à partir de 2 x 52' ou 4 x 26' ou 6 x 13’ 130 000 € … Série d’œuvres audiovisuelles : 2, 3, 4 x 52' ou 5 x 52' 30 000 € … Le montant total des aides publiques ne peut excéder 50% du coût total de l’œuvre ou 60% pour les œuvres difficiles … Territorialisation des dépenses (60% du montant de l’aide au développement, 100% du montant de l’aide à la production de documentaire, 160% du montant de l’aide à la production de fiction)"
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": []
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "ctguyane.fr fonds territorial PDF fetched and read",
+     "result": "found (2017 rules)",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Dated 17 October 2017; no later version was found on the CTG's site in this pass. No rate of yes published. France's audiovisual tax credit applies in French Guiana (producer-GF.json)."
+   }
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": []
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

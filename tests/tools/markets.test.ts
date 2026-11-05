@@ -76,7 +76,7 @@ describe('the markets compile', () => {
       ['film', 'television', 'stage'],
       ['day', 'week', 'month', 'year', 'session', 'performance', 'episode'],
       ['budget', 'lines', 'seats', 'minutes', 'length', 'years', 'nth'],
-      ['agreements', 'rates', 'none', 'union', 'language', 'market', 'terms', 'successors'],
+      ['agreements', 'rates', 'none', 'union', 'language', 'market', 'terms', 'successors', 'stage'],
     ]);
     expect(figureOf(RESEARCH, 1, ['rates'])).toBe(RESEARCH.figures[1]);
     expect(figureOf(RESEARCH, 0, ['rates', 'agreements'])).toBe(RESEARCH.figures[0]);
@@ -296,9 +296,14 @@ describe('the markets compile', () => {
     const out = readMarkets(root);
     expect(Object.keys(out.markets)).toEqual(['AA', 'BB']);
     expect(out.markets).toEqual({ AA: { language: 'fr', zone: 'Europe/Paris', agreements: ['aa-film'] }, BB: { language: 'fr', zone: 'Europe/Monaco', agreements: ['bb-film'] } });
-    expect(out.unknown).toEqual({ AA: [], BB: ['rates'] });
+    // Neither market's agreements cover the stage, so neither tells what a part on stage is paid (from 2026-11-04).
+    expect(out.unknown).toEqual({ AA: ['stage'], BB: ['rates', 'stage'] });
     expect(out.agreements['bb-film']).toEqual({ country: 'BB', currency: 'EUR', media: ['film'], none: false, minimums: [read({})] });
     expect(serialize(out)).toBe(`${JSON.stringify(out, null, 1)}\n`);
+    // An agreement on stage among a market's own tells nothing of it.
+    put(READINGS, { AA: { ...reading('aa-film'), agreements: { 'aa-film': { ...reading('aa-film').agreements['aa-film'], media: ['film', 'stage'] } } }, BB: { ...reading('bb-film'), zone: 'Europe/Monaco', market: 6 } });
+    expect(readMarkets(root).unknown).toEqual({ AA: [], BB: ['rates', 'stage'] });
+    put(READINGS, { AA: reading('aa-film'), BB: { ...reading('bb-film'), zone: 'Europe/Monaco', market: 6 } });
     expect(readResearch(root, { entries: all as never }, 'BB')).toEqual({ research: JSON.parse(bb), blocked: true });
     expect(readResearch(root, { entries: all as never }, 'AA').blocked).toBe(false);
     // A blocker of the markets stands for the file: another fact of the same length doesn't.
@@ -368,7 +373,7 @@ describe('the markets compile', () => {
     for (const [cc, body] of Object.entries(files)) put(`${SOURCES}/${cc}.json`, body);
     put(`${SOURCES}/EE.json`, '{"not": "read"}');
     const cite = (cc: string) => ({ fact: `${FACT}${cc}`, value: { file: `${SOURCES}/${cc}.json`, sha256: sha(files[cc] as string) } });
-    const blocked = { fact: `${BLOCKED}EE`, attempts: [{ result: 'not found: rates' }, { result: 'not found: market' }, { result: 'not found: rates' }] };
+    const blocked = { fact: `${BLOCKED}EE`, attempts: [{ result: 'not found: rates' }, { result: 'not found: stage' }, { result: 'not found: market' }, { result: 'not found: rates' }] };
     const entries = [cite('AA'), cite('BB'), cite('CC'), cite('DD'), { fact: `${BLOCKED}DD` }, blocked];
     put('research/register.json', { entries });
     const film = { media: ['film'], currency: 'EUR', minimums: [{ medium: 'film', per: 'day', from: '2026-01-01', fig: 1, path: ['day', 'lead'] }] };
@@ -382,14 +387,17 @@ describe('the markets compile', () => {
     const out = readMarkets(root);
     expect(out.markets).toEqual({ BB: { language: 'fr', zone: 'Europe/Paris', agreements: ['bb-film'] }, AA: { language: 'fr', zone: 'Europe/Paris', agreements: ['aa-bb-film'] } });
     expect(out.agreements['aa-bb-film']).toEqual({ ...out.agreements['bb-film'], country: 'AA', follows: 'bb-film' });
-    expect(out.unknown).toEqual({ AA: [], BB: [], CC: ['terms'], DD: ['rates'], EE: ['rates', 'market'] });
+    // A follower is told the stage as its followed market is; one read and not compiled, or cited by its blockers alone, too, once.
+    expect(out.unknown).toEqual({ AA: ['stage'], BB: ['stage'], CC: ['terms', 'stage'], DD: ['rates', 'stage'], EE: ['rates', 'stage', 'market'] });
+    put(READINGS, { ...readings, BB: { ...readings.BB, agreements: { 'bb-film': { ...film, media: ['film', 'stage'] } } } });
+    expect(readMarkets(root).unknown).toEqual({ AA: [], BB: [], CC: ['terms', 'stage'], DD: ['rates', 'stage'], EE: ['rates', 'stage', 'market'] });
     put(READINGS, { ...readings, DD: { unread: 'nor here', unknown: ['market', 'rates'] } });
-    expect(readMarkets(root).unknown['DD']).toEqual(['rates', 'market']);
+    expect(readMarkets(root).unknown['DD']).toEqual(['rates', 'market', 'stage']);
     put(READINGS, { ...readings, DD: { unread: 'nor here', unknown: ['pay'] } });
     expect(() => readMarkets(root)).toThrow("a blocker names pay, which isn't a fact the research seeks");
     put(READINGS, { ...readings, DD: { unread: 'nor here', unknown: 'rates' } });
     expect(() => readMarkets(root)).toThrow("DD's reading says why it isn't read, what that leaves unknown, and nothing else");
-    expect(blockedOf({ entries } as never, 'EE')).toEqual(['rates', 'market']);
+    expect(blockedOf({ entries } as never, 'EE')).toEqual(['rates', 'stage', 'market']);
     expect(() => blockedOf({ entries: [{ fact: `${BLOCKED}EE`, attempts: [{ result: 'gave up' }] }] } as never, 'EE')).toThrow("a blocker names gave up, which isn't a fact the research seeks");
     for (const result of ['so not found: rates', 'not found: rates, then market']) expect(() => blockedOf({ entries: [{ fact: `${BLOCKED}EE`, attempts: [{ result }] }] } as never, 'EE'), result).toThrow(`a blocker names ${result}, which isn't a fact the research seeks`);
     expect(() => blockedOf({ entries: [{ fact: `${FACT}EE` }] } as never, 'EE')).toThrow(`${SOURCES}/EE.json isn't cited by the register`);
@@ -452,7 +460,8 @@ describe('the markets coverage', () => {
       { key: 'BB', status: 'blocked', register: ['R-3', 'R-2'], tests: [...TESTS, TOLD] },
       { key: 'CC', status: 'blocked', register: ['R-4'], tests: [...TESTS, TOLD] },
       { key: 'DD', status: 'pending' },
-      { key: 'US', status: 'researched', register: ['R-9'], tests: KEPT_TESTS },
+      // A kept country's own research is cited beside the kept minimums (Canada's stage, from 2026-11-04).
+      { key: 'US', status: 'researched', register: ['R-9', 'R-8'], tests: [...KEPT_TESTS, ...TESTS] },
       { key: 'GB', status: 'researched', register: ['R-9'], tests: KEPT_TESTS },
       { key: 'CA', status: 'researched', register: ['R-9'], tests: KEPT_TESTS },
     ]);

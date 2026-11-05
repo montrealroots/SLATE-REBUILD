@@ -1,0 +1,140 @@
+{
+ "topic": "markets.PM.series-and-stage",
+ "read": "2026-11-04",
+ "country": "PM",
+ "note": "Read 2026-11-04 by the research of a series and a play in every market (scratchpad l4t: the first wave t1-t8 and the follow-up u1-u25, merged item by item, the later verdict standing where it read more): what a series' and a play's producer can draw on there. Each quote kept was found in its saved file (the integrator's check, 2026-11-04); a quote not found there was left out, and a figure with none left was left out with it. Attempts recorded for a web search the shared allowance refused were dropped, not being attempts.",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.saint-pierre-et-miquelon.gouv.fr/Actions-de-l-Etat/Culture/APPEL-A-PROJET-FEAC-2026",
+   "title": "Appel à projet FEAC 2026 (Les services de l'État à Saint-Pierre-et-Miquelon)",
+   "read": "2026-11-04",
+   "said": "DATE BUTOIR : le 2 février 2026, 23h59 (heure de Paris) NOUVEAU : une seule commission pour toute l'année 2026 Le FEAC (Fonds d'aide aux échanges artistiques et culturels pour l'Outre-Mer) soutient les productions artistiques ultramarines en prenant en charge une partie de leurs frais de transport des personnes et matériels, nécessaires aux projets concourant à : la circulation des artistes, des créateurs … ; la création et la diffusion des œuvres, des spectacles et du patrimoine culturel et immatériel en général ; la tenue de manifestations culturelles ; …",
+   "file": "pm-feac2026.html",
+   "sha256": "25dd68ec7aa6eb2ccf3541c190edc831f2dc10737e87932c9c201cababc60e5a"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.saint-pierre-et-miquelon.gouv.fr/Actions-de-l-Etat/Culture",
+   "title": "Culture (Les services de l'État à Saint-Pierre-et-Miquelon)",
+   "read": "2026-11-04",
+   "said": "La Mission aux Affaires Culturelles (MAC) constitue le service déconcentré du ministère de la Culture à Saint-Pierre-et-Miquelon. Créée en 2020, la MAC est placée sous l'autorité du Préfet de Saint-Pierre-et-Miquelon. … Élaborer la programmation et la gestion des crédits déconcentrés du ministère de la Culture. … ainsi qu'au développement de l'action des équipements culturels de Saint-Pierre-et-Miquelon.",
+   "file": "pm-pref-culture.html",
+   "sha256": "4ec78284c4755f71a4a3ddb85658bab5cd6a27129e725b6082e3b995cdb21861"
+  }
+ ],
+ "figures": [
+  {
+   "part": "stage",
+   "item": "fund",
+   "finding": "Not attempted. producer-PM.json holds as a blocker whether France's credits reach Saint-Pierre-et-Miquelon (own tax code); its labour terms follow France. The FEAC pays travel only, not a production. France's ASTP (FR item 6) is for Paris private theatre and wasn't checked for reach here.",
+   "verdict": "partial",
+   "value": {
+    "fund": "FEAC (Fonds d'aide aux échanges artistiques et culturels pour l'Outre-Mer)",
+    "covers": "part of the transport costs of people and material",
+    "for": "overseas artistic productions, including creating and touring shows",
+    "deadline2026": "2026-02-02",
+    "commissions2026": 1,
+    "range": null,
+    "rateOfYes": null,
+    "alsoFrance": "the Ministry of Culture's devolved credits through the MAC (terms not published on the page read)"
+   },
+   "sources": [
+    {
+     "src": 0,
+     "said": "DATE BUTOIR : le 2 février 2026, 23h59 (heure de Paris) NOUVEAU : une seule commission pour toute l'année 2026 Le FEAC (Fonds d'aide aux échanges artistiques et culturels pour l'Outre-Mer) soutient les productions artistiques ultramarines en prenant en charge une partie de leurs frais de transport des personnes et matériels, nécessaires aux projets concourant à : la circulation des artistes, des créateurs … ; la création et la diffusion des œuvres, des spectacles et du patrimoine culturel et immatériel en général ; la tenue de manifestations culturelles ; …"
+    },
+    {
+     "src": 1,
+     "said": "La Mission aux Affaires Culturelles (MAC) constitue le service déconcentré du ministère de la Culture à Saint-Pierre-et-Miquelon. Créée en 2020, la MAC est placée sous l'autorité du Préfet de Saint-Pierre-et-Miquelon. … Élaborer la programmation et la gestion des crédits déconcentrés du ministère de la Culture. … ainsi qu'au développement de l'action des équipements culturels de Saint-Pierre-et-Miquelon."
+    }
+   ]
+  }
+ ],
+ "blockers": [
+  {
+   "item": "series.incentive",
+   "sought": "The production incentive's terms for a series (rate, threshold per episode or hour, what counts, cap, date in force), or that it excludes television",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "legifrance.gouv.fr article URL",
+     "result": "403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "spm-ct975.fr (Collectivité territoriale)",
+     "result": "HTTP 418",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.fund",
+   "sought": "A public fund for a producer's series: its terms, and how often it says yes",
+   "attempts": [
+    {
+     "method": "official-register",
+     "tried": "legifrance.gouv.fr article URL",
+     "result": "403",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "spm-ct975.fr (Collectivité territoriale)",
+     "result": "HTTP 418",
+     "date": "2026-11-04"
+    }
+   ]
+  },
+  {
+   "item": "series.feecap",
+   "sought": "A cap a funder or broadcaster sets on a series producer's fee and overheads",
+   "attempts": []
+  },
+  {
+   "item": "series.outcomes",
+   "sought": "How a series reaches the screen, and a count of how often an independent series is picked up",
+   "attempts": []
+  },
+  {
+   "item": "stage.incentive",
+   "sought": "A tax incentive for theatre production",
+   "attempts": []
+  },
+  {
+   "item": "stage.fund",
+   "sought": "A public fund for a theatre production: its ranges, who may apply, how often it says yes",
+   "attempts": [
+    {
+     "method": "institution",
+     "tried": "spm-ct975.fr (Collectivité territoriale)",
+     "result": "HTTP 418",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "culture.gouv.fr Mission aux affaires culturelles de Saint-Pierre-et-Miquelon page",
+     "result": "read; missions only",
+     "date": "2026-11-04"
+    },
+    {
+     "method": "institution",
+     "tried": "saint-pierre-et-miquelon.gouv.fr home, Actions de l'État / Culture, Appel à projet FEAC 2026",
+     "result": "read",
+     "date": "2026-11-04"
+    }
+   ],
+   "foundInPart": {
+    "figure": 0,
+    "what": "Not attempted. producer-PM.json holds as a blocker whether France's credits reach Saint-Pierre-et-Miquelon (own tax code); its labour terms follow France. The FEAC pays travel only, not a production. France's ASTP (FR item 6) is for Paris private theatre and wasn't checked for reach here."
+   }
+  },
+  {
+   "item": "stage.outcomes",
+   "sought": "How a play fares: a count of runs that recoup or are extended",
+   "attempts": []
+  }
+ ]
+}

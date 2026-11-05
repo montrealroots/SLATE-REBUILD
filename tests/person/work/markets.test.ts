@@ -20,12 +20,15 @@ import {
   type Work,
 } from '../../../src/person/work/career.ts';
 import { COUNTRY_CODES, countryName } from '../../../src/world/gazetteer/gazetteer.ts';
-// The screen's forms: a play is paid under a theatre's agreement, not a market's (career's PLAYS).
-import type { Screen as Form } from '../../../src/person/work/career.ts';
+// A UK play is paid under a theatre's agreement (career's PLAYS); a play elsewhere under its market's, from 2026-11-04.
+import type { Screen } from '../../../src/person/work/career.ts';
+import type { Form } from '../../../src/person/work/work.ts';
 import compiled from '../../../src/person/work/markets.json' with { type: 'json' };
 
 const money = (c: CurrencyCode, n: string) => fromMajor(c, n);
 const terms = (agreement: string, budget: number | null = null, minutes: number | null = null) => ({ agreement, budget, minutes });
+/** A play's terms: its running time, its theatre's grade, its run's performances, the writer's plays premiered before. */
+const stage = (agreement: string, minutes: number | null, o: { grade?: number; performances?: number; premieres?: number } = {}) => ({ agreement, budget: null, minutes, ...o });
 const fee = (agreement: string, form: Form, date: string, budget: number | null = null, minutes: number | null = null, work: Work | null = null) => minimumOf(terms(agreement, budget, minutes), form, date, work);
 /** Each country's writer research, as the compile reads it (its blockers' items). */
 const SOURCES = resolve(import.meta.dirname, '../../../research/sources/person/markets');
@@ -76,8 +79,8 @@ const EXPECTED: Record<string, string[]> = {
   'no-nrk': ['pilot/episode - minute 2026-05-01 3022'],
   'se-svt': ['pilot/episode minutes1-19 minute 2025-01-01 2898', 'pilot/episode minutes20-29 minute 2025-01-01 4456', 'pilot/episode minutes30-60 minute 2025-01-01 4551', 'pilot/episode minutes61- minute 2025-01-01 3945'],
   'se-producers': ['pilot/episode minutes1-19 minute 2023-08-30 2674', 'pilot/episode minutes20-29 minute 2023-08-30 4113', 'pilot/episode minutes30-60 minute 2023-08-30 4200', 'pilot/episode minutes61- minute 2023-08-30 3642'],
-  // Andorra's artists' statute: the minimum wage a day of 8 hours, from 1 July 2026, for each day the script was written.
-  ad: ['feature/pilot/episode/short - day 2026-07-01 72.4'],
+  // Andorra's artists' statute: the minimum wage a day of 8 hours, from 1 July 2026, for each day the script (or, from 2026-11-04, the play) was written.
+  ad: ['feature/pilot/episode/short/play - day 2026-07-01 72.4'],
   // Azerbaijan's minimum author fees for films made to state order (new wording of 10 January 2025), an original screenplay.
   'az-state': [
     'feature fiction - script 2025-01-10 10000',
@@ -89,9 +92,39 @@ const EXPECTED: Record<string, string[]> = {
   ],
   // Switzerland's ARF/FDS agreement with GARP, IG and SFP from 5 August 2025: a fiction feature's screenplay; no agreed minimum for a documentary.
   'ch-film': ['feature fiction - script 2025-08-05 75000', 'feature documentary - - 2025-08-05 negotiated'],
+  // A play's (2026-11-04). Denmark's TIO theatres: salary months by the running time, the month DKK 28,401.25 from 1 April 2026.
+  'dk-tio': ['play minutes1-30 script 2026-04-01 28401.25 times 3', 'play minutes31-45 script 2026-04-01 28401.25 times 3.5', 'play minutes46-75 script 2026-04-01 28401.25 times 4', 'play minutes76-90 script 2026-04-01 28401.25 times 4.5', 'play minutes91- script 2026-04-01 28401.25 times 5'],
+  // Norway's Spekter theatres: the category's fee, half of it for 30 to 45 minutes, three quarters for 46 to 69; under 30 negotiated.
+  'no-spekter': [
+    'play minutes0-29 - 2026-04-15 negotiated',
+    'play minutes30-45 grade1-1 script 2026-04-15 519298 times 0.5',
+    'play minutes46-69 grade1-1 script 2026-04-15 519298 times 0.75',
+    'play minutes70- grade1-1 script 2026-04-15 519298',
+    'play minutes30-45 grade2-2 script 2026-04-15 467368 times 0.5',
+    'play minutes46-69 grade2-2 script 2026-04-15 467368 times 0.75',
+    'play minutes70- grade2-2 script 2026-04-15 467368',
+    'play minutes30-45 grade3-3 script 2026-04-15 363509 times 0.5',
+    'play minutes46-69 grade3-3 script 2026-04-15 363509 times 0.75',
+    'play minutes70- grade3-3 script 2026-04-15 363509',
+  ],
+  // Iceland: the National Theatre's for the quarter from 1 October 2026, the City Theatre's from 1 January 2026; a writer's first work less.
+  'is-national': ['play premieres0-0 script 2026-10-01 7607862', 'play premieres1- script 2026-10-01 7778825'],
+  'is-reykjavik': ['play premieres0-0 script 2026-01-01 7285489', 'play premieres1- script 2026-01-01 7449269'],
+  // Canada's PACT theatres: the guarantee by the run's performances, each year from 30 June; a short play's under 20 minutes.
+  'ca-pgc': [
+    'play minutes20- performances7- script 2025-06-30 2288',
+    'play minutes20- performances1-6 script 2025-06-30 128.75',
+    'play minutes1-19 performances7- script 2025-06-30 750',
+    'play minutes1-19 performances1-6 performance 2025-06-30 50',
+    'play minutes20- performances7- script 2026-06-30 2356.65',
+    'play minutes20- performances1-6 script 2026-06-30 132.6',
+    'play minutes20- performances7- script 2027-06-30 2427.35',
+    'play minutes20- performances1-6 script 2027-06-30 136.6',
+  ],
 };
 
-const ALL: Form[] = ['feature', 'pilot', 'episode', 'short'];
+const ALL: Screen[] = ['feature', 'pilot', 'episode', 'short'];
+const PLAY: Form[] = ['play'];
 const TV: Form[] = ['pilot', 'episode'];
 /** Each agreement's country, languages, currency, forms, and how it pays (none, unknown, or its minimums). */
 const AGREEMENTS: Record<string, [string, string[], string | null, Form[], 'none' | 'unknown' | 'fees']> = {
@@ -135,7 +168,7 @@ const AGREEMENTS: Record<string, [string, string[], string | null, Form[], 'none
   'se-film': ['SE', ['sv'], null, ['feature'], 'none'],
   za: ['ZA', ['en'], null, ALL, 'none'],
   // The world's markets beyond the twenty (2026-11-01): a wage floor by the day written, fees by kind, and pay left to negotiation.
-  ad: ['AD', ['ca'], 'EUR', ALL, 'fees'],
+  ad: ['AD', ['ca'], 'EUR', [...ALL, 'play'], 'fees'],
   ai: ['AI', ['en'], null, ALL, 'none'],
   as: ['AS', ['sm', 'en'], null, ALL, 'none'],
   at: ['AT', ['de'], null, ALL, 'none'],
@@ -152,64 +185,87 @@ const AGREEMENTS: Record<string, [string, string[], string | null, Form[], 'none
   gi: ['GI', ['en'], null, ALL, 'none'],
   li: ['LI', ['de'], null, ALL, 'none'],
   ms: ['MS', ['en'], null, ALL, 'none'],
-  nc: ['NC', ['fr'], null, ALL, 'none'],
+  nc: ['NC', ['fr'], null, [...ALL, 'play'], 'none'],
   pa: ['PA', ['es'], null, ALL, 'none'],
   ph: ['PH', ['fil', 'en'], null, ALL, 'none'],
-  pn: ['PN', ['en'], null, ALL, 'none'],
+  pn: ['PN', ['en'], null, [...ALL, 'play'], 'none'],
   sh: ['SH', ['en'], null, ALL, 'none'],
   tz: ['TZ', ['sw', 'en'], null, ALL, 'none'],
   ua: ['UA', ['uk'], null, ALL, 'none'],
-  va: ['VA', ['it'], null, ALL, 'none'],
+  va: ['VA', ['it'], null, [...ALL, 'play'], 'none'],
   vg: ['VG', ['en'], null, ALL, 'none'],
+  // A play's writers' agreements (2026-11-04): an up-front minimum, or none where the minimum is a share of the takings alone.
+  'dk-tio': ['DK', ['da'], 'DKK', PLAY, 'fees'],
+  'no-spekter': ['NO', ['no'], 'NOK', PLAY, 'fees'],
+  'is-national': ['IS', ['is'], 'ISK', PLAY, 'fees'],
+  'is-reykjavik': ['IS', ['is'], 'ISK', PLAY, 'fees'],
+  'ca-pgc': ['CA', ['en'], 'CAD', PLAY, 'fees'],
+  'fr-sacd': ['FR', ['fr'], null, PLAY, 'none'],
+  'sk-lita': ['SK', ['sk'], null, PLAY, 'none'],
+  'lt-latga': ['LT', ['lt'], null, PLAY, 'none'],
+  'uy-agadu': ['UY', ['es'], null, PLAY, 'none'],
+  'it-siae': ['IT', ['it'], null, PLAY, 'none'],
+  'cz-dilia': ['CZ', ['cs'], null, PLAY, 'none'],
+  // From the methods round of 2026-11-04: a copyright law's royalty floor or a society's tariff, a share of the takings alone.
+  'cl-17336': ['CL', ['es'], null, PLAY, 'none'],
+  'co-ley23': ['CO', ['es'], null, PLAY, 'none'],
+  'gr-2121': ['GR', ['el'], null, PLAY, 'none'],
+  'lv-akka': ['LV', ['lv'], null, PLAY, 'none'],
+  'mg-omda': ['MG', ['mg', 'fr'], null, PLAY, 'none'],
+  'py-apa': ['PY', ['es'], null, PLAY, 'none'],
 };
+/** The countries whose only agreements known are a play's, their screen agreement's figures unknown. */
+const PLAY_ONLY = ['CO', 'CZ', 'GR', 'IS', 'LT', 'LV', 'MG', 'PY', 'SK', 'UY'];
 /** The markets that follow another's terms (the research: a French overseas department, an Australian territory, Puerto Rico under the US system), and those with none to sell under. */
 const FOLLOWS: Record<string, string> = { BL: 'FR', CC: 'AU', CX: 'AU', GF: 'FR', MF: 'FR', NF: 'AU', PM: 'FR', PR: 'US', YT: 'FR' };
 const NO_AGREEMENT = ['AN', 'AQ', 'CS', 'GS', 'HM', 'IO', 'JE', 'TH', 'UM'];
 /** Every other market's own agreement, its figures unknown, as its blockers say: whether any agreement, guild rate or law sets the terms, or the fees. */
-const UNKNOWN_AGREEMENTS = Object.keys(RESEARCH).filter((cc) => !Object.values(AGREEMENTS).some(([c]) => c === cc) && !(cc in FOLLOWS) && !NO_AGREEMENT.includes(cc));
+const UNKNOWN_AGREEMENTS = Object.keys(RESEARCH).filter((cc) => PLAY_ONLY.includes(cc) || (!Object.values(AGREEMENTS).some(([c]) => c === cc) && !(cc in FOLLOWS) && !NO_AGREEMENT.includes(cc)));
 
 /** What the twenty's research couldn't find, and the world's where it compiles an agreement of its own that tells or a market with nothing to sell under. */
 const UNKNOWN: Record<string, string[]> = {
-  AR: ['fees'],
-  AU: ['fees', 'language'],
-  BR: [],
+  AR: ['fees', 'play'],
+  AU: ['fees', 'language', 'play'],
+  BR: ['play'],
   CA: [],
-  DE: [],
+  DE: ['play'],
   DK: ['fees'],
-  ES: ['fees'],
+  ES: ['fees', 'play'],
   FR: [],
   GB: ['language'],
-  IE: [],
-  IN: ['union', 'fees'],
+  IE: ['play'],
+  IN: ['union', 'fees', 'play'],
   IT: [],
-  JP: ['fees'],
-  KR: ['union', 'fees'],
-  MX: ['agreement'],
-  NG: ['union', 'fees'],
-  NL: ['fees'],
+  JP: ['fees', 'play'],
+  KR: ['union', 'fees', 'play'],
+  MX: ['agreement', 'play'],
+  NG: ['union', 'fees', 'play'],
+  NL: ['fees', 'play'],
   NO: ['fees'],
-  NZ: ['fees'],
-  SE: ['fees'],
-  ZA: ['fees'],
-  AI: ['none'],
-  BE: ['fees'],
-  BN: ['terms'],
-  GI: ['none'],
-  GP: ['follows'],
-  HK: ['union', 'none'],
-  HU: ['union', 'none'],
-  RE: ['follows'],
-  MS: ['none'],
-  SH: ['none'],
-  TH: ['union'],
-  VG: ['none'],
+  NZ: ['fees', 'play'],
+  SE: ['fees', 'play'],
+  ZA: ['fees', 'play'],
+  AI: ['none', 'play'],
+  BE: ['fees', 'play'],
+  BN: ['terms', 'play'],
+  GI: ['none', 'play'],
+  GP: ['follows', 'play'],
+  HK: ['union', 'none', 'play'],
+  HU: ['union', 'none', 'play'],
+  RE: ['follows', 'play'],
+  MS: ['none', 'play'],
+  SH: ['none', 'play'],
+  TH: ['union', 'play'],
+  VG: ['none', 'play'],
+  // Vietnam's play: every method tried on 2026-11-04, the decree in force (287/2026) not reached.
+  VN: ['fees', 'play'],
 };
 
 const tierText = (f: Fee) => {
   const tiers = Object.entries(f.when).map(([k, [lo, hi]]) => `${k}${lo}-${hi ?? ''}`);
   return tiers.length === 0 ? '-' : tiers.join(' ');
 };
-const line = (f: Fee) => [f.forms.join('/'), ...(f.kind === null ? [] : [f.kind]), tierText(f), f.per ?? '-', f.from, f.amount ?? 'negotiated', ...(f.share === null ? [] : ['share', f.share]), ...(f.cap === null ? [] : ['cap', f.cap])].join(' ');
+const line = (f: Fee) => [f.forms.join('/'), ...(f.kind === null ? [] : [f.kind]), tierText(f), f.per ?? '-', f.from, f.amount ?? 'negotiated', ...(f.share === null ? [] : ['share', f.share]), ...(f.cap === null ? [] : ['cap', f.cap]), ...(f.times === null ? [] : ['times', f.times])].join(' ');
 
 describe('the markets', () => {
   it("are each country's own, every minimum as the research gives it", () => {
@@ -221,7 +277,7 @@ describe('the markets', () => {
       const a = agreements[id];
       // What waits for photography and an option's terms went from the compile on 2026-11-04 (nothing read them).
       expect(Object.keys(a ?? {}).sort(), id).toEqual(['country', 'currency', 'fees', 'forms', 'languages', 'none', 'unknown']);
-      for (const f of a?.fees ?? []) expect(Object.keys(f).sort(), id).toEqual(['amount', 'cap', 'forms', 'from', 'kind', 'per', 'share', 'when']);
+      for (const f of a?.fees ?? []) expect(Object.keys(f).sort(), id).toEqual(['amount', 'cap', 'forms', 'from', 'kind', 'per', 'share', 'times', 'when']);
       expect([a?.country, a?.languages, a?.currency, a?.forms, a?.none ? 'none' : a?.unknown ? 'unknown' : 'fees'], id).toEqual([country, languages, currency, forms, pays]);
       expect(a?.fees.map(line), id).toEqual(EXPECTED[id] ?? []);
       expect(countryOf(id)).toBe(country);
@@ -320,7 +376,7 @@ describe("a script a production pays for in a market", () => {
     expect(fee('ar-film', 'feature', '2025-04-11')).toEqual(money('ARS', '21000000'));
     expect(() => fee('ar-film', 'feature', '2025-04-10')).toThrow('no minimum under ar-film is known before 2025-04-11');
     expect(() => fee('ar-film', 'episode', '2026-11-01')).toThrow('ar-film sets no terms for a episode');
-    expect(() => fee('ar', 'episode', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Argentina', missing: MISSING.fees }));
+    expect(() => fee('ar', 'episode', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Argentina', missing: `${MISSING.fees} and ${MISSING.play}` }));
     // Mexico: the STPC writers' section's screenplay a film, the year's table from 15 May.
     const mx: [string, string][] = [['2021-05-15', '209475'], ['2022-05-14', '209475'], ['2022-05-15', '219948.75'], ['2023-05-15', '230946.19'], ['2024-05-14', '230946.19'], ['2024-05-15', '242493.50'], ['2026-11-01', '242493.50']];
     for (const [date, amount] of mx) expect(fee('mx-film', 'feature', date), date).toEqual(money('MXN', amount));
@@ -375,7 +431,7 @@ describe("a script a production pays for in a market", () => {
     expect(fee('dk-feature', 'feature', '2026-11-01', null, null)).toEqual(money('DKK', '598836'));
     expect(() => fee('au-awg', 'feature', '2026-11-01')).toThrow(aboutMarket('au-awg') as string);
     expect(() => fee('jp', 'episode', '2026-11-01')).toThrow(aboutMarket('jp') as string);
-    expect(() => fee('mx', 'short', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Mexico', missing: MISSING.agreement }));
+    expect(() => fee('mx', 'short', '2026-11-01')).toThrow(t(UNKEPT_LINE, { country: 'Mexico', missing: `${MISSING.agreement} and ${MISSING.play}` }));
   });
 
   it("tells the player what of a market isn't known", () => {
@@ -388,29 +444,36 @@ describe("a script a production pays for in a market", () => {
       terms: "whether any agreement, guild rate or law sets a script's terms",
       none: 'whether any fund, guild or agreement serves a writer there',
       follows: 'whether the agreements of the country whose law it follows reach a script written for a production there',
+      play: "what a play's script is paid",
     });
-    expect(aboutMarket('au-awg')).toBe("Some of what a screenwriter is paid or asked in Australia isn't known to this game yet: some of the minimums a script is paid and the language scripts are written in.");
-    expect(aboutMarket('ar-film')).toBe("Some of what a screenwriter is paid or asked in Argentina isn't known to this game yet: some of the minimums a script is paid.");
+    expect(aboutCountry('VN')).toBe(t(UNKEPT_LINE, { country: 'Vietnam', missing: `${MISSING.fees} and ${MISSING.play}` }));
+    // Three items, from the methods round of 2026-11-04 (a play's minimum where the research couldn't find it), are listed with a comma and "and".
+    expect(aboutMarket('au-awg')).toBe("Some of what a screenwriter is paid or asked in Australia isn't known to this game yet: some of the minimums a script is paid, the language scripts are written in and what a play's script is paid.");
+    expect(aboutMarket('ar-film')).toBe("Some of what a screenwriter is paid or asked in Argentina isn't known to this game yet: some of the minimums a script is paid and what a play's script is paid.");
     expect(aboutMarket('ar')).toBe(aboutMarket('ar-film'));
-    // Ireland's guild's terms were found on 2026-11-04 (its page as Common Crawl kept it): nothing of its market is untold.
-    expect(aboutMarket('ie')).toBeUndefined();
-    // An option's terms aren't told: nothing the life does turns on them.
-    expect(aboutMarket('de-zdf')).toBeUndefined();
+    // Ireland's guild's terms were found on 2026-11-04 (its page as Common Crawl kept it); a play's writer's weren't, which alone is told.
+    expect(aboutMarket('ie')).toBe(t(UNKEPT_LINE, { country: 'Ireland', missing: MISSING.play }));
+    // An option's terms aren't told: nothing the life does turns on them. Germany's play's writer's terms, which the methods round couldn't find, are.
+    expect(aboutMarket('de-zdf')).toBe(t(UNKEPT_LINE, { country: 'Germany', missing: MISSING.play }));
     expect(aboutMarket('ca-ipa')).toBeUndefined();
     expect(aboutMarket('it')).toBeUndefined();
+    // A market whose play's terms were found by the methods round tells nothing of a play: Chile's copyright law.
+    expect(aboutMarket('cl')).toBeUndefined();
     expect(aboutMarket('wga')).toBeUndefined();
     for (const m of Object.values(MARKETS)) for (const id of m.agreements) expect(aboutMarket(id) === undefined, id).toBe(id === KEPT || (MARKETS[countryOf(id)] as typeof m).unknown.length === 0);
     // The world's: a country whose research couldn't find whether anything sets the terms, or whether any fund, guild or agreement serves a writer; one with nothing to sell under told by its country.
-    expect(aboutMarket('bn')).toBe(t(UNKEPT_LINE, { country: 'Brunei', missing: MISSING.terms }));
-    expect(aboutMarket('ai')).toBe(t(UNKEPT_LINE, { country: 'Anguilla', missing: MISSING.none }));
-    expect(aboutMarket('cd')).toBe(t(UNKEPT_LINE, { country: countryName('CD'), missing: `${MISSING.fees} and ${MISSING.none}` }));
-    expect(aboutMarket('bg')).toBe(t(UNKEPT_LINE, { country: 'Bulgaria', missing: MISSING.fees }));
-    expect(aboutCountry('TH')).toBe(t(UNKEPT_LINE, { country: 'Thailand', missing: MISSING.union }));
-    // No writer's market leaves more than two items untold, so two are joined by "and".
-    expect(Math.max(...Object.values(MARKETS).map((m) => m.unknown.length))).toBe(2);
+    expect(aboutMarket('bn')).toBe(t(UNKEPT_LINE, { country: 'Brunei', missing: `${MISSING.terms} and ${MISSING.play}` }));
+    expect(aboutMarket('ai')).toBe(t(UNKEPT_LINE, { country: 'Anguilla', missing: `${MISSING.none} and ${MISSING.play}` }));
+    expect(aboutMarket('cd')).toBe(t(UNKEPT_LINE, { country: countryName('CD'), missing: `${MISSING.fees}, ${MISSING.none} and ${MISSING.play}` }));
+    expect(aboutMarket('bg')).toBe(t(UNKEPT_LINE, { country: 'Bulgaria', missing: `${MISSING.fees} and ${MISSING.play}` }));
+    expect(aboutCountry('TH')).toBe(t(UNKEPT_LINE, { country: 'Thailand', missing: `${MISSING.union} and ${MISSING.play}` }));
+    // No writer's market left more than two items untold until the methods round of 2026-11-04 added a play's minimum to some.
+    expect(Math.max(...Object.values(MARKETS).map((m) => m.unknown.length))).toBe(3);
     expect(aboutCountry('BE')).toBe(aboutMarket('be'));
-    expect(aboutMarket('re')).toBe(t(UNKEPT_LINE, { country: countryName('RE'), missing: MISSING.follows }));
-    for (const cc of ['US', 'AZ', 'BL', 'JE', 'XX', 'toString']) expect(aboutCountry(cc), cc).toBeUndefined();
+    expect(aboutMarket('re')).toBe(t(UNKEPT_LINE, { country: countryName('RE'), missing: `${MISSING.follows} and ${MISSING.play}` }));
+    for (const cc of ['US', 'BL', 'XX', 'toString']) expect(aboutCountry(cc), cc).toBeUndefined();
+    // Azerbaijan's and Jersey's screen terms are known whole; a play's writer's aren't, and are told.
+    for (const cc of ['AZ', 'JE'] as const) expect(aboutCountry(cc), cc).toBe(t(UNKEPT_LINE, { country: countryName(cc), missing: MISSING.play }));
     for (const cc of Object.keys(MARKETS)) expect(aboutCountry(cc) === undefined, cc).toBe((RESEARCH[cc]?.blockers ?? []).every((b) => b.item === 'option'));
   });
 
@@ -441,5 +504,76 @@ describe("a script a production pays for in a market", () => {
     for (const [id, [, , , forms, pays]] of Object.entries(AGREEMENTS)) if (pays === 'none') for (const form of forms) expect(minimumOf(terms(id), form, '1900-01-01'), id).toBeNull();
     // And where the research couldn't find it, refused and told.
     for (const cc of UNKNOWN_AGREEMENTS) expect(() => fee(cc.toLowerCase(), 'feature', '2026-11-01'), cc).toThrow(aboutCountry(cc) as string);
+  });
+
+  it("is paid for a play its market's playwrights' minimum: by its running time, its theatre's grade, its run, the writer's first premiere", () => {
+    const play = (o: ReturnType<typeof stage>, date = '2026-11-04', work: Work | null = null) => minimumOf(o, 'play', date, work);
+    // Denmark's TIO theatres: 3 salary months up to 30 minutes, 3.5 to 45, 4 to 75, 4.5 to 90, 5 beyond; DKK 28,401.25 a month from 1 April 2026.
+    const dk: [number, string][] = [[1, '85203.75'], [30, '85203.75'], [31, '99404.38'], [45, '99404.38'], [46, '113605'], [75, '113605'], [76, '127805.62'], [90, '127805.62'], [91, '142006.25'], [180, '142006.25']];
+    for (const [minutes, amount] of dk) expect(play(stage('dk-tio', minutes)), String(minutes)).toEqual(money('DKK', amount));
+    expect(play(stage('dk-tio', 90), '2026-04-01')).toEqual(money('DKK', '127805.62'));
+    expect(() => play(stage('dk-tio', 90), '2026-03-31')).toThrow('no minimum under dk-tio is known before 2026-04-01');
+    expect(() => play(stage('dk-tio', 0))).toThrow('dk-tio sets no minimum for that play');
+    expect(() => play(stage('dk-tio', null))).toThrow('a play under dk-tio names its running time');
+    // Norway's Spekter theatres: the category's fee for a full-length play, half for 30 to 45 minutes, three quarters for 46 to 69; under 30 negotiated.
+    const no: [number, number, string][] = [[1, 70, '519298'], [2, 120, '467368'], [3, 70, '363509'], [1, 69, '389473.50'], [3, 46, '272631.75'], [2, 45, '233684'], [1, 30, '259649']];
+    for (const [grade, minutes, amount] of no) expect(play(stage('no-spekter', minutes, { grade })), `${grade} ${minutes}`).toEqual(money('NOK', amount));
+    expect(play(stage('no-spekter', 29, { grade: 1 }))).toBeNull();
+    expect(play(stage('no-spekter', 29))).toBeNull();
+    expect(() => play(stage('no-spekter', 70))).toThrow("a play under no-spekter names its theatre's grade");
+    expect(() => play(stage('no-spekter', 70, { grade: 4 }))).toThrow('no-spekter sets no minimum for that play');
+    expect(() => play(stage('no-spekter', 70, { grade: 1 }), '2026-04-14')).toThrow('no minimum under no-spekter is known before 2026-04-15');
+    // Iceland: the National Theatre's and the City Theatre's minimum, less for the writer's first work at a professional theatre.
+    expect(play(stage('is-national', 90, { premieres: 0 }))).toEqual(money('ISK', '7607862'));
+    expect(play(stage('is-national', 90, { premieres: 1 }))).toEqual(money('ISK', '7778825'));
+    expect(play(stage('is-national', 40, { premieres: 5 }), '2026-10-01')).toEqual(money('ISK', '7778825'));
+    expect(() => play(stage('is-national', 90, { premieres: 1 }), '2026-09-30')).toThrow('no minimum under is-national is known before 2026-10-01');
+    expect(play(stage('is-reykjavik', 90, { premieres: 0 }), '2026-01-01')).toEqual(money('ISK', '7285489'));
+    expect(play(stage('is-reykjavik', 90, { premieres: 2 }))).toEqual(money('ISK', '7449269'));
+    expect(() => play(stage('is-reykjavik', 90, { premieres: 0 }), '2025-12-31')).toThrow('no minimum under is-reykjavik is known before 2026-01-01');
+    expect(() => play(stage('is-national', 90))).toThrow("a play under is-national names the writer's plays premiered before");
+    // Canada's PACT theatres: the guarantee by the run's performances, each year from 30 June; a short play's under 20 minutes, by the performance under 7.
+    const ca: [string, number, number, string][] = [
+      ['2025-06-30', 90, 7, '2288'], ['2026-06-29', 20, 40, '2288'], ['2026-06-30', 90, 7, '2356.65'], ['2027-06-30', 90, 8, '2427.35'],
+      ['2025-06-30', 90, 6, '128.75'], ['2026-11-04', 90, 1, '132.60'], ['2027-06-30', 90, 6, '136.60'],
+      ['2026-11-04', 19, 7, '750'], ['2026-11-04', 1, 6, '300'], ['2026-11-04', 10, 1, '50'],
+    ];
+    for (const [date, minutes, performances, amount] of ca) expect(play(stage('ca-pgc', minutes, { performances }), date), `${date} ${minutes} ${performances}`).toEqual(money('CAD', amount));
+    expect(() => play(stage('ca-pgc', 90))).toThrow("a play under ca-pgc names its run's performances");
+    expect(() => play(stage('ca-pgc', 10))).toThrow("a play under ca-pgc names its run's performances");
+    expect(() => play(stage('ca-pgc', 90, { performances: 8 }), '2025-06-29')).toThrow('no minimum under ca-pgc is known before 2025-06-30');
+    // Andorra: the artists' statute's floor a day for each day the play was written, as a script's.
+    expect(play(stage('ad', 90), '2026-11-04', { genre: 'drama', days: 56 })).toEqual(money('EUR', '4054.40'));
+    // A share of the takings alone: nothing up front, the game keeping no box office.
+    for (const id of ['fr-sacd', 'sk-lita', 'lt-latga', 'uy-agadu', 'it-siae', 'cz-dilia']) expect(play(stage(id, 90)), id).toBeNull();
+    // From the methods round: a copyright law's royalty floor (Chile, Colombia, Greece) or a society's tariff (Latvia, Madagascar, Paraguay).
+    for (const id of ['cl-17336', 'co-ley23', 'gr-2121', 'lv-akka', 'mg-omda', 'py-apa']) expect(play(stage(id, 90)), id).toBeNull();
+    // And none where nothing sets a stage writer's pay: Pitcairn, New Caledonia, Vatican City.
+    for (const id of ['pn', 'nc', 'va']) expect(play(stage(id, 90)), id).toBeNull();
+    // A French overseas collectivity follows France's, the play's agreement with the rest.
+    for (const cc of ['BL', 'GF', 'MF', 'PM', 'YT']) expect(MARKETS[cc]?.agreements, cc).toContain('fr-sacd');
+    // A screen agreement sets no terms for a play, nor a play's for the screen, nor the WGA's for a play.
+    expect(() => play(stage('dk-feature', 90))).toThrow('dk-feature sets no terms for a play');
+    expect(() => fee('dk-tio', 'feature', '2026-11-04')).toThrow('dk-tio sets no terms for a feature');
+    expect(() => play(stage('wga', 90))).toThrow('wga sets no terms for a play');
+    // A play where the research couldn't find its writer's terms is told (Vietnam's: every method tried, the decree in force not reached).
+    expect(aboutCountry('VN')).toContain(MISSING.play);
+    // The methods round's falsifier: the same play is staged, nothing paid up front, under Chile's law, and refused and told under Argentina's market, whose play's terms weren't found.
+    expect(MARKETS.CL?.agreements).toContain('cl-17336');
+    expect(MARKETS.AR?.agreements.some((id) => marketOf(id)?.forms.includes('play'))).toBe(false);
+    expect(aboutCountry('AR')).toContain(MISSING.play);
+    expect(aboutCountry('CL')).toBeUndefined();
+    expect(() => play(stage('ar-film', 90))).toThrow('ar-film sets no terms for a play');
+  });
+
+  it("pays one play differently by its market: the same ninety-minute play under each market's terms", () => {
+    const o = { grade: 1, performances: 8, premieres: 1 };
+    const paid = ['dk-tio', 'no-spekter', 'is-national', 'ca-pgc', 'fr-sacd'].map((id) => minimumOf(stage(id, 90, o), 'play', '2026-11-04'));
+    expect(paid).toEqual([money('DKK', '127805.62'), money('NOK', '519298'), money('ISK', '7778825'), money('CAD', '2356.65'), null]);
+    // And one input moved moves the pay: the running time in Denmark, the grade in Norway, the first work in Iceland, the run in Canada.
+    expect(minimumOf(stage('dk-tio', 91, o), 'play', '2026-11-04')).not.toEqual(paid[0]);
+    expect(minimumOf(stage('no-spekter', 90, { ...o, grade: 2 }), 'play', '2026-11-04')).not.toEqual(paid[1]);
+    expect(minimumOf(stage('is-national', 90, { ...o, premieres: 0 }), 'play', '2026-11-04')).not.toEqual(paid[2]);
+    expect(minimumOf(stage('ca-pgc', 90, { ...o, performances: 6 }), 'play', '2026-11-04')).not.toEqual(paid[3]);
   });
 });
